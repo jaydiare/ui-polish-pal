@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Athlete, EbayAvgRecord } from "@/data/athletes";
+import { buildBudgetAthleteId } from "@/lib/budget-knapsack";
 import AthleteCard from "./AthleteCard";
 
 interface VzlaAthleteGridProps {
@@ -15,10 +16,7 @@ interface VzlaAthleteGridProps {
 const VzlaAthleteGrid = ({ athletes, byName, byKey, hasMore, remainingCount, onLoadMore, highlightedIds }: VzlaAthleteGridProps) => {
   // If budget is active, filter to only highlighted cards
   const displayAthletes = highlightedIds && highlightedIds.size > 0
-    ? athletes.filter((a) => {
-        const id = `${a.name.trim().toLowerCase().replace(/\s+/g, " ")}|${(a.sport || "").trim().toLowerCase()}`;
-        return highlightedIds.has(id);
-      })
+    ? athletes.filter((a) => highlightedIds.has(buildBudgetAthleteId(a.name, a.sport)))
     : athletes;
 
   return (
@@ -35,7 +33,7 @@ const VzlaAthleteGrid = ({ athletes, byName, byKey, hasMore, remainingCount, onL
               athlete={a}
               byName={byName}
               byKey={byKey}
-              isRecommended={highlightedIds?.has(`${a.name.trim().toLowerCase().replace(/\s+/g, " ")}|${(a.sport || "").trim().toLowerCase()}`)}
+              isRecommended={highlightedIds?.has(buildBudgetAthleteId(a.name, a.sport))}
             />
           </motion.div>
         ))}
