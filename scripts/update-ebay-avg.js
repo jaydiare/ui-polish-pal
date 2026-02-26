@@ -765,12 +765,20 @@ async function main() {
     const cacheKey = matchCacheKey(name, sport);
     const cached = matchCache[cacheKey];
 
-    // Use cached match if available
-    if (cached && cached.mode && cached.value) {
-      match = cached;
-      cacheHits++;
-      console.log(`  ✅ Cache hit: ${match.mode}="${match.value}" (validated on ${match.validatedOn || "?"})`);
-    } else {
+    // Use cached match if available (including cached skips)
+    if (cached) {
+      if (cached.mode && cached.value) {
+        match = cached;
+        cacheHits++;
+        console.log(`  ✅ Cache hit: ${match.mode}="${match.value}" (validated on ${match.validatedOn || "?"})`);
+      } else if (cached.mode === null && cached.skippedAt) {
+        cacheHits++;
+        console.log(`  ⏭️ Cache hit (skip): previously skipped on ${cached.skippedAt}`);
+        continue;
+      }
+    }
+
+    if (!match) {
       cacheMisses++;
 
       for (const marketplaceId of ["EBAY_CA", "EBAY_US"]) {
