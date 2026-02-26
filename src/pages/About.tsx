@@ -16,7 +16,7 @@ const About = () => {
       <div className="page-shell">
         <VzlaSideBanner />
 
-        <main className="w-full px-8 pb-8 pt-0">
+        <main className="w-full min-w-0 overflow-hidden px-4 md:px-8 pb-8 pt-0">
           <motion.section
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
