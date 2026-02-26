@@ -57,7 +57,7 @@ const Index = () => {
             filteredCount={filteredAthletes.length}
           />
           <VzlaAthleteGrid
-            athletes={paginatedAthletes}
+            athletes={budgetChosenIds.size > 0 ? filteredAthletes : paginatedAthletes}
             byName={byName}
             byKey={byKey}
             hasMore={hasMore}
