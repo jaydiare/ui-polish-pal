@@ -21,10 +21,11 @@ const AthleteCard = ({ athlete, byName, byKey, isRecommended }: AthleteCardProps
   const avgNum = getEbayAvgNumber(athlete, byName, byKey);
   const money = avgNum != null ? formatCurrency(avgNum, "USD") : "—";
 
-  const cv = getMarketStabilityCV(athlete, byName, byKey);
+  const hasPrice = avgNum != null;
+  const cv = hasPrice ? getMarketStabilityCV(athlete, byName, byKey) : null;
   const stability = marketStabilityScoreFromCV(cv);
 
-  const dom = getAvgDaysOnMarket(athlete, byName, byKey);
+  const dom = hasPrice ? getAvgDaysOnMarket(athlete, byName, byKey) : null;
   const domText = dom != null ? `${Math.round(dom)}d` : "—";
 
   const shopUrl = buildEbaySearchUrl(athlete.name, athlete.sport);
