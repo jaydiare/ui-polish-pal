@@ -3,6 +3,7 @@ import VzlaNavbar from "@/components/VzlaNavbar";
 import VzlaSideBanner from "@/components/VzlaSideBanner";
 import VzlaFooter from "@/components/VzlaFooter";
 import VzlaEbayFooter from "@/components/VzlaEbayFooter";
+import VzlaStoreBanner from "@/components/VzlaStoreBanner";
 
 const EBAY_STORE =
   "https://www.ebay.ca/str/localherossportscards?mkcid=1&mkrid=706-53473-19255-0&siteid=2&campid=5339142305&toolid=10001&mkevt=1";
@@ -100,6 +101,8 @@ const About = () => {
               ))}
             </div>
           </motion.section>
+
+          <VzlaStoreBanner />
 
           <VzlaFooter />
         </main>
