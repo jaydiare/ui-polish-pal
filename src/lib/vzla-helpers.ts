@@ -194,7 +194,8 @@ export function filterAthletes(
   const wantsNoPrice = filters.price === "none";
   const wantsNoStability = filters.stability === "none";
   const wantsNoDays = filters.daysListed === "none";
-  const wantsEmptyStates = wantsNoPrice || wantsNoStability || wantsNoDays;
+  const hasSearch = q.length > 0;
+  const wantsEmptyStates = wantsNoPrice || wantsNoStability || wantsNoDays || hasSearch;
 
   let filtered = list
     .filter((a) => {
