@@ -27,7 +27,7 @@ const VzlaHero = ({ lastUpdated }: VzlaHeroProps) => {
       </h1>
 
       <p className="text-muted-foreground text-sm md:text-base max-w-2xl mx-auto leading-relaxed mb-6">
-        Real-time eBay market data for Venezuelan athletes' sports cards.
+        Daily eBay market data for Venezuelan athletes' sports cards.
         Track prices, stability scores, and market trends.
       </p>
 
