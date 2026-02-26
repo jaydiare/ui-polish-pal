@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import { Athlete, EbayAvgRecord } from "@/data/athletes";
 import AthleteCard from "./AthleteCard";
 
@@ -13,19 +14,26 @@ interface VzlaAthleteGridProps {
 const VzlaAthleteGrid = ({ athletes, byName, byKey, hasMore, remainingCount, onLoadMore }: VzlaAthleteGridProps) => {
   return (
     <>
-      <div className="grid grid-cols-[repeat(auto-fill,minmax(220px,1fr))] gap-[18px] mt-[26px]">
-        {athletes.map((a) => (
-          <AthleteCard key={`${a.name}-${a.sport}`} athlete={a} byName={byName} byKey={byKey} />
+      <div className="grid grid-cols-[repeat(auto-fill,minmax(250px,1fr))] gap-5 mt-8">
+        {athletes.map((a, i) => (
+          <motion.div
+            key={`${a.name}-${a.sport}`}
+            initial={{ opacity: 0, y: 12 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.3, delay: Math.min(i * 0.02, 0.5) }}
+          >
+            <AthleteCard athlete={a} byName={byName} byKey={byKey} />
+          </motion.div>
         ))}
       </div>
 
       {hasMore && (
-        <div className="flex justify-center my-[18px]">
+        <div className="flex justify-center mt-8">
           <button
-            className="h-11 px-[18px] rounded-xl border border-foreground/10 bg-foreground/[0.06] text-foreground/90 cursor-pointer backdrop-blur-[10px] transition-all hover:bg-foreground/10 hover:border-foreground/[0.18] active:translate-y-px"
+            className="px-6 py-3 rounded-xl border border-border bg-secondary text-foreground font-display font-semibold text-sm cursor-pointer transition-all hover:bg-vzla-yellow/10 hover:border-vzla-yellow/20 hover:text-vzla-yellow active:scale-[0.98]"
             onClick={onLoadMore}
           >
-            Load More ({remainingCount} more)
+            Load More ({remainingCount} remaining)
           </button>
         </div>
       )}

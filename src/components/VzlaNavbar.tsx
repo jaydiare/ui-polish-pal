@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 
 const SOCIAL_LINKS = {
   instagram: "https://www.instagram.com/localheros_sportscards/",
@@ -9,7 +10,7 @@ const SOCIAL_LINKS = {
 const EBAY_STORE = "https://www.ebay.ca/str/localherossportscards?mkcid=1&mkrid=706-53473-19255-0&siteid=2&campid=5339142305&toolid=10001&mkevt=1";
 
 const InstagramIcon = () => (
-  <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2">
+  <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2">
     <rect x="3" y="3" width="18" height="18" rx="5" />
     <circle cx="12" cy="12" r="4" />
     <circle cx="17.5" cy="6.5" r="1" />
@@ -17,28 +18,22 @@ const InstagramIcon = () => (
 );
 
 const TwitterIcon = () => (
-  <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+  <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
     <path d="M18.9 2H22l-6.8 7.8L23 22h-6.2l-4.8-7-6.1 7H2l7.3-8.4L1 2h6.4l4.4 6.4L18.9 2zm-1.1 18h1.7L7.2 3.9H5.4L17.8 20z" />
   </svg>
 );
 
 const FacebookIcon = () => (
-  <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+  <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
     <path d="M22 12a10 10 0 1 0-11.6 9.9v-7H8v-3h2.4V9.7c0-2.4 1.4-3.8 3.6-3.8 1 0 2 .2 2 .2v2.2h-1.1c-1.1 0-1.4.7-1.4 1.4V12H16l-.4 3h-2.1v7A10 10 0 0 0 22 12z" />
   </svg>
 );
 
 const SocialIcons = () => (
-  <div className="flex gap-3.5 justify-center">
-    <a className="icon-btn" href={SOCIAL_LINKS.instagram} target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-      <InstagramIcon />
-    </a>
-    <a className="icon-btn" href={SOCIAL_LINKS.twitter} target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)">
-      <TwitterIcon />
-    </a>
-    <a className="icon-btn" href={SOCIAL_LINKS.facebook} target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-      <FacebookIcon />
-    </a>
+  <div className="flex gap-2">
+    <a className="icon-btn" href={SOCIAL_LINKS.instagram} target="_blank" rel="noopener noreferrer" aria-label="Instagram"><InstagramIcon /></a>
+    <a className="icon-btn" href={SOCIAL_LINKS.twitter} target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)"><TwitterIcon /></a>
+    <a className="icon-btn" href={SOCIAL_LINKS.facebook} target="_blank" rel="noopener noreferrer" aria-label="Facebook"><FacebookIcon /></a>
   </div>
 );
 
@@ -49,110 +44,168 @@ const VzlaNavbar = () => {
 
   return (
     <>
-      <nav className="vzla-nav p-6 flex items-center justify-between relative">
-        <a href="#top" className="flex items-center gap-3.5 no-underline select-none">
-          <span className="flex flex-col items-center text-center leading-none">
-            <span className="text-foreground font-black text-lg tracking-[0.14em] uppercase whitespace-nowrap">
+      <nav className="vzla-nav px-6 py-4 flex items-center justify-between">
+        <a href="#top" className="flex items-center gap-3 no-underline select-none group">
+          <div className="w-9 h-9 rounded-lg cta-flag flex items-center justify-center">
+            <span className="font-display font-bold text-xs text-white">VZ</span>
+          </div>
+          <span className="flex flex-col leading-none">
+            <span className="font-display font-bold text-sm tracking-wide text-foreground">
               VZLA SPORTS
             </span>
-            <span className="w-full text-center mt-1.5 pt-1.5 border-t-2 border-foreground/[0.18] text-foreground/85 font-black text-[9px] tracking-[0.42em] uppercase">
-              ELITE
+            <span className="text-[9px] tracking-[0.3em] uppercase text-muted-foreground font-semibold mt-0.5">
+              ELITE INDEX
             </span>
           </span>
         </a>
 
         {/* Desktop nav */}
-        <ul className="hidden md:flex gap-7 items-center text-lg tracking-[0.02em] m-0 p-0 list-none">
-          <li><a href="#top" className="text-foreground/90 no-underline font-bold hover:text-vzla-yellow transition-colors text-flag-gradient">Home</a></li>
-          <li><a href="#about" className="text-foreground/90 no-underline font-bold hover:text-vzla-yellow transition-colors">About</a></li>
+        <ul className="hidden md:flex gap-1 items-center m-0 p-0 list-none">
+          {[
+            { label: "Home", href: "#top", gradient: true },
+            { label: "About", href: "#about" },
+          ].map((item) => (
+            <li key={item.label}>
+              <a
+                href={item.href}
+                className={`px-4 py-2 rounded-lg text-sm font-semibold no-underline transition-colors ${
+                  item.gradient
+                    ? "text-vzla-yellow"
+                    : "text-foreground/70 hover:text-foreground hover:bg-secondary"
+                }`}
+              >
+                {item.label}
+              </a>
+            </li>
+          ))}
 
           <li className="relative">
             <button
               onClick={() => { setShopOpen(!shopOpen); setContactOpen(false); }}
-              className="text-foreground/90 font-bold text-lg bg-transparent border-none cursor-pointer hover:text-vzla-yellow transition-colors inline-flex items-center gap-2"
+              className="px-4 py-2 rounded-lg text-sm font-semibold bg-transparent border-none cursor-pointer text-foreground/70 hover:text-foreground hover:bg-secondary transition-colors inline-flex items-center gap-1.5"
             >
-              Shop <span className="text-sm opacity-90">▾</span>
+              Shop
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" className={`transition-transform ${shopOpen ? "rotate-180" : ""}`}>
+                <path d="M6 9l6 6 6-6" />
+              </svg>
             </button>
-            {shopOpen && (
-              <div className="absolute right-0 top-[calc(100%+12px)] min-w-[240px] bg-[rgba(10,10,10,0.95)] border border-foreground/10 rounded-[18px] p-3 shadow-[0_20px_60px_rgba(0,0,0,0.65)] backdrop-blur-xl z-[99999]">
-                <a
-                  className="block px-3 py-2.5 rounded-xl text-foreground/90 text-[15px] no-underline hover:bg-vzla-yellow/10 hover:text-vzla-yellow transition-colors"
-                  href={EBAY_STORE}
-                  target="_blank"
-                  rel="noopener noreferrer"
+            <AnimatePresence>
+              {shopOpen && (
+                <motion.div
+                  initial={{ opacity: 0, y: 8, scale: 0.96 }}
+                  animate={{ opacity: 1, y: 0, scale: 1 }}
+                  exit={{ opacity: 0, y: 8, scale: 0.96 }}
+                  transition={{ duration: 0.15 }}
+                  className="absolute right-0 top-[calc(100%+8px)] min-w-[220px] glass-panel p-2 z-[99999]"
                 >
-                  Visit my eBay Store
-                </a>
-              </div>
-            )}
+                  <a
+                    className="block px-3 py-2.5 rounded-lg text-foreground/80 text-sm no-underline hover:bg-secondary hover:text-vzla-yellow transition-colors"
+                    href={EBAY_STORE}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    🛒 Visit my eBay Store
+                  </a>
+                </motion.div>
+              )}
+            </AnimatePresence>
           </li>
 
           <li className="relative">
             <button
               onClick={() => { setContactOpen(!contactOpen); setShopOpen(false); }}
-              className="text-foreground/90 font-bold text-lg bg-transparent border-none cursor-pointer hover:text-vzla-yellow transition-colors inline-flex items-center gap-2"
+              className="px-4 py-2 rounded-lg text-sm font-semibold bg-transparent border-none cursor-pointer text-foreground/70 hover:text-foreground hover:bg-secondary transition-colors inline-flex items-center gap-1.5"
             >
-              Contact <span className="text-sm opacity-90">▾</span>
+              Contact
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" className={`transition-transform ${contactOpen ? "rotate-180" : ""}`}>
+                <path d="M6 9l6 6 6-6" />
+              </svg>
             </button>
-            {contactOpen && (
-              <div className="absolute right-0 top-[calc(100%+12px)] min-w-[240px] bg-[rgba(10,10,10,0.95)] border border-foreground/10 rounded-[18px] p-3 shadow-[0_20px_60px_rgba(0,0,0,0.65)] backdrop-blur-xl z-[99999]">
-                <SocialIcons />
-              </div>
-            )}
+            <AnimatePresence>
+              {contactOpen && (
+                <motion.div
+                  initial={{ opacity: 0, y: 8, scale: 0.96 }}
+                  animate={{ opacity: 1, y: 0, scale: 1 }}
+                  exit={{ opacity: 0, y: 8, scale: 0.96 }}
+                  transition={{ duration: 0.15 }}
+                  className="absolute right-0 top-[calc(100%+8px)] min-w-[200px] glass-panel p-3 z-[99999]"
+                >
+                  <SocialIcons />
+                </motion.div>
+              )}
+            </AnimatePresence>
           </li>
         </ul>
 
         {/* Hamburger */}
         <button
-          className="flex md:hidden w-11 h-11 rounded-xl border border-foreground/10 bg-foreground/[0.06] items-center justify-center cursor-pointer hover:border-vzla-mint/25 hover:bg-vzla-mint/10 transition-all"
+          className="flex md:hidden w-10 h-10 rounded-lg border border-border bg-secondary items-center justify-center cursor-pointer hover:border-vzla-yellow/25 transition-all"
           onClick={() => setMobileOpen(true)}
           aria-label="Open menu"
         >
-          <span className="relative block w-[22px] h-0.5 rounded-full bg-foreground before:content-[''] before:absolute before:left-0 before:w-[22px] before:h-0.5 before:rounded-full before:bg-foreground before:-top-[7px] after:content-[''] after:absolute after:left-0 after:w-[22px] after:h-0.5 after:rounded-full after:bg-foreground after:top-[7px]" />
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+            <path d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
         </button>
       </nav>
 
-      {/* Mobile menu overlay */}
-      {mobileOpen && (
-        <div className="fixed inset-0 z-[10000] bg-[rgba(10,10,10,0.92)] backdrop-blur-[14px] p-[18px]">
-          <div className="flex items-center justify-between gap-3">
-            <a href="#top" className="flex items-center gap-3 no-underline select-none" onClick={() => setMobileOpen(false)}>
-              <span className="flex flex-col items-center text-center leading-none">
-                <span className="text-foreground font-black text-[13px] tracking-[0.10em] uppercase whitespace-nowrap">VZLA SPORTS</span>
-                <span className="w-full text-center mt-1.5 pt-1.5 border-t-2 border-foreground/[0.18] text-foreground/85 font-black text-[8px] tracking-[0.28em] uppercase">ELITE</span>
-              </span>
-            </a>
-            <button
-              className="w-[46px] h-[46px] rounded-[14px] border border-foreground/10 bg-foreground/[0.06] text-vzla-yellow text-[28px] leading-none cursor-pointer"
-              onClick={() => setMobileOpen(false)}
-            >
-              ✕
-            </button>
-          </div>
-
-          <div className="mt-[22px] flex flex-col gap-3.5 max-w-[520px] mx-auto">
-            <a href="#top" onClick={() => setMobileOpen(false)} className="flex items-center justify-center w-full px-[18px] py-[18px] rounded-[18px] border border-foreground/[0.16] bg-foreground/[0.06] text-foreground/90 no-underline font-extrabold text-xl">Home</a>
-            <a href="#about" onClick={() => setMobileOpen(false)} className="flex items-center justify-center w-full px-[18px] py-[18px] rounded-[18px] border border-foreground/[0.16] bg-foreground/[0.06] text-foreground/90 no-underline font-extrabold text-xl">About</a>
-
-            <a
-              href={EBAY_STORE}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center justify-center w-full px-[18px] py-[18px] rounded-[18px] border border-foreground/[0.16] bg-foreground/[0.06] text-foreground/90 no-underline font-extrabold text-xl"
-            >
-              Shop
-            </a>
-
-            <div className="mt-2.5 p-3.5 rounded-[18px] border border-foreground/10 bg-[rgba(0,0,0,0.35)]">
-              <SocialIcons />
+      {/* Mobile menu */}
+      <AnimatePresence>
+        {mobileOpen && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-[10000] bg-background/95 backdrop-blur-xl p-5"
+          >
+            <div className="flex items-center justify-between">
+              <a href="#top" className="flex items-center gap-3 no-underline" onClick={() => setMobileOpen(false)}>
+                <div className="w-8 h-8 rounded-lg cta-flag flex items-center justify-center">
+                  <span className="font-display font-bold text-xs text-white">VZ</span>
+                </div>
+                <span className="font-display font-bold text-sm text-foreground">VZLA SPORTS</span>
+              </a>
+              <button
+                className="w-10 h-10 rounded-lg border border-border bg-secondary text-foreground flex items-center justify-center cursor-pointer"
+                onClick={() => setMobileOpen(false)}
+              >
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <path d="M18 6L6 18M6 6l12 12" />
+                </svg>
+              </button>
             </div>
 
-            <a href="#top" onClick={() => setMobileOpen(false)} className="mt-2.5 flex justify-center py-4 px-[18px] rounded-full font-black cta-flag no-underline">
-              Top
-            </a>
-          </div>
-        </div>
-      )}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.1 }}
+              className="mt-8 flex flex-col gap-3 max-w-md mx-auto"
+            >
+              {["Home", "About"].map((label) => (
+                <a
+                  key={label}
+                  href={label === "Home" ? "#top" : `#${label.toLowerCase()}`}
+                  onClick={() => setMobileOpen(false)}
+                  className="flex items-center justify-center w-full py-4 rounded-xl border border-border bg-secondary text-foreground no-underline font-display font-bold text-lg hover:bg-vzla-yellow/10 hover:border-vzla-yellow/20 transition-colors"
+                >
+                  {label}
+                </a>
+              ))}
+              <a
+                href={EBAY_STORE}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center w-full py-4 rounded-xl border border-border bg-secondary text-foreground no-underline font-display font-bold text-lg"
+              >
+                🛒 Shop
+              </a>
+              <div className="mt-4 p-4 rounded-xl border border-border bg-secondary/50 flex justify-center">
+                <SocialIcons />
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </>
   );
 };

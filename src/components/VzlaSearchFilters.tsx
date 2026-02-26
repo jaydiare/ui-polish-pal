@@ -18,18 +18,19 @@ const VzlaSearchFilters = ({
   filteredCount,
 }: VzlaSearchFiltersProps) => {
   return (
-    <div className="flex justify-center mb-4">
-      <div className="w-full max-w-6xl grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_auto] gap-4 items-start">
+    <div className="glass-panel p-5 mb-6">
+      <div className="flex flex-col lg:flex-row gap-4 items-start lg:items-end">
         {/* Search */}
-        <div className="w-full">
-          <div className="relative flex items-center gap-2.5 h-11 w-full px-3 rounded-[14px] glass-input transition-all focus-within:border-foreground/[0.18] focus-within:shadow-[0_0_0_3px_rgba(242,242,13,0.12),0_10px_30px_rgba(0,0,0,0.35)]">
-            <span className="text-foreground/55 inline-flex items-center justify-center">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
-                <path d="M21 21l-4.3-4.3m1.8-5.2a7 7 0 11-14 0 7 7 0 0114 0z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
-              </svg>
-            </span>
+        <div className="flex-1 w-full lg:max-w-sm">
+          <label className="text-[10px] tracking-widest uppercase font-bold text-muted-foreground mb-1.5 block">
+            Search
+          </label>
+          <div className="relative flex items-center gap-2 h-10 w-full px-3 rounded-lg glass-input">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" className="text-muted-foreground shrink-0">
+              <path d="M21 21l-4.3-4.3m1.8-5.2a7 7 0 11-14 0 7 7 0 0114 0z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+            </svg>
             <input
-              className="flex-1 h-full border-0 outline-none bg-transparent text-foreground/90 text-[13px] tracking-[0.2px] placeholder:text-foreground/35"
+              className="flex-1 h-full border-0 outline-none bg-transparent text-foreground text-sm placeholder:text-muted-foreground"
               placeholder="Search players..."
               type="text"
               autoComplete="off"
@@ -39,23 +40,21 @@ const VzlaSearchFilters = ({
             />
             {filters.search && (
               <button
-                className="h-[30px] w-[30px] rounded-[10px] border border-foreground/10 bg-foreground/[0.06] text-foreground/75 flex items-center justify-center cursor-pointer hover:bg-foreground/10 hover:text-foreground/90 active:translate-y-px transition-all"
+                className="w-6 h-6 rounded-md bg-secondary border border-border text-muted-foreground flex items-center justify-center cursor-pointer hover:text-foreground transition-colors"
                 onClick={() => updateFilter("search", "")}
                 aria-label="Clear search"
               >
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none">
-                  <path d="M18 6L6 18M6 6l12 12" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
-                </svg>
+                ×
               </button>
             )}
           </div>
-          <div className="mt-1.5 text-[11px] text-foreground/45">
-            Showing <span className="text-foreground/70">{filteredCount}</span> of <span className="text-foreground/70">{totalCount}</span> players
+          <div className="mt-1.5 text-[11px] text-muted-foreground">
+            Showing <span className="text-foreground font-medium">{filteredCount}</span> of {totalCount} players
           </div>
         </div>
 
         {/* Filters */}
-        <div className="flex gap-3.5 items-start justify-end flex-wrap lg:flex-nowrap" aria-label="Filters">
+        <div className="flex gap-3 items-end flex-wrap lg:flex-nowrap">
           <FilterSelect
             label="Category"
             value={filters.category}
@@ -81,21 +80,21 @@ const VzlaSearchFilters = ({
             onChange={(v) => updateFilter("price", v)}
             options={[
               { value: "all", label: "All" },
-              { value: "low", label: "Low" },
-              { value: "high", label: "High" },
-              { value: "none", label: "None" },
+              { value: "low", label: "Low → High" },
+              { value: "high", label: "High → Low" },
+              { value: "none", label: "No Price" },
             ]}
           />
           <FilterSelect
-            label="Market Stability"
+            label="Stability"
             value={filters.stability}
             onChange={(v) => updateFilter("stability", v)}
             options={[
               { value: "all", label: "All" },
-              { value: "stable", label: "Stable (0–10%)" },
-              { value: "active", label: "Active (10–20%)" },
-              { value: "volatile", label: "Volatile (20–35%)" },
-              { value: "highly_unstable", label: "Highly Unstable (35%+)" },
+              { value: "stable", label: "Stable" },
+              { value: "active", label: "Active" },
+              { value: "volatile", label: "Volatile" },
+              { value: "highly_unstable", label: "Unstable" },
               { value: "none", label: "No Score" },
             ]}
           />
@@ -113,18 +112,12 @@ interface FilterSelectProps {
 }
 
 const FilterSelect = ({ label, value, onChange, options }: FilterSelectProps) => (
-  <label className="flex flex-col gap-2 min-w-[180px] lg:min-w-[220px] flex-1 lg:flex-initial">
-    <span className="h-3.5 leading-[14px] m-0 pl-1.5 text-[10px] tracking-[0.18em] uppercase font-black text-foreground/55">
+  <label className="flex flex-col gap-1.5 min-w-[140px]">
+    <span className="text-[10px] tracking-widest uppercase font-bold text-muted-foreground">
       {label}
     </span>
     <select
-      className="h-11 px-3.5 pr-10 rounded-[14px] glass-input text-foreground/90 text-[13px] outline-none appearance-none cursor-pointer transition-all focus:border-foreground/[0.18] focus:shadow-[0_0_0_3px_rgba(242,242,13,0.12),0_10px_30px_rgba(0,0,0,0.28)]"
-      style={{
-        backgroundImage: "linear-gradient(45deg, transparent 50%, rgba(255,255,255,.6) 50%), linear-gradient(135deg, rgba(255,255,255,.6) 50%, transparent 50%)",
-        backgroundPosition: "calc(100% - 18px) 18px, calc(100% - 13px) 18px",
-        backgroundSize: "5px 5px, 5px 5px",
-        backgroundRepeat: "no-repeat",
-      }}
+      className="h-10 px-3 pr-8 rounded-lg glass-input text-foreground text-sm outline-none appearance-none cursor-pointer bg-[url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2212%22%20height%3D%2212%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22%236b7280%22%20stroke-width%3D%222.5%22%3E%3Cpath%20d%3D%22M6%209l6%206%206-6%22%2F%3E%3C%2Fsvg%3E')] bg-[length:12px] bg-[position:calc(100%-10px)_center] bg-no-repeat"
       value={value}
       onChange={(e) => onChange(e.target.value)}
     >
