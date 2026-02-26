@@ -63,7 +63,7 @@ const About = () => {
                 {
                   title: "What We Believe",
                   paragraphs: [
-                    "Many Venezuelans see sports cards as memories and nothing more. But the truth is that well-maintained collectibles can grow in value beyond nostalgia. Condition, rarity, and demand all matter. Knowledge makes the difference.",
+                    "For many Venezuelans, sports cards are simply memories. Yet behind every card lies real potential. When condition, rarity, and demand align, collectibles become assets. At Vzla Sports Elite, knowledge is what empowers Venezuelan buyers and collectors around the world who follow Venezuelan athletes to make informed, confident decisions.",
                   ],
                   extra: null,
                 },
