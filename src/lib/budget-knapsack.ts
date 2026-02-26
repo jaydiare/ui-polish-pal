@@ -163,6 +163,7 @@ function normKey(s: string): string {
 
 export interface BudgetCandidate {
   name: string;
+  sport?: string;
   price: number | null;
   stabilityPct: number | null;
   daysOnMarket: number | null;
@@ -182,7 +183,7 @@ export function runKnapsack(
       const base = stabilityPoints(c.stabilityPct);
       const liq = liquidityMultiplier(c.daysOnMarket);
       return {
-        id: normKey(c.name),
+        id: `${normKey(c.name)}|${normKey(c.sport || "")}`,
         name: c.name,
         priceCents,
         stabilityPct: c.stabilityPct,
