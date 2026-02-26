@@ -9,15 +9,6 @@ interface VzlaSearchFiltersProps {
   filteredCount: number;
 }
 
-const DEFAULT_FILTERS: Filters = {
-  search: "",
-  category: "all",
-  league: "all",
-  price: "all",
-  stability: "all",
-  daysListed: "all",
-};
-
 const VzlaSearchFilters = ({
   filters,
   updateFilter,
@@ -26,19 +17,9 @@ const VzlaSearchFilters = ({
   totalCount,
   filteredCount,
 }: VzlaSearchFiltersProps) => {
-  const hasActiveFilter = Object.keys(DEFAULT_FILTERS).some(
-    (k) => filters[k as keyof Filters] !== DEFAULT_FILTERS[k as keyof Filters]
-  );
-
-  const clearAll = () => {
-    for (const [k, v] of Object.entries(DEFAULT_FILTERS)) {
-      updateFilter(k as keyof Filters, v);
-    }
-  };
-
   return (
     <div className="glass-panel p-5 mb-6" role="search" aria-label="Filter athletes">
-      <div className="grid grid-cols-1 lg:grid-cols-[minmax(200px,1.2fr)_repeat(5,minmax(120px,1fr))_auto] gap-4 items-end">
+      <div className="grid grid-cols-1 lg:grid-cols-[minmax(200px,1.2fr)_repeat(5,minmax(120px,1fr))] gap-4 items-end">
         {/* Search */}
         <div>
           <label htmlFor="player-search" className="text-[10px] tracking-widest uppercase font-bold text-muted-foreground mb-1.5 block">
@@ -130,17 +111,6 @@ const VzlaSearchFilters = ({
             { value: "none", label: "No Data" },
           ]}
         />
-
-        {/* Clear button */}
-        <div className="flex items-end">
-          <button
-            onClick={clearAll}
-            disabled={!hasActiveFilter}
-            className="h-11 px-4 rounded-lg border border-border bg-secondary text-sm font-semibold text-muted-foreground transition-all hover:text-foreground hover:border-foreground/20 disabled:opacity-30 disabled:cursor-not-allowed whitespace-nowrap"
-          >
-            Clear
-          </button>
-        </div>
       </div>
     </div>
   );
