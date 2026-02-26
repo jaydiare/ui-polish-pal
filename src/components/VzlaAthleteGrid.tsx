@@ -15,7 +15,10 @@ interface VzlaAthleteGridProps {
 const VzlaAthleteGrid = ({ athletes, byName, byKey, hasMore, remainingCount, onLoadMore, highlightedIds }: VzlaAthleteGridProps) => {
   // If budget is active, filter to only highlighted cards
   const displayAthletes = highlightedIds && highlightedIds.size > 0
-    ? athletes.filter((a) => highlightedIds.has(a.name.trim().toLowerCase().replace(/\s+/g, " ")))
+    ? athletes.filter((a) => {
+        const id = `${a.name.trim().toLowerCase().replace(/\s+/g, " ")}|${(a.sport || "").trim().toLowerCase()}`;
+        return highlightedIds.has(id);
+      })
     : athletes;
 
   return (
@@ -32,7 +35,7 @@ const VzlaAthleteGrid = ({ athletes, byName, byKey, hasMore, remainingCount, onL
               athlete={a}
               byName={byName}
               byKey={byKey}
-              isRecommended={highlightedIds?.has(a.name.trim().toLowerCase().replace(/\s+/g, " "))}
+              isRecommended={highlightedIds?.has(`${a.name.trim().toLowerCase().replace(/\s+/g, " ")}|${(a.sport || "").trim().toLowerCase()}`)}
             />
           </motion.div>
         ))}

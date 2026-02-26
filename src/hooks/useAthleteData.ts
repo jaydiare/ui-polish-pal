@@ -107,6 +107,7 @@ export function useAthleteData() {
   const budgetCandidates = useMemo((): BudgetCandidate[] => {
     return filteredAthletes.map((a) => ({
       name: a.name,
+      sport: a.sport,
       price: getEbayAvgNumber(a, byName, byKey),
       stabilityPct: (() => {
         const cv = getMarketStabilityCV(a, byName, byKey);
