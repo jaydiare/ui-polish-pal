@@ -71,6 +71,7 @@ const About = () => {
                   title: "Our Mission",
                   paragraphs: [
                     "VZLA Sports Elite was created to make it easy for Venezuelans around the world to discover and support their favorite hometown athletes.",
+                    "We also aim to help buyers from Venezuela and collectors worldwide who are passionate about Venezuelan athletes find the cards and memorabilia they're looking for.",
                     "Beyond simply showcasing athletes, our mission is to share knowledge about this hobby and help collectors understand how to preserve and protect the long-term value of their collections.",
                   ],
                   extra: null,
