@@ -97,7 +97,7 @@ const AthleteCard = ({ athlete, byName, byKey, isRecommended }: AthleteCardProps
         href={shopUrl}
         target="_blank"
         rel="noopener noreferrer"
-        className="mt-auto pt-4 self-stretch inline-flex items-center justify-center px-4 py-2.5 rounded-lg cta-yellow no-underline text-xs font-bold tracking-wide uppercase group-hover:shadow-lg transition-all"
+        className="mt-auto pt-4 self-stretch inline-flex items-center justify-center px-4 py-2.5 rounded-lg cta-yellow no-underline text-xs font-bold tracking-wide group-hover:shadow-lg transition-all"
       >
         Search on eBay →
       </a>
