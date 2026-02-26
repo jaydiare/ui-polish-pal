@@ -161,6 +161,9 @@ function normKey(s: string): string {
   return String(s || "").trim().toLowerCase().replace(/\s+/g, " ");
 }
 
+export function buildBudgetAthleteId(name: string, sport?: string | null): string {
+  return `${normKey(name)}|${normKey(sport || "")}`;
+}
 export interface BudgetCandidate {
   name: string;
   sport?: string;
@@ -183,7 +186,7 @@ export function runKnapsack(
       const base = stabilityPoints(c.stabilityPct);
       const liq = liquidityMultiplier(c.daysOnMarket);
       return {
-        id: `${normKey(c.name)}|${normKey(c.sport || "")}`,
+        id: buildBudgetAthleteId(c.name, c.sport),
         name: c.name,
         priceCents,
         stabilityPct: c.stabilityPct,
