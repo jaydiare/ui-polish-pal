@@ -123,8 +123,19 @@ export function useAthleteData() {
     setBudgetResult(result);
   }, [budgetCandidates]);
 
+  const DEFAULT_FILTERS: Filters = {
+    search: "",
+    category: "all",
+    league: "all",
+    price: "all",
+    stability: "all",
+    daysListed: "all",
+  };
+
   const clearBudget = useCallback(() => {
     setBudgetResult(null);
+    setFilters(DEFAULT_FILTERS);
+    setVisibleCount(PAGE_SIZE);
   }, []);
 
   // Chosen IDs set for highlighting
