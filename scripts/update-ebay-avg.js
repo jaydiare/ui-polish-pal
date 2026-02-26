@@ -51,10 +51,14 @@ if (!EBAY_CLIENT_ID || !EBAY_CLIENT_SECRET) {
 }
 
 const OUT_PATH = path.join(__dirname, "..", "data", "ebay-avg.json");
+const MATCH_CACHE_PATH = path.join(__dirname, "..", "data", "ebay-match-cache.json");
 
 // This script expects:
 // data/athletes.json: [{ name: "Jose Altuve", sport: "Baseball" }, ...]
 const ATHLETES_PATH = path.join(__dirname, "..", "data", "athletes.json");
+
+// CLI flag: --force-refresh to skip cache and re-validate all matches
+const FORCE_REFRESH = process.argv.includes("--force-refresh");
 
 // Category you were using (Trading Card Singles)
 const CATEGORY_ID = "261328";
@@ -680,11 +684,38 @@ function loadAthletes() {
     .filter((x) => x.name);
 }
 
+// --- match cache ---
+function loadMatchCache() {
+  try {
+    if (fs.existsSync(MATCH_CACHE_PATH)) {
+      return JSON.parse(fs.readFileSync(MATCH_CACHE_PATH, "utf8"));
+    }
+  } catch { /* ignore corrupt cache */ }
+  return {};
+}
+
+function saveMatchCache(cache) {
+  fs.mkdirSync(path.dirname(MATCH_CACHE_PATH), { recursive: true });
+  fs.writeFileSync(MATCH_CACHE_PATH, JSON.stringify(cache, null, 2));
+}
+
+function matchCacheKey(name, sport) {
+  return `${normSpaces(name)}||${normSpaces(sport)}`;
+}
+
 // --- main ---
 async function main() {
   const token = await getAppToken();
   const fx = await getFxRatesToUSD();
-  const athletes = loadAthletes();
+  const matchCache = FORCE_REFRESH ? {} : loadMatchCache();
+  let cacheHits = 0;
+  let cacheMisses = 0;
+
+  if (FORCE_REFRESH) {
+    console.log("⚠️ --force-refresh: ignoring cached matches, re-validating all athletes.");
+  } else {
+    console.log(`📦 Match cache loaded: ${Object.keys(matchCache).length} cached entries.`);
+  }
 
   const out = {
     _meta: {
@@ -727,28 +758,47 @@ async function main() {
     console.log(`[${i + 1}/${athletes.length}] ${name} (${sport || "Unknown"})`);
 
     let match = null;
+    const cacheKey = matchCacheKey(name, sport);
+    const cached = matchCache[cacheKey];
 
-    for (const marketplaceId of ["EBAY_CA", "EBAY_US"]) {
-      const v = await validatePlayerAthleteMatch({ token, marketplaceId, name, sport });
-      if (v.ok) {
-        match = { mode: "player", value: v.aspectValue, validatedOn: marketplaceId };
-        break;
-      }
-    }
+    // Use cached match if available
+    if (cached && cached.mode && cached.value) {
+      match = cached;
+      cacheHits++;
+      console.log(`  ✅ Cache hit: ${match.mode}="${match.value}" (validated on ${match.validatedOn || "?"})`);
+    } else {
+      cacheMisses++;
 
-    if (!match) {
       for (const marketplaceId of ["EBAY_CA", "EBAY_US"]) {
-        const s = await validateSportMatch({ token, marketplaceId, name, sport });
-        if (s.ok) {
-          match = { mode: "sport", value: s.sportAspectValue, validatedOn: marketplaceId };
+        const v = await validatePlayerAthleteMatch({ token, marketplaceId, name, sport });
+        if (v.ok) {
+          match = { mode: "player", value: v.aspectValue, validatedOn: marketplaceId };
           break;
         }
       }
-    }
 
-    if (!match) {
-      console.log(`${name}: SKIPPED (no Player/Athlete match AND sport did not match)`);
-      continue;
+      if (!match) {
+        for (const marketplaceId of ["EBAY_CA", "EBAY_US"]) {
+          const s = await validateSportMatch({ token, marketplaceId, name, sport });
+          if (s.ok) {
+            match = { mode: "sport", value: s.sportAspectValue, validatedOn: marketplaceId };
+            break;
+          }
+        }
+      }
+
+      if (!match) {
+        console.log(`  ${name}: SKIPPED (no Player/Athlete match AND sport did not match)`);
+        // Cache the miss too so we don't re-validate every run
+        matchCache[cacheKey] = { mode: null, value: null, skippedAt: new Date().toISOString() };
+        saveMatchCache(matchCache);
+        continue;
+      }
+
+      // Cache the successful match
+      matchCache[cacheKey] = { ...match, cachedAt: new Date().toISOString() };
+      saveMatchCache(matchCache);
+      console.log(`  📝 Cached new match: ${match.mode}="${match.value}"`);
     }
 
     const rec = {
@@ -862,7 +912,9 @@ async function main() {
 
   fs.mkdirSync(path.dirname(OUT_PATH), { recursive: true });
   fs.writeFileSync(OUT_PATH, JSON.stringify(out, null, 2));
+  saveMatchCache(matchCache);
   console.log(`Wrote ${OUT_PATH} (indexHistory: ${history.length} entries)`);
+  console.log(`📦 Match cache summary: ${cacheHits} hits, ${cacheMisses} misses, ${Object.keys(matchCache).length} total cached.`);
 }
 
 main().catch((err) => {
