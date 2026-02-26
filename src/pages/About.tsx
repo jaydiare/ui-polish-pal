@@ -65,6 +65,7 @@ const About = () => {
                   paragraphs: [
                     "Many Venezuelans see sports cards as memories and nothing more. But the truth is that well-maintained collectibles can grow in value beyond nostalgia. Condition, rarity, and demand all matter. Knowledge makes the difference.",
                   ],
+                  extra: null,
                 },
                 {
                   title: "Our Mission",
@@ -72,14 +73,28 @@ const About = () => {
                     "VZLA Sports Elite was created to make it easy for Venezuelans around the world to discover and support their favorite hometown athletes.",
                     "Beyond simply showcasing athletes, our mission is to share knowledge about this hobby and help collectors understand how to preserve and protect the long-term value of their collections.",
                   ],
+                  extra: null,
                 },
                 {
                   title: "Why It Matters",
                   paragraphs: [
                     "Whether you started collecting recently, have been doing it quietly for many years, inherited a large collection from your father or grandfather, or received cards from a friend, your collection has potential.",
                     "I can help you find sports cards and memorabilia from active Venezuelan athletes today, and later from non-active athletes as well.",
-                    "We want to help you collect with confidence.",
-                  ],
+                  ] as (string | React.ReactNode)[],
+                  extra: (
+                    <p className="text-foreground/75 leading-relaxed text-sm mt-4">
+                      We want to help you collect with confidence.{" "}
+                      <a
+                        href="https://www.facebook.com/groups/1591729798708721/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-vzla-yellow font-bold no-underline hover:underline"
+                      >
+                        Join our Facebook community
+                      </a>{" "}
+                      to connect with other Venezuelan collectors!
+                    </p>
+                  ),
                 },
               ].map((card, i) => (
                 <motion.div
@@ -97,6 +112,7 @@ const About = () => {
                       {p}
                     </p>
                   ))}
+                  {card.extra}
                 </motion.div>
               ))}
             </div>
