@@ -57,7 +57,7 @@ const About = () => {
 
             <div className="h-16" />
 
-            <div className="grid md:grid-cols-3 gap-8 text-left">
+            <div className="grid md:grid-cols-3 gap-6 text-left items-stretch">
               {[
                 {
                   title: "What We Believe",
@@ -86,13 +86,13 @@ const About = () => {
                   initial={{ opacity: 0, y: 16 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.4, delay: 0.2 + i * 0.1 }}
-                  className="glass-panel p-8"
+                  className="glass-panel p-6 flex flex-col"
                 >
-                  <h2 className="font-display font-bold text-xl mb-4 uppercase tracking-wide text-center md:text-left">
+                  <h2 className="font-display font-bold text-base mb-3 uppercase tracking-wide">
                     {card.title}
                   </h2>
                   {card.paragraphs.map((p, j) => (
-                    <p key={j} className={`text-foreground/80 leading-[1.9] text-lg ${j > 0 ? "mt-5" : ""}`}>
+                    <p key={j} className={`text-foreground/75 leading-relaxed text-sm ${j > 0 ? "mt-4" : ""}`}>
                       {p}
                     </p>
                   ))}
