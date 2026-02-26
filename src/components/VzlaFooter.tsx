@@ -83,15 +83,8 @@ const VzlaFooter = () => {
           </div>
 
           {/* Bottom bar */}
-          <div className="pt-6 border-t border-border flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-muted-foreground">
+          <div className="pt-6 border-t border-border flex items-center justify-center text-xs text-muted-foreground">
             <span>© {new Date().getFullYear()} VZLA Sports Elite. All rights reserved.</span>
-            <span className="flex items-center gap-2">
-              Powered by real market data
-              <span className="inline-flex items-center gap-1 text-emerald-400 font-semibold">
-                <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
-                Live Data
-              </span>
-            </span>
           </div>
         </div>
       </footer>
