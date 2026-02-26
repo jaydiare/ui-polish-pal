@@ -534,7 +534,9 @@ async function ebayBrowseSearch({
     return res.json();
   }
 
-  throw new Error(`Browse search failed (${marketplaceId}): exceeded ${MAX_RETRIES + 1} retries due to 429s`);
+  // Return null instead of throwing — caller decides whether to skip
+  console.log(`  ⚠️ Giving up after ${MAX_RETRIES + 1} retries (429s) for ${marketplaceId}`);
+  return null;
 }
 
 // --- Matching / Validation ---
@@ -567,10 +569,11 @@ async function validatePlayerAthleteMatch({ token, marketplaceId, name, sport })
       aspectFilter,
     });
 
+    if (!data) return { ok: false, aspectValue: null }; // 429 exhausted
     const total = safeNum(data?.total) ?? 0;
     if (total > 0) return { ok: true, aspectValue: cand };
 
-    await sleep(120);
+    await sleep(200);
   }
 
   return { ok: false, aspectValue: null };
@@ -594,10 +597,11 @@ async function validateSportMatch({ token, marketplaceId, name, sport }) {
       aspectFilter,
     });
 
+    if (!data) return { ok: false, sportAspectValue: null }; // 429 exhausted
     const total = safeNum(data?.total) ?? 0;
     if (total > 0) return { ok: true, sportAspectValue: s };
 
-    await sleep(120);
+    await sleep(200);
   }
 
   return { ok: false, sportAspectValue: null };
@@ -636,6 +640,7 @@ async function computeAvgActiveListing({
       aspectFilter,
     });
 
+    if (!data) break; // 429 exhausted, use whatever we have
     const items = data?.itemSummaries || [];
 
     for (const it of items) {
@@ -669,7 +674,7 @@ async function computeAvgActiveListing({
 
     if (items.length < PAGE_SIZE) break;
     offset += PAGE_SIZE;
-    await sleep(120);
+    await sleep(200);
   }
 
   const taguchiListing = taguchiTrimmedMean(pricesUSD, TAGUCHI_TRIM_PCT);
