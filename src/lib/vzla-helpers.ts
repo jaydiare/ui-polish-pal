@@ -175,8 +175,8 @@ export function formatIndexNumber(n: number): string {
 // Filtering
 export interface Filters {
   search: string;
-  category: string[];
-  league: string;
+  category: string;
+  league: string[];
   price: string;
   stability: string;
   daysListed: string;
@@ -199,13 +199,13 @@ export function filterAthletes(
 
   let filtered = list
     .filter((a) => {
-      if (!filters.category.length) return true;
-      if (filters.category.includes("Other") && !["Baseball", "Soccer", "Basketball"].includes(a.sport)) return true;
-      return filters.category.includes(a.sport);
+      if (filters.category === "all") return true;
+      if (filters.category === "Other") return !["Baseball", "Soccer", "Basketball"].includes(a.sport);
+      return a.sport === filters.category;
     })
     .filter((a) => {
-      if (filters.league === "all") return true;
-      return a.league === filters.league;
+      if (!filters.league.length) return true;
+      return filters.league.includes(a.league);
     })
     .filter((a) => {
       if (filters.stability === "all") return true;

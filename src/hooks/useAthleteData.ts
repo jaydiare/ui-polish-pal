@@ -33,8 +33,8 @@ export function useAthleteData() {
   const [visibleCount, setVisibleCount] = useState(PAGE_SIZE);
   const [filters, setFilters] = useState<Filters>({
     search: "",
-    category: [],
-    league: "all",
+    category: "all",
+    league: [],
     price: "all",
     stability: "all",
     daysListed: "all",
@@ -135,8 +135,8 @@ export function useAthleteData() {
 
   const DEFAULT_FILTERS: Filters = {
     search: "",
-    category: [],
-    league: "all",
+    category: "all",
+    league: [],
     price: "all",
     stability: "all",
     daysListed: "all",
