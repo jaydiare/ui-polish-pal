@@ -37,9 +37,6 @@ const Index = () => {
       <VzlaNavbar />
 
       <div className="page-shell">
-        {/* Left sidebar */}
-        <VzlaSideBanner />
-
         {/* Main content */}
         <main id="main-content" className="w-full px-8 pb-8 pt-0" role="main" aria-label="Athlete cards and market data">
           <VzlaHero lastUpdated={lastUpdated} />
