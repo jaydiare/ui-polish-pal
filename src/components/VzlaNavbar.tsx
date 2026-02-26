@@ -55,7 +55,7 @@ const VzlaNavbar = () => {
             <span className="font-display font-bold text-sm tracking-wide text-foreground">
               VZLA SPORTS
             </span>
-            <span className="text-[9px] tracking-[0.3em] uppercase text-muted-foreground font-semibold mt-0.5">
+            <span className="text-[9px] tracking-[0.3em] uppercase text-muted-foreground font-semibold mt-0.5 text-center">
               ELITE
             </span>
           </span>
