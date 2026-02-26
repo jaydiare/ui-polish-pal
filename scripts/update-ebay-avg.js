@@ -57,6 +57,12 @@ const MATCH_CACHE_PATH = path.join(__dirname, "..", "data", "ebay-match-cache.js
 // data/athletes.json: [{ name: "Jose Altuve", sport: "Baseball" }, ...]
 const ATHLETES_PATH = path.join(__dirname, "..", "data", "athletes.json");
 
+import fs from "node:fs/promises";
+
+const athletes = JSON.parse(
+  await fs.readFile(ATHLETES_PATH, "utf8")
+);
+
 // CLI flag: --force-refresh to skip cache and re-validate all matches
 const FORCE_REFRESH = process.argv.includes("--force-refresh");
 
