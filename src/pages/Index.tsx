@@ -24,6 +24,10 @@ const Index = () => {
     loadMore,
     sportOptions,
     leagueOptions,
+    budgetResult,
+    budgetChosenIds,
+    runBudget,
+    clearBudget,
   } = useAthleteData();
 
   return (
@@ -38,7 +42,11 @@ const Index = () => {
         <main className="w-full px-8 pb-8 pt-0">
           <VzlaHero lastUpdated={lastUpdated} />
           <VzlaIndexCards athletes={athletes} byName={byName} byKey={byKey} />
-          <VzlaBudgetBar />
+          <VzlaBudgetBar
+            onSuggest={runBudget}
+            onClear={clearBudget}
+            result={budgetResult}
+          />
           <VzlaSearchFilters
             filters={filters}
             updateFilter={updateFilter}
@@ -54,6 +62,7 @@ const Index = () => {
             hasMore={hasMore}
             remainingCount={remainingCount}
             onLoadMore={loadMore}
+            highlightedIds={budgetChosenIds}
           />
           <VzlaFooter />
         </main>

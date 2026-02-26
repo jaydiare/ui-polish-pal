@@ -4,9 +4,13 @@ import {
   mergeByNameSportKeepBest,
   buildEbayIndexes,
   filterAthletes,
+  getEbayAvgNumber,
+  getMarketStabilityCV,
+  getAvgDaysOnMarket,
   Filters,
   timeAgo,
 } from "@/lib/vzla-helpers";
+import { runKnapsack, BudgetCandidate, KnapsackResult } from "@/lib/budget-knapsack";
 
 const PAGE_SIZE = 400;
 
@@ -97,6 +101,36 @@ export function useAthleteData() {
     setVisibleCount(PAGE_SIZE);
   }, []);
 
+  // Budget knapsack
+  const [budgetResult, setBudgetResult] = useState<KnapsackResult | null>(null);
+
+  const budgetCandidates = useMemo((): BudgetCandidate[] => {
+    return filteredAthletes.map((a) => ({
+      name: a.name,
+      price: getEbayAvgNumber(a, byName, byKey),
+      stabilityPct: (() => {
+        const cv = getMarketStabilityCV(a, byName, byKey);
+        return cv != null ? cv * 100 : null;
+      })(),
+      daysOnMarket: getAvgDaysOnMarket(a, byName, byKey),
+    }));
+  }, [filteredAthletes, byName, byKey]);
+
+  const runBudget = useCallback((budgetDollars: number, maxCards: number | null) => {
+    const result = runKnapsack(budgetCandidates, budgetDollars, maxCards);
+    setBudgetResult(result);
+  }, [budgetCandidates]);
+
+  const clearBudget = useCallback(() => {
+    setBudgetResult(null);
+  }, []);
+
+  // Chosen IDs set for highlighting
+  const budgetChosenIds = useMemo(() => {
+    if (!budgetResult) return new Set<string>();
+    return new Set(budgetResult.chosen.map((c) => c.id));
+  }, [budgetResult]);
+
   return {
     athletes,
     filteredAthletes,
@@ -111,5 +145,9 @@ export function useAthleteData() {
     loadMore,
     sportOptions,
     leagueOptions,
+    budgetResult,
+    budgetChosenIds,
+    runBudget,
+    clearBudget,
   };
 }

@@ -13,9 +13,10 @@ interface AthleteCardProps {
   athlete: Athlete;
   byName: Record<string, EbayAvgRecord>;
   byKey: Record<string, EbayAvgRecord>;
+  isRecommended?: boolean;
 }
 
-const AthleteCard = ({ athlete, byName, byKey }: AthleteCardProps) => {
+const AthleteCard = ({ athlete, byName, byKey, isRecommended }: AthleteCardProps) => {
   const avgNum = getEbayAvgNumber(athlete, byName, byKey);
   const money = avgNum != null ? formatCurrency(avgNum, "USD") : "—";
 
@@ -29,7 +30,15 @@ const AthleteCard = ({ athlete, byName, byKey }: AthleteCardProps) => {
   const initials = initialsFromName(athlete.name);
 
   return (
-    <article className="athlete-card group">
+    <article className={`athlete-card group ${isRecommended ? "is-recommended" : ""}`}>
+      {/* Recommended badge */}
+      {isRecommended && (
+        <div className="mb-2 -mt-1 text-[10px] font-bold text-vzla-yellow tracking-wider uppercase flex items-center gap-1.5">
+          <span className="w-1.5 h-1.5 rounded-full bg-vzla-yellow" />
+          Budget Pick
+        </div>
+      )}
+
       {/* Header */}
       <div className="flex gap-3 items-start">
         <div className="w-12 h-12 rounded-xl flex items-center justify-center font-display font-bold text-sm tracking-wide bg-secondary border border-border text-vzla-yellow shrink-0">
