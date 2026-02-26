@@ -47,7 +47,6 @@ const Index = () => {
           filters={filters}
           updateFilter={updateFilter}
           sportOptions={sportOptions}
-          leagueOptions={leagueOptions}
           totalCount={athletes.length}
           filteredCount={filteredAthletes.length}
         />
