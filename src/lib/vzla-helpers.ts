@@ -212,9 +212,11 @@ export function filterAthletes(
     .filter((a) => !q || norm(a.name).includes(q))
     .filter((a) => {
       if (filters.daysListed === "all") return true;
+      const price = getEbayAvgNumber(a, byName, byKey);
       const days = getAvgDaysOnMarket(a, byName, byKey);
-      if (filters.daysListed === "none") return days == null;
-      if (days == null) return false;
+      // Athletes with no price/listing data belong in "none" (No Data), not "low"
+      if (filters.daysListed === "none") return price == null || days == null;
+      if (price == null || days == null) return false;
       if (filters.daysListed === "low") return days < 180;
       if (filters.daysListed === "medium") return days >= 180 && days <= 540;
       if (filters.daysListed === "high") return days > 540;
