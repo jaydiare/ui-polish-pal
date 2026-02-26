@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { Link, useLocation } from "react-router-dom";
 
 const SOCIAL_LINKS = {
   instagram: "https://www.instagram.com/localheros_sportscards/",
@@ -41,11 +42,12 @@ const VzlaNavbar = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [shopOpen, setShopOpen] = useState(false);
   const [contactOpen, setContactOpen] = useState(false);
+  const location = useLocation();
 
   return (
     <>
       <nav className="vzla-nav px-6 py-4 flex items-center justify-between">
-        <a href="#top" className="flex items-center gap-3 no-underline select-none group">
+        <Link to="/" className="flex items-center gap-3 no-underline select-none group">
           <div className="w-9 h-9 rounded-lg cta-flag flex items-center justify-center">
             <span className="font-display font-bold text-xs text-white">VZ</span>
           </div>
@@ -57,25 +59,25 @@ const VzlaNavbar = () => {
               ELITE INDEX
             </span>
           </span>
-        </a>
+        </Link>
 
         {/* Desktop nav */}
         <ul className="hidden md:flex gap-1 items-center m-0 p-0 list-none">
           {[
-            { label: "Home", href: "#top", gradient: true },
-            { label: "About", href: "#about" },
+            { label: "Home", to: "/" },
+            { label: "About", to: "/about" },
           ].map((item) => (
             <li key={item.label}>
-              <a
-                href={item.href}
+              <Link
+                to={item.to}
                 className={`px-4 py-2 rounded-lg text-sm font-semibold no-underline transition-colors ${
-                  item.gradient
+                  location.pathname === item.to
                     ? "text-vzla-yellow"
                     : "text-foreground/70 hover:text-foreground hover:bg-secondary"
                 }`}
               >
                 {item.label}
-              </a>
+              </Link>
             </li>
           ))}
 
@@ -159,12 +161,12 @@ const VzlaNavbar = () => {
             className="fixed inset-0 z-[10000] bg-background/95 backdrop-blur-xl p-5"
           >
             <div className="flex items-center justify-between">
-              <a href="#top" className="flex items-center gap-3 no-underline" onClick={() => setMobileOpen(false)}>
+              <Link to="/" className="flex items-center gap-3 no-underline" onClick={() => setMobileOpen(false)}>
                 <div className="w-8 h-8 rounded-lg cta-flag flex items-center justify-center">
                   <span className="font-display font-bold text-xs text-white">VZ</span>
                 </div>
                 <span className="font-display font-bold text-sm text-foreground">VZLA SPORTS</span>
-              </a>
+              </Link>
               <button
                 className="w-10 h-10 rounded-lg border border-border bg-secondary text-foreground flex items-center justify-center cursor-pointer"
                 onClick={() => setMobileOpen(false)}
@@ -181,15 +183,18 @@ const VzlaNavbar = () => {
               transition={{ delay: 0.1 }}
               className="mt-8 flex flex-col gap-3 max-w-md mx-auto"
             >
-              {["Home", "About"].map((label) => (
-                <a
-                  key={label}
-                  href={label === "Home" ? "#top" : `#${label.toLowerCase()}`}
+              {[
+                { label: "Home", to: "/" },
+                { label: "About", to: "/about" },
+              ].map((item) => (
+                <Link
+                  key={item.label}
+                  to={item.to}
                   onClick={() => setMobileOpen(false)}
                   className="flex items-center justify-center w-full py-4 rounded-xl border border-border bg-secondary text-foreground no-underline font-display font-bold text-lg hover:bg-vzla-yellow/10 hover:border-vzla-yellow/20 transition-colors"
                 >
-                  {label}
-                </a>
+                  {item.label}
+                </Link>
               ))}
               <a
                 href={EBAY_STORE}
