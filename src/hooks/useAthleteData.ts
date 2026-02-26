@@ -34,7 +34,7 @@ export function useAthleteData() {
   const [filters, setFilters] = useState<Filters>({
     search: "",
     category: "all",
-    league: "all",
+    league: [],
     price: "all",
     stability: "all",
     daysListed: "all",
@@ -107,7 +107,7 @@ export function useAthleteData() {
     return Array.from(new Set(athletes.map((a) => a.league).filter(Boolean))).sort();
   }, [athletes]);
 
-  const updateFilter = useCallback((key: keyof Filters, value: string) => {
+  const updateFilter = useCallback((key: keyof Filters, value: any) => {
     setFilters((prev) => ({ ...prev, [key]: value }));
     setVisibleCount(PAGE_SIZE);
   }, []);
@@ -136,7 +136,7 @@ export function useAthleteData() {
   const DEFAULT_FILTERS: Filters = {
     search: "",
     category: "all",
-    league: "all",
+    league: [],
     price: "all",
     stability: "all",
     daysListed: "all",

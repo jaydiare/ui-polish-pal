@@ -25,6 +25,7 @@ const Index = () => {
     remainingCount,
     loadMore,
     sportOptions,
+    leagueOptions,
     budgetResult,
     budgetChosenIds,
     runBudget,
@@ -48,6 +49,7 @@ const Index = () => {
           filters={filters}
           updateFilter={updateFilter}
           sportOptions={sportOptions}
+          leagueOptions={leagueOptions}
           totalCount={athletes.length}
           filteredCount={filteredAthletes.length}
         />
