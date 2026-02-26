@@ -35,6 +35,7 @@ export function useAthleteData() {
     league: "all",
     price: "all",
     stability: "all",
+    daysListed: "all",
   });
 
   // Build indexes

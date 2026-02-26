@@ -179,6 +179,7 @@ export interface Filters {
   league: string;
   price: string;
   stability: string;
+  daysListed: string;
 }
 
 export function filterAthletes(
@@ -208,7 +209,17 @@ export function filterAthletes(
       if (getEbayAvgNumber(a, byName, byKey) == null) return false;
       return bucket === filters.stability;
     })
-    .filter((a) => !q || norm(a.name).includes(q));
+    .filter((a) => !q || norm(a.name).includes(q))
+    .filter((a) => {
+      if (filters.daysListed === "all") return true;
+      const days = getAvgDaysOnMarket(a, byName, byKey);
+      if (filters.daysListed === "none") return days == null;
+      if (days == null) return false;
+      if (filters.daysListed === "low") return days < 180;
+      if (filters.daysListed === "medium") return days >= 180 && days <= 540;
+      if (filters.daysListed === "high") return days > 540;
+      return true;
+    });
 
   if (filters.price === "none") {
     filtered = filtered.filter((a) => getEbayAvgNumber(a, byName, byKey) == null);
