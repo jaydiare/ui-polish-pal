@@ -480,9 +480,25 @@ async function getAppToken() {
 // --- API call counter ---
 let apiCallCount = 0;
 let apiRetryCount = 0;
+let lastApiRequestAt = 0;
 
-// --- eBay Browse Search (with retry on 429) ---
-const MAX_RETRIES = 4;
+// --- eBay Browse Search (with retry/throttle for rate limits) ---
+const MAX_RETRIES = 6;
+const MIN_REQUEST_GAP_MS = 300;
+const MAX_BACKOFF_MS = 30_000;
+
+function isRateLimitPayload(text) {
+  const t = String(text || "").toLowerCase();
+  return t.includes('"errorid": 2001') || t.includes("too many requests") || t.includes("request limit has been reached");
+}
+
+async function throttleEbayRequests() {
+  const now = Date.now();
+  const elapsed = now - lastApiRequestAt;
+  const waitMs = Math.max(0, MIN_REQUEST_GAP_MS - elapsed);
+  if (waitMs > 0) await sleep(waitMs);
+  lastApiRequestAt = Date.now();
+}
 
 async function ebayBrowseSearch({
   token,
@@ -506,36 +522,59 @@ async function ebayBrowseSearch({
   }
 
   for (let attempt = 0; attempt <= MAX_RETRIES; attempt++) {
-    const res = await fetch(url.toString(), {
-      headers: {
-        Authorization: `Bearer ${token}`,
-        "Content-Type": "application/json",
-        ...getHeaderMarketplace(marketplaceId),
-      },
-    });
+    await throttleEbayRequests();
 
-    if (res.status === 429) {
-      const retryAfter = res.headers.get("Retry-After");
-      const waitMs = retryAfter
-        ? parseInt(retryAfter, 10) * 1000
-        : Math.pow(2, attempt) * 1000 + Math.random() * 500;
-      console.log(`  ⏳ 429 rate-limited, waiting ${Math.round(waitMs / 1000)}s (attempt ${attempt + 1}/${MAX_RETRIES + 1})`);
+    let res;
+    try {
+      res = await fetch(url.toString(), {
+        headers: {
+          Authorization: `Bearer ${token}`,
+          "Content-Type": "application/json",
+          ...getHeaderMarketplace(marketplaceId),
+        },
+      });
+    } catch (err) {
+      if (attempt >= MAX_RETRIES) {
+        throw new Error(`Browse search network error (${marketplaceId}): ${err?.message || err}`);
+      }
+      const waitMs = Math.min(MAX_BACKOFF_MS, Math.pow(2, attempt) * 1500 + Math.random() * 1200);
       apiRetryCount++;
+      console.log(`  🌐 Network retry in ${Math.round(waitMs / 1000)}s (attempt ${attempt + 1}/${MAX_RETRIES + 1})`);
       await sleep(waitMs);
       continue;
     }
 
-    if (!res.ok) {
-      const txt = await res.text().catch(() => "");
-      throw new Error(`Browse search failed (${marketplaceId}) ${res.status}: ${txt}`);
+    const txt = await res.text().catch(() => "");
+
+    if (res.ok) {
+      apiCallCount++;
+      try {
+        return txt ? JSON.parse(txt) : {};
+      } catch {
+        throw new Error(`Browse search parse error (${marketplaceId}): invalid JSON response`);
+      }
     }
 
-    apiCallCount++;
-    return res.json();
+    const limited = res.status === 429 || isRateLimitPayload(txt);
+    if (limited) {
+      const retryAfterRaw = res.headers.get("Retry-After") || "";
+      const retryAfter = Number.parseInt(retryAfterRaw, 10);
+      const backoff = Math.min(MAX_BACKOFF_MS, Math.pow(2, attempt) * 1500 + Math.random() * 1200);
+      const waitMs = Number.isFinite(retryAfter) && retryAfter > 0
+        ? Math.min(MAX_BACKOFF_MS, retryAfter * 1000 + Math.random() * 1200)
+        : backoff;
+
+      apiRetryCount++;
+      console.log(`  ⏳ Rate-limited (${marketplaceId}), waiting ${Math.round(waitMs / 1000)}s (attempt ${attempt + 1}/${MAX_RETRIES + 1})`);
+      await sleep(waitMs);
+      continue;
+    }
+
+    throw new Error(`Browse search failed (${marketplaceId}) ${res.status}: ${txt}`);
   }
 
   // Return null instead of throwing — caller decides whether to skip
-  console.log(`  ⚠️ Giving up after ${MAX_RETRIES + 1} retries (429s) for ${marketplaceId}`);
+  console.log(`  ⚠️ Giving up after ${MAX_RETRIES + 1} retries for ${marketplaceId}`);
   return null;
 }
 
@@ -809,19 +848,29 @@ async function main() {
       cacheMisses++;
 
       for (const marketplaceId of ["EBAY_CA", "EBAY_US"]) {
-        const v = await validatePlayerAthleteMatch({ token, marketplaceId, name, sport });
-        if (v.ok) {
-          match = { mode: "player", value: v.aspectValue, validatedOn: marketplaceId };
-          break;
+        try {
+          const v = await validatePlayerAthleteMatch({ token, marketplaceId, name, sport });
+          if (v.ok) {
+            match = { mode: "player", value: v.aspectValue, validatedOn: marketplaceId };
+            break;
+          }
+        } catch (e) {
+          console.log(`  ⚠️ ${name} (${marketplaceId}) player-match validation error: ${e?.message || e}`);
+          await sleep(1000);
         }
       }
 
       if (!match) {
         for (const marketplaceId of ["EBAY_CA", "EBAY_US"]) {
-          const s = await validateSportMatch({ token, marketplaceId, name, sport });
-          if (s.ok) {
-            match = { mode: "sport", value: s.sportAspectValue, validatedOn: marketplaceId };
-            break;
+          try {
+            const s = await validateSportMatch({ token, marketplaceId, name, sport });
+            if (s.ok) {
+              match = { mode: "sport", value: s.sportAspectValue, validatedOn: marketplaceId };
+              break;
+            }
+          } catch (e) {
+            console.log(`  ⚠️ ${name} (${marketplaceId}) sport-match validation error: ${e?.message || e}`);
+            await sleep(1000);
           }
         }
       }
