@@ -19,13 +19,13 @@ const VzlaSearchFilters = ({
 }: VzlaSearchFiltersProps) => {
   return (
     <div className="glass-panel p-5 mb-6">
-      <div className="flex flex-col lg:flex-row gap-4 items-start lg:items-end">
+      <div className="grid grid-cols-1 lg:grid-cols-[1fr_auto] gap-5 items-end">
         {/* Search */}
-        <div className="flex-1 w-full lg:max-w-sm">
+        <div>
           <label className="text-[10px] tracking-widest uppercase font-bold text-muted-foreground mb-1.5 block">
             Search
           </label>
-          <div className="relative flex items-center gap-2 h-10 w-full px-3 rounded-lg glass-input">
+          <div className="relative flex items-center gap-2 h-11 w-full px-3.5 rounded-lg bg-secondary border border-border transition-all focus-within:border-primary/40 focus-within:shadow-[0_0_0_3px_hsl(var(--primary)/0.08)]">
             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" className="text-muted-foreground shrink-0">
               <path d="M21 21l-4.3-4.3m1.8-5.2a7 7 0 11-14 0 7 7 0 0114 0z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
             </svg>
@@ -40,7 +40,7 @@ const VzlaSearchFilters = ({
             />
             {filters.search && (
               <button
-                className="w-6 h-6 rounded-md bg-secondary border border-border text-muted-foreground flex items-center justify-center cursor-pointer hover:text-foreground transition-colors"
+                className="w-6 h-6 rounded-md bg-muted text-muted-foreground flex items-center justify-center cursor-pointer hover:text-foreground transition-colors"
                 onClick={() => updateFilter("search", "")}
                 aria-label="Clear search"
               >
@@ -49,12 +49,12 @@ const VzlaSearchFilters = ({
             )}
           </div>
           <div className="mt-1.5 text-[11px] text-muted-foreground">
-            Showing <span className="text-foreground font-medium">{filteredCount}</span> of {totalCount} players
+            Showing <span className="text-foreground font-semibold">{filteredCount}</span> of {totalCount} players
           </div>
         </div>
 
-        {/* Filters */}
-        <div className="flex gap-3 items-end flex-wrap lg:flex-nowrap">
+        {/* Filters row */}
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
           <FilterSelect
             label="Category"
             value={filters.category}
@@ -112,12 +112,12 @@ interface FilterSelectProps {
 }
 
 const FilterSelect = ({ label, value, onChange, options }: FilterSelectProps) => (
-  <label className="flex flex-col gap-1.5 min-w-[140px]">
+  <label className="flex flex-col gap-1.5 min-w-[130px]">
     <span className="text-[10px] tracking-widest uppercase font-bold text-muted-foreground">
       {label}
     </span>
     <select
-      className="h-10 px-3 pr-8 rounded-lg glass-input text-foreground text-sm outline-none appearance-none cursor-pointer bg-[url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2212%22%20height%3D%2212%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22%236b7280%22%20stroke-width%3D%222.5%22%3E%3Cpath%20d%3D%22M6%209l6%206%206-6%22%2F%3E%3C%2Fsvg%3E')] bg-[length:12px] bg-[position:calc(100%-10px)_center] bg-no-repeat"
+      className="h-11 px-3.5 pr-9 rounded-lg bg-secondary border border-border text-foreground text-sm outline-none appearance-none cursor-pointer transition-all focus:border-primary/40 focus:shadow-[0_0_0_3px_hsl(var(--primary)/0.08)] bg-[url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2212%22%20height%3D%2212%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22%236b7280%22%20stroke-width%3D%222.5%22%3E%3Cpath%20d%3D%22M6%209l6%206%206-6%22%2F%3E%3C%2Fsvg%3E')] bg-[length:12px] bg-[position:calc(100%-12px)_center] bg-no-repeat"
       value={value}
       onChange={(e) => onChange(e.target.value)}
     >
