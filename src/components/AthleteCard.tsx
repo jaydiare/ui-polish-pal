@@ -89,7 +89,7 @@ const AthleteCard = ({ athlete, byName, byKey, isRecommended }: AthleteCardProps
 
       {/* Stats row */}
       <div className="mt-3 flex items-center justify-between text-[11px] text-muted-foreground">
-        <span>⏳ Listed: <strong className="text-foreground/70">{domText}</strong></span>
+        <span><span className="text-foreground/80">⏱</span> Listed: <strong className="text-foreground/70">{domText}</strong></span>
         <span className="text-foreground/40 italic text-[10px]">*prices may vary*</span>
       </div>
 
