@@ -60,7 +60,7 @@ const Index = () => {
             athletes={budgetChosenIds.size > 0 ? filteredAthletes : paginatedAthletes}
             byName={byName}
             byKey={byKey}
-            hasMore={hasMore}
+            hasMore={budgetChosenIds.size > 0 ? false : hasMore}
             remainingCount={remainingCount}
             onLoadMore={loadMore}
             highlightedIds={budgetChosenIds}
