@@ -477,7 +477,9 @@ async function getAppToken() {
   return json.access_token;
 }
 
-// --- eBay Browse Search ---
+// --- eBay Browse Search (with retry on 429) ---
+const MAX_RETRIES = 4;
+
 async function ebayBrowseSearch({
   token,
   marketplaceId,
@@ -499,20 +501,34 @@ async function ebayBrowseSearch({
     url.searchParams.set("aspect_filter", aspectFilter);
   }
 
-  const res = await fetch(url.toString(), {
-    headers: {
-      Authorization: `Bearer ${token}`,
-      "Content-Type": "application/json",
-      ...getHeaderMarketplace(marketplaceId),
-    },
-  });
+  for (let attempt = 0; attempt <= MAX_RETRIES; attempt++) {
+    const res = await fetch(url.toString(), {
+      headers: {
+        Authorization: `Bearer ${token}`,
+        "Content-Type": "application/json",
+        ...getHeaderMarketplace(marketplaceId),
+      },
+    });
 
-  if (!res.ok) {
-    const txt = await res.text().catch(() => "");
-    throw new Error(`Browse search failed (${marketplaceId}) ${res.status}: ${txt}`);
+    if (res.status === 429) {
+      const retryAfter = res.headers.get("Retry-After");
+      const waitMs = retryAfter
+        ? parseInt(retryAfter, 10) * 1000
+        : Math.pow(2, attempt) * 1000 + Math.random() * 500;
+      console.log(`  ⏳ 429 rate-limited, waiting ${Math.round(waitMs / 1000)}s (attempt ${attempt + 1}/${MAX_RETRIES + 1})`);
+      await sleep(waitMs);
+      continue;
+    }
+
+    if (!res.ok) {
+      const txt = await res.text().catch(() => "");
+      throw new Error(`Browse search failed (${marketplaceId}) ${res.status}: ${txt}`);
+    }
+
+    return res.json();
   }
 
-  return res.json();
+  throw new Error(`Browse search failed (${marketplaceId}): exceeded ${MAX_RETRIES + 1} retries due to 429s`);
 }
 
 // --- Matching / Validation ---
