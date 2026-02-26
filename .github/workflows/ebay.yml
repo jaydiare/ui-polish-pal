@@ -2,7 +2,7 @@ name: Update eBay averages
 
 on:
   schedule:
-      - cron: "0 0,8,16 * * *"  
+    - cron: "0 0,8,16 * * *"
   workflow_dispatch:
 
 concurrency:
@@ -18,13 +18,16 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # required for rebase
 
       - uses: actions/setup-node@v4
         with:
           node-version: 20
 
-      - run: npm install --no-audit --no-fund
+      - name: Install deps
         if: hashFiles('package-lock.json') != ''
+        run: npm ci --no-audit --no-fund
 
       - name: Update eBay averages
         run: node scripts/update-ebay-avg.js
@@ -37,8 +40,10 @@ jobs:
           mkdir -p public/data
           cp data/ebay-avg.json public/data/ebay-avg.json
 
-      - name: Commit changes
+      - name: Commit & push (rebase-safe)
         run: |
+          set -e
+
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
@@ -50,4 +55,9 @@ jobs:
           fi
 
           git commit -m "Update eBay sold averages"
-          git push origin main
+
+          # In case origin/main moved while this job was running:
+          git fetch origin main
+          git rebase origin/main
+
+          git push origin HEAD:main
