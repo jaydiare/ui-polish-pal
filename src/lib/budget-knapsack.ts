@@ -73,6 +73,8 @@ function knapsackPickWithMaxCount(
   budgetCents: number,
   maxCount: number
 ): KnapsackItem[] {
+  type PathNode = { itemIndex: number; prev: PathNode | null };
+
   const B = budgetCents;
   const K = Math.max(1, maxCount | 0);
   const width = B + 1;
@@ -82,10 +84,7 @@ function knapsackPickWithMaxCount(
   dp.fill(-Infinity);
   dp[0] = 0;
 
-  const choice = new Int32Array(size);
-  const prevBArr = new Int32Array(size);
-  choice.fill(-1);
-  prevBArr.fill(-1);
+  const pathHead: Array<PathNode | null> = Array(size).fill(null);
 
   for (let i = 0; i < items.length; i++) {
     const w = items[i].priceCents;
@@ -104,8 +103,7 @@ function knapsackPickWithMaxCount(
         const cand = base + v;
         if (cand > dp[to]) {
           dp[to] = cand;
-          choice[to] = i;
-          prevBArr[to] = b - w;
+          pathHead[to] = { itemIndex: i, prev: pathHead[from] };
         }
       }
     }
@@ -141,16 +139,11 @@ function knapsackPickWithMaxCount(
   if (bestB < 0 || bestVal === -Infinity) return [];
 
   const chosen: KnapsackItem[] = [];
-  let k = bestK;
-  let b = bestB;
+  let node = pathHead[bestK * width + bestB];
 
-  while (k > 0) {
-    const idx = k * width + b;
-    const i = choice[idx];
-    if (i < 0) break;
-    chosen.push(items[i]);
-    b = prevBArr[idx];
-    k--;
+  while (node) {
+    chosen.push(items[node.itemIndex]);
+    node = node.prev;
   }
 
   chosen.reverse();
