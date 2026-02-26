@@ -27,9 +27,12 @@ const VzlaBudgetBar = ({ onSuggest, onClear, result }: VzlaBudgetBarProps) => {
 
   return (
     <div className="glass-panel p-5 mb-4" role="region" aria-label="Budget suggestion tool">
-      <label className="text-[10px] tracking-widest uppercase font-bold text-muted-foreground mb-3 block">
+      <label className="text-[10px] tracking-widest uppercase font-bold text-muted-foreground mb-1 block">
         💰 Budget Optimizer
       </label>
+      <p className="text-xs text-muted-foreground mb-3">
+        Enter your budget and we'll find the best combination of cards to maximize value using market data.
+      </p>
       <div className="grid grid-cols-1 sm:grid-cols-[1fr_1fr_auto_auto] gap-3 items-end">
         <div>
           <label htmlFor="budget-input" className="sr-only">Budget amount in USD</label>
