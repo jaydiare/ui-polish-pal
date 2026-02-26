@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -6,51 +6,53 @@
 
 @layer base {
   :root {
-    --background: 222 47% 6%;
-    --foreground: 210 40% 96%;
+    --background: 222 80% 5%;
+    --foreground: 0 0% 96%;
 
-    --card: 222 47% 10%;
-    --card-foreground: 210 40% 96%;
+    --card: 0 0% 5%;
+    --card-foreground: 0 0% 96%;
 
-    --popover: 222 47% 10%;
-    --popover-foreground: 210 40% 96%;
+    --popover: 222 80% 5%;
+    --popover-foreground: 0 0% 96%;
 
-    --primary: 217 91% 60%;
-    --primary-foreground: 0 0% 100%;
+    --primary: 55 93% 51%;
+    --primary-foreground: 0 0% 0%;
 
-    --secondary: 222 47% 14%;
-    --secondary-foreground: 210 40% 96%;
+    --secondary: 222 40% 12%;
+    --secondary-foreground: 0 0% 96%;
 
-    --muted: 222 30% 18%;
-    --muted-foreground: 215 20% 55%;
+    --muted: 222 30% 14%;
+    --muted-foreground: 0 0% 55%;
 
-    --accent: 280 70% 60%;
-    --accent-foreground: 0 0% 100%;
+    --accent: 170 100% 75%;
+    --accent-foreground: 0 0% 0%;
 
     --destructive: 0 84% 60%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 0 0% 98%;
 
-    --border: 222 30% 18%;
-    --input: 222 30% 18%;
-    --ring: 217 91% 60%;
+    --border: 0 0% 100% / 0.08;
+    --input: 0 0% 100% / 0.10;
+    --ring: 55 93% 51%;
 
-    --radius: 0.75rem;
+    --radius: 0.875rem;
 
-    --hero-gradient: linear-gradient(135deg, hsl(217 91% 60%) 0%, hsl(280 70% 60%) 100%);
-    --glow-primary: 0 0 40px hsl(217 91% 60% / 0.3);
-    --glow-accent: 0 0 40px hsl(280 70% 60% / 0.3);
+    --vzla-bg: #000A27;
+    --vzla-panel: #0b0b0b;
+    --vzla-mint: #7fffe1;
+    --vzla-yellow: #f4d40d;
+    --vzla-blue: #1b4fb3;
+    --vzla-red: #b11226;
 
-    --sidebar-background: 222 47% 8%;
-    --sidebar-foreground: 210 40% 96%;
-    --sidebar-primary: 217 91% 60%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 222 47% 14%;
-    --sidebar-accent-foreground: 210 40% 96%;
-    --sidebar-border: 222 30% 18%;
-    --sidebar-ring: 217 91% 60%;
+    --vzla-flag-grad: linear-gradient(90deg, #f4d40d 0%, #1b4fb3 45%, #b11226 100%);
 
-    --font-heading: 'Space Grotesk', sans-serif;
-    --font-body: 'Inter', sans-serif;
+    --sidebar-background: 222 80% 5%;
+    --sidebar-foreground: 0 0% 96%;
+    --sidebar-primary: 55 93% 51%;
+    --sidebar-primary-foreground: 0 0% 0%;
+    --sidebar-accent: 222 40% 12%;
+    --sidebar-accent-foreground: 0 0% 96%;
+    --sidebar-border: 0 0% 100% / 0.08;
+    --sidebar-ring: 55 93% 51%;
   }
 }
 
@@ -60,30 +62,352 @@
   }
 
   body {
-    @apply bg-background text-foreground;
-    font-family: var(--font-body);
+    background: var(--vzla-bg);
+    color: #fff;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    min-height: 100vh;
+    overflow-x: hidden;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    font-family: var(--font-heading);
+    font-weight: 800;
+    letter-spacing: -0.02em;
   }
 }
 
+/* ===========================
+   Gradient text utility
+   =========================== */
 @layer utilities {
-  .text-gradient {
-    @apply bg-clip-text text-transparent;
-    background-image: var(--hero-gradient);
+  .text-flag-gradient {
+    background: var(--vzla-flag-grad);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
   }
 
-  .glow-primary {
-    box-shadow: var(--glow-primary);
+  .glass-panel {
+    background: rgba(18, 18, 18, 0.65);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 18px;
+    box-shadow: 0 18px 45px rgba(0, 0, 0, 0.35);
   }
 
-  .glow-accent {
-    box-shadow: var(--glow-accent);
+  .glass-input {
+    background: rgba(11, 18, 32, 0.72);
+    border: 1px solid rgba(255, 255, 255, 0.10);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
   }
 
-  .glass {
-    @apply bg-card/60 backdrop-blur-xl border border-border/50;
+  .cta-yellow {
+    background: linear-gradient(180deg, #f7f73a 0%, #f2f20d 60%, #d4d400 100%);
+    color: #000;
+    font-weight: 950;
+  }
+
+  .cta-flag {
+    background: var(--vzla-flag-grad);
+    color: #000;
+    font-weight: 900;
+    box-shadow: 0 18px 45px rgba(0, 0, 0, 0.55);
+  }
+}
+
+/* ===========================
+   Nav gradient layers
+   =========================== */
+.vzla-nav {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  overflow: visible !important;
+  background: transparent !important;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  isolation: isolate;
+}
+
+.vzla-nav::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  pointer-events: none;
+  background: linear-gradient(
+    90deg,
+    rgba(244, 212, 13, 0.22) 0%,
+    rgba(0, 51, 160, 0.22) 50%,
+    rgba(207, 20, 43, 0.22) 100%
+  );
+}
+
+.vzla-nav::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.10), rgba(0, 0, 0, 0.40));
+}
+
+.vzla-nav > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* ===========================
+   Hero gradient layers
+   =========================== */
+.hero-panel {
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+  background: transparent;
+}
+
+.hero-panel::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  pointer-events: none;
+  background: linear-gradient(
+    90deg,
+    rgba(244, 212, 13, 0.22) 0%,
+    rgba(0, 51, 160, 0.22) 50%,
+    rgba(207, 20, 43, 0.22) 100%
+  );
+}
+
+.hero-panel::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background: rgba(0, 0, 0, 0.50);
+}
+
+.hero-panel > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Hero sub text box */
+.hero-sub {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  border-radius: 16px;
+  padding: 14px 18px;
+  max-width: 1100px;
+  width: 100%;
+  margin: 14px auto 0;
+  background: transparent;
+  color: rgba(255, 255, 255, 0.92);
+  line-height: 1.55;
+}
+
+.hero-sub::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  pointer-events: none;
+  background: linear-gradient(
+    90deg,
+    rgba(244, 212, 13, 0.18) 0%,
+    rgba(0, 51, 160, 0.18) 50%,
+    rgba(207, 20, 43, 0.18) 100%
+  );
+}
+
+.hero-sub::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background: rgba(0, 0, 0, 0.42);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+/* ===========================
+   Athlete card
+   =========================== */
+.athlete-card {
+  min-width: 0;
+  padding: 16px;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.55);
+  display: flex;
+  flex-direction: column;
+  min-height: 240px;
+  text-align: left;
+  transition: transform 0.15s ease, border-color 0.15s ease;
+}
+
+.athlete-card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(255, 255, 255, 0.14);
+}
+
+.athlete-card.is-recommended {
+  outline: 2px solid rgba(242, 242, 13, 0.65);
+  box-shadow: 0 0 0 6px rgba(242, 242, 13, 0.10);
+}
+
+/* ===========================
+   Icon button
+   =========================== */
+.icon-btn {
+  width: 46px;
+  height: 46px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  color: rgba(255, 255, 255, 0.9);
+  text-decoration: none;
+  transition: 0.15s ease;
+}
+
+.icon-btn:hover {
+  background: rgba(242, 242, 13, 0.12);
+  color: var(--vzla-yellow);
+  border-color: rgba(242, 242, 13, 0.25);
+}
+
+/* ===========================
+   Mobile menu
+   =========================== */
+.mobile-menu {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  background: rgba(10, 10, 10, 0.92);
+  backdrop-filter: blur(14px);
+  display: none;
+  padding: 18px;
+  padding-top: calc(18px + env(safe-area-inset-top));
+  padding-bottom: calc(18px + env(safe-area-inset-bottom));
+}
+
+.mobile-menu.is-open {
+  display: block;
+}
+
+/* ===========================
+   Page shell (3-col layout)
+   =========================== */
+.page-shell {
+  max-width: 1700px;
+  margin: 0 auto;
+  padding: 0 18px 120px;
+  display: grid;
+  grid-template-columns: 160px 1fr 160px;
+  gap: 20px;
+  align-items: start;
+}
+
+.side-banner {
+  position: sticky;
+  top: 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  max-height: calc(100vh - 120px);
+  overflow-y: auto;
+  scrollbar-width: none;
+  align-items: center;
+  width: 100%;
+}
+
+.side-banner img {
+  width: 100%;
+  max-width: 140px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.45);
+}
+
+@media (max-width: 980px) {
+  .page-shell {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    padding: 0 14px 120px;
+  }
+  .page-shell > main {
+    grid-column: 1;
+    padding: 16px !important;
+    padding-top: 0 !important;
+  }
+  .page-shell > .side-banner {
+    display: none;
+  }
+}
+
+/* ===========================
+   eBay fixed footer
+   =========================== */
+.ebay-footer {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9999;
+  background: rgba(0, 10, 39, 0.88);
+  backdrop-filter: blur(10px);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  padding-bottom: calc(10px + env(safe-area-inset-bottom));
+}
+
+.ebay-banner-img {
+  width: min(700px, 92vw);
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.55);
+}
+
+.footer-banner-spacer {
+  height: 105px;
+}
+
+@media (min-width: 768px) {
+  .footer-banner-spacer {
+    height: 95px;
+  }
+}
+
+/* Mobile hero */
+@media (max-width: 768px) {
+  .hero-panel {
+    padding: 22px 14px !important;
+    border-radius: 18px;
+  }
+  .hero-panel h1 {
+    font-size: 44px !important;
+    line-height: 1.05 !important;
+  }
+  .hero-sub {
+    font-size: 14px;
+    padding: 12px 14px;
+    margin-top: 12px;
+  }
+  .vzla-nav::before {
+    filter: saturate(1.2);
+  }
+  .vzla-nav::after {
+    background: rgba(0, 0, 0, 0.55);
   }
 }
