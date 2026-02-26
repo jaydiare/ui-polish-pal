@@ -6,7 +6,6 @@ const VzlaBudgetBar = () => {
   const [result, setResult] = useState<string | null>(null);
 
   const handleSuggest = () => {
-    // Budget suggestion placeholder - requires budget-knapsack logic
     if (!budget) {
       setResult("Please enter a budget amount.");
       return;
@@ -21,39 +20,47 @@ const VzlaBudgetBar = () => {
   };
 
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-[minmax(180px,1fr)_minmax(180px,1fr)_auto_auto] items-center gap-3 my-3.5 mb-[22px]">
-      <input
-        type="number"
-        min="1"
-        step="1"
-        placeholder="Optional budget e.g. 250"
-        value={budget}
-        onChange={(e) => setBudget(e.target.value)}
-        className="w-full h-11 px-3.5 rounded-full border border-foreground/10 bg-[rgba(0,0,0,0.25)] text-foreground/90 outline-none backdrop-blur-[10px] placeholder:text-foreground/45"
-      />
-      <input
-        type="number"
-        min="1"
-        step="1"
-        placeholder="Optional # of cards"
-        value={cards}
-        onChange={(e) => setCards(e.target.value)}
-        className="w-full h-11 px-3.5 rounded-full border border-foreground/10 bg-[rgba(0,0,0,0.25)] text-foreground/90 outline-none backdrop-blur-[10px] placeholder:text-foreground/45"
-      />
-      <button
-        onClick={handleSuggest}
-        className="h-11 px-3.5 rounded-full border border-vzla-yellow/25 bg-vzla-yellow/[0.14] text-foreground/95 cursor-pointer backdrop-blur-[10px] transition-all hover:bg-foreground/10 hover:border-foreground/[0.16] active:translate-y-px whitespace-nowrap"
-      >
-        Suggest
-      </button>
-      <button
-        onClick={handleClear}
-        className="h-11 px-3.5 rounded-full border border-foreground/10 bg-foreground/[0.06] text-foreground/[0.88] cursor-pointer backdrop-blur-[10px] transition-all hover:bg-foreground/10 hover:border-foreground/[0.16] active:translate-y-px whitespace-nowrap"
-      >
-        Clear
-      </button>
+    <div className="glass-panel p-4 mb-6">
+      <div className="flex flex-col sm:flex-row items-center gap-3">
+        <div className="flex items-center gap-2 text-xs text-muted-foreground font-semibold whitespace-nowrap">
+          <span className="text-lg">💰</span>
+          Budget Tool
+        </div>
+        <input
+          type="number"
+          min="1"
+          step="1"
+          placeholder="Budget (USD)"
+          value={budget}
+          onChange={(e) => setBudget(e.target.value)}
+          className="flex-1 h-10 px-3 rounded-lg glass-input text-foreground text-sm outline-none w-full sm:w-auto placeholder:text-muted-foreground"
+        />
+        <input
+          type="number"
+          min="1"
+          step="1"
+          placeholder="# of cards"
+          value={cards}
+          onChange={(e) => setCards(e.target.value)}
+          className="flex-1 h-10 px-3 rounded-lg glass-input text-foreground text-sm outline-none w-full sm:w-auto placeholder:text-muted-foreground"
+        />
+        <div className="flex gap-2">
+          <button
+            onClick={handleSuggest}
+            className="h-10 px-5 rounded-lg cta-yellow text-xs font-bold cursor-pointer"
+          >
+            Suggest
+          </button>
+          <button
+            onClick={handleClear}
+            className="h-10 px-4 rounded-lg border border-border bg-secondary text-muted-foreground text-xs font-semibold cursor-pointer hover:text-foreground transition-colors"
+          >
+            Clear
+          </button>
+        </div>
+      </div>
       {result && (
-        <div className="col-span-full mt-2.5 text-sm opacity-90">
+        <div className="mt-3 text-sm text-foreground/80 px-1">
           {result}
         </div>
       )}

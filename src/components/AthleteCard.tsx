@@ -17,59 +17,74 @@ interface AthleteCardProps {
 
 const AthleteCard = ({ athlete, byName, byKey }: AthleteCardProps) => {
   const avgNum = getEbayAvgNumber(athlete, byName, byKey);
-  const money = avgNum != null ? `USD ${formatCurrency(avgNum, "USD")}` : "—";
+  const money = avgNum != null ? formatCurrency(avgNum, "USD") : "—";
 
   const cv = getMarketStabilityCV(athlete, byName, byKey);
   const stability = marketStabilityScoreFromCV(cv);
 
   const dom = getAvgDaysOnMarket(athlete, byName, byKey);
-  const domText = dom != null ? `${Math.round(dom)} days` : "—";
+  const domText = dom != null ? `${Math.round(dom)}d` : "—";
 
   const shopUrl = buildEbaySearchUrl(athlete.name, athlete.sport);
   const initials = initialsFromName(athlete.name);
 
   return (
-    <article className="athlete-card">
-      <div className="flex gap-3.5 items-start">
-        <div className="w-16 h-16 rounded-2xl flex items-center justify-center font-black text-xl tracking-[0.06em] bg-vzla-yellow/10 border border-vzla-yellow/[0.18] text-vzla-yellow">
+    <article className="athlete-card group">
+      {/* Header */}
+      <div className="flex gap-3 items-start">
+        <div className="w-12 h-12 rounded-xl flex items-center justify-center font-display font-bold text-sm tracking-wide bg-secondary border border-border text-vzla-yellow shrink-0">
           {initials}
         </div>
-        <div className="min-w-0 flex flex-col gap-2">
-          <div className="font-black text-xl leading-[1.05] line-clamp-2">{athlete.name}</div>
-          <span className="inline-flex self-start px-3 py-1.5 rounded-full text-xs font-extrabold text-flag-gradient bg-vzla-yellow/10 border border-vzla-yellow/[0.18]">
-            {athlete.sport}
-          </span>
+        <div className="min-w-0 flex-1">
+          <h3 className="font-display font-bold text-base leading-tight line-clamp-2 text-foreground mb-1.5">
+            {athlete.name}
+          </h3>
+          <div className="flex items-center gap-2 flex-wrap">
+            <span className="inline-flex px-2 py-0.5 rounded-md text-[10px] font-bold bg-vzla-yellow/10 border border-vzla-yellow/20 text-vzla-yellow">
+              {athlete.sport}
+            </span>
+            <span className="text-[10px] text-muted-foreground font-semibold tracking-wide uppercase">
+              {athlete.league}
+            </span>
+          </div>
         </div>
       </div>
 
-      <div className="mt-3.5 text-xs font-black tracking-[-0.02em]">{money}</div>
-      <div className="mt-0.5 text-xs text-foreground/55 font-bold">eBay Avg. listing Price</div>
-
-      <div className="mt-1.5 text-[11px] text-foreground/45">
-        Market Stability :
-        <span className="inline-block px-2 py-0.5 rounded-full bg-foreground/[0.08] ml-1.5 font-semibold">
-          {stability.label}
-        </span>
-        <span className="ml-1.5 opacity-75">({stability.pctText})</span>
+      {/* Price */}
+      <div className="mt-4 p-3 rounded-lg bg-secondary/50 border border-border/50">
+        <div className="flex items-baseline justify-between">
+          <div>
+            <div className="text-lg font-display font-bold text-foreground">{money}</div>
+            <div className="text-[10px] text-muted-foreground font-medium mt-0.5">eBay Avg. Price</div>
+          </div>
+          <div className="text-right">
+            <div className={`text-xs font-bold stability-${stability.bucket}`}>
+              {stability.label}
+            </div>
+            <div className="text-[10px] text-muted-foreground">{stability.pctText}</div>
+          </div>
+        </div>
       </div>
 
-      <div className="text-[11px] text-foreground/45">
-        Avg. time listed: <span className="font-semibold">{domText}</span>
+      {/* Stats row */}
+      <div className="mt-3 flex items-center justify-between text-[11px] text-muted-foreground">
+        <span>⏱ Listed: <strong className="text-foreground/70">{domText}</strong></span>
+        <span className="text-foreground/40 italic text-[10px]">*prices may vary*</span>
       </div>
 
-      <div className="text-[11px] text-foreground/45">*prices may vary*</div>
-
+      {/* CTA */}
       <a
         href={shopUrl}
         target="_blank"
         rel="noopener noreferrer"
-        className="mt-3.5 self-start inline-flex items-center justify-center px-4 py-3 rounded-full cta-yellow no-underline text-sm hover:scale-[1.02] transition-transform"
+        className="mt-auto pt-4 self-stretch inline-flex items-center justify-center px-4 py-2.5 rounded-lg cta-yellow no-underline text-xs font-bold tracking-wide uppercase group-hover:shadow-lg transition-all"
       >
-        Search on eBay
+        Search on eBay →
       </a>
 
-      <div className="mt-2.5 text-foreground/55 font-extrabold text-xs tracking-[0.06em] uppercase">
-        {athlete.league} • {athlete.team}
+      {/* Team */}
+      <div className="mt-2.5 text-muted-foreground font-semibold text-[10px] tracking-wider uppercase text-center">
+        {athlete.team}
       </div>
     </article>
   );
