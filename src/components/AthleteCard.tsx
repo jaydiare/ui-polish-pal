@@ -8,6 +8,7 @@ import {
   buildEbaySearchUrl,
   initialsFromName,
 } from "@/lib/vzla-helpers";
+import { useWikipediaImage } from "@/hooks/useWikipediaImage";
 
 interface AthleteCardProps {
   athlete: Athlete;
@@ -28,6 +29,7 @@ const AthleteCard = ({ athlete, byName, byKey, isRecommended }: AthleteCardProps
 
   const shopUrl = buildEbaySearchUrl(athlete.name, athlete.sport);
   const initials = initialsFromName(athlete.name);
+  const photo = useWikipediaImage(athlete.name);
 
   return (
     <article className={`athlete-card group ${isRecommended ? "is-recommended" : ""}`}>
@@ -41,9 +43,18 @@ const AthleteCard = ({ athlete, byName, byKey, isRecommended }: AthleteCardProps
 
       {/* Header */}
       <div className="flex gap-3 items-start">
-        <div className="w-12 h-12 rounded-xl flex items-center justify-center font-display font-bold text-sm tracking-wide bg-secondary border border-border text-vzla-yellow shrink-0">
-          {initials}
-        </div>
+        {photo ? (
+          <img
+            src={photo}
+            alt={athlete.name}
+            className="w-12 h-12 rounded-xl object-cover shrink-0 border border-border"
+            loading="lazy"
+          />
+        ) : (
+          <div className="w-12 h-12 rounded-xl flex items-center justify-center font-display font-bold text-sm tracking-wide bg-secondary border border-border text-vzla-yellow shrink-0">
+            {initials}
+          </div>
+        )}
         <div className="min-w-0 flex-1">
           <h3 className="font-display font-bold text-base leading-tight line-clamp-2 text-foreground mb-1.5">
             {athlete.name}
