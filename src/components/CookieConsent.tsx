@@ -41,6 +41,11 @@ const CookieConsent = () => {
     setVisible(false);
   };
 
+  const handleReject = () => {
+    localStorage.setItem(CONSENT_KEY, "rejected");
+    setVisible(false);
+  };
+
   return (
     <AnimatePresence>
       {visible && (
@@ -52,14 +57,22 @@ const CookieConsent = () => {
           className="fixed bottom-24 left-4 right-4 md:left-auto md:right-6 md:max-w-sm z-[9998] glass-panel p-5 border border-border shadow-2xl"
         >
           <p className="text-sm text-foreground/85 leading-relaxed mb-4">
-            We use cookies to analyze site traffic and improve your experience. By clicking <strong className="text-foreground">Accept</strong>, you consent to our use of analytics cookies.
+            We use cookies to analyze site traffic and improve your experience. You can accept or reject analytics cookies.
           </p>
-          <button
-            onClick={handleAccept}
-            className="w-full h-10 rounded-lg cta-yellow text-sm font-bold cursor-pointer"
-          >
-            Accept
-          </button>
+          <div className="flex gap-3">
+            <button
+              onClick={handleReject}
+              className="flex-1 h-10 rounded-lg border border-border bg-muted text-foreground text-sm font-bold cursor-pointer hover:bg-muted/80 transition-colors"
+            >
+              Reject
+            </button>
+            <button
+              onClick={handleAccept}
+              className="flex-1 h-10 rounded-lg cta-yellow text-sm font-bold cursor-pointer"
+            >
+              Accept
+            </button>
+          </div>
         </motion.div>
       )}
     </AnimatePresence>
