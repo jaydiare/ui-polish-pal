@@ -82,7 +82,7 @@ const VzlaBudgetBar = ({ onSuggest, onClear, result }: VzlaBudgetBarProps) => {
             <span className="text-foreground/90">
               Showing <strong className="text-vzla-yellow">{result.chosen.length}</strong> card{result.chosen.length !== 1 ? "s" : ""}
               {result.maxCards && <> (target ≤ <strong>{result.maxCards}</strong>)</>}
-              {" — "}Spent <strong className="text-vzla-yellow">${(result.spentCents / 100).toFixed(2)}</strong> of ${(result.budgetCents / 100).toFixed(2)}
+              {" — "}Spent <strong className="text-vzla-yellow">USD ${(result.spentCents / 100).toFixed(2)}</strong> of USD ${(result.budgetCents / 100).toFixed(2)}
             </span>
           )}
         </div>
