@@ -9,6 +9,15 @@ interface VzlaSearchFiltersProps {
   filteredCount: number;
 }
 
+const DEFAULT_FILTERS: Filters = {
+  search: "",
+  category: "all",
+  league: "all",
+  price: "all",
+  stability: "all",
+  daysListed: "all",
+};
+
 const VzlaSearchFilters = ({
   filters,
   updateFilter,
@@ -17,6 +26,16 @@ const VzlaSearchFilters = ({
   totalCount,
   filteredCount,
 }: VzlaSearchFiltersProps) => {
+  const hasActiveFilter = Object.keys(DEFAULT_FILTERS).some(
+    (k) => filters[k as keyof Filters] !== DEFAULT_FILTERS[k as keyof Filters]
+  );
+
+  const clearAll = () => {
+    for (const [k, v] of Object.entries(DEFAULT_FILTERS)) {
+      updateFilter(k as keyof Filters, v);
+    }
+  };
+
   return (
     <div className="glass-panel p-5 mb-6" role="search" aria-label="Filter athletes">
       <div className="grid grid-cols-1 lg:grid-cols-[minmax(200px,1.2fr)_repeat(5,minmax(120px,1fr))] gap-4 items-end">
@@ -112,6 +131,21 @@ const VzlaSearchFilters = ({
           ]}
         />
       </div>
+
+      {/* Clear filters — visible only when filters are active (ISO 9241-210: user control & system status) */}
+      {hasActiveFilter && (
+        <div className="mt-3 flex items-center justify-between">
+          <span className="text-[11px] text-muted-foreground">
+            Showing {filteredCount} of {totalCount} athletes
+          </span>
+          <button
+            onClick={clearAll}
+            className="text-[11px] font-semibold text-vzla-yellow hover:text-vzla-yellow/80 transition-colors cursor-pointer flex items-center gap-1"
+          >
+            <span>✕</span> Clear all filters
+          </button>
+        </div>
+      )}
     </div>
   );
 };
