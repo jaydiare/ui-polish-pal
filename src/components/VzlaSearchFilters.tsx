@@ -1,8 +1,9 @@
 import { Filters } from "@/lib/vzla-helpers";
+import { Checkbox } from "@/components/ui/checkbox";
 
 interface VzlaSearchFiltersProps {
   filters: Filters;
-  updateFilter: (key: keyof Filters, value: string) => void;
+  updateFilter: (key: keyof Filters, value: any) => void;
   sportOptions: string[];
   leagueOptions: string[];
   totalCount: number;
@@ -11,8 +12,8 @@ interface VzlaSearchFiltersProps {
 
 const DEFAULT_FILTERS: Filters = {
   search: "",
-  category: "all",
-  league: [],
+  category: [],
+  league: "all",
   price: "all",
   stability: "all",
   daysListed: "all",
@@ -28,29 +29,31 @@ const VzlaSearchFilters = ({
 }: VzlaSearchFiltersProps) => {
   const hasActiveFilter =
     filters.search !== "" ||
-    filters.category !== "all" ||
-    filters.league.length > 0 ||
+    filters.category.length > 0 ||
+    filters.league !== "all" ||
     filters.price !== "all" ||
     filters.stability !== "all" ||
     filters.daysListed !== "all";
 
   const clearAll = () => {
     for (const [k, v] of Object.entries(DEFAULT_FILTERS)) {
-      updateFilter(k as keyof Filters, v as any);
+      updateFilter(k as keyof Filters, v);
     }
   };
 
-  const toggleLeague = (league: string) => {
-    const current = filters.league;
-    const next = current.includes(league)
-      ? current.filter((l) => l !== league)
-      : [...current, league];
-    updateFilter("league", next as any);
+  const toggleCategory = (cat: string) => {
+    const current = filters.category;
+    const next = current.includes(cat)
+      ? current.filter((c) => c !== cat)
+      : [...current, cat];
+    updateFilter("category", next);
   };
+
+  const allCategories = [...sportOptions, "Other"];
 
   return (
     <div className="glass-panel p-5 mb-6" role="search" aria-label="Filter athletes">
-      <div className="grid grid-cols-1 lg:grid-cols-[minmax(200px,1.2fr)_repeat(4,minmax(120px,1fr))] gap-4 items-end">
+      <div className="grid grid-cols-1 lg:grid-cols-[minmax(200px,1.2fr)_repeat(3,minmax(120px,1fr))] gap-4 items-end">
         {/* Search */}
         <div>
           <label htmlFor="player-search" className="text-[10px] tracking-widest uppercase font-bold text-muted-foreground mb-1.5 block">
@@ -82,17 +85,6 @@ const VzlaSearchFilters = ({
           </div>
         </div>
 
-        <FilterSelect
-          label="Category"
-          id="filter-category"
-          value={filters.category}
-          onChange={(v) => updateFilter("category", v)}
-          options={[
-            { value: "all", label: "All" },
-            ...sportOptions.map((s) => ({ value: s, label: s })),
-            { value: "Other", label: "Other" },
-          ]}
-        />
         <FilterSelect
           label="Price"
           id="filter-price"
@@ -134,38 +126,36 @@ const VzlaSearchFilters = ({
         />
       </div>
 
-      {/* League multi-select chips */}
-      {leagueOptions.length > 0 && (
+      {/* Category checkboxes */}
+      {allCategories.length > 0 && (
         <div className="mt-4">
           <span className="text-[10px] tracking-widest uppercase font-bold text-muted-foreground mb-2 block">
-            League
+            Category
           </span>
-          <div className="flex flex-wrap gap-2" role="group" aria-label="Filter by league">
-            {leagueOptions.map((league) => {
-              const isSelected = filters.league.includes(league);
+          <div className="flex flex-wrap gap-x-5 gap-y-2" role="group" aria-label="Filter by category">
+            {allCategories.map((cat) => {
+              const isChecked = filters.category.includes(cat);
               return (
-                <button
-                  key={league}
-                  onClick={() => toggleLeague(league)}
-                  className={`
-                    px-3 py-1.5 rounded-full text-xs font-semibold border cursor-pointer
-                    transition-all duration-150
-                    ${isSelected
-                      ? "bg-primary text-primary-foreground border-primary shadow-sm"
-                      : "bg-secondary text-muted-foreground border-border hover:border-primary/40 hover:text-foreground"
-                    }
-                  `}
-                  aria-pressed={isSelected}
+                <label
+                  key={cat}
+                  className="flex items-center gap-2 cursor-pointer select-none group"
                 >
-                  {league}
-                </button>
+                  <Checkbox
+                    checked={isChecked}
+                    onCheckedChange={() => toggleCategory(cat)}
+                    aria-label={`Filter by ${cat}`}
+                  />
+                  <span className={`text-sm transition-colors ${isChecked ? "text-foreground font-medium" : "text-muted-foreground group-hover:text-foreground"}`}>
+                    {cat}
+                  </span>
+                </label>
               );
             })}
-            {filters.league.length > 0 && (
+            {filters.category.length > 0 && (
               <button
-                onClick={() => updateFilter("league", [] as any)}
-                className="px-3 py-1.5 rounded-full text-xs font-semibold text-vzla-yellow hover:text-vzla-yellow/80 border border-transparent cursor-pointer transition-colors"
-                aria-label="Clear league filter"
+                onClick={() => updateFilter("category", [])}
+                className="text-[11px] font-semibold text-vzla-yellow hover:text-vzla-yellow/80 cursor-pointer transition-colors ml-1"
+                aria-label="Clear category filter"
               >
                 ✕ Clear
               </button>
