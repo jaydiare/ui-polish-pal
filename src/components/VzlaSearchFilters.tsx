@@ -23,14 +23,9 @@ const VzlaSearchFilters = ({
       <div className="grid grid-cols-1 lg:grid-cols-[minmax(200px,1.2fr)_repeat(4,minmax(120px,1fr))] gap-4 items-end">
         {/* Search */}
         <div>
-          <div className="flex items-baseline justify-between mb-1.5">
-            <label htmlFor="player-search" className="text-[10px] tracking-widest uppercase font-bold text-muted-foreground">
-              Search
-            </label>
-            <span className="text-[11px] text-muted-foreground" aria-live="polite">
-              Showing <span className="text-foreground font-semibold">{filteredCount}</span> of {totalCount} players
-            </span>
-          </div>
+          <label htmlFor="player-search" className="text-[10px] tracking-widest uppercase font-bold text-muted-foreground mb-1.5 block">
+            Search
+          </label>
           <div className="relative flex items-center gap-2.5 h-11 w-full px-3.5 rounded-lg bg-secondary border border-border transition-all focus-within:border-primary/40 focus-within:shadow-[0_0_0_3px_hsl(var(--primary)/0.08)]">
             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" className="text-muted-foreground shrink-0" aria-hidden="true">
               <path d="M21 21l-4.3-4.3m1.8-5.2a7 7 0 11-14 0 7 7 0 0114 0z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
