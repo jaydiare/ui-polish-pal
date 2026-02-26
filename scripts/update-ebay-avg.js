@@ -75,7 +75,7 @@ const PAGE_SIZE = 60;
 const MIN_EBAY_SAMPLE_SIZE = 4;
 
 // Marketplaces to compute
-const MARKETPLACES = ["EBAY_US", "EBAY_CA", "EBAY_ES"];
+const MARKETPLACES = ["EBAY_US", "EBAY_CA"];
 
 // restrict to major manufacturers (sports card makers)
 const MANUFACTURERS = ["Topps", "Panini", "Upper Deck", "Leaf", "Artesania Sport", "Ovenca Venezuelan", "Sport Grafico", "Line Up", "Venezuelan League", "BYN"];
