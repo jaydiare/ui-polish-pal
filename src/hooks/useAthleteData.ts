@@ -12,7 +12,7 @@ import {
 } from "@/lib/vzla-helpers";
 import { runKnapsack, BudgetCandidate, KnapsackResult } from "@/lib/budget-knapsack";
 
-const PAGE_SIZE = 400;
+const PAGE_SIZE = 48;
 
 async function fetchJson(path: string) {
   try {

@@ -324,11 +324,11 @@
    Page shell (3-col layout)
    =========================== */
 .page-shell {
-  max-width: 1700px;
+  max-width: 1500px;
   margin: 0 auto;
   padding: 0 20px 120px;
   display: grid;
-  grid-template-columns: 160px 1fr 160px;
+  grid-template-columns: 1fr 160px;
   gap: 24px;
   align-items: start;
 }
