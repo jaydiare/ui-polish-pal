@@ -85,7 +85,7 @@ const About = () => {
                     <p className="text-foreground/75 leading-relaxed text-sm mt-4">
                       We want to help you collect with confidence.{" "}
                       <a
-                        href="https://www.facebook.com/share/g/1BxBduddTQ/"
+                        href="https://www.facebook.com/groups/1591729798708721"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="text-vzla-yellow font-bold no-underline hover:underline"
