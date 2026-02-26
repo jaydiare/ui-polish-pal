@@ -23,7 +23,7 @@ jobs:
         with:
           node-version: 20
 
-      - run: npm ci
+      - run: npm install --no-audit --no-fund
         if: hashFiles('package-lock.json') != ''
 
       - name: Update eBay averages
