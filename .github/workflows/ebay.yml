@@ -42,7 +42,7 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
-          git add data/ebay-avg.json public/data/ebay-avg.json
+          git add data/ebay-avg.json data/ebay-match-cache.json public/data/ebay-avg.json
 
           if git diff --cached --quiet; then
             echo "No changes to commit"
