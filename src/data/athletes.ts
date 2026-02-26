@@ -22,9 +22,14 @@ export interface EbayAvgRecord {
   };
 }
 
+export interface IndexHistoryEntry {
+  date: string;
+  [sport: string]: string | number; // sport name -> index value
+}
+
 export interface EbayAvgData {
-  _meta?: { updatedAt?: string };
-  [key: string]: EbayAvgRecord | { updatedAt?: string } | undefined;
+  _meta?: { updatedAt?: string; indexHistory?: IndexHistoryEntry[] };
+  [key: string]: EbayAvgRecord | { updatedAt?: string; indexHistory?: IndexHistoryEntry[] } | undefined;
 }
 
 export const athleteDataRaw: Athlete[] = [

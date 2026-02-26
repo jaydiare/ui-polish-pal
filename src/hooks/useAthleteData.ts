@@ -137,6 +137,7 @@ export function useAthleteData() {
     paginatedAthletes,
     byName,
     byKey,
+    ebayAvgRaw,
     lastUpdated,
     filters,
     updateFilter,

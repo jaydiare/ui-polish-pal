@@ -1,13 +1,14 @@
 import { motion } from "framer-motion";
 import { useMemo } from "react";
 import { LineChart, Line, ResponsiveContainer } from "recharts";
-import { Athlete, EbayAvgRecord } from "@/data/athletes";
-import { computeIndexForSport, getSportCounts, formatIndexNumber, getEbayAvgNumber } from "@/lib/vzla-helpers";
+import { Athlete, EbayAvgRecord, IndexHistoryEntry } from "@/data/athletes";
+import { computeIndexForSport, getSportCounts, formatIndexNumber } from "@/lib/vzla-helpers";
 
 interface VzlaIndexCardsProps {
   athletes: Athlete[];
   byName: Record<string, EbayAvgRecord>;
   byKey: Record<string, EbayAvgRecord>;
+  indexHistory?: IndexHistoryEntry[];
 }
 
 const SPORT_ICONS: Record<string, string> = {
@@ -17,27 +18,7 @@ const SPORT_ICONS: Record<string, string> = {
   All: "🏆",
 };
 
-/** Build a small distribution sparkline from athlete prices for a sport */
-function buildSparkline(athletes: Athlete[], sport: string, byName: Record<string, EbayAvgRecord>, byKey: Record<string, EbayAvgRecord>) {
-  const prices: number[] = [];
-  athletes.forEach((a) => {
-    if (sport !== "All" && a.sport !== sport) return;
-    const v = getEbayAvgNumber(a, byName, byKey);
-    if (v != null) prices.push(v);
-  });
-  if (prices.length < 2) return [];
-  prices.sort((a, b) => a - b);
-  // Sample ~12 points across the sorted distribution
-  const points = 12;
-  const data: { v: number }[] = [];
-  for (let i = 0; i < points; i++) {
-    const idx = Math.min(Math.floor((i / (points - 1)) * (prices.length - 1)), prices.length - 1);
-    data.push({ v: prices[idx] });
-  }
-  return data;
-}
-
-const VzlaIndexCards = ({ athletes, byName, byKey }: VzlaIndexCardsProps) => {
+const VzlaIndexCards = ({ athletes, byName, byKey, indexHistory }: VzlaIndexCardsProps) => {
   const counts = getSportCounts(athletes);
 
   const entries = Array.from(counts.entries())
@@ -57,9 +38,18 @@ const VzlaIndexCards = ({ athletes, byName, byKey }: VzlaIndexCardsProps) => {
     { title: "All Index", icon: "🏆", value: formatIndexNumber(iAll.sum), athletes: athletes.length, priced: iAll.used, sport: "All" },
   ];
 
+  // Build sparkline data from indexHistory
   const sparklines = useMemo(() => {
-    return cards.map((c) => buildSparkline(athletes, c.sport, byName, byKey));
-  }, [athletes, byName, byKey]);
+    if (!indexHistory || indexHistory.length < 2) return cards.map(() => []);
+    return cards.map((c) => {
+      return indexHistory
+        .map((h) => {
+          const v = Number(h[c.sport]);
+          return Number.isFinite(v) && v > 0 ? { v } : null;
+        })
+        .filter(Boolean) as { v: number }[];
+    });
+  }, [indexHistory, cards.map(c => c.sport).join(",")]);
 
   return (
     <section className="grid grid-cols-1 sm:grid-cols-3 gap-4 my-6" aria-label="VZLA Index Cards">
@@ -84,7 +74,7 @@ const VzlaIndexCards = ({ athletes, byName, byKey }: VzlaIndexCardsProps) => {
             <span className="text-xs text-muted-foreground font-medium">{card.priced} priced</span>
           </div>
 
-          {/* Sparkline */}
+          {/* Sparkline trend */}
           {sparklines[i] && sparklines[i].length > 1 && (
             <div className="absolute bottom-2 right-2 w-24 h-10 opacity-60">
               <ResponsiveContainer width="100%" height="100%">
