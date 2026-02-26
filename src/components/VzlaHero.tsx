@@ -19,7 +19,7 @@ const VzlaHero = ({ lastUpdated }: VzlaHeroProps) => {
         className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-secondary border border-border text-xs font-semibold text-muted-foreground mb-6"
       >
         <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-        Live Market Data
+        Updated Daily
       </motion.div>
 
       <h1 className="text-4xl md:text-6xl font-display font-bold mb-4 leading-[1.05] text-glow">
