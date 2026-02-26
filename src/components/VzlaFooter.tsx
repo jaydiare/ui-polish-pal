@@ -12,29 +12,10 @@ const VzlaFooter = () => {
   return (
     <>
       <footer id="about" className="mt-16 border-t border-border bg-card">
-        {/* Sponsor banners */}
-        <div className="max-w-5xl mx-auto px-6 pt-8 pb-4 flex flex-wrap items-center justify-center gap-6">
-          <a href={CARDHEDGE} target="_blank" rel="noopener noreferrer" title="Card Hedge Sports & Trading Card Analytics">
-            <img
-              src="./assets/cardhedge_806_318.jpg"
-              alt="Card Hedge Sports & Trading Card Analytics"
-              className="h-16 md:h-20 w-auto rounded-lg shadow-lg hover:scale-[1.03] transition-transform"
-              loading="lazy"
-            />
-          </a>
-          <a href={BCW} target="_blank" rel="noopener noreferrer" title="BCW - Protect, Store, Display">
-            <img
-              src="./assets/BCW.jpg"
-              alt="BCW - Protect, Store, Display"
-              className="h-16 md:h-20 w-auto rounded-lg shadow-lg hover:scale-[1.03] transition-transform"
-              loading="lazy"
-            />
-          </a>
-        </div>
 
         <div className="max-w-5xl mx-auto px-6 py-10">
           {/* Top row — 3-column like CardHedge */}
-          <div className="grid grid-cols-1 md:grid-cols-[1.5fr_1fr_1fr] gap-10 mb-10">
+          <div className="grid grid-cols-1 md:grid-cols-[1.5fr_1fr_auto] gap-10 mb-10">
             {/* Brand column */}
             <div>
               <div className="flex items-center gap-3 mb-4">
@@ -80,12 +61,24 @@ const VzlaFooter = () => {
               </nav>
             </div>
 
-            {/* Quick Links column */}
-            <div>
-              <h4 className="font-display font-bold text-foreground text-sm mb-4">Quick Links</h4>
-              <nav className="flex flex-col gap-2.5">
-                <a href="#top" className="text-sm text-muted-foreground no-underline hover:text-foreground transition-colors">Back to Top</a>
-              </nav>
+            {/* Sponsor banners stacked on right */}
+            <div className="flex flex-col gap-4 items-center">
+              <a href={CARDHEDGE} target="_blank" rel="noopener noreferrer" title="Card Hedge Sports & Trading Card Analytics">
+                <img
+                  src="./assets/cardhedge_806_318.jpg"
+                  alt="Card Hedge Sports & Trading Card Analytics"
+                  className="w-40 md:w-48 h-auto rounded-lg shadow-lg hover:scale-[1.03] transition-transform"
+                  loading="lazy"
+                />
+              </a>
+              <a href={BCW} target="_blank" rel="noopener noreferrer" title="BCW - Protect, Store, Display">
+                <img
+                  src="./assets/BCW.jpg"
+                  alt="BCW - Protect, Store, Display"
+                  className="w-40 md:w-48 h-auto rounded-lg shadow-lg hover:scale-[1.03] transition-transform"
+                  loading="lazy"
+                />
+              </a>
             </div>
           </div>
 
