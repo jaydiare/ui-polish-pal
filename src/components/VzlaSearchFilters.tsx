@@ -20,7 +20,7 @@ const VzlaSearchFilters = ({
   return (
     <div className="glass-panel p-5 mb-6" role="search" aria-label="Filter athletes">
       {/* Row: Search + Filters aligned on same baseline */}
-      <div className="grid grid-cols-1 lg:grid-cols-[minmax(200px,1.2fr)_repeat(4,minmax(120px,1fr))] gap-4 items-end">
+      <div className="grid grid-cols-1 lg:grid-cols-[minmax(200px,1.2fr)_repeat(5,minmax(120px,1fr))] gap-4 items-end">
         {/* Search */}
         <div>
           <label htmlFor="player-search" className="text-[10px] tracking-widest uppercase font-bold text-muted-foreground mb-1.5 block">
@@ -98,6 +98,19 @@ const VzlaSearchFilters = ({
             { value: "volatile", label: "Volatile" },
             { value: "highly_unstable", label: "Unstable" },
             { value: "none", label: "No Score" },
+          ]}
+        />
+        <FilterSelect
+          label="Avg Days Listed"
+          id="filter-days-listed"
+          value={filters.daysListed}
+          onChange={(v) => updateFilter("daysListed", v)}
+          options={[
+            { value: "all", label: "All" },
+            { value: "low", label: "Low (< 180d)" },
+            { value: "medium", label: "Mid (180–540d)" },
+            { value: "high", label: "High (> 540d)" },
+            { value: "none", label: "No Data" },
           ]}
         />
       </div>
