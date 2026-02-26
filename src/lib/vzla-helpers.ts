@@ -108,7 +108,7 @@ export function marketStabilityScoreFromCV(cv: number | null): StabilityScore {
   if (pct < 10) return { label: "Stable", pctText, bucket: "stable" };
   if (pct < 20) return { label: "Active", pctText, bucket: "active" };
   if (pct < 35) return { label: "Volatile", pctText, bucket: "volatile" };
-  return { label: "Highly Unstable", pctText, bucket: "highly_unstable" };
+  return { label: "Unstable", pctText, bucket: "highly_unstable" };
 }
 
 export function formatCurrency(amount: number, currency: string = "USD"): string {
