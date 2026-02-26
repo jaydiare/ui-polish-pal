@@ -202,11 +202,11 @@ export function filterAthletes(
     })
     .filter((a) => {
       if (filters.stability === "all") return true;
-      const cv = getMarketStabilityCV(a, byName, byKey);
+      const price = getEbayAvgNumber(a, byName, byKey);
+      const cv = price != null ? getMarketStabilityCV(a, byName, byKey) : null;
       const bucket = marketStabilityScoreFromCV(cv).bucket;
-      if (filters.stability === "none") return cv == null || bucket === "none";
-      if (cv == null) return false;
-      if (getEbayAvgNumber(a, byName, byKey) == null) return false;
+      if (filters.stability === "none") return price == null || cv == null || bucket === "none";
+      if (price == null || cv == null) return false;
       return bucket === filters.stability;
     })
     .filter((a) => !q || norm(a.name).includes(q))
