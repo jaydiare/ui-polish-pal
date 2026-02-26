@@ -1,0 +1,115 @@
+import { motion } from "framer-motion";
+import VzlaNavbar from "@/components/VzlaNavbar";
+import VzlaSideBanner from "@/components/VzlaSideBanner";
+import VzlaFooter from "@/components/VzlaFooter";
+import VzlaEbayFooter from "@/components/VzlaEbayFooter";
+
+const EBAY_STORE =
+  "https://www.ebay.ca/str/localherossportscards?mkcid=1&mkrid=706-53473-19255-0&siteid=2&campid=5339142305&toolid=10001&mkevt=1";
+
+const About = () => {
+  return (
+    <div id="top" className="min-h-screen">
+      <VzlaNavbar />
+
+      <div className="page-shell">
+        <VzlaSideBanner />
+
+        <main className="w-full px-8 pb-8 pt-0">
+          <motion.section
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, ease: [0.4, 0, 0.2, 1] }}
+            className="hero-panel text-center mb-8 p-10 md:p-14"
+          >
+            <div className="text-[10px] tracking-[0.22em] uppercase font-bold text-muted-foreground mb-4">
+              ABOUT
+            </div>
+
+            <h1 className="text-4xl md:text-5xl font-display font-bold mb-10 leading-[1.05] text-glow">
+              VZLA <span className="text-flag-gradient">SPORTS ELITE</span>
+            </h1>
+
+            <div className="max-w-[920px] mx-auto text-left space-y-8">
+              <p className="text-foreground/80 leading-[1.9] text-lg">
+                In Venezuela, many of us grew up trading sports cards, especially baseball cards, and collecting World Cup sticker albums. We remember the excitement of racing to complete an album before kickoff and the pride of finally finishing it.
+              </p>
+
+              <p className="text-foreground/80 leading-[1.9] text-lg">
+                For a long time, we believed these collectibles were only sentimental. Today, we understand something more. Sports cards and memorabilia can hold real value over time, especially when properly preserved and cared for.
+              </p>
+
+              <div className="h-6" />
+
+              <p className="text-foreground/80 leading-[1.9] text-lg">
+                This is how, in September of 2023, we decided to embark on this journey and open the store{" "}
+                <a
+                  className="text-vzla-yellow font-bold no-underline hover:underline"
+                  href={EBAY_STORE}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  @localheros_sportscards
+                </a>
+                . We started growing our personal collection and selling valuable cards we had no idea were worth so much after holding them for so many years.
+              </p>
+            </div>
+
+            <div className="h-16" />
+
+            <div className="grid md:grid-cols-3 gap-8 text-left">
+              {[
+                {
+                  title: "What We Believe",
+                  paragraphs: [
+                    "Many Venezuelans see sports cards as memories and nothing more. But the truth is that well-maintained collectibles can grow in value beyond nostalgia. Condition, rarity, and demand all matter. Knowledge makes the difference.",
+                  ],
+                },
+                {
+                  title: "Our Mission",
+                  paragraphs: [
+                    "VZLA Sports Elite was created to make it easy for Venezuelans around the world to discover and support their favorite hometown athletes.",
+                    "Beyond simply showcasing athletes, our mission is to share knowledge about this hobby and help collectors understand how to preserve and protect the long-term value of their collections.",
+                  ],
+                },
+                {
+                  title: "Why It Matters",
+                  paragraphs: [
+                    "Whether you started collecting recently, have been doing it quietly for many years, inherited a large collection from your father or grandfather, or received cards from a friend, your collection has potential.",
+                    "I can help you find sports cards and memorabilia from active Venezuelan athletes today, and later from non-active athletes as well.",
+                    "We want to help you collect with confidence.",
+                  ],
+                },
+              ].map((card, i) => (
+                <motion.div
+                  key={card.title}
+                  initial={{ opacity: 0, y: 16 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.4, delay: 0.2 + i * 0.1 }}
+                  className="glass-panel p-8"
+                >
+                  <h2 className="font-display font-bold text-xl mb-4 uppercase tracking-wide text-center md:text-left">
+                    {card.title}
+                  </h2>
+                  {card.paragraphs.map((p, j) => (
+                    <p key={j} className={`text-foreground/80 leading-[1.9] text-lg ${j > 0 ? "mt-5" : ""}`}>
+                      {p}
+                    </p>
+                  ))}
+                </motion.div>
+              ))}
+            </div>
+          </motion.section>
+
+          <VzlaFooter />
+        </main>
+
+        <VzlaSideBanner />
+      </div>
+
+      <VzlaEbayFooter />
+    </div>
+  );
+};
+
+export default About;
