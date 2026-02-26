@@ -176,7 +176,7 @@ export function runKnapsack(
 ): KnapsackResult {
   const budgetCents = Math.round(budgetDollars * 100);
 
-  const items: KnapsackItem[] = candidates
+  const rawItems: KnapsackItem[] = candidates
     .filter((c) => c.price != null && Number.isFinite(c.price) && c.price! > 0)
     .map((c) => {
       const priceCents = Math.round(c.price! * 100);
@@ -192,6 +192,23 @@ export function runKnapsack(
       };
     })
     .filter((x) => x.valueScore > 0 && x.priceCents <= budgetCents);
+
+  // Prevent the same athlete (same normalized name+sport) from being selected twice.
+  // Keep the stronger duplicate by valueScore; on tie, keep the cheaper card.
+  const deduped = new Map<string, KnapsackItem>();
+  for (const item of rawItems) {
+    const prev = deduped.get(item.id);
+    if (!prev) {
+      deduped.set(item.id, item);
+      continue;
+    }
+
+    if (item.valueScore > prev.valueScore || (item.valueScore === prev.valueScore && item.priceCents < prev.priceCents)) {
+      deduped.set(item.id, item);
+    }
+  }
+
+  const items = Array.from(deduped.values());
 
   const chosen = maxCards
     ? knapsackPickWithMaxCount(items, budgetCents, maxCards)
