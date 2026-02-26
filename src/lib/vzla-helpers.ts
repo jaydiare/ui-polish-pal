@@ -190,6 +190,12 @@ export function filterAthletes(
 ): Athlete[] {
   const q = norm(filters.search);
 
+  // Determine if user explicitly requested empty-state cards
+  const wantsNoPrice = filters.price === "none";
+  const wantsNoStability = filters.stability === "none";
+  const wantsNoDays = filters.daysListed === "none";
+  const wantsEmptyStates = wantsNoPrice || wantsNoStability || wantsNoDays;
+
   let filtered = list
     .filter((a) => {
       if (filters.category === "all") return true;
@@ -214,7 +220,6 @@ export function filterAthletes(
       if (filters.daysListed === "all") return true;
       const price = getEbayAvgNumber(a, byName, byKey);
       const days = getAvgDaysOnMarket(a, byName, byKey);
-      // Athletes with no price/listing data belong in "none" (No Data), not "low"
       if (filters.daysListed === "none") return price == null || days == null;
       if (price == null || days == null) return false;
       if (filters.daysListed === "low") return days < 180;
@@ -222,6 +227,11 @@ export function filterAthletes(
       if (filters.daysListed === "high") return days > 540;
       return true;
     });
+
+  // Hide athletes with no eBay data by default, unless user explicitly filters for them
+  if (!wantsEmptyStates) {
+    filtered = filtered.filter((a) => getEbayAvgNumber(a, byName, byKey) != null);
+  }
 
   if (filters.price === "none") {
     filtered = filtered.filter((a) => getEbayAvgNumber(a, byName, byKey) == null);
