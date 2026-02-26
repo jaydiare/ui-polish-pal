@@ -5,7 +5,7 @@ import { Link, useLocation } from "react-router-dom";
 const SOCIAL_LINKS = {
   instagram: "https://www.instagram.com/localheros_sportscards/",
   twitter: "https://x.com/jdiegorceli1?s=21",
-  facebook: "https://www.facebook.com/groups/1591729798708721/",
+  facebook: "https://www.facebook.com/share/g/1BxBduddTQ/",
 };
 
 const EBAY_STORE = "https://www.ebay.ca/str/localherossportscards?mkcid=1&mkrid=706-53473-19255-0&siteid=2&campid=5339142305&toolid=10001&mkevt=1";
