@@ -4,7 +4,6 @@ interface VzlaSearchFiltersProps {
   filters: Filters;
   updateFilter: (key: keyof Filters, value: string) => void;
   sportOptions: string[];
-  leagueOptions: string[];
   totalCount: number;
   filteredCount: number;
 }
@@ -12,7 +11,6 @@ interface VzlaSearchFiltersProps {
 const DEFAULT_FILTERS: Filters = {
   search: "",
   category: "all",
-  league: [],
   price: "all",
   stability: "all",
   daysListed: "all",
@@ -22,14 +20,12 @@ const VzlaSearchFilters = ({
   filters,
   updateFilter,
   sportOptions,
-  leagueOptions,
   totalCount,
   filteredCount,
 }: VzlaSearchFiltersProps) => {
   const hasActiveFilter =
     filters.search !== "" ||
     filters.category !== "all" ||
-    filters.league.length > 0 ||
     filters.price !== "all" ||
     filters.stability !== "all" ||
     filters.daysListed !== "all";
@@ -38,14 +34,6 @@ const VzlaSearchFilters = ({
     for (const [k, v] of Object.entries(DEFAULT_FILTERS)) {
       updateFilter(k as keyof Filters, v as any);
     }
-  };
-
-  const toggleLeague = (league: string) => {
-    const current = filters.league;
-    const next = current.includes(league)
-      ? current.filter((l) => l !== league)
-      : [...current, league];
-    updateFilter("league", next as any);
   };
 
   return (
@@ -133,46 +121,6 @@ const VzlaSearchFilters = ({
           ]}
         />
       </div>
-
-      {/* League multi-select chips */}
-      {leagueOptions.length > 0 && (
-        <div className="mt-4">
-          <span className="text-[10px] tracking-widest uppercase font-bold text-muted-foreground mb-2 block">
-            League
-          </span>
-          <div className="flex flex-wrap gap-2" role="group" aria-label="Filter by league">
-            {leagueOptions.map((league) => {
-              const isSelected = filters.league.includes(league);
-              return (
-                <button
-                  key={league}
-                  onClick={() => toggleLeague(league)}
-                  className={`
-                    px-3 py-1.5 rounded-full text-xs font-semibold border cursor-pointer
-                    transition-all duration-150
-                    ${isSelected
-                      ? "bg-primary text-primary-foreground border-primary shadow-sm"
-                      : "bg-secondary text-muted-foreground border-border hover:border-primary/40 hover:text-foreground"
-                    }
-                  `}
-                  aria-pressed={isSelected}
-                >
-                  {league}
-                </button>
-              );
-            })}
-            {filters.league.length > 0 && (
-              <button
-                onClick={() => updateFilter("league", [] as any)}
-                className="px-3 py-1.5 rounded-full text-xs font-semibold text-vzla-yellow hover:text-vzla-yellow/80 border border-transparent cursor-pointer transition-colors"
-                aria-label="Clear league filter"
-              >
-                ✕ Clear
-              </button>
-            )}
-          </div>
-        </div>
-      )}
 
       {/* Clear filters */}
       {hasActiveFilter && (
