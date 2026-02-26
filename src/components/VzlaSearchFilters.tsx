@@ -4,7 +4,6 @@ interface VzlaSearchFiltersProps {
   filters: Filters;
   updateFilter: (key: keyof Filters, value: string) => void;
   sportOptions: string[];
-  leagueOptions: string[];
   totalCount: number;
   filteredCount: number;
 }
@@ -22,7 +21,6 @@ const VzlaSearchFilters = ({
   filters,
   updateFilter,
   sportOptions,
-  leagueOptions,
   totalCount,
   filteredCount,
 }: VzlaSearchFiltersProps) => {
@@ -38,7 +36,7 @@ const VzlaSearchFilters = ({
 
   return (
     <div className="glass-panel p-5 mb-6" role="search" aria-label="Filter athletes">
-      <div className="grid grid-cols-1 lg:grid-cols-[minmax(200px,1.2fr)_repeat(5,minmax(120px,1fr))] gap-4 items-end">
+      <div className="grid grid-cols-1 lg:grid-cols-[minmax(200px,1.2fr)_repeat(4,minmax(120px,1fr))] gap-4 items-end">
         {/* Search */}
         <div>
           <label htmlFor="player-search" className="text-[10px] tracking-widest uppercase font-bold text-muted-foreground mb-1.5 block">
@@ -79,16 +77,6 @@ const VzlaSearchFilters = ({
             { value: "all", label: "All" },
             ...sportOptions.map((s) => ({ value: s, label: s })),
             { value: "Other", label: "Other" },
-          ]}
-        />
-        <FilterSelect
-          label="League"
-          id="filter-league"
-          value={filters.league}
-          onChange={(v) => updateFilter("league", v)}
-          options={[
-            { value: "all", label: "All" },
-            ...leagueOptions.map((l) => ({ value: l, label: l })),
           ]}
         />
         <FilterSelect
