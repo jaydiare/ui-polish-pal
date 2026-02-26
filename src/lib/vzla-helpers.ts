@@ -115,8 +115,8 @@ export function formatCurrency(amount: number, currency: string = "USD"): string
   const n = Number(amount);
   if (!Number.isFinite(n)) return "";
   const c = currency.toUpperCase();
-  if (c === "CAD") return `C$${n.toFixed(2)}`;
-  return `$${n.toFixed(2)}`;
+  if (c === "CAD") return `CAD $${n.toFixed(2)}`;
+  return `USD $${n.toFixed(2)}`;
 }
 
 export function buildEbaySearchUrl(name: string, sport: string): string {
