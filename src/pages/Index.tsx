@@ -33,6 +33,7 @@ const Index = () => {
 
   return (
     <div id="top" className="min-h-screen">
+      <a href="#main-content" className="skip-link">Skip to main content</a>
       <VzlaNavbar />
 
       <div className="page-shell">
@@ -40,7 +41,7 @@ const Index = () => {
         <VzlaSideBanner />
 
         {/* Main content */}
-        <main className="w-full px-8 pb-8 pt-0">
+        <main id="main-content" className="w-full px-8 pb-8 pt-0" role="main" aria-label="Athlete cards and market data">
           <VzlaHero lastUpdated={lastUpdated} />
           <VzlaIndexCards athletes={athletes} byName={byName} byKey={byKey} indexHistory={ebayAvgRaw?._meta?.indexHistory} />
           <VzlaBudgetBar

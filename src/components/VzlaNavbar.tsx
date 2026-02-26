@@ -46,7 +46,7 @@ const VzlaNavbar = () => {
 
   return (
     <>
-      <nav className="vzla-nav px-6 py-4 flex items-center justify-between">
+      <nav className="vzla-nav px-6 py-4 flex items-center justify-between" aria-label="Main navigation">
         <Link to="/" className="flex items-center gap-3 no-underline select-none group">
           <div className="w-9 h-9 rounded-lg cta-flag flex items-center justify-center">
             <span className="font-display font-bold text-xs text-white">VZ</span>
@@ -62,14 +62,15 @@ const VzlaNavbar = () => {
         </Link>
 
         {/* Desktop nav */}
-        <ul className="hidden md:flex gap-1 items-center m-0 p-0 list-none">
+        <ul className="hidden md:flex gap-1 items-center m-0 p-0 list-none" role="menubar">
           {[
             { label: "Home", to: "/" },
             { label: "About", to: "/about" },
           ].map((item) => (
-            <li key={item.label}>
+            <li key={item.label} role="none">
               <Link
                 to={item.to}
+                role="menuitem"
                 className={`px-4 py-2 rounded-lg text-sm font-semibold no-underline transition-colors ${
                   location.pathname === item.to
                     ? "text-vzla-yellow"
@@ -81,9 +82,12 @@ const VzlaNavbar = () => {
             </li>
           ))}
 
-          <li className="relative">
+          <li className="relative" role="none">
             <button
               onClick={() => { setShopOpen(!shopOpen); setContactOpen(false); }}
+              aria-expanded={shopOpen}
+              aria-haspopup="true"
+              role="menuitem"
               className="px-4 py-2 rounded-lg text-sm font-semibold bg-transparent border-none cursor-pointer text-foreground/70 hover:text-foreground hover:bg-secondary transition-colors inline-flex items-center gap-1.5"
             >
               Shop
@@ -113,9 +117,12 @@ const VzlaNavbar = () => {
             </AnimatePresence>
           </li>
 
-          <li className="relative">
+          <li className="relative" role="none">
             <button
               onClick={() => { setContactOpen(!contactOpen); setShopOpen(false); }}
+              aria-expanded={contactOpen}
+              aria-haspopup="true"
+              role="menuitem"
               className="px-4 py-2 rounded-lg text-sm font-semibold bg-transparent border-none cursor-pointer text-foreground/70 hover:text-foreground hover:bg-secondary transition-colors inline-flex items-center gap-1.5"
             >
               Contact

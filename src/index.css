@@ -61,6 +61,32 @@
     @apply border-border;
   }
 
+  /* Skip-to-content link */
+  .skip-link {
+    @apply sr-only;
+    &:focus {
+      @apply not-sr-only fixed top-2 left-2 z-[99999] px-4 py-2 rounded-lg text-sm font-bold;
+      background: hsl(var(--vzla-yellow));
+      color: hsl(0 0% 0%);
+    }
+  }
+
+  /* Consistent focus-visible rings */
+  :focus-visible {
+    outline: 2px solid hsl(var(--vzla-yellow));
+    outline-offset: 2px;
+  }
+
+  /* Respect reduced-motion preference */
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+
   body {
     @apply bg-background text-foreground;
     font-family: 'Inter', system-ui, -apple-system, sans-serif;
