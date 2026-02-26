@@ -477,6 +477,10 @@ async function getAppToken() {
   return json.access_token;
 }
 
+// --- API call counter ---
+let apiCallCount = 0;
+let apiRetryCount = 0;
+
 // --- eBay Browse Search (with retry on 429) ---
 const MAX_RETRIES = 4;
 
@@ -516,6 +520,7 @@ async function ebayBrowseSearch({
         ? parseInt(retryAfter, 10) * 1000
         : Math.pow(2, attempt) * 1000 + Math.random() * 500;
       console.log(`  ⏳ 429 rate-limited, waiting ${Math.round(waitMs / 1000)}s (attempt ${attempt + 1}/${MAX_RETRIES + 1})`);
+      apiRetryCount++;
       await sleep(waitMs);
       continue;
     }
@@ -525,6 +530,7 @@ async function ebayBrowseSearch({
       throw new Error(`Browse search failed (${marketplaceId}) ${res.status}: ${txt}`);
     }
 
+    apiCallCount++;
     return res.json();
   }
 
@@ -943,6 +949,7 @@ async function main() {
   saveMatchCache(matchCache);
   console.log(`Wrote ${OUT_PATH} (indexHistory: ${history.length} entries)`);
   console.log(`📦 Match cache summary: ${cacheHits} hits, ${cacheMisses} misses, ${Object.keys(matchCache).length} total cached.`);
+  console.log(`📊 API call summary: ${apiCallCount} successful calls, ${apiRetryCount} retries (429s). Daily limit: 5,000.`);
 }
 
 main().catch((err) => {
