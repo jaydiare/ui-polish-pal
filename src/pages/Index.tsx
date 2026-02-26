@@ -16,6 +16,7 @@ const Index = () => {
     paginatedAthletes,
     byName,
     byKey,
+    ebayAvgRaw,
     lastUpdated,
     filters,
     updateFilter,
@@ -41,7 +42,7 @@ const Index = () => {
         {/* Main content */}
         <main className="w-full px-8 pb-8 pt-0">
           <VzlaHero lastUpdated={lastUpdated} />
-          <VzlaIndexCards athletes={athletes} byName={byName} byKey={byKey} />
+          <VzlaIndexCards athletes={athletes} byName={byName} byKey={byKey} indexHistory={ebayAvgRaw?._meta?.indexHistory} />
           <VzlaBudgetBar
             onSuggest={runBudget}
             onClear={clearBudget}

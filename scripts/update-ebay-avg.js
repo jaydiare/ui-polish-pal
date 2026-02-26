@@ -822,9 +822,47 @@ async function main() {
     await sleep(500);
   }
 
+  // ── Index History: append daily snapshot ──
+  const today = new Date().toISOString().slice(0, 10); // YYYY-MM-DD
+
+  // Compute index sums per sport
+  const sportSums = {};
+  let allSum = 0;
+  let allUsed = 0;
+
+  for (const [name, rec] of Object.entries(out)) {
+    if (name === "_meta") continue;
+    const price = rec?.taguchiListing ?? rec?.avgListing ?? rec?.avg ?? null;
+    if (price == null || !Number.isFinite(Number(price)) || Number(price) <= 0) continue;
+    const v = Number(price);
+    const sport = rec?.match?.mode === "player" || rec?.match?.mode === "sport"
+      ? (athletes.find(a => a.name === name)?.sport || "Other")
+      : "Other";
+
+    if (!sportSums[sport]) sportSums[sport] = { sum: 0, used: 0 };
+    sportSums[sport].sum += v;
+    sportSums[sport].used += 1;
+    allSum += v;
+    allUsed += 1;
+  }
+
+  const snapshot = { date: today };
+  for (const [sport, data] of Object.entries(sportSums)) {
+    snapshot[sport] = Math.round(data.sum);
+  }
+  snapshot.All = Math.round(allSum);
+
+  // Append to history (keep last 90 entries, dedupe by date)
+  if (!out._meta.indexHistory) out._meta.indexHistory = [];
+  const history = out._meta.indexHistory.filter(h => h.date !== today);
+  history.push(snapshot);
+  // Keep last 90 snapshots
+  if (history.length > 90) history.splice(0, history.length - 90);
+  out._meta.indexHistory = history;
+
   fs.mkdirSync(path.dirname(OUT_PATH), { recursive: true });
   fs.writeFileSync(OUT_PATH, JSON.stringify(out, null, 2));
-  console.log(`Wrote ${OUT_PATH}`);
+  console.log(`Wrote ${OUT_PATH} (indexHistory: ${history.length} entries)`);
 }
 
 main().catch((err) => {
