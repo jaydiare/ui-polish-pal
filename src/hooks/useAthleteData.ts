@@ -9,6 +9,8 @@ import {
   getAvgDaysOnMarket,
   Filters,
   timeAgo,
+  SortOption,
+  sortAthletes,
 } from "@/lib/vzla-helpers";
 import { runKnapsack, BudgetCandidate, KnapsackResult } from "@/lib/budget-knapsack";
 
@@ -67,6 +69,8 @@ export function useAthleteData() {
       return () => clearInterval(interval);
     }
   }, [ebayAvgRaw]);
+  // Sort
+  const [sort, setSort] = useState<SortOption>("default");
 
   // Filtered athletes
   const filteredAthletes = useMemo(
@@ -74,14 +78,20 @@ export function useAthleteData() {
     [athletes, filters, byName, byKey]
   );
 
-  // Paginated
-  const paginatedAthletes = useMemo(
-    () => filteredAthletes.slice(0, visibleCount),
-    [filteredAthletes, visibleCount]
+  // Sorted
+  const sortedAthletes = useMemo(
+    () => sortAthletes(filteredAthletes, sort, byName, byKey),
+    [filteredAthletes, sort, byName, byKey]
   );
 
-  const hasMore = filteredAthletes.length > visibleCount;
-  const remainingCount = Math.min(PAGE_SIZE, filteredAthletes.length - visibleCount);
+  // Paginated
+  const paginatedAthletes = useMemo(
+    () => sortedAthletes.slice(0, visibleCount),
+    [sortedAthletes, visibleCount]
+  );
+
+  const hasMore = sortedAthletes.length > visibleCount;
+  const remainingCount = Math.min(PAGE_SIZE, sortedAthletes.length - visibleCount);
 
   const loadMore = useCallback(() => {
     setVisibleCount((prev) => prev + PAGE_SIZE);
@@ -146,7 +156,7 @@ export function useAthleteData() {
 
   return {
     athletes,
-    filteredAthletes,
+    filteredAthletes: sortedAthletes,
     paginatedAthletes,
     byName,
     byKey,
@@ -154,6 +164,8 @@ export function useAthleteData() {
     lastUpdated,
     filters,
     updateFilter,
+    sort,
+    setSort,
     hasMore,
     remainingCount,
     loadMore,

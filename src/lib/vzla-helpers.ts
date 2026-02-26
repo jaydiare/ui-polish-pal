@@ -249,3 +249,35 @@ export function filterAthletes(
 
   return filtered;
 }
+
+// Sorting
+export type SortOption = "default" | "price_desc" | "stability_best";
+
+export function sortAthletes(
+  list: Athlete[],
+  sort: SortOption,
+  byName: Record<string, EbayAvgRecord>,
+  byKey: Record<string, EbayAvgRecord>
+): Athlete[] {
+  if (sort === "default") return list;
+
+  return list.slice().sort((a, b) => {
+    if (sort === "price_desc") {
+      const pa = getEbayAvgNumber(a, byName, byKey);
+      const pb = getEbayAvgNumber(b, byName, byKey);
+      if (pa == null && pb == null) return 0;
+      if (pa == null) return 1;
+      if (pb == null) return -1;
+      return pb - pa;
+    }
+    if (sort === "stability_best") {
+      const ca = getMarketStabilityCV(a, byName, byKey);
+      const cb = getMarketStabilityCV(b, byName, byKey);
+      if (ca == null && cb == null) return 0;
+      if (ca == null) return 1;
+      if (cb == null) return -1;
+      return ca - cb; // lower CV = more stable
+    }
+    return 0;
+  });
+}

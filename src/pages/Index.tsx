@@ -19,11 +19,12 @@ const Index = () => {
     lastUpdated,
     filters,
     updateFilter,
+    sort,
+    setSort,
     hasMore,
     remainingCount,
     loadMore,
     sportOptions,
-    leagueOptions,
     budgetResult,
     budgetChosenIds,
     runBudget,
@@ -58,6 +59,8 @@ const Index = () => {
           remainingCount={remainingCount}
           onLoadMore={loadMore}
           highlightedIds={budgetChosenIds}
+          sort={sort}
+          onSortChange={setSort}
         />
         <VzlaFooter />
       </main>

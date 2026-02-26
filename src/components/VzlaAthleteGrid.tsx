@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Athlete, EbayAvgRecord } from "@/data/athletes";
 import { buildBudgetAthleteId } from "@/lib/budget-knapsack";
+import { SortOption } from "@/lib/vzla-helpers";
 import AthleteCard from "./AthleteCard";
 
 interface VzlaAthleteGridProps {
@@ -11,9 +12,17 @@ interface VzlaAthleteGridProps {
   remainingCount: number;
   onLoadMore: () => void;
   highlightedIds?: Set<string>;
+  sort: SortOption;
+  onSortChange: (sort: SortOption) => void;
 }
 
-const VzlaAthleteGrid = ({ athletes, byName, byKey, hasMore, remainingCount, onLoadMore, highlightedIds }: VzlaAthleteGridProps) => {
+const SORT_OPTIONS: { value: SortOption; label: string }[] = [
+  { value: "default", label: "Default" },
+  { value: "price_desc", label: "Price ↓" },
+  { value: "stability_best", label: "Most Stable" },
+];
+
+const VzlaAthleteGrid = ({ athletes, byName, byKey, hasMore, remainingCount, onLoadMore, highlightedIds, sort, onSortChange }: VzlaAthleteGridProps) => {
   // If budget is active, filter to only highlighted cards
   const displayAthletes = highlightedIds && highlightedIds.size > 0
     ? athletes.filter((a) => highlightedIds.has(buildBudgetAthleteId(a.name, a.sport)))
@@ -21,7 +30,25 @@ const VzlaAthleteGrid = ({ athletes, byName, byKey, hasMore, remainingCount, onL
 
   return (
     <>
-      <div className="grid grid-cols-[repeat(auto-fill,minmax(250px,1fr))] gap-5 mt-8">
+      {/* Sort bar */}
+      <div className="flex items-center gap-2 mt-8 mb-4" role="toolbar" aria-label="Sort controls">
+        <span className="text-[10px] tracking-widest uppercase font-bold text-muted-foreground">Sort by</span>
+        {SORT_OPTIONS.map((opt) => (
+          <button
+            key={opt.value}
+            onClick={() => onSortChange(opt.value)}
+            className={`px-3 py-1.5 rounded-lg text-xs font-semibold cursor-pointer transition-all border ${
+              sort === opt.value
+                ? "bg-vzla-yellow/15 border-vzla-yellow/30 text-vzla-yellow"
+                : "bg-secondary border-border text-muted-foreground hover:text-foreground hover:border-foreground/20"
+            }`}
+          >
+            {opt.label}
+          </button>
+        ))}
+      </div>
+
+      <div className="grid grid-cols-[repeat(auto-fill,minmax(250px,1fr))] gap-5">
         {displayAthletes.map((a, i) => (
           <motion.div
             key={`${a.name}-${a.sport}`}
