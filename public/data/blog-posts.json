@@ -2,80 +2,45 @@
   {
     "slug": "top-venezuelan-athlete-card-sales",
     "title": "Top 5 Venezuelan Athlete Card Sales",
-    "excerpt": "The most expensive sports cards sold from Venezuelan athletes on the secondary market.",
+    "excerpt": "The most expensive sports cards sold from Venezuelan athletes who made it to the MLB.",
     "date": "2026-02-27",
     "author": "VZLA Sports Elite",
     "coverImage": "",
+    "credit": "@luthecollector",
     "sections": [
       {
-        "heading": "Top Sales – Venezuelan Athletes",
-        "description": "These are the highest verified sold prices for cards featuring Venezuelan athletes.",
+        "heading": "Top Sales – Venezuelan MLB Athletes",
+        "description": "The highest verified sold prices for cards featuring Venezuelan athletes in the MLB.",
         "items": [
           {
             "rank": 1,
-            "title": "Ronald Acuña Jr. – 2018 Topps Chrome Update Gold Refractor /50",
+            "title": "2017 Bowman Chrome Prospects Auto Superfractor 1/1 – Ronald Acuña Jr. (PSA 9)",
             "imageUrl": "",
-            "soldPrice": 12500
+            "soldPrice": 430000
           },
           {
             "rank": 2,
-            "title": "Jose Altuve – 2011 Topps Update Gold /2011",
+            "title": "2024 Topps Chrome Update MLB Debut Patch Auto 1/1 – Jackson Chourio (PSA 9 / Auto 10)",
             "imageUrl": "",
-            "soldPrice": 8750
+            "soldPrice": 105000
           },
           {
             "rank": 3,
-            "title": "Salvador Perez – 2011 Bowman Chrome Refractor Auto",
+            "title": "1956 Topps – Luis Aparicio RC (PSA 10 Gem Mint)",
             "imageUrl": "",
-            "soldPrice": 4200
+            "soldPrice": 53000
           },
           {
             "rank": 4,
-            "title": "Jackson Chourio – 2023 Bowman Chrome 1st Auto Gold /50",
+            "title": "2000 Topps Traded Certified Autograph – Miguel Cabrera (PSA 10 Gem Mint)",
             "imageUrl": "",
-            "soldPrice": 3800
+            "soldPrice": 22700
           },
           {
             "rank": 5,
-            "title": "Francisco Alvarez – 2022 Bowman Sapphire Auto",
+            "title": "2010 Bowman Chrome Prospects Orange Refractor – Jose Altuve (PSA 10 Gem Mint)",
             "imageUrl": "",
-            "soldPrice": 2900
-          }
-        ]
-      },
-      {
-        "heading": "Top Sales – Cards Printed in Venezuela",
-        "description": "Rare cards that were printed or distributed exclusively in Venezuela.",
-        "items": [
-          {
-            "rank": 1,
-            "title": "1959 Topps Venezuela Bob Gibson RC",
-            "imageUrl": "",
-            "soldPrice": 25000
-          },
-          {
-            "rank": 2,
-            "title": "1966 Topps Venezuela Mickey Mantle",
-            "imageUrl": "",
-            "soldPrice": 18500
-          },
-          {
-            "rank": 3,
-            "title": "1964 Topps Venezuela Hank Aaron",
-            "imageUrl": "",
-            "soldPrice": 14000
-          },
-          {
-            "rank": 4,
-            "title": "1960 Topps Venezuela Roberto Clemente",
-            "imageUrl": "",
-            "soldPrice": 11200
-          },
-          {
-            "rank": 5,
-            "title": "1967 Topps Venezuela Rod Carew RC",
-            "imageUrl": "",
-            "soldPrice": 8900
+            "soldPrice": 5800
           }
         ]
       }
