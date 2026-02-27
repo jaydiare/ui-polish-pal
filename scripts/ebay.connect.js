@@ -1,5 +1,5 @@
 import crypto from "crypto";
-import { EBAY_AUTH_URL } from "../utils/ebay.config.js";
+import { EBAY_AUTH_URL } from "./ebay.config.js";
 
 export const ebayConnect = (req, res) => {
   const state = crypto.randomBytes(16).toString("hex");

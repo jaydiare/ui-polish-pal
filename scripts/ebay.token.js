@@ -1,5 +1,5 @@
 import fetch from "node-fetch";
-import { EBAY_TOKEN_URL } from "../utils/ebay.config.js";
+import { EBAY_TOKEN_URL } from "./ebay.config.js";
 
 export const refreshAccessToken = async (refreshToken) => {
   const basic = Buffer.from(
