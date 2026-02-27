@@ -267,7 +267,7 @@ function buildSoldSearchURL(keyword, page = 1) {
     _sacat: CATEGORY_ID,
     LH_Sold: "1",
     LH_Complete: "1",
-    _ipg: "60", // items per page
+    _ipg: "60",
     rt: "nc",
   });
 
@@ -283,11 +283,17 @@ async function fetchSoldPage(url) {
   const res = await fetch(url, {
     headers: {
       "User-Agent": randomUA(),
-      "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+      "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
       "Accept-Language": "en-US,en;q=0.9",
-      "Accept-Encoding": "gzip, deflate, br",
+      // NOTE: removed "br" (brotli) — Node.js fetch may not decompress it correctly
+      "Accept-Encoding": "gzip, deflate",
       "Cache-Control": "no-cache",
+      "Referer": "https://www.ebay.com/",
+      "Sec-Fetch-Dest": "document",
+      "Sec-Fetch-Mode": "navigate",
+      "Sec-Fetch-Site": "same-origin",
     },
+    redirect: "follow",
   });
 
   if (!res.ok) {
@@ -297,31 +303,99 @@ async function fetchSoldPage(url) {
   return res.text();
 }
 
-// Parse sold prices from eBay search results HTML
+// Try to extract item data from embedded JSON in <script> tags (SSR hydration data)
+function parseItemsFromScriptTags(html) {
+  const results = [];
+
+  // eBay embeds search result data in script tags for SSR hydration
+  // Look for patterns like: "itemSummaries" or "listingItems" or individual item objects
+  const scriptMatches = html.match(/<script[^>]*>([^<]*"soldPrice"[^<]*)<\/script>/gi) || [];
+
+  for (const scriptBlock of scriptMatches) {
+    try {
+      const jsonStr = scriptBlock.replace(/<\/?script[^>]*>/gi, "").trim();
+      const data = JSON.parse(jsonStr);
+      // Attempt to extract items from various possible structures
+      const items = extractItemsFromJSON(data);
+      results.push(...items);
+    } catch {
+      // Not valid JSON or wrong structure, skip
+    }
+  }
+
+  // Also try: look for __NEXT_DATA__ or similar hydration
+  const nextDataMatch = html.match(/<script[^>]*id="__NEXT_DATA__"[^>]*>([^<]+)<\/script>/i);
+  if (nextDataMatch) {
+    try {
+      const data = JSON.parse(nextDataMatch[1]);
+      const items = extractItemsFromJSON(data);
+      results.push(...items);
+    } catch { /* skip */ }
+  }
+
+  return results;
+}
+
+function extractItemsFromJSON(obj, depth = 0) {
+  if (depth > 8 || !obj || typeof obj !== "object") return [];
+
+  const results = [];
+
+  // If this object looks like an item with title + price
+  if (obj.title && (obj.price || obj.soldPrice || obj.sellingStatus)) {
+    const price = safeNum(obj.soldPrice?.value || obj.price?.value || obj.soldPrice || obj.price);
+    const currency = obj.soldPrice?.currency || obj.price?.currency || "USD";
+    if (price != null) {
+      results.push({
+        title: String(obj.title),
+        price,
+        currency: String(currency).toUpperCase(),
+        shippingCost: safeNum(obj.shippingCost?.value || obj.shippingCost) || 0,
+        soldDate: obj.soldDate || obj.endDate || null,
+      });
+    }
+  }
+
+  // Recurse into arrays and objects
+  if (Array.isArray(obj)) {
+    for (const item of obj) {
+      results.push(...extractItemsFromJSON(item, depth + 1));
+    }
+  } else {
+    for (const val of Object.values(obj)) {
+      if (val && typeof val === "object") {
+        results.push(...extractItemsFromJSON(val, depth + 1));
+      }
+    }
+  }
+
+  return results;
+}
+
+// Parse sold prices from eBay search results HTML (cheerio)
 function parseSoldListings(html) {
   const $ = cheerio.load(html);
   const results = [];
 
-  // eBay search results are in .s-item containers
+  // Primary: eBay search results in .s-item containers
   $(".s-item").each((_, el) => {
     const $el = $(el);
 
-    const title = normSpaces($el.find(".s-item__title").first().text());
-    if (!title || title === "Shop on eBay") return; // skip header item
+    const title = normSpaces($el.find(".s-item__title, .s-item__title span").first().text());
+    if (!title || title === "Shop on eBay") return;
 
-    // Sold price — eBay shows it in .s-item__price
-    const priceText = $el.find(".s-item__price").first().text().trim();
+    // Sold price — .s-item__price or .s-item__detail--primary
+    const priceText = $el.find(".s-item__price").first().text().trim() ||
+                      $el.find(".s-item__detail--primary .POSITIVE").first().text().trim();
 
-    // Parse price: handles "$12.99", "C $15.00", "US $10.00", "$5.00 to $20.00" (range)
     const parsed = parsePriceText(priceText);
 
-    // Sold date (e.g., "Sold  Jan 15, 2025")
     const soldDateText = $el.find(".s-item__title--tag .POSITIVE").text().trim() ||
                          $el.find(".s-item__ended-date").text().trim() ||
-                         $el.find(".s-item__endedDate").text().trim();
+                         $el.find(".s-item__endedDate").text().trim() ||
+                         $el.find(".s-item__caption .POSITIVE").text().trim();
 
-    // Shipping cost
-    const shippingText = $el.find(".s-item__shipping, .s-item__freeXDays").first().text().trim();
+    const shippingText = $el.find(".s-item__shipping, .s-item__freeXDays, .s-item__logisticsCost").first().text().trim();
     const shippingCost = parseShippingText(shippingText);
 
     if (parsed) {
@@ -334,6 +408,37 @@ function parseSoldListings(html) {
       });
     }
   });
+
+  // Fallback: try data-* attribute selectors (newer eBay markup)
+  if (!results.length) {
+    $("[data-viewport]").each((_, el) => {
+      const $el = $(el);
+      const title = normSpaces($el.find("[role='heading']").first().text());
+      if (!title || title === "Shop on eBay") return;
+
+      const priceText = $el.find("[class*='price'], .POSITIVE").first().text().trim();
+      const parsed = parsePriceText(priceText);
+
+      const shippingText = $el.find("[class*='shipping'], [class*='logistic']").first().text().trim();
+      const shippingCost = parseShippingText(shippingText);
+
+      if (parsed) {
+        results.push({
+          title,
+          price: parsed.price,
+          currency: parsed.currency,
+          shippingCost,
+          soldDate: null,
+        });
+      }
+    });
+  }
+
+  // Fallback: try extracting from embedded script tags
+  if (!results.length) {
+    const scriptItems = parseItemsFromScriptTags(html);
+    results.push(...scriptItems);
+  }
 
   return results;
 }
@@ -456,6 +561,18 @@ async function main() {
       for (let page = 1; page <= MAX_PAGES; page++) {
         const url = buildSoldSearchURL(keyword, page);
         const html = await fetchSoldPage(url);
+
+        // Debug: log HTML size and check for bot detection
+        if (page === 1) {
+          console.log(`  HTML size: ${html.length} chars`);
+          if (html.includes("captcha") || html.includes("robot")) {
+            console.log(`  ⚠️ Possible bot detection/CAPTCHA for "${keyword}"`);
+          }
+          // Log how many .s-item we find for debugging
+          const sItemCount = (html.match(/s-item__title/g) || []).length;
+          console.log(`  Raw .s-item__title matches: ${sItemCount}`);
+        }
+
         const listings = parseSoldListings(html);
 
         if (!listings.length) {
