@@ -53,11 +53,11 @@ const AthleteCard = ({ athlete, byName, byKey, ebaySoldRaw, isRecommended }: Ath
           <img
             src={photo}
             alt={athlete.name}
-            className="w-12 h-12 rounded-xl object-cover shrink-0 border border-border"
+            className="w-16 h-16 rounded-xl object-cover shrink-0 border border-border"
             loading="lazy"
           />
         ) : (
-          <div className="w-12 h-12 rounded-xl flex items-center justify-center font-display font-bold text-sm tracking-wide bg-secondary border border-border text-vzla-yellow shrink-0">
+          <div className="w-16 h-16 rounded-xl flex items-center justify-center font-display font-bold text-base tracking-wide bg-secondary border border-border text-vzla-yellow shrink-0">
             {initials}
           </div>
         )}
