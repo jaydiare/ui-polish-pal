@@ -61,8 +61,11 @@ const athletes = JSON.parse(
   await fs.promises.readFile(ATHLETES_PATH, "utf8")
 );
 
-// CLI flag: --force-refresh to skip cache and re-validate all matches
+// CLI flags:
+//   --force-refresh      => skip cache and re-validate all matches
+//   --reset-match-cache  => clear match cache before run
 const FORCE_REFRESH = process.argv.includes("--force-refresh");
+const RESET_MATCH_CACHE = process.argv.includes("--reset-match-cache");
 
 // Category you were using (Trading Card Singles)
 const CATEGORY_ID = "261328";
@@ -484,12 +487,38 @@ let lastApiRequestAt = 0;
 
 // --- eBay Browse Search (with retry/throttle for rate limits) ---
 const MAX_RETRIES = 6;
-const MIN_REQUEST_GAP_MS = 300;
+const MIN_REQUEST_GAP_MS = Math.max(
+  300,
+  Number.parseInt(process.env.EBAY_MIN_REQUEST_GAP_MS || "1200", 10) || 1200
+);
 const MAX_BACKOFF_MS = 30_000;
+const RATE_LIMIT_EXHAUSTED = "RATE_LIMIT_EXHAUSTED";
 
 function isRateLimitPayload(text) {
   const t = String(text || "").toLowerCase();
   return t.includes('"errorid": 2001') || t.includes("too many requests") || t.includes("request limit has been reached");
+}
+
+function parseRetryAfterMs(retryAfterRaw) {
+  const raw = String(retryAfterRaw || "").trim();
+  if (!raw) return null;
+
+  const seconds = Number.parseInt(raw, 10);
+  if (Number.isFinite(seconds) && seconds > 0) {
+    return seconds * 1000;
+  }
+
+  const until = Date.parse(raw);
+  if (Number.isFinite(until)) {
+    const diff = until - Date.now();
+    if (diff > 0) return diff;
+  }
+
+  return null;
+}
+
+function isRateLimitExhaustedError(err) {
+  return String(err?.message || "").includes(RATE_LIMIT_EXHAUSTED);
 }
 
 async function throttleEbayRequests() {
@@ -558,10 +587,10 @@ async function ebayBrowseSearch({
     const limited = res.status === 429 || isRateLimitPayload(txt);
     if (limited) {
       const retryAfterRaw = res.headers.get("Retry-After") || "";
-      const retryAfter = Number.parseInt(retryAfterRaw, 10);
+      const retryAfterMs = parseRetryAfterMs(retryAfterRaw);
       const backoff = Math.min(MAX_BACKOFF_MS, Math.pow(2, attempt) * 1500 + Math.random() * 1200);
-      const waitMs = Number.isFinite(retryAfter) && retryAfter > 0
-        ? Math.min(MAX_BACKOFF_MS, retryAfter * 1000 + Math.random() * 1200)
+      const waitMs = retryAfterMs != null
+        ? Math.min(MAX_BACKOFF_MS, retryAfterMs + Math.random() * 1200)
         : backoff;
 
       apiRetryCount++;
@@ -573,9 +602,8 @@ async function ebayBrowseSearch({
     throw new Error(`Browse search failed (${marketplaceId}) ${res.status}: ${txt}`);
   }
 
-  // Return null instead of throwing — caller decides whether to skip
-  console.log(`  ⚠️ Giving up after ${MAX_RETRIES + 1} retries for ${marketplaceId}`);
-  return null;
+  // Throw a typed error so callers can avoid poisoning cache on transient 429s
+  throw new Error(`${RATE_LIMIT_EXHAUSTED}:${marketplaceId}`);
 }
 
 // --- Matching / Validation ---
@@ -608,7 +636,6 @@ async function validatePlayerAthleteMatch({ token, marketplaceId, name, sport })
       aspectFilter,
     });
 
-    if (!data) return { ok: false, aspectValue: null }; // 429 exhausted
     const total = safeNum(data?.total) ?? 0;
     if (total > 0) return { ok: true, aspectValue: cand };
 
@@ -636,7 +663,6 @@ async function validateSportMatch({ token, marketplaceId, name, sport }) {
       aspectFilter,
     });
 
-    if (!data) return { ok: false, sportAspectValue: null }; // 429 exhausted
     const total = safeNum(data?.total) ?? 0;
     if (total > 0) return { ok: true, sportAspectValue: s };
 
@@ -777,15 +803,31 @@ function matchCacheKey(name, sport) {
 async function main() {
   const token = await getAppToken();
   const fx = await getFxRatesToUSD();
-  const matchCache = FORCE_REFRESH ? {} : loadMatchCache();
+  const matchCache = (FORCE_REFRESH || RESET_MATCH_CACHE) ? {} : loadMatchCache();
   let cacheHits = 0;
   let cacheMisses = 0;
+
+  let previousOut = {};
+  try {
+    if (fs.existsSync(OUT_PATH)) {
+      previousOut = JSON.parse(fs.readFileSync(OUT_PATH, "utf8"));
+    }
+  } catch {
+    previousOut = {};
+  }
+
+  if (RESET_MATCH_CACHE) {
+    saveMatchCache(matchCache);
+    console.log("🧹 --reset-match-cache: cache cleared before run.");
+  }
 
   if (FORCE_REFRESH) {
     console.log("⚠️ --force-refresh: ignoring cached matches, re-validating all athletes.");
   } else {
     console.log(`📦 Match cache loaded: ${Object.keys(matchCache).length} cached entries.`);
   }
+
+  console.log(`⏱️ Request gap: ${MIN_REQUEST_GAP_MS}ms (set EBAY_MIN_REQUEST_GAP_MS to tune)`);
 
   const out = {
     _meta: {
@@ -828,6 +870,7 @@ async function main() {
     console.log(`[${i + 1}/${athletes.length}] ${name} (${sport || "Unknown"})`);
 
     let match = null;
+    let athleteRateLimited = false;
     const cacheKey = matchCacheKey(name, sport);
     const cached = matchCache[cacheKey];
 
@@ -855,6 +898,7 @@ async function main() {
             break;
           }
         } catch (e) {
+          if (isRateLimitExhaustedError(e)) athleteRateLimited = true;
           console.log(`  ⚠️ ${name} (${marketplaceId}) player-match validation error: ${e?.message || e}`);
           await sleep(1000);
         }
@@ -869,6 +913,7 @@ async function main() {
               break;
             }
           } catch (e) {
+            if (isRateLimitExhaustedError(e)) athleteRateLimited = true;
             console.log(`  ⚠️ ${name} (${marketplaceId}) sport-match validation error: ${e?.message || e}`);
             await sleep(1000);
           }
@@ -876,8 +921,17 @@ async function main() {
       }
 
       if (!match) {
+        if (athleteRateLimited) {
+          console.log(`  ${name}: SKIPPED (rate-limited during validation, not caching miss)`);
+          if (previousOut?.[name]) {
+            out[name] = previousOut[name];
+            console.log(`  ♻️ ${name}: kept previous value from existing ebay-avg.json`);
+          }
+          continue;
+        }
+
         console.log(`  ${name}: SKIPPED (no Player/Athlete match AND sport did not match)`);
-        // Cache the miss too so we don't re-validate every run
+        // Cache only true misses (not transient API throttling)
         matchCache[cacheKey] = { mode: null, value: null, skippedAt: new Date().toISOString() };
         saveMatchCache(matchCache);
         continue;
@@ -953,7 +1007,12 @@ async function main() {
     rec.avg = rec.avgListing;
     rec.n = rec.nListing;
 
-    out[name] = rec;
+    if (rec.nListing === 0 && previousOut?.[name]) {
+      out[name] = previousOut[name];
+      console.log(`  ♻️ ${name}: kept previous snapshot (no fresh listing sample)`);
+    } else {
+      out[name] = rec;
+    }
     
     fs.writeFileSync(OUT_PATH, JSON.stringify(out, null, 2));
 
