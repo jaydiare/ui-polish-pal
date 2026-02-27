@@ -45,5 +45,51 @@
         ]
       }
     ]
+  },
+  {
+    "slug": "top-cards-printed-in-venezuela",
+    "title": "Top 5 Cards Printed in Venezuela",
+    "excerpt": "The most valuable vintage baseball cards that were printed and distributed exclusively in Venezuela.",
+    "date": "2026-02-27",
+    "author": "VZLA Sports Elite",
+    "coverImage": "",
+    "sections": [
+      {
+        "heading": "Top Sales – Cards Printed in Venezuela",
+        "description": "Rare Topps Venezuela editions — printed locally with distinct paper stock and distribution — are among the most sought-after vintage cards in the hobby.",
+        "items": [
+          {
+            "rank": 1,
+            "title": "1959 Topps Venezuela – Bob Gibson RC",
+            "imageUrl": "",
+            "soldPrice": 0
+          },
+          {
+            "rank": 2,
+            "title": "1966 Topps Venezuela – Mickey Mantle",
+            "imageUrl": "",
+            "soldPrice": 0
+          },
+          {
+            "rank": 3,
+            "title": "1964 Topps Venezuela – Hank Aaron",
+            "imageUrl": "",
+            "soldPrice": 0
+          },
+          {
+            "rank": 4,
+            "title": "1960 Topps Venezuela – Roberto Clemente",
+            "imageUrl": "",
+            "soldPrice": 0
+          },
+          {
+            "rank": 5,
+            "title": "1967 Topps Venezuela – Rod Carew RC",
+            "imageUrl": "",
+            "soldPrice": 0
+          }
+        ]
+      }
+    ]
   }
 ]
