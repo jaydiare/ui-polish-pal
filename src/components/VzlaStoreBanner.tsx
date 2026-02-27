@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 
-const EBAY_AFF = "&mkcid=1&mkrid=706-53473-19255-0&campid=5339142305&toolid=10001&mkevt=1";
+//const EBAY_AFF = "&mkcid=1&mkrid=706-53473-19255-0&campid=5339142305&toolid=10001&mkevt=1";
 
 const FEATURED_CARDS = [
   {
