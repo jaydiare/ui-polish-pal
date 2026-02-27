@@ -53,7 +53,7 @@ const AthleteCard = ({ athlete, byName, byKey, ebaySoldRaw, isRecommended }: Ath
           <img
             src={photo}
             alt={athlete.name}
-            className="w-16 h-16 rounded-xl object-cover shrink-0 border border-border"
+            className="w-16 h-16 rounded-xl object-cover object-top shrink-0 border border-border"
             loading="lazy"
           />
         ) : (
