@@ -682,11 +682,38 @@ function loadAthletes() {
     .filter((x) => x.name);
 }
 
+// --- index computation (mirrors frontend computeIndexForSport) ---
+function computeScriptIndex(outData, athletes, sport) {
+  let sum = 0;
+  let used = 0;
+  for (const a of athletes) {
+    if (sport !== "All" && a.sport !== sport) continue;
+    const rec = outData[a.name];
+    const v = rec?.taguchiListing ?? rec?.avgListing ?? rec?.avg ?? null;
+    if (v != null && Number.isFinite(v) && v > 0) {
+      sum += v;
+      used += 1;
+    }
+  }
+  return { sum, used };
+}
+
 // --- main ---
 async function main() {
   const token = await getAppToken();
   const fx = await getFxRatesToUSD();
   const athletes = loadAthletes();
+
+  // Load previous indexHistory so we can append to it
+  let prevHistory = [];
+  try {
+    if (fs.existsSync(OUT_PATH)) {
+      const prev = JSON.parse(fs.readFileSync(OUT_PATH, "utf8"));
+      if (Array.isArray(prev?._meta?.indexHistory)) {
+        prevHistory = prev._meta.indexHistory;
+      }
+    }
+  } catch { /* ignore parse errors */ }
 
   const out = {
     _meta: {
@@ -823,6 +850,39 @@ async function main() {
 
     await sleep(500);
   }
+
+  // --- Append today's index snapshot to indexHistory ---
+  const today = new Date().toISOString().slice(0, 10); // YYYY-MM-DD
+
+  // Detect top sports from athletes list (same logic as frontend)
+  const sportCounts = new Map();
+  for (const a of athletes) {
+    const s = a.sport || "Other";
+    if (s === "Other") continue;
+    sportCounts.set(s, (sportCounts.get(s) || 0) + 1);
+  }
+  const topSports = [...sportCounts.entries()]
+    .sort((a, b) => b[1] - a[1])
+    .slice(0, 3)
+    .map(([s]) => s);
+
+  const snapshot = { date: today };
+  for (const sport of topSports) {
+    const idx = computeScriptIndex(out, athletes, sport);
+    snapshot[sport] = Math.round(idx.sum);
+  }
+  const allIdx = computeScriptIndex(out, athletes, "All");
+  snapshot.All = Math.round(allIdx.sum);
+
+  // Dedupe: replace existing entry for today, keep last 90 days
+  const history = prevHistory.filter((h) => h.date !== today);
+  history.push(snapshot);
+  // Keep only last 90 entries
+  while (history.length > 90) history.shift();
+
+  out._meta.indexHistory = history;
+
+  console.log(`Index snapshot for ${today}:`, JSON.stringify(snapshot));
 
   fs.mkdirSync(path.dirname(OUT_PATH), { recursive: true });
   fs.writeFileSync(OUT_PATH, JSON.stringify(out, null, 2));
