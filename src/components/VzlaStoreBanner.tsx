@@ -73,7 +73,7 @@ const VzlaStoreBanner = () => {
     if (!el) return;
 
     let raf: number;
-    const speed = 0.5; // px per frame
+    const speed = 0.15; // px per frame (slow drift)
 
     const step = () => {
       if (!paused && el) {
