@@ -2,7 +2,7 @@ import { useState } from "react";
 import { KnapsackResult } from "@/lib/budget-knapsack";
 
 interface VzlaBudgetBarProps {
-  onSuggest: (budget: number, maxCards: number | null) => void;
+  onSuggest: (budget: number, maxCards: number | null, flipOnly: boolean) => void;
   onClear: () => void;
   result: KnapsackResult | null;
 }
@@ -10,18 +10,20 @@ interface VzlaBudgetBarProps {
 const VzlaBudgetBar = ({ onSuggest, onClear, result }: VzlaBudgetBarProps) => {
   const [budget, setBudget] = useState("");
   const [cards, setCards] = useState("");
+  const [flipOnly, setFlipOnly] = useState(false);
 
   const handleSuggest = () => {
     const b = Number(budget);
     if (!Number.isFinite(b) || b <= 0) return;
     const c = cards ? Number(cards) : null;
     const maxCards = c && Number.isFinite(c) && c > 0 ? Math.floor(c) : null;
-    onSuggest(b, maxCards);
+    onSuggest(b, maxCards, flipOnly);
   };
 
   const handleClear = () => {
     setBudget("");
     setCards("");
+    setFlipOnly(false);
     onClear();
   };
 
@@ -33,7 +35,7 @@ const VzlaBudgetBar = ({ onSuggest, onClear, result }: VzlaBudgetBarProps) => {
       <p className="text-xs text-muted-foreground mb-3">
         Enter your budget and we'll find the best combination of cards to maximize value using market data.
       </p>
-      <div className="grid grid-cols-1 sm:grid-cols-[1fr_1fr_auto_auto] gap-3 items-end">
+      <div className="grid grid-cols-1 sm:grid-cols-[1fr_1fr_auto_auto_auto] gap-3 items-end">
         <div>
           <label htmlFor="budget-input" className="sr-only">Budget amount in USD</label>
           <input
@@ -60,6 +62,18 @@ const VzlaBudgetBar = ({ onSuggest, onClear, result }: VzlaBudgetBarProps) => {
             className="w-full h-11 px-3.5 rounded-lg bg-secondary border border-border text-foreground text-sm outline-none transition-all placeholder:text-muted-foreground focus:border-primary/40 focus:shadow-[0_0_0_3px_hsl(var(--primary)/0.08)]"
           />
         </div>
+        <button
+          onClick={() => setFlipOnly((prev) => !prev)}
+          className={`h-11 px-4 rounded-lg border text-xs font-bold cursor-pointer whitespace-nowrap transition-all flex items-center gap-1.5 ${
+            flipOnly
+              ? "bg-vzla-yellow/15 border-vzla-yellow/40 text-vzla-yellow"
+              : "bg-secondary border-border text-muted-foreground hover:text-foreground"
+          }`}
+          aria-pressed={flipOnly}
+          aria-label="Filter for flip potential cards only"
+        >
+          🔄 Flip Only
+        </button>
         <button
           onClick={handleSuggest}
           className="h-11 px-6 rounded-lg cta-yellow text-sm font-bold cursor-pointer whitespace-nowrap"

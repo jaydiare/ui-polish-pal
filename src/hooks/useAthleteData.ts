@@ -128,8 +128,11 @@ export function useAthleteData() {
     }));
   }, [filteredAthletes, byName, byKey]);
 
-  const runBudget = useCallback((budgetDollars: number, maxCards: number | null) => {
-    const result = runKnapsack(budgetCandidates, budgetDollars, maxCards);
+  const runBudget = useCallback((budgetDollars: number, maxCards: number | null, flipOnly: boolean = false) => {
+    const candidates = flipOnly
+      ? budgetCandidates.filter((c) => c.stabilityPct != null && c.stabilityPct > 20)
+      : budgetCandidates;
+    const result = runKnapsack(candidates, budgetDollars, maxCards);
     setBudgetResult(result);
   }, [budgetCandidates]);
 
