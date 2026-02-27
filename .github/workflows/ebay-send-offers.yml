@@ -1,0 +1,33 @@
+name: Send 10% offers to buyers
+
+on:
+  schedule:
+    - cron: "0 14 * * *"       # daily at 2 PM UTC
+  workflow_dispatch:
+
+concurrency:
+  group: send-offers
+  cancel-in-progress: true
+
+jobs:
+  send:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install deps
+        if: hashFiles('package-lock.json') != ''
+        run: npm install --no-audit --no-fund
+
+      - name: Send 10% offers
+        run: node scripts/send-offers.js
+        env:
+          EBAY_CLIENT_ID: ${{ secrets.EBAY_CLIENT_ID }}
+          EBAY_CLIENT_SECRET: ${{ secrets.EBAY_CLIENT_SECRET }}
+          EBAY_REFRESH_TOKEN: ${{ secrets.EBAY_REFRESH_TOKEN }}
+          EBAY_SCOPES: ${{ secrets.EBAY_SCOPES }}
