@@ -65,6 +65,7 @@ const VzlaNavbar = () => {
         <ul className="hidden md:flex gap-1 items-center m-0 p-0 list-none" role="menubar">
           {[
             { label: "Home", to: "/" },
+            { label: "Blog", to: "/blog" },
             { label: "About", to: "/about" },
           ].map((item) => (
             <li key={item.label} role="none">
@@ -192,6 +193,7 @@ const VzlaNavbar = () => {
             >
               {[
                 { label: "Home", to: "/" },
+                { label: "Blog", to: "/blog" },
                 { label: "About", to: "/about" },
               ].map((item) => (
                 <Link
