@@ -512,7 +512,7 @@ function loadAthletes() {
 
 function buildKeyword(name, sport) {
   const sportHint = sport ? ` ${sport}` : "";
-  return `${name}${sportHint} card`;
+  return `${name}${sportHint}`;
 }
 
 // --- main ---
