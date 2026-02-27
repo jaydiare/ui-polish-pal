@@ -353,7 +353,14 @@ function parseItemsFromScriptTags(html) {
 
   for (const scriptBlock of scriptMatches) {
     try {
-      const jsonStr = scriptBlock.replace(/<\/?script[^>]*>/gi, "").trim();
+      let jsonStr = scriptBlock;
+      // Fully remove script tags (loop to handle incomplete multi-character sanitization)
+      let prev;
+      do {
+        prev = jsonStr;
+        jsonStr = jsonStr.replace(/<\/?script[^>]*>/gi, "");
+      } while (jsonStr !== prev);
+      jsonStr = jsonStr.trim();
       const data = JSON.parse(jsonStr);
       // Attempt to extract items from various possible structures
       const items = extractItemsFromJSON(data);
