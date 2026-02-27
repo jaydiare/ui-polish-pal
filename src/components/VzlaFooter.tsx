@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const EBAY_STORE = "https://www.ebay.ca/str/localherossportscards?mkcid=1&mkrid=706-53473-19255-0&siteid=2&campid=5339142305&toolid=10001&mkevt=1";
 const CARDHEDGE = "https://www.cardhedger.com?via=vzlaelite";
 const BCW = "https://www.bcwsupplies.com/?acc=vzlaelite";
@@ -83,8 +85,11 @@ const VzlaFooter = () => {
           </div>
 
           {/* Bottom bar */}
-          <div className="pt-6 border-t border-border flex items-center justify-center text-xs text-muted-foreground">
+          <div className="pt-6 border-t border-border flex items-center justify-between text-xs text-muted-foreground">
             <span>© {new Date().getFullYear()} VZLA Sports Elite. All rights reserved.</span>
+            <Link to="/privacy" className="text-muted-foreground no-underline hover:text-foreground transition-colors">
+              Privacy Policy
+            </Link>
           </div>
         </div>
       </footer>
