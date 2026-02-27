@@ -4,7 +4,7 @@ const VzlaEbayFooter = () => {
   return (
     <footer className="ebay-footer">
       <a href={EBAY_BANNER} target="_blank" rel="noopener noreferrer">
-        <img src="./assets/Baseball-728x90.jpg" alt="eBay banner" className="ebay-banner-img" loading="eager" />
+        <img src="/assets/Baseball-728x90.jpg" alt="eBay banner" className="ebay-banner-img" loading="eager" />
       </a>
     </footer>
   );
