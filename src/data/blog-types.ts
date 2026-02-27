@@ -3,6 +3,7 @@ export interface BlogSaleItem {
   title: string;
   imageUrl: string;
   soldPrice: number;
+  sourceUrl?: string;
 }
 
 export interface BlogSection {

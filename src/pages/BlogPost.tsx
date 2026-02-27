@@ -86,6 +86,11 @@ const BlogPost = () => {
                     <p className="text-vzla-yellow font-display font-bold text-lg mt-1">
                       ${item.soldPrice.toLocaleString()}
                     </p>
+                    {item.sourceUrl && (
+                      <a href={item.sourceUrl} target="_blank" rel="noopener noreferrer" className="text-xs text-muted-foreground hover:text-vzla-yellow transition-colors">
+                        View source ↗
+                      </a>
+                    )}
                   </div>
                 </div>
               ))}
