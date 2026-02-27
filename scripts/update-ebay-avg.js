@@ -51,21 +51,10 @@ if (!EBAY_CLIENT_ID || !EBAY_CLIENT_SECRET) {
 }
 
 const OUT_PATH = path.join(__dirname, "..", "data", "ebay-avg.json");
-const MATCH_CACHE_PATH = path.join(__dirname, "..", "data", "ebay-match-cache.json");
 
 // This script expects:
 // data/athletes.json: [{ name: "Jose Altuve", sport: "Baseball" }, ...]
 const ATHLETES_PATH = path.join(__dirname, "..", "data", "athletes.json");
-
-const athletes = JSON.parse(
-  await fs.promises.readFile(ATHLETES_PATH, "utf8")
-);
-
-// CLI flags:
-//   --force-refresh      => skip cache and re-validate all matches
-//   --reset-match-cache  => clear match cache before run
-const FORCE_REFRESH = process.argv.includes("--force-refresh");
-const RESET_MATCH_CACHE = process.argv.includes("--reset-match-cache");
 
 // Category you were using (Trading Card Singles)
 const CATEGORY_ID = "261328";
@@ -82,8 +71,10 @@ const MARKETPLACES = ["EBAY_US", "EBAY_CA"];
 
 // restrict to major manufacturers (sports card makers)
 const MANUFACTURERS = ["Topps", "Panini", "Upper Deck", "Leaf", "Artesania Sport", "Ovenca Venezuelan", "Sport Grafico", "Line Up", "Venezuelan League", "BYN"];
+
 // ✅ Country of Origin options
 const COUNTRY_OF_ORIGIN = ["United States", "Italy", "Venezuela"];
+
 // Taguchi caps (winsorization %)
 const TAGUCHI_TRIM_PCT = 0.4;
 
@@ -480,55 +471,7 @@ async function getAppToken() {
   return json.access_token;
 }
 
-// --- API call counter ---
-let apiCallCount = 0;
-let apiRetryCount = 0;
-let lastApiRequestAt = 0;
-
-// --- eBay Browse Search (with retry/throttle for rate limits) ---
-const MAX_RETRIES = 6;
-const MIN_REQUEST_GAP_MS = Math.max(
-  300,
-  Number.parseInt(process.env.EBAY_MIN_REQUEST_GAP_MS || "1200", 10) || 1200
-);
-const MAX_BACKOFF_MS = 30_000;
-const RATE_LIMIT_EXHAUSTED = "RATE_LIMIT_EXHAUSTED";
-
-function isRateLimitPayload(text) {
-  const t = String(text || "").toLowerCase();
-  return t.includes('"errorid": 2001') || t.includes("too many requests") || t.includes("request limit has been reached");
-}
-
-function parseRetryAfterMs(retryAfterRaw) {
-  const raw = String(retryAfterRaw || "").trim();
-  if (!raw) return null;
-
-  const seconds = Number.parseInt(raw, 10);
-  if (Number.isFinite(seconds) && seconds > 0) {
-    return seconds * 1000;
-  }
-
-  const until = Date.parse(raw);
-  if (Number.isFinite(until)) {
-    const diff = until - Date.now();
-    if (diff > 0) return diff;
-  }
-
-  return null;
-}
-
-function isRateLimitExhaustedError(err) {
-  return String(err?.message || "").includes(RATE_LIMIT_EXHAUSTED);
-}
-
-async function throttleEbayRequests() {
-  const now = Date.now();
-  const elapsed = now - lastApiRequestAt;
-  const waitMs = Math.max(0, MIN_REQUEST_GAP_MS - elapsed);
-  if (waitMs > 0) await sleep(waitMs);
-  lastApiRequestAt = Date.now();
-}
-
+// --- eBay Browse Search ---
 async function ebayBrowseSearch({
   token,
   marketplaceId,
@@ -550,60 +493,20 @@ async function ebayBrowseSearch({
     url.searchParams.set("aspect_filter", aspectFilter);
   }
 
-  for (let attempt = 0; attempt <= MAX_RETRIES; attempt++) {
-    await throttleEbayRequests();
+  const res = await fetch(url.toString(), {
+    headers: {
+      Authorization: `Bearer ${token}`,
+      "Content-Type": "application/json",
+      ...getHeaderMarketplace(marketplaceId),
+    },
+  });
 
-    let res;
-    try {
-      res = await fetch(url.toString(), {
-        headers: {
-          Authorization: `Bearer ${token}`,
-          "Content-Type": "application/json",
-          ...getHeaderMarketplace(marketplaceId),
-        },
-      });
-    } catch (err) {
-      if (attempt >= MAX_RETRIES) {
-        throw new Error(`Browse search network error (${marketplaceId}): ${err?.message || err}`);
-      }
-      const waitMs = Math.min(MAX_BACKOFF_MS, Math.pow(2, attempt) * 1500 + Math.random() * 1200);
-      apiRetryCount++;
-      console.log(`  🌐 Network retry in ${Math.round(waitMs / 1000)}s (attempt ${attempt + 1}/${MAX_RETRIES + 1})`);
-      await sleep(waitMs);
-      continue;
-    }
-
+  if (!res.ok) {
     const txt = await res.text().catch(() => "");
-
-    if (res.ok) {
-      apiCallCount++;
-      try {
-        return txt ? JSON.parse(txt) : {};
-      } catch {
-        throw new Error(`Browse search parse error (${marketplaceId}): invalid JSON response`);
-      }
-    }
-
-    const limited = res.status === 429 || isRateLimitPayload(txt);
-    if (limited) {
-      const retryAfterRaw = res.headers.get("Retry-After") || "";
-      const retryAfterMs = parseRetryAfterMs(retryAfterRaw);
-      const backoff = Math.min(MAX_BACKOFF_MS, Math.pow(2, attempt) * 1500 + Math.random() * 1200);
-      const waitMs = retryAfterMs != null
-        ? Math.min(MAX_BACKOFF_MS, retryAfterMs + Math.random() * 1200)
-        : backoff;
-
-      apiRetryCount++;
-      console.log(`  ⏳ Rate-limited (${marketplaceId}), waiting ${Math.round(waitMs / 1000)}s (attempt ${attempt + 1}/${MAX_RETRIES + 1})`);
-      await sleep(waitMs);
-      continue;
-    }
-
     throw new Error(`Browse search failed (${marketplaceId}) ${res.status}: ${txt}`);
   }
 
-  // Throw a typed error so callers can avoid poisoning cache on transient 429s
-  throw new Error(`${RATE_LIMIT_EXHAUSTED}:${marketplaceId}`);
+  return res.json();
 }
 
 // --- Matching / Validation ---
@@ -639,7 +542,7 @@ async function validatePlayerAthleteMatch({ token, marketplaceId, name, sport })
     const total = safeNum(data?.total) ?? 0;
     if (total > 0) return { ok: true, aspectValue: cand };
 
-    await sleep(200);
+    await sleep(120);
   }
 
   return { ok: false, aspectValue: null };
@@ -666,7 +569,7 @@ async function validateSportMatch({ token, marketplaceId, name, sport }) {
     const total = safeNum(data?.total) ?? 0;
     if (total > 0) return { ok: true, sportAspectValue: s };
 
-    await sleep(200);
+    await sleep(120);
   }
 
   return { ok: false, sportAspectValue: null };
@@ -705,7 +608,6 @@ async function computeAvgActiveListing({
       aspectFilter,
     });
 
-    if (!data) break; // 429 exhausted, use whatever we have
     const items = data?.itemSummaries || [];
 
     for (const it of items) {
@@ -739,7 +641,7 @@ async function computeAvgActiveListing({
 
     if (items.length < PAGE_SIZE) break;
     offset += PAGE_SIZE;
-    await sleep(200);
+    await sleep(120);
   }
 
   const taguchiListing = taguchiTrimmedMean(pricesUSD, TAGUCHI_TRIM_PCT);
@@ -780,54 +682,11 @@ function loadAthletes() {
     .filter((x) => x.name);
 }
 
-// --- match cache ---
-function loadMatchCache() {
-  try {
-    if (fs.existsSync(MATCH_CACHE_PATH)) {
-      return JSON.parse(fs.readFileSync(MATCH_CACHE_PATH, "utf8"));
-    }
-  } catch { /* ignore corrupt cache */ }
-  return {};
-}
-
-function saveMatchCache(cache) {
-  fs.mkdirSync(path.dirname(MATCH_CACHE_PATH), { recursive: true });
-  fs.writeFileSync(MATCH_CACHE_PATH, JSON.stringify(cache, null, 2));
-}
-
-function matchCacheKey(name, sport) {
-  return `${normSpaces(name)}||${normSpaces(sport)}`;
-}
-
 // --- main ---
 async function main() {
   const token = await getAppToken();
   const fx = await getFxRatesToUSD();
-  const matchCache = (FORCE_REFRESH || RESET_MATCH_CACHE) ? {} : loadMatchCache();
-  let cacheHits = 0;
-  let cacheMisses = 0;
-
-  let previousOut = {};
-  try {
-    if (fs.existsSync(OUT_PATH)) {
-      previousOut = JSON.parse(fs.readFileSync(OUT_PATH, "utf8"));
-    }
-  } catch {
-    previousOut = {};
-  }
-
-  if (RESET_MATCH_CACHE) {
-    saveMatchCache(matchCache);
-    console.log("🧹 --reset-match-cache: cache cleared before run.");
-  }
-
-  if (FORCE_REFRESH) {
-    console.log("⚠️ --force-refresh: ignoring cached matches, re-validating all athletes.");
-  } else {
-    console.log(`📦 Match cache loaded: ${Object.keys(matchCache).length} cached entries.`);
-  }
-
-  console.log(`⏱️ Request gap: ${MIN_REQUEST_GAP_MS}ms (set EBAY_MIN_REQUEST_GAP_MS to tune)`);
+  const athletes = loadAthletes();
 
   const out = {
     _meta: {
@@ -870,77 +729,28 @@ async function main() {
     console.log(`[${i + 1}/${athletes.length}] ${name} (${sport || "Unknown"})`);
 
     let match = null;
-    let athleteRateLimited = false;
-    const cacheKey = matchCacheKey(name, sport);
-    const cached = matchCache[cacheKey];
 
-    // Use cached match if available (including cached skips)
-    if (cached) {
-      if (cached.mode && cached.value) {
-        match = cached;
-        cacheHits++;
-        console.log(`  ✅ Cache hit: ${match.mode}="${match.value}" (validated on ${match.validatedOn || "?"})`);
-      } else if (cached.mode === null && cached.skippedAt) {
-        cacheHits++;
-        console.log(`  ⏭️ Cache hit (skip): previously skipped on ${cached.skippedAt}`);
-        continue;
+    for (const marketplaceId of ["EBAY_CA", "EBAY_US"]) {
+      const v = await validatePlayerAthleteMatch({ token, marketplaceId, name, sport });
+      if (v.ok) {
+        match = { mode: "player", value: v.aspectValue, validatedOn: marketplaceId };
+        break;
       }
     }
 
     if (!match) {
-      cacheMisses++;
-
       for (const marketplaceId of ["EBAY_CA", "EBAY_US"]) {
-        try {
-          const v = await validatePlayerAthleteMatch({ token, marketplaceId, name, sport });
-          if (v.ok) {
-            match = { mode: "player", value: v.aspectValue, validatedOn: marketplaceId };
-            break;
-          }
-        } catch (e) {
-          if (isRateLimitExhaustedError(e)) athleteRateLimited = true;
-          console.log(`  ⚠️ ${name} (${marketplaceId}) player-match validation error: ${e?.message || e}`);
-          await sleep(1000);
+        const s = await validateSportMatch({ token, marketplaceId, name, sport });
+        if (s.ok) {
+          match = { mode: "sport", value: s.sportAspectValue, validatedOn: marketplaceId };
+          break;
         }
       }
+    }
 
-      if (!match) {
-        for (const marketplaceId of ["EBAY_CA", "EBAY_US"]) {
-          try {
-            const s = await validateSportMatch({ token, marketplaceId, name, sport });
-            if (s.ok) {
-              match = { mode: "sport", value: s.sportAspectValue, validatedOn: marketplaceId };
-              break;
-            }
-          } catch (e) {
-            if (isRateLimitExhaustedError(e)) athleteRateLimited = true;
-            console.log(`  ⚠️ ${name} (${marketplaceId}) sport-match validation error: ${e?.message || e}`);
-            await sleep(1000);
-          }
-        }
-      }
-
-      if (!match) {
-        if (athleteRateLimited) {
-          console.log(`  ${name}: SKIPPED (rate-limited during validation, not caching miss)`);
-          if (previousOut?.[name]) {
-            out[name] = previousOut[name];
-            console.log(`  ♻️ ${name}: kept previous value from existing ebay-avg.json`);
-          }
-          continue;
-        }
-
-        console.log(`  ${name}: SKIPPED (no Player/Athlete match AND sport did not match)`);
-        // Cache only true misses (not transient API throttling)
-        matchCache[cacheKey] = { mode: null, value: null, skippedAt: new Date().toISOString() };
-        saveMatchCache(matchCache);
-        continue;
-      }
-
-      // Cache the successful match
-      matchCache[cacheKey] = { ...match, cachedAt: new Date().toISOString() };
-      saveMatchCache(matchCache);
-      console.log(`  📝 Cached new match: ${match.mode}="${match.value}"`);
+    if (!match) {
+      console.log(`${name}: SKIPPED (no Player/Athlete match AND sport did not match)`);
+      continue;
     }
 
     const rec = {
@@ -1007,62 +817,16 @@ async function main() {
     rec.avg = rec.avgListing;
     rec.n = rec.nListing;
 
-    if (rec.nListing === 0 && previousOut?.[name]) {
-      out[name] = previousOut[name];
-      console.log(`  ♻️ ${name}: kept previous snapshot (no fresh listing sample)`);
-    } else {
-      out[name] = rec;
-    }
+    out[name] = rec;
     
     fs.writeFileSync(OUT_PATH, JSON.stringify(out, null, 2));
 
     await sleep(500);
   }
 
-  // ── Index History: append daily snapshot ──
-  const today = new Date().toISOString().slice(0, 10); // YYYY-MM-DD
-
-  // Compute index sums per sport
-  const sportSums = {};
-  let allSum = 0;
-  let allUsed = 0;
-
-  for (const [name, rec] of Object.entries(out)) {
-    if (name === "_meta") continue;
-    const price = rec?.taguchiListing ?? rec?.avgListing ?? rec?.avg ?? null;
-    if (price == null || !Number.isFinite(Number(price)) || Number(price) <= 0) continue;
-    const v = Number(price);
-    const sport = rec?.match?.mode === "player" || rec?.match?.mode === "sport"
-      ? (athletes.find(a => a.name === name)?.sport || "Other")
-      : "Other";
-
-    if (!sportSums[sport]) sportSums[sport] = { sum: 0, used: 0 };
-    sportSums[sport].sum += v;
-    sportSums[sport].used += 1;
-    allSum += v;
-    allUsed += 1;
-  }
-
-  const snapshot = { date: today };
-  for (const [sport, data] of Object.entries(sportSums)) {
-    snapshot[sport] = Math.round(data.sum);
-  }
-  snapshot.All = Math.round(allSum);
-
-  // Append to history (keep last 90 entries, dedupe by date)
-  if (!out._meta.indexHistory) out._meta.indexHistory = [];
-  const history = out._meta.indexHistory.filter(h => h.date !== today);
-  history.push(snapshot);
-  // Keep last 90 snapshots
-  if (history.length > 90) history.splice(0, history.length - 90);
-  out._meta.indexHistory = history;
-
   fs.mkdirSync(path.dirname(OUT_PATH), { recursive: true });
   fs.writeFileSync(OUT_PATH, JSON.stringify(out, null, 2));
-  saveMatchCache(matchCache);
-  console.log(`Wrote ${OUT_PATH} (indexHistory: ${history.length} entries)`);
-  console.log(`📦 Match cache summary: ${cacheHits} hits, ${cacheMisses} misses, ${Object.keys(matchCache).length} total cached.`);
-  console.log(`📊 API call summary: ${apiCallCount} successful calls, ${apiRetryCount} retries (429s). Daily limit: 5,000.`);
+  console.log(`Wrote ${OUT_PATH}`);
 }
 
 main().catch((err) => {
