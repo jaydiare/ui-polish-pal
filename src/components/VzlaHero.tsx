@@ -48,6 +48,12 @@ const VzlaHero = ({ lastUpdated }: VzlaHeroProps) => {
             </div>
           ))}
         </div>
+        <div className="mt-4 flex items-center justify-center gap-2 px-3 py-2 rounded-lg bg-vzla-yellow/5 border border-vzla-yellow/15 w-fit mx-auto">
+          <span className="text-[13px]">🔄</span>
+          <span className="text-xs text-muted-foreground">
+            <strong className="text-vzla-yellow">Flip Potential</strong> — Cards marked Volatile or Unstable may offer buy-low, sell-high opportunities due to wide price swings.
+          </span>
+        </div>
       </div>
 
     </motion.section>
