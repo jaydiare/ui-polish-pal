@@ -1,17 +1,19 @@
 // scripts/sold-update-ebay-avg.js
 // Node 20+ (uses global fetch)
 //
-// Pulls SOLD listing comps via Apify actor caffein.dev/ebay-sold-listings
-// Applies the same robust statistical pipeline as update-ebay-avg.js:
-//   - Taguchi winsorized mean (not just median)
+// Scrapes eBay's PUBLIC sold listings search pages (LH_Sold=1&LH_Complete=1)
+// to compute sold price averages — NO API keys needed, NO Apify.
+//
+// Same statistical pipeline as update-ebay-avg.js:
+//   - Taguchi winsorized mean
 //   - Market stability CV (sd/mean on winsorized sample)
-//   - Ungraded condition policy (Near Mint or Better / Excellent only)
-//   - Manufacturer/brand filter (Topps, Panini, Upper Deck, etc.)
-//   - Junk title exclusion (lots, breaks, you pick, etc.)
+//   - Ungraded condition policy
+//   - Manufacturer/brand filter
+//   - Junk title exclusion
 //   - Currency normalization to USD via CBSA Exchange Rates API
 //
 // Env:
-//   APIFY_TOKEN
+//   (none required — uses public eBay search pages)
 //
 // Input:
 //   data/athletes.json: [{ name, sport, ... }]
@@ -22,50 +24,34 @@
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import * as cheerio from "cheerio";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const APIFY_TOKEN = process.env.APIFY_TOKEN;
-if (!APIFY_TOKEN) {
-  console.error("Missing APIFY_TOKEN in env.");
-  process.exit(1);
-}
-
 const ATHLETES_PATH = path.join(__dirname, "..", "data", "athletes.json");
 const OUT_PATH = path.join(__dirname, "..", "data", "ebay-sold-avg.json");
 
-// Apify actor
-const ACTOR_ID = "caffein.dev~ebay-sold-listings";
+// Category: Trading Card Singles
+const CATEGORY_ID = "261328";
 
 // Sampling
-const RESULTS_LIMIT = 60;
+const MAX_PAGES = 2; // 2 pages × ~60 results = ~120 sold comps max
 const MIN_SAMPLE_SIZE = 4;
 
 // Taguchi caps (winsorization %)
 const TAGUCHI_TRIM_PCT = 0.4;
 
-// Allowed brands (same as update-ebay-avg.js manufacturers)
+// Allowed brands (same as update-ebay-avg.js manufacturers, lowercase)
 const BRANDS = [
   "topps", "panini", "upper deck", "leaf",
-  "artesania sport", "ovenca venezuelan", "sport grafico",
+  "artesania sport", "ovenca", "sport grafico",
   "line up", "venezuelan league", "byn",
 ];
 
 // --------------------
-// Ungraded condition policy (mirrors update-ebay-avg.js)
+// Ungraded condition policy
 // --------------------
-const UNGRADED_ALLOWED_CONDITIONS = [
-  "near mint or better",
-  "near-mint or better",
-  "near mint",
-  "nm",
-  "nm-mt",
-  "nmt",
-  "excellent",
-  "ex",
-];
-
 const UNGRADED_BLOCKLIST = [
   "damaged", "damage", "poor", "fair", "very good", "vg",
   "good", "gd", "creases", "crease", "wrinkle", "wrinkling",
@@ -74,7 +60,7 @@ const UNGRADED_BLOCKLIST = [
   "pin hole", "hole", "torn", "tear", "scratches", "scratch",
 ];
 
-// Junk title exclusion (from your reference script)
+// Junk title exclusion
 const JUNK_PHRASES = [
   "you pick", "you choose", "pick your", "choose your",
   "your choice", "complete your set", "complete set",
@@ -82,6 +68,14 @@ const JUNK_PHRASES = [
   "singles you pick", "you pick!", "you pick -",
   "lot", "team lot", "player lot", "break", "case break",
   "random", "bulk", "paper rc's & vets", "rc's & vets",
+];
+
+// Rotate user agents to reduce blocking
+const USER_AGENTS = [
+  "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36",
+  "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36",
+  "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36",
+  "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:128.0) Gecko/20100101 Firefox/128.0",
 ];
 
 // --- helpers ---
@@ -172,38 +166,8 @@ function taguchiCV(values, trimPercent = TAGUCHI_TRIM_PCT) {
   return sd / m;
 }
 
-// --- condition policy ---
-function normText(s) {
-  return String(s || "").toLowerCase().replace(/\s+/g, " ").trim();
-}
-
-function includesAny(text, arr) {
-  const t = normText(text);
-  return arr.some((w) => t.includes(normText(w)));
-}
-
-function isGradedListing(item) {
-  const title = norm(item?.title || "");
-  if (norm(item?.condition || "").includes("graded")) return true;
-  const graderHints = ["psa", "bgs", "sgc", "cgc", "beckett", "gem mint", "gm mt", "9.5", "10"];
-  return graderHints.some((k) => title.includes(k));
-}
-
-function ungradedPassesConditionPolicy(item) {
-  const title = normText(item?.title || "");
-  const cond = normText(item?.condition || "");
-  const joined = [title, cond].join(" | ");
-
-  if (includesAny(joined, UNGRADED_BLOCKLIST)) return false;
-  if (includesAny(joined, UNGRADED_ALLOWED_CONDITIONS)) return true;
-
-  // Sold listings often lack condition detail — be permissive for sold comps
-  // (unlike active listings where we're strict)
-  return true;
-}
-
-// --- junk / brand / relevance filters ---
-function isJunkSoldCompTitle(title) {
+// --- filters ---
+function isJunkTitle(title) {
   const t = norm(title);
   return JUNK_PHRASES.some((p) => t.includes(p));
 }
@@ -219,6 +183,23 @@ function titleLooksRelevantToPlayer(title, playerName) {
   const last = parts[parts.length - 1];
   if (!last) return true;
   return t.includes(last);
+}
+
+function isGradedTitle(title) {
+  const t = norm(title);
+  const graderHints = ["psa", "bgs", "sgc", "cgc", "beckett", "gem mint", "gm mt"];
+  return graderHints.some((k) => t.includes(k));
+}
+
+function ungradedPassesPolicy(title) {
+  const t = norm(title);
+  if (UNGRADED_BLOCKLIST.some((w) => t.includes(w))) return false;
+  // Permissive for sold comps (condition detail often missing from search results)
+  return true;
+}
+
+function randomUA() {
+  return USER_AGENTS[Math.floor(Math.random() * USER_AGENTS.length)];
 }
 
 // --- FX (Normalize ANY currency -> USD) ---
@@ -277,41 +258,137 @@ function convertToUSD(amount, currency, fxRatesToUSD) {
   return { usd: amount * rate, rateUsed: rate };
 }
 
-// Prefer totalPrice if present, else sold+shipping, else sold
-function getTotalPrice(item) {
-  const soldCur = item?.soldCurrency || item?.shippingCurrency || null;
+// --- eBay sold search page scraping ---
 
-  const total = safeNum(item?.totalPrice);
-  if (total != null && total > 0) return { amount: total, currency: soldCur, mode: "totalPrice" };
+// Build eBay sold listings search URL
+function buildSoldSearchURL(keyword, page = 1) {
+  const params = new URLSearchParams({
+    _nkw: keyword,
+    _sacat: CATEGORY_ID,
+    LH_Sold: "1",
+    LH_Complete: "1",
+    _ipg: "60", // items per page
+    rt: "nc",
+  });
 
-  const sold = safeNum(item?.soldPrice);
-  const ship = safeNum(item?.shippingPrice);
-  if (sold != null && sold > 0 && ship != null && ship >= 0) {
-    return { amount: sold + ship, currency: soldCur, mode: "sold+shipping" };
+  if (page > 1) {
+    params.set("_pgn", String(page));
   }
-  if (sold != null && sold > 0) return { amount: sold, currency: soldCur, mode: "soldOnly" };
 
-  return { amount: null, currency: null, mode: null };
+  return `https://www.ebay.com/sch/i.html?${params.toString()}`;
 }
 
-// --- Apify call ---
-async function runApifyActorAndGetItems(input) {
-  const url =
-    `https://api.apify.com/v2/acts/${encodeURIComponent(ACTOR_ID)}` +
-    `/run-sync-get-dataset-items?token=${encodeURIComponent(APIFY_TOKEN)}`;
-
+// Fetch a single search results page
+async function fetchSoldPage(url) {
   const res = await fetch(url, {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify(input),
+    headers: {
+      "User-Agent": randomUA(),
+      "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+      "Accept-Language": "en-US,en;q=0.9",
+      "Accept-Encoding": "gzip, deflate, br",
+      "Cache-Control": "no-cache",
+    },
   });
 
   if (!res.ok) {
-    const txt = await res.text().catch(() => "");
-    throw new Error(`Apify actor failed (${res.status}): ${txt}`);
+    throw new Error(`eBay page fetch failed (${res.status})`);
   }
 
-  return res.json();
+  return res.text();
+}
+
+// Parse sold prices from eBay search results HTML
+function parseSoldListings(html) {
+  const $ = cheerio.load(html);
+  const results = [];
+
+  // eBay search results are in .s-item containers
+  $(".s-item").each((_, el) => {
+    const $el = $(el);
+
+    const title = normSpaces($el.find(".s-item__title").first().text());
+    if (!title || title === "Shop on eBay") return; // skip header item
+
+    // Sold price — eBay shows it in .s-item__price
+    const priceText = $el.find(".s-item__price").first().text().trim();
+
+    // Parse price: handles "$12.99", "C $15.00", "US $10.00", "$5.00 to $20.00" (range)
+    const parsed = parsePriceText(priceText);
+
+    // Sold date (e.g., "Sold  Jan 15, 2025")
+    const soldDateText = $el.find(".s-item__title--tag .POSITIVE").text().trim() ||
+                         $el.find(".s-item__ended-date").text().trim() ||
+                         $el.find(".s-item__endedDate").text().trim();
+
+    // Shipping cost
+    const shippingText = $el.find(".s-item__shipping, .s-item__freeXDays").first().text().trim();
+    const shippingCost = parseShippingText(shippingText);
+
+    if (parsed) {
+      results.push({
+        title,
+        price: parsed.price,
+        currency: parsed.currency,
+        shippingCost,
+        soldDate: soldDateText || null,
+      });
+    }
+  });
+
+  return results;
+}
+
+// Parse price text like "$12.99", "C $15.00", "US $10.00", "GBP 8.50"
+function parsePriceText(text) {
+  if (!text) return null;
+
+  const t = text.replace(/,/g, "").trim();
+
+  // Handle price ranges ("$5.00 to $20.00") — use midpoint
+  const rangeMatch = t.match(
+    /(?:(?:C|US|AU|CA)?\s*\$|(?:GBP|EUR|£|€)\s*)?([\d.]+)\s+to\s+(?:(?:C|US|AU|CA)?\s*\$|(?:GBP|EUR|£|€)\s*)?([\d.]+)/i
+  );
+  if (rangeMatch) {
+    const low = safeNum(rangeMatch[1]);
+    const high = safeNum(rangeMatch[2]);
+    if (low != null && high != null) {
+      const currency = detectCurrency(t);
+      return { price: (low + high) / 2, currency };
+    }
+  }
+
+  // Single price
+  const priceMatch = t.match(/([\d.]+)/);
+  if (!priceMatch) return null;
+
+  const price = safeNum(priceMatch[1]);
+  if (price == null) return null;
+
+  const currency = detectCurrency(t);
+  return { price, currency };
+}
+
+function detectCurrency(text) {
+  const t = text.toUpperCase();
+  if (t.includes("C $") || t.includes("CA $") || t.includes("CAD")) return "CAD";
+  if (t.includes("£") || t.includes("GBP")) return "GBP";
+  if (t.includes("€") || t.includes("EUR")) return "EUR";
+  if (t.includes("AU $") || t.includes("AUD")) return "AUD";
+  // Default: USD (eBay.com default)
+  return "USD";
+}
+
+function parseShippingText(text) {
+  if (!text) return 0;
+  const t = norm(text);
+  if (t.includes("free")) return 0;
+
+  const match = text.replace(/,/g, "").match(/([\d.]+)/);
+  if (match) {
+    const v = safeNum(match[1]);
+    return v != null ? v : 0;
+  }
+  return 0;
 }
 
 // --- data loading ---
@@ -341,14 +418,15 @@ async function main() {
   const out = {
     _meta: {
       updatedAt: new Date().toISOString(),
-      source: "Apify Actor caffein.dev/ebay-sold-listings",
+      source: "eBay public sold listings (HTML scrape, LH_Sold=1)",
       note:
-        "SOLD comps. Brand-filtered (Topps/Panini/Upper Deck/etc). Junk titles removed. " +
+        "SOLD comps scraped from public eBay search. Brand-filtered. Junk titles removed. " +
         "Taguchi winsorized mean + market stability CV. Ungraded condition policy (permissive for sold). " +
-        "Currency normalized to USD via CBSA.",
-      resultsLimit: RESULTS_LIMIT,
+        "Currency normalized to USD via CBSA. Prices include shipping when parseable.",
+      maxPages: MAX_PAGES,
       minSampleSize: MIN_SAMPLE_SIZE,
       brands: BRANDS,
+      categoryId: CATEGORY_ID,
       listingStat: { method: "taguchi_winsorized_mean", trimPercent: TAGUCHI_TRIM_PCT },
       stabilityStat: {
         method: "cv",
@@ -357,7 +435,6 @@ async function main() {
         trimPercent: TAGUCHI_TRIM_PCT,
       },
       ungradedPolicy: {
-        allow: ["Near Mint or Better", "Excellent"],
         blocklist: "damaged/low-condition keywords",
         note: "Permissive for sold comps (unknown condition accepted)",
       },
@@ -370,50 +447,56 @@ async function main() {
     console.log(`[${i + 1}/${athletes.length}] ${name} (${sport || "Unknown"})`);
 
     const keyword = buildKeyword(name, sport);
-
-    const input = {
-      keyword,
-      maxItems: RESULTS_LIMIT,
-      limit: RESULTS_LIMIT,
-    };
+    const pricesUSD = [];
+    let firstCur = null;
+    let fxRateUsed = null;
+    let totalScraped = 0;
 
     try {
-      const items = await runApifyActorAndGetItems(input);
+      for (let page = 1; page <= MAX_PAGES; page++) {
+        const url = buildSoldSearchURL(keyword, page);
+        const html = await fetchSoldPage(url);
+        const listings = parseSoldListings(html);
 
-      const pricesUSD = [];
-      let firstCur = null;
-      let fxRateUsed = null;
-
-      for (const it of items || []) {
-        const title = it?.title || "";
-        if (!title) continue;
-
-        // 1) Brand filter
-        if (!hasAllowedBrand(title)) continue;
-
-        // 2) Junk title filter
-        if (isJunkSoldCompTitle(title)) continue;
-
-        // 3) Player relevance (last name)
-        if (!titleLooksRelevantToPlayer(title, name)) continue;
-
-        // 4) Ungraded condition policy
-        const graded = isGradedListing(it);
-        if (!graded) {
-          if (!ungradedPassesConditionPolicy(it)) continue;
+        if (!listings.length) {
+          if (page === 1) console.log(`  No sold results found for "${keyword}"`);
+          break;
         }
 
-        // 5) Price extraction
-        const { amount, currency } = getTotalPrice(it);
-        if (amount == null) continue;
+        totalScraped += listings.length;
 
-        firstCur = firstCur || currency || null;
+        for (const it of listings) {
+          const title = it.title;
 
-        const { usd, rateUsed } = convertToUSD(amount, currency, fx.rates);
-        if (usd == null) continue;
+          // 1) Brand filter
+          if (!hasAllowedBrand(title)) continue;
 
-        pricesUSD.push(usd);
-        fxRateUsed = fxRateUsed || rateUsed;
+          // 2) Junk title filter
+          if (isJunkTitle(title)) continue;
+
+          // 3) Player relevance (last name)
+          if (!titleLooksRelevantToPlayer(title, name)) continue;
+
+          // 4) Ungraded condition policy
+          if (!isGradedTitle(title)) {
+            if (!ungradedPassesPolicy(title)) continue;
+          }
+
+          // 5) Price: card price + shipping
+          let totalPrice = it.price;
+          if (it.shippingCost > 0) totalPrice += it.shippingCost;
+
+          firstCur = firstCur || it.currency || null;
+
+          const { usd, rateUsed } = convertToUSD(totalPrice, it.currency, fx.rates);
+          if (usd == null) continue;
+
+          pricesUSD.push(usd);
+          fxRateUsed = fxRateUsed || rateUsed;
+        }
+
+        // Throttle between pages
+        if (page < MAX_PAGES) await sleep(1500 + Math.random() * 1000);
       }
 
       const hasSample = pricesUSD.length >= MIN_SAMPLE_SIZE;
@@ -422,8 +505,14 @@ async function main() {
       const medianSold = median(pricesUSD);
       const marketStabilityCV = taguchiCV(pricesUSD, TAGUCHI_TRIM_PCT);
 
+      console.log(
+        `  Scraped: ${totalScraped} | After filters: ${pricesUSD.length} | ` +
+        `Taguchi: ${hasSample && taguchiSold != null ? `$${taguchiSold.toFixed(2)}` : "N/A"}`
+      );
+
       out[name] = {
         keyword,
+        nScraped: totalScraped,
         nSoldUsed: pricesUSD.length,
 
         // Primary stat (mirrors update-ebay-avg.js naming)
@@ -437,9 +526,10 @@ async function main() {
         fxRateUsed: fxRateUsed || null,
       };
     } catch (e) {
-      console.log(`${name}: ERROR ${e?.message || e}`);
+      console.log(`  ${name}: ERROR ${e?.message || e}`);
       out[name] = {
         keyword,
+        nScraped: totalScraped,
         nSoldUsed: 0,
         avg: null,
         taguchiSold: null,
@@ -450,15 +540,16 @@ async function main() {
       };
     }
 
-    // Progressive save (like update-ebay-avg.js)
+    // Progressive save
     fs.writeFileSync(OUT_PATH, JSON.stringify(out, null, 2));
 
-    await sleep(300);
+    // Throttle between athletes (be polite to eBay)
+    await sleep(2000 + Math.random() * 2000);
   }
 
   fs.mkdirSync(path.dirname(OUT_PATH), { recursive: true });
   fs.writeFileSync(OUT_PATH, JSON.stringify(out, null, 2));
-  console.log(`Wrote ${OUT_PATH}`);
+  console.log(`\nWrote ${OUT_PATH}`);
 }
 
 main().catch((err) => {
