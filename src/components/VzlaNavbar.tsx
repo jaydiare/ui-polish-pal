@@ -40,19 +40,12 @@ const SocialIcons = () => (
 
 const VzlaNavbar = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
-  const [mobileAnimating, setMobileAnimating] = useState(false);
   const [shopOpen, setShopOpen] = useState(false);
   const [contactOpen, setContactOpen] = useState(false);
   const location = useLocation();
 
   const closeMobileInstant = () => {
     setMobileOpen(false);
-    setMobileAnimating(false);
-  };
-
-  const openMobile = () => {
-    setMobileOpen(true);
-    setMobileAnimating(true);
   };
 
   return (
@@ -161,7 +154,7 @@ const VzlaNavbar = () => {
         {/* Hamburger */}
         <button
           className="flex md:hidden w-10 h-10 rounded-lg border border-border bg-secondary items-center justify-center cursor-pointer hover:border-vzla-yellow/25 transition-all"
-          onClick={() => openMobile()}
+          onClick={() => setMobileOpen(true)}
           aria-label="Open menu"
         >
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -171,68 +164,54 @@ const VzlaNavbar = () => {
       </nav>
 
       {/* Mobile menu */}
-      <AnimatePresence mode="wait">
-        {mobileOpen && (
-          <motion.div
-            key="mobile-menu"
-            initial={mobileAnimating ? { opacity: 0 } : false}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0, transition: { duration: 0.1 } }}
-            transition={{ duration: 0.2 }}
-            className="fixed inset-0 z-[10000] bg-background/95 backdrop-blur-xl p-5"
-          >
-            <div className="flex items-center justify-between">
-              <Link to="/" className="flex items-center gap-3 no-underline" onClick={closeMobileInstant}>
-                <div className="w-8 h-8 rounded-lg cta-flag flex items-center justify-center">
-                  <span className="font-display font-bold text-xs text-white">VZ</span>
-                </div>
-                <span className="font-display font-bold text-sm text-foreground">VZLA SPORTS</span>
-              </Link>
-              <button
-                className="w-10 h-10 rounded-lg border border-border bg-secondary text-foreground flex items-center justify-center cursor-pointer"
-                onClick={() => setMobileOpen(false)}
-              >
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                  <path d="M18 6L6 18M6 6l12 12" />
-                </svg>
-              </button>
-            </div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.1 }}
-              className="mt-8 flex flex-col gap-3 max-w-md mx-auto"
-            >
-              {[
-                { label: "Home", to: "/" },
-                { label: "About", to: "/about" },
-                { label: "Blog", to: "/blog" },
-              ].map((item) => (
-                <Link
-                  key={item.label}
-                  to={item.to}
-                  onClick={closeMobileInstant}
-                  className="flex items-center justify-center w-full py-4 rounded-xl border border-border bg-secondary text-foreground no-underline font-display font-bold text-lg hover:bg-vzla-yellow/10 hover:border-vzla-yellow/20 transition-colors"
-                >
-                  {item.label}
-                </Link>
-              ))}
-              <a
-                href={EBAY_STORE}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center justify-center w-full py-4 rounded-xl border border-border bg-secondary text-foreground no-underline font-display font-bold text-lg"
-              >
-                🛒 Shop
-              </a>
-              <div className="mt-4 p-4 rounded-xl border border-border bg-secondary/50 flex justify-center">
-                <SocialIcons />
+      {mobileOpen && (
+        <div className="fixed inset-0 z-[10000] bg-background/95 backdrop-blur-xl p-5">
+          <div className="flex items-center justify-between">
+            <Link to="/" className="flex items-center gap-3 no-underline" onClick={closeMobileInstant}>
+              <div className="w-8 h-8 rounded-lg cta-flag flex items-center justify-center">
+                <span className="font-display font-bold text-xs text-white">VZ</span>
               </div>
-            </motion.div>
-          </motion.div>
-        )}
-      </AnimatePresence>
+              <span className="font-display font-bold text-sm text-foreground">VZLA SPORTS</span>
+            </Link>
+            <button
+              className="w-10 h-10 rounded-lg border border-border bg-secondary text-foreground flex items-center justify-center cursor-pointer"
+              onClick={() => setMobileOpen(false)}
+            >
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <path d="M18 6L6 18M6 6l12 12" />
+              </svg>
+            </button>
+          </div>
+
+          <div className="mt-8 flex flex-col gap-3 max-w-md mx-auto">
+            {[
+              { label: "Home", to: "/" },
+              { label: "About", to: "/about" },
+              { label: "Blog", to: "/blog" },
+            ].map((item) => (
+              <Link
+                key={item.label}
+                to={item.to}
+                onClick={closeMobileInstant}
+                className="flex items-center justify-center w-full py-4 rounded-xl border border-border bg-secondary text-foreground no-underline font-display font-bold text-lg hover:bg-vzla-yellow/10 hover:border-vzla-yellow/20 transition-colors"
+              >
+                {item.label}
+              </Link>
+            ))}
+            <a
+              href={EBAY_STORE}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-center w-full py-4 rounded-xl border border-border bg-secondary text-foreground no-underline font-display font-bold text-lg"
+            >
+              🛒 Shop
+            </a>
+            <div className="mt-4 p-4 rounded-xl border border-border bg-secondary/50 flex justify-center">
+              <SocialIcons />
+            </div>
+          </div>
+        </div>
+      )}
     </>
   );
 };
