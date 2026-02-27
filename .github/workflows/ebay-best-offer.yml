@@ -1,8 +1,8 @@
 name: Check Best Offer enabled
 
 on:
-  schedule:
-    - cron: "0 8 * * *"        # daily at 8 AM UTC
+  schedule: 
+   # - cron: "0 8 * * *"        # daily at 8 AM UTC
   workflow_dispatch:
 
 concurrency:
