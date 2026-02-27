@@ -40,9 +40,20 @@ const SocialIcons = () => (
 
 const VzlaNavbar = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [mobileAnimating, setMobileAnimating] = useState(false);
   const [shopOpen, setShopOpen] = useState(false);
   const [contactOpen, setContactOpen] = useState(false);
   const location = useLocation();
+
+  const closeMobileInstant = () => {
+    setMobileOpen(false);
+    setMobileAnimating(false);
+  };
+
+  const openMobile = () => {
+    setMobileOpen(true);
+    setMobileAnimating(true);
+  };
 
   return (
     <>
@@ -150,7 +161,7 @@ const VzlaNavbar = () => {
         {/* Hamburger */}
         <button
           className="flex md:hidden w-10 h-10 rounded-lg border border-border bg-secondary items-center justify-center cursor-pointer hover:border-vzla-yellow/25 transition-all"
-          onClick={() => setMobileOpen(true)}
+          onClick={() => openMobile()}
           aria-label="Open menu"
         >
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -160,16 +171,18 @@ const VzlaNavbar = () => {
       </nav>
 
       {/* Mobile menu */}
-      <AnimatePresence>
+      <AnimatePresence mode="wait">
         {mobileOpen && (
           <motion.div
-            initial={{ opacity: 0 }}
+            key="mobile-menu"
+            initial={mobileAnimating ? { opacity: 0 } : false}
             animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
+            exit={{ opacity: 0, transition: { duration: 0.1 } }}
+            transition={{ duration: 0.2 }}
             className="fixed inset-0 z-[10000] bg-background/95 backdrop-blur-xl p-5"
           >
             <div className="flex items-center justify-between">
-              <Link to="/" className="flex items-center gap-3 no-underline" onClick={() => setMobileOpen(false)}>
+              <Link to="/" className="flex items-center gap-3 no-underline" onClick={closeMobileInstant}>
                 <div className="w-8 h-8 rounded-lg cta-flag flex items-center justify-center">
                   <span className="font-display font-bold text-xs text-white">VZ</span>
                 </div>
@@ -199,7 +212,7 @@ const VzlaNavbar = () => {
                 <Link
                   key={item.label}
                   to={item.to}
-                  onClick={() => setMobileOpen(false)}
+                  onClick={closeMobileInstant}
                   className="flex items-center justify-center w-full py-4 rounded-xl border border-border bg-secondary text-foreground no-underline font-display font-bold text-lg hover:bg-vzla-yellow/10 hover:border-vzla-yellow/20 transition-colors"
                 >
                   {item.label}
