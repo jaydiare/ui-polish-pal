@@ -1,8 +1,9 @@
-name: Update eBay sold averages
+name: Update eBay sold averages (batched)
 
 on:
   schedule:
-    - cron: "0 6,18 * * *"
+    # Every 2 hours — processes 10 athletes per run
+    - cron: "0 */2 * * *"
   workflow_dispatch:
 
 concurrency:
@@ -29,13 +30,13 @@ jobs:
         if: hashFiles('package-lock.json') != ''
         run: npm install --no-audit --no-fund
 
-      - name: Update eBay sold averages
+      - name: Update eBay sold averages (batch of 10)
         run: node scripts/sold-update-ebay-avg.js
 
       - name: Copy to public
         run: |
           mkdir -p public/data
-          cp data/ebay-sold-avg.json public/data/ebay-sold-avg.json
+          cp data/ebay-sold-avg.json public/data/ebay-sold-avg.json 2>/dev/null || true
 
       - name: Commit & push (rebase-safe)
         run: |
@@ -44,14 +45,14 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
-          git add data/ebay-sold-avg.json public/data/ebay-sold-avg.json
+          git add data/ebay-sold-avg.json data/ebay-sold-progress.json public/data/ebay-sold-avg.json
 
           if git diff --cached --quiet; then
             echo "No changes to commit"
             exit 0
           fi
 
-          git commit -m "Update eBay sold averages"
+          git commit -m "Update eBay sold averages (batch)"
 
           git fetch origin main
           git rebase origin/main
