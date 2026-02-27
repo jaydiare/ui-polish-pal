@@ -8,6 +8,7 @@ interface VzlaAthleteGridProps {
   athletes: Athlete[];
   byName: Record<string, EbayAvgRecord>;
   byKey: Record<string, EbayAvgRecord>;
+  ebaySoldRaw?: Record<string, any>;
   hasMore: boolean;
   remainingCount: number;
   onLoadMore: () => void;
@@ -22,7 +23,7 @@ const SORT_OPTIONS: { value: SortOption; label: string }[] = [
   { value: "stability_best", label: "Most Stable" },
 ];
 
-const VzlaAthleteGrid = ({ athletes, byName, byKey, hasMore, remainingCount, onLoadMore, highlightedIds, sort, onSortChange }: VzlaAthleteGridProps) => {
+const VzlaAthleteGrid = ({ athletes, byName, byKey, ebaySoldRaw, hasMore, remainingCount, onLoadMore, highlightedIds, sort, onSortChange }: VzlaAthleteGridProps) => {
   // If budget is active, filter to only highlighted cards
   const displayAthletes = highlightedIds && highlightedIds.size > 0
     ? athletes.filter((a) => highlightedIds.has(buildBudgetAthleteId(a.name, a.sport)))
@@ -60,6 +61,7 @@ const VzlaAthleteGrid = ({ athletes, byName, byKey, hasMore, remainingCount, onL
               athlete={a}
               byName={byName}
               byKey={byKey}
+              ebaySoldRaw={ebaySoldRaw}
               isRecommended={highlightedIds?.has(buildBudgetAthleteId(a.name, a.sport))}
             />
           </motion.div>
