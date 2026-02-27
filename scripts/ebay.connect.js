@@ -6,6 +6,7 @@ export const ebayConnect = (req, res) => {
 
   res.cookie("ebay_oauth_state", state, {
     httpOnly: true,
+    secure: true,
     sameSite: "lax",
   });
 
