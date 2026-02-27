@@ -29,6 +29,7 @@ async function fetchJson(path: string) {
 export function useAthleteData() {
   const [athletes, setAthletes] = useState<Athlete[]>(athleteDataRaw);
   const [ebayAvgRaw, setEbayAvgRaw] = useState<EbayAvgData>({});
+  const [ebaySoldRaw, setEbaySoldRaw] = useState<Record<string, any>>({});
   const [lastUpdated, setLastUpdated] = useState<string>("—");
   const [visibleCount, setVisibleCount] = useState(PAGE_SIZE);
   const [filters, setFilters] = useState<Filters>({
@@ -45,9 +46,10 @@ export function useAthleteData() {
   // Fetch data on mount
   useEffect(() => {
     (async () => {
-      const [fetchedAthletes, fetchedEbay] = await Promise.all([
+      const [fetchedAthletes, fetchedEbay, fetchedSold] = await Promise.all([
         fetchJson("data/athletes.json"),
         fetchJson("https://raw.githubusercontent.com/jaydiare/ui-polish-pal/main/data/ebay-avg.json"),
+        fetchJson("https://raw.githubusercontent.com/jaydiare/ui-polish-pal/main/data/ebay-sold-avg.json"),
       ]);
 
       if (fetchedAthletes) {
@@ -55,6 +57,9 @@ export function useAthleteData() {
       }
       if (fetchedEbay && typeof fetchedEbay === "object") {
         setEbayAvgRaw(fetchedEbay);
+      }
+      if (fetchedSold && typeof fetchedSold === "object") {
+        setEbaySoldRaw(fetchedSold);
       }
     })();
   }, []);
@@ -155,6 +160,7 @@ export function useAthleteData() {
     byName,
     byKey,
     ebayAvgRaw,
+    ebaySoldRaw,
     lastUpdated,
     filters,
     updateFilter,

@@ -14,10 +14,11 @@ interface AthleteCardProps {
   athlete: Athlete;
   byName: Record<string, EbayAvgRecord>;
   byKey: Record<string, EbayAvgRecord>;
+  ebaySoldRaw?: Record<string, any>;
   isRecommended?: boolean;
 }
 
-const AthleteCard = ({ athlete, byName, byKey, isRecommended }: AthleteCardProps) => {
+const AthleteCard = ({ athlete, byName, byKey, ebaySoldRaw, isRecommended }: AthleteCardProps) => {
   const avgNum = getEbayAvgNumber(athlete, byName, byKey);
   const money = avgNum != null ? formatCurrency(avgNum, "USD") : "—";
 
@@ -27,6 +28,10 @@ const AthleteCard = ({ athlete, byName, byKey, isRecommended }: AthleteCardProps
 
   const dom = hasPrice ? getAvgDaysOnMarket(athlete, byName, byKey) : null;
   const domText = dom != null ? `${Math.round(dom)}d` : "—";
+
+  // Sold avg (reference only)
+  const soldRecord = ebaySoldRaw?.[athlete.name];
+  const soldAvg = soldRecord?.taguchiSold != null ? soldRecord.taguchiSold : null;
 
   const shopUrl = buildEbaySearchUrl(athlete.name, athlete.sport);
   const initials = initialsFromName(athlete.name);
@@ -86,6 +91,14 @@ const AthleteCard = ({ athlete, byName, byKey, isRecommended }: AthleteCardProps
           </div>
         </div>
       </div>
+
+      {/* Sold avg (reference only) */}
+      {soldAvg != null && (
+        <div className="mt-2 px-3 py-1.5 rounded-md bg-accent/30 border border-border/30 flex items-baseline justify-between">
+          <span className="text-[10px] text-muted-foreground font-medium">eBay Avg. Sold</span>
+          <span className="text-sm font-display font-bold text-foreground/80">{formatCurrency(soldAvg, "USD")}</span>
+        </div>
+      )}
 
       {/* Stats row */}
       <div className="mt-3 flex items-center justify-between text-[11px] text-muted-foreground">
