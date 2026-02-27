@@ -31,6 +31,7 @@ const __dirname = path.dirname(__filename);
 
 const ATHLETES_PATH = path.join(__dirname, "..", "data", "athletes.json");
 const OUT_PATH = path.join(__dirname, "..", "data", "ebay-sold-avg.json");
+const PROGRESS_PATH = path.join(__dirname, "..", "data", "ebay-sold-progress.json");
 
 // Category: Trading Card Singles
 const CATEGORY_ID = "261328";
@@ -38,8 +39,9 @@ const CATEGORY_ID = "261328";
 // Sampling
 const MAX_PAGES = 2;
 const MAX_RETRIES = 4;
-const BASE_DELAY_MS = 4000; // base delay between athletes
+const BASE_DELAY_MS = 4000;
 const INTER_PAGE_DELAY_MS = 2500;
+const BATCH_SIZE = 10; // athletes per run
 const MIN_SAMPLE_SIZE = 4;
 
 // Taguchi caps (winsorization %)
@@ -554,40 +556,82 @@ function buildKeyword(name, sport) {
 }
 
 // --- main ---
+// --- progress tracking ---
+function loadProgress() {
+  try {
+    if (fs.existsSync(PROGRESS_PATH)) {
+      return JSON.parse(fs.readFileSync(PROGRESS_PATH, "utf8"));
+    }
+  } catch { /* fresh start */ }
+  return { nextIndex: 0 };
+}
+
+function saveProgress(prog) {
+  fs.writeFileSync(PROGRESS_PATH, JSON.stringify(prog, null, 2));
+}
+
+function loadExistingOutput() {
+  try {
+    if (fs.existsSync(OUT_PATH)) {
+      return JSON.parse(fs.readFileSync(OUT_PATH, "utf8"));
+    }
+  } catch { /* fresh start */ }
+  return {};
+}
+
+// --- main ---
 async function main() {
   const athletes = loadAthletes();
+  const progress = loadProgress();
+  const startIdx = progress.nextIndex || 0;
+
+  // If we've already processed all athletes, reset for a fresh cycle
+  if (startIdx >= athletes.length) {
+    console.log(`All ${athletes.length} athletes processed. Resetting progress for next cycle.`);
+    saveProgress({ nextIndex: 0, lastCompletedAt: new Date().toISOString() });
+    return;
+  }
+
+  const endIdx = Math.min(startIdx + BATCH_SIZE, athletes.length);
+  const batch = athletes.slice(startIdx, endIdx);
+
+  console.log(`\n📦 Batch: athletes ${startIdx + 1}–${endIdx} of ${athletes.length} (${batch.length} this run)\n`);
+
   const fx = await getFxRatesToUSD();
 
-  const out = {
-    _meta: {
-      updatedAt: new Date().toISOString(),
-      source: "eBay public sold listings (HTML scrape, LH_Sold=1)",
-      note:
-        "SOLD comps scraped from public eBay search. Brand-filtered. Junk titles removed. " +
-        "Taguchi winsorized mean + market stability CV. Ungraded condition policy (permissive for sold). " +
-        "Currency normalized to USD via CBSA. Prices include shipping when parseable.",
-      maxPages: MAX_PAGES,
-      minSampleSize: MIN_SAMPLE_SIZE,
-      brands: BRANDS,
-      categoryId: CATEGORY_ID,
-      listingStat: { method: "taguchi_winsorized_mean", trimPercent: TAGUCHI_TRIM_PCT },
-      stabilityStat: {
-        method: "cv",
-        formula: "sd/mean",
-        sample: "winsorized",
-        trimPercent: TAGUCHI_TRIM_PCT,
-      },
-      ungradedPolicy: {
-        blocklist: "damaged/low-condition keywords",
-        note: "Permissive for sold comps (unknown condition accepted)",
-      },
-      fx: { source: "CBSA Exchange Rates API", asOf: fx.asOf },
+  // Merge into existing output (preserve previously scraped data)
+  const out = loadExistingOutput();
+
+  out._meta = {
+    updatedAt: new Date().toISOString(),
+    source: "eBay public sold listings (HTML scrape, LH_Sold=1)",
+    note:
+      "SOLD comps scraped in batches of " + BATCH_SIZE + ". Brand-filtered. Junk titles removed. " +
+      "Taguchi winsorized mean + market stability CV. Ungraded condition policy (permissive for sold). " +
+      "Currency normalized to USD via CBSA. Prices include shipping when parseable.",
+    batchInfo: { startIdx, endIdx, totalAthletes: athletes.length },
+    maxPages: MAX_PAGES,
+    minSampleSize: MIN_SAMPLE_SIZE,
+    brands: BRANDS,
+    categoryId: CATEGORY_ID,
+    listingStat: { method: "taguchi_winsorized_mean", trimPercent: TAGUCHI_TRIM_PCT },
+    stabilityStat: {
+      method: "cv",
+      formula: "sd/mean",
+      sample: "winsorized",
+      trimPercent: TAGUCHI_TRIM_PCT,
     },
+    ungradedPolicy: {
+      blocklist: "damaged/low-condition keywords",
+      note: "Permissive for sold comps (unknown condition accepted)",
+    },
+    fx: { source: "CBSA Exchange Rates API", asOf: fx.asOf },
   };
 
-  for (let i = 0; i < athletes.length; i++) {
-    const { name, sport } = athletes[i];
-    console.log(`[${i + 1}/${athletes.length}] ${name} (${sport || "Unknown"})`);
+  for (let i = 0; i < batch.length; i++) {
+    const globalIdx = startIdx + i;
+    const { name, sport } = batch[i];
+    console.log(`[${globalIdx + 1}/${athletes.length}] ${name} (${sport || "Unknown"})`);
 
     const keyword = buildKeyword(name, sport);
     const pricesUSD = [];
@@ -600,13 +644,11 @@ async function main() {
         const url = buildSoldSearchURL(keyword, page);
         const html = await fetchSoldPage(url);
 
-        // Debug: log HTML size and check for bot detection
         if (page === 1) {
           console.log(`  HTML size: ${html.length} chars`);
           if (html.includes("captcha") || html.includes("robot")) {
             console.log(`  ⚠️ Possible bot detection/CAPTCHA for "${keyword}"`);
           }
-          // Log how many .s-item we find for debugging
           const sItemCount = (html.match(/s-item__title/g) || []).length;
           console.log(`  Raw .s-item__title matches: ${sItemCount}`);
         }
@@ -622,40 +664,27 @@ async function main() {
 
         for (const it of listings) {
           const title = it.title;
-
-          // 1) Brand filter
           if (!hasAllowedBrand(title)) continue;
-
-          // 2) Junk title filter
           if (isJunkTitle(title)) continue;
-
-          // 3) Player relevance (last name)
           if (!titleLooksRelevantToPlayer(title, name)) continue;
-
-          // 4) Ungraded condition policy
           if (!isGradedTitle(title)) {
             if (!ungradedPassesPolicy(title)) continue;
           }
 
-          // 5) Price: card price + shipping
           let totalPrice = it.price;
           if (it.shippingCost > 0) totalPrice += it.shippingCost;
-
           firstCur = firstCur || it.currency || null;
 
           const { usd, rateUsed } = convertToUSD(totalPrice, it.currency, fx.rates);
           if (usd == null) continue;
-
           pricesUSD.push(usd);
           fxRateUsed = fxRateUsed || rateUsed;
         }
 
-        // Throttle between pages
         if (page < MAX_PAGES) await sleep(INTER_PAGE_DELAY_MS + Math.random() * 1500);
       }
 
       const hasSample = pricesUSD.length >= MIN_SAMPLE_SIZE;
-
       const taguchiSold = taguchiTrimmedMean(pricesUSD, TAGUCHI_TRIM_PCT);
       const medianSold = median(pricesUSD);
       const marketStabilityCV = taguchiCV(pricesUSD, TAGUCHI_TRIM_PCT);
@@ -669,13 +698,10 @@ async function main() {
         keyword,
         nScraped: totalScraped,
         nSoldUsed: pricesUSD.length,
-
-        // Primary stat (mirrors update-ebay-avg.js naming)
         avg: hasSample ? taguchiSold : null,
         taguchiSold: hasSample ? taguchiSold : null,
         medianSold: hasSample ? medianSold : null,
         marketStabilityCV: hasSample ? marketStabilityCV : null,
-
         currency: "USD",
         originalCurrencyExample: firstCur,
         fxRateUsed: fxRateUsed || null,
@@ -698,15 +724,21 @@ async function main() {
     // Progressive save
     fs.writeFileSync(OUT_PATH, JSON.stringify(out, null, 2));
 
-    // Longer delay between athletes to avoid CAPTCHA triggers
-    const dynamicDelay = BASE_DELAY_MS + Math.random() * 4000;
-    console.log(`  💤 Waiting ${(dynamicDelay / 1000).toFixed(1)}s before next athlete...`);
-    await sleep(dynamicDelay);
+    // Delay between athletes
+    if (i < batch.length - 1) {
+      const dynamicDelay = BASE_DELAY_MS + Math.random() * 4000;
+      console.log(`  💤 Waiting ${(dynamicDelay / 1000).toFixed(1)}s before next athlete...`);
+      await sleep(dynamicDelay);
+    }
   }
+
+  // Update progress
+  saveProgress({ nextIndex: endIdx, lastBatchAt: new Date().toISOString() });
 
   fs.mkdirSync(path.dirname(OUT_PATH), { recursive: true });
   fs.writeFileSync(OUT_PATH, JSON.stringify(out, null, 2));
-  console.log(`\nWrote ${OUT_PATH}`);
+  console.log(`\n✅ Batch complete (${startIdx + 1}–${endIdx}). Next run starts at athlete ${endIdx + 1}.`);
+  console.log(`Wrote ${OUT_PATH}`);
 }
 
 main().catch((err) => {
