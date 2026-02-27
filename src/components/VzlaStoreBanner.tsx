@@ -120,7 +120,7 @@ const VzlaStoreBanner = () => {
         {cards.map((card, i) => (
           <a
             key={`${card.url}-${i}`}
-            href={`${card.url}
+            href={card.url}
             target="_blank"
             rel="noopener noreferrer"
             className="flex-shrink-0 w-[180px] group no-underline"
