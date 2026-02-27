@@ -36,7 +36,10 @@ const OUT_PATH = path.join(__dirname, "..", "data", "ebay-sold-avg.json");
 const CATEGORY_ID = "261328";
 
 // Sampling
-const MAX_PAGES = 2; // 2 pages × ~60 results = ~120 sold comps max
+const MAX_PAGES = 2;
+const MAX_RETRIES = 4;
+const BASE_DELAY_MS = 4000; // base delay between athletes
+const INTER_PAGE_DELAY_MS = 2500;
 const MIN_SAMPLE_SIZE = 4;
 
 // Taguchi caps (winsorization %)
@@ -278,29 +281,64 @@ function buildSoldSearchURL(keyword, page = 1) {
   return `https://www.ebay.com/sch/i.html?${params.toString()}`;
 }
 
-// Fetch a single search results page
+// Fetch a single search results page with retry + exponential backoff
 async function fetchSoldPage(url) {
-  const res = await fetch(url, {
-    headers: {
-      "User-Agent": randomUA(),
-      "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
-      "Accept-Language": "en-US,en;q=0.9",
-      // NOTE: removed "br" (brotli) — Node.js fetch may not decompress it correctly
-      "Accept-Encoding": "gzip, deflate",
-      "Cache-Control": "no-cache",
-      "Referer": "https://www.ebay.com/",
-      "Sec-Fetch-Dest": "document",
-      "Sec-Fetch-Mode": "navigate",
-      "Sec-Fetch-Site": "same-origin",
-    },
-    redirect: "follow",
-  });
+  for (let attempt = 0; attempt < MAX_RETRIES; attempt++) {
+    const res = await fetch(url, {
+      headers: {
+        "User-Agent": randomUA(),
+        "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
+        "Accept-Language": "en-US,en;q=0.9",
+        "Accept-Encoding": "gzip, deflate",
+        "Cache-Control": "no-cache",
+        "Referer": "https://www.ebay.com/",
+        "Sec-Fetch-Dest": "document",
+        "Sec-Fetch-Mode": "navigate",
+        "Sec-Fetch-Site": "same-origin",
+      },
+      redirect: "follow",
+    });
 
-  if (!res.ok) {
-    throw new Error(`eBay page fetch failed (${res.status})`);
+    if (res.status === 429) {
+      const retryAfter = res.headers.get("Retry-After");
+      let delayMs = Math.pow(2, attempt) * 3000;
+      if (retryAfter) {
+        const parsed = parseInt(retryAfter, 10);
+        if (!isNaN(parsed)) delayMs = Math.max(parsed * 1000, delayMs);
+      }
+      const jitter = Math.random() * 2000;
+      console.log(`  ⏳ Rate limited (429). Waiting ${((delayMs + jitter) / 1000).toFixed(1)}s (attempt ${attempt + 1}/${MAX_RETRIES})`);
+      await sleep(delayMs + jitter);
+      continue;
+    }
+
+    if (!res.ok) {
+      if (attempt < MAX_RETRIES - 1) {
+        const waitMs = Math.pow(2, attempt) * 2000 + Math.random() * 1000;
+        console.log(`  ⚠️ HTTP ${res.status}. Retrying in ${(waitMs / 1000).toFixed(1)}s (attempt ${attempt + 1}/${MAX_RETRIES})`);
+        await sleep(waitMs);
+        continue;
+      }
+      throw new Error(`eBay page fetch failed (${res.status}) after ${MAX_RETRIES} attempts`);
+    }
+
+    const html = await res.text();
+
+    // Detect CAPTCHA/bot page and retry with longer backoff
+    if (html.includes("captcha") || html.includes("robot") || html.length < 5000) {
+      if (attempt < MAX_RETRIES - 1) {
+        const waitMs = Math.pow(2, attempt) * 5000 + Math.random() * 3000;
+        console.log(`  🤖 CAPTCHA/bot detection (HTML ${html.length} chars). Waiting ${(waitMs / 1000).toFixed(1)}s (attempt ${attempt + 1}/${MAX_RETRIES})`);
+        await sleep(waitMs);
+        continue;
+      }
+      console.log(`  🤖 CAPTCHA persists after ${MAX_RETRIES} attempts — skipping`);
+    }
+
+    return html;
   }
 
-  return res.text();
+  throw new Error(`fetchSoldPage: max retries (${MAX_RETRIES}) exceeded`);
 }
 
 // Try to extract item data from embedded JSON in <script> tags (SSR hydration data)
@@ -613,7 +651,7 @@ async function main() {
         }
 
         // Throttle between pages
-        if (page < MAX_PAGES) await sleep(1500 + Math.random() * 1000);
+        if (page < MAX_PAGES) await sleep(INTER_PAGE_DELAY_MS + Math.random() * 1500);
       }
 
       const hasSample = pricesUSD.length >= MIN_SAMPLE_SIZE;
@@ -660,8 +698,10 @@ async function main() {
     // Progressive save
     fs.writeFileSync(OUT_PATH, JSON.stringify(out, null, 2));
 
-    // Throttle between athletes (be polite to eBay)
-    await sleep(2000 + Math.random() * 2000);
+    // Longer delay between athletes to avoid CAPTCHA triggers
+    const dynamicDelay = BASE_DELAY_MS + Math.random() * 4000;
+    console.log(`  💤 Waiting ${(dynamicDelay / 1000).toFixed(1)}s before next athlete...`);
+    await sleep(dynamicDelay);
   }
 
   fs.mkdirSync(path.dirname(OUT_PATH), { recursive: true });
