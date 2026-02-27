@@ -203,13 +203,14 @@
   z-index: 999;
   overflow: visible !important;
   background: linear-gradient(
-    180deg,
-    hsl(var(--vzla-panel) / 0.95) 0%,
-    hsl(var(--background) / 0.85) 100%
+    135deg,
+    hsl(250 50% 12%) 0%,
+    hsl(260 60% 18%) 40%,
+    hsl(245 55% 14%) 100%
   );
   backdrop-filter: blur(16px) saturate(1.2);
   -webkit-backdrop-filter: blur(16px) saturate(1.2);
-  border-bottom: 1px solid hsl(var(--border) / 0.5);
+  border-bottom: 1px solid hsl(var(--vzla-purple) / 0.25);
 }
 
 /* ===========================
