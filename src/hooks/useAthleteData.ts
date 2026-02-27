@@ -46,10 +46,11 @@ export function useAthleteData() {
   // Fetch data on mount
   useEffect(() => {
     (async () => {
-      const [fetchedAthletes, fetchedEbay, fetchedSold] = await Promise.all([
+      const [fetchedAthletes, fetchedEbay, fetchedSold, fetchedProgress] = await Promise.all([
         fetchJson("data/athletes.json"),
         fetchJson("https://raw.githubusercontent.com/jaydiare/ui-polish-pal/main/data/ebay-avg.json"),
         fetchJson("https://raw.githubusercontent.com/jaydiare/ui-polish-pal/main/data/ebay-sold-avg.json"),
+        fetchJson("https://raw.githubusercontent.com/jaydiare/ui-polish-pal/main/data/ebay-sold-progress.json"),
       ]);
 
       if (fetchedAthletes) {
@@ -61,18 +62,20 @@ export function useAthleteData() {
       if (fetchedSold && typeof fetchedSold === "object") {
         setEbaySoldRaw(fetchedSold);
       }
+      if (fetchedProgress?.lastBatchAt) {
+        setLastUpdated(timeAgo(fetchedProgress.lastBatchAt));
+      }
     })();
   }, []);
 
-  // Update last updated label
+  // Update last updated label (fallback if progress didn't load)
   useEffect(() => {
+    if (lastUpdated !== "—") return; // already set from progress
     const updatedAt = ebayAvgRaw?._meta?.updatedAt;
     if (updatedAt) {
       setLastUpdated(timeAgo(updatedAt));
-      const interval = setInterval(() => setLastUpdated(timeAgo(updatedAt)), 60000);
-      return () => clearInterval(interval);
     }
-  }, [ebayAvgRaw]);
+  }, [ebayAvgRaw, lastUpdated]);
   // Sort
   const [sort, setSort] = useState<SortOption>("default");
 
