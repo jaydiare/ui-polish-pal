@@ -47,7 +47,7 @@ export function useAthleteData() {
     (async () => {
       const [fetchedAthletes, fetchedEbay] = await Promise.all([
         fetchJson("data/athletes.json"),
-        fetchJson("data/ebay-avg.json"),
+        fetchJson("https://raw.githubusercontent.com/jaydiare/ui-polish-pal/main/data/ebay-avg.json"),
       ]);
 
       if (fetchedAthletes) {
