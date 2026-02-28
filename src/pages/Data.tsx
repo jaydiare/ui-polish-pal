@@ -377,7 +377,16 @@ const Data = () => {
                         line={{ stroke: "hsl(var(--muted-foreground))", strokeWidth: 1, strokeDasharray: "6 4" }}
                         shape={() => null} legendType="none" isAnimationActive={false}
                       />
-                      <Scatter data={comparisonData} isAnimationActive={false}>
+                      <Scatter
+                        data={comparisonData}
+                        isAnimationActive={false}
+                        cursor="pointer"
+                        onClick={(data: any) => {
+                          if (data?.name) {
+                            window.open(buildEbaySearchUrl(data.name, data.sport), "_blank", "noopener,noreferrer");
+                          }
+                        }}
+                      >
                         {comparisonData.map((entry, idx) => (
                           <Cell key={idx} fill={getSportColor(entry.sport)} fillOpacity={0.75} r={5} />
                         ))}
