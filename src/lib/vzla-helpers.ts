@@ -32,6 +32,11 @@ export function mergeByNameSportKeepBest(localArr: Athlete[], fetchedArr: Athlet
   return Array.from(map.values());
 }
 
+// Strip accents/diacritics for robust matching
+function normalizeName(s: string): string {
+  return s.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().trim();
+}
+
 // eBay average lookups
 export function buildEbayIndexes(obj: EbayAvgData) {
   const byName: Record<string, EbayAvgRecord> = {};
@@ -44,8 +49,12 @@ export function buildEbayIndexes(obj: EbayAvgData) {
     const rec = obj[k] as EbayAvgRecord;
     if (!rec) continue;
     byName[k] = rec;
+    // Also store under normalized (accent-stripped) key for robust matching
+    const normK = normalizeName(k);
+    if (normK !== k) byName[normK] = rec;
     if (rec?.sport) {
       byKey[makeNameSportKey(k, rec.sport)] = rec;
+      byKey[makeNameSportKey(normK, rec.sport)] = rec;
     }
   }
   return { byName, byKey };
@@ -57,7 +66,8 @@ export function getEbayAvgFor(
   byKey: Record<string, EbayAvgRecord>
 ): EbayAvgRecord | null {
   const key = makeNameSportKey(athlete.name, athlete.sport);
-  return byKey[key] || byName[athlete.name] || null;
+  const normName = normalizeName(athlete.name);
+  return byKey[key] || byKey[makeNameSportKey(normName, athlete.sport)] || byName[athlete.name] || byName[normName] || null;
 }
 
 export function getEbayAvgNumber(
