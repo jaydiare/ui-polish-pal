@@ -40,14 +40,17 @@ const VzlaIndexCards = ({ athletes, byName, byKey, indexHistory }: VzlaIndexCard
 
   // Build sparkline data from indexHistory
   const sparklines = useMemo(() => {
-    if (!indexHistory || indexHistory.length < 2) return cards.map(() => []);
+    if (!indexHistory || indexHistory.length === 0) return cards.map(() => []);
     return cards.map((c) => {
-      return indexHistory
+      const points = indexHistory
         .map((h) => {
           const v = Number(h[c.sport]);
           return Number.isFinite(v) && v > 0 ? { v } : null;
         })
         .filter(Boolean) as { v: number }[];
+      // If only 1 point, duplicate it to draw a flat line
+      if (points.length === 1) return [points[0], points[0]];
+      return points;
     });
   }, [indexHistory, cards.map(c => c.sport).join(",")]);
 
