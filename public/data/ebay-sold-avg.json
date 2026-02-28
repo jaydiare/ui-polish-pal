@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-02-28T04:46:30.300Z",
+    "updatedAt": "2026-02-28T06:22:56.682Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. Brand-filtered. Junk titles removed. Taguchi winsorized mean + market stability CV. Ungraded condition policy (permissive for sold). Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 120,
-      "endIdx": 130,
+      "startIdx": 130,
+      "endIdx": 140,
       "totalAthletes": 575
     },
     "maxPages": 2,
@@ -39,7 +39,7 @@
     },
     "fx": {
       "source": "CBSA Exchange Rates API",
-      "asOf": "2026-02-28T00:00:00.000Z"
+      "asOf": "2026-03-01T00:00:00.000Z"
     }
   },
   "Adbert Alzolay": {
@@ -1598,6 +1598,126 @@
     "taguchiSold": 2.0560869565217392,
     "medianSold": 1.6,
     "marketStabilityCV": 0.3068204079819419,
+    "currency": "USD",
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
+  },
+  "Ehire Adrianza": {
+    "keyword": "Ehire Adrianza Baseball",
+    "nScraped": 101,
+    "nSoldUsed": 25,
+    "avg": 1.9767999999999994,
+    "taguchiSold": 1.9767999999999994,
+    "medianSold": 1.99,
+    "marketStabilityCV": 0.012367069032988615,
+    "currency": "USD",
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
+  },
+  "Eider Torres": {
+    "keyword": "Eider Torres Baseball",
+    "nScraped": 122,
+    "nSoldUsed": 18,
+    "avg": 0.99,
+    "taguchiSold": 0.99,
+    "medianSold": 0.99,
+    "marketStabilityCV": 0,
+    "currency": "USD",
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
+  },
+  "Elias Díaz": {
+    "keyword": "Elias Díaz Baseball",
+    "nScraped": 120,
+    "nSoldUsed": 3,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
+    "currency": "USD",
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
+  },
+  "Elieser Hernández": {
+    "keyword": "Elieser Hernández Baseball",
+    "nScraped": 161,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
+    "currency": "USD",
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
+  },
+  "Elio Chacón": {
+    "keyword": "Elio Chacón Baseball",
+    "nScraped": 60,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
+    "currency": "USD",
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
+  },
+  "Eliézer Alfonzo": {
+    "keyword": "Eliézer Alfonzo Baseball",
+    "nScraped": 74,
+    "nSoldUsed": 23,
+    "avg": 2.264782608695653,
+    "taguchiSold": 2.264782608695653,
+    "medianSold": 1.95,
+    "marketStabilityCV": 0.2898235279354096,
+    "currency": "USD",
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
+  },
+  "Elvis Andrus": {
+    "keyword": "Elvis Andrus Baseball",
+    "nScraped": 120,
+    "nSoldUsed": 33,
+    "avg": 3.429999999999999,
+    "taguchiSold": 3.429999999999999,
+    "medianSold": 2.99,
+    "marketStabilityCV": 0.4288118363417093,
+    "currency": "USD",
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
+  },
+  "Elvis Araújo": {
+    "keyword": "Elvis Araújo Baseball",
+    "nScraped": 126,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
+    "currency": "USD",
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
+  },
+  "Ender Inciarte": {
+    "keyword": "Ender Inciarte Baseball",
+    "nScraped": 120,
+    "nSoldUsed": 39,
+    "avg": 1.3243589743589743,
+    "taguchiSold": 1.3243589743589743,
+    "medianSold": 1,
+    "marketStabilityCV": 0.28224322619604547,
+    "currency": "USD",
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
+  },
+  "Enderson Franco": {
+    "keyword": "Enderson Franco Baseball",
+    "nScraped": 126,
+    "nSoldUsed": 66,
+    "avg": 2.0824242424242416,
+    "taguchiSold": 2.0824242424242416,
+    "medianSold": 1.75,
+    "marketStabilityCV": 0.7058776566688908,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
