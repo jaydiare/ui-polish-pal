@@ -9,8 +9,13 @@ function normKey(s: string | undefined | null): string {
   return String(s || "").trim().toLowerCase().replace(/\s+/g, " ");
 }
 
+// Strip accents/diacritics for robust matching
+function normalizeName(s: string): string {
+  return s.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().trim();
+}
+
 function makeNameSportKey(name: string | undefined, sport: string | undefined): string {
-  return `${norm(name)}|${norm(sport)}`;
+  return `${normalizeName(String(name || ""))}|${normalizeName(String(sport || ""))}`;
 }
 
 // Merge local + fetched athletes
@@ -30,11 +35,6 @@ export function mergeByNameSportKeepBest(localArr: Athlete[], fetchedArr: Athlet
   localArr.forEach(add);
   fetchedArr.forEach(add);
   return Array.from(map.values());
-}
-
-// Strip accents/diacritics for robust matching
-function normalizeName(s: string): string {
-  return s.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().trim();
 }
 
 // eBay average lookups
