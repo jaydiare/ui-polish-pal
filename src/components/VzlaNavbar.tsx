@@ -50,7 +50,7 @@ const VzlaNavbar = () => {
 
   return (
     <>
-      <nav className="vzla-nav px-6 py-4 flex items-center justify-between" aria-label="Main navigation">
+      <nav className="vzla-nav px-6 py-4 flex items-center justify-between relative" aria-label="Main navigation">
         <Link to="/" className="flex items-center gap-3 no-underline select-none group">
           <div className="w-9 h-9 rounded-lg cta-flag flex items-center justify-center">
             <span className="font-display font-bold text-xs text-white">VZ</span>
@@ -66,7 +66,7 @@ const VzlaNavbar = () => {
         </Link>
 
         {/* Desktop nav */}
-        <ul className="hidden md:flex gap-1 items-center m-0 p-0 list-none" role="menubar">
+        <ul className="hidden md:flex gap-1 items-center m-0 p-0 list-none absolute left-1/2 -translate-x-1/2" role="menubar">
           {[
             { label: "Home", to: "/" },
             { label: "About", to: "/about" },
