@@ -130,6 +130,9 @@ const Data = () => {
       const lp = getListedPrice(listedData[key] as ListedRecord);
       const sp = getSoldPrice(soldData[key] as SoldRecord);
       if (lp == null || sp == null) continue;
+      // Filter extreme outliers where ratio > 10x (likely bad data from graded/auto cards)
+      const ratio = Math.max(lp, sp) / Math.max(Math.min(lp, sp), 0.01);
+      if (ratio > 10) continue;
       const sport = athleteSportMap[key] || (listedData[key] as any)?.sport || "Other";
       items.push({ name: key, sport, listed: Math.round(lp * 100) / 100, sold: Math.round(sp * 100) / 100, spread: Math.round((lp - sp) * 100) / 100 });
     }
@@ -358,9 +361,9 @@ const Data = () => {
                 Each dot is an athlete. Above the diagonal = listed higher than sold (overpriced).
               </p>
               <div className="glass-panel p-4 md:p-6">
-                <div className="w-full h-[350px] md:h-[450px]">
+                <div className="w-full h-[400px] md:h-[450px]">
                   <ResponsiveContainer width="100%" height="100%">
-                    <ScatterChart margin={{ top: 10, right: 20, bottom: 40, left: 10 }}>
+                    <ScatterChart margin={{ top: 10, right: 10, bottom: 40, left: 0 }}>
                       <CartesianGrid strokeDasharray="3 3" stroke="hsl(var(--border))" opacity={0.5} />
                       <XAxis
                         type="number" dataKey="sold" name="Sold" unit="$"
@@ -392,7 +395,7 @@ const Data = () => {
                         }}
                       >
                         {comparisonData.map((entry, idx) => (
-                          <Cell key={idx} fill={getSportColor(entry.sport)} fillOpacity={0.75} r={5} />
+                          <Cell key={idx} fill={getSportColor(entry.sport)} fillOpacity={0.8} r={typeof window !== 'undefined' && window.innerWidth < 768 ? 6 : 5} />
                         ))}
                       </Scatter>
                     </ScatterChart>
