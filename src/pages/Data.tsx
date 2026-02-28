@@ -222,6 +222,10 @@ const Data = () => {
           <p className="text-muted-foreground text-sm max-w-xl">
             Listed vs sold price analytics for Venezuelan athletes trading cards. Data powered by eBay market scans.
           </p>
+          <div className="mt-3 inline-flex items-center gap-2 rounded-full border border-border/50 bg-card/80 backdrop-blur-sm px-4 py-1.5">
+            <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
+            <span className="text-xs text-muted-foreground font-medium">Updated Daily</span>
+          </div>
         </motion.div>
 
         {!hasData ? (
