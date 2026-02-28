@@ -71,7 +71,7 @@ const VzlaNavbar = () => {
             { label: "Home", to: "/" },
             { label: "About", to: "/about" },
             { label: "Blog", to: "/blog" },
-            { label: "Data", to: "/data" },
+            { label: "Market Intel", to: "/data" },
           ].map((item) => (
             <li key={item.label} role="none">
               <Link
@@ -189,7 +189,7 @@ const VzlaNavbar = () => {
               { label: "Home", to: "/" },
               { label: "About", to: "/about" },
               { label: "Blog", to: "/blog" },
-              { label: "Data", to: "/data" },
+              { label: "Market Intel", to: "/data" },
             ].map((item) => (
               <Link
                 key={item.label}

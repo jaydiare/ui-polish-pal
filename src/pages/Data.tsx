@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import VzlaNavbar from "@/components/VzlaNavbar";
 import VzlaFooter from "@/components/VzlaFooter";
 import VzlaEbayFooter from "@/components/VzlaEbayFooter";
+import { buildEbaySearchUrl } from "@/lib/vzla-helpers";
 import {
   ScatterChart,
   Scatter,
@@ -78,7 +79,14 @@ const PriceTooltip = ({ payload }: any) => {
   if (!d) return null;
   return (
     <div className="rounded-xl border border-border/50 bg-background/95 backdrop-blur-lg p-3 text-xs shadow-2xl">
-      <div className="font-display font-bold text-foreground">{d.name}</div>
+      <a
+        href={buildEbaySearchUrl(d.name, d.sport)}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="font-display font-bold text-foreground hover:text-primary transition-colors underline decoration-dotted underline-offset-2"
+      >
+        {d.name} ↗
+      </a>
       <div className="text-muted-foreground text-[10px] mb-1.5">{d.sport}</div>
       <div className="flex flex-col gap-0.5">
         <span className="text-muted-foreground">Listed: <strong className="text-foreground">${d.listed.toFixed(2)}</strong></span>
@@ -87,6 +95,7 @@ const PriceTooltip = ({ payload }: any) => {
           {d.spread > 0 ? "+" : ""}${d.spread.toFixed(2)}
         </strong></span>
       </div>
+      <div className="text-[9px] text-muted-foreground/60 mt-1.5">Click name to search eBay</div>
     </div>
   );
 };
@@ -208,7 +217,7 @@ const Data = () => {
           className="pt-8 pb-4"
         >
           <h1 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-1">
-            Market Data
+            Market Intel
           </h1>
           <p className="text-muted-foreground text-sm max-w-xl">
             Listed vs sold price analytics for Venezuelan athletes trading cards. Data powered by eBay market scans.
