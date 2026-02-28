@@ -398,8 +398,10 @@ const Data = () => {
                     </ScatterChart>
                   </ResponsiveContainer>
                 </div>
-                <div className="flex flex-wrap gap-4 mt-3 justify-center">
-                  {Object.entries(SPORT_COLORS).map(([sport, color]) => (
+              <div className="flex flex-wrap gap-4 mt-3 justify-center">
+                  {Object.entries(SPORT_COLORS)
+                    .filter(([sport]) => comparisonData.some(d => d.sport === sport))
+                    .map(([sport, color]) => (
                     <div key={sport} className="flex items-center gap-1.5 text-[10px] text-muted-foreground">
                       <div className="w-2.5 h-2.5 rounded-full" style={{ backgroundColor: color }} />
                       {sport}
