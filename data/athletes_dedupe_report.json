@@ -1,9 +1,9 @@
 {
   "input": "data/athletes.json",
   "output": "data/athletes.json",
-  "total_before": 586,
+  "total_before": 592,
   "total_after": 575,
-  "removed_count": 11,
+  "removed_count": 17,
   "removed": [
     {
       "normalized": "jon aramburu",
@@ -44,14 +44,14 @@
       "normalized": "cristian casseres jr.",
       "kept_original_index": 524,
       "removed_original_index": 540,
-      "kept_name": "Cristian Cásseres Jr.",
+      "kept_name": "Cristian Casseres Jr.",
       "removed_name": "Cristian Cásseres Jr."
     },
     {
       "normalized": "david martinez",
       "kept_original_index": 542,
       "removed_original_index": 543,
-      "kept_name": "David Martínez",
+      "kept_name": "David Martinez",
       "removed_name": "David Martínez"
     },
     {
@@ -72,7 +72,7 @@
       "normalized": "sergio cordova",
       "kept_original_index": 504,
       "removed_original_index": 571,
-      "kept_name": "Sergio Córdova",
+      "kept_name": "Sergio Cordova",
       "removed_name": "Sergio Córdova"
     },
     {
@@ -81,6 +81,48 @@
       "removed_original_index": 574,
       "kept_name": "Yangel Herrera",
       "removed_name": "Yangel Herrera"
+    },
+    {
+      "normalized": "alejandro marques",
+      "kept_original_index": 576,
+      "removed_original_index": 585,
+      "kept_name": "Alejandro Marques",
+      "removed_name": "Alejandro Marqués"
+    },
+    {
+      "normalized": "daniele quieto",
+      "kept_original_index": 578,
+      "removed_original_index": 586,
+      "kept_name": "Daniele Quieto",
+      "removed_name": "Daniele Quieto"
+    },
+    {
+      "normalized": "fernando amorebieta",
+      "kept_original_index": 509,
+      "removed_original_index": 587,
+      "kept_name": "Fernando Amorebieta",
+      "removed_name": "Fernando Amorebieta"
+    },
+    {
+      "normalized": "jeffren suarez",
+      "kept_original_index": 510,
+      "removed_original_index": 588,
+      "kept_name": "Jeffren Suarez",
+      "removed_name": "Jeffrén Suárez"
+    },
+    {
+      "normalized": "salomon rondon",
+      "kept_original_index": 520,
+      "removed_original_index": 589,
+      "kept_name": "Salomon Rondon",
+      "removed_name": "Salomón Rondón"
+    },
+    {
+      "normalized": "tomas rincon",
+      "kept_original_index": 505,
+      "removed_original_index": 590,
+      "kept_name": "Tomas Rincon",
+      "removed_name": "Tomás Rincón"
     }
   ]
 }
