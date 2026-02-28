@@ -426,7 +426,17 @@ const Data = () => {
                       />
                       <YAxis type="category" dataKey="name" width={110} tick={{ fill: "hsl(var(--muted-foreground))", fontSize: 9 }} />
                       <Tooltip content={<PriceTooltip />} />
-                      <Bar dataKey="spread" isAnimationActive={false} radius={[0, 4, 4, 0]}>
+                      <Bar
+                        dataKey="spread"
+                        isAnimationActive={false}
+                        radius={[0, 4, 4, 0]}
+                        cursor="pointer"
+                        onClick={(data: any) => {
+                          if (data?.name) {
+                            window.open(buildEbaySearchUrl(data.name, data.sport), "_blank", "noopener,noreferrer");
+                          }
+                        }}
+                      >
                         {topSpread.map((entry, idx) => (
                           <Cell key={idx} fill={entry.spread > 0 ? "hsl(0, 72%, 50%)" : "hsl(142, 71%, 45%)"} fillOpacity={0.8} />
                         ))}
