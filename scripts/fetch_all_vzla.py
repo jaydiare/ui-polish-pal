@@ -61,7 +61,7 @@ BDB_ENDPOINTS: List[Dict[str, Any]] = [
     #{"sport": "Soccer", "league": "EPL",        "provider": "balldontlie", "path": "/epl/v2/players",        "field": "birth_place"},
     {"sport": "Soccer", "league": "La Liga",    "provider": "balldontlie", "path": "/laliga/v1/players",     "field": "birth_place"},
     {"sport": "Soccer", "league": "MLS",        "provider": "balldontlie", "path": "/mls/v1/players",        "field": "birth_place"},
-    #{"sport": "Soccer", "league": "UCL",        "provider": "balldontlie", "path": "/ucl/v1/players",        "field": "birth_place"},
+    {"sport": "Soccer", "league": "UCL",        "provider": "balldontlie", "path": "/ucl/v1/players",        "field": "birth_place"},
     #{"sport": "Soccer", "league": "Ligue 1",    "provider": "balldontlie", "path": "/ligue1/v1/players",     "field": "birth_place"},
     #{"sport": "Soccer", "league": "Bundesliga", "provider": "balldontlie", "path": "/bundesliga/v1/players", "field": "birth_place"},
     #{"sport": "Soccer", "league": "Serie A",    "provider": "balldontlie", "path": "/seriea/v1/players",     "field": "birth_place"},
