@@ -1,6 +1,8 @@
 import VzlaNavbar from "@/components/VzlaNavbar";
 import VzlaHero from "@/components/VzlaHero";
 import VzlaIndexCards from "@/components/VzlaIndexCards";
+import VzlaHowToMoney from "@/components/VzlaHowToMoney";
+import VzlaTopDeals from "@/components/VzlaTopDeals";
 import VzlaBudgetBar from "@/components/VzlaBudgetBar";
 import VzlaSearchFilters from "@/components/VzlaSearchFilters";
 import VzlaAthleteGrid from "@/components/VzlaAthleteGrid";
@@ -41,6 +43,8 @@ const Index = () => {
       <main id="main-content" className="page-shell" role="main" aria-label="Athlete cards and market data">
         <VzlaHero lastUpdated={lastUpdated} />
         <VzlaIndexCards athletes={athletes} byName={byName} byKey={byKey} indexHistory={ebayAvgRaw?._meta?.indexHistory} />
+        <VzlaHowToMoney />
+        <VzlaTopDeals />
         <VzlaBudgetBar
           onSuggest={runBudget}
           onClear={clearBudget}
