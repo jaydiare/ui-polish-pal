@@ -6,6 +6,16 @@ import unicodedata
 from pathlib import Path
 
 
+def strip_accents(name: str) -> str:
+    """Remove accent/diacritic marks but preserve original casing and spacing."""
+    if name is None:
+        return ""
+    s = str(name).strip()
+    s = unicodedata.normalize("NFKD", s)
+    s = "".join(ch for ch in s if not unicodedata.combining(ch))
+    return s
+
+
 def normalize_name(name: str) -> str:
     """
     Normalize names so duplicates like:
@@ -17,8 +27,7 @@ def normalize_name(name: str) -> str:
         return ""
     name = str(name).strip()
     name = " ".join(name.split())  # collapse whitespace
-    name = unicodedata.normalize("NFKD", name)
-    name = "".join(ch for ch in name if not unicodedata.combining(ch))  # remove accents
+    name = strip_accents(name)
     return name.lower()
 
 
@@ -67,6 +76,9 @@ def main() -> int:
         # Keep the oldest = first seen occurrence
         if norm not in seen:
             seen[norm] = idx
+            # Strip accents from the stored name
+            if isinstance(athlete, dict) and "name" in athlete:
+                athlete["name"] = strip_accents(athlete["name"])
             kept.append(athlete)
         else:
             removed.append(
