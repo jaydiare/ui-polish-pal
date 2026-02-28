@@ -34,8 +34,8 @@ const VzlaHowToMoney = () => {
       >
         <div className="flex items-center gap-2 mb-4">
           <span className="w-1 h-5 rounded-full bg-primary inline-block" />
-          <h2 className="font-display font-bold text-lg text-foreground">
-            How to Make Money With This Data
+        <h2 className="font-display font-bold text-lg text-foreground">
+            Your Edge
           </h2>
         </div>
 
