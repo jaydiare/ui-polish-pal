@@ -1,8 +1,86 @@
 {
   "input": "data/athletes.json",
   "output": "data/athletes.json",
-  "total_before": 575,
+  "total_before": 586,
   "total_after": 575,
-  "removed_count": 0,
-  "removed": []
+  "removed_count": 11,
+  "removed": [
+    {
+      "normalized": "jon aramburu",
+      "kept_original_index": 511,
+      "removed_original_index": 512,
+      "kept_name": "Jon Aramburu",
+      "removed_name": "Jon Aramburu"
+    },
+    {
+      "normalized": "juan arango",
+      "kept_original_index": 503,
+      "removed_original_index": 514,
+      "kept_name": "Juan Arango",
+      "removed_name": "Juan Arango"
+    },
+    {
+      "normalized": "yangel herrera",
+      "kept_original_index": 522,
+      "removed_original_index": 523,
+      "kept_name": "Yangel Herrera",
+      "removed_name": "Yangel Herrera"
+    },
+    {
+      "normalized": "abel caputo",
+      "kept_original_index": 530,
+      "removed_original_index": 531,
+      "kept_name": "Abel Caputo",
+      "removed_name": "Abel Caputo"
+    },
+    {
+      "normalized": "alejandro fuenmayor",
+      "kept_original_index": 532,
+      "removed_original_index": 533,
+      "kept_name": "Alejandro Fuenmayor",
+      "removed_name": "Alejandro Fuenmayor"
+    },
+    {
+      "normalized": "cristian casseres jr.",
+      "kept_original_index": 524,
+      "removed_original_index": 540,
+      "kept_name": "Cristian Cásseres Jr.",
+      "removed_name": "Cristian Cásseres Jr."
+    },
+    {
+      "normalized": "david martinez",
+      "kept_original_index": 542,
+      "removed_original_index": 543,
+      "kept_name": "David Martínez",
+      "removed_name": "David Martínez"
+    },
+    {
+      "normalized": "fernando aristeguieta",
+      "kept_original_index": 525,
+      "removed_original_index": 548,
+      "kept_name": "Fernando Aristeguieta",
+      "removed_name": "Fernando Aristeguieta"
+    },
+    {
+      "normalized": "gabriel cichero",
+      "kept_original_index": 526,
+      "removed_original_index": 549,
+      "kept_name": "Gabriel Cichero",
+      "removed_name": "Gabriel Cichero"
+    },
+    {
+      "normalized": "sergio cordova",
+      "kept_original_index": 504,
+      "removed_original_index": 571,
+      "kept_name": "Sergio Córdova",
+      "removed_name": "Sergio Córdova"
+    },
+    {
+      "normalized": "yangel herrera",
+      "kept_original_index": 522,
+      "removed_original_index": 574,
+      "kept_name": "Yangel Herrera",
+      "removed_name": "Yangel Herrera"
+    }
+  ]
 }
