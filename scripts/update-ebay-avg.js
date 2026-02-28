@@ -751,104 +751,119 @@ async function main() {
     },
   };
 
+  let errorCount = 0;
+
   for (let i = 0; i < athletes.length; i++) {
     const { name, sport } = athletes[i];
     console.log(`[${i + 1}/${athletes.length}] ${name} (${sport || "Unknown"})`);
 
-    let match = null;
+    try {
+      let match = null;
 
-    for (const marketplaceId of ["EBAY_CA", "EBAY_US"]) {
-      const v = await validatePlayerAthleteMatch({ token, marketplaceId, name, sport });
-      if (v.ok) {
-        match = { mode: "player", value: v.aspectValue, validatedOn: marketplaceId };
-        break;
-      }
-    }
-
-    if (!match) {
       for (const marketplaceId of ["EBAY_CA", "EBAY_US"]) {
-        const s = await validateSportMatch({ token, marketplaceId, name, sport });
-        if (s.ok) {
-          match = { mode: "sport", value: s.sportAspectValue, validatedOn: marketplaceId };
+        const v = await validatePlayerAthleteMatch({ token, marketplaceId, name, sport });
+        if (v.ok) {
+          match = { mode: "player", value: v.aspectValue, validatedOn: marketplaceId };
           break;
         }
       }
-    }
 
-    if (!match) {
-      console.log(`${name}: SKIPPED (no Player/Athlete match AND sport did not match)`);
-      continue;
-    }
+      if (!match) {
+        for (const marketplaceId of ["EBAY_CA", "EBAY_US"]) {
+          const s = await validateSportMatch({ token, marketplaceId, name, sport });
+          if (s.ok) {
+            match = { mode: "sport", value: s.sportAspectValue, validatedOn: marketplaceId };
+            break;
+          }
+        }
+      }
 
-    const rec = {
-      match,
-      marketplaces: {},
-      avg: null,
-      n: 0,
-      avgListing: null,
-      taguchiListing: null,
-      marketStabilityCV: null,
-      avgDaysOnMarket: null, // ✅ NEW
-      nListing: 0,
-      currency: "USD",
-    };
+      if (!match) {
+        console.log(`${name}: SKIPPED (no Player/Athlete match AND sport did not match)`);
+        continue;
+      }
 
-    for (const marketplaceId of MARKETPLACES) {
-      try {
-        const listing = await computeAvgActiveListing({
-          token,
-          marketplaceId,
-          name,
-          sport,
-          aspectMode: match.mode,
-          aspectValue: match.value,
-          fxRates: fx.rates,
-        });
+      const rec = {
+        match,
+        marketplaces: {},
+        avg: null,
+        n: 0,
+        avgListing: null,
+        taguchiListing: null,
+        marketStabilityCV: null,
+        avgDaysOnMarket: null,
+        nListing: 0,
+        currency: "USD",
+      };
 
-        rec.marketplaces[marketplaceId] = {
-          aspectMode: match.mode,
-          aspectValue: match.value,
+      for (const marketplaceId of MARKETPLACES) {
+        try {
+          const listing = await computeAvgActiveListing({
+            token,
+            marketplaceId,
+            name,
+            sport,
+            aspectMode: match.mode,
+            aspectValue: match.value,
+            fxRates: fx.rates,
+          });
 
-          avgListing: listing.avgListing,
-          taguchiListing: listing.taguchiListing,
-          marketStabilityCV: listing.marketStabilityCV,
-          avgDaysOnMarket: listing.avgDaysOnMarket, // ✅ NEW
-          nListing: listing.nListing,
-          nDaysOnMarket: listing.nDaysOnMarket, // debug
-          currency: listing.currency,
+          rec.marketplaces[marketplaceId] = {
+            aspectMode: match.mode,
+            aspectValue: match.value,
+            avgListing: listing.avgListing,
+            taguchiListing: listing.taguchiListing,
+            marketStabilityCV: listing.marketStabilityCV,
+            avgDaysOnMarket: listing.avgDaysOnMarket,
+            nListing: listing.nListing,
+            nDaysOnMarket: listing.nDaysOnMarket,
+            currency: listing.currency,
+            originalCurrency: listing.originalCurrency,
+            fxRateUsed: listing.fxRateUsed,
+          };
+        } catch (e) {
+          console.log(`${name} (${marketplaceId}): ERROR ${e?.message || e}`);
+        }
+      }
 
-          originalCurrency: listing.originalCurrency,
-          fxRateUsed: listing.fxRateUsed,
-        };
-      } catch (e) {
-        console.log(`${name} (${marketplaceId}): ERROR ${e?.message || e}`);
+      const ca = rec.marketplaces.EBAY_CA;
+      const us = rec.marketplaces.EBAY_US;
+
+      const pick =
+        (ca && ca.taguchiListing != null ? ca : null) ||
+        (us && us.taguchiListing != null ? us : null) ||
+        ca ||
+        us;
+
+      rec.taguchiListing = pick?.taguchiListing ?? null;
+      rec.avgListing = pick?.avgListing ?? null;
+      rec.marketStabilityCV = pick?.marketStabilityCV ?? null;
+      rec.avgDaysOnMarket = pick?.avgDaysOnMarket ?? null;
+      rec.nListing = pick?.nListing ?? 0;
+      rec.currency = "USD";
+
+      rec.avg = rec.avgListing;
+      rec.n = rec.nListing;
+
+      out[name] = rec;
+    } catch (e) {
+      errorCount++;
+      console.error(`[${i + 1}/${athletes.length}] FAILED ${name}: ${e?.message || e}`);
+      // On rate-limit (429), wait longer before continuing
+      if (String(e?.message || "").includes("429")) {
+        console.log("Rate limited — waiting 60s before continuing...");
+        await sleep(60_000);
       }
     }
 
-    const ca = rec.marketplaces.EBAY_CA;
-    const us = rec.marketplaces.EBAY_US;
-
-    const pick =
-      (ca && ca.taguchiListing != null ? ca : null) ||
-      (us && us.taguchiListing != null ? us : null) ||
-      ca ||
-      us;
-
-    rec.taguchiListing = pick?.taguchiListing ?? null;
-    rec.avgListing = pick?.avgListing ?? null;
-    rec.marketStabilityCV = pick?.marketStabilityCV ?? null;
-    rec.avgDaysOnMarket = pick?.avgDaysOnMarket ?? null; // ✅ NEW
-    rec.nListing = pick?.nListing ?? 0;
-    rec.currency = "USD";
-
-    rec.avg = rec.avgListing;
-    rec.n = rec.nListing;
-
-    out[name] = rec;
-    
+    // Always save progress after each athlete
     fs.writeFileSync(OUT_PATH, JSON.stringify(out, null, 2));
 
     await sleep(500);
+  }
+
+  if (errorCount > 0) {
+    console.warn(`\n⚠️  ${errorCount} athlete(s) failed but data for ${Object.keys(out).length - 1} athletes was saved.`);
   }
 
   // --- Append today's index snapshot to indexHistory ---
@@ -890,6 +905,7 @@ async function main() {
 }
 
 main().catch((err) => {
-  console.error(err);
-  process.exit(1);
+  console.error("Fatal error in main():", err);
+  // Still try to exit 0 so the workflow commits whatever data was saved
+  process.exit(0);
 });
