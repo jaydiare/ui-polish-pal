@@ -16,26 +16,17 @@ import {
   Cell,
   Legend,
 } from "recharts";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
-interface SoldRecord {
-  avg?: number;
-  taguchiSold?: number;
-}
-
+/* ── Types ── */
+interface SoldRecord { avg?: number; taguchiSold?: number }
 interface ListedRecord {
-  avgListing?: number;
-  taguchiListing?: number;
-  trimmedListing?: number;
-  avg?: number;
-  average?: number;
-  sport?: string;
+  avgListing?: number; taguchiListing?: number; trimmedListing?: number;
+  avg?: number; average?: number; sport?: string;
   marketplaces?: Record<string, { avgListing?: number; taguchiListing?: number }>;
 }
 
 function getListedPrice(rec: ListedRecord | undefined): number | null {
   if (!rec) return null;
-  // Check merged marketplace averages first
   const mp = rec.marketplaces;
   if (mp) {
     const vals: number[] = [];
@@ -60,9 +51,7 @@ async function fetchJson(url: string) {
     const res = await fetch(url, { cache: "no-store" });
     if (!res.ok) return null;
     return await res.json();
-  } catch {
-    return null;
-  }
+  } catch { return null; }
 }
 
 const SPORT_COLORS: Record<string, string> = {
@@ -73,9 +62,33 @@ const SPORT_COLORS: Record<string, string> = {
   Other: "hsl(270, 60%, 55%)",
 };
 
+const SPORT_ICONS: Record<string, string> = {
+  Baseball: "⚾", Soccer: "⚽", Basketball: "🏀", Football: "🏈", Other: "🏅",
+};
+
 function getSportColor(sport: string) {
   return SPORT_COLORS[sport] || SPORT_COLORS.Other;
 }
+
+/* ── Custom tooltip ── */
+const PriceTooltip = ({ payload }: any) => {
+  if (!payload?.length) return null;
+  const d = payload[0]?.payload;
+  if (!d) return null;
+  return (
+    <div className="rounded-xl border border-border/50 bg-background/95 backdrop-blur-lg p-3 text-xs shadow-2xl">
+      <div className="font-display font-bold text-foreground">{d.name}</div>
+      <div className="text-muted-foreground text-[10px] mb-1.5">{d.sport}</div>
+      <div className="flex flex-col gap-0.5">
+        <span className="text-muted-foreground">Listed: <strong className="text-foreground">${d.listed.toFixed(2)}</strong></span>
+        <span className="text-muted-foreground">Sold: <strong className="text-foreground">${d.sold.toFixed(2)}</strong></span>
+        <span className="text-muted-foreground">Spread: <strong className={d.spread > 0 ? "text-red-400" : "text-green-400"}>
+          {d.spread > 0 ? "+" : ""}${d.spread.toFixed(2)}
+        </strong></span>
+      </div>
+    </div>
+  );
+};
 
 const Data = () => {
   const [listedData, setListedData] = useState<Record<string, ListedRecord>>({});
@@ -91,46 +104,45 @@ const Data = () => {
       if (listed) setListedData(listed);
       if (athletes && Array.isArray(athletes)) {
         const map: Record<string, string> = {};
-        for (const a of athletes) {
-          if (a?.name && a?.sport) map[a.name] = a.sport;
-        }
+        for (const a of athletes) { if (a?.name && a?.sport) map[a.name] = a.sport; }
         setAthleteSportMap(map);
       }
       if (sold) setSoldData(sold);
     });
   }, []);
 
-  // Build unified comparison data
+  /* ── Comparison Data ── */
   const comparisonData = useMemo(() => {
     const items: { name: string; sport: string; listed: number; sold: number; spread: number }[] = [];
     const allKeys = new Set([...Object.keys(listedData), ...Object.keys(soldData)]);
-
     for (const key of allKeys) {
       if (key === "_meta") continue;
       const lp = getListedPrice(listedData[key] as ListedRecord);
       const sp = getSoldPrice(soldData[key] as SoldRecord);
       if (lp == null || sp == null) continue;
-
       const sport = athleteSportMap[key] || (listedData[key] as any)?.sport || "Other";
-      items.push({
-        name: key,
-        sport,
-        listed: Math.round(lp * 100) / 100,
-        sold: Math.round(sp * 100) / 100,
-        spread: Math.round((lp - sp) * 100) / 100,
-      });
+      items.push({ name: key, sport, listed: Math.round(lp * 100) / 100, sold: Math.round(sp * 100) / 100, spread: Math.round((lp - sp) * 100) / 100 });
     }
     return items;
   }, [listedData, soldData, athleteSportMap]);
 
-  // Top spread athletes (biggest listed-sold gap)
-  const topSpread = useMemo(() => {
-    return [...comparisonData]
-      .sort((a, b) => Math.abs(b.spread) - Math.abs(a.spread))
-      .slice(0, 20);
+  /* ── KPI Stats ── */
+  const stats = useMemo(() => {
+    if (!comparisonData.length) return null;
+    const totalListed = comparisonData.reduce((s, d) => s + d.listed, 0);
+    const totalSold = comparisonData.reduce((s, d) => s + d.sold, 0);
+    const avgSpread = comparisonData.reduce((s, d) => s + d.spread, 0) / comparisonData.length;
+    const overpriced = comparisonData.filter(d => d.spread > 0).length;
+    const underpriced = comparisonData.filter(d => d.spread < 0).length;
+    return { totalListed, totalSold, avgSpread, overpriced, underpriced, matched: comparisonData.length };
   }, [comparisonData]);
 
-  // Sport aggregation
+  /* ── Top Spreads ── */
+  const topSpread = useMemo(() =>
+    [...comparisonData].sort((a, b) => Math.abs(b.spread) - Math.abs(a.spread)).slice(0, 20),
+    [comparisonData]);
+
+  /* ── Sport Aggregation ── */
   const sportAgg = useMemo(() => {
     const agg: Record<string, { listed: number; sold: number; count: number }> = {};
     for (const item of comparisonData) {
@@ -158,256 +170,237 @@ const Data = () => {
     <div className="min-h-screen">
       <VzlaNavbar />
       <main className="page-shell" role="main">
+        {/* ── Hero ── */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="py-8"
+          className="pt-8 pb-4"
         >
-          <h1 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-2">
-            📊 Market Data
+          <h1 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-1">
+            Market Data
           </h1>
-          <p className="text-muted-foreground text-sm mb-8">
-            Compare active listing prices vs sold comps across {comparisonData.length} athletes with matched data.
+          <p className="text-muted-foreground text-sm max-w-xl">
+            Listed vs sold price analytics for Venezuelan athletes trading cards. Data powered by eBay market scans.
           </p>
-
-          {!hasData ? (
-            <div className="glass-panel p-12 text-center">
-              <div className="animate-pulse text-muted-foreground">Loading market data…</div>
-            </div>
-          ) : (
-            <Tabs defaultValue="scatter" className="w-full">
-              <TabsList className="grid w-full grid-cols-3 mb-6">
-                <TabsTrigger value="scatter">Listed vs Sold</TabsTrigger>
-                <TabsTrigger value="spread">Top Spreads</TabsTrigger>
-                <TabsTrigger value="sports">By Sport</TabsTrigger>
-              </TabsList>
-
-              {/* ── Scatter: Listed vs Sold ── */}
-              <TabsContent value="scatter">
-                <div className="glass-panel p-4 md:p-6">
-                  <h2 className="font-display font-bold text-lg mb-1 text-foreground">Listed vs Sold Price</h2>
-                  <p className="text-xs text-muted-foreground mb-4">
-                    Dots above the diagonal = listed higher than sold (overpriced). Below = underpriced.
-                  </p>
-                  <div className="w-full h-[400px] md:h-[500px]">
-                    <ResponsiveContainer width="100%" height="100%">
-                      <ScatterChart margin={{ top: 10, right: 20, bottom: 40, left: 10 }}>
-                        <CartesianGrid strokeDasharray="3 3" stroke="hsl(var(--border))" />
-                        <XAxis
-                          type="number"
-                          dataKey="sold"
-                          name="Sold"
-                          unit="$"
-                          label={{ value: "Avg Sold ($)", position: "insideBottom", offset: -10, style: { fill: "hsl(var(--muted-foreground))", fontSize: 12 } }}
-                          tick={{ fill: "hsl(var(--muted-foreground))", fontSize: 11 }}
-                        />
-                        <YAxis
-                          type="number"
-                          dataKey="listed"
-                          name="Listed"
-                          unit="$"
-                          label={{ value: "Avg Listed ($)", angle: -90, position: "insideLeft", offset: 10, style: { fill: "hsl(var(--muted-foreground))", fontSize: 12 } }}
-                          tick={{ fill: "hsl(var(--muted-foreground))", fontSize: 11 }}
-                        />
-                        <Tooltip
-                          content={({ payload }) => {
-                            if (!payload?.length) return null;
-                            const d = payload[0]?.payload;
-                            if (!d) return null;
-                            return (
-                              <div className="glass-panel p-3 text-xs shadow-xl border border-border/50">
-                                <div className="font-display font-bold text-foreground">{d.name}</div>
-                                <div className="text-muted-foreground">{d.sport}</div>
-                                <div className="mt-1 flex flex-col gap-0.5">
-                                  <span>Listed: <strong className="text-foreground">${d.listed.toFixed(2)}</strong></span>
-                                  <span>Sold: <strong className="text-foreground">${d.sold.toFixed(2)}</strong></span>
-                                  <span>Spread: <strong className={d.spread > 0 ? "text-red-400" : "text-green-400"}>
-                                    {d.spread > 0 ? "+" : ""}${d.spread.toFixed(2)}
-                                  </strong></span>
-                                </div>
-                              </div>
-                            );
-                          }}
-                        />
-                        {/* Reference diagonal line — created via a second scatter */}
-                        <Scatter
-                          data={(() => {
-                            const maxVal = Math.max(...comparisonData.map(d => Math.max(d.listed, d.sold)));
-                            return [{ listed: 0, sold: 0 }, { listed: maxVal, sold: maxVal }];
-                          })()}
-                          line={{ stroke: "hsl(var(--muted-foreground))", strokeWidth: 1, strokeDasharray: "6 4" }}
-                          shape={() => null}
-                          legendType="none"
-                          isAnimationActive={false}
-                        />
-                        <Scatter
-                          data={comparisonData}
-                          isAnimationActive={false}
-                        >
-                          {comparisonData.map((entry, idx) => (
-                            <Cell
-                              key={idx}
-                              fill={getSportColor(entry.sport)}
-                              fillOpacity={0.7}
-                              r={5}
-                            />
-                          ))}
-                        </Scatter>
-                      </ScatterChart>
-                    </ResponsiveContainer>
-                  </div>
-                  <div className="flex flex-wrap gap-4 mt-4 justify-center">
-                    {Object.entries(SPORT_COLORS).map(([sport, color]) => (
-                      <div key={sport} className="flex items-center gap-1.5 text-xs text-muted-foreground">
-                        <div className="w-3 h-3 rounded-full" style={{ backgroundColor: color }} />
-                        {sport}
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </TabsContent>
-
-              {/* ── Bar: Top Spread ── */}
-              <TabsContent value="spread">
-                <div className="glass-panel p-4 md:p-6">
-                  <h2 className="font-display font-bold text-lg mb-1 text-foreground">Top 20 Price Spreads</h2>
-                  <p className="text-xs text-muted-foreground mb-4">
-                    Largest gaps between listed and sold price. Red = listed higher, green = sold higher (deals).
-                  </p>
-                  <div className="w-full h-[500px] md:h-[600px]">
-                    <ResponsiveContainer width="100%" height="100%">
-                      <BarChart
-                        data={topSpread}
-                        layout="vertical"
-                        margin={{ top: 5, right: 30, left: 10, bottom: 5 }}
-                      >
-                        <CartesianGrid strokeDasharray="3 3" stroke="hsl(var(--border))" />
-                        <XAxis
-                          type="number"
-                          tick={{ fill: "hsl(var(--muted-foreground))", fontSize: 11 }}
-                          label={{ value: "Spread ($)", position: "insideBottom", offset: -5, style: { fill: "hsl(var(--muted-foreground))", fontSize: 12 } }}
-                        />
-                        <YAxis
-                          type="category"
-                          dataKey="name"
-                          width={120}
-                          tick={{ fill: "hsl(var(--muted-foreground))", fontSize: 10 }}
-                        />
-                        <Tooltip
-                          content={({ payload }) => {
-                            if (!payload?.length) return null;
-                            const d = payload[0]?.payload;
-                            if (!d) return null;
-                            return (
-                              <div className="glass-panel p-3 text-xs shadow-xl border border-border/50">
-                                <div className="font-display font-bold text-foreground">{d.name}</div>
-                                <div className="text-muted-foreground">{d.sport}</div>
-                                <div className="mt-1 flex flex-col gap-0.5">
-                                  <span>Listed: <strong>${d.listed.toFixed(2)}</strong></span>
-                                  <span>Sold: <strong>${d.sold.toFixed(2)}</strong></span>
-                                  <span>Spread: <strong className={d.spread > 0 ? "text-red-400" : "text-green-400"}>
-                                    {d.spread > 0 ? "+" : ""}${d.spread.toFixed(2)}
-                                  </strong></span>
-                                </div>
-                              </div>
-                            );
-                          }}
-                        />
-                        <Bar dataKey="spread" isAnimationActive={false}>
-                          {topSpread.map((entry, idx) => (
-                            <Cell
-                              key={idx}
-                              fill={entry.spread > 0 ? "hsl(0, 72%, 50%)" : "hsl(142, 71%, 45%)"}
-                              fillOpacity={0.8}
-                            />
-                          ))}
-                        </Bar>
-                      </BarChart>
-                    </ResponsiveContainer>
-                  </div>
-                </div>
-              </TabsContent>
-
-              {/* ── Sport Comparison ── */}
-              <TabsContent value="sports">
-                <div className="glass-panel p-4 md:p-6">
-                  <h2 className="font-display font-bold text-lg mb-1 text-foreground">Accumulated by Sport</h2>
-                  <p className="text-xs text-muted-foreground mb-4">
-                    Total accumulated listed vs sold prices per sport category.
-                  </p>
-                  <div className="w-full h-[400px]">
-                    <ResponsiveContainer width="100%" height="100%">
-                      <BarChart data={sportAgg} margin={{ top: 10, right: 30, bottom: 20, left: 10 }}>
-                        <CartesianGrid strokeDasharray="3 3" stroke="hsl(var(--border))" />
-                        <XAxis
-                          dataKey="sport"
-                          tick={{ fill: "hsl(var(--muted-foreground))", fontSize: 11 }}
-                        />
-                        <YAxis
-                          tick={{ fill: "hsl(var(--muted-foreground))", fontSize: 11 }}
-                          label={{ value: "Total ($)", angle: -90, position: "insideLeft", style: { fill: "hsl(var(--muted-foreground))", fontSize: 12 } }}
-                        />
-                        <Tooltip
-                          content={({ payload }) => {
-                            if (!payload?.length) return null;
-                            const d = payload[0]?.payload;
-                            if (!d) return null;
-                            return (
-                              <div className="glass-panel p-3 text-xs shadow-xl border border-border/50">
-                                <div className="font-display font-bold text-foreground">{d.sport}</div>
-                                <div className="mt-1 flex flex-col gap-0.5">
-                                  <span>Total Listed: <strong className="text-foreground">${d.totalListed.toFixed(2)}</strong></span>
-                                  <span>Total Sold: <strong className="text-foreground">${d.totalSold.toFixed(2)}</strong></span>
-                                  <span>Avg Listed: <strong>${d.avgListed.toFixed(2)}</strong></span>
-                                  <span>Avg Sold: <strong>${d.avgSold.toFixed(2)}</strong></span>
-                                  <span className="text-muted-foreground">{d.count} athletes</span>
-                                </div>
-                              </div>
-                            );
-                          }}
-                        />
-                        <Legend
-                          wrapperStyle={{ fontSize: 12, color: "hsl(var(--muted-foreground))" }}
-                        />
-                        <Bar dataKey="totalListed" name="Total Listed" fill="hsl(45, 93%, 47%)" fillOpacity={0.8} />
-                        <Bar dataKey="totalSold" name="Total Sold" fill="hsl(210, 80%, 55%)" fillOpacity={0.8} />
-                      </BarChart>
-                    </ResponsiveContainer>
-                  </div>
-
-                  {/* Summary table */}
-                  <div className="mt-6 overflow-x-auto">
-                    <table className="w-full text-xs">
-                      <thead>
-                        <tr className="border-b border-border">
-                          <th className="text-left py-2 px-3 text-muted-foreground font-semibold">Sport</th>
-                          <th className="text-right py-2 px-3 text-muted-foreground font-semibold">Athletes</th>
-                          <th className="text-right py-2 px-3 text-muted-foreground font-semibold">Avg Listed</th>
-                          <th className="text-right py-2 px-3 text-muted-foreground font-semibold">Avg Sold</th>
-                          <th className="text-right py-2 px-3 text-muted-foreground font-semibold">Total Listed</th>
-                          <th className="text-right py-2 px-3 text-muted-foreground font-semibold">Total Sold</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        {sportAgg.map((s) => (
-                          <tr key={s.sport} className="border-b border-border/50 hover:bg-secondary/30">
-                            <td className="py-2 px-3 font-medium text-foreground">{s.sport}</td>
-                            <td className="py-2 px-3 text-right text-muted-foreground">{s.count}</td>
-                            <td className="py-2 px-3 text-right font-mono text-foreground">${s.avgListed.toFixed(2)}</td>
-                            <td className="py-2 px-3 text-right font-mono text-foreground">${s.avgSold.toFixed(2)}</td>
-                            <td className="py-2 px-3 text-right font-mono text-foreground">${s.totalListed.toFixed(2)}</td>
-                            <td className="py-2 px-3 text-right font-mono text-foreground">${s.totalSold.toFixed(2)}</td>
-                          </tr>
-                        ))}
-                      </tbody>
-                    </table>
-                  </div>
-                </div>
-              </TabsContent>
-            </Tabs>
-          )}
         </motion.div>
+
+        {!hasData ? (
+          <div className="glass-panel p-16 text-center my-8">
+            <div className="w-10 h-10 rounded-full border-2 border-primary border-t-transparent animate-spin mx-auto mb-4" />
+            <div className="text-muted-foreground text-sm">Loading market data…</div>
+          </div>
+        ) : (
+          <>
+            {/* ── KPI Cards ── */}
+            {stats && (
+              <section className="grid grid-cols-2 md:grid-cols-4 gap-3 my-6" aria-label="Market summary">
+                {[
+                  { label: "Athletes Matched", value: stats.matched.toString(), icon: "👥", sub: "with both listed & sold data" },
+                  { label: "Avg Spread", value: `${stats.avgSpread > 0 ? "+" : ""}$${stats.avgSpread.toFixed(2)}`, icon: "📊", sub: stats.avgSpread > 0 ? "listed higher on avg" : "sold higher on avg", color: stats.avgSpread > 0 ? "text-red-400" : "text-green-400" },
+                  { label: "Overpriced", value: stats.overpriced.toString(), icon: "🔴", sub: "listed > sold" },
+                  { label: "Underpriced", value: stats.underpriced.toString(), icon: "🟢", sub: "sold > listed (deals)" },
+                ].map((kpi, i) => (
+                  <motion.div
+                    key={kpi.label}
+                    initial={{ opacity: 0, y: 12 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.4, delay: i * 0.08 }}
+                    className="glass-panel p-4 shimmer"
+                  >
+                    <div className="flex items-center gap-2 mb-2">
+                      <span className="text-lg">{kpi.icon}</span>
+                      <span className="text-[10px] uppercase tracking-widest text-muted-foreground font-semibold">{kpi.label}</span>
+                    </div>
+                    <div className={`text-2xl font-display font-bold tracking-tight ${kpi.color || "text-foreground"}`}>
+                      {kpi.value}
+                    </div>
+                    <div className="text-[10px] text-muted-foreground mt-1">{kpi.sub}</div>
+                  </motion.div>
+                ))}
+              </section>
+            )}
+
+            {/* ── Sport Breakdown Cards (always visible) ── */}
+            <section className="my-8" aria-label="Sport breakdown">
+              <h2 className="font-display font-bold text-lg text-foreground mb-4 flex items-center gap-2">
+                <span className="w-1 h-5 rounded-full bg-primary inline-block" />
+                By Sport
+              </h2>
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+                {sportAgg.map((s, i) => {
+                  const spread = s.totalListed - s.totalSold;
+                  const pct = s.totalSold > 0 ? ((spread / s.totalSold) * 100).toFixed(1) : "0";
+                  return (
+                    <motion.div
+                      key={s.sport}
+                      initial={{ opacity: 0, y: 12 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.35, delay: i * 0.06 }}
+                      className="glass-panel p-4 hover:border-primary/20 transition-colors"
+                    >
+                      <div className="flex items-center gap-3 mb-3">
+                        <div
+                          className="w-10 h-10 rounded-xl flex items-center justify-center text-lg border border-border"
+                          style={{ backgroundColor: `${getSportColor(s.sport)}15` }}
+                        >
+                          {SPORT_ICONS[s.sport] || "🏅"}
+                        </div>
+                        <div>
+                          <div className="font-display font-bold text-sm text-foreground">{s.sport}</div>
+                          <div className="text-[10px] text-muted-foreground">{s.count} athletes</div>
+                        </div>
+                      </div>
+
+                      <div className="grid grid-cols-2 gap-3">
+                        <div>
+                          <div className="text-[10px] text-muted-foreground uppercase tracking-wider mb-0.5">Avg Listed</div>
+                          <div className="font-mono font-bold text-foreground text-sm">${s.avgListed.toFixed(2)}</div>
+                        </div>
+                        <div>
+                          <div className="text-[10px] text-muted-foreground uppercase tracking-wider mb-0.5">Avg Sold</div>
+                          <div className="font-mono font-bold text-foreground text-sm">${s.avgSold.toFixed(2)}</div>
+                        </div>
+                      </div>
+
+                      {/* Mini bar comparison */}
+                      <div className="mt-3 space-y-1.5">
+                        <div className="flex items-center gap-2">
+                          <span className="text-[9px] text-muted-foreground w-10 shrink-0">Listed</span>
+                          <div className="flex-1 h-2 rounded-full bg-secondary overflow-hidden">
+                            <div
+                              className="h-full rounded-full transition-all"
+                              style={{
+                                width: `${Math.min(100, (s.totalListed / Math.max(s.totalListed, s.totalSold)) * 100)}%`,
+                                backgroundColor: "hsl(45, 93%, 47%)",
+                              }}
+                            />
+                          </div>
+                          <span className="text-[9px] font-mono text-muted-foreground w-14 text-right">${s.totalListed.toFixed(0)}</span>
+                        </div>
+                        <div className="flex items-center gap-2">
+                          <span className="text-[9px] text-muted-foreground w-10 shrink-0">Sold</span>
+                          <div className="flex-1 h-2 rounded-full bg-secondary overflow-hidden">
+                            <div
+                              className="h-full rounded-full transition-all"
+                              style={{
+                                width: `${Math.min(100, (s.totalSold / Math.max(s.totalListed, s.totalSold)) * 100)}%`,
+                                backgroundColor: "hsl(210, 80%, 55%)",
+                              }}
+                            />
+                          </div>
+                          <span className="text-[9px] font-mono text-muted-foreground w-14 text-right">${s.totalSold.toFixed(0)}</span>
+                        </div>
+                      </div>
+
+                      <div className="mt-3 pt-2 border-t border-border/50 flex justify-between items-center">
+                        <span className="text-[10px] text-muted-foreground">Market spread</span>
+                        <span className={`text-xs font-bold ${spread > 0 ? "text-red-400" : "text-green-400"}`}>
+                          {spread > 0 ? "+" : ""}{pct}%
+                        </span>
+                      </div>
+                    </motion.div>
+                  );
+                })}
+              </div>
+            </section>
+
+            {/* ── Scatter: Listed vs Sold ── */}
+            <section className="my-8" aria-label="Listed vs Sold scatter chart">
+              <h2 className="font-display font-bold text-lg text-foreground mb-1 flex items-center gap-2">
+                <span className="w-1 h-5 rounded-full bg-primary inline-block" />
+                Listed vs Sold
+              </h2>
+              <p className="text-xs text-muted-foreground mb-4 ml-3">
+                Each dot is an athlete. Above the diagonal = listed higher than sold (overpriced).
+              </p>
+              <div className="glass-panel p-4 md:p-6">
+                <div className="w-full h-[350px] md:h-[450px]">
+                  <ResponsiveContainer width="100%" height="100%">
+                    <ScatterChart margin={{ top: 10, right: 20, bottom: 40, left: 10 }}>
+                      <CartesianGrid strokeDasharray="3 3" stroke="hsl(var(--border))" opacity={0.5} />
+                      <XAxis
+                        type="number" dataKey="sold" name="Sold" unit="$"
+                        label={{ value: "Avg Sold ($)", position: "insideBottom", offset: -10, style: { fill: "hsl(var(--muted-foreground))", fontSize: 11 } }}
+                        tick={{ fill: "hsl(var(--muted-foreground))", fontSize: 10 }}
+                      />
+                      <YAxis
+                        type="number" dataKey="listed" name="Listed" unit="$"
+                        label={{ value: "Avg Listed ($)", angle: -90, position: "insideLeft", offset: 10, style: { fill: "hsl(var(--muted-foreground))", fontSize: 11 } }}
+                        tick={{ fill: "hsl(var(--muted-foreground))", fontSize: 10 }}
+                      />
+                      <Tooltip content={<PriceTooltip />} />
+                      <Scatter
+                        data={(() => {
+                          const maxVal = Math.max(...comparisonData.map(d => Math.max(d.listed, d.sold)));
+                          return [{ listed: 0, sold: 0 }, { listed: maxVal, sold: maxVal }];
+                        })()}
+                        line={{ stroke: "hsl(var(--muted-foreground))", strokeWidth: 1, strokeDasharray: "6 4" }}
+                        shape={() => null} legendType="none" isAnimationActive={false}
+                      />
+                      <Scatter data={comparisonData} isAnimationActive={false}>
+                        {comparisonData.map((entry, idx) => (
+                          <Cell key={idx} fill={getSportColor(entry.sport)} fillOpacity={0.75} r={5} />
+                        ))}
+                      </Scatter>
+                    </ScatterChart>
+                  </ResponsiveContainer>
+                </div>
+                <div className="flex flex-wrap gap-4 mt-3 justify-center">
+                  {Object.entries(SPORT_COLORS).map(([sport, color]) => (
+                    <div key={sport} className="flex items-center gap-1.5 text-[10px] text-muted-foreground">
+                      <div className="w-2.5 h-2.5 rounded-full" style={{ backgroundColor: color }} />
+                      {sport}
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </section>
+
+            {/* ── Top 20 Price Spreads ── */}
+            <section className="my-8" aria-label="Top price spreads">
+              <h2 className="font-display font-bold text-lg text-foreground mb-1 flex items-center gap-2">
+                <span className="w-1 h-5 rounded-full bg-primary inline-block" />
+                Biggest Price Gaps
+              </h2>
+              <p className="text-xs text-muted-foreground mb-4 ml-3">
+                Top 20 athletes with the largest listed-to-sold price spread.
+              </p>
+              <div className="glass-panel p-4 md:p-6">
+                <div className="w-full h-[450px] md:h-[550px]">
+                  <ResponsiveContainer width="100%" height="100%">
+                    <BarChart data={topSpread} layout="vertical" margin={{ top: 5, right: 30, left: 10, bottom: 5 }}>
+                      <CartesianGrid strokeDasharray="3 3" stroke="hsl(var(--border))" opacity={0.5} />
+                      <XAxis
+                        type="number"
+                        tick={{ fill: "hsl(var(--muted-foreground))", fontSize: 10 }}
+                        label={{ value: "Spread ($)", position: "insideBottom", offset: -5, style: { fill: "hsl(var(--muted-foreground))", fontSize: 11 } }}
+                      />
+                      <YAxis type="category" dataKey="name" width={110} tick={{ fill: "hsl(var(--muted-foreground))", fontSize: 9 }} />
+                      <Tooltip content={<PriceTooltip />} />
+                      <Bar dataKey="spread" isAnimationActive={false} radius={[0, 4, 4, 0]}>
+                        {topSpread.map((entry, idx) => (
+                          <Cell key={idx} fill={entry.spread > 0 ? "hsl(0, 72%, 50%)" : "hsl(142, 71%, 45%)"} fillOpacity={0.8} />
+                        ))}
+                      </Bar>
+                    </BarChart>
+                  </ResponsiveContainer>
+                </div>
+                <div className="flex gap-6 justify-center mt-3">
+                  <div className="flex items-center gap-1.5 text-[10px] text-muted-foreground">
+                    <div className="w-2.5 h-2.5 rounded-sm" style={{ backgroundColor: "hsl(0, 72%, 50%)" }} />
+                    Overpriced (listed &gt; sold)
+                  </div>
+                  <div className="flex items-center gap-1.5 text-[10px] text-muted-foreground">
+                    <div className="w-2.5 h-2.5 rounded-sm" style={{ backgroundColor: "hsl(142, 71%, 45%)" }} />
+                    Deals (sold &gt; listed)
+                  </div>
+                </div>
+              </div>
+            </section>
+          </>
+        )}
+
         <VzlaFooter />
       </main>
       <VzlaEbayFooter />
