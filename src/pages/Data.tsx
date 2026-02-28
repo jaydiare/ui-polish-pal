@@ -80,13 +80,22 @@ function getSportColor(sport: string) {
 const Data = () => {
   const [listedData, setListedData] = useState<Record<string, ListedRecord>>({});
   const [soldData, setSoldData] = useState<Record<string, SoldRecord>>({});
+  const [athleteSportMap, setAthleteSportMap] = useState<Record<string, string>>({});
 
   useEffect(() => {
     Promise.all([
       fetchJson("https://raw.githubusercontent.com/jaydiare/ui-polish-pal/main/data/ebay-avg.json"),
       fetchJson("https://raw.githubusercontent.com/jaydiare/ui-polish-pal/main/data/ebay-sold-avg.json"),
-    ]).then(([listed, sold]) => {
+      fetchJson("data/athletes.json"),
+    ]).then(([listed, sold, athletes]) => {
       if (listed) setListedData(listed);
+      if (athletes && Array.isArray(athletes)) {
+        const map: Record<string, string> = {};
+        for (const a of athletes) {
+          if (a?.name && a?.sport) map[a.name] = a.sport;
+        }
+        setAthleteSportMap(map);
+      }
       if (sold) setSoldData(sold);
     });
   }, []);
@@ -102,7 +111,7 @@ const Data = () => {
       const sp = getSoldPrice(soldData[key] as SoldRecord);
       if (lp == null || sp == null) continue;
 
-      const sport = (listedData[key] as any)?.sport || "Other";
+      const sport = athleteSportMap[key] || (listedData[key] as any)?.sport || "Other";
       items.push({
         name: key,
         sport,
@@ -112,7 +121,7 @@ const Data = () => {
       });
     }
     return items;
-  }, [listedData, soldData]);
+  }, [listedData, soldData, athleteSportMap]);
 
   // Top spread athletes (biggest listed-sold gap)
   const topSpread = useMemo(() => {
