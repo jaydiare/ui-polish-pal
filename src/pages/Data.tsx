@@ -115,7 +115,13 @@ const Data = () => {
       if (listed) setListedData(listed);
       if (athletes && Array.isArray(athletes)) {
         const map: Record<string, string> = {};
-        for (const a of athletes) { if (a?.name && a?.sport) map[a.name] = a.sport; }
+        const norm = (s: string) => s.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().trim();
+        for (const a of athletes) {
+          if (a?.name && a?.sport) {
+            map[a.name] = a.sport;          // exact key
+            map[norm(a.name)] = a.sport;    // normalized key
+          }
+        }
         setAthleteSportMap(map);
       }
       if (sold) setSoldData(sold);
@@ -134,7 +140,8 @@ const Data = () => {
       // Filter extreme outliers where ratio > 10x (likely bad data from graded/auto cards)
       const ratio = Math.max(lp, sp) / Math.max(Math.min(lp, sp), 0.01);
       if (ratio > 10) continue;
-      const sport = athleteSportMap[key] || (listedData[key] as any)?.sport || "Other";
+      const normKey = key.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().trim();
+      const sport = athleteSportMap[key] || athleteSportMap[normKey] || (listedData[key] as any)?.sport || "Other";
       items.push({ name: key, sport, listed: Math.round(lp * 100) / 100, sold: Math.round(sp * 100) / 100, spread: Math.round((lp - sp) * 100) / 100 });
     }
     return items;
@@ -167,7 +174,8 @@ const Data = () => {
     const allKeys = new Set([...Object.keys(listedData), ...Object.keys(soldData)]);
     for (const key of allKeys) {
       if (key === "_meta") continue;
-      const sport = athleteSportMap[key] || (listedData[key] as any)?.sport || "Other";
+      const normKey = key.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().trim();
+      const sport = athleteSportMap[key] || athleteSportMap[normKey] || (listedData[key] as any)?.sport || "Other";
       addSport(sport);
       const lp = getListedPrice(listedData[key] as ListedRecord);
       const sp = getSoldPrice(soldData[key] as SoldRecord);
