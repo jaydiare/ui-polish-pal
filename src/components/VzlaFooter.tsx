@@ -60,6 +60,7 @@ const VzlaFooter = () => {
                 <a href={EBAY_STORE} target="_blank" rel="noopener noreferrer" className="text-sm text-muted-foreground no-underline hover:text-foreground transition-colors">eBay Store</a>
                 <a href={CARDHEDGE} target="_blank" rel="noopener noreferrer" className="text-sm text-muted-foreground no-underline hover:text-foreground transition-colors">Card Hedge AI</a>
                 <a href={BCW} target="_blank" rel="noopener noreferrer" className="text-sm text-muted-foreground no-underline hover:text-foreground transition-colors">BCW Supplies</a>
+                <a href="https://www.facebook.com/groups/1591729798708721" target="_blank" rel="noopener noreferrer" className="text-sm text-muted-foreground no-underline hover:text-foreground transition-colors">Facebook Community</a>
               </nav>
             </div>
 
