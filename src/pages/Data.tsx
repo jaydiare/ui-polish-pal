@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import VzlaNavbar from "@/components/VzlaNavbar";
 import VzlaFooter from "@/components/VzlaFooter";
 import VzlaEbayFooter from "@/components/VzlaEbayFooter";
+import VzlaSupplyDemand from "@/components/VzlaSupplyDemand";
 import { buildEbaySearchUrl } from "@/lib/vzla-helpers";
 import {
   ScatterChart,
@@ -465,6 +466,8 @@ const Data = () => {
                 </div>
               </div>
             </section>
+            {/* ── Supply & Demand ── */}
+            <VzlaSupplyDemand comparisonData={comparisonData} />
           </>
         )}
 
