@@ -38,11 +38,15 @@ const VzlaIndexCards = ({ athletes, byName, byKey, indexHistory }: VzlaIndexCard
     { title: "All Index", icon: "🏆", value: formatIndexNumber(iAll.sum), athletes: athletes.length, priced: iAll.used, sport: "All" },
   ];
 
-  // Build sparkline data + % change from indexHistory
-  const { sparklines, changes } = useMemo(() => {
+  const { sparklines, changes, periods } = useMemo(() => {
     if (!indexHistory || indexHistory.length === 0) {
-      return { sparklines: cards.map(() => []), changes: cards.map(() => null) };
+      return {
+        sparklines: cards.map(() => []),
+        changes: cards.map(() => null),
+        periods: cards.map(() => "")
+      };
     }
+
     const sLines = cards.map((c) => {
       const points = indexHistory
         .map((h) => {
@@ -50,29 +54,49 @@ const VzlaIndexCards = ({ athletes, byName, byKey, indexHistory }: VzlaIndexCard
           return Number.isFinite(v) && v > 0 ? { v } : null;
         })
         .filter(Boolean) as { v: number }[];
-      // If only 1 point, add a slight offset so Recharts draws a visible line
+
+      // Ensure 1-point history still renders as a visible line
       if (points.length === 1) {
-        return [{ v: points[0].v * 0.98 }, points[0]];
+        const base = points[0].v;
+        return [{ v: base * 0.98 }, { v: base }];
       }
+
       return points;
     });
+
     const chgs = cards.map((c) => {
-      if (!indexHistory || indexHistory.length < 2) return null;
-      const recent = indexHistory.slice(-2);
-      const prev = Number(recent[0][c.sport]);
-      const curr = Number(recent[1][c.sport]);
-      if (!Number.isFinite(prev) || !Number.isFinite(curr) || prev === 0) return null;
+      const series = indexHistory
+        .map((h) => Number(h[c.sport]))
+        .filter((v) => Number.isFinite(v) && v > 0);
+
+      if (series.length < 2) return null;
+      const prev = series[series.length - 2];
+      const curr = series[series.length - 1];
+      if (!prev || prev <= 0) return null;
       return ((curr - prev) / prev) * 100;
     });
-    return { sparklines: sLines, changes: chgs };
-  }, [indexHistory, cards.map(c => c.sport).join(",")]);
+
+    const firstDate = new Date(indexHistory[0]?.date || "");
+    const lastDate = new Date(indexHistory[indexHistory.length - 1]?.date || "");
+    const dayDiff =
+      Number.isFinite(firstDate.getTime()) && Number.isFinite(lastDate.getTime())
+        ? Math.max(1, Math.round((lastDate.getTime() - firstDate.getTime()) / (1000 * 60 * 60 * 24)))
+        : Math.max(1, indexHistory.length - 1);
+
+    return {
+      sparklines: sLines,
+      changes: chgs,
+      periods: cards.map(() => `${dayDiff}d`),
+    };
+  }, [indexHistory, cards.map((c) => c.sport).join(",")]);
 
   return (
     <section className="grid grid-cols-1 sm:grid-cols-3 gap-4 my-6" aria-label="VZLA Index Cards">
       {cards.map((card, i) => {
         const change = changes[i];
         const isUp = change != null && change >= 0;
-        const isDown = change != null && change < 0;
+        const trendColor = isUp ? "hsl(var(--primary))" : "hsl(var(--destructive))";
+
         return (
           <motion.div
             key={card.title}
@@ -87,32 +111,51 @@ const VzlaIndexCards = ({ athletes, byName, byKey, indexHistory }: VzlaIndexCard
               </div>
               <div className="font-display font-bold text-sm text-foreground">{card.title}</div>
             </div>
-            <div className="flex items-baseline gap-2">
-              <span className="text-3xl font-display font-bold tracking-tight text-foreground">{card.value}</span>
-              {change != null && (
-                <span className={`text-xs font-semibold ${isUp ? "text-green-500" : "text-red-500"}`}>
-                  {isUp ? "▲" : "▼"} {Math.abs(change).toFixed(1)}%
-                </span>
-              )}
-            </div>
+
+            <div className="text-3xl font-display font-bold tracking-tight text-foreground">{card.value}</div>
+
             <div className="mt-2 flex items-center gap-3">
               <span className="text-xs text-muted-foreground font-medium">{card.athletes} athletes</span>
               <span className="w-1 h-1 rounded-full bg-border" />
               <span className="text-xs text-muted-foreground font-medium">{card.priced} priced</span>
             </div>
 
-            {/* Sparkline trend */}
+            <div className="mt-3 flex items-center justify-end gap-2 text-xs">
+              {change != null ? (
+                <>
+                  <span className={`font-semibold ${isUp ? "text-primary" : "text-destructive"}`}>
+                    {isUp ? "↗" : "↘"} {change > 0 ? "+" : ""}{change.toFixed(1)}%
+                  </span>
+                  <span className="text-muted-foreground">{periods[i]}</span>
+                </>
+              ) : (
+                <span className="text-muted-foreground">Collecting trend…</span>
+              )}
+            </div>
+
             {sparklines[i] && sparklines[i].length > 1 && (
-              <div className="absolute bottom-2 right-2 w-24 h-10 opacity-70">
+              <div className="absolute bottom-2 right-2 w-28 h-12 opacity-85">
                 <ResponsiveContainer width="100%" height="100%">
-                  <LineChart data={sparklines[i]}>
+                  <LineChart data={sparklines[i]} margin={{ top: 6, right: 6, bottom: 2, left: 6 }}>
                     <YAxis domain={["dataMin - 1", "dataMax + 1"]} hide />
                     <Line
                       type="monotone"
                       dataKey="v"
-                      stroke={isDown ? "hsl(0 70% 55%)" : "hsl(142 70% 45%)"}
-                      strokeWidth={2}
-                      dot={false}
+                      stroke={trendColor}
+                      strokeWidth={2.5}
+                      dot={(props) => {
+                        if (props.index !== sparklines[i].length - 1) return <g />;
+                        return (
+                          <circle
+                            cx={props.cx}
+                            cy={props.cy}
+                            r={4}
+                            fill="hsl(var(--background))"
+                            stroke={trendColor}
+                            strokeWidth={2}
+                          />
+                        );
+                      }}
                     />
                   </LineChart>
                 </ResponsiveContainer>
@@ -126,3 +169,4 @@ const VzlaIndexCards = ({ athletes, byName, byKey, indexHistory }: VzlaIndexCard
 };
 
 export default VzlaIndexCards;
+
