@@ -121,15 +121,13 @@ const VzlaIndexCards = ({ athletes, byName, byKey, indexHistory }: VzlaIndexCard
             </div>
 
             <div className="mt-3 flex items-center justify-end gap-2 text-xs">
-              {change != null ? (
+              {change != null && (
                 <>
                   <span className={`font-semibold ${isUp ? "text-primary" : "text-destructive"}`}>
                     {isUp ? "↗" : "↘"} {change > 0 ? "+" : ""}{change.toFixed(1)}%
                   </span>
                   <span className="text-muted-foreground">{periods[i]}</span>
                 </>
-              ) : (
-                <span className="text-muted-foreground">Collecting trend…</span>
               )}
             </div>
 
