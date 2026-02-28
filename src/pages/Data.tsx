@@ -59,11 +59,12 @@ const SPORT_COLORS: Record<string, string> = {
   Soccer: "hsl(142, 71%, 45%)",
   Basketball: "hsl(25, 95%, 53%)",
   Football: "hsl(221, 83%, 53%)",
+  All: "hsl(280, 70%, 55%)",
   Other: "hsl(270, 60%, 55%)",
 };
 
 const SPORT_ICONS: Record<string, string> = {
-  Baseball: "⚾", Soccer: "⚽", Basketball: "🏀", Football: "🏈", Other: "🏅",
+  Baseball: "⚾", Soccer: "⚽", Basketball: "🏀", Football: "🏈", All: "🏆", Other: "🏅",
 };
 
 function getSportColor(sport: string) {
@@ -142,27 +143,56 @@ const Data = () => {
     [...comparisonData].sort((a, b) => Math.abs(b.spread) - Math.abs(a.spread)).slice(0, 20),
     [comparisonData]);
 
-  /* ── Sport Aggregation ── */
+  /* ── Sport Aggregation (includes listed-only athletes + "All" card) ── */
   const sportAgg = useMemo(() => {
-    const agg: Record<string, { listed: number; sold: number; count: number }> = {};
-    for (const item of comparisonData) {
-      const s = item.sport || "Other";
-      if (!agg[s]) agg[s] = { listed: 0, sold: 0, count: 0 };
-      agg[s].listed += item.listed;
-      agg[s].sold += item.sold;
-      agg[s].count += 1;
+    const agg: Record<string, { listed: number; sold: number; listedCount: number; soldCount: number; totalCount: number }> = {};
+    const addSport = (sport: string) => {
+      if (!agg[sport]) agg[sport] = { listed: 0, sold: 0, listedCount: 0, soldCount: 0, totalCount: 0 };
+    };
+
+    // Include all athletes from listedData (even without sold data)
+    const allKeys = new Set([...Object.keys(listedData), ...Object.keys(soldData)]);
+    for (const key of allKeys) {
+      if (key === "_meta") continue;
+      const sport = athleteSportMap[key] || (listedData[key] as any)?.sport || "Other";
+      addSport(sport);
+      const lp = getListedPrice(listedData[key] as ListedRecord);
+      const sp = getSoldPrice(soldData[key] as SoldRecord);
+      if (lp != null) { agg[sport].listed += lp; agg[sport].listedCount += 1; }
+      if (sp != null) { agg[sport].sold += sp; agg[sport].soldCount += 1; }
+      agg[sport].totalCount += 1;
     }
-    return Object.entries(agg)
+
+    const entries = Object.entries(agg)
+      .filter(([s]) => s !== "Other" || agg[s].totalCount > 2)
       .map(([sport, v]) => ({
         sport,
-        avgListed: Math.round((v.listed / v.count) * 100) / 100,
-        avgSold: Math.round((v.sold / v.count) * 100) / 100,
+        avgListed: v.listedCount > 0 ? Math.round((v.listed / v.listedCount) * 100) / 100 : 0,
+        avgSold: v.soldCount > 0 ? Math.round((v.sold / v.soldCount) * 100) / 100 : 0,
         totalListed: Math.round(v.listed * 100) / 100,
         totalSold: Math.round(v.sold * 100) / 100,
-        count: v.count,
+        count: v.totalCount,
       }))
       .sort((a, b) => b.count - a.count);
-  }, [comparisonData]);
+
+    // Add "All" summary card
+    const allListed = entries.reduce((s, e) => s + e.totalListed, 0);
+    const allSold = entries.reduce((s, e) => s + e.totalSold, 0);
+    const allCount = entries.reduce((s, e) => s + e.count, 0);
+    const allListedCount = Object.values(agg).reduce((s, v) => s + v.listedCount, 0);
+    const allSoldCount = Object.values(agg).reduce((s, v) => s + v.soldCount, 0);
+
+    entries.push({
+      sport: "All",
+      avgListed: allListedCount > 0 ? Math.round((allListed / allListedCount) * 100) / 100 : 0,
+      avgSold: allSoldCount > 0 ? Math.round((allSold / allSoldCount) * 100) / 100 : 0,
+      totalListed: Math.round(allListed * 100) / 100,
+      totalSold: Math.round(allSold * 100) / 100,
+      count: allCount,
+    });
+
+    return entries;
+  }, [listedData, soldData, athleteSportMap]);
 
   const hasData = comparisonData.length > 0;
 
