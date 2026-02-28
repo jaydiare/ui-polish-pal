@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-02-28T14:12:54.196Z",
+    "updatedAt": "2026-02-28T16:14:07.305Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. Brand-filtered. Junk titles removed. Taguchi winsorized mean + market stability CV. Ungraded condition policy (permissive for sold). Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 170,
-      "endIdx": 180,
+      "startIdx": 180,
+      "endIdx": 190,
       "totalAthletes": 575
     },
     "maxPages": 2,
@@ -2201,5 +2201,125 @@
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
+  },
+  "Gleyber Torres": {
+    "keyword": "Gleyber Torres Baseball",
+    "nScraped": 120,
+    "nSoldUsed": 33,
+    "avg": 3.9915151515151517,
+    "taguchiSold": 3.9915151515151517,
+    "medianSold": 3.99,
+    "marketStabilityCV": 0.24172722848121755,
+    "currency": "USD",
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
+  },
+  "Gonzalo Marquez": {
+    "keyword": "Gonzalo Marquez Baseball",
+    "nScraped": 157,
+    "nSoldUsed": 54,
+    "avg": 2.7999999999999994,
+    "taguchiSold": 2.7999999999999994,
+    "medianSold": 2.25,
+    "marketStabilityCV": 0.3876337385817564,
+    "currency": "USD",
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
+  },
+  "Gorkys Hernández": {
+    "keyword": "Gorkys Hernández Baseball",
+    "nScraped": 126,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
+    "currency": "USD",
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
+  },
+  "Gregorio Petit": {
+    "keyword": "Gregorio Petit Baseball",
+    "nScraped": 120,
+    "nSoldUsed": 36,
+    "avg": 0.9944444444444444,
+    "taguchiSold": 0.9944444444444444,
+    "medianSold": 0.99,
+    "marketStabilityCV": 0.005067680085039922,
+    "currency": "USD",
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
+  },
+  "Gregory Infante": {
+    "keyword": "Gregory Infante Baseball",
+    "nScraped": 124,
+    "nSoldUsed": 22,
+    "avg": 0.9899999999999998,
+    "taguchiSold": 0.9899999999999998,
+    "medianSold": 0.99,
+    "marketStabilityCV": 2.295655543187869e-16,
+    "currency": "USD",
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
+  },
+  "Gregor Blanco": {
+    "keyword": "Gregor Blanco Baseball",
+    "nScraped": 77,
+    "nSoldUsed": 31,
+    "avg": 1.1051612903225807,
+    "taguchiSold": 1.1051612903225807,
+    "medianSold": 0.99,
+    "marketStabilityCV": 0.11683537266128152,
+    "currency": "USD",
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
+  },
+  "Guilder Rodríguez": {
+    "keyword": "Guilder Rodríguez Baseball",
+    "nScraped": 131,
+    "nSoldUsed": 55,
+    "avg": 9.118000000000004,
+    "taguchiSold": 9.118000000000004,
+    "medianSold": 12,
+    "marketStabilityCV": 0.6657254473946862,
+    "currency": "USD",
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
+  },
+  "Guillermo Moscoso": {
+    "keyword": "Guillermo Moscoso Baseball",
+    "nScraped": 122,
+    "nSoldUsed": 4,
+    "avg": 0.17500000000000002,
+    "taguchiSold": 0.17500000000000002,
+    "medianSold": 0.17500000000000002,
+    "marketStabilityCV": 1.0887176504718659,
+    "currency": "USD",
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
+  },
+  "Guillermo Quiroz": {
+    "keyword": "Guillermo Quiroz Baseball",
+    "nScraped": 62,
+    "nSoldUsed": 16,
+    "avg": 1.5518750000000003,
+    "taguchiSold": 1.5518750000000003,
+    "medianSold": 1.6,
+    "marketStabilityCV": 0.09350477236202304,
+    "currency": "USD",
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
+  },
+  "Guillermo Rodríguez": {
+    "keyword": "Guillermo Rodríguez Baseball",
+    "nScraped": 120,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
+    "currency": "USD",
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
   }
 }
