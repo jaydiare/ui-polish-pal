@@ -91,7 +91,7 @@ const VzlaIndexCards = ({ athletes, byName, byKey, indexHistory }: VzlaIndexCard
   }, [indexHistory, cards.map((c) => c.sport).join(",")]);
 
   return (
-    <section className="grid grid-cols-1 sm:grid-cols-3 gap-4 my-6" aria-label="VZLA Index Cards">
+    <section className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4 my-6 px-1 sm:px-0" aria-label="VZLA Index Cards">
       {cards.map((card, i) => {
         const change = changes[i];
         const isUp = change != null && change >= 0;
