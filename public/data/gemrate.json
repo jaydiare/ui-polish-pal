@@ -1,13 +1,13 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-01T21:03:45.127112+00:00",
-    "athleteCount": 115,
+    "updatedAt": "2026-03-01T21:45:39.387219+00:00",
+    "athleteCount": 124,
     "graders": [
       "PSA"
     ],
     "batchInfo": {
-      "startIdx": 140,
-      "endIdx": 150,
+      "startIdx": 150,
+      "endIdx": 160,
       "totalAthletes": 575
     }
   },
@@ -2080,6 +2080,168 @@
         "gems": 74,
         "grades": 1780,
         "gemRate": 4.0
+      }
+    },
+    "Ethan Salas": {
+      "name": "Ethan Salas",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 1040,
+          "gems": 9238,
+          "grades": 15774,
+          "gemRate": 59.0
+        }
+      },
+      "totals": {
+        "cards": 1040,
+        "gems": 9238,
+        "grades": 15774,
+        "gemRate": 59.0
+      }
+    },
+    "Eugenio Suarez": {
+      "name": "Eugenio Suarez",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 277,
+          "gems": 592,
+          "grades": 973,
+          "gemRate": 61.0
+        }
+      },
+      "totals": {
+        "cards": 277,
+        "gems": 592,
+        "grades": 973,
+        "gemRate": 61.0
+      }
+    },
+    "Everson Pereira": {
+      "name": "Everson Pereira",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 518,
+          "gems": 1748,
+          "grades": 3403,
+          "gemRate": 51.0
+        }
+      },
+      "totals": {
+        "cards": 518,
+        "gems": 1748,
+        "grades": 3403,
+        "gemRate": 51.0
+      }
+    },
+    "Ezequiel Carrera": {
+      "name": "Ezequiel Carrera",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 8,
+          "gems": 5,
+          "grades": 10,
+          "gemRate": 50.0
+        }
+      },
+      "totals": {
+        "cards": 8,
+        "gems": 5,
+        "grades": 10,
+        "gemRate": 50.0
+      }
+    },
+    "Ezequiel Tovar": {
+      "name": "Ezequiel Tovar",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 926,
+          "gems": 3803,
+          "grades": 6839,
+          "gemRate": 56.0
+        }
+      },
+      "totals": {
+        "cards": 926,
+        "gems": 3803,
+        "grades": 6839,
+        "gemRate": 56.0
+      }
+    },
+    "Felipe Lira": {
+      "name": "Felipe Lira",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 5,
+          "gems": 7,
+          "grades": 13,
+          "gemRate": 54.0
+        }
+      },
+      "totals": {
+        "cards": 5,
+        "gems": 7,
+        "grades": 13,
+        "gemRate": 54.0
+      }
+    },
+    "Felipe Vazquez": {
+      "name": "Felipe Vazquez",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 8,
+          "gems": 10,
+          "grades": 13,
+          "gemRate": 77.0
+        }
+      },
+      "totals": {
+        "cards": 8,
+        "gems": 10,
+        "grades": 13,
+        "gemRate": 77.0
+      }
+    },
+    "Felix Doubront": {
+      "name": "Felix Doubront",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 35,
+          "gems": 53,
+          "grades": 86,
+          "gemRate": 62.0
+        }
+      },
+      "totals": {
+        "cards": 35,
+        "gems": 53,
+        "grades": 86,
+        "gemRate": 62.0
+      }
+    },
+    "Felix Escalona": {
+      "name": "Felix Escalona",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 7,
+          "gems": 5,
+          "grades": 13,
+          "gemRate": 38.0
+        }
+      },
+      "totals": {
+        "cards": 7,
+        "gems": 5,
+        "grades": 13,
+        "gemRate": 38.0
       }
     }
   }
