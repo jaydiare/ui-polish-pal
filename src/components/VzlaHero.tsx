@@ -54,6 +54,12 @@ const VzlaHero = ({ lastUpdated }: VzlaHeroProps) => {
             <strong className="text-vzla-yellow">Flip Potential</strong> — Cards marked Volatile or Unstable may offer buy-low, sell-high opportunities due to wide price swings.
           </span>
         </div>
+        <div className="mt-2 flex items-center justify-center gap-2 px-3 py-2 rounded-lg bg-emerald-500/5 border border-emerald-500/15 w-fit mx-auto">
+          <span className="text-[13px]">🔻</span>
+          <span className="text-xs text-muted-foreground">
+            <strong className="text-emerald-400">Buy Low</strong> — Cards where the average sold price is below the current listing price, signaling potential bargains.
+          </span>
+        </div>
       </div>
 
     </motion.section>
