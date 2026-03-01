@@ -570,7 +570,7 @@ const GemrateChart = () => {
     return Object.values(gemrateData.athletes)
       .filter((a) => a.totals && a.totals.grades > 0)
       .sort((a, b) => b.totals.grades - a.totals.grades)
-      .slice(0, 10)
+      .slice(0, 20)
       .map((a) => ({
         name: a.name,
         sport: a.sport,
@@ -590,7 +590,7 @@ const GemrateChart = () => {
     <section className="my-8" aria-label="Gemrate grading data">
       <h2 className="font-display font-bold text-lg text-foreground mb-1 flex items-center gap-2">
         <span className="w-1 h-5 rounded-full bg-primary inline-block" />
-        Graded Cards – Top 10
+        Graded Cards – Top 20
       </h2>
       <p className="text-xs text-muted-foreground mb-4 ml-3">
         Total graded cards by PSA for Venezuelan athletes.
