@@ -73,7 +73,17 @@ const JUNK_PHRASES = [
   "singles you pick", "you pick!", "you pick -",
   "lot", "team lot", "player lot", "break", "case break",
   "random", "bulk", "paper rc's & vets", "rc's & vets",
+  "u-pick", "u pick", "lote", "base cards from",
 ];
+
+// Sport → League mapping for eBay aspect filters
+const SPORT_LEAGUE_MAP = {
+  Baseball: "Major League (MLB)",
+  Soccer: "Major League Soccer (MLS)",
+  Basketball: "National Basketball Assoc. (NBA)",
+  Football: "National Football League (NFL)",
+  Hockey: "National Hockey League (NHL)",
+};
 
 // Rotate user agents to reduce blocking
 const USER_AGENTS = [
@@ -265,8 +275,8 @@ function convertToUSD(amount, currency, fxRatesToUSD) {
 
 // --- eBay sold search page scraping ---
 
-// Build eBay sold listings search URL
-function buildSoldSearchURL(keyword, page = 1) {
+// Build eBay sold listings search URL (with League aspect filter when available)
+function buildSoldSearchURL(keyword, sport, page = 1) {
   const params = new URLSearchParams({
     _nkw: keyword,
     _sacat: CATEGORY_ID,
@@ -275,6 +285,12 @@ function buildSoldSearchURL(keyword, page = 1) {
     _ipg: "60",
     rt: "nc",
   });
+
+  // Add League aspect filter to avoid cross-sport contamination
+  const league = SPORT_LEAGUE_MAP[sport];
+  if (league) {
+    params.set("League", league);
+  }
 
   if (page > 1) {
     params.set("_pgn", String(page));
@@ -648,7 +664,7 @@ async function main() {
 
     try {
       for (let page = 1; page <= MAX_PAGES; page++) {
-        const url = buildSoldSearchURL(keyword, page);
+        const url = buildSoldSearchURL(keyword, sport, page);
         const html = await fetchSoldPage(url);
 
         if (page === 1) {
