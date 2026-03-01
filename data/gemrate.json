@@ -1,13 +1,13 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-01T22:54:22.104156+00:00",
-    "athleteCount": 186,
+    "updatedAt": "2026-03-01T22:55:42.246951+00:00",
+    "athleteCount": 195,
     "graders": [
       "PSA"
     ],
     "batchInfo": {
-      "startIdx": 220,
-      "endIdx": 230,
+      "startIdx": 230,
+      "endIdx": 240,
       "totalAthletes": 575
     }
   },
@@ -3358,6 +3358,168 @@
         "gems": 219,
         "grades": 410,
         "gemRate": 53.0
+      }
+    },
+    "Jesus Tinoco": {
+      "name": "Jesus Tinoco",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 17,
+          "gems": 22,
+          "grades": 37,
+          "gemRate": 59.0
+        }
+      },
+      "totals": {
+        "cards": 17,
+        "gems": 22,
+        "grades": 37,
+        "gemRate": 59.0
+      }
+    },
+    "Jhonathan Diaz": {
+      "name": "Jhonathan Diaz",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 5,
+          "gems": 4,
+          "grades": 6,
+          "gemRate": 67.0
+        }
+      },
+      "totals": {
+        "cards": 5,
+        "gems": 4,
+        "grades": 6,
+        "gemRate": 67.0
+      }
+    },
+    "Jhonny Pereda": {
+      "name": "Jhonny Pereda",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 8,
+          "gems": 6,
+          "grades": 10,
+          "gemRate": 60.0
+        }
+      },
+      "totals": {
+        "cards": 8,
+        "gems": 6,
+        "grades": 10,
+        "gemRate": 60.0
+      }
+    },
+    "Jhostynxon Garcia": {
+      "name": "Jhostynxon Garcia",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 124,
+          "gems": 550,
+          "grades": 1284,
+          "gemRate": 43.0
+        }
+      },
+      "totals": {
+        "cards": 124,
+        "gems": 550,
+        "grades": 1284,
+        "gemRate": 43.0
+      }
+    },
+    "Jhoulys Chacin": {
+      "name": "Jhoulys Chacin",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 23,
+          "gems": 14,
+          "grades": 28,
+          "gemRate": 50.0
+        }
+      },
+      "totals": {
+        "cards": 23,
+        "gems": 14,
+        "grades": 28,
+        "gemRate": 50.0
+      }
+    },
+    "Joe Ortiz": {
+      "name": "Joe Ortiz",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 1,
+          "gems": 0,
+          "grades": 1,
+          "gemRate": 0.0
+        }
+      },
+      "totals": {
+        "cards": 1,
+        "gems": 0,
+        "grades": 1,
+        "gemRate": 0.0
+      }
+    },
+    "Johan Santana": {
+      "name": "Johan Santana",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 504,
+          "gems": 729,
+          "grades": 1791,
+          "gemRate": 41.0
+        }
+      },
+      "totals": {
+        "cards": 504,
+        "gems": 729,
+        "grades": 1791,
+        "gemRate": 41.0
+      }
+    },
+    "Johnny Paredes": {
+      "name": "Johnny Paredes",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 2,
+          "gems": 11,
+          "grades": 16,
+          "gemRate": 69.0
+        }
+      },
+      "totals": {
+        "cards": 2,
+        "gems": 11,
+        "grades": 16,
+        "gemRate": 69.0
+      }
+    },
+    "Jonathan Herrera": {
+      "name": "Jonathan Herrera",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 2,
+          "gems": 4,
+          "grades": 6,
+          "gemRate": 67.0
+        }
+      },
+      "totals": {
+        "cards": 2,
+        "gems": 4,
+        "grades": 6,
+        "gemRate": 67.0
       }
     }
   }
