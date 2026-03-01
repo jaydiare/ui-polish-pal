@@ -1,13 +1,13 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-01T22:47:35.577301+00:00",
-    "athleteCount": 169,
+    "updatedAt": "2026-03-01T22:50:27.022576+00:00",
+    "athleteCount": 176,
     "graders": [
       "PSA"
     ],
     "batchInfo": {
-      "startIdx": 200,
-      "endIdx": 210,
+      "startIdx": 210,
+      "endIdx": 220,
       "totalAthletes": 575
     }
   },
@@ -3052,6 +3052,132 @@
         "gems": 11,
         "grades": 14,
         "gemRate": 79.0
+      }
+    },
+    "Humberto Quintero": {
+      "name": "Humberto Quintero",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 3,
+          "gems": 1,
+          "grades": 3,
+          "gemRate": 33.0
+        }
+      },
+      "totals": {
+        "cards": 3,
+        "gems": 1,
+        "grades": 3,
+        "gemRate": 33.0
+      }
+    },
+    "Ildemaro Vargas": {
+      "name": "Ildemaro Vargas",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 10,
+          "gems": 5,
+          "grades": 12,
+          "gemRate": 42.0
+        }
+      },
+      "totals": {
+        "cards": 10,
+        "gems": 5,
+        "grades": 12,
+        "gemRate": 42.0
+      }
+    },
+    "Israel Pineda": {
+      "name": "Israel Pineda",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 54,
+          "gems": 121,
+          "grades": 221,
+          "gemRate": 55.0
+        }
+      },
+      "totals": {
+        "cards": 54,
+        "gems": 121,
+        "grades": 221,
+        "gemRate": 55.0
+      }
+    },
+    "Ivan Ochoa": {
+      "name": "Ivan Ochoa",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 6,
+          "gems": 0,
+          "grades": 7,
+          "gemRate": 0.0
+        }
+      },
+      "totals": {
+        "cards": 6,
+        "gems": 0,
+        "grades": 7,
+        "gemRate": 0.0
+      }
+    },
+    "Jackson Chourio": {
+      "name": "Jackson Chourio",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 3702,
+          "gems": 42414,
+          "grades": 76767,
+          "gemRate": 55.0
+        }
+      },
+      "totals": {
+        "cards": 3702,
+        "gems": 42414,
+        "grades": 76767,
+        "gemRate": 55.0
+      }
+    },
+    "Jairo Diaz": {
+      "name": "Jairo Diaz",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 2,
+          "gems": 2,
+          "grades": 2,
+          "gemRate": 100.0
+        }
+      },
+      "totals": {
+        "cards": 2,
+        "gems": 2,
+        "grades": 2,
+        "gemRate": 100.0
+      }
+    },
+    "Jairo Iriarte": {
+      "name": "Jairo Iriarte",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 44,
+          "gems": 15,
+          "grades": 55,
+          "gemRate": 27.0
+        }
+      },
+      "totals": {
+        "cards": 44,
+        "gems": 15,
+        "grades": 55,
+        "gemRate": 27.0
       }
     }
   }
