@@ -1,13 +1,13 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-01T18:19:54.979605+00:00",
-    "athleteCount": 25,
+    "updatedAt": "2026-03-01T18:25:46.672178+00:00",
+    "athleteCount": 33,
     "graders": [
       "PSA"
     ],
     "batchInfo": {
-      "startIdx": 30,
-      "endIdx": 40,
+      "startIdx": 40,
+      "endIdx": 50,
       "totalAthletes": 575
     }
   },
@@ -460,6 +460,150 @@
         "gems": 12,
         "grades": 48,
         "gemRate": 25.0
+      }
+    },
+    "Angel Nesbitt": {
+      "name": "Angel Nesbitt",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 3,
+          "gems": 2,
+          "grades": 3,
+          "gemRate": 67.0
+        }
+      },
+      "totals": {
+        "cards": 3,
+        "gems": 2,
+        "grades": 3,
+        "gemRate": 67.0
+      }
+    },
+    "Angel Salazar": {
+      "name": "Angel Salazar",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 11,
+          "gems": 66,
+          "grades": 103,
+          "gemRate": 64.0
+        }
+      },
+      "totals": {
+        "cards": 11,
+        "gems": 66,
+        "grades": 103,
+        "gemRate": 64.0
+      }
+    },
+    "Angel Zerpa": {
+      "name": "Angel Zerpa",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 59,
+          "gems": 32,
+          "grades": 74,
+          "gemRate": 43.0
+        }
+      },
+      "totals": {
+        "cards": 59,
+        "gems": 32,
+        "grades": 74,
+        "gemRate": 43.0
+      }
+    },
+    "Anibal Sanchez": {
+      "name": "Anibal Sanchez",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 69,
+          "gems": 49,
+          "grades": 97,
+          "gemRate": 51.0
+        }
+      },
+      "totals": {
+        "cards": 69,
+        "gems": 49,
+        "grades": 97,
+        "gemRate": 51.0
+      }
+    },
+    "Anthony Molina": {
+      "name": "Anthony Molina",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 3,
+          "gems": 1,
+          "grades": 3,
+          "gemRate": 33.0
+        }
+      },
+      "totals": {
+        "cards": 3,
+        "gems": 1,
+        "grades": 3,
+        "gemRate": 33.0
+      }
+    },
+    "Anthony Ortega": {
+      "name": "Anthony Ortega",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 2,
+          "gems": 2,
+          "grades": 2,
+          "gemRate": 100.0
+        }
+      },
+      "totals": {
+        "cards": 2,
+        "gems": 2,
+        "grades": 2,
+        "gemRate": 100.0
+      }
+    },
+    "Anthony Santander": {
+      "name": "Anthony Santander",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 226,
+          "gems": 424,
+          "grades": 881,
+          "gemRate": 48.0
+        }
+      },
+      "totals": {
+        "cards": 226,
+        "gems": 424,
+        "grades": 881,
+        "gemRate": 48.0
+      }
+    },
+    "Antonio Senzatela": {
+      "name": "Antonio Senzatela",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 47,
+          "gems": 74,
+          "grades": 102,
+          "gemRate": 73.0
+        }
+      },
+      "totals": {
+        "cards": 47,
+        "gems": 74,
+        "grades": 102,
+        "gemRate": 73.0
       }
     }
   }
