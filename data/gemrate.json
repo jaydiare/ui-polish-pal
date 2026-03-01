@@ -1,13 +1,13 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-01T17:11:27.923579+00:00",
-    "athleteCount": 8,
+    "updatedAt": "2026-03-01T18:09:43.682531+00:00",
+    "athleteCount": 16,
     "graders": [
       "PSA"
     ],
     "batchInfo": {
-      "startIdx": 10,
-      "endIdx": 20,
+      "startIdx": 20,
+      "endIdx": 30,
       "totalAthletes": 575
     }
   },
@@ -154,6 +154,150 @@
         "gems": 3,
         "grades": 3,
         "gemRate": 100.0
+      }
+    },
+    "Alex Torres": {
+      "name": "Alex Torres",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 3,
+          "gems": 1,
+          "grades": 6,
+          "gemRate": 17.0
+        }
+      },
+      "totals": {
+        "cards": 3,
+        "gems": 1,
+        "grades": 6,
+        "gemRate": 17.0
+      }
+    },
+    "Alexi Amarista": {
+      "name": "Alexi Amarista",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 4,
+          "gems": 3,
+          "grades": 4,
+          "gemRate": 75.0
+        }
+      },
+      "totals": {
+        "cards": 4,
+        "gems": 3,
+        "grades": 4,
+        "gemRate": 75.0
+      }
+    },
+    "Alexis Infante": {
+      "name": "Alexis Infante",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 5,
+          "gems": 3,
+          "grades": 7,
+          "gemRate": 43.0
+        }
+      },
+      "totals": {
+        "cards": 5,
+        "gems": 3,
+        "grades": 7,
+        "gemRate": 43.0
+      }
+    },
+    "Alfredo Gonzalez": {
+      "name": "Alfredo Gonzalez",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 6,
+          "gems": 11,
+          "grades": 18,
+          "gemRate": 61.0
+        }
+      },
+      "totals": {
+        "cards": 6,
+        "gems": 11,
+        "grades": 18,
+        "gemRate": 61.0
+      }
+    },
+    "Ali Sanchez": {
+      "name": "Ali Sanchez",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 14,
+          "gems": 18,
+          "grades": 26,
+          "gemRate": 69.0
+        }
+      },
+      "totals": {
+        "cards": 14,
+        "gems": 18,
+        "grades": 26,
+        "gemRate": 69.0
+      }
+    },
+    "Alvaro Espinoza": {
+      "name": "Alvaro Espinoza",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 17,
+          "gems": 65,
+          "grades": 186,
+          "gemRate": 35.0
+        }
+      },
+      "totals": {
+        "cards": 17,
+        "gems": 65,
+        "grades": 186,
+        "gemRate": 35.0
+      }
+    },
+    "Anderson Espinoza": {
+      "name": "Anderson Espinoza",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 95,
+          "gems": 146,
+          "grades": 240,
+          "gemRate": 61.0
+        }
+      },
+      "totals": {
+        "cards": 95,
+        "gems": 146,
+        "grades": 240,
+        "gemRate": 61.0
+      }
+    },
+    "Anderson Machado": {
+      "name": "Anderson Machado",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 5,
+          "gems": 2,
+          "grades": 9,
+          "gemRate": 22.0
+        }
+      },
+      "totals": {
+        "cards": 5,
+        "gems": 2,
+        "grades": 9,
+        "gemRate": 22.0
       }
     }
   }
