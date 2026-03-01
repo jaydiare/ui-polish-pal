@@ -1,13 +1,13 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-01T22:55:42.246951+00:00",
-    "athleteCount": 195,
+    "updatedAt": "2026-03-01T22:57:10.534629+00:00",
+    "athleteCount": 204,
     "graders": [
       "PSA"
     ],
     "batchInfo": {
-      "startIdx": 230,
-      "endIdx": 240,
+      "startIdx": 240,
+      "endIdx": 250,
       "totalAthletes": 575
     }
   },
@@ -3520,6 +3520,168 @@
         "gems": 4,
         "grades": 6,
         "gemRate": 67.0
+      }
+    },
+    "Jorbit Vivas": {
+      "name": "Jorbit Vivas",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 122,
+          "gems": 582,
+          "grades": 1041,
+          "gemRate": 56.0
+        }
+      },
+      "totals": {
+        "cards": 122,
+        "gems": 582,
+        "grades": 1041,
+        "gemRate": 56.0
+      }
+    },
+    "Jorge Barrosa": {
+      "name": "Jorge Barrosa",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 64,
+          "gems": 258,
+          "grades": 456,
+          "gemRate": 57.0
+        }
+      },
+      "totals": {
+        "cards": 64,
+        "gems": 258,
+        "grades": 456,
+        "gemRate": 57.0
+      }
+    },
+    "Jorge Julio": {
+      "name": "Jorge Julio",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 2,
+          "gems": 0,
+          "grades": 7,
+          "gemRate": 0.0
+        }
+      },
+      "totals": {
+        "cards": 2,
+        "gems": 0,
+        "grades": 7,
+        "gemRate": 0.0
+      }
+    },
+    "Jorge Velandia": {
+      "name": "Jorge Velandia",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 1,
+          "gems": 1,
+          "grades": 1,
+          "gemRate": 100.0
+        }
+      },
+      "totals": {
+        "cards": 1,
+        "gems": 1,
+        "grades": 1,
+        "gemRate": 100.0
+      }
+    },
+    "Jose Altuve": {
+      "name": "Jose Altuve",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 4424,
+          "gems": 12880,
+          "grades": 25216,
+          "gemRate": 51.0
+        }
+      },
+      "totals": {
+        "cards": 4424,
+        "gems": 12880,
+        "grades": 25216,
+        "gemRate": 51.0
+      }
+    },
+    "Jose Alvarado": {
+      "name": "Jose Alvarado",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 24,
+          "gems": 10,
+          "grades": 33,
+          "gemRate": 30.0
+        }
+      },
+      "totals": {
+        "cards": 24,
+        "gems": 10,
+        "grades": 33,
+        "gemRate": 30.0
+      }
+    },
+    "Jose Alvarez": {
+      "name": "Jose Alvarez",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 11,
+          "gems": 26,
+          "grades": 32,
+          "gemRate": 81.0
+        }
+      },
+      "totals": {
+        "cards": 11,
+        "gems": 26,
+        "grades": 32,
+        "gemRate": 81.0
+      }
+    },
+    "Jose Azocar": {
+      "name": "Jose Azocar",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 50,
+          "gems": 61,
+          "grades": 102,
+          "gemRate": 60.0
+        }
+      },
+      "totals": {
+        "cards": 50,
+        "gems": 61,
+        "grades": 102,
+        "gemRate": 60.0
+      }
+    },
+    "Jose Briceno": {
+      "name": "Jose Briceno",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 13,
+          "gems": 17,
+          "grades": 27,
+          "gemRate": 63.0
+        }
+      },
+      "totals": {
+        "cards": 13,
+        "gems": 17,
+        "grades": 27,
+        "gemRate": 63.0
       }
     }
   }
