@@ -559,7 +559,7 @@ const GemrateChart = () => {
   const [gemrateData, setGemrateData] = useState<GemrateData | null>(null);
 
   useEffect(() => {
-    fetchJson("data/gemrate.json").then((d) => {
+    fetchJson("https://raw.githubusercontent.com/jaydiare/ui-polish-pal/main/data/gemrate.json").then((d) => {
       if (d && d.athletes) setGemrateData(d);
     });
   }, []);
