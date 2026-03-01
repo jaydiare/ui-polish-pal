@@ -1,13 +1,13 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-01T20:20:27.397863+00:00",
-    "athleteCount": 58,
+    "updatedAt": "2026-03-01T20:38:30.299794+00:00",
+    "athleteCount": 67,
     "graders": [
       "PSA"
     ],
     "batchInfo": {
-      "startIdx": 70,
-      "endIdx": 80,
+      "startIdx": 80,
+      "endIdx": 90,
       "totalAthletes": 575
     }
   },
@@ -1054,6 +1054,168 @@
         "gems": 4,
         "grades": 8,
         "gemRate": 50.0
+      }
+    },
+    "Carlos Silva": {
+      "name": "Carlos Silva",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 64,
+          "gems": 145,
+          "grades": 260,
+          "gemRate": 56.0
+        }
+      },
+      "totals": {
+        "cards": 64,
+        "gems": 145,
+        "grades": 260,
+        "gemRate": 56.0
+      }
+    },
+    "Carlos Tocci": {
+      "name": "Carlos Tocci",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 6,
+          "gems": 4,
+          "grades": 11,
+          "gemRate": 36.0
+        }
+      },
+      "totals": {
+        "cards": 6,
+        "gems": 4,
+        "grades": 11,
+        "gemRate": 36.0
+      }
+    },
+    "Carlos Valderrama": {
+      "name": "Carlos Valderrama",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 6,
+          "gems": 2,
+          "grades": 9,
+          "gemRate": 22.0
+        }
+      },
+      "totals": {
+        "cards": 6,
+        "gems": 2,
+        "grades": 9,
+        "gemRate": 22.0
+      }
+    },
+    "Carlos Zambrano": {
+      "name": "Carlos Zambrano",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 114,
+          "gems": 380,
+          "grades": 993,
+          "gemRate": 38.0
+        }
+      },
+      "totals": {
+        "cards": 114,
+        "gems": 380,
+        "grades": 993,
+        "gemRate": 38.0
+      }
+    },
+    "Cesar Gutierrez": {
+      "name": "Cesar Gutierrez",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 10,
+          "gems": 44,
+          "grades": 1321,
+          "gemRate": 3.0
+        }
+      },
+      "totals": {
+        "cards": 10,
+        "gems": 44,
+        "grades": 1321,
+        "gemRate": 3.0
+      }
+    },
+    "Cesar Hernandez": {
+      "name": "Cesar Hernandez",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 48,
+          "gems": 34,
+          "grades": 67,
+          "gemRate": 51.0
+        }
+      },
+      "totals": {
+        "cards": 48,
+        "gems": 34,
+        "grades": 67,
+        "gemRate": 51.0
+      }
+    },
+    "Cesar Izturis": {
+      "name": "Cesar Izturis",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 18,
+          "gems": 14,
+          "grades": 58,
+          "gemRate": 24.0
+        }
+      },
+      "totals": {
+        "cards": 18,
+        "gems": 14,
+        "grades": 58,
+        "gemRate": 24.0
+      }
+    },
+    "Cesar Jimenez": {
+      "name": "Cesar Jimenez",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 6,
+          "gems": 3,
+          "grades": 6,
+          "gemRate": 50.0
+        }
+      },
+      "totals": {
+        "cards": 6,
+        "gems": 3,
+        "grades": 6,
+        "gemRate": 50.0
+      }
+    },
+    "Cesar Tovar": {
+      "name": "Cesar Tovar",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 49,
+          "gems": 137,
+          "grades": 3501,
+          "gemRate": 4.0
+        }
+      },
+      "totals": {
+        "cards": 49,
+        "gems": 137,
+        "grades": 3501,
+        "gemRate": 4.0
       }
     }
   }
