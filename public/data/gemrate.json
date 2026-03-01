@@ -1,13 +1,13 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-01T20:40:08.721262+00:00",
-    "athleteCount": 77,
+    "updatedAt": "2026-03-01T20:43:04.687653+00:00",
+    "athleteCount": 85,
     "graders": [
       "PSA"
     ],
     "batchInfo": {
-      "startIdx": 90,
-      "endIdx": 100,
+      "startIdx": 100,
+      "endIdx": 110,
       "totalAthletes": 575
     }
   },
@@ -1396,6 +1396,150 @@
         "gems": 85,
         "grades": 159,
         "gemRate": 53.0
+      }
+    },
+    "David Concepcion": {
+      "name": "David Concepcion",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 12,
+          "gems": 15,
+          "grades": 152,
+          "gemRate": 10.0
+        }
+      },
+      "totals": {
+        "cards": 12,
+        "gems": 15,
+        "grades": 152,
+        "gemRate": 10.0
+      }
+    },
+    "David Peralta": {
+      "name": "David Peralta",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 84,
+          "gems": 131,
+          "grades": 206,
+          "gemRate": 64.0
+        }
+      },
+      "totals": {
+        "cards": 84,
+        "gems": 131,
+        "grades": 206,
+        "gemRate": 64.0
+      }
+    },
+    "Deolis Guerra": {
+      "name": "Deolis Guerra",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 9,
+          "gems": 10,
+          "grades": 23,
+          "gemRate": 43.0
+        }
+      },
+      "totals": {
+        "cards": 9,
+        "gems": 10,
+        "grades": 23,
+        "gemRate": 43.0
+      }
+    },
+    "Diego Castillo": {
+      "name": "Diego Castillo",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 37,
+          "gems": 20,
+          "grades": 44,
+          "gemRate": 45.0
+        }
+      },
+      "totals": {
+        "cards": 37,
+        "gems": 20,
+        "grades": 44,
+        "gemRate": 45.0
+      }
+    },
+    "Dioner Navarro": {
+      "name": "Dioner Navarro",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 53,
+          "gems": 70,
+          "grades": 166,
+          "gemRate": 42.0
+        }
+      },
+      "totals": {
+        "cards": 53,
+        "gems": 70,
+        "grades": 166,
+        "gemRate": 42.0
+      }
+    },
+    "Dixon Machado": {
+      "name": "Dixon Machado",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 16,
+          "gems": 8,
+          "grades": 19,
+          "gemRate": 42.0
+        }
+      },
+      "totals": {
+        "cards": 16,
+        "gems": 8,
+        "grades": 19,
+        "gemRate": 42.0
+      }
+    },
+    "Donaldo Mendez": {
+      "name": "Donaldo Mendez",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 6,
+          "gems": 55,
+          "grades": 182,
+          "gemRate": 30.0
+        }
+      },
+      "totals": {
+        "cards": 6,
+        "gems": 55,
+        "grades": 182,
+        "gemRate": 30.0
+      }
+    },
+    "Eddie Perez": {
+      "name": "Eddie Perez",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 4,
+          "gems": 1,
+          "grades": 4,
+          "gemRate": 25.0
+        }
+      },
+      "totals": {
+        "cards": 4,
+        "gems": 1,
+        "grades": 4,
+        "gemRate": 25.0
       }
     }
   }
