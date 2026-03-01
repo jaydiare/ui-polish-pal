@@ -1,13 +1,13 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-01T23:07:16.932776+00:00",
-    "athleteCount": 228,
+    "updatedAt": "2026-03-01T23:31:05.295228+00:00",
+    "athleteCount": 237,
     "graders": [
       "PSA"
     ],
     "batchInfo": {
-      "startIdx": 270,
-      "endIdx": 280,
+      "startIdx": 280,
+      "endIdx": 290,
       "totalAthletes": 575
     }
   },
@@ -4114,6 +4114,168 @@
         "gems": 0,
         "grades": 1,
         "gemRate": 0.0
+      }
+    },
+    "Juan Rincon": {
+      "name": "Juan Rincon",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 3,
+          "gems": 1,
+          "grades": 3,
+          "gemRate": 33.0
+        }
+      },
+      "totals": {
+        "cards": 3,
+        "gems": 1,
+        "grades": 3,
+        "gemRate": 33.0
+      }
+    },
+    "Juan Rivera": {
+      "name": "Juan Rivera",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 42,
+          "gems": 564,
+          "grades": 1737,
+          "gemRate": 32.0
+        }
+      },
+      "totals": {
+        "cards": 42,
+        "gems": 564,
+        "grades": 1737,
+        "gemRate": 32.0
+      }
+    },
+    "Juan Yepez": {
+      "name": "Juan Yepez",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 354,
+          "gems": 522,
+          "grades": 1056,
+          "gemRate": 49.0
+        }
+      },
+      "totals": {
+        "cards": 354,
+        "gems": 522,
+        "grades": 1056,
+        "gemRate": 49.0
+      }
+    },
+    "Julio Machado": {
+      "name": "Julio Machado",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 12,
+          "gems": 29,
+          "grades": 107,
+          "gemRate": 27.0
+        }
+      },
+      "totals": {
+        "cards": 12,
+        "gems": 29,
+        "grades": 107,
+        "gemRate": 27.0
+      }
+    },
+    "Junior Guerra": {
+      "name": "Junior Guerra",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 7,
+          "gems": 2,
+          "grades": 8,
+          "gemRate": 25.0
+        }
+      },
+      "totals": {
+        "cards": 7,
+        "gems": 2,
+        "grades": 8,
+        "gemRate": 25.0
+      }
+    },
+    "Keibert Ruiz": {
+      "name": "Keibert Ruiz",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 598,
+          "gems": 1653,
+          "grades": 2819,
+          "gemRate": 59.0
+        }
+      },
+      "totals": {
+        "cards": 598,
+        "gems": 1653,
+        "grades": 2819,
+        "gemRate": 59.0
+      }
+    },
+    "Keider Montero": {
+      "name": "Keider Montero",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 57,
+          "gems": 26,
+          "grades": 82,
+          "gemRate": 32.0
+        }
+      },
+      "totals": {
+        "cards": 57,
+        "gems": 26,
+        "grades": 82,
+        "gemRate": 32.0
+      }
+    },
+    "Kelvim Escobar": {
+      "name": "Kelvim Escobar",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 18,
+          "gems": 13,
+          "grades": 48,
+          "gemRate": 27.0
+        }
+      },
+      "totals": {
+        "cards": 18,
+        "gems": 13,
+        "grades": 48,
+        "gemRate": 27.0
+      }
+    },
+    "Kenedy Corona": {
+      "name": "Kenedy Corona",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 60,
+          "gems": 188,
+          "grades": 362,
+          "gemRate": 52.0
+        }
+      },
+      "totals": {
+        "cards": 60,
+        "gems": 188,
+        "grades": 362,
+        "gemRate": 52.0
       }
     }
   }
