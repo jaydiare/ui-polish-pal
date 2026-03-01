@@ -605,16 +605,16 @@ const GemrateChart = () => {
           </div>
         ) : (
           <>
-            <div className="w-full h-[450px] md:h-[550px]">
+            <div className="w-full h-[700px] md:h-[750px]">
               <ResponsiveContainer width="100%" height="100%">
-                <BarChart data={top10} layout="vertical" margin={{ top: 5, right: 30, left: 10, bottom: 5 }}>
+                <BarChart data={top10} layout="vertical" margin={{ top: 5, right: 30, left: 20, bottom: 5 }}>
                   <CartesianGrid strokeDasharray="3 3" stroke="hsl(var(--border))" opacity={0.5} />
                   <XAxis
                     type="number"
                     tick={{ fill: "hsl(var(--muted-foreground))", fontSize: 10 }}
                     label={{ value: "Total PSA Grades", position: "insideBottom", offset: -5, style: { fill: "hsl(var(--muted-foreground))", fontSize: 11 } }}
                   />
-                  <YAxis type="category" dataKey="name" width={120} tick={{ fill: "hsl(var(--muted-foreground))", fontSize: 9 }} />
+                  <YAxis type="category" dataKey="name" width={150} tick={{ fill: "hsl(var(--muted-foreground))", fontSize: 11 }} />
                   <Tooltip
                     content={({ payload }: any) => {
                       if (!payload?.length) return null;
