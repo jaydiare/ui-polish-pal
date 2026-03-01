@@ -1,13 +1,13 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-01T20:59:04.904040+00:00",
-    "athleteCount": 98,
+    "updatedAt": "2026-03-01T21:01:21.351915+00:00",
+    "athleteCount": 107,
     "graders": [
       "PSA"
     ],
     "batchInfo": {
-      "startIdx": 120,
-      "endIdx": 130,
+      "startIdx": 130,
+      "endIdx": 140,
       "totalAthletes": 575
     }
   },
@@ -1774,6 +1774,168 @@
         "gems": 5,
         "grades": 8,
         "gemRate": 62.0
+      }
+    },
+    "Edward Olivares": {
+      "name": "Edward Olivares",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 75,
+          "gems": 125,
+          "grades": 248,
+          "gemRate": 50.0
+        }
+      },
+      "totals": {
+        "cards": 75,
+        "gems": 125,
+        "grades": 248,
+        "gemRate": 50.0
+      }
+    },
+    "Edwin Escobar": {
+      "name": "Edwin Escobar",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 22,
+          "gems": 15,
+          "grades": 34,
+          "gemRate": 44.0
+        }
+      },
+      "totals": {
+        "cards": 22,
+        "gems": 15,
+        "grades": 34,
+        "gemRate": 44.0
+      }
+    },
+    "Edwin Hurtado": {
+      "name": "Edwin Hurtado",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 2,
+          "gems": 1,
+          "grades": 2,
+          "gemRate": 50.0
+        }
+      },
+      "totals": {
+        "cards": 2,
+        "gems": 1,
+        "grades": 2,
+        "gemRate": 50.0
+      }
+    },
+    "Edwin Moreno": {
+      "name": "Edwin Moreno",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 4,
+          "gems": 1,
+          "grades": 4,
+          "gemRate": 25.0
+        }
+      },
+      "totals": {
+        "cards": 4,
+        "gems": 1,
+        "grades": 4,
+        "gemRate": 25.0
+      }
+    },
+    "Ehire Adrianza": {
+      "name": "Ehire Adrianza",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 16,
+          "gems": 4,
+          "grades": 17,
+          "gemRate": 24.0
+        }
+      },
+      "totals": {
+        "cards": 16,
+        "gems": 4,
+        "grades": 17,
+        "gemRate": 24.0
+      }
+    },
+    "Eider Torres": {
+      "name": "Eider Torres",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 3,
+          "gems": 1,
+          "grades": 3,
+          "gemRate": 33.0
+        }
+      },
+      "totals": {
+        "cards": 3,
+        "gems": 1,
+        "grades": 3,
+        "gemRate": 33.0
+      }
+    },
+    "Elias Diaz": {
+      "name": "Elias Diaz",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 43,
+          "gems": 25,
+          "grades": 57,
+          "gemRate": 44.0
+        }
+      },
+      "totals": {
+        "cards": 43,
+        "gems": 25,
+        "grades": 57,
+        "gemRate": 44.0
+      }
+    },
+    "Elieser Hernandez": {
+      "name": "Elieser Hernandez",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 2,
+          "gems": 1,
+          "grades": 2,
+          "gemRate": 50.0
+        }
+      },
+      "totals": {
+        "cards": 2,
+        "gems": 1,
+        "grades": 2,
+        "gemRate": 50.0
+      }
+    },
+    "Eliezer Alfonzo": {
+      "name": "Eliezer Alfonzo",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 1,
+          "gems": 1,
+          "grades": 2,
+          "gemRate": 50.0
+        }
+      },
+      "totals": {
+        "cards": 1,
+        "gems": 1,
+        "grades": 2,
+        "gemRate": 50.0
       }
     }
   }
