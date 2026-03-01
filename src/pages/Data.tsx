@@ -184,8 +184,9 @@ const Data = () => {
       agg[sport].totalCount += 1;
     }
 
+    // Show all sports that have athletes (not just Baseball/Soccer)
     const entries = Object.entries(agg)
-      .filter(([s]) => s === "Baseball" || s === "Soccer")
+      .filter(([s]) => s !== "Other")
       .map(([sport, v]) => ({
         sport,
         avgListed: v.listedCount > 0 ? Math.round((v.listed / v.listedCount) * 100) / 100 : 0,
@@ -196,10 +197,10 @@ const Data = () => {
       }))
       .sort((a, b) => b.count - a.count);
 
-    // Add "All" summary card
-    const allListed = entries.reduce((s, e) => s + e.totalListed, 0);
-    const allSold = entries.reduce((s, e) => s + e.totalSold, 0);
-    const allCount = entries.reduce((s, e) => s + e.count, 0);
+    // Add "All" summary card from ALL sports (including Other)
+    const allListed = Object.values(agg).reduce((s, v) => s + v.listed, 0);
+    const allSold = Object.values(agg).reduce((s, v) => s + v.sold, 0);
+    const allCount = Object.values(agg).reduce((s, v) => s + v.totalCount, 0);
     const allListedCount = Object.values(agg).reduce((s, v) => s + v.listedCount, 0);
     const allSoldCount = Object.values(agg).reduce((s, v) => s + v.soldCount, 0);
 
