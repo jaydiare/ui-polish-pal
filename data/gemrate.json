@@ -1,13 +1,13 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-01T22:57:10.534629+00:00",
-    "athleteCount": 204,
+    "updatedAt": "2026-03-01T23:02:47.572693+00:00",
+    "athleteCount": 212,
     "graders": [
       "PSA"
     ],
     "batchInfo": {
-      "startIdx": 240,
-      "endIdx": 250,
+      "startIdx": 250,
+      "endIdx": 260,
       "totalAthletes": 575
     }
   },
@@ -3682,6 +3682,150 @@
         "gems": 17,
         "grades": 27,
         "gemRate": 63.0
+      }
+    },
+    "Jose Butto": {
+      "name": "Jose Butto",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 68,
+          "gems": 87,
+          "grades": 151,
+          "gemRate": 58.0
+        }
+      },
+      "totals": {
+        "cards": 68,
+        "gems": 87,
+        "grades": 151,
+        "gemRate": 58.0
+      }
+    },
+    "Jose Campos": {
+      "name": "Jose Campos",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 10,
+          "gems": 5,
+          "grades": 17,
+          "gemRate": 29.0
+        }
+      },
+      "totals": {
+        "cards": 10,
+        "gems": 5,
+        "grades": 17,
+        "gemRate": 29.0
+      }
+    },
+    "Jose Castillo": {
+      "name": "Jose Castillo",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 18,
+          "gems": 9,
+          "grades": 56,
+          "gemRate": 16.0
+        }
+      },
+      "totals": {
+        "cards": 18,
+        "gems": 9,
+        "grades": 56,
+        "gemRate": 16.0
+      }
+    },
+    "Jose Herrera": {
+      "name": "Jose Herrera",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 13,
+          "gems": 19,
+          "grades": 398,
+          "gemRate": 5.0
+        }
+      },
+      "totals": {
+        "cards": 13,
+        "gems": 19,
+        "grades": 398,
+        "gemRate": 5.0
+      }
+    },
+    "Jose Lobaton": {
+      "name": "Jose Lobaton",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 2,
+          "gems": 1,
+          "grades": 2,
+          "gemRate": 50.0
+        }
+      },
+      "totals": {
+        "cards": 2,
+        "gems": 1,
+        "grades": 2,
+        "gemRate": 50.0
+      }
+    },
+    "Jose Lopez": {
+      "name": "Jose Lopez",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 17,
+          "gems": 62,
+          "grades": 197,
+          "gemRate": 31.0
+        }
+      },
+      "totals": {
+        "cards": 17,
+        "gems": 62,
+        "grades": 197,
+        "gemRate": 31.0
+      }
+    },
+    "Jose Malave": {
+      "name": "Jose Malave",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 4,
+          "gems": 3,
+          "grades": 7,
+          "gemRate": 43.0
+        }
+      },
+      "totals": {
+        "cards": 4,
+        "gems": 3,
+        "grades": 7,
+        "gemRate": 43.0
+      }
+    },
+    "Jose Martinez": {
+      "name": "Jose Martinez",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 50,
+          "gems": 114,
+          "grades": 769,
+          "gemRate": 15.0
+        }
+      },
+      "totals": {
+        "cards": 50,
+        "gems": 114,
+        "grades": 769,
+        "gemRate": 15.0
       }
     }
   }
