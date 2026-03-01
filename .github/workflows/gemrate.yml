@@ -3,8 +3,8 @@ name: Gemrate Grading Sync
 on:
   workflow_dispatch:
   schedule:
-    # Run quarterly: Jan 1, Apr 1, Jul 1, Oct 1 at 6am UTC
-    - cron: '0 6 1 1,4,7,10 *'
+    # Run every 2 hours to process batches of 10 athletes
+    - cron: '0 */2 * * *'
 
 concurrency:
   group: gemrate-sync
@@ -30,7 +30,7 @@ jobs:
       - name: Install dependencies
         run: pip install requests
 
-      - name: Fetch Gemrate data
+      - name: Fetch Gemrate data (batch)
         run: python scripts/fetch_gemrate.py
 
       - name: Commit and Push changes
@@ -40,14 +40,14 @@ jobs:
           git config --global user.name "GitHub Actions"
           git config --global user.email "actions@github.com"
 
-          git add data/gemrate.json public/data/gemrate.json || true
+          git add data/gemrate.json public/data/gemrate.json data/gemrate-progress.json || true
 
           if git diff --cached --quiet; then
             echo "No changes to commit"
             exit 0
           fi
 
-          git commit -m "Automated sync: Updated PSA grading data from Gemrate"
+          git commit -m "Automated sync: Updated PSA grading data (batch)"
 
           git fetch origin main
           git rebase origin/main || (git rebase --abort && git pull --rebase origin main)
