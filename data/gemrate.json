@@ -1,13 +1,13 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-01T18:37:25.623583+00:00",
-    "athleteCount": 50,
+    "updatedAt": "2026-03-01T20:20:27.397863+00:00",
+    "athleteCount": 58,
     "graders": [
       "PSA"
     ],
     "batchInfo": {
-      "startIdx": 60,
-      "endIdx": 70,
+      "startIdx": 70,
+      "endIdx": 80,
       "totalAthletes": 575
     }
   },
@@ -910,6 +910,150 @@
         "gems": 75,
         "grades": 202,
         "gemRate": 37.0
+      }
+    },
+    "Carlos Maldonado": {
+      "name": "Carlos Maldonado",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 2,
+          "gems": 1,
+          "grades": 5,
+          "gemRate": 20.0
+        }
+      },
+      "totals": {
+        "cards": 2,
+        "gems": 1,
+        "grades": 5,
+        "gemRate": 20.0
+      }
+    },
+    "Carlos Martinez": {
+      "name": "Carlos Martinez",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 188,
+          "gems": 329,
+          "grades": 647,
+          "gemRate": 51.0
+        }
+      },
+      "totals": {
+        "cards": 188,
+        "gems": 329,
+        "grades": 647,
+        "gemRate": 51.0
+      }
+    },
+    "Carlos Monasterios": {
+      "name": "Carlos Monasterios",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 3,
+          "gems": 3,
+          "grades": 5,
+          "gemRate": 60.0
+        }
+      },
+      "totals": {
+        "cards": 3,
+        "gems": 3,
+        "grades": 5,
+        "gemRate": 60.0
+      }
+    },
+    "Carlos Narvaez": {
+      "name": "Carlos Narvaez",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 92,
+          "gems": 43,
+          "grades": 232,
+          "gemRate": 19.0
+        }
+      },
+      "totals": {
+        "cards": 92,
+        "gems": 43,
+        "grades": 232,
+        "gemRate": 19.0
+      }
+    },
+    "Carlos Perez": {
+      "name": "Carlos Perez",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 93,
+          "gems": 78,
+          "grades": 173,
+          "gemRate": 45.0
+        }
+      },
+      "totals": {
+        "cards": 93,
+        "gems": 78,
+        "grades": 173,
+        "gemRate": 45.0
+      }
+    },
+    "Carlos Pulido": {
+      "name": "Carlos Pulido",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 3,
+          "gems": 1,
+          "grades": 3,
+          "gemRate": 33.0
+        }
+      },
+      "totals": {
+        "cards": 3,
+        "gems": 1,
+        "grades": 3,
+        "gemRate": 33.0
+      }
+    },
+    "Carlos Quintana": {
+      "name": "Carlos Quintana",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 25,
+          "gems": 72,
+          "grades": 188,
+          "gemRate": 38.0
+        }
+      },
+      "totals": {
+        "cards": 25,
+        "gems": 72,
+        "grades": 188,
+        "gemRate": 38.0
+      }
+    },
+    "Carlos Rivero": {
+      "name": "Carlos Rivero",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 5,
+          "gems": 4,
+          "grades": 8,
+          "gemRate": 50.0
+        }
+      },
+      "totals": {
+        "cards": 5,
+        "gems": 4,
+        "grades": 8,
+        "gemRate": 50.0
       }
     }
   }
