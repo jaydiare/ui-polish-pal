@@ -47,7 +47,7 @@ jobs:
             exit 0
           fi
 
-          git commit -m "Automated sync: Updated Gemrate grading data"
+          git commit -m "Automated sync: Updated PSA grading data from Gemrate"
 
           git fetch origin main
           git rebase origin/main || (git rebase --abort && git pull --rebase origin main)

@@ -549,11 +549,7 @@ interface GemrateData {
   athletes: Record<string, GemrateAthlete>;
 }
 
-const GRADER_COLORS: Record<string, string> = {
-  PSA: "hsl(200, 80%, 50%)",
-  Beckett: "hsl(340, 75%, 55%)",
-  SGC: "hsl(45, 90%, 50%)",
-};
+const PSA_COLOR = "hsl(200, 80%, 50%)";
 
 const GemrateChart = () => {
   const [gemrateData, setGemrateData] = useState<GemrateData | null>(null);
@@ -578,9 +574,7 @@ const GemrateChart = () => {
       .map((a) => ({
         name: a.name,
         sport: a.sport,
-        PSA: a.graders?.PSA?.grades || 0,
-        Beckett: a.graders?.Beckett?.grades || 0,
-        SGC: a.graders?.SGC?.grades || 0,
+        PSA: a.graders?.PSA?.grades || a.totals.grades,
         total: a.totals.grades,
         gemRate: a.totals.gemRate,
       }));
@@ -599,7 +593,7 @@ const GemrateChart = () => {
         Graded Cards – Top 10
       </h2>
       <p className="text-xs text-muted-foreground mb-4 ml-3">
-        Total graded cards by PSA, Beckett &amp; SGC for Venezuelan athletes.
+        Total graded cards by PSA for Venezuelan athletes.
         {updatedAt && <span className="ml-1 opacity-70">Updated {updatedAt}.</span>}
       </p>
       <div className="glass-panel p-4 md:p-6">
@@ -618,7 +612,7 @@ const GemrateChart = () => {
                   <XAxis
                     type="number"
                     tick={{ fill: "hsl(var(--muted-foreground))", fontSize: 10 }}
-                    label={{ value: "Total Grades", position: "insideBottom", offset: -5, style: { fill: "hsl(var(--muted-foreground))", fontSize: 11 } }}
+                    label={{ value: "Total PSA Grades", position: "insideBottom", offset: -5, style: { fill: "hsl(var(--muted-foreground))", fontSize: 11 } }}
                   />
                   <YAxis type="category" dataKey="name" width={120} tick={{ fill: "hsl(var(--muted-foreground))", fontSize: 9 }} />
                   <Tooltip
@@ -631,33 +625,18 @@ const GemrateChart = () => {
                           <div className="font-display font-bold text-foreground mb-1">{d.name}</div>
                           <div className="text-muted-foreground text-[10px] mb-1.5">{d.sport}</div>
                           <div className="flex flex-col gap-0.5">
-                            <span className="text-muted-foreground">PSA: <strong className="text-foreground">{d.PSA.toLocaleString()}</strong></span>
-                            <span className="text-muted-foreground">Beckett: <strong className="text-foreground">{d.Beckett.toLocaleString()}</strong></span>
-                            <span className="text-muted-foreground">SGC: <strong className="text-foreground">{d.SGC.toLocaleString()}</strong></span>
-                            <span className="text-muted-foreground mt-1">Gem Rate: <strong className="text-foreground">{d.gemRate}%</strong></span>
+                            <span className="text-muted-foreground">PSA Grades: <strong className="text-foreground">{d.PSA.toLocaleString()}</strong></span>
+                            <span className="text-muted-foreground">Gem Rate: <strong className="text-foreground">{d.gemRate}%</strong></span>
                           </div>
                           <div className="text-[9px] text-muted-foreground/60 mt-1.5">Click bar to search graded cards on eBay</div>
                         </div>
                       );
                     }}
                   />
-                  <Legend verticalAlign="top" wrapperStyle={{ fontSize: 11 }} />
-                  <Bar dataKey="PSA" stackId="grades" fill={GRADER_COLORS.PSA} radius={[0, 0, 0, 0]} isAnimationActive={false} cursor="pointer"
-                    onClick={(data: any) => { if (data?.name) window.open(buildEbayGradedSearchUrl(data.name, data.sport), "_blank", "noopener,noreferrer"); }} />
-                  <Bar dataKey="Beckett" stackId="grades" fill={GRADER_COLORS.Beckett} radius={[0, 0, 0, 0]} isAnimationActive={false} cursor="pointer"
-                    onClick={(data: any) => { if (data?.name) window.open(buildEbayGradedSearchUrl(data.name, data.sport), "_blank", "noopener,noreferrer"); }} />
-                  <Bar dataKey="SGC" stackId="grades" fill={GRADER_COLORS.SGC} radius={[0, 4, 4, 0]} isAnimationActive={false} cursor="pointer"
+                  <Bar dataKey="PSA" name="PSA Grades" fill={PSA_COLOR} radius={[0, 4, 4, 0]} isAnimationActive={false} cursor="pointer"
                     onClick={(data: any) => { if (data?.name) window.open(buildEbayGradedSearchUrl(data.name, data.sport), "_blank", "noopener,noreferrer"); }} />
                 </BarChart>
               </ResponsiveContainer>
-            </div>
-            <div className="flex gap-6 justify-center mt-3">
-              {Object.entries(GRADER_COLORS).map(([grader, color]) => (
-                <div key={grader} className="flex items-center gap-1.5 text-[10px] text-muted-foreground">
-                  <div className="w-2.5 h-2.5 rounded-sm" style={{ backgroundColor: color }} />
-                  {grader}
-                </div>
-              ))}
             </div>
           </>
         )}
