@@ -581,7 +581,7 @@ const GemrateChart = () => {
       }));
   }, [gemrateData]);
 
-  if (!gemrateData || top10.length === 0) return null;
+  const isEmpty = !gemrateData || top10.length === 0;
 
   const updatedAt = gemrateData._meta?.updatedAt
     ? new Date(gemrateData._meta.updatedAt).toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" })
@@ -598,53 +598,60 @@ const GemrateChart = () => {
         {updatedAt && <span className="ml-1 opacity-70">Updated {updatedAt}.</span>}
       </p>
       <div className="glass-panel p-4 md:p-6">
-        <div className="w-full h-[450px] md:h-[550px]">
-          <ResponsiveContainer width="100%" height="100%">
-            <BarChart data={top10} layout="vertical" margin={{ top: 5, right: 30, left: 10, bottom: 5 }}>
-              <CartesianGrid strokeDasharray="3 3" stroke="hsl(var(--border))" opacity={0.5} />
-              <XAxis
-                type="number"
-                tick={{ fill: "hsl(var(--muted-foreground))", fontSize: 10 }}
-                label={{ value: "Total Grades", position: "insideBottom", offset: -5, style: { fill: "hsl(var(--muted-foreground))", fontSize: 11 } }}
-              />
-              <YAxis type="category" dataKey="name" width={120} tick={{ fill: "hsl(var(--muted-foreground))", fontSize: 9 }} />
-              <Tooltip
-                content={({ payload }: any) => {
-                  if (!payload?.length) return null;
-                  const d = payload[0]?.payload;
-                  if (!d) return null;
-                  return (
-                    <div className="rounded-xl border border-border/50 bg-background/95 backdrop-blur-lg p-3 text-xs shadow-2xl">
-                      <div className="font-display font-bold text-foreground mb-1">{d.name}</div>
-                      <div className="text-muted-foreground text-[10px] mb-1.5">{d.sport}</div>
-                      <div className="flex flex-col gap-0.5">
-                        <span className="text-muted-foreground">PSA: <strong className="text-foreground">{d.PSA.toLocaleString()}</strong></span>
-                        <span className="text-muted-foreground">Beckett: <strong className="text-foreground">{d.Beckett.toLocaleString()}</strong></span>
-                        <span className="text-muted-foreground">SGC: <strong className="text-foreground">{d.SGC.toLocaleString()}</strong></span>
-                        <span className="text-muted-foreground mt-1">Gem Rate: <strong className="text-foreground">{d.gemRate}%</strong></span>
-                      </div>
-                    </div>
-                  );
-                }}
-              />
-              <Legend
-                verticalAlign="top"
-                wrapperStyle={{ fontSize: 11 }}
-              />
-              <Bar dataKey="PSA" stackId="grades" fill={GRADER_COLORS.PSA} radius={[0, 0, 0, 0]} isAnimationActive={false} />
-              <Bar dataKey="Beckett" stackId="grades" fill={GRADER_COLORS.Beckett} radius={[0, 0, 0, 0]} isAnimationActive={false} />
-              <Bar dataKey="SGC" stackId="grades" fill={GRADER_COLORS.SGC} radius={[0, 4, 4, 0]} isAnimationActive={false} />
-            </BarChart>
-          </ResponsiveContainer>
-        </div>
-        <div className="flex gap-6 justify-center mt-3">
-          {Object.entries(GRADER_COLORS).map(([grader, color]) => (
-            <div key={grader} className="flex items-center gap-1.5 text-[10px] text-muted-foreground">
-              <div className="w-2.5 h-2.5 rounded-sm" style={{ backgroundColor: color }} />
-              {grader}
+        {isEmpty ? (
+          <div className="py-12 text-center">
+            <div className="text-3xl mb-3">📊</div>
+            <p className="text-sm text-muted-foreground">Grading data will appear here once the quarterly update runs.</p>
+            <a href="https://www.gemrate.com" target="_blank" rel="noopener noreferrer" className="text-xs text-primary underline mt-2 inline-block">Visit gemrate.com →</a>
+          </div>
+        ) : (
+          <>
+            <div className="w-full h-[450px] md:h-[550px]">
+              <ResponsiveContainer width="100%" height="100%">
+                <BarChart data={top10} layout="vertical" margin={{ top: 5, right: 30, left: 10, bottom: 5 }}>
+                  <CartesianGrid strokeDasharray="3 3" stroke="hsl(var(--border))" opacity={0.5} />
+                  <XAxis
+                    type="number"
+                    tick={{ fill: "hsl(var(--muted-foreground))", fontSize: 10 }}
+                    label={{ value: "Total Grades", position: "insideBottom", offset: -5, style: { fill: "hsl(var(--muted-foreground))", fontSize: 11 } }}
+                  />
+                  <YAxis type="category" dataKey="name" width={120} tick={{ fill: "hsl(var(--muted-foreground))", fontSize: 9 }} />
+                  <Tooltip
+                    content={({ payload }: any) => {
+                      if (!payload?.length) return null;
+                      const d = payload[0]?.payload;
+                      if (!d) return null;
+                      return (
+                        <div className="rounded-xl border border-border/50 bg-background/95 backdrop-blur-lg p-3 text-xs shadow-2xl">
+                          <div className="font-display font-bold text-foreground mb-1">{d.name}</div>
+                          <div className="text-muted-foreground text-[10px] mb-1.5">{d.sport}</div>
+                          <div className="flex flex-col gap-0.5">
+                            <span className="text-muted-foreground">PSA: <strong className="text-foreground">{d.PSA.toLocaleString()}</strong></span>
+                            <span className="text-muted-foreground">Beckett: <strong className="text-foreground">{d.Beckett.toLocaleString()}</strong></span>
+                            <span className="text-muted-foreground">SGC: <strong className="text-foreground">{d.SGC.toLocaleString()}</strong></span>
+                            <span className="text-muted-foreground mt-1">Gem Rate: <strong className="text-foreground">{d.gemRate}%</strong></span>
+                          </div>
+                        </div>
+                      );
+                    }}
+                  />
+                  <Legend verticalAlign="top" wrapperStyle={{ fontSize: 11 }} />
+                  <Bar dataKey="PSA" stackId="grades" fill={GRADER_COLORS.PSA} radius={[0, 0, 0, 0]} isAnimationActive={false} />
+                  <Bar dataKey="Beckett" stackId="grades" fill={GRADER_COLORS.Beckett} radius={[0, 0, 0, 0]} isAnimationActive={false} />
+                  <Bar dataKey="SGC" stackId="grades" fill={GRADER_COLORS.SGC} radius={[0, 4, 4, 0]} isAnimationActive={false} />
+                </BarChart>
+              </ResponsiveContainer>
             </div>
-          ))}
-        </div>
+            <div className="flex gap-6 justify-center mt-3">
+              {Object.entries(GRADER_COLORS).map(([grader, color]) => (
+                <div key={grader} className="flex items-center gap-1.5 text-[10px] text-muted-foreground">
+                  <div className="w-2.5 h-2.5 rounded-sm" style={{ backgroundColor: color }} />
+                  {grader}
+                </div>
+              ))}
+            </div>
+          </>
+        )}
         <p className="text-[9px] text-muted-foreground/60 text-center mt-3">
           Data sourced from <a href="https://www.gemrate.com" target="_blank" rel="noopener noreferrer" className="underline hover:text-primary">gemrate.com</a>. Updated quarterly.
         </p>
