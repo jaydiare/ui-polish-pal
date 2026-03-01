@@ -559,9 +559,14 @@ const GemrateChart = () => {
   const [gemrateData, setGemrateData] = useState<GemrateData | null>(null);
 
   useEffect(() => {
-    fetchJson("https://raw.githubusercontent.com/jaydiare/ui-polish-pal/main/data/gemrate.json").then((d) => {
+    (async () => {
+      // Try GitHub raw first (auto-updates when Action commits), fall back to local
+      let d = await fetchJson("https://raw.githubusercontent.com/jaydiare/ui-polish-pal/main/data/gemrate.json");
+      if (!d || !d.athletes) {
+        d = await fetchJson("data/gemrate.json");
+      }
       if (d && d.athletes) setGemrateData(d);
-    });
+    })();
   }, []);
 
   const top10 = useMemo(() => {
