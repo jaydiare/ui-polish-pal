@@ -385,7 +385,7 @@ const Data = () => {
                         label={{ value: "Avg Listed ($)", angle: -90, position: "insideLeft", offset: 10, style: { fill: "hsl(var(--muted-foreground))", fontSize: 11 } }}
                         tick={{ fill: "hsl(var(--muted-foreground))", fontSize: 10 }}
                       />
-                      <Tooltip content={<PriceTooltip />} wrapperStyle={{ pointerEvents: "auto" }} />
+                      <Tooltip content={<PriceTooltip />} trigger="click" wrapperStyle={{ pointerEvents: "auto", zIndex: 100 }} />
                       <Scatter
                         data={(() => {
                           const maxVal = Math.max(...comparisonData.map(d => Math.max(d.listed, d.sold)));
