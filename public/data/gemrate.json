@@ -1,12 +1,15 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-01T16:24:59.750991+00:00",
+    "updatedAt": "2026-03-01T16:59:17.290289+00:00",
     "athleteCount": 0,
     "graders": [
-      "PSA",
-      "Beckett",
-      "SGC"
-    ]
+      "PSA"
+    ],
+    "batchInfo": {
+      "startIdx": 0,
+      "endIdx": 10,
+      "totalAthletes": 575
+    }
   },
   "athletes": {}
 }
