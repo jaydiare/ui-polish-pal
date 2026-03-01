@@ -372,7 +372,14 @@ const Data = () => {
               <div className="glass-panel p-4 md:p-6">
                 <div className="w-full h-[400px] md:h-[450px]">
                   <ResponsiveContainer width="100%" height="100%">
-                    <ScatterChart margin={{ top: 10, right: 10, bottom: 40, left: 0 }}>
+                    <ScatterChart margin={{ top: 10, right: 10, bottom: 40, left: 0 }}
+                      onClick={(state: any) => {
+                        const d = state?.activePayload?.[0]?.payload;
+                        if (d?.name) {
+                          window.open(buildEbaySearchUrl(d.name, d.sport), "_blank", "noopener,noreferrer");
+                        }
+                      }}
+                    >
                       <CartesianGrid strokeDasharray="3 3" stroke="hsl(var(--border))" opacity={0.5} />
                       <XAxis
                         type="number" dataKey="sold" name="Sold" unit="$"
@@ -397,12 +404,6 @@ const Data = () => {
                         data={comparisonData}
                         isAnimationActive={false}
                         cursor="pointer"
-                        onClick={(entry: any) => {
-                          const d = entry?.payload || entry;
-                          if (d?.name) {
-                            window.open(buildEbaySearchUrl(d.name, d.sport), "_blank", "noopener,noreferrer");
-                          }
-                        }}
                       >
                         {comparisonData.map((entry, idx) => (
                           <Cell key={idx} fill={getSportColor(entry.sport)} fillOpacity={0.8} r={typeof window !== 'undefined' && window.innerWidth < 768 ? 6 : 5} />
