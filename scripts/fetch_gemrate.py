@@ -193,7 +193,8 @@ def main():
         category = CAT_MAP.get(sport, "")
         idx = start_idx + i
 
-        print(f"  [{idx + 1}/{len(unique)}] {name}...", end=" ")
+        cat_label = category if category else "All Categories"
+        print(f"  [{idx + 1}/{len(unique)}] {name} ({sport} → {cat_label})...", end=" ")
         stats = fetch_gemrate(session, name, category)
 
         if stats and isinstance(stats, dict) and stats["grades"] > 0:
