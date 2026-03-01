@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """
 Scrape gemrate.com for Venezuelan athletes' PSA graded-card stats.
+Runs in batches (like ebay-sold-avg) with progress tracking.
 Queries PSA grader only for each athlete found in data/athletes.json.
 Outputs data/gemrate.json with per-athlete PSA totals.
 """
@@ -9,6 +10,8 @@ import json, os, re, time, sys, random
 import requests
 
 GEMRATE_URL = "https://www.gemrate.com/player"
+
+BATCH_SIZE = 10  # athletes per run
 
 # Rotate realistic browser User-Agents to reduce Cloudflare blocks
 USER_AGENTS = [
@@ -25,6 +28,17 @@ DELAY_MAX = 6
 
 # Max retries per request
 MAX_RETRIES = 2
+
+# Sport -> gemrate category mapping
+CAT_MAP = {
+    "Baseball": "baseball-cards",
+    "Soccer": "soccer-cards",
+    "Basketball": "basketball-cards",
+    "Football": "football-cards",
+    "Boxing": "boxing-wrestling-cards-mma",
+    "Tennis": "",
+    "Golf": "golf-cards",
+}
 
 
 def get_headers():
@@ -44,16 +58,13 @@ def get_headers():
 
 def parse_summary(html: str):
     """Extract # of Cards, Total Gems, Total Grades, Gem Rate from the HTML."""
-    # Check for Cloudflare block
     if "you have been blocked" in html.lower() or "cf-error-details" in html.lower():
         return "blocked"
 
-    # Check if results exist (player summary section)
     if "- Summary" not in html:
         return None
 
     def extract_stat(label):
-        # Match: label<br><strong style="color:#009999;">VALUE</strong>
         pattern = rf"{re.escape(label)}<br><strong[^>]*>([\d,]+%?)</strong>"
         m = re.search(pattern, html, re.IGNORECASE)
         if not m:
@@ -108,7 +119,7 @@ def fetch_gemrate(session, player: str, category: str = ""):
             if result == "blocked":
                 print(f"  🚫 Cloudflare blocked (attempt {attempt+1})", file=sys.stderr)
                 if attempt < MAX_RETRIES:
-                    time.sleep(15 * (attempt + 1))  # longer backoff
+                    time.sleep(15 * (attempt + 1))
                     continue
                 return None
 
@@ -125,14 +136,16 @@ def fetch_gemrate(session, player: str, category: str = ""):
 
 
 def main():
-    athletes_path = os.path.join(os.path.dirname(__file__), "..", "data", "athletes.json")
-    output_path = os.path.join(os.path.dirname(__file__), "..", "data", "gemrate.json")
-    public_path = os.path.join(os.path.dirname(__file__), "..", "public", "data", "gemrate.json")
+    base_dir = os.path.join(os.path.dirname(__file__), "..")
+    athletes_path = os.path.join(base_dir, "data", "athletes.json")
+    output_path = os.path.join(base_dir, "data", "gemrate.json")
+    public_path = os.path.join(base_dir, "public", "data", "gemrate.json")
+    progress_path = os.path.join(base_dir, "data", "gemrate-progress.json")
 
     with open(athletes_path, "r", encoding="utf-8") as f:
         athletes = json.load(f)
 
-    # Dedupe by name
+    # Dedupe by name, maintain stable order
     seen = set()
     unique = []
     for a in athletes:
@@ -141,45 +154,57 @@ def main():
             seen.add(name)
             unique.append(a)
 
-    print(f"📊 Fetching PSA Gemrate data for {len(unique)} athletes...")
+    # Load progress
+    progress = {"startIdx": 0}
+    if os.path.exists(progress_path):
+        try:
+            with open(progress_path, "r", encoding="utf-8") as f:
+                progress = json.load(f)
+        except Exception:
+            pass
 
-    # Sport -> gemrate category mapping
-    cat_map = {
-        "Baseball": "baseball-cards",
-        "Soccer": "soccer-cards",
-        "Basketball": "basketball-cards",
-        "Football": "football-cards",
-        "Boxing": "boxing-wrestling-cards-mma",
-        "Tennis": "",
-        "Golf": "golf-cards",
-    }
+    start_idx = progress.get("startIdx", 0)
 
-    results = {}
-    blocked_count = 0
+    # Wrap around if past the end
+    if start_idx >= len(unique):
+        start_idx = 0
+
+    end_idx = min(start_idx + BATCH_SIZE, len(unique))
+    batch = unique[start_idx:end_idx]
+
+    print(f"📊 Gemrate PSA batch: athletes {start_idx}–{end_idx - 1} of {len(unique)} (batch size {BATCH_SIZE})")
+
+    # Load existing results to merge
+    existing_data = {"_meta": {}, "athletes": {}}
+    if os.path.exists(output_path):
+        try:
+            with open(output_path, "r", encoding="utf-8") as f:
+                existing_data = json.load(f)
+        except Exception:
+            pass
+
+    results = existing_data.get("athletes", {})
     session = requests.Session()
+    blocked_count = 0
 
-    for i, a in enumerate(unique, 1):
+    for i, a in enumerate(batch):
         name = a["name"]
         sport = a.get("sport", "")
-        category = cat_map.get(sport, "")
+        category = CAT_MAP.get(sport, "")
+        idx = start_idx + i
 
-        print(f"  [{i}/{len(unique)}] {name}...", end=" ")
+        print(f"  [{idx + 1}/{len(unique)}] {name}...", end=" ")
         stats = fetch_gemrate(session, name, category)
-
-        if stats == "blocked":
-            # Already handled inside fetch_gemrate, stats will be None
-            pass
 
         if stats and isinstance(stats, dict) and stats["grades"] > 0:
             results[name] = {
                 "name": name,
                 "sport": sport,
-                "graders": {
-                    "PSA": stats,
-                },
+                "graders": {"PSA": stats},
                 "totals": stats,
             }
             print(f"✅ {stats['grades']} grades, {stats['gemRate']}% gem rate")
+            blocked_count = 0
         else:
             if stats is None:
                 blocked_count += 1
@@ -190,19 +215,38 @@ def main():
         time.sleep(delay)
 
         # If too many consecutive blocks, pause longer
-        if blocked_count > 5:
-            print("  ⏸ Too many blocks, pausing 60s...", file=sys.stderr)
+        if blocked_count > 3:
+            print("  ⏸ Multiple blocks, pausing 60s...", file=sys.stderr)
             time.sleep(60)
             blocked_count = 0
 
-    # Add metadata
+    # Compute next batch start
+    next_start = end_idx if end_idx < len(unique) else 0
+
     from datetime import datetime, timezone
 
+    # Save progress
+    progress_out = {
+        "startIdx": next_start,
+        "lastBatchAt": datetime.now(timezone.utc).isoformat(),
+        "lastBatchRange": f"{start_idx}-{end_idx - 1}",
+        "totalAthletes": len(unique),
+    }
+    os.makedirs(os.path.dirname(progress_path), exist_ok=True)
+    with open(progress_path, "w", encoding="utf-8") as f:
+        json.dump(progress_out, f, indent=2)
+
+    # Save output
     output = {
         "_meta": {
             "updatedAt": datetime.now(timezone.utc).isoformat(),
             "athleteCount": len(results),
             "graders": ["PSA"],
+            "batchInfo": {
+                "startIdx": start_idx,
+                "endIdx": end_idx,
+                "totalAthletes": len(unique),
+            },
         },
         "athletes": results,
     }
@@ -216,7 +260,7 @@ def main():
     with open(public_path, "w", encoding="utf-8") as f:
         json.dump(output, f, indent=2, ensure_ascii=False)
 
-    print(f"\n✅ Done! {len(results)} athletes with PSA grading data saved.")
+    print(f"\n✅ Batch done! {len(results)} total athletes with PSA data. Next batch starts at index {next_start}.")
 
 
 if __name__ == "__main__":
