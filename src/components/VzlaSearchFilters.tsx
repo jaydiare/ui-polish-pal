@@ -29,8 +29,7 @@ const VzlaSearchFilters = ({
     filters.category !== "all" ||
     filters.price !== "all" ||
     filters.stability !== "all" ||
-    filters.daysListed !== "all" ||
-    filters.signal !== "all";
+    filters.daysListed !== "all";
 
   const clearAll = () => {
     for (const [k, v] of Object.entries(DEFAULT_FILTERS)) {
@@ -40,7 +39,7 @@ const VzlaSearchFilters = ({
 
   return (
     <div className="glass-panel p-5 mb-6" role="search" aria-label="Filter athletes">
-      <div className="grid grid-cols-1 lg:grid-cols-[minmax(200px,1.2fr)_repeat(5,minmax(120px,1fr))] gap-4 items-end">
+      <div className="grid grid-cols-1 lg:grid-cols-[minmax(200px,1.2fr)_repeat(4,minmax(120px,1fr))] gap-4 items-end">
         {/* Search */}
         <div>
           <label htmlFor="player-search" className="text-[10px] tracking-widest uppercase font-bold text-muted-foreground mb-1.5 block">
@@ -120,17 +119,6 @@ const VzlaSearchFilters = ({
             { value: "medium", label: "Mid (180–540d)" },
             { value: "high", label: "High (> 540d)" },
             { value: "none", label: "No Data" },
-          ]}
-        />
-        <FilterSelect
-          label="Signal"
-          id="filter-signal"
-          value={filters.signal}
-          onChange={(v) => updateFilter("signal", v)}
-          options={[
-            { value: "all", label: "All" },
-            { value: "buy_low", label: "🔻 Buy Low" },
-            { value: "flip", label: "🔄 Flip Potential" },
           ]}
         />
       </div>
