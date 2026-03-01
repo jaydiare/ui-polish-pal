@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-01T04:11:59.094Z",
+    "updatedAt": "2026-03-01T06:32:53.394Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. Brand-filtered. Junk titles removed. Taguchi winsorized mean + market stability CV. Ungraded condition policy (permissive for sold). Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 10,
-      "endIdx": 20,
+      "startIdx": 20,
+      "endIdx": 30,
       "totalAthletes": 575
     },
     "maxPages": 2,
@@ -39,7 +39,7 @@
     },
     "fx": {
       "source": "CBSA Exchange Rates API",
-      "asOf": "2026-03-01T00:00:00.000Z"
+      "asOf": "2026-03-02T00:00:00.000Z"
     }
   },
   "Adbert Alzolay": {
@@ -284,12 +284,12 @@
   },
   "Alex Torres": {
     "keyword": "Alex Torres Baseball",
-    "nScraped": 134,
-    "nSoldUsed": 29,
-    "avg": 1.3403448275862062,
-    "taguchiSold": 1.3403448275862062,
+    "nScraped": 133,
+    "nSoldUsed": 21,
+    "avg": 1.4471428571428564,
+    "taguchiSold": 1.4471428571428564,
     "medianSold": 1.52,
-    "marketStabilityCV": 0.23594265081369226,
+    "marketStabilityCV": 0.1355545775213401,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
@@ -309,11 +309,11 @@
   "Alexis Infante": {
     "keyword": "Alexis Infante Baseball",
     "nScraped": 122,
-    "nSoldUsed": 20,
-    "avg": 0.9899999999999999,
-    "taguchiSold": 0.9899999999999999,
+    "nSoldUsed": 16,
+    "avg": 0.9900000000000001,
+    "taguchiSold": 0.9900000000000001,
     "medianSold": 0.99,
-    "marketStabilityCV": 1.1505704941938521e-16,
+    "marketStabilityCV": 1.158215564969497e-16,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
@@ -368,24 +368,24 @@
   },
   "Anderson Espinoza": {
     "keyword": "Anderson Espinoza Baseball",
-    "nScraped": 103,
-    "nSoldUsed": 37,
-    "avg": 1.758378378378378,
-    "taguchiSold": 1.758378378378378,
-    "medianSold": 1.99,
-    "marketStabilityCV": 0.14319341182610604,
+    "nScraped": 104,
+    "nSoldUsed": 38,
+    "avg": 1.7673684210526315,
+    "taguchiSold": 1.7673684210526315,
+    "medianSold": 1.97,
+    "marketStabilityCV": 0.1391229917431003,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
   },
   "Anderson Machado": {
     "keyword": "Anderson Machado Baseball",
-    "nScraped": 156,
-    "nSoldUsed": 103,
-    "avg": 18.055145631067962,
-    "taguchiSold": 18.055145631067962,
-    "medianSold": 9.06,
-    "marketStabilityCV": 0.7505313596477702,
+    "nScraped": 154,
+    "nSoldUsed": 88,
+    "avg": 20.575227272727275,
+    "taguchiSold": 20.575227272727275,
+    "medianSold": 12.5,
+    "marketStabilityCV": 0.8277450657806547,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
@@ -2858,6 +2858,54 @@
     "taguchiSold": 1.9121428571428571,
     "medianSold": 1.415,
     "marketStabilityCV": 0.5168924638587035,
+    "currency": "USD",
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
+  },
+  "Alfredo Gonzalez": {
+    "keyword": "Alfredo Gonzalez Baseball",
+    "nScraped": 124,
+    "nSoldUsed": 30,
+    "avg": 2.1266666666666674,
+    "taguchiSold": 2.1266666666666674,
+    "medianSold": 2.495,
+    "marketStabilityCV": 0.48925474742776026,
+    "currency": "USD",
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
+  },
+  "Ali Sanchez": {
+    "keyword": "Ali Sanchez Baseball",
+    "nScraped": 84,
+    "nSoldUsed": 42,
+    "avg": 1.6778571428571436,
+    "taguchiSold": 1.6778571428571436,
+    "medianSold": 1.705,
+    "marketStabilityCV": 0.17676508600052607,
+    "currency": "USD",
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
+  },
+  "Alvaro Espinoza": {
+    "keyword": "Alvaro Espinoza Baseball",
+    "nScraped": 120,
+    "nSoldUsed": 27,
+    "avg": 2.3718518518518517,
+    "taguchiSold": 2.3718518518518517,
+    "medianSold": 2.13,
+    "marketStabilityCV": 0.2450123900437915,
+    "currency": "USD",
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
+  },
+  "Amalio Carreno": {
+    "keyword": "Amalio Carreno Baseball",
+    "nScraped": 42,
+    "nSoldUsed": 2,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
