@@ -1,13 +1,13 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-01T18:25:46.672178+00:00",
-    "athleteCount": 33,
+    "updatedAt": "2026-03-01T18:35:24.694086+00:00",
+    "athleteCount": 41,
     "graders": [
       "PSA"
     ],
     "batchInfo": {
-      "startIdx": 40,
-      "endIdx": 50,
+      "startIdx": 50,
+      "endIdx": 60,
       "totalAthletes": 575
     }
   },
@@ -604,6 +604,150 @@
         "gems": 74,
         "grades": 102,
         "gemRate": 73.0
+      }
+    },
+    "Argenis Diaz": {
+      "name": "Argenis Diaz",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 4,
+          "gems": 1,
+          "grades": 4,
+          "gemRate": 25.0
+        }
+      },
+      "totals": {
+        "cards": 4,
+        "gems": 1,
+        "grades": 4,
+        "gemRate": 25.0
+      }
+    },
+    "Armando Galarraga": {
+      "name": "Armando Galarraga",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 28,
+          "gems": 34,
+          "grades": 63,
+          "gemRate": 54.0
+        }
+      },
+      "totals": {
+        "cards": 28,
+        "gems": 34,
+        "grades": 63,
+        "gemRate": 54.0
+      }
+    },
+    "Asdrubal Cabrera": {
+      "name": "Asdrubal Cabrera",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 93,
+          "gems": 58,
+          "grades": 154,
+          "gemRate": 38.0
+        }
+      },
+      "totals": {
+        "cards": 93,
+        "gems": 58,
+        "grades": 154,
+        "gemRate": 38.0
+      }
+    },
+    "Avisail Garcia": {
+      "name": "Avisail Garcia",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 129,
+          "gems": 417,
+          "grades": 634,
+          "gemRate": 66.0
+        }
+      },
+      "totals": {
+        "cards": 129,
+        "gems": 417,
+        "grades": 634,
+        "gemRate": 66.0
+      }
+    },
+    "Bo Diaz": {
+      "name": "Bo Diaz",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 66,
+          "gems": 267,
+          "grades": 719,
+          "gemRate": 37.0
+        }
+      },
+      "totals": {
+        "cards": 66,
+        "gems": 267,
+        "grades": 719,
+        "gemRate": 37.0
+      }
+    },
+    "Bobby Abreu": {
+      "name": "Bobby Abreu",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 250,
+          "gems": 123,
+          "grades": 403,
+          "gemRate": 31.0
+        }
+      },
+      "totals": {
+        "cards": 250,
+        "gems": 123,
+        "grades": 403,
+        "gemRate": 31.0
+      }
+    },
+    "Brayan Rocchio": {
+      "name": "Brayan Rocchio",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 236,
+          "gems": 879,
+          "grades": 1401,
+          "gemRate": 63.0
+        }
+      },
+      "totals": {
+        "cards": 236,
+        "gems": 879,
+        "grades": 1401,
+        "gemRate": 63.0
+      }
+    },
+    "Brayan Villarreal": {
+      "name": "Brayan Villarreal",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 6,
+          "gems": 6,
+          "grades": 9,
+          "gemRate": 67.0
+        }
+      },
+      "totals": {
+        "cards": 6,
+        "gems": 6,
+        "grades": 9,
+        "gemRate": 67.0
       }
     }
   }
