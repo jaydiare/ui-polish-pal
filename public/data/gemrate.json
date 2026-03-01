@@ -1,13 +1,13 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-01T22:28:08.617264+00:00",
-    "athleteCount": 151,
+    "updatedAt": "2026-03-01T22:30:48.717957+00:00",
+    "athleteCount": 161,
     "graders": [
       "PSA"
     ],
     "batchInfo": {
-      "startIdx": 180,
-      "endIdx": 190,
+      "startIdx": 190,
+      "endIdx": 200,
       "totalAthletes": 575
     }
   },
@@ -2728,6 +2728,186 @@
         "gems": 3,
         "grades": 5,
         "gemRate": 60.0
+      }
+    },
+    "Gregory Infante": {
+      "name": "Gregory Infante",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 2,
+          "gems": 1,
+          "grades": 2,
+          "gemRate": 50.0
+        }
+      },
+      "totals": {
+        "cards": 2,
+        "gems": 1,
+        "grades": 2,
+        "gemRate": 50.0
+      }
+    },
+    "Guilder Rodriguez": {
+      "name": "Guilder Rodriguez",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 6,
+          "gems": 5,
+          "grades": 7,
+          "gemRate": 71.0
+        }
+      },
+      "totals": {
+        "cards": 6,
+        "gems": 5,
+        "grades": 7,
+        "gemRate": 71.0
+      }
+    },
+    "Guillermo Moscoso": {
+      "name": "Guillermo Moscoso",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 1,
+          "gems": 0,
+          "grades": 2,
+          "gemRate": 0.0
+        }
+      },
+      "totals": {
+        "cards": 1,
+        "gems": 0,
+        "grades": 2,
+        "gemRate": 0.0
+      }
+    },
+    "Guillermo Quiroz": {
+      "name": "Guillermo Quiroz",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 9,
+          "gems": 0,
+          "grades": 9,
+          "gemRate": 0.0
+        }
+      },
+      "totals": {
+        "cards": 9,
+        "gems": 0,
+        "grades": 9,
+        "gemRate": 0.0
+      }
+    },
+    "Guillermo Rodriguez": {
+      "name": "Guillermo Rodriguez",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 1,
+          "gems": 0,
+          "grades": 1,
+          "gemRate": 0.0
+        }
+      },
+      "totals": {
+        "cards": 1,
+        "gems": 0,
+        "grades": 1,
+        "gemRate": 0.0
+      }
+    },
+    "Gus Gil": {
+      "name": "Gus Gil",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 3,
+          "gems": 0,
+          "grades": 267,
+          "gemRate": 0.0
+        }
+      },
+      "totals": {
+        "cards": 3,
+        "gems": 0,
+        "grades": 267,
+        "gemRate": 0.0
+      }
+    },
+    "Gus Polidor": {
+      "name": "Gus Polidor",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 8,
+          "gems": 4,
+          "grades": 15,
+          "gemRate": 27.0
+        }
+      },
+      "totals": {
+        "cards": 8,
+        "gems": 4,
+        "grades": 15,
+        "gemRate": 27.0
+      }
+    },
+    "Gustavo Chacin": {
+      "name": "Gustavo Chacin",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 12,
+          "gems": 11,
+          "grades": 29,
+          "gemRate": 38.0
+        }
+      },
+      "totals": {
+        "cards": 12,
+        "gems": 11,
+        "grades": 29,
+        "gemRate": 38.0
+      }
+    },
+    "Gustavo Molina": {
+      "name": "Gustavo Molina",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 5,
+          "gems": 2,
+          "grades": 5,
+          "gemRate": 40.0
+        }
+      },
+      "totals": {
+        "cards": 5,
+        "gems": 2,
+        "grades": 5,
+        "gemRate": 40.0
+      }
+    },
+    "Harold Castro": {
+      "name": "Harold Castro",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 18,
+          "gems": 13,
+          "grades": 27,
+          "gemRate": 48.0
+        }
+      },
+      "totals": {
+        "cards": 18,
+        "gems": 13,
+        "grades": 27,
+        "gemRate": 48.0
       }
     }
   }
