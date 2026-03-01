@@ -1,13 +1,13 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-01T23:02:47.572693+00:00",
-    "athleteCount": 212,
+    "updatedAt": "2026-03-01T23:05:19.499327+00:00",
+    "athleteCount": 220,
     "graders": [
       "PSA"
     ],
     "batchInfo": {
-      "startIdx": 250,
-      "endIdx": 260,
+      "startIdx": 260,
+      "endIdx": 270,
       "totalAthletes": 575
     }
   },
@@ -3826,6 +3826,150 @@
         "gems": 114,
         "grades": 769,
         "gemRate": 15.0
+      }
+    },
+    "Jose Mijares": {
+      "name": "Jose Mijares",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 5,
+          "gems": 2,
+          "grades": 6,
+          "gemRate": 33.0
+        }
+      },
+      "totals": {
+        "cards": 5,
+        "gems": 2,
+        "grades": 6,
+        "gemRate": 33.0
+      }
+    },
+    "Jose Nieves": {
+      "name": "Jose Nieves",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 1,
+          "gems": 0,
+          "grades": 2,
+          "gemRate": 0.0
+        }
+      },
+      "totals": {
+        "cards": 1,
+        "gems": 0,
+        "grades": 2,
+        "gemRate": 0.0
+      }
+    },
+    "Jose Ortega": {
+      "name": "Jose Ortega",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 2,
+          "gems": 2,
+          "grades": 2,
+          "gemRate": 100.0
+        }
+      },
+      "totals": {
+        "cards": 2,
+        "gems": 2,
+        "grades": 2,
+        "gemRate": 100.0
+      }
+    },
+    "Jose Osuna": {
+      "name": "Jose Osuna",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 17,
+          "gems": 16,
+          "grades": 26,
+          "gemRate": 62.0
+        }
+      },
+      "totals": {
+        "cards": 17,
+        "gems": 16,
+        "grades": 26,
+        "gemRate": 62.0
+      }
+    },
+    "Jose Peraza": {
+      "name": "Jose Peraza",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 106,
+          "gems": 173,
+          "grades": 296,
+          "gemRate": 58.0
+        }
+      },
+      "totals": {
+        "cards": 106,
+        "gems": 173,
+        "grades": 296,
+        "gemRate": 58.0
+      }
+    },
+    "Jose Pirela": {
+      "name": "Jose Pirela",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 84,
+          "gems": 85,
+          "grades": 206,
+          "gemRate": 41.0
+        }
+      },
+      "totals": {
+        "cards": 84,
+        "gems": 85,
+        "grades": 206,
+        "gemRate": 41.0
+      }
+    },
+    "Jose Rodriguez": {
+      "name": "Jose Rodriguez",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 230,
+          "gems": 346,
+          "grades": 812,
+          "gemRate": 43.0
+        }
+      },
+      "totals": {
+        "cards": 230,
+        "gems": 346,
+        "grades": 812,
+        "gemRate": 43.0
+      }
+    },
+    "Jose Rondon": {
+      "name": "Jose Rondon",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 12,
+          "gems": 2,
+          "grades": 25,
+          "gemRate": 8.0
+        }
+      },
+      "totals": {
+        "cards": 12,
+        "gems": 2,
+        "grades": 25,
+        "gemRate": 8.0
       }
     }
   }
