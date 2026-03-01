@@ -7,6 +7,7 @@ Outputs data/gemrate.json with per-athlete PSA totals.
 """
 
 import json, os, re, time, sys, random
+import html
 import requests
 
 GEMRATE_URL = "https://www.gemrate.com/player"
@@ -56,36 +57,61 @@ def get_headers():
     }
 
 
-def parse_summary(html: str):
-    """Extract # of Cards, Total Gems, Total Grades, Gem Rate from the HTML."""
-    if "you have been blocked" in html.lower() or "cf-error-details" in html.lower():
+def parse_summary(html_content: str):
+    """Extract # of Cards, Total Gems, Total Grades, Gem Rate from Gemrate HTML."""
+    lower_html = html_content.lower()
+    if "you have been blocked" in lower_html or "cf-error-details" in lower_html:
         return "blocked"
 
-    if "- Summary" not in html:
+    if "summary" not in lower_html:
         return None
 
-    def extract_stat(label):
-        pattern = rf"{re.escape(label)}<br><strong[^>]*>([\d,]+%?)</strong>"
-        m = re.search(pattern, html, re.IGNORECASE)
-        if not m:
-            return None
-        val = m.group(1).replace(",", "")
-        if "%" in val:
-            return float(val.replace("%", ""))
+    def parse_numeric(raw: str):
+        val = raw.replace(",", "").strip()
+        if val.endswith("%"):
+            return float(val[:-1])
         return int(val)
+
+    def extract_stat(label: str):
+        # Pattern 1: legacy format (# of Cards<br><strong>123</strong>)
+        legacy = rf"{re.escape(label)}\s*<br\s*/?>\s*<strong[^>]*>([\d,]+%?)</strong>"
+        m = re.search(legacy, html_content, re.IGNORECASE)
+        if m:
+            return parse_numeric(m.group(1))
+
+        # Pattern 2: generic label -> value in nearby HTML nodes
+        nearby = rf"{re.escape(label)}(?:\s|</[^>]+>|<[^>]+>)*?([\d,]+%?)"
+        m = re.search(nearby, html_content, re.IGNORECASE)
+        if m:
+            return parse_numeric(m.group(1))
+
+        # Pattern 3: text-only fallback (robust against markup changes)
+        text = re.sub(r"(?is)<script.*?>.*?</script>|<style.*?>.*?</style>", " ", html_content)
+        text = re.sub(r"(?i)<br\s*/?>", "\n", text)
+        text = re.sub(r"(?s)<[^>]+>", "\n", text)
+        text = html.unescape(text)
+        text = re.sub(r"[ \t]+", " ", text)
+        text = re.sub(r"\n+", "\n", text)
+
+        text_pattern = rf"{re.escape(label)}\s*([\d,]+%?)"
+        m = re.search(text_pattern, text, re.IGNORECASE)
+        if m:
+            return parse_numeric(m.group(1))
+
+        return None
 
     cards = extract_stat("# of Cards")
     gems = extract_stat("Total Gems")
     grades = extract_stat("Total Grades")
     gem_rate = extract_stat("Gem Rate")
 
-    if cards is None and gems is None and grades is None:
+    if cards is None and gems is None and grades is None and gem_rate is None:
         return None
 
     return {
-        "cards": cards or 0,
-        "gems": gems or 0,
-        "grades": grades or 0,
+        "cards": cards if cards is not None else 0,
+        "gems": gems if gems is not None else 0,
+        "grades": grades if grades is not None else 0,
         "gemRate": gem_rate if gem_rate is not None else 0,
     }
 
