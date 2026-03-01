@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { KnapsackResult } from "@/lib/budget-knapsack";
 
 interface VzlaBudgetBarProps {
@@ -12,13 +12,30 @@ const VzlaBudgetBar = ({ onSuggest, onClear, result }: VzlaBudgetBarProps) => {
   const [cards, setCards] = useState("");
   const [flipOnly, setFlipOnly] = useState(false);
 
+  const justSuggested = useRef(false);
+
   const handleSuggest = () => {
     const b = Number(budget);
     if (!Number.isFinite(b) || b <= 0) return;
     const c = cards ? Number(cards) : null;
     const maxCards = c && Number.isFinite(c) && c > 0 ? Math.floor(c) : null;
+    justSuggested.current = true;
     onSuggest(b, maxCards, flipOnly);
   };
+
+  // Auto-scroll to results on mobile after suggest
+  useEffect(() => {
+    if (result && justSuggested.current) {
+      justSuggested.current = false;
+      // Small delay to let the grid re-render
+      setTimeout(() => {
+        const target = document.querySelector('[role="toolbar"][aria-label="Sort controls"]');
+        if (target) {
+          target.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+      }, 100);
+    }
+  }, [result]);
 
   const handleClear = () => {
     setBudget("");
