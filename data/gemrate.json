@@ -1,15 +1,160 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-01T16:59:17.290289+00:00",
-    "athleteCount": 0,
+    "updatedAt": "2026-03-01T17:11:27.923579+00:00",
+    "athleteCount": 8,
     "graders": [
       "PSA"
     ],
     "batchInfo": {
-      "startIdx": 0,
-      "endIdx": 10,
+      "startIdx": 10,
+      "endIdx": 20,
       "totalAthletes": 575
     }
   },
-  "athletes": {}
+  "athletes": {
+    "Alex Cabrera": {
+      "name": "Alex Cabrera",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 19,
+          "gems": 19,
+          "grades": 61,
+          "gemRate": 31.0
+        }
+      },
+      "totals": {
+        "cards": 19,
+        "gems": 19,
+        "grades": 61,
+        "gemRate": 31.0
+      }
+    },
+    "Alex Carrasquel": {
+      "name": "Alex Carrasquel",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 1,
+          "gems": 0,
+          "grades": 20,
+          "gemRate": 0.0
+        }
+      },
+      "totals": {
+        "cards": 1,
+        "gems": 0,
+        "grades": 20,
+        "gemRate": 0.0
+      }
+    },
+    "Alex Escobar": {
+      "name": "Alex Escobar",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 48,
+          "gems": 264,
+          "grades": 1230,
+          "gemRate": 21.0
+        }
+      },
+      "totals": {
+        "cards": 48,
+        "gems": 264,
+        "grades": 1230,
+        "gemRate": 21.0
+      }
+    },
+    "Alex Herrera": {
+      "name": "Alex Herrera",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 2,
+          "gems": 0,
+          "grades": 2,
+          "gemRate": 0.0
+        }
+      },
+      "totals": {
+        "cards": 2,
+        "gems": 0,
+        "grades": 2,
+        "gemRate": 0.0
+      }
+    },
+    "Alex Prieto": {
+      "name": "Alex Prieto",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 1,
+          "gems": 0,
+          "grades": 1,
+          "gemRate": 0.0
+        }
+      },
+      "totals": {
+        "cards": 1,
+        "gems": 0,
+        "grades": 1,
+        "gemRate": 0.0
+      }
+    },
+    "Alex Ramirez": {
+      "name": "Alex Ramirez",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 241,
+          "gems": 573,
+          "grades": 919,
+          "gemRate": 62.0
+        }
+      },
+      "totals": {
+        "cards": 241,
+        "gems": 573,
+        "grades": 919,
+        "gemRate": 62.0
+      }
+    },
+    "Alex Romero": {
+      "name": "Alex Romero",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 9,
+          "gems": 9,
+          "grades": 15,
+          "gemRate": 60.0
+        }
+      },
+      "totals": {
+        "cards": 9,
+        "gems": 9,
+        "grades": 15,
+        "gemRate": 60.0
+      }
+    },
+    "Alex Serrano": {
+      "name": "Alex Serrano",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 1,
+          "gems": 3,
+          "grades": 3,
+          "gemRate": 100.0
+        }
+      },
+      "totals": {
+        "cards": 1,
+        "gems": 3,
+        "grades": 3,
+        "gemRate": 100.0
+      }
+    }
+  }
 }
