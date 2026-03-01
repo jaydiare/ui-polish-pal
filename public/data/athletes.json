@@ -175,6 +175,13 @@
     "provider": "manual"
   },
   {
+    "name": "Alvaro Espinoza",
+    "sport": "Baseball",
+    "league": "MLB",
+    "team": "Mets",
+    "provider": "balldontlie"
+  },
+  {
     "name": "Alvin Colina",
     "sport": "Baseball",
     "league": "MLB",
@@ -217,11 +224,25 @@
     "provider": "balldontlie"
   },
   {
+    "name": "Andres Galarraga",
+    "sport": "Baseball",
+    "league": "MLB",
+    "team": "Giants",
+    "provider": "balldontlie"
+  },
+  {
     "name": "Andres Gimenez",
     "sport": "Baseball",
     "league": "MLB",
     "team": "Blue Jays",
     "provider": "balldontlie"
+  },
+  {
+    "name": "Andres Machado",
+    "sport": "Baseball",
+    "league": "MLB",
+    "team": "Nationals",
+    "provider": "manual"
   },
   {
     "name": "Andruw Monasterio",
@@ -238,17 +259,31 @@
     "provider": "manual"
   },
   {
-    "name": "Andres Galarraga",
+    "name": "Angel Bravo",
+    "sport": "Baseball",
+    "league": "MLB",
+    "team": "Padres",
+    "provider": "manual"
+  },
+  {
+    "name": "Angel Escobar",
     "sport": "Baseball",
     "league": "MLB",
     "team": "Giants",
+    "provider": "manual"
+  },
+  {
+    "name": "Angel Guzman",
+    "sport": "Baseball",
+    "league": "MLB",
+    "team": "Rays",
     "provider": "balldontlie"
   },
   {
-    "name": "Andres Machado",
+    "name": "Angel Nesbitt",
     "sport": "Baseball",
     "league": "MLB",
-    "team": "Nationals",
+    "team": "Tigers",
     "provider": "manual"
   },
   {
@@ -469,6 +504,13 @@
     "provider": "manual"
   },
   {
+    "name": "Carlos Mendez",
+    "sport": "Baseball",
+    "league": "MLB",
+    "team": "Orioles",
+    "provider": "manual"
+  },
+  {
     "name": "Carlos Mendoza",
     "sport": "Baseball",
     "league": "MLB",
@@ -483,13 +525,6 @@
     "provider": "manual"
   },
   {
-    "name": "Carlos Mendez",
-    "sport": "Baseball",
-    "league": "MLB",
-    "team": "Orioles",
-    "provider": "manual"
-  },
-  {
     "name": "Carlos Narvaez",
     "sport": "Baseball",
     "league": "MLB",
@@ -497,17 +532,17 @@
     "provider": "manual"
   },
   {
-    "name": "Carlos Pulido",
-    "sport": "Baseball",
-    "league": "MLB",
-    "team": "Twins",
-    "provider": "manual"
-  },
-  {
     "name": "Carlos Perez",
     "sport": "Baseball",
     "league": "MLB",
     "team": "Athletics",
+    "provider": "manual"
+  },
+  {
+    "name": "Carlos Pulido",
+    "sport": "Baseball",
+    "league": "MLB",
+    "team": "Twins",
     "provider": "manual"
   },
   {
@@ -560,6 +595,34 @@
     "provider": "balldontlie"
   },
   {
+    "name": "Cesar Gutierrez",
+    "sport": "Baseball",
+    "league": "MLB",
+    "team": "Tigers",
+    "provider": "manual"
+  },
+  {
+    "name": "Cesar Hernandez",
+    "sport": "Baseball",
+    "league": "MLB",
+    "team": "Nationals",
+    "provider": "manual"
+  },
+  {
+    "name": "Cesar Izturis",
+    "sport": "Baseball",
+    "league": "MLB",
+    "team": "Reds",
+    "provider": "manual"
+  },
+  {
+    "name": "Cesar Jimenez",
+    "sport": "Baseball",
+    "league": "MLB",
+    "team": "Brewers",
+    "provider": "manual"
+  },
+  {
     "name": "Cesar Tovar",
     "sport": "Baseball",
     "league": "MLB",
@@ -592,34 +655,6 @@
     "sport": "Baseball",
     "league": "MLB",
     "team": "Rangers",
-    "provider": "manual"
-  },
-  {
-    "name": "Cesar Gutierrez",
-    "sport": "Baseball",
-    "league": "MLB",
-    "team": "Tigers",
-    "provider": "manual"
-  },
-  {
-    "name": "Cesar Hernandez",
-    "sport": "Baseball",
-    "league": "MLB",
-    "team": "Nationals",
-    "provider": "manual"
-  },
-  {
-    "name": "Cesar Izturis",
-    "sport": "Baseball",
-    "league": "MLB",
-    "team": "Reds",
-    "provider": "manual"
-  },
-  {
-    "name": "Cesar Jimenez",
-    "sport": "Baseball",
-    "league": "MLB",
-    "team": "Brewers",
     "provider": "manual"
   },
   {
@@ -938,17 +973,17 @@
     "provider": "manual"
   },
   {
-    "name": "Elio Chacon",
-    "sport": "Baseball",
-    "league": "MLB",
-    "team": "Mets",
-    "provider": "manual"
-  },
-  {
     "name": "Eliezer Alfonzo",
     "sport": "Baseball",
     "league": "MLB",
     "team": "Rockies",
+    "provider": "manual"
+  },
+  {
+    "name": "Elio Chacon",
+    "sport": "Baseball",
+    "league": "MLB",
+    "team": "Mets",
     "provider": "manual"
   },
   {
@@ -1071,6 +1106,27 @@
     "provider": "manual"
   },
   {
+    "name": "Felix Doubront",
+    "sport": "Baseball",
+    "league": "MLB",
+    "team": "Athletics",
+    "provider": "manual"
+  },
+  {
+    "name": "Felix Escalona",
+    "sport": "Baseball",
+    "league": "MLB",
+    "team": "Yankees",
+    "provider": "manual"
+  },
+  {
+    "name": "Felix Hernandez",
+    "sport": "Baseball",
+    "league": "MLB",
+    "team": "Mariners",
+    "provider": "balldontlie"
+  },
+  {
     "name": "Fernando Lunar",
     "sport": "Baseball",
     "league": "MLB",
@@ -1173,27 +1229,6 @@
     "sport": "Baseball",
     "league": "MLB",
     "team": "Orioles",
-    "provider": "balldontlie"
-  },
-  {
-    "name": "Felix Doubront",
-    "sport": "Baseball",
-    "league": "MLB",
-    "team": "Athletics",
-    "provider": "manual"
-  },
-  {
-    "name": "Felix Escalona",
-    "sport": "Baseball",
-    "league": "MLB",
-    "team": "Yankees",
-    "provider": "manual"
-  },
-  {
-    "name": "Felix Hernandez",
-    "sport": "Baseball",
-    "league": "MLB",
-    "team": "Mariners",
     "provider": "balldontlie"
   },
   {
@@ -1372,6 +1407,27 @@
     "provider": "manual"
   },
   {
+    "name": "Hector Gimenez",
+    "sport": "Baseball",
+    "league": "MLB",
+    "team": "White Sox",
+    "provider": "manual"
+  },
+  {
+    "name": "Hector Rondon",
+    "sport": "Baseball",
+    "league": "MLB",
+    "team": "Diamondbacks",
+    "provider": "manual"
+  },
+  {
+    "name": "Hector Sanchez",
+    "sport": "Baseball",
+    "league": "MLB",
+    "team": "Padres",
+    "provider": "manual"
+  },
+  {
     "name": "Henderson Alvarez III",
     "sport": "Baseball",
     "league": "MLB",
@@ -1425,27 +1481,6 @@
     "sport": "Baseball",
     "league": "MLB",
     "team": "Mariners",
-    "provider": "manual"
-  },
-  {
-    "name": "Hector Gimenez",
-    "sport": "Baseball",
-    "league": "MLB",
-    "team": "White Sox",
-    "provider": "manual"
-  },
-  {
-    "name": "Hector Rondon",
-    "sport": "Baseball",
-    "league": "MLB",
-    "team": "Diamondbacks",
-    "provider": "manual"
-  },
-  {
-    "name": "Hector Sanchez",
-    "sport": "Baseball",
-    "league": "MLB",
-    "team": "Padres",
     "provider": "manual"
   },
   {
@@ -1694,31 +1729,10 @@
     "provider": "balldontlie"
   },
   {
-    "name": "Jose Butto",
+    "name": "Jose Alvarez",
     "sport": "Baseball",
     "league": "MLB",
-    "team": "Mets",
-    "provider": "balldontlie"
-  },
-  {
-    "name": "Jose Campos",
-    "sport": "Baseball",
-    "league": "MLB",
-    "team": "Diamondbacks",
-    "provider": "manual"
-  },
-  {
-    "name": "Josh Barfield",
-    "sport": "Baseball",
-    "league": "MLB",
-    "team": "Indians",
-    "provider": "manual"
-  },
-  {
-    "name": "Josmil Pinto",
-    "sport": "Baseball",
-    "league": "MLB",
-    "team": "Brewers",
+    "team": "Giants",
     "provider": "manual"
   },
   {
@@ -1733,6 +1747,20 @@
     "sport": "Baseball",
     "league": "MLB",
     "team": "Angels",
+    "provider": "manual"
+  },
+  {
+    "name": "Jose Butto",
+    "sport": "Baseball",
+    "league": "MLB",
+    "team": "Mets",
+    "provider": "balldontlie"
+  },
+  {
+    "name": "Jose Campos",
+    "sport": "Baseball",
+    "league": "MLB",
+    "team": "Diamondbacks",
     "provider": "manual"
   },
   {
@@ -1876,13 +1904,6 @@
     "provider": "balldontlie"
   },
   {
-    "name": "Jose Torres",
-    "sport": "Baseball",
-    "league": "MLB",
-    "team": "Padres",
-    "provider": "manual"
-  },
-  {
     "name": "Jose Tabata",
     "sport": "Baseball",
     "league": "MLB",
@@ -1890,10 +1911,24 @@
     "provider": "balldontlie"
   },
   {
-    "name": "Jose Alvarez",
+    "name": "Jose Torres",
     "sport": "Baseball",
     "league": "MLB",
-    "team": "Giants",
+    "team": "Padres",
+    "provider": "manual"
+  },
+  {
+    "name": "Josh Barfield",
+    "sport": "Baseball",
+    "league": "MLB",
+    "team": "Indians",
+    "provider": "manual"
+  },
+  {
+    "name": "Josmil Pinto",
+    "sport": "Baseball",
+    "league": "MLB",
+    "team": "Brewers",
     "provider": "manual"
   },
   {
@@ -2163,6 +2198,13 @@
     "provider": "manual"
   },
   {
+    "name": "Luis Madero",
+    "sport": "Baseball",
+    "league": "MLB",
+    "team": "Marlins",
+    "provider": "manual"
+  },
+  {
     "name": "Luis Matos",
     "sport": "Baseball",
     "league": "MLB",
@@ -2226,6 +2268,13 @@
     "provider": "manual"
   },
   {
+    "name": "Luis Sanchez",
+    "sport": "Baseball",
+    "league": "MLB",
+    "team": "Angels",
+    "provider": "manual"
+  },
+  {
     "name": "Luis Sardinas",
     "sport": "Baseball",
     "league": "MLB",
@@ -2238,13 +2287,6 @@
     "league": "MLB",
     "team": "Yankees",
     "provider": "balldontlie"
-  },
-  {
-    "name": "Luis Sanchez",
-    "sport": "Baseball",
-    "league": "MLB",
-    "team": "Angels",
-    "provider": "manual"
   },
   {
     "name": "Luis Torrens",
@@ -2273,13 +2315,6 @@
     "league": "MLB",
     "team": "White Sox",
     "provider": "balldontlie"
-  },
-  {
-    "name": "Luis Madero",
-    "sport": "Baseball",
-    "league": "MLB",
-    "team": "Marlins",
-    "provider": "manual"
   },
   {
     "name": "Magglio Ordonez",
@@ -2345,17 +2380,17 @@
     "provider": "manual"
   },
   {
-    "name": "Martin Prado",
-    "sport": "Baseball",
-    "league": "MLB",
-    "team": "Marlins",
-    "provider": "manual"
-  },
-  {
     "name": "Martin Perez",
     "sport": "Baseball",
     "league": "MLB",
     "team": "Braves",
+    "provider": "manual"
+  },
+  {
+    "name": "Martin Prado",
+    "sport": "Baseball",
+    "league": "MLB",
+    "team": "Marlins",
     "provider": "manual"
   },
   {
@@ -2499,6 +2534,13 @@
     "provider": "manual"
   },
   {
+    "name": "Nestor Chavez",
+    "sport": "Baseball",
+    "league": "MLB",
+    "team": "Giants",
+    "provider": "manual"
+  },
+  {
     "name": "Niuman Romero",
     "sport": "Baseball",
     "league": "MLB",
@@ -2510,13 +2552,6 @@
     "sport": "Baseball",
     "league": "MLB",
     "team": "Astros",
-    "provider": "manual"
-  },
-  {
-    "name": "Nestor Chavez",
-    "sport": "Baseball",
-    "league": "MLB",
-    "team": "Giants",
     "provider": "manual"
   },
   {
@@ -2573,6 +2608,20 @@
     "sport": "Baseball",
     "league": "MLB",
     "team": "Padres",
+    "provider": "manual"
+  },
+  {
+    "name": "Oscar Henriquez",
+    "sport": "Baseball",
+    "league": "MLB",
+    "team": "Tigers",
+    "provider": "manual"
+  },
+  {
+    "name": "Oscar Hernandez",
+    "sport": "Baseball",
+    "league": "MLB",
+    "team": "Royals",
     "provider": "manual"
   },
   {
@@ -2772,6 +2821,13 @@
     "provider": "balldontlie"
   },
   {
+    "name": "Raul Chavez",
+    "sport": "Baseball",
+    "league": "MLB",
+    "team": "Blue Jays",
+    "provider": "manual"
+  },
+  {
     "name": "Ray Monzant",
     "sport": "Baseball",
     "league": "MLB",
@@ -2783,13 +2839,6 @@
     "sport": "Baseball",
     "league": "MLB",
     "team": "White Sox",
-    "provider": "manual"
-  },
-  {
-    "name": "Raul Chavez",
-    "sport": "Baseball",
-    "league": "MLB",
-    "team": "Blue Jays",
     "provider": "manual"
   },
   {
@@ -2807,13 +2856,6 @@
     "provider": "manual"
   },
   {
-    "name": "Renyel Pinto",
-    "sport": "Baseball",
-    "league": "MLB",
-    "team": "Marlins",
-    "provider": "manual"
-  },
-  {
     "name": "Rene Pinto",
     "sport": "Baseball",
     "league": "MLB",
@@ -2825,6 +2867,13 @@
     "sport": "Baseball",
     "league": "MLB",
     "team": "Rockies",
+    "provider": "manual"
+  },
+  {
+    "name": "Renyel Pinto",
+    "sport": "Baseball",
+    "league": "MLB",
+    "team": "Marlins",
     "provider": "manual"
   },
   {
@@ -2912,6 +2961,13 @@
     "provider": "manual"
   },
   {
+    "name": "Romulo Sanchez",
+    "sport": "Baseball",
+    "league": "MLB",
+    "team": "Yankees",
+    "provider": "manual"
+  },
+  {
     "name": "Ronald Acuna Jr.",
     "sport": "Baseball",
     "league": "MLB",
@@ -2968,13 +3024,6 @@
     "provider": "manual"
   },
   {
-    "name": "Romulo Sanchez",
-    "sport": "Baseball",
-    "league": "MLB",
-    "team": "Yankees",
-    "provider": "manual"
-  },
-  {
     "name": "Salvador Perez",
     "sport": "Baseball",
     "league": "MLB",
@@ -3010,17 +3059,17 @@
     "provider": "balldontlie"
   },
   {
-    "name": "Steve Torrealba",
-    "sport": "Baseball",
-    "league": "MLB",
-    "team": "Braves",
-    "provider": "manual"
-  },
-  {
     "name": "Simon Muzziotti",
     "sport": "Baseball",
     "league": "MLB",
     "team": "Phillies",
+    "provider": "manual"
+  },
+  {
+    "name": "Steve Torrealba",
+    "sport": "Baseball",
+    "league": "MLB",
+    "team": "Braves",
     "provider": "manual"
   },
   {
@@ -3255,17 +3304,17 @@
     "provider": "balldontlie"
   },
   {
-    "name": "Wilson Ramos",
-    "sport": "Baseball",
-    "league": "MLB",
-    "team": "Indians",
-    "provider": "manual"
-  },
-  {
     "name": "Wilson Alvarez",
     "sport": "Baseball",
     "league": "MLB",
     "team": "Dodgers",
+    "provider": "manual"
+  },
+  {
+    "name": "Wilson Ramos",
+    "sport": "Baseball",
+    "league": "MLB",
+    "team": "Indians",
     "provider": "manual"
   },
   {
@@ -3385,55 +3434,6 @@
     "sport": "Baseball",
     "league": "MLB",
     "team": "Athletics",
-    "provider": "manual"
-  },
-  {
-    "name": "Alvaro Espinoza",
-    "sport": "Baseball",
-    "league": "MLB",
-    "team": "Mets",
-    "provider": "balldontlie"
-  },
-  {
-    "name": "Angel Bravo",
-    "sport": "Baseball",
-    "league": "MLB",
-    "team": "Padres",
-    "provider": "manual"
-  },
-  {
-    "name": "Angel Escobar",
-    "sport": "Baseball",
-    "league": "MLB",
-    "team": "Giants",
-    "provider": "manual"
-  },
-  {
-    "name": "Angel Guzman",
-    "sport": "Baseball",
-    "league": "MLB",
-    "team": "Rays",
-    "provider": "balldontlie"
-  },
-  {
-    "name": "Angel Nesbitt",
-    "sport": "Baseball",
-    "league": "MLB",
-    "team": "Tigers",
-    "provider": "manual"
-  },
-  {
-    "name": "Oscar Henriquez",
-    "sport": "Baseball",
-    "league": "MLB",
-    "team": "Tigers",
-    "provider": "manual"
-  },
-  {
-    "name": "Oscar Hernandez",
-    "sport": "Baseball",
-    "league": "MLB",
-    "team": "Royals",
     "provider": "manual"
   },
   {
@@ -3822,14 +3822,14 @@
     "provider": "balldontlie"
   },
   {
-    "name": "Josef Martinez",
+    "name": "Jose Andres Martinez",
     "sport": "Soccer",
     "league": "MLS",
     "team": "Unknown",
     "provider": "balldontlie"
   },
   {
-    "name": "Jose Andres Martinez",
+    "name": "Josef Martinez",
     "sport": "Soccer",
     "league": "MLS",
     "team": "Unknown",
@@ -3976,14 +3976,14 @@
     "provider": "balldontlie"
   },
   {
-    "name": "Luis Morales",
+    "name": "Luis Balbo",
     "sport": "Soccer",
     "league": "Serie A",
     "team": "Unknown",
     "provider": "balldontlie"
   },
   {
-    "name": "Luis Balbo",
+    "name": "Luis Morales",
     "sport": "Soccer",
     "league": "Serie A",
     "team": "Unknown",
