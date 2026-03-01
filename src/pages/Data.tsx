@@ -1,4 +1,4 @@
-import { useState, useEffect, useMemo } from "react";
+import { useState, useEffect, useMemo, useRef, useCallback } from "react";
 import { motion } from "framer-motion";
 import VzlaNavbar from "@/components/VzlaNavbar";
 import VzlaFooter from "@/components/VzlaFooter";
@@ -101,10 +101,65 @@ const PriceTooltip = ({ payload }: any) => {
   );
 };
 
+/* ── Pinned tooltip for scatter chart ── */
+interface PinnedData {
+  name: string; sport: string; listed: number; sold: number; spread: number; cx: number; cy: number;
+}
+
+const PinnedScatterTooltip = ({ data, onClose }: { data: PinnedData; onClose: () => void }) => {
+  const ref = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    const handler = (e: MouseEvent | TouchEvent) => {
+      if (ref.current && !ref.current.contains(e.target as Node)) onClose();
+    };
+    document.addEventListener("mousedown", handler);
+    document.addEventListener("touchstart", handler);
+    return () => { document.removeEventListener("mousedown", handler); document.removeEventListener("touchstart", handler); };
+  }, [onClose]);
+
+  return (
+    <div
+      ref={ref}
+      className="absolute z-50 rounded-xl border border-border/50 bg-background/95 backdrop-blur-lg p-3 text-xs shadow-2xl"
+      style={{ left: Math.min(data.cx + 12, 220), top: Math.max(data.cy - 10, 0), pointerEvents: "auto", minWidth: 160 }}
+    >
+      <a href={buildEbaySearchUrl(data.name, data.sport)} target="_blank" rel="noopener noreferrer"
+        className="font-display font-bold text-foreground hover:text-primary transition-colors underline decoration-dotted underline-offset-2">
+        {data.name} ↗
+      </a>
+      <div className="text-muted-foreground text-[10px] mb-1.5">{data.sport}</div>
+      <div className="flex flex-col gap-0.5">
+        <span className="text-muted-foreground">Listed: <strong className="text-foreground">${data.listed.toFixed(2)}</strong></span>
+        <span className="text-muted-foreground">Sold: <strong className="text-foreground">${data.sold.toFixed(2)}</strong></span>
+        <span className="text-muted-foreground">Spread: <strong className={data.spread > 0 ? "text-red-400" : "text-green-400"}>
+          {data.spread > 0 ? "+" : ""}${data.spread.toFixed(2)}
+        </strong></span>
+      </div>
+      <div className="text-[9px] text-muted-foreground/60 mt-1.5">Tap name to search eBay</div>
+    </div>
+  );
+};
+
 const Data = () => {
   const [listedData, setListedData] = useState<Record<string, ListedRecord>>({});
   const [soldData, setSoldData] = useState<Record<string, SoldRecord>>({});
   const [athleteSportMap, setAthleteSportMap] = useState<Record<string, string>>({});
+  const [pinnedDot, setPinnedDot] = useState<PinnedData | null>(null);
+  const scatterWrapRef = useRef<HTMLDivElement>(null);
+
+  const handleScatterClick = useCallback((state: any) => {
+    if (!state?.activePayload?.length) { setPinnedDot(null); return; }
+    const d = state.activePayload[0]?.payload;
+    if (!d?.name) { setPinnedDot(null); return; }
+    const cx = state.chartX ?? 0;
+    const cy = state.chartY ?? 0;
+    setPinnedDot({
+      name: d.name, sport: d.sport, listed: d.listed, sold: d.sold,
+      spread: d.spread ?? d.listed - d.sold, cx, cy,
+    });
+  }, []);
+
+  const closePinned = useCallback(() => setPinnedDot(null), []);
 
   useEffect(() => {
     Promise.all([
@@ -370,10 +425,9 @@ const Data = () => {
                 Each dot is an athlete. Above the diagonal = listed higher than sold (overpriced).
               </p>
               <div className="glass-panel p-4 md:p-6">
-                <div className="w-full h-[400px] md:h-[450px]">
+                <div className="w-full h-[400px] md:h-[450px] relative" ref={scatterWrapRef}>
                   <ResponsiveContainer width="100%" height="100%">
-                    <ScatterChart margin={{ top: 10, right: 10, bottom: 40, left: 0 }}
-                    >
+                    <ScatterChart margin={{ top: 10, right: 10, bottom: 40, left: 0 }} onClick={handleScatterClick}>
                       <CartesianGrid strokeDasharray="3 3" stroke="hsl(var(--border))" opacity={0.5} />
                       <XAxis
                         type="number" dataKey="sold" name="Sold" unit="$"
@@ -385,7 +439,7 @@ const Data = () => {
                         label={{ value: "Avg Listed ($)", angle: -90, position: "insideLeft", offset: 10, style: { fill: "hsl(var(--muted-foreground))", fontSize: 11 } }}
                         tick={{ fill: "hsl(var(--muted-foreground))", fontSize: 10 }}
                       />
-                      <Tooltip content={<PriceTooltip />} trigger="click" wrapperStyle={{ pointerEvents: "auto", zIndex: 100 }} />
+                      <Tooltip content={() => null} />
                       <Scatter
                         data={(() => {
                           const maxVal = Math.max(...comparisonData.map(d => Math.max(d.listed, d.sold)));
@@ -394,17 +448,14 @@ const Data = () => {
                         line={{ stroke: "hsl(var(--muted-foreground))", strokeWidth: 1, strokeDasharray: "6 4" }}
                         shape={() => null} legendType="none" isAnimationActive={false}
                       />
-                      <Scatter
-                        data={comparisonData}
-                        isAnimationActive={false}
-                        cursor="pointer"
-                      >
+                      <Scatter data={comparisonData} isAnimationActive={false} cursor="pointer">
                         {comparisonData.map((entry, idx) => (
                           <Cell key={idx} fill={getSportColor(entry.sport)} fillOpacity={0.8} r={typeof window !== 'undefined' && window.innerWidth < 768 ? 6 : 5} />
                         ))}
                       </Scatter>
                     </ScatterChart>
                   </ResponsiveContainer>
+                  {pinnedDot && <PinnedScatterTooltip data={pinnedDot} onClose={closePinned} />}
                 </div>
               <div className="flex flex-wrap gap-4 mt-3 justify-center">
                   {Object.entries(SPORT_COLORS)
