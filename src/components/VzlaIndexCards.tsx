@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { useMemo } from "react";
-import { LineChart, Line, ResponsiveContainer, YAxis } from "recharts";
+
 import { Athlete, EbayAvgRecord, IndexHistoryEntry } from "@/data/athletes";
 import { computeIndexForSport, getSportCounts, formatIndexNumber } from "@/lib/vzla-helpers";
 
@@ -38,31 +38,13 @@ const VzlaIndexCards = ({ athletes, byName, byKey, indexHistory }: VzlaIndexCard
     { title: "All Index", icon: "🏆", value: formatIndexNumber(iAll.sum), athletes: athletes.length, priced: iAll.used, sport: "All" },
   ];
 
-  const { sparklines, changes, periods } = useMemo(() => {
+  const { changes, periods } = useMemo(() => {
     if (!indexHistory || indexHistory.length === 0) {
       return {
-        sparklines: cards.map(() => []),
         changes: cards.map(() => null),
         periods: cards.map(() => "")
       };
     }
-
-    const sLines = cards.map((c) => {
-      const points = indexHistory
-        .map((h) => {
-          const v = Number(h[c.sport]);
-          return Number.isFinite(v) && v > 0 ? { v } : null;
-        })
-        .filter(Boolean) as { v: number }[];
-
-      // Ensure 1-point history still renders as a visible line
-      if (points.length === 1) {
-        const base = points[0].v;
-        return [{ v: base * 0.98 }, { v: base }];
-      }
-
-      return points;
-    });
 
     const chgs = cards.map((c) => {
       const series = indexHistory
@@ -84,7 +66,6 @@ const VzlaIndexCards = ({ athletes, byName, byKey, indexHistory }: VzlaIndexCard
         : Math.max(1, indexHistory.length - 1);
 
     return {
-      sparklines: sLines,
       changes: chgs,
       periods: cards.map(() => `${dayDiff}d`),
     };
@@ -95,7 +76,7 @@ const VzlaIndexCards = ({ athletes, byName, byKey, indexHistory }: VzlaIndexCard
       {cards.map((card, i) => {
         const change = changes[i];
         const isUp = change != null && change >= 0;
-        const trendColor = isUp ? "hsl(var(--primary))" : "hsl(var(--destructive))";
+        
 
         return (
           <motion.div
@@ -131,34 +112,6 @@ const VzlaIndexCards = ({ athletes, byName, byKey, indexHistory }: VzlaIndexCard
               )}
             </div>
 
-            {sparklines[i] && sparklines[i].length > 1 && (
-              <div className="absolute bottom-2 right-2 w-28 h-12 opacity-85">
-                <ResponsiveContainer width="100%" height="100%">
-                  <LineChart data={sparklines[i]} margin={{ top: 6, right: 6, bottom: 2, left: 6 }}>
-                    <YAxis domain={["dataMin - 1", "dataMax + 1"]} hide />
-                    <Line
-                      type="monotone"
-                      dataKey="v"
-                      stroke={trendColor}
-                      strokeWidth={2.5}
-                      dot={(props) => {
-                        if (props.index !== sparklines[i].length - 1) return <g />;
-                        return (
-                          <circle
-                            cx={props.cx}
-                            cy={props.cy}
-                            r={4}
-                            fill="hsl(var(--background))"
-                            stroke={trendColor}
-                            strokeWidth={2}
-                          />
-                        );
-                      }}
-                    />
-                  </LineChart>
-                </ResponsiveContainer>
-              </div>
-            )}
           </motion.div>
         );
       })}
