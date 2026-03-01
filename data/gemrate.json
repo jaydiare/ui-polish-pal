@@ -1,13 +1,13 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-01T20:43:04.687653+00:00",
-    "athleteCount": 85,
+    "updatedAt": "2026-03-01T20:56:24.899966+00:00",
+    "athleteCount": 90,
     "graders": [
       "PSA"
     ],
     "batchInfo": {
-      "startIdx": 100,
-      "endIdx": 110,
+      "startIdx": 110,
+      "endIdx": 120,
       "totalAthletes": 575
     }
   },
@@ -1540,6 +1540,96 @@
         "gems": 1,
         "grades": 4,
         "gemRate": 25.0
+      }
+    },
+    "Eddie Zambrano": {
+      "name": "Eddie Zambrano",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 4,
+          "gems": 2,
+          "grades": 5,
+          "gemRate": 40.0
+        }
+      },
+      "totals": {
+        "cards": 4,
+        "gems": 2,
+        "grades": 5,
+        "gemRate": 40.0
+      }
+    },
+    "Eddy Diaz": {
+      "name": "Eddy Diaz",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 60,
+          "gems": 71,
+          "grades": 182,
+          "gemRate": 39.0
+        }
+      },
+      "totals": {
+        "cards": 60,
+        "gems": 71,
+        "grades": 182,
+        "gemRate": 39.0
+      }
+    },
+    "Edgar Navarro": {
+      "name": "Edgar Navarro",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 8,
+          "gems": 5,
+          "grades": 9,
+          "gemRate": 56.0
+        }
+      },
+      "totals": {
+        "cards": 8,
+        "gems": 5,
+        "grades": 9,
+        "gemRate": 56.0
+      }
+    },
+    "Edgardo Alfonzo": {
+      "name": "Edgardo Alfonzo",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 120,
+          "gems": 197,
+          "grades": 1255,
+          "gemRate": 16.0
+        }
+      },
+      "totals": {
+        "cards": 120,
+        "gems": 197,
+        "grades": 1255,
+        "gemRate": 16.0
+      }
+    },
+    "Edgardo Henriquez": {
+      "name": "Edgardo Henriquez",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 57,
+          "gems": 30,
+          "grades": 129,
+          "gemRate": 23.0
+        }
+      },
+      "totals": {
+        "cards": 57,
+        "gems": 30,
+        "grades": 129,
+        "gemRate": 23.0
       }
     }
   }
