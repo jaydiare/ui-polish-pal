@@ -397,9 +397,10 @@ const Data = () => {
                         data={comparisonData}
                         isAnimationActive={false}
                         cursor="pointer"
-                        onClick={(data: any) => {
-                          if (data?.name) {
-                            window.open(buildEbaySearchUrl(data.name, data.sport), "_blank", "noopener,noreferrer");
+                        onClick={(entry: any) => {
+                          const d = entry?.payload || entry;
+                          if (d?.name) {
+                            window.open(buildEbaySearchUrl(d.name, d.sport), "_blank", "noopener,noreferrer");
                           }
                         }}
                       >
