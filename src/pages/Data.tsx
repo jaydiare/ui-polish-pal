@@ -583,7 +583,7 @@ const GemrateChart = () => {
 
   const isEmpty = !gemrateData || top10.length === 0;
 
-  const updatedAt = gemrateData._meta?.updatedAt
+  const updatedAt = gemrateData?._meta?.updatedAt
     ? new Date(gemrateData._meta.updatedAt).toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" })
     : null;
 
