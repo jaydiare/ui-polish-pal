@@ -523,6 +523,9 @@ const Data = () => {
             </section>
             {/* ── Supply & Demand ── */}
             <VzlaSupplyDemand comparisonData={comparisonData} />
+
+            {/* ── Gemrate Grading Data ── */}
+            <GemrateChart />
           </>
         )}
 
@@ -530,6 +533,123 @@ const Data = () => {
       </main>
       <VzlaEbayFooter />
     </div>
+  );
+};
+
+/* ── Gemrate Grading Bar Chart ── */
+interface GemrateAthlete {
+  name: string;
+  sport: string;
+  graders: Record<string, { cards: number; gems: number; grades: number; gemRate: number }>;
+  totals: { cards: number; gems: number; grades: number; gemRate: number };
+}
+
+interface GemrateData {
+  _meta?: { updatedAt?: string; graders?: string[] };
+  athletes: Record<string, GemrateAthlete>;
+}
+
+const GRADER_COLORS: Record<string, string> = {
+  PSA: "hsl(200, 80%, 50%)",
+  Beckett: "hsl(340, 75%, 55%)",
+  SGC: "hsl(45, 90%, 50%)",
+};
+
+const GemrateChart = () => {
+  const [gemrateData, setGemrateData] = useState<GemrateData | null>(null);
+
+  useEffect(() => {
+    fetchJson("data/gemrate.json").then((d) => {
+      if (d && d.athletes) setGemrateData(d);
+    });
+  }, []);
+
+  const top10 = useMemo(() => {
+    if (!gemrateData?.athletes) return [];
+    return Object.values(gemrateData.athletes)
+      .filter((a) => a.totals && a.totals.grades > 0)
+      .sort((a, b) => b.totals.grades - a.totals.grades)
+      .slice(0, 10)
+      .map((a) => ({
+        name: a.name,
+        sport: a.sport,
+        PSA: a.graders?.PSA?.grades || 0,
+        Beckett: a.graders?.Beckett?.grades || 0,
+        SGC: a.graders?.SGC?.grades || 0,
+        total: a.totals.grades,
+        gemRate: a.totals.gemRate,
+      }));
+  }, [gemrateData]);
+
+  if (!gemrateData || top10.length === 0) return null;
+
+  const updatedAt = gemrateData._meta?.updatedAt
+    ? new Date(gemrateData._meta.updatedAt).toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" })
+    : null;
+
+  return (
+    <section className="my-8" aria-label="Gemrate grading data">
+      <h2 className="font-display font-bold text-lg text-foreground mb-1 flex items-center gap-2">
+        <span className="w-1 h-5 rounded-full bg-primary inline-block" />
+        Graded Cards – Top 10
+      </h2>
+      <p className="text-xs text-muted-foreground mb-4 ml-3">
+        Total graded cards by PSA, Beckett &amp; SGC for Venezuelan athletes.
+        {updatedAt && <span className="ml-1 opacity-70">Updated {updatedAt}.</span>}
+      </p>
+      <div className="glass-panel p-4 md:p-6">
+        <div className="w-full h-[450px] md:h-[550px]">
+          <ResponsiveContainer width="100%" height="100%">
+            <BarChart data={top10} layout="vertical" margin={{ top: 5, right: 30, left: 10, bottom: 5 }}>
+              <CartesianGrid strokeDasharray="3 3" stroke="hsl(var(--border))" opacity={0.5} />
+              <XAxis
+                type="number"
+                tick={{ fill: "hsl(var(--muted-foreground))", fontSize: 10 }}
+                label={{ value: "Total Grades", position: "insideBottom", offset: -5, style: { fill: "hsl(var(--muted-foreground))", fontSize: 11 } }}
+              />
+              <YAxis type="category" dataKey="name" width={120} tick={{ fill: "hsl(var(--muted-foreground))", fontSize: 9 }} />
+              <Tooltip
+                content={({ payload }: any) => {
+                  if (!payload?.length) return null;
+                  const d = payload[0]?.payload;
+                  if (!d) return null;
+                  return (
+                    <div className="rounded-xl border border-border/50 bg-background/95 backdrop-blur-lg p-3 text-xs shadow-2xl">
+                      <div className="font-display font-bold text-foreground mb-1">{d.name}</div>
+                      <div className="text-muted-foreground text-[10px] mb-1.5">{d.sport}</div>
+                      <div className="flex flex-col gap-0.5">
+                        <span className="text-muted-foreground">PSA: <strong className="text-foreground">{d.PSA.toLocaleString()}</strong></span>
+                        <span className="text-muted-foreground">Beckett: <strong className="text-foreground">{d.Beckett.toLocaleString()}</strong></span>
+                        <span className="text-muted-foreground">SGC: <strong className="text-foreground">{d.SGC.toLocaleString()}</strong></span>
+                        <span className="text-muted-foreground mt-1">Gem Rate: <strong className="text-foreground">{d.gemRate}%</strong></span>
+                      </div>
+                    </div>
+                  );
+                }}
+              />
+              <Legend
+                verticalAlign="top"
+                wrapperStyle={{ fontSize: 11 }}
+              />
+              <Bar dataKey="PSA" stackId="grades" fill={GRADER_COLORS.PSA} radius={[0, 0, 0, 0]} isAnimationActive={false} />
+              <Bar dataKey="Beckett" stackId="grades" fill={GRADER_COLORS.Beckett} radius={[0, 0, 0, 0]} isAnimationActive={false} />
+              <Bar dataKey="SGC" stackId="grades" fill={GRADER_COLORS.SGC} radius={[0, 4, 4, 0]} isAnimationActive={false} />
+            </BarChart>
+          </ResponsiveContainer>
+        </div>
+        <div className="flex gap-6 justify-center mt-3">
+          {Object.entries(GRADER_COLORS).map(([grader, color]) => (
+            <div key={grader} className="flex items-center gap-1.5 text-[10px] text-muted-foreground">
+              <div className="w-2.5 h-2.5 rounded-sm" style={{ backgroundColor: color }} />
+              {grader}
+            </div>
+          ))}
+        </div>
+        <p className="text-[9px] text-muted-foreground/60 text-center mt-3">
+          Data sourced from <a href="https://www.gemrate.com" target="_blank" rel="noopener noreferrer" className="underline hover:text-primary">gemrate.com</a>. Updated quarterly.
+        </p>
+      </div>
+    </section>
   );
 };
 
