@@ -570,7 +570,7 @@ const GemrateChart = () => {
     return Object.values(gemrateData.athletes)
       .filter((a) => a.totals && a.totals.grades > 0)
       .sort((a, b) => b.totals.grades - a.totals.grades)
-      .slice(0, 20)
+      .slice(0, 10)
       .map((a) => ({
         name: a.name,
         sport: a.sport,
@@ -590,7 +590,7 @@ const GemrateChart = () => {
     <section className="my-8" aria-label="Gemrate grading data">
       <h2 className="font-display font-bold text-lg text-foreground mb-1 flex items-center gap-2">
         <span className="w-1 h-5 rounded-full bg-primary inline-block" />
-        Graded Cards – Top 20
+        Graded Cards – Top 10
       </h2>
       <p className="text-xs text-muted-foreground mb-4 ml-3">
         Total graded cards by PSA for Venezuelan athletes.
@@ -605,7 +605,7 @@ const GemrateChart = () => {
           </div>
         ) : (
           <>
-            <div className="w-full h-[700px] md:h-[750px]">
+            <div className="w-full h-[450px] md:h-[550px]">
               <ResponsiveContainer width="100%" height="100%">
                 <BarChart data={top10} layout="vertical" margin={{ top: 5, right: 30, left: 20, bottom: 5 }}>
                   <CartesianGrid strokeDasharray="3 3" stroke="hsl(var(--border))" opacity={0.5} />
