@@ -1,13 +1,13 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-01T20:56:24.899966+00:00",
-    "athleteCount": 90,
+    "updatedAt": "2026-03-01T20:59:04.904040+00:00",
+    "athleteCount": 98,
     "graders": [
       "PSA"
     ],
     "batchInfo": {
-      "startIdx": 110,
-      "endIdx": 120,
+      "startIdx": 120,
+      "endIdx": 130,
       "totalAthletes": 575
     }
   },
@@ -1630,6 +1630,150 @@
         "gems": 30,
         "grades": 129,
         "gemRate": 23.0
+      }
+    },
+    "Eduardo Escobar": {
+      "name": "Eduardo Escobar",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 66,
+          "gems": 98,
+          "grades": 165,
+          "gemRate": 59.0
+        }
+      },
+      "totals": {
+        "cards": 66,
+        "gems": 98,
+        "grades": 165,
+        "gemRate": 59.0
+      }
+    },
+    "Eduardo Jimenez": {
+      "name": "Eduardo Jimenez",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 4,
+          "gems": 0,
+          "grades": 4,
+          "gemRate": 0.0
+        }
+      },
+      "totals": {
+        "cards": 4,
+        "gems": 0,
+        "grades": 4,
+        "gemRate": 0.0
+      }
+    },
+    "Eduardo Rodriguez": {
+      "name": "Eduardo Rodriguez",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 162,
+          "gems": 291,
+          "grades": 1414,
+          "gemRate": 21.0
+        }
+      },
+      "totals": {
+        "cards": 162,
+        "gems": 291,
+        "grades": 1414,
+        "gemRate": 21.0
+      }
+    },
+    "Eduardo Sanchez": {
+      "name": "Eduardo Sanchez",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 4,
+          "gems": 2,
+          "grades": 4,
+          "gemRate": 50.0
+        }
+      },
+      "totals": {
+        "cards": 4,
+        "gems": 2,
+        "grades": 4,
+        "gemRate": 50.0
+      }
+    },
+    "Eduardo Villacis": {
+      "name": "Eduardo Villacis",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 2,
+          "gems": 1,
+          "grades": 2,
+          "gemRate": 50.0
+        }
+      },
+      "totals": {
+        "cards": 2,
+        "gems": 1,
+        "grades": 2,
+        "gemRate": 50.0
+      }
+    },
+    "Edubray Ramos": {
+      "name": "Edubray Ramos",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 1,
+          "gems": 1,
+          "grades": 1,
+          "gemRate": 100.0
+        }
+      },
+      "totals": {
+        "cards": 1,
+        "gems": 1,
+        "grades": 1,
+        "gemRate": 100.0
+      }
+    },
+    "Edwar Colina": {
+      "name": "Edwar Colina",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 2,
+          "gems": 0,
+          "grades": 2,
+          "gemRate": 0.0
+        }
+      },
+      "totals": {
+        "cards": 2,
+        "gems": 0,
+        "grades": 2,
+        "gemRate": 0.0
+      }
+    },
+    "Edward Mujica": {
+      "name": "Edward Mujica",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 6,
+          "gems": 5,
+          "grades": 8,
+          "gemRate": 62.0
+        }
+      },
+      "totals": {
+        "cards": 6,
+        "gems": 5,
+        "grades": 8,
+        "gemRate": 62.0
       }
     }
   }
