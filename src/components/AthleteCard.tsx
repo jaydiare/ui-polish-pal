@@ -96,6 +96,12 @@ const AthleteCard = ({ athlete, byName, byKey, ebaySoldRaw, isRecommended }: Ath
             <span className="text-[10px] font-bold text-vzla-yellow tracking-wide">Flip Potential</span>
           </div>
         )}
+        {hasPrice && soldAvg != null && avgNum != null && soldAvg < avgNum && (
+          <div className="mt-2 flex items-center gap-1.5 px-2 py-1 rounded-md bg-emerald-500/10 border border-emerald-500/20 w-fit">
+            <span className="text-[11px]">🔻</span>
+            <span className="text-[10px] font-bold text-emerald-400 tracking-wide">Buy Low</span>
+          </div>
+        )}
       </div>
 
       {/* Sold avg (reference only) */}
