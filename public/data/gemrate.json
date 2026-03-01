@@ -1,13 +1,13 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-01T22:50:27.022576+00:00",
-    "athleteCount": 176,
+    "updatedAt": "2026-03-01T22:54:22.104156+00:00",
+    "athleteCount": 186,
     "graders": [
       "PSA"
     ],
     "batchInfo": {
-      "startIdx": 210,
-      "endIdx": 220,
+      "startIdx": 220,
+      "endIdx": 230,
       "totalAthletes": 575
     }
   },
@@ -3178,6 +3178,186 @@
         "gems": 15,
         "grades": 55,
         "gemRate": 27.0
+      }
+    },
+    "Javier Sanoja": {
+      "name": "Javier Sanoja",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 82,
+          "gems": 135,
+          "grades": 353,
+          "gemRate": 38.0
+        }
+      },
+      "totals": {
+        "cards": 82,
+        "gems": 135,
+        "grades": 353,
+        "gemRate": 38.0
+      }
+    },
+    "Jean Machi": {
+      "name": "Jean Machi",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 5,
+          "gems": 3,
+          "grades": 6,
+          "gemRate": 50.0
+        }
+      },
+      "totals": {
+        "cards": 5,
+        "gems": 3,
+        "grades": 6,
+        "gemRate": 50.0
+      }
+    },
+    "Jeanmar Gomez": {
+      "name": "Jeanmar Gomez",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 11,
+          "gems": 8,
+          "grades": 20,
+          "gemRate": 40.0
+        }
+      },
+      "totals": {
+        "cards": 11,
+        "gems": 8,
+        "grades": 20,
+        "gemRate": 40.0
+      }
+    },
+    "Jeferson Quero": {
+      "name": "Jeferson Quero",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 154,
+          "gems": 877,
+          "grades": 1374,
+          "gemRate": 64.0
+        }
+      },
+      "totals": {
+        "cards": 154,
+        "gems": 877,
+        "grades": 1374,
+        "gemRate": 64.0
+      }
+    },
+    "Jermaine Palacios": {
+      "name": "Jermaine Palacios",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 58,
+          "gems": 62,
+          "grades": 109,
+          "gemRate": 57.0
+        }
+      },
+      "totals": {
+        "cards": 58,
+        "gems": 62,
+        "grades": 109,
+        "gemRate": 57.0
+      }
+    },
+    "Jesus Aguilar": {
+      "name": "Jesus Aguilar",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 82,
+          "gems": 164,
+          "grades": 241,
+          "gemRate": 68.0
+        }
+      },
+      "totals": {
+        "cards": 82,
+        "gems": 164,
+        "grades": 241,
+        "gemRate": 68.0
+      }
+    },
+    "Jesus Delgado": {
+      "name": "Jesus Delgado",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 2,
+          "gems": 1,
+          "grades": 2,
+          "gemRate": 50.0
+        }
+      },
+      "totals": {
+        "cards": 2,
+        "gems": 1,
+        "grades": 2,
+        "gemRate": 50.0
+      }
+    },
+    "Jesus Flores": {
+      "name": "Jesus Flores",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 8,
+          "gems": 2,
+          "grades": 10,
+          "gemRate": 20.0
+        }
+      },
+      "totals": {
+        "cards": 8,
+        "gems": 2,
+        "grades": 10,
+        "gemRate": 20.0
+      }
+    },
+    "Jesus Guzman": {
+      "name": "Jesus Guzman",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 6,
+          "gems": 2,
+          "grades": 9,
+          "gemRate": 22.0
+        }
+      },
+      "totals": {
+        "cards": 6,
+        "gems": 2,
+        "grades": 9,
+        "gemRate": 22.0
+      }
+    },
+    "Jesus Montero": {
+      "name": "Jesus Montero",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 122,
+          "gems": 219,
+          "grades": 410,
+          "gemRate": 53.0
+        }
+      },
+      "totals": {
+        "cards": 122,
+        "gems": 219,
+        "grades": 410,
+        "gemRate": 53.0
       }
     }
   }
