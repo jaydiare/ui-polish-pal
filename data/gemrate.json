@@ -1,13 +1,13 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-01T23:05:19.499327+00:00",
-    "athleteCount": 220,
+    "updatedAt": "2026-03-01T23:07:16.932776+00:00",
+    "athleteCount": 228,
     "graders": [
       "PSA"
     ],
     "batchInfo": {
-      "startIdx": 260,
-      "endIdx": 270,
+      "startIdx": 270,
+      "endIdx": 280,
       "totalAthletes": 575
     }
   },
@@ -3970,6 +3970,150 @@
         "gems": 2,
         "grades": 25,
         "gemRate": 8.0
+      }
+    },
+    "Jose Suarez": {
+      "name": "Jose Suarez",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 18,
+          "gems": 51,
+          "grades": 106,
+          "gemRate": 48.0
+        }
+      },
+      "totals": {
+        "cards": 18,
+        "gems": 51,
+        "grades": 106,
+        "gemRate": 48.0
+      }
+    },
+    "Jose Tabata": {
+      "name": "Jose Tabata",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 42,
+          "gems": 465,
+          "grades": 703,
+          "gemRate": 66.0
+        }
+      },
+      "totals": {
+        "cards": 42,
+        "gems": 465,
+        "grades": 703,
+        "gemRate": 66.0
+      }
+    },
+    "Jose Torres": {
+      "name": "Jose Torres",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 50,
+          "gems": 77,
+          "grades": 196,
+          "gemRate": 39.0
+        }
+      },
+      "totals": {
+        "cards": 50,
+        "gems": 77,
+        "grades": 196,
+        "gemRate": 39.0
+      }
+    },
+    "Josh Barfield": {
+      "name": "Josh Barfield",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 33,
+          "gems": 55,
+          "grades": 216,
+          "gemRate": 25.0
+        }
+      },
+      "totals": {
+        "cards": 33,
+        "gems": 55,
+        "grades": 216,
+        "gemRate": 25.0
+      }
+    },
+    "Josmil Pinto": {
+      "name": "Josmil Pinto",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 16,
+          "gems": 12,
+          "grades": 18,
+          "gemRate": 67.0
+        }
+      },
+      "totals": {
+        "cards": 16,
+        "gems": 12,
+        "grades": 18,
+        "gemRate": 67.0
+      }
+    },
+    "Juan Castillo": {
+      "name": "Juan Castillo",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 10,
+          "gems": 27,
+          "grades": 33,
+          "gemRate": 82.0
+        }
+      },
+      "totals": {
+        "cards": 10,
+        "gems": 27,
+        "grades": 33,
+        "gemRate": 82.0
+      }
+    },
+    "Juan Moreno": {
+      "name": "Juan Moreno",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 3,
+          "gems": 0,
+          "grades": 3,
+          "gemRate": 0.0
+        }
+      },
+      "totals": {
+        "cards": 3,
+        "gems": 0,
+        "grades": 3,
+        "gemRate": 0.0
+      }
+    },
+    "Juan Morillo": {
+      "name": "Juan Morillo",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 1,
+          "gems": 0,
+          "grades": 1,
+          "gemRate": 0.0
+        }
+      },
+      "totals": {
+        "cards": 1,
+        "gems": 0,
+        "grades": 1,
+        "gemRate": 0.0
       }
     }
   }
