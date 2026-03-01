@@ -90,7 +90,7 @@ const AthleteCard = ({ athlete, byName, byKey, ebaySoldRaw, isRecommended }: Ath
             <div className="text-[10px] text-muted-foreground">{stability.pctText}</div>
           </div>
         </div>
-        {hasPrice && cv != null && (stability.bucket === "volatile" || stability.bucket === "highly_unstable") && (
+        {hasPrice && cv != null && soldAvg != null && avgNum != null && soldAvg >= avgNum && (stability.bucket === "volatile" || stability.bucket === "highly_unstable") && (
           <div className="mt-2 flex items-center gap-1.5 px-2 py-1 rounded-md bg-vzla-yellow/10 border border-vzla-yellow/20 w-fit">
             <span className="text-[11px]">🔄</span>
             <span className="text-[10px] font-bold text-vzla-yellow tracking-wide">Flip Potential</span>
