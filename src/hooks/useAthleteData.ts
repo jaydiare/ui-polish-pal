@@ -132,13 +132,22 @@ export function useAthleteData() {
     }));
   }, [filteredAthletes, byName, byKey]);
 
-  const runBudget = useCallback((budgetDollars: number, maxCards: number | null, flipOnly: boolean = false) => {
-    const candidates = flipOnly
-      ? budgetCandidates.filter((c) => c.stabilityPct != null && c.stabilityPct > 20)
-      : budgetCandidates;
+  const runBudget = useCallback((budgetDollars: number, maxCards: number | null, flipOnly: boolean = false, buyLowOnly: boolean = false) => {
+    let candidates = budgetCandidates;
+    if (flipOnly) {
+      candidates = candidates.filter((c) => c.stabilityPct != null && c.stabilityPct > 20);
+    }
+    if (buyLowOnly) {
+      // Filter to athletes where sold avg < listing avg (buy low signal)
+      candidates = candidates.filter((c) => {
+        const soldRecord = ebaySoldRaw?.[c.name];
+        const soldAvg = soldRecord?.taguchiSold != null ? soldRecord.taguchiSold : null;
+        return soldAvg != null && c.price != null && soldAvg < c.price;
+      });
+    }
     const result = runKnapsack(candidates, budgetDollars, maxCards);
     setBudgetResult(result);
-  }, [budgetCandidates]);
+  }, [budgetCandidates, ebaySoldRaw]);
 
   const DEFAULT_FILTERS: Filters = {
     search: "",

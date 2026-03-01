@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import { KnapsackResult } from "@/lib/budget-knapsack";
 
 interface VzlaBudgetBarProps {
-  onSuggest: (budget: number, maxCards: number | null, flipOnly: boolean) => void;
+  onSuggest: (budget: number, maxCards: number | null, flipOnly: boolean, buyLowOnly: boolean) => void;
   onClear: () => void;
   result: KnapsackResult | null;
 }
@@ -11,6 +11,7 @@ const VzlaBudgetBar = ({ onSuggest, onClear, result }: VzlaBudgetBarProps) => {
   const [budget, setBudget] = useState("");
   const [cards, setCards] = useState("");
   const [flipOnly, setFlipOnly] = useState(false);
+  const [buyLowOnly, setBuyLowOnly] = useState(false);
 
   const justSuggested = useRef(false);
 
@@ -20,7 +21,7 @@ const VzlaBudgetBar = ({ onSuggest, onClear, result }: VzlaBudgetBarProps) => {
     const c = cards ? Number(cards) : null;
     const maxCards = c && Number.isFinite(c) && c > 0 ? Math.floor(c) : null;
     justSuggested.current = true;
-    onSuggest(b, maxCards, flipOnly);
+    onSuggest(b, maxCards, flipOnly, buyLowOnly);
   };
 
   // Auto-scroll to results on mobile after suggest
@@ -41,6 +42,7 @@ const VzlaBudgetBar = ({ onSuggest, onClear, result }: VzlaBudgetBarProps) => {
     setBudget("");
     setCards("");
     setFlipOnly(false);
+    setBuyLowOnly(false);
     onClear();
   };
 
@@ -52,7 +54,7 @@ const VzlaBudgetBar = ({ onSuggest, onClear, result }: VzlaBudgetBarProps) => {
       <p className="text-xs text-muted-foreground mb-3">
         Enter your budget and we'll find the best combination of cards to maximize value using market data.
       </p>
-      <div className="grid grid-cols-1 sm:grid-cols-[1fr_1fr_auto_auto_auto] gap-3 items-end">
+      <div className="grid grid-cols-1 sm:grid-cols-[1fr_1fr_auto_auto_auto_auto] gap-3 items-end">
         <div>
           <label htmlFor="budget-input" className="sr-only">Budget amount in USD</label>
           <input
@@ -80,7 +82,7 @@ const VzlaBudgetBar = ({ onSuggest, onClear, result }: VzlaBudgetBarProps) => {
           />
         </div>
         <button
-          onClick={() => setFlipOnly((prev) => !prev)}
+          onClick={() => setFlipOnly((prev) => { if (!prev) setBuyLowOnly(false); return !prev; })}
           className={`h-11 px-4 rounded-lg border text-xs font-bold cursor-pointer whitespace-nowrap transition-all flex items-center gap-1.5 ${
             flipOnly
               ? "bg-vzla-yellow/15 border-vzla-yellow/40 text-vzla-yellow"
@@ -90,6 +92,18 @@ const VzlaBudgetBar = ({ onSuggest, onClear, result }: VzlaBudgetBarProps) => {
           aria-label="Filter for flip potential cards only"
         >
           🔄 Flip Only
+        </button>
+        <button
+          onClick={() => setBuyLowOnly((prev) => { if (!prev) setFlipOnly(false); return !prev; })}
+          className={`h-11 px-4 rounded-lg border text-xs font-bold cursor-pointer whitespace-nowrap transition-all flex items-center gap-1.5 ${
+            buyLowOnly
+              ? "bg-emerald-500/15 border-emerald-500/40 text-emerald-400"
+              : "bg-secondary border-border text-muted-foreground hover:text-foreground"
+          }`}
+          aria-pressed={buyLowOnly}
+          aria-label="Filter for buy low cards only"
+        >
+          🔻 Buy Low
         </button>
         <button
           onClick={handleSuggest}
