@@ -1,0 +1,9 @@
+{
+  "_meta": {
+    "updatedAt": "2026-03-01T00:00:00Z",
+    "athleteCount": 0,
+    "graders": ["PSA", "Beckett", "SGC"],
+    "note": "Run the gemrate GitHub Action to populate this file with real data."
+  },
+  "athletes": {}
+}
