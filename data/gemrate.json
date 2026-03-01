@@ -1,13 +1,13 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-01T23:31:05.295228+00:00",
-    "athleteCount": 237,
+    "updatedAt": "2026-03-01T23:56:08.206337+00:00",
+    "athleteCount": 244,
     "graders": [
       "PSA"
     ],
     "batchInfo": {
-      "startIdx": 280,
-      "endIdx": 290,
+      "startIdx": 290,
+      "endIdx": 300,
       "totalAthletes": 575
     }
   },
@@ -4276,6 +4276,132 @@
         "gems": 188,
         "grades": 362,
         "gemRate": 52.0
+      }
+    },
+    "Kervin Castro": {
+      "name": "Kervin Castro",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 31,
+          "gems": 19,
+          "grades": 51,
+          "gemRate": 37.0
+        }
+      },
+      "totals": {
+        "cards": 31,
+        "gems": 19,
+        "grades": 51,
+        "gemRate": 37.0
+      }
+    },
+    "Lenyn Sosa": {
+      "name": "Lenyn Sosa",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 226,
+          "gems": 810,
+          "grades": 1515,
+          "gemRate": 53.0
+        }
+      },
+      "totals": {
+        "cards": 226,
+        "gems": 810,
+        "grades": 1515,
+        "gemRate": 53.0
+      }
+    },
+    "Leo Hernandez": {
+      "name": "Leo Hernandez",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 4,
+          "gems": 29,
+          "grades": 45,
+          "gemRate": 64.0
+        }
+      },
+      "totals": {
+        "cards": 4,
+        "gems": 29,
+        "grades": 45,
+        "gemRate": 64.0
+      }
+    },
+    "Leo Rivas": {
+      "name": "Leo Rivas",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 22,
+          "gems": 17,
+          "grades": 29,
+          "gemRate": 59.0
+        }
+      },
+      "totals": {
+        "cards": 22,
+        "gems": 17,
+        "grades": 29,
+        "gemRate": 59.0
+      }
+    },
+    "Les Straker": {
+      "name": "Les Straker",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 10,
+          "gems": 20,
+          "grades": 43,
+          "gemRate": 47.0
+        }
+      },
+      "totals": {
+        "cards": 10,
+        "gems": 20,
+        "grades": 43,
+        "gemRate": 47.0
+      }
+    },
+    "Liu Rodriguez": {
+      "name": "Liu Rodriguez",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 1,
+          "gems": 0,
+          "grades": 1,
+          "gemRate": 0.0
+        }
+      },
+      "totals": {
+        "cards": 1,
+        "gems": 0,
+        "grades": 1,
+        "gemRate": 0.0
+      }
+    },
+    "Livan Soto": {
+      "name": "Livan Soto",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 86,
+          "gems": 247,
+          "grades": 435,
+          "gemRate": 57.0
+        }
+      },
+      "totals": {
+        "cards": 86,
+        "gems": 247,
+        "grades": 435,
+        "gemRate": 57.0
       }
     }
   }
