@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { buildEbaySearchUrl } from "@/lib/vzla-helpers";
 import { Link } from "react-router-dom";
 
-interface SoldRecord { avg?: number; taguchiSold?: number }
+interface SoldRecord { avg?: number; taguchiSold?: number; marketStabilityCV?: number }
 interface ListedRecord {
   avgListing?: number; taguchiListing?: number; trimmedListing?: number;
   avg?: number; average?: number; sport?: string;
@@ -87,6 +87,9 @@ const VzlaTopDeals = ({ athleteSportMap: externalMap }: VzlaTopDealsProps) => {
       if (ratio > 10) continue;
       const spread = lp - sp;
       if (spread >= 0) continue; // only underpriced (sold > listed)
+      // Skip deals with unreliable sold data (CV > 0.5 = extreme variance)
+      const cv = (soldData[key] as SoldRecord)?.marketStabilityCV;
+      if (cv != null && cv > 0.5) continue;
       const sport = athleteSportMap[key] || (listedData[key] as any)?.sport || "Other";
       items.push({
         name: key,
