@@ -38,6 +38,7 @@ export function useAthleteData() {
     price: "all",
     stability: "all",
     daysListed: "all",
+    signal: "all",
   });
 
   // Build indexes
@@ -81,8 +82,8 @@ export function useAthleteData() {
 
   // Filtered athletes
   const filteredAthletes = useMemo(
-    () => filterAthletes(athletes, filters, byName, byKey),
-    [athletes, filters, byName, byKey]
+    () => filterAthletes(athletes, filters, byName, byKey, ebaySoldRaw),
+    [athletes, filters, byName, byKey, ebaySoldRaw]
   );
 
   // Sorted
@@ -145,6 +146,7 @@ export function useAthleteData() {
     price: "all",
     stability: "all",
     daysListed: "all",
+    signal: "all",
   };
 
   const clearBudget = useCallback(() => {

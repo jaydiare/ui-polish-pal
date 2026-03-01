@@ -194,13 +194,15 @@ export interface Filters {
   price: string;
   stability: string;
   daysListed: string;
+  signal: string;
 }
 
 export function filterAthletes(
   list: Athlete[],
   filters: Filters,
   byName: Record<string, EbayAvgRecord>,
-  byKey: Record<string, EbayAvgRecord>
+  byKey: Record<string, EbayAvgRecord>,
+  ebaySoldRaw?: Record<string, any>
 ): Athlete[] {
   const q = norm(filters.search);
 
@@ -254,6 +256,26 @@ export function filterAthletes(
       if (pa == null) return 1;
       if (pb == null) return -1;
       return filters.price === "low" ? pa - pb : pb - pa;
+    });
+  }
+
+  // Signal filter (Buy Low, Flip Potential)
+  if (filters.signal && filters.signal !== "all") {
+    filtered = filtered.filter((a) => {
+      const avgNum = getEbayAvgNumber(a, byName, byKey);
+      if (avgNum == null) return false;
+      const soldRecord = ebaySoldRaw?.[a.name];
+      const soldAvg = soldRecord?.taguchiSold != null ? soldRecord.taguchiSold : null;
+      const cv = getMarketStabilityCV(a, byName, byKey);
+      const bucket = marketStabilityScoreFromCV(cv).bucket;
+
+      if (filters.signal === "buy_low") {
+        return soldAvg != null && soldAvg < avgNum;
+      }
+      if (filters.signal === "flip") {
+        return soldAvg != null && soldAvg >= avgNum && (bucket === "volatile" || bucket === "highly_unstable");
+      }
+      return true;
     });
   }
 
