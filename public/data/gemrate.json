@@ -1,13 +1,13 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-01T21:01:21.351915+00:00",
-    "athleteCount": 107,
+    "updatedAt": "2026-03-01T21:03:45.127112+00:00",
+    "athleteCount": 115,
     "graders": [
       "PSA"
     ],
     "batchInfo": {
-      "startIdx": 130,
-      "endIdx": 140,
+      "startIdx": 140,
+      "endIdx": 150,
       "totalAthletes": 575
     }
   },
@@ -1936,6 +1936,150 @@
         "gems": 1,
         "grades": 2,
         "gemRate": 50.0
+      }
+    },
+    "Elio Chacon": {
+      "name": "Elio Chacon",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 5,
+          "gems": 2,
+          "grades": 574,
+          "gemRate": 0.0
+        }
+      },
+      "totals": {
+        "cards": 5,
+        "gems": 2,
+        "grades": 574,
+        "gemRate": 0.0
+      }
+    },
+    "Elvis Andrus": {
+      "name": "Elvis Andrus",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 261,
+          "gems": 455,
+          "grades": 839,
+          "gemRate": 54.0
+        }
+      },
+      "totals": {
+        "cards": 261,
+        "gems": 455,
+        "grades": 839,
+        "gemRate": 54.0
+      }
+    },
+    "Elvis Araujo": {
+      "name": "Elvis Araujo",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 1,
+          "gems": 0,
+          "grades": 1,
+          "gemRate": 0.0
+        }
+      },
+      "totals": {
+        "cards": 1,
+        "gems": 0,
+        "grades": 1,
+        "gemRate": 0.0
+      }
+    },
+    "Ender Inciarte": {
+      "name": "Ender Inciarte",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 59,
+          "gems": 198,
+          "grades": 284,
+          "gemRate": 70.0
+        }
+      },
+      "totals": {
+        "cards": 59,
+        "gems": 198,
+        "grades": 284,
+        "gemRate": 70.0
+      }
+    },
+    "Endy Chavez": {
+      "name": "Endy Chavez",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 20,
+          "gems": 19,
+          "grades": 44,
+          "gemRate": 43.0
+        }
+      },
+      "totals": {
+        "cards": 20,
+        "gems": 19,
+        "grades": 44,
+        "gemRate": 43.0
+      }
+    },
+    "Enmanuel De Jesus": {
+      "name": "Enmanuel De Jesus",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 1,
+          "gems": 0,
+          "grades": 1,
+          "gemRate": 0.0
+        }
+      },
+      "totals": {
+        "cards": 1,
+        "gems": 0,
+        "grades": 1,
+        "gemRate": 0.0
+      }
+    },
+    "Enrique Gonzalez": {
+      "name": "Enrique Gonzalez",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 1,
+          "gems": 0,
+          "grades": 1,
+          "gemRate": 0.0
+        }
+      },
+      "totals": {
+        "cards": 1,
+        "gems": 0,
+        "grades": 1,
+        "gemRate": 0.0
+      }
+    },
+    "Enzo Hernandez": {
+      "name": "Enzo Hernandez",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 19,
+          "gems": 74,
+          "grades": 1780,
+          "gemRate": 4.0
+        }
+      },
+      "totals": {
+        "cards": 19,
+        "gems": 74,
+        "grades": 1780,
+        "gemRate": 4.0
       }
     }
   }
