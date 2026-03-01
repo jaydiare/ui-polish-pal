@@ -4,7 +4,7 @@ import VzlaNavbar from "@/components/VzlaNavbar";
 import VzlaFooter from "@/components/VzlaFooter";
 import VzlaEbayFooter from "@/components/VzlaEbayFooter";
 import VzlaSupplyDemand from "@/components/VzlaSupplyDemand";
-import { buildEbaySearchUrl } from "@/lib/vzla-helpers";
+import { buildEbaySearchUrl, buildEbayGradedSearchUrl } from "@/lib/vzla-helpers";
 import {
   ScatterChart,
   Scatter,
@@ -631,14 +631,18 @@ const GemrateChart = () => {
                             <span className="text-muted-foreground">SGC: <strong className="text-foreground">{d.SGC.toLocaleString()}</strong></span>
                             <span className="text-muted-foreground mt-1">Gem Rate: <strong className="text-foreground">{d.gemRate}%</strong></span>
                           </div>
+                          <div className="text-[9px] text-muted-foreground/60 mt-1.5">Click bar to search graded cards on eBay</div>
                         </div>
                       );
                     }}
                   />
                   <Legend verticalAlign="top" wrapperStyle={{ fontSize: 11 }} />
-                  <Bar dataKey="PSA" stackId="grades" fill={GRADER_COLORS.PSA} radius={[0, 0, 0, 0]} isAnimationActive={false} />
-                  <Bar dataKey="Beckett" stackId="grades" fill={GRADER_COLORS.Beckett} radius={[0, 0, 0, 0]} isAnimationActive={false} />
-                  <Bar dataKey="SGC" stackId="grades" fill={GRADER_COLORS.SGC} radius={[0, 4, 4, 0]} isAnimationActive={false} />
+                  <Bar dataKey="PSA" stackId="grades" fill={GRADER_COLORS.PSA} radius={[0, 0, 0, 0]} isAnimationActive={false} cursor="pointer"
+                    onClick={(data: any) => { if (data?.name) window.open(buildEbayGradedSearchUrl(data.name, data.sport), "_blank", "noopener,noreferrer"); }} />
+                  <Bar dataKey="Beckett" stackId="grades" fill={GRADER_COLORS.Beckett} radius={[0, 0, 0, 0]} isAnimationActive={false} cursor="pointer"
+                    onClick={(data: any) => { if (data?.name) window.open(buildEbayGradedSearchUrl(data.name, data.sport), "_blank", "noopener,noreferrer"); }} />
+                  <Bar dataKey="SGC" stackId="grades" fill={GRADER_COLORS.SGC} radius={[0, 4, 4, 0]} isAnimationActive={false} cursor="pointer"
+                    onClick={(data: any) => { if (data?.name) window.open(buildEbayGradedSearchUrl(data.name, data.sport), "_blank", "noopener,noreferrer"); }} />
                 </BarChart>
               </ResponsiveContainer>
             </div>
