@@ -131,7 +131,7 @@ export function formatCurrency(amount: number, currency: string = "USD"): string
 
 export function buildEbaySearchUrl(name: string, sport: string): string {
   const query = encodeURIComponent(`${name} ${sport}`);
-  return `https://www.ebay.ca/sch/i.html?_nkw=${query}&_sacat=261328&LH_BIN=1&LH_PrefLoc=1&mkevt=1&mkcid=1&mkrid=706-53473-19255-0&campid=5339142305&toolid=10001`;
+  return `https://www.ebay.com/sch/i.html?_nkw=${query}&_sacat=261328&LH_BIN=1&LH_PrefLoc=2&mkevt=1&mkcid=1&mkrid=706-53473-19255-0&campid=5339142305&toolid=10001`;
 }
 
 export function initialsFromName(name: string): string {
