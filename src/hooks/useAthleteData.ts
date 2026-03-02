@@ -129,37 +129,23 @@ export function useAthleteData() {
 
 
   const runBudget = useCallback((budgetDollars: number, maxCards: number | null, cardType: string = "raw", buyLowOnly: boolean = false) => {
-    // Build candidates based on cardType — "both" merges raw + graded with compound IDs
-    let candidates: BudgetCandidate[] = [];
+    const useName = cardType === "graded" ? gradedByName : byName;
+    const useKey = cardType === "graded" ? gradedByKey : byKey;
 
-    const addCandidates = (useName: Record<string, any>, useKey: Record<string, any>, suffix: string) => {
-      for (const a of filteredAthletes) {
-        const price = getEbayAvgNumber(a, useName, useKey);
-        if (price == null) continue;
-        candidates.push({
-          name: suffix ? `${a.name}|${suffix}` : a.name,
-          sport: a.sport,
-          price,
-          stabilityPct: (() => {
-            const cv = getMarketStabilityCV(a, useName, useKey);
-            return cv != null ? cv * 100 : null;
-          })(),
-          daysOnMarket: getAvgDaysOnMarket(a, useName, useKey),
-        });
-      }
-    };
-
-    if (cardType === "raw" || cardType === "both") {
-      addCandidates(byName, byKey, cardType === "both" ? "raw" : "");
-    }
-    if (cardType === "graded" || cardType === "both") {
-      addCandidates(gradedByName, gradedByKey, cardType === "both" ? "graded" : "");
-    }
+    let candidates: BudgetCandidate[] = filteredAthletes.map((a) => ({
+      name: a.name,
+      sport: a.sport,
+      price: getEbayAvgNumber(a, useName, useKey),
+      stabilityPct: (() => {
+        const cv = getMarketStabilityCV(a, useName, useKey);
+        return cv != null ? cv * 100 : null;
+      })(),
+      daysOnMarket: getAvgDaysOnMarket(a, useName, useKey),
+    }));
 
     if (buyLowOnly) {
       candidates = candidates.filter((c) => {
-        const baseName = c.name.includes("|") ? c.name.split("|")[0] : c.name;
-        const soldRecord = ebaySoldRaw?.[baseName];
+        const soldRecord = ebaySoldRaw?.[c.name];
         const soldAvg = soldRecord?.taguchiSold != null ? soldRecord.taguchiSold : null;
         return soldAvg != null && c.price != null && soldAvg < c.price;
       });
