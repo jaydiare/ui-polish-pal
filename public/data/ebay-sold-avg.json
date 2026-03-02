@@ -1,12 +1,12 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-02T18:45:30.336Z",
+    "updatedAt": "2026-03-02T21:29:34.497Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. Brand-filtered. Junk titles removed. Taguchi winsorized mean + market stability CV. Ungraded condition policy (permissive for sold). Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 250,
-      "endIdx": 260,
-      "totalAthletes": 553
+      "startIdx": 260,
+      "endIdx": 270,
+      "totalAthletes": 560
     },
     "maxPages": 3,
     "minSampleSize": 4,
@@ -3921,6 +3921,126 @@
   },
   "Jose Mujica": {
     "keyword": "Jose Mujica Baseball",
+    "nScraped": 0,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
+    "currency": "USD",
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
+  },
+  "Jose Nieves": {
+    "keyword": "Jose Nieves Baseball",
+    "nScraped": 203,
+    "nSoldUsed": 6,
+    "avg": 2.645,
+    "taguchiSold": 2.645,
+    "medianSold": 2.645,
+    "marketStabilityCV": 0.9753396014553242,
+    "currency": "USD",
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
+  },
+  "Jose Ortega": {
+    "keyword": "Jose Ortega Baseball",
+    "nScraped": 60,
+    "nSoldUsed": 39,
+    "avg": 1.6989743589743584,
+    "taguchiSold": 1.6989743589743584,
+    "medianSold": 1.74,
+    "marketStabilityCV": 0.11408233627693737,
+    "currency": "USD",
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
+  },
+  "Jose Osuna": {
+    "keyword": "Jose Osuna Baseball",
+    "nScraped": 247,
+    "nSoldUsed": 119,
+    "avg": 4.282268907563029,
+    "taguchiSold": 4.282268907563029,
+    "medianSold": 3.84,
+    "marketStabilityCV": 0.37305965826525084,
+    "currency": "USD",
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
+  },
+  "Jose Peraza": {
+    "keyword": "Jose Peraza Baseball",
+    "nScraped": 163,
+    "nSoldUsed": 42,
+    "avg": 1.968095238095239,
+    "taguchiSold": 1.968095238095239,
+    "medianSold": 1.99,
+    "marketStabilityCV": 0.1687929650024711,
+    "currency": "USD",
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
+  },
+  "Jose Pirela": {
+    "keyword": "Jose Pirela Baseball",
+    "nScraped": 180,
+    "nSoldUsed": 6,
+    "avg": 7.495,
+    "taguchiSold": 7.495,
+    "medianSold": 7.495,
+    "marketStabilityCV": 0.3661227502469489,
+    "currency": "USD",
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
+  },
+  "Jose Rodriguez": {
+    "keyword": "Jose Rodriguez Baseball",
+    "nScraped": 180,
+    "nSoldUsed": 39,
+    "avg": 2.079743589743591,
+    "taguchiSold": 2.079743589743591,
+    "medianSold": 1.99,
+    "marketStabilityCV": 0.382210491121851,
+    "currency": "USD",
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
+  },
+  "Jose Rondon": {
+    "keyword": "Jose Rondon Baseball",
+    "nScraped": 198,
+    "nSoldUsed": 110,
+    "avg": 1.2302727272727274,
+    "taguchiSold": 1.2302727272727274,
+    "medianSold": 1.1,
+    "marketStabilityCV": 0.19966213168190783,
+    "currency": "USD",
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
+  },
+  "Jose Ruiz": {
+    "keyword": "Jose Ruiz Baseball",
+    "nScraped": 60,
+    "nSoldUsed": 33,
+    "avg": 8.176969696969698,
+    "taguchiSold": 8.176969696969698,
+    "medianSold": 4.99,
+    "marketStabilityCV": 0.7533458247040954,
+    "currency": "USD",
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
+  },
+  "Jose Suarez": {
+    "keyword": "Jose Suarez Baseball",
+    "nScraped": 0,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
+    "currency": "USD",
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
+  },
+  "Jose Tabata": {
+    "keyword": "Jose Tabata Baseball",
     "nScraped": 0,
     "nSoldUsed": 0,
     "avg": null,
