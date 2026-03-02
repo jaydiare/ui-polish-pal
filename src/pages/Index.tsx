@@ -26,6 +26,8 @@ const Index = () => {
     updateFilter,
     sort,
     setSort,
+    priceMode,
+    setPriceMode,
     hasMore,
     remainingCount,
     loadMore,
@@ -56,9 +58,10 @@ const Index = () => {
           filters={filters}
           updateFilter={updateFilter}
           sportOptions={sportOptions}
-          
           totalCount={athletes.length}
           filteredCount={filteredAthletes.length}
+          priceMode={priceMode}
+          onPriceModeChange={setPriceMode}
         />
         <VzlaAthleteGrid
           athletes={budgetChosenIds.size > 0 ? filteredAthletes : paginatedAthletes}

@@ -86,16 +86,21 @@ export function useAthleteData() {
   // Sort
   const [sort, setSort] = useState<SortOption>("default");
 
+  // Price mode: which price set drives filters & sorting
+  const [priceMode, setPriceMode] = useState<"raw" | "graded">("raw");
+  const activeByName = priceMode === "graded" ? gradedByName : byName;
+  const activeByKey = priceMode === "graded" ? gradedByKey : byKey;
+
   // Filtered athletes
   const filteredAthletes = useMemo(
-    () => filterAthletes(athletes, filters, byName, byKey, ebaySoldRaw),
-    [athletes, filters, byName, byKey, ebaySoldRaw]
+    () => filterAthletes(athletes, filters, activeByName, activeByKey, ebaySoldRaw),
+    [athletes, filters, activeByName, activeByKey, ebaySoldRaw]
   );
 
   // Sorted
   const sortedAthletes = useMemo(
-    () => sortAthletes(filteredAthletes, sort, byName, byKey),
-    [filteredAthletes, sort, byName, byKey]
+    () => sortAthletes(filteredAthletes, sort, activeByName, activeByKey),
+    [filteredAthletes, sort, activeByName, activeByKey]
   );
 
   // Paginated
@@ -190,6 +195,8 @@ export function useAthleteData() {
     updateFilter,
     sort,
     setSort,
+    priceMode,
+    setPriceMode,
     hasMore,
     remainingCount,
     loadMore,

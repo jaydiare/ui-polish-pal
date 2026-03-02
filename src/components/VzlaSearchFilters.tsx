@@ -6,6 +6,8 @@ interface VzlaSearchFiltersProps {
   sportOptions: string[];
   totalCount: number;
   filteredCount: number;
+  priceMode: "raw" | "graded";
+  onPriceModeChange: (mode: "raw" | "graded") => void;
 }
 
 const DEFAULT_FILTERS: Filters = {
@@ -23,6 +25,8 @@ const VzlaSearchFilters = ({
   sportOptions,
   totalCount,
   filteredCount,
+  priceMode,
+  onPriceModeChange,
 }: VzlaSearchFiltersProps) => {
   const hasActiveFilter =
     filters.search !== "" ||
@@ -39,6 +43,27 @@ const VzlaSearchFilters = ({
 
   return (
     <div className="glass-panel p-5 mb-6" role="search" aria-label="Filter athletes">
+      {/* Price mode toggle */}
+      <div className="flex items-center justify-between mb-4">
+        <span className="text-[10px] tracking-widest uppercase font-bold text-muted-foreground">
+          Filtering by
+        </span>
+        <div className="inline-flex items-center rounded-full border border-border/50 bg-card/80 backdrop-blur-sm p-0.5">
+          <button
+            onClick={() => onPriceModeChange("raw")}
+            className={`px-3 py-1 rounded-full text-[10px] font-bold tracking-wide transition-all ${priceMode === "raw" ? "bg-primary/20 text-primary" : "text-muted-foreground hover:text-foreground"}`}
+          >
+            🃏 Raw Prices
+          </button>
+          <button
+            onClick={() => onPriceModeChange("graded")}
+            className={`px-3 py-1 rounded-full text-[10px] font-bold tracking-wide transition-all ${priceMode === "graded" ? "bg-primary/20 text-primary" : "text-muted-foreground hover:text-foreground"}`}
+          >
+            🏅 Graded Prices
+          </button>
+        </div>
+      </div>
+
       <div className="grid grid-cols-1 lg:grid-cols-[minmax(200px,1.2fr)_repeat(4,minmax(120px,1fr))] gap-4 items-end">
         {/* Search */}
         <div>
