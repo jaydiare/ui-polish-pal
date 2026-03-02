@@ -12,7 +12,7 @@ import requests
 
 GEMRATE_URL = "https://www.gemrate.com/player"
 
-BATCH_SIZE = 10  # athletes per run
+BATCH_SIZE = 20  # athletes per run
 
 # Rotate realistic browser User-Agents to reduce Cloudflare blocks
 USER_AGENTS = [
