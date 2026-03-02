@@ -1,13 +1,13 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-02T10:39:55.428477+00:00",
-    "athleteCount": 378,
+    "updatedAt": "2026-03-02T11:40:52.529878+00:00",
+    "athleteCount": 393,
     "graders": [
       "PSA"
     ],
     "batchInfo": {
-      "startIdx": 430,
-      "endIdx": 450,
+      "startIdx": 450,
+      "endIdx": 470,
       "totalAthletes": 575
     }
   },
@@ -6814,6 +6814,276 @@
         "gems": 27,
         "grades": 80,
         "gemRate": 34.0
+      }
+    },
+    "Vic Davalillo": {
+      "name": "Vic Davalillo",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 46,
+          "gems": 91,
+          "grades": 3356,
+          "gemRate": 3.0
+        }
+      },
+      "totals": {
+        "cards": 46,
+        "gems": 91,
+        "grades": 3356,
+        "gemRate": 3.0
+      }
+    },
+    "Victor Martinez": {
+      "name": "Victor Martinez",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 342,
+          "gems": 384,
+          "grades": 826,
+          "gemRate": 46.0
+        }
+      },
+      "totals": {
+        "cards": 342,
+        "gems": 384,
+        "grades": 826,
+        "gemRate": 46.0
+      }
+    },
+    "Victor Reyes": {
+      "name": "Victor Reyes",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 36,
+          "gems": 30,
+          "grades": 68,
+          "gemRate": 44.0
+        }
+      },
+      "totals": {
+        "cards": 36,
+        "gems": 30,
+        "grades": 68,
+        "gemRate": 44.0
+      }
+    },
+    "Victor Zambrano": {
+      "name": "Victor Zambrano",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 5,
+          "gems": 3,
+          "grades": 5,
+          "gemRate": 60.0
+        }
+      },
+      "totals": {
+        "cards": 5,
+        "gems": 3,
+        "grades": 5,
+        "gemRate": 60.0
+      }
+    },
+    "Wiki Gonzalez": {
+      "name": "Wiki Gonzalez",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 1,
+          "gems": 0,
+          "grades": 1,
+          "gemRate": 0.0
+        }
+      },
+      "totals": {
+        "cards": 1,
+        "gems": 0,
+        "grades": 1,
+        "gemRate": 0.0
+      }
+    },
+    "Wil Ledezma": {
+      "name": "Wil Ledezma",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 9,
+          "gems": 9,
+          "grades": 19,
+          "gemRate": 47.0
+        }
+      },
+      "totals": {
+        "cards": 9,
+        "gems": 9,
+        "grades": 19,
+        "gemRate": 47.0
+      }
+    },
+    "Wilfredo Rodriguez": {
+      "name": "Wilfredo Rodriguez",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 17,
+          "gems": 6,
+          "grades": 36,
+          "gemRate": 17.0
+        }
+      },
+      "totals": {
+        "cards": 17,
+        "gems": 6,
+        "grades": 36,
+        "gemRate": 17.0
+      }
+    },
+    "Wilfredo Tovar": {
+      "name": "Wilfredo Tovar",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 2,
+          "gems": 3,
+          "grades": 4,
+          "gemRate": 75.0
+        }
+      },
+      "totals": {
+        "cards": 2,
+        "gems": 3,
+        "grades": 4,
+        "gemRate": 75.0
+      }
+    },
+    "William Bergolla": {
+      "name": "William Bergolla",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 228,
+          "gems": 545,
+          "grades": 970,
+          "gemRate": 56.0
+        }
+      },
+      "totals": {
+        "cards": 228,
+        "gems": 545,
+        "grades": 970,
+        "gemRate": 56.0
+      }
+    },
+    "William Contreras": {
+      "name": "William Contreras",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 695,
+          "gems": 1024,
+          "grades": 2281,
+          "gemRate": 45.0
+        }
+      },
+      "totals": {
+        "cards": 695,
+        "gems": 1024,
+        "grades": 2281,
+        "gemRate": 45.0
+      }
+    },
+    "William Cuevas": {
+      "name": "William Cuevas",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 1,
+          "gems": 1,
+          "grades": 1,
+          "gemRate": 100.0
+        }
+      },
+      "totals": {
+        "cards": 1,
+        "gems": 1,
+        "grades": 1,
+        "gemRate": 100.0
+      }
+    },
+    "Willians Astudillo": {
+      "name": "Willians Astudillo",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 164,
+          "gems": 287,
+          "grades": 461,
+          "gemRate": 62.0
+        }
+      },
+      "totals": {
+        "cards": 164,
+        "gems": 287,
+        "grades": 461,
+        "gemRate": 62.0
+      }
+    },
+    "Willie Canate": {
+      "name": "Willie Canate",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 1,
+          "gems": 0,
+          "grades": 2,
+          "gemRate": 0.0
+        }
+      },
+      "totals": {
+        "cards": 1,
+        "gems": 0,
+        "grades": 2,
+        "gemRate": 0.0
+      }
+    },
+    "Willie Martinez": {
+      "name": "Willie Martinez",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 7,
+          "gems": 3,
+          "grades": 27,
+          "gemRate": 11.0
+        }
+      },
+      "totals": {
+        "cards": 7,
+        "gems": 3,
+        "grades": 27,
+        "gemRate": 11.0
+      }
+    },
+    "Willson Contreras": {
+      "name": "Willson Contreras",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 850,
+          "gems": 1549,
+          "grades": 2682,
+          "gemRate": 58.0
+        }
+      },
+      "totals": {
+        "cards": 850,
+        "gems": 1549,
+        "grades": 2682,
+        "gemRate": 58.0
       }
     }
   }
