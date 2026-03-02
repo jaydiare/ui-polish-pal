@@ -2,23 +2,34 @@ import { useState, useEffect } from "react";
 
 const cache = new Map<string, string | null>();
 
-// ── MLB headshot via Stats API (public, no key needed) ──
+// ── MLB headshot via lookup API ──
+// The statsapi.mlb.com API may block CORS, so we use the lookup endpoint
+// and validate the image using an Image() element (not subject to CORS).
 async function fetchMlbHeadshot(name: string): Promise<string | null> {
   try {
     const q = encodeURIComponent(name);
     const res = await fetch(
-      `https://statsapi.mlb.com/api/v1/people/search?names=${q}&hydrate=currentTeam`
+      `https://lookup-service-prod.mlb.com/json/named.search_player_all.bam?sport_code=%27mlb%27&active_sw=%27Y%27&name_part=%27${q}%27`
     );
     const data = await res.json();
-    const person = data?.people?.[0];
-    if (!person?.id) return null;
+    const results = data?.search_player_all?.queryResults;
+    const row = results?.totalSize === "1"
+      ? results.row
+      : Array.isArray(results?.row) ? results.row[0] : null;
+    if (!row?.player_id) return null;
 
-    const headshotUrl = `https://img.mlb.com/mlb/images/players/head_shot/${person.id}.jpg`;
+    const headshotUrl = `https://img.mlb.com/mlb/images/players/head_shot/${row.player_id}.jpg`;
 
-    // Verify the image actually exists (some IDs return a generic silhouette)
-    const check = await fetch(headshotUrl, { method: "HEAD" });
-    if (check.ok) return headshotUrl;
-    return null;
+    // Validate image loads (Image element bypasses CORS)
+    return new Promise<string | null>((resolve) => {
+      const img = new Image();
+      img.onload = () => {
+        // Generic silhouettes are very small; real headshots are larger
+        resolve(img.naturalWidth > 50 ? headshotUrl : null);
+      };
+      img.onerror = () => resolve(null);
+      img.src = headshotUrl;
+    });
   } catch {
     return null;
   }
