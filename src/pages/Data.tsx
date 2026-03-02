@@ -4,6 +4,7 @@ import VzlaNavbar from "@/components/VzlaNavbar";
 import VzlaFooter from "@/components/VzlaFooter";
 import VzlaEbayFooter from "@/components/VzlaEbayFooter";
 import VzlaSupplyDemand from "@/components/VzlaSupplyDemand";
+import Sparkline from "@/components/Sparkline";
 import { buildEbaySearchUrl, buildEbayGradedSearchUrl } from "@/lib/vzla-helpers";
 import {
   ScatterChart,
@@ -207,7 +208,7 @@ const Data = () => {
   const [athleteSportMap, setAthleteSportMap] = useState<Record<string, string>>({});
   const [pinnedDot, setPinnedDot] = useState<PinnedData | null>(null);
   const scatterWrapRef = useRef<HTMLDivElement>(null);
-
+  const [athleteHistory, setAthleteHistory] = useState<Record<string, any[]>>({});
   // Per-section toggles
   const [scatterMode, setScatterMode] = useState<CardMode>("raw");
   const [gapsMode, setGapsMode] = useState<CardMode>("raw");
@@ -235,7 +236,8 @@ const Data = () => {
       fetchJson("https://raw.githubusercontent.com/jaydiare/ui-polish-pal/main/data/ebay-graded-avg.json"),
       fetchJson("https://raw.githubusercontent.com/jaydiare/ui-polish-pal/main/data/ebay-graded-sold-avg.json"),
       fetchJson("data/athletes.json"),
-    ]).then(([listed, sold, gradedListed, gradedSold, athletes]) => {
+      fetchJson("https://raw.githubusercontent.com/jaydiare/ui-polish-pal/main/data/athlete-history.json"),
+    ]).then(([listed, sold, gradedListed, gradedSold, athletes, history]) => {
       if (listed) setListedData(listed);
       if (sold) setSoldData(sold);
       if (gradedListed) setGradedListedData(gradedListed);
@@ -251,6 +253,7 @@ const Data = () => {
         }
         setAthleteSportMap(map);
       }
+      if (history && typeof history === "object") setAthleteHistory(history);
     });
   }, []);
 
@@ -880,7 +883,17 @@ const Data = () => {
                         <p className="text-xs text-muted-foreground/50 italic">No athletes in this category</p>
                       ) : (
                         <div className="space-y-1.5 max-h-[220px] overflow-y-auto pr-1">
-                          {group.slice(0, 8).map((a) => (
+                          {group.slice(0, 8).map((a) => {
+                            const hist = athleteHistory[a.name];
+                            const key = signalMode === "graded" ? "graded" : "raw";
+                            const sparkValues = hist && hist.length >= 7
+                              ? hist.map((h: any) => h?.[key]?.price ?? null).filter((v: any): v is number => v != null && Number.isFinite(v))
+                              : null;
+                            const sparkDates = hist && hist.length >= 7
+                              ? hist.filter((h: any) => h?.[key]?.price != null && Number.isFinite(h[key].price)).map((h: any) => h?.date ?? "")
+                              : null;
+                            const hasSparkline = sparkValues != null && sparkValues.length >= 7;
+                            return (
                             <a
                               key={a.name}
                               href={buildEbaySearchUrl(a.name, a.sport)}
@@ -888,10 +901,15 @@ const Data = () => {
                               rel="noopener noreferrer"
                               className="flex items-center justify-between gap-2 rounded-lg px-2.5 py-1.5 hover:bg-accent/50 transition-colors group"
                             >
-                              <div className="min-w-0">
+                              <div className="min-w-0 flex-1">
                                 <div className="text-xs font-semibold text-foreground truncate group-hover:text-primary transition-colors">{a.name}</div>
                                 <div className="text-[9px] text-muted-foreground">{a.sport}</div>
                               </div>
+                              {hasSparkline && (
+                                <div className="shrink-0">
+                                  <Sparkline data={sparkValues} dates={sparkDates!} width={56} height={18} />
+                                </div>
+                              )}
                               <div className="text-right shrink-0">
                                 <div className={`text-xs font-mono font-bold ${a.spreadPct > 0 ? "text-red-400" : "text-green-400"}`}>
                                   {a.spreadPct > 0 ? "+" : ""}{a.spreadPct.toFixed(0)}%
@@ -903,7 +921,8 @@ const Data = () => {
                                 </div>
                               </div>
                             </a>
-                          ))}
+                            );
+                          })}
                           {group.length > 8 && (
                             <div className="text-[10px] text-muted-foreground/60 text-center pt-1">
                               +{group.length - 8} more
