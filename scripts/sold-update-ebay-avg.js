@@ -51,7 +51,7 @@ const TAGUCHI_TRIM_PCT = 0.4;
 const BRANDS = [
   "topps", "panini", "upper deck", "leaf",
   "artesania sport", "ovenca", "sport grafico",
-  "line up", "venezuelan league", "byn", "O-Pee-Chee",
+  "line up", "venezuelan league", "byn", "O-Pee-Chee", "fleer",
 ];
 
 // --------------------
