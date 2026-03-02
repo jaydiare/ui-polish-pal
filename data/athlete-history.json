@@ -1,1 +1,938 @@
-{}
+{
+  "Alejandro Machado": [
+    {
+      "date": "2026-03-02",
+      "raw": {
+        "price": 2.5,
+        "days": 1355,
+        "n": 1,
+        "idx": 56.02
+      },
+      "sold": 8.42
+    }
+  ],
+  "Alex Cabrera": [
+    {
+      "date": "2026-03-02",
+      "raw": {
+        "price": 3.38,
+        "days": 2514,
+        "n": 1,
+        "idx": 51.79
+      },
+      "sold": 8.76
+    }
+  ],
+  "Alex Delgado": [
+    {
+      "date": "2026-03-02",
+      "raw": {
+        "price": 3.49,
+        "days": 1183,
+        "n": 1,
+        "idx": 112.57
+      },
+      "sold": 1.51
+    }
+  ],
+  "Alex Escobar": [
+    {
+      "date": "2026-03-02",
+      "raw": {
+        "price": 2.19,
+        "cv": 0.6695,
+        "days": 1455,
+        "n": 7,
+        "idx": 97.04
+      },
+      "sold": 2.47
+    }
+  ],
+  "Alex Herrera": [
+    {
+      "date": "2026-03-02",
+      "raw": {
+        "price": 20.99,
+        "cv": 0,
+        "days": 1845,
+        "n": 4,
+        "idx": 911.52
+      },
+      "sold": 9.81
+    }
+  ],
+  "Alex Prieto": [
+    {
+      "date": "2026-03-02",
+      "raw": {
+        "price": 39.99,
+        "days": 1319,
+        "n": 1,
+        "idx": 190.43
+      },
+      "sold": 3.44
+    }
+  ],
+  "Alex Romero": [
+    {
+      "date": "2026-03-02",
+      "raw": {
+        "price": 5.99,
+        "cv": 0,
+        "days": 1459,
+        "n": 5,
+        "idx": 201.31
+      },
+      "sold": 2.95
+    }
+  ],
+  "Alex Torres": [
+    {
+      "date": "2026-03-02",
+      "raw": {
+        "price": 5.99,
+        "cv": 0,
+        "days": 1491,
+        "n": 8,
+        "idx": 170.92
+      },
+      "sold": 1.45
+    }
+  ],
+  "Alexi Amarista": [
+    {
+      "date": "2026-03-02",
+      "raw": {
+        "price": 5.99,
+        "cv": 0.1755,
+        "days": 1739,
+        "n": 10,
+        "idx": 281.46
+      },
+      "sold": 0.45
+    }
+  ],
+  "Alexis Infante": [
+    {
+      "date": "2026-03-02",
+      "raw": {
+        "price": 3.49,
+        "cv": 0,
+        "days": 1104,
+        "n": 3,
+        "idx": 205.71
+      },
+      "sold": 0.99
+    }
+  ],
+  "Anderson Machado": [
+    {
+      "date": "2026-03-02",
+      "raw": {
+        "price": 6.95,
+        "days": 1885,
+        "n": 1,
+        "idx": 190.1
+      },
+      "sold": 20.58
+    }
+  ],
+  "Andres Galarraga": [
+    {
+      "date": "2026-03-02",
+      "raw": {
+        "price": 1.35,
+        "cv": 0.2824,
+        "days": 1087,
+        "n": 4,
+        "idx": 25.23
+      },
+      "sold": 5
+    }
+  ],
+  "Angel Bravo": [
+    {
+      "date": "2026-03-02",
+      "raw": {
+        "price": 1.48,
+        "n": 2,
+        "idx": 29.9
+      },
+      "sold": 2.22
+    }
+  ],
+  "Angel Salazar": [
+    {
+      "date": "2026-03-02",
+      "raw": {
+        "price": 14.99,
+        "days": 1159,
+        "n": 2,
+        "idx": 1176.66
+      },
+      "sold": 1
+    }
+  ],
+  "Anibal Sanchez": [
+    {
+      "date": "2026-03-02",
+      "raw": {
+        "price": 1.31,
+        "days": 459,
+        "n": 1,
+        "idx": 59.82
+      },
+      "sold": 1.76
+    }
+  ],
+  "Asdrubal Cabrera": [
+    {
+      "date": "2026-03-02",
+      "raw": {
+        "price": 4.95,
+        "days": 2318,
+        "n": 1,
+        "idx": 364.86
+      },
+      "sold": 2.35
+    }
+  ],
+  "Avisail Garcia": [
+    {
+      "date": "2026-03-02",
+      "raw": {
+        "price": 0.99,
+        "days": 1307,
+        "n": 1,
+        "idx": 84.78
+      },
+      "sold": 1.48
+    }
+  ],
+  "Carlos Tocci": [
+    {
+      "date": "2026-03-02",
+      "raw": {
+        "price": 1.99,
+        "days": 2066,
+        "n": 1,
+        "idx": 78.69
+      },
+      "sold": 1.12
+    }
+  ],
+  "Cesar Gutierrez": [
+    {
+      "date": "2026-03-02",
+      "raw": {
+        "price": 13.25,
+        "days": 2443,
+        "n": 1,
+        "idx": 367.75
+      },
+      "sold": 3.73
+    }
+  ],
+  "Cesar Tovar": [
+    {
+      "date": "2026-03-02",
+      "raw": {
+        "price": 10.26,
+        "days": 182,
+        "n": 1,
+        "idx": 267.64
+      },
+      "sold": 1.71
+    }
+  ],
+  "Darwin Cubillan": [
+    {
+      "date": "2026-03-02",
+      "raw": {
+        "price": 3.4,
+        "days": 1732,
+        "n": 1,
+        "idx": 129.68
+      },
+      "sold": 1.8
+    }
+  ],
+  "Dilson Torres": [
+    {
+      "date": "2026-03-02",
+      "raw": {
+        "price": 1.56,
+        "days": 1236,
+        "n": 1,
+        "idx": 106.88
+      },
+      "sold": 1.52
+    }
+  ],
+  "Eduardo Villacis": [
+    {
+      "date": "2026-03-02",
+      "raw": {
+        "price": 12,
+        "days": 1046,
+        "n": 1,
+        "idx": 658.9
+      },
+      "sold": 1.88
+    }
+  ],
+  "Elvis Andrus": [
+    {
+      "date": "2026-03-02",
+      "raw": {
+        "price": 3.2,
+        "days": 1226,
+        "n": 2,
+        "idx": 61.84
+      },
+      "sold": 3.41
+    }
+  ],
+  "Ender Inciarte": [
+    {
+      "date": "2026-03-02",
+      "raw": {
+        "price": 0.99,
+        "days": 1156,
+        "n": 1,
+        "idx": 53.23
+      },
+      "sold": 1.25
+    }
+  ],
+  "Endy Chavez": [
+    {
+      "date": "2026-03-02",
+      "raw": {
+        "price": 15.99,
+        "cv": 0,
+        "days": 1378,
+        "n": 4,
+        "idx": 481.86
+      },
+      "sold": 2.38
+    }
+  ],
+  "Enrique Gonzalez": [
+    {
+      "date": "2026-03-02",
+      "raw": {
+        "price": 3.95,
+        "days": 30,
+        "n": 1,
+        "idx": 73.11
+      },
+      "sold": 1.84
+    }
+  ],
+  "Enzo Hernandez": [
+    {
+      "date": "2026-03-02",
+      "raw": {
+        "price": 2.25,
+        "days": 2387,
+        "n": 1,
+        "idx": 135.87
+      },
+      "sold": 1.52
+    }
+  ],
+  "Francisco Arcia": [
+    {
+      "date": "2026-03-02",
+      "raw": {
+        "price": 1.59,
+        "days": 1093,
+        "n": 1,
+        "idx": 51.19
+      },
+      "sold": 0.99
+    }
+  ],
+  "Franklin Barreto": [
+    {
+      "date": "2026-03-02",
+      "raw": {
+        "price": 2.49,
+        "days": 1058,
+        "n": 1,
+        "idx": 164.3
+      },
+      "sold": 2.19
+    }
+  ],
+  "Fred Manrique": [
+    {
+      "date": "2026-03-02",
+      "raw": {
+        "price": 1.62,
+        "days": 1520,
+        "n": 1,
+        "idx": 205.15
+      },
+      "sold": 1.66
+    }
+  ],
+  "Freddy Garcia": [
+    {
+      "date": "2026-03-02",
+      "raw": {
+        "price": 1.46,
+        "days": 772,
+        "n": 1,
+        "idx": 123.74
+      }
+    }
+  ],
+  "Gustavo Molina": [
+    {
+      "date": "2026-03-02",
+      "raw": {
+        "price": 12,
+        "days": 1141,
+        "n": 1,
+        "idx": 214.7
+      },
+      "sold": 1.9
+    }
+  ],
+  "Henry Rodriguez": [
+    {
+      "date": "2026-03-02",
+      "raw": {
+        "price": 1.38,
+        "days": 970,
+        "n": 1,
+        "idx": 121.08
+      }
+    }
+  ],
+  "Jeanmar Gomez": [
+    {
+      "date": "2026-03-02",
+      "raw": {
+        "price": 9.99,
+        "cv": 0,
+        "days": 1842,
+        "n": 3,
+        "idx": 380.12
+      },
+      "sold": 1.21
+    }
+  ],
+  "Jesus Delgado": [
+    {
+      "date": "2026-03-02",
+      "raw": {
+        "price": 0.99,
+        "days": 1038,
+        "n": 1,
+        "idx": 41.46
+      },
+      "sold": 5.32
+    }
+  ],
+  "Jesus Sucre": [
+    {
+      "date": "2026-03-02",
+      "raw": {
+        "price": 2.39,
+        "days": 941,
+        "n": 1,
+        "idx": 147.72
+      },
+      "sold": 0.99
+    }
+  ],
+  "Joe Ortiz": [
+    {
+      "date": "2026-03-02",
+      "raw": {
+        "price": 1.5,
+        "days": 1225,
+        "n": 1,
+        "idx": 27.99
+      }
+    }
+  ],
+  "Johnny Paredes": [
+    {
+      "date": "2026-03-02",
+      "raw": {
+        "price": 12.99,
+        "days": 1526,
+        "n": 1,
+        "idx": 1005.56
+      }
+    }
+  ],
+  "Jorge Velandia": [
+    {
+      "date": "2026-03-02",
+      "raw": {
+        "price": 10,
+        "days": 1046,
+        "n": 1,
+        "idx": 375.92
+      }
+    }
+  ],
+  "Jose Herrera": [
+    {
+      "date": "2026-03-02",
+      "raw": {
+        "price": 0.73,
+        "days": 61,
+        "n": 1,
+        "idx": 49.64
+      }
+    }
+  ],
+  "Jose Lopez": [
+    {
+      "date": "2026-03-02",
+      "raw": {
+        "price": 7.79,
+        "days": 2849,
+        "n": 1,
+        "idx": 400.62
+      }
+    }
+  ],
+  "Jose Malave": [
+    {
+      "date": "2026-03-02",
+      "raw": {
+        "price": 14,
+        "days": 1819,
+        "n": 1,
+        "idx": 833.07
+      }
+    }
+  ],
+  "Jose Mijares": [
+    {
+      "date": "2026-03-02",
+      "raw": {
+        "price": 22.07,
+        "days": 209,
+        "n": 1,
+        "idx": 584.91
+      }
+    }
+  ],
+  "Jose Ortega": [
+    {
+      "date": "2026-03-02",
+      "raw": {
+        "price": 0.99,
+        "days": 1749,
+        "n": 1,
+        "idx": 56.92
+      }
+    }
+  ],
+  "Jose Ruiz": [
+    {
+      "date": "2026-03-02",
+      "raw": {
+        "price": 12,
+        "days": 1806,
+        "n": 1,
+        "idx": 727.07
+      }
+    }
+  ],
+  "Jose Torres": [
+    {
+      "date": "2026-03-02",
+      "raw": {
+        "price": 2.16,
+        "days": 1499,
+        "n": 1,
+        "idx": 79.01
+      }
+    }
+  ],
+  "Juan Graterol": [
+    {
+      "date": "2026-03-02",
+      "raw": {
+        "price": 10,
+        "days": 1651,
+        "n": 1,
+        "idx": 682.39
+      }
+    }
+  ],
+  "Juan Rivera": [
+    {
+      "date": "2026-03-02",
+      "raw": {
+        "price": 15.99,
+        "days": 1894,
+        "n": 2,
+        "idx": 1222.88
+      }
+    }
+  ],
+  "Julio Machado": [
+    {
+      "date": "2026-03-02",
+      "raw": {
+        "price": 6.34,
+        "days": 2217,
+        "n": 1,
+        "idx": 455.86
+      }
+    }
+  ],
+  "Luis Alexander Basabe": [
+    {
+      "date": "2026-03-02",
+      "raw": {
+        "price": 3.73,
+        "cv": 0.3733,
+        "days": 1338,
+        "n": 9,
+        "idx": 128.61
+      }
+    }
+  ],
+  "Luis Aponte": [
+    {
+      "date": "2026-03-02",
+      "raw": {
+        "price": 1.69,
+        "days": 1704,
+        "n": 1,
+        "idx": 79.07
+      }
+    }
+  ],
+  "Luis Curvelo": [
+    {
+      "date": "2026-03-02",
+      "raw": {
+        "price": 9.03,
+        "days": 1200,
+        "n": 1,
+        "idx": 75.2
+      }
+    }
+  ],
+  "Luis Oviedo": [
+    {
+      "date": "2026-03-02",
+      "raw": {
+        "price": 24.99,
+        "days": 1538,
+        "n": 1,
+        "idx": 617.81
+      }
+    }
+  ],
+  "Luis Sanchez": [
+    {
+      "date": "2026-03-02",
+      "raw": {
+        "price": 1.29,
+        "days": 1721,
+        "n": 2,
+        "idx": 75.75
+      }
+    }
+  ],
+  "Luis Sojo": [
+    {
+      "date": "2026-03-02",
+      "raw": {
+        "price": 1,
+        "days": 1059,
+        "n": 1,
+        "idx": 112.57
+      }
+    }
+  ],
+  "Manny Sarmiento": [
+    {
+      "date": "2026-03-02",
+      "raw": {
+        "price": 2,
+        "days": 2063,
+        "n": 1,
+        "idx": 165.59
+      }
+    }
+  ],
+  "Manny Trillo": [
+    {
+      "date": "2026-03-02",
+      "raw": {
+        "price": 8.99,
+        "days": 1240,
+        "n": 1,
+        "idx": 683.77
+      }
+    }
+  ],
+  "Martin Perez": [
+    {
+      "date": "2026-03-02",
+      "raw": {
+        "price": 8.7,
+        "days": 1099,
+        "n": 2,
+        "idx": 380.35
+      }
+    }
+  ],
+  "Maximo Acosta": [
+    {
+      "date": "2026-03-02",
+      "raw": {
+        "price": 4.25,
+        "days": 1258,
+        "n": 2,
+        "idx": 42.93
+      }
+    }
+  ],
+  "Omar Daal": [
+    {
+      "date": "2026-03-02",
+      "raw": {
+        "price": 1.99,
+        "days": 1339,
+        "n": 1,
+        "idx": 143.41
+      }
+    }
+  ],
+  "Omar Vizquel": [
+    {
+      "date": "2026-03-02",
+      "raw": {
+        "price": 1.46,
+        "days": 149,
+        "n": 1,
+        "idx": 15.22
+      }
+    }
+  ],
+  "Oscar Azocar": [
+    {
+      "date": "2026-03-02",
+      "raw": {
+        "price": 1.75,
+        "days": 1020,
+        "n": 1,
+        "idx": 150.75
+      }
+    }
+  ],
+  "Pedro Hernandez": [
+    {
+      "date": "2026-03-02",
+      "raw": {
+        "price": 15,
+        "days": 1316,
+        "n": 1,
+        "idx": 717.59
+      }
+    }
+  ],
+  "Raul Chavez": [
+    {
+      "date": "2026-03-02",
+      "raw": {
+        "price": 1.68,
+        "days": 1070,
+        "n": 1,
+        "idx": 46.21
+      }
+    }
+  ],
+  "Ray Monzant": [
+    {
+      "date": "2026-03-02",
+      "raw": {
+        "price": 5.25,
+        "days": 2522,
+        "n": 1,
+        "idx": 64.91
+      }
+    }
+  ],
+  "Ricardo Rodriguez": [
+    {
+      "date": "2026-03-02",
+      "raw": {
+        "price": 0.99,
+        "days": 1187,
+        "n": 1,
+        "idx": 28.73
+      }
+    }
+  ],
+  "Ronald Belisario": [
+    {
+      "date": "2026-03-02",
+      "raw": {
+        "price": 3.59,
+        "days": 1062,
+        "n": 1,
+        "idx": 86.59
+      }
+    }
+  ],
+  "Ronald Herrera": [
+    {
+      "date": "2026-03-02",
+      "raw": {
+        "price": 2.99,
+        "days": 861,
+        "n": 1,
+        "idx": 71.55
+      }
+    }
+  ],
+  "Vic Davalillo": [
+    {
+      "date": "2026-03-02",
+      "raw": {
+        "price": 1.49,
+        "days": 1894,
+        "n": 1,
+        "idx": 35.97
+      }
+    }
+  ],
+  "Victor Martinez": [
+    {
+      "date": "2026-03-02",
+      "raw": {
+        "price": 1.46,
+        "days": 824,
+        "n": 1,
+        "idx": 9.49
+      }
+    }
+  ],
+  "Victor Reyes": [
+    {
+      "date": "2026-03-02",
+      "raw": {
+        "price": 0.99,
+        "days": 1324,
+        "n": 1,
+        "idx": 51.36
+      }
+    }
+  ],
+  "Wilson Ramos": [
+    {
+      "date": "2026-03-02",
+      "raw": {
+        "price": 0.99,
+        "days": 1327,
+        "n": 1,
+        "idx": 54
+      }
+    }
+  ],
+  "Yoel Hernandez": [
+    {
+      "date": "2026-03-02",
+      "raw": {
+        "price": 20.74,
+        "days": 1486,
+        "n": 2,
+        "idx": 415.38
+      }
+    }
+  ],
+  "Yohander Mendez": [
+    {
+      "date": "2026-03-02",
+      "raw": {
+        "price": 1.61,
+        "days": 2783,
+        "n": 1,
+        "idx": 37.31
+      }
+    }
+  ],
+  "Yohel Pozo": [
+    {
+      "date": "2026-03-02",
+      "raw": {
+        "price": 7.32,
+        "days": 1182,
+        "n": 1,
+        "idx": 107.26
+      }
+    }
+  ],
+  "Yonny Chirinos": [
+    {
+      "date": "2026-03-02",
+      "raw": {
+        "price": 1.5,
+        "days": 967,
+        "n": 1,
+        "idx": 100.18
+      }
+    }
+  ],
+  "Yonny Hernandez": [
+    {
+      "date": "2026-03-02",
+      "raw": {
+        "price": 1.08,
+        "days": 954,
+        "n": 2,
+        "idx": 48.72
+      }
+    }
+  ],
+  "Yorman Rodriguez": [
+    {
+      "date": "2026-03-02",
+      "raw": {
+        "price": 7.48,
+        "days": 214,
+        "n": 1,
+        "idx": 136.62
+      }
+    }
+  ],
+  "Yorvit Torrealba": [
+    {
+      "date": "2026-03-02",
+      "raw": {
+        "price": 14,
+        "days": 1326,
+        "n": 1,
+        "idx": 588.26
+      }
+    }
+  ],
+  "Alejandro Fuenmayor": [
+    {
+      "date": "2026-03-02",
+      "raw": {
+        "price": 6.99,
+        "cv": 0,
+        "days": 1285,
+        "n": 3,
+        "idx": 101.27
+      }
+    }
+  ]
+}
