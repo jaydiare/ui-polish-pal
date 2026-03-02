@@ -76,6 +76,7 @@ const Index = () => {
           highlightedIds={budgetChosenIds}
           sort={sort}
           onSortChange={setSort}
+          priceMode={priceMode}
         />
         <VzlaFooter />
       </main>

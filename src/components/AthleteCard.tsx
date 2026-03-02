@@ -19,18 +19,14 @@ interface AthleteCardProps {
   gradedByKey: Record<string, EbayAvgRecord>;
   ebaySoldRaw?: Record<string, any>;
   isRecommended?: boolean;
+  priceMode: "raw" | "graded";
 }
 
-const AthleteCard = ({ athlete, byName, byKey, gradedByName, gradedByKey, ebaySoldRaw, isRecommended }: AthleteCardProps) => {
+const AthleteCard = ({ athlete, byName, byKey, gradedByName, gradedByKey, ebaySoldRaw, isRecommended, priceMode }: AthleteCardProps) => {
   const avgNum = getEbayAvgNumber(athlete, byName, byKey);
   const money = avgNum != null ? formatCurrency(avgNum, "USD") : "—";
 
   const hasPrice = avgNum != null;
-  const cv = hasPrice ? getMarketStabilityCV(athlete, byName, byKey) : null;
-  const stability = marketStabilityScoreFromCV(cv);
-
-  const dom = hasPrice ? getAvgDaysOnMarket(athlete, byName, byKey) : null;
-  const domText = dom != null ? `${Math.round(dom)}d` : null;
 
   const rawIdx = getIndexLevel(athlete, byName, byKey);
   const gradedIdx = getIndexLevel(athlete, gradedByName, gradedByKey);
@@ -41,13 +37,24 @@ const AthleteCard = ({ athlete, byName, byKey, gradedByName, gradedByKey, ebaySo
   const soldRecord = ebaySoldRaw?.[athlete.name];
   const soldAvg = soldRecord?.taguchiSold != null ? soldRecord.taguchiSold : null;
 
+  // Active price set for signals based on priceMode
+  const activeByName = priceMode === "graded" ? gradedByName : byName;
+  const activeByKey = priceMode === "graded" ? gradedByKey : byKey;
+  const activeAvgNum = priceMode === "graded" ? gradedAvgNum : avgNum;
+  const activeHasPrice = activeAvgNum != null;
+
+  const cv = activeHasPrice ? getMarketStabilityCV(athlete, activeByName, activeByKey) : null;
+  const stability = marketStabilityScoreFromCV(cv);
+  const dom = activeHasPrice ? getAvgDaysOnMarket(athlete, activeByName, activeByKey) : null;
+  const domText = dom != null ? `${Math.round(dom)}d` : null;
+
   const shopUrl = buildEbaySearchUrl(athlete.name, athlete.sport);
   const initials = initialsFromName(athlete.name);
   const photo = useWikipediaImage(athlete.name, athlete.sport);
 
-  // Signals
-  const isFlip = hasPrice && cv != null && soldAvg != null && avgNum != null && soldAvg >= avgNum && (stability.bucket === "volatile" || stability.bucket === "highly_unstable");
-  const isBuyLow = hasPrice && soldAvg != null && avgNum != null && soldAvg < avgNum;
+  // Signals based on active price mode
+  const isFlip = activeHasPrice && cv != null && soldAvg != null && activeAvgNum != null && soldAvg >= activeAvgNum && (stability.bucket === "volatile" || stability.bucket === "highly_unstable");
+  const isBuyLow = activeHasPrice && soldAvg != null && activeAvgNum != null && soldAvg < activeAvgNum;
 
   return (
     <article className={`athlete-card group ${isRecommended ? "is-recommended" : ""}`}>
