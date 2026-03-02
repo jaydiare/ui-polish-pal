@@ -17,7 +17,7 @@ interface VzlaAthleteGridProps {
   highlightedIds?: Set<string>;
   sort: SortOption;
   onSortChange: (sort: SortOption) => void;
-  priceMode: "raw" | "graded";
+  priceMode: "raw" | "graded" | "both";
 }
 
 const SORT_OPTIONS: { value: SortOption; label: string }[] = [
