@@ -98,6 +98,8 @@ const UNGRADED_BLOCKLIST = [
   "damage",
   "poor",
   "fair",
+  "digitalcard",
+  "digital",
   "very good",
   "vg",
   "good",
