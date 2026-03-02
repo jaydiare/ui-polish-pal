@@ -74,7 +74,7 @@ function getSportColor(sport: string) {
 }
 
 /* ── Toggle component ── */
-type CardMode = "raw" | "graded";
+type CardMode = "raw" | "graded" | "both";
 
 const ModeToggle = ({ value, onChange, className = "" }: { value: CardMode; onChange: (v: CardMode) => void; className?: string }) => (
   <div className={`inline-flex items-center rounded-full border border-border/50 bg-card/80 backdrop-blur-sm p-0.5 ${className}`}>
@@ -89,6 +89,12 @@ const ModeToggle = ({ value, onChange, className = "" }: { value: CardMode; onCh
       className={`px-3 py-1 rounded-full text-[10px] font-bold tracking-wide transition-all ${value === "graded" ? "bg-primary/20 text-primary" : "text-muted-foreground hover:text-foreground"}`}
     >
       🏅 Graded
+    </button>
+    <button
+      onClick={() => onChange("both")}
+      className={`px-3 py-1 rounded-full text-[10px] font-bold tracking-wide transition-all ${value === "both" ? "bg-primary/20 text-primary" : "text-muted-foreground hover:text-foreground"}`}
+    >
+      ⚖️ Both
     </button>
   </div>
 );
@@ -256,12 +262,29 @@ const Data = () => {
 
   /* ── Per-section active data ── */
   const scatterData = scatterMode === "graded" ? gradedComparison : rawComparison;
+  const scatterDataBoth = scatterMode === "both";
   const gapsComparison = gapsMode === "graded" ? gradedComparison : rawComparison;
   const supplyComparison = supplyMode === "graded" ? gradedComparison : rawComparison;
 
+  // For "both" mode in gaps: merge raw & graded, picking whichever has larger absolute spread per athlete
+  const gapsComparisonBoth = useMemo(() => {
+    if (gapsMode !== "both") return gapsComparison;
+    const map = new Map<string, typeof rawComparison[0]>();
+    for (const d of rawComparison) {
+      map.set(d.name, { ...d });
+    }
+    for (const d of gradedComparison) {
+      const existing = map.get(d.name);
+      if (!existing || Math.abs(d.spread) > Math.abs(existing.spread)) {
+        map.set(d.name, { ...d });
+      }
+    }
+    return [...map.values()];
+  }, [gapsMode, rawComparison, gradedComparison, gapsComparison]);
+
   const topSpread = useMemo(() =>
-    [...gapsComparison].sort((a, b) => Math.abs(b.spread) - Math.abs(a.spread)).slice(0, 20),
-    [gapsComparison]);
+    [...gapsComparisonBoth].sort((a, b) => Math.abs(b.spread) - Math.abs(a.spread)).slice(0, 20),
+    [gapsComparisonBoth]);
 
   /* ── Sport Aggregation helper ── */
   function buildSportAgg(
@@ -610,30 +633,59 @@ const Data = () => {
                       <Tooltip content={() => null} />
                       <Scatter
                         data={(() => {
-                          const maxVal = Math.max(...scatterData.map(d => Math.max(d.listed, d.sold)));
+                          const allData = scatterDataBoth ? [...rawComparison, ...gradedComparison] : scatterData;
+                          const maxVal = allData.length ? Math.max(...allData.map(d => Math.max(d.listed, d.sold))) : 10;
                           return [{ listed: 0, sold: 0 }, { listed: maxVal, sold: maxVal }];
                         })()}
                         line={{ stroke: "hsl(var(--muted-foreground))", strokeWidth: 1, strokeDasharray: "6 4" }}
                         shape={() => null} legendType="none" isAnimationActive={false}
                       />
-                      <Scatter data={scatterData} isAnimationActive={false} cursor="pointer">
-                        {scatterData.map((entry, idx) => (
-                          <Cell key={idx} fill={getSportColor(entry.sport)} fillOpacity={0.8} r={typeof window !== 'undefined' && window.innerWidth < 768 ? 6 : 5} />
-                        ))}
-                      </Scatter>
+                      {scatterDataBoth ? (
+                        <>
+                          <Scatter data={rawComparison} isAnimationActive={false} cursor="pointer" name="Raw">
+                            {rawComparison.map((_entry, idx) => (
+                              <Cell key={idx} fill="hsl(45, 93%, 47%)" fillOpacity={0.7} r={typeof window !== 'undefined' && window.innerWidth < 768 ? 6 : 5} />
+                            ))}
+                          </Scatter>
+                          <Scatter data={gradedComparison} isAnimationActive={false} cursor="pointer" name="Graded">
+                            {gradedComparison.map((_entry, idx) => (
+                              <Cell key={idx} fill="hsl(280, 70%, 55%)" fillOpacity={0.7} r={typeof window !== 'undefined' && window.innerWidth < 768 ? 6 : 5} />
+                            ))}
+                          </Scatter>
+                        </>
+                      ) : (
+                        <Scatter data={scatterData} isAnimationActive={false} cursor="pointer">
+                          {scatterData.map((entry, idx) => (
+                            <Cell key={idx} fill={getSportColor(entry.sport)} fillOpacity={0.8} r={typeof window !== 'undefined' && window.innerWidth < 768 ? 6 : 5} />
+                          ))}
+                        </Scatter>
+                      )}
                     </ScatterChart>
                   </ResponsiveContainer>
                   {pinnedDot && <PinnedScatterTooltip data={pinnedDot} onClose={closePinned} />}
                 </div>
                 <div className="flex flex-wrap gap-4 mt-3 justify-center">
-                  {Object.entries(SPORT_COLORS)
-                    .filter(([sport]) => scatterData.some(d => d.sport === sport))
-                    .map(([sport, color]) => (
-                    <div key={sport} className="flex items-center gap-1.5 text-[10px] text-muted-foreground">
-                      <div className="w-2.5 h-2.5 rounded-full" style={{ backgroundColor: color }} />
-                      {sport}
-                    </div>
-                  ))}
+                  {scatterDataBoth ? (
+                    <>
+                      <div className="flex items-center gap-1.5 text-[10px] text-muted-foreground">
+                        <div className="w-2.5 h-2.5 rounded-full" style={{ backgroundColor: "hsl(45, 93%, 47%)" }} />
+                        Raw
+                      </div>
+                      <div className="flex items-center gap-1.5 text-[10px] text-muted-foreground">
+                        <div className="w-2.5 h-2.5 rounded-full" style={{ backgroundColor: "hsl(280, 70%, 55%)" }} />
+                        Graded
+                      </div>
+                    </>
+                  ) : (
+                    Object.entries(SPORT_COLORS)
+                      .filter(([sport]) => scatterData.some(d => d.sport === sport))
+                      .map(([sport, color]) => (
+                      <div key={sport} className="flex items-center gap-1.5 text-[10px] text-muted-foreground">
+                        <div className="w-2.5 h-2.5 rounded-full" style={{ backgroundColor: color }} />
+                        {sport}
+                      </div>
+                    ))
+                  )}
                 </div>
               </div>
             </section>
@@ -702,7 +754,7 @@ const Data = () => {
                 </h2>
                 <ModeToggle value={supplyMode} onChange={setSupplyMode} />
               </div>
-              <VzlaSupplyDemand comparisonData={supplyComparison} hideTitle />
+              <VzlaSupplyDemand comparisonData={supplyMode === "both" ? [...rawComparison, ...gradedComparison] : supplyComparison} hideTitle />
             </section>
 
             {/* ── Gemrate Grading Data ── */}
