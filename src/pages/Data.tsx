@@ -73,6 +73,26 @@ function getSportColor(sport: string) {
   return SPORT_COLORS[sport] || SPORT_COLORS.Other;
 }
 
+/* ── Toggle component ── */
+type CardMode = "raw" | "graded";
+
+const ModeToggle = ({ value, onChange, className = "" }: { value: CardMode; onChange: (v: CardMode) => void; className?: string }) => (
+  <div className={`inline-flex items-center rounded-full border border-border/50 bg-card/80 backdrop-blur-sm p-0.5 ${className}`}>
+    <button
+      onClick={() => onChange("raw")}
+      className={`px-3 py-1 rounded-full text-[10px] font-bold tracking-wide transition-all ${value === "raw" ? "bg-primary/20 text-primary" : "text-muted-foreground hover:text-foreground"}`}
+    >
+      🃏 Raw
+    </button>
+    <button
+      onClick={() => onChange("graded")}
+      className={`px-3 py-1 rounded-full text-[10px] font-bold tracking-wide transition-all ${value === "graded" ? "bg-primary/20 text-primary" : "text-muted-foreground hover:text-foreground"}`}
+    >
+      🏅 Graded
+    </button>
+  </div>
+);
+
 /* ── Custom tooltip ── */
 const PriceTooltip = ({ payload }: any) => {
   if (!payload?.length) return null;
@@ -140,19 +160,52 @@ const PinnedScatterTooltip = ({ data, onClose }: { data: PinnedData; onClose: ()
   );
 };
 
-type CardMode = "raw" | "graded";
+/* ── Helper: build comparison items from listed + sold ── */
+function buildComparison(
+  listedData: Record<string, ListedRecord>,
+  soldData: Record<string, SoldRecord>,
+  athleteSportMap: Record<string, string>,
+) {
+  const items: { name: string; sport: string; listed: number; sold: number; spread: number }[] = [];
+  const allKeys = new Set([...Object.keys(listedData), ...Object.keys(soldData)]);
+  for (const key of allKeys) {
+    if (key === "_meta") continue;
+    const lp = getListedPrice(listedData[key] as ListedRecord);
+    const sp = getSoldPrice(soldData[key] as SoldRecord);
+    if (lp == null || sp == null) continue;
+    const ratio = Math.max(lp, sp) / Math.max(Math.min(lp, sp), 0.01);
+    if (ratio > 10) continue;
+    const normKey = key.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().trim();
+    const sport = athleteSportMap[key] || athleteSportMap[normKey] || (listedData[key] as any)?.sport || "Other";
+    items.push({ name: key, sport, listed: Math.round(lp * 100) / 100, sold: Math.round(sp * 100) / 100, spread: Math.round((lp - sp) * 100) / 100 });
+  }
+  return items;
+}
+
+function buildStats(comparisonData: { listed: number; sold: number; spread: number }[]) {
+  if (!comparisonData.length) return null;
+  const avgSpread = comparisonData.reduce((s, d) => s + d.spread, 0) / comparisonData.length;
+  const overpriced = comparisonData.filter(d => d.spread > 0).length;
+  const underpriced = comparisonData.filter(d => d.spread < 0).length;
+  return { avgSpread, overpriced, underpriced, matched: comparisonData.length };
+}
 
 const Data = () => {
+  // Raw data
   const [listedData, setListedData] = useState<Record<string, ListedRecord>>({});
   const [soldData, setSoldData] = useState<Record<string, SoldRecord>>({});
+  // Graded data
+  const [gradedListedData, setGradedListedData] = useState<Record<string, ListedRecord>>({});
   const [gradedSoldData, setGradedSoldData] = useState<Record<string, SoldRecord>>({});
-  const [cardMode, setCardMode] = useState<CardMode>("raw");
+
   const [athleteSportMap, setAthleteSportMap] = useState<Record<string, string>>({});
   const [pinnedDot, setPinnedDot] = useState<PinnedData | null>(null);
   const scatterWrapRef = useRef<HTMLDivElement>(null);
 
-  // Active sold data based on toggle (scatter always uses raw)
-  const activeSoldData = cardMode === "graded" ? gradedSoldData : soldData;
+  // Per-section toggles
+  const [scatterMode, setScatterMode] = useState<CardMode>("raw");
+  const [gapsMode, setGapsMode] = useState<CardMode>("raw");
+  const [supplyMode, setSupplyMode] = useState<CardMode>("raw");
 
   const handleScatterClick = useCallback((state: any) => {
     if (!state?.activePayload?.length) { setPinnedDot(null); return; }
@@ -172,10 +225,14 @@ const Data = () => {
     Promise.all([
       fetchJson("https://raw.githubusercontent.com/jaydiare/ui-polish-pal/main/data/ebay-avg.json"),
       fetchJson("https://raw.githubusercontent.com/jaydiare/ui-polish-pal/main/data/ebay-sold-avg.json"),
+      fetchJson("https://raw.githubusercontent.com/jaydiare/ui-polish-pal/main/data/ebay-graded-avg.json"),
       fetchJson("https://raw.githubusercontent.com/jaydiare/ui-polish-pal/main/data/ebay-graded-sold-avg.json"),
       fetchJson("data/athletes.json"),
-    ]).then(([listed, sold, gradedSold, athletes]) => {
+    ]).then(([listed, sold, gradedListed, gradedSold, athletes]) => {
       if (listed) setListedData(listed);
+      if (sold) setSoldData(sold);
+      if (gradedListed) setGradedListedData(gradedListed);
+      if (gradedSold) setGradedSoldData(gradedSold);
       if (athletes && Array.isArray(athletes)) {
         const map: Record<string, string> = {};
         const norm = (s: string) => s.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().trim();
@@ -187,80 +244,40 @@ const Data = () => {
         }
         setAthleteSportMap(map);
       }
-      if (sold) setSoldData(sold);
-      if (gradedSold) setGradedSoldData(gradedSold);
     });
   }, []);
 
-  /* ── Comparison Data (uses toggled sold source) ── */
-  const comparisonData = useMemo(() => {
-    const items: { name: string; sport: string; listed: number; sold: number; spread: number }[] = [];
-    const allKeys = new Set([...Object.keys(listedData), ...Object.keys(activeSoldData)]);
-    for (const key of allKeys) {
-      if (key === "_meta") continue;
-      const lp = getListedPrice(listedData[key] as ListedRecord);
-      const sp = getSoldPrice(activeSoldData[key] as SoldRecord);
-      if (lp == null || sp == null) continue;
-      const ratio = Math.max(lp, sp) / Math.max(Math.min(lp, sp), 0.01);
-      if (ratio > 10) continue;
-      const normKey = key.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().trim();
-      const sport = athleteSportMap[key] || athleteSportMap[normKey] || (listedData[key] as any)?.sport || "Other";
-      items.push({ name: key, sport, listed: Math.round(lp * 100) / 100, sold: Math.round(sp * 100) / 100, spread: Math.round((lp - sp) * 100) / 100 });
-    }
-    return items;
-  }, [listedData, activeSoldData, athleteSportMap]);
+  /* ── Comparison data per mode ── */
+  const rawComparison = useMemo(() => buildComparison(listedData, soldData, athleteSportMap), [listedData, soldData, athleteSportMap]);
+  const gradedComparison = useMemo(() => buildComparison(gradedListedData, gradedSoldData, athleteSportMap), [gradedListedData, gradedSoldData, athleteSportMap]);
 
-  /* ── Scatter-only data (always raw) ── */
-  const scatterData = useMemo(() => {
-    if (cardMode === "raw") return comparisonData; // same data, no duplicate
-    const items: { name: string; sport: string; listed: number; sold: number; spread: number }[] = [];
-    const allKeys = new Set([...Object.keys(listedData), ...Object.keys(soldData)]);
-    for (const key of allKeys) {
-      if (key === "_meta") continue;
-      const lp = getListedPrice(listedData[key] as ListedRecord);
-      const sp = getSoldPrice(soldData[key] as SoldRecord);
-      if (lp == null || sp == null) continue;
-      const ratio = Math.max(lp, sp) / Math.max(Math.min(lp, sp), 0.01);
-      if (ratio > 10) continue;
-      const normKey = key.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().trim();
-      const sport = athleteSportMap[key] || athleteSportMap[normKey] || (listedData[key] as any)?.sport || "Other";
-      items.push({ name: key, sport, listed: Math.round(lp * 100) / 100, sold: Math.round(sp * 100) / 100, spread: Math.round((lp - sp) * 100) / 100 });
-    }
-    return items;
-  }, [cardMode, comparisonData, listedData, soldData, athleteSportMap]);
+  const rawStats = useMemo(() => buildStats(rawComparison), [rawComparison]);
+  const gradedStats = useMemo(() => buildStats(gradedComparison), [gradedComparison]);
 
-  /* ── KPI Stats ── */
-  const stats = useMemo(() => {
-    if (!comparisonData.length) return null;
-    const totalListed = comparisonData.reduce((s, d) => s + d.listed, 0);
-    const totalSold = comparisonData.reduce((s, d) => s + d.sold, 0);
-    const avgSpread = comparisonData.reduce((s, d) => s + d.spread, 0) / comparisonData.length;
-    const overpriced = comparisonData.filter(d => d.spread > 0).length;
-    const underpriced = comparisonData.filter(d => d.spread < 0).length;
-    return { totalListed, totalSold, avgSpread, overpriced, underpriced, matched: comparisonData.length };
-  }, [comparisonData]);
+  /* ── Per-section active data ── */
+  const scatterData = scatterMode === "graded" ? gradedComparison : rawComparison;
+  const gapsComparison = gapsMode === "graded" ? gradedComparison : rawComparison;
+  const supplyComparison = supplyMode === "graded" ? gradedComparison : rawComparison;
 
-  /* ── Top Spreads ── */
   const topSpread = useMemo(() =>
-    [...comparisonData].sort((a, b) => Math.abs(b.spread) - Math.abs(a.spread)).slice(0, 20),
-    [comparisonData]);
+    [...gapsComparison].sort((a, b) => Math.abs(b.spread) - Math.abs(a.spread)).slice(0, 20),
+    [gapsComparison]);
 
-  /* ── Sport Aggregation (includes listed-only athletes + "All" card) ── */
+  /* ── Sport Aggregation (for sport breakdown cards — uses raw) ── */
   const sportAgg = useMemo(() => {
     const agg: Record<string, { listed: number; sold: number; listedCount: number; soldCount: number; totalCount: number }> = {};
     const addSport = (sport: string) => {
       if (!agg[sport]) agg[sport] = { listed: 0, sold: 0, listedCount: 0, soldCount: 0, totalCount: 0 };
     };
 
-    // Include all athletes from listedData (even without sold data)
-    const allKeys = new Set([...Object.keys(listedData), ...Object.keys(activeSoldData)]);
+    const allKeys = new Set([...Object.keys(listedData), ...Object.keys(soldData)]);
     for (const key of allKeys) {
       if (key === "_meta") continue;
       const normKey = key.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().trim();
       const sport = athleteSportMap[key] || athleteSportMap[normKey] || (listedData[key] as any)?.sport || "Other";
       addSport(sport);
       const lp = getListedPrice(listedData[key] as ListedRecord);
-      const sp = getSoldPrice(activeSoldData[key] as SoldRecord);
+      const sp = getSoldPrice(soldData[key] as SoldRecord);
       if (lp != null) { agg[sport].listed += lp; agg[sport].listedCount += 1; }
       if (sp != null) { agg[sport].sold += sp; agg[sport].soldCount += 1; }
       agg[sport].totalCount += 1;
@@ -278,7 +295,6 @@ const Data = () => {
       }))
       .sort((a, b) => b.count - a.count);
 
-    // Add "All" summary card
     const allListed = entries.reduce((s, e) => s + e.totalListed, 0);
     const allSold = entries.reduce((s, e) => s + e.totalSold, 0);
     const allCount = entries.reduce((s, e) => s + e.count, 0);
@@ -295,9 +311,9 @@ const Data = () => {
     });
 
     return entries;
-  }, [listedData, activeSoldData, athleteSportMap]);
+  }, [listedData, soldData, athleteSportMap]);
 
-  const hasData = comparisonData.length > 0;
+  const hasData = rawComparison.length > 0;
 
   return (
     <div className="min-h-screen">
@@ -321,14 +337,6 @@ const Data = () => {
               <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
               <span className="text-xs text-muted-foreground font-medium">Updated Daily</span>
             </div>
-            <select
-              value={cardMode}
-              onChange={(e) => setCardMode(e.target.value as CardMode)}
-              className="rounded-full border border-border/50 bg-card/80 backdrop-blur-sm px-4 py-1.5 text-xs text-muted-foreground font-medium appearance-none cursor-pointer hover:border-primary/30 transition-colors focus:outline-none focus:ring-1 focus:ring-primary/30"
-            >
-              <option value="raw">🃏 Raw Sold</option>
-              <option value="graded">🏅 Graded Sold</option>
-            </select>
           </div>
         </motion.div>
 
@@ -339,36 +347,96 @@ const Data = () => {
           </div>
         ) : (
           <>
-            {/* ── KPI Cards ── */}
-            {stats && (
+            {/* ── KPI Cards — dual raw/graded ── */}
+            {rawStats && (
               <section className="grid grid-cols-2 md:grid-cols-4 gap-3 my-6" aria-label="Market summary">
-                {[
-                  { label: "Athletes Matched", value: stats.matched.toString(), icon: "👥", sub: "with both listed & sold data" },
-                  { label: "Avg Spread", value: `${stats.avgSpread > 0 ? "+" : ""}$${stats.avgSpread.toFixed(2)}`, icon: "📊", sub: stats.avgSpread > 0 ? "listed higher on avg" : "sold higher on avg", color: stats.avgSpread > 0 ? "text-red-400" : "text-green-400" },
-                  { label: "Overpriced", value: stats.overpriced.toString(), icon: "🔴", sub: "listed > sold" },
-                  { label: "Underpriced", value: stats.underpriced.toString(), icon: "🟢", sub: "sold > listed (deals)" },
-                ].map((kpi, i) => (
-                  <motion.div
-                    key={kpi.label}
-                    initial={{ opacity: 0, y: 12 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.4, delay: i * 0.08 }}
-                    className="glass-panel p-4 shimmer"
-                  >
-                    <div className="flex items-center gap-2 mb-2">
-                      <span className="text-lg">{kpi.icon}</span>
-                      <span className="text-[10px] uppercase tracking-widest text-muted-foreground font-semibold">{kpi.label}</span>
+                {/* Athletes Matched */}
+                <motion.div initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.4 }} className="glass-panel p-4 shimmer">
+                  <div className="flex items-center gap-2 mb-2">
+                    <span className="text-lg">👥</span>
+                    <span className="text-[10px] uppercase tracking-widest text-muted-foreground font-semibold">Athletes Matched</span>
+                  </div>
+                  <div className="grid grid-cols-2 gap-2">
+                    <div>
+                      <div className="text-[9px] text-muted-foreground uppercase tracking-wider mb-0.5">Raw</div>
+                      <div className="text-xl font-display font-bold text-foreground">{rawStats.matched}</div>
                     </div>
-                    <div className={`text-2xl font-display font-bold tracking-tight ${kpi.color || "text-foreground"}`}>
-                      {kpi.value}
+                    <div>
+                      <div className="text-[9px] text-muted-foreground uppercase tracking-wider mb-0.5">Graded</div>
+                      <div className="text-xl font-display font-bold text-foreground">{gradedStats?.matched ?? "—"}</div>
                     </div>
-                    <div className="text-[10px] text-muted-foreground mt-1">{kpi.sub}</div>
-                  </motion.div>
-                ))}
+                  </div>
+                  <div className="text-[10px] text-muted-foreground mt-1">with both listed & sold data</div>
+                </motion.div>
+
+                {/* Avg Spread */}
+                <motion.div initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.4, delay: 0.08 }} className="glass-panel p-4 shimmer">
+                  <div className="flex items-center gap-2 mb-2">
+                    <span className="text-lg">📊</span>
+                    <span className="text-[10px] uppercase tracking-widest text-muted-foreground font-semibold">Avg Spread</span>
+                  </div>
+                  <div className="grid grid-cols-2 gap-2">
+                    <div>
+                      <div className="text-[9px] text-muted-foreground uppercase tracking-wider mb-0.5">Raw</div>
+                      <div className={`text-lg font-display font-bold ${rawStats.avgSpread > 0 ? "text-red-400" : "text-green-400"}`}>
+                        {rawStats.avgSpread > 0 ? "+" : ""}${rawStats.avgSpread.toFixed(2)}
+                      </div>
+                    </div>
+                    <div>
+                      <div className="text-[9px] text-muted-foreground uppercase tracking-wider mb-0.5">Graded</div>
+                      {gradedStats ? (
+                        <div className={`text-lg font-display font-bold ${gradedStats.avgSpread > 0 ? "text-red-400" : "text-green-400"}`}>
+                          {gradedStats.avgSpread > 0 ? "+" : ""}${gradedStats.avgSpread.toFixed(2)}
+                        </div>
+                      ) : (
+                        <div className="text-lg font-display font-bold text-muted-foreground/40">—</div>
+                      )}
+                    </div>
+                  </div>
+                  <div className="text-[10px] text-muted-foreground mt-1">listed vs sold gap</div>
+                </motion.div>
+
+                {/* Overpriced */}
+                <motion.div initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.4, delay: 0.16 }} className="glass-panel p-4 shimmer">
+                  <div className="flex items-center gap-2 mb-2">
+                    <span className="text-lg">🔴</span>
+                    <span className="text-[10px] uppercase tracking-widest text-muted-foreground font-semibold">Overpriced</span>
+                  </div>
+                  <div className="grid grid-cols-2 gap-2">
+                    <div>
+                      <div className="text-[9px] text-muted-foreground uppercase tracking-wider mb-0.5">Raw</div>
+                      <div className="text-xl font-display font-bold text-foreground">{rawStats.overpriced}</div>
+                    </div>
+                    <div>
+                      <div className="text-[9px] text-muted-foreground uppercase tracking-wider mb-0.5">Graded</div>
+                      <div className="text-xl font-display font-bold text-foreground">{gradedStats?.overpriced ?? "—"}</div>
+                    </div>
+                  </div>
+                  <div className="text-[10px] text-muted-foreground mt-1">listed &gt; sold</div>
+                </motion.div>
+
+                {/* Underpriced */}
+                <motion.div initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.4, delay: 0.24 }} className="glass-panel p-4 shimmer">
+                  <div className="flex items-center gap-2 mb-2">
+                    <span className="text-lg">🟢</span>
+                    <span className="text-[10px] uppercase tracking-widest text-muted-foreground font-semibold">Underpriced</span>
+                  </div>
+                  <div className="grid grid-cols-2 gap-2">
+                    <div>
+                      <div className="text-[9px] text-muted-foreground uppercase tracking-wider mb-0.5">Raw</div>
+                      <div className="text-xl font-display font-bold text-foreground">{rawStats.underpriced}</div>
+                    </div>
+                    <div>
+                      <div className="text-[9px] text-muted-foreground uppercase tracking-wider mb-0.5">Graded</div>
+                      <div className="text-xl font-display font-bold text-foreground">{gradedStats?.underpriced ?? "—"}</div>
+                    </div>
+                  </div>
+                  <div className="text-[10px] text-muted-foreground mt-1">sold &gt; listed (deals)</div>
+                </motion.div>
               </section>
             )}
 
-            {/* ── Sport Breakdown Cards (always visible) ── */}
+            {/* ── Sport Breakdown Cards ── */}
             <section className="my-8" aria-label="Sport breakdown">
               <h2 className="font-display font-bold text-lg text-foreground mb-4 flex items-center gap-2">
                 <span className="w-1 h-5 rounded-full bg-primary inline-block" />
@@ -410,31 +478,18 @@ const Data = () => {
                         </div>
                       </div>
 
-                      {/* Mini bar comparison */}
                       <div className="mt-3 space-y-1.5">
                         <div className="flex items-center gap-2">
                           <span className="text-[9px] text-muted-foreground w-10 shrink-0">Listed</span>
                           <div className="flex-1 h-2 rounded-full bg-secondary overflow-hidden">
-                            <div
-                              className="h-full rounded-full transition-all"
-                              style={{
-                                width: `${Math.min(100, (s.totalListed / Math.max(s.totalListed, s.totalSold)) * 100)}%`,
-                                backgroundColor: "hsl(45, 93%, 47%)",
-                              }}
-                            />
+                            <div className="h-full rounded-full transition-all" style={{ width: `${Math.min(100, (s.totalListed / Math.max(s.totalListed, s.totalSold)) * 100)}%`, backgroundColor: "hsl(45, 93%, 47%)" }} />
                           </div>
                           <span className="text-[9px] font-mono text-muted-foreground w-14 text-right">${s.totalListed.toFixed(0)}</span>
                         </div>
                         <div className="flex items-center gap-2">
                           <span className="text-[9px] text-muted-foreground w-10 shrink-0">Sold</span>
                           <div className="flex-1 h-2 rounded-full bg-secondary overflow-hidden">
-                            <div
-                              className="h-full rounded-full transition-all"
-                              style={{
-                                width: `${Math.min(100, (s.totalSold / Math.max(s.totalListed, s.totalSold)) * 100)}%`,
-                                backgroundColor: "hsl(210, 80%, 55%)",
-                              }}
-                            />
+                            <div className="h-full rounded-full transition-all" style={{ width: `${Math.min(100, (s.totalSold / Math.max(s.totalListed, s.totalSold)) * 100)}%`, backgroundColor: "hsl(210, 80%, 55%)" }} />
                           </div>
                           <span className="text-[9px] font-mono text-muted-foreground w-14 text-right">${s.totalSold.toFixed(0)}</span>
                         </div>
@@ -454,10 +509,13 @@ const Data = () => {
 
             {/* ── Scatter: Listed vs Sold ── */}
             <section className="my-8" aria-label="Listed vs Sold scatter chart">
-              <h2 className="font-display font-bold text-lg text-foreground mb-1 flex items-center gap-2">
-                <span className="w-1 h-5 rounded-full bg-primary inline-block" />
-                Listed vs Sold
-              </h2>
+              <div className="flex items-center justify-between flex-wrap gap-2 mb-1">
+                <h2 className="font-display font-bold text-lg text-foreground flex items-center gap-2">
+                  <span className="w-1 h-5 rounded-full bg-primary inline-block" />
+                  Listed vs Sold
+                </h2>
+                <ModeToggle value={scatterMode} onChange={(v) => { setScatterMode(v); setPinnedDot(null); }} />
+              </div>
               <p className="text-xs text-muted-foreground mb-4 ml-3">
                 Each dot is an athlete. Above the diagonal = listed higher than sold (overpriced).
               </p>
@@ -494,7 +552,7 @@ const Data = () => {
                   </ResponsiveContainer>
                   {pinnedDot && <PinnedScatterTooltip data={pinnedDot} onClose={closePinned} />}
                 </div>
-              <div className="flex flex-wrap gap-4 mt-3 justify-center">
+                <div className="flex flex-wrap gap-4 mt-3 justify-center">
                   {Object.entries(SPORT_COLORS)
                     .filter(([sport]) => scatterData.some(d => d.sport === sport))
                     .map(([sport, color]) => (
@@ -509,10 +567,13 @@ const Data = () => {
 
             {/* ── Top 20 Price Spreads ── */}
             <section className="my-8" aria-label="Top price spreads">
-              <h2 className="font-display font-bold text-lg text-foreground mb-1 flex items-center gap-2">
-                <span className="w-1 h-5 rounded-full bg-primary inline-block" />
-                Biggest Price Gaps
-              </h2>
+              <div className="flex items-center justify-between flex-wrap gap-2 mb-1">
+                <h2 className="font-display font-bold text-lg text-foreground flex items-center gap-2">
+                  <span className="w-1 h-5 rounded-full bg-primary inline-block" />
+                  Biggest Price Gaps
+                </h2>
+                <ModeToggle value={gapsMode} onChange={setGapsMode} />
+              </div>
               <p className="text-xs text-muted-foreground mb-4 ml-3">
                 Top 20 athletes with the largest listed-to-sold price spread.
               </p>
@@ -558,8 +619,18 @@ const Data = () => {
                 </div>
               </div>
             </section>
+
             {/* ── Supply & Demand ── */}
-            <VzlaSupplyDemand comparisonData={comparisonData} />
+            <section className="my-8" aria-label="Supply and demand">
+              <div className="flex items-center justify-between flex-wrap gap-2 mb-1">
+                <h2 className="font-display font-bold text-lg text-foreground flex items-center gap-2">
+                  <span className="w-1 h-5 rounded-full bg-primary inline-block" />
+                  Supply & Demand
+                </h2>
+                <ModeToggle value={supplyMode} onChange={setSupplyMode} />
+              </div>
+              <VzlaSupplyDemand comparisonData={supplyComparison} hideTitle />
+            </section>
 
             {/* ── Gemrate Grading Data ── */}
             <GemrateChart />
@@ -593,7 +664,6 @@ const GemrateChart = () => {
 
   useEffect(() => {
     (async () => {
-      // Try GitHub raw first (auto-updates when Action commits), fall back to local
       let d = await fetchJson("https://raw.githubusercontent.com/jaydiare/ui-polish-pal/main/data/gemrate.json");
       if (!d || !d.athletes) {
         d = await fetchJson("data/gemrate.json");
