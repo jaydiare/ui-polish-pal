@@ -59,14 +59,18 @@ const AthleteCard = forwardRef<HTMLElement, AthleteCardProps>(({ athlete, byName
   const isFlip = activeHasPrice && cv != null && soldAvg != null && activeAvgNum != null && soldAvg >= activeAvgNum && (stability.bucket === "volatile" || stability.bucket === "highly_unstable");
   const isBuyLow = activeHasPrice && soldAvg != null && activeAvgNum != null && soldAvg < activeAvgNum;
 
-  // Sparkline data: extract raw prices from history, only show with 7+ data points
+  // Sparkline data: extract prices from history based on priceMode, only show with 7+ data points
   const sparklineData = useMemo(() => {
     if (!history || history.length < 7) return null;
-    return history
-      .map((h: any) => h?.raw?.price ?? null)
+    const extractor = priceMode === "graded"
+      ? (h: any) => h?.graded?.price ?? null
+      : (h: any) => h?.raw?.price ?? null;
+    const values = history
+      .map(extractor)
       .filter((v: any): v is number => v != null && Number.isFinite(v));
-  }, [history]);
-  const showSparkline = sparklineData != null && sparklineData.length >= 7;
+    return values.length >= 7 ? values : null;
+  }, [history, priceMode]);
+  const showSparkline = sparklineData != null;
 
   return (
     <article ref={ref} className={`athlete-card group ${isRecommended ? "is-recommended" : ""}`}>
