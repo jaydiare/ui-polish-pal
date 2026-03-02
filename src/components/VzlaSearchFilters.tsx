@@ -6,8 +6,8 @@ interface VzlaSearchFiltersProps {
   sportOptions: string[];
   totalCount: number;
   filteredCount: number;
-  priceMode: "raw" | "graded";
-  onPriceModeChange: (mode: "raw" | "graded") => void;
+  priceMode: "raw" | "graded" | "both";
+  onPriceModeChange: (mode: "raw" | "graded" | "both") => void;
 }
 
 const DEFAULT_FILTERS: Filters = {
@@ -53,13 +53,19 @@ const VzlaSearchFilters = ({
             onClick={() => onPriceModeChange("raw")}
             className={`px-3 py-1 rounded-full text-[10px] font-bold tracking-wide transition-all ${priceMode === "raw" ? "bg-primary/20 text-primary" : "text-muted-foreground hover:text-foreground"}`}
           >
-            🃏 Raw Prices
+            🃏 Raw
           </button>
           <button
             onClick={() => onPriceModeChange("graded")}
             className={`px-3 py-1 rounded-full text-[10px] font-bold tracking-wide transition-all ${priceMode === "graded" ? "bg-primary/20 text-primary" : "text-muted-foreground hover:text-foreground"}`}
           >
-            🏅 Graded Prices
+            🏅 Graded
+          </button>
+          <button
+            onClick={() => onPriceModeChange("both")}
+            className={`px-3 py-1 rounded-full text-[10px] font-bold tracking-wide transition-all ${priceMode === "both" ? "bg-primary/20 text-primary" : "text-muted-foreground hover:text-foreground"}`}
+          >
+            ⚖️ Both
           </button>
         </div>
       </div>

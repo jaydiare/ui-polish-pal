@@ -19,7 +19,7 @@ interface AthleteCardProps {
   gradedByKey: Record<string, EbayAvgRecord>;
   ebaySoldRaw?: Record<string, any>;
   isRecommended?: boolean;
-  priceMode: "raw" | "graded";
+  priceMode: "raw" | "graded" | "both";
 }
 
 const AthleteCard = ({ athlete, byName, byKey, gradedByName, gradedByKey, ebaySoldRaw, isRecommended, priceMode }: AthleteCardProps) => {
@@ -107,34 +107,38 @@ const AthleteCard = ({ athlete, byName, byKey, gradedByName, gradedByKey, ebaySo
       </div>
 
       {/* ── Price grid ── */}
-      <div className="mt-3 grid grid-cols-2 gap-2">
+      <div className={`mt-3 grid gap-2 ${priceMode === "both" ? "grid-cols-2" : "grid-cols-1"}`}>
         {/* Raw */}
-        <div className="p-2.5 rounded-lg bg-secondary/50 border border-border/40">
-          <div className="text-[9px] text-muted-foreground font-medium uppercase tracking-wider mb-1">Raw</div>
-          <div className="text-base font-display font-bold text-foreground leading-none">{money}</div>
-          {rawIdx != null && (
-            <div className={`text-[10px] font-semibold mt-1 ${rawIdx >= 100 ? "text-primary" : "text-destructive"}`}>
-              {rawIdx >= 100 ? "↗" : "↘"} {rawIdx.toFixed(0)}
-            </div>
-          )}
-        </div>
+        {(priceMode === "raw" || priceMode === "both") && (
+          <div className="p-2.5 rounded-lg bg-secondary/50 border border-border/40">
+            <div className="text-[9px] text-muted-foreground font-medium uppercase tracking-wider mb-1">Raw</div>
+            <div className="text-base font-display font-bold text-foreground leading-none">{money}</div>
+            {rawIdx != null && (
+              <div className={`text-[10px] font-semibold mt-1 ${rawIdx >= 100 ? "text-primary" : "text-destructive"}`}>
+                {rawIdx >= 100 ? "↗" : "↘"} {rawIdx.toFixed(0)}
+              </div>
+            )}
+          </div>
+        )}
 
         {/* Graded */}
-        <div className="p-2.5 rounded-lg bg-secondary/50 border border-border/40">
-          <div className="text-[9px] text-muted-foreground font-medium uppercase tracking-wider mb-1">Graded</div>
-          {gradedMoney ? (
-            <>
-              <div className="text-base font-display font-bold text-foreground leading-none">{gradedMoney}</div>
-              {gradedIdx != null && (
-                <div className={`text-[10px] font-semibold mt-1 ${gradedIdx >= 100 ? "text-primary" : "text-destructive"}`}>
-                  {gradedIdx >= 100 ? "↗" : "↘"} {gradedIdx.toFixed(0)}
-                </div>
-              )}
-            </>
-          ) : (
-            <div className="text-sm text-muted-foreground/40 font-display font-bold leading-none">—</div>
-          )}
-        </div>
+        {(priceMode === "graded" || priceMode === "both") && (
+          <div className="p-2.5 rounded-lg bg-secondary/50 border border-border/40">
+            <div className="text-[9px] text-muted-foreground font-medium uppercase tracking-wider mb-1">Graded</div>
+            {gradedMoney ? (
+              <>
+                <div className="text-base font-display font-bold text-foreground leading-none">{gradedMoney}</div>
+                {gradedIdx != null && (
+                  <div className={`text-[10px] font-semibold mt-1 ${gradedIdx >= 100 ? "text-primary" : "text-destructive"}`}>
+                    {gradedIdx >= 100 ? "↗" : "↘"} {gradedIdx.toFixed(0)}
+                  </div>
+                )}
+              </>
+            ) : (
+              <div className="text-sm text-muted-foreground/40 font-display font-bold leading-none">—</div>
+            )}
+          </div>
+        )}
       </div>
 
       {/* ── Meta row: stability + sold + days listed ── */}
