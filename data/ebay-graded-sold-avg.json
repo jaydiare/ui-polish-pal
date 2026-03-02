@@ -1,14 +1,14 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-02T15:33:38.339Z",
+    "updatedAt": "2026-03-02T15:56:24.194Z",
     "source": "eBay public sold listings — GRADED ONLY (HTML scrape, LH_Sold=1)",
     "note": "GRADED sold comps only (PSA, BGS, SGC, etc.). Scraped in batches of 10. Brand-filtered. Junk titles removed. Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA.",
     "batchInfo": {
-      "startIdx": 60,
-      "endIdx": 70,
+      "startIdx": 70,
+      "endIdx": 80,
       "totalAthletes": 575
     },
-    "maxPages": 2,
+    "maxPages": 3,
     "minSampleSize": 4,
     "brands": [
       "topps",
@@ -20,7 +20,8 @@
       "sport grafico",
       "line up",
       "venezuelan league",
-      "byn"
+      "byn",
+      "O-Pee-Chee"
     ],
     "categoryId": "261328",
     "listingStat": {
@@ -877,5 +878,125 @@
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
+  },
+  "Carlos Maldonado": {
+    "keyword": "Carlos Maldonado Baseball",
+    "nScraped": 60,
+    "nSoldUsed": 7,
+    "avg": 19.277142857142856,
+    "taguchiSold": 19.277142857142856,
+    "medianSold": 15,
+    "marketStabilityCV": 0.27721378324584145,
+    "currency": "USD",
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
+  },
+  "Carlos Martinez": {
+    "keyword": "Carlos Martinez Baseball",
+    "nScraped": 189,
+    "nSoldUsed": 70,
+    "avg": 40.79814285714282,
+    "taguchiSold": 40.79814285714282,
+    "medianSold": 49.99,
+    "marketStabilityCV": 0.4710192911530384,
+    "currency": "USD",
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
+  },
+  "Carlos Mendez": {
+    "keyword": "Carlos Mendez Baseball",
+    "nScraped": 60,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
+    "currency": "USD",
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
+  },
+  "Carlos Mendoza": {
+    "keyword": "Carlos Mendoza Baseball",
+    "nScraped": 60,
+    "nSoldUsed": 12,
+    "avg": 18.136666666666667,
+    "taguchiSold": 18.136666666666667,
+    "medianSold": 15.094999999999999,
+    "marketStabilityCV": 0.23652417841954979,
+    "currency": "USD",
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
+  },
+  "Carlos Monasterios": {
+    "keyword": "Carlos Monasterios Baseball",
+    "nScraped": 60,
+    "nSoldUsed": 2,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
+    "currency": "USD",
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
+  },
+  "Carlos Narvaez": {
+    "keyword": "Carlos Narvaez Baseball",
+    "nScraped": 252,
+    "nSoldUsed": 99,
+    "avg": 35.79151515151523,
+    "taguchiSold": 35.79151515151523,
+    "medianSold": 39,
+    "marketStabilityCV": 0.20094078557032868,
+    "currency": "USD",
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
+  },
+  "Carlos Perez": {
+    "keyword": "Carlos Perez Baseball",
+    "nScraped": 186,
+    "nSoldUsed": 28,
+    "avg": 93.95714285714287,
+    "taguchiSold": 93.95714285714287,
+    "medianSold": 90.215,
+    "marketStabilityCV": 0.04759733213538749,
+    "currency": "USD",
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
+  },
+  "Carlos Pulido": {
+    "keyword": "Carlos Pulido Baseball",
+    "nScraped": 60,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
+    "currency": "USD",
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
+  },
+  "Carlos Quintana": {
+    "keyword": "Carlos Quintana Baseball",
+    "nScraped": 122,
+    "nSoldUsed": 8,
+    "avg": 23.095000000000002,
+    "taguchiSold": 23.095000000000002,
+    "medianSold": 23.095000000000002,
+    "marketStabilityCV": 0.7010472411801111,
+    "currency": "USD",
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
+  },
+  "Carlos Rivero": {
+    "keyword": "Carlos Rivero Baseball",
+    "nScraped": 0,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
+    "currency": "USD",
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
   }
 }
