@@ -212,6 +212,7 @@ const Data = () => {
   const [scatterMode, setScatterMode] = useState<CardMode>("raw");
   const [gapsMode, setGapsMode] = useState<CardMode>("raw");
   const [supplyMode, setSupplyMode] = useState<CardMode>("raw");
+  const [signalMode, setSignalMode] = useState<CardMode>("raw");
 
   const handleScatterClick = useCallback((state: any) => {
     if (!state?.activePayload?.length) { setPinnedDot(null); return; }
@@ -308,16 +309,23 @@ const Data = () => {
   };
 
   const signalAthletes = useMemo(() => {
-    // Use raw data by default; merge both for broader coverage
-    const allComparison = [...rawComparison];
-    const seen = new Set(rawComparison.map(d => d.name));
-    for (const d of gradedComparison) {
-      if (!seen.has(d.name)) { allComparison.push(d); seen.add(d.name); }
+    let allComparison: typeof rawComparison;
+    if (signalMode === "raw") {
+      allComparison = rawComparison;
+    } else if (signalMode === "graded") {
+      allComparison = gradedComparison;
+    } else {
+      // "both": merge, preferring raw when athlete exists in both
+      allComparison = [...rawComparison];
+      const seen = new Set(rawComparison.map(d => d.name));
+      for (const d of gradedComparison) {
+        if (!seen.has(d.name)) { allComparison.push(d); seen.add(d.name); }
+      }
     }
 
     const results: SignalAthlete[] = [];
     for (const d of allComparison) {
-      const rec = listedData[d.name] as any;
+      const rec = (signalMode === "graded" ? gradedListedData[d.name] : listedData[d.name]) as any;
       const cv: number | null = rec?.marketStabilityCV ?? rec?.marketplaces?.EBAY_US?.marketStabilityCV ?? null; // Market Stability Score
       const days: number | null = rec?.avgDaysOnMarket ?? rec?.marketplaces?.EBAY_US?.avgDaysOnMarket ?? null;
       const spreadPct = d.sold > 0 ? ((d.listed - d.sold) / d.sold) * 100 : 0;
@@ -345,7 +353,7 @@ const Data = () => {
     }
 
     return results;
-  }, [rawComparison, gradedComparison, listedData]);
+  }, [signalMode, rawComparison, gradedComparison, listedData, gradedListedData]);
 
   const signalGroups = useMemo(() => {
     const groups: Record<SignalCategory, SignalAthlete[]> = {
@@ -840,10 +848,13 @@ const Data = () => {
 
             {/* ── Investment Signal Score ── */}
             <section className="my-8" aria-label="Investment signal score">
-              <h2 className="font-display font-bold text-lg text-foreground mb-1 flex items-center gap-2">
-                <span className="w-1 h-5 rounded-full bg-primary inline-block" />
-                Investment Signal Score
-              </h2>
+              <div className="flex items-center justify-between flex-wrap gap-2 mb-1">
+                <h2 className="font-display font-bold text-lg text-foreground flex items-center gap-2">
+                  <span className="w-1 h-5 rounded-full bg-primary inline-block" />
+                  Investment Signal Score
+                </h2>
+                <ModeToggle value={signalMode} onChange={setSignalMode} />
+              </div>
               <p className="text-xs text-muted-foreground mb-4 ml-3">
                 Athletes classified by price spread, stability (CV), and days on market. Data-driven — not guessing.
               </p>
