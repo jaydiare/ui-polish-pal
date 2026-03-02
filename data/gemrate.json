@@ -1,13 +1,13 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-02T01:01:54.330008+00:00",
-    "athleteCount": 262,
+    "updatedAt": "2026-03-02T01:07:52.340171+00:00",
+    "athleteCount": 272,
     "graders": [
       "PSA"
     ],
     "batchInfo": {
-      "startIdx": 310,
-      "endIdx": 320,
+      "startIdx": 320,
+      "endIdx": 330,
       "totalAthletes": 575
     }
   },
@@ -4726,6 +4726,186 @@
         "gems": 96,
         "grades": 210,
         "gemRate": 46.0
+      }
+    },
+    "Luis Rengifo": {
+      "name": "Luis Rengifo",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 37,
+          "gems": 36,
+          "grades": 74,
+          "gemRate": 49.0
+        }
+      },
+      "totals": {
+        "cards": 37,
+        "gems": 36,
+        "grades": 74,
+        "gemRate": 49.0
+      }
+    },
+    "Luis Rivas": {
+      "name": "Luis Rivas",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 18,
+          "gems": 12,
+          "grades": 66,
+          "gemRate": 18.0
+        }
+      },
+      "totals": {
+        "cards": 18,
+        "gems": 12,
+        "grades": 66,
+        "gemRate": 18.0
+      }
+    },
+    "Luis Rodriguez": {
+      "name": "Luis Rodriguez",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 394,
+          "gems": 1804,
+          "grades": 3064,
+          "gemRate": 59.0
+        }
+      },
+      "totals": {
+        "cards": 394,
+        "gems": 1804,
+        "grades": 3064,
+        "gemRate": 59.0
+      }
+    },
+    "Luis Salazar": {
+      "name": "Luis Salazar",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 62,
+          "gems": 313,
+          "grades": 618,
+          "gemRate": 51.0
+        }
+      },
+      "totals": {
+        "cards": 62,
+        "gems": 313,
+        "grades": 618,
+        "gemRate": 51.0
+      }
+    },
+    "Luis Sanchez": {
+      "name": "Luis Sanchez",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 14,
+          "gems": 113,
+          "grades": 212,
+          "gemRate": 53.0
+        }
+      },
+      "totals": {
+        "cards": 14,
+        "gems": 113,
+        "grades": 212,
+        "gemRate": 53.0
+      }
+    },
+    "Luis Sardinas": {
+      "name": "Luis Sardinas",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 15,
+          "gems": 16,
+          "grades": 27,
+          "gemRate": 59.0
+        }
+      },
+      "totals": {
+        "cards": 15,
+        "gems": 16,
+        "grades": 27,
+        "gemRate": 59.0
+      }
+    },
+    "Luis Sojo": {
+      "name": "Luis Sojo",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 37,
+          "gems": 44,
+          "grades": 194,
+          "gemRate": 23.0
+        }
+      },
+      "totals": {
+        "cards": 37,
+        "gems": 44,
+        "grades": 194,
+        "gemRate": 23.0
+      }
+    },
+    "Luis Torrens": {
+      "name": "Luis Torrens",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 13,
+          "gems": 47,
+          "grades": 82,
+          "gemRate": 57.0
+        }
+      },
+      "totals": {
+        "cards": 13,
+        "gems": 47,
+        "grades": 82,
+        "gemRate": 57.0
+      }
+    },
+    "Luis Ugueto": {
+      "name": "Luis Ugueto",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 6,
+          "gems": 2,
+          "grades": 7,
+          "gemRate": 29.0
+        }
+      },
+      "totals": {
+        "cards": 6,
+        "gems": 2,
+        "grades": 7,
+        "gemRate": 29.0
+      }
+    },
+    "Luis Valbuena": {
+      "name": "Luis Valbuena",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 15,
+          "gems": 12,
+          "grades": 22,
+          "gemRate": 55.0
+        }
+      },
+      "totals": {
+        "cards": 15,
+        "gems": 12,
+        "grades": 22,
+        "gemRate": 55.0
       }
     }
   }
