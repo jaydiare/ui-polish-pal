@@ -60,17 +60,19 @@ const AthleteCard = forwardRef<HTMLElement, AthleteCardProps>(({ athlete, byName
   const isBuyLow = activeHasPrice && soldAvg != null && activeAvgNum != null && soldAvg < activeAvgNum;
 
   // Sparkline data: extract prices from history based on priceMode, only show with 7+ data points
-  const sparklineData = useMemo(() => {
+  const extractSparkline = (key: "raw" | "graded") => {
     if (!history || history.length < 7) return null;
-    const extractor = priceMode === "graded"
-      ? (h: any) => h?.graded?.price ?? null
-      : (h: any) => h?.raw?.price ?? null;
     const values = history
-      .map(extractor)
+      .map((h: any) => h?.[key]?.price ?? null)
       .filter((v: any): v is number => v != null && Number.isFinite(v));
     return values.length >= 7 ? values : null;
-  }, [history, priceMode]);
-  const showSparkline = sparklineData != null;
+  };
+  const rawSparkline = useMemo(() => extractSparkline("raw"), [history]);
+  const gradedSparkline = useMemo(() => extractSparkline("graded"), [history]);
+
+  const showRawSparkline = (priceMode === "raw" || priceMode === "both") && rawSparkline != null;
+  const showGradedSparkline = (priceMode === "graded" || priceMode === "both") && gradedSparkline != null;
+  const showSparkline = showRawSparkline || showGradedSparkline;
 
   return (
     <article ref={ref} className={`athlete-card group ${isRecommended ? "is-recommended" : ""}`}>
@@ -159,9 +161,21 @@ const AthleteCard = forwardRef<HTMLElement, AthleteCardProps>(({ athlete, byName
 
       {/* ── Sparkline ── */}
       {showSparkline && (
-        <div className="mt-2 flex items-center gap-2">
-          <Sparkline data={sparklineData} width={80} height={20} />
-          <span className="text-[9px] text-muted-foreground">{sparklineData.length}d trend</span>
+        <div className={`mt-2 flex items-center gap-2 ${priceMode === "both" && showRawSparkline && showGradedSparkline ? "grid grid-cols-2" : ""}`}>
+          {showRawSparkline && (
+            <div className="flex items-center gap-1.5">
+              {priceMode === "both" && <span className="text-[8px] text-muted-foreground uppercase">Raw</span>}
+              <Sparkline data={rawSparkline} width={priceMode === "both" ? 60 : 80} height={20} />
+              <span className="text-[9px] text-muted-foreground">{rawSparkline.length}d</span>
+            </div>
+          )}
+          {showGradedSparkline && (
+            <div className="flex items-center gap-1.5">
+              {priceMode === "both" && <span className="text-[8px] text-muted-foreground uppercase">Grd</span>}
+              <Sparkline data={gradedSparkline} width={priceMode === "both" ? 60 : 80} height={20} />
+              <span className="text-[9px] text-muted-foreground">{gradedSparkline.length}d</span>
+            </div>
+          )}
         </div>
       )}
 
