@@ -703,7 +703,7 @@ const Data = () => {
                 Top 20 athletes with the largest listed-to-sold price spread.
               </p>
               <div className="glass-panel p-4 md:p-6">
-                <div className="w-full h-[450px] md:h-[550px]">
+                <div className="w-full h-[560px] md:h-[550px]">
                   <ResponsiveContainer width="100%" height="100%">
                     <BarChart data={topSpread} layout="vertical" margin={{ top: 22, right: 30, left: 10, bottom: 5 }}>
                       <CartesianGrid strokeDasharray="3 3" stroke="hsl(var(--border))" opacity={0.5} />
