@@ -178,17 +178,23 @@ export function computeIndexForSport(
 
   list.forEach((a) => {
     if (sportOrAll !== "All" && a.sport !== sportOrAll) return;
-    const rawV = getEbayAvgNumber(a, byName, byKey);
-    const gradedV = hasGraded ? getEbayAvgNumber(a, gradedByName!, gradedByKey!) : null;
 
-    if (rawV != null && gradedV != null) {
-      sum += rawV * rawWeight + gradedV * gradedWeight;
+    const rawRec = getEbayAvgFor(a, byName, byKey);
+    const rawIdx = rawRec?.indexLevel;
+    const hasRawIdx = rawIdx != null && Number.isFinite(rawIdx) && rawIdx > 0;
+
+    const gradedRec = hasGraded ? getEbayAvgFor(a, gradedByName!, gradedByKey!) : null;
+    const gradedIdx = gradedRec?.indexLevel;
+    const hasGradedIdx = gradedIdx != null && Number.isFinite(gradedIdx) && gradedIdx > 0;
+
+    if (hasRawIdx && hasGradedIdx) {
+      sum += rawIdx! * rawWeight + gradedIdx! * gradedWeight;
       used += 1;
-    } else if (rawV != null) {
-      sum += rawV;
+    } else if (hasRawIdx) {
+      sum += rawIdx!;
       used += 1;
-    } else if (gradedV != null) {
-      sum += gradedV;
+    } else if (hasGradedIdx) {
+      sum += gradedIdx!;
       used += 1;
     }
   });
