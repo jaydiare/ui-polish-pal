@@ -133,11 +133,11 @@ export function useAthleteData() {
 
 
 
-  const runBudget = useCallback((budgetDollars: number, maxCards: number | null, cardType: string = "raw", buyLowOnly: boolean = false) => {
+  const runBudget = useCallback((budgetDollars: number, maxCards: number | null, cardType: string = "raw") => {
     const useName = cardType === "graded" ? gradedByName : byName;
     const useKey = cardType === "graded" ? gradedByKey : byKey;
 
-    let candidates: BudgetCandidate[] = filteredAthletes.map((a) => ({
+    const candidates: BudgetCandidate[] = filteredAthletes.map((a) => ({
       name: a.name,
       sport: a.sport,
       price: getEbayAvgNumber(a, useName, useKey),
@@ -148,13 +148,6 @@ export function useAthleteData() {
       daysOnMarket: getAvgDaysOnMarket(a, useName, useKey),
     }));
 
-    if (buyLowOnly) {
-      candidates = candidates.filter((c) => {
-        const soldRecord = ebaySoldRaw?.[c.name];
-        const soldAvg = soldRecord?.taguchiSold != null ? soldRecord.taguchiSold : null;
-        return soldAvg != null && c.price != null && soldAvg < c.price;
-      });
-    }
     const result = runKnapsack(candidates, budgetDollars, maxCards);
     setBudgetResult(result);
   }, [filteredAthletes, byName, byKey, gradedByName, gradedByKey, ebaySoldRaw]);
