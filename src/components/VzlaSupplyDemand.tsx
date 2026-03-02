@@ -13,6 +13,7 @@ import {
 
 interface Props {
   comparisonData: { name: string; listed: number; sold: number; sport: string }[];
+  hideTitle?: boolean;
 }
 
 const SupplyDemandTooltip = ({ payload, label }: any) => {
@@ -30,7 +31,7 @@ const SupplyDemandTooltip = ({ payload, label }: any) => {
   );
 };
 
-const VzlaSupplyDemand = ({ comparisonData }: Props) => {
+const VzlaSupplyDemand = ({ comparisonData, hideTitle }: Props) => {
   const { chartData, equilibrium } = useMemo(() => {
     if (!comparisonData.length) return { chartData: [], equilibrium: null };
 
@@ -68,23 +69,37 @@ const VzlaSupplyDemand = ({ comparisonData }: Props) => {
   if (!chartData.length) return null;
 
   return (
-    <section className="my-8" aria-label="Supply and demand curves">
-      <h2 className="font-display font-bold text-lg text-foreground mb-1 flex items-center gap-2">
-        <span className="w-1 h-5 rounded-full bg-primary inline-block" />
-        Supply &amp; Demand
-      </h2>
-      <p className="text-xs text-muted-foreground mb-4 ml-3">
-        Step-function curves inspired by{" "}
-        <a href="https://github.com/gus-massa/pymarket" target="_blank" rel="noopener noreferrer" className="underline decoration-dotted underline-offset-2 hover:text-primary transition-colors">
-          pymarket
-        </a>
-        . Supply = listed prices (ascending), Demand = sold prices (descending).
-        {equilibrium && (
-          <span className="ml-1 font-medium text-foreground">
-            Equilibrium ≈ {equilibrium.qty} cards @ ${equilibrium.price.toFixed(2)}
-          </span>
-        )}
-      </p>
+    <section className={hideTitle ? "" : "my-8"} aria-label="Supply and demand curves">
+      {!hideTitle && (
+        <>
+          <h2 className="font-display font-bold text-lg text-foreground mb-1 flex items-center gap-2">
+            <span className="w-1 h-5 rounded-full bg-primary inline-block" />
+            Supply &amp; Demand
+          </h2>
+          <p className="text-xs text-muted-foreground mb-4 ml-3">
+            Step-function curves inspired by{" "}
+            <a href="https://github.com/gus-massa/pymarket" target="_blank" rel="noopener noreferrer" className="underline decoration-dotted underline-offset-2 hover:text-primary transition-colors">
+              pymarket
+            </a>
+            . Supply = listed prices (ascending), Demand = sold prices (descending).
+            {equilibrium && (
+              <span className="ml-1 font-medium text-foreground">
+                Equilibrium ≈ {equilibrium.qty} cards @ ${equilibrium.price.toFixed(2)}
+              </span>
+            )}
+          </p>
+        </>
+      )}
+      {hideTitle && (
+        <p className="text-xs text-muted-foreground mb-4 ml-3">
+          Supply = listed prices (ascending), Demand = sold prices (descending).
+          {equilibrium && (
+            <span className="ml-1 font-medium text-foreground">
+              Equilibrium ≈ {equilibrium.qty} cards @ ${equilibrium.price.toFixed(2)}
+            </span>
+          )}
+        </p>
+      )}
       <div className="glass-panel p-4 md:p-6">
         <div className="w-full h-[400px] md:h-[450px]">
           <ResponsiveContainer width="100%" height="100%">
