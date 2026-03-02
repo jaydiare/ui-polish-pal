@@ -70,7 +70,7 @@ const MIN_EBAY_SAMPLE_SIZE = 4;
 const MARKETPLACES = ["EBAY_US", "EBAY_CA"];
 
 // restrict to major manufacturers (sports card makers)
-const MANUFACTURERS = ["Topps", "Panini", "Upper Deck", "Leaf", "Artesania Sport", "Ovenca Venezuelan", "Sport Grafico", "Line Up", "Venezuelan League", "BYN"];
+const MANUFACTURERS = ["Topps", "Panini", "Upper Deck", "Leaf", "Artesania Sport", "Ovenca Venezuelan", "Sport Grafico", "Line Up", "Venezuelan League", "BYN", "O-Pee-Chee"];
 
 // ✅ Country of Origin options
 const COUNTRY_OF_ORIGIN = ["United States", "Italy", "Venezuela"];
@@ -88,8 +88,6 @@ const UNGRADED_ALLOWED_CONDITIONS = [
   "nm",
   "nm-mt",
   "nmt",
-  "excellent",
-  "ex",
 ];
 
 // if any of these appear (descriptor/title), reject ungraded listing
@@ -124,6 +122,8 @@ const UNGRADED_BLOCKLIST = [
   "tear",
   "scratches",
   "scratch",
+  "excellent",
+  "ex",
 ];
 
 // --- helpers ---
@@ -303,7 +303,7 @@ function isGradedListing(item) {
 
   if (cond.includes("graded")) return true;
 
-  const graderHints = ["psa", "bgs", "sgc", "cgc", "beckett", "gem mint", "gm mt", "9.5", "10"];
+  const graderHints = ["psa", "sgc",  "gem mint", "gm mt", "9.5", "10"];
   return graderHints.some((k) => title.includes(k));
 }
 
