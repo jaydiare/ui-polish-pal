@@ -30,7 +30,7 @@ const TAGUCHI_TRIM_PCT = 0.4;
 const BRANDS = [
   "topps", "panini", "upper deck", "leaf",
   "artesania sport", "ovenca", "sport grafico",
-  "line up", "venezuelan league", "byn",
+  "line up", "venezuelan league", "byn", "O-Pee-Chee",
 ];
 
 const JUNK_PHRASES = [
@@ -139,7 +139,7 @@ function titleLooksRelevantToPlayer(title, playerName) {
 // ✅ GRADED detection — ONLY include graded titles
 function isGradedTitle(title) {
   const t = norm(title);
-  const graderHints = ["psa", "bgs", "sgc", "cgc", "beckett", "gem mint", "gm mt"];
+  const graderHints = ["psa", "sgc", "gem mint", "gm mt"];
   return graderHints.some((k) => t.includes(k));
 }
 
