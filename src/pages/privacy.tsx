@@ -94,14 +94,7 @@ export default function Privacy() {
               <h2 className="text-lg font-semibold text-foreground mb-2">8. Contact</h2>
               <p>
                 For questions about this Privacy Policy, please reach out via our social
-                channels or email us at{" "}
-                <a
-                  href="mailto:privacy@vzlasportselite.com"
-                  className="text-vzla-yellow hover:underline"
-                >
-                  privacy@vzlasportselite.com
-                </a>
-                .
+                channels.
               </p>
             </section>
           </div>
