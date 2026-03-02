@@ -2,9 +2,21 @@ import { useState, useEffect } from "react";
 
 const cache = new Map<string, string | null>();
 
-async function tryWikiPages(query: string): Promise<string | null> {
-  const q = encodeURIComponent(query);
-  // Try exact title match
+// Map sport names to Wikipedia disambiguation suffixes
+const SPORT_TO_WIKI: Record<string, string> = {
+  Baseball: "baseball",
+  Soccer: "footballer",
+  Football: "American football",
+  Basketball: "basketball",
+  Tennis: "tennis",
+  Golf: "golfer",
+  MMA: "mixed martial artist",
+  BMX: "cyclist",
+  Bowling: "bowler",
+};
+
+async function fetchImageByTitle(title: string): Promise<string | null> {
+  const q = encodeURIComponent(title);
   const res = await fetch(
     `https://en.wikipedia.org/w/api.php?action=query&titles=${q}&prop=pageimages&format=json&pithumbsize=200&origin=*`
   );
@@ -14,36 +26,40 @@ async function tryWikiPages(query: string): Promise<string | null> {
     const page = Object.values(pages)[0] as any;
     if (page?.thumbnail?.source) return page.thumbnail.source;
   }
+  return null;
+}
 
-  // Fallback: search API
+async function searchAndFetchImage(query: string): Promise<string | null> {
+  const q = encodeURIComponent(query);
   const searchRes = await fetch(
     `https://en.wikipedia.org/w/api.php?action=query&list=search&srsearch=${q}&srlimit=1&format=json&origin=*`
   );
   const searchData = await searchRes.json();
   const hit = searchData?.query?.search?.[0];
   if (!hit?.title) return null;
-
-  const titleQ = encodeURIComponent(hit.title);
-  const imgRes = await fetch(
-    `https://en.wikipedia.org/w/api.php?action=query&titles=${titleQ}&prop=pageimages&format=json&pithumbsize=200&origin=*`
-  );
-  const imgData = await imgRes.json();
-  const imgPages = imgData?.query?.pages;
-  if (imgPages) {
-    const imgPage = Object.values(imgPages)[0] as any;
-    if (imgPage?.thumbnail?.source) return imgPage.thumbnail.source;
-  }
-  return null;
+  return fetchImageByTitle(hit.title);
 }
 
 async function fetchWikiImage(name: string, sport?: string): Promise<string | null> {
-  // Try with sport disambiguation first (e.g. "Luis Rodriguez baseball")
+  // 1. Try exact name match
+  const exact = await fetchImageByTitle(name);
+  if (exact) return exact;
+
+  // 2. Try Wikipedia disambiguation pattern: "Name (sport)"
   if (sport) {
-    const result = await tryWikiPages(`${name} ${sport}`);
-    if (result) return result;
+    const wikiSuffix = SPORT_TO_WIKI[sport] || sport.toLowerCase();
+    const disambig = await fetchImageByTitle(`${name} (${wikiSuffix})`);
+    if (disambig) return disambig;
   }
-  // Fallback to name only
-  return tryWikiPages(name);
+
+  // 3. Try search with sport keyword for disambiguation
+  if (sport) {
+    const sportSearch = await searchAndFetchImage(`${name} ${sport}`);
+    if (sportSearch) return sportSearch;
+  }
+
+  // 4. Fallback: plain search
+  return searchAndFetchImage(name);
 }
 
 export function useWikipediaImage(name: string, sport?: string): string | null {
