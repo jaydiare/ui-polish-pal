@@ -690,9 +690,10 @@ async function main() {
           if (!hasAllowedBrand(title)) continue;
           if (isJunkTitle(title)) continue;
           if (!titleLooksRelevantToPlayer(title, name)) continue;
-          if (!isGradedTitle(title)) {
-            if (!ungradedPassesPolicy(title)) continue;
-          }
+          // ✅ RAW ONLY: skip graded listings entirely
+          if (isGradedTitle(title)) continue;
+          // Enforce ungraded condition policy
+          if (!ungradedPassesPolicy(title)) continue;
 
           let totalPrice = it.price;
           if (it.shippingCost > 0) totalPrice += it.shippingCost;
