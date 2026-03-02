@@ -1,13 +1,13 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-02T16:23:30.090466+00:00",
-    "athleteCount": 438,
+    "updatedAt": "2026-03-02T16:27:09.616318+00:00",
+    "athleteCount": 441,
     "graders": [
       "PSA"
     ],
     "batchInfo": {
-      "startIdx": 550,
-      "endIdx": 570,
+      "startIdx": 570,
+      "endIdx": 575,
       "totalAthletes": 575
     }
   },
@@ -7894,6 +7894,60 @@
         "gems": 5,
         "grades": 10,
         "gemRate": 50.0
+      }
+    },
+    "Yeferson Soteldo": {
+      "name": "Yeferson Soteldo",
+      "sport": "Soccer",
+      "graders": {
+        "PSA": {
+          "cards": 6,
+          "gems": 4,
+          "grades": 7,
+          "gemRate": 57.0
+        }
+      },
+      "totals": {
+        "cards": 6,
+        "gems": 4,
+        "grades": 7,
+        "gemRate": 57.0
+      }
+    },
+    "Yordan Osorio": {
+      "name": "Yordan Osorio",
+      "sport": "Soccer",
+      "graders": {
+        "PSA": {
+          "cards": 6,
+          "gems": 4,
+          "grades": 6,
+          "gemRate": 67.0
+        }
+      },
+      "totals": {
+        "cards": 6,
+        "gems": 4,
+        "grades": 6,
+        "gemRate": 67.0
+      }
+    },
+    "Garbine Muguruza": {
+      "name": "Garbine Muguruza",
+      "sport": "Tennis",
+      "graders": {
+        "PSA": {
+          "cards": 19,
+          "gems": 13,
+          "grades": 30,
+          "gemRate": 43.0
+        }
+      },
+      "totals": {
+        "cards": 19,
+        "gems": 13,
+        "grades": 30,
+        "gemRate": 43.0
       }
     }
   }
