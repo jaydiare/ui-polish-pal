@@ -684,20 +684,21 @@ function loadAthletes() {
     .filter((x) => x.name);
 }
 
-// --- index computation (mirrors frontend computeIndexForSport) ---
+// --- index computation: average of per-player index levels (base=100) ---
 function computeScriptIndex(outData, athletes, sport) {
   let sum = 0;
   let used = 0;
   for (const a of athletes) {
     if (sport !== "All" && a.sport !== sport) continue;
     const rec = outData[a.name];
-    const v = rec?.taguchiListing ?? rec?.avgListing ?? rec?.avg ?? null;
-    if (v != null && Number.isFinite(v) && v > 0) {
-      sum += v;
+    const idx = rec?.indexLevel;
+    if (idx != null && Number.isFinite(idx) && idx > 0) {
+      sum += idx;
       used += 1;
     }
   }
-  return { sum, used };
+  const average = used > 0 ? sum / used : 0;
+  return { average, used };
 }
 
 // --- main ---
@@ -706,13 +707,17 @@ async function main() {
   const fx = await getFxRatesToUSD();
   const athletes = loadAthletes();
 
-  // Load previous indexHistory so we can append to it
+  // Load previous indexHistory and basePrices so we can append/reuse
   let prevHistory = [];
+  let basePrices = {};  // { playerName: basePrice }
   try {
     if (fs.existsSync(OUT_PATH)) {
       const prev = JSON.parse(fs.readFileSync(OUT_PATH, "utf8"));
       if (Array.isArray(prev?._meta?.indexHistory)) {
         prevHistory = prev._meta.indexHistory;
+      }
+      if (prev?._meta?.basePrices && typeof prev._meta.basePrices === "object") {
+        basePrices = prev._meta.basePrices;
       }
     }
   } catch { /* ignore parse errors */ }
@@ -847,6 +852,20 @@ async function main() {
       rec.avg = rec.avgListing;
       rec.n = rec.nListing;
 
+      // --- Base=100 index per player ---
+      const robustPrice = rec.taguchiListing;
+      if (robustPrice != null && Number.isFinite(robustPrice) && robustPrice > 0) {
+        // Set base price on first observation
+        if (!basePrices[name] || !Number.isFinite(basePrices[name]) || basePrices[name] <= 0) {
+          basePrices[name] = robustPrice;
+        }
+        rec.basePriceUSD = basePrices[name];
+        rec.indexLevel = 100 * (robustPrice / basePrices[name]);
+      } else {
+        rec.basePriceUSD = basePrices[name] ?? null;
+        rec.indexLevel = null;
+      }
+
       out[name] = rec;
     } catch (e) {
       errorCount++;
@@ -883,13 +902,16 @@ async function main() {
     .slice(0, 3)
     .map(([s]) => s);
 
+  // Persist basePrices in _meta
+  out._meta.basePrices = basePrices;
+
   const snapshot = { date: today };
   for (const sport of topSports) {
     const idx = computeScriptIndex(out, athletes, sport);
-    snapshot[sport] = Math.round(idx.sum);
+    snapshot[sport] = parseFloat(idx.average.toFixed(1));
   }
   const allIdx = computeScriptIndex(out, athletes, "All");
-  snapshot.All = Math.round(allIdx.sum);
+  snapshot.All = parseFloat(allIdx.average.toFixed(1));
 
   // Dedupe: replace existing entry for today, keep last 90 days
   const history = prevHistory.filter((h) => h.date !== today);
