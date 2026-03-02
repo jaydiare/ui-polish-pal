@@ -566,10 +566,11 @@ const Data = () => {
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
                 {rawSportAgg.map((s, i) => {
                   const g = gradedSportMap[s.sport];
+                  const hasGraded = g && g.totalListed > 0 && g.totalSold > 0;
                   const rawSpread = s.totalListed - s.totalSold;
                   const rawPct = s.totalSold > 0 ? ((rawSpread / s.totalSold) * 100).toFixed(1) : "0";
-                  const gradedSpread = g ? g.totalListed - g.totalSold : 0;
-                  const gradedPct = g && g.totalSold > 0 ? ((gradedSpread / g.totalSold) * 100).toFixed(1) : "0";
+                  const gradedSpread = hasGraded ? g.totalListed - g.totalSold : 0;
+                  const gradedPct = hasGraded ? ((gradedSpread / g.totalSold) * 100).toFixed(1) : null;
                   return (
                     <motion.div
                       key={s.sport}
@@ -601,7 +602,7 @@ const Data = () => {
                           </div>
                           <div>
                             <div className="text-[9px] text-muted-foreground uppercase tracking-wider mb-0.5">Graded</div>
-                            <div className="font-mono font-bold text-foreground text-sm">{g ? `$${g.avgListed.toFixed(2)}` : "—"}</div>
+                            <div className="font-mono font-bold text-foreground text-sm">{hasGraded ? `$${g.avgListed.toFixed(2)}` : "—"}</div>
                           </div>
                         </div>
                       </div>
@@ -616,7 +617,7 @@ const Data = () => {
                           </div>
                           <div>
                             <div className="text-[9px] text-muted-foreground uppercase tracking-wider mb-0.5">Graded</div>
-                            <div className="font-mono font-bold text-foreground text-sm">{g ? `$${g.avgSold.toFixed(2)}` : "—"}</div>
+                            <div className="font-mono font-bold text-foreground text-sm">{hasGraded ? `$${g.avgSold.toFixed(2)}` : "—"}</div>
                           </div>
                         </div>
                       </div>
@@ -641,7 +642,7 @@ const Data = () => {
                       </div>
 
                       {/* Mini bars — Graded */}
-                      {g && (
+                      {hasGraded && (
                         <div className="space-y-1.5 mt-2">
                           <div className="text-[9px] text-muted-foreground font-semibold uppercase tracking-wider">Graded Totals</div>
                           <div className="flex items-center gap-2">
@@ -674,8 +675,8 @@ const Data = () => {
                             </div>
                             <div className="text-center">
                               <div className="text-[8px] text-muted-foreground uppercase">Graded</div>
-                              <span className={`text-xs font-bold ${g ? (gradedSpread > 0 ? "text-red-400" : "text-green-400") : "text-muted-foreground/40"}`}>
-                                {g ? `${gradedSpread > 0 ? "+" : ""}${gradedPct}%` : "—"}
+                              <span className={`text-xs font-bold ${gradedPct ? (gradedSpread > 0 ? "text-red-400" : "text-green-400") : "text-muted-foreground/40"}`}>
+                                {gradedPct ? `${gradedSpread > 0 ? "+" : ""}${gradedPct}%` : "—"}
                               </span>
                             </div>
                           </div>
