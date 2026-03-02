@@ -59,19 +59,19 @@ const AthleteCard = forwardRef<HTMLElement, AthleteCardProps>(({ athlete, byName
   const isFlip = activeHasPrice && cv != null && soldAvg != null && activeAvgNum != null && soldAvg >= activeAvgNum && (stability.bucket === "volatile" || stability.bucket === "highly_unstable");
   const isBuyLow = activeHasPrice && soldAvg != null && activeAvgNum != null && soldAvg < activeAvgNum;
 
-  // Sparkline data: extract prices from history based on priceMode, only show with 7+ data points
+  // Sparkline data: extract prices + dates from history based on priceMode, only show with 7+ data points
   const extractSparkline = (key: "raw" | "graded") => {
     if (!history || history.length < 7) return null;
-    const values = history
-      .map((h: any) => h?.[key]?.price ?? null)
-      .filter((v: any): v is number => v != null && Number.isFinite(v));
-    return values.length >= 7 ? values : null;
+    const entries = history
+      .map((h: any) => ({ price: h?.[key]?.price ?? null, date: h?.date ?? null }))
+      .filter((e): e is { price: number; date: string } => e.price != null && Number.isFinite(e.price));
+    return entries.length >= 7 ? { values: entries.map(e => e.price), dates: entries.map(e => e.date) } : null;
   };
-  const rawSparkline = useMemo(() => extractSparkline("raw"), [history]);
-  const gradedSparkline = useMemo(() => extractSparkline("graded"), [history]);
+  const rawSparkData = useMemo(() => extractSparkline("raw"), [history]);
+  const gradedSparkData = useMemo(() => extractSparkline("graded"), [history]);
 
-  const showRawSparkline = (priceMode === "raw" || priceMode === "both") && rawSparkline != null;
-  const showGradedSparkline = (priceMode === "graded" || priceMode === "both") && gradedSparkline != null;
+  const showRawSparkline = (priceMode === "raw" || priceMode === "both") && rawSparkData != null;
+  const showGradedSparkline = (priceMode === "graded" || priceMode === "both") && gradedSparkData != null;
   const showSparkline = showRawSparkline || showGradedSparkline;
 
   return (
@@ -162,18 +162,18 @@ const AthleteCard = forwardRef<HTMLElement, AthleteCardProps>(({ athlete, byName
       {/* ── Sparkline ── */}
       {showSparkline && (
         <div className={`mt-2 flex items-center gap-2 ${priceMode === "both" && showRawSparkline && showGradedSparkline ? "grid grid-cols-2" : ""}`}>
-          {showRawSparkline && (
+          {showRawSparkline && rawSparkData && (
             <div className="flex items-center gap-1.5">
               {priceMode === "both" && <span className="text-[8px] text-muted-foreground uppercase">Raw</span>}
-              <Sparkline data={rawSparkline} width={priceMode === "both" ? 60 : 80} height={20} />
-              <span className="text-[9px] text-muted-foreground">{rawSparkline.length}d</span>
+              <Sparkline data={rawSparkData.values} dates={rawSparkData.dates} width={priceMode === "both" ? 60 : 80} height={20} />
+              <span className="text-[9px] text-muted-foreground">{rawSparkData.values.length}d</span>
             </div>
           )}
-          {showGradedSparkline && (
+          {showGradedSparkline && gradedSparkData && (
             <div className="flex items-center gap-1.5">
               {priceMode === "both" && <span className="text-[8px] text-muted-foreground uppercase">Grd</span>}
-              <Sparkline data={gradedSparkline} width={priceMode === "both" ? 60 : 80} height={20} />
-              <span className="text-[9px] text-muted-foreground">{gradedSparkline.length}d</span>
+              <Sparkline data={gradedSparkData.values} dates={gradedSparkData.dates} width={priceMode === "both" ? 60 : 80} height={20} />
+              <span className="text-[9px] text-muted-foreground">{gradedSparkData.values.length}d</span>
             </div>
           )}
         </div>
