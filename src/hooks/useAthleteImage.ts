@@ -2,31 +2,30 @@ import { useState, useEffect } from "react";
 
 const cache = new Map<string, string | null>();
 
-// ── MLB headshot via corsproxy to bypass CORS on statsapi ──
-async function fetchMlbHeadshot(name: string): Promise<string | null> {
+// ── ESPN headshot for baseball players (CORS-friendly, no auth) ──
+async function fetchEspnHeadshot(name: string): Promise<string | null> {
   try {
     const q = encodeURIComponent(name);
-    const apiUrl = `https://statsapi.mlb.com/api/v1/people/search?names=${q}&sportCode=mlb`;
-    const res = await fetch(`https://corsproxy.io/?url=${encodeURIComponent(apiUrl)}`);
+    const res = await fetch(
+      `https://site.api.espn.com/apis/common/v3/search?query=${q}&limit=1&type=player&sport=baseball&league=mlb`
+    );
     if (!res.ok) return null;
     const data = await res.json();
-    const person = data?.people?.[0];
-    if (!person?.id) return null;
+    const item = data?.items?.[0] ?? data?.results?.[0]?.items?.[0];
+    const imageUrl = item?.image ?? item?.headshot?.href;
+    if (!imageUrl) return null;
 
-    const headshotUrl = `https://img.mlb.com/mlb/images/players/head_shot/${person.id}.jpg`;
-
-    // Validate image loads via Image element (bypasses CORS)
+    // Validate image loads
     return new Promise<string | null>((resolve) => {
       const img = new Image();
-      img.onload = () => resolve(img.naturalWidth > 50 ? headshotUrl : null);
+      img.onload = () => resolve(img.naturalWidth > 1 ? imageUrl : null);
       img.onerror = () => resolve(null);
-      img.src = headshotUrl;
+      img.src = imageUrl;
     });
   } catch {
     return null;
   }
 }
-
 // ── Wikipedia fallback ──
 const SPORT_TO_WIKI: Record<string, string> = {
   Baseball: "baseball",
@@ -87,8 +86,8 @@ async function fetchWikiImage(name: string, sport?: string): Promise<string | nu
 async function fetchAthleteImage(name: string, sport?: string): Promise<string | null> {
   // Try MLB headshot first for baseball players
   if (sport === "Baseball") {
-    const mlb = await fetchMlbHeadshot(name);
-    if (mlb) return mlb;
+    const espn = await fetchEspnHeadshot(name);
+    if (espn) return espn;
   }
 
   // Fallback to Wikipedia
