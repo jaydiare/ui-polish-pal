@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, forwardRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const GA_ID = "G-3SCYEVBB9B";
@@ -23,7 +23,7 @@ function loadGA() {
   document.head.appendChild(inline);
 }
 
-const CookieConsent = () => {
+const CookieConsent = forwardRef<HTMLDivElement>((_, ref) => {
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
@@ -47,6 +47,7 @@ const CookieConsent = () => {
   };
 
   return (
+    <div ref={ref}>
     <AnimatePresence>
       {visible && (
         <motion.div
@@ -76,7 +77,10 @@ const CookieConsent = () => {
         </motion.div>
       )}
     </AnimatePresence>
+    </div>
   );
-};
+});
+
+CookieConsent.displayName = "CookieConsent";
 
 export default CookieConsent;

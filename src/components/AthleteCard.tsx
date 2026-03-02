@@ -1,4 +1,4 @@
-import { useMemo } from "react";
+import { useMemo, forwardRef } from "react";
 import { Athlete, EbayAvgRecord } from "@/data/athletes";
 import {
   getEbayAvgNumber,
@@ -25,7 +25,7 @@ interface AthleteCardProps {
   priceMode: "raw" | "graded" | "both";
 }
 
-const AthleteCard = ({ athlete, byName, byKey, gradedByName, gradedByKey, ebaySoldRaw, history, isRecommended, priceMode }: AthleteCardProps) => {
+const AthleteCard = forwardRef<HTMLElement, AthleteCardProps>(({ athlete, byName, byKey, gradedByName, gradedByKey, ebaySoldRaw, history, isRecommended, priceMode }, ref) => {
   const avgNum = getEbayAvgNumber(athlete, byName, byKey);
   const money = avgNum != null ? formatCurrency(avgNum, "USD") : "—";
 
@@ -69,7 +69,7 @@ const AthleteCard = ({ athlete, byName, byKey, gradedByName, gradedByKey, ebaySo
   const showSparkline = sparklineData != null && sparklineData.length >= 7;
 
   return (
-    <article className={`athlete-card group ${isRecommended ? "is-recommended" : ""}`}>
+    <article ref={ref} className={`athlete-card group ${isRecommended ? "is-recommended" : ""}`}>
       {/* Recommended badge */}
       {isRecommended && (
         <div className="mb-2 -mt-1 text-[10px] font-bold text-vzla-yellow tracking-wider uppercase flex items-center gap-1.5">
@@ -194,6 +194,8 @@ const AthleteCard = ({ athlete, byName, byKey, gradedByName, gradedByKey, ebaySo
       </div>
     </article>
   );
-};
+});
+
+AthleteCard.displayName = "AthleteCard";
 
 export default AthleteCard;

@@ -1,12 +1,14 @@
+import { forwardRef } from "react";
 import { motion } from "framer-motion";
 
 interface VzlaHeroProps {
   lastUpdated: string;
 }
 
-const VzlaHero = ({ lastUpdated }: VzlaHeroProps) => {
+const VzlaHero = forwardRef<HTMLElement, VzlaHeroProps>(({ lastUpdated }, ref) => {
   return (
     <motion.section
+      ref={ref}
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, ease: [0.4, 0, 0.2, 1] }}
@@ -64,6 +66,8 @@ const VzlaHero = ({ lastUpdated }: VzlaHeroProps) => {
 
     </motion.section>
   );
-};
+});
+
+VzlaHero.displayName = "VzlaHero";
 
 export default VzlaHero;
