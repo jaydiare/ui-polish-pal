@@ -1,13 +1,13 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-02T01:27:30.228875+00:00",
-    "athleteCount": 289,
+    "updatedAt": "2026-03-02T04:10:37.510374+00:00",
+    "athleteCount": 305,
     "graders": [
       "PSA"
     ],
     "batchInfo": {
-      "startIdx": 340,
-      "endIdx": 350,
+      "startIdx": 350,
+      "endIdx": 370,
       "totalAthletes": 575
     }
   },
@@ -5211,6 +5211,294 @@
         "cards": 250,
         "gems": 712,
         "grades": 1464,
+        "gemRate": 49.0
+      }
+    },
+    "Melvin Mora": {
+      "name": "Melvin Mora",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 76,
+          "gems": 51,
+          "grades": 177,
+          "gemRate": 29.0
+        }
+      },
+      "totals": {
+        "cards": 76,
+        "gems": 51,
+        "grades": 177,
+        "gemRate": 29.0
+      }
+    },
+    "Miguel Cabrera": {
+      "name": "Miguel Cabrera",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 7578,
+          "gems": 17362,
+          "grades": 40230,
+          "gemRate": 43.0
+        }
+      },
+      "totals": {
+        "cards": 7578,
+        "gems": 17362,
+        "grades": 40230,
+        "gemRate": 43.0
+      }
+    },
+    "Miguel Cairo": {
+      "name": "Miguel Cairo",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 12,
+          "gems": 14,
+          "grades": 25,
+          "gemRate": 56.0
+        }
+      },
+      "totals": {
+        "cards": 12,
+        "gems": 14,
+        "grades": 25,
+        "gemRate": 56.0
+      }
+    },
+    "Miguel Garcia": {
+      "name": "Miguel Garcia",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 1,
+          "gems": 0,
+          "grades": 1,
+          "gemRate": 0.0
+        }
+      },
+      "totals": {
+        "cards": 1,
+        "gems": 0,
+        "grades": 1,
+        "gemRate": 0.0
+      }
+    },
+    "Miguel Gonzalez": {
+      "name": "Miguel Gonzalez",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 8,
+          "gems": 5,
+          "grades": 36,
+          "gemRate": 14.0
+        }
+      },
+      "totals": {
+        "cards": 8,
+        "gems": 5,
+        "grades": 36,
+        "gemRate": 14.0
+      }
+    },
+    "Miguel Montero": {
+      "name": "Miguel Montero",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 64,
+          "gems": 73,
+          "grades": 142,
+          "gemRate": 51.0
+        }
+      },
+      "totals": {
+        "cards": 64,
+        "gems": 73,
+        "grades": 142,
+        "gemRate": 51.0
+      }
+    },
+    "Miguel Perez": {
+      "name": "Miguel Perez",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 8,
+          "gems": 4,
+          "grades": 12,
+          "gemRate": 33.0
+        }
+      },
+      "totals": {
+        "cards": 8,
+        "gems": 4,
+        "grades": 12,
+        "gemRate": 33.0
+      }
+    },
+    "Miguel Rojas": {
+      "name": "Miguel Rojas",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 51,
+          "gems": 55,
+          "grades": 83,
+          "gemRate": 66.0
+        }
+      },
+      "totals": {
+        "cards": 51,
+        "gems": 55,
+        "grades": 83,
+        "gemRate": 66.0
+      }
+    },
+    "Miguel Yajure": {
+      "name": "Miguel Yajure",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 29,
+          "gems": 14,
+          "grades": 34,
+          "gemRate": 41.0
+        }
+      },
+      "totals": {
+        "cards": 29,
+        "gems": 14,
+        "grades": 34,
+        "gemRate": 41.0
+      }
+    },
+    "Moises Ballesteros": {
+      "name": "Moises Ballesteros",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 295,
+          "gems": 1138,
+          "grades": 2077,
+          "gemRate": 55.0
+        }
+      },
+      "totals": {
+        "cards": 295,
+        "gems": 1138,
+        "grades": 2077,
+        "gemRate": 55.0
+      }
+    },
+    "Nivaldo Rodriguez": {
+      "name": "Nivaldo Rodriguez",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 8,
+          "gems": 5,
+          "grades": 12,
+          "gemRate": 42.0
+        }
+      },
+      "totals": {
+        "cards": 8,
+        "gems": 5,
+        "grades": 12,
+        "gemRate": 42.0
+      }
+    },
+    "Odubel Herrera": {
+      "name": "Odubel Herrera",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 61,
+          "gems": 135,
+          "grades": 183,
+          "gemRate": 74.0
+        }
+      },
+      "totals": {
+        "cards": 61,
+        "gems": 135,
+        "grades": 183,
+        "gemRate": 74.0
+      }
+    },
+    "Omar Daal": {
+      "name": "Omar Daal",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 9,
+          "gems": 1,
+          "grades": 12,
+          "gemRate": 8.0
+        }
+      },
+      "totals": {
+        "cards": 9,
+        "gems": 1,
+        "grades": 12,
+        "gemRate": 8.0
+      }
+    },
+    "Omar Infante": {
+      "name": "Omar Infante",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 30,
+          "gems": 62,
+          "grades": 113,
+          "gemRate": 55.0
+        }
+      },
+      "totals": {
+        "cards": 30,
+        "gems": 62,
+        "grades": 113,
+        "gemRate": 55.0
+      }
+    },
+    "Omar Narvaez": {
+      "name": "Omar Narvaez",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 24,
+          "gems": 9,
+          "grades": 26,
+          "gemRate": 35.0
+        }
+      },
+      "totals": {
+        "cards": 24,
+        "gems": 9,
+        "grades": 26,
+        "gemRate": 35.0
+      }
+    },
+    "Omar Vizquel": {
+      "name": "Omar Vizquel",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 572,
+          "gems": 4168,
+          "grades": 8450,
+          "gemRate": 49.0
+        }
+      },
+      "totals": {
+        "cards": 572,
+        "gems": 4168,
+        "grades": 8450,
         "gemRate": 49.0
       }
     }
