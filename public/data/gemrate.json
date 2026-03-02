@@ -1,13 +1,13 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-02T01:24:30.022533+00:00",
-    "athleteCount": 281,
+    "updatedAt": "2026-03-02T01:27:30.228875+00:00",
+    "athleteCount": 289,
     "graders": [
       "PSA"
     ],
     "batchInfo": {
-      "startIdx": 330,
-      "endIdx": 340,
+      "startIdx": 340,
+      "endIdx": 350,
       "totalAthletes": 575
     }
   },
@@ -5068,6 +5068,150 @@
         "gems": 2,
         "grades": 2,
         "gemRate": 100.0
+      }
+    },
+    "Martin Perez": {
+      "name": "Martin Perez",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 59,
+          "gems": 47,
+          "grades": 91,
+          "gemRate": 52.0
+        }
+      },
+      "totals": {
+        "cards": 59,
+        "gems": 47,
+        "grades": 91,
+        "gemRate": 52.0
+      }
+    },
+    "Martin Prado": {
+      "name": "Martin Prado",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 57,
+          "gems": 113,
+          "grades": 208,
+          "gemRate": 54.0
+        }
+      },
+      "totals": {
+        "cards": 57,
+        "gems": 113,
+        "grades": 208,
+        "gemRate": 54.0
+      }
+    },
+    "Marwin Gonzalez": {
+      "name": "Marwin Gonzalez",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 34,
+          "gems": 47,
+          "grades": 74,
+          "gemRate": 64.0
+        }
+      },
+      "totals": {
+        "cards": 34,
+        "gems": 47,
+        "grades": 74,
+        "gemRate": 64.0
+      }
+    },
+    "Mauricio Llovera": {
+      "name": "Mauricio Llovera",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 2,
+          "gems": 0,
+          "grades": 2,
+          "gemRate": 0.0
+        }
+      },
+      "totals": {
+        "cards": 2,
+        "gems": 0,
+        "grades": 2,
+        "gemRate": 0.0
+      }
+    },
+    "Mauricio Robles": {
+      "name": "Mauricio Robles",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 4,
+          "gems": 4,
+          "grades": 6,
+          "gemRate": 67.0
+        }
+      },
+      "totals": {
+        "cards": 4,
+        "gems": 4,
+        "grades": 6,
+        "gemRate": 67.0
+      }
+    },
+    "Max Castillo": {
+      "name": "Max Castillo",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 30,
+          "gems": 31,
+          "grades": 57,
+          "gemRate": 54.0
+        }
+      },
+      "totals": {
+        "cards": 30,
+        "gems": 31,
+        "grades": 57,
+        "gemRate": 54.0
+      }
+    },
+    "Max Ramirez": {
+      "name": "Max Ramirez",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 8,
+          "gems": 12,
+          "grades": 34,
+          "gemRate": 35.0
+        }
+      },
+      "totals": {
+        "cards": 8,
+        "gems": 12,
+        "grades": 34,
+        "gemRate": 35.0
+      }
+    },
+    "Maximo Acosta": {
+      "name": "Maximo Acosta",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 250,
+          "gems": 712,
+          "grades": 1464,
+          "gemRate": 49.0
+        }
+      },
+      "totals": {
+        "cards": 250,
+        "gems": 712,
+        "grades": 1464,
+        "gemRate": 49.0
       }
     }
   }
