@@ -37,7 +37,7 @@ const PROGRESS_PATH = path.join(__dirname, "..", "data", "ebay-sold-progress.jso
 const CATEGORY_ID = "261328";
 
 // Sampling
-const MAX_PAGES = 2;
+const MAX_PAGES = 3;
 const MAX_RETRIES = 4;
 const BASE_DELAY_MS = 4000;
 const INTER_PAGE_DELAY_MS = 2500;
@@ -51,7 +51,7 @@ const TAGUCHI_TRIM_PCT = 0.4;
 const BRANDS = [
   "topps", "panini", "upper deck", "leaf",
   "artesania sport", "ovenca", "sport grafico",
-  "line up", "venezuelan league", "byn",
+  "line up", "venezuelan league", "byn", "O-Pee-Chee",
 ];
 
 // --------------------
