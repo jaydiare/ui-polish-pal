@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import SEOHead from "@/components/SEOHead";
 import VzlaNavbar from "@/components/VzlaNavbar";
 import VzlaFooter from "@/components/VzlaFooter";
 import VzlaEbayFooter from "@/components/VzlaEbayFooter";
@@ -17,6 +18,11 @@ const Blog = () => {
 
   return (
     <div className="min-h-screen">
+      <SEOHead
+        title="Blog"
+        description="Market insights, top Venezuelan athlete card sales, and collecting guides. Stay informed on sports card trends and investment opportunities."
+        path="/blog"
+      />
       <VzlaNavbar />
       <main className="page-shell pt-8">
         <h1 className="text-3xl md:text-4xl font-display font-bold text-flag-gradient mb-2">Blog</h1>

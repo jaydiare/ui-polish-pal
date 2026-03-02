@@ -1,5 +1,6 @@
 import { useState, useEffect, useMemo, useRef, useCallback } from "react";
 import { motion } from "framer-motion";
+import SEOHead from "@/components/SEOHead";
 import VzlaNavbar from "@/components/VzlaNavbar";
 import VzlaFooter from "@/components/VzlaFooter";
 import VzlaEbayFooter from "@/components/VzlaEbayFooter";
@@ -438,6 +439,11 @@ const Data = () => {
 
   return (
     <div className="min-h-screen">
+      <SEOHead
+        title="Market Intel – Listed vs Sold Price Analytics"
+        description="Compare listed vs sold prices for 550+ Venezuelan athletes' trading cards. Scatter plots, price gaps, supply & demand charts, and investment signal scores updated daily."
+        path="/data"
+      />
       <VzlaNavbar />
       <main className="page-shell" role="main">
         {/* ── Hero ── */}
