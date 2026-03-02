@@ -10,7 +10,7 @@ import {
   buildEbaySearchUrl,
   initialsFromName,
 } from "@/lib/vzla-helpers";
-import { useWikipediaImage } from "@/hooks/useWikipediaImage";
+import { useAthleteImage } from "@/hooks/useAthleteImage";
 import Sparkline from "./Sparkline";
 
 interface AthleteCardProps {
@@ -79,7 +79,7 @@ const AthleteCard = forwardRef<HTMLElement, AthleteCardProps>(({ athlete, byName
 
   const shopUrl = buildEbaySearchUrl(athlete.name, athlete.sport);
   const initials = initialsFromName(athlete.name);
-  const photo = useWikipediaImage(athlete.name, athlete.sport);
+  const photo = useAthleteImage(athlete.name, athlete.sport);
 
   // Signals based on active price mode (single mode)
   const isFlip = activeHasPrice && cv != null && soldAvg != null && activeAvgNum != null && soldAvg >= activeAvgNum && (stability.bucket === "volatile" || stability.bucket === "highly_unstable");
