@@ -303,7 +303,7 @@ function isGradedListing(item) {
 
   if (cond.includes("graded")) return true;
 
-  const graderHints = ["psa", "bgs", "sgc", "cgc", "beckett", "gem mint", "gm mt", "9.5", "10"];
+  const graderHints = ["psa", "sgc", "gem mint", "gm mt", "9.5", "10"];
   return graderHints.some((k) => title.includes(k));
 }
 
