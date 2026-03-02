@@ -1,13 +1,13 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-02T15:33:50.167916+00:00",
-    "athleteCount": 426,
+    "updatedAt": "2026-03-02T15:39:22.044989+00:00",
+    "athleteCount": 433,
     "graders": [
       "PSA"
     ],
     "batchInfo": {
-      "startIdx": 510,
-      "endIdx": 530,
+      "startIdx": 530,
+      "endIdx": 550,
       "totalAthletes": 575
     }
   },
@@ -7678,6 +7678,132 @@
         "gems": 2,
         "grades": 2,
         "gemRate": 100.0
+      }
+    },
+    "Dani Pereira": {
+      "name": "Dani Pereira",
+      "sport": "Soccer",
+      "graders": {
+        "PSA": {
+          "cards": 4,
+          "gems": 1,
+          "grades": 8,
+          "gemRate": 12.0
+        }
+      },
+      "totals": {
+        "cards": 4,
+        "gems": 1,
+        "grades": 8,
+        "gemRate": 12.0
+      }
+    },
+    "David Martinez": {
+      "name": "David Martinez",
+      "sport": "Soccer",
+      "graders": {
+        "PSA": {
+          "cards": 35,
+          "gems": 31,
+          "grades": 62,
+          "gemRate": 50.0
+        }
+      },
+      "totals": {
+        "cards": 35,
+        "gems": 31,
+        "grades": 62,
+        "gemRate": 50.0
+      }
+    },
+    "Emilio Renteria": {
+      "name": "Emilio Renteria",
+      "sport": "Soccer",
+      "graders": {
+        "PSA": {
+          "cards": 1,
+          "gems": 0,
+          "grades": 1,
+          "gemRate": 0.0
+        }
+      },
+      "totals": {
+        "cards": 1,
+        "gems": 0,
+        "grades": 1,
+        "gemRate": 0.0
+      }
+    },
+    "Jefferson Savarino": {
+      "name": "Jefferson Savarino",
+      "sport": "Soccer",
+      "graders": {
+        "PSA": {
+          "cards": 6,
+          "gems": 2,
+          "grades": 6,
+          "gemRate": 33.0
+        }
+      },
+      "totals": {
+        "cards": 6,
+        "gems": 2,
+        "grades": 6,
+        "gemRate": 33.0
+      }
+    },
+    "Josef Martinez": {
+      "name": "Josef Martinez",
+      "sport": "Soccer",
+      "graders": {
+        "PSA": {
+          "cards": 94,
+          "gems": 84,
+          "grades": 163,
+          "gemRate": 52.0
+        }
+      },
+      "totals": {
+        "cards": 94,
+        "gems": 84,
+        "grades": 163,
+        "gemRate": 52.0
+      }
+    },
+    "Junior Moreno": {
+      "name": "Junior Moreno",
+      "sport": "Soccer",
+      "graders": {
+        "PSA": {
+          "cards": 3,
+          "gems": 0,
+          "grades": 3,
+          "gemRate": 0.0
+        }
+      },
+      "totals": {
+        "cards": 3,
+        "gems": 0,
+        "grades": 3,
+        "gemRate": 0.0
+      }
+    },
+    "Kevin Kelsy": {
+      "name": "Kevin Kelsy",
+      "sport": "Soccer",
+      "graders": {
+        "PSA": {
+          "cards": 16,
+          "gems": 13,
+          "grades": 23,
+          "gemRate": 57.0
+        }
+      },
+      "totals": {
+        "cards": 16,
+        "gems": 13,
+        "grades": 23,
+        "gemRate": 57.0
       }
     }
   }
