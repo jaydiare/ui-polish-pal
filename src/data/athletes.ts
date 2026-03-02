@@ -16,6 +16,7 @@ export interface EbayAvgRecord {
   sport?: string;
   marketStabilityCV?: number;
   avgDaysOnMarket?: number;
+  indexLevel?: number;
   marketplaces?: {
     EBAY_US?: { marketStabilityCV?: number; avgDaysOnMarket?: number };
     EBAY_CA?: { marketStabilityCV?: number; avgDaysOnMarket?: number };
