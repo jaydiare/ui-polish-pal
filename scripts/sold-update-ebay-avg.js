@@ -58,7 +58,7 @@ const BRANDS = [
 // Ungraded condition policy
 // --------------------
 const UNGRADED_BLOCKLIST = [
-  "damaged", "damage", "poor", "fair", "very good", "vg",
+  "damaged", "digital", "digitalcard", "damage", "poor", "fair", "very good", "vg",
   "good", "gd", "creases", "crease", "wrinkle", "wrinkling",
   "corner wear", "surface wear", "paper loss", "stain", "stained",
   "water damage", "tape", "writing", "marked", "marked up",
