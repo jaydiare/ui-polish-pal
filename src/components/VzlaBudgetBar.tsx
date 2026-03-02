@@ -4,7 +4,7 @@ import { KnapsackResult } from "@/lib/budget-knapsack";
 export type CardType = "raw" | "graded";
 
 interface VzlaBudgetBarProps {
-  onSuggest: (budget: number, maxCards: number | null, cardType: CardType, buyLowOnly: boolean) => void;
+  onSuggest: (budget: number, maxCards: number | null, cardType: CardType) => void;
   onClear: () => void;
   result: KnapsackResult | null;
 }
@@ -13,7 +13,6 @@ const VzlaBudgetBar = ({ onSuggest, onClear, result }: VzlaBudgetBarProps) => {
   const [budget, setBudget] = useState("");
   const [cards, setCards] = useState("");
   const [cardType, setCardType] = useState<CardType>("raw");
-  const [buyLowOnly, setBuyLowOnly] = useState(false);
 
   const justSuggested = useRef(false);
 
@@ -23,7 +22,7 @@ const VzlaBudgetBar = ({ onSuggest, onClear, result }: VzlaBudgetBarProps) => {
     const c = cards ? Number(cards) : null;
     const maxCards = c && Number.isFinite(c) && c > 0 ? Math.floor(c) : null;
     justSuggested.current = true;
-    onSuggest(b, maxCards, cardType, buyLowOnly);
+    onSuggest(b, maxCards, cardType);
   };
 
   // Auto-scroll to results on mobile after suggest
@@ -43,7 +42,6 @@ const VzlaBudgetBar = ({ onSuggest, onClear, result }: VzlaBudgetBarProps) => {
     setBudget("");
     setCards("");
     setCardType("raw");
-    setBuyLowOnly(false);
     onClear();
   };
 
@@ -109,18 +107,6 @@ const VzlaBudgetBar = ({ onSuggest, onClear, result }: VzlaBudgetBarProps) => {
             🏅 Graded
           </button>
         </div>
-        <button
-          onClick={() => setBuyLowOnly((prev) => !prev)}
-          className={`h-11 px-4 rounded-lg border text-xs font-bold cursor-pointer whitespace-nowrap transition-all flex items-center gap-1.5 ${
-            buyLowOnly
-              ? "bg-emerald-500/15 border-emerald-500/40 text-emerald-400"
-              : "bg-secondary border-border text-muted-foreground hover:text-foreground"
-          }`}
-          aria-pressed={buyLowOnly}
-          aria-label="Filter for buy low cards only"
-        >
-          🔻 Buy Low
-        </button>
         <button
           onClick={handleSuggest}
           className="h-11 px-6 rounded-lg cta-yellow text-sm font-bold cursor-pointer whitespace-nowrap"
