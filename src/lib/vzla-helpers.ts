@@ -162,13 +162,35 @@ export function timeAgo(isoString: string): string {
   return `${days}d ago`;
 }
 
-export function computeIndexForSport(list: Athlete[], sportOrAll: string, byName: Record<string, EbayAvgRecord>, byKey: Record<string, EbayAvgRecord>) {
+export function computeIndexForSport(
+  list: Athlete[],
+  sportOrAll: string,
+  byName: Record<string, EbayAvgRecord>,
+  byKey: Record<string, EbayAvgRecord>,
+  gradedByName?: Record<string, EbayAvgRecord>,
+  gradedByKey?: Record<string, EbayAvgRecord>,
+  rawWeight = 0.7,
+) {
   let sum = 0;
   let used = 0;
+  const gradedWeight = 1 - rawWeight;
+  const hasGraded = gradedByName && gradedByKey && Object.keys(gradedByName).length > 0;
+
   list.forEach((a) => {
     if (sportOrAll !== "All" && a.sport !== sportOrAll) return;
-    const v = getEbayAvgNumber(a, byName, byKey);
-    if (v != null) { sum += v; used += 1; }
+    const rawV = getEbayAvgNumber(a, byName, byKey);
+    const gradedV = hasGraded ? getEbayAvgNumber(a, gradedByName!, gradedByKey!) : null;
+
+    if (rawV != null && gradedV != null) {
+      sum += rawV * rawWeight + gradedV * gradedWeight;
+      used += 1;
+    } else if (rawV != null) {
+      sum += rawV;
+      used += 1;
+    } else if (gradedV != null) {
+      sum += gradedV;
+      used += 1;
+    }
   });
   return { sum, used };
 }
