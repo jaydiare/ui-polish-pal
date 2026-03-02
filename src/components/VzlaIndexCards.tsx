@@ -8,8 +8,6 @@ interface VzlaIndexCardsProps {
   athletes: Athlete[];
   byName: Record<string, EbayAvgRecord>;
   byKey: Record<string, EbayAvgRecord>;
-  gradedByName?: Record<string, EbayAvgRecord>;
-  gradedByKey?: Record<string, EbayAvgRecord>;
   indexHistory?: IndexHistoryEntry[];
 }
 
@@ -20,7 +18,7 @@ const SPORT_ICONS: Record<string, string> = {
   All: "🏆",
 };
 
-const VzlaIndexCards = ({ athletes, byName, byKey, gradedByName, gradedByKey, indexHistory }: VzlaIndexCardsProps) => {
+const VzlaIndexCards = ({ athletes, byName, byKey, indexHistory }: VzlaIndexCardsProps) => {
   const counts = getSportCounts(athletes);
 
   const entries = Array.from(counts.entries())
@@ -30,9 +28,9 @@ const VzlaIndexCards = ({ athletes, byName, byKey, gradedByName, gradedByKey, in
   const top1 = entries[0]?.[0] || "Baseball";
   const top2 = entries[1]?.[0] || "Soccer";
 
-  const i1 = computeIndexForSport(athletes, top1, byName, byKey, gradedByName, gradedByKey);
-  const i2 = computeIndexForSport(athletes, top2, byName, byKey, gradedByName, gradedByKey);
-  const iAll = computeIndexForSport(athletes, "All", byName, byKey, gradedByName, gradedByKey);
+  const i1 = computeIndexForSport(athletes, top1, byName, byKey);
+  const i2 = computeIndexForSport(athletes, top2, byName, byKey);
+  const iAll = computeIndexForSport(athletes, "All", byName, byKey);
 
   const cards = [
     { title: `${top1} Index`, icon: SPORT_ICONS[top1] || "🏅", value: formatIndexNumber(i1.sum), athletes: counts.get(top1) || 0, priced: i1.used, sport: top1 },

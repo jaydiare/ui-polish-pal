@@ -167,38 +167,26 @@ export function computeIndexForSport(
   sportOrAll: string,
   byName: Record<string, EbayAvgRecord>,
   byKey: Record<string, EbayAvgRecord>,
-  gradedByName?: Record<string, EbayAvgRecord>,
-  gradedByKey?: Record<string, EbayAvgRecord>,
-  rawWeight = 0.7,
 ) {
   let sum = 0;
   let used = 0;
-  const gradedWeight = 1 - rawWeight;
-  const hasGraded = gradedByName && gradedByKey && Object.keys(gradedByName).length > 0;
-
   list.forEach((a) => {
     if (sportOrAll !== "All" && a.sport !== sportOrAll) return;
-
-    const rawRec = getEbayAvgFor(a, byName, byKey);
-    const rawIdx = rawRec?.indexLevel;
-    const hasRawIdx = rawIdx != null && Number.isFinite(rawIdx) && rawIdx > 0;
-
-    const gradedRec = hasGraded ? getEbayAvgFor(a, gradedByName!, gradedByKey!) : null;
-    const gradedIdx = gradedRec?.indexLevel;
-    const hasGradedIdx = gradedIdx != null && Number.isFinite(gradedIdx) && gradedIdx > 0;
-
-    if (hasRawIdx && hasGradedIdx) {
-      sum += rawIdx! * rawWeight + gradedIdx! * gradedWeight;
-      used += 1;
-    } else if (hasRawIdx) {
-      sum += rawIdx!;
-      used += 1;
-    } else if (hasGradedIdx) {
-      sum += gradedIdx!;
-      used += 1;
-    }
+    const v = getEbayAvgNumber(a, byName, byKey);
+    if (v != null) { sum += v; used += 1; }
   });
   return { sum, used };
+}
+
+export function getIndexLevel(
+  athlete: Athlete,
+  byName: Record<string, EbayAvgRecord>,
+  byKey: Record<string, EbayAvgRecord>,
+): number | null {
+  const rec = getEbayAvgFor(athlete, byName, byKey);
+  const idx = rec?.indexLevel;
+  if (idx != null && Number.isFinite(idx) && idx > 0) return idx;
+  return null;
 }
 
 export function getSportCounts(list: Athlete[]): Map<string, number> {

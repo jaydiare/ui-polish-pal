@@ -3,6 +3,7 @@ import {
   getEbayAvgNumber,
   getMarketStabilityCV,
   getAvgDaysOnMarket,
+  getIndexLevel,
   marketStabilityScoreFromCV,
   formatCurrency,
   buildEbaySearchUrl,
@@ -30,6 +31,10 @@ const AthleteCard = ({ athlete, byName, byKey, gradedByName, gradedByKey, ebaySo
 
   const dom = hasPrice ? getAvgDaysOnMarket(athlete, byName, byKey) : null;
   const domText = dom != null ? `${Math.round(dom)}d` : "—";
+
+  // Index level (base=100)
+  const rawIdx = getIndexLevel(athlete, byName, byKey);
+  const gradedIdx = getIndexLevel(athlete, gradedByName, gradedByKey);
 
   // Graded price
   const gradedAvgNum = getEbayAvgNumber(athlete, gradedByName, gradedByKey);
@@ -130,6 +135,22 @@ const AthleteCard = ({ athlete, byName, byKey, gradedByName, gradedByKey, ebaySo
         <div className="mt-2 px-3 py-1.5 rounded-md bg-accent/30 border border-border/30 flex items-baseline justify-between">
           <span className="text-[10px] text-muted-foreground font-medium">eBay Avg. Sold</span>
           <span className="text-sm font-display font-bold text-foreground/80">{formatCurrency(soldAvg, "USD")}</span>
+        </div>
+      )}
+
+      {/* Index level */}
+      {(rawIdx != null || gradedIdx != null) && (
+        <div className="mt-2 flex items-center gap-3 text-[10px] text-muted-foreground">
+          {rawIdx != null && (
+            <span>
+              📈 Raw: <strong className={`${rawIdx >= 100 ? "text-primary" : "text-destructive"}`}>{rawIdx.toFixed(0)}%</strong>
+            </span>
+          )}
+          {gradedIdx != null && (
+            <span>
+              🏅 Graded: <strong className={`${gradedIdx >= 100 ? "text-primary" : "text-destructive"}`}>{gradedIdx.toFixed(0)}%</strong>
+            </span>
+          )}
         </div>
       )}
 
