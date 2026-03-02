@@ -1,13 +1,13 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-02T04:10:37.510374+00:00",
-    "athleteCount": 305,
+    "updatedAt": "2026-03-02T04:18:55.382015+00:00",
+    "athleteCount": 323,
     "graders": [
       "PSA"
     ],
     "batchInfo": {
-      "startIdx": 350,
-      "endIdx": 370,
+      "startIdx": 370,
+      "endIdx": 390,
       "totalAthletes": 575
     }
   },
@@ -5500,6 +5500,330 @@
         "gems": 4168,
         "grades": 8450,
         "gemRate": 49.0
+      }
+    },
+    "Orber Moreno": {
+      "name": "Orber Moreno",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 9,
+          "gems": 7,
+          "grades": 27,
+          "gemRate": 26.0
+        }
+      },
+      "totals": {
+        "cards": 9,
+        "gems": 7,
+        "grades": 27,
+        "gemRate": 26.0
+      }
+    },
+    "Orlando Arcia": {
+      "name": "Orlando Arcia",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 344,
+          "gems": 489,
+          "grades": 880,
+          "gemRate": 56.0
+        }
+      },
+      "totals": {
+        "cards": 344,
+        "gems": 489,
+        "grades": 880,
+        "gemRate": 56.0
+      }
+    },
+    "Oscar Azocar": {
+      "name": "Oscar Azocar",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 13,
+          "gems": 36,
+          "grades": 122,
+          "gemRate": 30.0
+        }
+      },
+      "totals": {
+        "cards": 13,
+        "gems": 36,
+        "grades": 122,
+        "gemRate": 30.0
+      }
+    },
+    "Oscar Henriquez": {
+      "name": "Oscar Henriquez",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 1,
+          "gems": 0,
+          "grades": 2,
+          "gemRate": 0.0
+        }
+      },
+      "totals": {
+        "cards": 1,
+        "gems": 0,
+        "grades": 2,
+        "gemRate": 0.0
+      }
+    },
+    "Oscar Hernandez": {
+      "name": "Oscar Hernandez",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 744,
+          "gems": 995,
+          "grades": 2400,
+          "gemRate": 41.0
+        }
+      },
+      "totals": {
+        "cards": 744,
+        "gems": 995,
+        "grades": 2400,
+        "gemRate": 41.0
+      }
+    },
+    "Oscar Salazar": {
+      "name": "Oscar Salazar",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 3,
+          "gems": 0,
+          "grades": 5,
+          "gemRate": 0.0
+        }
+      },
+      "totals": {
+        "cards": 3,
+        "gems": 0,
+        "grades": 5,
+        "gemRate": 0.0
+      }
+    },
+    "Osleivis Basabe": {
+      "name": "Osleivis Basabe",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 168,
+          "gems": 230,
+          "grades": 495,
+          "gemRate": 46.0
+        }
+      },
+      "totals": {
+        "cards": 168,
+        "gems": 230,
+        "grades": 495,
+        "gemRate": 46.0
+      }
+    },
+    "Oswald Peraza": {
+      "name": "Oswald Peraza",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 1036,
+          "gems": 3774,
+          "grades": 6321,
+          "gemRate": 60.0
+        }
+      },
+      "totals": {
+        "cards": 1036,
+        "gems": 3774,
+        "grades": 6321,
+        "gemRate": 60.0
+      }
+    },
+    "Oswaldo Arcia": {
+      "name": "Oswaldo Arcia",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 54,
+          "gems": 67,
+          "grades": 99,
+          "gemRate": 68.0
+        }
+      },
+      "totals": {
+        "cards": 54,
+        "gems": 67,
+        "grades": 99,
+        "gemRate": 68.0
+      }
+    },
+    "Oswaldo Cabrera": {
+      "name": "Oswaldo Cabrera",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 532,
+          "gems": 4189,
+          "grades": 6817,
+          "gemRate": 61.0
+        }
+      },
+      "totals": {
+        "cards": 532,
+        "gems": 4189,
+        "grades": 6817,
+        "gemRate": 61.0
+      }
+    },
+    "Oswaldo Navarro": {
+      "name": "Oswaldo Navarro",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 6,
+          "gems": 0,
+          "grades": 9,
+          "gemRate": 0.0
+        }
+      },
+      "totals": {
+        "cards": 6,
+        "gems": 0,
+        "grades": 9,
+        "gemRate": 0.0
+      }
+    },
+    "Oswaldo Peraza": {
+      "name": "Oswaldo Peraza",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 4,
+          "gems": 7,
+          "grades": 9,
+          "gemRate": 78.0
+        }
+      },
+      "totals": {
+        "cards": 4,
+        "gems": 7,
+        "grades": 9,
+        "gemRate": 78.0
+      }
+    },
+    "Ozzie Guillen": {
+      "name": "Ozzie Guillen",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 206,
+          "gems": 897,
+          "grades": 2344,
+          "gemRate": 38.0
+        }
+      },
+      "totals": {
+        "cards": 206,
+        "gems": 897,
+        "grades": 2344,
+        "gemRate": 38.0
+      }
+    },
+    "Pablo Lopez": {
+      "name": "Pablo Lopez",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 194,
+          "gems": 264,
+          "grades": 492,
+          "gemRate": 54.0
+        }
+      },
+      "totals": {
+        "cards": 194,
+        "gems": 264,
+        "grades": 492,
+        "gemRate": 54.0
+      }
+    },
+    "Pablo Sandoval": {
+      "name": "Pablo Sandoval",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 275,
+          "gems": 481,
+          "grades": 955,
+          "gemRate": 50.0
+        }
+      },
+      "totals": {
+        "cards": 275,
+        "gems": 481,
+        "grades": 955,
+        "gemRate": 50.0
+      }
+    },
+    "Pablo Torrealba": {
+      "name": "Pablo Torrealba",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 5,
+          "gems": 46,
+          "grades": 263,
+          "gemRate": 17.0
+        }
+      },
+      "totals": {
+        "cards": 5,
+        "gems": 46,
+        "grades": 263,
+        "gemRate": 17.0
+      }
+    },
+    "Pedro Avila": {
+      "name": "Pedro Avila",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 44,
+          "gems": 38,
+          "grades": 70,
+          "gemRate": 54.0
+        }
+      },
+      "totals": {
+        "cards": 44,
+        "gems": 38,
+        "grades": 70,
+        "gemRate": 54.0
+      }
+    },
+    "Pedro Castellano": {
+      "name": "Pedro Castellano",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 10,
+          "gems": 3,
+          "grades": 12,
+          "gemRate": 25.0
+        }
+      },
+      "totals": {
+        "cards": 10,
+        "gems": 3,
+        "grades": 12,
+        "gemRate": 25.0
       }
     }
   }
