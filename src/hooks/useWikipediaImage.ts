@@ -2,9 +2,9 @@ import { useState, useEffect } from "react";
 
 const cache = new Map<string, string | null>();
 
-async function fetchWikiImage(name: string): Promise<string | null> {
-  // Try exact title match first
-  const q = encodeURIComponent(name);
+async function tryWikiPages(query: string): Promise<string | null> {
+  const q = encodeURIComponent(query);
+  // Try exact title match
   const res = await fetch(
     `https://en.wikipedia.org/w/api.php?action=query&titles=${q}&prop=pageimages&format=json&pithumbsize=200&origin=*`
   );
@@ -15,7 +15,7 @@ async function fetchWikiImage(name: string): Promise<string | null> {
     if (page?.thumbnail?.source) return page.thumbnail.source;
   }
 
-  // Fallback: use search API (handles accents, redirects, partial matches)
+  // Fallback: search API
   const searchRes = await fetch(
     `https://en.wikipedia.org/w/api.php?action=query&list=search&srsearch=${q}&srlimit=1&format=json&origin=*`
   );
@@ -33,33 +33,43 @@ async function fetchWikiImage(name: string): Promise<string | null> {
     const imgPage = Object.values(imgPages)[0] as any;
     if (imgPage?.thumbnail?.source) return imgPage.thumbnail.source;
   }
-
   return null;
 }
 
-export function useWikipediaImage(name: string): string | null {
-  const [url, setUrl] = useState<string | null>(cache.get(name) ?? null);
+async function fetchWikiImage(name: string, sport?: string): Promise<string | null> {
+  // Try with sport disambiguation first (e.g. "Luis Rodriguez baseball")
+  if (sport) {
+    const result = await tryWikiPages(`${name} ${sport}`);
+    if (result) return result;
+  }
+  // Fallback to name only
+  return tryWikiPages(name);
+}
+
+export function useWikipediaImage(name: string, sport?: string): string | null {
+  const cacheKey = sport ? `${name}__${sport}` : name;
+  const [url, setUrl] = useState<string | null>(cache.get(cacheKey) ?? null);
 
   useEffect(() => {
-    if (cache.has(name)) {
-      setUrl(cache.get(name) ?? null);
+    if (cache.has(cacheKey)) {
+      setUrl(cache.get(cacheKey) ?? null);
       return;
     }
 
     let cancelled = false;
 
-    fetchWikiImage(name)
+    fetchWikiImage(name, sport)
       .then((thumb) => {
-        cache.set(name, thumb);
+        cache.set(cacheKey, thumb);
         if (!cancelled) setUrl(thumb);
       })
       .catch(() => {
-        cache.set(name, null);
+        cache.set(cacheKey, null);
         if (!cancelled) setUrl(null);
       });
 
     return () => { cancelled = true; };
-  }, [name]);
+  }, [name, sport, cacheKey]);
 
   return url;
 }
