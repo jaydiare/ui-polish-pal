@@ -29,6 +29,7 @@ async function fetchJson(path: string) {
 export function useAthleteData() {
   const [athletes, setAthletes] = useState<Athlete[]>(athleteDataRaw);
   const [ebayAvgRaw, setEbayAvgRaw] = useState<EbayAvgData>({});
+  const [ebayGradedRaw, setEbayGradedRaw] = useState<EbayAvgData>({});
   const [ebaySoldRaw, setEbaySoldRaw] = useState<Record<string, any>>({});
   const [lastUpdated, setLastUpdated] = useState<string>("—");
   const [visibleCount, setVisibleCount] = useState(PAGE_SIZE);
@@ -43,13 +44,15 @@ export function useAthleteData() {
 
   // Build indexes
   const { byName, byKey } = useMemo(() => buildEbayIndexes(ebayAvgRaw), [ebayAvgRaw]);
+  const { byName: gradedByName, byKey: gradedByKey } = useMemo(() => buildEbayIndexes(ebayGradedRaw), [ebayGradedRaw]);
 
   // Fetch data on mount
   useEffect(() => {
     (async () => {
-      const [fetchedAthletes, fetchedEbay, fetchedSold, fetchedProgress] = await Promise.all([
+      const [fetchedAthletes, fetchedEbay, fetchedGraded, fetchedSold, fetchedProgress] = await Promise.all([
         fetchJson("data/athletes.json"),
         fetchJson("https://raw.githubusercontent.com/jaydiare/ui-polish-pal/main/data/ebay-avg.json"),
+        fetchJson("https://raw.githubusercontent.com/jaydiare/ui-polish-pal/main/data/ebay-graded-avg.json"),
         fetchJson("https://raw.githubusercontent.com/jaydiare/ui-polish-pal/main/data/ebay-sold-avg.json"),
         fetchJson("https://raw.githubusercontent.com/jaydiare/ui-polish-pal/main/data/ebay-sold-progress.json"),
       ]);
@@ -59,6 +62,9 @@ export function useAthleteData() {
       }
       if (fetchedEbay && typeof fetchedEbay === "object") {
         setEbayAvgRaw(fetchedEbay);
+      }
+      if (fetchedGraded && typeof fetchedGraded === "object") {
+        setEbayGradedRaw(fetchedGraded);
       }
       if (fetchedSold && typeof fetchedSold === "object") {
         setEbaySoldRaw(fetchedSold);
@@ -176,6 +182,8 @@ export function useAthleteData() {
     paginatedAthletes,
     byName,
     byKey,
+    gradedByName,
+    gradedByKey,
     ebayAvgRaw,
     ebaySoldRaw,
     lastUpdated,

@@ -613,12 +613,12 @@ async function computeAvgActiveListing({
     const items = data?.itemSummaries || [];
 
     for (const it of items) {
-      // ✅ enforce ungraded policy
-      const graded = isGradedListing(it);
-      if (!graded) {
-        const okUngraded = ungradedPassesConditionPolicy(it);
-        if (!okUngraded) continue;
-      }
+      // ✅ RAW ONLY: skip graded listings entirely
+      if (isGradedListing(it)) continue;
+
+      // ✅ enforce ungraded condition policy (Near Mint / Excellent only)
+      const okUngraded = ungradedPassesConditionPolicy(it);
+      if (!okUngraded) continue;
 
       const p = it?.price;
       const v = safeNum(p?.value);

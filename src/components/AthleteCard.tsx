@@ -14,11 +14,13 @@ interface AthleteCardProps {
   athlete: Athlete;
   byName: Record<string, EbayAvgRecord>;
   byKey: Record<string, EbayAvgRecord>;
+  gradedByName: Record<string, EbayAvgRecord>;
+  gradedByKey: Record<string, EbayAvgRecord>;
   ebaySoldRaw?: Record<string, any>;
   isRecommended?: boolean;
 }
 
-const AthleteCard = ({ athlete, byName, byKey, ebaySoldRaw, isRecommended }: AthleteCardProps) => {
+const AthleteCard = ({ athlete, byName, byKey, gradedByName, gradedByKey, ebaySoldRaw, isRecommended }: AthleteCardProps) => {
   const avgNum = getEbayAvgNumber(athlete, byName, byKey);
   const money = avgNum != null ? formatCurrency(avgNum, "USD") : "—";
 
@@ -28,6 +30,10 @@ const AthleteCard = ({ athlete, byName, byKey, ebaySoldRaw, isRecommended }: Ath
 
   const dom = hasPrice ? getAvgDaysOnMarket(athlete, byName, byKey) : null;
   const domText = dom != null ? `${Math.round(dom)}d` : "—";
+
+  // Graded price
+  const gradedAvgNum = getEbayAvgNumber(athlete, gradedByName, gradedByKey);
+  const gradedMoney = gradedAvgNum != null ? formatCurrency(gradedAvgNum, "USD") : null;
 
   // Sold avg (reference only)
   const soldRecord = ebaySoldRaw?.[athlete.name];
@@ -76,12 +82,13 @@ const AthleteCard = ({ athlete, byName, byKey, ebaySoldRaw, isRecommended }: Ath
         </div>
       </div>
 
-      {/* Price */}
+      {/* Prices */}
       <div className="mt-4 p-3 rounded-lg bg-secondary/50 border border-border/50">
+        {/* Raw Price */}
         <div className="flex items-baseline justify-between">
           <div>
             <div className="text-lg font-display font-bold text-foreground">{money}</div>
-            <div className="text-[10px] text-muted-foreground font-medium mt-0.5">eBay Avg. Price</div>
+            <div className="text-[10px] text-muted-foreground font-medium mt-0.5">Raw eBay Avg.</div>
           </div>
           <div className="text-right">
             <div className={`text-xs font-bold stability-${stability.bucket}`}>
@@ -90,6 +97,20 @@ const AthleteCard = ({ athlete, byName, byKey, ebaySoldRaw, isRecommended }: Ath
             <div className="text-[10px] text-muted-foreground">{stability.pctText}</div>
           </div>
         </div>
+
+        {/* Graded Price */}
+        {gradedMoney && (
+          <div className="mt-2 pt-2 border-t border-border/30 flex items-baseline justify-between">
+            <div>
+              <div className="text-base font-display font-bold text-accent">{gradedMoney}</div>
+              <div className="text-[10px] text-muted-foreground font-medium mt-0.5">Graded eBay Avg.</div>
+            </div>
+            <span className="inline-flex px-1.5 py-0.5 rounded text-[9px] font-bold bg-accent/10 border border-accent/20 text-accent">
+              GRADED
+            </span>
+          </div>
+        )}
+
         {hasPrice && cv != null && soldAvg != null && avgNum != null && soldAvg >= avgNum && (stability.bucket === "volatile" || stability.bucket === "highly_unstable") && (
           <div className="mt-2 flex items-center gap-1.5 px-2 py-1 rounded-md bg-vzla-yellow/10 border border-vzla-yellow/20 w-fit">
             <span className="text-[11px]">🔄</span>
