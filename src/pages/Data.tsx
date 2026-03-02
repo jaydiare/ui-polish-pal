@@ -286,6 +286,79 @@ const Data = () => {
     [...gapsComparisonBoth].sort((a, b) => Math.abs(b.spread) - Math.abs(a.spread)).slice(0, 10),
     [gapsComparisonBoth]);
 
+  /* ── Investment Signal Score ── */
+  type SignalCategory = "undervalued_stable" | "fast_mover" | "speculative" | "overpriced_slow";
+
+  interface SignalAthlete {
+    name: string;
+    sport: string;
+    listed: number;
+    sold: number;
+    spreadPct: number;
+    cv: number | null;
+    days: number | null;
+    signal: SignalCategory;
+  }
+
+  const SIGNAL_META: Record<SignalCategory, { label: string; emoji: string; color: string; desc: string }> = {
+    undervalued_stable: { label: "Undervalued & Stable", emoji: "🟢", color: "hsl(142, 71%, 45%)", desc: "Sold > listed price with tight market consistency" },
+    fast_mover: { label: "Fast Mover", emoji: "⚡", color: "hsl(45, 93%, 47%)", desc: "Low days on market — high liquidity" },
+    speculative: { label: "Speculative", emoji: "🎲", color: "hsl(280, 70%, 55%)", desc: "High price volatility — potential flip opportunity" },
+    overpriced_slow: { label: "Overpriced & Slow", emoji: "🔴", color: "hsl(0, 72%, 50%)", desc: "Listed well above sold, slow to move" },
+  };
+
+  const signalAthletes = useMemo(() => {
+    // Use raw data by default; merge both for broader coverage
+    const allComparison = [...rawComparison];
+    const seen = new Set(rawComparison.map(d => d.name));
+    for (const d of gradedComparison) {
+      if (!seen.has(d.name)) { allComparison.push(d); seen.add(d.name); }
+    }
+
+    const results: SignalAthlete[] = [];
+    for (const d of allComparison) {
+      const rec = listedData[d.name] as any;
+      const cv: number | null = rec?.marketStabilityCV ?? rec?.marketplaces?.EBAY_US?.marketStabilityCV ?? null;
+      const days: number | null = rec?.avgDaysOnMarket ?? rec?.marketplaces?.EBAY_US?.avgDaysOnMarket ?? null;
+      const spreadPct = d.sold > 0 ? ((d.listed - d.sold) / d.sold) * 100 : 0;
+
+      let signal: SignalCategory;
+      if (cv != null && cv >= 0.35) {
+        signal = "speculative";
+      } else if (spreadPct < -5 && (cv == null || cv < 0.20)) {
+        signal = "undervalued_stable";
+      } else if (days != null && days < 180 && spreadPct <= 10) {
+        signal = "fast_mover";
+      } else if (spreadPct > 15 && (days == null || days > 300)) {
+        signal = "overpriced_slow";
+      } else if (spreadPct < 0 && (cv == null || cv < 0.25)) {
+        signal = "undervalued_stable";
+      } else if (days != null && days < 250) {
+        signal = "fast_mover";
+      } else if (spreadPct > 5) {
+        signal = "overpriced_slow";
+      } else {
+        signal = "fast_mover"; // default bucket
+      }
+
+      results.push({ name: d.name, sport: d.sport, listed: d.listed, sold: d.sold, spreadPct, cv, days, signal });
+    }
+
+    return results;
+  }, [rawComparison, gradedComparison, listedData]);
+
+  const signalGroups = useMemo(() => {
+    const groups: Record<SignalCategory, SignalAthlete[]> = {
+      undervalued_stable: [], fast_mover: [], speculative: [], overpriced_slow: [],
+    };
+    for (const a of signalAthletes) groups[a.signal].push(a);
+    // Sort each group by absolute spread
+    for (const key of Object.keys(groups) as SignalCategory[]) {
+      groups[key].sort((a, b) => Math.abs(b.spreadPct) - Math.abs(a.spreadPct));
+    }
+    return groups;
+  }, [signalAthletes]);
+
   /* ── Sport Aggregation helper ── */
   function buildSportAgg(
     listed: Record<string, ListedRecord>,
@@ -763,6 +836,74 @@ const Data = () => {
                 <ModeToggle value={supplyMode} onChange={setSupplyMode} />
               </div>
               <VzlaSupplyDemand comparisonData={supplyMode === "both" ? [...rawComparison, ...gradedComparison] : supplyComparison} hideTitle />
+            </section>
+
+            {/* ── Investment Signal Score ── */}
+            <section className="my-8" aria-label="Investment signal score">
+              <h2 className="font-display font-bold text-lg text-foreground mb-1 flex items-center gap-2">
+                <span className="w-1 h-5 rounded-full bg-primary inline-block" />
+                Investment Signal Score
+              </h2>
+              <p className="text-xs text-muted-foreground mb-4 ml-3">
+                Athletes classified by price spread, market stability (CV), and days on market. Data-driven — not guessing.
+              </p>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                {(Object.keys(SIGNAL_META) as SignalCategory[]).map((cat) => {
+                  const meta = SIGNAL_META[cat];
+                  const group = signalGroups[cat];
+                  return (
+                    <motion.div
+                      key={cat}
+                      initial={{ opacity: 0, y: 12 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.35 }}
+                      className="glass-panel p-4 hover:border-primary/20 transition-colors"
+                    >
+                      <div className="flex items-center gap-2 mb-1">
+                        <span className="text-lg">{meta.emoji}</span>
+                        <span className="font-display font-bold text-sm text-foreground">{meta.label}</span>
+                        <span className="ml-auto text-[10px] font-mono text-muted-foreground rounded-full border border-border px-2 py-0.5">{group.length}</span>
+                      </div>
+                      <p className="text-[10px] text-muted-foreground mb-3">{meta.desc}</p>
+                      {group.length === 0 ? (
+                        <p className="text-xs text-muted-foreground/50 italic">No athletes in this category</p>
+                      ) : (
+                        <div className="space-y-1.5 max-h-[220px] overflow-y-auto pr-1">
+                          {group.slice(0, 8).map((a) => (
+                            <a
+                              key={a.name}
+                              href={buildEbaySearchUrl(a.name, a.sport)}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="flex items-center justify-between gap-2 rounded-lg px-2.5 py-1.5 hover:bg-accent/50 transition-colors group"
+                            >
+                              <div className="min-w-0">
+                                <div className="text-xs font-semibold text-foreground truncate group-hover:text-primary transition-colors">{a.name}</div>
+                                <div className="text-[9px] text-muted-foreground">{a.sport}</div>
+                              </div>
+                              <div className="text-right shrink-0">
+                                <div className={`text-xs font-mono font-bold ${a.spreadPct > 0 ? "text-red-400" : "text-green-400"}`}>
+                                  {a.spreadPct > 0 ? "+" : ""}{a.spreadPct.toFixed(0)}%
+                                </div>
+                                <div className="text-[9px] text-muted-foreground">
+                                  {a.cv != null ? `CV ${(a.cv * 100).toFixed(0)}%` : ""}
+                                  {a.cv != null && a.days != null ? " · " : ""}
+                                  {a.days != null ? `${Math.round(a.days)}d` : ""}
+                                </div>
+                              </div>
+                            </a>
+                          ))}
+                          {group.length > 8 && (
+                            <div className="text-[10px] text-muted-foreground/60 text-center pt-1">
+                              +{group.length - 8} more
+                            </div>
+                          )}
+                        </div>
+                      )}
+                    </motion.div>
+                  );
+                })}
+              </div>
             </section>
 
             {/* ── Gemrate Grading Data ── */}
