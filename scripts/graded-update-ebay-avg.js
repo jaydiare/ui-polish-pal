@@ -73,7 +73,7 @@ const MARKETPLACES = ["EBAY_US", "EBAY_CA"];
 const MANUFACTURERS = ["Topps", "Panini", "Upper Deck", "Leaf", "Artesania Sport", "Ovenca Venezuelan", "Sport Grafico", "Line Up", "Venezuelan League", "BYN", "O-Pee-Chee"];
 
 // ✅ Country of Origin options
-const COUNTRY_OF_ORIGIN = ["United States", "Italy", "Venezuela"];
+const COUNTRY_OF_ORIGIN = ["United States", "Italy", "Venezuela", "Japan"];
 
 // Taguchi caps (winsorization %)
 const TAGUCHI_TRIM_PCT = 0.4;
