@@ -58,7 +58,7 @@ const BRANDS = [
 // Ungraded condition policy
 // --------------------
 const UNGRADED_BLOCKLIST = [
-  "damaged", "digital", "digitalcard", "damage", "poor", "fair", "very good", "vg",
+  "damaged", "damage", "poor", "fair", "very good", "vg",
   "good", "gd", "creases", "crease", "wrinkle", "wrinkling",
   "corner wear", "surface wear", "paper loss", "stain", "stained",
   "water damage", "tape", "writing", "marked", "marked up",
@@ -67,13 +67,13 @@ const UNGRADED_BLOCKLIST = [
 
 // Junk title exclusion
 const JUNK_PHRASES = [
-  "you pick", "you choose", "pick your", "choose your",
+  "you pick", "digitalcard", "digital", "you choose", "pick your", "choose your",
   "your choice", "complete your set", "complete set",
   "set builder", "set break", "base singles", "insert singles",
   "singles you pick", "you pick!", "you pick -",
   "lot", "team lot", "player lot", "break", "case break",
   "random", "bulk", "paper rc's & vets", "rc's & vets",
-  "u-pick", "u pick", "lote", "base cards from",
+  "u-pick", "u pick", "lote", "base cards from", "group",
 ];
 
 // Sport → League mapping for eBay aspect filters
