@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import { KnapsackResult } from "@/lib/budget-knapsack";
 
-export type CardType = "raw" | "graded" | "both";
+export type CardType = "raw" | "graded";
 
 interface VzlaBudgetBarProps {
   onSuggest: (budget: number, maxCards: number | null, cardType: CardType, buyLowOnly: boolean) => void;
@@ -12,13 +12,10 @@ interface VzlaBudgetBarProps {
 const VzlaBudgetBar = ({ onSuggest, onClear, result }: VzlaBudgetBarProps) => {
   const [budget, setBudget] = useState("");
   const [cards, setCards] = useState("");
-  const [useRaw, setUseRaw] = useState(true);
-  const [useGraded, setUseGraded] = useState(false);
+  const [cardType, setCardType] = useState<CardType>("raw");
   const [buyLowOnly, setBuyLowOnly] = useState(false);
 
   const justSuggested = useRef(false);
-
-  const cardType: CardType = useRaw && useGraded ? "both" : useGraded ? "graded" : "raw";
 
   const handleSuggest = () => {
     const b = Number(budget);
