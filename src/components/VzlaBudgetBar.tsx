@@ -42,20 +42,9 @@ const VzlaBudgetBar = ({ onSuggest, onClear, result }: VzlaBudgetBarProps) => {
   const handleClear = () => {
     setBudget("");
     setCards("");
-    setUseRaw(true);
-    setUseGraded(false);
+    setCardType("raw");
     setBuyLowOnly(false);
     onClear();
-  };
-
-  // Ensure at least one is always selected
-  const toggleRaw = () => {
-    if (useRaw && !useGraded) return; // can't deselect both
-    setUseRaw(!useRaw);
-  };
-  const toggleGraded = () => {
-    if (useGraded && !useRaw) return; // can't deselect both
-    setUseGraded(!useGraded);
   };
 
   return (
@@ -93,29 +82,29 @@ const VzlaBudgetBar = ({ onSuggest, onClear, result }: VzlaBudgetBarProps) => {
             className="w-full h-11 px-3.5 rounded-lg bg-secondary border border-border text-foreground text-sm outline-none transition-all placeholder:text-muted-foreground focus:border-primary/40 focus:shadow-[0_0_0_3px_hsl(var(--primary)/0.08)]"
           />
         </div>
-        {/* Card type toggles */}
+        {/* Card type toggles — mutually exclusive */}
         <div className="flex gap-1.5">
           <button
-            onClick={toggleRaw}
+            onClick={() => setCardType("raw")}
             className={`h-11 px-3.5 rounded-lg border text-xs font-bold cursor-pointer whitespace-nowrap transition-all flex items-center gap-1.5 ${
-              useRaw
+              cardType === "raw"
                 ? "bg-primary/15 border-primary/40 text-primary"
                 : "bg-secondary border-border text-muted-foreground hover:text-foreground"
             }`}
-            aria-pressed={useRaw}
-            aria-label="Include raw cards"
+            aria-pressed={cardType === "raw"}
+            aria-label="Use raw cards"
           >
             🃏 Raw
           </button>
           <button
-            onClick={toggleGraded}
+            onClick={() => setCardType("graded")}
             className={`h-11 px-3.5 rounded-lg border text-xs font-bold cursor-pointer whitespace-nowrap transition-all flex items-center gap-1.5 ${
-              useGraded
+              cardType === "graded"
                 ? "bg-primary/15 border-primary/40 text-primary"
                 : "bg-secondary border-border text-muted-foreground hover:text-foreground"
             }`}
-            aria-pressed={useGraded}
-            aria-label="Include graded cards"
+            aria-pressed={cardType === "graded"}
+            aria-label="Use graded cards"
           >
             🏅 Graded
           </button>
