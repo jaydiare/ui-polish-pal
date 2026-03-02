@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import { KnapsackResult } from "@/lib/budget-knapsack";
 
-export type CardType = "raw" | "graded";
+export type CardType = "raw" | "graded" | "both";
 
 interface VzlaBudgetBarProps {
   onSuggest: (budget: number, maxCards: number | null, cardType: CardType, buyLowOnly: boolean) => void;
@@ -12,10 +12,13 @@ interface VzlaBudgetBarProps {
 const VzlaBudgetBar = ({ onSuggest, onClear, result }: VzlaBudgetBarProps) => {
   const [budget, setBudget] = useState("");
   const [cards, setCards] = useState("");
-  const [cardType, setCardType] = useState<CardType>("raw");
+  const [useRaw, setUseRaw] = useState(true);
+  const [useGraded, setUseGraded] = useState(false);
   const [buyLowOnly, setBuyLowOnly] = useState(false);
 
   const justSuggested = useRef(false);
+
+  const cardType: CardType = useRaw && useGraded ? "both" : useGraded ? "graded" : "raw";
 
   const handleSuggest = () => {
     const b = Number(budget);
@@ -30,7 +33,6 @@ const VzlaBudgetBar = ({ onSuggest, onClear, result }: VzlaBudgetBarProps) => {
   useEffect(() => {
     if (result && justSuggested.current) {
       justSuggested.current = false;
-      // Small delay to let the grid re-render
       setTimeout(() => {
         const target = document.querySelector('[role="toolbar"][aria-label="Sort controls"]');
         if (target) {
@@ -43,9 +45,20 @@ const VzlaBudgetBar = ({ onSuggest, onClear, result }: VzlaBudgetBarProps) => {
   const handleClear = () => {
     setBudget("");
     setCards("");
-    setCardType("raw");
+    setUseRaw(true);
+    setUseGraded(false);
     setBuyLowOnly(false);
     onClear();
+  };
+
+  // Ensure at least one is always selected
+  const toggleRaw = () => {
+    if (useRaw && !useGraded) return; // can't deselect both
+    setUseRaw(!useRaw);
+  };
+  const toggleGraded = () => {
+    if (useGraded && !useRaw) return; // can't deselect both
+    setUseGraded(!useGraded);
   };
 
   return (
@@ -83,18 +96,32 @@ const VzlaBudgetBar = ({ onSuggest, onClear, result }: VzlaBudgetBarProps) => {
             className="w-full h-11 px-3.5 rounded-lg bg-secondary border border-border text-foreground text-sm outline-none transition-all placeholder:text-muted-foreground focus:border-primary/40 focus:shadow-[0_0_0_3px_hsl(var(--primary)/0.08)]"
           />
         </div>
-        <div>
-          <label htmlFor="card-type-select" className="sr-only">Card type</label>
-          <select
-            id="card-type-select"
-            value={cardType}
-            onChange={(e) => setCardType(e.target.value as CardType)}
-            className="h-11 px-3.5 rounded-lg bg-secondary border border-border text-foreground text-sm outline-none transition-all cursor-pointer focus:border-primary/40 focus:shadow-[0_0_0_3px_hsl(var(--primary)/0.08)]"
-            aria-label="Select card type"
+        {/* Card type toggles */}
+        <div className="flex gap-1.5">
+          <button
+            onClick={toggleRaw}
+            className={`h-11 px-3.5 rounded-lg border text-xs font-bold cursor-pointer whitespace-nowrap transition-all flex items-center gap-1.5 ${
+              useRaw
+                ? "bg-primary/15 border-primary/40 text-primary"
+                : "bg-secondary border-border text-muted-foreground hover:text-foreground"
+            }`}
+            aria-pressed={useRaw}
+            aria-label="Include raw cards"
           >
-            <option value="raw">🃏 Raw Cards</option>
-            <option value="graded">🏅 Graded Cards</option>
-          </select>
+            🃏 Raw
+          </button>
+          <button
+            onClick={toggleGraded}
+            className={`h-11 px-3.5 rounded-lg border text-xs font-bold cursor-pointer whitespace-nowrap transition-all flex items-center gap-1.5 ${
+              useGraded
+                ? "bg-primary/15 border-primary/40 text-primary"
+                : "bg-secondary border-border text-muted-foreground hover:text-foreground"
+            }`}
+            aria-pressed={useGraded}
+            aria-label="Include graded cards"
+          >
+            🏅 Graded
+          </button>
         </div>
         <button
           onClick={() => setBuyLowOnly((prev) => !prev)}
