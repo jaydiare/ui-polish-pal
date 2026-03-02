@@ -1,13 +1,13 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-02T00:05:20.646924+00:00",
-    "athleteCount": 253,
+    "updatedAt": "2026-03-02T01:01:54.330008+00:00",
+    "athleteCount": 262,
     "graders": [
       "PSA"
     ],
     "batchInfo": {
-      "startIdx": 300,
-      "endIdx": 310,
+      "startIdx": 310,
+      "endIdx": 320,
       "totalAthletes": 575
     }
   },
@@ -4564,6 +4564,168 @@
         "gems": 2929,
         "grades": 5537,
         "gemRate": 53.0
+      }
+    },
+    "Luis Guillorme": {
+      "name": "Luis Guillorme",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 27,
+          "gems": 24,
+          "grades": 45,
+          "gemRate": 53.0
+        }
+      },
+      "totals": {
+        "cards": 27,
+        "gems": 24,
+        "grades": 45,
+        "gemRate": 53.0
+      }
+    },
+    "Luis Hernandez": {
+      "name": "Luis Hernandez",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 4,
+          "gems": 2,
+          "grades": 4,
+          "gemRate": 50.0
+        }
+      },
+      "totals": {
+        "cards": 4,
+        "gems": 2,
+        "grades": 4,
+        "gemRate": 50.0
+      }
+    },
+    "Luis Jimenez": {
+      "name": "Luis Jimenez",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 1,
+          "gems": 1,
+          "grades": 1,
+          "gemRate": 100.0
+        }
+      },
+      "totals": {
+        "cards": 1,
+        "gems": 1,
+        "grades": 1,
+        "gemRate": 100.0
+      }
+    },
+    "Luis Leal": {
+      "name": "Luis Leal",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 24,
+          "gems": 142,
+          "grades": 273,
+          "gemRate": 52.0
+        }
+      },
+      "totals": {
+        "cards": 24,
+        "gems": 142,
+        "grades": 273,
+        "gemRate": 52.0
+      }
+    },
+    "Luis Matos": {
+      "name": "Luis Matos",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 657,
+          "gems": 1916,
+          "grades": 3605,
+          "gemRate": 53.0
+        }
+      },
+      "totals": {
+        "cards": 657,
+        "gems": 1916,
+        "grades": 3605,
+        "gemRate": 53.0
+      }
+    },
+    "Luis Maza": {
+      "name": "Luis Maza",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 1,
+          "gems": 0,
+          "grades": 1,
+          "gemRate": 0.0
+        }
+      },
+      "totals": {
+        "cards": 1,
+        "gems": 0,
+        "grades": 1,
+        "gemRate": 0.0
+      }
+    },
+    "Luis Ordaz": {
+      "name": "Luis Ordaz",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 12,
+          "gems": 2,
+          "grades": 25,
+          "gemRate": 8.0
+        }
+      },
+      "totals": {
+        "cards": 12,
+        "gems": 2,
+        "grades": 25,
+        "gemRate": 8.0
+      }
+    },
+    "Luis Oviedo": {
+      "name": "Luis Oviedo",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 2,
+          "gems": 0,
+          "grades": 2,
+          "gemRate": 0.0
+        }
+      },
+      "totals": {
+        "cards": 2,
+        "gems": 0,
+        "grades": 2,
+        "gemRate": 0.0
+      }
+    },
+    "Luis Perales": {
+      "name": "Luis Perales",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 37,
+          "gems": 96,
+          "grades": 210,
+          "gemRate": 46.0
+        }
+      },
+      "totals": {
+        "cards": 37,
+        "gems": 96,
+        "grades": 210,
+        "gemRate": 46.0
       }
     }
   }
