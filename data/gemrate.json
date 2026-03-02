@@ -1,13 +1,13 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-02T08:39:02.353654+00:00",
-    "athleteCount": 361,
+    "updatedAt": "2026-03-02T10:39:55.428477+00:00",
+    "athleteCount": 378,
     "graders": [
       "PSA"
     ],
     "batchInfo": {
-      "startIdx": 410,
-      "endIdx": 430,
+      "startIdx": 430,
+      "endIdx": 450,
       "totalAthletes": 575
     }
   },
@@ -6508,6 +6508,312 @@
         "gems": 0,
         "grades": 1,
         "gemRate": 0.0
+      }
+    },
+    "Rougned Odor": {
+      "name": "Rougned Odor",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 210,
+          "gems": 353,
+          "grades": 569,
+          "gemRate": 62.0
+        }
+      },
+      "totals": {
+        "cards": 210,
+        "gems": 353,
+        "grades": 569,
+        "gemRate": 62.0
+      }
+    },
+    "Ruben Quevedo": {
+      "name": "Ruben Quevedo",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 9,
+          "gems": 9,
+          "grades": 56,
+          "gemRate": 16.0
+        }
+      },
+      "totals": {
+        "cards": 9,
+        "gems": 9,
+        "grades": 56,
+        "gemRate": 16.0
+      }
+    },
+    "Salvador Perez": {
+      "name": "Salvador Perez",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 2876,
+          "gems": 3028,
+          "grades": 7506,
+          "gemRate": 40.0
+        }
+      },
+      "totals": {
+        "cards": 2876,
+        "gems": 3028,
+        "grades": 7506,
+        "gemRate": 40.0
+      }
+    },
+    "Sandy Leon": {
+      "name": "Sandy Leon",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 13,
+          "gems": 15,
+          "grades": 26,
+          "gemRate": 58.0
+        }
+      },
+      "totals": {
+        "cards": 13,
+        "gems": 15,
+        "grades": 26,
+        "gemRate": 58.0
+      }
+    },
+    "Sebastian Rivero": {
+      "name": "Sebastian Rivero",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 8,
+          "gems": 5,
+          "grades": 9,
+          "gemRate": 56.0
+        }
+      },
+      "totals": {
+        "cards": 8,
+        "gems": 5,
+        "grades": 9,
+        "gemRate": 56.0
+      }
+    },
+    "Sergio Escalona": {
+      "name": "Sergio Escalona",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 2,
+          "gems": 0,
+          "grades": 2,
+          "gemRate": 0.0
+        }
+      },
+      "totals": {
+        "cards": 2,
+        "gems": 0,
+        "grades": 2,
+        "gemRate": 0.0
+      }
+    },
+    "Simon Muzziotti": {
+      "name": "Simon Muzziotti",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 78,
+          "gems": 143,
+          "grades": 289,
+          "gemRate": 49.0
+        }
+      },
+      "totals": {
+        "cards": 78,
+        "gems": 143,
+        "grades": 289,
+        "gemRate": 49.0
+      }
+    },
+    "Steve Torrealba": {
+      "name": "Steve Torrealba",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 1,
+          "gems": 0,
+          "grades": 2,
+          "gemRate": 0.0
+        }
+      },
+      "totals": {
+        "cards": 1,
+        "gems": 0,
+        "grades": 2,
+        "gemRate": 0.0
+      }
+    },
+    "Thairo Estrada": {
+      "name": "Thairo Estrada",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 132,
+          "gems": 189,
+          "grades": 379,
+          "gemRate": 50.0
+        }
+      },
+      "totals": {
+        "cards": 132,
+        "gems": 189,
+        "grades": 379,
+        "gemRate": 50.0
+      }
+    },
+    "Tomas Perez": {
+      "name": "Tomas Perez",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 4,
+          "gems": 1,
+          "grades": 4,
+          "gemRate": 25.0
+        }
+      },
+      "totals": {
+        "cards": 4,
+        "gems": 1,
+        "grades": 4,
+        "gemRate": 25.0
+      }
+    },
+    "Tony Alvarez": {
+      "name": "Tony Alvarez",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 9,
+          "gems": 27,
+          "grades": 50,
+          "gemRate": 54.0
+        }
+      },
+      "totals": {
+        "cards": 9,
+        "gems": 27,
+        "grades": 50,
+        "gemRate": 54.0
+      }
+    },
+    "Tony Armas": {
+      "name": "Tony Armas",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 111,
+          "gems": 416,
+          "grades": 1367,
+          "gemRate": 30.0
+        }
+      },
+      "totals": {
+        "cards": 111,
+        "gems": 416,
+        "grades": 1367,
+        "gemRate": 30.0
+      }
+    },
+    "Tony Castillo": {
+      "name": "Tony Castillo",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 12,
+          "gems": 43,
+          "grades": 122,
+          "gemRate": 35.0
+        }
+      },
+      "totals": {
+        "cards": 12,
+        "gems": 43,
+        "grades": 122,
+        "gemRate": 35.0
+      }
+    },
+    "Tucupita Marcano": {
+      "name": "Tucupita Marcano",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 24,
+          "gems": 145,
+          "grades": 284,
+          "gemRate": 51.0
+        }
+      },
+      "totals": {
+        "cards": 24,
+        "gems": 145,
+        "grades": 284,
+        "gemRate": 51.0
+      }
+    },
+    "Ubaldo Heredia": {
+      "name": "Ubaldo Heredia",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 1,
+          "gems": 0,
+          "grades": 1,
+          "gemRate": 0.0
+        }
+      },
+      "totals": {
+        "cards": 1,
+        "gems": 0,
+        "grades": 1,
+        "gemRate": 0.0
+      }
+    },
+    "Ugueth Urbina": {
+      "name": "Ugueth Urbina",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 33,
+          "gems": 56,
+          "grades": 101,
+          "gemRate": 55.0
+        }
+      },
+      "totals": {
+        "cards": 33,
+        "gems": 56,
+        "grades": 101,
+        "gemRate": 55.0
+      }
+    },
+    "Urbano Lugo": {
+      "name": "Urbano Lugo",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 12,
+          "gems": 27,
+          "grades": 80,
+          "gemRate": 34.0
+        }
+      },
+      "totals": {
+        "cards": 12,
+        "gems": 27,
+        "grades": 80,
+        "gemRate": 34.0
       }
     }
   }
