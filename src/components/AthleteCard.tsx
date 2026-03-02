@@ -35,7 +35,7 @@ const AthleteCard = ({ athlete, byName, byKey, ebaySoldRaw, isRecommended }: Ath
 
   const shopUrl = buildEbaySearchUrl(athlete.name, athlete.sport);
   const initials = initialsFromName(athlete.name);
-  const photo = useWikipediaImage(athlete.name);
+  const photo = useWikipediaImage(athlete.name, athlete.sport);
 
   return (
     <article className={`athlete-card group ${isRecommended ? "is-recommended" : ""}`}>
