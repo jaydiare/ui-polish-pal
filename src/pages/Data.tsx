@@ -712,7 +712,15 @@ const Data = () => {
                         tick={{ fill: "hsl(var(--muted-foreground))", fontSize: 10 }}
                         label={{ value: "Spread ($)", position: "insideBottom", offset: -5, style: { fill: "hsl(var(--muted-foreground))", fontSize: 11 } }}
                       />
-                      <YAxis type="category" dataKey="name" width={140} tickMargin={6} tick={{ fill: "hsl(var(--muted-foreground))", fontSize: 10 }} />
+                      <YAxis
+                        type="category"
+                        dataKey="name"
+                        width={150}
+                        interval={0}
+                        tickMargin={8}
+                        padding={{ top: 16, bottom: 8 }}
+                        tick={{ fill: "hsl(var(--muted-foreground))", fontSize: 10 }}
+                      />
                       <Tooltip content={<PriceTooltip />} />
                       <Bar
                         dataKey="spread"
