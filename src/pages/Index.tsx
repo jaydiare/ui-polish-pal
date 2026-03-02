@@ -44,7 +44,7 @@ const Index = () => {
 
       <main id="main-content" className="page-shell" role="main" aria-label="Athlete cards and market data">
         <VzlaHero lastUpdated={lastUpdated} />
-        <VzlaIndexCards athletes={athletes} byName={byName} byKey={byKey} gradedByName={gradedByName} gradedByKey={gradedByKey} indexHistory={ebayAvgRaw?._meta?.indexHistory} />
+        <VzlaIndexCards athletes={athletes} byName={byName} byKey={byKey} indexHistory={ebayAvgRaw?._meta?.indexHistory} />
         <VzlaHowToMoney />
         <VzlaTopDeals />
         <VzlaBudgetBar
