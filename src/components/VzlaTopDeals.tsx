@@ -1,6 +1,6 @@
 import { useState, useEffect, useMemo } from "react";
 import { motion } from "framer-motion";
-import { buildEbaySearchUrl } from "@/lib/vzla-helpers";
+import { buildEbaySearchUrl, buildEbayGradedSearchUrl } from "@/lib/vzla-helpers";
 import { Link } from "react-router-dom";
 
 interface SoldRecord { avg?: number; taguchiSold?: number; marketStabilityCV?: number }
@@ -48,23 +48,63 @@ interface Deal {
   savingsPct: number;
 }
 
+type DealMode = "raw" | "graded";
+
 interface VzlaTopDealsProps {
   athleteSportMap?: Record<string, string>;
+}
+
+function buildDeals(
+  listedData: Record<string, ListedRecord>,
+  soldData: Record<string, SoldRecord>,
+  athleteSportMap: Record<string, string>,
+): Deal[] {
+  const items: Deal[] = [];
+  const allKeys = new Set([...Object.keys(listedData), ...Object.keys(soldData)]);
+  for (const key of allKeys) {
+    if (key === "_meta") continue;
+    const lp = getListedPrice(listedData[key] as ListedRecord);
+    const sp = getSoldPrice(soldData[key] as SoldRecord);
+    if (lp == null || sp == null) continue;
+    const ratio = Math.max(lp, sp) / Math.max(Math.min(lp, sp), 0.01);
+    if (ratio > 10) continue;
+    const spread = lp - sp;
+    if (spread >= 0) continue;
+    const cv = (soldData[key] as SoldRecord)?.marketStabilityCV;
+    if (cv != null && cv > 0.5) continue;
+    const sport = athleteSportMap[key] || (listedData[key] as any)?.sport || "Other";
+    items.push({
+      name: key,
+      sport,
+      listed: Math.round(lp * 100) / 100,
+      sold: Math.round(sp * 100) / 100,
+      savings: Math.round(Math.abs(spread) * 100) / 100,
+      savingsPct: Math.round((Math.abs(spread) / sp) * 100),
+    });
+  }
+  return items.sort((a, b) => b.savings - a.savings).slice(0, 5);
 }
 
 const VzlaTopDeals = ({ athleteSportMap: externalMap }: VzlaTopDealsProps) => {
   const [listedData, setListedData] = useState<Record<string, ListedRecord>>({});
   const [soldData, setSoldData] = useState<Record<string, SoldRecord>>({});
+  const [gradedListedData, setGradedListedData] = useState<Record<string, ListedRecord>>({});
+  const [gradedSoldData, setGradedSoldData] = useState<Record<string, SoldRecord>>({});
   const [athleteSportMap, setAthleteSportMap] = useState<Record<string, string>>({});
+  const [mode, setMode] = useState<DealMode>("raw");
 
   useEffect(() => {
     Promise.all([
       fetchJson("https://raw.githubusercontent.com/jaydiare/ui-polish-pal/main/data/ebay-avg.json"),
       fetchJson("https://raw.githubusercontent.com/jaydiare/ui-polish-pal/main/data/ebay-sold-avg.json"),
+      fetchJson("https://raw.githubusercontent.com/jaydiare/ui-polish-pal/main/data/ebay-graded-avg.json"),
+      fetchJson("https://raw.githubusercontent.com/jaydiare/ui-polish-pal/main/data/ebay-graded-sold-avg.json"),
       ...(externalMap ? [] : [fetchJson("data/athletes.json")]),
-    ]).then(([listed, sold, athletes]) => {
+    ]).then(([listed, sold, gradedListed, gradedSold, athletes]) => {
       if (listed) setListedData(listed);
       if (sold) setSoldData(sold);
+      if (gradedListed) setGradedListedData(gradedListed);
+      if (gradedSold) setGradedSoldData(gradedSold);
       if (externalMap) {
         setAthleteSportMap(externalMap);
       } else if (athletes && Array.isArray(athletes)) {
@@ -75,35 +115,12 @@ const VzlaTopDeals = ({ athleteSportMap: externalMap }: VzlaTopDealsProps) => {
     });
   }, [externalMap]);
 
-  const deals = useMemo((): Deal[] => {
-    const items: Deal[] = [];
-    const allKeys = new Set([...Object.keys(listedData), ...Object.keys(soldData)]);
-    for (const key of allKeys) {
-      if (key === "_meta") continue;
-      const lp = getListedPrice(listedData[key] as ListedRecord);
-      const sp = getSoldPrice(soldData[key] as SoldRecord);
-      if (lp == null || sp == null) continue;
-      const ratio = Math.max(lp, sp) / Math.max(Math.min(lp, sp), 0.01);
-      if (ratio > 10) continue;
-      const spread = lp - sp;
-      if (spread >= 0) continue; // only underpriced (sold > listed)
-      // Skip deals with unreliable sold data (CV > 0.5 = extreme variance)
-      const cv = (soldData[key] as SoldRecord)?.marketStabilityCV;
-      if (cv != null && cv > 0.5) continue;
-      const sport = athleteSportMap[key] || (listedData[key] as any)?.sport || "Other";
-      items.push({
-        name: key,
-        sport,
-        listed: Math.round(lp * 100) / 100,
-        sold: Math.round(sp * 100) / 100,
-        savings: Math.round(Math.abs(spread) * 100) / 100,
-        savingsPct: Math.round((Math.abs(spread) / sp) * 100),
-      });
-    }
-    return items.sort((a, b) => b.savings - a.savings).slice(0, 5);
-  }, [listedData, soldData, athleteSportMap]);
+  const rawDeals = useMemo(() => buildDeals(listedData, soldData, athleteSportMap), [listedData, soldData, athleteSportMap]);
+  const gradedDeals = useMemo(() => buildDeals(gradedListedData, gradedSoldData, athleteSportMap), [gradedListedData, gradedSoldData, athleteSportMap]);
 
-  if (!deals.length) return null;
+  const deals = mode === "graded" ? gradedDeals : rawDeals;
+
+  if (!rawDeals.length && !gradedDeals.length) return null;
 
   return (
     <section className="my-8" aria-label="Top deals right now">
@@ -112,55 +129,86 @@ const VzlaTopDeals = ({ athleteSportMap: externalMap }: VzlaTopDealsProps) => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.2 }}
       >
-        <div className="flex items-center gap-2 mb-4">
+        <div className="flex items-center gap-2 mb-4 flex-wrap">
           <span className="w-1 h-5 rounded-full bg-primary inline-block" />
           <h2 className="font-display font-bold text-lg text-foreground">
             🟢 Top Deals Right Now
           </h2>
+
+          {/* Raw / Graded toggle */}
+          <div className="inline-flex items-center rounded-full border border-border/50 bg-card/80 backdrop-blur-sm p-0.5 ml-2">
+            <button
+              onClick={() => setMode("raw")}
+              className={`px-3 py-1 rounded-full text-[10px] font-bold tracking-wide transition-all cursor-pointer ${
+                mode === "raw"
+                  ? "bg-primary/20 text-primary"
+                  : "text-muted-foreground hover:text-foreground"
+              }`}
+            >
+              🃏 Raw
+            </button>
+            <button
+              onClick={() => setMode("graded")}
+              className={`px-3 py-1 rounded-full text-[10px] font-bold tracking-wide transition-all cursor-pointer ${
+                mode === "graded"
+                  ? "bg-primary/20 text-primary"
+                  : "text-muted-foreground hover:text-foreground"
+              }`}
+            >
+              🏅 Graded
+            </button>
+          </div>
+
           <span className="text-[10px] text-muted-foreground ml-auto">sold &gt; listed = flip opportunity</span>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3">
-          {deals.map((deal, i) => (
-            <motion.a
-              key={deal.name}
-              href={buildEbaySearchUrl(deal.name, deal.sport)}
-              target="_blank"
-              rel="noopener noreferrer"
-              initial={{ opacity: 0, y: 12 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.35, delay: i * 0.06 }}
-              className="glass-panel p-4 hover:border-green-500/30 transition-all group cursor-pointer"
-            >
-              <div className="flex items-center justify-between mb-2">
-                <span className="text-[10px] text-muted-foreground uppercase tracking-wider">{deal.sport}</span>
-                <span className="text-[10px] font-bold text-green-400 bg-green-400/10 px-2 py-0.5 rounded-full">
-                  -{deal.savingsPct}%
-                </span>
-              </div>
-              <h3 className="font-display font-bold text-sm text-foreground mb-2 group-hover:text-primary transition-colors truncate">
-                {deal.name}
-              </h3>
-              <div className="space-y-1">
-                <div className="flex justify-between text-[11px]">
-                  <span className="text-muted-foreground">Buy now</span>
-                  <span className="font-mono font-bold text-foreground">${deal.listed.toFixed(2)}</span>
+        {deals.length > 0 ? (
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3">
+            {deals.map((deal, i) => (
+              <motion.a
+                key={`${mode}-${deal.name}`}
+                href={mode === "graded" ? buildEbayGradedSearchUrl(deal.name, deal.sport) : buildEbaySearchUrl(deal.name, deal.sport)}
+                target="_blank"
+                rel="noopener noreferrer"
+                initial={{ opacity: 0, y: 12 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.35, delay: i * 0.06 }}
+                className="glass-panel p-4 hover:border-green-500/30 transition-all group cursor-pointer"
+              >
+                <div className="flex items-center justify-between mb-2">
+                  <span className="text-[10px] text-muted-foreground uppercase tracking-wider">{deal.sport}</span>
+                  <span className="text-[10px] font-bold text-green-400 bg-green-400/10 px-2 py-0.5 rounded-full">
+                    -{deal.savingsPct}%
+                  </span>
                 </div>
-                <div className="flex justify-between text-[11px]">
-                  <span className="text-muted-foreground">Sells for</span>
-                  <span className="font-mono font-bold text-green-400">${deal.sold.toFixed(2)}</span>
+                <h3 className="font-display font-bold text-sm text-foreground mb-2 group-hover:text-primary transition-colors truncate">
+                  {deal.name}
+                </h3>
+                <div className="space-y-1">
+                  <div className="flex justify-between text-[11px]">
+                    <span className="text-muted-foreground">Buy now</span>
+                    <span className="font-mono font-bold text-foreground">${deal.listed.toFixed(2)}</span>
+                  </div>
+                  <div className="flex justify-between text-[11px]">
+                    <span className="text-muted-foreground">Sells for</span>
+                    <span className="font-mono font-bold text-green-400">${deal.sold.toFixed(2)}</span>
+                  </div>
+                  <div className="border-t border-border/50 pt-1 mt-1 flex justify-between text-[11px]">
+                    <span className="text-muted-foreground">Potential</span>
+                    <span className="font-mono font-bold text-green-400">+${deal.savings.toFixed(2)}</span>
+                  </div>
                 </div>
-                <div className="border-t border-border/50 pt-1 mt-1 flex justify-between text-[11px]">
-                  <span className="text-muted-foreground">Potential</span>
-                  <span className="font-mono font-bold text-green-400">+${deal.savings.toFixed(2)}</span>
+                <div className="text-[9px] text-muted-foreground/60 mt-2 text-center group-hover:text-primary/60 transition-colors">
+                  Click to buy on eBay ↗
                 </div>
-              </div>
-              <div className="text-[9px] text-muted-foreground/60 mt-2 text-center group-hover:text-primary/60 transition-colors">
-                Click to buy on eBay ↗
-              </div>
-            </motion.a>
-          ))}
-        </div>
+              </motion.a>
+            ))}
+          </div>
+        ) : (
+          <div className="glass-panel p-6 text-center text-muted-foreground text-sm">
+            No {mode === "graded" ? "graded" : "raw"} deals found yet. Data is still being collected.
+          </div>
+        )}
 
         <div className="mt-3 text-center">
           <Link
