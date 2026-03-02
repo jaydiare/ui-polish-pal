@@ -283,7 +283,7 @@ const Data = () => {
   }, [gapsMode, rawComparison, gradedComparison, gapsComparison]);
 
   const topSpread = useMemo(() =>
-    [...gapsComparisonBoth].sort((a, b) => Math.abs(b.spread) - Math.abs(a.spread)).slice(0, 20),
+    [...gapsComparisonBoth].sort((a, b) => Math.abs(b.spread) - Math.abs(a.spread)).slice(0, 10),
     [gapsComparisonBoth]);
 
   /* ── Sport Aggregation helper ── */
@@ -690,7 +690,7 @@ const Data = () => {
               </div>
             </section>
 
-            {/* ── Top 20 Price Spreads ── */}
+            {/* ── Top 10 Price Spreads ── */}
             <section className="my-8" aria-label="Top price spreads">
               <div className="flex items-center justify-between flex-wrap gap-2 mb-1">
                 <h2 className="font-display font-bold text-lg text-foreground flex items-center gap-2">
@@ -700,10 +700,10 @@ const Data = () => {
                 <ModeToggle value={gapsMode} onChange={setGapsMode} />
               </div>
               <p className="text-xs text-muted-foreground mb-4 ml-3">
-                Top 20 athletes with the largest listed-to-sold price spread.
+                Top 10 athletes with the largest listed-to-sold price spread.
               </p>
               <div className="glass-panel p-4 md:p-6">
-                <div className="w-full h-[560px] md:h-[550px]">
+                <div className="w-full h-[360px] md:h-[400px]">
                   <ResponsiveContainer width="100%" height="100%">
                     <BarChart data={topSpread} layout="vertical" margin={{ top: 22, right: 30, left: 10, bottom: 5 }}>
                       <CartesianGrid strokeDasharray="3 3" stroke="hsl(var(--border))" opacity={0.5} />
