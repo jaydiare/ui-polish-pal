@@ -1,8 +1,10 @@
 import { useState, useEffect, useRef } from "react";
 import { KnapsackResult } from "@/lib/budget-knapsack";
 
+export type CardType = "raw" | "graded";
+
 interface VzlaBudgetBarProps {
-  onSuggest: (budget: number, maxCards: number | null, flipOnly: boolean, buyLowOnly: boolean) => void;
+  onSuggest: (budget: number, maxCards: number | null, cardType: CardType, buyLowOnly: boolean) => void;
   onClear: () => void;
   result: KnapsackResult | null;
 }
@@ -10,7 +12,7 @@ interface VzlaBudgetBarProps {
 const VzlaBudgetBar = ({ onSuggest, onClear, result }: VzlaBudgetBarProps) => {
   const [budget, setBudget] = useState("");
   const [cards, setCards] = useState("");
-  const [flipOnly, setFlipOnly] = useState(false);
+  const [cardType, setCardType] = useState<CardType>("raw");
   const [buyLowOnly, setBuyLowOnly] = useState(false);
 
   const justSuggested = useRef(false);
@@ -21,7 +23,7 @@ const VzlaBudgetBar = ({ onSuggest, onClear, result }: VzlaBudgetBarProps) => {
     const c = cards ? Number(cards) : null;
     const maxCards = c && Number.isFinite(c) && c > 0 ? Math.floor(c) : null;
     justSuggested.current = true;
-    onSuggest(b, maxCards, flipOnly, buyLowOnly);
+    onSuggest(b, maxCards, cardType, buyLowOnly);
   };
 
   // Auto-scroll to results on mobile after suggest
@@ -41,7 +43,7 @@ const VzlaBudgetBar = ({ onSuggest, onClear, result }: VzlaBudgetBarProps) => {
   const handleClear = () => {
     setBudget("");
     setCards("");
-    setFlipOnly(false);
+    setCardType("raw");
     setBuyLowOnly(false);
     onClear();
   };
@@ -81,20 +83,21 @@ const VzlaBudgetBar = ({ onSuggest, onClear, result }: VzlaBudgetBarProps) => {
             className="w-full h-11 px-3.5 rounded-lg bg-secondary border border-border text-foreground text-sm outline-none transition-all placeholder:text-muted-foreground focus:border-primary/40 focus:shadow-[0_0_0_3px_hsl(var(--primary)/0.08)]"
           />
         </div>
+        <div>
+          <label htmlFor="card-type-select" className="sr-only">Card type</label>
+          <select
+            id="card-type-select"
+            value={cardType}
+            onChange={(e) => setCardType(e.target.value as CardType)}
+            className="h-11 px-3.5 rounded-lg bg-secondary border border-border text-foreground text-sm outline-none transition-all cursor-pointer focus:border-primary/40 focus:shadow-[0_0_0_3px_hsl(var(--primary)/0.08)]"
+            aria-label="Select card type"
+          >
+            <option value="raw">🃏 Raw Cards</option>
+            <option value="graded">🏅 Graded Cards</option>
+          </select>
+        </div>
         <button
-          onClick={() => setFlipOnly((prev) => { if (!prev) setBuyLowOnly(false); return !prev; })}
-          className={`h-11 px-4 rounded-lg border text-xs font-bold cursor-pointer whitespace-nowrap transition-all flex items-center gap-1.5 ${
-            flipOnly
-              ? "bg-vzla-yellow/15 border-vzla-yellow/40 text-vzla-yellow"
-              : "bg-secondary border-border text-muted-foreground hover:text-foreground"
-          }`}
-          aria-pressed={flipOnly}
-          aria-label="Filter for flip potential cards only"
-        >
-          🔄 Flip Only
-        </button>
-        <button
-          onClick={() => setBuyLowOnly((prev) => { if (!prev) setFlipOnly(false); return !prev; })}
+          onClick={() => setBuyLowOnly((prev) => !prev)}
           className={`h-11 px-4 rounded-lg border text-xs font-bold cursor-pointer whitespace-nowrap transition-all flex items-center gap-1.5 ${
             buyLowOnly
               ? "bg-emerald-500/15 border-emerald-500/40 text-emerald-400"
