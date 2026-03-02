@@ -21,6 +21,7 @@ const Index = () => {
     gradedByKey,
     ebayAvgRaw,
     ebaySoldRaw,
+    ebayGradedSoldRaw,
     athleteHistory,
     lastUpdated,
     filters,
@@ -71,6 +72,7 @@ const Index = () => {
           gradedByName={gradedByName}
           gradedByKey={gradedByKey}
           ebaySoldRaw={ebaySoldRaw}
+          ebayGradedSoldRaw={ebayGradedSoldRaw}
           athleteHistory={athleteHistory}
           hasMore={budgetChosenIds.size > 0 ? false : hasMore}
           remainingCount={remainingCount}
