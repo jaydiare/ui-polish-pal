@@ -1,0 +1,60 @@
+name: Update eBay graded sold averages (batched)
+
+on:
+  schedule:
+    # Every 2 hours, offset by 1 hour from raw sold to avoid overlap
+    - cron: "30 */2 * * *"
+  workflow_dispatch:
+
+concurrency:
+  group: ebay-graded-sold-avg-main
+  cancel-in-progress: true
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install deps
+        if: hashFiles('package-lock.json') != ''
+        run: npm install --no-audit --no-fund
+
+      - name: Update eBay graded sold averages (batch of 10)
+        run: node scripts/graded-sold-update-ebay-avg.js
+
+      - name: Copy to public
+        run: |
+          mkdir -p public/data
+          cp data/ebay-graded-sold-avg.json public/data/ebay-graded-sold-avg.json 2>/dev/null || true
+
+      - name: Commit & push (rebase-safe)
+        run: |
+          set -e
+
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          git add data/ebay-graded-sold-avg.json data/ebay-graded-sold-progress.json public/data/ebay-graded-sold-avg.json
+
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+            exit 0
+          fi
+
+          git commit -m "Update eBay graded sold averages (batch)"
+
+          git fetch origin main
+          git rebase origin/main
+
+          git push origin HEAD:main
