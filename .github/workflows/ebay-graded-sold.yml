@@ -55,6 +55,6 @@ jobs:
           git commit -m "Update eBay graded sold averages (batch)"
 
           git fetch origin main
-          git rebase --autostash origin/main
+          git rebase --autostash origin/main || (git rebase --abort && git pull --rebase origin main)
 
           git push origin HEAD:main
