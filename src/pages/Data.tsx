@@ -318,7 +318,7 @@ const Data = () => {
     const results: SignalAthlete[] = [];
     for (const d of allComparison) {
       const rec = listedData[d.name] as any;
-      const cv: number | null = rec?.marketStabilityCV ?? rec?.marketplaces?.EBAY_US?.marketStabilityCV ?? null;
+      const cv: number | null = rec?.marketStabilityCV ?? rec?.marketplaces?.EBAY_US?.marketStabilityCV ?? null; // Market Stability Score
       const days: number | null = rec?.avgDaysOnMarket ?? rec?.marketplaces?.EBAY_US?.avgDaysOnMarket ?? null;
       const spreadPct = d.sold > 0 ? ((d.listed - d.sold) / d.sold) * 100 : 0;
 
@@ -886,7 +886,7 @@ const Data = () => {
                                   {a.spreadPct > 0 ? "+" : ""}{a.spreadPct.toFixed(0)}%
                                 </div>
                                 <div className="text-[9px] text-muted-foreground">
-                                  {a.cv != null ? `CV ${(a.cv * 100).toFixed(0)}%` : ""}
+                                  {a.cv != null ? `Stability ${(a.cv * 100).toFixed(0)}%` : ""}
                                   {a.cv != null && a.days != null ? " · " : ""}
                                   {a.days != null ? `${Math.round(a.days)}d` : ""}
                                 </div>
