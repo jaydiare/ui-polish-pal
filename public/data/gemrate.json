@@ -1,13 +1,13 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-02T15:39:22.044989+00:00",
-    "athleteCount": 433,
+    "updatedAt": "2026-03-02T16:23:30.090466+00:00",
+    "athleteCount": 438,
     "graders": [
       "PSA"
     ],
     "batchInfo": {
-      "startIdx": 530,
-      "endIdx": 550,
+      "startIdx": 550,
+      "endIdx": 570,
       "totalAthletes": 575
     }
   },
@@ -7804,6 +7804,96 @@
         "gems": 13,
         "grades": 23,
         "gemRate": 57.0
+      }
+    },
+    "Rafael Romo": {
+      "name": "Rafael Romo",
+      "sport": "Soccer",
+      "graders": {
+        "PSA": {
+          "cards": 2,
+          "gems": 2,
+          "grades": 2,
+          "gemRate": 100.0
+        }
+      },
+      "totals": {
+        "cards": 2,
+        "gems": 2,
+        "grades": 2,
+        "gemRate": 100.0
+      }
+    },
+    "Telasco Segovia": {
+      "name": "Telasco Segovia",
+      "sport": "Soccer",
+      "graders": {
+        "PSA": {
+          "cards": 7,
+          "gems": 14,
+          "grades": 17,
+          "gemRate": 82.0
+        }
+      },
+      "totals": {
+        "cards": 7,
+        "gems": 14,
+        "grades": 17,
+        "gemRate": 82.0
+      }
+    },
+    "Wikelman Carmona": {
+      "name": "Wikelman Carmona",
+      "sport": "Soccer",
+      "graders": {
+        "PSA": {
+          "cards": 8,
+          "gems": 1,
+          "grades": 9,
+          "gemRate": 11.0
+        }
+      },
+      "totals": {
+        "cards": 8,
+        "gems": 1,
+        "grades": 9,
+        "gemRate": 11.0
+      }
+    },
+    "Alejandro Marques": {
+      "name": "Alejandro Marques",
+      "sport": "Soccer",
+      "graders": {
+        "PSA": {
+          "cards": 54,
+          "gems": 35,
+          "grades": 91,
+          "gemRate": 38.0
+        }
+      },
+      "totals": {
+        "cards": 54,
+        "gems": 35,
+        "grades": 91,
+        "gemRate": 38.0
+      }
+    },
+    "Luis Morales": {
+      "name": "Luis Morales",
+      "sport": "Soccer",
+      "graders": {
+        "PSA": {
+          "cards": 9,
+          "gems": 5,
+          "grades": 10,
+          "gemRate": 50.0
+        }
+      },
+      "totals": {
+        "cards": 9,
+        "gems": 5,
+        "grades": 10,
+        "gemRate": 50.0
       }
     }
   }
