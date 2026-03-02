@@ -140,12 +140,19 @@ const PinnedScatterTooltip = ({ data, onClose }: { data: PinnedData; onClose: ()
   );
 };
 
+type CardMode = "raw" | "graded";
+
 const Data = () => {
   const [listedData, setListedData] = useState<Record<string, ListedRecord>>({});
   const [soldData, setSoldData] = useState<Record<string, SoldRecord>>({});
+  const [gradedSoldData, setGradedSoldData] = useState<Record<string, SoldRecord>>({});
+  const [cardMode, setCardMode] = useState<CardMode>("raw");
   const [athleteSportMap, setAthleteSportMap] = useState<Record<string, string>>({});
   const [pinnedDot, setPinnedDot] = useState<PinnedData | null>(null);
   const scatterWrapRef = useRef<HTMLDivElement>(null);
+
+  // Active sold data based on toggle (scatter always uses raw)
+  const activeSoldData = cardMode === "graded" ? gradedSoldData : soldData;
 
   const handleScatterClick = useCallback((state: any) => {
     if (!state?.activePayload?.length) { setPinnedDot(null); return; }
@@ -165,34 +172,35 @@ const Data = () => {
     Promise.all([
       fetchJson("https://raw.githubusercontent.com/jaydiare/ui-polish-pal/main/data/ebay-avg.json"),
       fetchJson("https://raw.githubusercontent.com/jaydiare/ui-polish-pal/main/data/ebay-sold-avg.json"),
+      fetchJson("https://raw.githubusercontent.com/jaydiare/ui-polish-pal/main/data/ebay-graded-sold-avg.json"),
       fetchJson("data/athletes.json"),
-    ]).then(([listed, sold, athletes]) => {
+    ]).then(([listed, sold, gradedSold, athletes]) => {
       if (listed) setListedData(listed);
       if (athletes && Array.isArray(athletes)) {
         const map: Record<string, string> = {};
         const norm = (s: string) => s.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().trim();
         for (const a of athletes) {
           if (a?.name && a?.sport) {
-            map[a.name] = a.sport;          // exact key
-            map[norm(a.name)] = a.sport;    // normalized key
+            map[a.name] = a.sport;
+            map[norm(a.name)] = a.sport;
           }
         }
         setAthleteSportMap(map);
       }
       if (sold) setSoldData(sold);
+      if (gradedSold) setGradedSoldData(gradedSold);
     });
   }, []);
 
-  /* ── Comparison Data ── */
+  /* ── Comparison Data (uses toggled sold source) ── */
   const comparisonData = useMemo(() => {
     const items: { name: string; sport: string; listed: number; sold: number; spread: number }[] = [];
-    const allKeys = new Set([...Object.keys(listedData), ...Object.keys(soldData)]);
+    const allKeys = new Set([...Object.keys(listedData), ...Object.keys(activeSoldData)]);
     for (const key of allKeys) {
       if (key === "_meta") continue;
       const lp = getListedPrice(listedData[key] as ListedRecord);
-      const sp = getSoldPrice(soldData[key] as SoldRecord);
+      const sp = getSoldPrice(activeSoldData[key] as SoldRecord);
       if (lp == null || sp == null) continue;
-      // Filter extreme outliers where ratio > 10x (likely bad data from graded/auto cards)
       const ratio = Math.max(lp, sp) / Math.max(Math.min(lp, sp), 0.01);
       if (ratio > 10) continue;
       const normKey = key.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().trim();
@@ -200,7 +208,26 @@ const Data = () => {
       items.push({ name: key, sport, listed: Math.round(lp * 100) / 100, sold: Math.round(sp * 100) / 100, spread: Math.round((lp - sp) * 100) / 100 });
     }
     return items;
-  }, [listedData, soldData, athleteSportMap]);
+  }, [listedData, activeSoldData, athleteSportMap]);
+
+  /* ── Scatter-only data (always raw) ── */
+  const scatterData = useMemo(() => {
+    if (cardMode === "raw") return comparisonData; // same data, no duplicate
+    const items: { name: string; sport: string; listed: number; sold: number; spread: number }[] = [];
+    const allKeys = new Set([...Object.keys(listedData), ...Object.keys(soldData)]);
+    for (const key of allKeys) {
+      if (key === "_meta") continue;
+      const lp = getListedPrice(listedData[key] as ListedRecord);
+      const sp = getSoldPrice(soldData[key] as SoldRecord);
+      if (lp == null || sp == null) continue;
+      const ratio = Math.max(lp, sp) / Math.max(Math.min(lp, sp), 0.01);
+      if (ratio > 10) continue;
+      const normKey = key.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().trim();
+      const sport = athleteSportMap[key] || athleteSportMap[normKey] || (listedData[key] as any)?.sport || "Other";
+      items.push({ name: key, sport, listed: Math.round(lp * 100) / 100, sold: Math.round(sp * 100) / 100, spread: Math.round((lp - sp) * 100) / 100 });
+    }
+    return items;
+  }, [cardMode, comparisonData, listedData, soldData, athleteSportMap]);
 
   /* ── KPI Stats ── */
   const stats = useMemo(() => {
@@ -226,14 +253,14 @@ const Data = () => {
     };
 
     // Include all athletes from listedData (even without sold data)
-    const allKeys = new Set([...Object.keys(listedData), ...Object.keys(soldData)]);
+    const allKeys = new Set([...Object.keys(listedData), ...Object.keys(activeSoldData)]);
     for (const key of allKeys) {
       if (key === "_meta") continue;
       const normKey = key.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().trim();
       const sport = athleteSportMap[key] || athleteSportMap[normKey] || (listedData[key] as any)?.sport || "Other";
       addSport(sport);
       const lp = getListedPrice(listedData[key] as ListedRecord);
-      const sp = getSoldPrice(soldData[key] as SoldRecord);
+      const sp = getSoldPrice(activeSoldData[key] as SoldRecord);
       if (lp != null) { agg[sport].listed += lp; agg[sport].listedCount += 1; }
       if (sp != null) { agg[sport].sold += sp; agg[sport].soldCount += 1; }
       agg[sport].totalCount += 1;
@@ -268,7 +295,7 @@ const Data = () => {
     });
 
     return entries;
-  }, [listedData, soldData, athleteSportMap]);
+  }, [listedData, activeSoldData, athleteSportMap]);
 
   const hasData = comparisonData.length > 0;
 
@@ -289,9 +316,19 @@ const Data = () => {
           <p className="text-muted-foreground text-sm max-w-xl">
             Listed vs sold price analytics for Venezuelan athletes trading cards. Data powered by eBay market scans.
           </p>
-          <div className="mt-3 inline-flex items-center gap-2 rounded-full border border-border/50 bg-card/80 backdrop-blur-sm px-4 py-1.5">
-            <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
-            <span className="text-xs text-muted-foreground font-medium">Updated Daily</span>
+          <div className="mt-3 flex items-center gap-3 flex-wrap">
+            <div className="inline-flex items-center gap-2 rounded-full border border-border/50 bg-card/80 backdrop-blur-sm px-4 py-1.5">
+              <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
+              <span className="text-xs text-muted-foreground font-medium">Updated Daily</span>
+            </div>
+            <select
+              value={cardMode}
+              onChange={(e) => setCardMode(e.target.value as CardMode)}
+              className="rounded-full border border-border/50 bg-card/80 backdrop-blur-sm px-4 py-1.5 text-xs text-muted-foreground font-medium appearance-none cursor-pointer hover:border-primary/30 transition-colors focus:outline-none focus:ring-1 focus:ring-primary/30"
+            >
+              <option value="raw">🃏 Raw Sold</option>
+              <option value="graded">🏅 Graded Sold</option>
+            </select>
           </div>
         </motion.div>
 
@@ -442,14 +479,14 @@ const Data = () => {
                       <Tooltip content={() => null} />
                       <Scatter
                         data={(() => {
-                          const maxVal = Math.max(...comparisonData.map(d => Math.max(d.listed, d.sold)));
+                          const maxVal = Math.max(...scatterData.map(d => Math.max(d.listed, d.sold)));
                           return [{ listed: 0, sold: 0 }, { listed: maxVal, sold: maxVal }];
                         })()}
                         line={{ stroke: "hsl(var(--muted-foreground))", strokeWidth: 1, strokeDasharray: "6 4" }}
                         shape={() => null} legendType="none" isAnimationActive={false}
                       />
-                      <Scatter data={comparisonData} isAnimationActive={false} cursor="pointer">
-                        {comparisonData.map((entry, idx) => (
+                      <Scatter data={scatterData} isAnimationActive={false} cursor="pointer">
+                        {scatterData.map((entry, idx) => (
                           <Cell key={idx} fill={getSportColor(entry.sport)} fillOpacity={0.8} r={typeof window !== 'undefined' && window.innerWidth < 768 ? 6 : 5} />
                         ))}
                       </Scatter>
@@ -459,7 +496,7 @@ const Data = () => {
                 </div>
               <div className="flex flex-wrap gap-4 mt-3 justify-center">
                   {Object.entries(SPORT_COLORS)
-                    .filter(([sport]) => comparisonData.some(d => d.sport === sport))
+                    .filter(([sport]) => scatterData.some(d => d.sport === sport))
                     .map(([sport, color]) => (
                     <div key={sport} className="flex items-center gap-1.5 text-[10px] text-muted-foreground">
                       <div className="w-2.5 h-2.5 rounded-full" style={{ backgroundColor: color }} />
