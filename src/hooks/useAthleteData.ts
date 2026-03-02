@@ -125,26 +125,26 @@ export function useAthleteData() {
   // Budget knapsack
   const [budgetResult, setBudgetResult] = useState<KnapsackResult | null>(null);
 
-  const budgetCandidates = useMemo((): BudgetCandidate[] => {
-    return filteredAthletes.map((a) => ({
+
+
+
+  const runBudget = useCallback((budgetDollars: number, maxCards: number | null, cardType: string = "raw", buyLowOnly: boolean = false) => {
+    // Use graded or raw price indexes based on cardType
+    const useName = cardType === "graded" ? gradedByName : byName;
+    const useKey = cardType === "graded" ? gradedByKey : byKey;
+
+    let candidates: BudgetCandidate[] = filteredAthletes.map((a) => ({
       name: a.name,
       sport: a.sport,
-      price: getEbayAvgNumber(a, byName, byKey),
+      price: getEbayAvgNumber(a, useName, useKey),
       stabilityPct: (() => {
-        const cv = getMarketStabilityCV(a, byName, byKey);
+        const cv = getMarketStabilityCV(a, useName, useKey);
         return cv != null ? cv * 100 : null;
       })(),
-      daysOnMarket: getAvgDaysOnMarket(a, byName, byKey),
+      daysOnMarket: getAvgDaysOnMarket(a, useName, useKey),
     }));
-  }, [filteredAthletes, byName, byKey]);
 
-  const runBudget = useCallback((budgetDollars: number, maxCards: number | null, flipOnly: boolean = false, buyLowOnly: boolean = false) => {
-    let candidates = budgetCandidates;
-    if (flipOnly) {
-      candidates = candidates.filter((c) => c.stabilityPct != null && c.stabilityPct > 20);
-    }
     if (buyLowOnly) {
-      // Filter to athletes where sold avg < listing avg (buy low signal)
       candidates = candidates.filter((c) => {
         const soldRecord = ebaySoldRaw?.[c.name];
         const soldAvg = soldRecord?.taguchiSold != null ? soldRecord.taguchiSold : null;
@@ -153,7 +153,7 @@ export function useAthleteData() {
     }
     const result = runKnapsack(candidates, budgetDollars, maxCards);
     setBudgetResult(result);
-  }, [budgetCandidates, ebaySoldRaw]);
+  }, [filteredAthletes, byName, byKey, gradedByName, gradedByKey, ebaySoldRaw]);
 
   const DEFAULT_FILTERS: Filters = {
     search: "",
