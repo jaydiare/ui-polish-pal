@@ -31,6 +31,7 @@ export function useAthleteData() {
   const [ebayAvgRaw, setEbayAvgRaw] = useState<EbayAvgData>({});
   const [ebayGradedRaw, setEbayGradedRaw] = useState<EbayAvgData>({});
   const [ebaySoldRaw, setEbaySoldRaw] = useState<Record<string, any>>({});
+  const [athleteHistory, setAthleteHistory] = useState<Record<string, any[]>>({});
   const [lastUpdated, setLastUpdated] = useState<string>("—");
   const [visibleCount, setVisibleCount] = useState(PAGE_SIZE);
   const [filters, setFilters] = useState<Filters>({
@@ -49,12 +50,13 @@ export function useAthleteData() {
   // Fetch data on mount
   useEffect(() => {
     (async () => {
-      const [fetchedAthletes, fetchedEbay, fetchedGraded, fetchedSold, fetchedProgress] = await Promise.all([
+      const [fetchedAthletes, fetchedEbay, fetchedGraded, fetchedSold, fetchedProgress, fetchedHistory] = await Promise.all([
         fetchJson("data/athletes.json"),
         fetchJson("https://raw.githubusercontent.com/jaydiare/ui-polish-pal/main/data/ebay-avg.json"),
         fetchJson("https://raw.githubusercontent.com/jaydiare/ui-polish-pal/main/data/ebay-graded-avg.json"),
         fetchJson("https://raw.githubusercontent.com/jaydiare/ui-polish-pal/main/data/ebay-sold-avg.json"),
         fetchJson("https://raw.githubusercontent.com/jaydiare/ui-polish-pal/main/data/ebay-sold-progress.json"),
+        fetchJson("https://raw.githubusercontent.com/jaydiare/ui-polish-pal/main/data/athlete-history.json"),
       ]);
 
       if (fetchedAthletes) {
@@ -71,6 +73,9 @@ export function useAthleteData() {
       }
       if (fetchedProgress?.lastBatchAt) {
         setLastUpdated(timeAgo(fetchedProgress.lastBatchAt));
+      }
+      if (fetchedHistory && typeof fetchedHistory === "object") {
+        setAthleteHistory(fetchedHistory);
       }
     })();
   }, []);
@@ -183,6 +188,7 @@ export function useAthleteData() {
     gradedByKey,
     ebayAvgRaw,
     ebaySoldRaw,
+    athleteHistory,
     lastUpdated,
     filters,
     updateFilter,
