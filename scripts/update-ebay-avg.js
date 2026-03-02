@@ -887,8 +887,20 @@ async function main() {
     console.warn(`\n⚠️  ${errorCount} athlete(s) failed but data for ${Object.keys(out).length - 1} athletes was saved.`);
   }
 
-  // --- Append today's index snapshot to indexHistory ---
+  // --- Append today's index snapshot to indexHistory (70/30 raw/graded weighted) ---
   const today = new Date().toISOString().slice(0, 10); // YYYY-MM-DD
+
+  // Load graded data for weighted index
+  const GRADED_PATH = path.join(__dirname, "..", "data", "ebay-graded-avg.json");
+  let gradedData = {};
+  try {
+    if (fs.existsSync(GRADED_PATH)) {
+      gradedData = JSON.parse(fs.readFileSync(GRADED_PATH, "utf8"));
+    }
+  } catch { /* ignore */ }
+
+  const RAW_WEIGHT = 0.7;
+  const GRADED_WEIGHT = 0.3;
 
   // Detect top sports from athletes list (same logic as frontend)
   const sportCounts = new Map();
@@ -905,12 +917,40 @@ async function main() {
   // Persist basePrices in _meta
   out._meta.basePrices = basePrices;
 
+  // Weighted index: blend raw indexLevel with graded indexLevel (70/30)
+  function computeWeightedIndex(rawData, gradedData, athletes, sport) {
+    let sum = 0;
+    let used = 0;
+    for (const a of athletes) {
+      if (sport !== "All" && a.sport !== sport) continue;
+      const rawRec = rawData[a.name];
+      const gradedRec = gradedData[a.name];
+      const rawIdx = rawRec?.indexLevel;
+      const gradedIdx = gradedRec?.indexLevel;
+      const hasRaw = rawIdx != null && Number.isFinite(rawIdx) && rawIdx > 0;
+      const hasGraded = gradedIdx != null && Number.isFinite(gradedIdx) && gradedIdx > 0;
+
+      if (hasRaw && hasGraded) {
+        sum += rawIdx * RAW_WEIGHT + gradedIdx * GRADED_WEIGHT;
+        used += 1;
+      } else if (hasRaw) {
+        sum += rawIdx;
+        used += 1;
+      } else if (hasGraded) {
+        sum += gradedIdx;
+        used += 1;
+      }
+    }
+    const average = used > 0 ? sum / used : 0;
+    return { average, used };
+  }
+
   const snapshot = { date: today };
   for (const sport of topSports) {
-    const idx = computeScriptIndex(out, athletes, sport);
+    const idx = computeWeightedIndex(out, gradedData, athletes, sport);
     snapshot[sport] = parseFloat(idx.average.toFixed(1));
   }
-  const allIdx = computeScriptIndex(out, athletes, "All");
+  const allIdx = computeWeightedIndex(out, gradedData, athletes, "All");
   snapshot.All = parseFloat(allIdx.average.toFixed(1));
 
   // Dedupe: replace existing entry for today, keep last 90 days
