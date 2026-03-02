@@ -17,6 +17,8 @@ const Index = () => {
     paginatedAthletes,
     byName,
     byKey,
+    gradedByName,
+    gradedByKey,
     ebayAvgRaw,
     ebaySoldRaw,
     lastUpdated,
@@ -62,6 +64,8 @@ const Index = () => {
           athletes={budgetChosenIds.size > 0 ? filteredAthletes : paginatedAthletes}
           byName={byName}
           byKey={byKey}
+          gradedByName={gradedByName}
+          gradedByKey={gradedByKey}
           ebaySoldRaw={ebaySoldRaw}
           hasMore={budgetChosenIds.size > 0 ? false : hasMore}
           remainingCount={remainingCount}
