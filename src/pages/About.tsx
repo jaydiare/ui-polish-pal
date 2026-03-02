@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import SEOHead from "@/components/SEOHead";
 import VzlaNavbar from "@/components/VzlaNavbar";
 import VzlaFooter from "@/components/VzlaFooter";
 import VzlaEbayFooter from "@/components/VzlaEbayFooter";
@@ -10,6 +11,11 @@ const EBAY_STORE =
 const About = () => {
   return (
     <div id="top" className="min-h-screen">
+      <SEOHead
+        title="About"
+        description="Learn about VZLA Sports Elite — the daily eBay price index tracking 550+ Venezuelan athletes' trading cards across baseball, soccer, MMA, and more."
+        path="/about"
+      />
       <VzlaNavbar />
 
       <main className="page-shell">

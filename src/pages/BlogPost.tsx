@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
+import SEOHead from "@/components/SEOHead";
 import VzlaNavbar from "@/components/VzlaNavbar";
 import VzlaFooter from "@/components/VzlaFooter";
 import VzlaEbayFooter from "@/components/VzlaEbayFooter";
@@ -45,6 +46,23 @@ const BlogPost = () => {
 
   return (
     <div className="min-h-screen">
+      <SEOHead
+        title={post.title}
+        description={post.excerpt}
+        path={`/blog/${slug}`}
+        image={post.coverImage?.startsWith("http") ? post.coverImage : undefined}
+        type="article"
+        jsonLd={{
+          "@context": "https://schema.org",
+          "@type": "Article",
+          "headline": post.title,
+          "description": post.excerpt,
+          "datePublished": post.date,
+          "author": { "@type": "Person", "name": post.author },
+          "publisher": { "@type": "Organization", "name": "VZLA Sports Elite" },
+          "mainEntityOfPage": `https://vzlasportselite.com/blog/${slug}`,
+        }}
+      />
       <VzlaNavbar />
       <main className="page-shell pt-8 max-w-3xl mx-auto">
         <Link to="/blog" className="text-sm text-muted-foreground hover:text-vzla-yellow transition-colors no-underline mb-4 inline-block">
