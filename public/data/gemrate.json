@@ -1,13 +1,13 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-01T23:56:08.206337+00:00",
-    "athleteCount": 244,
+    "updatedAt": "2026-03-02T00:05:20.646924+00:00",
+    "athleteCount": 253,
     "graders": [
       "PSA"
     ],
     "batchInfo": {
-      "startIdx": 290,
-      "endIdx": 300,
+      "startIdx": 300,
+      "endIdx": 310,
       "totalAthletes": 575
     }
   },
@@ -4402,6 +4402,168 @@
         "gems": 247,
         "grades": 435,
         "gemRate": 57.0
+      }
+    },
+    "Luinder Avila": {
+      "name": "Luinder Avila",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 13,
+          "gems": 24,
+          "grades": 55,
+          "gemRate": 44.0
+        }
+      },
+      "totals": {
+        "cards": 13,
+        "gems": 24,
+        "grades": 55,
+        "gemRate": 44.0
+      }
+    },
+    "Luis Alexander Basabe": {
+      "name": "Luis Alexander Basabe",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 41,
+          "gems": 239,
+          "grades": 319,
+          "gemRate": 75.0
+        }
+      },
+      "totals": {
+        "cards": 41,
+        "gems": 239,
+        "grades": 319,
+        "gemRate": 75.0
+      }
+    },
+    "Luis Aparicio": {
+      "name": "Luis Aparicio",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 1190,
+          "gems": 775,
+          "grades": 30105,
+          "gemRate": 3.0
+        }
+      },
+      "totals": {
+        "cards": 1190,
+        "gems": 775,
+        "grades": 30105,
+        "gemRate": 3.0
+      }
+    },
+    "Luis Aponte": {
+      "name": "Luis Aponte",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 12,
+          "gems": 126,
+          "grades": 214,
+          "gemRate": 59.0
+        }
+      },
+      "totals": {
+        "cards": 12,
+        "gems": 126,
+        "grades": 214,
+        "gemRate": 59.0
+      }
+    },
+    "Luis Arraez": {
+      "name": "Luis Arraez",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 1095,
+          "gems": 5100,
+          "grades": 8687,
+          "gemRate": 59.0
+        }
+      },
+      "totals": {
+        "cards": 1095,
+        "gems": 5100,
+        "grades": 8687,
+        "gemRate": 59.0
+      }
+    },
+    "Luis Avilan": {
+      "name": "Luis Avilan",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 1,
+          "gems": 2,
+          "grades": 2,
+          "gemRate": 100.0
+        }
+      },
+      "totals": {
+        "cards": 1,
+        "gems": 2,
+        "grades": 2,
+        "gemRate": 100.0
+      }
+    },
+    "Luis Contreras": {
+      "name": "Luis Contreras",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 3,
+          "gems": 0,
+          "grades": 3,
+          "gemRate": 0.0
+        }
+      },
+      "totals": {
+        "cards": 3,
+        "gems": 0,
+        "grades": 3,
+        "gemRate": 0.0
+      }
+    },
+    "Luis Curvelo": {
+      "name": "Luis Curvelo",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 2,
+          "gems": 0,
+          "grades": 2,
+          "gemRate": 0.0
+        }
+      },
+      "totals": {
+        "cards": 2,
+        "gems": 0,
+        "grades": 2,
+        "gemRate": 0.0
+      }
+    },
+    "Luis Garcia": {
+      "name": "Luis Garcia",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 883,
+          "gems": 2929,
+          "grades": 5537,
+          "gemRate": 53.0
+        }
+      },
+      "totals": {
+        "cards": 883,
+        "gems": 2929,
+        "grades": 5537,
+        "gemRate": 53.0
       }
     }
   }
