@@ -1,3 +1,4 @@
+import { useMemo } from "react";
 import { Athlete, EbayAvgRecord } from "@/data/athletes";
 import {
   getEbayAvgNumber,
@@ -10,6 +11,7 @@ import {
   initialsFromName,
 } from "@/lib/vzla-helpers";
 import { useWikipediaImage } from "@/hooks/useWikipediaImage";
+import Sparkline from "./Sparkline";
 
 interface AthleteCardProps {
   athlete: Athlete;
@@ -18,11 +20,12 @@ interface AthleteCardProps {
   gradedByName: Record<string, EbayAvgRecord>;
   gradedByKey: Record<string, EbayAvgRecord>;
   ebaySoldRaw?: Record<string, any>;
+  history?: any[];
   isRecommended?: boolean;
   priceMode: "raw" | "graded" | "both";
 }
 
-const AthleteCard = ({ athlete, byName, byKey, gradedByName, gradedByKey, ebaySoldRaw, isRecommended, priceMode }: AthleteCardProps) => {
+const AthleteCard = ({ athlete, byName, byKey, gradedByName, gradedByKey, ebaySoldRaw, history, isRecommended, priceMode }: AthleteCardProps) => {
   const avgNum = getEbayAvgNumber(athlete, byName, byKey);
   const money = avgNum != null ? formatCurrency(avgNum, "USD") : "—";
 
@@ -55,6 +58,15 @@ const AthleteCard = ({ athlete, byName, byKey, gradedByName, gradedByKey, ebaySo
   // Signals based on active price mode
   const isFlip = activeHasPrice && cv != null && soldAvg != null && activeAvgNum != null && soldAvg >= activeAvgNum && (stability.bucket === "volatile" || stability.bucket === "highly_unstable");
   const isBuyLow = activeHasPrice && soldAvg != null && activeAvgNum != null && soldAvg < activeAvgNum;
+
+  // Sparkline data: extract raw prices from history, only show with 7+ data points
+  const sparklineData = useMemo(() => {
+    if (!history || history.length < 7) return null;
+    return history
+      .map((h: any) => h?.raw?.price ?? null)
+      .filter((v: any): v is number => v != null && Number.isFinite(v));
+  }, [history]);
+  const showSparkline = sparklineData != null && sparklineData.length >= 7;
 
   return (
     <article className={`athlete-card group ${isRecommended ? "is-recommended" : ""}`}>
@@ -140,6 +152,14 @@ const AthleteCard = ({ athlete, byName, byKey, gradedByName, gradedByKey, ebaySo
           </div>
         )}
       </div>
+
+      {/* ── Sparkline ── */}
+      {showSparkline && (
+        <div className="mt-2 flex items-center gap-2">
+          <Sparkline data={sparklineData} width={80} height={20} />
+          <span className="text-[9px] text-muted-foreground">{sparklineData.length}d trend</span>
+        </div>
+      )}
 
       {/* ── Meta row: stability + sold + days listed ── */}
       <div className="mt-2 flex items-center gap-2 text-[10px] text-muted-foreground flex-wrap">
