@@ -705,14 +705,14 @@ const Data = () => {
               <div className="glass-panel p-4 md:p-6">
                 <div className="w-full h-[450px] md:h-[550px]">
                   <ResponsiveContainer width="100%" height="100%">
-                    <BarChart data={topSpread} layout="vertical" margin={{ top: 5, right: 30, left: 10, bottom: 5 }}>
+                    <BarChart data={topSpread} layout="vertical" margin={{ top: 22, right: 30, left: 10, bottom: 5 }}>
                       <CartesianGrid strokeDasharray="3 3" stroke="hsl(var(--border))" opacity={0.5} />
                       <XAxis
                         type="number"
                         tick={{ fill: "hsl(var(--muted-foreground))", fontSize: 10 }}
                         label={{ value: "Spread ($)", position: "insideBottom", offset: -5, style: { fill: "hsl(var(--muted-foreground))", fontSize: 11 } }}
                       />
-                      <YAxis type="category" dataKey="name" width={140} tick={{ fill: "hsl(var(--muted-foreground))", fontSize: 10 }} />
+                      <YAxis type="category" dataKey="name" width={140} tickMargin={6} tick={{ fill: "hsl(var(--muted-foreground))", fontSize: 10 }} />
                       <Tooltip content={<PriceTooltip />} />
                       <Bar
                         dataKey="spread"
