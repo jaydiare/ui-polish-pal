@@ -1,13 +1,13 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-02T01:07:52.340171+00:00",
-    "athleteCount": 272,
+    "updatedAt": "2026-03-02T01:24:30.022533+00:00",
+    "athleteCount": 281,
     "graders": [
       "PSA"
     ],
     "batchInfo": {
-      "startIdx": 320,
-      "endIdx": 330,
+      "startIdx": 330,
+      "endIdx": 340,
       "totalAthletes": 575
     }
   },
@@ -4906,6 +4906,168 @@
         "gems": 12,
         "grades": 22,
         "gemRate": 55.0
+      }
+    },
+    "Luisangel Acuna": {
+      "name": "Luisangel Acuna",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 1609,
+          "gems": 3566,
+          "grades": 7672,
+          "gemRate": 46.0
+        }
+      },
+      "totals": {
+        "cards": 1609,
+        "gems": 3566,
+        "grades": 7672,
+        "gemRate": 46.0
+      }
+    },
+    "Magglio Ordonez": {
+      "name": "Magglio Ordonez",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 631,
+          "gems": 1194,
+          "grades": 4942,
+          "gemRate": 24.0
+        }
+      },
+      "totals": {
+        "cards": 631,
+        "gems": 1194,
+        "grades": 4942,
+        "gemRate": 24.0
+      }
+    },
+    "Maicer Izturis": {
+      "name": "Maicer Izturis",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 7,
+          "gems": 3,
+          "grades": 10,
+          "gemRate": 30.0
+        }
+      },
+      "totals": {
+        "cards": 7,
+        "gems": 3,
+        "grades": 10,
+        "gemRate": 30.0
+      }
+    },
+    "Maikel Garcia": {
+      "name": "Maikel Garcia",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 172,
+          "gems": 499,
+          "grades": 1063,
+          "gemRate": 47.0
+        }
+      },
+      "totals": {
+        "cards": 172,
+        "gems": 499,
+        "grades": 1063,
+        "gemRate": 47.0
+      }
+    },
+    "Manny Pina": {
+      "name": "Manny Pina",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 12,
+          "gems": 27,
+          "grades": 37,
+          "gemRate": 73.0
+        }
+      },
+      "totals": {
+        "cards": 12,
+        "gems": 27,
+        "grades": 37,
+        "gemRate": 73.0
+      }
+    },
+    "Manny Sarmiento": {
+      "name": "Manny Sarmiento",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 18,
+          "gems": 152,
+          "grades": 429,
+          "gemRate": 35.0
+        }
+      },
+      "totals": {
+        "cards": 18,
+        "gems": 152,
+        "grades": 429,
+        "gemRate": 35.0
+      }
+    },
+    "Manny Trillo": {
+      "name": "Manny Trillo",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 154,
+          "gems": 489,
+          "grades": 2035,
+          "gemRate": 24.0
+        }
+      },
+      "totals": {
+        "cards": 154,
+        "gems": 489,
+        "grades": 2035,
+        "gemRate": 24.0
+      }
+    },
+    "Marco Scutaro": {
+      "name": "Marco Scutaro",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 42,
+          "gems": 38,
+          "grades": 82,
+          "gemRate": 46.0
+        }
+      },
+      "totals": {
+        "cards": 42,
+        "gems": 38,
+        "grades": 82,
+        "gemRate": 46.0
+      }
+    },
+    "Marcos Armas": {
+      "name": "Marcos Armas",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 2,
+          "gems": 2,
+          "grades": 2,
+          "gemRate": 100.0
+        }
+      },
+      "totals": {
+        "cards": 2,
+        "gems": 2,
+        "grades": 2,
+        "gemRate": 100.0
       }
     }
   }
