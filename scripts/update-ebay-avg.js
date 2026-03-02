@@ -70,7 +70,7 @@ const MIN_EBAY_SAMPLE_SIZE = 4;
 const MARKETPLACES = ["EBAY_US", "EBAY_CA"];
 
 // restrict to major manufacturers (sports card makers)
-const MANUFACTURERS = ["Topps", "Panini", "Upper Deck", "Leaf", "Artesania Sport", "Ovenca Venezuelan", "Sport Grafico", "Line Up", "Venezuelan League", "BYN", "O-Pee-Chee"];
+const MANUFACTURERS = ["Topps", "Panini", "Upper Deck", "Leaf", "Artesania Sport", "Ovenca Venezuelan", "Sport Grafico", "Line Up", "Venezuelan League", "BYN", "O-Pee-Chee", "Fleer"];
 
 // ✅ Country of Origin options
 const COUNTRY_OF_ORIGIN = ["United States", "Italy", "Venezuela", "Japan"];
