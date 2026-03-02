@@ -20,12 +20,13 @@ interface AthleteCardProps {
   gradedByName: Record<string, EbayAvgRecord>;
   gradedByKey: Record<string, EbayAvgRecord>;
   ebaySoldRaw?: Record<string, any>;
+  ebayGradedSoldRaw?: Record<string, any>;
   history?: any[];
   isRecommended?: boolean;
   priceMode: "raw" | "graded" | "both";
 }
 
-const AthleteCard = forwardRef<HTMLElement, AthleteCardProps>(({ athlete, byName, byKey, gradedByName, gradedByKey, ebaySoldRaw, history, isRecommended, priceMode }, ref) => {
+const AthleteCard = forwardRef<HTMLElement, AthleteCardProps>(({ athlete, byName, byKey, gradedByName, gradedByKey, ebaySoldRaw, ebayGradedSoldRaw, history, isRecommended, priceMode }, ref) => {
   const avgNum = getEbayAvgNumber(athlete, byName, byKey);
   const money = avgNum != null ? formatCurrency(avgNum, "USD") : "—";
 
@@ -38,7 +39,13 @@ const AthleteCard = forwardRef<HTMLElement, AthleteCardProps>(({ athlete, byName
   const gradedMoney = gradedAvgNum != null ? formatCurrency(gradedAvgNum, "USD") : null;
 
   const soldRecord = ebaySoldRaw?.[athlete.name];
-  const soldAvg = soldRecord?.taguchiSold != null ? soldRecord.taguchiSold : null;
+  const rawSoldAvg = soldRecord?.taguchiSold != null ? soldRecord.taguchiSold : null;
+
+  const gradedSoldRecord = ebayGradedSoldRaw?.[athlete.name];
+  const gradedSoldAvg = gradedSoldRecord?.taguchiSold != null ? gradedSoldRecord.taguchiSold : null;
+
+  // Pick sold avg based on priceMode
+  const soldAvg = priceMode === "graded" ? (gradedSoldAvg ?? rawSoldAvg) : rawSoldAvg;
 
   // Active price set for signals based on priceMode
   const activeByName = priceMode === "graded" ? gradedByName : byName;
@@ -182,12 +189,27 @@ const AthleteCard = forwardRef<HTMLElement, AthleteCardProps>(({ athlete, byName
       {/* ── Meta row: stability + sold + days listed ── */}
       <div className="mt-2 flex items-center gap-2 text-[10px] text-muted-foreground flex-wrap">
         <span className={`font-bold stability-${stability.bucket}`}>{stability.label}</span>
-        {soldAvg != null && (
+        {priceMode === "both" ? (
+          <>
+            {rawSoldAvg != null && (
+              <>
+                <span className="text-border">·</span>
+                <span>Raw Sold {formatCurrency(rawSoldAvg, "USD")}</span>
+              </>
+            )}
+            {gradedSoldAvg != null && (
+              <>
+                <span className="text-border">·</span>
+                <span>Grd Sold {formatCurrency(gradedSoldAvg, "USD")}</span>
+              </>
+            )}
+          </>
+        ) : soldAvg != null ? (
           <>
             <span className="text-border">·</span>
             <span>Sold {formatCurrency(soldAvg, "USD")}</span>
           </>
-        )}
+        ) : null}
         {domText && (
           <>
             <span className="text-border">·</span>

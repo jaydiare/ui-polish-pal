@@ -31,6 +31,7 @@ export function useAthleteData() {
   const [ebayAvgRaw, setEbayAvgRaw] = useState<EbayAvgData>({});
   const [ebayGradedRaw, setEbayGradedRaw] = useState<EbayAvgData>({});
   const [ebaySoldRaw, setEbaySoldRaw] = useState<Record<string, any>>({});
+  const [ebayGradedSoldRaw, setEbayGradedSoldRaw] = useState<Record<string, any>>({});
   const [athleteHistory, setAthleteHistory] = useState<Record<string, any[]>>({});
   const [lastUpdated, setLastUpdated] = useState<string>("—");
   const [visibleCount, setVisibleCount] = useState(PAGE_SIZE);
@@ -50,11 +51,12 @@ export function useAthleteData() {
   // Fetch data on mount
   useEffect(() => {
     (async () => {
-      const [fetchedAthletes, fetchedEbay, fetchedGraded, fetchedSold, fetchedProgress, fetchedHistory] = await Promise.all([
+      const [fetchedAthletes, fetchedEbay, fetchedGraded, fetchedSold, fetchedGradedSold, fetchedProgress, fetchedHistory] = await Promise.all([
         fetchJson("data/athletes.json"),
         fetchJson("https://raw.githubusercontent.com/jaydiare/ui-polish-pal/main/data/ebay-avg.json"),
         fetchJson("https://raw.githubusercontent.com/jaydiare/ui-polish-pal/main/data/ebay-graded-avg.json"),
         fetchJson("https://raw.githubusercontent.com/jaydiare/ui-polish-pal/main/data/ebay-sold-avg.json"),
+        fetchJson("https://raw.githubusercontent.com/jaydiare/ui-polish-pal/main/data/ebay-graded-sold-avg.json"),
         fetchJson("https://raw.githubusercontent.com/jaydiare/ui-polish-pal/main/data/ebay-sold-progress.json"),
         fetchJson("https://raw.githubusercontent.com/jaydiare/ui-polish-pal/main/data/athlete-history.json"),
       ]);
@@ -70,6 +72,9 @@ export function useAthleteData() {
       }
       if (fetchedSold && typeof fetchedSold === "object") {
         setEbaySoldRaw(fetchedSold);
+      }
+      if (fetchedGradedSold && typeof fetchedGradedSold === "object") {
+        setEbayGradedSoldRaw(fetchedGradedSold);
       }
       if (fetchedProgress?.lastBatchAt) {
         setLastUpdated(timeAgo(fetchedProgress.lastBatchAt));
@@ -188,6 +193,7 @@ export function useAthleteData() {
     gradedByKey,
     ebayAvgRaw,
     ebaySoldRaw,
+    ebayGradedSoldRaw,
     athleteHistory,
     lastUpdated,
     filters,
