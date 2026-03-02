@@ -441,13 +441,6 @@
     "provider": "balldontlie"
   },
   {
-    "name": "Carlos Ascanio",
-    "sport": "Baseball",
-    "league": "MLB",
-    "team": "Black Yankees",
-    "provider": "manual"
-  },
-  {
     "name": "Carlos Asuaje",
     "sport": "Baseball",
     "league": "MLB",
@@ -634,13 +627,6 @@
     "sport": "Baseball",
     "league": "MLB",
     "team": "Orioles",
-    "provider": "manual"
-  },
-  {
-    "name": "Chucho Ramos",
-    "sport": "Baseball",
-    "league": "MLB",
-    "team": "Reds",
     "provider": "manual"
   },
   {
@@ -1869,13 +1855,6 @@
     "provider": "balldontlie"
   },
   {
-    "name": "Jose Quijada",
-    "sport": "Baseball",
-    "league": "MLB",
-    "team": "Angels",
-    "provider": "manual"
-  },
-  {
     "name": "Jose Rodriguez",
     "sport": "Baseball",
     "league": "MLB",
@@ -2195,13 +2174,6 @@
     "sport": "Baseball",
     "league": "MLB",
     "team": "Blue Jays",
-    "provider": "manual"
-  },
-  {
-    "name": "Luis Madero",
-    "sport": "Baseball",
-    "league": "MLB",
-    "team": "Marlins",
     "provider": "manual"
   },
   {
@@ -3437,27 +3409,6 @@
     "provider": "manual"
   },
   {
-    "name": "Michael Carrera",
-    "sport": "Basketball",
-    "league": "LEB Oro",
-    "team": "Estudiantes",
-    "provider": "manual"
-  },
-  {
-    "name": "Heissler Guillent",
-    "sport": "Basketball",
-    "league": "LNBP",
-    "team": "Astros",
-    "provider": "manual"
-  },
-  {
-    "name": "Jose Ascanio",
-    "sport": "Basketball",
-    "league": "Liga Nacional",
-    "team": "Oberá",
-    "provider": "manual"
-  },
-  {
     "name": "Carl Herrera",
     "sport": "Basketball",
     "league": "NBA",
@@ -3483,13 +3434,6 @@
     "sport": "Basketball",
     "league": "NBB",
     "team": "São José",
-    "provider": "manual"
-  },
-  {
-    "name": "David Cubillan",
-    "sport": "Basketball",
-    "league": "SLB",
-    "team": "Trotamundos",
     "provider": "manual"
   },
   {
@@ -3545,13 +3489,6 @@
     "name": "Yohandry Orozco",
     "sport": "Soccer",
     "league": "Bundesliga",
-    "team": "Unknown",
-    "provider": "balldontlie"
-  },
-  {
-    "name": "Andres Tunez",
-    "sport": "Soccer",
-    "league": "La Liga",
     "team": "Unknown",
     "provider": "balldontlie"
   },
@@ -3613,13 +3550,6 @@
   },
   {
     "name": "Roberto Rosales",
-    "sport": "Soccer",
-    "league": "La Liga",
-    "team": "Unknown",
-    "provider": "balldontlie"
-  },
-  {
-    "name": "Ruben Suarez Estrada",
     "sport": "Soccer",
     "league": "La Liga",
     "team": "Unknown",
@@ -3689,13 +3619,6 @@
     "provider": "balldontlie"
   },
   {
-    "name": "Abel Caputo",
-    "sport": "Soccer",
-    "league": "MLS",
-    "team": "Inter Miami",
-    "provider": "balldontlie"
-  },
-  {
     "name": "Alejandro Fuenmayor",
     "sport": "Soccer",
     "league": "MLS",
@@ -3718,13 +3641,6 @@
   },
   {
     "name": "Brayan Martinez",
-    "sport": "Soccer",
-    "league": "MLS",
-    "team": "Unknown",
-    "provider": "balldontlie"
-  },
-  {
-    "name": "Carlos Cermeno",
     "sport": "Soccer",
     "league": "MLS",
     "team": "Unknown",
@@ -3780,13 +3696,6 @@
     "provider": "balldontlie"
   },
   {
-    "name": "Erickson Gallardo",
-    "sport": "Soccer",
-    "league": "MLS",
-    "team": "Unknown",
-    "provider": "balldontlie"
-  },
-  {
     "name": "Gustavo Caraballo",
     "sport": "Soccer",
     "league": "MLS",
@@ -3794,21 +3703,7 @@
     "provider": "balldontlie"
   },
   {
-    "name": "Javier Otero",
-    "sport": "Soccer",
-    "league": "MLS",
-    "team": "Unknown",
-    "provider": "balldontlie"
-  },
-  {
     "name": "Jefferson Savarino",
-    "sport": "Soccer",
-    "league": "MLS",
-    "team": "Unknown",
-    "provider": "balldontlie"
-  },
-  {
-    "name": "Jesus Bueno",
     "sport": "Soccer",
     "league": "MLS",
     "team": "Unknown",
@@ -3864,20 +3759,6 @@
     "provider": "balldontlie"
   },
   {
-    "name": "Moises Tablante",
-    "sport": "Soccer",
-    "league": "MLS",
-    "team": "Unknown",
-    "provider": "balldontlie"
-  },
-  {
-    "name": "Pablo Bonilla",
-    "sport": "Soccer",
-    "league": "MLS",
-    "team": "Unknown",
-    "provider": "balldontlie"
-  },
-  {
     "name": "Rafael Romo",
     "sport": "Soccer",
     "league": "MLS",
@@ -3886,20 +3767,6 @@
   },
   {
     "name": "Renzo Zambrano",
-    "sport": "Soccer",
-    "league": "MLS",
-    "team": "Unknown",
-    "provider": "balldontlie"
-  },
-  {
-    "name": "Rodrigo Neri",
-    "sport": "Soccer",
-    "league": "MLS",
-    "team": "Unknown",
-    "provider": "balldontlie"
-  },
-  {
-    "name": "Rolando Escobar",
     "sport": "Soccer",
     "league": "MLS",
     "team": "Unknown",
@@ -3921,13 +3788,6 @@
   },
   {
     "name": "Ronaldo Pena",
-    "sport": "Soccer",
-    "league": "MLS",
-    "team": "Unknown",
-    "provider": "balldontlie"
-  },
-  {
-    "name": "Santiago Pita",
     "sport": "Soccer",
     "league": "MLS",
     "team": "Unknown",
@@ -3959,20 +3819,6 @@
     "sport": "Soccer",
     "league": "Primeira Liga",
     "team": "Estoril",
-    "provider": "balldontlie"
-  },
-  {
-    "name": "Alessandro Milani",
-    "sport": "Soccer",
-    "league": "Serie A",
-    "team": "Lazio",
-    "provider": "balldontlie"
-  },
-  {
-    "name": "Daniele Quieto",
-    "sport": "Soccer",
-    "league": "Serie A",
-    "team": "Unknown",
     "provider": "balldontlie"
   },
   {
