@@ -11,21 +11,15 @@ async function fetchEspnHeadshot(name: string): Promise<string | null> {
     );
     if (!res.ok) return null;
     const data = await res.json();
-    const item = data?.items?.[0] ?? data?.results?.[0]?.items?.[0];
-    const imageUrl = item?.image ?? item?.headshot?.href;
+    const item = data?.items?.[0];
+    const imageUrl = item?.headshot?.href;
     if (!imageUrl) return null;
-
-    // Validate image loads
-    return new Promise<string | null>((resolve) => {
-      const img = new Image();
-      img.onload = () => resolve(img.naturalWidth > 1 ? imageUrl : null);
-      img.onerror = () => resolve(null);
-      img.src = imageUrl;
-    });
+    return imageUrl;
   } catch {
     return null;
   }
 }
+
 // ── Wikipedia fallback ──
 const SPORT_TO_WIKI: Record<string, string> = {
   Baseball: "baseball",
