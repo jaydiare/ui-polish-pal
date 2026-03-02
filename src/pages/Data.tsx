@@ -845,7 +845,7 @@ const Data = () => {
                 Investment Signal Score
               </h2>
               <p className="text-xs text-muted-foreground mb-4 ml-3">
-                Athletes classified by price spread, market stability (CV), and days on market. Data-driven — not guessing.
+                Athletes classified by price spread, stability (CV), and days on market. Data-driven — not guessing.
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {(Object.keys(SIGNAL_META) as SignalCategory[]).map((cat) => {

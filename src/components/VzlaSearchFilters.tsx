@@ -126,7 +126,7 @@ const VzlaSearchFilters = ({
           ]}
         />
         <FilterSelect
-          label="Market Stability"
+          label="Stability"
           id="filter-stability"
           value={filters.stability}
           onChange={(v) => updateFilter("stability", v)}

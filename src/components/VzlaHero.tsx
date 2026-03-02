@@ -33,7 +33,7 @@ const VzlaHero = ({ lastUpdated }: VzlaHeroProps) => {
 
       <div className="hero-sub text-sm leading-relaxed text-left md:text-center">
         <p className="mb-2">
-          The <strong className="text-foreground">Market Stability Score</strong> measures how tightly listing prices cluster around a common level.
+          The <strong className="text-foreground">Stability Score</strong> measures how tightly listing prices cluster around a common level.
         </p>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mt-4">
           {[

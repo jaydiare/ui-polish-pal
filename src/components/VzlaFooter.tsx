@@ -29,7 +29,7 @@ const VzlaFooter = () => {
                 </div>
               </div>
               <p className="text-sm text-muted-foreground leading-relaxed mb-5 max-w-sm">
-                Your Venezuelan athletes trading card index. Get real-time prices, market stability insights, and smart budget tools for sports card collecting.
+                Your Venezuelan athletes trading card index. Get real-time prices, stability insights, and smart budget tools for sports card collecting.
               </p>
               <div className="flex gap-2">
                 <a className="icon-btn" href={SOCIAL.instagram} target="_blank" rel="noopener noreferrer" aria-label="Instagram">
