@@ -963,6 +963,22 @@ async function main() {
 
   console.log(`Index snapshot for ${today}:`, JSON.stringify(snapshot));
 
+  // --- Append to standalone index-history.json (permanent archive, no cap) ---
+  const HISTORY_PATH = path.join(__dirname, "..", "data", "index-history.json");
+  let fullHistory = [];
+  try {
+    if (fs.existsSync(HISTORY_PATH)) {
+      const parsed = JSON.parse(fs.readFileSync(HISTORY_PATH, "utf8"));
+      if (Array.isArray(parsed)) fullHistory = parsed;
+    }
+  } catch { /* ignore */ }
+  // Dedupe by date, then append
+  fullHistory = fullHistory.filter((h) => h.date !== today);
+  fullHistory.push(snapshot);
+  fullHistory.sort((a, b) => a.date.localeCompare(b.date));
+  fs.writeFileSync(HISTORY_PATH, JSON.stringify(fullHistory, null, 2));
+  console.log(`Appended to ${HISTORY_PATH} (${fullHistory.length} total entries)`);
+
   fs.mkdirSync(path.dirname(OUT_PATH), { recursive: true });
   fs.writeFileSync(OUT_PATH, JSON.stringify(out, null, 2));
   console.log(`Wrote ${OUT_PATH}`);
