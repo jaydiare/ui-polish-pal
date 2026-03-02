@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-02T15:26:49.189Z",
+    "updatedAt": "2026-03-02T15:33:38.339Z",
     "source": "eBay public sold listings — GRADED ONLY (HTML scrape, LH_Sold=1)",
     "note": "GRADED sold comps only (PSA, BGS, SGC, etc.). Scraped in batches of 10. Brand-filtered. Junk titles removed. Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA.",
     "batchInfo": {
-      "startIdx": 50,
-      "endIdx": 60,
+      "startIdx": 60,
+      "endIdx": 70,
       "totalAthletes": 575
     },
     "maxPages": 2,
@@ -757,5 +757,125 @@
     "currency": "USD",
     "originalCurrencyExample": null,
     "fxRateUsed": null
+  },
+  "Breyvic Valera": {
+    "keyword": "Breyvic Valera Baseball",
+    "nScraped": 60,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
+    "currency": "USD",
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
+  },
+  "Bruce Rondon": {
+    "keyword": "Bruce Rondon Baseball",
+    "nScraped": 60,
+    "nSoldUsed": 1,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
+    "currency": "USD",
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
+  },
+  "Brusdar Graterol": {
+    "keyword": "Brusdar Graterol Baseball",
+    "nScraped": 136,
+    "nSoldUsed": 14,
+    "avg": 18.62142857142857,
+    "taguchiSold": 18.62142857142857,
+    "medianSold": 10.5,
+    "marketStabilityCV": 0.5468214546594169,
+    "currency": "USD",
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
+  },
+  "Carlos Ascanio": {
+    "keyword": "Carlos Ascanio Baseball",
+    "nScraped": 60,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
+    "currency": "USD",
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
+  },
+  "Carlos Asuaje": {
+    "keyword": "Carlos Asuaje Baseball",
+    "nScraped": 60,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
+    "currency": "USD",
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
+  },
+  "Carlos Carrasco": {
+    "keyword": "Carlos Carrasco Baseball",
+    "nScraped": 130,
+    "nSoldUsed": 6,
+    "avg": 15.9,
+    "taguchiSold": 15.9,
+    "medianSold": 15.9,
+    "marketStabilityCV": 0,
+    "currency": "USD",
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
+  },
+  "Carlos Garcia": {
+    "keyword": "Carlos Garcia Baseball",
+    "nScraped": 124,
+    "nSoldUsed": 18,
+    "avg": 31.09333333333333,
+    "taguchiSold": 31.09333333333333,
+    "medianSold": 28.08,
+    "marketStabilityCV": 0.11534787858686223,
+    "currency": "USD",
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
+  },
+  "Carlos Gonzalez": {
+    "keyword": "Carlos Gonzalez Baseball",
+    "nScraped": 138,
+    "nSoldUsed": 14,
+    "avg": 5.825714285714286,
+    "taguchiSold": 5.825714285714286,
+    "medianSold": 5.5,
+    "marketStabilityCV": 0.18622145852831948,
+    "currency": "USD",
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
+  },
+  "Carlos Guillen": {
+    "keyword": "Carlos Guillen Baseball",
+    "nScraped": 123,
+    "nSoldUsed": 26,
+    "avg": 36.79807692307693,
+    "taguchiSold": 36.79807692307693,
+    "medianSold": 31.49,
+    "marketStabilityCV": 0.20010955867043612,
+    "currency": "USD",
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
+  },
+  "Carlos Hernandez": {
+    "keyword": "Carlos Hernandez Baseball",
+    "nScraped": 125,
+    "nSoldUsed": 26,
+    "avg": 32.85038461538461,
+    "taguchiSold": 32.85038461538461,
+    "medianSold": 27.494999999999997,
+    "marketStabilityCV": 0.36511249949513075,
+    "currency": "USD",
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
   }
 }
