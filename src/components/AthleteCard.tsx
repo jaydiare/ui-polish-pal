@@ -58,6 +58,15 @@ const AthleteCard = forwardRef<HTMLElement, AthleteCardProps>(({ athlete, byName
   const dom = activeHasPrice ? getAvgDaysOnMarket(athlete, activeByName, activeByKey) : null;
   const domText = dom != null ? `${Math.round(dom)}d` : null;
 
+  // Separate raw & graded stability/DOM for "both" mode
+  const rawCv = avgNum != null ? getMarketStabilityCV(athlete, byName, byKey) : null;
+  const rawStability = marketStabilityScoreFromCV(rawCv);
+  const rawDom = avgNum != null ? getAvgDaysOnMarket(athlete, byName, byKey) : null;
+
+  const gradedCv = gradedAvgNum != null ? getMarketStabilityCV(athlete, gradedByName, gradedByKey) : null;
+  const gradedStability = marketStabilityScoreFromCV(gradedCv);
+  const gradedDom = gradedAvgNum != null ? getAvgDaysOnMarket(athlete, gradedByName, gradedByKey) : null;
+
   const shopUrl = buildEbaySearchUrl(athlete.name, athlete.sport);
   const initials = initialsFromName(athlete.name);
   const photo = useWikipediaImage(athlete.name, athlete.sport);
@@ -187,36 +196,60 @@ const AthleteCard = forwardRef<HTMLElement, AthleteCardProps>(({ athlete, byName
       )}
 
       {/* ── Meta row: stability + sold + days listed ── */}
-      <div className="mt-2 flex items-center gap-2 text-[10px] text-muted-foreground flex-wrap">
-        <span className={`font-bold stability-${stability.bucket}`}>{stability.label}</span>
-        {priceMode === "both" ? (
-          <>
+      {priceMode === "both" ? (
+        <div className="mt-2 space-y-1 text-[10px] text-muted-foreground">
+          {/* Raw meta line */}
+          <div className="flex items-center gap-2 flex-wrap">
+            <span className="text-[9px] uppercase font-bold text-muted-foreground/60">Raw</span>
+            <span className={`font-bold stability-${rawStability.bucket}`}>{rawStability.label}</span>
             {rawSoldAvg != null && (
               <>
                 <span className="text-border">·</span>
-                <span>Raw Sold {formatCurrency(rawSoldAvg, "USD")}</span>
+                <span>Sold {formatCurrency(rawSoldAvg, "USD")}</span>
               </>
             )}
+            {rawDom != null && (
+              <>
+                <span className="text-border">·</span>
+                <span>⏱ {Math.round(rawDom)}d</span>
+              </>
+            )}
+          </div>
+          {/* Graded meta line */}
+          <div className="flex items-center gap-2 flex-wrap">
+            <span className="text-[9px] uppercase font-bold text-muted-foreground/60">Grd</span>
+            <span className={`font-bold stability-${gradedStability.bucket}`}>{gradedStability.label}</span>
             {gradedSoldAvg != null && (
               <>
                 <span className="text-border">·</span>
-                <span>Grd Sold {formatCurrency(gradedSoldAvg, "USD")}</span>
+                <span>Sold {formatCurrency(gradedSoldAvg, "USD")}</span>
               </>
             )}
-          </>
-        ) : soldAvg != null ? (
-          <>
-            <span className="text-border">·</span>
-            <span>Sold {formatCurrency(soldAvg, "USD")}</span>
-          </>
-        ) : null}
-        {domText && (
-          <>
-            <span className="text-border">·</span>
-            <span>⏱ {domText}</span>
-          </>
-        )}
-      </div>
+            {gradedDom != null && (
+              <>
+                <span className="text-border">·</span>
+                <span>⏱ {Math.round(gradedDom)}d</span>
+              </>
+            )}
+          </div>
+        </div>
+      ) : (
+        <div className="mt-2 flex items-center gap-2 text-[10px] text-muted-foreground flex-wrap">
+          <span className={`font-bold stability-${stability.bucket}`}>{stability.label}</span>
+          {soldAvg != null && (
+            <>
+              <span className="text-border">·</span>
+              <span>Sold {formatCurrency(soldAvg, "USD")}</span>
+            </>
+          )}
+          {domText && (
+            <>
+              <span className="text-border">·</span>
+              <span>⏱ {domText}</span>
+            </>
+          )}
+        </div>
+      )}
 
       {/* ── CTA ── */}
       <a
