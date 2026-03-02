@@ -97,7 +97,7 @@ export function useAthleteData() {
   const [sort, setSort] = useState<SortOption>("default");
 
   // Price mode: which price set drives filters & sorting
-  const [priceMode, setPriceMode] = useState<"raw" | "graded" | "both">("raw");
+  const [priceMode, setPriceMode] = useState<"raw" | "graded" | "both">("both");
   const activeByName = priceMode === "graded" ? gradedByName : byName;
   const activeByKey = priceMode === "graded" ? gradedByKey : byKey;
 
