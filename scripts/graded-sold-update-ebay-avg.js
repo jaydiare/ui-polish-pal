@@ -139,7 +139,7 @@ function titleLooksRelevantToPlayer(title, playerName) {
 // ✅ GRADED detection — ONLY include graded titles
 function isGradedTitle(title) {
   const t = norm(title);
-  const graderHints = ["psa", "sgc", "gem mint", "gm mt"];
+  const graderHints = ["psa", "sgc", "gem mint", "gm mt", "9.5", "10"];
   return graderHints.some((k) => t.includes(k));
 }
 
