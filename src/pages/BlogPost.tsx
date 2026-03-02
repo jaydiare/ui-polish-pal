@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import SEOHead from "@/components/SEOHead";
+import SocialShare from "@/components/SocialShare";
 import VzlaNavbar from "@/components/VzlaNavbar";
 import VzlaFooter from "@/components/VzlaFooter";
 import VzlaEbayFooter from "@/components/VzlaEbayFooter";
@@ -70,7 +71,14 @@ const BlogPost = () => {
         </Link>
 
         <h1 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-2">{post.title}</h1>
-        <p className="text-sm text-muted-foreground mb-8">{post.date} · {post.author}</p>
+        <div className="flex items-center justify-between mb-8">
+          <p className="text-sm text-muted-foreground">{post.date} · {post.author}</p>
+          <SocialShare
+            url={`https://vzlasportselite.com/blog/${slug}`}
+            title={post.title}
+            compact
+          />
+        </div>
 
         {post.sections.map((section, si) => (
           <section key={si} className="mb-12">

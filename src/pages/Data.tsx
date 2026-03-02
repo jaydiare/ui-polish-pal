@@ -1,6 +1,7 @@
 import { useState, useEffect, useMemo, useRef, useCallback } from "react";
 import { motion } from "framer-motion";
 import SEOHead from "@/components/SEOHead";
+import SocialShare from "@/components/SocialShare";
 import VzlaNavbar from "@/components/VzlaNavbar";
 import VzlaFooter from "@/components/VzlaFooter";
 import VzlaEbayFooter from "@/components/VzlaEbayFooter";
@@ -463,6 +464,13 @@ const Data = () => {
             <div className="inline-flex items-center gap-2 rounded-full border border-border/50 bg-card/80 backdrop-blur-sm px-4 py-1.5">
               <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
               <span className="text-xs text-muted-foreground font-medium">Updated Daily</span>
+            </div>
+            <div className="ml-auto">
+              <SocialShare
+                url="https://vzlasportselite.com/data"
+                title="Market Intel – Venezuelan Athletes Trading Cards Price Analytics"
+                compact
+              />
             </div>
           </div>
         </motion.div>

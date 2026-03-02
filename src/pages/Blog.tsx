@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import SEOHead from "@/components/SEOHead";
+import SocialShare from "@/components/SocialShare";
 import VzlaNavbar from "@/components/VzlaNavbar";
 import VzlaFooter from "@/components/VzlaFooter";
 import VzlaEbayFooter from "@/components/VzlaEbayFooter";
@@ -26,7 +27,10 @@ const Blog = () => {
       <VzlaNavbar />
       <main className="page-shell pt-8">
         <h1 className="text-3xl md:text-4xl font-display font-bold text-flag-gradient mb-2">Blog</h1>
-        <p className="text-muted-foreground mb-8">Market insights, top sales, and more.</p>
+        <div className="flex items-center justify-between mb-8">
+          <p className="text-muted-foreground">Market insights, top sales, and more.</p>
+          <SocialShare url="https://vzlasportselite.com/blog" title="VZLA Sports Elite Blog – Market Insights & Top Sales" compact />
+        </div>
 
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {posts.map((post) => (
