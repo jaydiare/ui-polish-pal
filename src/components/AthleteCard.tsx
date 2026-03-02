@@ -53,18 +53,28 @@ const AthleteCard = forwardRef<HTMLElement, AthleteCardProps>(({ athlete, byName
   const activeAvgNum = priceMode === "graded" ? gradedAvgNum : avgNum;
   const activeHasPrice = activeAvgNum != null;
 
-  const cv = activeHasPrice ? getMarketStabilityCV(athlete, activeByName, activeByKey) : null;
+  // Stability/DOM from listing data
+  const listingCv = activeHasPrice ? getMarketStabilityCV(athlete, activeByName, activeByKey) : null;
+  const listingDom = activeHasPrice ? getAvgDaysOnMarket(athlete, activeByName, activeByKey) : null;
+
+  // Fallback: use sold data's CV when listing CV unavailable (graded mode)
+  const gradedSoldCv = gradedSoldRecord?.marketStabilityCV != null && Number.isFinite(gradedSoldRecord.marketStabilityCV) ? gradedSoldRecord.marketStabilityCV : null;
+  const rawSoldCv = soldRecord?.marketStabilityCV != null && Number.isFinite(soldRecord.marketStabilityCV) ? soldRecord.marketStabilityCV : null;
+
+  const cv = listingCv ?? (priceMode === "graded" ? gradedSoldCv : rawSoldCv);
   const stability = marketStabilityScoreFromCV(cv);
-  const dom = activeHasPrice ? getAvgDaysOnMarket(athlete, activeByName, activeByKey) : null;
+  const dom = listingDom;
   const domText = dom != null ? `${Math.round(dom)}d` : null;
 
   // Separate raw & graded stability/DOM for "both" mode
-  const rawCv = avgNum != null ? getMarketStabilityCV(athlete, byName, byKey) : null;
+  const rawListingCv = avgNum != null ? getMarketStabilityCV(athlete, byName, byKey) : null;
+  const rawCv = rawListingCv ?? rawSoldCv;
   const rawStability = marketStabilityScoreFromCV(rawCv);
   const rawDom = avgNum != null ? getAvgDaysOnMarket(athlete, byName, byKey) : null;
 
-  const gradedCv = gradedAvgNum != null ? getMarketStabilityCV(athlete, gradedByName, gradedByKey) : null;
-  const gradedStability = marketStabilityScoreFromCV(gradedCv);
+  const gradedListingCv = gradedAvgNum != null ? getMarketStabilityCV(athlete, gradedByName, gradedByKey) : null;
+  const gradedCvFinal = gradedListingCv ?? gradedSoldCv;
+  const gradedStability = marketStabilityScoreFromCV(gradedCvFinal);
   const gradedDom = gradedAvgNum != null ? getAvgDaysOnMarket(athlete, gradedByName, gradedByKey) : null;
 
   const shopUrl = buildEbaySearchUrl(athlete.name, athlete.sport);
