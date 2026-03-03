@@ -1,12 +1,12 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-02T22:55:15.410Z",
+    "updatedAt": "2026-03-03T03:57:25.889Z",
     "source": "eBay public sold listings — GRADED ONLY (HTML scrape, LH_Sold=1)",
     "note": "GRADED sold comps only (PSA, BGS, SGC, etc.). Scraped in batches of 10. Brand-filtered. Junk titles removed. Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA.",
     "batchInfo": {
-      "startIdx": 170,
-      "endIdx": 180,
-      "totalAthletes": 560
+      "startIdx": 180,
+      "endIdx": 190,
+      "totalAthletes": 568
     },
     "maxPages": 3,
     "minSampleSize": 4,
@@ -21,7 +21,8 @@
       "line up",
       "venezuelan league",
       "byn",
-      "O-Pee-Chee"
+      "O-Pee-Chee",
+      "Fleer"
     ],
     "categoryId": "261328",
     "listingStat": {
@@ -2189,6 +2190,126 @@
   },
   "German Gonzalez": {
     "keyword": "German Gonzalez Baseball",
+    "nScraped": 0,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
+    "currency": "USD",
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
+  },
+  "German Marquez": {
+    "keyword": "German Marquez Baseball",
+    "nScraped": 201,
+    "nSoldUsed": 16,
+    "avg": 9.995625,
+    "taguchiSold": 9.995625,
+    "medianSold": 10,
+    "marketStabilityCV": 0.0005125717884554182,
+    "currency": "USD",
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
+  },
+  "Giomar Guevara": {
+    "keyword": "Giomar Guevara Baseball",
+    "nScraped": 3,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
+    "currency": "USD",
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
+  },
+  "Giovanni Carrara": {
+    "keyword": "Giovanni Carrara Baseball",
+    "nScraped": 20,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
+    "currency": "USD",
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
+  },
+  "Gleyber Torres": {
+    "keyword": "Gleyber Torres Baseball",
+    "nScraped": 180,
+    "nSoldUsed": 99,
+    "avg": 9.209090909090909,
+    "taguchiSold": 9.209090909090909,
+    "medianSold": 9.04,
+    "marketStabilityCV": 0.22816024284553968,
+    "currency": "USD",
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
+  },
+  "Gonzalo Marquez": {
+    "keyword": "Gonzalo Marquez Baseball",
+    "nScraped": 180,
+    "nSoldUsed": 15,
+    "avg": 26,
+    "taguchiSold": 26,
+    "medianSold": 26,
+    "marketStabilityCV": 0,
+    "currency": "USD",
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
+  },
+  "Gorkys Hernandez": {
+    "keyword": "Gorkys Hernandez Baseball",
+    "nScraped": 180,
+    "nSoldUsed": 57,
+    "avg": 49.356491228070176,
+    "taguchiSold": 49.356491228070176,
+    "medianSold": 46,
+    "marketStabilityCV": 0.3420846327704853,
+    "currency": "USD",
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
+  },
+  "Gregor Blanco": {
+    "keyword": "Gregor Blanco Baseball",
+    "nScraped": 60,
+    "nSoldUsed": 2,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
+    "currency": "USD",
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
+  },
+  "Gregorio Petit": {
+    "keyword": "Gregorio Petit Baseball",
+    "nScraped": 19,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
+    "currency": "USD",
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
+  },
+  "Gregory Infante": {
+    "keyword": "Gregory Infante Baseball",
+    "nScraped": 60,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
+    "currency": "USD",
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
+  },
+  "Guilder Rodriguez": {
+    "keyword": "Guilder Rodriguez Baseball",
     "nScraped": 0,
     "nSoldUsed": 0,
     "avg": null,
