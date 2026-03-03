@@ -1,12 +1,12 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-02T22:06:28.466Z",
+    "updatedAt": "2026-03-03T01:54:19.169Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. Brand-filtered. Junk titles removed. Taguchi winsorized mean + market stability CV. Ungraded condition policy (permissive for sold). Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 290,
-      "endIdx": 300,
-      "totalAthletes": 560
+      "startIdx": 300,
+      "endIdx": 310,
+      "totalAthletes": 568
     },
     "maxPages": 3,
     "minSampleSize": 4,
@@ -21,7 +21,8 @@
       "line up",
       "venezuelan league",
       "byn",
-      "O-Pee-Chee"
+      "O-Pee-Chee",
+      "fleer"
     ],
     "categoryId": "261328",
     "listingStat": {
@@ -4401,6 +4402,114 @@
   },
   "Luis Alexander Basabe": {
     "keyword": "Luis Alexander Basabe Baseball",
+    "nScraped": 78,
+    "nSoldUsed": 23,
+    "avg": 1.459565217391304,
+    "taguchiSold": 1.459565217391304,
+    "medianSold": 0.99,
+    "marketStabilityCV": 0.3447004860607856,
+    "currency": "USD",
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
+  },
+  "Luis Aparicio": {
+    "keyword": "Luis Aparicio Baseball",
+    "nScraped": 180,
+    "nSoldUsed": 46,
+    "avg": 3.473478260869565,
+    "taguchiSold": 3.473478260869565,
+    "medianSold": 2.99,
+    "marketStabilityCV": 0.27302838332443036,
+    "currency": "USD",
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
+  },
+  "Luis Aponte": {
+    "keyword": "Luis Aponte Baseball",
+    "nScraped": 281,
+    "nSoldUsed": 26,
+    "avg": 1.281923076923077,
+    "taguchiSold": 1.281923076923077,
+    "medianSold": 1.25,
+    "marketStabilityCV": 0.15351521731971884,
+    "currency": "USD",
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
+  },
+  "Luis Arraez": {
+    "keyword": "Luis Arraez Baseball",
+    "nScraped": 180,
+    "nSoldUsed": 50,
+    "avg": 4.048799999999997,
+    "taguchiSold": 4.048799999999997,
+    "medianSold": 3.96,
+    "marketStabilityCV": 0.21399959532605642,
+    "currency": "USD",
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
+  },
+  "Luis Avilan": {
+    "keyword": "Luis Avilan Baseball",
+    "nScraped": 186,
+    "nSoldUsed": 12,
+    "avg": 1.5250000000000004,
+    "taguchiSold": 1.5250000000000004,
+    "medianSold": 1.525,
+    "marketStabilityCV": 0.017122392389085046,
+    "currency": "USD",
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
+  },
+  "Luis Contreras": {
+    "keyword": "Luis Contreras Baseball",
+    "nScraped": 178,
+    "nSoldUsed": 121,
+    "avg": 2.88504132231405,
+    "taguchiSold": 2.88504132231405,
+    "medianSold": 2.99,
+    "marketStabilityCV": 0.20176779109679588,
+    "currency": "USD",
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
+  },
+  "Luis Curvelo": {
+    "keyword": "Luis Curvelo Baseball",
+    "nScraped": 183,
+    "nSoldUsed": 12,
+    "avg": 2.9949999999999997,
+    "taguchiSold": 2.9949999999999997,
+    "medianSold": 2.995,
+    "marketStabilityCV": 0.001743682697385918,
+    "currency": "USD",
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
+  },
+  "Luis Garcia": {
+    "keyword": "Luis Garcia Baseball",
+    "nScraped": 0,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
+    "currency": "USD",
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
+  },
+  "Luis Guillorme": {
+    "keyword": "Luis Guillorme Baseball",
+    "nScraped": 0,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
+    "currency": "USD",
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
+  },
+  "Luis Hernandez": {
+    "keyword": "Luis Hernandez Baseball",
     "nScraped": 0,
     "nSoldUsed": 0,
     "avg": null,
