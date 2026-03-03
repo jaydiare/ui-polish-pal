@@ -50,7 +50,7 @@ if (!EBAY_CLIENT_ID || !EBAY_CLIENT_SECRET) {
   process.exit(1);
 }
 
-const OUT_PATH = path.join(__dirname, "..", "data", "ebay-avg.json");
+const OUT_PATH = path.join(__dirname, "..", "data", "ebay-graded-avg.json");
 
 // This script expects:
 // data/athletes.json: [{ name: "Jose Altuve", sport: "Baseball" }, ...]
