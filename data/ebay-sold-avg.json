@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-03T04:44:27.287Z",
+    "updatedAt": "2026-03-03T06:46:28.551Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. Brand-filtered. Junk titles removed. Taguchi winsorized mean + market stability CV. Ungraded condition policy (permissive for sold). Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 310,
-      "endIdx": 320,
+      "startIdx": 320,
+      "endIdx": 330,
       "totalAthletes": 568
     },
     "maxPages": 3,
@@ -41,7 +41,7 @@
     },
     "fx": {
       "source": "CBSA Exchange Rates API",
-      "asOf": "2026-03-03T00:00:00.000Z"
+      "asOf": "2026-03-04T00:00:00.000Z"
     }
   },
   "Adbert Alzolay": {
@@ -4630,6 +4630,126 @@
   },
   "Luis Rodriguez": {
     "keyword": "Luis Rodriguez Baseball",
+    "nScraped": 0,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
+    "currency": "USD",
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
+  },
+  "Luis Salazar": {
+    "keyword": "Luis Salazar Baseball",
+    "nScraped": 180,
+    "nSoldUsed": 25,
+    "avg": 0.8287999999999998,
+    "taguchiSold": 0.8287999999999998,
+    "medianSold": 0.73,
+    "marketStabilityCV": 0.7397058878045294,
+    "currency": "USD",
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
+  },
+  "Luis Sanchez": {
+    "keyword": "Luis Sanchez Baseball",
+    "nScraped": 64,
+    "nSoldUsed": 13,
+    "avg": 1.5407692307692311,
+    "taguchiSold": 1.5407692307692311,
+    "medianSold": 1.49,
+    "marketStabilityCV": 0.1657976073719531,
+    "currency": "USD",
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
+  },
+  "Luis Sardinas": {
+    "keyword": "Luis Sardinas Baseball",
+    "nScraped": 192,
+    "nSoldUsed": 3,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
+    "currency": "USD",
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
+  },
+  "Luis Sojo": {
+    "keyword": "Luis Sojo Baseball",
+    "nScraped": 180,
+    "nSoldUsed": 35,
+    "avg": 4.542857142857143,
+    "taguchiSold": 4.542857142857143,
+    "medianSold": 4.99,
+    "marketStabilityCV": 0.10975762326756225,
+    "currency": "USD",
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
+  },
+  "Luis Torrens": {
+    "keyword": "Luis Torrens Baseball",
+    "nScraped": 171,
+    "nSoldUsed": 72,
+    "avg": 2.607916666666666,
+    "taguchiSold": 2.607916666666666,
+    "medianSold": 2.495,
+    "marketStabilityCV": 0.31290008991395063,
+    "currency": "USD",
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
+  },
+  "Luis Ugueto": {
+    "keyword": "Luis Ugueto Baseball",
+    "nScraped": 180,
+    "nSoldUsed": 15,
+    "avg": 0.9900000000000001,
+    "taguchiSold": 0.9900000000000001,
+    "medianSold": 0.99,
+    "marketStabilityCV": 1.1607979886101801e-16,
+    "currency": "USD",
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
+  },
+  "Luis Valbuena": {
+    "keyword": "Luis Valbuena Baseball",
+    "nScraped": 126,
+    "nSoldUsed": 18,
+    "avg": 5.511111111111111,
+    "taguchiSold": 5.511111111111111,
+    "medianSold": 3,
+    "marketStabilityCV": 0.753403818828507,
+    "currency": "USD",
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
+  },
+  "Luisangel Acuna": {
+    "keyword": "Luisangel Acuna Baseball",
+    "nScraped": 0,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
+    "currency": "USD",
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
+  },
+  "Magglio Ordonez": {
+    "keyword": "Magglio Ordonez Baseball",
+    "nScraped": 0,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
+    "currency": "USD",
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
+  },
+  "Maicer Izturis": {
+    "keyword": "Maicer Izturis Baseball",
     "nScraped": 0,
     "nSoldUsed": 0,
     "avg": null,
