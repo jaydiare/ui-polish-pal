@@ -1,13 +1,13 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-03T20:28:56.790219+00:00",
+    "updatedAt": "2026-03-03T22:24:12.503783+00:00",
     "athleteCount": 450,
     "graders": [
       "PSA"
     ],
     "batchInfo": {
-      "startIdx": 260,
-      "endIdx": 280,
+      "startIdx": 280,
+      "endIdx": 300,
       "totalAthletes": 568
     }
   },
@@ -4303,14 +4303,14 @@
         "PSA": {
           "cards": 226,
           "gems": 810,
-          "grades": 1515,
+          "grades": 1516,
           "gemRate": 53.0
         }
       },
       "totals": {
         "cards": 226,
         "gems": 810,
-        "grades": 1515,
+        "grades": 1516,
         "gemRate": 53.0
       }
     },
