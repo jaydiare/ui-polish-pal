@@ -33,6 +33,18 @@ const SPORT_TO_WIKI: Record<string, string> = {
   Bowling: "bowler",
 };
 
+// Reject Wikipedia thumbnails that are clearly not athlete photos
+const BAD_IMAGE_PATTERNS = [
+  /map/i, /flag/i, /coat_of_arms/i, /escudo/i, /logo/i, /emblem/i,
+  /shield/i, /banner/i, /icon/i, /seal/i, /crest/i,
+  /\.svg/i, /provinces/i, /districts/i, /region/i, /municipality/i,
+  /commons-logo/i, /wiki.*logo/i,
+];
+
+function isLikelyBadImage(url: string): boolean {
+  return BAD_IMAGE_PATTERNS.some((p) => p.test(url));
+}
+
 async function fetchImageByTitle(title: string): Promise<string | null> {
   const q = encodeURIComponent(title);
   const res = await fetch(
@@ -42,7 +54,8 @@ async function fetchImageByTitle(title: string): Promise<string | null> {
   const pages = data?.query?.pages;
   if (pages) {
     const page = Object.values(pages)[0] as any;
-    if (page?.thumbnail?.source) return page.thumbnail.source;
+    const src = page?.thumbnail?.source;
+    if (src && !isLikelyBadImage(src)) return src;
   }
   return null;
 }
