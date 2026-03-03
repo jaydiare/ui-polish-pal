@@ -1,0 +1,247 @@
+{
+  "input": "data/athletes.json",
+  "output": "data/athletes.json",
+  "total_before": 602,
+  "total_after": 568,
+  "removed_count": 34,
+  "removed": [
+    {
+      "normalized": "bradgley rodriguez",
+      "kept_original_index": 57,
+      "removed_original_index": 58,
+      "kept_name": "Bradgley Rodriguez",
+      "removed_name": "Bradgley Rodríguez"
+    },
+    {
+      "normalized": "jose butto",
+      "kept_original_index": 249,
+      "removed_original_index": 250,
+      "kept_name": "Jose Butto",
+      "removed_name": "Jose Butto"
+    },
+    {
+      "normalized": "juan castillo",
+      "kept_original_index": 275,
+      "removed_original_index": 276,
+      "kept_name": "Juan Castillo",
+      "removed_name": "Juan Castillo"
+    },
+    {
+      "normalized": "juan morillo",
+      "kept_original_index": 279,
+      "removed_original_index": 280,
+      "kept_name": "Juan Morillo",
+      "removed_name": "Juan Morillo"
+    },
+    {
+      "normalized": "orber moreno",
+      "kept_original_index": 371,
+      "removed_original_index": 372,
+      "kept_name": "Orber Moreno",
+      "removed_name": "Orber Moreno"
+    },
+    {
+      "normalized": "simon muzziotti",
+      "kept_original_index": 439,
+      "removed_original_index": 440,
+      "kept_name": "Simon Muzziotti",
+      "removed_name": "Simón Muzziotti"
+    },
+    {
+      "normalized": "jeffren suarez",
+      "kept_original_index": 509,
+      "removed_original_index": 510,
+      "kept_name": "Jeffren Suarez",
+      "removed_name": "Jeffrén Suárez"
+    },
+    {
+      "normalized": "jon aramburu",
+      "kept_original_index": 511,
+      "removed_original_index": 512,
+      "kept_name": "Jon Aramburu",
+      "removed_name": "Jon Aramburu"
+    },
+    {
+      "normalized": "jorge gomez",
+      "kept_original_index": 513,
+      "removed_original_index": 514,
+      "kept_name": "Jorge Gomez",
+      "removed_name": "Jorge Gómez"
+    },
+    {
+      "normalized": "juan arango",
+      "kept_original_index": 502,
+      "removed_original_index": 515,
+      "kept_name": "Juan Arango",
+      "removed_name": "Juan Arango"
+    },
+    {
+      "normalized": "salomon rondon",
+      "kept_original_index": 521,
+      "removed_original_index": 522,
+      "kept_name": "Salomon Rondon",
+      "removed_name": "Salomón Rondón"
+    },
+    {
+      "normalized": "victor garcia",
+      "kept_original_index": 523,
+      "removed_original_index": 524,
+      "kept_name": "Victor Garcia",
+      "removed_name": "Víctor García"
+    },
+    {
+      "normalized": "yangel herrera",
+      "kept_original_index": 525,
+      "removed_original_index": 526,
+      "kept_name": "Yangel Herrera",
+      "removed_name": "Yangel Herrera"
+    },
+    {
+      "normalized": "alejandro fuenmayor",
+      "kept_original_index": 534,
+      "removed_original_index": 535,
+      "kept_name": "Alejandro Fuenmayor",
+      "removed_name": "Alejandro Fuenmayor"
+    },
+    {
+      "normalized": "brayan martinez",
+      "kept_original_index": 538,
+      "removed_original_index": 539,
+      "kept_name": "Brayan Martinez",
+      "removed_name": "Brayan Martínez"
+    },
+    {
+      "normalized": "cristian casseres jr.",
+      "kept_original_index": 527,
+      "removed_original_index": 543,
+      "kept_name": "Cristian Casseres Jr.",
+      "removed_name": "Cristian Cásseres Jr."
+    },
+    {
+      "normalized": "david martinez",
+      "kept_original_index": 545,
+      "removed_original_index": 546,
+      "kept_name": "David Martinez",
+      "removed_name": "David Martínez"
+    },
+    {
+      "normalized": "emilio renteria",
+      "kept_original_index": 548,
+      "removed_original_index": 549,
+      "kept_name": "Emilio Renteria",
+      "removed_name": "Emilio Rentería"
+    },
+    {
+      "normalized": "fernando aristeguieta",
+      "kept_original_index": 528,
+      "removed_original_index": 552,
+      "kept_name": "Fernando Aristeguieta",
+      "removed_name": "Fernando Aristeguieta"
+    },
+    {
+      "normalized": "gabriel cichero",
+      "kept_original_index": 529,
+      "removed_original_index": 553,
+      "kept_name": "Gabriel Cichero",
+      "removed_name": "Gabriel Cichero"
+    },
+    {
+      "normalized": "jesus castellano",
+      "kept_original_index": 558,
+      "removed_original_index": 560,
+      "kept_name": "Jesus Castellano",
+      "removed_name": "Jesús Castellano"
+    },
+    {
+      "normalized": "josef martinez",
+      "kept_original_index": 562,
+      "removed_original_index": 563,
+      "kept_name": "Josef Martinez",
+      "removed_name": "Josef Martínez"
+    },
+    {
+      "normalized": "jose andres martinez",
+      "kept_original_index": 561,
+      "removed_original_index": 564,
+      "kept_name": "Jose Andres Martinez",
+      "removed_name": "José Andrés Martínez"
+    },
+    {
+      "normalized": "junior moreno",
+      "kept_original_index": 565,
+      "removed_original_index": 566,
+      "kept_name": "Junior Moreno",
+      "removed_name": "Júnior Moreno"
+    },
+    {
+      "normalized": "luis gonzalez",
+      "kept_original_index": 568,
+      "removed_original_index": 569,
+      "kept_name": "Luis Gonzalez",
+      "removed_name": "Luis González"
+    },
+    {
+      "normalized": "ronald hernandez",
+      "kept_original_index": 578,
+      "removed_original_index": 579,
+      "kept_name": "Ronald Hernandez",
+      "removed_name": "Ronald Hernández"
+    },
+    {
+      "normalized": "ronaldo pena",
+      "kept_original_index": 580,
+      "removed_original_index": 581,
+      "kept_name": "Ronaldo Pena",
+      "removed_name": "Ronaldo Peña"
+    },
+    {
+      "normalized": "sergio cordova",
+      "kept_original_index": 503,
+      "removed_original_index": 583,
+      "kept_name": "Sergio Cordova",
+      "removed_name": "Sergio Córdova"
+    },
+    {
+      "normalized": "yangel herrera",
+      "kept_original_index": 525,
+      "removed_original_index": 586,
+      "kept_name": "Yangel Herrera",
+      "removed_name": "Yangel Herrera"
+    },
+    {
+      "normalized": "alejandro marques",
+      "kept_original_index": 588,
+      "removed_original_index": 595,
+      "kept_name": "Alejandro Marques",
+      "removed_name": "Alejandro Marqués"
+    },
+    {
+      "normalized": "fernando amorebieta",
+      "kept_original_index": 508,
+      "removed_original_index": 597,
+      "kept_name": "Fernando Amorebieta",
+      "removed_name": "Fernando Amorebieta"
+    },
+    {
+      "normalized": "jeffren suarez",
+      "kept_original_index": 509,
+      "removed_original_index": 598,
+      "kept_name": "Jeffren Suarez",
+      "removed_name": "Jeffrén Suárez"
+    },
+    {
+      "normalized": "salomon rondon",
+      "kept_original_index": 521,
+      "removed_original_index": 599,
+      "kept_name": "Salomon Rondon",
+      "removed_name": "Salomón Rondón"
+    },
+    {
+      "normalized": "tomas rincon",
+      "kept_original_index": 504,
+      "removed_original_index": 600,
+      "kept_name": "Tomas Rincon",
+      "removed_name": "Tomás Rincón"
+    }
+  ]
+}
