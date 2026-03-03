@@ -42,11 +42,13 @@ import { fileURLToPath } from "node:url";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const EBAY_CLIENT_ID = process.env.EBAY_CLIENT_ID;
-const EBAY_CLIENT_SECRET = process.env.EBAY_CLIENT_SECRET;
+// Uses separate eBay affiliate credentials (EBAY_SID / EBAY_TOKEN)
+// to get its own API rate-limit quota, independent of the raw listings script.
+const EBAY_CLIENT_ID = process.env.EBAY_SID;
+const EBAY_CLIENT_SECRET = process.env.EBAY_TOKEN;
 
 if (!EBAY_CLIENT_ID || !EBAY_CLIENT_SECRET) {
-  console.error("Missing EBAY_CLIENT_ID or EBAY_CLIENT_SECRET in env.");
+  console.error("Missing EBAY_SID or EBAY_TOKEN in env.");
   process.exit(1);
 }
 

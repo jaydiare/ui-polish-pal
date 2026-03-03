@@ -32,8 +32,8 @@ jobs:
       - name: Update eBay graded averages
         run: node scripts/graded-update-ebay-avg.js
         env:
-          EBAY_CLIENT_ID: ${{ secrets.EBAY_CLIENT_ID }}
-          EBAY_CLIENT_SECRET: ${{ secrets.EBAY_CLIENT_SECRET }}
+          EBAY_SID: ${{ secrets.EBAY_SID }}
+          EBAY_TOKEN: ${{ secrets.EBAY_TOKEN }}
 
       - name: Copy to public
         run: |
