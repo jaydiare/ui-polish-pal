@@ -76,13 +76,35 @@ async function fetchWikiImage(name: string, sport?: string): Promise<string | nu
   return searchAndFetchImage(name);
 }
 
-// ── Main hook: MLB first for baseball, then Wikipedia ──
+// ── TheSportsDB fallback (free key "3" is public/publishable) ──
+async function fetchSportsDbHeadshot(name: string): Promise<string | null> {
+  try {
+    const q = encodeURIComponent(name);
+    const res = await fetch(
+      `https://www.thesportsdb.com/api/v1/json/3/searchplayers.php?p=${q}`
+    );
+    if (!res.ok) return null;
+    const data = await res.json();
+    const player = data?.player?.[0];
+    const thumb = player?.strThumb || player?.strCutout || null;
+    if (!thumb) return null;
+    return thumb;
+  } catch {
+    return null;
+  }
+}
+
+// ── Main hook: ESPN → TheSportsDB → Wikipedia ──
 async function fetchAthleteImage(name: string, sport?: string): Promise<string | null> {
-  // Try MLB headshot first for baseball players
+  // Try ESPN headshot first for baseball players
   if (sport === "Baseball") {
     const espn = await fetchEspnHeadshot(name);
     if (espn) return espn;
   }
+
+  // Try TheSportsDB for all sports
+  const tsdb = await fetchSportsDbHeadshot(name);
+  if (tsdb) return tsdb;
 
   // Fallback to Wikipedia
   return fetchWikiImage(name, sport);
