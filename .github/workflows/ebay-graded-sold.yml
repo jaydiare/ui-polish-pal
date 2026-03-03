@@ -3,7 +3,7 @@ name: Update eBay graded sold averages (batched)
 on:
   schedule:
     # Every 3 hours starting at 01:30 UTC — staggered 90min from raw sold
-    - cron: "30 1,4,7,10,13,16,19,22 * * *"
+    - cron: "30 0,2,4,6,8,10,12,14,16,18,20,22 * * *"
   workflow_dispatch:
 
 concurrency:
