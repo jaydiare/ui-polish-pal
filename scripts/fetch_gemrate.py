@@ -14,6 +14,10 @@ GEMRATE_URL = "https://www.gemrate.com/player"
 
 BATCH_SIZE = 20  # athletes per run
 
+# --- cooldown config (added) ---
+COOLDOWN_DAYS = 30
+COOLDOWN_FILE = "gemrate-cooldown.json"
+
 # Rotate realistic browser User-Agents to reduce Cloudflare blocks
 USER_AGENTS = [
     "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",
@@ -55,6 +59,33 @@ def get_headers():
         "Connection": "keep-alive",
         "Cache-Control": "no-cache",
     }
+
+
+def in_cooldown(base_dir):
+    """Return True if within cooldown window."""
+    from datetime import datetime, timezone, timedelta
+
+    cooldown_path = os.path.join(base_dir, "data", COOLDOWN_FILE)
+
+    if not os.path.exists(cooldown_path):
+        return False
+
+    try:
+        with open(cooldown_path, "r", encoding="utf-8") as f:
+            data = json.load(f)
+
+        completed_at = data.get("completedAt")
+        if not completed_at:
+            return False
+
+        last_done = datetime.fromisoformat(completed_at)
+        if last_done.tzinfo is None:
+            last_done = last_done.replace(tzinfo=timezone.utc)
+
+        return datetime.now(timezone.utc) < last_done + timedelta(days=COOLDOWN_DAYS)
+
+    except Exception:
+        return False
 
 
 def parse_summary(html_content: str):
@@ -163,6 +194,12 @@ def fetch_gemrate(session, player: str, category: str = ""):
 
 def main():
     base_dir = os.path.join(os.path.dirname(__file__), "..")
+
+    # --- cooldown check (added) ---
+    if in_cooldown(base_dir):
+        print("⏳ In 30-day cooldown — skipping run.")
+        return
+
     athletes_path = os.path.join(base_dir, "data", "athletes.json")
     output_path = os.path.join(base_dir, "data", "gemrate.json")
     public_path = os.path.join(base_dir, "public", "data", "gemrate.json")
@@ -249,6 +286,15 @@ def main():
 
     # Compute next batch start
     next_start = end_idx if end_idx < len(unique) else 0
+
+    # --- if we completed a full cycle, start cooldown (added) ---
+    if next_start == 0:
+        from datetime import datetime, timezone
+        cooldown_path = os.path.join(base_dir, "data", COOLDOWN_FILE)
+        os.makedirs(os.path.dirname(cooldown_path), exist_ok=True)
+        with open(cooldown_path, "w", encoding="utf-8") as f:
+            json.dump({"completedAt": datetime.now(timezone.utc).isoformat()}, f, indent=2)
+        print("🛑 Full cycle complete — entering 30-day cooldown.")
 
     from datetime import datetime, timezone
 
