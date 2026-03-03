@@ -1,13 +1,13 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-03T18:41:24.506772+00:00",
+    "updatedAt": "2026-03-03T20:28:56.790219+00:00",
     "athleteCount": 450,
     "graders": [
       "PSA"
     ],
     "batchInfo": {
-      "startIdx": 240,
-      "endIdx": 260,
+      "startIdx": 260,
+      "endIdx": 280,
       "totalAthletes": 568
     }
   },
@@ -4103,17 +4103,17 @@
       "sport": "Baseball",
       "graders": {
         "PSA": {
-          "cards": 1,
-          "gems": 0,
-          "grades": 1,
-          "gemRate": 0.0
+          "cards": 2,
+          "gems": 1,
+          "grades": 2,
+          "gemRate": 50.0
         }
       },
       "totals": {
-        "cards": 1,
-        "gems": 0,
-        "grades": 1,
-        "gemRate": 0.0
+        "cards": 2,
+        "gems": 1,
+        "grades": 2,
+        "gemRate": 50.0
       }
     },
     "Juan Rincon": {
@@ -4157,16 +4157,16 @@
       "sport": "Baseball",
       "graders": {
         "PSA": {
-          "cards": 354,
+          "cards": 355,
           "gems": 522,
-          "grades": 1056,
+          "grades": 1057,
           "gemRate": 49.0
         }
       },
       "totals": {
-        "cards": 354,
+        "cards": 355,
         "gems": 522,
-        "grades": 1056,
+        "grades": 1057,
         "gemRate": 49.0
       }
     },
