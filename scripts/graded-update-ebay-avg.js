@@ -10,7 +10,7 @@
 //   EBAY_CLIENT_SECRET
 //
 // Output:
-//   data/ebay-avg.json
+//   data/ebay-graded-avg.json
 //
 // Matching rules (your latest):
 // 1) Prefer Player/Athlete aspect_filter match (with name variations / accents).
