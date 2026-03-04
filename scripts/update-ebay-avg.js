@@ -88,6 +88,8 @@ const UNGRADED_ALLOWED_CONDITIONS = [
   "nm",
   "nm-mt",
   "nmt",
+  "excellent",
+  "ex",
 ];
 
 // if any of these appear (descriptor/title), reject ungraded listing
