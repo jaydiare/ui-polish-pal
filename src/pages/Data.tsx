@@ -711,8 +711,13 @@ const Data = () => {
                 </h2>
                 <ModeToggle value={scatterMode} onChange={(v) => { setScatterMode(v); setPinnedDot(null); }} />
               </div>
-              <p className="text-xs text-muted-foreground mb-4 ml-3">
+              <p className="text-xs text-muted-foreground mb-1 ml-3">
                 Each dot is an athlete. Above the diagonal = listed higher than sold (overpriced).
+              </p>
+              <p className="text-xs text-muted-foreground mb-4 ml-3">
+                <strong className="text-foreground">Dots above the line</strong> = sellers are asking more than buyers actually pay — potential overpricing.{" "}
+                <strong className="text-foreground">Dots below the line</strong> = cards are selling for more than the listed average — potential deals worth targeting.{" "}
+                The further a dot is from the diagonal, the bigger the price mismatch.
               </p>
               <div className="glass-panel p-4 md:p-6">
                 <div className="w-full h-[400px] md:h-[450px] relative" ref={scatterWrapRef}>
