@@ -88,6 +88,8 @@ const UNGRADED_ALLOWED_CONDITIONS = [
   "nm",
   "nm-mt",
   "nmt",
+  "excellent",
+  "ex",
 ];
 
 // if any of these appear (descriptor/title), reject ungraded listing
@@ -122,10 +124,6 @@ const UNGRADED_BLOCKLIST = [
   "tear",
   "scratches",
   "scratch",
-  "excellent",
-  "ex",
-  "auto",
-  "signed",
 ];
 
 // --- helpers ---
@@ -293,8 +291,8 @@ function ungradedPassesConditionPolicy(item) {
   // accept only near mint/excellent hints
   if (includesAny(joined, UNGRADED_ALLOWED_CONDITIONS)) return true;
 
-  // unknown condition => reject (strict)
-  return false;
+  // No explicit condition info — allow by default (most listings lack descriptors)
+  return true;
 }
 
 // You said you already filter graded vs not graded.
