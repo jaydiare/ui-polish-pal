@@ -798,8 +798,13 @@ const Data = () => {
                 </h2>
                 <ModeToggle value={gapsMode} onChange={setGapsMode} />
               </div>
-              <p className="text-xs text-muted-foreground mb-4 ml-3">
+              <p className="text-xs text-muted-foreground mb-1 ml-3">
                 Top 10 athletes with the largest listed-to-sold price spread.
+              </p>
+              <p className="text-xs text-muted-foreground mb-4 ml-3">
+                <span className="inline-flex items-center gap-1"><span className="inline-block w-3 h-0.5 rounded" style={{ backgroundColor: "hsl(0, 72%, 50%)" }} /> <strong className="text-foreground">Red bars</strong> = listed price is higher than sold (overpriced — sellers asking more than buyers pay).</span>{" "}
+                <span className="inline-flex items-center gap-1"><span className="inline-block w-3 h-0.5 rounded" style={{ backgroundColor: "hsl(142, 71%, 45%)" }} /> <strong className="text-foreground">Green bars</strong> = sold price is higher than listed (deals — cards selling above ask).</span>{" "}
+                Larger gaps signal bigger arbitrage opportunities or market inefficiencies.
               </p>
               <div className="glass-panel p-4 md:p-6">
                 <div className="w-full h-[360px] md:h-[400px]">
