@@ -124,8 +124,6 @@ const UNGRADED_BLOCKLIST = [
   "tear",
   "scratches",
   "scratch",
-  "excellent",
-  "ex",
 ];
 
 // --- helpers ---
