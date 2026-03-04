@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-04T03:09:04.180Z",
+    "updatedAt": "2026-03-04T05:26:45.722Z",
     "source": "eBay public sold listings — GRADED ONLY (HTML scrape, LH_Sold=1)",
     "note": "GRADED sold comps only (PSA, BGS, SGC, etc.). Scraped in batches of 10. Brand-filtered. Junk titles removed. Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA.",
     "batchInfo": {
-      "startIdx": 340,
-      "endIdx": 350,
+      "startIdx": 350,
+      "endIdx": 360,
       "totalAthletes": 568
     },
     "maxPages": 3,
@@ -37,7 +37,7 @@
     },
     "fx": {
       "source": "CBSA Exchange Rates API",
-      "asOf": "2026-03-04T00:00:00.000Z"
+      "asOf": "2026-03-05T00:00:00.000Z"
     }
   },
   "Adbert Alzolay": {
@@ -4239,5 +4239,125 @@
     "currency": "USD",
     "originalCurrencyExample": null,
     "fxRateUsed": null
+  },
+  "Miguel Cairo": {
+    "keyword": "Miguel Cairo Baseball",
+    "nScraped": 60,
+    "nSoldUsed": 8,
+    "avg": 1.79,
+    "taguchiSold": 1.79,
+    "medianSold": 1.79,
+    "marketStabilityCV": 0.11944636510052484,
+    "currency": "USD",
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
+  },
+  "Miguel Garcia": {
+    "keyword": "Miguel Garcia Baseball",
+    "nScraped": 60,
+    "nSoldUsed": 3,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
+    "currency": "USD",
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
+  },
+  "Miguel Gonzalez": {
+    "keyword": "Miguel Gonzalez Baseball",
+    "nScraped": 186,
+    "nSoldUsed": 27,
+    "avg": 14.312222222222227,
+    "taguchiSold": 14.312222222222227,
+    "medianSold": 11.61,
+    "marketStabilityCV": 0.567974039295716,
+    "currency": "USD",
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
+  },
+  "Miguel Montero": {
+    "keyword": "Miguel Montero Baseball",
+    "nScraped": 186,
+    "nSoldUsed": 14,
+    "avg": 1.6071428571428572,
+    "taguchiSold": 1.6071428571428572,
+    "medianSold": 1.5,
+    "marketStabilityCV": 0.07988595860203707,
+    "currency": "USD",
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
+  },
+  "Miguel Perez": {
+    "keyword": "Miguel Perez Baseball",
+    "nScraped": 60,
+    "nSoldUsed": 9,
+    "avg": 95.43555555555555,
+    "taguchiSold": 95.43555555555555,
+    "medianSold": 99,
+    "marketStabilityCV": 0.054231200795958466,
+    "currency": "USD",
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
+  },
+  "Miguel Rojas": {
+    "keyword": "Miguel Rojas Baseball",
+    "nScraped": 189,
+    "nSoldUsed": 4,
+    "avg": 1.99,
+    "taguchiSold": 1.99,
+    "medianSold": 1.99,
+    "marketStabilityCV": 0,
+    "currency": "USD",
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
+  },
+  "Miguel Socolovich": {
+    "keyword": "Miguel Socolovich Baseball",
+    "nScraped": 60,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
+    "currency": "USD",
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
+  },
+  "Miguel Yajure": {
+    "keyword": "Miguel Yajure Baseball",
+    "nScraped": 60,
+    "nSoldUsed": 1,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
+    "currency": "USD",
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
+  },
+  "Moises Ballesteros": {
+    "keyword": "Moises Ballesteros Baseball",
+    "nScraped": 130,
+    "nSoldUsed": 10,
+    "avg": 36.24,
+    "taguchiSold": 36.24,
+    "medianSold": 36.24,
+    "marketStabilityCV": 0.1817902444449262,
+    "currency": "USD",
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
+  },
+  "Nestor Chavez": {
+    "keyword": "Nestor Chavez Baseball",
+    "nScraped": 60,
+    "nSoldUsed": 7,
+    "avg": 37.49142857142857,
+    "taguchiSold": 37.49142857142857,
+    "medianSold": 39.99,
+    "marketStabilityCV": 0.611912438859521,
+    "currency": "USD",
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
   }
 }
