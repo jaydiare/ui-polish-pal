@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-04T05:26:45.722Z",
+    "updatedAt": "2026-03-04T05:33:46.965Z",
     "source": "eBay public sold listings — GRADED ONLY (HTML scrape, LH_Sold=1)",
     "note": "GRADED sold comps only (PSA, BGS, SGC, etc.). Scraped in batches of 10. Brand-filtered. Junk titles removed. Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA.",
     "batchInfo": {
-      "startIdx": 350,
-      "endIdx": 360,
+      "startIdx": 360,
+      "endIdx": 370,
       "totalAthletes": 568
     },
     "maxPages": 3,
@@ -4359,5 +4359,125 @@
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
+  },
+  "Niuman Romero": {
+    "keyword": "Niuman Romero Baseball",
+    "nScraped": 60,
+    "nSoldUsed": 3,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
+    "currency": "USD",
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
+  },
+  "Nivaldo Rodriguez": {
+    "keyword": "Nivaldo Rodriguez Baseball",
+    "nScraped": 60,
+    "nSoldUsed": 6,
+    "avg": 12.49,
+    "taguchiSold": 12.49,
+    "medianSold": 12.49,
+    "marketStabilityCV": 0.2192644345497062,
+    "currency": "USD",
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
+  },
+  "Odubel Herrera": {
+    "keyword": "Odubel Herrera Baseball",
+    "nScraped": 186,
+    "nSoldUsed": 9,
+    "avg": 2.99,
+    "taguchiSold": 2.99,
+    "medianSold": 2.99,
+    "marketStabilityCV": 0,
+    "currency": "USD",
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
+  },
+  "Omar Daal": {
+    "keyword": "Omar Daal Baseball",
+    "nScraped": 60,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
+    "currency": "USD",
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
+  },
+  "Omar Infante": {
+    "keyword": "Omar Infante Baseball",
+    "nScraped": 60,
+    "nSoldUsed": 7,
+    "avg": 3.1057142857142854,
+    "taguchiSold": 3.1057142857142854,
+    "medianSold": 1.79,
+    "marketStabilityCV": 0.5555774234112305,
+    "currency": "USD",
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
+  },
+  "Omar Narvaez": {
+    "keyword": "Omar Narvaez Baseball",
+    "nScraped": 183,
+    "nSoldUsed": 6,
+    "avg": 59.99,
+    "taguchiSold": 59.99,
+    "medianSold": 59.989999999999995,
+    "marketStabilityCV": 0.5478138598151353,
+    "currency": "USD",
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
+  },
+  "Omar Vizquel": {
+    "keyword": "Omar Vizquel Baseball",
+    "nScraped": 168,
+    "nSoldUsed": 74,
+    "avg": 21.139189189189196,
+    "taguchiSold": 21.139189189189196,
+    "medianSold": 20.75,
+    "marketStabilityCV": 0.13674587011633424,
+    "currency": "USD",
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
+  },
+  "Orber Moreno": {
+    "keyword": "Orber Moreno Baseball",
+    "nScraped": 60,
+    "nSoldUsed": 16,
+    "avg": 17.32875,
+    "taguchiSold": 17.32875,
+    "medianSold": 17.494999999999997,
+    "marketStabilityCV": 0.21263526161599275,
+    "currency": "USD",
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
+  },
+  "Orlando Arcia": {
+    "keyword": "Orlando Arcia Baseball",
+    "nScraped": 72,
+    "nSoldUsed": 9,
+    "avg": 12.217777777777776,
+    "taguchiSold": 12.217777777777776,
+    "medianSold": 6,
+    "marketStabilityCV": 0.603495786637263,
+    "currency": "USD",
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
+  },
+  "Oscar Azocar": {
+    "keyword": "Oscar Azocar Baseball",
+    "nScraped": 0,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
+    "currency": "USD",
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
   }
 }
