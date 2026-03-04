@@ -143,7 +143,7 @@ const VzlaNavbar = () => {
                   animate={{ opacity: 1, y: 0, scale: 1 }}
                   exit={{ opacity: 0, y: 8, scale: 0.96 }}
                   transition={{ duration: 0.15 }}
-                  className="absolute right-0 top-[calc(100%+8px)] min-w-[200px] glass-panel p-3 z-[99999]"
+                  className="absolute right-0 top-[calc(100%+8px)] glass-panel p-3 z-[99999]"
                 >
                   <SocialIcons />
                 </motion.div>
