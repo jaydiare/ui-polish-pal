@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-04T15:01:54.046Z",
+    "updatedAt": "2026-03-04T17:06:24.508Z",
     "source": "eBay public sold listings — GRADED ONLY (HTML scrape, LH_Sold=1)",
     "note": "GRADED sold comps only (PSA, BGS, SGC, etc.). Scraped in batches of 10. Brand-filtered. Junk titles removed. Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA.",
     "batchInfo": {
-      "startIdx": 420,
-      "endIdx": 430,
+      "startIdx": 430,
+      "endIdx": 440,
       "totalAthletes": 568
     },
     "maxPages": 3,
@@ -5199,5 +5199,125 @@
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
+  },
+  "Sandy Leon": {
+    "keyword": "Sandy Leon Baseball",
+    "nScraped": 60,
+    "nSoldUsed": 1,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
+    "currency": "USD",
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
+  },
+  "Sebastian Rivero": {
+    "keyword": "Sebastian Rivero Baseball",
+    "nScraped": 60,
+    "nSoldUsed": 6,
+    "avg": 1.7,
+    "taguchiSold": 1.7,
+    "medianSold": 1.7,
+    "marketStabilityCV": 0.032218973970892156,
+    "currency": "USD",
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
+  },
+  "Sergio Escalona": {
+    "keyword": "Sergio Escalona Baseball",
+    "nScraped": 63,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
+    "currency": "USD",
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
+  },
+  "Silvino Bracho": {
+    "keyword": "Silvino Bracho Baseball",
+    "nScraped": 18,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
+    "currency": "USD",
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
+  },
+  "Simon Muzziotti": {
+    "keyword": "Simon Muzziotti Baseball",
+    "nScraped": 180,
+    "nSoldUsed": 6,
+    "avg": 27.12,
+    "taguchiSold": 27.12,
+    "medianSold": 27.12,
+    "marketStabilityCV": 0.9237769093025922,
+    "currency": "USD",
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
+  },
+  "Steve Torrealba": {
+    "keyword": "Steve Torrealba Baseball",
+    "nScraped": 60,
+    "nSoldUsed": 2,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
+    "currency": "USD",
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
+  },
+  "Thairo Estrada": {
+    "keyword": "Thairo Estrada Baseball",
+    "nScraped": 193,
+    "nSoldUsed": 9,
+    "avg": 29.990000000000002,
+    "taguchiSold": 29.990000000000002,
+    "medianSold": 29.99,
+    "marketStabilityCV": 1.2564927978796463e-16,
+    "currency": "USD",
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
+  },
+  "Toby Hernandez": {
+    "keyword": "Toby Hernandez Baseball",
+    "nScraped": 60,
+    "nSoldUsed": 22,
+    "avg": 45.533181818181816,
+    "taguchiSold": 45.533181818181816,
+    "medianSold": 41.56,
+    "marketStabilityCV": 0.30791472286724314,
+    "currency": "USD",
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
+  },
+  "Tomas Perez": {
+    "keyword": "Tomas Perez Baseball",
+    "nScraped": 60,
+    "nSoldUsed": 21,
+    "avg": 55.20571428571428,
+    "taguchiSold": 55.20571428571428,
+    "medianSold": 72.52,
+    "marketStabilityCV": 0.4310400970512764,
+    "currency": "USD",
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
+  },
+  "Tomas Telis": {
+    "keyword": "Tomas Telis Baseball",
+    "nScraped": 0,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
+    "currency": "USD",
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
   }
 }
