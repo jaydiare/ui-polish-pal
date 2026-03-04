@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-04T04:27:35.431Z",
+    "updatedAt": "2026-03-04T06:42:32.628Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. Brand-filtered. Junk titles removed. Taguchi winsorized mean + market stability CV. Ungraded condition policy (permissive for sold). Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 450,
-      "endIdx": 460,
+      "startIdx": 460,
+      "endIdx": 470,
       "totalAthletes": 568
     },
     "maxPages": 3,
@@ -41,7 +41,7 @@
     },
     "fx": {
       "source": "CBSA Exchange Rates API",
-      "asOf": "2026-03-04T00:00:00.000Z"
+      "asOf": "2026-03-05T00:00:00.000Z"
     }
   },
   "Adbert Alzolay": {
@@ -6310,6 +6310,126 @@
   },
   "William Bergolla": {
     "keyword": "William Bergolla Baseball",
+    "nScraped": 0,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
+    "currency": "USD",
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
+  },
+  "William Contreras": {
+    "keyword": "William Contreras Baseball",
+    "nScraped": 180,
+    "nSoldUsed": 46,
+    "avg": 2.6247826086956523,
+    "taguchiSold": 2.6247826086956523,
+    "medianSold": 2.87,
+    "marketStabilityCV": 0.22958543898538397,
+    "currency": "USD",
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
+  },
+  "William Cuevas": {
+    "keyword": "William Cuevas Baseball",
+    "nScraped": 180,
+    "nSoldUsed": 14,
+    "avg": 1.247142857142857,
+    "taguchiSold": 1.247142857142857,
+    "medianSold": 0.99,
+    "marketStabilityCV": 0.24706997505784672,
+    "currency": "USD",
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
+  },
+  "Williams Perez": {
+    "keyword": "Williams Perez Baseball",
+    "nScraped": 180,
+    "nSoldUsed": 83,
+    "avg": 3.3385542168674687,
+    "taguchiSold": 3.3385542168674687,
+    "medianSold": 3.25,
+    "marketStabilityCV": 0.09831813982759503,
+    "currency": "USD",
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
+  },
+  "Willians Astudillo": {
+    "keyword": "Willians Astudillo Baseball",
+    "nScraped": 180,
+    "nSoldUsed": 76,
+    "avg": 2.5703947368421054,
+    "taguchiSold": 2.5703947368421054,
+    "medianSold": 1.995,
+    "marketStabilityCV": 0.4975293468969356,
+    "currency": "USD",
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
+  },
+  "Willie Canate": {
+    "keyword": "Willie Canate Baseball",
+    "nScraped": 189,
+    "nSoldUsed": 9,
+    "avg": 1,
+    "taguchiSold": 1,
+    "medianSold": 1,
+    "marketStabilityCV": 0,
+    "currency": "USD",
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
+  },
+  "Willie Martinez": {
+    "keyword": "Willie Martinez Baseball",
+    "nScraped": 187,
+    "nSoldUsed": 118,
+    "avg": 1.3977966101694927,
+    "taguchiSold": 1.3977966101694927,
+    "medianSold": 1.42,
+    "marketStabilityCV": 0.2720946951494014,
+    "currency": "USD",
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
+  },
+  "Willson Contreras": {
+    "keyword": "Willson Contreras Baseball",
+    "nScraped": 180,
+    "nSoldUsed": 46,
+    "avg": 2.326086956521738,
+    "taguchiSold": 2.326086956521738,
+    "medianSold": 2,
+    "marketStabilityCV": 0.17280716805154492,
+    "currency": "USD",
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
+  },
+  "Wilmer Flores": {
+    "keyword": "Wilmer Flores Baseball",
+    "nScraped": 180,
+    "nSoldUsed": 37,
+    "avg": 1.5137837837837826,
+    "taguchiSold": 1.5137837837837826,
+    "medianSold": 1.65,
+    "marketStabilityCV": 0.304318176572096,
+    "currency": "USD",
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
+  },
+  "Wilmer Font": {
+    "keyword": "Wilmer Font Baseball",
+    "nScraped": 63,
+    "nSoldUsed": 5,
+    "avg": 0.99,
+    "taguchiSold": 0.99,
+    "medianSold": 0.99,
+    "marketStabilityCV": 0,
+    "currency": "USD",
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
+  },
+  "Wilson Alvarez": {
+    "keyword": "Wilson Alvarez Baseball",
     "nScraped": 0,
     "nSoldUsed": 0,
     "avg": null,
