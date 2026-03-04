@@ -43,7 +43,7 @@ const About = () => {
               For a long time, we believed these collectibles were only sentimental. Today, we understand something more. Sports cards and memorabilia can hold real value over time, especially when properly preserved and cared for.
             </p>
 
-            <div className="h-6" />
+            <div className="h-0" />
 
             <p className="text-foreground/80 leading-[1.9] text-lg">
               This is how, in September of 2023, we decided to embark on this journey and open the store{" "}
