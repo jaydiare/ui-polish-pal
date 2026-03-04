@@ -168,13 +168,14 @@ export function computeIndexForSport(
   byName: Record<string, EbayAvgRecord>,
   byKey: Record<string, EbayAvgRecord>,
 ) {
-  let sum = 0;
+  let total = 0;
   let used = 0;
   list.forEach((a) => {
     if (sportOrAll !== "All" && a.sport !== sportOrAll) return;
-    const v = getEbayAvgNumber(a, byName, byKey);
-    if (v != null) { sum += v; used += 1; }
+    const idx = getIndexLevel(a, byName, byKey);
+    if (idx != null) { total += idx; used += 1; }
   });
+  const sum = used > 0 ? Math.round((total / used) * 10) / 10 : 0;
   return { sum, used };
 }
 
