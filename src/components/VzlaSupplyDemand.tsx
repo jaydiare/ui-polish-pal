@@ -88,17 +88,29 @@ const VzlaSupplyDemand = ({ comparisonData, hideTitle }: Props) => {
               </span>
             )}
           </p>
+          <p className="text-xs text-muted-foreground mb-4 ml-3">
+            <span className="inline-flex items-center gap-1"><span className="inline-block w-3 h-0.5 rounded" style={{ backgroundColor: "hsl(0, 72%, 55%)" }} /> <strong className="text-foreground">Red line</strong> = what buyers actually paid (sold prices, highest first).</span>{" "}
+            <span className="inline-flex items-center gap-1"><span className="inline-block w-3 h-0.5 rounded" style={{ backgroundColor: "hsl(221, 83%, 53%)" }} /> <strong className="text-foreground">Blue line</strong> = what sellers are asking (listed prices, lowest first).</span>{" "}
+            Where they cross is the <strong className="text-foreground">equilibrium</strong> — the fair market price where supply meets demand.
+          </p>
         </>
       )}
       {hideTitle && (
-        <p className="text-xs text-muted-foreground mb-4 ml-3">
-          Supply = listed prices (ascending), Demand = sold prices (descending).
-          {equilibrium && (
-            <span className="ml-1 font-medium text-foreground">
-              Equilibrium ≈ {equilibrium.qty} cards @ ${equilibrium.price.toFixed(2)}
-            </span>
-          )}
-        </p>
+        <>
+          <p className="text-xs text-muted-foreground mb-4 ml-3">
+            Supply = listed prices (ascending), Demand = sold prices (descending).
+            {equilibrium && (
+              <span className="ml-1 font-medium text-foreground">
+                Equilibrium ≈ {equilibrium.qty} cards @ ${equilibrium.price.toFixed(2)}
+              </span>
+            )}
+          </p>
+          <p className="text-xs text-muted-foreground mb-4 ml-3">
+            <span className="inline-flex items-center gap-1"><span className="inline-block w-3 h-0.5 rounded" style={{ backgroundColor: "hsl(0, 72%, 55%)" }} /> <strong className="text-foreground">Red line</strong> = what buyers actually paid (sold prices, highest first).</span>{" "}
+            <span className="inline-flex items-center gap-1"><span className="inline-block w-3 h-0.5 rounded" style={{ backgroundColor: "hsl(221, 83%, 53%)" }} /> <strong className="text-foreground">Blue line</strong> = what sellers are asking (listed prices, lowest first).</span>{" "}
+            Where they cross is the <strong className="text-foreground">equilibrium</strong> — the fair market price where supply meets demand.
+          </p>
+        </>
       )}
       <div className="glass-panel p-4 md:p-6">
         <div className="w-full h-[400px] md:h-[450px]">
