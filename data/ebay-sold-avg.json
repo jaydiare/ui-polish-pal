@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-04T15:37:16.746Z",
+    "updatedAt": "2026-03-04T15:59:57.667Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. Brand-filtered. Junk titles removed. Taguchi winsorized mean + market stability CV. Ungraded condition policy (permissive for sold). Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 530,
-      "endIdx": 540,
+      "startIdx": 540,
+      "endIdx": 550,
       "totalAthletes": 568
     },
     "maxPages": 3,
@@ -7279,5 +7279,125 @@
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
+  },
+  "Jose Andres Martinez": {
+    "keyword": "Jose Andres Martinez Soccer",
+    "nScraped": 43,
+    "nSoldUsed": 14,
+    "avg": 4.490000000000001,
+    "taguchiSold": 4.490000000000001,
+    "medianSold": 4.49,
+    "marketStabilityCV": 0.3239278807810353,
+    "currency": "USD",
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
+  },
+  "Josef Martinez": {
+    "keyword": "Josef Martinez Soccer",
+    "nScraped": 123,
+    "nSoldUsed": 71,
+    "avg": 4.676478873239437,
+    "taguchiSold": 4.676478873239437,
+    "medianSold": 4.99,
+    "marketStabilityCV": 0.3279234968930832,
+    "currency": "USD",
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
+  },
+  "Junior Moreno": {
+    "keyword": "Junior Moreno Soccer",
+    "nScraped": 195,
+    "nSoldUsed": 66,
+    "avg": 5.7640909090909105,
+    "taguchiSold": 5.7640909090909105,
+    "medianSold": 5.5,
+    "marketStabilityCV": 0.43666203921120794,
+    "currency": "USD",
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
+  },
+  "Kevin Kelsy": {
+    "keyword": "Kevin Kelsy Soccer",
+    "nScraped": 218,
+    "nSoldUsed": 30,
+    "avg": 3.4899999999999993,
+    "taguchiSold": 3.4899999999999993,
+    "medianSold": 3.49,
+    "marketStabilityCV": 0.14571565264057532,
+    "currency": "USD",
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
+  },
+  "Luis Gonzalez": {
+    "keyword": "Luis Gonzalez Soccer",
+    "nScraped": 186,
+    "nSoldUsed": 124,
+    "avg": 16.439516129032295,
+    "taguchiSold": 16.439516129032295,
+    "medianSold": 16.99,
+    "marketStabilityCV": 0.1973216370944879,
+    "currency": "USD",
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
+  },
+  "Miguel Navarro": {
+    "keyword": "Miguel Navarro Soccer",
+    "nScraped": 186,
+    "nSoldUsed": 58,
+    "avg": 4.399827586206896,
+    "taguchiSold": 4.399827586206896,
+    "medianSold": 4.99,
+    "marketStabilityCV": 0.24832962222009028,
+    "currency": "USD",
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
+  },
+  "Moises Tablante": {
+    "keyword": "Moises Tablante Soccer",
+    "nScraped": 60,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
+    "currency": "USD",
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
+  },
+  "Pablo Bonilla": {
+    "keyword": "Pablo Bonilla Soccer",
+    "nScraped": 60,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
+    "currency": "USD",
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
+  },
+  "Rafael Romo": {
+    "keyword": "Rafael Romo Soccer",
+    "nScraped": 0,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
+    "currency": "USD",
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
+  },
+  "Renzo Zambrano": {
+    "keyword": "Renzo Zambrano Soccer",
+    "nScraped": 0,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
+    "currency": "USD",
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
   }
 }
