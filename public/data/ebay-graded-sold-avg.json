@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-04T13:33:55.505Z",
+    "updatedAt": "2026-03-04T15:01:54.046Z",
     "source": "eBay public sold listings — GRADED ONLY (HTML scrape, LH_Sold=1)",
     "note": "GRADED sold comps only (PSA, BGS, SGC, etc.). Scraped in batches of 10. Brand-filtered. Junk titles removed. Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA.",
     "batchInfo": {
-      "startIdx": 410,
-      "endIdx": 420,
+      "startIdx": 420,
+      "endIdx": 430,
       "totalAthletes": 568
     },
     "maxPages": 3,
@@ -5079,5 +5079,125 @@
     "currency": "USD",
     "originalCurrencyExample": null,
     "fxRateUsed": null
+  },
+  "Romulo Sanchez": {
+    "keyword": "Romulo Sanchez Baseball",
+    "nScraped": 60,
+    "nSoldUsed": 8,
+    "avg": 10.42,
+    "taguchiSold": 10.42,
+    "medianSold": 10.42,
+    "marketStabilityCV": 0.16107491355182585,
+    "currency": "USD",
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
+  },
+  "Ronald Acuna Jr.": {
+    "keyword": "Ronald Acuna Jr. Baseball",
+    "nScraped": 180,
+    "nSoldUsed": 75,
+    "avg": 42.44719999999994,
+    "taguchiSold": 42.44719999999994,
+    "medianSold": 42,
+    "marketStabilityCV": 0.16405679120505323,
+    "currency": "USD",
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
+  },
+  "Ronald Belisario": {
+    "keyword": "Ronald Belisario Baseball",
+    "nScraped": 60,
+    "nSoldUsed": 1,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
+    "currency": "USD",
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
+  },
+  "Ronald Herrera": {
+    "keyword": "Ronald Herrera Baseball",
+    "nScraped": 60,
+    "nSoldUsed": 10,
+    "avg": 31.494999999999997,
+    "taguchiSold": 31.494999999999997,
+    "medianSold": 31.494999999999997,
+    "marketStabilityCV": 0.11730733131068607,
+    "currency": "USD",
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
+  },
+  "Ronald Torreyes": {
+    "keyword": "Ronald Torreyes Baseball",
+    "nScraped": 60,
+    "nSoldUsed": 2,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
+    "currency": "USD",
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
+  },
+  "Ronny Cedeno": {
+    "keyword": "Ronny Cedeno Baseball",
+    "nScraped": 60,
+    "nSoldUsed": 25,
+    "avg": 23.175999999999995,
+    "taguchiSold": 23.175999999999995,
+    "medianSold": 24.99,
+    "marketStabilityCV": 0.12952890311177634,
+    "currency": "USD",
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
+  },
+  "Rosman Garcia": {
+    "keyword": "Rosman Garcia Baseball",
+    "nScraped": 60,
+    "nSoldUsed": 5,
+    "avg": 27.95,
+    "taguchiSold": 27.95,
+    "medianSold": 27.95,
+    "marketStabilityCV": 0,
+    "currency": "USD",
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
+  },
+  "Rougned Odor": {
+    "keyword": "Rougned Odor Baseball",
+    "nScraped": 194,
+    "nSoldUsed": 15,
+    "avg": 9.99,
+    "taguchiSold": 9.99,
+    "medianSold": 9.99,
+    "marketStabilityCV": 0,
+    "currency": "USD",
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
+  },
+  "Ruben Quevedo": {
+    "keyword": "Ruben Quevedo Baseball",
+    "nScraped": 60,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
+    "currency": "USD",
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
+  },
+  "Salvador Perez": {
+    "keyword": "Salvador Perez Baseball",
+    "nScraped": 180,
+    "nSoldUsed": 111,
+    "avg": 33.43756756756766,
+    "taguchiSold": 33.43756756756766,
+    "medianSold": 34.67,
+    "marketStabilityCV": 0.0992481163829562,
+    "currency": "USD",
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
   }
 }
