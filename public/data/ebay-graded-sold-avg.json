@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-05T03:12:02.480Z",
+    "updatedAt": "2026-03-05T05:29:06.275Z",
     "source": "eBay public sold listings — GRADED ONLY (HTML scrape, LH_Sold=1)",
     "note": "GRADED sold comps only (PSA, BGS, SGC, etc.). Scraped in batches of 10. Brand-filtered. Junk titles removed. Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA.",
     "batchInfo": {
-      "startIdx": 470,
-      "endIdx": 480,
+      "startIdx": 480,
+      "endIdx": 490,
       "totalAthletes": 568
     },
     "maxPages": 3,
@@ -37,7 +37,7 @@
     },
     "fx": {
       "source": "CBSA Exchange Rates API",
-      "asOf": "2026-03-05T00:00:00.000Z"
+      "asOf": "2026-03-06T00:00:00.000Z"
     }
   },
   "Adbert Alzolay": {
@@ -5790,6 +5790,126 @@
   },
   "Yohel Pozo": {
     "keyword": "Yohel Pozo Baseball",
+    "nScraped": 0,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
+    "currency": "USD",
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
+  },
+  "Yolmer Sanchez": {
+    "keyword": "Yolmer Sanchez Baseball",
+    "nScraped": 189,
+    "nSoldUsed": 9,
+    "avg": 5.5,
+    "taguchiSold": 5.5,
+    "medianSold": 5.5,
+    "marketStabilityCV": 0,
+    "currency": "USD",
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
+  },
+  "Yonathan Daza": {
+    "keyword": "Yonathan Daza Baseball",
+    "nScraped": 183,
+    "nSoldUsed": 3,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
+    "currency": "USD",
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
+  },
+  "Yonny Chirinos": {
+    "keyword": "Yonny Chirinos Baseball",
+    "nScraped": 96,
+    "nSoldUsed": 6,
+    "avg": 16.205,
+    "taguchiSold": 16.205,
+    "medianSold": 16.205,
+    "marketStabilityCV": 0.5938590148328151,
+    "currency": "USD",
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
+  },
+  "Yonny Hernandez": {
+    "keyword": "Yonny Hernandez Baseball",
+    "nScraped": 182,
+    "nSoldUsed": 19,
+    "avg": 48.89368421052632,
+    "taguchiSold": 48.89368421052632,
+    "medianSold": 49.99,
+    "marketStabilityCV": 0.5853887210103413,
+    "currency": "USD",
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
+  },
+  "Yorman Bazardo": {
+    "keyword": "Yorman Bazardo Baseball",
+    "nScraped": 32,
+    "nSoldUsed": 2,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
+    "currency": "USD",
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
+  },
+  "Yorman Rodriguez": {
+    "keyword": "Yorman Rodriguez Baseball",
+    "nScraped": 180,
+    "nSoldUsed": 28,
+    "avg": 29.321428571428573,
+    "taguchiSold": 29.321428571428573,
+    "medianSold": 27,
+    "marketStabilityCV": 0.11925056709222923,
+    "currency": "USD",
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
+  },
+  "Yorvit Torrealba": {
+    "keyword": "Yorvit Torrealba Baseball",
+    "nScraped": 37,
+    "nSoldUsed": 3,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
+    "currency": "USD",
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
+  },
+  "Yusmeiro Petit": {
+    "keyword": "Yusmeiro Petit Baseball",
+    "nScraped": 61,
+    "nSoldUsed": 2,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
+    "currency": "USD",
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
+  },
+  "Carl Herrera": {
+    "keyword": "Carl Herrera Basketball",
+    "nScraped": 0,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
+    "currency": "USD",
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
+  },
+  "Greivis Vasquez": {
+    "keyword": "Greivis Vasquez Basketball",
     "nScraped": 0,
     "nSoldUsed": 0,
     "avg": null,
