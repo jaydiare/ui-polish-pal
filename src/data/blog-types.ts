@@ -20,4 +20,6 @@ export interface BlogPost {
   author: string;
   coverImage: string;
   sections: BlogSection[];
+  type?: "ranked" | "roster";
+  playerNames?: string[];
 }
