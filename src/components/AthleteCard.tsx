@@ -149,7 +149,7 @@ const AthleteCard = forwardRef<HTMLElement, AthleteCardProps>(({ athlete, byName
               </span>
             )}
             {priceMode !== "both" && isBuyLow && (
-              <span className="inline-flex px-1.5 py-0.5 rounded text-[9px] font-bold bg-accent/10 border border-accent/20 text-accent">
+              <span className="inline-flex px-1.5 py-0.5 rounded text-[9px] font-bold bg-violet-500/10 border border-violet-400/20 text-violet-400">
                 🔻 Buy Low
               </span>
             )}
@@ -177,7 +177,7 @@ const AthleteCard = forwardRef<HTMLElement, AthleteCardProps>(({ athlete, byName
             {priceMode === "both" && (rawIsBuyLow || rawIsFlip) && (
               <div className="flex gap-1 mt-1.5 flex-wrap">
                 {rawIsFlip && <span className="inline-flex px-1 py-0.5 rounded text-[8px] font-bold bg-vzla-yellow/10 border border-vzla-yellow/20 text-vzla-yellow leading-none">🔄 Flip</span>}
-                {rawIsBuyLow && <span className="inline-flex px-1 py-0.5 rounded text-[8px] font-bold bg-accent/10 border border-accent/20 text-accent leading-none">🔻 Buy Low</span>}
+                {rawIsBuyLow && <span className="inline-flex px-1 py-0.5 rounded text-[8px] font-bold bg-violet-500/10 border border-violet-400/20 text-violet-400 leading-none">🔻 Buy Low</span>}
               </div>
             )}
           </div>
@@ -198,7 +198,7 @@ const AthleteCard = forwardRef<HTMLElement, AthleteCardProps>(({ athlete, byName
                 {priceMode === "both" && (gradedIsBuyLow || gradedIsFlip) && (
                   <div className="flex gap-1 mt-1.5 flex-wrap">
                     {gradedIsFlip && <span className="inline-flex px-1 py-0.5 rounded text-[8px] font-bold bg-vzla-yellow/10 border border-vzla-yellow/20 text-vzla-yellow leading-none">🔄 Flip</span>}
-                    {gradedIsBuyLow && <span className="inline-flex px-1 py-0.5 rounded text-[8px] font-bold bg-accent/10 border border-accent/20 text-accent leading-none">🔻 Buy Low</span>}
+                    {gradedIsBuyLow && <span className="inline-flex px-1 py-0.5 rounded text-[8px] font-bold bg-violet-500/10 border border-violet-400/20 text-violet-400 leading-none">🔻 Buy Low</span>}
                   </div>
                 )}
               </>
