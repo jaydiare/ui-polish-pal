@@ -1,5 +1,7 @@
 import express from "express";
 import cookieParser from "cookie-parser";
+import cors from "cors";
+import rateLimit from "express-rate-limit";
 import dotenv from "dotenv";
 
 import { ebayConnect } from "./scripts/ebay.connect.js";
@@ -9,6 +11,24 @@ dotenv.config();
 
 const app = express();
 app.use(cookieParser());
+
+// Restrict CORS to production frontend origin
+const FRONTEND_URL = process.env.FRONTEND_URL || "https://www.vzlasportselite.com";
+app.use(
+  cors({
+    origin: FRONTEND_URL,
+    credentials: true,
+  })
+);
+
+// Rate-limit OAuth routes: max 30 requests per minute per IP
+const oauthLimiter = rateLimit({
+  windowMs: 60_000,
+  max: 30,
+  standardHeaders: true,
+  legacyHeaders: false,
+});
+app.use("/api/ebay", oauthLimiter);
 
 app.get("/api/ebay/connect", ebayConnect);
 app.get("/api/ebay/callback", ebayCallback);
