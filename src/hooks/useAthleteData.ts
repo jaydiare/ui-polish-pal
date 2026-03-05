@@ -33,6 +33,7 @@ export function useAthleteData() {
   const [ebaySoldRaw, setEbaySoldRaw] = useState<Record<string, any>>({});
   const [ebayGradedSoldRaw, setEbayGradedSoldRaw] = useState<Record<string, any>>({});
   const [athleteHistory, setAthleteHistory] = useState<Record<string, any[]>>({});
+  const [indexHistory, setIndexHistory] = useState<any[]>([]);
   const [lastUpdated, setLastUpdated] = useState<string>("—");
   const [visibleCount, setVisibleCount] = useState(PAGE_SIZE);
   const [filters, setFilters] = useState<Filters>({
@@ -51,7 +52,7 @@ export function useAthleteData() {
   // Fetch data on mount
   useEffect(() => {
     (async () => {
-      const [fetchedAthletes, fetchedEbay, fetchedGraded, fetchedSold, fetchedGradedSold, fetchedProgress, fetchedHistory] = await Promise.all([
+      const [fetchedAthletes, fetchedEbay, fetchedGraded, fetchedSold, fetchedGradedSold, fetchedProgress, fetchedHistory, fetchedIndexHistory] = await Promise.all([
         fetchJson("https://raw.githubusercontent.com/jaydiare/ui-polish-pal/main/data/athletes.json"),
         fetchJson("https://raw.githubusercontent.com/jaydiare/ui-polish-pal/main/data/ebay-avg.json"),
         fetchJson("https://raw.githubusercontent.com/jaydiare/ui-polish-pal/main/data/ebay-graded-avg.json"),
@@ -59,6 +60,7 @@ export function useAthleteData() {
         fetchJson("https://raw.githubusercontent.com/jaydiare/ui-polish-pal/main/data/ebay-graded-sold-avg.json"),
         fetchJson("https://raw.githubusercontent.com/jaydiare/ui-polish-pal/main/data/ebay-sold-progress.json"),
         fetchJson("https://raw.githubusercontent.com/jaydiare/ui-polish-pal/main/data/athlete-history.json"),
+        fetchJson("https://raw.githubusercontent.com/jaydiare/ui-polish-pal/main/data/index-history.json"),
       ]);
 
       if (fetchedAthletes) {
@@ -81,6 +83,9 @@ export function useAthleteData() {
       }
       if (fetchedHistory && typeof fetchedHistory === "object") {
         setAthleteHistory(fetchedHistory);
+      }
+      if (Array.isArray(fetchedIndexHistory)) {
+        setIndexHistory(fetchedIndexHistory);
       }
     })();
   }, []);
@@ -195,6 +200,7 @@ export function useAthleteData() {
     ebaySoldRaw,
     ebayGradedSoldRaw,
     athleteHistory,
+    indexHistory,
     lastUpdated,
     filters,
     updateFilter,

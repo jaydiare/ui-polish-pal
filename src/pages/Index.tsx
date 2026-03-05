@@ -24,6 +24,7 @@ const Index = () => {
     ebaySoldRaw,
     ebayGradedSoldRaw,
     athleteHistory,
+    indexHistory,
     lastUpdated,
     filters,
     updateFilter,
@@ -54,7 +55,7 @@ const Index = () => {
 
       <main id="main-content" className="page-shell" role="main" aria-label="Athlete cards and market data">
         <VzlaHero lastUpdated={lastUpdated} />
-        <VzlaIndexCards athletes={athletes} byName={byName} byKey={byKey} indexHistory={ebayAvgRaw?._meta?.indexHistory} />
+        <VzlaIndexCards athletes={athletes} byName={byName} byKey={byKey} indexHistory={indexHistory} />
         <VzlaHowToMoney />
         <VzlaTopDeals />
         <VzlaBudgetBar
