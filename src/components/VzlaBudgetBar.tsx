@@ -6,13 +6,19 @@ export type CardType = "raw" | "graded";
 interface VzlaBudgetBarProps {
   onSuggest: (budget: number, maxCards: number | null, cardType: CardType) => void;
   onClear: () => void;
+  onCardTypeChange?: (cardType: CardType) => void;
   result: KnapsackResult | null;
 }
 
-const VzlaBudgetBar = ({ onSuggest, onClear, result }: VzlaBudgetBarProps) => {
+const VzlaBudgetBar = ({ onSuggest, onClear, onCardTypeChange, result }: VzlaBudgetBarProps) => {
   const [budget, setBudget] = useState("");
   const [cards, setCards] = useState("");
-  const [cardType, setCardType] = useState<CardType>("raw");
+  const [cardType, setCardTypeLocal] = useState<CardType>("raw");
+
+  const setCardType = (type: CardType) => {
+    setCardTypeLocal(type);
+    onCardTypeChange?.(type);
+  };
 
   const justSuggested = useRef(false);
 
@@ -41,7 +47,7 @@ const VzlaBudgetBar = ({ onSuggest, onClear, result }: VzlaBudgetBarProps) => {
   const handleClear = () => {
     setBudget("");
     setCards("");
-    setCardType("raw");
+    setCardTypeLocal("raw");
     onClear();
   };
 

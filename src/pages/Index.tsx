@@ -61,6 +61,7 @@ const Index = () => {
         <VzlaBudgetBar
           onSuggest={runBudget}
           onClear={clearBudget}
+          onCardTypeChange={(type) => setPriceMode(type)}
           result={budgetResult}
         />
         <VzlaSearchFilters
