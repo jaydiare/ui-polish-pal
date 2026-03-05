@@ -192,5 +192,88 @@
       }
     ],
     "sections": []
+  },
+  {
+    "slug": "how-to-use-vzla-sports-elite",
+    "title": "How to Use VZLA Sports Elite for Smarter Card Buying",
+    "excerpt": "A complete guide to navigating the platform, understanding market signals, using the budget optimizer, and making data-driven decisions when collecting Venezuelan athlete cards.",
+    "date": "2026-03-05",
+    "author": "VZLA Sports Elite",
+    "coverImage": "",
+    "textSections": [
+      {
+        "heading": "What Is VZLA Sports Elite?",
+        "paragraphs": [
+          "VZLA Sports Elite is a sports-card market intelligence platform tracking 550+ Venezuelan athletes across Baseball, Soccer, Basketball, and other sports. We pull daily eBay data — both active listings and recently sold cards — and compute statistical pricing analytics so you can make smarter buying decisions instead of guessing.",
+          "Whether you're a collector in Venezuela looking for your favorite players, or a global investor hunting undervalued cards, this platform gives you the data edge you need."
+        ]
+      },
+      {
+        "heading": "Understanding the Athlete Cards",
+        "paragraphs": [
+          "Every athlete card on the home page shows key market data at a glance. The eBay average price uses a Taguchi-method calculation — a statistical technique that filters out extreme outliers (like a $1 listing or a $10,000 rare card) to give you the most realistic market price.",
+          "The Stability score (CV%) tells you how consistent pricing is. A 'Stable' card (under 10% CV) means prices are predictable — great for safe investments. A 'Volatile' or 'Unstable' card means prices swing wildly — higher risk, but also higher potential reward if you time it right.",
+          "Days on Market shows how fast cards typically sell. Under 7 days means high demand — cards fly off the shelves. Over 180 days means low liquidity — you might wait a while to resell. This is crucial for deciding whether to buy for a quick flip or a long-term hold.",
+          "The Index Level (base-100) tracks whether an athlete's card value is rising or falling over time. Green with an up arrow means prices are above the baseline — the card is gaining value. Red with a down arrow means it's losing value compared to when we first tracked it."
+        ]
+      },
+      {
+        "heading": "Raw vs Graded: Choosing Your Mode",
+        "paragraphs": [
+          "Use the toggle at the top to switch between Raw, Graded, and Both views. Raw cards are ungraded cards in Near Mint or Excellent condition — typically cheaper and easier to find. Graded cards (PSA, BGS, SGC) are professionally authenticated and command premium prices.",
+          "If you're starting out or on a budget, focus on Raw cards. If you're investing for long-term value appreciation, Graded cards (especially PSA 10s) tend to hold and grow value better. The 'Both' mode lets you compare side by side to spot grading premiums."
+        ]
+      },
+      {
+        "heading": "Reading the Investment Signals",
+        "paragraphs": [
+          "Look for two key badges on athlete cards: 'Buy Low' and 'Flip Potential'. A Buy Low signal appears when the average sold price is lower than the average listed price — meaning buyers are paying less than sellers are asking. This is a great time to make offers below listing price.",
+          "A Flip Potential signal means cards are selling at or above list price in a volatile market — if you can buy at the right moment and sell quickly, there's profit potential. But be careful: the volatility cuts both ways.",
+          "On the Market Intel page (/data), you'll find four Investment Signal Quadrants: Undervalued (selling above ask with stable prices — strong buy), Fast Mover (high liquidity — sells quickly), Speculative (wild price swings — high risk/reward), and Overpriced (listed above what buyers actually pay — avoid or wait for drops)."
+        ]
+      },
+      {
+        "heading": "Using the Budget Optimizer",
+        "paragraphs": [
+          "The Budget Optimizer is one of the most powerful tools on the platform. Enter your budget in USD and optionally set a maximum number of cards. The algorithm uses a knapsack optimization to find the best combination of cards that maximizes value within your budget.",
+          "Value is calculated using a combination of price stability and liquidity. Stable cards with fast sell times score highest. The optimizer won't just find the cheapest cards — it finds the best risk-adjusted value.",
+          "You can toggle between Raw and Graded datasets. For beginners, start with Raw and a budget of $20-50 to see which athletes offer the best entry point. For serious investors, try Graded mode with a larger budget to find premium opportunities.",
+          "Pro tip: Run the optimizer periodically. As market prices shift daily, the recommended portfolio changes — an athlete that was a great buy last week might be overpriced today."
+        ]
+      },
+      {
+        "heading": "Market Intel: Your Data Dashboard",
+        "paragraphs": [
+          "The Market Intel page (/data) is where the deep analysis lives. The KPI cards at the top give you a snapshot: how many athletes are tracked, how many have both listing and sold data, and average market prices.",
+          "The Listed vs Sold scatter plot is essential. Each dot is an athlete — dots above the diagonal line are overpriced (listed higher than sold), dots below are potentially undervalued. Click the sport legends to filter by Baseball, Soccer, or Basketball and spot sport-specific trends.",
+          "The Top 10 Biggest Price Gaps chart shows athletes with the largest spread between listed and sold prices. Large gaps in either direction signal opportunity — either to buy low or to avoid overpaying.",
+          "The Supply & Demand section uses PSA grading population data from Gemrate to show how many graded cards exist for each athlete. Low population + high demand = rare cards that could appreciate. High population = more supply, which can cap price growth."
+        ]
+      },
+      {
+        "heading": "Search & Filter Like a Pro",
+        "paragraphs": [
+          "Use the search bar and filters to narrow down exactly what you're looking for. Filter by sport (Baseball, Soccer, Basketball), price range, stability level, days on market, and investment signal type.",
+          "A powerful combo: filter for 'Stable' stability + 'Buy Low' signal to find safe, undervalued cards. Or filter for 'Volatile' + 'Flip Potential' if you want to take calculated risks for higher returns.",
+          "By default, athletes without eBay data are hidden. If you're scouting emerging players who might not have many cards listed yet, search by name or filter for 'No Price' to discover them early."
+        ]
+      },
+      {
+        "heading": "Sparklines: Reading the Trend",
+        "paragraphs": [
+          "The small chart on each athlete card is a sparkline showing the price trend over time. A green upward line means the card is appreciating. A red downward line means it's losing value.",
+          "Hover over the sparkline to see exact prices and dates. Look for athletes with consistent upward trends and stable pricing — these are your safest long-term bets. Athletes with sharp recent drops might be buying opportunities if the fundamentals (team, performance, popularity) haven't changed."
+        ]
+      },
+      {
+        "heading": "Tips for Venezuelan Collectors",
+        "paragraphs": [
+          "If you're buying from within Venezuela, focus on athletes who play in leagues with global visibility — MLB, NBA, La Liga, Premier League. These cards have the largest buyer pools and the most liquid markets.",
+          "Use the Budget Optimizer with a realistic budget in mind, accounting for shipping costs. Raw cards are usually the best starting point since they're more affordable and easier to find.",
+          "Keep an eye on the Sport Index cards on the home page. They show whether Baseball or Soccer cards as a whole are trending up or down — this macro view helps you decide which sport to focus your collecting on at any given time."
+        ]
+      }
+    ],
+    "sections": []
   }
 ]
