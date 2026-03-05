@@ -68,22 +68,18 @@ const VzlaFooter = () => {
             <div className="flex flex-col gap-4 items-center">
               <a href={CARDHEDGE} target="_blank" rel="noopener noreferrer" title="Card Hedge Sports & Trading Card Analytics">
                 <img
-                  src="/assets/cardhedge_806_318.webp"
+                  src="/assets/cardhedge_806_318.jpg"
                   alt="Card Hedge Sports & Trading Card Analytics"
                   className="w-40 md:w-48 h-auto rounded-lg shadow-lg hover:scale-[1.03] transition-transform"
                   loading="lazy"
-                  width={806}
-                  height={318}
                 />
               </a>
               <a href={BCW} target="_blank" rel="noopener noreferrer" title="BCW - Protect, Store, Display">
                 <img
-                  src="/assets/BCW.webp"
+                  src="/assets/BCW.jpg"
                   alt="BCW - Protect, Store, Display"
                   className="w-40 md:w-48 h-auto rounded-lg shadow-lg hover:scale-[1.03] transition-transform"
                   loading="lazy"
-                  width={300}
-                  height={250}
                 />
               </a>
             </div>

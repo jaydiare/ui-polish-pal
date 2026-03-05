@@ -4,7 +4,7 @@ const EBAY_BASE = "https://www.ebay.ca/sch/i.html?_nkw=trading+cards&mkevt=1&mkc
 const CAMPAIGN_ID = "5339142321";
 
 const FOOTER_BANNERS = [
-  { id: "footer-main", img: "/assets/Baseball-728x90.webp", alt: "eBay banner" },
+  { id: "footer-main", img: "/assets/Baseball-728x90.jpg", alt: "eBay banner" },
   { id: "footer-alt", img: "/assets/Baseball-728x90_1.jpg", alt: "eBay banner" },
 ];
 
@@ -31,7 +31,7 @@ const VzlaEbayFooter = () => {
   return (
     <footer className="ebay-footer">
       <a href={url} target="_blank" rel="noopener noreferrer">
-        <img src={banner.img} alt={banner.alt} className="ebay-banner-img" loading="eager" width={728} height={90} />
+        <img src={banner.img} alt={banner.alt} className="ebay-banner-img" loading="eager" />
       </a>
     </footer>
   );
