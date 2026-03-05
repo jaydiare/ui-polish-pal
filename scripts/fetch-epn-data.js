@@ -74,7 +74,7 @@ function matchAthlete(itemTitle, athletes) {
 async function fetchTransactions(startDate, endDate) {
   const path =
     `/Reports/ebay_partner_transaction_detail` +
-    `?STATUS=ALL&START_DATE=${startDate}&END_DATE=${endDate}&date_type=event_date`;
+    `?STATUS=ALL&StartDate=${startDate}&EndDate=${endDate}&date_type=event_date`;
 
   try {
     const data = await epnGet(path);
@@ -94,7 +94,7 @@ async function fetchTransactions(startDate, endDate) {
 async function fetchActions(startDate, endDate) {
   try {
     const data = await epnGet(
-      `/ActionUpdates?START_DATE=${startDate}&END_DATE=${endDate}`
+      `/ActionUpdates?StartDate=${startDate}&EndDate=${endDate}`
     );
     if (Array.isArray(data)) return data;
     if (data?.actionUpdates) return data.actionUpdates;
