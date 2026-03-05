@@ -106,12 +106,21 @@
 
     <link rel="icon" href="/favicon.png" type="image/png" />
 
+    <!-- Inline critical CSS for fast FCP -->
+    <style>
+      body{margin:0;background:#080c1a;color:#f7f7f7;font-family:'Inter','Space Grotesk',system-ui,sans-serif}
+      #root{min-height:100vh}
+      .shell-loader{display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:100vh;gap:1rem}
+      .shell-loader h1{font-size:1.5rem;font-weight:700;color:#f0d000;margin:0}
+      .shell-loader p{font-size:.875rem;color:#8a8fa8;margin:0}
+      .shell-spinner{width:32px;height:32px;border:3px solid #1a1f36;border-top-color:#f0d000;border-radius:50%;animation:spin .7s linear infinite}
+      @keyframes spin{to{transform:rotate(360deg)}}
+    </style>
+
     <!-- Preconnect to critical third-party origins -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="preconnect" href="https://raw.githubusercontent.com" crossorigin />
-    <link rel="preconnect" href="https://site.api.espn.com" />
-    <link rel="preconnect" href="https://www.thesportsdb.com" />
 
     <!-- Non-render-blocking Google Fonts -->
     <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800;900&display=swap" />
@@ -119,7 +128,7 @@
     <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800;900&display=swap" /></noscript>
   </head>
   <body>
-    <div id="root"></div>
+    <div id="root"><div class="shell-loader"><div class="shell-spinner"></div><h1>VZLA Sports Elite</h1><p>Loading market data…</p></div></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
