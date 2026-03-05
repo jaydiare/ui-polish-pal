@@ -49,7 +49,7 @@ const VzlaSideBanner = () => {
         <img src={topBanner.img} alt={topBanner.alt} />
       </a>
       <a href={BCW} target="_blank" rel="noopener noreferrer">
-        <img src="./assets/BCW.jpg" alt="BCW - Protect, Store, Display" />
+        <img src="/assets/BCW.webp" alt="BCW - Protect, Store, Display" width={300} height={250} />
       </a>
     </aside>
   );
