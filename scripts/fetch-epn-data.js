@@ -80,6 +80,24 @@ function matchAthlete(itemTitle, athletes) {
   return null;
 }
 
+// ── normalize EPN payload shapes ─────────────────────────────────────
+
+function pickFirstArray(data, preferredKeys = []) {
+  if (Array.isArray(data)) return data;
+  if (!data || typeof data !== "object") return [];
+
+  for (const key of preferredKeys) {
+    if (Array.isArray(data[key])) return data[key];
+  }
+
+  // Fallback: EPN often returns a single top-level collection with varying case.
+  for (const value of Object.values(data)) {
+    if (Array.isArray(value)) return value;
+  }
+
+  return [];
+}
+
 // ── fetch transaction detail report ──────────────────────────────────
 
 async function fetchTransactions(startDate, endDate) {
@@ -89,11 +107,7 @@ async function fetchTransactions(startDate, endDate) {
 
   try {
     const data = await epnGet(path);
-    // Response can be an array of records or wrapped in an object
-    if (Array.isArray(data)) return data;
-    if (data?.records) return data.records;
-    if (data?.transactions) return data.transactions;
-    return [];
+    return pickFirstArray(data, ["records", "Records", "transactions", "Transactions"]);
   } catch (err) {
     console.warn("Could not fetch transaction detail:", err.message);
     return [];
@@ -108,11 +122,15 @@ async function fetchPerfByDay(startDate, endDate) {
     `?CAMPAIGN_ID=0&START_DATE=${startDate}&END_DATE=${endDate}`;
   try {
     const data = await epnGet(path);
-    if (Array.isArray(data)) return data;
-    if (data?.records) return data.records;
-    return [];
+    return pickFirstArray(data, ["records", "Records", "rows", "Rows"]);
   } catch (err) {
-    console.warn("Could not fetch perf-by-day:", err.message);
+    if (String(err.message).includes("403")) {
+      console.warn(
+        "Could not fetch perf-by-day: endpoint access is not enabled for this EPN account. Continuing in transaction-only mode."
+      );
+    } else {
+      console.warn("Could not fetch perf-by-day:", err.message);
+    }
     return [];
   }
 }
@@ -122,9 +140,7 @@ async function fetchPerfByDay(startDate, endDate) {
 async function fetchCampaigns() {
   try {
     const data = await epnGet("/Campaigns");
-    if (Array.isArray(data)) return data;
-    if (data?.campaigns) return data.campaigns;
-    return [];
+    return pickFirstArray(data, ["campaigns", "Campaigns"]);
   } catch (err) {
     console.warn("Could not fetch campaigns:", err.message);
     return [];
