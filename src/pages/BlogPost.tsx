@@ -11,6 +11,23 @@ import type { BlogPost as BlogPostType } from "@/data/blog-types";
 import { useAthleteData } from "@/hooks/useAthleteData";
 import type { Athlete } from "@/data/athletes";
 
+/** Auto-link URLs in text */
+function renderLinkedText(text: string) {
+  const urlRegex = /(https?:\/\/[^\s]+|facebook\.com\/[^\s]+)/g;
+  const parts = text.split(urlRegex);
+  return parts.map((part, i) => {
+    if (urlRegex.test(part)) {
+      const href = part.startsWith("http") ? part : `https://${part}`;
+      return (
+        <a key={i} href={href} target="_blank" rel="noopener noreferrer" className="text-vzla-yellow font-bold no-underline hover:underline">
+          {part.includes("facebook.com/groups") ? "Join our Facebook community" : part}
+        </a>
+      );
+    }
+    return part;
+  });
+}
+
 const BlogPost = () => {
   const { slug } = useParams<{ slug: string }>();
   const [post, setPost] = useState<BlogPostType | null>(null);
@@ -91,7 +108,9 @@ const BlogPost = () => {
               <section key={i} className="mb-10 glass-panel p-6 rounded-xl">
                 <h2 className="text-lg font-display font-bold text-flag-gradient mb-4">{ts.heading}</h2>
                 {ts.paragraphs.map((p, j) => (
-                  <p key={j} className="text-muted-foreground text-sm leading-7 text-justify mb-4 last:mb-0">{p}</p>
+                  <p key={j} className="text-muted-foreground text-sm leading-7 text-justify mb-4 last:mb-0">
+                    {renderLinkedText(p)}
+                  </p>
                 ))}
               </section>
             ))}
