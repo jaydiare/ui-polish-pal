@@ -8,8 +8,8 @@ export const ebayCallback = async (req, res) => {
   const expectedState = req.cookies?.ebay_oauth_state;
 
   console.log("[eBay callback] code:", code ? "present" : "MISSING");
-  console.log("[eBay callback] state:", state);
-  console.log("[eBay callback] expectedState:", expectedState || "MISSING (no cookie)");
+  console.log("[eBay callback] state:", state ? "present" : "MISSING");
+  console.log("[eBay callback] expectedState:", expectedState ? "present" : "MISSING");
 
   if (!code) {
     console.error("[eBay callback] DENIED: no authorization code received");
@@ -42,17 +42,17 @@ export const ebayCallback = async (req, res) => {
 
     const data = await response.json();
     if (!response.ok) {
-      console.error("[eBay callback] DENIED: token exchange failed:", JSON.stringify(data));
+      console.error("[eBay callback] DENIED: token exchange failed");
       return res.redirect(`${FRONTEND_URL}/ebay/denied`);
     }
 
     console.log("[eBay callback] ✅ SUCCESS!");
-    console.log("[eBay callback] refresh_token:", data.refresh_token ? data.refresh_token.substring(0, 20) + "..." : "MISSING");
+    console.log("[eBay callback] refresh_token received:", !!data.refresh_token);
 
     res.clearCookie("ebay_oauth_state");
     res.redirect(`${FRONTEND_URL}/ebay/success`);
   } catch (err) {
-    console.error("[eBay callback] error:", err);
+    console.error("[eBay callback] error:", err.message);
     res.redirect(`${FRONTEND_URL}/ebay/denied`);
   }
 };
