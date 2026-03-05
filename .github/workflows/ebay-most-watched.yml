@@ -5,13 +5,16 @@ on:
     - cron: "0 14 * * 1"   # Every Monday at 14:00 UTC
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 jobs:
   fetch-most-watched:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
         with:
-          token: ${{ secrets.PAT_TOKEN }}
+          fetch-depth: 0
 
       - uses: actions/setup-node@v4
         with:
