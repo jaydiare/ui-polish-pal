@@ -1,5 +1,11 @@
 import { useState } from "react";
-import { Share2, Facebook, Twitter, Link as LinkIcon, Check } from "lucide-react";
+import { Share2, Facebook, Link as LinkIcon, Check } from "lucide-react";
+
+const XIcon = ({ className }: { className?: string }) => (
+  <svg viewBox="0 0 24 24" fill="currentColor" className={className}>
+    <path d="M18.9 2H22l-6.8 7.8L23 22h-6.2l-4.8-7-6.1 7H2l7.3-8.4L1 2h6.4l4.4 6.4L18.9 2zm-1.1 18h1.7L7.2 3.9H5.4L17.8 20z" />
+  </svg>
+);
 
 interface SocialShareProps {
   url?: string;
@@ -33,7 +39,7 @@ const SocialShare = ({ url, title, compact = false }: SocialShareProps) => {
     },
     {
       label: "X",
-      icon: Twitter,
+      icon: XIcon,
       href: `https://twitter.com/intent/tweet?url=${encodedUrl}&text=${encodedTitle}`,
       hoverClass: "hover:text-foreground hover:border-foreground/30",
     },
