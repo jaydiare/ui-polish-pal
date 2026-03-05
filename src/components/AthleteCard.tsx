@@ -23,10 +23,11 @@ interface AthleteCardProps {
   ebayGradedSoldRaw?: Record<string, any>;
   history?: any[];
   isRecommended?: boolean;
+  isHotSeller?: boolean;
   priceMode: "raw" | "graded" | "both";
 }
 
-const AthleteCard = forwardRef<HTMLElement, AthleteCardProps>(({ athlete, byName, byKey, gradedByName, gradedByKey, ebaySoldRaw, ebayGradedSoldRaw, history, isRecommended, priceMode }, ref) => {
+const AthleteCard = forwardRef<HTMLElement, AthleteCardProps>(({ athlete, byName, byKey, gradedByName, gradedByKey, ebaySoldRaw, ebayGradedSoldRaw, history, isRecommended, isHotSeller, priceMode }, ref) => {
   const avgNum = getEbayAvgNumber(athlete, byName, byKey);
   const money = avgNum != null ? formatCurrency(avgNum, "USD") : "—";
 
@@ -150,6 +151,11 @@ const AthleteCard = forwardRef<HTMLElement, AthleteCardProps>(({ athlete, byName
             {priceMode !== "both" && isBuyLow && (
               <span className="inline-flex px-1.5 py-0.5 rounded text-[9px] font-bold bg-accent/10 border border-accent/20 text-accent">
                 🔻 Buy Low
+              </span>
+            )}
+            {isHotSeller && (
+              <span className="inline-flex px-1.5 py-0.5 rounded text-[9px] font-bold bg-orange-500/10 border border-orange-500/20 text-orange-400">
+                🔥 Hot Seller
               </span>
             )}
           </div>
