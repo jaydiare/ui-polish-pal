@@ -213,6 +213,7 @@ const Data = () => {
   const [athleteHistory, setAthleteHistory] = useState<Record<string, any[]>>({});
   // Per-section toggles
   const [scatterMode, setScatterMode] = useState<CardMode>("raw");
+  const [scatterSportFilter, setScatterSportFilter] = useState<string | null>(null);
   const [gapsMode, setGapsMode] = useState<CardMode>("raw");
   const [supplyMode, setSupplyMode] = useState<CardMode>("raw");
   const [signalMode, setSignalMode] = useState<CardMode>("raw");
@@ -267,8 +268,11 @@ const Data = () => {
   const gradedStats = useMemo(() => buildStats(gradedComparison), [gradedComparison]);
 
   /* ── Per-section active data ── */
-  const scatterData = scatterMode === "graded" ? gradedComparison : rawComparison;
+  const scatterDataAll = scatterMode === "graded" ? gradedComparison : rawComparison;
   const scatterDataBoth = scatterMode === "both";
+  const scatterData = scatterSportFilter
+    ? scatterDataAll.filter(d => d.sport === scatterSportFilter)
+    : scatterDataAll;
   const gapsComparison = gapsMode === "graded" ? gradedComparison : rawComparison;
   const supplyComparison = supplyMode === "graded" ? gradedComparison : rawComparison;
 
@@ -709,7 +713,7 @@ const Data = () => {
                   <span className="w-1 h-5 rounded-full bg-primary inline-block" />
                   Listed vs Sold
                 </h2>
-                <ModeToggle value={scatterMode} onChange={(v) => { setScatterMode(v); setPinnedDot(null); }} />
+                <ModeToggle value={scatterMode} onChange={(v) => { setScatterMode(v); setPinnedDot(null); setScatterSportFilter(null); }} />
               </div>
               <p className="text-xs text-muted-foreground mb-1 ml-3">
                 Each dot is an athlete. Above the diagonal = listed higher than sold (overpriced).
@@ -782,12 +786,25 @@ const Data = () => {
                     </>
                   ) : (
                     Object.entries(SPORT_COLORS)
-                      .filter(([sport]) => scatterData.some(d => d.sport === sport))
+                      .filter(([sport]) => scatterDataAll.some(d => d.sport === sport))
                       .map(([sport, color]) => (
-                      <div key={sport} className="flex items-center gap-1.5 text-[10px] text-muted-foreground">
-                        <div className="w-2.5 h-2.5 rounded-full" style={{ backgroundColor: color }} />
+                      <button
+                        key={sport}
+                        onClick={() => setScatterSportFilter(prev => prev === sport ? null : sport)}
+                        className={`flex items-center gap-1.5 text-[10px] transition-all cursor-pointer rounded-full px-2 py-0.5 ${
+                          scatterSportFilter === sport
+                            ? "bg-primary/15 text-foreground font-bold ring-1 ring-primary/30"
+                            : scatterSportFilter
+                              ? "text-muted-foreground/40 hover:text-muted-foreground"
+                              : "text-muted-foreground hover:text-foreground"
+                        }`}
+                      >
+                        <div
+                          className="w-2.5 h-2.5 rounded-full transition-opacity"
+                          style={{ backgroundColor: color, opacity: scatterSportFilter && scatterSportFilter !== sport ? 0.3 : 1 }}
+                        />
                         {sport}
-                      </div>
+                      </button>
                     ))
                   )}
                 </div>
