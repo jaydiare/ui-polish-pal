@@ -40,13 +40,6 @@ function dateFmt(d) {
   return d.toISOString().slice(0, 10); // YYYY-MM-DD
 }
 
-function dateFmtSlash(d) {
-  const mm = String(d.getUTCMonth() + 1).padStart(2, "0");
-  const dd = String(d.getUTCDate()).padStart(2, "0");
-  const yyyy = d.getUTCFullYear();
-  return `${mm}/${dd}/${yyyy}`; // MM/DD/YYYY (required by ActionUpdates)
-}
-
 function isoDateFmt(d) {
   return d.toISOString().slice(0, 10); // YYYY-MM-DD (for stored metadata)
 }
@@ -139,8 +132,6 @@ async function main() {
 
   const startDate = dateFmt(start30);
   const endDate = dateFmt(now);
-  const startDateSlash = dateFmtSlash(start30);
-  const endDateSlash = dateFmtSlash(now);
   const startDateIso = isoDateFmt(start30);
   const endDateIso = isoDateFmt(now);
 
@@ -158,7 +149,7 @@ async function main() {
 
   // 3. Fetch action updates (conversions)
   console.log("\n🔹 Fetching action updates...");
-  const actions = await fetchActions(startDateSlash, endDateSlash);
+  const actions = await fetchActions(startDate, endDate);
   console.log(`   Found ${actions.length} action update(s)`);
 
   // 4. Load athletes for matching
