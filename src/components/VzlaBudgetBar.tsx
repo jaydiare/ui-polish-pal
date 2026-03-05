@@ -7,18 +7,12 @@ interface VzlaBudgetBarProps {
   onSuggest: (budget: number, maxCards: number | null, cardType: CardType) => void;
   onClear: () => void;
   result: KnapsackResult | null;
-  priceMode: "raw" | "graded" | "both";
-  onPriceModeChange: (mode: "raw" | "graded" | "both") => void;
 }
 
-const VzlaBudgetBar = ({ onSuggest, onClear, result, priceMode, onPriceModeChange }: VzlaBudgetBarProps) => {
+const VzlaBudgetBar = ({ onSuggest, onClear, result }: VzlaBudgetBarProps) => {
   const [budget, setBudget] = useState("");
   const [cards, setCards] = useState("");
-  const cardType: CardType = priceMode === "graded" ? "graded" : "raw";
-
-  const setCardType = (type: CardType) => {
-    onPriceModeChange(type);
-  };
+  const [cardType, setCardType] = useState<CardType>("raw");
 
   const justSuggested = useRef(false);
 
@@ -47,6 +41,7 @@ const VzlaBudgetBar = ({ onSuggest, onClear, result, priceMode, onPriceModeChang
   const handleClear = () => {
     setBudget("");
     setCards("");
+    setCardType("raw");
     onClear();
   };
 
