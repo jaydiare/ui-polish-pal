@@ -1,7 +1,10 @@
 {
   "_meta": {
-    "updatedAt": null,
-    "period": { "start": null, "end": null }
+    "updatedAt": "2026-03-05T19:14:05.183Z",
+    "period": {
+      "start": "2026-02-03",
+      "end": "2026-03-05"
+    }
   },
   "placements": {},
   "bestBanner": null,
