@@ -13,7 +13,7 @@ interface VzlaBudgetBarProps {
 const VzlaBudgetBar = ({ onSuggest, onClear, onCardTypeChange, result }: VzlaBudgetBarProps) => {
   const [budget, setBudget] = useState("");
   const [cards, setCards] = useState("");
-  const [cardType, setCardTypeLocal] = useState<CardType>("raw");
+  const [cardType, setCardTypeLocal] = useState<CardType | null>(null);
 
   const setCardType = (type: CardType) => {
     setCardTypeLocal(type);
@@ -25,10 +25,11 @@ const VzlaBudgetBar = ({ onSuggest, onClear, onCardTypeChange, result }: VzlaBud
   const handleSuggest = () => {
     const b = Number(budget);
     if (!Number.isFinite(b) || b <= 0) return;
+    const activeType = cardType || "raw";
     const c = cards ? Number(cards) : null;
     const maxCards = c && Number.isFinite(c) && c > 0 ? Math.floor(c) : null;
     justSuggested.current = true;
-    onSuggest(b, maxCards, cardType);
+    onSuggest(b, maxCards, activeType);
   };
 
   // Auto-scroll to results on mobile after suggest
@@ -47,7 +48,7 @@ const VzlaBudgetBar = ({ onSuggest, onClear, onCardTypeChange, result }: VzlaBud
   const handleClear = () => {
     setBudget("");
     setCards("");
-    setCardTypeLocal("raw");
+    setCardTypeLocal(null);
     onClear();
   };
 
@@ -92,7 +93,7 @@ const VzlaBudgetBar = ({ onSuggest, onClear, onCardTypeChange, result }: VzlaBud
             onClick={() => setCardType("raw")}
             className={`h-11 px-3.5 rounded-lg border text-xs font-bold cursor-pointer whitespace-nowrap transition-all flex items-center gap-1.5 ${
               cardType === "raw"
-                ? "bg-primary/15 border-primary/40 text-primary"
+                ? "bg-vzla-yellow/15 border-vzla-yellow/50 text-vzla-yellow"
                 : "bg-secondary border-border text-muted-foreground hover:text-foreground"
             }`}
             aria-pressed={cardType === "raw"}
@@ -104,7 +105,7 @@ const VzlaBudgetBar = ({ onSuggest, onClear, onCardTypeChange, result }: VzlaBud
             onClick={() => setCardType("graded")}
             className={`h-11 px-3.5 rounded-lg border text-xs font-bold cursor-pointer whitespace-nowrap transition-all flex items-center gap-1.5 ${
               cardType === "graded"
-                ? "bg-primary/15 border-primary/40 text-primary"
+                ? "bg-vzla-yellow/15 border-vzla-yellow/50 text-vzla-yellow"
                 : "bg-secondary border-border text-muted-foreground hover:text-foreground"
             }`}
             aria-pressed={cardType === "graded"}
