@@ -62,6 +62,8 @@ const Index = () => {
           onSuggest={runBudget}
           onClear={clearBudget}
           result={budgetResult}
+          priceMode={priceMode}
+          onPriceModeChange={setPriceMode}
         />
         <VzlaSearchFilters
           filters={filters}
