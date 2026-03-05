@@ -32,7 +32,7 @@ jobs:
       - name: Fetch EPN data
         run: node scripts/fetch-epn-data.js
         env:
-          EPN_ACCOUNT_SID: ${{ secrets.EPN_ACCOUNT_SID }}
+          EPN_SID: ${{ secrets.EPN_SID }}
           EPN_AUTH_TOKEN: ${{ secrets.EPN_AUTH_TOKEN }}
 
       - name: Copy to public
