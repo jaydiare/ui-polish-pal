@@ -62,7 +62,7 @@ const USER_AGENTS = [
 // --- helpers ---
 function sleep(ms) { return new Promise((r) => setTimeout(r, ms)); }
 function normSpaces(s) { return String(s || "").replace(/\s+/g, " ").trim(); }
-function norm(s) { return String(s || "").toLowerCase().trim(); }
+function norm(s) { return String(s || "").normalize("NFKD").replace(/[\u0300-\u036f]/g, "").toLowerCase().trim(); }
 function safeNum(x) { const n = Number(x); return Number.isFinite(n) ? n : null; }
 
 function avg(values) {
@@ -132,9 +132,9 @@ function hasAllowedBrand(title) { return BRANDS.some((b) => norm(title).includes
 function titleLooksRelevantToPlayer(title, playerName) {
   const t = norm(title);
   const parts = norm(playerName).split(/\s+/).filter(Boolean);
-  const last = parts[parts.length - 1];
-  if (!last) return true;
-  return t.includes(last);
+  if (!parts.length) return true;
+  // Require ALL name parts (first + last) to appear in the title
+  return parts.every((part) => t.includes(part));
 }
 
 // ✅ GRADED detection — ONLY include graded titles
