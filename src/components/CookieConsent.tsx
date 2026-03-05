@@ -1,4 +1,4 @@
-import { useState, useEffect, forwardRef } from "react";
+import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const GA_ID = "G-3SCYEVBB9B";
@@ -23,7 +23,7 @@ function loadGA() {
   document.head.appendChild(inline);
 }
 
-const CookieConsent = forwardRef<HTMLDivElement>((_, ref) => {
+const CookieConsent = () => {
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
@@ -47,7 +47,6 @@ const CookieConsent = forwardRef<HTMLDivElement>((_, ref) => {
   };
 
   return (
-    <div ref={ref}>
     <AnimatePresence>
       {visible && (
         <motion.div
@@ -55,7 +54,7 @@ const CookieConsent = forwardRef<HTMLDivElement>((_, ref) => {
           animate={{ y: 0, opacity: 1 }}
           exit={{ y: 100, opacity: 0 }}
           transition={{ duration: 0.3, ease: "easeOut" }}
-          className="fixed bottom-0 left-0 right-0 md:bottom-24 md:left-auto md:right-6 md:max-w-sm z-[9998] glass-panel p-5 border border-border shadow-2xl rounded-b-none md:rounded-b-2xl"
+          className="fixed bottom-[110px] left-3 right-3 md:bottom-24 md:left-auto md:right-6 md:max-w-sm z-[10000] glass-panel p-5 border border-border shadow-2xl rounded-2xl"
         >
           <p className="text-sm text-foreground/85 leading-relaxed mb-4">
             We use cookies to analyze site traffic and improve your experience. You can accept or reject analytics cookies.
@@ -77,10 +76,7 @@ const CookieConsent = forwardRef<HTMLDivElement>((_, ref) => {
         </motion.div>
       )}
     </AnimatePresence>
-    </div>
   );
-});
-
-CookieConsent.displayName = "CookieConsent";
+};
 
 export default CookieConsent;
