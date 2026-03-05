@@ -8,6 +8,7 @@ import {
   marketStabilityScoreFromCV,
   formatCurrency,
   buildEbaySearchUrl,
+  buildEbayGradedSearchUrl,
   initialsFromName,
 } from "@/lib/vzla-helpers";
 import { useAthleteImage } from "@/hooks/useAthleteImage";
@@ -79,7 +80,9 @@ const AthleteCard = forwardRef<HTMLElement, AthleteCardProps>(({ athlete, byName
   const gradedStability = marketStabilityScoreFromCV(gradedCvFinal);
   const gradedDom = gradedAvgNum != null ? getAvgDaysOnMarket(athlete, gradedByName, gradedByKey) : null;
 
-  const shopUrl = buildEbaySearchUrl(athlete.name, athlete.sport);
+  const shopUrl = priceMode === "graded"
+    ? buildEbayGradedSearchUrl(athlete.name, athlete.sport)
+    : buildEbaySearchUrl(athlete.name, athlete.sport);
   const initials = initialsFromName(athlete.name);
   const photo = useAthleteImage(athlete.name, athlete.sport, cardRef);
 
