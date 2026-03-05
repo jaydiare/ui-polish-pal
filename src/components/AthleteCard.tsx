@@ -1,4 +1,4 @@
-import { useMemo, forwardRef } from "react";
+import { useMemo, forwardRef, useRef, useCallback } from "react";
 import { Athlete, EbayAvgRecord } from "@/data/athletes";
 import {
   getEbayAvgNumber,
@@ -28,6 +28,7 @@ interface AthleteCardProps {
 }
 
 const AthleteCard = forwardRef<HTMLElement, AthleteCardProps>(({ athlete, byName, byKey, gradedByName, gradedByKey, ebaySoldRaw, ebayGradedSoldRaw, history, isRecommended, isHotSeller, priceMode }, ref) => {
+  const cardRef = useRef<HTMLElement>(null);
   const avgNum = getEbayAvgNumber(athlete, byName, byKey);
   const money = avgNum != null ? formatCurrency(avgNum, "USD") : "—";
 
@@ -80,7 +81,7 @@ const AthleteCard = forwardRef<HTMLElement, AthleteCardProps>(({ athlete, byName
 
   const shopUrl = buildEbaySearchUrl(athlete.name, athlete.sport);
   const initials = initialsFromName(athlete.name);
-  const photo = useAthleteImage(athlete.name, athlete.sport);
+  const photo = useAthleteImage(athlete.name, athlete.sport, cardRef);
 
   // Signals based on active price mode (single mode)
   const isFlip = activeHasPrice && cv != null && soldAvg != null && activeAvgNum != null && soldAvg >= activeAvgNum && (stability.bucket === "volatile" || stability.bucket === "highly_unstable");
@@ -108,7 +109,11 @@ const AthleteCard = forwardRef<HTMLElement, AthleteCardProps>(({ athlete, byName
   const showSparkline = showRawSparkline || showGradedSparkline;
 
   return (
-    <article ref={ref} className={`athlete-card group ${isRecommended ? "is-recommended" : ""}`}>
+    <article ref={(node) => {
+      cardRef.current = node;
+      if (typeof ref === 'function') ref(node);
+      else if (ref) (ref as React.MutableRefObject<HTMLElement | null>).current = node;
+    }} className={`athlete-card group ${isRecommended ? "is-recommended" : ""}`}>
       {/* Recommended badge */}
       {isRecommended && (
         <div className="mb-2 -mt-1 text-[10px] font-bold text-vzla-yellow tracking-wider uppercase flex items-center gap-1.5">

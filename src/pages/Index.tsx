@@ -1,14 +1,16 @@
+import { lazy, Suspense } from "react";
 import SEOHead from "@/components/SEOHead";
 import VzlaNavbar from "@/components/VzlaNavbar";
 import VzlaHero from "@/components/VzlaHero";
 import VzlaIndexCards from "@/components/VzlaIndexCards";
-import VzlaHowToMoney from "@/components/VzlaHowToMoney";
-import VzlaTopDeals from "@/components/VzlaTopDeals";
-import VzlaBudgetBar from "@/components/VzlaBudgetBar";
-import VzlaSearchFilters from "@/components/VzlaSearchFilters";
-import VzlaAthleteGrid from "@/components/VzlaAthleteGrid";
-import VzlaFooter from "@/components/VzlaFooter";
-import VzlaEbayFooter from "@/components/VzlaEbayFooter";
+
+const VzlaHowToMoney = lazy(() => import("@/components/VzlaHowToMoney"));
+const VzlaTopDeals = lazy(() => import("@/components/VzlaTopDeals"));
+const VzlaBudgetBar = lazy(() => import("@/components/VzlaBudgetBar"));
+const VzlaSearchFilters = lazy(() => import("@/components/VzlaSearchFilters"));
+const VzlaAthleteGrid = lazy(() => import("@/components/VzlaAthleteGrid"));
+const VzlaFooter = lazy(() => import("@/components/VzlaFooter"));
+const VzlaEbayFooter = lazy(() => import("@/components/VzlaEbayFooter"));
 import { useAthleteData } from "@/hooks/useAthleteData";
 
 const Index = () => {
@@ -56,44 +58,48 @@ const Index = () => {
       <main id="main-content" className="page-shell" role="main" aria-label="Athlete cards and market data">
         <VzlaHero lastUpdated={lastUpdated} />
         <VzlaIndexCards athletes={athletes} byName={byName} byKey={byKey} indexHistory={indexHistory} />
-        <VzlaHowToMoney />
-        <VzlaTopDeals />
-        <VzlaBudgetBar
-          onSuggest={runBudget}
-          onClear={clearBudget}
-          onCardTypeChange={(type) => setPriceMode(type)}
-          result={budgetResult}
-        />
-        <VzlaSearchFilters
-          filters={filters}
-          updateFilter={updateFilter}
-          sportOptions={sportOptions}
-          totalCount={athletes.length}
-          filteredCount={filteredAthletes.length}
-          priceMode={priceMode}
-          onPriceModeChange={setPriceMode}
-        />
-        <VzlaAthleteGrid
-          athletes={budgetChosenIds.size > 0 ? filteredAthletes : paginatedAthletes}
-          byName={byName}
-          byKey={byKey}
-          gradedByName={gradedByName}
-          gradedByKey={gradedByKey}
-          ebaySoldRaw={ebaySoldRaw}
-          ebayGradedSoldRaw={ebayGradedSoldRaw}
-          athleteHistory={athleteHistory}
-          hasMore={budgetChosenIds.size > 0 ? false : hasMore}
-          remainingCount={remainingCount}
-          onLoadMore={loadMore}
-          highlightedIds={budgetChosenIds}
-          sort={sort}
-          onSortChange={setSort}
-          priceMode={priceMode}
-        />
-        <VzlaFooter />
+        <Suspense fallback={<div className="min-h-[200px]" />}>
+          <VzlaHowToMoney />
+          <VzlaTopDeals />
+          <VzlaBudgetBar
+            onSuggest={runBudget}
+            onClear={clearBudget}
+            onCardTypeChange={(type) => setPriceMode(type)}
+            result={budgetResult}
+          />
+          <VzlaSearchFilters
+            filters={filters}
+            updateFilter={updateFilter}
+            sportOptions={sportOptions}
+            totalCount={athletes.length}
+            filteredCount={filteredAthletes.length}
+            priceMode={priceMode}
+            onPriceModeChange={setPriceMode}
+          />
+          <VzlaAthleteGrid
+            athletes={budgetChosenIds.size > 0 ? filteredAthletes : paginatedAthletes}
+            byName={byName}
+            byKey={byKey}
+            gradedByName={gradedByName}
+            gradedByKey={gradedByKey}
+            ebaySoldRaw={ebaySoldRaw}
+            ebayGradedSoldRaw={ebayGradedSoldRaw}
+            athleteHistory={athleteHistory}
+            hasMore={budgetChosenIds.size > 0 ? false : hasMore}
+            remainingCount={remainingCount}
+            onLoadMore={loadMore}
+            highlightedIds={budgetChosenIds}
+            sort={sort}
+            onSortChange={setSort}
+            priceMode={priceMode}
+          />
+          <VzlaFooter />
+        </Suspense>
       </main>
 
-      <VzlaEbayFooter />
+      <Suspense fallback={null}>
+        <VzlaEbayFooter />
+      </Suspense>
     </div>
   );
 };
