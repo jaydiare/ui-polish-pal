@@ -961,8 +961,8 @@ const Data = () => {
               </div>
             </section>
 
-            {/* ── Most Listed on eBay ── */}
-            <MostListedChart listedData={listedData} gradedListedData={gradedListedData} athleteSportMap={athleteSportMap} />
+            {/* ── Most Sold on eBay ── */}
+            <MostSoldChart soldData={soldData} gradedSoldData={gradedSoldData} athleteSportMap={athleteSportMap} />
 
             {/* ── Gemrate Grading Data ── */}
             <GemrateChart />
@@ -976,85 +976,76 @@ const Data = () => {
   );
 };
 
-/* ── Most Listed on eBay ── */
-const LISTED_COLOR = "hsl(45, 93%, 47%)";
+/* ── Most Sold on eBay ── */
+const SOLD_BAR_COLOR = "hsl(45, 93%, 47%)";
 
-const MostListedChart = ({ listedData, gradedListedData, athleteSportMap }: {
-  listedData: Record<string, any>;
-  gradedListedData: Record<string, any>;
+const MostSoldChart = ({ soldData, gradedSoldData, athleteSportMap }: {
+  soldData: Record<string, any>;
+  gradedSoldData: Record<string, any>;
   athleteSportMap: Record<string, string>;
 }) => {
-  const [listMode, setListMode] = useState<CardMode>("raw");
+  const [soldMode, setSoldMode] = useState<CardMode>("raw");
 
   const top10 = useMemo(() => {
-    const src = listMode === "graded" ? gradedListedData : listedData;
-    if (!src || typeof src !== "object") return [];
+    const buildEntries = (src: Record<string, any>) => {
+      const entries: { name: string; sport: string; soldCount: number; avgSold: number | null }[] = [];
+      if (!src || typeof src !== "object") return entries;
+      for (const [name, rec] of Object.entries(src)) {
+        if (name === "_meta" || !rec) continue;
+        const r = rec as any;
+        const n = r.nScraped ?? r.nSoldUsed ?? 0;
+        if (n <= 0) continue;
+        const normKey = name.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().trim();
+        const sport = athleteSportMap[name] || athleteSportMap[normKey] || "Other";
+        const avgSold = r.taguchiSold ?? r.avg ?? null;
+        entries.push({ name, sport, soldCount: n, avgSold });
+      }
+      return entries;
+    };
 
-    const entries: { name: string; sport: string; listings: number; avgPrice: number | null }[] = [];
-    for (const [name, rec] of Object.entries(src)) {
-      if (name === "_meta" || !rec) continue;
-      const r = rec as any;
-      const n = r.nListing ?? r.n ?? 0;
-      if (n <= 0) continue;
-      const normKey = name.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().trim();
-      const sport = athleteSportMap[name] || athleteSportMap[normKey] || "Other";
-      const avgPrice = r.taguchiListing ?? r.avgListing ?? r.avg ?? null;
-      entries.push({ name, sport, listings: n, avgPrice });
-    }
-
-    // If "both" mode, merge raw + graded listing counts
-    if (listMode === "both") {
-      const mergedMap = new Map<string, { name: string; sport: string; listings: number; avgPrice: number | null }>();
-      for (const src of [listedData, gradedListedData]) {
-        if (!src) continue;
-        for (const [name, rec] of Object.entries(src)) {
-          if (name === "_meta" || !rec) continue;
-          const r = rec as any;
-          const n = r.nListing ?? r.n ?? 0;
-          if (n <= 0) continue;
-          const normKey = name.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().trim();
-          const sport = athleteSportMap[name] || athleteSportMap[normKey] || "Other";
-          const existing = mergedMap.get(name);
+    if (soldMode === "both") {
+      const mergedMap = new Map<string, { name: string; sport: string; soldCount: number; avgSold: number | null }>();
+      for (const src of [soldData, gradedSoldData]) {
+        for (const entry of buildEntries(src)) {
+          const existing = mergedMap.get(entry.name);
           if (existing) {
-            existing.listings += n;
+            existing.soldCount += entry.soldCount;
           } else {
-            const avgPrice = r.taguchiListing ?? r.avgListing ?? r.avg ?? null;
-            mergedMap.set(name, { name, sport, listings: n, avgPrice });
+            mergedMap.set(entry.name, { ...entry });
           }
         }
       }
-      return [...mergedMap.values()]
-        .sort((a, b) => b.listings - a.listings)
-        .slice(0, 10);
+      return [...mergedMap.values()].sort((a, b) => b.soldCount - a.soldCount).slice(0, 10);
     }
 
-    return entries.sort((a, b) => b.listings - a.listings).slice(0, 10);
-  }, [listedData, gradedListedData, athleteSportMap, listMode]);
+    const src = soldMode === "graded" ? gradedSoldData : soldData;
+    return buildEntries(src).sort((a, b) => b.soldCount - a.soldCount).slice(0, 10);
+  }, [soldData, gradedSoldData, athleteSportMap, soldMode]);
 
   const isEmpty = top10.length === 0;
-  const updatedAt = (listMode === "graded" ? gradedListedData : listedData)?._meta?.updatedAt;
+  const updatedAt = (soldMode === "graded" ? gradedSoldData : soldData)?._meta?.updatedAt;
   const formattedDate = updatedAt
     ? new Date(updatedAt).toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" })
     : null;
 
   return (
-    <section className="my-8" aria-label="Most listed athletes on eBay">
+    <section className="my-8" aria-label="Most sold athletes on eBay">
       <div className="flex items-center justify-between mb-1">
         <h2 className="font-display font-bold text-lg text-foreground flex items-center gap-2">
           <span className="w-1 h-5 rounded-full bg-vzla-yellow inline-block" />
-          📦 Most Listed – Top 10
+          🔥 Most Sold – Top 10
         </h2>
-        <ModeToggle value={listMode} onChange={setListMode} />
+        <ModeToggle value={soldMode} onChange={setSoldMode} />
       </div>
       <p className="text-xs text-muted-foreground mb-4 ml-3">
-        Athletes with the most active {listMode === "graded" ? "graded" : listMode === "both" ? "total" : "raw"} eBay listings.
+        Athletes with the highest {soldMode === "graded" ? "graded" : soldMode === "both" ? "total" : "raw"} sold volume on eBay.
         {formattedDate && <span className="ml-1 opacity-70">Updated {formattedDate}.</span>}
       </p>
       <div className="glass-panel p-4 md:p-6">
         {isEmpty ? (
           <div className="py-12 text-center">
-            <div className="text-3xl mb-3">📦</div>
-            <p className="text-sm text-muted-foreground">No listing data available yet.</p>
+            <div className="text-3xl mb-3">🔥</div>
+            <p className="text-sm text-muted-foreground">No sold data available yet.</p>
           </div>
         ) : (
           <div className="w-full h-[450px] md:h-[550px]">
@@ -1064,7 +1055,7 @@ const MostListedChart = ({ listedData, gradedListedData, athleteSportMap }: {
                 <XAxis
                   type="number"
                   tick={{ fill: "hsl(var(--muted-foreground))", fontSize: 10 }}
-                  label={{ value: "Active Listings", position: "insideBottom", offset: -5, style: { fill: "hsl(var(--muted-foreground))", fontSize: 11 } }}
+                  label={{ value: "Sold Listings", position: "insideBottom", offset: -5, style: { fill: "hsl(var(--muted-foreground))", fontSize: 11 } }}
                 />
                 <YAxis type="category" dataKey="name" width={150} tick={{ fill: "hsl(var(--muted-foreground))", fontSize: 11 }} />
                 <Tooltip
@@ -1076,16 +1067,16 @@ const MostListedChart = ({ listedData, gradedListedData, athleteSportMap }: {
                       <div className="rounded-xl border border-border/50 bg-background/95 backdrop-blur-lg p-3 text-xs shadow-2xl">
                         <div className="font-display font-bold text-foreground mb-1">{d.name}</div>
                         <div className="text-muted-foreground text-[10px] mb-1.5">{d.sport}</div>
-                        <span className="text-muted-foreground">Listings: <strong className="text-foreground">{d.listings.toLocaleString()}</strong></span>
-                        {d.avgPrice != null && (
-                          <div className="text-muted-foreground mt-1">Avg Price: <strong className="text-foreground">${d.avgPrice.toFixed(2)}</strong></div>
+                        <span className="text-muted-foreground">Sold: <strong className="text-foreground">{d.soldCount.toLocaleString()}</strong></span>
+                        {d.avgSold != null && (
+                          <div className="text-muted-foreground mt-1">Avg Sold: <strong className="text-foreground">${d.avgSold.toFixed(2)}</strong></div>
                         )}
                         <div className="text-[9px] text-muted-foreground/60 mt-1.5">Click bar to search on eBay</div>
                       </div>
                     );
                   }}
                 />
-                <Bar dataKey="listings" name="Listings" fill={LISTED_COLOR} radius={[0, 4, 4, 0]} isAnimationActive={false} cursor="pointer"
+                <Bar dataKey="soldCount" name="Sold" fill={SOLD_BAR_COLOR} radius={[0, 4, 4, 0]} isAnimationActive={false} cursor="pointer"
                   onClick={(data: any) => {
                     if (data?.name) window.open(buildEbaySearchUrl(data.name, data.sport), "_blank", "noopener,noreferrer");
                   }}
@@ -1095,7 +1086,7 @@ const MostListedChart = ({ listedData, gradedListedData, athleteSportMap }: {
           </div>
         )}
         <p className="text-[9px] text-muted-foreground/60 text-center mt-3">
-          Based on active eBay listings. Updated daily.
+          Based on eBay sold listings. Updated in batches.
         </p>
       </div>
     </section>
