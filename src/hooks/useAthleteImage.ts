@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 
 const cache = new Map<string, string | null>();
 
@@ -72,11 +72,33 @@ async function fetchAthleteImage(name: string, sport?: string): Promise<string |
   return null;
 }
 
-export function useAthleteImage(name: string, sport?: string): string | null {
+export function useAthleteImage(name: string, sport?: string, containerRef?: React.RefObject<HTMLElement>): string | null {
   const cacheKey = sport ? `${name}__${sport}` : name;
   const [url, setUrl] = useState<string | null>(cache.get(cacheKey) ?? null);
+  const [isVisible, setIsVisible] = useState(false);
+
+  // IntersectionObserver: defer fetching until card is near viewport
+  useEffect(() => {
+    if (!containerRef?.current) {
+      setIsVisible(true); // no ref = fetch immediately
+      return;
+    }
+    const el = containerRef.current;
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.disconnect();
+        }
+      },
+      { rootMargin: "200px" }
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, [containerRef]);
 
   useEffect(() => {
+    if (!isVisible) return;
     if (cache.has(cacheKey)) {
       setUrl(cache.get(cacheKey) ?? null);
       return;
@@ -95,7 +117,7 @@ export function useAthleteImage(name: string, sport?: string): string | null {
       });
 
     return () => { cancelled = true; };
-  }, [name, sport, cacheKey]);
+  }, [name, sport, cacheKey, isVisible]);
 
   return url;
 }
