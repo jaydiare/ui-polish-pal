@@ -20,84 +20,6 @@ async function fetchEspnHeadshot(name: string): Promise<string | null> {
   }
 }
 
-// ── Wikipedia fallback ──
-const SPORT_TO_WIKI: Record<string, string> = {
-  Baseball: "baseball",
-  Soccer: "footballer",
-  Football: "American football",
-  Basketball: "basketball",
-  Tennis: "tennis",
-  Golf: "golfer",
-  MMA: "mixed martial artist",
-  BMX: "cyclist",
-  Bowling: "bowler",
-};
-
-// Reject Wikipedia thumbnails that are clearly not athlete photos
-const BAD_IMAGE_PATTERNS = [
-  /map/i, /flag/i, /coat_of_arms/i, /escudo/i, /logo/i, /emblem/i,
-  /shield/i, /banner/i, /icon/i, /seal/i, /crest/i,
-  /\.svg/i, /provinces/i, /districts/i, /region/i, /municipality/i,
-  /commons-logo/i, /wiki.*logo/i,
-  /location/i, /locator/i, /admin.*map/i, /geo.*map/i,
-  /in_venezuela/i, /in_colombia/i, /in_south_america/i, /in_north_america/i,
-  /in_europe/i, /in_asia/i, /in_africa/i, /in_the_/i,
-  /state_of_/i, /estadio/i, /stadium/i, /arena\b/i, /ballpark/i,
-  /team_logo/i, /jersey/i, /uniform/i, /panorama/i, /skyline/i,
-  /city_hall/i, /plaza/i, /church/i, /cathedral/i, /monument/i,
-  /landscape/i, /aerial/i, /satellite/i,
-  /wikimedia/i, /wikidata/i, /question_book/i, /edit-clear/i,
-  /los_angeles_angels/i, /yankee.*stadium/i,
-];
-
-function isLikelyBadImage(url: string): boolean {
-  return BAD_IMAGE_PATTERNS.some((p) => p.test(url));
-}
-
-async function fetchImageByTitle(title: string): Promise<string | null> {
-  const q = encodeURIComponent(title);
-  const res = await fetch(
-    `https://en.wikipedia.org/w/api.php?action=query&titles=${q}&prop=pageimages&format=json&pithumbsize=200&origin=*`
-  );
-  const data = await res.json();
-  const pages = data?.query?.pages;
-  if (pages) {
-    const page = Object.values(pages)[0] as any;
-    const src = page?.thumbnail?.source;
-    if (src && !isLikelyBadImage(src)) return src;
-  }
-  return null;
-}
-
-async function searchAndFetchImage(query: string): Promise<string | null> {
-  const q = encodeURIComponent(query);
-  const searchRes = await fetch(
-    `https://en.wikipedia.org/w/api.php?action=query&list=search&srsearch=${q}&srlimit=1&format=json&origin=*`
-  );
-  const searchData = await searchRes.json();
-  const hit = searchData?.query?.search?.[0];
-  if (!hit?.title) return null;
-  return fetchImageByTitle(hit.title);
-}
-
-async function fetchWikiImage(name: string, sport?: string): Promise<string | null> {
-  const exact = await fetchImageByTitle(name);
-  if (exact) return exact;
-
-  if (sport) {
-    const wikiSuffix = SPORT_TO_WIKI[sport] || sport.toLowerCase();
-    const disambig = await fetchImageByTitle(`${name} (${wikiSuffix})`);
-    if (disambig) return disambig;
-  }
-
-  if (sport) {
-    const sportSearch = await searchAndFetchImage(`${name} ${sport}`);
-    if (sportSearch) return sportSearch;
-  }
-
-  return searchAndFetchImage(name);
-}
-
 // ── TheSportsDB fallback (free key "3" is public/publishable) ──
 const SPORT_TO_TSDB: Record<string, string[]> = {
   Baseball: ["Baseball"],
@@ -122,7 +44,6 @@ async function fetchSportsDbHeadshot(name: string, sport?: string): Promise<stri
     const players = data?.player;
     if (!Array.isArray(players) || players.length === 0) return null;
 
-    // If we know the sport, prefer a match by sport first
     if (sport) {
       const tsdbSports = SPORT_TO_TSDB[sport] || [sport];
       const sportMatch = players.find(
@@ -131,7 +52,6 @@ async function fetchSportsDbHeadshot(name: string, sport?: string): Promise<stri
       if (sportMatch) return sportMatch.strThumb || sportMatch.strCutout;
     }
 
-    // Fallback to first player with a thumbnail
     const withThumb = players.find((p: any) => p?.strThumb || p?.strCutout);
     return withThumb ? (withThumb.strThumb || withThumb.strCutout) : null;
   } catch {
@@ -139,20 +59,17 @@ async function fetchSportsDbHeadshot(name: string, sport?: string): Promise<stri
   }
 }
 
-// ── Main hook: ESPN → TheSportsDB → Wikipedia ──
+// ── Main hook: ESPN → TheSportsDB (Wikipedia removed to avoid CORS errors on published site) ──
 async function fetchAthleteImage(name: string, sport?: string): Promise<string | null> {
-  // Try ESPN headshot first for baseball players
   if (sport === "Baseball") {
     const espn = await fetchEspnHeadshot(name);
     if (espn) return espn;
   }
 
-  // Try TheSportsDB for all sports
   const tsdb = await fetchSportsDbHeadshot(name, sport);
   if (tsdb) return tsdb;
 
-  // Fallback to Wikipedia
-  return fetchWikiImage(name, sport);
+  return null;
 }
 
 export function useAthleteImage(name: string, sport?: string): string | null {
