@@ -84,6 +84,20 @@ const BlogPost = () => {
           />
         </div>
 
+        {/* Text sections (facts, predictions, etc.) */}
+        {post.textSections && post.textSections.length > 0 && (
+          <div className="max-w-3xl mb-10">
+            {post.textSections.map((ts, i) => (
+              <section key={i} className="mb-8">
+                <h2 className="text-xl font-display font-bold text-flag-gradient mb-3">{ts.heading}</h2>
+                {ts.paragraphs.map((p, j) => (
+                  <p key={j} className="text-muted-foreground text-sm leading-relaxed mb-3">{p}</p>
+                ))}
+              </section>
+            ))}
+          </div>
+        )}
+
         {post.type === "roster" && post.playerNames ? (
           <RosterSection playerNames={post.playerNames} excerpt={post.excerpt} />
         ) : (

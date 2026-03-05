@@ -12,6 +12,11 @@ export interface BlogSection {
   items: BlogSaleItem[];
 }
 
+export interface BlogTextSection {
+  heading: string;
+  paragraphs: string[];
+}
+
 export interface BlogPost {
   slug: string;
   title: string;
@@ -20,6 +25,7 @@ export interface BlogPost {
   author: string;
   coverImage: string;
   sections: BlogSection[];
+  textSections?: BlogTextSection[];
   type?: "ranked" | "roster";
   playerNames?: string[];
 }
