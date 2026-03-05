@@ -86,12 +86,12 @@ const BlogPost = () => {
 
         {/* Text sections (facts, predictions, etc.) */}
         {post.textSections && post.textSections.length > 0 && (
-          <div className="max-w-3xl mb-10">
+          <div className="max-w-3xl mb-12">
             {post.textSections.map((ts, i) => (
-              <section key={i} className="mb-8">
-                <h2 className="text-xl font-display font-bold text-flag-gradient mb-3">{ts.heading}</h2>
+              <section key={i} className="mb-10 glass-panel p-6 rounded-xl">
+                <h2 className="text-lg font-display font-bold text-flag-gradient mb-4">{ts.heading}</h2>
                 {ts.paragraphs.map((p, j) => (
-                  <p key={j} className="text-muted-foreground text-sm leading-relaxed mb-3">{p}</p>
+                  <p key={j} className="text-muted-foreground text-sm leading-7 text-justify mb-4 last:mb-0">{p}</p>
                 ))}
               </section>
             ))}
