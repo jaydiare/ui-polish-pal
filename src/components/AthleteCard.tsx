@@ -234,7 +234,7 @@ const AthleteCard = forwardRef<HTMLElement, AthleteCardProps>(({ athlete, byName
         <div className="mt-2 space-y-1 text-[10px] text-muted-foreground">
           {/* Raw meta line */}
           <div className="flex items-center gap-2 flex-wrap">
-            <span className="text-[9px] uppercase font-bold text-muted-foreground/60">Raw</span>
+            <span className="text-[9px] uppercase font-bold text-muted-foreground">Raw</span>
             <span className={`font-bold stability-${rawStability.bucket}`}>{rawStability.label}</span>
             {rawSoldAvg != null && (
               <>
@@ -251,7 +251,7 @@ const AthleteCard = forwardRef<HTMLElement, AthleteCardProps>(({ athlete, byName
           </div>
           {/* Graded meta line */}
           <div className="flex items-center gap-2 flex-wrap">
-            <span className="text-[9px] uppercase font-bold text-muted-foreground/60">Grd</span>
+            <span className="text-[9px] uppercase font-bold text-muted-foreground">Grd</span>
             <span className={`font-bold stability-${gradedStability.bucket}`}>{gradedStability.label}</span>
             {gradedSoldAvg != null && (
               <>

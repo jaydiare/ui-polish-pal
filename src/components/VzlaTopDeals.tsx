@@ -198,7 +198,7 @@ const VzlaTopDeals = ({ athleteSportMap: externalMap }: VzlaTopDealsProps) => {
                     <span className="font-mono font-bold text-green-400">+${deal.savings.toFixed(2)}</span>
                   </div>
                 </div>
-                <div className="text-[9px] text-muted-foreground/60 mt-2 text-center group-hover:text-primary/60 transition-colors">
+                <div className="text-[9px] text-muted-foreground mt-2 text-center group-hover:text-primary/60 transition-colors">
                   Click to buy on eBay ↗
                 </div>
               </motion.a>
