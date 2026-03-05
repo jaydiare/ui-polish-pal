@@ -3,6 +3,7 @@ import { Athlete, EbayAvgRecord } from "@/data/athletes";
 import { buildBudgetAthleteId } from "@/lib/budget-knapsack";
 import { SortOption } from "@/lib/vzla-helpers";
 import AthleteCard from "./AthleteCard";
+import { useHotSellers } from "@/hooks/useEpnPerformance";
 
 interface VzlaAthleteGridProps {
   athletes: Athlete[];
@@ -29,6 +30,8 @@ const SORT_OPTIONS: { value: SortOption; label: string }[] = [
 ];
 
 const VzlaAthleteGrid = ({ athletes, byName, byKey, gradedByName, gradedByKey, ebaySoldRaw, ebayGradedSoldRaw, athleteHistory, hasMore, remainingCount, onLoadMore, highlightedIds, sort, onSortChange, priceMode }: VzlaAthleteGridProps) => {
+  const hotSellers = useHotSellers();
+
   // If budget is active, filter to only highlighted cards
   const displayAthletes = highlightedIds && highlightedIds.size > 0
     ? athletes.filter((a) => highlightedIds.has(buildBudgetAthleteId(a.name, a.sport)))
@@ -72,6 +75,7 @@ const VzlaAthleteGrid = ({ athletes, byName, byKey, gradedByName, gradedByKey, e
               ebayGradedSoldRaw={ebayGradedSoldRaw}
               history={athleteHistory?.[a.name]}
               isRecommended={highlightedIds?.has(buildBudgetAthleteId(a.name, a.sport))}
+              isHotSeller={hotSellers.has(a.name)}
               priceMode={priceMode}
             />
           </motion.div>

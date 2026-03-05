@@ -1,0 +1,62 @@
+name: Fetch EPN performance data
+
+on:
+  schedule:
+    - cron: "0 6 * * *"
+  workflow_dispatch:
+
+concurrency:
+  group: epn-data-main
+  cancel-in-progress: true
+
+permissions:
+  contents: write
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install deps
+        if: hashFiles('package-lock.json') != ''
+        run: npm install --no-audit --no-fund
+
+      - name: Fetch EPN data
+        run: node scripts/fetch-epn-data.js
+        env:
+          EPN_ACCOUNT_SID: ${{ secrets.EPN_ACCOUNT_SID }}
+          EPN_AUTH_TOKEN: ${{ secrets.EPN_AUTH_TOKEN }}
+
+      - name: Copy to public
+        run: |
+          mkdir -p public/data
+          cp data/epn-performance.json public/data/epn-performance.json
+
+      - name: Commit & push (rebase-safe)
+        run: |
+          set -e
+
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          git add data/epn-performance.json public/data/epn-performance.json
+
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+            exit 0
+          fi
+
+          git commit -m "Update EPN performance data"
+
+          git fetch origin main
+          git rebase --autostash origin/main || (git rebase --abort && git pull --rebase origin main)
+
+          git push origin HEAD:main
