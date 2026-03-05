@@ -93,18 +93,19 @@ async function fetchTransactions(startDate, endDate) {
   }
 }
 
-// ── fetch action updates (conversions) ───────────────────────────────
+// ── fetch performance by day (clicks, impressions, earnings by customId) ─
 
-async function fetchActions(startDate, endDate) {
+async function fetchPerfByDay(startDate, endDate) {
+  const path =
+    `/Reports/ebay_partner_perf_by_day` +
+    `?CAMPAIGN_ID=0&START_DATE=${startDate}&END_DATE=${endDate}`;
   try {
-    const data = await epnGet(
-      `/ActionUpdates?ActionDateStart=${startDate}&ActionDateEnd=${endDate}`
-    );
+    const data = await epnGet(path);
     if (Array.isArray(data)) return data;
-    if (data?.actionUpdates) return data.actionUpdates;
+    if (data?.records) return data.records;
     return [];
   } catch (err) {
-    console.warn("Could not fetch action updates:", err.message);
+    console.warn("Could not fetch perf-by-day:", err.message);
     return [];
   }
 }
@@ -147,10 +148,10 @@ async function main() {
   const transactions = await fetchTransactions(startDate, endDate);
   console.log(`   Found ${transactions.length} transaction(s)`);
 
-  // 3. Fetch action updates (conversions)
-  console.log("\n🔹 Fetching action updates...");
-  const actions = await fetchActions(startDate, endDate);
-  console.log(`   Found ${actions.length} action update(s)`);
+  // 3. Fetch performance by day (clicks/impressions/earnings by customId)
+  console.log("\n🔹 Fetching performance by day...");
+  const perfRows = await fetchPerfByDay(startDate, endDate);
+  console.log(`   Found ${perfRows.length} perf row(s)`);
 
   // 4. Load athletes for matching
   const athletes = loadAthletes();
@@ -160,45 +161,36 @@ async function main() {
 
   const placementStats = {};
 
+  // Aggregate transaction-level data (item-level detail for hot-sellers)
   for (const txn of transactions) {
-    const customId = txn.customId || txn.custom_id || txn.customid || "unknown";
+    const customId = txn.customId || txn.custom_id || txn.customid || txn.CustomId || "unknown";
     if (!placementStats[customId]) {
       placementStats[customId] = { clicks: 0, impressions: 0, earnings: 0, conversions: 0, items: [] };
     }
     const stat = placementStats[customId];
 
-    // Count as a click event
-    stat.clicks += parseInt(txn.clicks || txn.quantity_clicks || "1", 10) || 1;
-    stat.impressions += parseInt(txn.impressions || txn.quantity_impressions || "0", 10) || 0;
-    stat.earnings += parseFloat(txn.earnings || txn.totalEarnings || txn.total_earnings || "0") || 0;
-
-    // Check if it was a sale/conversion
-    const status = (txn.status || txn.actionType || "").toLowerCase();
+    const status = (txn.status || txn.actionType || txn.Status || "").toLowerCase();
     if (status.includes("sale") || status.includes("won") || status.includes("paid")) {
       stat.conversions += 1;
     }
 
-    // Extract item title for hot-sellers matching
-    const itemTitle = txn.itemName || txn.item_name || txn.itemTitle || txn.item_title || "";
+    const itemTitle = txn.itemName || txn.item_name || txn.itemTitle || txn.item_title || txn.ItemName || "";
     if (itemTitle) {
       const matched = matchAthlete(itemTitle, athletes);
       if (matched) stat.items.push(matched);
     }
   }
 
-  // Also count actions as conversions
-  for (const action of actions) {
-    const customId = action.customId || action.custom_id || "unknown";
+  // Aggregate perf-by-day rows (clicks, impressions, earnings)
+  for (const row of perfRows) {
+    const customId = row.customId || row.custom_id || row.CustomId || "all";
     if (!placementStats[customId]) {
       placementStats[customId] = { clicks: 0, impressions: 0, earnings: 0, conversions: 0, items: [] };
     }
-    placementStats[customId].conversions += 1;
-
-    const itemTitle = action.itemName || action.item_name || "";
-    if (itemTitle) {
-      const matched = matchAthlete(itemTitle, athletes);
-      if (matched) placementStats[customId].items.push(matched);
-    }
+    const stat = placementStats[customId];
+    stat.clicks += parseInt(row.clicks || row.Clicks || "0", 10) || 0;
+    stat.impressions += parseInt(row.impressions || row.Impressions || "0", 10) || 0;
+    stat.earnings += parseFloat(row.earnings || row.Earnings || row.totalEarnings || "0") || 0;
   }
 
   // Calculate CTR per placement
