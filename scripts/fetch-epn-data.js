@@ -37,7 +37,10 @@ async function epnGet(path) {
 }
 
 function dateFmt(d) {
-  return d.toISOString().slice(0, 10); // YYYY-MM-DD
+  const mm = String(d.getMonth() + 1).padStart(2, "0");
+  const dd = String(d.getDate()).padStart(2, "0");
+  const yyyy = d.getFullYear();
+  return `${mm}/${dd}/${yyyy}`; // MM/DD/YYYY (EPN expected format)
 }
 
 // ── load athletes for name matching ──────────────────────────────────
