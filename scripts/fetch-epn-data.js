@@ -29,11 +29,18 @@ async function epnGet(path) {
   const res = await fetch(url, {
     headers: { Authorization: AUTH_HEADER, Accept: "application/json" },
   });
+  const text = await res.text();
   if (!res.ok) {
-    const text = await res.text();
     throw new Error(`EPN ${res.status}: ${text}`);
   }
-  return res.json();
+  // DEBUG: log first 500 chars of response to understand structure
+  console.log(`  📦 Response (${text.length} chars): ${text.slice(0, 500)}`);
+  try {
+    return JSON.parse(text);
+  } catch {
+    console.warn("  ⚠️ Response is not JSON");
+    return {};
+  }
 }
 
 function dateFmt(d) {
