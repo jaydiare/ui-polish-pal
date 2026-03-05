@@ -103,7 +103,7 @@ function normSpaces(s) {
 }
 
 function norm(s) {
-  return String(s || "").toLowerCase().trim();
+  return String(s || "").normalize("NFKD").replace(/[\u0300-\u036f]/g, "").toLowerCase().trim();
 }
 
 function safeNum(x) {
@@ -195,9 +195,9 @@ function hasAllowedBrand(title) {
 function titleLooksRelevantToPlayer(title, playerName) {
   const t = norm(title);
   const parts = norm(playerName).split(/\s+/).filter(Boolean);
-  const last = parts[parts.length - 1];
-  if (!last) return true;
-  return t.includes(last);
+  if (!parts.length) return true;
+  // Require ALL name parts (first + last) to appear in the title
+  return parts.every((part) => t.includes(part));
 }
 
 function isGradedTitle(title) {
