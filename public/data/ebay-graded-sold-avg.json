@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-05T18:25:06.820Z",
+    "updatedAt": "2026-03-05T19:40:00.508Z",
     "source": "eBay public sold listings — GRADED ONLY (HTML scrape, LH_Sold=1)",
     "note": "GRADED sold comps only (PSA, BGS, SGC, etc.). Scraped in batches of 10. Brand-filtered. Junk titles removed. Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA.",
     "batchInfo": {
-      "startIdx": 550,
-      "endIdx": 560,
+      "startIdx": 560,
+      "endIdx": 568,
       "totalAthletes": 568
     },
     "maxPages": 3,
@@ -6756,6 +6756,102 @@
     "taguchiSold": null,
     "medianSold": null,
     "marketStabilityCV": null,
+    "currency": "USD",
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
+  },
+  "Luis Balbo": {
+    "keyword": "Luis Balbo Soccer",
+    "nScraped": 60,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
+    "currency": "USD",
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
+  },
+  "Luis Morales": {
+    "keyword": "Luis Morales Soccer",
+    "nScraped": 60,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
+    "currency": "USD",
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
+  },
+  "Manuel Arteaga": {
+    "keyword": "Manuel Arteaga Soccer",
+    "nScraped": 42,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
+    "currency": "USD",
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
+  },
+  "Yeferson Soteldo": {
+    "keyword": "Yeferson Soteldo Soccer",
+    "nScraped": 16,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
+    "currency": "USD",
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
+  },
+  "Yordan Osorio": {
+    "keyword": "Yordan Osorio Soccer",
+    "nScraped": 63,
+    "nSoldUsed": 12,
+    "avg": 39.12,
+    "taguchiSold": 39.12,
+    "medianSold": 39.12,
+    "marketStabilityCV": 0.9576940980262089,
+    "currency": "USD",
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
+  },
+  "Nahuel Ferraresi": {
+    "keyword": "Nahuel Ferraresi Soccer",
+    "nScraped": 60,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
+    "currency": "USD",
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
+  },
+  "Daniele Quieto": {
+    "keyword": "Daniele Quieto Soccer",
+    "nScraped": 36,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
+    "currency": "USD",
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
+  },
+  "Garbine Muguruza": {
+    "keyword": "Garbine Muguruza Tennis",
+    "nScraped": 180,
+    "nSoldUsed": 9,
+    "avg": 14.599999999999998,
+    "taguchiSold": 14.599999999999998,
+    "medianSold": 14.6,
+    "marketStabilityCV": 1.290486952342829e-16,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
