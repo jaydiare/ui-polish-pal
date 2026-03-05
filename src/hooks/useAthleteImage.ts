@@ -99,7 +99,19 @@ async function fetchWikiImage(name: string, sport?: string): Promise<string | nu
 }
 
 // ── TheSportsDB fallback (free key "3" is public/publishable) ──
-async function fetchSportsDbHeadshot(name: string): Promise<string | null> {
+const SPORT_TO_TSDB: Record<string, string[]> = {
+  Baseball: ["Baseball"],
+  Soccer: ["Soccer"],
+  Football: ["American Football"],
+  Basketball: ["Basketball"],
+  Tennis: ["Tennis"],
+  Golf: ["Golf"],
+  MMA: ["Fighting"],
+  BMX: ["Cycling", "Motorsport"],
+  Bowling: ["Bowling"],
+};
+
+async function fetchSportsDbHeadshot(name: string, sport?: string): Promise<string | null> {
   try {
     const q = encodeURIComponent(name);
     const res = await fetch(
@@ -107,10 +119,21 @@ async function fetchSportsDbHeadshot(name: string): Promise<string | null> {
     );
     if (!res.ok) return null;
     const data = await res.json();
-    const player = data?.player?.[0];
-    const thumb = player?.strThumb || player?.strCutout || null;
-    if (!thumb) return null;
-    return thumb;
+    const players = data?.player;
+    if (!Array.isArray(players) || players.length === 0) return null;
+
+    // If we know the sport, prefer a match by sport first
+    if (sport) {
+      const tsdbSports = SPORT_TO_TSDB[sport] || [sport];
+      const sportMatch = players.find(
+        (p: any) => tsdbSports.some((s) => p?.strSport?.toLowerCase() === s.toLowerCase()) && (p?.strThumb || p?.strCutout)
+      );
+      if (sportMatch) return sportMatch.strThumb || sportMatch.strCutout;
+    }
+
+    // Fallback to first player with a thumbnail
+    const withThumb = players.find((p: any) => p?.strThumb || p?.strCutout);
+    return withThumb ? (withThumb.strThumb || withThumb.strCutout) : null;
   } catch {
     return null;
   }
@@ -125,7 +148,7 @@ async function fetchAthleteImage(name: string, sport?: string): Promise<string |
   }
 
   // Try TheSportsDB for all sports
-  const tsdb = await fetchSportsDbHeadshot(name);
+  const tsdb = await fetchSportsDbHeadshot(name, sport);
   if (tsdb) return tsdb;
 
   // Fallback to Wikipedia
