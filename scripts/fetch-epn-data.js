@@ -37,10 +37,7 @@ async function epnGet(path) {
 }
 
 function dateFmt(d) {
-  const mm = String(d.getMonth() + 1).padStart(2, "0");
-  const dd = String(d.getDate()).padStart(2, "0");
-  const yyyy = d.getFullYear();
-  return `${mm}/${dd}/${yyyy}`; // MM/DD/YYYY (EPN expected format)
+  return d.toISOString().slice(0, 10); // YYYY-MM-DD (EPN expected format)
 }
 
 // ── load athletes for name matching ──────────────────────────────────
@@ -77,7 +74,7 @@ function matchAthlete(itemTitle, athletes) {
 async function fetchTransactions(startDate, endDate) {
   const path =
     `/Reports/ebay_partner_transaction_detail` +
-    `?STATUS=ALL&StartDate=${startDate}&EndDate=${endDate}&date_type=event_date`;
+    `?STATUS=ALL&START_DATE=${startDate}&END_DATE=${endDate}&date_type=event_date`;
 
   try {
     const data = await epnGet(path);
@@ -97,7 +94,7 @@ async function fetchTransactions(startDate, endDate) {
 async function fetchActions(startDate, endDate) {
   try {
     const data = await epnGet(
-      `/ActionUpdates?StartDate=${startDate}&EndDate=${endDate}`
+      `/ActionUpdates?START_DATE=${startDate}&END_DATE=${endDate}`
     );
     if (Array.isArray(data)) return data;
     if (data?.actionUpdates) return data.actionUpdates;
