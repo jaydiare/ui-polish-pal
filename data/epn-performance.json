@@ -1,13 +1,23 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-05T21:05:19.748Z",
+    "updatedAt": "2026-03-05T21:08:39.215Z",
     "period": {
       "start": "2026-02-03",
       "end": "2026-03-05"
     }
   },
-  "placements": {},
+  "placements": {
+    "unknown": {
+      "clicks": 0,
+      "impressions": 0,
+      "ctr": 0,
+      "earnings": 0,
+      "conversions": 0
+    }
+  },
   "bestBanner": null,
   "hotSellers": [],
-  "campaigns": []
+  "campaigns": [
+    {}
+  ]
 }
