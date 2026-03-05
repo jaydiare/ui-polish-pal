@@ -10,11 +10,11 @@
 
 import fs from "fs";
 
-const SID = process.env.EPN_ACCOUNT_SID;
+const SID = process.env.EPN_SID;
 const TOKEN = process.env.EPN_AUTH_TOKEN;
 
 if (!SID || !TOKEN) {
-  console.error("Missing EPN_ACCOUNT_SID or EPN_AUTH_TOKEN");
+  console.error("Missing EPN_SID or EPN_AUTH_TOKEN");
   process.exit(1);
 }
 
