@@ -98,7 +98,7 @@ async function fetchTransactions(startDate, endDate) {
 async function fetchActions(startDate, endDate) {
   try {
     const data = await epnGet(
-      `/ActionUpdates?START_DATE=${startDate}&END_DATE=${endDate}`
+      `/ActionUpdates?ActionDateStart=${startDate}&ActionDateEnd=${endDate}`
     );
     if (Array.isArray(data)) return data;
     if (data?.actionUpdates) return data.actionUpdates;
