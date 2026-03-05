@@ -57,6 +57,12 @@ jobs:
           git commit -m "Update EPN performance data"
 
           git fetch origin main
-          git rebase --autostash origin/main || (git rebase --abort && git pull --rebase origin main)
+
+          if ! git rebase --autostash origin/main; then
+            echo "Rebase conflict detected, resolving generated EPN files by keeping latest run output"
+            git checkout --theirs data/epn-performance.json public/data/epn-performance.json || true
+            git add data/epn-performance.json public/data/epn-performance.json
+            git rebase --continue || (git rebase --abort && exit 1)
+          fi
 
           git push origin HEAD:main
