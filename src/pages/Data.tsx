@@ -961,8 +961,8 @@ const Data = () => {
               </div>
             </section>
 
-            {/* ── Most Watched on eBay ── */}
-            <MostWatchedChart />
+            {/* ── Most Listed on eBay ── */}
+            <MostListedChart listedData={listedData} gradedListedData={gradedListedData} athleteSportMap={athleteSportMap} />
 
             {/* ── Gemrate Grading Data ── */}
             <GemrateChart />
@@ -976,50 +976,85 @@ const Data = () => {
   );
 };
 
-/* ── Most Watched on eBay ── */
-const WATCHED_COLOR = "hsl(45, 93%, 47%)";
+/* ── Most Listed on eBay ── */
+const LISTED_COLOR = "hsl(45, 93%, 47%)";
 
-const MostWatchedChart = () => {
-  const [watchedData, setWatchedData] = useState<any>(null);
-
-  useEffect(() => {
-    (async () => {
-      let d = await fetchJson("https://raw.githubusercontent.com/jaydiare/ui-polish-pal/main/data/ebay-most-watched.json");
-      if (!d || !d.top10) d = await fetchJson("data/ebay-most-watched.json");
-      if (d && d.top10) setWatchedData(d);
-    })();
-  }, []);
+const MostListedChart = ({ listedData, gradedListedData, athleteSportMap }: {
+  listedData: Record<string, any>;
+  gradedListedData: Record<string, any>;
+  athleteSportMap: Record<string, string>;
+}) => {
+  const [listMode, setListMode] = useState<CardMode>("raw");
 
   const top10 = useMemo(() => {
-    if (!watchedData?.top10) return [];
-    return watchedData.top10.map((a: any) => ({
-      name: a.name,
-      sport: a.sport,
-      watchCount: a.watchCount,
-      topItemUrl: a.topItem?.viewUrl || null,
-    }));
-  }, [watchedData]);
+    const src = listMode === "graded" ? gradedListedData : listedData;
+    if (!src || typeof src !== "object") return [];
 
-  const isEmpty = !watchedData || top10.length === 0;
-  const updatedAt = watchedData?._meta?.updatedAt
-    ? new Date(watchedData._meta.updatedAt).toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" })
+    const entries: { name: string; sport: string; listings: number; avgPrice: number | null }[] = [];
+    for (const [name, rec] of Object.entries(src)) {
+      if (name === "_meta" || !rec) continue;
+      const r = rec as any;
+      const n = r.nListing ?? r.n ?? 0;
+      if (n <= 0) continue;
+      const normKey = name.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().trim();
+      const sport = athleteSportMap[name] || athleteSportMap[normKey] || "Other";
+      const avgPrice = r.taguchiListing ?? r.avgListing ?? r.avg ?? null;
+      entries.push({ name, sport, listings: n, avgPrice });
+    }
+
+    // If "both" mode, merge raw + graded listing counts
+    if (listMode === "both") {
+      const mergedMap = new Map<string, { name: string; sport: string; listings: number; avgPrice: number | null }>();
+      for (const src of [listedData, gradedListedData]) {
+        if (!src) continue;
+        for (const [name, rec] of Object.entries(src)) {
+          if (name === "_meta" || !rec) continue;
+          const r = rec as any;
+          const n = r.nListing ?? r.n ?? 0;
+          if (n <= 0) continue;
+          const normKey = name.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().trim();
+          const sport = athleteSportMap[name] || athleteSportMap[normKey] || "Other";
+          const existing = mergedMap.get(name);
+          if (existing) {
+            existing.listings += n;
+          } else {
+            const avgPrice = r.taguchiListing ?? r.avgListing ?? r.avg ?? null;
+            mergedMap.set(name, { name, sport, listings: n, avgPrice });
+          }
+        }
+      }
+      return [...mergedMap.values()]
+        .sort((a, b) => b.listings - a.listings)
+        .slice(0, 10);
+    }
+
+    return entries.sort((a, b) => b.listings - a.listings).slice(0, 10);
+  }, [listedData, gradedListedData, athleteSportMap, listMode]);
+
+  const isEmpty = top10.length === 0;
+  const updatedAt = (listMode === "graded" ? gradedListedData : listedData)?._meta?.updatedAt;
+  const formattedDate = updatedAt
+    ? new Date(updatedAt).toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" })
     : null;
 
   return (
-    <section className="my-8" aria-label="Most watched athletes on eBay">
-      <h2 className="font-display font-bold text-lg text-foreground mb-1 flex items-center gap-2">
-        <span className="w-1 h-5 rounded-full bg-vzla-yellow inline-block" />
-        👁️ Most Watched – Top 10
-      </h2>
+    <section className="my-8" aria-label="Most listed athletes on eBay">
+      <div className="flex items-center justify-between mb-1">
+        <h2 className="font-display font-bold text-lg text-foreground flex items-center gap-2">
+          <span className="w-1 h-5 rounded-full bg-vzla-yellow inline-block" />
+          📦 Most Listed – Top 10
+        </h2>
+        <ModeToggle value={listMode} onChange={setListMode} />
+      </div>
       <p className="text-xs text-muted-foreground mb-4 ml-3">
-        Venezuelan athletes with the most watchers on eBay trading cards.
-        {updatedAt && <span className="ml-1 opacity-70">Updated {updatedAt}.</span>}
+        Athletes with the most active {listMode === "graded" ? "graded" : listMode === "both" ? "total" : "raw"} eBay listings.
+        {formattedDate && <span className="ml-1 opacity-70">Updated {formattedDate}.</span>}
       </p>
       <div className="glass-panel p-4 md:p-6">
         {isEmpty ? (
           <div className="py-12 text-center">
-            <div className="text-3xl mb-3">👁️</div>
-            <p className="text-sm text-muted-foreground">Most watched data will appear here after the weekly sync runs.</p>
+            <div className="text-3xl mb-3">📦</div>
+            <p className="text-sm text-muted-foreground">No listing data available yet.</p>
           </div>
         ) : (
           <div className="w-full h-[450px] md:h-[550px]">
@@ -1029,7 +1064,7 @@ const MostWatchedChart = () => {
                 <XAxis
                   type="number"
                   tick={{ fill: "hsl(var(--muted-foreground))", fontSize: 10 }}
-                  label={{ value: "Total Watchers", position: "insideBottom", offset: -5, style: { fill: "hsl(var(--muted-foreground))", fontSize: 11 } }}
+                  label={{ value: "Active Listings", position: "insideBottom", offset: -5, style: { fill: "hsl(var(--muted-foreground))", fontSize: 11 } }}
                 />
                 <YAxis type="category" dataKey="name" width={150} tick={{ fill: "hsl(var(--muted-foreground))", fontSize: 11 }} />
                 <Tooltip
@@ -1041,16 +1076,18 @@ const MostWatchedChart = () => {
                       <div className="rounded-xl border border-border/50 bg-background/95 backdrop-blur-lg p-3 text-xs shadow-2xl">
                         <div className="font-display font-bold text-foreground mb-1">{d.name}</div>
                         <div className="text-muted-foreground text-[10px] mb-1.5">{d.sport}</div>
-                        <span className="text-muted-foreground">Watchers: <strong className="text-foreground">{d.watchCount.toLocaleString()}</strong></span>
+                        <span className="text-muted-foreground">Listings: <strong className="text-foreground">{d.listings.toLocaleString()}</strong></span>
+                        {d.avgPrice != null && (
+                          <div className="text-muted-foreground mt-1">Avg Price: <strong className="text-foreground">${d.avgPrice.toFixed(2)}</strong></div>
+                        )}
                         <div className="text-[9px] text-muted-foreground/60 mt-1.5">Click bar to search on eBay</div>
                       </div>
                     );
                   }}
                 />
-                <Bar dataKey="watchCount" name="Watchers" fill={WATCHED_COLOR} radius={[0, 4, 4, 0]} isAnimationActive={false} cursor="pointer"
+                <Bar dataKey="listings" name="Listings" fill={LISTED_COLOR} radius={[0, 4, 4, 0]} isAnimationActive={false} cursor="pointer"
                   onClick={(data: any) => {
-                    if (data?.topItemUrl) window.open(data.topItemUrl, "_blank", "noopener,noreferrer");
-                    else if (data?.name) window.open(buildEbaySearchUrl(data.name, data.sport), "_blank", "noopener,noreferrer");
+                    if (data?.name) window.open(buildEbaySearchUrl(data.name, data.sport), "_blank", "noopener,noreferrer");
                   }}
                 />
               </BarChart>
@@ -1058,7 +1095,7 @@ const MostWatchedChart = () => {
           </div>
         )}
         <p className="text-[9px] text-muted-foreground/60 text-center mt-3">
-          Data from eBay Merchandising API. Updated weekly.
+          Based on active eBay listings. Updated daily.
         </p>
       </div>
     </section>
