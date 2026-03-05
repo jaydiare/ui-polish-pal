@@ -37,7 +37,14 @@ async function epnGet(path) {
 }
 
 function dateFmt(d) {
-  return d.toISOString().slice(0, 10); // YYYY-MM-DD (EPN expected format)
+  const mm = String(d.getMonth() + 1).padStart(2, "0");
+  const dd = String(d.getDate()).padStart(2, "0");
+  const yyyy = d.getFullYear();
+  return `${mm}/${dd}/${yyyy}`; // MM/DD/YYYY (EPN expected format)
+}
+
+function isoDateFmt(d) {
+  return d.toISOString().slice(0, 10); // YYYY-MM-DD (for stored metadata)
 }
 
 // ── load athletes for name matching ──────────────────────────────────
@@ -128,8 +135,10 @@ async function main() {
 
   const startDate = dateFmt(start30);
   const endDate = dateFmt(now);
+  const startDateIso = isoDateFmt(start30);
+  const endDateIso = isoDateFmt(now);
 
-  console.log(`\n📊 EPN Data Fetch: ${startDate} to ${endDate}`);
+  console.log(`\n📊 EPN Data Fetch: ${startDateIso} to ${endDateIso}`);
 
   // 1. Fetch campaigns
   console.log("\n🔹 Fetching campaigns...");
@@ -240,7 +249,7 @@ async function main() {
   const output = {
     _meta: {
       updatedAt: now.toISOString(),
-      period: { start: startDate, end: endDate },
+      period: { start: startDateIso, end: endDateIso },
     },
     placements,
     bestBanner,
