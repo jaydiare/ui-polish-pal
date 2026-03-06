@@ -303,8 +303,12 @@ function isGradedListing(item) {
 
   if (cond.includes("graded")) return true;
 
-  const graderHints = ["psa", "sgc", "gem mint", "gm mt", "9.5", "10"];
-  return graderHints.some((k) => title.includes(k));
+  // Avoid false positives from plain "10" in titles (e.g. "lot of 10", card #10)
+  // by requiring grading-company context.
+  const graderWithGrade = /\b(psa|sgc|bgs|cgc|hga|isa|csa|beckett|bcg)\b[^\n]{0,14}\b(10|9\.5|9|8\.5|8|gem mint|mint|pristine|black label|gold label)\b/i;
+  const slabOnly = /\b(gem mint|pristine|black label|gold label)\b/i;
+
+  return graderWithGrade.test(title) || slabOnly.test(title);
 }
 
 // ✅ NEW: listing “age” (days on market) for ACTIVE listings
