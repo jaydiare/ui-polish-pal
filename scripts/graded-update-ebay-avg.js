@@ -679,6 +679,7 @@ function loadAthletes() {
     .map((x) => ({
       name: normSpaces(x?.name),
       sport: normSpaces(x?.sport),
+      searchKeyword: x?.searchKeyword ? normSpaces(x.searchKeyword) : undefined,
     }))
     .filter((x) => x.name);
 }
@@ -760,14 +761,15 @@ async function main() {
   let errorCount = 0;
 
   for (let i = 0; i < athletes.length; i++) {
-    const { name, sport } = athletes[i];
-    console.log(`[${i + 1}/${athletes.length}] ${name} (${sport || "Unknown"})`);
+    const { name, sport, searchKeyword } = athletes[i];
+    console.log(`[${i + 1}/${athletes.length}] ${name} (${sport || "Unknown"})${searchKeyword ? ` [searchKeyword: ${searchKeyword}]` : ""}`);
+    const queryName = searchKeyword || name;
 
     try {
       let match = null;
 
       for (const marketplaceId of ["EBAY_CA", "EBAY_US"]) {
-        const v = await validatePlayerAthleteMatch({ token, marketplaceId, name, sport });
+        const v = await validatePlayerAthleteMatch({ token, marketplaceId, name: queryName, sport });
         if (v.ok) {
           match = { mode: "player", value: v.aspectValue, validatedOn: marketplaceId };
           break;
@@ -776,7 +778,7 @@ async function main() {
 
       if (!match) {
         for (const marketplaceId of ["EBAY_CA", "EBAY_US"]) {
-          const s = await validateSportMatch({ token, marketplaceId, name, sport });
+          const s = await validateSportMatch({ token, marketplaceId, name: queryName, sport });
           if (s.ok) {
             match = { mode: "sport", value: s.sportAspectValue, validatedOn: marketplaceId };
             break;
@@ -807,7 +809,7 @@ async function main() {
           const listing = await computeAvgActiveListing({
             token,
             marketplaceId,
-            name,
+            name: queryName,
             sport,
             aspectMode: match.mode,
             aspectValue: match.value,
