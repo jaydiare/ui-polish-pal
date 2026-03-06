@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-06T22:42:48.618Z",
+    "updatedAt": "2026-03-06T22:45:30.978Z",
     "source": "eBay public sold listings — GRADED ONLY (HTML scrape, LH_Sold=1)",
     "note": "GRADED sold comps only (PSA, BGS, SGC, etc.). Scraped in batches of 10. No brand filter. Junk titles removed. Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA.",
     "batchInfo": {
-      "startIdx": 120,
-      "endIdx": 130,
+      "startIdx": 130,
+      "endIdx": 140,
       "totalAthletes": 568
     },
     "maxPages": 3,
@@ -1577,7 +1577,7 @@
   },
   "Edwin Bellorin": {
     "keyword": "Edwin Bellorin Baseball",
-    "nScraped": 0,
+    "nScraped": 60,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -1637,15 +1637,14 @@
   },
   "Eider Torres": {
     "keyword": "Eider Torres Baseball",
-    "nScraped": 60,
+    "nScraped": 0,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "error": "fetch failed"
   },
   "Elias Diaz": {
     "keyword": "Elias Diaz Baseball",
@@ -1685,7 +1684,7 @@
   },
   "Elio Chacon": {
     "keyword": "Elio Chacon Baseball",
-    "nScraped": 187,
+    "nScraped": 186,
     "nSoldUsed": 6,
     "avg": 708.38,
     "taguchiSold": 708.38,
