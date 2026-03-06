@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-06T13:46:36.625Z",
+    "updatedAt": "2026-03-06T16:57:00.034Z",
     "minSampleSize": 4,
     "marketplaces": [
       "EBAY_US"
@@ -589,7 +589,8 @@
       "Yeferson Soteldo": 3.9208276670930076,
       "Yordan Osorio": 2.4545521184577055,
       "Nahuel Ferraresi": 2.4047838004735813,
-      "Garbine Muguruza": 14.677955334017502
+      "Garbine Muguruza": 14.677955334017502,
+      "Carlos Guzman": 13.99
     },
     "indexHistory": [
       {
@@ -629,10 +630,8 @@
       },
       {
         "date": "2026-03-06",
-        "Baseball": 842.3,
-        "Soccer": 711.1,
-        "Basketball": 512.6,
-        "All": 831.3
+        "Baseball": 100,
+        "All": 100
       }
     ]
   },
@@ -18299,5 +18298,37 @@
     "currency": "USD",
     "basePriceUSD": 14.677955334017502,
     "indexLevel": null
+  },
+  "Carlos Guzman": {
+    "match": {
+      "mode": "player",
+      "value": "Carlos Guzman",
+      "validatedOn": "EBAY_CA"
+    },
+    "marketplaces": {
+      "EBAY_US": {
+        "aspectMode": "player",
+        "aspectValue": "Carlos Guzman",
+        "avgListing": 13.99,
+        "taguchiListing": 13.99,
+        "marketStabilityCV": 0,
+        "avgDaysOnMarket": 1771.0278919405864,
+        "nListing": 3,
+        "nDaysOnMarket": 3,
+        "currency": "USD",
+        "originalCurrency": "USD",
+        "fxRateUsed": 1
+      }
+    },
+    "avg": 13.99,
+    "n": 3,
+    "avgListing": 13.99,
+    "taguchiListing": 13.99,
+    "marketStabilityCV": 0,
+    "avgDaysOnMarket": 1771.0278919405864,
+    "nListing": 3,
+    "currency": "USD",
+    "basePriceUSD": 13.99,
+    "indexLevel": 100
   }
 }
