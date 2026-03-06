@@ -25,6 +25,7 @@ const Index = () => {
     ebayAvgRaw,
     ebaySoldRaw,
     ebayGradedSoldRaw,
+    gemratePopMap,
     athleteHistory,
     indexHistory,
     lastUpdated,
@@ -85,6 +86,7 @@ const Index = () => {
             ebaySoldRaw={ebaySoldRaw}
             ebayGradedSoldRaw={ebayGradedSoldRaw}
             athleteHistory={athleteHistory}
+            gemratePopMap={gemratePopMap}
             hasMore={budgetChosenIds.size > 0 ? false : hasMore}
             remainingCount={remainingCount}
             onLoadMore={loadMore}
