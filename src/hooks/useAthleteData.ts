@@ -26,6 +26,54 @@ async function fetchJson(path: string) {
   }
 }
 
+const normalizeDataKey = (s: string) =>
+  String(s || "")
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .replace(/[.\-']/g, "")
+    .replace(/\s+/g, " ")
+    .toLowerCase()
+    .trim();
+
+function enrichWithBasePrices(data: EbayAvgData | null): EbayAvgData | null {
+  if (!data || typeof data !== "object") return data;
+
+  const basePrices = (data as any)?._meta?.basePrices as Record<string, unknown> | undefined;
+  if (!basePrices || typeof basePrices !== "object") return data;
+
+  const normalizedToKey = new Map<string, string>();
+  for (const key of Object.keys(data)) {
+    if (key === "_meta") continue;
+    normalizedToKey.set(normalizeDataKey(key), key);
+  }
+
+  const merged: EbayAvgData = { ...data };
+
+  for (const [name, rawPrice] of Object.entries(basePrices)) {
+    const price = Number(rawPrice);
+    if (!Number.isFinite(price) || price <= 0) continue;
+
+    const existingKey = normalizedToKey.get(normalizeDataKey(name)) ?? name;
+    const current = ((merged as any)[existingKey] && typeof (merged as any)[existingKey] === "object"
+      ? { ...(merged as any)[existingKey] }
+      : {}) as Record<string, any>;
+
+    const currentPrice = Number(
+      current.avgListing ?? current.taguchiListing ?? current.trimmedListing ?? current.avg ?? current.average
+    );
+
+    if (!Number.isFinite(currentPrice) || currentPrice <= 0) {
+      current.avgListing = price;
+      current.taguchiListing = price;
+      current.avg = price;
+      current.average = price;
+      (merged as any)[existingKey] = current;
+    }
+  }
+
+  return merged;
+}
+
 export function useAthleteData() {
   const [athletes, setAthletes] = useState<Athlete[]>(athleteDataRaw);
   const [ebayAvgRaw, setEbayAvgRaw] = useState<EbayAvgData>({});
@@ -63,14 +111,17 @@ export function useAthleteData() {
         fetchJson("https://raw.githubusercontent.com/jaydiare/ui-polish-pal/main/data/index-history.json"),
       ]);
 
+      const patchedEbay = enrichWithBasePrices(fetchedEbay as EbayAvgData | null);
+      const patchedGraded = enrichWithBasePrices(fetchedGraded as EbayAvgData | null);
+
       if (fetchedAthletes) {
         setAthletes(mergeByNameSportKeepBest(athleteDataRaw, fetchedAthletes));
       }
-      if (fetchedEbay && typeof fetchedEbay === "object") {
-        setEbayAvgRaw(fetchedEbay);
+      if (patchedEbay && typeof patchedEbay === "object") {
+        setEbayAvgRaw(patchedEbay);
       }
-      if (fetchedGraded && typeof fetchedGraded === "object") {
-        setEbayGradedRaw(fetchedGraded);
+      if (patchedGraded && typeof patchedGraded === "object") {
+        setEbayGradedRaw(patchedGraded);
       }
       if (fetchedSold && typeof fetchedSold === "object") {
         setEbaySoldRaw(fetchedSold);
