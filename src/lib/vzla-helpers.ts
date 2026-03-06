@@ -11,7 +11,7 @@ function normKey(s: string | undefined | null): string {
 
 // Strip accents/diacritics for robust matching
 function normalizeName(s: string): string {
-  return s.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().trim();
+  return s.normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/[.\-']/g, "").replace(/\s+/g, " ").toLowerCase().trim();
 }
 
 function makeNameSportKey(name: string | undefined, sport: string | undefined): string {
