@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import SEOHead from "@/components/SEOHead";
+import WbcPolymarketOdds from "@/components/WbcPolymarketOdds";
 import SocialShare from "@/components/SocialShare";
 import VzlaNavbar from "@/components/VzlaNavbar";
 import VzlaFooter from "@/components/VzlaFooter";
@@ -114,6 +115,7 @@ const BlogPost = () => {
                 ))}
               </section>
             ))}
+            {post.slug === "venezuelan-wbc-2026-roster" && <WbcPolymarketOdds />}
           </div>
         )}
 
