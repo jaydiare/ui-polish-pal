@@ -1,13 +1,13 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-06T10:31:15.158457+00:00",
+    "updatedAt": "2026-03-06T12:41:07.529607+00:00",
     "athleteCount": 450,
     "graders": [
       "PSA"
     ],
     "batchInfo": {
-      "startIdx": 140,
-      "endIdx": 160,
+      "startIdx": 160,
+      "endIdx": 180,
       "totalAthletes": 568
     }
   },
@@ -2286,15 +2286,15 @@
       "graders": {
         "PSA": {
           "cards": 1885,
-          "gems": 8603,
-          "grades": 15145,
+          "gems": 8604,
+          "grades": 15148,
           "gemRate": 57.0
         }
       },
       "totals": {
         "cards": 1885,
-        "gems": 8603,
-        "grades": 15145,
+        "gems": 8604,
+        "grades": 15148,
         "gemRate": 57.0
       }
     },
@@ -2502,16 +2502,16 @@
       "graders": {
         "PSA": {
           "cards": 129,
-          "gems": 387,
-          "grades": 1463,
-          "gemRate": 26.0
+          "gems": 388,
+          "grades": 1464,
+          "gemRate": 27.0
         }
       },
       "totals": {
         "cards": 129,
-        "gems": 387,
-        "grades": 1463,
-        "gemRate": 26.0
+        "gems": 388,
+        "grades": 1464,
+        "gemRate": 27.0
       }
     },
     "Gabriel Arias": {
