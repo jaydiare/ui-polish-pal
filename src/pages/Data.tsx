@@ -1224,7 +1224,7 @@ const GemrateChart = () => {
   );
 };
 
-/* ── PSA Pop vs Graded Sold Scatter ── */
+/* ── PSA Pop vs Graded Sold Bubble Chart ── */
 const PSAPopVsSoldChart = ({ gradedSoldData, athleteSportMap }: {
   gradedSoldData: Record<string, any>;
   athleteSportMap: Record<string, string>;
@@ -1239,30 +1239,31 @@ const PSAPopVsSoldChart = ({ gradedSoldData, athleteSportMap }: {
     })();
   }, []);
 
-  const scatterData = useMemo(() => {
+  const bubbleData = useMemo(() => {
     if (!gemrateData?.athletes) return [];
-    const items: { name: string; sport: string; psaPop: number; soldCount: number; avgSold: number | null }[] = [];
+    const items: { name: string; sport: string; psaPop: number; soldCount: number; avgSold: number; z: number }[] = [];
 
     for (const [, athlete] of Object.entries(gemrateData.athletes)) {
       const psaPop = athlete.graders?.PSA?.grades ?? athlete.totals?.grades ?? 0;
       if (psaPop <= 0) continue;
 
-      // Find matching sold data
       const soldRec = gradedSoldData[athlete.name] as any;
       const soldCount = soldRec?.nScraped ?? soldRec?.nSoldUsed ?? 0;
       if (soldCount <= 0) continue;
 
       const avgSold = soldRec?.taguchiSold ?? soldRec?.avg ?? null;
+      if (avgSold == null || !Number.isFinite(avgSold) || avgSold <= 0) continue;
+
       const normKey = athlete.name.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().trim();
       const sport = athleteSportMap[athlete.name] || athleteSportMap[normKey] || athlete.sport || "Other";
 
-      items.push({ name: athlete.name, sport, psaPop, soldCount, avgSold: avgSold != null && Number.isFinite(avgSold) ? Math.round(avgSold * 100) / 100 : null });
+      items.push({ name: athlete.name, sport, psaPop, soldCount, avgSold: Math.round(avgSold * 100) / 100, z: avgSold });
     }
 
     return items;
   }, [gemrateData, gradedSoldData, athleteSportMap]);
 
-  const [pinnedDot, setPinnedDot] = useState<{ name: string; sport: string; psaPop: number; soldCount: number; avgSold: number | null; cx: number; cy: number } | null>(null);
+  const [pinnedDot, setPinnedDot] = useState<{ name: string; sport: string; psaPop: number; soldCount: number; avgSold: number; cx: number; cy: number } | null>(null);
   const wrapRef = useRef<HTMLDivElement>(null);
 
   const handleClick = useCallback((state: any) => {
@@ -1274,7 +1275,6 @@ const PSAPopVsSoldChart = ({ gradedSoldData, athleteSportMap }: {
 
   const closePinned = useCallback(() => setPinnedDot(null), []);
 
-  // Close pinned on outside click
   useEffect(() => {
     if (!pinnedDot) return;
     const handler = (e: MouseEvent | TouchEvent) => {
@@ -1285,32 +1285,40 @@ const PSAPopVsSoldChart = ({ gradedSoldData, athleteSportMap }: {
     return () => { document.removeEventListener("mousedown", handler); document.removeEventListener("touchstart", handler); };
   }, [pinnedDot, closePinned]);
 
-  if (!scatterData.length) return null;
+  if (!bubbleData.length) return null;
 
-  // Identify "low pop, high demand" athletes (bottom 50% pop but top 50% sold)
-  const sortedByPop = [...scatterData].sort((a, b) => a.psaPop - b.psaPop);
+  // Medians for quadrant classification
+  const sortedByPop = [...bubbleData].sort((a, b) => a.psaPop - b.psaPop);
   const medianPop = sortedByPop[Math.floor(sortedByPop.length / 2)]?.psaPop ?? 0;
-  const sortedBySold = [...scatterData].sort((a, b) => a.soldCount - b.soldCount);
+  const sortedBySold = [...bubbleData].sort((a, b) => a.soldCount - b.soldCount);
   const medianSold = sortedBySold[Math.floor(sortedBySold.length / 2)]?.soldCount ?? 0;
 
+  // Scale bubble radius: sqrt scale from avgSold, clamped between 4-22px
+  const maxAvgSold = Math.max(...bubbleData.map(d => d.avgSold));
+  const minAvgSold = Math.min(...bubbleData.map(d => d.avgSold));
+  const getBubbleRadius = (avgSold: number) => {
+    const t = maxAvgSold > minAvgSold ? (avgSold - minAvgSold) / (maxAvgSold - minAvgSold) : 0.5;
+    return 4 + Math.sqrt(t) * 18;
+  };
+
   return (
-    <section className="my-8" aria-label="PSA population vs graded sold">
+    <section className="my-8" aria-label="PSA population vs graded sold bubble chart">
       <h2 className="font-display font-bold text-lg text-foreground mb-1 flex items-center gap-2">
         <span className="w-1 h-5 rounded-full bg-primary inline-block" />
         PSA Pop vs Graded Sold
       </h2>
       <p className="text-xs text-muted-foreground mb-1 ml-3">
-        Cross-references PSA population (total graded cards) with eBay sold volume.
+        Bubble size = average sold price. Bigger bubble = higher value cards.
       </p>
       <p className="text-xs text-muted-foreground mb-4 ml-3">
-        <strong className="text-foreground">Bottom-left quadrant</strong> = low PSA pop AND low sales — niche cards.{" "}
-        <strong className="text-foreground">Bottom-right quadrant</strong> = low PSA pop but HIGH sales — 🔥 scarce cards with strong demand.{" "}
-        <strong className="text-foreground">Top-right</strong> = high pop, high sales — liquid market.
+        <strong className="text-foreground">Left side</strong> = low PSA population (scarce).{" "}
+        <strong className="text-foreground">Higher up</strong> = more sold transactions (high demand).{" "}
+        <span className="inline-flex items-center gap-1"><span className="inline-block w-3 h-3 rounded-full" style={{ backgroundColor: "hsl(0, 72%, 55%)" }} /> <strong className="text-foreground">Red</strong> = scarce + in-demand</span> — the sweet spot for collectors.
       </p>
       <div className="glass-panel p-4 md:p-6">
-        <div className="w-full h-[400px] md:h-[450px] relative" ref={wrapRef}>
+        <div className="w-full h-[420px] md:h-[480px] relative" ref={wrapRef}>
           <ResponsiveContainer width="100%" height="100%">
-            <ScatterChart margin={{ top: 10, right: 20, bottom: 40, left: 10 }} onClick={handleClick}>
+            <ScatterChart margin={{ top: 20, right: 20, bottom: 40, left: 10 }} onClick={handleClick}>
               <CartesianGrid strokeDasharray="3 3" stroke="hsl(var(--border))" opacity={0.5} />
               <XAxis
                 type="number" dataKey="psaPop" name="PSA Pop"
@@ -1323,15 +1331,17 @@ const PSAPopVsSoldChart = ({ gradedSoldData, athleteSportMap }: {
                 tick={{ fill: "hsl(var(--muted-foreground))", fontSize: 10 }}
               />
               <Tooltip content={() => null} />
-              <Scatter data={scatterData} isAnimationActive={false} cursor="pointer">
-                {scatterData.map((entry, idx) => {
+              <Scatter data={bubbleData} isAnimationActive={false} cursor="pointer">
+                {bubbleData.map((entry, idx) => {
                   const isHotScarcity = entry.psaPop <= medianPop && entry.soldCount >= medianSold;
                   return (
                     <Cell
                       key={idx}
                       fill={isHotScarcity ? "hsl(0, 72%, 55%)" : getSportColor(entry.sport)}
-                      fillOpacity={isHotScarcity ? 0.95 : 0.7}
-                      r={isHotScarcity ? 7 : (typeof window !== "undefined" && window.innerWidth < 768 ? 6 : 5)}
+                      fillOpacity={isHotScarcity ? 0.9 : 0.65}
+                      stroke={isHotScarcity ? "hsl(0, 72%, 40%)" : "hsl(var(--border))"}
+                      strokeWidth={isHotScarcity ? 1.5 : 0.5}
+                      r={getBubbleRadius(entry.avgSold)}
                     />
                   );
                 })}
@@ -1341,7 +1351,7 @@ const PSAPopVsSoldChart = ({ gradedSoldData, athleteSportMap }: {
           {pinnedDot && (
             <div
               className="absolute z-50 rounded-xl border border-border/50 bg-background/95 backdrop-blur-lg p-3 text-xs shadow-2xl"
-              style={{ left: Math.min(pinnedDot.cx + 12, 220), top: Math.max(pinnedDot.cy - 10, 0), pointerEvents: "auto", minWidth: 160 }}
+              style={{ left: Math.min(pinnedDot.cx + 12, 220), top: Math.max(pinnedDot.cy - 10, 0), pointerEvents: "auto", minWidth: 170 }}
             >
               <a href={buildEbayGradedSearchUrl(pinnedDot.name, pinnedDot.sport)} target="_blank" rel="noopener noreferrer"
                 className="font-display font-bold text-foreground hover:text-primary transition-colors underline decoration-dotted underline-offset-2">
@@ -1350,10 +1360,8 @@ const PSAPopVsSoldChart = ({ gradedSoldData, athleteSportMap }: {
               <div className="text-muted-foreground text-[10px] mb-1.5">{pinnedDot.sport}</div>
               <div className="flex flex-col gap-0.5">
                 <span className="text-muted-foreground">PSA Pop: <strong className="text-foreground">{pinnedDot.psaPop.toLocaleString()}</strong></span>
-                <span className="text-muted-foreground">Sold: <strong className="text-foreground">{pinnedDot.soldCount.toLocaleString()}</strong></span>
-                {pinnedDot.avgSold != null && (
-                  <span className="text-muted-foreground">Avg Sold: <strong className="text-foreground">${pinnedDot.avgSold.toFixed(2)}</strong></span>
-                )}
+                <span className="text-muted-foreground">Sold Count: <strong className="text-foreground">{pinnedDot.soldCount.toLocaleString()}</strong></span>
+                <span className="text-muted-foreground">Avg Sold: <strong className="text-foreground">${pinnedDot.avgSold.toFixed(2)}</strong></span>
                 {pinnedDot.psaPop <= medianPop && pinnedDot.soldCount >= medianSold && (
                   <span className="text-red-400 font-bold mt-1">🔥 Low pop, high demand</span>
                 )}
@@ -1362,19 +1370,27 @@ const PSAPopVsSoldChart = ({ gradedSoldData, athleteSportMap }: {
             </div>
           )}
         </div>
-        <div className="flex flex-wrap gap-4 mt-3 justify-center">
+        {/* Legend + bubble size reference */}
+        <div className="flex flex-wrap items-center gap-4 mt-3 justify-center">
           <div className="flex items-center gap-1.5 text-[10px] text-muted-foreground">
-            <div className="w-2.5 h-2.5 rounded-full" style={{ backgroundColor: "hsl(0, 72%, 55%)" }} />
-            🔥 Low pop, high demand
+            <div className="w-3 h-3 rounded-full" style={{ backgroundColor: "hsl(0, 72%, 55%)" }} />
+            🔥 Scarce + in-demand
           </div>
           {Object.entries(SPORT_COLORS)
-            .filter(([sport]) => sport !== "All" && sport !== "Other" && scatterData.some(d => d.sport === sport))
+            .filter(([sport]) => sport !== "All" && sport !== "Other" && bubbleData.some(d => d.sport === sport))
             .map(([sport, color]) => (
               <div key={sport} className="flex items-center gap-1.5 text-[10px] text-muted-foreground">
                 <div className="w-2.5 h-2.5 rounded-full" style={{ backgroundColor: color }} />
                 {sport}
               </div>
             ))}
+          <div className="flex items-center gap-2 text-[10px] text-muted-foreground ml-2 border-l border-border pl-3">
+            <span>Size =</span>
+            <div className="w-2 h-2 rounded-full bg-muted-foreground/40" />
+            <span>Low $</span>
+            <div className="w-4 h-4 rounded-full bg-muted-foreground/40" />
+            <span>High $</span>
+          </div>
         </div>
       </div>
     </section>
