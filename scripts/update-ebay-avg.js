@@ -668,6 +668,55 @@ async function computeAvgActiveListing({
 }
 
 // --- data loading ---
+function parseWithRecovery(content) {
+  // Strip BOM and normalize whitespace
+  let clean = content.replace(/^\uFEFF/, "").trim();
+
+  // Attempt 1: direct parse
+  try { return JSON.parse(clean); } catch (e1) {
+    console.warn(`JSON parsing failed: ${e1.message}`);
+    console.warn("Attempting recovery strategies...");
+
+    // Attempt 2: fix trailing commas before ] or }
+    try {
+      const noTrailing = clean.replace(/,\s*([\]}])/g, "$1");
+      const parsed = JSON.parse(noTrailing);
+      console.warn(`Recovered by removing trailing commas (${Array.isArray(parsed) ? parsed.length : "ok"} items)`);
+      return parsed;
+    } catch { /* next */ }
+
+    // Attempt 3: truncated JSON — find last complete object and close array
+    const lastBrace = clean.lastIndexOf("}");
+    if (lastBrace > 0) {
+      for (let pos = lastBrace; pos > 0; pos--) {
+        if (clean[pos] === "}") {
+          const candidate = clean.substring(0, pos + 1).replace(/,\s*$/, "") + "]";
+          try {
+            const items = JSON.parse(candidate);
+            console.warn(`Recovered ${Array.isArray(items) ? items.length : "some"} items from truncated JSON (cut at pos ${pos})`);
+            return items;
+          } catch { /* try earlier position */ }
+        }
+      }
+    }
+
+    // Attempt 4: line-by-line object extraction
+    try {
+      const objRegex = /\{[^{}]*\}/g;
+      const matches = clean.match(objRegex) || [];
+      const items = matches.map((m) => {
+        try { return JSON.parse(m); } catch { return null; }
+      }).filter(Boolean);
+      if (items.length > 0) {
+        console.warn(`Recovered ${items.length} items via line-by-line extraction`);
+        return items;
+      }
+    } catch { /* fall through */ }
+
+    throw new Error(`Cannot parse athletes.json (${e1.message}). File may be corrupted — try re-running the workflow.`);
+  }
+}
+
 function loadAthletes() {
   if (!fs.existsSync(ATHLETES_PATH)) {
     throw new Error(
@@ -676,7 +725,7 @@ function loadAthletes() {
   }
 
   const raw = fs.readFileSync(ATHLETES_PATH, "utf8");
-  const arr = JSON.parse(raw);
+  const arr = parseWithRecovery(raw);
 
   return (arr || [])
     .map((x) => ({
