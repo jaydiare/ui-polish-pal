@@ -133,7 +133,7 @@ export function buildEbaySearchUrl(name: string, sport: string): string {
   const query = encodeURIComponent(`${name} ${sport}`);
   const sportParam = encodeURIComponent(sport);
   const condition = encodeURIComponent("Near Mint or Better") + "%7C" + encodeURIComponent("Excellent");
-  return `https://www.ebay.com/sch/i.html?_nkw=${query}&_sacat=261328&LH_BIN=1&LH_PrefLoc=2&mkevt=1&mkcid=1&mkrid=706-53473-19255-0&campid=5339142305&toolid=10001&Sport=${sportParam}&Card%2520Condition=${condition}&_dcat=261328`;
+  return `https://www.ebay.com/sch/i.html?_nkw=${query}&_sacat=261328&LH_BIN=1&LH_PrefLoc=2&mkevt=1&mkcid=1&mkrid=706-53473-19255-0&campid=5339142305&toolid=10001&Sport=${sportParam}&Card%2520Condition=${condition}&Condition%2520Type=Ungraded&_dcat=261328`;
 }
 
 export function buildEbayGradedSearchUrl(name: string, sport: string): string {
