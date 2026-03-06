@@ -27,11 +27,7 @@ const BATCH_SIZE = 10;
 const MIN_SAMPLE_SIZE = 4;
 const TAGUCHI_TRIM_PCT = 0.4;
 
-const BRANDS = [
-  "topps", "panini", "upper deck", "leaf",
-  "artesania sport", "ovenca", "sport grafico",
-  "line up", "venezuelan league", "byn", "O-Pee-Chee", "Fleer",
-];
+// Brand filter removed — all brands accepted
 
 const JUNK_PHRASES = [
   "you pick", "digitalcard", "digital", "you choose", "pick your", "choose your",
@@ -127,7 +123,7 @@ function taguchiCV(values, trimPercent = TAGUCHI_TRIM_PCT) {
 
 // --- filters ---
 function isJunkTitle(title) { return JUNK_PHRASES.some((p) => norm(title).includes(p)); }
-function hasAllowedBrand(title) { return BRANDS.some((b) => norm(title).includes(b)); }
+function hasAllowedBrand(title) { return true; } // Brand filter removed
 
 function titleLooksRelevantToPlayer(title, playerName) {
   const t = norm(title);
@@ -394,9 +390,9 @@ async function main() {
   out._meta = {
     updatedAt: new Date().toISOString(),
     source: "eBay public sold listings — GRADED ONLY (HTML scrape, LH_Sold=1)",
-    note: "GRADED sold comps only (PSA, BGS, SGC, etc.). Scraped in batches of " + BATCH_SIZE + ". Brand-filtered. Junk titles removed. Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA.",
+    note: "GRADED sold comps only (PSA, BGS, SGC, etc.). Scraped in batches of " + BATCH_SIZE + ". No brand filter. Junk titles removed. Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA.",
     batchInfo: { startIdx, endIdx, totalAthletes: athletes.length },
-    maxPages: MAX_PAGES, minSampleSize: MIN_SAMPLE_SIZE, brands: BRANDS, categoryId: CATEGORY_ID,
+    maxPages: MAX_PAGES, minSampleSize: MIN_SAMPLE_SIZE, brands: "none (all brands accepted)", categoryId: CATEGORY_ID,
     listingStat: { method: "taguchi_winsorized_mean", trimPercent: TAGUCHI_TRIM_PCT },
     stabilityStat: { method: "cv", formula: "sd/mean", sample: "winsorized", trimPercent: TAGUCHI_TRIM_PCT },
     fx: { source: "CBSA Exchange Rates API", asOf: fx.asOf },
