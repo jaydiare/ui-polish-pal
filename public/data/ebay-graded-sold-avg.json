@@ -1,12 +1,12 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-06T13:49:49.899Z",
+    "updatedAt": "2026-03-06T16:19:43.917Z",
     "source": "eBay public sold listings — GRADED ONLY (HTML scrape, LH_Sold=1)",
     "note": "GRADED sold comps only (PSA, BGS, SGC, etc.). Scraped in batches of 10. No brand filter. Junk titles removed. Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA.",
     "batchInfo": {
-      "startIdx": 280,
-      "endIdx": 290,
-      "totalAthletes": 568
+      "startIdx": 0,
+      "endIdx": 10,
+      "totalAthletes": 567
     },
     "maxPages": 3,
     "minSampleSize": 4,
@@ -29,12 +29,12 @@
   },
   "Adbert Alzolay": {
     "keyword": "Adbert Alzolay Baseball",
-    "nScraped": 215,
-    "nSoldUsed": 15,
-    "avg": 12.990000000000002,
-    "taguchiSold": 12.990000000000002,
-    "medianSold": 12.99,
-    "marketStabilityCV": 1.4154765311459007e-16,
+    "nScraped": 183,
+    "nSoldUsed": 3,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
@@ -66,50 +66,50 @@
   "Albert Suarez": {
     "keyword": "Albert Suarez Baseball",
     "nScraped": 60,
-    "nSoldUsed": 1,
+    "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
   },
   "Alberto Callaspo": {
     "keyword": "Alberto Callaspo Baseball",
-    "nScraped": 57,
-    "nSoldUsed": 2,
+    "nScraped": 48,
+    "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
   },
   "Alberto Gonzalez": {
     "keyword": "Alberto Gonzalez Baseball",
     "nScraped": 60,
-    "nSoldUsed": 1,
+    "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
   },
   "Alcides Escobar": {
     "keyword": "Alcides Escobar Baseball",
-    "nScraped": 60,
-    "nSoldUsed": 5,
-    "avg": 1.5,
-    "taguchiSold": 1.5,
-    "medianSold": 1.5,
-    "marketStabilityCV": 0,
+    "nScraped": 63,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
   },
   "Alejandro Chacin": {
     "keyword": "Alejandro Chacin Baseball",
