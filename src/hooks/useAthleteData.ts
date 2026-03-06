@@ -38,36 +38,58 @@ const normalizeDataKey = (s: string) =>
 function enrichWithBasePrices(data: EbayAvgData | null): EbayAvgData | null {
   if (!data || typeof data !== "object") return data;
 
-  const basePrices = (data as any)?._meta?.basePrices as Record<string, unknown> | undefined;
-  if (!basePrices || typeof basePrices !== "object") return data;
-
-  const normalizedToKey = new Map<string, string>();
-  for (const key of Object.keys(data)) {
-    if (key === "_meta") continue;
-    normalizedToKey.set(normalizeDataKey(key), key);
-  }
-
   const merged: EbayAvgData = { ...data };
 
-  for (const [name, rawPrice] of Object.entries(basePrices)) {
-    const price = Number(rawPrice);
-    if (!Number.isFinite(price) || price <= 0) continue;
-
-    const existingKey = normalizedToKey.get(normalizeDataKey(name)) ?? name;
-    const current = ((merged as any)[existingKey] && typeof (merged as any)[existingKey] === "object"
-      ? { ...(merged as any)[existingKey] }
-      : {}) as Record<string, any>;
+  // Step 1: Per-record basePriceUSD fallback
+  for (const key of Object.keys(merged)) {
+    if (key === "_meta") continue;
+    const rec = (merged as any)[key];
+    if (!rec || typeof rec !== "object") continue;
 
     const currentPrice = Number(
-      current.avgListing ?? current.taguchiListing ?? current.trimmedListing ?? current.avg ?? current.average
+      rec.avgListing ?? rec.taguchiListing ?? rec.trimmedListing ?? rec.avg ?? rec.average
     );
-
     if (!Number.isFinite(currentPrice) || currentPrice <= 0) {
-      current.avgListing = price;
-      current.taguchiListing = price;
-      current.avg = price;
-      current.average = price;
-      (merged as any)[existingKey] = current;
+      const base = Number(rec.basePriceUSD);
+      if (Number.isFinite(base) && base > 0) {
+        rec.avgListing = base;
+        rec.taguchiListing = base;
+        rec.avg = base;
+        rec.average = base;
+        (merged as any)[key] = rec;
+      }
+    }
+  }
+
+  // Step 2: _meta.basePrices fallback
+  const basePrices = (data as any)?._meta?.basePrices as Record<string, unknown> | undefined;
+  if (basePrices && typeof basePrices === "object") {
+    const normalizedToKey = new Map<string, string>();
+    for (const key of Object.keys(merged)) {
+      if (key === "_meta") continue;
+      normalizedToKey.set(normalizeDataKey(key), key);
+    }
+
+    for (const [name, rawPrice] of Object.entries(basePrices)) {
+      const price = Number(rawPrice);
+      if (!Number.isFinite(price) || price <= 0) continue;
+
+      const existingKey = normalizedToKey.get(normalizeDataKey(name)) ?? name;
+      const current = ((merged as any)[existingKey] && typeof (merged as any)[existingKey] === "object"
+        ? { ...(merged as any)[existingKey] }
+        : {}) as Record<string, any>;
+
+      const currentPrice = Number(
+        current.avgListing ?? current.taguchiListing ?? current.trimmedListing ?? current.avg ?? current.average
+      );
+
+      if (!Number.isFinite(currentPrice) || currentPrice <= 0) {
+        current.avgListing = price;
+        current.taguchiListing = price;
+        current.avg = price;
+        current.average = price;
+        (merged as any)[existingKey] = current;
+      }
     }
   }
 
