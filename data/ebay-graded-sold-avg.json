@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-06T12:29:11.104Z",
+    "updatedAt": "2026-03-06T12:31:55.819Z",
     "source": "eBay public sold listings — GRADED ONLY (HTML scrape, LH_Sold=1)",
     "note": "GRADED sold comps only (PSA, BGS, SGC, etc.). Scraped in batches of 10. No brand filter. Junk titles removed. Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA.",
     "batchInfo": {
-      "startIdx": 190,
-      "endIdx": 200,
+      "startIdx": 200,
+      "endIdx": 210,
       "totalAthletes": 568
     },
     "maxPages": 3,
@@ -2429,27 +2429,27 @@
   },
   "Hector Rondon": {
     "keyword": "Hector Rondon Baseball",
-    "nScraped": 183,
-    "nSoldUsed": 3,
+    "nScraped": 61,
+    "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
   },
   "Hector Sanchez": {
     "keyword": "Hector Sanchez Baseball",
-    "nScraped": 60,
-    "nSoldUsed": 6,
-    "avg": 18.349999999999998,
-    "taguchiSold": 18.349999999999998,
-    "medianSold": 18.35,
-    "marketStabilityCV": 0.5671241739835509,
+    "nScraped": 61,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
   },
   "Henderson Alvarez III": {
     "keyword": "Henderson Alvarez III Baseball",
@@ -2466,30 +2466,30 @@
   "Henry Blanco": {
     "keyword": "Henry Blanco Baseball",
     "nScraped": 60,
-    "nSoldUsed": 2,
+    "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
   },
   "Henry Rodriguez": {
     "keyword": "Henry Rodriguez Baseball",
-    "nScraped": 185,
-    "nSoldUsed": 7,
-    "avg": 17.178571428571427,
-    "taguchiSold": 17.178571428571427,
-    "medianSold": 3.07,
-    "marketStabilityCV": 1.0243273278386542,
+    "nScraped": 180,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
   },
   "Hernan Iribarren": {
     "keyword": "Hernan Iribarren Baseball",
-    "nScraped": 54,
+    "nScraped": 17,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -2501,31 +2501,31 @@
   },
   "Hernan Perez": {
     "keyword": "Hernan Perez Baseball",
-    "nScraped": 180,
-    "nSoldUsed": 26,
-    "avg": 86.07576923076924,
-    "taguchiSold": 86.07576923076924,
-    "medianSold": 89.99,
-    "marketStabilityCV": 0.0824318127794168,
+    "nScraped": 60,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
   },
   "Horacio Estrada": {
     "keyword": "Horacio Estrada Baseball",
     "nScraped": 60,
-    "nSoldUsed": 8,
-    "avg": 33.584999999999994,
-    "taguchiSold": 33.584999999999994,
-    "medianSold": 33.585,
-    "marketStabilityCV": 0.019576080247270096,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
   },
   "Humberto Arteaga": {
     "keyword": "Humberto Arteaga Baseball",
-    "nScraped": 0,
+    "nScraped": 46,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -2537,7 +2537,7 @@
   },
   "Humberto Quintero": {
     "keyword": "Humberto Quintero Baseball",
-    "nScraped": 0,
+    "nScraped": 60,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
