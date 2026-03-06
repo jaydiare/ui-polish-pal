@@ -1803,8 +1803,8 @@
     "sport": "Baseball",
     "league": "MLB",
     "team": "Cubs",
-    "provider": "manual"
-    "searchKeyword": "Jose Martinez Cardinals" 
+    "provider": "manual",
+    "searchKeyword": "Jose Martinez Cardinals"
   },
   {
     "name": "Jose Mijares",
@@ -3806,8 +3806,8 @@
     "sport": "Soccer",
     "league": "MLS",
     "team": "FC Dallas",
-    "provider": "balldontlie"
-     "searchKeyword": "Luis Gonzalez FC Dallas" 
+    "provider": "balldontlie",
+    "searchKeyword": "Luis Gonzalez FC Dallas"
   },
   {
     "name": "Miguel Navarro",
