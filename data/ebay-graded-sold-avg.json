@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-06T11:44:46.694Z",
+    "updatedAt": "2026-03-06T12:00:16.019Z",
     "source": "eBay public sold listings — GRADED ONLY (HTML scrape, LH_Sold=1)",
     "note": "GRADED sold comps only (PSA, BGS, SGC, etc.). Scraped in batches of 10. No brand filter. Junk titles removed. Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA.",
     "batchInfo": {
-      "startIdx": 110,
-      "endIdx": 120,
+      "startIdx": 120,
+      "endIdx": 130,
       "totalAthletes": 568
     },
     "maxPages": 3,
@@ -1470,23 +1470,23 @@
   "Eduardo Paredes": {
     "keyword": "Eduardo Paredes Baseball",
     "nScraped": 60,
-    "nSoldUsed": 11,
-    "avg": 13.659090909090908,
-    "taguchiSold": 13.659090909090908,
-    "medianSold": 12.9,
-    "marketStabilityCV": 0.09084132034115752,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
   },
   "Eduardo Rodriguez": {
     "keyword": "Eduardo Rodriguez Baseball",
-    "nScraped": 213,
-    "nSoldUsed": 33,
-    "avg": 15.33000000000001,
-    "taguchiSold": 15.33000000000001,
-    "medianSold": 14.5,
-    "marketStabilityCV": 0.21034033957941084,
+    "nScraped": 188,
+    "nSoldUsed": 15,
+    "avg": 18.719999999999995,
+    "taguchiSold": 18.719999999999995,
+    "medianSold": 18.72,
+    "marketStabilityCV": 1.9644273653403055e-16,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
@@ -1494,26 +1494,26 @@
   "Eduardo Salazar": {
     "keyword": "Eduardo Salazar Baseball",
     "nScraped": 60,
-    "nSoldUsed": 4,
-    "avg": 21.99,
-    "taguchiSold": 21.99,
-    "medianSold": 21.99,
-    "marketStabilityCV": 0.4200820512521152,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
   },
   "Eduardo Sanchez": {
     "keyword": "Eduardo Sanchez Baseball",
     "nScraped": 60,
-    "nSoldUsed": 8,
-    "avg": 6.825,
-    "taguchiSold": 6.825,
-    "medianSold": 6.825,
-    "marketStabilityCV": 0.18404803472357428,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
   },
   "Eduardo Villacis": {
     "keyword": "Eduardo Villacis Baseball",
@@ -1530,18 +1530,18 @@
   "Edubray Ramos": {
     "keyword": "Edubray Ramos Baseball",
     "nScraped": 60,
-    "nSoldUsed": 5,
-    "avg": 19.95,
-    "taguchiSold": 19.95,
-    "medianSold": 19.95,
-    "marketStabilityCV": 0,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
   },
   "Edwar Colina": {
     "keyword": "Edwar Colina Baseball",
-    "nScraped": 15,
+    "nScraped": 18,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -1553,19 +1553,19 @@
   },
   "Edward Mujica": {
     "keyword": "Edward Mujica Baseball",
-    "nScraped": 180,
-    "nSoldUsed": 3,
+    "nScraped": 60,
+    "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
   },
   "Edward Olivares": {
     "keyword": "Edward Olivares Baseball",
-    "nScraped": 183,
+    "nScraped": 180,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
