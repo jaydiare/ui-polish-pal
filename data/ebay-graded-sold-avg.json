@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-06T18:21:40.608Z",
+    "updatedAt": "2026-03-06T18:24:52.506Z",
     "source": "eBay public sold listings — GRADED ONLY (HTML scrape, LH_Sold=1)",
     "note": "GRADED sold comps only (PSA, BGS, SGC, etc.). Scraped in batches of 10. No brand filter. Junk titles removed. Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA.",
     "batchInfo": {
-      "startIdx": 30,
-      "endIdx": 40,
+      "startIdx": 40,
+      "endIdx": 50,
       "totalAthletes": 568
     },
     "maxPages": 3,
@@ -497,15 +497,15 @@
   },
   "Angel Guzman": {
     "keyword": "Angel Guzman Baseball",
-    "nScraped": 0,
-    "nSoldUsed": 0,
-    "avg": null,
-    "taguchiSold": null,
-    "medianSold": null,
-    "marketStabilityCV": null,
+    "nScraped": 188,
+    "nSoldUsed": 9,
+    "avg": 15,
+    "taguchiSold": 15,
+    "medianSold": 15,
+    "marketStabilityCV": 0,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
   },
   "Angel Nesbitt": {
     "keyword": "Angel Nesbitt Baseball",
@@ -533,7 +533,7 @@
   },
   "Angel Zerpa": {
     "keyword": "Angel Zerpa Baseball",
-    "nScraped": 181,
+    "nScraped": 182,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -593,27 +593,27 @@
   },
   "Anthony Santander": {
     "keyword": "Anthony Santander Baseball",
-    "nScraped": 199,
-    "nSoldUsed": 6,
+    "nScraped": 134,
+    "nSoldUsed": 4,
     "avg": 19.495,
     "taguchiSold": 19.495,
     "medianSold": 19.495,
-    "marketStabilityCV": 0.25314081780567055,
+    "marketStabilityCV": 0.2668338510078752,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
   },
   "Antonio Senzatela": {
     "keyword": "Antonio Senzatela Baseball",
-    "nScraped": 59,
-    "nSoldUsed": 1,
+    "nScraped": 0,
+    "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
   },
   "Arcenio Leon": {
     "keyword": "Arcenio Leon Baseball",
