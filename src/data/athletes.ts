@@ -53,7 +53,11 @@ export const athleteDataRaw: Athlete[] = [
   { name: "Darwin Machís", sport: "Soccer", league: "La Liga", team: "Cádiz" },
   { name: "Jefferson Savarino", sport: "Soccer", league: "Serie A", team: "Botafogo" },
   { name: "Yangel Herrera", sport: "Soccer", league: "La Liga", team: "Girona" },
-  
+
+  { name: "Carl Herrera", sport: "Basketball", league: "NBA", team: "Rockets" },
+  { name: "Greivis Vasquez", sport: "Basketball", league: "NBA", team: "Nets" },
+  { name: "Oscar Torres", sport: "Basketball", league: "NBA", team: "Bucks" },
+
   { name: "Daniel Dhers", sport: "BMX", league: "BMX", team: "BMX" },
   { name: "Yulimar Rojas", sport: "Track & Field", league: "Track & Field", team: "Track & Field" },
   { name: "Jhonattan Vegas", sport: "Golf", league: "PGA", team: "Golf" },
