@@ -190,6 +190,24 @@ def fetch_gemrate(session, player: str, category: str = ""):
             return None
 
     return None
+def parse_with_recovery(content):
+    """Parse JSON, attempting to recover truncated arrays."""
+    try:
+        return json.loads(content)
+    except json.JSONDecodeError as e:
+        print(f"⚠ JSON parsing failed, attempting recovery... ({e})", file=sys.stderr)
+        last_brace = content.rfind("}")
+        if last_brace > 0:
+            repaired = content[: last_brace + 1].rstrip()
+            if not repaired.endswith("]"):
+                repaired += "]"
+            try:
+                items = json.loads(repaired)
+                print(f"✓ Recovered {len(items)} items from truncated JSON")
+                return items
+            except json.JSONDecodeError as repair_e:
+                print(f"✖ JSON recovery failed: {repair_e}", file=sys.stderr)
+        raise
 
 
 def main():
@@ -206,7 +224,7 @@ def main():
     progress_path = os.path.join(base_dir, "data", "gemrate-progress.json")
 
     with open(athletes_path, "r", encoding="utf-8") as f:
-        athletes = json.load(f)
+        athletes = parse_with_recovery(f.read())
 
     # Dedupe by name, maintain stable order
     seen = set()
