@@ -117,14 +117,14 @@ category_ids = "261328" (Trading Card Singles)
 **Query construction:**
 ```
 q = "{name} {sport} card"
-aspect_filter = "Graded:{Yes}" + Player/Athlete or Sport aspect
+aspect_filter = "Graded:{Yes},Professional Grader:{Professional Sports Authenticator (PSA)}" + Player/Athlete or Sport aspect
 filter = "buyingOptions:{FIXED_PRICE}"
 category_ids = "261328"
 ```
 
 **Filtering pipeline:**
-1. **API-level:** `Graded:{Yes}` aspect filter restricts to graded cards
-2. **Post-fetch graded detection:** Skip if `isGradedListing()` returns false (only include graded)
+1. **API-level:** `Graded:{Yes}` + `Professional Grader:{PSA}` aspect filters restrict to PSA-graded cards
+2. **Post-fetch PSA detection:** Skip if `isGradedListing()` returns false (PSA-only regex — requires "PSA" in title)
 3. **Price normalization:** Convert to USD via CBSA Exchange Rates API
 
 **Matching strategy:** Same as raw script (Player/Athlete → Sport → skip)
@@ -173,7 +173,7 @@ https://www.ebay.com/sch/i.html?
 **Search URL construction:**
 ```
 https://www.ebay.com/sch/i.html?
-  _nkw={name} {sport} graded    ← "graded" keyword added
+  _nkw={name} {sport} PSA        ← "PSA" keyword (not generic "graded")
   _sacat=261328
   LH_Sold=1
   LH_Complete=1
@@ -181,11 +181,11 @@ https://www.ebay.com/sch/i.html?
 ```
 
 **Filtering pipeline:**
-1. **URL-level:** "graded" keyword in search + `League` aspect filter
+1. **URL-level:** "PSA" keyword in search + `League` aspect filter
 2. **Brand filter:** Removed — all brands accepted
 3. **Junk title filter:** Same as raw sold (includes "auto" and "signed" in junk list)
 4. **Name relevance:** All name parts must appear in title
-5. **Graded detection:** Skip if `isGradedTitle()` returns false (only include graded — robust regex)
+5. **PSA detection:** Skip if `isGradedTitle()` returns false (PSA-only regex — requires "PSA" + grade in title)
 6. **Price normalization:** Same as raw sold
 
 **Output fields:** Same as raw sold (`taguchiSold`, `medianSold`, `marketStabilityCV`, etc.)
@@ -288,39 +288,35 @@ taguchiListing → avgListing → trimmedListing → avg → average → basePri
 
 ## 5. Filtering Rules
 
-### 5.1 Graded Detection (Consistent Across All Scripts)
+### 5.1 Graded Detection
 
-All 4 scripts now use the **same robust regex**:
+**Two different detectors are used depending on purpose:**
+
+#### Raw scripts (to EXCLUDE graded cards) — All graders detected
+
+Used by `update-ebay-avg.js` and `sold-update-ebay-avg.js`:
 
 ```javascript
-// For Browse API scripts (item object with condition field):
-function isGradedListing(item) {
-  const cond = normText(item?.condition || "");
-  const title = normText(item?.title || "");
+// Detects ALL grading companies to exclude from raw data
+const graderWithGrade = /\b(psa|sgc|bgs|cgc|hga|isa|csa|beckett|bcg)\b[^\n]{0,14}\b(10|9\.5|9|8\.5|8|gem mint|mint|pristine|black label|gold label)\b/i;
+const slabOnly = /\b(gem mint|pristine|black label|gold label)\b/i;
+```
 
-  if (cond.includes("graded")) return true;
+#### Graded scripts (to INCLUDE only PSA cards) — PSA-only
 
-  const graderWithGrade = /\b(psa|sgc|bgs|cgc|hga|isa|csa|beckett|bcg)\b[^\n]{0,14}\b(10|9\.5|9|8\.5|8|gem mint|mint|pristine|black label|gold label)\b/i;
-  const slabOnly = /\b(gem mint|pristine|black label|gold label)\b/i;
+Used by `graded-update-ebay-avg.js` and `graded-sold-update-ebay-avg.js`:
 
-  return graderWithGrade.test(title) || slabOnly.test(title);
-}
-
-// For HTML scraper scripts (title string only):
-function isGradedTitle(title) {
-  const t = norm(title);
-  // Same regex as above
-  const graderWithGrade = /\b(psa|sgc|bgs|cgc|hga|isa|csa|beckett|bcg)\b[^\n]{0,14}\b(10|9\.5|9|8\.5|8|gem mint|mint|pristine|black label|gold label)\b/i;
-  const slabOnly = /\b(gem mint|pristine|black label|gold label)\b/i;
-  return graderWithGrade.test(t) || slabOnly.test(t);
-}
+```javascript
+// Only includes PSA-graded cards
+const psaWithGrade = /\bpsa\b[^\n]{0,14}\b(10|9\.5|9|8\.5|8|gem mint|mint|pristine|black label|gold label)\b/i;
 ```
 
 **Key design decisions:**
-- Requires **grading company context** (e.g., "PSA 10") — prevents false positives from card #10 or "lot of 10"
-- Supports all major graders: PSA, SGC, BGS, CGC, HGA, ISA, CSA, Beckett, BCG
-- Allows up to 14 characters between grader name and grade number
-- Slab-only keywords (gem mint, pristine, black label, gold label) pass without grader prefix
+- **Raw scripts** detect ALL graders (PSA, BGS, SGC, CGC, HGA, etc.) to exclude them from raw averages
+- **Graded scripts** only detect PSA — BGS, SGC, and other graders are ignored
+- Requires **grading company + grade context** — prevents false positives from card #10 or "lot of 10"
+- The graded listing API also uses `Professional Grader:{Professional Sports Authenticator (PSA)}` aspect filter
+- The graded sold search uses "PSA" as the keyword instead of generic "graded"
 
 ### 5.2 Raw Card Condition Policy
 
