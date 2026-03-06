@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-06T22:18:30.724Z",
+    "updatedAt": "2026-03-06T22:28:07.950Z",
     "source": "eBay public sold listings — GRADED ONLY (HTML scrape, LH_Sold=1)",
     "note": "GRADED sold comps only (PSA, BGS, SGC, etc.). Scraped in batches of 10. No brand filter. Junk titles removed. Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA.",
     "batchInfo": {
-      "startIdx": 80,
-      "endIdx": 90,
+      "startIdx": 90,
+      "endIdx": 100,
       "totalAthletes": 568
     },
     "maxPages": 3,
@@ -1109,7 +1109,7 @@
   },
   "Chico Carrasquel": {
     "keyword": "Chico Carrasquel Baseball",
-    "nScraped": 232,
+    "nScraped": 227,
     "nSoldUsed": 6,
     "avg": 63.25,
     "taguchiSold": 63.25,
@@ -1145,7 +1145,7 @@
   },
   "Cris Colon": {
     "keyword": "Cris Colon Baseball",
-    "nScraped": 182,
+    "nScraped": 180,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -1181,7 +1181,7 @@
   },
   "Danny Leon": {
     "keyword": "Danny Leon Baseball",
-    "nScraped": 180,
+    "nScraped": 181,
     "nSoldUsed": 3,
     "avg": null,
     "taguchiSold": null,
@@ -1217,15 +1217,15 @@
   },
   "Darwinzon Hernandez": {
     "keyword": "Darwinzon Hernandez Baseball",
-    "nScraped": 180,
-    "nSoldUsed": 3,
+    "nScraped": 0,
+    "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
   },
   "Deolis Guerra": {
     "keyword": "Deolis Guerra Baseball",
