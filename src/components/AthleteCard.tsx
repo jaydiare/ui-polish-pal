@@ -214,9 +214,9 @@ const AthleteCard = forwardRef<HTMLElement, AthleteCardProps>(({ athlete, byName
                 </div>
                 {priceMode === "graded" && psaPop != null && (
                   <div className="text-right shrink-0">
-                    <div className="text-[9px] text-muted-foreground font-medium uppercase tracking-wider">PSA</div>
-                    <div className="text-[9px] text-muted-foreground font-medium uppercase tracking-wider">POP #</div>
-                    <div className="text-sm font-display font-bold text-foreground leading-tight mt-0.5">{psaPop.toLocaleString()}</div>
+                    <div className="text-[8px] text-muted-foreground font-medium uppercase tracking-wider leading-tight">PSA</div>
+                    <div className="text-[8px] text-muted-foreground font-medium uppercase tracking-wider leading-tight">POP #</div>
+                    <div className="text-xs font-display font-bold text-foreground leading-tight mt-0.5">{psaPop.toLocaleString()}</div>
                   </div>
                 )}
               </div>

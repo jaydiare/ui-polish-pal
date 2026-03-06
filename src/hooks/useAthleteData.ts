@@ -146,6 +146,9 @@ export function useAthleteData() {
           const pop = athlete?.graders?.PSA?.grades ?? athlete?.totals?.grades;
           if (pop != null && Number.isFinite(pop) && pop > 0) {
             popMap[name] = pop;
+            // Also store normalized (accent-stripped) key for matching
+            const normalized = name.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+            if (normalized !== name) popMap[normalized] = pop;
           }
         }
         setGemratePopMap(popMap);
