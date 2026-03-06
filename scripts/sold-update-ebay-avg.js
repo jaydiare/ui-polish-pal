@@ -193,10 +193,14 @@ function titleLooksRelevantToPlayer(title, playerName) {
   return parts.every((part) => t.includes(part));
 }
 
+// Robust graded detector — requires grading-company context to avoid false positives
 function isGradedTitle(title) {
   const t = norm(title);
-  const graderHints = ["psa", "sgc", "gem mint", "gm mt", "9.5", "10"];
-  return graderHints.some((k) => t.includes(k));
+
+  const graderWithGrade = /\b(psa|sgc|bgs|cgc|hga|isa|csa|beckett|bcg)\b[^\n]{0,14}\b(10|9\.5|9|8\.5|8|gem mint|mint|pristine|black label|gold label)\b/i;
+  const slabOnly = /\b(gem mint|pristine|black label|gold label)\b/i;
+
+  return graderWithGrade.test(t) || slabOnly.test(t);
 }
 
 function ungradedPassesPolicy(title) {
