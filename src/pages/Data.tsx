@@ -983,6 +983,9 @@ const Data = () => {
 
             {/* ── Gemrate Grading Data ── */}
             <GemrateChart />
+
+            {/* ── PSA Pop vs Sold ── */}
+            <PSAPopVsSoldChart gradedSoldData={gradedSoldData} athleteSportMap={athleteSportMap} />
           </>
         )}
 
@@ -1216,6 +1219,163 @@ const GemrateChart = () => {
         <p className="text-[9px] text-muted-foreground/60 text-center mt-3">
           Data sourced from <a href="https://www.gemrate.com" target="_blank" rel="noopener noreferrer" className="underline hover:text-primary">gemrate.com</a>. Updated quarterly.
         </p>
+      </div>
+    </section>
+  );
+};
+
+/* ── PSA Pop vs Graded Sold Scatter ── */
+const PSAPopVsSoldChart = ({ gradedSoldData, athleteSportMap }: {
+  gradedSoldData: Record<string, any>;
+  athleteSportMap: Record<string, string>;
+}) => {
+  const [gemrateData, setGemrateData] = useState<GemrateData | null>(null);
+
+  useEffect(() => {
+    (async () => {
+      let d = await fetchJson("https://raw.githubusercontent.com/jaydiare/ui-polish-pal/main/data/gemrate.json");
+      if (!d || !d.athletes) d = await fetchJson("data/gemrate.json");
+      if (d && d.athletes) setGemrateData(d);
+    })();
+  }, []);
+
+  const scatterData = useMemo(() => {
+    if (!gemrateData?.athletes) return [];
+    const items: { name: string; sport: string; psaPop: number; soldCount: number; avgSold: number | null }[] = [];
+
+    for (const [, athlete] of Object.entries(gemrateData.athletes)) {
+      const psaPop = athlete.graders?.PSA?.grades ?? athlete.totals?.grades ?? 0;
+      if (psaPop <= 0) continue;
+
+      // Find matching sold data
+      const soldRec = gradedSoldData[athlete.name] as any;
+      const soldCount = soldRec?.nScraped ?? soldRec?.nSoldUsed ?? 0;
+      if (soldCount <= 0) continue;
+
+      const avgSold = soldRec?.taguchiSold ?? soldRec?.avg ?? null;
+      const normKey = athlete.name.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().trim();
+      const sport = athleteSportMap[athlete.name] || athleteSportMap[normKey] || athlete.sport || "Other";
+
+      items.push({ name: athlete.name, sport, psaPop, soldCount, avgSold: avgSold != null && Number.isFinite(avgSold) ? Math.round(avgSold * 100) / 100 : null });
+    }
+
+    return items;
+  }, [gemrateData, gradedSoldData, athleteSportMap]);
+
+  const [pinnedDot, setPinnedDot] = useState<{ name: string; sport: string; psaPop: number; soldCount: number; avgSold: number | null; cx: number; cy: number } | null>(null);
+  const wrapRef = useRef<HTMLDivElement>(null);
+
+  const handleClick = useCallback((state: any) => {
+    if (!state?.activePayload?.length) { setPinnedDot(null); return; }
+    const d = state.activePayload[0]?.payload;
+    if (!d?.name) { setPinnedDot(null); return; }
+    setPinnedDot({ ...d, cx: state.chartX ?? 0, cy: state.chartY ?? 0 });
+  }, []);
+
+  const closePinned = useCallback(() => setPinnedDot(null), []);
+
+  // Close pinned on outside click
+  useEffect(() => {
+    if (!pinnedDot) return;
+    const handler = (e: MouseEvent | TouchEvent) => {
+      if (wrapRef.current && !wrapRef.current.contains(e.target as Node)) closePinned();
+    };
+    document.addEventListener("mousedown", handler);
+    document.addEventListener("touchstart", handler);
+    return () => { document.removeEventListener("mousedown", handler); document.removeEventListener("touchstart", handler); };
+  }, [pinnedDot, closePinned]);
+
+  if (!scatterData.length) return null;
+
+  // Identify "low pop, high demand" athletes (bottom 50% pop but top 50% sold)
+  const sortedByPop = [...scatterData].sort((a, b) => a.psaPop - b.psaPop);
+  const medianPop = sortedByPop[Math.floor(sortedByPop.length / 2)]?.psaPop ?? 0;
+  const sortedBySold = [...scatterData].sort((a, b) => a.soldCount - b.soldCount);
+  const medianSold = sortedBySold[Math.floor(sortedBySold.length / 2)]?.soldCount ?? 0;
+
+  return (
+    <section className="my-8" aria-label="PSA population vs graded sold">
+      <h2 className="font-display font-bold text-lg text-foreground mb-1 flex items-center gap-2">
+        <span className="w-1 h-5 rounded-full bg-primary inline-block" />
+        PSA Pop vs Graded Sold
+      </h2>
+      <p className="text-xs text-muted-foreground mb-1 ml-3">
+        Cross-references PSA population (total graded cards) with eBay sold volume.
+      </p>
+      <p className="text-xs text-muted-foreground mb-4 ml-3">
+        <strong className="text-foreground">Bottom-left quadrant</strong> = low PSA pop AND low sales — niche cards.{" "}
+        <strong className="text-foreground">Bottom-right quadrant</strong> = low PSA pop but HIGH sales — 🔥 scarce cards with strong demand.{" "}
+        <strong className="text-foreground">Top-right</strong> = high pop, high sales — liquid market.
+      </p>
+      <div className="glass-panel p-4 md:p-6">
+        <div className="w-full h-[400px] md:h-[450px] relative" ref={wrapRef}>
+          <ResponsiveContainer width="100%" height="100%">
+            <ScatterChart margin={{ top: 10, right: 20, bottom: 40, left: 10 }} onClick={handleClick}>
+              <CartesianGrid strokeDasharray="3 3" stroke="hsl(var(--border))" opacity={0.5} />
+              <XAxis
+                type="number" dataKey="psaPop" name="PSA Pop"
+                label={{ value: "PSA Population (total graded)", position: "insideBottom", offset: -10, style: { fill: "hsl(var(--muted-foreground))", fontSize: 11 } }}
+                tick={{ fill: "hsl(var(--muted-foreground))", fontSize: 10 }}
+              />
+              <YAxis
+                type="number" dataKey="soldCount" name="Sold"
+                label={{ value: "eBay Sold Count", angle: -90, position: "insideLeft", offset: 10, style: { fill: "hsl(var(--muted-foreground))", fontSize: 11 } }}
+                tick={{ fill: "hsl(var(--muted-foreground))", fontSize: 10 }}
+              />
+              <Tooltip content={() => null} />
+              <Scatter data={scatterData} isAnimationActive={false} cursor="pointer">
+                {scatterData.map((entry, idx) => {
+                  const isHotScarcity = entry.psaPop <= medianPop && entry.soldCount >= medianSold;
+                  return (
+                    <Cell
+                      key={idx}
+                      fill={isHotScarcity ? "hsl(0, 72%, 55%)" : getSportColor(entry.sport)}
+                      fillOpacity={isHotScarcity ? 0.95 : 0.7}
+                      r={isHotScarcity ? 7 : (typeof window !== "undefined" && window.innerWidth < 768 ? 6 : 5)}
+                    />
+                  );
+                })}
+              </Scatter>
+            </ScatterChart>
+          </ResponsiveContainer>
+          {pinnedDot && (
+            <div
+              className="absolute z-50 rounded-xl border border-border/50 bg-background/95 backdrop-blur-lg p-3 text-xs shadow-2xl"
+              style={{ left: Math.min(pinnedDot.cx + 12, 220), top: Math.max(pinnedDot.cy - 10, 0), pointerEvents: "auto", minWidth: 160 }}
+            >
+              <a href={buildEbayGradedSearchUrl(pinnedDot.name, pinnedDot.sport)} target="_blank" rel="noopener noreferrer"
+                className="font-display font-bold text-foreground hover:text-primary transition-colors underline decoration-dotted underline-offset-2">
+                {pinnedDot.name} ↗
+              </a>
+              <div className="text-muted-foreground text-[10px] mb-1.5">{pinnedDot.sport}</div>
+              <div className="flex flex-col gap-0.5">
+                <span className="text-muted-foreground">PSA Pop: <strong className="text-foreground">{pinnedDot.psaPop.toLocaleString()}</strong></span>
+                <span className="text-muted-foreground">Sold: <strong className="text-foreground">{pinnedDot.soldCount.toLocaleString()}</strong></span>
+                {pinnedDot.avgSold != null && (
+                  <span className="text-muted-foreground">Avg Sold: <strong className="text-foreground">${pinnedDot.avgSold.toFixed(2)}</strong></span>
+                )}
+                {pinnedDot.psaPop <= medianPop && pinnedDot.soldCount >= medianSold && (
+                  <span className="text-red-400 font-bold mt-1">🔥 Low pop, high demand</span>
+                )}
+              </div>
+              <div className="text-[9px] text-muted-foreground/60 mt-1.5">Tap name to search PSA graded on eBay</div>
+            </div>
+          )}
+        </div>
+        <div className="flex flex-wrap gap-4 mt-3 justify-center">
+          <div className="flex items-center gap-1.5 text-[10px] text-muted-foreground">
+            <div className="w-2.5 h-2.5 rounded-full" style={{ backgroundColor: "hsl(0, 72%, 55%)" }} />
+            🔥 Low pop, high demand
+          </div>
+          {Object.entries(SPORT_COLORS)
+            .filter(([sport]) => sport !== "All" && sport !== "Other" && scatterData.some(d => d.sport === sport))
+            .map(([sport, color]) => (
+              <div key={sport} className="flex items-center gap-1.5 text-[10px] text-muted-foreground">
+                <div className="w-2.5 h-2.5 rounded-full" style={{ backgroundColor: color }} />
+                {sport}
+              </div>
+            ))}
+        </div>
       </div>
     </section>
   );
