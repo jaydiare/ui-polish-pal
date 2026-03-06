@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-06T12:35:30.275Z",
+    "updatedAt": "2026-03-06T12:38:09.674Z",
     "source": "eBay public sold listings — GRADED ONLY (HTML scrape, LH_Sold=1)",
     "note": "GRADED sold comps only (PSA, BGS, SGC, etc.). Scraped in batches of 10. No brand filter. Junk titles removed. Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA.",
     "batchInfo": {
-      "startIdx": 210,
-      "endIdx": 220,
+      "startIdx": 220,
+      "endIdx": 230,
       "totalAthletes": 568
     },
     "maxPages": 3,
@@ -2670,30 +2670,30 @@
   "Jeanmar Gomez": {
     "keyword": "Jeanmar Gomez Baseball",
     "nScraped": 60,
-    "nSoldUsed": 7,
-    "avg": 3.0357142857142856,
-    "taguchiSold": 3.0357142857142856,
-    "medianSold": 3.25,
-    "marketStabilityCV": 0.4129395005831587,
-    "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
-  },
-  "Jeferson Quero": {
-    "keyword": "Jeferson Quero Baseball",
-    "nScraped": 216,
-    "nSoldUsed": 3,
+    "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
     "medianSold": null,
     "marketStabilityCV": null,
+    "currency": "USD",
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
+  },
+  "Jeferson Quero": {
+    "keyword": "Jeferson Quero Baseball",
+    "nScraped": 198,
+    "nSoldUsed": 6,
+    "avg": 19.285,
+    "taguchiSold": 19.285,
+    "medianSold": 19.285,
+    "marketStabilityCV": 0.32462892570827323,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
   },
   "Jermaine Palacios": {
     "keyword": "Jermaine Palacios Baseball",
-    "nScraped": 217,
+    "nScraped": 180,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -2705,27 +2705,27 @@
   },
   "Jesus Aguilar": {
     "keyword": "Jesus Aguilar Baseball",
-    "nScraped": 192,
-    "nSoldUsed": 13,
-    "avg": 6.898461538461539,
-    "taguchiSold": 6.898461538461539,
-    "medianSold": 10,
-    "marketStabilityCV": 0.505451362761593,
+    "nScraped": 180,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
   },
   "Jesus Delgado": {
     "keyword": "Jesus Delgado Baseball",
     "nScraped": 60,
-    "nSoldUsed": 7,
-    "avg": 13.324285714285713,
-    "taguchiSold": 13.324285714285713,
-    "medianSold": 15.27,
-    "marketStabilityCV": 0.5665531258820486,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
   },
   "Jesus Flores": {
     "keyword": "Jesus Flores Baseball",
@@ -2742,7 +2742,19 @@
   "Jesus Guzman": {
     "keyword": "Jesus Guzman Baseball",
     "nScraped": 60,
-    "nSoldUsed": 1,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
+    "currency": "USD",
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
+  },
+  "Jesus Montero": {
+    "keyword": "Jesus Montero Baseball",
+    "nScraped": 180,
+    "nSoldUsed": 3,
     "avg": null,
     "taguchiSold": null,
     "medianSold": null,
@@ -2751,21 +2763,9 @@
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
   },
-  "Jesus Montero": {
-    "keyword": "Jesus Montero Baseball",
-    "nScraped": 186,
-    "nSoldUsed": 7,
-    "avg": 773.8214285714286,
-    "taguchiSold": 773.8214285714286,
-    "medianSold": 5.5,
-    "marketStabilityCV": 1.2404580249783135,
-    "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
-  },
   "Jesus Sucre": {
     "keyword": "Jesus Sucre Baseball",
-    "nScraped": 0,
+    "nScraped": 60,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -2777,7 +2777,7 @@
   },
   "Jesus Tinoco": {
     "keyword": "Jesus Tinoco Baseball",
-    "nScraped": 0,
+    "nScraped": 60,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
