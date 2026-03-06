@@ -23,12 +23,13 @@ interface AthleteCardProps {
   ebaySoldRaw?: Record<string, any>;
   ebayGradedSoldRaw?: Record<string, any>;
   history?: any[];
+  psaPop?: number;
   isRecommended?: boolean;
   isHotSeller?: boolean;
   priceMode: "raw" | "graded" | "both";
 }
 
-const AthleteCard = forwardRef<HTMLElement, AthleteCardProps>(({ athlete, byName, byKey, gradedByName, gradedByKey, ebaySoldRaw, ebayGradedSoldRaw, history, isRecommended, isHotSeller, priceMode }, ref) => {
+const AthleteCard = forwardRef<HTMLElement, AthleteCardProps>(({ athlete, byName, byKey, gradedByName, gradedByKey, ebaySoldRaw, ebayGradedSoldRaw, history, psaPop, isRecommended, isHotSeller, priceMode }, ref) => {
   const cardRef = useRef<HTMLElement>(null);
   const avgNum = getEbayAvgNumber(athlete, byName, byKey);
   const money = avgNum != null ? formatCurrency(avgNum, "USD") : "—";
