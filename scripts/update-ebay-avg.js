@@ -709,14 +709,24 @@ function computeScriptIndex(outData, athletes, sport) {
 async function main() {
   const token = await getAppToken();
   const fx = await getFxRatesToUSD();
-  const athletes = loadAthletes();
+  let athletes = loadAthletes();
+
+  // ✅ Single-athlete mode: EBAY_ONLY env var (comma-separated names)
+  const onlyNames = process.env.EBAY_ONLY;
+  if (onlyNames) {
+    const wanted = onlyNames.split(",").map((n) => normalizeNameForCompare(n.trim()));
+    athletes = athletes.filter((a) => wanted.includes(normalizeNameForCompare(a.name)));
+    console.log(`🎯 Single-athlete mode: processing ${athletes.length} athlete(s)`);
+  }
 
   // Load previous indexHistory and basePrices so we can append/reuse
   let prevHistory = [];
   let basePrices = {};  // { playerName: basePrice }
+  let prevOut = {};
   try {
     if (fs.existsSync(OUT_PATH)) {
       const prev = JSON.parse(fs.readFileSync(OUT_PATH, "utf8"));
+      prevOut = prev;
       if (Array.isArray(prev?._meta?.indexHistory)) {
         prevHistory = prev._meta.indexHistory;
       }
@@ -726,7 +736,8 @@ async function main() {
     }
   } catch { /* ignore parse errors */ }
 
-  const out = {
+  // In single-athlete mode, start from previous data so we don't wipe others
+  const out = onlyNames ? { ...prevOut } : {
     _meta: {
       updatedAt: new Date().toISOString(),
       minSampleSize: MIN_EBAY_SAMPLE_SIZE,
@@ -761,6 +772,11 @@ async function main() {
       },
     },
   };
+
+  // Update timestamp in single-athlete mode too
+  if (onlyNames && out._meta) {
+    out._meta.updatedAt = new Date().toISOString();
+  }
 
   let errorCount = 0;
 
