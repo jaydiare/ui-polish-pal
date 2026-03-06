@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-06T17:03:39.101Z",
+    "updatedAt": "2026-03-06T18:21:40.608Z",
     "source": "eBay public sold listings — GRADED ONLY (HTML scrape, LH_Sold=1)",
     "note": "GRADED sold comps only (PSA, BGS, SGC, etc.). Scraped in batches of 10. No brand filter. Junk titles removed. Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA.",
     "batchInfo": {
-      "startIdx": 20,
-      "endIdx": 30,
+      "startIdx": 30,
+      "endIdx": 40,
       "totalAthletes": 568
     },
     "maxPages": 3,
@@ -377,7 +377,7 @@
   },
   "Anderson Machado": {
     "keyword": "Anderson Machado Baseball",
-    "nScraped": 0,
+    "nScraped": 60,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -401,7 +401,7 @@
   },
   "Andres Chaparro": {
     "keyword": "Andres Chaparro Baseball",
-    "nScraped": 186,
+    "nScraped": 188,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -425,7 +425,7 @@
   },
   "Andres Gimenez": {
     "keyword": "Andres Gimenez Baseball",
-    "nScraped": 239,
+    "nScraped": 247,
     "nSoldUsed": 27,
     "avg": 17.22222222222222,
     "taguchiSold": 17.22222222222222,
@@ -449,7 +449,7 @@
   },
   "Andruw Monasterio": {
     "keyword": "Andruw Monasterio Baseball",
-    "nScraped": 182,
+    "nScraped": 180,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -461,8 +461,8 @@
   },
   "Andry Lara": {
     "keyword": "Andry Lara Baseball",
-    "nScraped": 180,
-    "nSoldUsed": 3,
+    "nScraped": 120,
+    "nSoldUsed": 2,
     "avg": null,
     "taguchiSold": null,
     "medianSold": null,
@@ -473,7 +473,7 @@
   },
   "Angel Bravo": {
     "keyword": "Angel Bravo Baseball",
-    "nScraped": 60,
+    "nScraped": 0,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
