@@ -1803,7 +1803,7 @@
     "sport": "Baseball",
     "league": "MLB",
     "team": "Cubs",
-    "provider": "manual"
+    "provider": "manual",
     "searchKeyword": "Jose Martinez Cardinals" 
   },
   {
@@ -3806,7 +3806,7 @@
     "sport": "Soccer",
     "league": "MLS",
     "team": "FC Dallas",
-    "provider": "balldontlie"
+    "provider": "balldontlie",
      "searchKeyword": "Luis Gonzalez FC Dallas" 
   },
   {
