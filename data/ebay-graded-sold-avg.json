@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-06T21:59:52.605Z",
+    "updatedAt": "2026-03-06T22:18:30.724Z",
     "source": "eBay public sold listings — GRADED ONLY (HTML scrape, LH_Sold=1)",
     "note": "GRADED sold comps only (PSA, BGS, SGC, etc.). Scraped in batches of 10. No brand filter. Junk titles removed. Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA.",
     "batchInfo": {
-      "startIdx": 70,
-      "endIdx": 80,
+      "startIdx": 80,
+      "endIdx": 90,
       "totalAthletes": 568
     },
     "maxPages": 3,
@@ -989,7 +989,7 @@
   },
   "Carlos Sanabria": {
     "keyword": "Carlos Sanabria Baseball",
-    "nScraped": 0,
+    "nScraped": 60,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -1001,7 +1001,7 @@
   },
   "Carlos Silva": {
     "keyword": "Carlos Silva Baseball",
-    "nScraped": 193,
+    "nScraped": 191,
     "nSoldUsed": 3,
     "avg": null,
     "taguchiSold": null,
@@ -1049,7 +1049,7 @@
   },
   "Cesar Gutierrez": {
     "keyword": "Cesar Gutierrez Baseball",
-    "nScraped": 196,
+    "nScraped": 197,
     "nSoldUsed": 15,
     "avg": 31,
     "taguchiSold": 31,
@@ -1097,7 +1097,7 @@
   },
   "Cesar Tovar": {
     "keyword": "Cesar Tovar Baseball",
-    "nScraped": 231,
+    "nScraped": 228,
     "nSoldUsed": 51,
     "avg": 25.428823529411762,
     "taguchiSold": 25.428823529411762,
