@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-06T05:27:50.330Z",
+    "updatedAt": "2026-03-06T07:10:30.914Z",
     "source": "eBay public sold listings — GRADED ONLY (HTML scrape, LH_Sold=1)",
     "note": "GRADED sold comps only (PSA, BGS, SGC, etc.). Scraped in batches of 10. No brand filter. Junk titles removed. Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA.",
     "batchInfo": {
-      "startIdx": 60,
-      "endIdx": 70,
+      "startIdx": 70,
+      "endIdx": 80,
       "totalAthletes": 568
     },
     "maxPages": 3,
@@ -881,12 +881,12 @@
   },
   "Carlos Martinez": {
     "keyword": "Carlos Martinez Baseball",
-    "nScraped": 189,
-    "nSoldUsed": 70,
-    "avg": 40.79814285714282,
-    "taguchiSold": 40.79814285714282,
-    "medianSold": 49.99,
-    "marketStabilityCV": 0.4710192911530384,
+    "nScraped": 183,
+    "nSoldUsed": 3,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
@@ -906,50 +906,50 @@
   "Carlos Mendoza": {
     "keyword": "Carlos Mendoza Baseball",
     "nScraped": 60,
-    "nSoldUsed": 12,
-    "avg": 18.136666666666667,
-    "taguchiSold": 18.136666666666667,
-    "medianSold": 15.094999999999999,
-    "marketStabilityCV": 0.23652417841954979,
-    "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
-  },
-  "Carlos Monasterios": {
-    "keyword": "Carlos Monasterios Baseball",
-    "nScraped": 60,
-    "nSoldUsed": 2,
+    "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
+  },
+  "Carlos Monasterios": {
+    "keyword": "Carlos Monasterios Baseball",
+    "nScraped": 60,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
+    "currency": "USD",
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
   },
   "Carlos Narvaez": {
     "keyword": "Carlos Narvaez Baseball",
-    "nScraped": 252,
-    "nSoldUsed": 99,
-    "avg": 35.79151515151523,
-    "taguchiSold": 35.79151515151523,
-    "medianSold": 39,
-    "marketStabilityCV": 0.20094078557032868,
+    "nScraped": 223,
+    "nSoldUsed": 9,
+    "avg": 9.99,
+    "taguchiSold": 9.99,
+    "medianSold": 9.99,
+    "marketStabilityCV": 0,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
   },
   "Carlos Perez": {
     "keyword": "Carlos Perez Baseball",
-    "nScraped": 186,
-    "nSoldUsed": 28,
-    "avg": 93.95714285714287,
-    "taguchiSold": 93.95714285714287,
-    "medianSold": 90.215,
-    "marketStabilityCV": 0.04759733213538749,
+    "nScraped": 180,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
   },
   "Carlos Pulido": {
     "keyword": "Carlos Pulido Baseball",
@@ -965,12 +965,12 @@
   },
   "Carlos Quintana": {
     "keyword": "Carlos Quintana Baseball",
-    "nScraped": 122,
-    "nSoldUsed": 8,
-    "avg": 23.095000000000002,
-    "taguchiSold": 23.095000000000002,
-    "medianSold": 23.095000000000002,
-    "marketStabilityCV": 0.7010472411801111,
+    "nScraped": 180,
+    "nSoldUsed": 6,
+    "avg": 63.97,
+    "taguchiSold": 63.97,
+    "medianSold": 63.97,
+    "marketStabilityCV": 0.9593064771436425,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
@@ -989,15 +989,15 @@
   },
   "Carlos Sanabria": {
     "keyword": "Carlos Sanabria Baseball",
-    "nScraped": 60,
-    "nSoldUsed": 1,
+    "nScraped": 0,
+    "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
   },
   "Carlos Silva": {
     "keyword": "Carlos Silva Baseball",
