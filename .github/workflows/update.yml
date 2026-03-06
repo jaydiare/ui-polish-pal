@@ -3,7 +3,7 @@ name: Automated Athlete Sync
 on:
   workflow_dispatch:
   schedule:
-    - cron: '0 0,12 * * *'
+   - cron: '0 0 1 * *'
 
 concurrency:
   group: athlete-sync-main
