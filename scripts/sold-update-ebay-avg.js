@@ -279,6 +279,9 @@ function buildSoldSearchURL(keyword, sport, page = 1) {
     rt: "nc",
   });
 
+  // Restrict to ungraded (raw) cards only
+  params.set("Condition%20Type", "Ungraded");
+
   // Add League aspect filter to avoid cross-sport contamination
   const league = SPORT_LEAGUE_MAP[sport];
   if (league) {

@@ -370,8 +370,12 @@ function sportAspectCandidates(sportRaw) {
 }
 
 // Build a combined eBay aspect_filter (no Manufacturer restriction)
+// Always includes Condition Type:{Ungraded} for raw card searches
 function buildAspectFilter({ aspectMode, aspectValue }) {
   const parts = [];
+
+  // Always restrict to ungraded (raw) cards
+  parts.push(`Condition Type:{Ungraded}`);
 
   if (aspectMode === "player" && aspectValue) {
     parts.push(`Player/Athlete:{${aspectValue}}`);
