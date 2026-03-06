@@ -23,12 +23,13 @@ interface AthleteCardProps {
   ebaySoldRaw?: Record<string, any>;
   ebayGradedSoldRaw?: Record<string, any>;
   history?: any[];
+  psaPop?: number;
   isRecommended?: boolean;
   isHotSeller?: boolean;
   priceMode: "raw" | "graded" | "both";
 }
 
-const AthleteCard = forwardRef<HTMLElement, AthleteCardProps>(({ athlete, byName, byKey, gradedByName, gradedByKey, ebaySoldRaw, ebayGradedSoldRaw, history, isRecommended, isHotSeller, priceMode }, ref) => {
+const AthleteCard = forwardRef<HTMLElement, AthleteCardProps>(({ athlete, byName, byKey, gradedByName, gradedByKey, ebaySoldRaw, ebayGradedSoldRaw, history, psaPop, isRecommended, isHotSeller, priceMode }, ref) => {
   const cardRef = useRef<HTMLElement>(null);
   const avgNum = getEbayAvgNumber(athlete, byName, byKey);
   const money = avgNum != null ? formatCurrency(avgNum, "USD") : "—";
@@ -196,20 +197,29 @@ const AthleteCard = forwardRef<HTMLElement, AthleteCardProps>(({ athlete, byName
           <div className="p-2.5 rounded-lg bg-secondary/50 border border-border/40">
             <div className="text-[9px] text-muted-foreground font-medium uppercase tracking-wider mb-1">Graded</div>
             {gradedMoney ? (
-              <>
-                <div className="text-base font-display font-bold text-foreground leading-none">{gradedMoney}</div>
-                {gradedIdx != null && (
-                  <div className={`text-[10px] font-semibold mt-1 ${gradedIdx >= 100 ? "text-primary" : "text-destructive"}`}>
-                    {gradedIdx >= 100 ? "↗" : "↘"} {gradedIdx.toFixed(0)}
+              <div className="flex items-start justify-between gap-2">
+                <div>
+                  <div className="text-base font-display font-bold text-foreground leading-none">{gradedMoney}</div>
+                  {gradedIdx != null && (
+                    <div className={`text-[10px] font-semibold mt-1 ${gradedIdx >= 100 ? "text-primary" : "text-destructive"}`}>
+                      {gradedIdx >= 100 ? "↗" : "↘"} {gradedIdx.toFixed(0)}
+                    </div>
+                  )}
+                  {priceMode === "both" && (gradedIsBuyLow || gradedIsFlip) && (
+                    <div className="flex gap-1 mt-1.5 flex-wrap">
+                      {gradedIsFlip && <span className="inline-flex px-1 py-0.5 rounded text-[8px] font-bold bg-vzla-yellow/10 border border-vzla-yellow/20 text-vzla-yellow leading-none">🔄 Flip</span>}
+                      {gradedIsBuyLow && <span className="inline-flex px-1 py-0.5 rounded text-[8px] font-bold bg-violet-500/10 border border-violet-400/20 text-violet-400 leading-none">🔻 Buy Low</span>}
+                    </div>
+                  )}
+                </div>
+                {priceMode === "graded" && psaPop != null && (
+                  <div className="text-right shrink-0">
+                    <div className="text-[9px] text-muted-foreground font-medium uppercase tracking-wider">PSA</div>
+                    <div className="text-[9px] text-muted-foreground font-medium uppercase tracking-wider">POP #</div>
+                    <div className="text-sm font-display font-bold text-foreground leading-tight mt-0.5">{psaPop.toLocaleString()}</div>
                   </div>
                 )}
-                {priceMode === "both" && (gradedIsBuyLow || gradedIsFlip) && (
-                  <div className="flex gap-1 mt-1.5 flex-wrap">
-                    {gradedIsFlip && <span className="inline-flex px-1 py-0.5 rounded text-[8px] font-bold bg-vzla-yellow/10 border border-vzla-yellow/20 text-vzla-yellow leading-none">🔄 Flip</span>}
-                    {gradedIsBuyLow && <span className="inline-flex px-1 py-0.5 rounded text-[8px] font-bold bg-violet-500/10 border border-violet-400/20 text-violet-400 leading-none">🔻 Buy Low</span>}
-                  </div>
-                )}
-              </>
+              </div>
             ) : (
               <div className="text-sm text-muted-foreground/40 font-display font-bold leading-none">—</div>
             )}
