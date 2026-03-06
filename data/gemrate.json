@@ -1,13 +1,13 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-06T18:59:07.595730+00:00",
+    "updatedAt": "2026-03-06T20:41:07.212481+00:00",
     "athleteCount": 450,
     "graders": [
       "PSA"
     ],
     "batchInfo": {
-      "startIdx": 220,
-      "endIdx": 240,
+      "startIdx": 240,
+      "endIdx": 260,
       "totalAthletes": 568
     }
   },
@@ -3599,16 +3599,16 @@
       "sport": "Baseball",
       "graders": {
         "PSA": {
-          "cards": 4429,
-          "gems": 12882,
-          "grades": 25229,
+          "cards": 4438,
+          "gems": 12890,
+          "grades": 25257,
           "gemRate": 51.0
         }
       },
       "totals": {
-        "cards": 4429,
-        "gems": 12882,
-        "grades": 25229,
+        "cards": 4438,
+        "gems": 12890,
+        "grades": 25257,
         "gemRate": 51.0
       }
     },
@@ -3691,15 +3691,15 @@
         "PSA": {
           "cards": 68,
           "gems": 87,
-          "grades": 151,
-          "gemRate": 58.0
+          "grades": 152,
+          "gemRate": 57.0
         }
       },
       "totals": {
         "cards": 68,
         "gems": 87,
-        "grades": 151,
-        "gemRate": 58.0
+        "grades": 152,
+        "gemRate": 57.0
       }
     },
     "Jose Campos": {
@@ -3817,14 +3817,14 @@
         "PSA": {
           "cards": 50,
           "gems": 114,
-          "grades": 769,
+          "grades": 771,
           "gemRate": 15.0
         }
       },
       "totals": {
         "cards": 50,
         "gems": 114,
-        "grades": 769,
+        "grades": 771,
         "gemRate": 15.0
       }
     },
