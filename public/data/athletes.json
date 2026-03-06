@@ -1804,6 +1804,7 @@
     "league": "MLB",
     "team": "Cubs",
     "provider": "manual"
+    "searchKeyword": "Jose Martinez Cardinals" 
   },
   {
     "name": "Jose Mijares",
@@ -3475,56 +3476,56 @@
     "name": "Juan Arango",
     "sport": "Soccer",
     "league": "Bundesliga",
-    "team": "Unknown",
+    "team": "Venezuela",
     "provider": "balldontlie"
   },
   {
     "name": "Sergio Cordova",
     "sport": "Soccer",
-    "league": "Bundesliga",
-    "team": "Unknown",
+    "league": "Swiss Super League",
+    "team": "Young Boys",
     "provider": "balldontlie"
   },
   {
     "name": "Tomas Rincon",
     "sport": "Soccer",
-    "league": "Bundesliga",
-    "team": "Unknown",
+    "league": "Serie A",
+    "team": "Santos",
     "provider": "balldontlie"
   },
   {
     "name": "Yohandry Orozco",
     "sport": "Soccer",
     "league": "Bundesliga",
-    "team": "Unknown",
+    "team": "VfL Wolfsburg",
     "provider": "balldontlie"
   },
   {
     "name": "Andres Tunez",
     "sport": "Soccer",
     "league": "La Liga",
-    "team": "Unknown",
+    "team": "Celta",
     "provider": "balldontlie"
   },
   {
     "name": "Christian Santos",
     "sport": "Soccer",
     "league": "La Liga",
-    "team": "Unknown",
+    "team": "Deportivo La Coruña",
     "provider": "balldontlie"
   },
   {
     "name": "Fernando Amorebieta",
     "sport": "Soccer",
     "league": "La Liga",
-    "team": "Unknown",
+    "team": "Athletic Bilbao",
     "provider": "balldontlie"
   },
   {
     "name": "Jeffren Suarez",
     "sport": "Soccer",
     "league": "La Liga",
-    "team": "Unknown",
+    "team": "Valladolid",
     "provider": "balldontlie"
   },
   {
@@ -3776,21 +3777,21 @@
     "name": "Jesus Castellano",
     "sport": "Soccer",
     "league": "MLS",
-    "team": "Unknown",
+    "team": "FC Cincinati",
     "provider": "balldontlie"
   },
   {
     "name": "Jose Andres Martinez",
     "sport": "Soccer",
     "league": "MLS",
-    "team": "Unknown",
+    "team": "Philadelphia Union",
     "provider": "balldontlie"
   },
   {
     "name": "Josef Martinez",
     "sport": "Soccer",
     "league": "MLS",
-    "team": "Unknown",
+    "team": "Atlanta United",
     "provider": "balldontlie"
   },
   {
@@ -3804,21 +3805,22 @@
     "name": "Kevin Kelsy",
     "sport": "Soccer",
     "league": "MLS",
-    "team": "Unknown",
+    "team": "Portland Timbers",
     "provider": "balldontlie"
   },
   {
     "name": "Luis Gonzalez",
     "sport": "Soccer",
     "league": "MLS",
-    "team": "Unknown",
+    "team": "FC Dallas",
     "provider": "balldontlie"
+     "searchKeyword": "Luis Gonzalez FC Dallas" 
   },
   {
     "name": "Miguel Navarro",
     "sport": "Soccer",
     "league": "MLS",
-    "team": "Unknown",
+    "team": "Colorado Rapids",
     "provider": "balldontlie"
   },
   {
@@ -3860,49 +3862,49 @@
     "name": "Rolando Escobar",
     "sport": "Soccer",
     "league": "MLS",
-    "team": "Unknown",
+    "team": "FC Dallas",
     "provider": "balldontlie"
   },
   {
     "name": "Rolf Feltscher",
     "sport": "Soccer",
     "league": "MLS",
-    "team": "Unknown",
+    "team": "LA Galaxy",
     "provider": "balldontlie"
   },
   {
     "name": "Ronald Hernandez",
     "sport": "Soccer",
     "league": "MLS",
-    "team": "Unknown",
+    "team": "Atlanta United",
     "provider": "balldontlie"
   },
   {
     "name": "Ronaldo Pena",
     "sport": "Soccer",
     "league": "MLS",
-    "team": "Unknown",
+    "team": "Houston Dynamo FC",
     "provider": "balldontlie"
   },
   {
     "name": "Santiago Pita",
     "sport": "Soccer",
     "league": "MLS",
-    "team": "Unknown",
+    "team": "Atlabta United",
     "provider": "balldontlie"
   },
   {
     "name": "Telasco Segovia",
     "sport": "Soccer",
     "league": "MLS",
-    "team": "Unknown",
+    "team": " Inter Miami CF",
     "provider": "balldontlie"
   },
   {
     "name": "Wikelman Carmona",
     "sport": "Soccer",
     "league": "MLS",
-    "team": "Unknown",
+    "team": "CF Montreal",
     "provider": "balldontlie"
   },
   {
@@ -3923,7 +3925,7 @@
     "name": "Luis Balbo",
     "sport": "Soccer",
     "league": "Serie A",
-    "team": "Unknown",
+    "team": "Fiorentina",
     "provider": "balldontlie"
   },
   {
@@ -3937,7 +3939,7 @@
     "name": "Manuel Arteaga",
     "sport": "Soccer",
     "league": "Serie A",
-    "team": "Unknown",
+    "team": "Palermo",
     "provider": "balldontlie"
   },
   {
@@ -3951,7 +3953,7 @@
     "name": "Yordan Osorio",
     "sport": "Soccer",
     "league": "Serie A",
-    "team": "Unknown",
+    "team": "Parma",
     "provider": "balldontlie"
   },
   {
@@ -3965,7 +3967,7 @@
     "name": "Daniele Quieto",
     "sport": "Soccer",
     "league": "UCL",
-    "team": "Unknown",
+    "team": "Inter",
     "provider": "balldontlie"
   },
   {
