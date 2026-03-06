@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-06T22:45:30.978Z",
+    "updatedAt": "2026-03-06T22:49:25.112Z",
     "source": "eBay public sold listings — GRADED ONLY (HTML scrape, LH_Sold=1)",
     "note": "GRADED sold comps only (PSA, BGS, SGC, etc.). Scraped in batches of 10. No brand filter. Junk titles removed. Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA.",
     "batchInfo": {
-      "startIdx": 130,
-      "endIdx": 140,
+      "startIdx": 140,
+      "endIdx": 150,
       "totalAthletes": 568
     },
     "maxPages": 3,
@@ -1696,12 +1696,12 @@
   },
   "Elvis Andrus": {
     "keyword": "Elvis Andrus Baseball",
-    "nScraped": 63,
-    "nSoldUsed": 3,
-    "avg": null,
-    "taguchiSold": null,
-    "medianSold": null,
-    "marketStabilityCV": null,
+    "nScraped": 190,
+    "nSoldUsed": 9,
+    "avg": 7.8500000000000005,
+    "taguchiSold": 7.8500000000000005,
+    "medianSold": 7.85,
+    "marketStabilityCV": 1.2000706690576623e-16,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
@@ -1792,7 +1792,7 @@
   },
   "Enzo Hernandez": {
     "keyword": "Enzo Hernandez Baseball",
-    "nScraped": 201,
+    "nScraped": 196,
     "nSoldUsed": 33,
     "avg": 21,
     "taguchiSold": 21,
@@ -1804,7 +1804,7 @@
   },
   "Erick Castillo": {
     "keyword": "Erick Castillo Baseball",
-    "nScraped": 60,
+    "nScraped": 0,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
