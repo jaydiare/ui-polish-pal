@@ -82,6 +82,7 @@ export function useAthleteData() {
   const [ebayGradedSoldRaw, setEbayGradedSoldRaw] = useState<Record<string, any>>({});
   const [athleteHistory, setAthleteHistory] = useState<Record<string, any[]>>({});
   const [indexHistory, setIndexHistory] = useState<any[]>([]);
+  const [gemratePopMap, setGemratePopMap] = useState<Record<string, number>>({});
   const [lastUpdated, setLastUpdated] = useState<string>("—");
   const [visibleCount, setVisibleCount] = useState(PAGE_SIZE);
   const [filters, setFilters] = useState<Filters>({
@@ -100,7 +101,7 @@ export function useAthleteData() {
   // Fetch data on mount
   useEffect(() => {
     (async () => {
-      const [fetchedAthletes, fetchedEbay, fetchedGraded, fetchedSold, fetchedGradedSold, fetchedProgress, fetchedHistory, fetchedIndexHistory] = await Promise.all([
+      const [fetchedAthletes, fetchedEbay, fetchedGraded, fetchedSold, fetchedGradedSold, fetchedProgress, fetchedHistory, fetchedIndexHistory, fetchedGemrate] = await Promise.all([
         fetchJson("https://raw.githubusercontent.com/jaydiare/ui-polish-pal/main/data/athletes.json"),
         fetchJson("https://raw.githubusercontent.com/jaydiare/ui-polish-pal/main/data/ebay-avg.json"),
         fetchJson("https://raw.githubusercontent.com/jaydiare/ui-polish-pal/main/data/ebay-graded-avg.json"),
@@ -109,6 +110,7 @@ export function useAthleteData() {
         fetchJson("https://raw.githubusercontent.com/jaydiare/ui-polish-pal/main/data/ebay-sold-progress.json"),
         fetchJson("https://raw.githubusercontent.com/jaydiare/ui-polish-pal/main/data/athlete-history.json"),
         fetchJson("https://raw.githubusercontent.com/jaydiare/ui-polish-pal/main/data/index-history.json"),
+        fetchJson("https://raw.githubusercontent.com/jaydiare/ui-polish-pal/main/data/gemrate.json"),
       ]);
 
       const patchedEbay = enrichWithBasePrices(fetchedEbay as EbayAvgData | null);
@@ -137,6 +139,16 @@ export function useAthleteData() {
       }
       if (Array.isArray(fetchedIndexHistory)) {
         setIndexHistory(fetchedIndexHistory);
+      }
+      if (fetchedGemrate?.athletes && typeof fetchedGemrate.athletes === "object") {
+        const popMap: Record<string, number> = {};
+        for (const [name, athlete] of Object.entries(fetchedGemrate.athletes as Record<string, any>)) {
+          const pop = athlete?.graders?.PSA?.grades ?? athlete?.totals?.grades;
+          if (pop != null && Number.isFinite(pop) && pop > 0) {
+            popMap[name] = pop;
+          }
+        }
+        setGemratePopMap(popMap);
       }
     })();
   }, []);
