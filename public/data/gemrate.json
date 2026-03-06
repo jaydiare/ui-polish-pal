@@ -1,14 +1,14 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-06T12:41:07.529607+00:00",
+    "updatedAt": "2026-03-06T16:46:07.629801+00:00",
     "athleteCount": 450,
     "graders": [
       "PSA"
     ],
     "batchInfo": {
-      "startIdx": 160,
-      "endIdx": 180,
-      "totalAthletes": 568
+      "startIdx": 180,
+      "endIdx": 200,
+      "totalAthletes": 567
     }
   },
   "athletes": {
@@ -2645,16 +2645,16 @@
       "sport": "Baseball",
       "graders": {
         "PSA": {
-          "cards": 2771,
-          "gems": 63935,
-          "grades": 93889,
+          "cards": 2772,
+          "gems": 63936,
+          "grades": 93893,
           "gemRate": 68.0
         }
       },
       "totals": {
-        "cards": 2771,
-        "gems": 63935,
-        "grades": 93889,
+        "cards": 2772,
+        "gems": 63936,
+        "grades": 93893,
         "gemRate": 68.0
       }
     },
@@ -2699,17 +2699,17 @@
       "sport": "Baseball",
       "graders": {
         "PSA": {
-          "cards": 15,
+          "cards": 16,
           "gems": 8,
-          "grades": 16,
-          "gemRate": 50.0
+          "grades": 17,
+          "gemRate": 47.0
         }
       },
       "totals": {
-        "cards": 15,
+        "cards": 16,
         "gems": 8,
-        "grades": 16,
-        "gemRate": 50.0
+        "grades": 17,
+        "gemRate": 47.0
       }
     },
     "Gregorio Petit": {
