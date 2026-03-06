@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-06T22:36:51.370Z",
+    "updatedAt": "2026-03-06T22:39:33.000Z",
     "source": "eBay public sold listings — GRADED ONLY (HTML scrape, LH_Sold=1)",
     "note": "GRADED sold comps only (PSA, BGS, SGC, etc.). Scraped in batches of 10. No brand filter. Junk titles removed. Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA.",
     "batchInfo": {
-      "startIdx": 100,
-      "endIdx": 110,
+      "startIdx": 110,
+      "endIdx": 120,
       "totalAthletes": 568
     },
     "maxPages": 3,
@@ -1337,7 +1337,7 @@
   },
   "Eddy Diaz": {
     "keyword": "Eddy Diaz Baseball",
-    "nScraped": 0,
+    "nScraped": 180,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -1397,7 +1397,7 @@
   },
   "Edgardo Alfonzo": {
     "keyword": "Edgardo Alfonzo Baseball",
-    "nScraped": 186,
+    "nScraped": 185,
     "nSoldUsed": 9,
     "avg": 20.5,
     "taguchiSold": 20.5,
@@ -1409,7 +1409,7 @@
   },
   "Edgardo Henriquez": {
     "keyword": "Edgardo Henriquez Baseball",
-    "nScraped": 204,
+    "nScraped": 205,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -1445,7 +1445,7 @@
   },
   "Eduardo Escobar": {
     "keyword": "Eduardo Escobar Baseball",
-    "nScraped": 60,
+    "nScraped": 0,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
