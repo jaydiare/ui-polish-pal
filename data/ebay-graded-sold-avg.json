@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-06T09:00:40.723Z",
+    "updatedAt": "2026-03-06T11:00:01.048Z",
     "source": "eBay public sold listings — GRADED ONLY (HTML scrape, LH_Sold=1)",
     "note": "GRADED sold comps only (PSA, BGS, SGC, etc.). Scraped in batches of 10. No brand filter. Junk titles removed. Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA.",
     "batchInfo": {
-      "startIdx": 80,
-      "endIdx": 90,
+      "startIdx": 90,
+      "endIdx": 100,
       "totalAthletes": 568
     },
     "maxPages": 3,
@@ -1145,48 +1145,48 @@
   },
   "Cris Colon": {
     "keyword": "Cris Colon Baseball",
-    "nScraped": 180,
-    "nSoldUsed": 33,
-    "avg": 31.596060606060608,
-    "taguchiSold": 31.596060606060608,
-    "medianSold": 24.99,
-    "marketStabilityCV": 0.34297578315987526,
+    "nScraped": 182,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
   },
   "Damaso Blanco": {
     "keyword": "Damaso Blanco Baseball",
     "nScraped": 60,
-    "nSoldUsed": 13,
-    "avg": 30.406153846153845,
-    "taguchiSold": 30.406153846153845,
-    "medianSold": 30,
-    "marketStabilityCV": 0.018849555505567103,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
   },
   "Daniel Palencia": {
     "keyword": "Daniel Palencia Baseball",
-    "nScraped": 192,
-    "nSoldUsed": 18,
-    "avg": 31.75,
-    "taguchiSold": 31.75,
-    "medianSold": 31.75,
-    "marketStabilityCV": 0.5914675613576289,
+    "nScraped": 186,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
   },
   "Danny Leon": {
     "keyword": "Danny Leon Baseball",
-    "nScraped": 189,
-    "nSoldUsed": 49,
-    "avg": 22.60142857142857,
-    "taguchiSold": 22.60142857142857,
-    "medianSold": 23.5,
-    "marketStabilityCV": 0.10646150681563882,
+    "nScraped": 180,
+    "nSoldUsed": 3,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
@@ -1194,18 +1194,18 @@
   "Danny Sandoval": {
     "keyword": "Danny Sandoval Baseball",
     "nScraped": 60,
-    "nSoldUsed": 9,
-    "avg": 45.01111111111111,
-    "taguchiSold": 45.01111111111111,
-    "medianSold": 45.1,
-    "marketStabilityCV": 0.19995200087299522,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
   },
   "Darwin Cubillan": {
     "keyword": "Darwin Cubillan Baseball",
-    "nScraped": 0,
+    "nScraped": 38,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -1217,15 +1217,15 @@
   },
   "Darwinzon Hernandez": {
     "keyword": "Darwinzon Hernandez Baseball",
-    "nScraped": 0,
-    "nSoldUsed": 0,
+    "nScraped": 180,
+    "nSoldUsed": 3,
     "avg": null,
     "taguchiSold": null,
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
   },
   "Deolis Guerra": {
     "keyword": "Deolis Guerra Baseball",
@@ -6842,5 +6842,29 @@
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
+  },
+  "David Concepcion": {
+    "keyword": "David Concepcion Baseball",
+    "nScraped": 0,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
+    "currency": "USD",
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
+  },
+  "David Peralta": {
+    "keyword": "David Peralta Baseball",
+    "nScraped": 0,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
+    "currency": "USD",
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
   }
 }
