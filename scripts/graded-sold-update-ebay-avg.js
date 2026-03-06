@@ -353,7 +353,7 @@ function parseShippingText(text) {
 function loadAthletes() {
   if (!fs.existsSync(ATHLETES_PATH)) throw new Error(`Missing ${ATHLETES_PATH}.`);
   const raw = fs.readFileSync(ATHLETES_PATH, "utf8");
-  return (JSON.parse(raw) || []).map((x) => ({ name: normSpaces(x?.name), sport: normSpaces(x?.sport) })).filter((x) => x.name);
+  return (JSON.parse(raw) || []).map((x) => ({ name: normSpaces(x?.name), sport: normSpaces(x?.sport), searchKeyword: x?.searchKeyword ? normSpaces(x.searchKeyword) : undefined })).filter((x) => x.name);
 }
 
 function buildKeyword(name, sport) { return `${name} ${sport || ""}`.trim(); }
@@ -402,10 +402,10 @@ async function main() {
 
   for (let i = 0; i < batch.length; i++) {
     const globalIdx = startIdx + i;
-    const { name, sport } = batch[i];
-    console.log(`[${globalIdx + 1}/${athletes.length}] ${name} (${sport || "Unknown"}) — GRADED SOLD`);
+    const { name, sport, searchKeyword } = batch[i];
+    console.log(`[${globalIdx + 1}/${athletes.length}] ${name} (${sport || "Unknown"}) — GRADED SOLD${searchKeyword ? ` [searchKeyword: ${searchKeyword}]` : ""}`);
 
-    const keyword = buildKeyword(name, sport);
+    const keyword = buildKeyword(searchKeyword || name, sport);
     const pricesUSD = [];
     let firstCur = null;
     let fxRateUsed = null;

@@ -569,7 +569,7 @@ function loadAthletes() {
   const arr = JSON.parse(raw);
 
   return (arr || [])
-    .map((x) => ({ name: normSpaces(x?.name), sport: normSpaces(x?.sport) }))
+    .map((x) => ({ name: normSpaces(x?.name), sport: normSpaces(x?.sport), searchKeyword: x?.searchKeyword ? normSpaces(x.searchKeyword) : undefined }))
     .filter((x) => x.name);
 }
 
@@ -653,10 +653,10 @@ async function main() {
 
   for (let i = 0; i < batch.length; i++) {
     const globalIdx = startIdx + i;
-    const { name, sport } = batch[i];
-    console.log(`[${globalIdx + 1}/${athletes.length}] ${name} (${sport || "Unknown"})`);
+    const { name, sport, searchKeyword } = batch[i];
+    console.log(`[${globalIdx + 1}/${athletes.length}] ${name} (${sport || "Unknown"})${searchKeyword ? ` [searchKeyword: ${searchKeyword}]` : ""}`);
 
-    const keyword = buildKeyword(name, sport);
+    const keyword = buildKeyword(searchKeyword || name, sport);
     const pricesUSD = [];
     let firstCur = null;
     let fxRateUsed = null;

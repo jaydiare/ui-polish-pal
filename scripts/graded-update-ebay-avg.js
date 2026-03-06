@@ -679,6 +679,7 @@ function loadAthletes() {
     .map((x) => ({
       name: normSpaces(x?.name),
       sport: normSpaces(x?.sport),
+      searchKeyword: x?.searchKeyword ? normSpaces(x.searchKeyword) : undefined,
     }))
     .filter((x) => x.name);
 }
@@ -760,8 +761,8 @@ async function main() {
   let errorCount = 0;
 
   for (let i = 0; i < athletes.length; i++) {
-    const { name, sport } = athletes[i];
-    console.log(`[${i + 1}/${athletes.length}] ${name} (${sport || "Unknown"})`);
+    const { name, sport, searchKeyword } = athletes[i];
+    console.log(`[${i + 1}/${athletes.length}] ${name} (${sport || "Unknown"})${searchKeyword ? ` [searchKeyword: ${searchKeyword}]` : ""}`);
 
     try {
       let match = null;
