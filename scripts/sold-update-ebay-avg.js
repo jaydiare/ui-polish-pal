@@ -47,12 +47,7 @@ const MIN_SAMPLE_SIZE = 4;
 // Taguchi caps (winsorization %)
 const TAGUCHI_TRIM_PCT = 0.4;
 
-// Allowed brands (same as update-ebay-avg.js manufacturers, lowercase)
-const BRANDS = [
-  "topps", "panini", "upper deck", "leaf",
-  "artesania sport", "ovenca", "sport grafico",
-  "line up", "venezuelan league", "byn", "O-Pee-Chee", "fleer",
-];
+// Brand filter removed — all brands accepted
 
 // --------------------
 // Ungraded condition policy
@@ -187,10 +182,8 @@ function isJunkTitle(title) {
   return JUNK_PHRASES.some((p) => t.includes(p));
 }
 
-function hasAllowedBrand(title) {
-  const t = norm(title);
-  return BRANDS.some((b) => t.includes(b));
-}
+// Brand filter removed — hasAllowedBrand always returns true
+function hasAllowedBrand(title) { return true; }
 
 function titleLooksRelevantToPlayer(title, playerName) {
   const t = norm(title);
@@ -629,13 +622,13 @@ async function main() {
     updatedAt: new Date().toISOString(),
     source: "eBay public sold listings (HTML scrape, LH_Sold=1)",
     note:
-      "SOLD comps scraped in batches of " + BATCH_SIZE + ". Brand-filtered. Junk titles removed. " +
+      "SOLD comps scraped in batches of " + BATCH_SIZE + ". No brand filter. Junk titles removed. " +
       "Taguchi winsorized mean + market stability CV. Ungraded condition policy (permissive for sold). " +
       "Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     batchInfo: { startIdx, endIdx, totalAthletes: athletes.length },
     maxPages: MAX_PAGES,
     minSampleSize: MIN_SAMPLE_SIZE,
-    brands: BRANDS,
+    brands: "none (all brands accepted)",
     categoryId: CATEGORY_ID,
     listingStat: { method: "taguchi_winsorized_mean", trimPercent: TAGUCHI_TRIM_PCT },
     stabilityStat: {

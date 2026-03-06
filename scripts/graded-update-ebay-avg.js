@@ -69,8 +69,7 @@ const MIN_EBAY_SAMPLE_SIZE = 4;
 // Marketplaces to compute
 const MARKETPLACES = ["EBAY_US"];
 
-// restrict to major manufacturers (sports card makers)
-const MANUFACTURERS = ["Topps", "Panini", "Upper Deck", "Leaf", "Artesania Sport", "Ovenca Venezuelan", "Sport Grafico", "Line Up", "Venezuelan League", "BYN", "O-Pee-Chee", "Fleer"];
+// Manufacturer filter removed — all brands accepted
 
 // ✅ Country of Origin options
 const COUNTRY_OF_ORIGIN = ["United States", "Italy", "Venezuela", "Japan"];
@@ -368,7 +367,7 @@ function sportAspectCandidates(sportRaw) {
   return map[s] || [sportRaw];
 }
 
-// Build a combined eBay aspect_filter including Manufacturer
+// Build a combined eBay aspect_filter (no Manufacturer restriction)
 function buildAspectFilter({ aspectMode, aspectValue }) {
   const parts = [];
 
@@ -376,11 +375,6 @@ function buildAspectFilter({ aspectMode, aspectValue }) {
     parts.push(`Player/Athlete:{${aspectValue}}`);
   } else if (aspectMode === "sport" && aspectValue) {
     parts.push(`Sport:{${aspectValue}}`);
-  }
-
-  const mfg = (MANUFACTURERS || []).filter(Boolean);
-  if (mfg.length) {
-    parts.push(`Manufacturer:{${mfg.join("|")}}`);
   }
 
   return parts.length ? parts.join(",") : null;
@@ -741,7 +735,7 @@ async function main() {
           EUR: fx.rates?.EUR ?? null,
         },
       },
-      manufacturers: MANUFACTURERS,
+      manufacturers: "none (all brands accepted)",
       listingStat: { method: "taguchi_winsorized_mean", trimPercent: TAGUCHI_TRIM_PCT },
       stabilityStat: {
         method: "cv",
