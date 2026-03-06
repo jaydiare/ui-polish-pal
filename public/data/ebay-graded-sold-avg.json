@@ -1,12 +1,12 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-06T16:50:22.791Z",
+    "updatedAt": "2026-03-06T17:03:39.101Z",
     "source": "eBay public sold listings — GRADED ONLY (HTML scrape, LH_Sold=1)",
     "note": "GRADED sold comps only (PSA, BGS, SGC, etc.). Scraped in batches of 10. No brand filter. Junk titles removed. Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA.",
     "batchInfo": {
-      "startIdx": 10,
-      "endIdx": 20,
-      "totalAthletes": 567
+      "startIdx": 20,
+      "endIdx": 30,
+      "totalAthletes": 568
     },
     "maxPages": 3,
     "minSampleSize": 4,
@@ -257,7 +257,7 @@
   },
   "Alex Serrano": {
     "keyword": "Alex Serrano Baseball",
-    "nScraped": 0,
+    "nScraped": 60,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
