@@ -350,10 +350,23 @@ function parseShippingText(text) {
 }
 
 // --- data loading ---
+function parseWithRecovery(content) {
+  try { return JSON.parse(content); } catch (e) {
+    console.warn("JSON parsing failed, attempting recovery...");
+    const lastBrace = content.lastIndexOf("}");
+    if (lastBrace > 0) {
+      const repaired = content.substring(0, lastBrace + 1) + "]";
+      try { const items = JSON.parse(repaired); console.warn(`Recovered ${items.length} items from truncated JSON`); return items; }
+      catch { /* fall through */ }
+    }
+    throw e;
+  }
+}
+
 function loadAthletes() {
   if (!fs.existsSync(ATHLETES_PATH)) throw new Error(`Missing ${ATHLETES_PATH}.`);
   const raw = fs.readFileSync(ATHLETES_PATH, "utf8");
-  return (JSON.parse(raw) || []).map((x) => ({ name: normSpaces(x?.name), sport: normSpaces(x?.sport), searchKeyword: x?.searchKeyword ? normSpaces(x.searchKeyword) : undefined })).filter((x) => x.name);
+  return (parseWithRecovery(raw) || []).map((x) => ({ name: normSpaces(x?.name), sport: normSpaces(x?.sport), searchKeyword: x?.searchKeyword ? normSpaces(x.searchKeyword) : undefined })).filter((x) => x.name);
 }
 
 function buildKeyword(name, sport) { return `${name} ${sport || ""}`.trim(); }
