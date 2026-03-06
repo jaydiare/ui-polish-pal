@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-06T19:06:46.094Z",
+    "updatedAt": "2026-03-06T20:52:26.734Z",
     "source": "eBay public sold listings — GRADED ONLY (HTML scrape, LH_Sold=1)",
     "note": "GRADED sold comps only (PSA, BGS, SGC, etc.). Scraped in batches of 10. No brand filter. Junk titles removed. Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA.",
     "batchInfo": {
-      "startIdx": 50,
-      "endIdx": 60,
+      "startIdx": 60,
+      "endIdx": 70,
       "totalAthletes": 568
     },
     "maxPages": 3,
@@ -737,7 +737,7 @@
   },
   "Brayan Villarreal": {
     "keyword": "Brayan Villarreal Baseball",
-    "nScraped": 0,
+    "nScraped": 60,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -809,7 +809,7 @@
   },
   "Carlos Carrasco": {
     "keyword": "Carlos Carrasco Baseball",
-    "nScraped": 181,
+    "nScraped": 180,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -821,7 +821,7 @@
   },
   "Carlos Garcia": {
     "keyword": "Carlos Garcia Baseball",
-    "nScraped": 186,
+    "nScraped": 188,
     "nSoldUsed": 6,
     "avg": 71.245,
     "taguchiSold": 71.245,
@@ -833,7 +833,7 @@
   },
   "Carlos Gonzalez": {
     "keyword": "Carlos Gonzalez Baseball",
-    "nScraped": 187,
+    "nScraped": 186,
     "nSoldUsed": 6,
     "avg": 18,
     "taguchiSold": 18,
@@ -845,7 +845,7 @@
   },
   "Carlos Guillen": {
     "keyword": "Carlos Guillen Baseball",
-    "nScraped": 121,
+    "nScraped": 61,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
