@@ -367,9 +367,13 @@ function sportAspectCandidates(sportRaw) {
   return map[s] || [sportRaw];
 }
 
-// Build a combined eBay aspect_filter (no Manufacturer restriction)
+// Build a combined eBay aspect_filter for GRADED cards
+// Always includes Graded:{Yes} to restrict to graded listings at the API level
 function buildAspectFilter({ aspectMode, aspectValue }) {
   const parts = [];
+
+  // Always restrict to graded cards
+  parts.push(`Graded:{Yes}`);
 
   if (aspectMode === "player" && aspectValue) {
     parts.push(`Player/Athlete:{${aspectValue}}`);
@@ -609,12 +613,9 @@ async function computeAvgActiveListing({
     const items = data?.itemSummaries || [];
 
     for (const it of items) {
-      // ✅ enforce ungraded policy
+      // ✅ GRADED ONLY: skip ungraded listings entirely
       const graded = isGradedListing(it);
-      if (!graded) {
-        const okUngraded = ungradedPassesConditionPolicy(it);
-        if (!okUngraded) continue;
-      }
+      if (!graded) continue;
 
       const p = it?.price;
       const v = safeNum(p?.value);
