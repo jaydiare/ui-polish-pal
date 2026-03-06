@@ -296,18 +296,17 @@ function ungradedPassesConditionPolicy(item) {
   return false;
 }
 
-// You said you already filter graded vs not graded.
-// This keeps a compatible “graded” detector so the ungraded policy only applies when false.
+// PSA-only graded detector — only PSA-graded cards are included
 function isGradedListing(item) {
   const cond = normText(item?.condition || "");
   const title = normText(item?.title || "");
 
-  if (cond.includes("graded")) return true;
+  const hasPSA = /\bpsa\b/i.test(title);
 
-  const graderWithGrade = /\b(psa|sgc|bgs|cgc|hga|isa|csa|beckett|bcg)\b[^\n]{0,14}\b(10|9\.5|9|8\.5|8|gem mint|mint|pristine|black label|gold label)\b/i;
-  const slabOnly = /\b(gem mint|pristine|black label|gold label)\b/i;
+  if (cond.includes("graded") && hasPSA) return true;
 
-  return graderWithGrade.test(title) || slabOnly.test(title);
+  const psaWithGrade = /\bpsa\b[^\n]{0,14}\b(10|9\.5|9|8\.5|8|gem mint|mint|pristine|black label|gold label)\b/i;
+  return psaWithGrade.test(title);
 }
 
 // ✅ NEW: listing “age” (days on market) for ACTIVE listings
@@ -374,8 +373,9 @@ function sportAspectCandidates(sportRaw) {
 function buildAspectFilter({ aspectMode, aspectValue }) {
   const parts = [];
 
-  // Always restrict to graded cards
+  // Restrict to graded cards, PSA specifically
   parts.push(`Graded:{Yes}`);
+  parts.push(`Professional Grader:{Professional Sports Authenticator (PSA)}`);
 
   if (aspectMode === "player" && aspectValue) {
     parts.push(`Player/Athlete:{${aspectValue}}`);

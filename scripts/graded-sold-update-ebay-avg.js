@@ -133,14 +133,13 @@ function titleLooksRelevantToPlayer(title, playerName) {
   return parts.every((part) => t.includes(part));
 }
 
-// Robust graded detector — requires grading-company context to avoid false positives
+// PSA-only graded detector — only PSA-graded cards are included
 function isGradedTitle(title) {
   const t = norm(title);
 
-  const graderWithGrade = /\b(psa|sgc|bgs|cgc|hga|isa|csa|beckett|bcg)\b[^\n]{0,14}\b(10|9\.5|9|8\.5|8|gem mint|mint|pristine|black label|gold label)\b/i;
-  const slabOnly = /\b(gem mint|pristine|black label|gold label)\b/i;
-
-  return graderWithGrade.test(t) || slabOnly.test(t);
+  // Must mention PSA specifically
+  const psaWithGrade = /\bpsa\b[^\n]{0,14}\b(10|9\.5|9|8\.5|8|gem mint|mint|pristine|black label|gold label)\b/i;
+  return psaWithGrade.test(t);
 }
 
 function randomUA() { return USER_AGENTS[Math.floor(Math.random() * USER_AGENTS.length)]; }
@@ -185,9 +184,9 @@ function convertToUSD(amount, currency, fxRatesToUSD) {
 
 // --- eBay sold search page scraping ---
 function buildSoldSearchURL(keyword, sport, page = 1) {
-  // Add "graded" to keyword for better results
+  // Use "PSA" keyword instead of generic "graded" for PSA-only results
   const params = new URLSearchParams({
-    _nkw: keyword + " graded",
+    _nkw: keyword + " PSA",
     _sacat: CATEGORY_ID,
     LH_Sold: "1",
     LH_Complete: "1",
