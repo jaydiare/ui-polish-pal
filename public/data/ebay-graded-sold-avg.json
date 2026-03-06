@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-06T18:24:52.506Z",
+    "updatedAt": "2026-03-06T19:06:46.094Z",
     "source": "eBay public sold listings — GRADED ONLY (HTML scrape, LH_Sold=1)",
     "note": "GRADED sold comps only (PSA, BGS, SGC, etc.). Scraped in batches of 10. No brand filter. Junk titles removed. Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA.",
     "batchInfo": {
-      "startIdx": 40,
-      "endIdx": 50,
+      "startIdx": 50,
+      "endIdx": 60,
       "totalAthletes": 568
     },
     "maxPages": 3,
@@ -617,7 +617,7 @@
   },
   "Arcenio Leon": {
     "keyword": "Arcenio Leon Baseball",
-    "nScraped": 0,
+    "nScraped": 60,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -653,7 +653,7 @@
   },
   "Asdrubal Cabrera": {
     "keyword": "Asdrubal Cabrera Baseball",
-    "nScraped": 180,
+    "nScraped": 181,
     "nSoldUsed": 6,
     "avg": 36.995,
     "taguchiSold": 36.995,
@@ -689,19 +689,19 @@
   },
   "Bo Diaz": {
     "keyword": "Bo Diaz Baseball",
-    "nScraped": 242,
-    "nSoldUsed": 18,
-    "avg": 25.245000000000005,
-    "taguchiSold": 25.245000000000005,
-    "medianSold": 25.244999999999997,
-    "marketStabilityCV": 0.19340719821775496,
+    "nScraped": 240,
+    "nSoldUsed": 21,
+    "avg": 41.73714285714285,
+    "taguchiSold": 41.73714285714285,
+    "medianSold": 29.99,
+    "marketStabilityCV": 0.5402085291282452,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
   },
   "Bobby Abreu": {
     "keyword": "Bobby Abreu Baseball",
-    "nScraped": 219,
+    "nScraped": 224,
     "nSoldUsed": 36,
     "avg": 21.098333333333336,
     "taguchiSold": 21.098333333333336,
@@ -713,7 +713,7 @@
   },
   "Bradgley Rodriguez": {
     "keyword": "Bradgley Rodriguez Baseball",
-    "nScraped": 60,
+    "nScraped": 0,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
