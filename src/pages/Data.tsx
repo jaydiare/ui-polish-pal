@@ -1161,14 +1161,14 @@ const MostSoldChart = ({ soldData, gradedSoldData, athleteSportMap }: {
         <ModeToggle value={soldMode} onChange={setSoldMode} />
       </div>
       <p className="text-xs text-muted-foreground mb-4 ml-3">
-        Athletes with the highest {soldMode === "graded" ? "graded" : soldMode === "both" ? "total" : "raw"} verified sold volume on eBay (after filters).
+        Athletes with the highest {soldMode === "graded" ? "graded" : soldMode === "both" ? "total" : "raw"} verified listed volume on eBay (after filters).
         {formattedDate && <span className="ml-1 opacity-70">Updated {formattedDate}.</span>}
       </p>
       <div className="glass-panel p-4 md:p-6">
         {isEmpty ? (
           <div className="py-12 text-center">
             <div className="text-3xl mb-3">🔥</div>
-            <p className="text-sm text-muted-foreground">No sold data available yet.</p>
+            <p className="text-sm text-muted-foreground">No listed data available yet.</p>
           </div>
         ) : (
           <div className="w-full h-[450px] md:h-[550px]">
