@@ -1029,6 +1029,44 @@ async function main() {
     console.warn(`\n⚠️  ${errorCount} athlete(s) failed but data for ${Object.keys(out).length - 1} athletes was saved.`);
   }
 
+  // --- Ensure ALL athletes have a record with indexLevel (fallback to basePriceUSD) ---
+  let fallbackCount = 0;
+  for (const a of athletes) {
+    const existing = out[a.name];
+    if (existing && existing.indexLevel != null) continue; // already has index
+
+    const basePrice = basePrices[a.name];
+    if (!basePrice || !Number.isFinite(basePrice) || basePrice <= 0) continue;
+
+    if (existing) {
+      // Record exists but indexLevel missing (e.g. no current listings)
+      existing.basePriceUSD = basePrice;
+      existing.indexLevel = 100; // base price = 100 index
+    } else {
+      // No record at all — create a minimal one from base price
+      out[a.name] = {
+        match: null,
+        marketplaces: {},
+        avg: basePrice,
+        n: 0,
+        avgListing: basePrice,
+        taguchiListing: basePrice,
+        marketStabilityCV: null,
+        avgDaysOnMarket: null,
+        nListing: 0,
+        currency: "USD",
+        basePriceUSD: basePrice,
+        indexLevel: 100,
+        sport: a.sport || null,
+        fallback: true,
+      };
+    }
+    fallbackCount++;
+  }
+  if (fallbackCount > 0) {
+    console.log(`📌 Created/patched ${fallbackCount} fallback records from base prices (indexLevel=100)`);
+  }
+
   // --- Append today's index snapshot to indexHistory (70/30 raw/graded weighted) ---
   const today = new Date().toISOString().slice(0, 10); // YYYY-MM-DD
 
