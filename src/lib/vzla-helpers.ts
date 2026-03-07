@@ -191,6 +191,13 @@ export function getIndexLevel(
   const rec = getEbayAvgFor(athlete, byName, byKey);
   const idx = rec?.indexLevel;
   if (idx != null && Number.isFinite(idx) && idx > 0) return idx;
+
+  // Fallback: compute index from current price / base price when indexLevel missing
+  const price = Number(rec?.avgListing ?? rec?.taguchiListing ?? rec?.avg ?? rec?.average);
+  const base = Number(rec?.basePriceUSD);
+  if (Number.isFinite(price) && price > 0 && Number.isFinite(base) && base > 0) {
+    return (price / base) * 100;
+  }
   return null;
 }
 
