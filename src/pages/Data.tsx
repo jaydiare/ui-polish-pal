@@ -1154,8 +1154,8 @@ const SignalStrengthChart = ({ listedData, gradedListedData, athleteSportMap, at
         const mean = r.taguchiListing ?? r.avgListing ?? r.trimmedListing ?? r.avg ?? r.average ?? null;
         const cv = r.marketStabilityCV ?? r.marketplaces?.EBAY_US?.marketStabilityCV ?? null;
         if (mean == null || cv == null || !Number.isFinite(mean) || !Number.isFinite(cv) || mean <= 0 || cv <= 0) continue;
-        // S/N = 10 * log10(mean / sd) = 10 * log10(1 / CV)
-        const sn = 10 * Math.log10(1 / cv);
+        // Classic Taguchi S/N = 10 * log10(mean² / variance) = 10 * log10(1 / cv²)
+        const sn = 10 * Math.log10(1 / (cv * cv));
         if (!Number.isFinite(sn)) continue;
         const normKey = name.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().trim();
         const sport = athleteSportMap[name] || athleteSportMap[normKey] || (r.sport as string) || "Other";
@@ -1270,7 +1270,7 @@ const SignalStrengthChart = ({ listedData, gradedListedData, athleteSportMap, at
           </div>
         )}
         <p className="text-[9px] text-muted-foreground/60 text-center mt-3">
-          S/N = 10 · log₁₀(mean / std dev). Based on Taguchi signal-to-noise methodology. Higher values = more reliable investment.
+          S/N = 10 · log₁₀(mean² / variance). Based on Taguchi signal-to-noise methodology. Higher values = more reliable investment.
         </p>
       </div>
     </section>
