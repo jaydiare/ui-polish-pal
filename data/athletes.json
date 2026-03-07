@@ -4252,7 +4252,7 @@
     "name": "Eduardo Sosa",
     "sport": "Soccer",
     "league": "MLS",
-    "team": "Unknown",
+    "team": "Columbus Crew",
     "provider": "balldontlie",
     "gemrate": "no"
   },
@@ -4260,7 +4260,7 @@
     "name": "Emilio Renteria",
     "sport": "Soccer",
     "league": "MLS",
-    "team": "Unknown",
+    "team": "Columbus Crew",
     "provider": "balldontlie",
     "gemrate": "yes"
   },
@@ -4268,7 +4268,7 @@
     "name": "Ender Echenique",
     "sport": "Soccer",
     "league": "MLS",
-    "team": "Unknown",
+    "team": "FC Cincinnati",
     "provider": "balldontlie",
     "gemrate": "no"
   },
@@ -4276,7 +4276,7 @@
     "name": "Erickson Gallardo",
     "sport": "Soccer",
     "league": "MLS",
-    "team": "Unknown",
+    "team": "Phoenix Rising",
     "provider": "balldontlie",
     "gemrate": "no"
   },
@@ -4307,8 +4307,8 @@
   {
     "name": "Jefferson Savarino",
     "sport": "Soccer",
-    "league": "MLS",
-    "team": "Unknown",
+    "league": "Serie A",
+    "team": "Fluminense / Real Salt Lake / Botafogo ",
     "provider": "balldontlie",
     "gemrate": "yes"
   },
@@ -4316,7 +4316,7 @@
     "name": "Jesus Bueno",
     "sport": "Soccer",
     "league": "MLS",
-    "team": "Unknown",
+    "team": "Philadelphia Union",
     "provider": "balldontlie",
     "gemrate": "no"
   },
@@ -4340,7 +4340,7 @@
     "name": "Josef Martinez",
     "sport": "Soccer",
     "league": "MLS",
-    "team": "Atlanta United",
+    "team": "Atlanta United / Montreal CF / Earthquakes / Tijuana",
     "provider": "balldontlie",
     "gemrate": "yes"
   },
@@ -4348,7 +4348,7 @@
     "name": "Junior Moreno",
     "sport": "Soccer",
     "league": "MLS",
-    "team": "Unknown",
+    "team": "Houston Dynamo",
     "provider": "balldontlie",
     "gemrate": "yes"
   },
@@ -4381,7 +4381,7 @@
     "name": "Moises Tablante",
     "sport": "Soccer",
     "league": "MLS",
-    "team": "Unknown",
+    "team": "Atlanta United",
     "provider": "balldontlie",
     "gemrate": "no"
   },
@@ -4389,7 +4389,7 @@
     "name": "Pablo Bonilla",
     "sport": "Soccer",
     "league": "MLS",
-    "team": "Unknown",
+    "team": "Portland Timbers",
     "provider": "balldontlie",
     "gemrate": "no"
   },
@@ -4397,7 +4397,7 @@
     "name": "Rafael Romo",
     "sport": "Soccer",
     "league": "MLS",
-    "team": "Unknown",
+    "team": "D.C. United",
     "provider": "balldontlie",
     "gemrate": "yes"
   },
@@ -4405,7 +4405,7 @@
     "name": "Renzo Zambrano",
     "sport": "Soccer",
     "league": "MLS",
-    "team": "Unknown",
+    "team": "Phoenix Rising",
     "provider": "balldontlie",
     "gemrate": "no"
   },
@@ -4413,7 +4413,7 @@
     "name": "Rodrigo Neri",
     "sport": "Soccer",
     "league": "MLS",
-    "team": "Unknown",
+    "team": "Atlanta United",
     "provider": "balldontlie",
     "gemrate": "no"
   },
@@ -4498,14 +4498,6 @@
     "gemrate": "no"
   },
   {
-    "name": "Luis Morales",
-    "sport": "Soccer",
-    "league": "Serie A",
-    "team": "Unknown",
-    "provider": "balldontlie",
-    "gemrate": "yes"
-  },
-  {
     "name": "Manuel Arteaga",
     "sport": "Soccer",
     "league": "Serie A",
@@ -4517,7 +4509,7 @@
     "name": "Yeferson Soteldo",
     "sport": "Soccer",
     "league": "Serie A",
-    "team": "Gr\u00eamio",
+    "team": "Gremio",
     "provider": "manual",
     "gemrate": "yes"
   },
@@ -4532,8 +4524,8 @@
   {
     "name": "Nahuel Ferraresi",
     "sport": "Soccer",
-    "league": "S\u00e9rie A",
-    "team": "S\u00e3o Paulo",
+    "league": "Serie A",
+    "team": "Sao Paulo",
     "provider": "manual",
     "gemrate": "no"
   },
