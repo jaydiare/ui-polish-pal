@@ -901,7 +901,7 @@ const Data = () => {
                 <ModeToggle value={signalMode} onChange={setSignalMode} />
               </div>
               <p className="text-xs text-muted-foreground mb-4 ml-3">
-                Athletes classified by price spread, stability (Market Score), and days on market. Data-driven — not guessing.
+                Athletes classified by price spread, Stability score, and days on market. Data-driven — not guessing.
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {(Object.keys(SIGNAL_META) as SignalCategory[]).map((cat) => {
@@ -957,7 +957,7 @@ const Data = () => {
                                   {a.spreadPct > 0 ? "+" : ""}{a.spreadPct.toFixed(0)}%
                                 </div>
                                 <div className="text-[9px] text-muted-foreground">
-                                  {a.cv != null ? `Market Score ${(a.cv * 100).toFixed(0)}%` : ""}
+                                  {a.cv != null ? `Stability ${(a.cv * 100).toFixed(0)}%` : ""}
                                   {a.cv != null && a.days != null ? " · " : ""}
                                   {a.days != null ? `${Math.round(a.days)}d` : ""}
                                 </div>
@@ -1203,7 +1203,7 @@ const SignalStrengthChart = ({ listedData, gradedListedData, athleteSportMap, at
         {isEmpty ? (
           <div className="py-12 text-center">
             <div className="text-3xl mb-3">📡</div>
-            <p className="text-sm text-muted-foreground">Signal strength data requires both price mean and Market Score. Loading…</p>
+            <p className="text-sm text-muted-foreground">Signal strength data requires both price mean and Stability score. Loading…</p>
           </div>
         ) : (
           <div className="w-full h-[450px] md:h-[550px] relative" ref={snWrapRef}>
@@ -1229,7 +1229,7 @@ const SignalStrengthChart = ({ listedData, gradedListedData, athleteSportMap, at
                         <div className="flex flex-col gap-0.5">
                           <span className="text-muted-foreground">S/N Ratio: <strong className="text-foreground">{d.sn.toFixed(2)} dB</strong></span>
                           <span className="text-muted-foreground">Mean Price: <strong className="text-foreground">${d.mean.toFixed(2)}</strong></span>
-                          <span className="text-muted-foreground">Market Score: <strong className="text-foreground">{(d.cv * 100).toFixed(1)}%</strong></span>
+                          <span className="text-muted-foreground">Stability: <strong className="text-foreground">{(d.cv * 100).toFixed(1)}%</strong></span>
                         </div>
                         <div className="text-[9px] text-muted-foreground/60 mt-1.5">Click bar to pin details</div>
                       </div>
@@ -1255,7 +1255,7 @@ const SignalStrengthChart = ({ listedData, gradedListedData, athleteSportMap, at
                 <div className="flex flex-col gap-0.5">
                   <span className="text-muted-foreground">S/N Ratio: <strong className="text-foreground">{pinnedBar.sn.toFixed(2)} dB</strong></span>
                   <span className="text-muted-foreground">Mean Price: <strong className="text-foreground">${pinnedBar.mean.toFixed(2)}</strong></span>
-                  <span className="text-muted-foreground">Market Score: <strong className="text-foreground">{(pinnedBar.cv * 100).toFixed(1)}%</strong></span>
+                  <span className="text-muted-foreground">Stability: <strong className="text-foreground">{(pinnedBar.cv * 100).toFixed(1)}%</strong></span>
                 </div>
                 <a
                   href={buildEbaySearchUrl(pinnedBar.name, pinnedBar.sport)}
