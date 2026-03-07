@@ -17,6 +17,7 @@ export interface EbayAvgRecord {
   marketStabilityCV?: number;
   avgDaysOnMarket?: number;
   indexLevel?: number;
+  basePriceUSD?: number;
   marketplaces?: {
     EBAY_US?: { marketStabilityCV?: number; avgDaysOnMarket?: number };
     EBAY_CA?: { marketStabilityCV?: number; avgDaysOnMarket?: number };
