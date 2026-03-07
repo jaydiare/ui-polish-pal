@@ -73,7 +73,7 @@ const PAGE_SIZE = 60;
 const MIN_EBAY_SAMPLE_SIZE = 4;
 
 // Marketplaces to compute
-const MARKETPLACES = ["EBAY_US"];
+const MARKETPLACES = ["EBAY_US","EBAY_CA"];
 
 // ✅ Country of Origin options
 const COUNTRY_OF_ORIGIN = ["United States", "Italy", "Venezuela", "Japan"];
