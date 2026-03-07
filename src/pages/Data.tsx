@@ -1228,7 +1228,7 @@ const SignalStrengthChart = ({ listedData, gradedListedData, athleteSportMap, at
                         <div className="text-muted-foreground text-[10px] mb-1.5">{d.sport}</div>
                         <div className="flex flex-col gap-0.5">
                           <span className="text-muted-foreground">S/N Ratio: <strong className="text-foreground">{d.sn.toFixed(2)} dB</strong></span>
-                          <span className="text-muted-foreground">Mean Price: <strong className="text-foreground">${d.mean.toFixed(2)}</strong></span>
+                          <span className="text-muted-foreground">Mean Listed: <strong className="text-foreground">${d.mean.toFixed(2)}</strong></span>
                           <span className="text-muted-foreground">Stability: <strong className="text-foreground">{(d.cv * 100).toFixed(1)}%</strong></span>
                         </div>
                         <div className="text-[9px] text-muted-foreground/60 mt-1.5">Click bar to pin details</div>
@@ -1254,7 +1254,7 @@ const SignalStrengthChart = ({ listedData, gradedListedData, athleteSportMap, at
                 <div className="text-muted-foreground text-[10px] mb-1.5">{pinnedBar.sport}</div>
                 <div className="flex flex-col gap-0.5">
                   <span className="text-muted-foreground">S/N Ratio: <strong className="text-foreground">{pinnedBar.sn.toFixed(2)} dB</strong></span>
-                  <span className="text-muted-foreground">Mean Price: <strong className="text-foreground">${pinnedBar.mean.toFixed(2)}</strong></span>
+                  <span className="text-muted-foreground">Mean Listed: <strong className="text-foreground">${pinnedBar.mean.toFixed(2)}</strong></span>
                   <span className="text-muted-foreground">Stability: <strong className="text-foreground">{(pinnedBar.cv * 100).toFixed(1)}%</strong></span>
                 </div>
                 <a
