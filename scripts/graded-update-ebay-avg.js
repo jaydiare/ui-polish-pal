@@ -304,12 +304,21 @@ function isGradedListing(item) {
   const cond = normText(item?.condition || "");
   const title = normText(item?.title || "");
 
+  // API already filters to PSA, but keep a defensive title check
   const hasPSA = /\bpsa\b/i.test(title);
 
+  // If eBay explicitly marks it graded and title says PSA, accept it
   if (cond.includes("graded") && hasPSA) return true;
 
-  const psaWithGrade = /\bpsa\b[^\n]{0,14}\b(10|9\.5|9|8\.5|8|gem mint|mint|pristine|black label|gold label)\b/i;
-  return psaWithGrade.test(title);
+  // PSA grades 1–10 including half grades
+  const psaNumeric =
+    /\bpsa\b[^\n]{0,18}\b(10|9\.5|9|8\.5|8|7\.5|7|6\.5|6|5\.5|5|4\.5|4|3\.5|3|2\.5|2|1\.5|1)\b/i;
+
+  // PSA label-style listings
+  const psaLabel =
+    /\bpsa\b[^\n]{0,18}\b(gem mint|mint)\b/i;
+
+  return psaNumeric.test(title) || psaLabel.test(title);
 }
 
 // ✅ NEW: listing “age” (days on market) for ACTIVE listings
