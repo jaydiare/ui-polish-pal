@@ -280,9 +280,25 @@ const Data = () => {
     });
   }, []);
 
+  // Filter graded data to only include athletes with gemrate="yes"
+  const filterByGemrate = useCallback((data: Record<string, any>) => {
+    if (gemrateSet.size === 0) return data; // no filter data yet
+    const norm = (s: string) => s.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().trim();
+    const filtered: Record<string, any> = {};
+    for (const [key, val] of Object.entries(data)) {
+      if (key === "_meta" || gemrateSet.has(key) || gemrateSet.has(norm(key))) {
+        filtered[key] = val;
+      }
+    }
+    return filtered;
+  }, [gemrateSet]);
+
+  const filteredGradedListed = useMemo(() => filterByGemrate(gradedListedData), [gradedListedData, filterByGemrate]);
+  const filteredGradedSold = useMemo(() => filterByGemrate(gradedSoldData), [gradedSoldData, filterByGemrate]);
+
   /* ── Comparison data per mode ── */
   const rawComparison = useMemo(() => buildComparison(listedData, soldData, athleteSportMap), [listedData, soldData, athleteSportMap]);
-  const gradedComparison = useMemo(() => buildComparison(gradedListedData, gradedSoldData, athleteSportMap), [gradedListedData, gradedSoldData, athleteSportMap]);
+  const gradedComparison = useMemo(() => buildComparison(filteredGradedListed, filteredGradedSold, athleteSportMap), [filteredGradedListed, filteredGradedSold, athleteSportMap]);
 
   const rawStats = useMemo(() => buildStats(rawComparison), [rawComparison]);
   const gradedStats = useMemo(() => buildStats(gradedComparison), [gradedComparison]);
