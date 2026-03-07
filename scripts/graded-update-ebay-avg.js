@@ -316,7 +316,7 @@ function isGradedListing(item) {
 
   // PSA label-style listings
   const psaLabel =
-    /\bpsa\b[^\n]{0,18}\b(gem mint|mint|dna)\b/i;
+    /\bpsa\b[^\n]{0,18}\b(gem mint|mint|dna|authentic)\b/i;
 
   return psaNumeric.test(title) || psaLabel.test(title);
 }
