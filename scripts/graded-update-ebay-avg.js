@@ -54,7 +54,7 @@ const OUT_PATH = path.join(__dirname, "..", "data", "ebay-graded-avg.json");
 
 // This script expects:
 // data/athletes.json: [{ name: "Jose Altuve", sport: "Baseball" }, ...]
-const ATHLETES_PATH = path.join(__dirname, "..", "data", "athletes.json");
+const ATHLETES_PATH = path.join(__dirname, "..", "data", "athletes2.json");
 
 // Category you were using (Trading Card Singles)
 const CATEGORY_ID = "183050";
