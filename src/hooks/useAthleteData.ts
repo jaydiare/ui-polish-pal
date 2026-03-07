@@ -136,7 +136,7 @@ export function useAthleteData() {
   // Filter graded eBay data to only include gemrate-eligible athletes
   const filteredGradedRaw = useMemo<EbayAvgData>(() => {
     if (gemrateEligible.size === 0) return ebayGradedRaw;
-    const normName = (s: string) => s.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().trim();
+    const normName = (s: string) => s.normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/[.\-']/g, "").replace(/\s+/g, " ").toLowerCase().trim();
     const filtered: EbayAvgData = {};
     for (const [key, val] of Object.entries(ebayGradedRaw)) {
       if (key === "_meta" || gemrateEligible.has(key) || gemrateEligible.has(normName(key))) {
@@ -148,7 +148,7 @@ export function useAthleteData() {
 
   const filteredGradedSoldRaw = useMemo<Record<string, any>>(() => {
     if (gemrateEligible.size === 0) return ebayGradedSoldRaw;
-    const normName = (s: string) => s.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().trim();
+    const normName = (s: string) => s.normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/[.\-']/g, "").replace(/\s+/g, " ").toLowerCase().trim();
     const filtered: Record<string, any> = {};
     for (const [key, val] of Object.entries(ebayGradedSoldRaw)) {
       if (key === "_meta" || gemrateEligible.has(key) || gemrateEligible.has(normName(key))) {
