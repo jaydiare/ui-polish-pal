@@ -307,6 +307,7 @@ const Data = () => {
     spreadPct: number;
     cv: number | null;
     days: number | null;
+    sn: number | null;
     signal: SignalCategory;
   }
 
@@ -339,6 +340,12 @@ const Data = () => {
       const days: number | null = rec?.avgDaysOnMarket ?? rec?.marketplaces?.EBAY_US?.avgDaysOnMarket ?? null;
       const spreadPct = d.sold > 0 ? ((d.listed - d.sold) / d.sold) * 100 : 0;
 
+      // Classic Taguchi S/N = 10 * log10(mean² / variance) = 10 * log10(1 / cv²)
+      const mean = rec?.taguchiListing ?? rec?.avgListing ?? rec?.trimmedListing ?? rec?.avg ?? rec?.average ?? null;
+      const sn: number | null = (cv != null && cv > 0 && mean != null && mean > 0)
+        ? Math.round(10 * Math.log10(1 / (cv * cv)) * 100) / 100
+        : null;
+
       let signal: SignalCategory;
       if (cv != null && cv >= 0.35) {
         signal = "speculative";
@@ -358,7 +365,7 @@ const Data = () => {
         signal = "fast_mover"; // default bucket
       }
 
-      results.push({ name: d.name, sport: d.sport, listed: d.listed, sold: d.sold, spreadPct, cv, days, signal });
+      results.push({ name: d.name, sport: d.sport, listed: d.listed, sold: d.sold, spreadPct, cv, days, sn, signal });
     }
 
     return results;
@@ -957,8 +964,10 @@ const Data = () => {
                                   {a.spreadPct > 0 ? "+" : ""}{a.spreadPct.toFixed(0)}%
                                 </div>
                                 <div className="text-[9px] text-muted-foreground">
+                                  {a.sn != null ? `S/N ${a.sn.toFixed(1)}` : ""}
+                                  {a.sn != null && a.cv != null ? " · " : ""}
                                   {a.cv != null ? `Stability ${(a.cv * 100).toFixed(0)}%` : ""}
-                                  {a.cv != null && a.days != null ? " · " : ""}
+                                  {(a.sn != null || a.cv != null) && a.days != null ? " · " : ""}
                                   {a.days != null ? `${Math.round(a.days)}d` : ""}
                                 </div>
                               </div>
