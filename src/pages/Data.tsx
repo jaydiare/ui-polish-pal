@@ -208,6 +208,7 @@ const Data = () => {
   const [gradedSoldData, setGradedSoldData] = useState<Record<string, SoldRecord>>({});
 
   const [athleteSportMap, setAthleteSportMap] = useState<Record<string, string>>({});
+  const [gemrateSet, setGemrateSet] = useState<Set<string>>(new Set());
   const [pinnedDot, setPinnedDot] = useState<PinnedData | null>(null);
   const scatterWrapRef = useRef<HTMLDivElement>(null);
   const [athleteHistory, setAthleteHistory] = useState<Record<string, any[]>>({});
@@ -246,12 +247,18 @@ const Data = () => {
       if (gradedListed) setGradedListedData(gradedListed);
       if (gradedSold) setGradedSoldData(gradedSold);
       const map: Record<string, string> = {};
+      const grSet = new Set<string>();
       const norm = (s: string) => s.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().trim();
       if (athletes && Array.isArray(athletes)) {
         for (const a of athletes) {
           if (a?.name && a?.sport) {
             map[a.name] = a.sport;
             map[norm(a.name)] = a.sport;
+          }
+          // Track which athletes have gemrate="yes" (eligible for graded data)
+          if (a?.name && a?.gemrate?.toLowerCase() === "yes") {
+            grSet.add(a.name);
+            grSet.add(norm(a.name));
           }
         }
       }
@@ -268,13 +275,30 @@ const Data = () => {
         }
       }
       setAthleteSportMap(map);
+      setGemrateSet(grSet);
       if (history && typeof history === "object") setAthleteHistory(history);
     });
   }, []);
 
+  // Filter graded data to only include athletes with gemrate="yes"
+  const filterByGemrate = useCallback((data: Record<string, any>) => {
+    if (gemrateSet.size === 0) return data; // no filter data yet
+    const norm = (s: string) => s.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().trim();
+    const filtered: Record<string, any> = {};
+    for (const [key, val] of Object.entries(data)) {
+      if (key === "_meta" || gemrateSet.has(key) || gemrateSet.has(norm(key))) {
+        filtered[key] = val;
+      }
+    }
+    return filtered;
+  }, [gemrateSet]);
+
+  const filteredGradedListed = useMemo(() => filterByGemrate(gradedListedData), [gradedListedData, filterByGemrate]);
+  const filteredGradedSold = useMemo(() => filterByGemrate(gradedSoldData), [gradedSoldData, filterByGemrate]);
+
   /* ── Comparison data per mode ── */
   const rawComparison = useMemo(() => buildComparison(listedData, soldData, athleteSportMap), [listedData, soldData, athleteSportMap]);
-  const gradedComparison = useMemo(() => buildComparison(gradedListedData, gradedSoldData, athleteSportMap), [gradedListedData, gradedSoldData, athleteSportMap]);
+  const gradedComparison = useMemo(() => buildComparison(filteredGradedListed, filteredGradedSold, athleteSportMap), [filteredGradedListed, filteredGradedSold, athleteSportMap]);
 
   const rawStats = useMemo(() => buildStats(rawComparison), [rawComparison]);
   const gradedStats = useMemo(() => buildStats(gradedComparison), [gradedComparison]);
@@ -347,7 +371,7 @@ const Data = () => {
 
     const results: SignalAthlete[] = [];
     for (const d of allComparison) {
-      const rec = (signalMode === "graded" ? gradedListedData[d.name] : listedData[d.name]) as any;
+      const rec = (signalMode === "graded" ? filteredGradedListed[d.name] : listedData[d.name]) as any;
       const cv: number | null = rec?.marketStabilityCV ?? rec?.marketplaces?.EBAY_US?.marketStabilityCV ?? null; // Market Stability Score
       const days: number | null = rec?.avgDaysOnMarket ?? rec?.marketplaces?.EBAY_US?.avgDaysOnMarket ?? null;
       const spreadPct = d.sold > 0 ? ((d.listed - d.sold) / d.sold) * 100 : 0;
@@ -381,7 +405,7 @@ const Data = () => {
     }
 
     return results;
-  }, [signalMode, rawComparison, gradedComparison, listedData, gradedListedData]);
+  }, [signalMode, rawComparison, gradedComparison, listedData, filteredGradedListed]);
 
   const signalGroups = useMemo(() => {
     const groups: Record<SignalCategory, SignalAthlete[]> = {
@@ -459,7 +483,7 @@ const Data = () => {
   }
 
   const rawSportAgg = useMemo(() => buildSportAgg(listedData, soldData, athleteSportMap), [listedData, soldData, athleteSportMap]);
-  const gradedSportAgg = useMemo(() => buildSportAgg(gradedListedData, gradedSoldData, athleteSportMap), [gradedListedData, gradedSoldData, athleteSportMap]);
+  const gradedSportAgg = useMemo(() => buildSportAgg(filteredGradedListed, filteredGradedSold, athleteSportMap), [filteredGradedListed, filteredGradedSold, athleteSportMap]);
 
   // Build a lookup for graded by sport name
   const gradedSportMap = useMemo(() => {
@@ -1056,13 +1080,13 @@ const Data = () => {
 
 
             {/* ── Most Sold on eBay ── */}
-            <MostSoldChart soldData={soldData} gradedSoldData={gradedSoldData} athleteSportMap={athleteSportMap} />
+            <MostSoldChart soldData={soldData} gradedSoldData={filteredGradedSold} athleteSportMap={athleteSportMap} />
 
             {/* ── Gemrate Grading Data ── */}
             <GemrateChart />
 
             {/* ── PSA Pop vs Sold ── */}
-            <PSAPopVsSoldChart gradedSoldData={gradedSoldData} athleteSportMap={athleteSportMap} />
+            <PSAPopVsSoldChart gradedSoldData={filteredGradedSold} athleteSportMap={athleteSportMap} />
           </>
         )}
 

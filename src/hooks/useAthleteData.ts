@@ -120,9 +120,47 @@ export function useAthleteData() {
     signal: "all",
   });
 
+  // Build a set of athlete names eligible for graded data (gemrate="yes")
+  const gemrateEligible = useMemo(() => {
+    const set = new Set<string>();
+    const normName = (s: string) => s.normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/[.\-']/g, "").replace(/\s+/g, " ").toLowerCase().trim();
+    for (const a of athletes) {
+      if (a.gemrate?.toLowerCase() === "yes") {
+        set.add(a.name);
+        set.add(normName(a.name));
+      }
+    }
+    return set;
+  }, [athletes]);
+
+  // Filter graded eBay data to only include gemrate-eligible athletes
+  const filteredGradedRaw = useMemo<EbayAvgData>(() => {
+    if (gemrateEligible.size === 0) return ebayGradedRaw;
+    const normName = (s: string) => s.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().trim();
+    const filtered: EbayAvgData = {};
+    for (const [key, val] of Object.entries(ebayGradedRaw)) {
+      if (key === "_meta" || gemrateEligible.has(key) || gemrateEligible.has(normName(key))) {
+        (filtered as any)[key] = val;
+      }
+    }
+    return filtered;
+  }, [ebayGradedRaw, gemrateEligible]);
+
+  const filteredGradedSoldRaw = useMemo<Record<string, any>>(() => {
+    if (gemrateEligible.size === 0) return ebayGradedSoldRaw;
+    const normName = (s: string) => s.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().trim();
+    const filtered: Record<string, any> = {};
+    for (const [key, val] of Object.entries(ebayGradedSoldRaw)) {
+      if (key === "_meta" || gemrateEligible.has(key) || gemrateEligible.has(normName(key))) {
+        filtered[key] = val;
+      }
+    }
+    return filtered;
+  }, [ebayGradedSoldRaw, gemrateEligible]);
+
   // Build indexes
   const { byName, byKey } = useMemo(() => buildEbayIndexes(ebayAvgRaw), [ebayAvgRaw]);
-  const { byName: gradedByName, byKey: gradedByKey } = useMemo(() => buildEbayIndexes(ebayGradedRaw), [ebayGradedRaw]);
+  const { byName: gradedByName, byKey: gradedByKey } = useMemo(() => buildEbayIndexes(filteredGradedRaw), [filteredGradedRaw]);
 
   // Fetch data on mount
   useEffect(() => {
@@ -290,7 +328,7 @@ export function useAthleteData() {
     gradedByKey,
     ebayAvgRaw,
     ebaySoldRaw,
-    ebayGradedSoldRaw,
+    ebayGradedSoldRaw: filteredGradedSoldRaw,
     gemratePopMap,
     athleteHistory,
     indexHistory,
