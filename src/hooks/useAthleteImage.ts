@@ -2,6 +2,21 @@ import { useState, useEffect, useRef } from "react";
 
 const cache = new Map<string, string | null>();
 
+// Normalize a name for comparison: strip accents, punctuation, lowercase
+function normName(s: string): string {
+  return s.normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/[.\-']/g, "").replace(/\s+/g, " ").toLowerCase().trim();
+}
+
+// Check if two names match: all parts of the shorter name must appear in the longer
+function namesMatch(requested: string, returned: string): boolean {
+  const a = normName(requested);
+  const b = normName(returned);
+  if (a === b) return true;
+  const partsA = a.split(" ").filter(Boolean);
+  const partsB = b.split(" ").filter(Boolean);
+  // Every part of the requested name must appear in the returned name
+  return partsA.every(p => b.includes(p));
+}
 // ── ESPN headshot for baseball players (CORS-friendly, no auth) ──
 async function fetchEspnHeadshot(name: string): Promise<string | null> {
   try {
@@ -14,6 +29,11 @@ async function fetchEspnHeadshot(name: string): Promise<string | null> {
     const item = data?.items?.[0];
     const imageUrl = item?.headshot?.href;
     if (!imageUrl) return null;
+
+    // Validate: ESPN result name must closely match requested name
+    const resultName = (item?.displayName || item?.name || "").toLowerCase().trim();
+    if (!namesMatch(name, resultName)) return null;
+
     return imageUrl;
   } catch {
     return null;
@@ -44,15 +64,23 @@ async function fetchSportsDbHeadshot(name: string, sport?: string): Promise<stri
     const players = data?.player;
     if (!Array.isArray(players) || players.length === 0) return null;
 
+    // Filter to players whose name matches
+    const validPlayers = players.filter((p: any) => {
+      const pName = p?.strPlayer || p?.strPlayerAlternate || "";
+      return namesMatch(name, pName);
+    });
+
+    if (validPlayers.length === 0) return null;
+
     if (sport) {
       const tsdbSports = SPORT_TO_TSDB[sport] || [sport];
-      const sportMatch = players.find(
+      const sportMatch = validPlayers.find(
         (p: any) => tsdbSports.some((s) => p?.strSport?.toLowerCase() === s.toLowerCase()) && (p?.strThumb || p?.strCutout)
       );
       if (sportMatch) return sportMatch.strThumb || sportMatch.strCutout;
     }
 
-    const withThumb = players.find((p: any) => p?.strThumb || p?.strCutout);
+    const withThumb = validPlayers.find((p: any) => p?.strThumb || p?.strCutout);
     return withThumb ? (withThumb.strThumb || withThumb.strCutout) : null;
   } catch {
     return null;
