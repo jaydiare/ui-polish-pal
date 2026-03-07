@@ -386,7 +386,7 @@ const Data = () => {
   // Top 10 athletes by Taguchi S/N ratio for the Signal Strength card
   const signalStrengthTop = useMemo(() => {
     return [...signalAthletes]
-      .filter((a) => a.sn != null && Number.isFinite(a.sn))
+      .filter((a) => a.sn != null && Number.isFinite(a.sn) && a.cv != null && a.cv >= 0.01)
       .sort((a, b) => (b.sn ?? 0) - (a.sn ?? 0))
       .slice(0, 10);
   }, [signalAthletes]);
