@@ -1,13 +1,13 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-07T14:32:15.736524+00:00",
+    "updatedAt": "2026-03-07T16:37:04.671344+00:00",
     "athleteCount": 450,
     "graders": [
       "PSA"
     ],
     "batchInfo": {
-      "startIdx": 400,
-      "endIdx": 420,
+      "startIdx": 420,
+      "endIdx": 440,
       "totalAthletes": 568
     }
   },
@@ -6371,17 +6371,17 @@
       "sport": "Baseball",
       "graders": {
         "PSA": {
-          "cards": 21,
+          "cards": 22,
           "gems": 11,
-          "grades": 33,
-          "gemRate": 33.0
+          "grades": 34,
+          "gemRate": 32.0
         }
       },
       "totals": {
-        "cards": 21,
+        "cards": 22,
         "gems": 11,
-        "grades": 33,
-        "gemRate": 33.0
+        "grades": 34,
+        "gemRate": 32.0
       }
     },
     "Roger Cedeno": {
@@ -6407,16 +6407,16 @@
       "sport": "Baseball",
       "graders": {
         "PSA": {
-          "cards": 10623,
-          "gems": 156860,
-          "grades": 247931,
+          "cards": 10637,
+          "gems": 156923,
+          "grades": 248088,
           "gemRate": 63.0
         }
       },
       "totals": {
-        "cards": 10623,
-        "gems": 156860,
-        "grades": 247931,
+        "cards": 10637,
+        "gems": 156923,
+        "grades": 248088,
         "gemRate": 63.0
       }
     },
@@ -6551,16 +6551,16 @@
       "sport": "Baseball",
       "graders": {
         "PSA": {
-          "cards": 2882,
-          "gems": 3035,
-          "grades": 7524,
+          "cards": 2884,
+          "gems": 3041,
+          "grades": 7541,
           "gemRate": 40.0
         }
       },
       "totals": {
-        "cards": 2882,
-        "gems": 3035,
-        "grades": 7524,
+        "cards": 2884,
+        "gems": 3041,
+        "grades": 7541,
         "gemRate": 40.0
       }
     },
@@ -6659,16 +6659,16 @@
       "sport": "Baseball",
       "graders": {
         "PSA": {
-          "cards": 132,
+          "cards": 133,
           "gems": 189,
-          "grades": 379,
+          "grades": 380,
           "gemRate": 50.0
         }
       },
       "totals": {
-        "cards": 132,
+        "cards": 133,
         "gems": 189,
-        "grades": 379,
+        "grades": 380,
         "gemRate": 50.0
       }
     },
