@@ -1008,7 +1008,7 @@ const Data = () => {
                 {signalStrengthTop.length === 0 ? (
                   <p className="text-xs text-muted-foreground/50 italic">No athletes with S/N data</p>
                 ) : (
-                  <div className="space-y-1.5 max-h-[220px] overflow-y-auto pr-1">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-1.5 max-h-[280px] overflow-y-auto pr-1">
                     {signalStrengthTop.map((a) => (
                       <a
                         key={a.name}
