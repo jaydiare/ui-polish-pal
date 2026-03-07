@@ -97,6 +97,19 @@ function normSpaces(s) {
   return String(s || "").replace(/\s+/g, " ").trim();
 }
 
+function stripDiacritics(s) {
+  return String(s || "").normalize("NFKD").replace(/[\u0300-\u036f]/g, "");
+}
+
+function normalizeNameForCompare(s) {
+  return normSpaces(
+    stripDiacritics(s)
+      .toLowerCase()
+      .replace(/[.''"]/g, "")
+      .replace(/\b(jr|jr\.|sr|sr\.)\b/g, "")
+  );
+}
+
 function norm(s) {
   return String(s || "").normalize("NFKD").replace(/[\u0300-\u036f]/g, "").toLowerCase().trim();
 }
@@ -656,6 +669,72 @@ function loadExistingOutput() {
 // --- main ---
 async function main() {
   const athletes = loadAthletes();
+
+  // ✅ Single-athlete mode: EBAY_ONLY env var (comma-separated names)
+  const onlyNames = process.env.EBAY_ONLY;
+  if (onlyNames) {
+    const wanted = onlyNames.split(",").map((n) => normalizeNameForCompare(n.trim()));
+    const filtered = athletes.filter((a) => wanted.includes(normalizeNameForCompare(a.name)));
+    console.log(`🎯 Single-athlete mode: processing ${filtered.length} athlete(s) — skipping batch progress`);
+
+    const fx = await getFxRatesToUSD();
+    const out = loadExistingOutput();
+    out._meta = { ...out._meta, updatedAt: new Date().toISOString() };
+
+    for (let i = 0; i < filtered.length; i++) {
+      const { name, sport, searchKeyword } = filtered[i];
+      console.log(`[${i + 1}/${filtered.length}] ${name} (${sport || "Unknown"})${searchKeyword ? ` [searchKeyword: ${searchKeyword}]` : ""}`);
+
+      const keyword = buildKeyword(searchKeyword || name, sport);
+      const pricesUSD = [];
+      let firstCur = null;
+      let fxRateUsed = null;
+      let totalScraped = 0;
+
+      try {
+        for (let page = 1; page <= MAX_PAGES; page++) {
+          const url = buildSoldSearchURL(keyword, sport, page);
+          const html = await fetchSoldPage(url);
+          if (page === 1) {
+            console.log(`  HTML size: ${html.length} chars`);
+          }
+          const listings = parseSoldListings(html);
+          if (!listings.length) { if (page === 1) console.log(`  No sold results found for "${keyword}"`); break; }
+          totalScraped += listings.length;
+          for (const it of listings) {
+            const title = it.title;
+            if (!hasAllowedBrand(title)) continue;
+            if (isJunkTitle(title)) continue;
+            if (!titleLooksRelevantToPlayer(title, name)) continue;
+            if (isGradedTitle(title)) continue;
+            if (!ungradedPassesPolicy(title)) continue;
+            let totalPrice = it.price;
+            if (it.shippingCost > 0) totalPrice += it.shippingCost;
+            firstCur = firstCur || it.currency || null;
+            const { usd, rateUsed } = convertToUSD(totalPrice, it.currency, fx.rates);
+            if (usd == null) continue;
+            pricesUSD.push(usd);
+            fxRateUsed = fxRateUsed || rateUsed;
+          }
+          if (page < MAX_PAGES) await sleep(INTER_PAGE_DELAY_MS + Math.random() * 1500);
+        }
+        const hasSample = pricesUSD.length >= MIN_SAMPLE_SIZE;
+        const taguchiSold = taguchiTrimmedMean(pricesUSD, TAGUCHI_TRIM_PCT);
+        const medianSold = median(pricesUSD);
+        const marketStabilityCV = taguchiCV(pricesUSD, TAGUCHI_TRIM_PCT);
+        console.log(`  Scraped: ${totalScraped} | After filters: ${pricesUSD.length} | Taguchi: ${hasSample && taguchiSold != null ? `$${taguchiSold.toFixed(2)}` : "N/A"}`);
+        out[name] = { keyword, nScraped: totalScraped, nSoldUsed: pricesUSD.length, avg: hasSample ? taguchiSold : null, taguchiSold: hasSample ? taguchiSold : null, medianSold: hasSample ? medianSold : null, marketStabilityCV: hasSample ? marketStabilityCV : null, currency: "USD", originalCurrencyExample: firstCur, fxRateUsed: fxRateUsed || null };
+      } catch (e) {
+        console.log(`  ${name}: ERROR ${e?.message || e}`);
+        out[name] = { keyword, nScraped: totalScraped, nSoldUsed: 0, avg: null, taguchiSold: null, medianSold: null, marketStabilityCV: null, currency: "USD", error: String(e?.message || e) };
+      }
+      fs.writeFileSync(OUT_PATH, JSON.stringify(out, null, 2));
+      if (i < filtered.length - 1) await sleep(BASE_DELAY_MS + Math.random() * 4000);
+    }
+    console.log(`\n✅ Single-athlete mode complete. Wrote ${OUT_PATH}`);
+    return;
+  }
+
   const progress = loadProgress();
   const startIdx = progress.nextIndex || 0;
 

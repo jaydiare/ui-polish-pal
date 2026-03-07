@@ -625,7 +625,15 @@ function computeScriptIndex(outData, athletes, sport) {
 async function main() {
   const token = await getAppToken();
   const fx = await getFxRatesToUSD();
-  const athletes = loadAthletes();
+  let athletes = loadAthletes();
+
+  // ✅ Single-athlete mode: EBAY_ONLY env var (comma-separated names)
+  const onlyNames = process.env.EBAY_ONLY;
+  if (onlyNames) {
+    const wanted = onlyNames.split(",").map((n) => normalizeNameForCompare(n.trim()));
+    athletes = athletes.filter((a) => wanted.includes(normalizeNameForCompare(a.name)));
+    console.log(`🎯 Single-athlete mode: processing ${athletes.length} athlete(s)`);
+  }
 
   // FIX #3: load basePrices from dedicated file (survives output file deletion)
   const basePrices = loadBasePrices();
