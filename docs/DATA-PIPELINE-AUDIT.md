@@ -43,6 +43,19 @@ athletes.json (550+ athletes)
     └── All JSON files ──► GitHub raw URLs ──► Frontend fetches live
 ```
 
+### Data Preservation Strategy
+
+All listing scripts (Browse API) now load existing data from the output file before processing. If a run produces no new results (API quota, transient errors), previously collected athlete records are preserved via merge. This prevents data loss from empty runs (see Bug 8.7).
+
+### Graded Data Fallback Chain
+
+When graded listed data (`ebay-graded-avg.json`) is empty or sparse, the frontend builds a `mergedGradedData` object:
+
+1. **Graded Sold** (`ebay-graded-sold-avg.json`) — `taguchiSold` mapped to `avgListing`
+2. **Graded Listed** (`ebay-graded-avg.json`) — overwrites sold data where available (higher priority)
+
+This ensures the UI always displays graded prices when any graded data source is available.
+
 ### API vs Scraping
 
 | Method | Scripts | Quota Impact | Rate Limiting |
