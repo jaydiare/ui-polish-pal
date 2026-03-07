@@ -67,18 +67,19 @@ const VzlaAthleteGrid = ({ athletes, byName, byKey, gradedByName, gradedByKey, e
             transition={{ duration: 0.3, delay: Math.min(i * 0.02, 0.5) }}
           >
             <AthleteCard
-              athlete={a}
-              byName={byName}
-              byKey={byKey}
-              gradedByName={gradedByName}
-              gradedByKey={gradedByKey}
-              ebaySoldRaw={ebaySoldRaw}
-              ebayGradedSoldRaw={ebayGradedSoldRaw}
-              history={athleteHistory?.[a.name]}
-              psaPop={gemratePopMap?.[a.name] ?? gemratePopMap?.[a.name.normalize("NFD").replace(/[\u0300-\u036f]/g, "")]}
-              isRecommended={highlightedIds?.has(buildBudgetAthleteId(a.name, a.sport))}
-              isHotSeller={hotSellers.has(a.name)}
-              priceMode={priceMode}
+70:               athlete={a}
+71:               byName={byName}
+72:               byKey={byKey}
+73:               gradedByName={gradedByName}
+74:               gradedByKey={gradedByKey}
+75:               ebaySoldRaw={ebaySoldRaw}
+76:               ebayGradedSoldRaw={ebayGradedSoldRaw}
+77:               history={athleteHistory?.[a.name]}
+78:               psaPop={gemratePopMap?.[a.name] ?? gemratePopMap?.[a.name.normalize("NFD").replace(/[\u0300-\u036f]/g, "")]}
+79:               isRecommended={highlightedIds?.has(buildBudgetAthleteId(a.name, a.sport))}
+80:               isHotSeller={hotSellers.has(a.name)}
+81:               priceMode={a.gemrate?.toLowerCase() === "no" ? "raw" : priceMode}
+            />
             />
           </motion.div>
         ))}
