@@ -1306,13 +1306,6 @@ const PSAPopVsSoldChart = ({ gradedSoldData, athleteSportMap }: {
 
   if (!bubbleData.length && !allBubbleData.length) return null;
 
-  // Scale bubble radius on visible data
-  const maxAvgSold = bubbleData.length ? Math.max(...bubbleData.map(d => d.avgSold)) : 1;
-  const minAvgSold = bubbleData.length ? Math.min(...bubbleData.map(d => d.avgSold)) : 0;
-  const getBubbleRadius = (avgSold: number) => {
-    const t = maxAvgSold > minAvgSold ? (avgSold - minAvgSold) / (maxAvgSold - minAvgSold) : 0.5;
-    return 5 + Math.sqrt(t) * 20;
-  };
 
   // Sports present in the scarce dataset (for legend)
   const scarceAll = allBubbleData.filter(d => d.psaPop <= medianPop && d.soldCount >= medianSold);
@@ -1325,11 +1318,11 @@ const PSAPopVsSoldChart = ({ gradedSoldData, athleteSportMap }: {
         🔥 Scarce + In-Demand PSA Cards
       </h2>
       <p className="text-xs text-muted-foreground mb-1 ml-3">
-        Low PSA population but high sold volume — the sweet spot for collectors. Bubble size = avg sold price.
+        Low PSA population but high sold volume — the sweet spot for collectors.
       </p>
       <p className="text-xs text-muted-foreground mb-4 ml-3">
         These athletes have <strong className="text-foreground">fewer graded cards than the median</strong> yet <strong className="text-foreground">sell more than the median</strong>.
-        Bigger bubbles = higher average sold price. Click any sport below to filter.
+        Click any sport below to filter.
       </p>
       <div className="glass-panel p-4 md:p-6">
         {bubbleData.length === 0 ? (
@@ -1362,7 +1355,7 @@ const PSAPopVsSoldChart = ({ gradedSoldData, athleteSportMap }: {
                       fillOpacity={0.85}
                       stroke={getSportColor(entry.sport)}
                       strokeWidth={1}
-                      r={getBubbleRadius(entry.avgSold)}
+                      r={6}
                     />
                   ))}
                 </Scatter>
