@@ -59,6 +59,9 @@ const ATHLETES_PATH = path.join(__dirname, "..", "data", "athletes.json");
 // Category you were using (Trading Card Singles)
 const CATEGORY_ID = "183050";
 
+// Gemrate data yes/no
+const GEMRATE_ONLY = true;
+
 // Listing sampling
 const LISTING_PAGE_LIMIT = 60; // max active listings to sample per marketplace
 const PAGE_SIZE = 60;
@@ -724,11 +727,20 @@ function loadAthletes() {
   const raw = fs.readFileSync(ATHLETES_PATH, "utf8");
   const arr = parseWithRecovery(raw);
 
-  return (arr || [])
+  let list = arr || [];
+
+  // Filter only gemrate athletes if enabled
+  if (GEMRATE_ONLY) {
+    list = list.filter((x) => x.gemrate === "yes");
+  }
+
+  return list
     .map((x) => ({
       name: normSpaces(x?.name),
       sport: normSpaces(x?.sport),
-      searchKeyword: x?.searchKeyword ? normSpaces(x.searchKeyword) : undefined,
+      searchKeyword: x?.searchKeyword
+        ? normSpaces(x.searchKeyword)
+        : undefined,
     }))
     .filter((x) => x.name);
 }
