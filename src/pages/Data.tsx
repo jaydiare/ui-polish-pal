@@ -418,7 +418,6 @@ const Data = () => {
     }
 
     const entries = Object.entries(agg)
-      .filter(([s]) => s === "Baseball" || s === "Soccer")
       .map(([sport, v]) => ({
         sport,
         avgListed: v.listedCount > 0 ? Math.round((v.listed / v.listedCount) * 100) / 100 : 0,
