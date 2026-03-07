@@ -638,13 +638,19 @@ async function main() {
   // FIX #3: load basePrices from dedicated file (survives output file deletion)
   const basePrices = loadBasePrices();
 
-  // Load previous indexHistory from output file only (not basePrices)
+  // Load previous data from output file (preserve existing athlete records + indexHistory)
   let prevHistory = [];
+  let prevRecords = {};
   try {
     if (fs.existsSync(OUT_PATH)) {
       const prev = JSON.parse(fs.readFileSync(OUT_PATH, "utf8"));
       if (Array.isArray(prev?._meta?.indexHistory)) {
         prevHistory = prev._meta.indexHistory;
+      }
+      // Preserve existing athlete records so partial runs don't erase data
+      for (const [key, val] of Object.entries(prev)) {
+        if (key === "_meta") continue;
+        prevRecords[key] = val;
       }
       // FIX #3: do NOT load basePrices from out file anymore — dedicated file is authoritative
     }
@@ -676,6 +682,8 @@ async function main() {
         maxDetailFetches: MAX_ITEM_DETAIL_FETCHES,
       },
     },
+    // Seed with previous athlete records (new data will overwrite per-athlete)
+    ...prevRecords,
   };
 
   let errorCount = 0;
