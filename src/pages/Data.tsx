@@ -1080,13 +1080,13 @@ const Data = () => {
 
 
             {/* ── Most Sold on eBay ── */}
-            <MostSoldChart soldData={soldData} gradedSoldData={gradedSoldData} athleteSportMap={athleteSportMap} />
+            <MostSoldChart soldData={soldData} gradedSoldData={filteredGradedSold} athleteSportMap={athleteSportMap} />
 
             {/* ── Gemrate Grading Data ── */}
             <GemrateChart />
 
             {/* ── PSA Pop vs Sold ── */}
-            <PSAPopVsSoldChart gradedSoldData={gradedSoldData} athleteSportMap={athleteSportMap} />
+            <PSAPopVsSoldChart gradedSoldData={filteredGradedSold} athleteSportMap={athleteSportMap} />
           </>
         )}
 
