@@ -160,7 +160,39 @@ export function useAthleteData() {
 
   // Build indexes
   const { byName, byKey } = useMemo(() => buildEbayIndexes(ebayAvgRaw), [ebayAvgRaw]);
-  const { byName: gradedByName, byKey: gradedByKey } = useMemo(() => buildEbayIndexes(filteredGradedRaw), [filteredGradedRaw]);
+
+  // Graded indexes: merge graded listed (ebay-graded-avg.json) with graded sold
+  // (ebay-graded-sold-avg.json) as fallback, since graded listed data may be sparse/empty.
+  const mergedGradedData = useMemo<EbayAvgData>(() => {
+    const merged: EbayAvgData = {};
+    // Start with sold data (map taguchiSold → avgListing for price lookups)
+    for (const [key, val] of Object.entries(filteredGradedSoldRaw)) {
+      if (key === "_meta" || !val) continue;
+      const r = val as any;
+      const soldPrice = r.taguchiSold ?? r.avg;
+      if (soldPrice != null && Number.isFinite(soldPrice) && soldPrice > 0) {
+        (merged as any)[key] = {
+          ...r,
+          avgListing: soldPrice,
+          taguchiListing: soldPrice,
+          avg: soldPrice,
+          average: soldPrice,
+        };
+      }
+    }
+    // Override with listed data where available (higher priority)
+    for (const [key, val] of Object.entries(filteredGradedRaw)) {
+      if (key === "_meta" || !val) continue;
+      const r = val as any;
+      const listedPrice = r.avgListing ?? r.taguchiListing ?? r.trimmedListing ?? r.avg ?? r.average;
+      if (listedPrice != null && Number.isFinite(listedPrice) && listedPrice > 0) {
+        (merged as any)[key] = val;
+      }
+    }
+    return merged;
+  }, [filteredGradedRaw, filteredGradedSoldRaw]);
+
+  const { byName: gradedByName, byKey: gradedByKey } = useMemo(() => buildEbayIndexes(mergedGradedData), [mergedGradedData]);
 
   // Fetch data on mount
   useEffect(() => {
