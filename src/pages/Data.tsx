@@ -249,7 +249,7 @@ const Data = () => {
       if (gradedSold) setGradedSoldData(gradedSold);
       const map: Record<string, string> = {};
       const grSet = new Set<string>();
-      const norm = (s: string) => s.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().trim();
+      const norm = (s: string) => s.normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/[.\-']/g, "").replace(/\s+/g, " ").toLowerCase().trim();
       if (athletes && Array.isArray(athletes)) {
         for (const a of athletes) {
           if (a?.name && a?.sport) {
@@ -284,7 +284,7 @@ const Data = () => {
   // Filter graded data to only include athletes with gemrate="yes"
   const filterByGemrate = useCallback((data: Record<string, any>) => {
     if (gemrateSet.size === 0) return data; // no filter data yet
-    const norm = (s: string) => s.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().trim();
+    const norm = (s: string) => s.normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/[.\-']/g, "").replace(/\s+/g, " ").toLowerCase().trim();
     const filtered: Record<string, any> = {};
     for (const [key, val] of Object.entries(data)) {
       if (key === "_meta" || gemrateSet.has(key) || gemrateSet.has(norm(key))) {
@@ -1362,8 +1362,9 @@ const PSAPopVsSoldChart = ({ gradedSoldData, athleteSportMap }: {
       const avgSold = soldRec?.taguchiSold ?? soldRec?.avg ?? null;
       if (avgSold == null || !Number.isFinite(avgSold) || avgSold <= 0) continue;
 
-      const normKey = athlete.name.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().trim();
-      const sport = athleteSportMap[athlete.name] || athleteSportMap[normKey] || athlete.sport || "Other";
+      const normKey = athlete.name.normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/[.\-']/g, "").replace(/\s+/g, " ").toLowerCase().trim();
+      const sport = athleteSportMap[athlete.name] || athleteSportMap[normKey];
+      if (!sport) continue;
 
       items.push({ name: athlete.name, sport, psaPop, soldCount, avgSold: Math.round(avgSold * 100) / 100, z: avgSold });
     }
