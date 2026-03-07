@@ -458,16 +458,7 @@ const Data = () => {
     return entries;
   }
 
-  const rawSportAgg = useMemo(() => {
-    console.log("[DEBUG] sportMap size:", Object.keys(athleteSportMap).length, "listedData keys:", Object.keys(listedData).length);
-    // Sample: check first 3 listedData keys against sportMap
-    const sampleKeys = Object.keys(listedData).filter(k => k !== "_meta").slice(0, 3);
-    sampleKeys.forEach(k => {
-      const normKey = k.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().trim();
-      console.log(`[DEBUG] key="${k}" normKey="${normKey}" sport="${athleteSportMap[k] || athleteSportMap[normKey] || 'MISS'}"`)
-    });
-    return buildSportAgg(listedData, soldData, athleteSportMap);
-  }, [listedData, soldData, athleteSportMap]);
+  const rawSportAgg = useMemo(() => buildSportAgg(listedData, soldData, athleteSportMap), [listedData, soldData, athleteSportMap]);
   const gradedSportAgg = useMemo(() => buildSportAgg(gradedListedData, gradedSoldData, athleteSportMap), [gradedListedData, gradedSoldData, athleteSportMap]);
 
   // Build a lookup for graded by sport name
