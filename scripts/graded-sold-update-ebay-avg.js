@@ -28,7 +28,7 @@ import * as cheerio from "cheerio";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const ATHLETES_PATH = path.join(__dirname, "..", "data", "athletes.json");
+const ATHLETES_PATH = path.join(__dirname, "..", "data", "athletes2.json");
 const OUT_PATH = path.join(__dirname, "..", "data", "ebay-sold-avg.json");
 const PROGRESS_PATH = path.join(__dirname, "..", "data", "ebay-sold-progress.json");
 
