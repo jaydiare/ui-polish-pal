@@ -59,42 +59,34 @@ const VzlaAthleteGrid = ({ athletes, byName, byKey, gradedByName, gradedByKey, e
       </div>
 
       <div className="grid grid-cols-[repeat(auto-fill,minmax(250px,1fr))] gap-5">
-        {displayAthletes.map((a, i) => (
-          <motion.div
-            key={`${a.name}-${a.sport}`}
-            initial={{ opacity: 0, y: 12 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.3, delay: Math.min(i * 0.02, 0.5) }}
-          >
-            <AthleteCard
-            <AthleteCard
-              athlete={a}
-              byName={byName}
-              byKey={byKey}
-              gradedByName={gradedByName}
-              gradedByKey={gradedByKey}
-              ebaySoldRaw={ebaySoldRaw}
-              ebayGradedSoldRaw={ebayGradedSoldRaw}
-              history={athleteHistory?.[a.name]}
-              psaPop={gemratePopMap?.[a.name] ?? gemratePopMap?.[a.name.normalize("NFD").replace(/[\u0300-\u036f]/g, "")]}
-              isRecommended={highlightedIds?.has(buildBudgetAthleteId(a.name, a.sport))}
-              isHotSeller={hotSellers.has(a.name)}
-              priceMode={a.gemrate?.toLowerCase() === "no" ? "raw" : priceMode}
-            />
-72:               byKey={byKey}
-73:               gradedByName={gradedByName}
-74:               gradedByKey={gradedByKey}
-75:               ebaySoldRaw={ebaySoldRaw}
-76:               ebayGradedSoldRaw={ebayGradedSoldRaw}
-77:               history={athleteHistory?.[a.name]}
-78:               psaPop={gemratePopMap?.[a.name] ?? gemratePopMap?.[a.name.normalize("NFD").replace(/[\u0300-\u036f]/g, "")]}
-79:               isRecommended={highlightedIds?.has(buildBudgetAthleteId(a.name, a.sport))}
-80:               isHotSeller={hotSellers.has(a.name)}
-81:               priceMode={a.gemrate?.toLowerCase() === "no" ? "raw" : priceMode}
-            />
-            />
-          </motion.div>
-        ))}
+        {displayAthletes.map((a, i) => {
+          // Per-athlete priceMode: gemrate "no" → raw only; otherwise respect global
+          const effectivePriceMode = a.gemrate?.toLowerCase() === "no" ? "raw" : priceMode;
+
+          return (
+            <motion.div
+              key={`${a.name}-${a.sport}`}
+              initial={{ opacity: 0, y: 12 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.3, delay: Math.min(i * 0.02, 0.5) }}
+            >
+              <AthleteCard
+                athlete={a}
+                byName={byName}
+                byKey={byKey}
+                gradedByName={gradedByName}
+                gradedByKey={gradedByKey}
+                ebaySoldRaw={ebaySoldRaw}
+                ebayGradedSoldRaw={ebayGradedSoldRaw}
+                history={athleteHistory?.[a.name]}
+                psaPop={gemratePopMap?.[a.name] ?? gemratePopMap?.[a.name.normalize("NFD").replace(/[\u0300-\u036f]/g, "")]}
+                isRecommended={highlightedIds?.has(buildBudgetAthleteId(a.name, a.sport))}
+                isHotSeller={hotSellers.has(a.name)}
+                priceMode={effectivePriceMode}
+              />
+            </motion.div>
+          );
+        })}
       </div>
 
       {!highlightedIds?.size && hasMore && (
