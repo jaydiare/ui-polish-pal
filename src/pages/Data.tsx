@@ -1389,9 +1389,6 @@ const PSAPopVsSoldChart = ({ gradedSoldData, athleteSportMap }: {
             )}
           </div>
         )}
-        {/* Overlap note: athletes sharing same/similar sold counts */}
-        {(() => {
-          // Group athletes by sold count, flag clusters within ±1
         {/* Interactive sport legend + bubble size reference */}
         <div className="flex flex-wrap items-center gap-3 mt-3 justify-center">
           <button
