@@ -1,13 +1,13 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-07T02:29:46.196904+00:00",
+    "updatedAt": "2026-03-07T05:05:20.645417+00:00",
     "athleteCount": 450,
     "graders": [
       "PSA"
     ],
     "batchInfo": {
-      "startIdx": 280,
-      "endIdx": 300,
+      "startIdx": 300,
+      "endIdx": 320,
       "totalAthletes": 568
     }
   },
@@ -4410,16 +4410,16 @@
       "graders": {
         "PSA": {
           "cards": 13,
-          "gems": 24,
-          "grades": 55,
-          "gemRate": 44.0
+          "gems": 25,
+          "grades": 56,
+          "gemRate": 45.0
         }
       },
       "totals": {
         "cards": 13,
-        "gems": 24,
-        "grades": 55,
-        "gemRate": 44.0
+        "gems": 25,
+        "grades": 56,
+        "gemRate": 45.0
       }
     },
     "Luis Alexander Basabe": {
@@ -4447,14 +4447,14 @@
         "PSA": {
           "cards": 1190,
           "gems": 775,
-          "grades": 30110,
+          "grades": 30128,
           "gemRate": 3.0
         }
       },
       "totals": {
         "cards": 1190,
         "gems": 775,
-        "grades": 30110,
+        "grades": 30128,
         "gemRate": 3.0
       }
     },
@@ -4481,16 +4481,16 @@
       "sport": "Baseball",
       "graders": {
         "PSA": {
-          "cards": 1098,
-          "gems": 5101,
-          "grades": 8691,
+          "cards": 1102,
+          "gems": 5102,
+          "grades": 8697,
           "gemRate": 59.0
         }
       },
       "totals": {
-        "cards": 1098,
-        "gems": 5101,
-        "grades": 8691,
+        "cards": 1102,
+        "gems": 5102,
+        "grades": 8697,
         "gemRate": 59.0
       }
     },
@@ -4627,14 +4627,14 @@
         "PSA": {
           "cards": 24,
           "gems": 142,
-          "grades": 273,
+          "grades": 274,
           "gemRate": 52.0
         }
       },
       "totals": {
         "cards": 24,
         "gems": 142,
-        "grades": 273,
+        "grades": 274,
         "gemRate": 52.0
       }
     },
@@ -4644,15 +4644,15 @@
       "graders": {
         "PSA": {
           "cards": 657,
-          "gems": 1916,
-          "grades": 3606,
+          "gems": 1917,
+          "grades": 3607,
           "gemRate": 53.0
         }
       },
       "totals": {
         "cards": 657,
-        "gems": 1916,
-        "grades": 3606,
+        "gems": 1917,
+        "grades": 3607,
         "gemRate": 53.0
       }
     },
