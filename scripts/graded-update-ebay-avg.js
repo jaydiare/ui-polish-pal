@@ -518,6 +518,8 @@ async function computeAvgActiveListing({ token, marketplaceId, name, sport, aspe
   const marketStabilityCV = taguchiCV(pricesUSD, TAGUCHI_TRIM_PCT);
   const avgDaysOnMarket = avg(daysOnMarket);
 
+  console.log(`  📊 ${name} ${marketplaceId}: nListing=${pricesUSD.length}, nDaysOnMarket=${daysOnMarket.length}/${pricesUSD.length}`);
+
   return {
     avgListing: taguchiListing,
     taguchiListing,
