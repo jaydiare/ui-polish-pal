@@ -1006,7 +1006,7 @@ const Data = () => {
                   <span className="font-display font-bold text-sm text-foreground">Signal Strength</span>
                   <span className="ml-auto text-[10px] font-mono text-muted-foreground rounded-full border border-border px-2 py-0.5">{signalStrengthTop.length}</span>
                 </div>
-                <p className="text-[10px] text-muted-foreground mb-3">Top Taguchi S/N ratio — consistent pricing, reliable market</p>
+                <p className="text-[10px] text-muted-foreground mb-3">Athletes with the most stable and predictable pricing on eBay</p>
                 {signalStrengthTop.length === 0 ? (
                   <p className="text-xs text-muted-foreground/50 italic">No athletes with S/N data</p>
                 ) : (
