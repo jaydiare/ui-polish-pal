@@ -328,7 +328,7 @@ export function useAthleteData() {
     gradedByKey,
     ebayAvgRaw,
     ebaySoldRaw,
-    ebayGradedSoldRaw,
+    ebayGradedSoldRaw: filteredGradedSoldRaw,
     gemratePopMap,
     athleteHistory,
     indexHistory,
