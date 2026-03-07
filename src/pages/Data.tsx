@@ -247,12 +247,18 @@ const Data = () => {
       if (gradedListed) setGradedListedData(gradedListed);
       if (gradedSold) setGradedSoldData(gradedSold);
       const map: Record<string, string> = {};
+      const grSet = new Set<string>();
       const norm = (s: string) => s.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().trim();
       if (athletes && Array.isArray(athletes)) {
         for (const a of athletes) {
           if (a?.name && a?.sport) {
             map[a.name] = a.sport;
             map[norm(a.name)] = a.sport;
+          }
+          // Track which athletes have gemrate="yes" (eligible for graded data)
+          if (a?.name && a?.gemrate?.toLowerCase() === "yes") {
+            grSet.add(a.name);
+            grSet.add(norm(a.name));
           }
         }
       }
@@ -269,6 +275,7 @@ const Data = () => {
         }
       }
       setAthleteSportMap(map);
+      setGemrateSet(grSet);
       if (history && typeof history === "object") setAthleteHistory(history);
     });
   }, []);
