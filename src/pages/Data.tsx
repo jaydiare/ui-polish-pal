@@ -1058,7 +1058,7 @@ const MostSoldChart = ({ soldData, gradedSoldData, athleteSportMap }: {
         <ModeToggle value={soldMode} onChange={setSoldMode} />
       </div>
       <p className="text-xs text-muted-foreground mb-4 ml-3">
-        Athletes with the highest {soldMode === "graded" ? "graded" : soldMode === "both" ? "total" : "raw"} sold volume on eBay.
+        Athletes with the highest {soldMode === "graded" ? "graded" : soldMode === "both" ? "total" : "raw"} verified sold volume on eBay (after filters).
         {formattedDate && <span className="ml-1 opacity-70">Updated {formattedDate}.</span>}
       </p>
       <div className="glass-panel p-4 md:p-6">
@@ -1075,7 +1075,7 @@ const MostSoldChart = ({ soldData, gradedSoldData, athleteSportMap }: {
                 <XAxis
                   type="number"
                   tick={{ fill: "hsl(var(--muted-foreground))", fontSize: 10 }}
-                  label={{ value: "Sold Listings", position: "insideBottom", offset: -5, style: { fill: "hsl(var(--muted-foreground))", fontSize: 11 } }}
+                  label={{ value: "Verified Sold", position: "insideBottom", offset: -5, style: { fill: "hsl(var(--muted-foreground))", fontSize: 11 } }}
                 />
                 <YAxis type="category" dataKey="name" width={150} tick={{ fill: "hsl(var(--muted-foreground))", fontSize: 11 }} />
                 <Tooltip
@@ -1087,7 +1087,7 @@ const MostSoldChart = ({ soldData, gradedSoldData, athleteSportMap }: {
                       <div className="rounded-xl border border-border/50 bg-background/95 backdrop-blur-lg p-3 text-xs shadow-2xl">
                         <div className="font-display font-bold text-foreground mb-1">{d.name}</div>
                         <div className="text-muted-foreground text-[10px] mb-1.5">{d.sport}</div>
-                        <span className="text-muted-foreground">Sold: <strong className="text-foreground">{d.soldCount.toLocaleString()}</strong></span>
+                        <span className="text-muted-foreground">Verified Sold: <strong className="text-foreground">{d.soldCount.toLocaleString()}</strong></span>
                         {d.avgSold != null && (
                           <div className="text-muted-foreground mt-1">Avg Sold: <strong className="text-foreground">${d.avgSold.toFixed(2)}</strong></div>
                         )}
@@ -1106,7 +1106,7 @@ const MostSoldChart = ({ soldData, gradedSoldData, athleteSportMap }: {
           </div>
         )}
         <p className="text-[9px] text-muted-foreground/60 text-center mt-3">
-          Based on eBay sold listings. Updated in batches.
+          Based on eBay sold listings after name & junk filters. Updated in batches.
         </p>
       </div>
     </section>
