@@ -1255,7 +1255,7 @@ const SignalStrengthChart = ({ listedData, gradedListedData, athleteSportMap, at
                 <div className="flex flex-col gap-0.5">
                   <span className="text-muted-foreground">S/N Ratio: <strong className="text-foreground">{pinnedBar.sn.toFixed(2)} dB</strong></span>
                   <span className="text-muted-foreground">Mean Price: <strong className="text-foreground">${pinnedBar.mean.toFixed(2)}</strong></span>
-                  <span className="text-muted-foreground">Market Score: <strong className="text-foreground">{(pinnedBar.cv * 100).toFixed(1)}%</strong></span>
+                  <span className="text-muted-foreground">Stability: <strong className="text-foreground">{(pinnedBar.cv * 100).toFixed(1)}%</strong></span>
                 </div>
                 <a
                   href={buildEbaySearchUrl(pinnedBar.name, pinnedBar.sport)}
