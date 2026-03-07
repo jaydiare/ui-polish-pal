@@ -56,6 +56,12 @@ const OUT_PATH = path.join(__dirname, "..", "data", "ebay-avg.json");
 // data/athletes.json: [{ name: "Jose Altuve", sport: "Baseball" }, ...]
 const ATHLETES_PATH = path.join(__dirname, "..", "data", "athletes.json");
 
+// FIX #3: dedicated base prices file — never overwritten by normal runs
+const BASE_PRICES_PATH = path.join(__dirname, "..", "data", "ebay-base-prices.json");
+
+// FIX #2: max listings per athlete to fetch full item detail for date fallback
+const MAX_ITEM_DETAIL_FETCHES = 10;
+
 // Category you were using (Trading Card Singles)
 const CATEGORY_ID = "261328";
 
@@ -481,6 +487,20 @@ async function getAppToken() {
   return json.access_token;
 }
 
+// FIX #2: fetch full item detail to get itemCreationDate when summary doesn't include it
+async function ebayFetchItemDetail({ token, marketplaceId, itemId }) {
+  const url = `https://api.ebay.com/buy/browse/v1/item/${encodeURIComponent(itemId)}`;
+  const res = await fetch(url, {
+    headers: {
+      Authorization: `Bearer ${token}`,
+      "Content-Type": "application/json",
+      ...getHeaderMarketplace(marketplaceId),
+    },
+  });
+  if (!res.ok) return null; // non-fatal: just skip this item's date
+  return res.json();
+}
+
 // --- eBay Browse Search ---
 async function ebayBrowseSearch({
   token,
@@ -604,6 +624,9 @@ async function computeAvgActiveListing({
   const pricesUSD = [];
   const daysOnMarket = [];
 
+  // FIX #2: track items missing a date so we can fetch detail for them
+  const missingDateItems = [];
+
   let originalCurrency = null;
   let fxRateUsed = null;
 
@@ -642,9 +665,12 @@ async function computeAvgActiveListing({
       const iso = extractListingStartISO(it);
       const d = daysSince(iso);
 
-      // price gets included regardless; days are included only if date parse works
       pricesUSD.push(usd);
-      if (d != null) daysOnMarket.push(d);
+      if (d != null) {
+        daysOnMarket.push(d);
+      } else if (it?.itemId && missingDateItems.length < MAX_ITEM_DETAIL_FETCHES) {
+        missingDateItems.push({ itemId: it.itemId });
+      }
 
       fxRateUsed = fxRateUsed || rateUsed;
     }
@@ -654,11 +680,29 @@ async function computeAvgActiveListing({
     await sleep(120);
   }
 
+  // FIX #2: fetch item detail for listings where summary had no creation date
+  if (missingDateItems.length > 0) {
+    console.log(`  📅 Fetching item detail for ${missingDateItems.length} listings missing date...`);
+    for (const { itemId } of missingDateItems) {
+      try {
+        const detail = await ebayFetchItemDetail({ token, marketplaceId, itemId });
+        if (detail) {
+          const iso = extractListingStartISO(detail);
+          const d = daysSince(iso);
+          if (d != null) daysOnMarket.push(d);
+        }
+      } catch {
+        // non-fatal — skip
+      }
+      await sleep(150);
+    }
+  }
+
   const taguchiListing = taguchiTrimmedMean(pricesUSD, TAGUCHI_TRIM_PCT);
   const marketStabilityCV = taguchiCV(pricesUSD, TAGUCHI_TRIM_PCT);
-
-  // average days on market for the included listings that had a valid start date
   const avgDaysOnMarket = avg(daysOnMarket);
+
+  console.log(`  📊 ${name} ${marketplaceId}: nListing=${pricesUSD.length}, nDaysOnMarket=${daysOnMarket.length}/${pricesUSD.length}`);
 
   return {
     avgListing: taguchiListing,
@@ -742,6 +786,26 @@ function loadAthletes() {
     .filter((x) => x.name);
 }
 
+// FIX #3: load/save base prices from dedicated file, independent of main output
+function loadBasePrices() {
+  try {
+    if (fs.existsSync(BASE_PRICES_PATH)) {
+      const raw = fs.readFileSync(BASE_PRICES_PATH, "utf8");
+      const parsed = JSON.parse(raw);
+      console.log(`Loaded base prices from ${BASE_PRICES_PATH} (${Object.keys(parsed).length} athletes)`);
+      return parsed;
+    }
+  } catch (e) {
+    console.warn(`Could not load base prices file: ${e.message}. Starting fresh.`);
+  }
+  return {};
+}
+
+function saveBasePrices(basePrices) {
+  fs.mkdirSync(path.dirname(BASE_PRICES_PATH), { recursive: true });
+  fs.writeFileSync(BASE_PRICES_PATH, JSON.stringify(basePrices, null, 2));
+}
+
 // --- index computation: average of per-player index levels (base=100) ---
 function computeScriptIndex(outData, athletes, sport) {
   let sum = 0;
@@ -773,9 +837,11 @@ async function main() {
     console.log(`🎯 Single-athlete mode: processing ${athletes.length} athlete(s)`);
   }
 
-  // Load previous indexHistory and basePrices so we can append/reuse
+  // FIX #3: load basePrices from dedicated file (survives output file deletion)
+  const basePrices = loadBasePrices();
+
+  // Load previous indexHistory from output file only (not basePrices)
   let prevHistory = [];
-  let basePrices = {};  // { playerName: basePrice }
   let prevOut = {};
   try {
     if (fs.existsSync(OUT_PATH)) {
@@ -784,9 +850,7 @@ async function main() {
       if (Array.isArray(prev?._meta?.indexHistory)) {
         prevHistory = prev._meta.indexHistory;
       }
-      if (prev?._meta?.basePrices && typeof prev._meta.basePrices === "object") {
-        basePrices = prev._meta.basePrices;
-      }
+      // FIX #3: do NOT load basePrices from out file anymore — dedicated file is authoritative
     }
   } catch { /* ignore parse errors */ }
 
@@ -931,9 +995,11 @@ async function main() {
       // --- Base=100 index per player ---
       const robustPrice = rec.taguchiListing;
       if (robustPrice != null && Number.isFinite(robustPrice) && robustPrice > 0) {
-        // Set base price on first observation
+        // FIX #3: basePrices now loaded from dedicated file — set on first observation only
         if (!basePrices[name] || !Number.isFinite(basePrices[name]) || basePrices[name] <= 0) {
           basePrices[name] = robustPrice;
+          // FIX #3: persist immediately so a crash mid-run doesn't lose new base prices
+          saveBasePrices(basePrices);
         }
         rec.basePriceUSD = basePrices[name];
         rec.indexLevel = 100 * (robustPrice / basePrices[name]);
@@ -990,8 +1056,9 @@ async function main() {
     .slice(0, 3)
     .map(([s]) => s);
 
-  // Persist basePrices in _meta
-  out._meta.basePrices = basePrices;
+  // FIX #3: basePrices no longer stored in _meta (dedicated file is authoritative)
+  // Kept in _meta as a read-only snapshot for debugging only
+  out._meta.basePricesSnapshot = basePrices;
 
   // Weighted index: blend raw indexLevel with graded indexLevel (70/30)
   function computeWeightedIndex(rawData, gradedData, athletes, sport) {
@@ -1057,7 +1124,12 @@ async function main() {
 
   fs.mkdirSync(path.dirname(OUT_PATH), { recursive: true });
   fs.writeFileSync(OUT_PATH, JSON.stringify(out, null, 2));
+
+  // FIX #3: final save of base prices
+  saveBasePrices(basePrices);
+
   console.log(`Wrote ${OUT_PATH}`);
+  console.log(`Wrote ${BASE_PRICES_PATH}`);
 }
 
 main().catch((err) => {
