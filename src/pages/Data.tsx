@@ -1362,8 +1362,9 @@ const PSAPopVsSoldChart = ({ gradedSoldData, athleteSportMap }: {
       const avgSold = soldRec?.taguchiSold ?? soldRec?.avg ?? null;
       if (avgSold == null || !Number.isFinite(avgSold) || avgSold <= 0) continue;
 
-      const normKey = athlete.name.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().trim();
-      const sport = athleteSportMap[athlete.name] || athleteSportMap[normKey] || athlete.sport || "Other";
+      const normKey = athlete.name.normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/[.\-']/g, "").replace(/\s+/g, " ").toLowerCase().trim();
+      const sport = athleteSportMap[athlete.name] || athleteSportMap[normKey];
+      if (!sport) continue;
 
       items.push({ name: athlete.name, sport, psaPop, soldCount, avgSold: Math.round(avgSold * 100) / 100, z: avgSold });
     }
