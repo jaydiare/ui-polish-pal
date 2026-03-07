@@ -33,7 +33,7 @@ const OUT_PATH = path.join(__dirname, "..", "data", "ebay-sold-avg.json");
 const PROGRESS_PATH = path.join(__dirname, "..", "data", "ebay-sold-progress.json");
 
 // Category: Graded Sports Trading Cards
-const CATEGORY_ID = "183050";
+const CATEGORY_ID = "261328";
 
 // Gemrate data yes/no
 const GEMRATE_ONLY = true;
