@@ -5,6 +5,8 @@ export interface Athlete {
   sport: string;
   league: string;
   team: string;
+  gemrate?: string;
+  basePriceUSD?: number;
 }
 
 export interface EbayAvgRecord {
