@@ -462,6 +462,8 @@ const Data = () => {
         totalSold: Math.round(v.sold * 100) / 100,
         count: v.totalCount,
       }))
+      // Hide sports with no price data at all
+      .filter(e => e.avgListed > 0 || e.avgSold > 0)
       .sort((a, b) => b.count - a.count);
 
     const allListed = entries.reduce((s, e) => s + e.totalListed, 0);
