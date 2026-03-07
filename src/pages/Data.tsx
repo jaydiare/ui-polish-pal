@@ -987,13 +987,8 @@ const Data = () => {
               </div>
             </section>
 
-            {/* ── Signal Strength Top 10 ── */}
-            <SignalStrengthChart
-              listedData={listedData}
-              gradedListedData={gradedListedData}
-              athleteSportMap={athleteSportMap}
-              athleteHistory={athleteHistory}
-            />
+
+
 
             {/* ── Most Sold on eBay ── */}
             <MostSoldChart soldData={soldData} gradedSoldData={gradedSoldData} athleteSportMap={athleteSportMap} />
