@@ -599,7 +599,7 @@ const Data = () => {
                 By Sport
               </h2>
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
-                {rawSportAgg.filter(s => s.sport === "All" || (s.avgListed > 0 && s.avgSold > 0)).map((s, i) => {
+                {rawSportAgg.filter(s => s.sport === "All" || s.avgListed > 0 || s.avgSold > 0).map((s, i) => {
                   const g = gradedSportMap[s.sport];
                   const hasGraded = g && g.totalListed > 0 && g.totalSold > 0;
                   const rawSpread = s.totalListed - s.totalSold;
