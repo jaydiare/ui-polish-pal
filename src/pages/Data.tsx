@@ -1392,34 +1392,6 @@ const PSAPopVsSoldChart = ({ gradedSoldData, athleteSportMap }: {
         {/* Overlap note: athletes sharing same/similar sold counts */}
         {(() => {
           // Group athletes by sold count, flag clusters within ±1
-          const soldGroups = new Map<number, string[]>();
-          bubbleData.forEach(d => {
-            const key = d.soldCount;
-            if (!soldGroups.has(key)) soldGroups.set(key, []);
-            soldGroups.get(key)!.push(d.name);
-          });
-          const overlaps = Array.from(soldGroups.entries())
-            .filter(([, names]) => names.length > 1)
-            .sort((a, b) => b[1].length - a[1].length);
-          if (!overlaps.length) return null;
-          return (
-            <div className="mt-3 px-2 py-2 rounded-lg bg-muted/40 border border-border/40">
-              <p className="text-[10px] text-muted-foreground mb-1.5 font-semibold flex items-center gap-1">
-                <span>⚠️</span> Athletes with identical verified sold counts may share positions — hover to reveal all:
-              </p>
-              <div className="flex flex-wrap gap-x-4 gap-y-1">
-                {overlaps.slice(0, 5).map(([count, names]) => (
-                  <span key={count} className="text-[10px] text-muted-foreground">
-                    <strong className="text-foreground">{count} verified</strong>: {names.join(", ")}
-                  </span>
-                ))}
-                {overlaps.length > 5 && (
-                  <span className="text-[10px] text-muted-foreground italic">+{overlaps.length - 5} more groups</span>
-                )}
-              </div>
-            </div>
-          );
-        })()}
         {/* Interactive sport legend + bubble size reference */}
         <div className="flex flex-wrap items-center gap-3 mt-3 justify-center">
           <button
