@@ -83,13 +83,17 @@ function enrichWithBasePrices(data: EbayAvgData | null): EbayAvgData | null {
         current.avgListing ?? current.taguchiListing ?? current.trimmedListing ?? current.avg ?? current.average
       );
 
+      // Always ensure basePriceUSD is set from _meta.basePrices
+      if (!current.basePriceUSD) {
+        current.basePriceUSD = price;
+      }
       if (!Number.isFinite(currentPrice) || currentPrice <= 0) {
         current.avgListing = price;
         current.taguchiListing = price;
         current.avg = price;
         current.average = price;
-        (merged as any)[existingKey] = current;
       }
+      (merged as any)[existingKey] = current;
     }
   }
 
