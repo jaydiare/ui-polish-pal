@@ -1213,7 +1213,7 @@ const SignalStrengthChart = ({ listedData, gradedListedData, athleteSportMap, at
                 <XAxis
                   type="number"
                   tick={{ fill: "hsl(var(--muted-foreground))", fontSize: 10 }}
-                  label={{ value: "Signal-to-Noise (dB)", position: "insideBottom", offset: -5, style: { fill: "hsl(var(--muted-foreground))", fontSize: 11 } }}
+                  label={{ value: "Signal-to-Noise", position: "insideBottom", offset: -5, style: { fill: "hsl(var(--muted-foreground))", fontSize: 11 } }}
                 />
                 <YAxis type="category" dataKey="name" width={150} tick={{ fill: "hsl(var(--muted-foreground))", fontSize: 11 }} />
                 <Tooltip
