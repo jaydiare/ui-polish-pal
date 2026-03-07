@@ -1156,7 +1156,7 @@ const MostSoldChart = ({ soldData, gradedSoldData, athleteSportMap }: {
       <div className="flex items-center justify-between mb-1">
         <h2 className="font-display font-bold text-lg text-foreground flex items-center gap-2">
           <span className="w-1 h-5 rounded-full bg-vzla-yellow inline-block" />
-          🔥 Most Sold – Top 10
+          🔥 Most Listings – Top 10
         </h2>
         <ModeToggle value={soldMode} onChange={setSoldMode} />
       </div>
@@ -1190,9 +1190,9 @@ const MostSoldChart = ({ soldData, gradedSoldData, athleteSportMap }: {
                       <div className="rounded-xl border border-border/50 bg-background/95 backdrop-blur-lg p-3 text-xs shadow-2xl">
                         <div className="font-display font-bold text-foreground mb-1">{d.name}</div>
                         <div className="text-muted-foreground text-[10px] mb-1.5">{d.sport}</div>
-                        <span className="text-muted-foreground">Verified Sold: <strong className="text-foreground">{d.soldCount.toLocaleString()}</strong></span>
+                        <span className="text-muted-foreground">Verified Listing: <strong className="text-foreground">{d.soldCount.toLocaleString()}</strong></span>
                         {d.avgSold != null && (
-                          <div className="text-muted-foreground mt-1">Avg Sold: <strong className="text-foreground">${d.avgSold.toFixed(2)}</strong></div>
+                          <div className="text-muted-foreground mt-1">Avg Listing: <strong className="text-foreground">${d.avgSold.toFixed(2)}</strong></div>
                         )}
                         <div className="text-[9px] text-muted-foreground/60 mt-1.5">Click bar to search on eBay</div>
                       </div>
