@@ -1227,7 +1227,7 @@ const SignalStrengthChart = ({ listedData, gradedListedData, athleteSportMap, at
                         <div className="font-display font-bold text-foreground mb-1">{d.name}</div>
                         <div className="text-muted-foreground text-[10px] mb-1.5">{d.sport}</div>
                         <div className="flex flex-col gap-0.5">
-                          <span className="text-muted-foreground">S/N Ratio: <strong className="text-foreground"><span className="text-muted-foreground">S/N Ratio: <strong className="text-foreground">{d.sn.toFixed(2)}</strong></span></strong></span>
+                          <span className="text-muted-foreground">S/N Ratio: <strong className="text-foreground">{d.sn.toFixed(2)}</strong></span>
                           <span className="text-muted-foreground">Mean Listed: <strong className="text-foreground">${d.mean.toFixed(2)}</strong></span>
                           <span className="text-muted-foreground">Stability: <strong className="text-foreground">{(d.cv * 100).toFixed(1)}%</strong></span>
                         </div>
@@ -1253,7 +1253,7 @@ const SignalStrengthChart = ({ listedData, gradedListedData, athleteSportMap, at
                 <div className="font-display font-bold text-foreground mb-1">{pinnedBar.name}</div>
                 <div className="text-muted-foreground text-[10px] mb-1.5">{pinnedBar.sport}</div>
                 <div className="flex flex-col gap-0.5">
-                  <span className="text-muted-foreground">S/N Ratio: <strong className="text-foreground"><span className="text-muted-foreground">S/N Ratio: <strong className="text-foreground">{pinnedBar.sn.toFixed(2)}</strong></span></strong></span>
+                  <span className="text-muted-foreground">S/N Ratio: <strong className="text-foreground">{pinnedBar.sn.toFixed(2)}</strong></span>
                   <span className="text-muted-foreground">Mean Listed: <strong className="text-foreground">${pinnedBar.mean.toFixed(2)}</strong></span>
                   <span className="text-muted-foreground">Stability: <strong className="text-foreground">{(pinnedBar.cv * 100).toFixed(1)}%</strong></span>
                 </div>
