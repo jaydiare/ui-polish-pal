@@ -383,6 +383,14 @@ const Data = () => {
     return groups;
   }, [signalAthletes]);
 
+  // Top 10 athletes by Taguchi S/N ratio for the Signal Strength card
+  const signalStrengthTop = useMemo(() => {
+    return [...signalAthletes]
+      .filter((a) => a.sn != null && Number.isFinite(a.sn))
+      .sort((a, b) => (b.sn ?? 0) - (a.sn ?? 0))
+      .slice(0, 10);
+  }, [signalAthletes]);
+
   /* ── Sport Aggregation helper ── */
   function buildSportAgg(
     listed: Record<string, ListedRecord>,
