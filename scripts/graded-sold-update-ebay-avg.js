@@ -594,15 +594,17 @@ function loadAthletes() {
     throw new Error(`Missing ${ATHLETES_PATH}.`);
   }
 
+function loadAthletes() {
   const raw = fs.readFileSync(ATHLETES_PATH, "utf8");
-  const arr = parseWithRecovery(raw);
+  const arr = JSON.parse(raw);
 
-  return (arr || [])
+  let list = arr || [];
 
   if (GEMRATE_ONLY) {
     list = list.filter((x) => x.gemrate === "yes");
   }
-        
+
+  return list
     .map((x) => ({
       name: normSpaces(x?.name),
       sport: normSpaces(x?.sport),
