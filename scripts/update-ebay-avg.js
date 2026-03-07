@@ -122,7 +122,10 @@ const UNGRADED_BLOCKLIST = [
   "torn",
   "tear",
   "scratches",
-  "scratch",
+  "scratch","licensed reprint", 
+  "reprint","Card Painting", 
+  "replica", 
+  "copy",
 ];
 
 // --- helpers ---
@@ -304,8 +307,11 @@ function isGradedListing(item) {
 
   // Avoid false positives from plain "10" in titles (e.g. "lot of 10", card #10)
   // by requiring grading-company context.
-  const graderWithGrade = /\b(psa|sgc|bgs|cgc|hga|isa|csa|beckett|bcg)\b[^\n]{0,14}\b(10|9\.5|9|8\.5|8|gem mint|mint|pristine|black label|gold label)\b/i;
-  const slabOnly = /\b(gem mint|pristine|black label|gold label)\b/i;
+  //const graderWithGrade = /\b(psa|sgc|bgs|cgc|hga|isa|csa|beckett|bcg)\b[^\n]{0,14}\b(10|9\.5|9|8\.5|8|gem mint|mint|pristine|black label|gold label|dna|authentic)\b/i;
+  //const slabOnly = /\b(gem mint|pristine|black label|gold label)\b/i;
+
+  const graderWithGrade = /\b(psa|sgc|bgs|cgc|hga|isa|csa|beckett|bcg)\b[^\n]{0,20}\b(10|9\.5|9|8\.5|8|7\.5|7|6\.5|6|5\.5|5|4\.5|4|3\.5|3|2\.5|2|1\.5|1|gem mint|mint|pristine|black label|gold label|authentic|dna)\b/i;
+  const slabOnly = /\b(gem mint|pristine|black label|gold label|psa\s?10|sgc\s?10|bgs\s?9\.5)\b/i;
 
   return graderWithGrade.test(title) || slabOnly.test(title);
 }
