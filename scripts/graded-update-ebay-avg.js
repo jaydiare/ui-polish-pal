@@ -26,14 +26,14 @@
 // - Adds market stability CV (Coefficient of Variation) on the SAME winsorized sample:
 //        CV = s / mean  (lower CV => more stable)
 //
-// NEW (this change):
-// - Ungraded listings must be Card Condition: Near Mint or Better OR Excellent only
-// - Excludes damaged/low-condition ungraded listings using descriptors if present,
-//   otherwise falls back to title-based detection.
+// FIX #2:
+// - avgDaysOnMarket now falls back to fetching the full item detail endpoint
+//   (/buy/browse/v1/item/{itemId}) for listings missing itemCreationDate in summary.
+//   Capped at BASE_PRICES_PATH per athlete to avoid blowing rate limits.
 //
-// NEW (this change):
-// - Adds average days on market for ACTIVE listings (avg age in days since listing created).
-//   This is NOT "time to sell" — it's "how long current listings have been live".
+// FIX #3:
+// - basePrices are now persisted in a dedicated data/ebay-base-prices.json file,
+//   separate from the main output. This survives output file deletions/regenerations.
 
 import fs from "node:fs";
 import path from "node:path";
@@ -51,10 +51,13 @@ if (!EBAY_CLIENT_ID || !EBAY_CLIENT_SECRET) {
 }
 
 const OUT_PATH = path.join(__dirname, "..", "data", "ebay-graded-avg.json");
-
-// This script expects:
-// data/athletes.json: [{ name: "Jose Altuve", sport: "Baseball" }, ...]
 const ATHLETES_PATH = path.join(__dirname, "..", "data", "athletes.json");
+
+// FIX #3: dedicated base prices file — never overwritten by normal runs
+const BASE_PRICES_PATH = path.join(__dirname, "..", "data", "ebay-base-prices.json");
+
+// FIX #2: max listings per athlete to fetch full item detail for date fallback
+const MAX_ITEM_DETAIL_FETCHES = 10;
 
 // Category you were using (Trading Card Singles)
 const CATEGORY_ID = "261328";
@@ -71,8 +74,6 @@ const MIN_EBAY_SAMPLE_SIZE = 4;
 
 // Marketplaces to compute
 const MARKETPLACES = ["EBAY_US"];
-
-// Manufacturer filter removed — all brands accepted
 
 // ✅ Country of Origin options
 const COUNTRY_OF_ORIGIN = ["United States", "Italy", "Venezuela", "Japan"];
@@ -92,42 +93,13 @@ const UNGRADED_ALLOWED_CONDITIONS = [
   "nmt",
 ];
 
-// if any of these appear (descriptor/title), reject ungraded listing
 const UNGRADED_BLOCKLIST = [
-  "damaged",
-  "damage",
-  "poor",
-  "fair",
-  "digitalcard",
-  "digital",
-  "very good",
-  "vg",
-  "good",
-  "gd",
-  "creases",
-  "crease",
-  "wrinkle",
-  "wrinkling",
-  "corner wear",
-  "surface wear",
-  "paper loss",
-  "stain",
-  "stained",
-  "water damage",
-  "tape",
-  "writing",
-  "marked",
-  "marked up",
-  "pin hole",
-  "hole",
-  "torn",
-  "tear",
-  "scratches",
-  "scratch",
-  "excellent",
-  "ex",
-  "auto",
-  "signed",
+  "damaged", "damage", "poor", "fair", "digitalcard", "digital",
+  "very good", "vg", "good", "gd", "creases", "crease", "wrinkle",
+  "wrinkling", "corner wear", "surface wear", "paper loss", "stain",
+  "stained", "water damage", "tape", "writing", "marked", "marked up",
+  "pin hole", "hole", "torn", "tear", "scratches", "scratch",
+  "excellent", "ex", "auto", "signed",
 ];
 
 // --- helpers ---
@@ -136,21 +108,18 @@ function sleep(ms) {
 }
 
 function stripDiacritics(s) {
-  return String(s || "")
-    .normalize("NFKD")
-    .replace(/[\u0300-\u036f]/g, "");
+  return String(s || "").normalize("NFKD").replace(/[\u0300-\u036f]/g, "");
 }
 
 function normSpaces(s) {
   return String(s || "").replace(/\s+/g, " ").trim();
 }
 
-// Normalized name for comparisons (accents removed, punctuation softened)
 function normalizeNameForCompare(s) {
   return normSpaces(
     stripDiacritics(s)
       .toLowerCase()
-      .replace(/[.'’"]/g, "")
+      .replace(/[.''"]/g, "")
       .replace(/\b(jr|jr\.|sr|sr\.)\b/g, "")
   );
 }
@@ -162,11 +131,9 @@ function safeNum(x) {
 
 function avg(values) {
   if (!values.length) return null;
-  const s = values.reduce((a, b) => a + b, 0);
-  return s / values.length;
+  return values.reduce((a, b) => a + b, 0) / values.length;
 }
 
-// median helper (used as a fallback for tiny samples)
 function median(values) {
   if (!values.length) return null;
   const sorted = [...values].sort((a, b) => a - b);
@@ -174,32 +141,25 @@ function median(values) {
   return sorted.length % 2 ? sorted[mid] : (sorted[mid - 1] + sorted[mid]) / 2;
 }
 
-// Sample standard deviation
 function stdev(values) {
   if (!values || values.length < 2) return null;
   const m = avg(values);
   if (m == null) return null;
   let s = 0;
   for (const v of values) s += (v - m) * (v - m);
-  const varSample = s / (values.length - 1);
-  const sd = Math.sqrt(varSample);
+  const sd = Math.sqrt(s / (values.length - 1));
   return Number.isFinite(sd) ? sd : null;
 }
 
-// Taguchi "trimmed mean" (winsorized mean).
 function taguchiTrimmedMean(values, trimPercent = TAGUCHI_TRIM_PCT) {
   if (!values || !values.length) return null;
-
   const sorted = [...values].sort((a, b) => a - b);
   const n = sorted.length;
   const k = Math.floor(n * trimPercent);
-
   if (n < 3 || k === 0) return median(sorted);
   if (n <= 2 * k) return median(sorted);
-
   const lowCap = sorted[k];
   const highCap = sorted[n - k - 1];
-
   let sum = 0;
   for (let i = 0; i < n; i++) {
     const v = sorted[i];
@@ -210,41 +170,27 @@ function taguchiTrimmedMean(values, trimPercent = TAGUCHI_TRIM_PCT) {
 
 function taguchiWinsorizedSample(values, trimPercent = TAGUCHI_TRIM_PCT) {
   if (!values || !values.length) return [];
-
   const sorted = [...values].sort((a, b) => a - b);
   const n = sorted.length;
   const k = Math.floor(n * trimPercent);
-
   if (n < 3 || k === 0 || n <= 2 * k) return sorted;
-
   const lowCap = sorted[k];
   const highCap = sorted[n - k - 1];
-
   return sorted.map((v) => (v < lowCap ? lowCap : v > highCap ? highCap : v));
 }
 
 function taguchiCV(values, trimPercent = TAGUCHI_TRIM_PCT) {
   if (!values || values.length < 3) return null;
-
   const wins = taguchiWinsorizedSample(values, trimPercent);
   if (!wins || wins.length < 3) return null;
-
   const m = avg(wins);
   const sd = stdev(wins);
-
-  if (m == null || sd == null) return null;
-  if (!Number.isFinite(m) || !Number.isFinite(sd)) return null;
-  if (m <= 0) return null;
-
+  if (m == null || sd == null || !Number.isFinite(m) || !Number.isFinite(sd) || m <= 0) return null;
   return sd / m;
 }
 
-// ✅ string utilities for ungraded condition policy
 function normText(s) {
-  return String(s || "")
-    .toLowerCase()
-    .replace(/\s+/g, " ")
-    .trim();
+  return String(s || "").toLowerCase().replace(/\s+/g, " ").trim();
 }
 
 function includesAny(text, arr) {
@@ -252,101 +198,69 @@ function includesAny(text, arr) {
   return arr.some((w) => t.includes(normText(w)));
 }
 
-// Try to read condition descriptor names from multiple possible shapes.
 function extractConditionDescriptorTexts(item) {
   const out = [];
-
   const cds = item?.conditionDescriptors;
   if (Array.isArray(cds)) {
     for (const d of cds) {
       if (!d) continue;
-      out.push(d?.name);
-      out.push(d?.descriptorName);
-      out.push(d?.value);
-      out.push(d?.valueName);
+      out.push(d?.name, d?.descriptorName, d?.value, d?.valueName);
     }
   }
-
   const cdv = item?.conditionDescriptorValues;
   if (Array.isArray(cdv)) {
     for (const d of cdv) {
       if (!d) continue;
-      out.push(d?.name);
-      out.push(d?.descriptorName);
-      out.push(d?.value);
-      out.push(d?.valueName);
+      out.push(d?.name, d?.descriptorName, d?.value, d?.valueName);
     }
   }
-
   return out.filter(Boolean).map(normText);
 }
 
-// ✅ decide if listing should be included when it's UNGRADED
 function ungradedPassesConditionPolicy(item) {
   const title = normText(item?.title || "");
   const cond = normText(item?.condition || "");
   const descs = extractConditionDescriptorTexts(item);
-
   const joined = [title, cond, ...descs].join(" | ");
-
-  // reject damaged/low-grade hints
   if (includesAny(joined, UNGRADED_BLOCKLIST)) return false;
-
-  // accept only near mint/excellent hints
   if (includesAny(joined, UNGRADED_ALLOWED_CONDITIONS)) return true;
-
-  // unknown condition => reject (strict)
   return false;
 }
 
-// PSA-only graded detector — only PSA-graded cards are included
 function isGradedListing(item) {
   const cond = normText(item?.condition || "");
   const title = normText(item?.title || "");
-
-  // API already filters to PSA, but keep a defensive title check
   const hasPSA = /\bpsa\b/i.test(title);
-
-  // If eBay explicitly marks it graded and title says PSA, accept it
   if (cond.includes("graded") && hasPSA) return true;
-
-  // PSA grades 1–10 including half grades
   const psaNumeric =
     /\bpsa\b[^\n]{0,18}\b(10|9\.5|9|8\.5|8|7\.5|7|6\.5|6|5\.5|5|4\.5|4|3\.5|3|2\.5|2|1\.5|1)\b/i;
-
-  // PSA label-style listings
   const psaLabel =
     /\bpsa\b[^\n]{0,18}\b(gem mint|mint|dna|authentic)\b/i;
-
   return psaNumeric.test(title) || psaLabel.test(title);
 }
 
-// ✅ NEW: listing “age” (days on market) for ACTIVE listings
+// FIX #2: extract creation date from item summary OR full item detail fields
 function extractListingStartISO(item) {
-  // eBay Browse API commonly provides itemCreationDate for listing creation time.
-  // We also check a few defensive alternatives.
   return (
     item?.itemCreationDate ||
     item?.listingStartDate ||
     item?.startDate ||
     item?.creationDate ||
+    // full item detail endpoint uses these field names
+    item?.listingMarketplaceId?.itemCreationDate ||
+    item?.timeLeft ||  // not a date but guards against null coalescing
     null
   );
 }
 
+// Normalize timeLeft — not useful for age, so always prefer date fields above
 function daysSince(isoString) {
   const t = Date.parse(isoString || "");
   if (!Number.isFinite(t)) return null;
-
   const now = Date.now();
   let diff = (now - t) / (1000 * 60 * 60 * 24);
-
-  if (!Number.isFinite(diff)) return null;
-  if (diff < 0) diff = 0;
-
-  // sanity cap (optional): ignore absurd ages
-  if (diff > 3650) return null;
-
+  if (!Number.isFinite(diff) || diff < 0) return null;
+  if (diff > 3650) return null; // sanity cap
   return diff;
 }
 
@@ -354,16 +268,13 @@ function getHeaderMarketplace(marketplaceId) {
   return { "X-EBAY-C-MARKETPLACE-ID": marketplaceId };
 }
 
-// Build a search query.
 function buildQuery(name, sport) {
   const sportHint = sport ? ` ${sport}` : "";
   return `${name}${sportHint} card`;
 }
 
-// Map your sports to likely eBay "Sport" aspect values in Trading Card Singles.
 function sportAspectCandidates(sportRaw) {
   const s = (sportRaw || "").toLowerCase().trim();
-
   const map = {
     baseball: ["Baseball"],
     soccer: ["Soccer"],
@@ -376,29 +287,22 @@ function sportAspectCandidates(sportRaw) {
     olympics: ["Track & Field"],
     other: [],
   };
-
   return map[s] || [sportRaw];
 }
 
-// Build a combined eBay aspect_filter for GRADED cards
-// Always includes Graded:{Yes} to restrict to graded listings at the API level
 function buildAspectFilter({ aspectMode, aspectValue }) {
   const parts = [];
-
-  // Restrict to graded cards, PSA specifically
   parts.push(`Graded:{Yes}`);
   parts.push(`Professional Grader:{Professional Sports Authenticator (PSA)}`);
-
   if (aspectMode === "player" && aspectValue) {
     parts.push(`Player/Athlete:{${aspectValue}}`);
   } else if (aspectMode === "sport" && aspectValue) {
     parts.push(`Sport:{${aspectValue}}`);
   }
-
   return parts.length ? parts.join(",") : null;
 }
 
-// --- FX (Normalize ANY currency -> USD) ---
+// --- FX ---
 const CBSA_FX_URL =
   "https://bcd-api-dca-ipa.cbsa-asfc.cloud-nuage.canada.ca/exchange-rate-lambda/exchange-rates";
 
@@ -406,65 +310,47 @@ async function getFxRatesToUSD() {
   const res = await fetch(CBSA_FX_URL, {
     headers: { "Content-Type": "application/json" },
   });
-
   if (!res.ok) {
     const txt = await res.text().catch(() => "");
     throw new Error(`Failed to fetch FX rates (${res.status}): ${txt}`);
   }
-
   const json = await res.json();
   const rows = json?.ForeignExchangeRates || json?.foreignExchangeRates || [];
-
   const cadPer = { CAD: 1 };
   let asOf = null;
-
   for (const r of rows) {
     const from = String(r?.FromCurrency?.Value || r?.FromCurrency || "").toUpperCase();
     const to = String(r?.ToCurrency?.Value || r?.ToCurrency || "").toUpperCase();
     const rate = Number(r?.Rate);
-
     if (to === "CAD" && Number.isFinite(rate) && rate > 0 && from) {
       cadPer[from] = rate;
-      asOf =
-        asOf ||
-        r?.ExchangeRateEffectiveTimestamp ||
-        r?.ValidStartDate ||
-        r?.ExchangeRateExpiryTimestamp ||
-        null;
+      asOf = asOf || r?.ExchangeRateEffectiveTimestamp || r?.ValidStartDate || r?.ExchangeRateExpiryTimestamp || null;
     }
   }
-
   const cadPerUsd = cadPer.USD;
   if (!Number.isFinite(cadPerUsd) || cadPerUsd <= 0) {
-    throw new Error("CBSA FX: missing/invalid USD->CAD rate (needed to normalize to USD).");
+    throw new Error("CBSA FX: missing/invalid USD->CAD rate.");
   }
-
   const usdPer = { USD: 1 };
-
   for (const [cur, cadPerCur] of Object.entries(cadPer)) {
     if (!Number.isFinite(cadPerCur) || cadPerCur <= 0) continue;
     usdPer[cur] = cadPerCur / cadPerUsd;
   }
-
   usdPer.CAD = 1 / cadPerUsd;
-
   return { rates: usdPer, asOf };
 }
 
 function convertToUSD(amount, currency, fxRatesToUSD) {
   const cur = String(currency || "").toUpperCase();
   if (!Number.isFinite(amount)) return { usd: null, rateUsed: null };
-
   const rate = fxRatesToUSD?.[cur];
   if (!Number.isFinite(rate) || rate <= 0) return { usd: null, rateUsed: null };
-
   return { usd: amount * rate, rateUsed: rate };
 }
 
 // --- eBay auth ---
 async function getAppToken() {
   const creds = Buffer.from(`${EBAY_CLIENT_ID}:${EBAY_CLIENT_SECRET}`).toString("base64");
-
   const res = await fetch("https://api.ebay.com/identity/v1/oauth2/token", {
     method: "POST",
     headers: {
@@ -476,39 +362,24 @@ async function getAppToken() {
       scope: "https://api.ebay.com/oauth/api_scope",
     }),
   });
-
   if (!res.ok) {
     const txt = await res.text().catch(() => "");
     throw new Error(`Failed to get eBay token (${res.status}): ${txt}`);
   }
-
   const json = await res.json();
   if (!json.access_token) throw new Error("No access_token in token response");
   return json.access_token;
 }
 
 // --- eBay Browse Search ---
-async function ebayBrowseSearch({
-  token,
-  marketplaceId,
-  q,
-  categoryId,
-  limit,
-  offset,
-  aspectFilter,
-}) {
+async function ebayBrowseSearch({ token, marketplaceId, q, categoryId, limit, offset, aspectFilter }) {
   const url = new URL("https://api.ebay.com/buy/browse/v1/item_summary/search");
   url.searchParams.set("q", q);
   url.searchParams.set("limit", String(limit));
   url.searchParams.set("offset", String(offset));
   url.searchParams.set("category_ids", categoryId);
-
   url.searchParams.append("filter", "buyingOptions:{FIXED_PRICE}");
-
-  if (aspectFilter) {
-    url.searchParams.set("aspect_filter", aspectFilter);
-  }
-
+  if (aspectFilter) url.searchParams.set("aspect_filter", aspectFilter);
   const res = await fetch(url.toString(), {
     headers: {
       Authorization: `Bearer ${token}`,
@@ -516,120 +387,86 @@ async function ebayBrowseSearch({
       ...getHeaderMarketplace(marketplaceId),
     },
   });
-
   if (!res.ok) {
     const txt = await res.text().catch(() => "");
     throw new Error(`Browse search failed (${marketplaceId}) ${res.status}: ${txt}`);
   }
+  return res.json();
+}
 
+// FIX #2: fetch full item detail to get itemCreationDate when summary doesn't include it
+async function ebayFetchItemDetail({ token, marketplaceId, itemId }) {
+  const url = `https://api.ebay.com/buy/browse/v1/item/${encodeURIComponent(itemId)}`;
+  const res = await fetch(url, {
+    headers: {
+      Authorization: `Bearer ${token}`,
+      "Content-Type": "application/json",
+      ...getHeaderMarketplace(marketplaceId),
+    },
+  });
+  if (!res.ok) return null; // non-fatal: just skip this item's date
   return res.json();
 }
 
 // --- Matching / Validation ---
 function candidateAspectValuesForName(name) {
   const raw = normSpaces(name);
-
   const ascii = normSpaces(stripDiacritics(raw));
   const noDotsRaw = raw.replace(/\./g, "");
   const noDotsAscii = ascii.replace(/\./g, "");
-
   const noJrRaw = raw.replace(/\s+Jr\.?$/i, "").trim();
   const noJrAscii = ascii.replace(/\s+Jr\.?$/i, "").trim();
-
   const variants = new Set([raw, ascii, noDotsRaw, noDotsAscii, noJrRaw, noJrAscii]);
   return [...variants].map(normSpaces).filter(Boolean);
 }
 
 async function validatePlayerAthleteMatch({ token, marketplaceId, name, sport }) {
   const q = buildQuery(name, sport);
-
   for (const cand of candidateAspectValuesForName(name)) {
     const aspectFilter = `Player/Athlete:{${cand}}`;
-    const data = await ebayBrowseSearch({
-      token,
-      marketplaceId,
-      q,
-      categoryId: CATEGORY_ID,
-      limit: 1,
-      offset: 0,
-      aspectFilter,
-    });
-
+    const data = await ebayBrowseSearch({ token, marketplaceId, q, categoryId: CATEGORY_ID, limit: 1, offset: 0, aspectFilter });
     const total = safeNum(data?.total) ?? 0;
     if (total > 0) return { ok: true, aspectValue: cand };
-
     await sleep(120);
   }
-
   return { ok: false, aspectValue: null };
 }
 
 async function validateSportMatch({ token, marketplaceId, name, sport }) {
   const q = buildQuery(name, sport);
   const candidates = sportAspectCandidates(sport);
-
   for (const s of candidates) {
     if (!s) continue;
-
     const aspectFilter = `Sport:{${s}}`;
-    const data = await ebayBrowseSearch({
-      token,
-      marketplaceId,
-      q,
-      categoryId: CATEGORY_ID,
-      limit: 1,
-      offset: 0,
-      aspectFilter,
-    });
-
+    const data = await ebayBrowseSearch({ token, marketplaceId, q, categoryId: CATEGORY_ID, limit: 1, offset: 0, aspectFilter });
     const total = safeNum(data?.total) ?? 0;
     if (total > 0) return { ok: true, sportAspectValue: s };
-
     await sleep(120);
   }
-
   return { ok: false, sportAspectValue: null };
 }
 
 // --- computations ---
-async function computeAvgActiveListing({
-  token,
-  marketplaceId,
-  name,
-  sport,
-  aspectMode,
-  aspectValue,
-  fxRates,
-}) {
+async function computeAvgActiveListing({ token, marketplaceId, name, sport, aspectMode, aspectValue, fxRates }) {
   const q = buildQuery(name, sport);
   const aspectFilter = buildAspectFilter({ aspectMode, aspectValue });
 
   let offset = 0;
-
-  // included samples
   const pricesUSD = [];
   const daysOnMarket = [];
+
+  // FIX #2: track items that are missing a date so we can fetch detail for them
+  const missingDateItems = [];
 
   let originalCurrency = null;
   let fxRateUsed = null;
 
   while (offset < LISTING_PAGE_LIMIT) {
-    const data = await ebayBrowseSearch({
-      token,
-      marketplaceId,
-      q,
-      categoryId: CATEGORY_ID,
-      limit: PAGE_SIZE,
-      offset,
-      aspectFilter,
-    });
-
+    const data = await ebayBrowseSearch({ token, marketplaceId, q, categoryId: CATEGORY_ID, limit: PAGE_SIZE, offset, aspectFilter });
     const items = data?.itemSummaries || [];
 
     for (const it of items) {
-      // ✅ GRADED ONLY: skip ungraded listings entirely
-      const graded = isGradedListing(it);
-      if (!graded) continue;
+      if (!isGradedListing(it)) continue;
 
       const p = it?.price;
       const v = safeNum(p?.value);
@@ -641,15 +478,17 @@ async function computeAvgActiveListing({
       const { usd, rateUsed } = convertToUSD(v, cur, fxRates);
       if (usd == null) continue;
 
-      // ✅ days on market (active listing age)
+      pricesUSD.push(usd);
+      fxRateUsed = fxRateUsed || rateUsed;
+
+      // FIX #2: try to get date from summary first; queue for detail fetch if missing
       const iso = extractListingStartISO(it);
       const d = daysSince(iso);
-
-      // price gets included regardless; days are included only if date parse works
-      pricesUSD.push(usd);
-      if (d != null) daysOnMarket.push(d);
-
-      fxRateUsed = fxRateUsed || rateUsed;
+      if (d != null) {
+        daysOnMarket.push(d);
+      } else if (it?.itemId && missingDateItems.length < MAX_ITEM_DETAIL_FETCHES) {
+        missingDateItems.push({ itemId: it.itemId });
+      }
     }
 
     if (items.length < PAGE_SIZE) break;
@@ -657,19 +496,35 @@ async function computeAvgActiveListing({
     await sleep(120);
   }
 
+  // FIX #2: fetch item detail for listings where summary had no creation date
+  if (missingDateItems.length > 0) {
+    console.log(`  📅 Fetching item detail for ${missingDateItems.length} listings missing date...`);
+    for (const { itemId } of missingDateItems) {
+      try {
+        const detail = await ebayFetchItemDetail({ token, marketplaceId, itemId });
+        if (detail) {
+          const iso = extractListingStartISO(detail);
+          const d = daysSince(iso);
+          if (d != null) daysOnMarket.push(d);
+        }
+      } catch {
+        // non-fatal — skip
+      }
+      await sleep(150);
+    }
+  }
+
   const taguchiListing = taguchiTrimmedMean(pricesUSD, TAGUCHI_TRIM_PCT);
   const marketStabilityCV = taguchiCV(pricesUSD, TAGUCHI_TRIM_PCT);
-
-  // average days on market for the included listings that had a valid start date
   const avgDaysOnMarket = avg(daysOnMarket);
 
   return {
     avgListing: taguchiListing,
     taguchiListing,
     marketStabilityCV,
-    avgDaysOnMarket, // ✅ NEW
+    avgDaysOnMarket,
     nListing: pricesUSD.length,
-    nDaysOnMarket: daysOnMarket.length, // debug/transparency
+    nDaysOnMarket: daysOnMarket.length,
     currency: "USD",
     originalCurrency: originalCurrency || null,
     fxRateUsed: fxRateUsed || null,
@@ -678,23 +533,16 @@ async function computeAvgActiveListing({
 
 // --- data loading ---
 function parseWithRecovery(content) {
-  // Strip BOM and normalize whitespace
   let clean = content.replace(/^\uFEFF/, "").trim();
-
-  // Attempt 1: direct parse
   try { return JSON.parse(clean); } catch (e1) {
     console.warn(`JSON parsing failed: ${e1.message}`);
     console.warn("Attempting recovery strategies...");
-
-    // Attempt 2: fix trailing commas before ] or }
     try {
       const noTrailing = clean.replace(/,\s*([\]}])/g, "$1");
       const parsed = JSON.parse(noTrailing);
-      console.warn(`Recovered by removing trailing commas (${Array.isArray(parsed) ? parsed.length : "ok"} items)`);
+      console.warn(`Recovered by removing trailing commas`);
       return parsed;
     } catch { /* next */ }
-
-    // Attempt 3: truncated JSON — find last complete object and close array
     const lastBrace = clean.lastIndexOf("}");
     if (lastBrace > 0) {
       for (let pos = lastBrace; pos > 0; pos--) {
@@ -702,59 +550,59 @@ function parseWithRecovery(content) {
           const candidate = clean.substring(0, pos + 1).replace(/,\s*$/, "") + "]";
           try {
             const items = JSON.parse(candidate);
-            console.warn(`Recovered ${Array.isArray(items) ? items.length : "some"} items from truncated JSON (cut at pos ${pos})`);
+            console.warn(`Recovered ${Array.isArray(items) ? items.length : "some"} items from truncated JSON`);
             return items;
-          } catch { /* try earlier position */ }
+          } catch { /* try earlier */ }
         }
       }
     }
-
-    // Attempt 4: line-by-line object extraction
     try {
       const objRegex = /\{[^{}]*\}/g;
       const matches = clean.match(objRegex) || [];
-      const items = matches.map((m) => {
-        try { return JSON.parse(m); } catch { return null; }
-      }).filter(Boolean);
+      const items = matches.map((m) => { try { return JSON.parse(m); } catch { return null; } }).filter(Boolean);
       if (items.length > 0) {
         console.warn(`Recovered ${items.length} items via line-by-line extraction`);
         return items;
       }
     } catch { /* fall through */ }
-
     throw new Error(`Cannot parse athletes.json (${e1.message}). File may be corrupted — try re-running the workflow.`);
   }
 }
 
 function loadAthletes() {
   if (!fs.existsSync(ATHLETES_PATH)) {
-    throw new Error(
-      `Missing ${ATHLETES_PATH}. Create data/athletes.json with [{name,sport}, ...] or adjust script.`
-    );
+    throw new Error(`Missing ${ATHLETES_PATH}. Create data/athletes.json with [{name,sport}, ...] or adjust script.`);
   }
-
   const raw = fs.readFileSync(ATHLETES_PATH, "utf8");
   const arr = parseWithRecovery(raw);
-
   let list = arr || [];
-
-  // Filter only gemrate athletes if enabled
-  if (GEMRATE_ONLY) {
-    list = list.filter((x) => x.gemrate === "yes");
-  }
-
+  if (GEMRATE_ONLY) list = list.filter((x) => x.gemrate === "yes");
   return list
-    .map((x) => ({
-      name: normSpaces(x?.name),
-      sport: normSpaces(x?.sport),
-      searchKeyword: x?.searchKeyword
-        ? normSpaces(x.searchKeyword)
-        : undefined,
-    }))
+    .map((x) => ({ name: normSpaces(x?.name), sport: normSpaces(x?.sport), searchKeyword: x?.searchKeyword ? normSpaces(x.searchKeyword) : undefined }))
     .filter((x) => x.name);
 }
 
-// --- index computation: average of per-player index levels (base=100) ---
+// FIX #3: load/save base prices from dedicated file, independent of main output
+function loadBasePrices() {
+  try {
+    if (fs.existsSync(BASE_PRICES_PATH)) {
+      const raw = fs.readFileSync(BASE_PRICES_PATH, "utf8");
+      const parsed = JSON.parse(raw);
+      console.log(`Loaded base prices from ${BASE_PRICES_PATH} (${Object.keys(parsed).length} athletes)`);
+      return parsed;
+    }
+  } catch (e) {
+    console.warn(`Could not load base prices file: ${e.message}. Starting fresh.`);
+  }
+  return {};
+}
+
+function saveBasePrices(basePrices) {
+  fs.mkdirSync(path.dirname(BASE_PRICES_PATH), { recursive: true });
+  fs.writeFileSync(BASE_PRICES_PATH, JSON.stringify(basePrices, null, 2));
+}
+
+// --- index computation ---
 function computeScriptIndex(outData, athletes, sport) {
   let sum = 0;
   let used = 0;
@@ -777,20 +625,20 @@ async function main() {
   const fx = await getFxRatesToUSD();
   const athletes = loadAthletes();
 
-  // Load previous indexHistory and basePrices so we can append/reuse
+  // FIX #3: load basePrices from dedicated file (survives output file deletion)
+  const basePrices = loadBasePrices();
+
+  // Load previous indexHistory from output file only (not basePrices)
   let prevHistory = [];
-  let basePrices = {};  // { playerName: basePrice }
   try {
     if (fs.existsSync(OUT_PATH)) {
       const prev = JSON.parse(fs.readFileSync(OUT_PATH, "utf8"));
       if (Array.isArray(prev?._meta?.indexHistory)) {
         prevHistory = prev._meta.indexHistory;
       }
-      if (prev?._meta?.basePrices && typeof prev._meta.basePrices === "object") {
-        basePrices = prev._meta.basePrices;
-      }
+      // FIX #3: do NOT load basePrices from out file anymore — dedicated file is authoritative
     }
-  } catch { /* ignore parse errors */ }
+  } catch { /* ignore */ }
 
   const out = {
     _meta: {
@@ -799,31 +647,23 @@ async function main() {
       marketplaces: MARKETPLACES,
       categoryId: CATEGORY_ID,
       note:
-        "Active listing robust mean (Browse API FIXED_PRICE). No sold data. Prices normalized to USD. Includes market stability CV (sd/mean). Ungraded restricted to Near Mint or Better / Excellent (damaged excluded). Includes avg days-on-market for active listings (listing age).",
+        "Active listing robust mean (Browse API FIXED_PRICE). No sold data. Prices normalized to USD. " +
+        "Includes market stability CV (sd/mean). Ungraded restricted to Near Mint or Better / Excellent. " +
+        "Includes avg days-on-market for active listings (listing age). " +
+        "Base prices stored in dedicated ebay-base-prices.json (FIX #3).",
       fx: {
         source: "CBSA Exchange Rates API",
         asOf: fx.asOf,
-        ratesToUSD: {
-          USD: 1,
-          CAD: fx.rates?.CAD ?? null,
-          EUR: fx.rates?.EUR ?? null,
-        },
+        ratesToUSD: { USD: 1, CAD: fx.rates?.CAD ?? null, EUR: fx.rates?.EUR ?? null },
       },
       manufacturers: "none (all brands accepted)",
       listingStat: { method: "taguchi_winsorized_mean", trimPercent: TAGUCHI_TRIM_PCT },
-      stabilityStat: {
-        method: "cv",
-        formula: "sd/mean",
-        sample: "winsorized",
-        trimPercent: TAGUCHI_TRIM_PCT,
-      },
-      ungradedPolicy: {
-        allow: ["Near Mint or Better", "Excellent"],
-        blocklist: "damaged/low-condition keywords",
-      },
+      stabilityStat: { method: "cv", formula: "sd/mean", sample: "winsorized", trimPercent: TAGUCHI_TRIM_PCT },
+      ungradedPolicy: { allow: ["Near Mint or Better", "Excellent"], blocklist: "damaged/low-condition keywords" },
       daysOnMarket: {
-        meaning: "Average age of ACTIVE listings (not time-to-sell).",
+        meaning: "Average age of ACTIVE listings (not time-to-sell). Falls back to item detail fetch if summary omits creation date.",
         field: "avgDaysOnMarket",
+        maxDetailFetches: MAX_ITEM_DETAIL_FETCHES,
       },
     },
   };
@@ -877,15 +717,9 @@ async function main() {
       for (const marketplaceId of MARKETPLACES) {
         try {
           const listing = await computeAvgActiveListing({
-            token,
-            marketplaceId,
-            name: queryName,
-            sport,
-            aspectMode: match.mode,
-            aspectValue: match.value,
-            fxRates: fx.rates,
+            token, marketplaceId, name: queryName, sport,
+            aspectMode: match.mode, aspectValue: match.value, fxRates: fx.rates,
           });
-
           rec.marketplaces[marketplaceId] = {
             aspectMode: match.mode,
             aspectValue: match.value,
@@ -906,12 +740,10 @@ async function main() {
 
       const ca = rec.marketplaces.EBAY_CA;
       const us = rec.marketplaces.EBAY_US;
-
       const pick =
         (ca && ca.taguchiListing != null ? ca : null) ||
         (us && us.taguchiListing != null ? us : null) ||
-        ca ||
-        us;
+        ca || us;
 
       rec.taguchiListing = pick?.taguchiListing ?? null;
       rec.avgListing = pick?.avgListing ?? null;
@@ -919,16 +751,17 @@ async function main() {
       rec.avgDaysOnMarket = pick?.avgDaysOnMarket ?? null;
       rec.nListing = pick?.nListing ?? 0;
       rec.currency = "USD";
-
       rec.avg = rec.avgListing;
       rec.n = rec.nListing;
 
       // --- Base=100 index per player ---
       const robustPrice = rec.taguchiListing;
       if (robustPrice != null && Number.isFinite(robustPrice) && robustPrice > 0) {
-        // Set base price on first observation
+        // FIX #3: basePrices now loaded from dedicated file — set on first observation only
         if (!basePrices[name] || !Number.isFinite(basePrices[name]) || basePrices[name] <= 0) {
           basePrices[name] = robustPrice;
+          // FIX #3: persist immediately so a crash mid-run doesn't lose new base prices
+          saveBasePrices(basePrices);
         }
         rec.basePriceUSD = basePrices[name];
         rec.indexLevel = 100 * (robustPrice / basePrices[name]);
@@ -941,16 +774,13 @@ async function main() {
     } catch (e) {
       errorCount++;
       console.error(`[${i + 1}/${athletes.length}] FAILED ${name}: ${e?.message || e}`);
-      // On rate-limit (429), wait longer before continuing
       if (String(e?.message || "").includes("429")) {
         console.log("Rate limited — waiting 60s before continuing...");
         await sleep(60_000);
       }
     }
 
-    // Always save progress after each athlete
     fs.writeFileSync(OUT_PATH, JSON.stringify(out, null, 2));
-
     await sleep(500);
   }
 
@@ -959,22 +789,18 @@ async function main() {
   }
 
   // --- Append today's index snapshot to indexHistory ---
-  const today = new Date().toISOString().slice(0, 10); // YYYY-MM-DD
-
-  // Detect top sports from athletes list (same logic as frontend)
+  const today = new Date().toISOString().slice(0, 10);
   const sportCounts = new Map();
   for (const a of athletes) {
     const s = a.sport || "Other";
     if (s === "Other") continue;
     sportCounts.set(s, (sportCounts.get(s) || 0) + 1);
   }
-  const topSports = [...sportCounts.entries()]
-    .sort((a, b) => b[1] - a[1])
-    .slice(0, 3)
-    .map(([s]) => s);
+  const topSports = [...sportCounts.entries()].sort((a, b) => b[1] - a[1]).slice(0, 3).map(([s]) => s);
 
-  // Persist basePrices in _meta
-  out._meta.basePrices = basePrices;
+  // FIX #3: basePrices no longer stored in _meta (dedicated file is authoritative)
+  // Kept in _meta as a read-only snapshot for debugging only
+  out._meta.basePricesSnapshot = basePrices;
 
   const snapshot = { date: today };
   for (const sport of topSports) {
@@ -984,10 +810,8 @@ async function main() {
   const allIdx = computeScriptIndex(out, athletes, "All");
   snapshot.All = parseFloat(allIdx.average.toFixed(1));
 
-  // Dedupe: replace existing entry for today, keep last 90 days
   const history = prevHistory.filter((h) => h.date !== today);
   history.push(snapshot);
-  // Keep only last 90 entries
   while (history.length > 90) history.shift();
 
   out._meta.indexHistory = history;
@@ -996,11 +820,15 @@ async function main() {
 
   fs.mkdirSync(path.dirname(OUT_PATH), { recursive: true });
   fs.writeFileSync(OUT_PATH, JSON.stringify(out, null, 2));
+
+  // FIX #3: final save of base prices
+  saveBasePrices(basePrices);
+
   console.log(`Wrote ${OUT_PATH}`);
+  console.log(`Wrote ${BASE_PRICES_PATH}`);
 }
 
 main().catch((err) => {
   console.error("Fatal error in main():", err);
-  // Still try to exit 0 so the workflow commits whatever data was saved
   process.exit(0);
 });
