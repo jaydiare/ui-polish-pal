@@ -1417,13 +1417,6 @@ const PSAPopVsSoldChart = ({ gradedSoldData, athleteSportMap }: {
               </button>
             );
           })}
-          <div className="flex items-center gap-2 text-[10px] text-muted-foreground ml-2 border-l border-border pl-3">
-            <span>Size =</span>
-            <div className="w-2 h-2 rounded-full bg-muted-foreground/40" />
-            <span>Low $</span>
-            <div className="w-4 h-4 rounded-full bg-muted-foreground/40" />
-            <span>High $</span>
-          </div>
         </div>
       </div>
     </section>
