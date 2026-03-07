@@ -67,8 +67,20 @@ const VzlaAthleteGrid = ({ athletes, byName, byKey, gradedByName, gradedByKey, e
             transition={{ duration: 0.3, delay: Math.min(i * 0.02, 0.5) }}
           >
             <AthleteCard
-70:               athlete={a}
-71:               byName={byName}
+            <AthleteCard
+              athlete={a}
+              byName={byName}
+              byKey={byKey}
+              gradedByName={gradedByName}
+              gradedByKey={gradedByKey}
+              ebaySoldRaw={ebaySoldRaw}
+              ebayGradedSoldRaw={ebayGradedSoldRaw}
+              history={athleteHistory?.[a.name]}
+              psaPop={gemratePopMap?.[a.name] ?? gemratePopMap?.[a.name.normalize("NFD").replace(/[\u0300-\u036f]/g, "")]}
+              isRecommended={highlightedIds?.has(buildBudgetAthleteId(a.name, a.sport))}
+              isHotSeller={hotSellers.has(a.name)}
+              priceMode={a.gemrate?.toLowerCase() === "no" ? "raw" : priceMode}
+            />
 72:               byKey={byKey}
 73:               gradedByName={gradedByName}
 74:               gradedByKey={gradedByKey}
