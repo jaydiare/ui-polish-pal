@@ -1131,6 +1131,18 @@ const SignalStrengthChart = ({ listedData, gradedListedData, athleteSportMap, at
   athleteHistory: Record<string, any[]>;
 }) => {
   const [snMode, setSnMode] = useState<CardMode>("raw");
+  const [pinnedBar, setPinnedBar] = useState<{ name: string; sport: string; sn: number; mean: number; cv: number } | null>(null);
+  const snWrapRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (!pinnedBar) return;
+    const handler = (e: MouseEvent | TouchEvent) => {
+      if (snWrapRef.current && !snWrapRef.current.contains(e.target as Node)) setPinnedBar(null);
+    };
+    document.addEventListener("mousedown", handler);
+    document.addEventListener("touchstart", handler);
+    return () => { document.removeEventListener("mousedown", handler); document.removeEventListener("touchstart", handler); };
+  }, [pinnedBar]);
 
   const top10 = useMemo(() => {
     const buildEntries = (src: Record<string, ListedRecord>) => {
@@ -1194,7 +1206,7 @@ const SignalStrengthChart = ({ listedData, gradedListedData, athleteSportMap, at
             <p className="text-sm text-muted-foreground">Signal strength data requires both price mean and stability (CV). Loading…</p>
           </div>
         ) : (
-          <div className="w-full h-[450px] md:h-[550px]">
+          <div className="w-full h-[450px] md:h-[550px] relative" ref={snWrapRef}>
             <ResponsiveContainer width="100%" height="100%">
               <BarChart data={top10} layout="vertical" margin={{ top: 5, right: 30, left: 20, bottom: 5 }}>
                 <CartesianGrid strokeDasharray="3 3" stroke="hsl(var(--border))" opacity={0.5} />
@@ -1206,6 +1218,7 @@ const SignalStrengthChart = ({ listedData, gradedListedData, athleteSportMap, at
                 <YAxis type="category" dataKey="name" width={150} tick={{ fill: "hsl(var(--muted-foreground))", fontSize: 11 }} />
                 <Tooltip
                   content={({ payload }: any) => {
+                    if (pinnedBar) return null;
                     if (!payload?.length) return null;
                     const d = payload[0]?.payload;
                     if (!d) return null;
@@ -1218,14 +1231,14 @@ const SignalStrengthChart = ({ listedData, gradedListedData, athleteSportMap, at
                           <span className="text-muted-foreground">Mean Price: <strong className="text-foreground">${d.mean.toFixed(2)}</strong></span>
                           <span className="text-muted-foreground">CV: <strong className="text-foreground">{(d.cv * 100).toFixed(1)}%</strong></span>
                         </div>
-                        <div className="text-[9px] text-muted-foreground/60 mt-1.5">Click bar to search on eBay</div>
+                        <div className="text-[9px] text-muted-foreground/60 mt-1.5">Click bar to pin details</div>
                       </div>
                     );
                   }}
                 />
                 <Bar dataKey="sn" name="Signal Strength" fill={SN_BAR_COLOR} radius={[0, 4, 4, 0]} isAnimationActive={false} cursor="pointer"
                   onClick={(data: any) => {
-                    if (data?.name) window.open(buildEbaySearchUrl(data.name, data.sport), "_blank", "noopener,noreferrer");
+                    if (data?.name) setPinnedBar(data);
                   }}
                 >
                   {top10.map((entry, idx) => (
@@ -1234,6 +1247,26 @@ const SignalStrengthChart = ({ listedData, gradedListedData, athleteSportMap, at
                 </Bar>
               </BarChart>
             </ResponsiveContainer>
+            {pinnedBar && (
+              <div className="absolute top-4 right-4 z-50 rounded-xl border border-border/50 bg-background/95 backdrop-blur-lg p-4 text-xs shadow-2xl max-w-[220px]">
+                <button onClick={() => setPinnedBar(null)} className="absolute top-1.5 right-2 text-muted-foreground hover:text-foreground text-sm">✕</button>
+                <div className="font-display font-bold text-foreground mb-1">{pinnedBar.name}</div>
+                <div className="text-muted-foreground text-[10px] mb-1.5">{pinnedBar.sport}</div>
+                <div className="flex flex-col gap-0.5">
+                  <span className="text-muted-foreground">S/N Ratio: <strong className="text-foreground">{pinnedBar.sn.toFixed(2)} dB</strong></span>
+                  <span className="text-muted-foreground">Mean Price: <strong className="text-foreground">${pinnedBar.mean.toFixed(2)}</strong></span>
+                  <span className="text-muted-foreground">CV: <strong className="text-foreground">{(pinnedBar.cv * 100).toFixed(1)}%</strong></span>
+                </div>
+                <a
+                  href={buildEbaySearchUrl(pinnedBar.name, pinnedBar.sport)}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-2 inline-block text-primary underline text-[10px] font-semibold hover:text-primary/80"
+                >
+                  🔎 Search on eBay →
+                </a>
+              </div>
+            )}
           </div>
         )}
         <p className="text-[9px] text-muted-foreground/60 text-center mt-3">
