@@ -4,6 +4,11 @@ on:
   schedule:
     - cron: "0 8 * * *"
   workflow_dispatch:
+    inputs:
+      only:
+        description: "Single athlete name (e.g. Ronald Acuna Jr.) — leave empty for full batch"
+        required: false
+        default: ""
 
 concurrency:
   group: ebay-graded-avg-main
@@ -34,6 +39,7 @@ jobs:
         env:
           EBAY_CLIENT_ID: ${{ secrets.EBAY_CLIENT_ID }}
           EBAY_CLIENT_SECRET: ${{ secrets.EBAY_CLIENT_SECRET }}
+          EBAY_ONLY: ${{ github.event.inputs.only }}
 
       - name: Copy to public
         run: |

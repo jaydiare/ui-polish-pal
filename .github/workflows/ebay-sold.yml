@@ -5,6 +5,11 @@ on:
     # Every 3 hours starting at 00:00 UTC — staggered 90min from graded-sold
     - cron: "0 0,3,6,9,12,15,18,21 * * *"
   workflow_dispatch:
+    inputs:
+      only:
+        description: "Single athlete name (e.g. Ronald Acuna Jr.) — leave empty for full batch"
+        required: false
+        default: ""
 
 concurrency:
   group: ebay-sold-avg-main
@@ -32,6 +37,8 @@ jobs:
 
       - name: Update eBay sold averages (batch of 10)
         run: node scripts/sold-update-ebay-avg.js
+        env:
+          EBAY_ONLY: ${{ github.event.inputs.only }}
 
       - name: Copy to public
         run: |
