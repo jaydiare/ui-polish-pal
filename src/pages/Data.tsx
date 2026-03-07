@@ -1405,12 +1405,12 @@ const PSAPopVsSoldChart = ({ gradedSoldData, athleteSportMap }: {
           return (
             <div className="mt-3 px-2 py-2 rounded-lg bg-muted/40 border border-border/40">
               <p className="text-[10px] text-muted-foreground mb-1.5 font-semibold flex items-center gap-1">
-                <span>⚠️</span> Athletes with identical sold counts may overlap on the chart:
+                <span>⚠️</span> Athletes with identical verified sold counts may share positions — hover to reveal all:
               </p>
               <div className="flex flex-wrap gap-x-4 gap-y-1">
                 {overlaps.slice(0, 5).map(([count, names]) => (
                   <span key={count} className="text-[10px] text-muted-foreground">
-                    <strong className="text-foreground">{count} sold</strong>: {names.join(", ")}
+                    <strong className="text-foreground">{count} verified</strong>: {names.join(", ")}
                   </span>
                 ))}
                 {overlaps.length > 5 && (
