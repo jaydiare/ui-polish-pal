@@ -957,7 +957,7 @@ const Data = () => {
                                   {a.spreadPct > 0 ? "+" : ""}{a.spreadPct.toFixed(0)}%
                                 </div>
                                 <div className="text-[9px] text-muted-foreground">
-                                  {a.cv != null ? `Market Score ${(a.cv * 100).toFixed(0)}%` : ""}
+                                  {a.cv != null ? `Stability ${(a.cv * 100).toFixed(0)}%` : ""}
                                   {a.cv != null && a.days != null ? " · " : ""}
                                   {a.days != null ? `${Math.round(a.days)}d` : ""}
                                 </div>
