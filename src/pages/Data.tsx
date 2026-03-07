@@ -1131,6 +1131,18 @@ const SignalStrengthChart = ({ listedData, gradedListedData, athleteSportMap, at
   athleteHistory: Record<string, any[]>;
 }) => {
   const [snMode, setSnMode] = useState<CardMode>("raw");
+  const [pinnedBar, setPinnedBar] = useState<{ name: string; sport: string; sn: number; mean: number; cv: number } | null>(null);
+  const snWrapRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (!pinnedBar) return;
+    const handler = (e: MouseEvent | TouchEvent) => {
+      if (snWrapRef.current && !snWrapRef.current.contains(e.target as Node)) setPinnedBar(null);
+    };
+    document.addEventListener("mousedown", handler);
+    document.addEventListener("touchstart", handler);
+    return () => { document.removeEventListener("mousedown", handler); document.removeEventListener("touchstart", handler); };
+  }, [pinnedBar]);
 
   const top10 = useMemo(() => {
     const buildEntries = (src: Record<string, ListedRecord>) => {
