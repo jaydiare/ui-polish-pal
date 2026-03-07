@@ -1013,7 +1013,7 @@ const MostSoldChart = ({ soldData, gradedSoldData, athleteSportMap }: {
       for (const [name, rec] of Object.entries(src)) {
         if (name === "_meta" || !rec) continue;
         const r = rec as any;
-        const n = r.nScraped ?? r.nSoldUsed ?? 0;
+        const n = r.nSoldUsed ?? r.nScraped ?? 0;
         if (n <= 0) continue;
         const normKey = name.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().trim();
         const sport = athleteSportMap[name] || athleteSportMap[normKey] || "Other";
@@ -1249,7 +1249,7 @@ const PSAPopVsSoldChart = ({ gradedSoldData, athleteSportMap }: {
       if (psaPop <= 0) continue;
 
       const soldRec = gradedSoldData[athlete.name] as any;
-      const soldCount = soldRec?.nScraped ?? soldRec?.nSoldUsed ?? 0;
+      const soldCount = soldRec?.nSoldUsed ?? soldRec?.nScraped ?? 0;
       if (soldCount <= 0) continue;
 
       const avgSold = soldRec?.taguchiSold ?? soldRec?.avg ?? null;
