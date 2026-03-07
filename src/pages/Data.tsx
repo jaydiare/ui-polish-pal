@@ -184,8 +184,9 @@ function buildComparison(
     if (lp == null || sp == null) continue;
     const ratio = Math.max(lp, sp) / Math.max(Math.min(lp, sp), 0.01);
     if (ratio > 10) continue;
-    const normKey = key.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().trim();
-    const sport = athleteSportMap[key] || athleteSportMap[normKey] || (listedData[key] as any)?.sport || "Other";
+    const normKey = key.normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/[.\-']/g, "").replace(/\s+/g, " ").toLowerCase().trim();
+    const sport = athleteSportMap[key] || athleteSportMap[normKey];
+    if (!sport) continue; // skip athletes not in the roster
     items.push({ name: key, sport, listed: Math.round(lp * 100) / 100, sold: Math.round(sp * 100) / 100, spread: Math.round((lp - sp) * 100) / 100 });
   }
   return items;
@@ -443,8 +444,9 @@ const Data = () => {
     const allKeys = new Set([...Object.keys(listed), ...Object.keys(sold)]);
     for (const key of allKeys) {
       if (key === "_meta") continue;
-      const normKey = key.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().trim();
-      const sport = sportMap[key] || sportMap[normKey] || (listed[key] as any)?.sport || "Other";
+      const normKey = key.normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/[.\-']/g, "").replace(/\s+/g, " ").toLowerCase().trim();
+      const sport = sportMap[key] || sportMap[normKey];
+      if (!sport) continue; // skip athletes not in the roster
       addSport(sport);
       const lp = getListedPrice(listed[key] as ListedRecord);
       const sp = getSoldPrice(sold[key] as SoldRecord);
@@ -1118,8 +1120,9 @@ const MostSoldChart = ({ soldData, gradedSoldData, athleteSportMap }: {
         const r = rec as any;
         const n = r.nSoldUsed ?? r.nScraped ?? 0;
         if (n <= 0) continue;
-        const normKey = name.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().trim();
-        const sport = athleteSportMap[name] || athleteSportMap[normKey] || "Other";
+        const normKey = name.normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/[.\-']/g, "").replace(/\s+/g, " ").toLowerCase().trim();
+        const sport = athleteSportMap[name] || athleteSportMap[normKey];
+        if (!sport) continue; // skip athletes not in the roster
         const avgSold = r.taguchiSold ?? r.avg ?? null;
         entries.push({ name, sport, soldCount: n, avgSold });
       }
