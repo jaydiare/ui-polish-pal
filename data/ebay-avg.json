@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-07T13:32:40.256Z",
+    "updatedAt": "2026-03-07T17:34:52.860Z",
     "minSampleSize": 4,
     "marketplaces": [
       "EBAY_US",
@@ -636,12 +636,11 @@
       },
       {
         "date": "2026-03-07",
-        "Baseball": 1283.8,
-        "Soccer": 3007,
-        "Basketball": 715.3,
-        "All": 1311.9
+        "Baseball": 6331.6,
+        "All": 6331.6
       }
-    ]
+    ],
+    "basePricesSnapshot": {}
   },
   "Adbert Alzolay": {
     "match": {
