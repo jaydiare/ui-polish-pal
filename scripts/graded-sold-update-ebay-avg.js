@@ -35,6 +35,9 @@ const PROGRESS_PATH = path.join(__dirname, "..", "data", "ebay-sold-progress.jso
 // Category: Graded Sports Trading Cards
 const CATEGORY_ID = "183050";
 
+// Gemrate data yes/no
+const GEMRATE_ONLY = true;
+
 // Sampling
 const MAX_PAGES = 3;
 const MAX_RETRIES = 4;
@@ -595,6 +598,11 @@ function loadAthletes() {
   const arr = parseWithRecovery(raw);
 
   return (arr || [])
+
+  if (GEMRATE_ONLY) {
+    list = list.filter((x) => x.gemrate === "yes");
+  }
+        
     .map((x) => ({
       name: normSpaces(x?.name),
       sport: normSpaces(x?.sport),
