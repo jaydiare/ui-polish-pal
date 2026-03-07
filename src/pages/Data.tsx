@@ -1203,7 +1203,7 @@ const SignalStrengthChart = ({ listedData, gradedListedData, athleteSportMap, at
         {isEmpty ? (
           <div className="py-12 text-center">
             <div className="text-3xl mb-3">📡</div>
-            <p className="text-sm text-muted-foreground">Signal strength data requires both price mean and Market Score. Loading…</p>
+            <p className="text-sm text-muted-foreground">Signal strength data requires both price mean and Stability score. Loading…</p>
           </div>
         ) : (
           <div className="w-full h-[450px] md:h-[550px] relative" ref={snWrapRef}>
