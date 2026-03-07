@@ -991,9 +991,55 @@ const Data = () => {
                   );
                 })}
               </div>
+
+              {/* ── Signal Strength Card ── */}
+              <motion.div
+                initial={{ opacity: 0, y: 12 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.35 }}
+                className="glass-panel p-4 hover:border-primary/20 transition-colors mt-4"
+              >
+                <div className="flex items-center gap-2 mb-1">
+                  <span className="text-lg">📡</span>
+                  <span className="font-display font-bold text-sm text-foreground">Signal Strength</span>
+                  <span className="ml-auto text-[10px] font-mono text-muted-foreground rounded-full border border-border px-2 py-0.5">{signalStrengthTop.length}</span>
+                </div>
+                <p className="text-[10px] text-muted-foreground mb-3">Top Taguchi S/N ratio — consistent pricing, reliable market</p>
+                {signalStrengthTop.length === 0 ? (
+                  <p className="text-xs text-muted-foreground/50 italic">No athletes with S/N data</p>
+                ) : (
+                  <div className="space-y-1.5 max-h-[220px] overflow-y-auto pr-1">
+                    {signalStrengthTop.map((a) => (
+                      <a
+                        key={a.name}
+                        href={buildEbaySearchUrl(a.name, a.sport)}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center justify-between gap-2 rounded-lg px-2.5 py-1.5 hover:bg-accent/50 transition-colors group"
+                      >
+                        <div className="min-w-0 flex-1">
+                          <div className="text-xs font-semibold text-foreground truncate group-hover:text-primary transition-colors">{a.name}</div>
+                          <div className="text-[9px] text-muted-foreground">{a.sport}</div>
+                        </div>
+                        <div className="text-right shrink-0">
+                          <div className="text-xs font-mono font-bold text-foreground">
+                            S/N {a.sn!.toFixed(1)}
+                          </div>
+                          <div className="text-[9px] text-muted-foreground">
+                            {a.cv != null ? `Stability ${(a.cv * 100).toFixed(0)}%` : ""}
+                            {a.cv != null && a.days != null ? " · " : ""}
+                            {a.days != null ? `${Math.round(a.days)}d` : ""}
+                          </div>
+                        </div>
+                      </a>
+                    ))}
+                  </div>
+                )}
+                <p className="text-[9px] text-muted-foreground/60 text-center mt-3">
+                  S/N = 10 · log₁₀(mean² / variance). Higher = more reliable.
+                </p>
+              </motion.div>
             </section>
-
-
 
 
             {/* ── Most Sold on eBay ── */}
