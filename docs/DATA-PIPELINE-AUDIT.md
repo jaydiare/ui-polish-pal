@@ -43,6 +43,19 @@ athletes.json (550+ athletes)
     └── All JSON files ──► GitHub raw URLs ──► Frontend fetches live
 ```
 
+### Data Preservation Strategy
+
+All listing scripts (Browse API) now load existing data from the output file before processing. If a run produces no new results (API quota, transient errors), previously collected athlete records are preserved via merge. This prevents data loss from empty runs (see Bug 8.7).
+
+### Graded Data Fallback Chain
+
+When graded listed data (`ebay-graded-avg.json`) is empty or sparse, the frontend builds a `mergedGradedData` object:
+
+1. **Graded Sold** (`ebay-graded-sold-avg.json`) — `taguchiSold` mapped to `avgListing`
+2. **Graded Listed** (`ebay-graded-avg.json`) — overwrites sold data where available (higher priority)
+
+This ensures the UI always displays graded prices when any graded data source is available.
+
 ### API vs Scraping
 
 | Method | Scripts | Quota Impact | Rate Limiting |
@@ -539,6 +552,35 @@ if (!graded) {
 **Change:** Removed the manufacturer/brand allowlist (Topps, Panini, Upper Deck, etc.) from all 4 scripts to increase data coverage. Venezuelan league cards from smaller manufacturers (Artesania Sport, Ovenca, Sport Grafico, etc.) were being excluded.
 
 **Mitigation:** Junk title filter and Taguchi winsorization (40% trim) protect against noise from low-quality or novelty cards.
+
+### 8.7 (March 7, 2026) Graded Listed Data Overwritten with Empty File
+
+**Problem:** `graded-update-ebay-avg.js` overwrote `data/ebay-graded-avg.json` with only `_meta` metadata and zero athlete records. The `indexHistory` for 2026-03-07 confirmed `Baseball: 0, All: 0`. This caused the "Graded" filter on both the Home page grid and Market Intel to show no data.
+
+**Root cause:** The script initialized an empty `out` object on each run. If the eBay Browse API returned no results (quota exhaustion, transient errors, or no matches), the file was saved with only the `_meta` block — discarding all previously collected athlete price records.
+
+**Fix (script):** `graded-update-ebay-avg.js` now loads existing data from the output file at the start of the run and merges `prevRecords` into the new `out` object. This ensures previously collected athlete records are preserved even when a specific run returns no new data.
+
+```javascript
+// Load previous records as fallback
+const prevData = fs.existsSync(OUT_PATH) ? JSON.parse(fs.readFileSync(OUT_PATH, "utf-8")) : {};
+const prevRecords = {};
+for (const [k, v] of Object.entries(prevData)) {
+  if (k !== "_meta") prevRecords[k] = v;
+}
+// ... after processing, merge previous into output
+for (const [k, v] of Object.entries(prevRecords)) {
+  if (!(k in out)) out[k] = v;
+}
+```
+
+**Fix (frontend):** `useAthleteData.ts` now builds a `mergedGradedData` object that uses graded sold data (`ebay-graded-sold-avg.json`) as a fallback when graded listed data (`ebay-graded-avg.json`) is empty. Sold prices (`taguchiSold`) are mapped to `avgListing` fields so the existing price display logic works seamlessly. Listed data takes priority when available.
+
+### 8.8 (March 7, 2026) Graded Script File Header Mismatch
+
+**Problem:** `scripts/graded-update-ebay-avg.js` contains a misleading file header comment: `// scripts/update-ebay-avg.js` (line 1) — referencing the raw script name instead of the graded script. The output path comment on line 12 is correct (`data/ebay-graded-avg.json`).
+
+**Status:** Cosmetic only. No functional impact.
 
 ---
 
