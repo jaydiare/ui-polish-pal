@@ -56,6 +56,12 @@ const OUT_PATH = path.join(__dirname, "..", "data", "ebay-avg.json");
 // data/athletes.json: [{ name: "Jose Altuve", sport: "Baseball" }, ...]
 const ATHLETES_PATH = path.join(__dirname, "..", "data", "athletes.json");
 
+// FIX #3: dedicated base prices file — never overwritten by normal runs
+const BASE_PRICES_PATH = path.join(__dirname, "..", "data", "ebay-base-prices.json");
+
+// FIX #2: max listings per athlete to fetch full item detail for date fallback
+const MAX_ITEM_DETAIL_FETCHES = 10;
+
 // Category you were using (Trading Card Singles)
 const CATEGORY_ID = "261328";
 
@@ -481,6 +487,20 @@ async function getAppToken() {
   return json.access_token;
 }
 
+// FIX #2: fetch full item detail to get itemCreationDate when summary doesn't include it
+async function ebayFetchItemDetail({ token, marketplaceId, itemId }) {
+  const url = `https://api.ebay.com/buy/browse/v1/item/${encodeURIComponent(itemId)}`;
+  const res = await fetch(url, {
+    headers: {
+      Authorization: `Bearer ${token}`,
+      "Content-Type": "application/json",
+      ...getHeaderMarketplace(marketplaceId),
+    },
+  });
+  if (!res.ok) return null; // non-fatal: just skip this item's date
+  return res.json();
+}
+
 // --- eBay Browse Search ---
 async function ebayBrowseSearch({
   token,
@@ -604,6 +624,9 @@ async function computeAvgActiveListing({
   const pricesUSD = [];
   const daysOnMarket = [];
 
+  // FIX #2: track items missing a date so we can fetch detail for them
+  const missingDateItems = [];
+
   let originalCurrency = null;
   let fxRateUsed = null;
 
@@ -642,9 +665,12 @@ async function computeAvgActiveListing({
       const iso = extractListingStartISO(it);
       const d = daysSince(iso);
 
-      // price gets included regardless; days are included only if date parse works
       pricesUSD.push(usd);
-      if (d != null) daysOnMarket.push(d);
+      if (d != null) {
+        daysOnMarket.push(d);
+      } else if (it?.itemId && missingDateItems.length < MAX_ITEM_DETAIL_FETCHES) {
+        missingDateItems.push({ itemId: it.itemId });
+      }
 
       fxRateUsed = fxRateUsed || rateUsed;
     }
@@ -654,11 +680,29 @@ async function computeAvgActiveListing({
     await sleep(120);
   }
 
+  // FIX #2: fetch item detail for listings where summary had no creation date
+  if (missingDateItems.length > 0) {
+    console.log(`  📅 Fetching item detail for ${missingDateItems.length} listings missing date...`);
+    for (const { itemId } of missingDateItems) {
+      try {
+        const detail = await ebayFetchItemDetail({ token, marketplaceId, itemId });
+        if (detail) {
+          const iso = extractListingStartISO(detail);
+          const d = daysSince(iso);
+          if (d != null) daysOnMarket.push(d);
+        }
+      } catch {
+        // non-fatal — skip
+      }
+      await sleep(150);
+    }
+  }
+
   const taguchiListing = taguchiTrimmedMean(pricesUSD, TAGUCHI_TRIM_PCT);
   const marketStabilityCV = taguchiCV(pricesUSD, TAGUCHI_TRIM_PCT);
-
-  // average days on market for the included listings that had a valid start date
   const avgDaysOnMarket = avg(daysOnMarket);
+
+  console.log(`  📊 ${name} ${marketplaceId}: nListing=${pricesUSD.length}, nDaysOnMarket=${daysOnMarket.length}/${pricesUSD.length}`);
 
   return {
     avgListing: taguchiListing,
