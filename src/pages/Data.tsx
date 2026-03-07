@@ -1118,8 +1118,9 @@ const MostSoldChart = ({ soldData, gradedSoldData, athleteSportMap }: {
         const r = rec as any;
         const n = r.nSoldUsed ?? r.nScraped ?? 0;
         if (n <= 0) continue;
-        const normKey = name.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().trim();
-        const sport = athleteSportMap[name] || athleteSportMap[normKey] || "Other";
+        const normKey = name.normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/[.\-']/g, "").replace(/\s+/g, " ").toLowerCase().trim();
+        const sport = athleteSportMap[name] || athleteSportMap[normKey];
+        if (!sport) continue; // skip athletes not in the roster
         const avgSold = r.taguchiSold ?? r.avg ?? null;
         entries.push({ name, sport, soldCount: n, avgSold });
       }
