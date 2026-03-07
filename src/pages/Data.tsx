@@ -208,6 +208,7 @@ const Data = () => {
   const [gradedSoldData, setGradedSoldData] = useState<Record<string, SoldRecord>>({});
 
   const [athleteSportMap, setAthleteSportMap] = useState<Record<string, string>>({});
+  const [gemrateSet, setGemrateSet] = useState<Set<string>>(new Set());
   const [pinnedDot, setPinnedDot] = useState<PinnedData | null>(null);
   const scatterWrapRef = useRef<HTMLDivElement>(null);
   const [athleteHistory, setAthleteHistory] = useState<Record<string, any[]>>({});
