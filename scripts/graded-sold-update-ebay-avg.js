@@ -39,7 +39,7 @@ const CATEGORY_ID = "261328";
 const GEMRATE_ONLY = true;
 
 // Sampling
-const MAX_PAGES = 3;
+const MAX_PAGES = 4;
 const MAX_RETRIES = 4;
 const BASE_DELAY_MS = 4000;
 const INTER_PAGE_DELAY_MS = 2500;
