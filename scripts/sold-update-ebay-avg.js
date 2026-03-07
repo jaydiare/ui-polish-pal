@@ -57,7 +57,7 @@ const UNGRADED_BLOCKLIST = [
   "good", "gd", "creases", "crease", "wrinkle", "wrinkling",
   "corner wear", "surface wear", "paper loss", "stain", "stained",
   "water damage", "tape", "writing", "marked", "marked up",
-  "pin hole", "hole", "torn", "tear", "scratches", "scratch",
+  "pin hole", "hole", "torn", "tear", "scratches", "scratch","licensed reprint", "reprint","Card Painting", "replica", "copy",
 ];
 
 // Junk title exclusion
@@ -197,7 +197,7 @@ function titleLooksRelevantToPlayer(title, playerName) {
 function isGradedTitle(title) {
   const t = norm(title);
 
-  const graderWithGrade = /\b(psa|sgc|bgs|cgc|hga|isa|csa|beckett|bcg)\b[^\n]{0,14}\b(10|9\.5|9|8\.5|8|gem mint|mint|pristine|black label|gold label)\b/i;
+  const graderWithGrade = /\b(psa|sgc|bgs|cgc|hga|isa|csa|beckett|bcg)\b[^\n]{0,14}\b(10|9\.5|9|8\.5|8|gem mint|mint|pristine|black label|gold label|dna|authentic)\b/i;
   const slabOnly = /\b(gem mint|pristine|black label|gold label)\b/i;
 
   return graderWithGrade.test(t) || slabOnly.test(t);
