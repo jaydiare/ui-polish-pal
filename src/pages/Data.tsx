@@ -297,9 +297,30 @@ const Data = () => {
   const filteredGradedListed = useMemo(() => filterByGemrate(gradedListedData), [gradedListedData, filterByGemrate]);
   const filteredGradedSold = useMemo(() => filterByGemrate(gradedSoldData), [gradedSoldData, filterByGemrate]);
 
+  // Merge graded listed with graded sold as fallback (graded listed may be sparse/empty)
+  const mergedGradedListed = useMemo(() => {
+    const merged: Record<string, ListedRecord> = {};
+    // Start with sold data mapped to listed fields
+    for (const [key, val] of Object.entries(filteredGradedSold)) {
+      if (key === "_meta" || !val) continue;
+      const r = val as any;
+      const soldPrice = r.taguchiSold ?? r.avg;
+      if (soldPrice != null && Number.isFinite(soldPrice) && soldPrice > 0) {
+        merged[key] = { ...r, avgListing: soldPrice, taguchiListing: soldPrice, avg: soldPrice, average: soldPrice };
+      }
+    }
+    // Override with actual listed data where available
+    for (const [key, val] of Object.entries(filteredGradedListed)) {
+      if (key === "_meta" || !val) continue;
+      const lp = getListedPrice(val as ListedRecord);
+      if (lp != null) merged[key] = val as ListedRecord;
+    }
+    return merged;
+  }, [filteredGradedListed, filteredGradedSold]);
+
   /* ── Comparison data per mode ── */
   const rawComparison = useMemo(() => buildComparison(listedData, soldData, athleteSportMap), [listedData, soldData, athleteSportMap]);
-  const gradedComparison = useMemo(() => buildComparison(filteredGradedListed, filteredGradedSold, athleteSportMap), [filteredGradedListed, filteredGradedSold, athleteSportMap]);
+  const gradedComparison = useMemo(() => buildComparison(mergedGradedListed, filteredGradedSold, athleteSportMap), [mergedGradedListed, filteredGradedSold, athleteSportMap]);
 
   const rawStats = useMemo(() => buildStats(rawComparison), [rawComparison]);
   const gradedStats = useMemo(() => buildStats(gradedComparison), [gradedComparison]);
@@ -372,7 +393,7 @@ const Data = () => {
 
     const results: SignalAthlete[] = [];
     for (const d of allComparison) {
-      const rec = (signalMode === "graded" ? filteredGradedListed[d.name] : listedData[d.name]) as any;
+      const rec = (signalMode === "graded" ? mergedGradedListed[d.name] : listedData[d.name]) as any;
       const cv: number | null = rec?.marketStabilityCV ?? rec?.marketplaces?.EBAY_US?.marketStabilityCV ?? null; // Market Stability Score
       const days: number | null = rec?.avgDaysOnMarket ?? rec?.marketplaces?.EBAY_US?.avgDaysOnMarket ?? null;
       const spreadPct = d.sold > 0 ? ((d.listed - d.sold) / d.sold) * 100 : 0;
@@ -406,7 +427,7 @@ const Data = () => {
     }
 
     return results;
-  }, [signalMode, rawComparison, gradedComparison, listedData, filteredGradedListed]);
+  }, [signalMode, rawComparison, gradedComparison, listedData, mergedGradedListed]);
 
   const signalGroups = useMemo(() => {
     const groups: Record<SignalCategory, SignalAthlete[]> = {
@@ -487,7 +508,7 @@ const Data = () => {
   }
 
   const rawSportAgg = useMemo(() => buildSportAgg(listedData, soldData, athleteSportMap), [listedData, soldData, athleteSportMap]);
-  const gradedSportAgg = useMemo(() => buildSportAgg(filteredGradedListed, filteredGradedSold, athleteSportMap), [filteredGradedListed, filteredGradedSold, athleteSportMap]);
+  const gradedSportAgg = useMemo(() => buildSportAgg(mergedGradedListed, filteredGradedSold, athleteSportMap), [mergedGradedListed, filteredGradedSold, athleteSportMap]);
 
   // Build a lookup for graded by sport name
   const gradedSportMap = useMemo(() => {
