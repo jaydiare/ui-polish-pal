@@ -964,10 +964,8 @@ const Data = () => {
                                   {a.spreadPct > 0 ? "+" : ""}{a.spreadPct.toFixed(0)}%
                                 </div>
                                 <div className="text-[9px] text-muted-foreground">
-                                  {a.sn != null ? `S/N ${a.sn.toFixed(1)}` : ""}
-                                  {a.sn != null && a.cv != null ? " · " : ""}
                                   {a.cv != null ? `Stability ${(a.cv * 100).toFixed(0)}%` : ""}
-                                  {(a.sn != null || a.cv != null) && a.days != null ? " · " : ""}
+                                  {a.cv != null && a.days != null ? " · " : ""}
                                   {a.days != null ? `${Math.round(a.days)}d` : ""}
                                 </div>
                               </div>
