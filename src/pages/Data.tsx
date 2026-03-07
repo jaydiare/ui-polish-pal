@@ -245,17 +245,29 @@ const Data = () => {
       if (sold) setSoldData(sold);
       if (gradedListed) setGradedListedData(gradedListed);
       if (gradedSold) setGradedSoldData(gradedSold);
+      const map: Record<string, string> = {};
+      const norm = (s: string) => s.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().trim();
       if (athletes && Array.isArray(athletes)) {
-        const map: Record<string, string> = {};
-        const norm = (s: string) => s.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().trim();
         for (const a of athletes) {
           if (a?.name && a?.sport) {
             map[a.name] = a.sport;
             map[norm(a.name)] = a.sport;
           }
         }
-        setAthleteSportMap(map);
       }
+      // Also populate sport map from eBay data keys (which carry .sport)
+      for (const src of [listed, gradedListed]) {
+        if (!src || typeof src !== "object") continue;
+        for (const [key, rec] of Object.entries(src)) {
+          if (key === "_meta" || !rec) continue;
+          const sport = (rec as any)?.sport;
+          if (sport && !map[key]) {
+            map[key] = sport;
+            map[norm(key)] = sport;
+          }
+        }
+      }
+      setAthleteSportMap(map);
       if (history && typeof history === "object") setAthleteHistory(history);
     });
   }, []);
