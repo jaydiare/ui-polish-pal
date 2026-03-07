@@ -786,6 +786,26 @@ function loadAthletes() {
     .filter((x) => x.name);
 }
 
+// FIX #3: load/save base prices from dedicated file, independent of main output
+function loadBasePrices() {
+  try {
+    if (fs.existsSync(BASE_PRICES_PATH)) {
+      const raw = fs.readFileSync(BASE_PRICES_PATH, "utf8");
+      const parsed = JSON.parse(raw);
+      console.log(`Loaded base prices from ${BASE_PRICES_PATH} (${Object.keys(parsed).length} athletes)`);
+      return parsed;
+    }
+  } catch (e) {
+    console.warn(`Could not load base prices file: ${e.message}. Starting fresh.`);
+  }
+  return {};
+}
+
+function saveBasePrices(basePrices) {
+  fs.mkdirSync(path.dirname(BASE_PRICES_PATH), { recursive: true });
+  fs.writeFileSync(BASE_PRICES_PATH, JSON.stringify(basePrices, null, 2));
+}
+
 // --- index computation: average of per-player index levels (base=100) ---
 function computeScriptIndex(outData, athletes, sport) {
   let sum = 0;
@@ -817,9 +837,11 @@ async function main() {
     console.log(`🎯 Single-athlete mode: processing ${athletes.length} athlete(s)`);
   }
 
-  // Load previous indexHistory and basePrices so we can append/reuse
+  // FIX #3: load basePrices from dedicated file (survives output file deletion)
+  const basePrices = loadBasePrices();
+
+  // Load previous indexHistory from output file only (not basePrices)
   let prevHistory = [];
-  let basePrices = {};  // { playerName: basePrice }
   let prevOut = {};
   try {
     if (fs.existsSync(OUT_PATH)) {
@@ -828,9 +850,7 @@ async function main() {
       if (Array.isArray(prev?._meta?.indexHistory)) {
         prevHistory = prev._meta.indexHistory;
       }
-      if (prev?._meta?.basePrices && typeof prev._meta.basePrices === "object") {
-        basePrices = prev._meta.basePrices;
-      }
+      // FIX #3: do NOT load basePrices from out file anymore — dedicated file is authoritative
     }
   } catch { /* ignore parse errors */ }
 
@@ -975,9 +995,11 @@ async function main() {
       // --- Base=100 index per player ---
       const robustPrice = rec.taguchiListing;
       if (robustPrice != null && Number.isFinite(robustPrice) && robustPrice > 0) {
-        // Set base price on first observation
+        // FIX #3: basePrices now loaded from dedicated file — set on first observation only
         if (!basePrices[name] || !Number.isFinite(basePrices[name]) || basePrices[name] <= 0) {
           basePrices[name] = robustPrice;
+          // FIX #3: persist immediately so a crash mid-run doesn't lose new base prices
+          saveBasePrices(basePrices);
         }
         rec.basePriceUSD = basePrices[name];
         rec.indexLevel = 100 * (robustPrice / basePrices[name]);
@@ -1034,8 +1056,9 @@ async function main() {
     .slice(0, 3)
     .map(([s]) => s);
 
-  // Persist basePrices in _meta
-  out._meta.basePrices = basePrices;
+  // FIX #3: basePrices no longer stored in _meta (dedicated file is authoritative)
+  // Kept in _meta as a read-only snapshot for debugging only
+  out._meta.basePricesSnapshot = basePrices;
 
   // Weighted index: blend raw indexLevel with graded indexLevel (70/30)
   function computeWeightedIndex(rawData, gradedData, athletes, sport) {
@@ -1101,7 +1124,12 @@ async function main() {
 
   fs.mkdirSync(path.dirname(OUT_PATH), { recursive: true });
   fs.writeFileSync(OUT_PATH, JSON.stringify(out, null, 2));
+
+  // FIX #3: final save of base prices
+  saveBasePrices(basePrices);
+
   console.log(`Wrote ${OUT_PATH}`);
+  console.log(`Wrote ${BASE_PRICES_PATH}`);
 }
 
 main().catch((err) => {
