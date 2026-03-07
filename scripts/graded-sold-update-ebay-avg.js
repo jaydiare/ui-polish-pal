@@ -589,7 +589,6 @@ function parseWithRecovery(content) {
   }
 }
 
-
 function loadAthletes() {
   if (!fs.existsSync(ATHLETES_PATH)) {
     throw new Error(`Missing ${ATHLETES_PATH}.`);
@@ -611,6 +610,11 @@ function loadAthletes() {
       searchKeyword: x?.searchKeyword ? normSpaces(x.searchKeyword) : undefined,
     }))
     .filter((x) => x.name);
+}
+
+function buildKeyword(name, sport) {
+  const sportHint = sport ? ` ${sport}` : "";
+  return `${name}${sportHint}`;
 }
 
 // --- progress tracking ---
