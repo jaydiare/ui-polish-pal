@@ -64,6 +64,7 @@ export default function BlogDataTable() {
     ebaySoldRaw,
     ebayGradedSoldRaw,
     athleteHistory,
+    lastUpdated,
   } = useAthleteData();
 
   const [sortKey, setSortKey] = useState<SortKey>("name");
@@ -188,8 +189,9 @@ export default function BlogDataTable() {
           </TableBody>
         </Table>
       </div>
-      <div className="px-4 py-2 border-t border-border text-xs text-muted-foreground">
-        {sorted.length} athletes · Scroll to see all · Click headers to sort
+      <div className="px-4 py-2 border-t border-border text-xs text-muted-foreground flex justify-between">
+        <span>{sorted.length} athletes · Scroll to see all · Click headers to sort</span>
+        <span>Last updated: {lastUpdated}</span>
       </div>
     </div>
   );
