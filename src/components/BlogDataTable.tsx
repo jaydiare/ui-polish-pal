@@ -37,6 +37,18 @@ type SortDir = "asc" | "desc";
 
 const VISIBLE_ROWS = 30;
 
+const FILTERABLE_COLS: { key: SortKey; label: string }[] = [
+  { key: "rawListedPrice", label: "Raw Listed" },
+  { key: "rawSoldPrice", label: "Raw Sold" },
+  { key: "gradedListedPrice", label: "PSA Listed" },
+  { key: "gradedSoldPrice", label: "PSA Sold" },
+  { key: "psaPop", label: "PSA Pop" },
+  { key: "stabilityCV", label: "Stability" },
+  { key: "signalStrength", label: "S/N" },
+  { key: "daysOnMarket", label: "Days on Mkt" },
+  { key: "indexLevel", label: "Index" },
+];
+
 function fmtPrice(v: number | null) {
   if (v == null) return "—";
   return `$${v.toFixed(2)}`;
@@ -73,6 +85,16 @@ export default function BlogDataTable() {
 
   const [sortKey, setSortKey] = useState<SortKey>("name");
   const [sortDir, setSortDir] = useState<SortDir>("asc");
+  const [hideEmptyFor, setHideEmptyFor] = useState<Set<SortKey>>(new Set());
+
+  const toggleHideEmpty = useCallback((key: SortKey) => {
+    setHideEmptyFor((prev) => {
+      const next = new Set(prev);
+      if (next.has(key)) next.delete(key);
+      else next.add(key);
+      return next;
+    });
+  }, []);
 
   const rows = useMemo<RowData[]>(() => {
     return athletes.map((a) => {
@@ -139,6 +161,17 @@ export default function BlogDataTable() {
     return copy;
   }, [rows, sortKey, sortDir]);
 
+  // Apply empty-value filters
+  const filtered = useMemo(() => {
+    if (hideEmptyFor.size === 0) return sorted;
+    return sorted.filter((row) => {
+      for (const key of hideEmptyFor) {
+        if (row[key] == null) return false;
+      }
+      return true;
+    });
+  }, [sorted, hideEmptyFor]);
+
   const toggleSort = (key: SortKey) => {
     if (sortKey === key) {
       setSortDir((d) => (d === "asc" ? "desc" : "asc"));
@@ -183,7 +216,7 @@ export default function BlogDataTable() {
 
   const exportCsv = () => {
     const header = columns.map((c) => c.label).join(",");
-    const rows = sorted.map((row) =>
+    const csvRows = filtered.map((row) =>
       columns.map((col) => {
         const raw = (row as any)[col.key];
         if (raw == null) return "";
@@ -191,7 +224,7 @@ export default function BlogDataTable() {
         return raw;
       }).join(",")
     );
-    const csv = [header, ...rows].join("\n");
+    const csv = [header, ...csvRows].join("\n");
     const blob = new Blob([csv], { type: "text/csv;charset=utf-8;" });
     const url = URL.createObjectURL(blob);
     const a = document.createElement("a");
@@ -203,6 +236,37 @@ export default function BlogDataTable() {
 
   return (
     <div className="glass-panel rounded-xl overflow-hidden">
+      {/* Filter bar */}
+      <div className="px-4 py-2.5 border-b border-border flex items-center gap-2 flex-wrap">
+        <span className="text-xs text-muted-foreground flex items-center gap-1 mr-1">
+          <Filter className="w-3 h-3" /> Hide "—":
+        </span>
+        {FILTERABLE_COLS.map((col) => {
+          const active = hideEmptyFor.has(col.key);
+          return (
+            <button
+              key={col.key}
+              onClick={() => toggleHideEmpty(col.key)}
+              className={`text-[11px] px-2 py-0.5 rounded-full border transition-colors ${
+                active
+                  ? "bg-vzla-yellow/20 border-vzla-yellow/40 text-vzla-yellow"
+                  : "border-border text-muted-foreground hover:border-muted-foreground/50"
+              }`}
+            >
+              {col.label}
+            </button>
+          );
+        })}
+        {hideEmptyFor.size > 0 && (
+          <button
+            onClick={() => setHideEmptyFor(new Set())}
+            className="text-[11px] px-2 py-0.5 text-muted-foreground hover:text-foreground transition-colors"
+          >
+            Clear all
+          </button>
+        )}
+      </div>
+
       <div
         className="overflow-auto"
         style={{ maxHeight: `${VISIBLE_ROWS * 41 + 48}px` }}
@@ -223,7 +287,7 @@ export default function BlogDataTable() {
             </TableRow>
           </TableHeader>
           <TableBody>
-            {sorted.map((row, i) => (
+            {filtered.map((row) => (
               <TableRow key={row.name + row.sport} className="text-xs">
                 {columns.map((col) => (
                   <TableCell key={col.key} className="whitespace-nowrap py-2 px-3">
@@ -236,7 +300,7 @@ export default function BlogDataTable() {
         </Table>
       </div>
       <div className="px-4 py-2 border-t border-border text-xs text-muted-foreground flex justify-between items-center">
-        <span>{sorted.length} athletes · Scroll to see all · Click headers to sort</span>
+        <span>{filtered.length}{hideEmptyFor.size > 0 ? ` of ${sorted.length}` : ""} athletes · Scroll to see all · Click headers to sort</span>
         <div className="flex items-center gap-3">
           <span>Last updated: {lastUpdated}</span>
           <button
