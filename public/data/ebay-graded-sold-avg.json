@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-08T17:14:27.131Z",
+    "updatedAt": "2026-03-08T18:55:05.966Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA-only title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 220,
-      "endIdx": 230,
+      "startIdx": 230,
+      "endIdx": 240,
       "totalAthletes": 450
     },
     "maxPages": 4,
@@ -3247,8 +3247,8 @@
     "fxRateUsed": null
   },
   "Jose Suarez": {
-    "keyword": "Jose Suarez Baseball",
-    "nScraped": 60,
+    "keyword": "Jose Suarez Baseball PSA",
+    "nScraped": 241,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -3259,20 +3259,20 @@
     "fxRateUsed": null
   },
   "Jose Tabata": {
-    "keyword": "Jose Tabata Baseball",
-    "nScraped": 0,
-    "nSoldUsed": 0,
-    "avg": null,
-    "taguchiSold": null,
-    "medianSold": null,
-    "marketStabilityCV": null,
+    "keyword": "Jose Tabata Baseball PSA",
+    "nScraped": 240,
+    "nSoldUsed": 12,
+    "avg": 8.989999999999998,
+    "taguchiSold": 8.989999999999998,
+    "medianSold": 8.99,
+    "marketStabilityCV": 2.0637866612480598e-16,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
   },
   "Jose Torres": {
-    "keyword": "Jose Torres Baseball",
-    "nScraped": 183,
+    "keyword": "Jose Torres Baseball PSA",
+    "nScraped": 244,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -3283,20 +3283,20 @@
     "fxRateUsed": null
   },
   "Josh Barfield": {
-    "keyword": "Josh Barfield Baseball",
-    "nScraped": 180,
-    "nSoldUsed": 0,
-    "avg": null,
-    "taguchiSold": null,
-    "medianSold": null,
-    "marketStabilityCV": null,
+    "keyword": "Josh Barfield Baseball PSA",
+    "nScraped": 240,
+    "nSoldUsed": 4,
+    "avg": 39.99,
+    "taguchiSold": 39.99,
+    "medianSold": 39.99,
+    "marketStabilityCV": 0,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
   },
   "Josmil Pinto": {
-    "keyword": "Josmil Pinto Baseball",
-    "nScraped": 20,
+    "keyword": "Josmil Pinto Baseball PSA",
+    "nScraped": 21,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -3307,7 +3307,7 @@
     "fxRateUsed": null
   },
   "Juan Castillo": {
-    "keyword": "Juan Castillo Baseball",
+    "keyword": "Juan Castillo Baseball PSA",
     "nScraped": 183,
     "nSoldUsed": 0,
     "avg": null,
@@ -3331,8 +3331,8 @@
     "fxRateUsed": null
   },
   "Juan Moreno": {
-    "keyword": "Juan Moreno Baseball",
-    "nScraped": 60,
+    "keyword": "Juan Moreno Baseball PSA",
+    "nScraped": 0,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -3343,8 +3343,8 @@
     "fxRateUsed": null
   },
   "Juan Morillo": {
-    "keyword": "Juan Morillo Baseball",
-    "nScraped": 60,
+    "keyword": "Juan Morillo Baseball PSA",
+    "nScraped": 0,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -3355,8 +3355,8 @@
     "fxRateUsed": null
   },
   "Juan Rincon": {
-    "keyword": "Juan Rincon Baseball",
-    "nScraped": 60,
+    "keyword": "Juan Rincon Baseball PSA",
+    "nScraped": 0,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -3367,8 +3367,8 @@
     "fxRateUsed": null
   },
   "Juan Rivera": {
-    "keyword": "Juan Rivera Baseball",
-    "nScraped": 60,
+    "keyword": "Juan Rivera Baseball PSA",
+    "nScraped": 0,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
