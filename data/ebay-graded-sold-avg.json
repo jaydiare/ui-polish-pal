@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-08T12:33:17.433Z",
+    "updatedAt": "2026-03-08T13:13:15.810Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA-only title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 170,
-      "endIdx": 180,
+      "startIdx": 180,
+      "endIdx": 190,
       "totalAthletes": 449
     },
     "maxPages": 4,
@@ -2563,19 +2563,19 @@
     "fxRateUsed": null
   },
   "Israel Pineda": {
-    "keyword": "Israel Pineda Baseball",
-    "nScraped": 183,
-    "nSoldUsed": 0,
-    "avg": null,
-    "taguchiSold": null,
-    "medianSold": null,
-    "marketStabilityCV": null,
+    "keyword": "Israel Pineda Baseball PSA",
+    "nScraped": 244,
+    "nSoldUsed": 8,
+    "avg": 11.745000000000001,
+    "taguchiSold": 11.745000000000001,
+    "medianSold": 11.745000000000001,
+    "marketStabilityCV": 0.15974235148788582,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
   },
   "Ivan Ochoa": {
-    "keyword": "Ivan Ochoa Baseball",
+    "keyword": "Ivan Ochoa Baseball PSA",
     "nScraped": 60,
     "nSoldUsed": 0,
     "avg": null,
@@ -2611,19 +2611,19 @@
     "fxRateUsed": null
   },
   "Jackson Chourio": {
-    "keyword": "Jackson Chourio Baseball",
-    "nScraped": 180,
-    "nSoldUsed": 60,
-    "avg": 42.57533333333333,
-    "taguchiSold": 42.57533333333333,
-    "medianSold": 41.995000000000005,
-    "marketStabilityCV": 0.14360243942194909,
+    "keyword": "Jackson Chourio Baseball PSA",
+    "nScraped": 240,
+    "nSoldUsed": 102,
+    "avg": 61.10950980392147,
+    "taguchiSold": 61.10950980392147,
+    "medianSold": 53,
+    "marketStabilityCV": 0.269026394432377,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
   },
   "Jairo Diaz": {
-    "keyword": "Jairo Diaz Baseball",
+    "keyword": "Jairo Diaz Baseball PSA",
     "nScraped": 60,
     "nSoldUsed": 0,
     "avg": null,
@@ -2635,31 +2635,31 @@
     "fxRateUsed": null
   },
   "Jairo Iriarte": {
-    "keyword": "Jairo Iriarte Baseball",
-    "nScraped": 183,
-    "nSoldUsed": 3,
-    "avg": null,
-    "taguchiSold": null,
-    "medianSold": null,
-    "marketStabilityCV": null,
+    "keyword": "Jairo Iriarte Baseball PSA",
+    "nScraped": 248,
+    "nSoldUsed": 8,
+    "avg": 10.745000000000001,
+    "taguchiSold": 10.745000000000001,
+    "medianSold": 10.745000000000001,
+    "marketStabilityCV": 0.1746090198441339,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
   },
   "Javier Sanoja": {
-    "keyword": "Javier Sanoja Baseball",
-    "nScraped": 190,
-    "nSoldUsed": 0,
-    "avg": null,
-    "taguchiSold": null,
-    "medianSold": null,
-    "marketStabilityCV": null,
+    "keyword": "Javier Sanoja Baseball PSA",
+    "nScraped": 260,
+    "nSoldUsed": 12,
+    "avg": 76,
+    "taguchiSold": 76,
+    "medianSold": 76,
+    "marketStabilityCV": 0,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
   },
   "Jean Machi": {
-    "keyword": "Jean Machi Baseball",
+    "keyword": "Jean Machi Baseball PSA",
     "nScraped": 0,
     "nSoldUsed": 0,
     "avg": null,
@@ -2671,8 +2671,8 @@
     "fxRateUsed": null
   },
   "Jeanmar Gomez": {
-    "keyword": "Jeanmar Gomez Baseball",
-    "nScraped": 60,
+    "keyword": "Jeanmar Gomez Baseball PSA",
+    "nScraped": 0,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -2683,20 +2683,20 @@
     "fxRateUsed": null
   },
   "Jeferson Quero": {
-    "keyword": "Jeferson Quero Baseball",
-    "nScraped": 198,
-    "nSoldUsed": 6,
-    "avg": 19.285,
-    "taguchiSold": 19.285,
-    "medianSold": 19.285,
-    "marketStabilityCV": 0.32462892570827323,
+    "keyword": "Jeferson Quero Baseball PSA",
+    "nScraped": 0,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
   },
   "Jermaine Palacios": {
-    "keyword": "Jermaine Palacios Baseball",
-    "nScraped": 180,
+    "keyword": "Jermaine Palacios Baseball PSA",
+    "nScraped": 0,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
