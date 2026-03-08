@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-08T12:16:22.266Z",
+    "updatedAt": "2026-03-08T12:19:36.070Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA-only title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 150,
-      "endIdx": 160,
+      "startIdx": 160,
+      "endIdx": 170,
       "totalAthletes": 449
     },
     "maxPages": 4,
@@ -2287,8 +2287,8 @@
     "fxRateUsed": null
   },
   "Gregory Infante": {
-    "keyword": "Gregory Infante Baseball",
-    "nScraped": 41,
+    "keyword": "Gregory Infante Baseball PSA",
+    "nScraped": 44,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -2299,8 +2299,8 @@
     "fxRateUsed": null
   },
   "Guilder Rodriguez": {
-    "keyword": "Guilder Rodriguez Baseball",
-    "nScraped": 0,
+    "keyword": "Guilder Rodriguez Baseball PSA",
+    "nScraped": 324,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -2311,7 +2311,7 @@
     "fxRateUsed": null
   },
   "Guillermo Moscoso": {
-    "keyword": "Guillermo Moscoso Baseball",
+    "keyword": "Guillermo Moscoso Baseball PSA",
     "nScraped": 13,
     "nSoldUsed": 0,
     "avg": null,
@@ -2323,7 +2323,7 @@
     "fxRateUsed": null
   },
   "Guillermo Quiroz": {
-    "keyword": "Guillermo Quiroz Baseball",
+    "keyword": "Guillermo Quiroz Baseball PSA",
     "nScraped": 60,
     "nSoldUsed": 0,
     "avg": null,
@@ -2335,7 +2335,7 @@
     "fxRateUsed": null
   },
   "Guillermo Rodriguez": {
-    "keyword": "Guillermo Rodriguez Baseball",
+    "keyword": "Guillermo Rodriguez Baseball PSA",
     "nScraped": 60,
     "nSoldUsed": 0,
     "avg": null,
@@ -2347,20 +2347,32 @@
     "fxRateUsed": null
   },
   "Gus Gil": {
-    "keyword": "Gus Gil Baseball",
-    "nScraped": 181,
-    "nSoldUsed": 9,
-    "avg": 51.09,
-    "taguchiSold": 51.09,
+    "keyword": "Gus Gil Baseball PSA",
+    "nScraped": 241,
+    "nSoldUsed": 12,
+    "avg": 51.09000000000001,
+    "taguchiSold": 51.09000000000001,
     "medianSold": 51.09,
-    "marketStabilityCV": 0,
+    "marketStabilityCV": 1.4526085014382503e-16,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
   },
   "Gus Polidor": {
-    "keyword": "Gus Polidor Baseball",
-    "nScraped": 180,
+    "keyword": "Gus Polidor Baseball PSA",
+    "nScraped": 240,
+    "nSoldUsed": 4,
+    "avg": 75,
+    "taguchiSold": 75,
+    "medianSold": 75,
+    "marketStabilityCV": 0,
+    "currency": "USD",
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
+  },
+  "Gustavo Chacin": {
+    "keyword": "Gustavo Chacin Baseball PSA",
+    "nScraped": 0,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -2370,21 +2382,9 @@
     "originalCurrencyExample": null,
     "fxRateUsed": null
   },
-  "Gustavo Chacin": {
-    "keyword": "Gustavo Chacin Baseball",
-    "nScraped": 147,
-    "nSoldUsed": 3,
-    "avg": null,
-    "taguchiSold": null,
-    "medianSold": null,
-    "marketStabilityCV": null,
-    "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
-  },
   "Gustavo Molina": {
-    "keyword": "Gustavo Molina Baseball",
-    "nScraped": 60,
+    "keyword": "Gustavo Molina Baseball PSA",
+    "nScraped": 0,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -2395,8 +2395,8 @@
     "fxRateUsed": null
   },
   "Harold Castro": {
-    "keyword": "Harold Castro Baseball",
-    "nScraped": 180,
+    "keyword": "Harold Castro Baseball PSA",
+    "nScraped": 0,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
