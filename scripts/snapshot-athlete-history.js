@@ -66,6 +66,12 @@ function extractSnapshot(record) {
   return snap;
 }
 
+function daysBetween(dateA, dateB) {
+  const a = new Date(dateA);
+  const b = new Date(dateB);
+  return Math.round((b - a) / (1000 * 60 * 60 * 24));
+}
+
 function main() {
   const date = today();
   console.log(`📸 Snapshot for ${date}`);
@@ -79,8 +85,9 @@ function main() {
     process.exit(1);
   }
 
-  // Load existing history
+  // Load existing history & firstSeen tracker
   let history = readJson(HISTORY_FILE) || {};
+  let firstSeen = readJson(FIRST_SEEN_FILE) || {};
 
   // Build today's snapshots
   let count = 0;
@@ -100,9 +107,48 @@ function main() {
     // Skip if no data at all
     if (!rawSnap && !gradedSnap) continue;
 
+    // --- firstSeen tracking ---
+    const rawHasListings = (raw?.[name]?.nListing ?? 0) > 0;
+    const gradedHasListings = (graded?.[name]?.nListing ?? 0) > 0;
+    const hasActiveListings = rawHasListings || gradedHasListings;
+
+    if (!firstSeen[name]) firstSeen[name] = {};
+
+    // Raw firstSeen
+    if (rawHasListings) {
+      if (!firstSeen[name].raw) firstSeen[name].raw = date;
+    } else {
+      // Listings gone — reset so counter restarts when they reappear
+      delete firstSeen[name].raw;
+    }
+
+    // Graded firstSeen
+    if (gradedHasListings) {
+      if (!firstSeen[name].graded) firstSeen[name].graded = date;
+    } else {
+      delete firstSeen[name].graded;
+    }
+
+    // Clean up empty entries
+    if (!firstSeen[name].raw && !firstSeen[name].graded) {
+      delete firstSeen[name];
+    }
+
     const entry = {};
-    if (rawSnap) entry.raw = rawSnap;
-    if (gradedSnap) entry.graded = gradedSnap;
+    if (rawSnap) {
+      // Add observedDays to raw snapshot
+      if (firstSeen[name]?.raw) {
+        rawSnap.obsDays = daysBetween(firstSeen[name].raw, date);
+      }
+      entry.raw = rawSnap;
+    }
+    if (gradedSnap) {
+      // Add observedDays to graded snapshot
+      if (firstSeen[name]?.graded) {
+        gradedSnap.obsDays = daysBetween(firstSeen[name].graded, date);
+      }
+      entry.graded = gradedSnap;
+    }
     if (soldPrice != null) entry.sold = Math.round(soldPrice * 100) / 100;
 
     // Sport from raw or graded data
@@ -136,7 +182,9 @@ function main() {
   }
 
   writeFileSync(HISTORY_FILE, JSON.stringify(history, null, 2));
+  writeFileSync(FIRST_SEEN_FILE, JSON.stringify(firstSeen, null, 2));
   console.log(`✅ Snapshotted ${count} athletes → ${HISTORY_FILE}`);
+  console.log(`✅ firstSeen tracker → ${FIRST_SEEN_FILE} (${Object.keys(firstSeen).length} athletes tracked)`);
 }
 
 main();
