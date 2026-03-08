@@ -11,6 +11,7 @@ import {
   timeAgo,
   SortOption,
   sortAthletes,
+  getSignalToNoise,
 } from "@/lib/vzla-helpers";
 import { runKnapsack, BudgetCandidate, KnapsackResult } from "@/lib/budget-knapsack";
 
@@ -323,6 +324,7 @@ export function useAthleteData() {
         return cv != null ? cv * 100 : null;
       })(),
       daysOnMarket: getAvgDaysOnMarket(a, useName, useKey),
+      signalToNoise: getSignalToNoise(a, useName, useKey),
     }));
 
     const result = runKnapsack(candidates, budgetDollars, maxCards);

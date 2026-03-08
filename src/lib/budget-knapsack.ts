@@ -34,6 +34,19 @@ function liquidityMultiplier(days: number | null): number {
   return 0.75;
 }
 
+/**
+ * Signal-to-Noise bonus: non-restrictive multiplier that rewards predictable pricing.
+ * S/N = 10 * log10(mean² / variance) — higher = more predictable.
+ * Returns 1.0 (neutral) when data is unavailable so it never penalizes.
+ */
+function signalToNoiseMultiplier(sn: number | null): number {
+  if (sn == null || !Number.isFinite(sn)) return 1.0; // neutral — no penalty
+  // S/N typically ranges ~5–40 (capped at 40 in our analytics)
+  // Map to a gentle 1.0–1.25 bonus range
+  const clamped = Math.max(0, Math.min(sn, 40));
+  return 1.0 + (clamped / 40) * 0.25;
+}
+
 /** Standard 0/1 Knapsack: maximize valueScore under budget */
 function knapsackPick(items: KnapsackItem[], budgetCents: number): KnapsackItem[] {
   const dp = new Float64Array(budgetCents + 1);
@@ -163,6 +176,7 @@ export interface BudgetCandidate {
   price: number | null;
   stabilityPct: number | null;
   daysOnMarket: number | null;
+  signalToNoise?: number | null;
 }
 
 export function runKnapsack(
@@ -178,13 +192,14 @@ export function runKnapsack(
       const priceCents = Math.round(c.price! * 100);
       const base = stabilityPoints(c.stabilityPct);
       const liq = liquidityMultiplier(c.daysOnMarket);
+      const snBonus = signalToNoiseMultiplier(c.signalToNoise ?? null);
       return {
         id: buildBudgetAthleteId(c.name, c.sport),
         name: c.name,
         priceCents,
         stabilityPct: c.stabilityPct,
         daysOnMarket: c.daysOnMarket,
-        valueScore: base * liq,
+        valueScore: base * liq * snBonus,
       };
     })
     .filter((x) => x.valueScore > 0 && x.priceCents <= budgetCents);
