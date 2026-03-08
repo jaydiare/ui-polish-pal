@@ -132,6 +132,7 @@ const UNGRADED_BLOCKLIST = [
   "reprint","Card Painting", 
   "replica", 
   "copy",
+  "ERROR Card",
 ];
 
 // --- helpers ---
