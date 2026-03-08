@@ -313,10 +313,12 @@ export default function BlogDataTable() {
         <Table>
           <TableHeader className="sticky top-0 z-10 bg-card">
             <TableRow>
-              {columns.map((col) => (
+              {columns.map((col, i) => (
                 <TableHead
                   key={col.key}
-                  className="cursor-pointer select-none whitespace-nowrap text-xs hover:text-vzla-yellow transition-colors"
+                  className={`cursor-pointer select-none whitespace-nowrap text-xs hover:text-vzla-yellow transition-colors ${
+                    i === 0 ? "sticky left-0 z-20 bg-card" : ""
+                  }`}
                   onClick={() => toggleSort(col.key)}
                 >
                   {col.label}
