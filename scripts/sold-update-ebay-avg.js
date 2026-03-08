@@ -68,7 +68,7 @@ const JUNK_PHRASES = [
   "singles you pick", "you pick!", "you pick -",
   "lot", "team lot", "player lot", "break", "case break",
   "random", "bulk", "paper rc's & vets", "rc's & vets",
-  "u-pick", "u pick", "lote", "base cards from", "group", "you pick obo",
+  "u-pick", "u pick", "lote", "base cards from", "group", "you pick obo","card lot",
 ];
 
 // Sport → League mapping for eBay aspect filters
