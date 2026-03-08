@@ -6,6 +6,7 @@ import {
   getAvgDaysOnMarket,
   getEbayAvgFor,
   buildEbaySearchUrl,
+  marketStabilityScoreFromCV,
 } from "@/lib/vzla-helpers";
 import {
   Table,
@@ -237,7 +238,15 @@ export default function BlogDataTable() {
     { key: "gradedListedPrice", label: "PSA Listed", fmt: fmtPrice },
     { key: "gradedSoldPrice", label: "PSA Sold", fmt: fmtPrice },
     { key: "psaPop", label: "PSA Pop", fmt: (v) => v == null ? "—" : v.toLocaleString() },
-    { key: "stabilityCV", label: "Stability (CV%)", fmt: fmtPct },
+    { key: "stabilityCV", label: "Stability", fmt: (v) => v == null ? "—" : marketStabilityScoreFromCV(v).label, render: (_v, row) => {
+      if (row.stabilityCV == null) return <span className="text-muted-foreground">—</span>;
+      const s = marketStabilityScoreFromCV(row.stabilityCV);
+      const color = s.bucket === "stable" ? "text-green-400" :
+                    s.bucket === "active" ? "text-vzla-yellow" :
+                    s.bucket === "volatile" ? "text-orange-400" :
+                    "text-red-400";
+      return <span className={`font-medium ${color}`}>{s.label}</span>;
+    }},
     { key: "signalStrength", label: "Signal S/N", fmt: (v) => v == null ? "—" : v.toFixed(1) },
     { key: "daysOnMarket", label: "Days on Mkt", fmt: fmtDays },
     { key: "indexLevel", label: "Index", fmt: fmtIndex },
