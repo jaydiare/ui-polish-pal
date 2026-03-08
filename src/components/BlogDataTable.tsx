@@ -6,6 +6,7 @@ import {
   getAvgDaysOnMarket,
   getEbayAvgFor,
   buildEbaySearchUrl,
+  marketStabilityScoreFromCV,
 } from "@/lib/vzla-helpers";
 import {
   Table,
