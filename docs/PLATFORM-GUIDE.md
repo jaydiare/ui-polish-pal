@@ -64,7 +64,7 @@ A sports-card market intelligence platform tracking **550+ Venezuelan athletes**
 
 | Script | Workflow | What It Records |
 |--------|----------|-----------------|
-| `snapshot-athlete-history.js` | `snapshot-history.yml` | Per-athlete: price, CV, days on market, listing count, index level. 90-day rolling window. |
+| `snapshot-athlete-history.js` | `snapshot-history.yml` | Per-athlete: price, CV, days on market (API + observed), listing count, index level. Also maintains `data/athlete-first-seen.json` for snapshot-based DOM tracking. 90-day rolling window. |
 | (embedded in `update-ebay-avg.js`) | `ebay.yml` | Sport-level index to `data/index-history.json` — permanent archive. |
 
 ### 2.6 Data Freshness Strategy
@@ -100,6 +100,12 @@ Lower CV = more consistent pricing = lower risk. Displayed as a percentage on at
 ### 3.3 Average Days on Market
 
 How long listings typically stay active before selling or expiring. Used as a **liquidity indicator**.
+
+**Data sources (fallback chain):**
+1. **eBay API `avgDaysOnMarket`** — from `itemCreationDate` in Browse API responses. Often unreliable (returns 0 or null) because eBay doesn't consistently provide creation dates in search summaries.
+2. **Snapshot-based `observedDays`** — computed from `data/athlete-first-seen.json`. The snapshot script (`snapshot-athlete-history.js`) records the first date an athlete has active listings (`nListing > 0`). On subsequent snapshots, `obsDays = today - firstSeen`. If listings disappear, firstSeen resets so the counter restarts when new listings appear. This is stored in each history entry's `raw.obsDays` / `graded.obsDays` field.
+
+The frontend prefers the eBay API value when it's available and > 0, otherwise falls back to `obsDays` from the latest history entry.
 
 | Days | Interpretation |
 |------|----------------|

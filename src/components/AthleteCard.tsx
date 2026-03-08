@@ -67,19 +67,29 @@ const AthleteCard = forwardRef<HTMLElement, AthleteCardProps>(({ athlete, byName
 
   const cv = listingCv ?? (priceMode === "graded" ? gradedSoldCv : rawSoldCv);
   const stability = marketStabilityScoreFromCV(cv);
-  const dom = listingDom;
-  const domText = dom != null ? `${Math.round(dom)}d` : null;
+
+  // Days on market: prefer eBay API value, fallback to snapshot-based observedDays from history
+  const latestHistoryEntry = history?.length ? history[history.length - 1] : null;
+  const historyObsDays = priceMode === "graded"
+    ? (latestHistoryEntry?.graded?.obsDays ?? latestHistoryEntry?.raw?.obsDays)
+    : (latestHistoryEntry?.raw?.obsDays ?? latestHistoryEntry?.graded?.obsDays);
+  const dom = (listingDom != null && listingDom > 0) ? listingDom : (historyObsDays ?? null);
+  const domText = dom != null && dom > 0 ? `${Math.round(dom)}d` : null;
 
   // Separate raw & graded stability/DOM for "both" mode
   const rawListingCv = avgNum != null ? getMarketStabilityCV(athlete, byName, byKey) : null;
   const rawCv = rawListingCv ?? rawSoldCv;
   const rawStability = marketStabilityScoreFromCV(rawCv);
-  const rawDom = avgNum != null ? getAvgDaysOnMarket(athlete, byName, byKey) : null;
+  const rawApiDom = avgNum != null ? getAvgDaysOnMarket(athlete, byName, byKey) : null;
+  const rawObsDays = latestHistoryEntry?.raw?.obsDays ?? null;
+  const rawDom = (rawApiDom != null && rawApiDom > 0) ? rawApiDom : rawObsDays;
 
   const gradedListingCv = gradedAvgNum != null ? getMarketStabilityCV(athlete, gradedByName, gradedByKey) : null;
   const gradedCvFinal = gradedListingCv ?? gradedSoldCv;
   const gradedStability = marketStabilityScoreFromCV(gradedCvFinal);
-  const gradedDom = gradedAvgNum != null ? getAvgDaysOnMarket(athlete, gradedByName, gradedByKey) : null;
+  const gradedApiDom = gradedAvgNum != null ? getAvgDaysOnMarket(athlete, gradedByName, gradedByKey) : null;
+  const gradedObsDays = latestHistoryEntry?.graded?.obsDays ?? null;
+  const gradedDom = (gradedApiDom != null && gradedApiDom > 0) ? gradedApiDom : gradedObsDays;
 
   const shopUrl = priceMode === "graded"
     ? buildEbayGradedSearchUrl(athlete.name, athlete.sport)
