@@ -99,7 +99,7 @@ const UNGRADED_BLOCKLIST = [
   "wrinkling", "corner wear", "surface wear", "paper loss", "stain",
   "stained", "water damage", "tape", "writing", "marked", "marked up",
   "pin hole", "hole", "torn", "tear", "scratches", "scratch",
-  "excellent", "ex", "auto", "signed","ERROR Card",
+  "excellent", "ex", "auto", "signed","ERROR Card", "card lot",
 ];
 
 // --- helpers ---
