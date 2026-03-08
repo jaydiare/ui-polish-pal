@@ -25,6 +25,7 @@ interface RowData {
   gradedListedPrice: number | null;
   gradedSoldPrice: number | null;
   stabilityCV: number | null;
+  signalStrength: number | null;
   daysOnMarket: number | null;
   indexLevel: number | null;
 }
