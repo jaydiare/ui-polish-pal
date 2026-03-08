@@ -161,6 +161,8 @@ Meaning: Cards are selling at or above list price in a volatile market — poten
 | **Speculative** | High CV | Wildly varying prices — high risk/reward |
 | **Overpriced** | Listed > Sold, High DOM | Priced above what buyers pay, sitting on market |
 
+**Days-on-market fallback in signals:** The signal classifier uses the same DOM fallback chain as athlete cards — eBay API `avgDaysOnMarket` first, then snapshot-based `obsDays` from `athlete-history.json` when the API value is 0 or unavailable. This ensures "Fast Mover" and "Overpriced & Slow" classifications remain accurate even when the eBay Browse API omits listing creation dates.
+
 ---
 
 ## 5. Budget Optimizer (Knapsack Algorithm)
