@@ -67,8 +67,14 @@ const AthleteCard = forwardRef<HTMLElement, AthleteCardProps>(({ athlete, byName
 
   const cv = listingCv ?? (priceMode === "graded" ? gradedSoldCv : rawSoldCv);
   const stability = marketStabilityScoreFromCV(cv);
-  const dom = listingDom;
-  const domText = dom != null ? `${Math.round(dom)}d` : null;
+
+  // Days on market: prefer eBay API value, fallback to snapshot-based observedDays from history
+  const latestHistoryEntry = history?.length ? history[history.length - 1] : null;
+  const historyObsDays = priceMode === "graded"
+    ? (latestHistoryEntry?.graded?.obsDays ?? latestHistoryEntry?.raw?.obsDays)
+    : (latestHistoryEntry?.raw?.obsDays ?? latestHistoryEntry?.graded?.obsDays);
+  const dom = (listingDom != null && listingDom > 0) ? listingDom : (historyObsDays ?? null);
+  const domText = dom != null && dom > 0 ? `${Math.round(dom)}d` : null;
 
   // Separate raw & graded stability/DOM for "both" mode
   const rawListingCv = avgNum != null ? getMarketStabilityCV(athlete, byName, byKey) : null;
