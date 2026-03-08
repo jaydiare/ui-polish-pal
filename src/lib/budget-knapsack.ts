@@ -176,6 +176,7 @@ export interface BudgetCandidate {
   price: number | null;
   stabilityPct: number | null;
   daysOnMarket: number | null;
+  signalToNoise?: number | null;
 }
 
 export function runKnapsack(
