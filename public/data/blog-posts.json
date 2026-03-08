@@ -290,7 +290,7 @@
         "heading": "Complete Market Dataset",
         "paragraphs": [
           "This table contains the full dataset we track across 500+ Venezuelan athletes. It includes raw and graded listing averages, recent sold averages, market stability (CV%), average days on market, and the price index level. Click any column header to sort and scroll down to explore the entire roster.",
-          "Raw prices reflect ungraded Near Mint / Excellent condition cards. Graded prices cover PSA, BGS, and SGC authenticated cards. Stability CV% measures price consistency — lower is more stable. Days on Market shows average listing duration. The Index (base-100) tracks price movement over time."
+          "Raw prices reflect ungraded Near Mint / Excellent condition cards. Graded prices cover PSA authenticated cards only. Stability CV% measures price consistency — lower is more stable. Days on Market shows average listing duration. The Index (base-100) tracks price movement over time."
         ]
       }
     ],
