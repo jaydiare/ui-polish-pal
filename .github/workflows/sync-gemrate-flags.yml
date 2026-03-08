@@ -23,7 +23,7 @@ jobs:
           node-version: "20"
 
       - name: Sync gemrate flags
-        run: node scripts/sync-gemrate-flags.js
+        run: node scripts/sync-gemrate-flags.cjs
 
       - name: Commit & push
         run: |
