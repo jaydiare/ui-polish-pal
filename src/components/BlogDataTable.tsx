@@ -19,7 +19,7 @@ import { ArrowUp, ArrowDown, ArrowUpDown, Download } from "lucide-react";
 interface RowData {
   name: string;
   sport: string;
-  team: string;
+  
   rawListedPrice: number | null;
   rawSoldPrice: number | null;
   gradedListedPrice: number | null;
@@ -94,7 +94,7 @@ export default function BlogDataTable() {
       return {
         name: a.name,
         sport: a.sport,
-        team: a.team,
+        
         rawListedPrice: getEbayAvgNumber(a, byName, byKey),
         rawSoldPrice: rawSold != null && Number.isFinite(Number(rawSold)) && Number(rawSold) > 0 ? Number(rawSold) : null,
         gradedListedPrice: isGemrateEligible ? getEbayAvgNumber(a, gradedByName, gradedByKey) : null,
@@ -145,7 +145,7 @@ export default function BlogDataTable() {
   const columns: { key: SortKey; label: string; fmt: (v: any) => string; align?: string }[] = [
     { key: "name", label: "Athlete", fmt: (v) => v ?? "—" },
     { key: "sport", label: "Sport", fmt: (v) => v ?? "—" },
-    { key: "team", label: "Team", fmt: (v) => v ?? "—" },
+    
     { key: "rawListedPrice", label: "Raw Listed", fmt: fmtPrice },
     { key: "rawSoldPrice", label: "Raw Sold", fmt: fmtPrice },
     { key: "gradedListedPrice", label: "PSA Listed", fmt: fmtPrice },
