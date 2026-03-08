@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-08T08:35:11.666Z",
+    "updatedAt": "2026-03-08T15:07:47.136Z",
     "minSampleSize": 4,
     "marketplaces": [
       "EBAY_US"
@@ -223,7 +223,299 @@
       "David Martinez": 50,
       "Kevin Kelsy": 32.49,
       "Wikelman Carmona": 42.5,
-      "Garbine Muguruza": 110
+      "Garbine Muguruza": 110,
+      "Carlos Guzman": 6.963931536031734,
+      "Al Pedrique": 13.957246749430693,
+      "Albert Suarez": 0.984353191801954,
+      "Alberto Callaspo": 7.281438494249778,
+      "Alberto Gonzalez": 5.972232424887976,
+      "Alejandro Freire": 1.101887901270844,
+      "Alejandro Machado": 11.314051408079173,
+      "Alex Cabrera": 9.160361419231617,
+      "Alex Delgado": 3.481965768015867,
+      "Alex Herrera": 20.92852420480423,
+      "Alex Pacheco": 1.9907441416293248,
+      "Alex Prieto": 20.42900168956145,
+      "Alex Ramirez": 90.69639315360317,
+      "Alex Romero": 4.698240127609114,
+      "Alex Torres": 5.972232424887976,
+      "Alexi Amarista": 5.96549866549132,
+      "Alexis Infante": 2.2331594799089105,
+      "Alfredo Gonzalez": 9.953720708146625,
+      "Ali Sanchez": 9.075883346800852,
+      "Alvaro Espinoza": 0.7272460148387571,
+      "Alvin Colina": 1.0871960625872328,
+      "Anderson Espinoza": 9.946374788804818,
+      "Anderson Machado": 15.947990891060016,
+      "Andres Blanco": 9.939028869463014,
+      "Andres Machado": 0.99,
+      "Andruw Monasterio": 8.917946080952031,
+      "Angel Bravo": 14.948945860574451,
+      "Angel Escobar": 0.984353191801954,
+      "Angel Nesbitt": 1.2855358848159848,
+      "Angel Salazar": 14.941599941232644,
+      "Anibal Sanchez": 1.498567545728348,
+      "Anthony Castro": 50.32322045103945,
+      "Anthony Molina": 8.939983838977447,
+      "Anthony Ortega": 5.715125247924778,
+      "Anthony Santander": 4.03290971865129,
+      "Antonio Senzatela": 7.962976566517299,
+      "Arcenio Leon": 2.460882979504885,
+      "Argenis Diaz": 4.068303693661806,
+      "Armando Galarraga": 52.49,
+      "Beiker Graterol": 0.984353191801954,
+      "Brayan Villarreal": 1.946668625578491,
+      "Breyvic Valera": 2.960405494747668,
+      "Bruce Rondon": 12.928818041577903,
+      "Carlos Asuaje": 3.9741423639168447,
+      "Carlos Garcia": 3.4599280099904504,
+      "Carlos Gonzalez": 7.915228090795563,
+      "Carlos Guillen": 1.5279512230955705,
+      "Carlos Maldonado": 4.716080217439213,
+      "Carlos Mendez": 2.3433482700359947,
+      "Carlos Mendoza": 5.601263498126791,
+      "Carlos Monasterios": 2.967751414089473,
+      "Carlos Pulido": 0.99,
+      "Carlos Quintana": 2.1229706897818263,
+      "Carlos Rivero": 2.45248764311425,
+      "Carlos Sanabria": 2.9383677367222507,
+      "Carlos Tocci": 6.742504538728737,
+      "Carlos Valderrama": 12.936163960919709,
+      "Cesar Hernandez": 4.730772056122824,
+      "Cesar Izturis": 10.387129949313154,
+      "Cesar Jimenez": 1.4324542716520972,
+      "Clemente Alvarez": 8.25051683789655,
+      "Cris Colon": 1,
+      "Damaso Blanco": 29.890545801807093,
+      "Danny Sandoval": 5.472709909645192,
+      "Darwin Cubillan": 6.670094762359508,
+      "Diego Castillo": 1.5769240187076077,
+      "Diego Moreno": 5.972232424887975,
+      "Dilson Torres": 2.1817380445162713,
+      "Dioner Navarro": 20.531844560346727,
+      "Dixon Machado": 4.973187394402409,
+      "Eddie Perez": 13.957246749430693,
+      "Eddie Zambrano": 0.7272460148387571,
+      "Edgar Ramos": 1.987071181958422,
+      "Eduardo Escobar": 4.110041871740248,
+      "Eduardo Jimenez": 2.460882979504885,
+      "Eduardo Rodriguez": 1.5867185778300155,
+      "Eduardo Sanchez": 1.2230955704106368,
+      "Eduardo Villacis": 1.6979567850059294,
+      "Edwar Colina": 3.362332224449318,
+      "Edward Mujica": 13.949900830088888,
+      "Edwin Bellorin": 3.48563872768677,
+      "Edwin Escobar": 9.953720708146625,
+      "Edwin Hurtado": 9.663556894145302,
+      "Edwin Moreno": 5.753487271154206,
+      "Ehire Adrianza": 12.42929552633512,
+      "Eider Torres": 6.471754940130757,
+      "Elieser Hernandez": 6.794975391170205,
+      "Eliezer Alfonzo": 7.423663654839736,
+      "Elvis Araujo": 2.185411004187174,
+      "Ender Inciarte": 0.99,
+      "Enderson Franco": 0.9990450304855651,
+      "Enrique Gonzalez": 4.973187394402409,
+      "Erick Castillo": 7.20634687431132,
+      "Ezequiel Carrera": 6.404825452794305,
+      "Felipe Lira": 13.957246749430693,
+      "Felix Escalona": 6.739472889476562,
+      "Fernando Lunar": 14.941599941232644,
+      "Fernando Nieve": 5.97957834422978,
+      "Francisco Morales": 2.0201278189965484,
+      "Frank Mata": 5.568206861088664,
+      "Franklin Gutierrez": 4.705061338426504,
+      "Freddy Galvis": 2.6078013663409974,
+      "German Gonzalez": 0.7345919341805627,
+      "German Marquez": 1.5059134650701536,
+      "Giomar Guevara": 9.953720708146625,
+      "Giovanni Carrara": 3.232204510394476,
+      "Gleyber Torres": 1.6161022551972377,
+      "Gregor Blanco": 14.449423345331665,
+      "Gregorio Petit": 8.744908869789498,
+      "Gregory Infante": 3.9741423639168443,
+      "Guillermo Moscoso": 1.4985675457283478,
+      "Guillermo Quiroz": 7.172678077328044,
+      "Guillermo Rodriguez": 2.4645559391757876,
+      "Gus Polidor": 0.7272460148387571,
+      "Gustavo Chacin": 13.957246749430693,
+      "Gustavo Molina": 12.359509292587967,
+      "Harvey Garcia": 7.9629765665173,
+      "Hector Gimenez": 6.978623374715345,
+      "Hector Rondon": 0.8557996033203555,
+      "Henderson Alvarez III": 2.9787702931021816,
+      "Henry Blanco": 0.7345919341805627,
+      "Henry Rodriguez": 8.951002717990157,
+      "Hernan Iribarren": 9.413270927999495,
+      "Hernan Perez": 2.5967824873282894,
+      "Horacio Estrada": 6.56725189157423,
+      "Humberto Arteaga": 2.343348270035995,
+      "Humberto Quintero": 5.200243083149127,
+      "Ildemaro Vargas": 0.984353191801954,
+      "Israel Pineda": 5.840005876735473,
+      "Ivan Ochoa": 7.973995445530009,
+      "Jairo Diaz": 4.33409241166532,
+      "Jean Machi": 1.7850584000587675,
+      "Jeanmar Gomez": 7.819206430827676,
+      "Jermaine Palacios": 1.9833982222875193,
+      "Jesus Flores": 10.186341487303803,
+      "Jesus Guzman": 13.957246749430691,
+      "Jesus Sucre": 1.8354304184025771,
+      "Jesus Tinoco": 1.0945419819290383,
+      "Jhoulys Chacin": 3.3633816414981474,
+      "Jonathan Herrera": 4.973187394402409,
+      "Jorge Julio": 13.957246749430688,
+      "Jorge Velandia": 8.462499081760082,
+      "Jose Altuve": 0.99,
+      "Jose Alvarez": 5.340483361492691,
+      "Jose Briceno": 198.33982222875193,
+      "Jose Campos": 5.9722324248879755,
+      "Jose Castillo": 20.361838998436365,
+      "Jose Escobar": 3.481965768015867,
+      "Jose Godoy": 1.5867185778300155,
+      "Jose Herrera": 8.466172041430985,
+      "Jose Lobaton": 7.470799970616323,
+      "Jose Malave": 13.957246749430693,
+      "Jose Martinez": 1.8283177028494006,
+      "Jose Mijares": 13.443032395504297,
+      "Jose Mujica": 2.2258135605671048,
+      "Jose Nieves": 7.926246969808271,
+      "Jose Ortega": 40.35480790420921,
+      "Jose Osuna": 6.471754940130758,
+      "Jose Peraza": 6.207301843825754,
+      "Jose Rondon": 10.737635243622169,
+      "Jose Ruiz": 11.959156688459561,
+      "Jose Tabata": 6.118101394675258,
+      "Josh Barfield": 12.928818041577903,
+      "Josmil Pinto": 5.476382869316095,
+      "Juan Graterol": 1.0976902330755267,
+      "Juan Morillo": 5.336810401821787,
+      "Juan Rincon": 15.947990891060016,
+      "Juniel Querecuto": 0.984353191801954,
+      "Junior Guerra": 10.960111657973995,
+      "Kelvim Escobar": 7.517324126447759,
+      "Leo Hernandez": 99.66208771027694,
+      "Leonel Campos": 4.973187394402409,
+      "Les Straker": 0.7272460148387571,
+      "Lino Urdaneta": 34.87107911555131,
+      "Liu Rodriguez": 9.953720708146625,
+      "Luis Avilan": 9.499403850391873,
+      "Luis Curvelo": 9.968412546830235,
+      "Luis Guillorme": 6.1375156100786015,
+      "Luis Hernandez": 15.947990891060016,
+      "Luis Maza": 6.229339601851172,
+      "Luis Ordaz": 3.856607654447954,
+      "Luis Oviedo": 15.940644971718209,
+      "Luis Rengifo": 2.4829207375303017,
+      "Luis Sardinas": 0.9990450304855654,
+      "Luis Sojo": 0.7272460148387571,
+      "Luis Ugueto": 4.951149636376993,
+      "Luis Valbuena": 19.885403658267833,
+      "Maicer Izturis": 8.34129141262029,
+      "Manny Pina": 4.0255637993094835,
+      "Marcos Armas": 3.4709468890031587,
+      "Marcos Carvajal": 5.476382869316095,
+      "Martin Perez": 7.669139792845074,
+      "Marwin Gonzalez": 4.973187394402409,
+      "Mauricio Llovera": 12.208917946080952,
+      "Mauro Zarate": 14.941599941232644,
+      "Max Ramirez": 5.9722324248879755,
+      "Melvin Dorta": 10.963784617644897,
+      "Miguel Cairo": 1.2892088444868874,
+      "Miguel Garcia": 17.68897377506795,
+      "Miguel Montero": 9.946374788804818,
+      "Miguel Yajure": 2.233159479908911,
+      "Nestor Chavez": 996.6943362961874,
+      "Nivaldo Rodriguez": 1.8585175934768239,
+      "Odubel Herrera": 1.1753470946889004,
+      "Omar Daal": 15.947990891060016,
+      "Omar Infante": 13.957246749430693,
+      "Omar Narvaez": 1.909939028869463,
+      "Orber Moreno": 15.947990891060016,
+      "Oscar Henriquez": 5.760250181024441,
+      "Oscar Salazar": 10.110083848422203,
+      "Oswaldo Navarro": 1.7472793863009097,
+      "Pedro Avila": 2.3947697054286343,
+      "Pedro Castellano": 7.8344229780357,
+      "Pedro Hernandez": 2.9383677367222507,
+      "Rafael Betancourt": 9.07221038712995,
+      "Rafael Marchan": 4.277423891028533,
+      "Rafael Ortega": 1.909939028869463,
+      "Ramon Cabrera": 1.7850584000587673,
+      "Ramon Castro": 13.95724674943069,
+      "Ramon Flores": 2.5673988099610665,
+      "Ramon Garcia": 8.253140380518621,
+      "Raul Chavez": 12.23095570410637,
+      "Ray Olmedo": 9.953720708146625,
+      "Remy Hermoso": 9.953720708146625,
+      "Rene Pinto": 2.020127818996548,
+      "Rene Reyes": 13.500167323718342,
+      "Renyel Pinto": 14.952618820245354,
+      "Ricardo Pinto": 7.764636744288547,
+      "Ricardo Rodriguez": 4.973187394402409,
+      "Ricardo Sanchez": 3.7553972101830766,
+      "Rich Garces": 1.101887901270844,
+      "Robert Machado": 4.086363636363637,
+      "Roberto Petagine": 9.832513039006832,
+      "Ronald Belisario": 6.714170278410343,
+      "Ronald Torreyes": 8.212737824138692,
+      "Ronny Cedeno": 13.957246749430691,
+      "Rosman Garcia": 7.962976566517299,
+      "Ruben Quevedo": 21.9275692352898,
+      "Sebastian Rivero": 2.9897891721148904,
+      "Sergio Escalona": 2.982443252773084,
+      "Silvino Bracho": 1.8690117639651171,
+      "Steve Torrealba": 7.4634540512745176,
+      "Thairo Estrada": 0.9402776757511203,
+      "Tomas Perez": 13.957246749430691,
+      "Tomas Telis": 6.831704987879232,
+      "Tony Alvarez": 3.6341312400961265,
+      "Tony Armas": 1.49,
+      "Tony Castillo": 5.34048336149269,
+      "Ubaldo Heredia": 3.481965768015867,
+      "Victor Reyes": 1.04,
+      "Victor Zambrano": 13.957246749430691,
+      "Wiki Gonzalez": 15.947990891060016,
+      "Wilfredo Boscan": 29.890545801807093,
+      "Wilfredo Rodriguez": 5.9722324248879755,
+      "Wilfredo Tovar": 2.960405494747668,
+      "William Cuevas": 5.472709909645193,
+      "Williams Perez": 3.0506553609469935,
+      "Willie Canate": 0.99,
+      "Willie Martinez": 4.980533313744216,
+      "Willson Contreras": 3.099977962241975,
+      "Wilmer Font": 3.478292808344964,
+      "Yangervis Solarte": 4.980533313744215,
+      "Yoel Hernandez": 2.4829207375303017,
+      "Yoervis Medina": 13.949900830088886,
+      "Yohan Pino": 0.9990450304855654,
+      "Yohander Mendez": 6.717843238081246,
+      "Yonathan Daza": 3.495,
+      "Yonny Chirinos": 6.963931536031734,
+      "Yorman Rodriguez": 11.951810769117754,
+      "Yorvit Torrealba": 14.952618820245354,
+      "Yusmeiro Petit": 12.315433776537134,
+      "Carl Herrera": 2.84654374494968,
+      "Amleto Monacelli": 2.982443252773084,
+      "Juan Arango": 1.2488062881069566,
+      "Tomas Rincon": 6.963931536031734,
+      "Christian Santos": 0.9843531918019541,
+      "Miku Fedor": 1.2488062881069566,
+      "Roberto Rosales": 1.2488062881069566,
+      "Yangel Herrera": 1.3332843605377214,
+      "Gabriel Cichero": 1.2488062881069566,
+      "Oswaldo Vizcarrondo": 1.2488062881069566,
+      "Wuilker Farinez": 2.9604054947476675,
+      "Alejandro Fuenmayor": 8.594725629912581,
+      "Eduardo Sosa": 44.83949166238155,
+      "Jefferson Savarino": 20.42165577021964,
+      "Jesus Castellano": 0.7272460148387571,
+      "Josef Martinez": 14.691838683611254,
+      "Junior Moreno": 3.3313744215088517,
+      "Ronald Hernandez": 29.890545801807093,
+      "Ronaldo Pena": 2.552706971277455,
+      "Alejandro Marques": 4.400205685741571,
+      "Yeferson Soteldo": 33.034599280099904
     },
     "indexHistory": [
       {
@@ -261,10 +553,10 @@
       },
       {
         "date": "2026-03-08",
-        "Baseball": 100,
+        "Baseball": 114,
         "Soccer": 100,
         "Basketball": 100,
-        "All": 100
+        "All": 113.4
       }
     ]
   },
@@ -281,7 +573,7 @@
         "avgListing": 118.42,
         "taguchiListing": 118.42,
         "marketStabilityCV": null,
-        "avgDaysOnMarket": 1115.8286377199074,
+        "avgDaysOnMarket": 1116.1012701851853,
         "nListing": 2,
         "nDaysOnMarket": 2,
         "currency": "USD",
@@ -294,7 +586,7 @@
     "avgListing": 118.42,
     "taguchiListing": 118.42,
     "marketStabilityCV": null,
-    "avgDaysOnMarket": 1115.8286377199074,
+    "avgDaysOnMarket": 1116.1012701851853,
     "nListing": 2,
     "currency": "USD",
     "basePriceUSD": 118.42,
@@ -313,7 +605,7 @@
         "avgListing": 160,
         "taguchiListing": 160,
         "marketStabilityCV": null,
-        "avgDaysOnMarket": 257.5438832986111,
+        "avgDaysOnMarket": 257.81653524305557,
         "nListing": 2,
         "nDaysOnMarket": 2,
         "currency": "USD",
@@ -326,7 +618,7 @@
     "avgListing": 160,
     "taguchiListing": 160,
     "marketStabilityCV": null,
-    "avgDaysOnMarket": 257.5438832986111,
+    "avgDaysOnMarket": 257.81653524305557,
     "nListing": 2,
     "currency": "USD",
     "basePriceUSD": 160,
@@ -361,8 +653,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 13.957246749430693,
+    "indexLevel": 100
   },
   "Albert Suarez": {
     "match": {
@@ -393,8 +685,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 0.984353191801954,
+    "indexLevel": 100
   },
   "Alberto Callaspo": {
     "match": {
@@ -425,8 +717,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 7.281438494249778,
+    "indexLevel": 100
   },
   "Alberto Gonzalez": {
     "match": {
@@ -457,8 +749,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 5.972232424887976,
+    "indexLevel": 100
   },
   "Alcides Escobar": {
     "match": {
@@ -473,7 +765,7 @@
         "avgListing": 340,
         "taguchiListing": 340,
         "marketStabilityCV": null,
-        "avgDaysOnMarket": 61.48898957175926,
+        "avgDaysOnMarket": 61.761633009259256,
         "nListing": 1,
         "nDaysOnMarket": 1,
         "currency": "USD",
@@ -486,7 +778,7 @@
     "avgListing": 340,
     "taguchiListing": 340,
     "marketStabilityCV": null,
-    "avgDaysOnMarket": 61.48898957175926,
+    "avgDaysOnMarket": 61.761633009259256,
     "nListing": 1,
     "currency": "USD",
     "basePriceUSD": 340,
@@ -521,8 +813,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 1.101887901270844,
+    "indexLevel": 100
   },
   "Alejandro Machado": {
     "match": {
@@ -553,8 +845,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 11.314051408079173,
+    "indexLevel": 100
   },
   "Alex Cabrera": {
     "match": {
@@ -585,8 +877,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 9.160361419231617,
+    "indexLevel": 100
   },
   "Alex Carrasquel": {
     "match": {
@@ -601,7 +893,7 @@
         "avgListing": 58.4,
         "taguchiListing": 58.4,
         "marketStabilityCV": 0,
-        "avgDaysOnMarket": 158.9741071566358,
+        "avgDaysOnMarket": 159.24675220293213,
         "nListing": 3,
         "nDaysOnMarket": 3,
         "currency": "USD",
@@ -614,7 +906,7 @@
     "avgListing": 58.4,
     "taguchiListing": 58.4,
     "marketStabilityCV": 0,
-    "avgDaysOnMarket": 158.9741071566358,
+    "avgDaysOnMarket": 159.24675220293213,
     "nListing": 3,
     "currency": "USD",
     "basePriceUSD": 58.4,
@@ -630,27 +922,27 @@
       "EBAY_US": {
         "aspectMode": "player",
         "aspectValue": "Alex Escobar",
-        "avgListing": 12.49,
-        "taguchiListing": 12.49,
-        "marketStabilityCV": 0.23112500768199593,
-        "avgDaysOnMarket": 262.1999099537037,
-        "nListing": 4,
-        "nDaysOnMarket": 4,
+        "avgListing": 14.99,
+        "taguchiListing": 14.99,
+        "marketStabilityCV": 0,
+        "avgDaysOnMarket": 232.11791521990745,
+        "nListing": 5,
+        "nDaysOnMarket": 5,
         "currency": "USD",
         "originalCurrency": "USD",
         "fxRateUsed": 1
       }
     },
-    "avg": 12.49,
-    "n": 4,
-    "avgListing": 12.49,
-    "taguchiListing": 12.49,
-    "marketStabilityCV": 0.23112500768199593,
-    "avgDaysOnMarket": 262.1999099537037,
-    "nListing": 4,
+    "avg": 14.99,
+    "n": 5,
+    "avgListing": 14.99,
+    "taguchiListing": 14.99,
+    "marketStabilityCV": 0,
+    "avgDaysOnMarket": 232.11791521990745,
+    "nListing": 5,
     "currency": "USD",
     "basePriceUSD": 12.49,
-    "indexLevel": 100
+    "indexLevel": 120.01601281024821
   },
   "Alex Herrera": {
     "match": {
@@ -681,8 +973,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 20.92852420480423,
+    "indexLevel": 100
   },
   "Alex Prieto": {
     "match": {
@@ -713,8 +1005,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 20.42900168956145,
+    "indexLevel": 100
   },
   "Alex Ramirez": {
     "match": {
@@ -745,8 +1037,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 90.69639315360317,
+    "indexLevel": 100
   },
   "Alex Romero": {
     "match": {
@@ -777,8 +1069,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 4.698240127609114,
+    "indexLevel": 100
   },
   "Alex Serrano": {
     "match": {
@@ -841,8 +1133,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 5.972232424887976,
+    "indexLevel": 100
   },
   "Alexi Amarista": {
     "match": {
@@ -873,8 +1165,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 5.96549866549132,
+    "indexLevel": 100
   },
   "Alexis Infante": {
     "match": {
@@ -905,8 +1197,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 2.2331594799089105,
+    "indexLevel": 100
   },
   "Alfredo Gonzalez": {
     "match": {
@@ -937,8 +1229,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 9.953720708146625,
+    "indexLevel": 100
   },
   "Ali Sanchez": {
     "match": {
@@ -969,8 +1261,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 9.075883346800852,
+    "indexLevel": 100
   },
   "Alvaro Espinoza": {
     "match": {
@@ -1001,8 +1293,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 0.7272460148387571,
+    "indexLevel": 100
   },
   "Anderson Espinoza": {
     "match": {
@@ -1033,8 +1325,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 9.946374788804818,
+    "indexLevel": 100
   },
   "Anderson Machado": {
     "match": {
@@ -1065,8 +1357,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 15.947990891060016,
+    "indexLevel": 100
   },
   "Andres Blanco": {
     "match": {
@@ -1097,8 +1389,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 9.939028869463014,
+    "indexLevel": 100
   },
   "Andres Chaparro": {
     "match": {
@@ -1113,7 +1405,7 @@
         "avgListing": 40,
         "taguchiListing": 40,
         "marketStabilityCV": null,
-        "avgDaysOnMarket": 36.15011495370371,
+        "avgDaysOnMarket": 36.42276697916667,
         "nListing": 1,
         "nDaysOnMarket": 1,
         "currency": "USD",
@@ -1126,7 +1418,7 @@
     "avgListing": 40,
     "taguchiListing": 40,
     "marketStabilityCV": null,
-    "avgDaysOnMarket": 36.15011495370371,
+    "avgDaysOnMarket": 36.42276697916667,
     "nListing": 1,
     "currency": "USD",
     "basePriceUSD": 40,
@@ -1145,7 +1437,7 @@
         "avgListing": 42.24,
         "taguchiListing": 42.24,
         "marketStabilityCV": 0.4442207326861467,
-        "avgDaysOnMarket": 68.07520108796297,
+        "avgDaysOnMarket": 68.34785222222223,
         "nListing": 4,
         "nDaysOnMarket": 4,
         "currency": "USD",
@@ -1158,7 +1450,7 @@
     "avgListing": 42.24,
     "taguchiListing": 42.24,
     "marketStabilityCV": 0.4442207326861467,
-    "avgDaysOnMarket": 68.07520108796297,
+    "avgDaysOnMarket": 68.34785222222223,
     "nListing": 4,
     "currency": "USD",
     "basePriceUSD": 42.24,
@@ -1174,27 +1466,27 @@
       "EBAY_US": {
         "aspectMode": "player",
         "aspectValue": "Andres Gimenez",
-        "avgListing": 100,
-        "taguchiListing": 100,
-        "marketStabilityCV": 0,
-        "avgDaysOnMarket": 254.69234444058642,
-        "nListing": 3,
-        "nDaysOnMarket": 3,
+        "avgListing": 65,
+        "taguchiListing": 65,
+        "marketStabilityCV": null,
+        "avgDaysOnMarket": 35.4724003125,
+        "nListing": 2,
+        "nDaysOnMarket": 2,
         "currency": "USD",
         "originalCurrency": "USD",
         "fxRateUsed": 1
       }
     },
-    "avg": 100,
-    "n": 3,
-    "avgListing": 100,
-    "taguchiListing": 100,
-    "marketStabilityCV": 0,
-    "avgDaysOnMarket": 254.69234444058642,
-    "nListing": 3,
+    "avg": 65,
+    "n": 2,
+    "avgListing": 65,
+    "taguchiListing": 65,
+    "marketStabilityCV": null,
+    "avgDaysOnMarket": 35.4724003125,
+    "nListing": 2,
     "currency": "USD",
     "basePriceUSD": 100,
-    "indexLevel": 100
+    "indexLevel": 65
   },
   "Andres Machado": {
     "match": {
@@ -1225,8 +1517,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 0.99,
+    "indexLevel": 100
   },
   "Andruw Monasterio": {
     "match": {
@@ -1257,8 +1549,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 8.917946080952031,
+    "indexLevel": 100
   },
   "Andry Lara": {
     "match": {
@@ -1321,8 +1613,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 14.948945860574451,
+    "indexLevel": 100
   },
   "Angel Guzman": {
     "match": {
@@ -1334,27 +1626,27 @@
       "EBAY_US": {
         "aspectMode": "player",
         "aspectValue": "Angel Guzman",
-        "avgListing": 9,
-        "taguchiListing": 9,
+        "avgListing": 74,
+        "taguchiListing": 74,
         "marketStabilityCV": null,
-        "avgDaysOnMarket": 10.581203912037036,
-        "nListing": 1,
-        "nDaysOnMarket": 1,
+        "avgDaysOnMarket": 88.4581151736111,
+        "nListing": 2,
+        "nDaysOnMarket": 2,
         "currency": "USD",
         "originalCurrency": "USD",
         "fxRateUsed": 1
       }
     },
-    "avg": 9,
-    "n": 1,
-    "avgListing": 9,
-    "taguchiListing": 9,
+    "avg": 74,
+    "n": 2,
+    "avgListing": 74,
+    "taguchiListing": 74,
     "marketStabilityCV": null,
-    "avgDaysOnMarket": 10.581203912037036,
-    "nListing": 1,
+    "avgDaysOnMarket": 88.4581151736111,
+    "nListing": 2,
     "currency": "USD",
     "basePriceUSD": 9,
-    "indexLevel": 100
+    "indexLevel": 822.2222222222222
   },
   "Angel Nesbitt": {
     "match": {
@@ -1385,8 +1677,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 1.2855358848159848,
+    "indexLevel": 100
   },
   "Angel Salazar": {
     "match": {
@@ -1417,8 +1709,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 14.941599941232644,
+    "indexLevel": 100
   },
   "Angel Zerpa": {
     "match": {
@@ -1433,7 +1725,7 @@
         "avgListing": 75,
         "taguchiListing": 75,
         "marketStabilityCV": null,
-        "avgDaysOnMarket": 270.43090502314817,
+        "avgDaysOnMarket": 270.7035513773148,
         "nListing": 1,
         "nDaysOnMarket": 1,
         "currency": "USD",
@@ -1446,7 +1738,7 @@
     "avgListing": 75,
     "taguchiListing": 75,
     "marketStabilityCV": null,
-    "avgDaysOnMarket": 270.43090502314817,
+    "avgDaysOnMarket": 270.7035513773148,
     "nListing": 1,
     "currency": "USD",
     "basePriceUSD": 75,
@@ -1481,8 +1773,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 1.498567545728348,
+    "indexLevel": 100
   },
   "Anthony Molina": {
     "match": {
@@ -1513,8 +1805,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 8.939983838977447,
+    "indexLevel": 100
   },
   "Anthony Ortega": {
     "match": {
@@ -1545,8 +1837,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 5.715125247924778,
+    "indexLevel": 100
   },
   "Anthony Santander": {
     "match": {
@@ -1558,27 +1850,27 @@
       "EBAY_US": {
         "aspectMode": "player",
         "aspectValue": "Anthony Santander",
-        "avgListing": null,
-        "taguchiListing": null,
+        "avgListing": 149.99,
+        "taguchiListing": 149.99,
         "marketStabilityCV": null,
-        "avgDaysOnMarket": null,
-        "nListing": 0,
-        "nDaysOnMarket": 0,
+        "avgDaysOnMarket": 136.52686167824075,
+        "nListing": 1,
+        "nDaysOnMarket": 1,
         "currency": "USD",
-        "originalCurrency": null,
-        "fxRateUsed": null
+        "originalCurrency": "USD",
+        "fxRateUsed": 1
       }
     },
-    "avg": null,
-    "n": 0,
-    "avgListing": null,
-    "taguchiListing": null,
+    "avg": 149.99,
+    "n": 1,
+    "avgListing": 149.99,
+    "taguchiListing": 149.99,
     "marketStabilityCV": null,
-    "avgDaysOnMarket": null,
-    "nListing": 0,
+    "avgDaysOnMarket": 136.52686167824075,
+    "nListing": 1,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 4.03290971865129,
+    "indexLevel": 3719.150947176685
   },
   "Antonio Senzatela": {
     "match": {
@@ -1609,8 +1901,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 7.962976566517299,
+    "indexLevel": 100
   },
   "Argenis Diaz": {
     "match": {
@@ -1641,8 +1933,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 4.068303693661806,
+    "indexLevel": 100
   },
   "Armando Galarraga": {
     "match": {
@@ -1673,8 +1965,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 52.49,
+    "indexLevel": 100
   },
   "Asdrubal Cabrera": {
     "match": {
@@ -1689,7 +1981,7 @@
         "avgListing": 22.99,
         "taguchiListing": 22.99,
         "marketStabilityCV": null,
-        "avgDaysOnMarket": 196.94040386574073,
+        "avgDaysOnMarket": 197.21305394675926,
         "nListing": 1,
         "nDaysOnMarket": 1,
         "currency": "USD",
@@ -1702,7 +1994,7 @@
     "avgListing": 22.99,
     "taguchiListing": 22.99,
     "marketStabilityCV": null,
-    "avgDaysOnMarket": 196.94040386574073,
+    "avgDaysOnMarket": 197.21305394675926,
     "nListing": 1,
     "currency": "USD",
     "basePriceUSD": 22.99,
@@ -1721,7 +2013,7 @@
         "avgListing": 15,
         "taguchiListing": 15,
         "marketStabilityCV": null,
-        "avgDaysOnMarket": 307.75999578703704,
+        "avgDaysOnMarket": 308.0326464814815,
         "nListing": 1,
         "nDaysOnMarket": 1,
         "currency": "USD",
@@ -1734,7 +2026,7 @@
     "avgListing": 15,
     "taguchiListing": 15,
     "marketStabilityCV": null,
-    "avgDaysOnMarket": 307.75999578703704,
+    "avgDaysOnMarket": 308.0326464814815,
     "nListing": 1,
     "currency": "USD",
     "basePriceUSD": 15,
@@ -1753,7 +2045,7 @@
         "avgListing": 86,
         "taguchiListing": 86,
         "marketStabilityCV": null,
-        "avgDaysOnMarket": 35.65671797453704,
+        "avgDaysOnMarket": 35.929367650462964,
         "nListing": 1,
         "nDaysOnMarket": 1,
         "currency": "USD",
@@ -1766,7 +2058,7 @@
     "avgListing": 86,
     "taguchiListing": 86,
     "marketStabilityCV": null,
-    "avgDaysOnMarket": 35.65671797453704,
+    "avgDaysOnMarket": 35.929367650462964,
     "nListing": 1,
     "currency": "USD",
     "basePriceUSD": 86,
@@ -1785,7 +2077,7 @@
         "avgListing": 100.49,
         "taguchiListing": 100.49,
         "marketStabilityCV": 0,
-        "avgDaysOnMarket": 230.62846034722216,
+        "avgDaysOnMarket": 230.90111009259257,
         "nListing": 5,
         "nDaysOnMarket": 5,
         "currency": "USD",
@@ -1798,7 +2090,7 @@
     "avgListing": 100.49,
     "taguchiListing": 100.49,
     "marketStabilityCV": 0,
-    "avgDaysOnMarket": 230.62846034722216,
+    "avgDaysOnMarket": 230.90111009259257,
     "nListing": 5,
     "currency": "USD",
     "basePriceUSD": 100.49,
@@ -1817,7 +2109,7 @@
         "avgListing": 45.94499999999999,
         "taguchiListing": 45.94499999999999,
         "marketStabilityCV": 0.09073753506704346,
-        "avgDaysOnMarket": 118.3533403587963,
+        "avgDaysOnMarket": 118.6259910648148,
         "nListing": 10,
         "nDaysOnMarket": 10,
         "currency": "USD",
@@ -1830,7 +2122,7 @@
     "avgListing": 45.94499999999999,
     "taguchiListing": 45.94499999999999,
     "marketStabilityCV": 0.09073753506704346,
-    "avgDaysOnMarket": 118.3533403587963,
+    "avgDaysOnMarket": 118.6259910648148,
     "nListing": 10,
     "currency": "USD",
     "basePriceUSD": 45.94499999999999,
@@ -1865,8 +2157,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 1.946668625578491,
+    "indexLevel": 100
   },
   "Breyvic Valera": {
     "match": {
@@ -1897,8 +2189,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 2.960405494747668,
+    "indexLevel": 100
   },
   "Bruce Rondon": {
     "match": {
@@ -1929,8 +2221,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 12.928818041577903,
+    "indexLevel": 100
   },
   "Brusdar Graterol": {
     "match": {
@@ -1945,7 +2237,7 @@
         "avgListing": 125,
         "taguchiListing": 125,
         "marketStabilityCV": null,
-        "avgDaysOnMarket": 1116.7977223148148,
+        "avgDaysOnMarket": 1117.070370613426,
         "nListing": 2,
         "nDaysOnMarket": 2,
         "currency": "USD",
@@ -1958,7 +2250,7 @@
     "avgListing": 125,
     "taguchiListing": 125,
     "marketStabilityCV": null,
-    "avgDaysOnMarket": 1116.7977223148148,
+    "avgDaysOnMarket": 1117.070370613426,
     "nListing": 2,
     "currency": "USD",
     "basePriceUSD": 125,
@@ -1993,8 +2285,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 3.9741423639168447,
+    "indexLevel": 100
   },
   "Carlos Carrasco": {
     "match": {
@@ -2009,7 +2301,7 @@
         "avgListing": 39.99,
         "taguchiListing": 39.99,
         "marketStabilityCV": null,
-        "avgDaysOnMarket": 289.54364957175926,
+        "avgDaysOnMarket": 289.816297662037,
         "nListing": 1,
         "nDaysOnMarket": 1,
         "currency": "USD",
@@ -2022,7 +2314,7 @@
     "avgListing": 39.99,
     "taguchiListing": 39.99,
     "marketStabilityCV": null,
-    "avgDaysOnMarket": 289.54364957175926,
+    "avgDaysOnMarket": 289.816297662037,
     "nListing": 1,
     "currency": "USD",
     "basePriceUSD": 39.99,
@@ -2057,8 +2349,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 3.4599280099904504,
+    "indexLevel": 100
   },
   "Carlos Gonzalez": {
     "match": {
@@ -2070,27 +2362,27 @@
       "EBAY_US": {
         "aspectMode": "player",
         "aspectValue": "Carlos Gonzalez",
-        "avgListing": null,
-        "taguchiListing": null,
+        "avgListing": 69.99,
+        "taguchiListing": 69.99,
         "marketStabilityCV": null,
-        "avgDaysOnMarket": null,
-        "nListing": 0,
-        "nDaysOnMarket": 0,
+        "avgDaysOnMarket": 12.479694479166668,
+        "nListing": 1,
+        "nDaysOnMarket": 1,
         "currency": "USD",
-        "originalCurrency": null,
-        "fxRateUsed": null
+        "originalCurrency": "USD",
+        "fxRateUsed": 1
       }
     },
-    "avg": null,
-    "n": 0,
-    "avgListing": null,
-    "taguchiListing": null,
+    "avg": 69.99,
+    "n": 1,
+    "avgListing": 69.99,
+    "taguchiListing": 69.99,
     "marketStabilityCV": null,
-    "avgDaysOnMarket": null,
-    "nListing": 0,
+    "avgDaysOnMarket": 12.479694479166668,
+    "nListing": 1,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 7.915228090795563,
+    "indexLevel": 884.2448909512761
   },
   "Carlos Guillen": {
     "match": {
@@ -2121,8 +2413,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 1.5279512230955705,
+    "indexLevel": 100
   },
   "Carlos Hernandez": {
     "match": {
@@ -2137,7 +2429,7 @@
         "avgListing": 30.15,
         "taguchiListing": 30.15,
         "marketStabilityCV": null,
-        "avgDaysOnMarket": 233.4927827777778,
+        "avgDaysOnMarket": 233.7654264236111,
         "nListing": 1,
         "nDaysOnMarket": 1,
         "currency": "USD",
@@ -2150,7 +2442,7 @@
     "avgListing": 30.15,
     "taguchiListing": 30.15,
     "marketStabilityCV": null,
-    "avgDaysOnMarket": 233.4927827777778,
+    "avgDaysOnMarket": 233.7654264236111,
     "nListing": 1,
     "currency": "USD",
     "basePriceUSD": 30.15,
@@ -2185,8 +2477,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 4.716080217439213,
+    "indexLevel": 100
   },
   "Carlos Martinez": {
     "match": {
@@ -2201,7 +2493,7 @@
         "avgListing": 30,
         "taguchiListing": 30,
         "marketStabilityCV": null,
-        "avgDaysOnMarket": 362.4607528819445,
+        "avgDaysOnMarket": 362.733394525463,
         "nListing": 1,
         "nDaysOnMarket": 1,
         "currency": "USD",
@@ -2214,7 +2506,7 @@
     "avgListing": 30,
     "taguchiListing": 30,
     "marketStabilityCV": null,
-    "avgDaysOnMarket": 362.4607528819445,
+    "avgDaysOnMarket": 362.733394525463,
     "nListing": 1,
     "currency": "USD",
     "basePriceUSD": 30,
@@ -2249,8 +2541,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 2.967751414089473,
+    "indexLevel": 100
   },
   "Carlos Narvaez": {
     "match": {
@@ -2262,27 +2554,27 @@
       "EBAY_US": {
         "aspectMode": "player",
         "aspectValue": "Carlos Narvaez",
-        "avgListing": 89.995,
-        "taguchiListing": 89.995,
+        "avgListing": 90,
+        "taguchiListing": 90,
         "marketStabilityCV": null,
-        "avgDaysOnMarket": 20.56687388888889,
-        "nListing": 2,
-        "nDaysOnMarket": 2,
+        "avgDaysOnMarket": 23.545932789351852,
+        "nListing": 1,
+        "nDaysOnMarket": 1,
         "currency": "USD",
         "originalCurrency": "USD",
         "fxRateUsed": 1
       }
     },
-    "avg": 89.995,
-    "n": 2,
-    "avgListing": 89.995,
-    "taguchiListing": 89.995,
+    "avg": 90,
+    "n": 1,
+    "avgListing": 90,
+    "taguchiListing": 90,
     "marketStabilityCV": null,
-    "avgDaysOnMarket": 20.56687388888889,
-    "nListing": 2,
+    "avgDaysOnMarket": 23.545932789351852,
+    "nListing": 1,
     "currency": "USD",
     "basePriceUSD": 89.995,
-    "indexLevel": 100
+    "indexLevel": 100.00555586421467
   },
   "Carlos Perez": {
     "match": {
@@ -2294,27 +2586,27 @@
       "EBAY_US": {
         "aspectMode": "player",
         "aspectValue": "Carlos Perez",
-        "avgListing": 59.49,
-        "taguchiListing": 59.49,
+        "avgListing": 44.245000000000005,
+        "taguchiListing": 44.245000000000005,
         "marketStabilityCV": null,
-        "avgDaysOnMarket": 43.515186354166666,
-        "nListing": 1,
-        "nDaysOnMarket": 1,
+        "avgDaysOnMarket": 59.1912878125,
+        "nListing": 2,
+        "nDaysOnMarket": 2,
         "currency": "USD",
         "originalCurrency": "USD",
         "fxRateUsed": 1
       }
     },
-    "avg": 59.49,
-    "n": 1,
-    "avgListing": 59.49,
-    "taguchiListing": 59.49,
+    "avg": 44.245000000000005,
+    "n": 2,
+    "avgListing": 44.245000000000005,
+    "taguchiListing": 44.245000000000005,
     "marketStabilityCV": null,
-    "avgDaysOnMarket": 43.515186354166666,
-    "nListing": 1,
+    "avgDaysOnMarket": 59.1912878125,
+    "nListing": 2,
     "currency": "USD",
     "basePriceUSD": 59.49,
-    "indexLevel": 100
+    "indexLevel": 74.37384434358717
   },
   "Carlos Pulido": {
     "match": {
@@ -2345,8 +2637,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 0.99,
+    "indexLevel": 100
   },
   "Carlos Quintana": {
     "match": {
@@ -2377,8 +2669,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 2.1229706897818263,
+    "indexLevel": 100
   },
   "Carlos Rivero": {
     "match": {
@@ -2409,8 +2701,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 2.45248764311425,
+    "indexLevel": 100
   },
   "Carlos Silva": {
     "match": {
@@ -2425,7 +2717,7 @@
         "avgListing": 94.995,
         "taguchiListing": 94.995,
         "marketStabilityCV": null,
-        "avgDaysOnMarket": 48.90487628472222,
+        "avgDaysOnMarket": 49.17751621527778,
         "nListing": 2,
         "nDaysOnMarket": 2,
         "currency": "USD",
@@ -2438,7 +2730,7 @@
     "avgListing": 94.995,
     "taguchiListing": 94.995,
     "marketStabilityCV": null,
-    "avgDaysOnMarket": 48.90487628472222,
+    "avgDaysOnMarket": 49.17751621527778,
     "nListing": 2,
     "currency": "USD",
     "basePriceUSD": 94.995,
@@ -2473,8 +2765,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 6.742504538728737,
+    "indexLevel": 100
   },
   "Carlos Valderrama": {
     "match": {
@@ -2505,8 +2797,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 12.936163960919709,
+    "indexLevel": 100
   },
   "Carlos Zambrano": {
     "match": {
@@ -2521,7 +2813,7 @@
         "avgListing": 64.99,
         "taguchiListing": 64.99,
         "marketStabilityCV": 0,
-        "avgDaysOnMarket": 136.50359028645835,
+        "avgDaysOnMarket": 136.7762327170139,
         "nListing": 4,
         "nDaysOnMarket": 4,
         "currency": "USD",
@@ -2534,7 +2826,7 @@
     "avgListing": 64.99,
     "taguchiListing": 64.99,
     "marketStabilityCV": 0,
-    "avgDaysOnMarket": 136.50359028645835,
+    "avgDaysOnMarket": 136.7762327170139,
     "nListing": 4,
     "currency": "USD",
     "basePriceUSD": 64.99,
@@ -2553,7 +2845,7 @@
         "avgListing": 28.85,
         "taguchiListing": 28.85,
         "marketStabilityCV": null,
-        "avgDaysOnMarket": 15.26750494212963,
+        "avgDaysOnMarket": 15.540145625,
         "nListing": 1,
         "nDaysOnMarket": 1,
         "currency": "USD",
@@ -2566,7 +2858,7 @@
     "avgListing": 28.85,
     "taguchiListing": 28.85,
     "marketStabilityCV": null,
-    "avgDaysOnMarket": 15.26750494212963,
+    "avgDaysOnMarket": 15.540145625,
     "nListing": 1,
     "currency": "USD",
     "basePriceUSD": 28.85,
@@ -2601,8 +2893,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 4.730772056122824,
+    "indexLevel": 100
   },
   "Cesar Izturis": {
     "match": {
@@ -2633,8 +2925,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 10.387129949313154,
+    "indexLevel": 100
   },
   "Cesar Jimenez": {
     "match": {
@@ -2665,8 +2957,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 1.4324542716520972,
+    "indexLevel": 100
   },
   "Cesar Tovar": {
     "match": {
@@ -2680,22 +2972,22 @@
         "aspectValue": "Cesar Tovar",
         "avgListing": 79.92,
         "taguchiListing": 79.92,
-        "marketStabilityCV": 0.2731759402171662,
-        "avgDaysOnMarket": 120.33480947530865,
-        "nListing": 6,
-        "nDaysOnMarket": 6,
+        "marketStabilityCV": 0.26659241998571653,
+        "avgDaysOnMarket": 136.8895513888889,
+        "nListing": 8,
+        "nDaysOnMarket": 8,
         "currency": "USD",
         "originalCurrency": "USD",
         "fxRateUsed": 1
       }
     },
     "avg": 79.92,
-    "n": 6,
+    "n": 8,
     "avgListing": 79.92,
     "taguchiListing": 79.92,
-    "marketStabilityCV": 0.2731759402171662,
-    "avgDaysOnMarket": 120.33480947530865,
-    "nListing": 6,
+    "marketStabilityCV": 0.26659241998571653,
+    "avgDaysOnMarket": 136.8895513888889,
+    "nListing": 8,
     "currency": "USD",
     "basePriceUSD": 79.92,
     "indexLevel": 100
@@ -2710,27 +3002,27 @@
       "EBAY_US": {
         "aspectMode": "player",
         "aspectValue": "Chico Carrasquel",
-        "avgListing": 149.99,
-        "taguchiListing": 149.99,
-        "marketStabilityCV": 0,
-        "avgDaysOnMarket": 85.56194663194445,
-        "nListing": 3,
-        "nDaysOnMarket": 3,
+        "avgListing": 117.495,
+        "taguchiListing": 117.495,
+        "marketStabilityCV": 0.31934970845256205,
+        "avgDaysOnMarket": 79.34568226851853,
+        "nListing": 4,
+        "nDaysOnMarket": 4,
         "currency": "USD",
         "originalCurrency": "USD",
         "fxRateUsed": 1
       }
     },
-    "avg": 149.99,
-    "n": 3,
-    "avgListing": 149.99,
-    "taguchiListing": 149.99,
-    "marketStabilityCV": 0,
-    "avgDaysOnMarket": 85.56194663194445,
-    "nListing": 3,
+    "avg": 117.495,
+    "n": 4,
+    "avgListing": 117.495,
+    "taguchiListing": 117.495,
+    "marketStabilityCV": 0.31934970845256205,
+    "avgDaysOnMarket": 79.34568226851853,
+    "nListing": 4,
     "currency": "USD",
     "basePriceUSD": 149.99,
-    "indexLevel": 100
+    "indexLevel": 78.33522234815653
   },
   "Clemente Alvarez": {
     "match": {
@@ -2761,8 +3053,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 8.25051683789655,
+    "indexLevel": 100
   },
   "Cris Colon": {
     "match": {
@@ -2793,8 +3085,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 1,
+    "indexLevel": 100
   },
   "Damaso Blanco": {
     "match": {
@@ -2825,8 +3117,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 29.890545801807093,
+    "indexLevel": 100
   },
   "Daniel Palencia": {
     "match": {
@@ -2870,10 +3162,10 @@
       "EBAY_US": {
         "aspectMode": "player",
         "aspectValue": "Danny Leon",
-        "avgListing": 98.95,
-        "taguchiListing": 98.95,
+        "avgListing": 36,
+        "taguchiListing": 36,
         "marketStabilityCV": null,
-        "avgDaysOnMarket": 21.59229769675926,
+        "avgDaysOnMarket": 166.1245289699074,
         "nListing": 1,
         "nDaysOnMarket": 1,
         "currency": "USD",
@@ -2881,16 +3173,16 @@
         "fxRateUsed": 1
       }
     },
-    "avg": 98.95,
+    "avg": 36,
     "n": 1,
-    "avgListing": 98.95,
-    "taguchiListing": 98.95,
+    "avgListing": 36,
+    "taguchiListing": 36,
     "marketStabilityCV": null,
-    "avgDaysOnMarket": 21.59229769675926,
+    "avgDaysOnMarket": 166.1245289699074,
     "nListing": 1,
     "currency": "USD",
     "basePriceUSD": 98.95,
-    "indexLevel": 100
+    "indexLevel": 36.382011116725614
   },
   "Danny Sandoval": {
     "match": {
@@ -2921,8 +3213,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 5.472709909645192,
+    "indexLevel": 100
   },
   "Darwin Cubillan": {
     "match": {
@@ -2953,8 +3245,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 6.670094762359508,
+    "indexLevel": 100
   },
   "Darwinzon Hernandez": {
     "match": {
@@ -2969,7 +3261,7 @@
         "avgListing": 39.135000000000005,
         "taguchiListing": 39.135000000000005,
         "marketStabilityCV": null,
-        "avgDaysOnMarket": 86.93081751157408,
+        "avgDaysOnMarket": 87.20345452546296,
         "nListing": 2,
         "nDaysOnMarket": 2,
         "currency": "USD",
@@ -2982,7 +3274,7 @@
     "avgListing": 39.135000000000005,
     "taguchiListing": 39.135000000000005,
     "marketStabilityCV": null,
-    "avgDaysOnMarket": 86.93081751157408,
+    "avgDaysOnMarket": 87.20345452546296,
     "nListing": 2,
     "currency": "USD",
     "basePriceUSD": 39.135000000000005,
@@ -3001,7 +3293,7 @@
         "avgListing": 645,
         "taguchiListing": 645,
         "marketStabilityCV": 0.08164229795771526,
-        "avgDaysOnMarket": 272.27307902146464,
+        "avgDaysOnMarket": 272.5457133733165,
         "nListing": 11,
         "nDaysOnMarket": 11,
         "currency": "USD",
@@ -3014,7 +3306,7 @@
     "avgListing": 645,
     "taguchiListing": 645,
     "marketStabilityCV": 0.08164229795771526,
-    "avgDaysOnMarket": 272.27307902146464,
+    "avgDaysOnMarket": 272.5457133733165,
     "nListing": 11,
     "currency": "USD",
     "basePriceUSD": 645,
@@ -3033,7 +3325,7 @@
         "avgListing": 69.99,
         "taguchiListing": 69.99,
         "marketStabilityCV": null,
-        "avgDaysOnMarket": 202.50685464120372,
+        "avgDaysOnMarket": 202.7794885763889,
         "nListing": 1,
         "nDaysOnMarket": 1,
         "currency": "USD",
@@ -3046,7 +3338,7 @@
     "avgListing": 69.99,
     "taguchiListing": 69.99,
     "marketStabilityCV": null,
-    "avgDaysOnMarket": 202.50685464120372,
+    "avgDaysOnMarket": 202.7794885763889,
     "nListing": 1,
     "currency": "USD",
     "basePriceUSD": 69.99,
@@ -3065,7 +3357,7 @@
         "avgListing": 240,
         "taguchiListing": 240,
         "marketStabilityCV": null,
-        "avgDaysOnMarket": 227.3216664699074,
+        "avgDaysOnMarket": 227.59429840277778,
         "nListing": 1,
         "nDaysOnMarket": 1,
         "currency": "USD",
@@ -3078,7 +3370,7 @@
     "avgListing": 240,
     "taguchiListing": 240,
     "marketStabilityCV": null,
-    "avgDaysOnMarket": 227.3216664699074,
+    "avgDaysOnMarket": 227.59429840277778,
     "nListing": 1,
     "currency": "USD",
     "basePriceUSD": 240,
@@ -3113,8 +3405,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 1.5769240187076077,
+    "indexLevel": 100
   },
   "Dioner Navarro": {
     "match": {
@@ -3126,27 +3418,27 @@
       "EBAY_US": {
         "aspectMode": "player",
         "aspectValue": "Dioner Navarro",
-        "avgListing": null,
-        "taguchiListing": null,
+        "avgListing": 19.99,
+        "taguchiListing": 19.99,
         "marketStabilityCV": null,
-        "avgDaysOnMarket": null,
-        "nListing": 0,
-        "nDaysOnMarket": 0,
+        "avgDaysOnMarket": 151.88066746527778,
+        "nListing": 1,
+        "nDaysOnMarket": 1,
         "currency": "USD",
-        "originalCurrency": null,
-        "fxRateUsed": null
+        "originalCurrency": "USD",
+        "fxRateUsed": 1
       }
     },
-    "avg": null,
-    "n": 0,
-    "avgListing": null,
-    "taguchiListing": null,
+    "avg": 19.99,
+    "n": 1,
+    "avgListing": 19.99,
+    "taguchiListing": 19.99,
     "marketStabilityCV": null,
-    "avgDaysOnMarket": null,
-    "nListing": 0,
+    "avgDaysOnMarket": 151.88066746527778,
+    "nListing": 1,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 20.531844560346727,
+    "indexLevel": 97.36095527728085
   },
   "Dixon Machado": {
     "match": {
@@ -3177,8 +3469,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 4.973187394402409,
+    "indexLevel": 100
   },
   "Donaldo Mendez": {
     "match": {
@@ -3193,7 +3485,7 @@
         "avgListing": 287,
         "taguchiListing": 287,
         "marketStabilityCV": null,
-        "avgDaysOnMarket": 367.48083451388885,
+        "avgDaysOnMarket": 367.75346050925924,
         "nListing": 2,
         "nDaysOnMarket": 2,
         "currency": "USD",
@@ -3206,7 +3498,7 @@
     "avgListing": 287,
     "taguchiListing": 287,
     "marketStabilityCV": null,
-    "avgDaysOnMarket": 367.48083451388885,
+    "avgDaysOnMarket": 367.75346050925924,
     "nListing": 2,
     "currency": "USD",
     "basePriceUSD": 287,
@@ -3241,8 +3533,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 13.957246749430693,
+    "indexLevel": 100
   },
   "Eddie Zambrano": {
     "match": {
@@ -3273,8 +3565,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 0.7272460148387571,
+    "indexLevel": 100
   },
   "Eddy Diaz": {
     "match": {
@@ -3289,7 +3581,7 @@
         "avgListing": 32.49,
         "taguchiListing": 32.49,
         "marketStabilityCV": null,
-        "avgDaysOnMarket": 189.21609998842592,
+        "avgDaysOnMarket": 189.48872386574072,
         "nListing": 2,
         "nDaysOnMarket": 2,
         "currency": "USD",
@@ -3302,7 +3594,7 @@
     "avgListing": 32.49,
     "taguchiListing": 32.49,
     "marketStabilityCV": null,
-    "avgDaysOnMarket": 189.21609998842592,
+    "avgDaysOnMarket": 189.48872386574072,
     "nListing": 2,
     "currency": "USD",
     "basePriceUSD": 32.49,
@@ -3353,7 +3645,7 @@
         "avgListing": 25.99,
         "taguchiListing": 25.99,
         "marketStabilityCV": 0,
-        "avgDaysOnMarket": 379.2049539197531,
+        "avgDaysOnMarket": 379.47757222993823,
         "nListing": 3,
         "nDaysOnMarket": 3,
         "currency": "USD",
@@ -3366,7 +3658,7 @@
     "avgListing": 25.99,
     "taguchiListing": 25.99,
     "marketStabilityCV": 0,
-    "avgDaysOnMarket": 379.2049539197531,
+    "avgDaysOnMarket": 379.47757222993823,
     "nListing": 3,
     "currency": "USD",
     "basePriceUSD": 25.99,
@@ -3385,7 +3677,7 @@
         "avgListing": 99.95,
         "taguchiListing": 99.95,
         "marketStabilityCV": null,
-        "avgDaysOnMarket": 4.481053368055556,
+        "avgDaysOnMarket": 4.75367505787037,
         "nListing": 1,
         "nDaysOnMarket": 1,
         "currency": "USD",
@@ -3398,7 +3690,7 @@
     "avgListing": 99.95,
     "taguchiListing": 99.95,
     "marketStabilityCV": null,
-    "avgDaysOnMarket": 4.481053368055556,
+    "avgDaysOnMarket": 4.75367505787037,
     "nListing": 1,
     "currency": "USD",
     "basePriceUSD": 99.95,
@@ -3433,8 +3725,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 4.110041871740248,
+    "indexLevel": 100
   },
   "Eduardo Jimenez": {
     "match": {
@@ -3465,8 +3757,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 2.460882979504885,
+    "indexLevel": 100
   },
   "Eduardo Rodriguez": {
     "match": {
@@ -3497,8 +3789,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 1.5867185778300155,
+    "indexLevel": 100
   },
   "Eduardo Sanchez": {
     "match": {
@@ -3529,8 +3821,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 1.2230955704106368,
+    "indexLevel": 100
   },
   "Eduardo Villacis": {
     "match": {
@@ -3561,8 +3853,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 1.6979567850059294,
+    "indexLevel": 100
   },
   "Edubray Ramos": {
     "match": {
@@ -3625,8 +3917,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 3.362332224449318,
+    "indexLevel": 100
   },
   "Edward Mujica": {
     "match": {
@@ -3657,8 +3949,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 13.949900830088888,
+    "indexLevel": 100
   },
   "Edward Olivares": {
     "match": {
@@ -3673,7 +3965,7 @@
         "avgListing": 68.5,
         "taguchiListing": 68.5,
         "marketStabilityCV": null,
-        "avgDaysOnMarket": 17.05284570601852,
+        "avgDaysOnMarket": 17.32545726851852,
         "nListing": 1,
         "nDaysOnMarket": 1,
         "currency": "USD",
@@ -3686,7 +3978,7 @@
     "avgListing": 68.5,
     "taguchiListing": 68.5,
     "marketStabilityCV": null,
-    "avgDaysOnMarket": 17.05284570601852,
+    "avgDaysOnMarket": 17.32545726851852,
     "nListing": 1,
     "currency": "USD",
     "basePriceUSD": 68.5,
@@ -3721,8 +4013,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 9.953720708146625,
+    "indexLevel": 100
   },
   "Edwin Hurtado": {
     "match": {
@@ -3753,8 +4045,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 9.663556894145302,
+    "indexLevel": 100
   },
   "Edwin Moreno": {
     "match": {
@@ -3785,8 +4077,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 5.753487271154206,
+    "indexLevel": 100
   },
   "Ehire Adrianza": {
     "match": {
@@ -3817,8 +4109,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 12.42929552633512,
+    "indexLevel": 100
   },
   "Eider Torres": {
     "match": {
@@ -3849,8 +4141,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 6.471754940130757,
+    "indexLevel": 100
   },
   "Elias Diaz": {
     "match": {
@@ -3862,24 +4154,24 @@
       "EBAY_US": {
         "aspectMode": "player",
         "aspectValue": "Elias Diaz",
-        "avgListing": 39.99,
-        "taguchiListing": 39.99,
+        "avgListing": null,
+        "taguchiListing": null,
         "marketStabilityCV": null,
-        "avgDaysOnMarket": 501.51936668981483,
-        "nListing": 1,
-        "nDaysOnMarket": 1,
+        "avgDaysOnMarket": null,
+        "nListing": 0,
+        "nDaysOnMarket": 0,
         "currency": "USD",
-        "originalCurrency": "USD",
-        "fxRateUsed": 1
+        "originalCurrency": null,
+        "fxRateUsed": null
       }
     },
-    "avg": 39.99,
-    "n": 1,
-    "avgListing": 39.99,
-    "taguchiListing": 39.99,
+    "avg": null,
+    "n": 0,
+    "avgListing": null,
+    "taguchiListing": null,
     "marketStabilityCV": null,
-    "avgDaysOnMarket": 501.51936668981483,
-    "nListing": 1,
+    "avgDaysOnMarket": null,
+    "nListing": 0,
     "currency": "USD",
     "basePriceUSD": 39.99,
     "indexLevel": 100
@@ -3913,8 +4205,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 6.794975391170205,
+    "indexLevel": 100
   },
   "Eliezer Alfonzo": {
     "match": {
@@ -3945,8 +4237,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 7.423663654839736,
+    "indexLevel": 100
   },
   "Elio Chacon": {
     "match": {
@@ -3961,7 +4253,7 @@
         "avgListing": 85,
         "taguchiListing": 85,
         "marketStabilityCV": 0,
-        "avgDaysOnMarket": 200.66237374614198,
+        "avgDaysOnMarket": 200.93498063271605,
         "nListing": 3,
         "nDaysOnMarket": 3,
         "currency": "USD",
@@ -3974,7 +4266,7 @@
     "avgListing": 85,
     "taguchiListing": 85,
     "marketStabilityCV": 0,
-    "avgDaysOnMarket": 200.66237374614198,
+    "avgDaysOnMarket": 200.93498063271605,
     "nListing": 3,
     "currency": "USD",
     "basePriceUSD": 85,
@@ -3990,27 +4282,27 @@
       "EBAY_US": {
         "aspectMode": "player",
         "aspectValue": "Elvis Andrus",
-        "avgListing": 34.99,
-        "taguchiListing": 34.99,
+        "avgListing": 18.99,
+        "taguchiListing": 18.99,
         "marketStabilityCV": null,
-        "avgDaysOnMarket": 21.89706116898148,
-        "nListing": 2,
-        "nDaysOnMarket": 2,
+        "avgDaysOnMarket": 0.5504574537037037,
+        "nListing": 1,
+        "nDaysOnMarket": 1,
         "currency": "USD",
         "originalCurrency": "USD",
         "fxRateUsed": 1
       }
     },
-    "avg": 34.99,
-    "n": 2,
-    "avgListing": 34.99,
-    "taguchiListing": 34.99,
+    "avg": 18.99,
+    "n": 1,
+    "avgListing": 18.99,
+    "taguchiListing": 18.99,
     "marketStabilityCV": null,
-    "avgDaysOnMarket": 21.89706116898148,
-    "nListing": 2,
+    "avgDaysOnMarket": 0.5504574537037037,
+    "nListing": 1,
     "currency": "USD",
     "basePriceUSD": 34.99,
-    "indexLevel": 100
+    "indexLevel": 54.27264932837953
   },
   "Elvis Araujo": {
     "match": {
@@ -4041,8 +4333,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 2.185411004187174,
+    "indexLevel": 100
   },
   "Ender Inciarte": {
     "match": {
@@ -4073,8 +4365,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 0.99,
+    "indexLevel": 100
   },
   "Endy Chavez": {
     "match": {
@@ -4089,7 +4381,7 @@
         "avgListing": 19.99,
         "taguchiListing": 19.99,
         "marketStabilityCV": null,
-        "avgDaysOnMarket": 200.83073049768518,
+        "avgDaysOnMarket": 201.10334395833334,
         "nListing": 1,
         "nDaysOnMarket": 1,
         "currency": "USD",
@@ -4102,7 +4394,7 @@
     "avgListing": 19.99,
     "taguchiListing": 19.99,
     "marketStabilityCV": null,
-    "avgDaysOnMarket": 200.83073049768518,
+    "avgDaysOnMarket": 201.10334395833334,
     "nListing": 1,
     "currency": "USD",
     "basePriceUSD": 19.99,
@@ -4169,8 +4461,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 4.973187394402409,
+    "indexLevel": 100
   },
   "Enzo Hernandez": {
     "match": {
@@ -4182,27 +4474,27 @@
       "EBAY_US": {
         "aspectMode": "player",
         "aspectValue": "Enzo Hernandez",
-        "avgListing": 15,
-        "taguchiListing": 15,
-        "marketStabilityCV": 0,
-        "avgDaysOnMarket": 149.75807526234567,
-        "nListing": 3,
-        "nDaysOnMarket": 3,
+        "avgListing": 21.425,
+        "taguchiListing": 21.425,
+        "marketStabilityCV": 0.3462754239947114,
+        "avgDaysOnMarket": 381.01464278935185,
+        "nListing": 4,
+        "nDaysOnMarket": 4,
         "currency": "USD",
         "originalCurrency": "USD",
         "fxRateUsed": 1
       }
     },
-    "avg": 15,
-    "n": 3,
-    "avgListing": 15,
-    "taguchiListing": 15,
-    "marketStabilityCV": 0,
-    "avgDaysOnMarket": 149.75807526234567,
-    "nListing": 3,
+    "avg": 21.425,
+    "n": 4,
+    "avgListing": 21.425,
+    "taguchiListing": 21.425,
+    "marketStabilityCV": 0.3462754239947114,
+    "avgDaysOnMarket": 381.01464278935185,
+    "nListing": 4,
     "currency": "USD",
     "basePriceUSD": 15,
-    "indexLevel": 100
+    "indexLevel": 142.83333333333334
   },
   "Ethan Salas": {
     "match": {
@@ -4214,27 +4506,27 @@
       "EBAY_US": {
         "aspectMode": "player",
         "aspectValue": "Ethan Salas",
-        "avgListing": 44.5,
-        "taguchiListing": 44.5,
-        "marketStabilityCV": null,
-        "avgDaysOnMarket": 260.90910039351854,
-        "nListing": 2,
-        "nDaysOnMarket": 2,
+        "avgListing": 59.99,
+        "taguchiListing": 59.99,
+        "marketStabilityCV": 0,
+        "avgDaysOnMarket": 121.78655327160493,
+        "nListing": 3,
+        "nDaysOnMarket": 3,
         "currency": "USD",
         "originalCurrency": "USD",
         "fxRateUsed": 1
       }
     },
-    "avg": 44.5,
-    "n": 2,
-    "avgListing": 44.5,
-    "taguchiListing": 44.5,
-    "marketStabilityCV": null,
-    "avgDaysOnMarket": 260.90910039351854,
-    "nListing": 2,
+    "avg": 59.99,
+    "n": 3,
+    "avgListing": 59.99,
+    "taguchiListing": 59.99,
+    "marketStabilityCV": 0,
+    "avgDaysOnMarket": 121.78655327160493,
+    "nListing": 3,
     "currency": "USD",
     "basePriceUSD": 44.5,
-    "indexLevel": 100
+    "indexLevel": 134.80898876404495
   },
   "Eugenio Suarez": {
     "match": {
@@ -4249,7 +4541,7 @@
         "avgListing": 193.1,
         "taguchiListing": 193.1,
         "marketStabilityCV": null,
-        "avgDaysOnMarket": 20.052784131944446,
+        "avgDaysOnMarket": 20.325396238425927,
         "nListing": 1,
         "nDaysOnMarket": 1,
         "currency": "USD",
@@ -4262,7 +4554,7 @@
     "avgListing": 193.1,
     "taguchiListing": 193.1,
     "marketStabilityCV": null,
-    "avgDaysOnMarket": 20.052784131944446,
+    "avgDaysOnMarket": 20.325396238425927,
     "nListing": 1,
     "currency": "USD",
     "basePriceUSD": 193.1,
@@ -4281,7 +4573,7 @@
         "avgListing": 46.794999999999995,
         "taguchiListing": 46.794999999999995,
         "marketStabilityCV": 0.04201995900082377,
-        "avgDaysOnMarket": 155.3832338888889,
+        "avgDaysOnMarket": 155.6558454398148,
         "nListing": 6,
         "nDaysOnMarket": 6,
         "currency": "USD",
@@ -4294,7 +4586,7 @@
     "avgListing": 46.794999999999995,
     "taguchiListing": 46.794999999999995,
     "marketStabilityCV": 0.04201995900082377,
-    "avgDaysOnMarket": 155.3832338888889,
+    "avgDaysOnMarket": 155.6558454398148,
     "nListing": 6,
     "currency": "USD",
     "basePriceUSD": 46.794999999999995,
@@ -4329,8 +4621,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 6.404825452794305,
+    "indexLevel": 100
   },
   "Ezequiel Tovar": {
     "match": {
@@ -4342,10 +4634,10 @@
       "EBAY_US": {
         "aspectMode": "player",
         "aspectValue": "Ezequiel Tovar",
-        "avgListing": 61.66,
-        "taguchiListing": 61.66,
-        "marketStabilityCV": 0.699262375982505,
-        "avgDaysOnMarket": 38.002285381944446,
+        "avgListing": 62.495,
+        "taguchiListing": 62.495,
+        "marketStabilityCV": 0.6744914497725351,
+        "avgDaysOnMarket": 25.09264399305556,
         "nListing": 4,
         "nDaysOnMarket": 4,
         "currency": "USD",
@@ -4353,16 +4645,16 @@
         "fxRateUsed": 1
       }
     },
-    "avg": 61.66,
+    "avg": 62.495,
     "n": 4,
-    "avgListing": 61.66,
-    "taguchiListing": 61.66,
-    "marketStabilityCV": 0.699262375982505,
-    "avgDaysOnMarket": 38.002285381944446,
+    "avgListing": 62.495,
+    "taguchiListing": 62.495,
+    "marketStabilityCV": 0.6744914497725351,
+    "avgDaysOnMarket": 25.09264399305556,
     "nListing": 4,
     "currency": "USD",
     "basePriceUSD": 61.66,
-    "indexLevel": 100
+    "indexLevel": 101.35420045410315
   },
   "Felipe Lira": {
     "match": {
@@ -4393,8 +4685,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 13.957246749430693,
+    "indexLevel": 100
   },
   "Felipe Vazquez": {
     "match": {
@@ -4409,7 +4701,7 @@
         "avgListing": 54.97,
         "taguchiListing": 54.97,
         "marketStabilityCV": null,
-        "avgDaysOnMarket": 856.6902119212963,
+        "avgDaysOnMarket": 856.962821388889,
         "nListing": 2,
         "nDaysOnMarket": 2,
         "currency": "USD",
@@ -4422,7 +4714,7 @@
     "avgListing": 54.97,
     "taguchiListing": 54.97,
     "marketStabilityCV": null,
-    "avgDaysOnMarket": 856.6902119212963,
+    "avgDaysOnMarket": 856.962821388889,
     "nListing": 2,
     "currency": "USD",
     "basePriceUSD": 54.97,
@@ -4441,7 +4733,7 @@
         "avgListing": 24.99,
         "taguchiListing": 24.99,
         "marketStabilityCV": null,
-        "avgDaysOnMarket": 338.27708296296294,
+        "avgDaysOnMarket": 338.5496929976852,
         "nListing": 1,
         "nDaysOnMarket": 1,
         "currency": "USD",
@@ -4454,7 +4746,7 @@
     "avgListing": 24.99,
     "taguchiListing": 24.99,
     "marketStabilityCV": null,
-    "avgDaysOnMarket": 338.27708296296294,
+    "avgDaysOnMarket": 338.5496929976852,
     "nListing": 1,
     "currency": "USD",
     "basePriceUSD": 24.99,
@@ -4489,8 +4781,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 6.739472889476562,
+    "indexLevel": 100
   },
   "Felix Hernandez": {
     "match": {
@@ -4502,27 +4794,27 @@
       "EBAY_US": {
         "aspectMode": "player",
         "aspectValue": "Felix Hernandez",
-        "avgListing": 124.99000000000001,
-        "taguchiListing": 124.99000000000001,
-        "marketStabilityCV": 0.13857515061755965,
-        "avgDaysOnMarket": 273.9682352314815,
-        "nListing": 4,
-        "nDaysOnMarket": 4,
+        "avgListing": 139.99,
+        "taguchiListing": 139.99,
+        "marketStabilityCV": 0,
+        "avgDaysOnMarket": 359.4880301041667,
+        "nListing": 3,
+        "nDaysOnMarket": 3,
         "currency": "USD",
         "originalCurrency": "USD",
         "fxRateUsed": 1
       }
     },
-    "avg": 124.99000000000001,
-    "n": 4,
-    "avgListing": 124.99000000000001,
-    "taguchiListing": 124.99000000000001,
-    "marketStabilityCV": 0.13857515061755965,
-    "avgDaysOnMarket": 273.9682352314815,
-    "nListing": 4,
+    "avg": 139.99,
+    "n": 3,
+    "avgListing": 139.99,
+    "taguchiListing": 139.99,
+    "marketStabilityCV": 0,
+    "avgDaysOnMarket": 359.4880301041667,
+    "nListing": 3,
     "currency": "USD",
     "basePriceUSD": 124.99000000000001,
-    "indexLevel": 100
+    "indexLevel": 112.00096007680614
   },
   "Fernando Nieve": {
     "match": {
@@ -4553,8 +4845,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 5.97957834422978,
+    "indexLevel": 100
   },
   "Francisco Alvarez": {
     "match": {
@@ -4569,7 +4861,7 @@
         "avgListing": 49.99,
         "taguchiListing": 49.99,
         "marketStabilityCV": 0,
-        "avgDaysOnMarket": 305.46674415509256,
+        "avgDaysOnMarket": 305.7393498611111,
         "nListing": 4,
         "nDaysOnMarket": 4,
         "currency": "USD",
@@ -4582,7 +4874,7 @@
     "avgListing": 49.99,
     "taguchiListing": 49.99,
     "marketStabilityCV": 0,
-    "avgDaysOnMarket": 305.46674415509256,
+    "avgDaysOnMarket": 305.7393498611111,
     "nListing": 4,
     "currency": "USD",
     "basePriceUSD": 49.99,
@@ -4601,7 +4893,7 @@
         "avgListing": 34.97,
         "taguchiListing": 34.97,
         "marketStabilityCV": null,
-        "avgDaysOnMarket": 963.026011400463,
+        "avgDaysOnMarket": 963.2986161921297,
         "nListing": 2,
         "nDaysOnMarket": 2,
         "currency": "USD",
@@ -4614,7 +4906,7 @@
     "avgListing": 34.97,
     "taguchiListing": 34.97,
     "marketStabilityCV": null,
-    "avgDaysOnMarket": 963.026011400463,
+    "avgDaysOnMarket": 963.2986161921297,
     "nListing": 2,
     "currency": "USD",
     "basePriceUSD": 34.97,
@@ -4633,7 +4925,7 @@
         "avgListing": 34.99,
         "taguchiListing": 34.99,
         "marketStabilityCV": null,
-        "avgDaysOnMarket": 66.6631328125,
+        "avgDaysOnMarket": 66.93573717592592,
         "nListing": 1,
         "nDaysOnMarket": 1,
         "currency": "USD",
@@ -4646,7 +4938,7 @@
     "avgListing": 34.99,
     "taguchiListing": 34.99,
     "marketStabilityCV": null,
-    "avgDaysOnMarket": 66.6631328125,
+    "avgDaysOnMarket": 66.93573717592592,
     "nListing": 1,
     "currency": "USD",
     "basePriceUSD": 34.99,
@@ -4681,8 +4973,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 2.0201278189965484,
+    "indexLevel": 100
   },
   "Francisco Rodriguez": {
     "match": {
@@ -4697,7 +4989,7 @@
         "avgListing": 99.99,
         "taguchiListing": 99.99,
         "marketStabilityCV": null,
-        "avgDaysOnMarket": 147.25884855324074,
+        "avgDaysOnMarket": 147.531449375,
         "nListing": 1,
         "nDaysOnMarket": 1,
         "currency": "USD",
@@ -4710,7 +5002,7 @@
     "avgListing": 99.99,
     "taguchiListing": 99.99,
     "marketStabilityCV": null,
-    "avgDaysOnMarket": 147.25884855324074,
+    "avgDaysOnMarket": 147.531449375,
     "nListing": 1,
     "currency": "USD",
     "basePriceUSD": 99.99,
@@ -4745,8 +5037,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 5.568206861088664,
+    "indexLevel": 100
   },
   "Franklin Barreto": {
     "match": {
@@ -4758,27 +5050,27 @@
       "EBAY_US": {
         "aspectMode": "player",
         "aspectValue": "Franklin Barreto",
-        "avgListing": 11.495000000000001,
-        "taguchiListing": 11.495000000000001,
-        "marketStabilityCV": null,
-        "avgDaysOnMarket": 18.151920324074077,
-        "nListing": 2,
-        "nDaysOnMarket": 2,
+        "avgListing": 15,
+        "taguchiListing": 15,
+        "marketStabilityCV": 0,
+        "avgDaysOnMarket": 239.99046038580244,
+        "nListing": 3,
+        "nDaysOnMarket": 3,
         "currency": "USD",
         "originalCurrency": "USD",
         "fxRateUsed": 1
       }
     },
-    "avg": 11.495000000000001,
-    "n": 2,
-    "avgListing": 11.495000000000001,
-    "taguchiListing": 11.495000000000001,
-    "marketStabilityCV": null,
-    "avgDaysOnMarket": 18.151920324074077,
-    "nListing": 2,
+    "avg": 15,
+    "n": 3,
+    "avgListing": 15,
+    "taguchiListing": 15,
+    "marketStabilityCV": 0,
+    "avgDaysOnMarket": 239.99046038580244,
+    "nListing": 3,
     "currency": "USD",
     "basePriceUSD": 11.495000000000001,
-    "indexLevel": 100
+    "indexLevel": 130.49151805132666
   },
   "Franklin Gutierrez": {
     "match": {
@@ -4790,27 +5082,27 @@
       "EBAY_US": {
         "aspectMode": "player",
         "aspectValue": "Franklin Gutierrez",
-        "avgListing": null,
-        "taguchiListing": null,
+        "avgListing": 19.99,
+        "taguchiListing": 19.99,
         "marketStabilityCV": null,
-        "avgDaysOnMarket": null,
-        "nListing": 0,
-        "nDaysOnMarket": 0,
+        "avgDaysOnMarket": 20.659062199074075,
+        "nListing": 1,
+        "nDaysOnMarket": 1,
         "currency": "USD",
-        "originalCurrency": null,
-        "fxRateUsed": null
+        "originalCurrency": "USD",
+        "fxRateUsed": 1
       }
     },
-    "avg": null,
-    "n": 0,
-    "avgListing": null,
-    "taguchiListing": null,
+    "avg": 19.99,
+    "n": 1,
+    "avgListing": 19.99,
+    "taguchiListing": 19.99,
     "marketStabilityCV": null,
-    "avgDaysOnMarket": null,
-    "nListing": 0,
+    "avgDaysOnMarket": 20.659062199074075,
+    "nListing": 1,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 4.705061338426504,
+    "indexLevel": 424.86162373145976
   },
   "Franklin Morales": {
     "match": {
@@ -4825,7 +5117,7 @@
         "avgListing": 20.24,
         "taguchiListing": 20.24,
         "marketStabilityCV": null,
-        "avgDaysOnMarket": 362.4041665625,
+        "avgDaysOnMarket": 362.67676885416665,
         "nListing": 1,
         "nDaysOnMarket": 1,
         "currency": "USD",
@@ -4838,7 +5130,7 @@
     "avgListing": 20.24,
     "taguchiListing": 20.24,
     "marketStabilityCV": null,
-    "avgDaysOnMarket": 362.4041665625,
+    "avgDaysOnMarket": 362.67676885416665,
     "nListing": 1,
     "currency": "USD",
     "basePriceUSD": 20.24,
@@ -4857,7 +5149,7 @@
         "avgListing": 179.99,
         "taguchiListing": 179.99,
         "marketStabilityCV": null,
-        "avgDaysOnMarket": 119.16162849537037,
+        "avgDaysOnMarket": 119.43422950231482,
         "nListing": 1,
         "nDaysOnMarket": 1,
         "currency": "USD",
@@ -4870,7 +5162,7 @@
     "avgListing": 179.99,
     "taguchiListing": 179.99,
     "marketStabilityCV": null,
-    "avgDaysOnMarket": 119.16162849537037,
+    "avgDaysOnMarket": 119.43422950231482,
     "nListing": 1,
     "currency": "USD",
     "basePriceUSD": 179.99,
@@ -4886,27 +5178,27 @@
       "EBAY_US": {
         "aspectMode": "player",
         "aspectValue": "Freddy Fermin",
-        "avgListing": 38.35,
-        "taguchiListing": 38.35,
+        "avgListing": 49.055,
+        "taguchiListing": 49.055,
         "marketStabilityCV": null,
-        "avgDaysOnMarket": 129.404091875,
-        "nListing": 1,
-        "nDaysOnMarket": 1,
+        "avgDaysOnMarket": 158.65538355324074,
+        "nListing": 2,
+        "nDaysOnMarket": 2,
         "currency": "USD",
         "originalCurrency": "USD",
         "fxRateUsed": 1
       }
     },
-    "avg": 38.35,
-    "n": 1,
-    "avgListing": 38.35,
-    "taguchiListing": 38.35,
+    "avg": 49.055,
+    "n": 2,
+    "avgListing": 49.055,
+    "taguchiListing": 49.055,
     "marketStabilityCV": null,
-    "avgDaysOnMarket": 129.404091875,
-    "nListing": 1,
+    "avgDaysOnMarket": 158.65538355324074,
+    "nListing": 2,
     "currency": "USD",
     "basePriceUSD": 38.35,
-    "indexLevel": 100
+    "indexLevel": 127.91395045632332
   },
   "Freddy Galvis": {
     "match": {
@@ -4937,8 +5229,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 2.6078013663409974,
+    "indexLevel": 100
   },
   "Freddy Garcia": {
     "match": {
@@ -4953,7 +5245,7 @@
         "avgListing": 21.25,
         "taguchiListing": 21.25,
         "marketStabilityCV": 0,
-        "avgDaysOnMarket": 107.28543616512344,
+        "avgDaysOnMarket": 107.55803341049382,
         "nListing": 3,
         "nDaysOnMarket": 3,
         "currency": "USD",
@@ -4966,7 +5258,7 @@
     "avgListing": 21.25,
     "taguchiListing": 21.25,
     "marketStabilityCV": 0,
-    "avgDaysOnMarket": 107.28543616512344,
+    "avgDaysOnMarket": 107.55803341049382,
     "nListing": 3,
     "currency": "USD",
     "basePriceUSD": 21.25,
@@ -4982,27 +5274,27 @@
       "EBAY_US": {
         "aspectMode": "player",
         "aspectValue": "Gabriel Arias",
-        "avgListing": 39.99,
-        "taguchiListing": 39.99,
-        "marketStabilityCV": 0,
-        "avgDaysOnMarket": 295.7391392322531,
-        "nListing": 3,
-        "nDaysOnMarket": 3,
+        "avgListing": 51.489999999999995,
+        "taguchiListing": 51.489999999999995,
+        "marketStabilityCV": null,
+        "avgDaysOnMarket": 116.88421444444445,
+        "nListing": 2,
+        "nDaysOnMarket": 2,
         "currency": "USD",
         "originalCurrency": "USD",
         "fxRateUsed": 1
       }
     },
-    "avg": 39.99,
-    "n": 3,
-    "avgListing": 39.99,
-    "taguchiListing": 39.99,
-    "marketStabilityCV": 0,
-    "avgDaysOnMarket": 295.7391392322531,
-    "nListing": 3,
+    "avg": 51.489999999999995,
+    "n": 2,
+    "avgListing": 51.489999999999995,
+    "taguchiListing": 51.489999999999995,
+    "marketStabilityCV": null,
+    "avgDaysOnMarket": 116.88421444444445,
+    "nListing": 2,
     "currency": "USD",
     "basePriceUSD": 39.99,
-    "indexLevel": 100
+    "indexLevel": 128.75718929732432
   },
   "Gabriel Moreno": {
     "match": {
@@ -5017,7 +5309,7 @@
         "avgListing": 41.495000000000005,
         "taguchiListing": 41.495000000000005,
         "marketStabilityCV": 0.09226607246562506,
-        "avgDaysOnMarket": 90.77152976080248,
+        "avgDaysOnMarket": 91.04412317129629,
         "nListing": 6,
         "nDaysOnMarket": 6,
         "currency": "USD",
@@ -5030,7 +5322,7 @@
     "avgListing": 41.495000000000005,
     "taguchiListing": 41.495000000000005,
     "marketStabilityCV": 0.09226607246562506,
-    "avgDaysOnMarket": 90.77152976080248,
+    "avgDaysOnMarket": 91.04412317129629,
     "nListing": 6,
     "currency": "USD",
     "basePriceUSD": 41.495000000000005,
@@ -5049,7 +5341,7 @@
         "avgListing": 50,
         "taguchiListing": 50,
         "marketStabilityCV": null,
-        "avgDaysOnMarket": 65.27461331018519,
+        "avgDaysOnMarket": 65.54720523148148,
         "nListing": 1,
         "nDaysOnMarket": 1,
         "currency": "USD",
@@ -5062,7 +5354,7 @@
     "avgListing": 50,
     "taguchiListing": 50,
     "marketStabilityCV": null,
-    "avgDaysOnMarket": 65.27461331018519,
+    "avgDaysOnMarket": 65.54720523148148,
     "nListing": 1,
     "currency": "USD",
     "basePriceUSD": 50,
@@ -5097,8 +5389,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 0.7345919341805627,
+    "indexLevel": 100
   },
   "German Marquez": {
     "match": {
@@ -5129,8 +5421,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 1.5059134650701536,
+    "indexLevel": 100
   },
   "Giomar Guevara": {
     "match": {
@@ -5161,8 +5453,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 9.953720708146625,
+    "indexLevel": 100
   },
   "Giovanni Carrara": {
     "match": {
@@ -5193,8 +5485,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 3.232204510394476,
+    "indexLevel": 100
   },
   "Gleyber Torres": {
     "match": {
@@ -5225,8 +5517,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 1.6161022551972377,
+    "indexLevel": 100
   },
   "Gonzalo Marquez": {
     "match": {
@@ -5238,27 +5530,27 @@
       "EBAY_US": {
         "aspectMode": "player",
         "aspectValue": "Gonzalo Marquez",
-        "avgListing": 45.99,
-        "taguchiListing": 45.99,
+        "avgListing": 44.995000000000005,
+        "taguchiListing": 44.995000000000005,
         "marketStabilityCV": null,
-        "avgDaysOnMarket": 1074.698254988426,
-        "nListing": 1,
-        "nDaysOnMarket": 1,
+        "avgDaysOnMarket": 542.4241787731481,
+        "nListing": 2,
+        "nDaysOnMarket": 2,
         "currency": "USD",
         "originalCurrency": "USD",
         "fxRateUsed": 1
       }
     },
-    "avg": 45.99,
-    "n": 1,
-    "avgListing": 45.99,
-    "taguchiListing": 45.99,
+    "avg": 44.995000000000005,
+    "n": 2,
+    "avgListing": 44.995000000000005,
+    "taguchiListing": 44.995000000000005,
     "marketStabilityCV": null,
-    "avgDaysOnMarket": 1074.698254988426,
-    "nListing": 1,
+    "avgDaysOnMarket": 542.4241787731481,
+    "nListing": 2,
     "currency": "USD",
     "basePriceUSD": 45.99,
-    "indexLevel": 100
+    "indexLevel": 97.83648619265058
   },
   "Gorkys Hernandez": {
     "match": {
@@ -5273,7 +5565,7 @@
         "avgListing": 59.97,
         "taguchiListing": 59.97,
         "marketStabilityCV": null,
-        "avgDaysOnMarket": 68.28867990740741,
+        "avgDaysOnMarket": 68.56126371527778,
         "nListing": 1,
         "nDaysOnMarket": 1,
         "currency": "USD",
@@ -5286,7 +5578,7 @@
     "avgListing": 59.97,
     "taguchiListing": 59.97,
     "marketStabilityCV": null,
-    "avgDaysOnMarket": 68.28867990740741,
+    "avgDaysOnMarket": 68.56126371527778,
     "nListing": 1,
     "currency": "USD",
     "basePriceUSD": 59.97,
@@ -5321,8 +5613,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 14.449423345331665,
+    "indexLevel": 100
   },
   "Gregorio Petit": {
     "match": {
@@ -5353,8 +5645,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 8.744908869789498,
+    "indexLevel": 100
   },
   "Gregory Infante": {
     "match": {
@@ -5385,8 +5677,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 3.9741423639168443,
+    "indexLevel": 100
   },
   "Guilder Rodriguez": {
     "match": {
@@ -5401,7 +5693,7 @@
         "avgListing": 39.95,
         "taguchiListing": 39.95,
         "marketStabilityCV": null,
-        "avgDaysOnMarket": 7.65733744212963,
+        "avgDaysOnMarket": 7.929917650462963,
         "nListing": 1,
         "nDaysOnMarket": 1,
         "currency": "USD",
@@ -5414,7 +5706,7 @@
     "avgListing": 39.95,
     "taguchiListing": 39.95,
     "marketStabilityCV": null,
-    "avgDaysOnMarket": 7.65733744212963,
+    "avgDaysOnMarket": 7.929917650462963,
     "nListing": 1,
     "currency": "USD",
     "basePriceUSD": 39.95,
@@ -5449,8 +5741,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 1.4985675457283478,
+    "indexLevel": 100
   },
   "Guillermo Quiroz": {
     "match": {
@@ -5481,8 +5773,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 7.172678077328044,
+    "indexLevel": 100
   },
   "Guillermo Rodriguez": {
     "match": {
@@ -5513,8 +5805,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 2.4645559391757876,
+    "indexLevel": 100
   },
   "Gus Gil": {
     "match": {
@@ -5529,7 +5821,7 @@
         "avgListing": 57,
         "taguchiListing": 57,
         "marketStabilityCV": null,
-        "avgDaysOnMarket": 32.14237263888889,
+        "avgDaysOnMarket": 32.41494898148148,
         "nListing": 1,
         "nDaysOnMarket": 1,
         "currency": "USD",
@@ -5542,7 +5834,7 @@
     "avgListing": 57,
     "taguchiListing": 57,
     "marketStabilityCV": null,
-    "avgDaysOnMarket": 32.14237263888889,
+    "avgDaysOnMarket": 32.41494898148148,
     "nListing": 1,
     "currency": "USD",
     "basePriceUSD": 57,
@@ -5577,8 +5869,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 0.7272460148387571,
+    "indexLevel": 100
   },
   "Gustavo Chacin": {
     "match": {
@@ -5609,8 +5901,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 13.957246749430693,
+    "indexLevel": 100
   },
   "Gustavo Molina": {
     "match": {
@@ -5641,8 +5933,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 12.359509292587967,
+    "indexLevel": 100
   },
   "Harold Castro": {
     "match": {
@@ -5654,27 +5946,27 @@
       "EBAY_US": {
         "aspectMode": "player",
         "aspectValue": "Harold Castro",
-        "avgListing": 26.494999999999997,
-        "taguchiListing": 26.494999999999997,
-        "marketStabilityCV": null,
-        "avgDaysOnMarket": 663.4110175810185,
-        "nListing": 2,
-        "nDaysOnMarket": 2,
+        "avgListing": 30,
+        "taguchiListing": 30,
+        "marketStabilityCV": 0,
+        "avgDaysOnMarket": 722.7263812654322,
+        "nListing": 3,
+        "nDaysOnMarket": 3,
         "currency": "USD",
         "originalCurrency": "USD",
         "fxRateUsed": 1
       }
     },
-    "avg": 26.494999999999997,
-    "n": 2,
-    "avgListing": 26.494999999999997,
-    "taguchiListing": 26.494999999999997,
-    "marketStabilityCV": null,
-    "avgDaysOnMarket": 663.4110175810185,
-    "nListing": 2,
+    "avg": 30,
+    "n": 3,
+    "avgListing": 30,
+    "taguchiListing": 30,
+    "marketStabilityCV": 0,
+    "avgDaysOnMarket": 722.7263812654322,
+    "nListing": 3,
     "currency": "USD",
     "basePriceUSD": 26.494999999999997,
-    "indexLevel": 100
+    "indexLevel": 113.22891111530478
   },
   "Harvey Garcia": {
     "match": {
@@ -5705,8 +5997,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 7.9629765665173,
+    "indexLevel": 100
   },
   "Hector Gimenez": {
     "match": {
@@ -5737,8 +6029,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 6.978623374715345,
+    "indexLevel": 100
   },
   "Hector Rondon": {
     "match": {
@@ -5769,8 +6061,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 0.8557996033203555,
+    "indexLevel": 100
   },
   "Hector Sanchez": {
     "match": {
@@ -5785,7 +6077,7 @@
         "avgListing": 349,
         "taguchiListing": 349,
         "marketStabilityCV": null,
-        "avgDaysOnMarket": 148.47284498842592,
+        "avgDaysOnMarket": 148.7454090625,
         "nListing": 1,
         "nDaysOnMarket": 1,
         "currency": "USD",
@@ -5798,7 +6090,7 @@
     "avgListing": 349,
     "taguchiListing": 349,
     "marketStabilityCV": null,
-    "avgDaysOnMarket": 148.47284498842592,
+    "avgDaysOnMarket": 148.7454090625,
     "nListing": 1,
     "currency": "USD",
     "basePriceUSD": 349,
@@ -5833,8 +6125,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 0.7345919341805627,
+    "indexLevel": 100
   },
   "Henry Rodriguez": {
     "match": {
@@ -5865,8 +6157,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 8.951002717990157,
+    "indexLevel": 100
   },
   "Hernan Iribarren": {
     "match": {
@@ -5897,8 +6189,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 9.413270927999495,
+    "indexLevel": 100
   },
   "Hernan Perez": {
     "match": {
@@ -5929,8 +6221,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 2.5967824873282894,
+    "indexLevel": 100
   },
   "Humberto Quintero": {
     "match": {
@@ -5961,8 +6253,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 5.200243083149127,
+    "indexLevel": 100
   },
   "Ildemaro Vargas": {
     "match": {
@@ -5993,8 +6285,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 0.984353191801954,
+    "indexLevel": 100
   },
   "Israel Pineda": {
     "match": {
@@ -6025,8 +6317,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 5.840005876735473,
+    "indexLevel": 100
   },
   "Ivan Ochoa": {
     "match": {
@@ -6057,8 +6349,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 7.973995445530009,
+    "indexLevel": 100
   },
   "Jackson Chourio": {
     "match": {
@@ -6070,27 +6362,27 @@
       "EBAY_US": {
         "aspectMode": "player",
         "aspectValue": "Jackson Chourio",
-        "avgListing": 152.49,
-        "taguchiListing": 152.49,
-        "marketStabilityCV": 0.24609985898961034,
-        "avgDaysOnMarket": 150.3328623263889,
-        "nListing": 4,
-        "nDaysOnMarket": 4,
+        "avgListing": 119.99,
+        "taguchiListing": 119.99,
+        "marketStabilityCV": null,
+        "avgDaysOnMarket": 300.7040573379629,
+        "nListing": 2,
+        "nDaysOnMarket": 2,
         "currency": "USD",
         "originalCurrency": "USD",
         "fxRateUsed": 1
       }
     },
-    "avg": 152.49,
-    "n": 4,
-    "avgListing": 152.49,
-    "taguchiListing": 152.49,
-    "marketStabilityCV": 0.24609985898961034,
-    "avgDaysOnMarket": 150.3328623263889,
-    "nListing": 4,
+    "avg": 119.99,
+    "n": 2,
+    "avgListing": 119.99,
+    "taguchiListing": 119.99,
+    "marketStabilityCV": null,
+    "avgDaysOnMarket": 300.7040573379629,
+    "nListing": 2,
     "currency": "USD",
     "basePriceUSD": 152.49,
-    "indexLevel": 100
+    "indexLevel": 78.68712702472293
   },
   "Jairo Diaz": {
     "match": {
@@ -6121,8 +6413,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 4.33409241166532,
+    "indexLevel": 100
   },
   "Jairo Iriarte": {
     "match": {
@@ -6217,8 +6509,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 1.7850584000587675,
+    "indexLevel": 100
   },
   "Jeanmar Gomez": {
     "match": {
@@ -6249,8 +6541,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 7.819206430827676,
+    "indexLevel": 100
   },
   "Jeferson Quero": {
     "match": {
@@ -6262,10 +6554,10 @@
       "EBAY_US": {
         "aspectMode": "player",
         "aspectValue": "Jeferson Quero",
-        "avgListing": 79.99499999999999,
-        "taguchiListing": 79.99499999999999,
-        "marketStabilityCV": 0.00006846959903812069,
-        "avgDaysOnMarket": 205.05646136381174,
+        "avgListing": 139.995,
+        "taguchiListing": 139.995,
+        "marketStabilityCV": 0.4694541210403577,
+        "avgDaysOnMarket": 217.12455783950614,
         "nListing": 6,
         "nDaysOnMarket": 6,
         "currency": "USD",
@@ -6273,16 +6565,16 @@
         "fxRateUsed": 1
       }
     },
-    "avg": 79.99499999999999,
+    "avg": 139.995,
     "n": 6,
-    "avgListing": 79.99499999999999,
-    "taguchiListing": 79.99499999999999,
-    "marketStabilityCV": 0.00006846959903812069,
-    "avgDaysOnMarket": 205.05646136381174,
+    "avgListing": 139.995,
+    "taguchiListing": 139.995,
+    "marketStabilityCV": 0.4694541210403577,
+    "avgDaysOnMarket": 217.12455783950614,
     "nListing": 6,
     "currency": "USD",
     "basePriceUSD": 79.99499999999999,
-    "indexLevel": 100
+    "indexLevel": 175.00468779298708
   },
   "Jermaine Palacios": {
     "match": {
@@ -6313,8 +6605,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 1.9833982222875193,
+    "indexLevel": 100
   },
   "Jesus Aguilar": {
     "match": {
@@ -6326,27 +6618,27 @@
       "EBAY_US": {
         "aspectMode": "player",
         "aspectValue": "Jesus Aguilar",
-        "avgListing": 249.95,
-        "taguchiListing": 249.95,
-        "marketStabilityCV": null,
-        "avgDaysOnMarket": 31.438642430555557,
-        "nListing": 2,
-        "nDaysOnMarket": 2,
+        "avgListing": 249.94999999999996,
+        "taguchiListing": 249.94999999999996,
+        "marketStabilityCV": 1.3926522448917494e-16,
+        "avgDaysOnMarket": 258.3619062962963,
+        "nListing": 3,
+        "nDaysOnMarket": 3,
         "currency": "USD",
         "originalCurrency": "USD",
         "fxRateUsed": 1
       }
     },
-    "avg": 249.95,
-    "n": 2,
-    "avgListing": 249.95,
-    "taguchiListing": 249.95,
-    "marketStabilityCV": null,
-    "avgDaysOnMarket": 31.438642430555557,
-    "nListing": 2,
+    "avg": 249.94999999999996,
+    "n": 3,
+    "avgListing": 249.94999999999996,
+    "taguchiListing": 249.94999999999996,
+    "marketStabilityCV": 1.3926522448917494e-16,
+    "avgDaysOnMarket": 258.3619062962963,
+    "nListing": 3,
     "currency": "USD",
     "basePriceUSD": 249.95,
-    "indexLevel": 100
+    "indexLevel": 99.99999999999999
   },
   "Jesus Delgado": {
     "match": {
@@ -6361,7 +6653,7 @@
         "avgListing": 49.99,
         "taguchiListing": 49.99,
         "marketStabilityCV": null,
-        "avgDaysOnMarket": 60.368582939814814,
+        "avgDaysOnMarket": 60.641091099537036,
         "nListing": 1,
         "nDaysOnMarket": 1,
         "currency": "USD",
@@ -6374,7 +6666,7 @@
     "avgListing": 49.99,
     "taguchiListing": 49.99,
     "marketStabilityCV": null,
-    "avgDaysOnMarket": 60.368582939814814,
+    "avgDaysOnMarket": 60.641091099537036,
     "nListing": 1,
     "currency": "USD",
     "basePriceUSD": 49.99,
@@ -6409,8 +6701,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 10.186341487303803,
+    "indexLevel": 100
   },
   "Jesus Guzman": {
     "match": {
@@ -6441,8 +6733,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 13.957246749430691,
+    "indexLevel": 100
   },
   "Jesus Montero": {
     "match": {
@@ -6457,7 +6749,7 @@
         "avgListing": 20,
         "taguchiListing": 20,
         "marketStabilityCV": null,
-        "avgDaysOnMarket": 58.29452763888889,
+        "avgDaysOnMarket": 58.56702652777778,
         "nListing": 1,
         "nDaysOnMarket": 1,
         "currency": "USD",
@@ -6470,7 +6762,7 @@
     "avgListing": 20,
     "taguchiListing": 20,
     "marketStabilityCV": null,
-    "avgDaysOnMarket": 58.29452763888889,
+    "avgDaysOnMarket": 58.56702652777778,
     "nListing": 1,
     "currency": "USD",
     "basePriceUSD": 20,
@@ -6505,8 +6797,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 1.0945419819290383,
+    "indexLevel": 100
   },
   "Jhonathan Diaz": {
     "match": {
@@ -6521,7 +6813,7 @@
         "avgListing": 29.99,
         "taguchiListing": 29.99,
         "marketStabilityCV": 0,
-        "avgDaysOnMarket": 125.08988694058642,
+        "avgDaysOnMarket": 125.36238491512346,
         "nListing": 3,
         "nDaysOnMarket": 3,
         "currency": "USD",
@@ -6534,7 +6826,7 @@
     "avgListing": 29.99,
     "taguchiListing": 29.99,
     "marketStabilityCV": 0,
-    "avgDaysOnMarket": 125.08988694058642,
+    "avgDaysOnMarket": 125.36238491512346,
     "nListing": 3,
     "currency": "USD",
     "basePriceUSD": 29.99,
@@ -6585,7 +6877,7 @@
         "avgListing": 109.95,
         "taguchiListing": 109.95,
         "marketStabilityCV": null,
-        "avgDaysOnMarket": 26.459525300925925,
+        "avgDaysOnMarket": 26.732022488425926,
         "nListing": 1,
         "nDaysOnMarket": 1,
         "currency": "USD",
@@ -6598,7 +6890,7 @@
     "avgListing": 109.95,
     "taguchiListing": 109.95,
     "marketStabilityCV": null,
-    "avgDaysOnMarket": 26.459525300925925,
+    "avgDaysOnMarket": 26.732022488425926,
     "nListing": 1,
     "currency": "USD",
     "basePriceUSD": 109.95,
@@ -6633,8 +6925,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 3.3633816414981474,
+    "indexLevel": 100
   },
   "Joe Ortiz": {
     "match": {
@@ -6649,7 +6941,7 @@
         "avgListing": 179.99,
         "taguchiListing": 179.99,
         "marketStabilityCV": null,
-        "avgDaysOnMarket": 481.5347261689815,
+        "avgDaysOnMarket": 481.8072242824074,
         "nListing": 2,
         "nDaysOnMarket": 2,
         "currency": "USD",
@@ -6662,7 +6954,7 @@
     "avgListing": 179.99,
     "taguchiListing": 179.99,
     "marketStabilityCV": null,
-    "avgDaysOnMarket": 481.5347261689815,
+    "avgDaysOnMarket": 481.8072242824074,
     "nListing": 2,
     "currency": "USD",
     "basePriceUSD": 179.99,
@@ -6713,7 +7005,7 @@
         "avgListing": 14.95,
         "taguchiListing": 14.95,
         "marketStabilityCV": null,
-        "avgDaysOnMarket": 108.27012524305556,
+        "avgDaysOnMarket": 108.54262515046297,
         "nListing": 1,
         "nDaysOnMarket": 1,
         "currency": "USD",
@@ -6726,7 +7018,7 @@
     "avgListing": 14.95,
     "taguchiListing": 14.95,
     "marketStabilityCV": null,
-    "avgDaysOnMarket": 108.27012524305556,
+    "avgDaysOnMarket": 108.54262515046297,
     "nListing": 1,
     "currency": "USD",
     "basePriceUSD": 14.95,
@@ -6761,8 +7053,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 4.973187394402409,
+    "indexLevel": 100
   },
   "Jorbit Vivas": {
     "match": {
@@ -6774,27 +7066,27 @@
       "EBAY_US": {
         "aspectMode": "player",
         "aspectValue": "Jorbit Vivas",
-        "avgListing": 67.78,
-        "taguchiListing": 67.78,
-        "marketStabilityCV": 0.04736009880044734,
-        "avgDaysOnMarket": 283.7640219560185,
-        "nListing": 4,
-        "nDaysOnMarket": 4,
+        "avgListing": 65,
+        "taguchiListing": 65,
+        "marketStabilityCV": 0,
+        "avgDaysOnMarket": 178.78267590277778,
+        "nListing": 3,
+        "nDaysOnMarket": 3,
         "currency": "USD",
         "originalCurrency": "USD",
         "fxRateUsed": 1
       }
     },
-    "avg": 67.78,
-    "n": 4,
-    "avgListing": 67.78,
-    "taguchiListing": 67.78,
-    "marketStabilityCV": 0.04736009880044734,
-    "avgDaysOnMarket": 283.7640219560185,
-    "nListing": 4,
+    "avg": 65,
+    "n": 3,
+    "avgListing": 65,
+    "taguchiListing": 65,
+    "marketStabilityCV": 0,
+    "avgDaysOnMarket": 178.78267590277778,
+    "nListing": 3,
     "currency": "USD",
     "basePriceUSD": 67.78,
-    "indexLevel": 100
+    "indexLevel": 95.89849513130717
   },
   "Jorge Barrosa": {
     "match": {
@@ -6806,27 +7098,27 @@
       "EBAY_US": {
         "aspectMode": "player",
         "aspectValue": "Jorge Barrosa",
-        "avgListing": 49,
-        "taguchiListing": 49,
-        "marketStabilityCV": 0,
-        "avgDaysOnMarket": 222.9122767361111,
-        "nListing": 5,
-        "nDaysOnMarket": 5,
+        "avgListing": 51.905,
+        "taguchiListing": 51.905,
+        "marketStabilityCV": 0.06462585616013346,
+        "avgDaysOnMarket": 198.8119049189815,
+        "nListing": 4,
+        "nDaysOnMarket": 4,
         "currency": "USD",
         "originalCurrency": "USD",
         "fxRateUsed": 1
       }
     },
-    "avg": 49,
-    "n": 5,
-    "avgListing": 49,
-    "taguchiListing": 49,
-    "marketStabilityCV": 0,
-    "avgDaysOnMarket": 222.9122767361111,
-    "nListing": 5,
+    "avg": 51.905,
+    "n": 4,
+    "avgListing": 51.905,
+    "taguchiListing": 51.905,
+    "marketStabilityCV": 0.06462585616013346,
+    "avgDaysOnMarket": 198.8119049189815,
+    "nListing": 4,
     "currency": "USD",
     "basePriceUSD": 49,
-    "indexLevel": 100
+    "indexLevel": 105.92857142857144
   },
   "Jorge Julio": {
     "match": {
@@ -6857,8 +7149,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 13.957246749430688,
+    "indexLevel": 100
   },
   "Jorge Velandia": {
     "match": {
@@ -6889,8 +7181,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 8.462499081760082,
+    "indexLevel": 100
   },
   "Jose Altuve": {
     "match": {
@@ -6921,8 +7213,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 0.99,
+    "indexLevel": 100
   },
   "Jose Alvarado": {
     "match": {
@@ -6937,7 +7229,7 @@
         "avgListing": 62.94499999999999,
         "taguchiListing": 62.94499999999999,
         "marketStabilityCV": 0.4961295743977577,
-        "avgDaysOnMarket": 217.76481089120372,
+        "avgDaysOnMarket": 218.0373066550926,
         "nListing": 4,
         "nDaysOnMarket": 4,
         "currency": "USD",
@@ -6950,7 +7242,7 @@
     "avgListing": 62.94499999999999,
     "taguchiListing": 62.94499999999999,
     "marketStabilityCV": 0.4961295743977577,
-    "avgDaysOnMarket": 217.76481089120372,
+    "avgDaysOnMarket": 218.0373066550926,
     "nListing": 4,
     "currency": "USD",
     "basePriceUSD": 62.94499999999999,
@@ -6985,8 +7277,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 5.340483361492691,
+    "indexLevel": 100
   },
   "Jose Azocar": {
     "match": {
@@ -7001,7 +7293,7 @@
         "avgListing": 28.95,
         "taguchiListing": 28.95,
         "marketStabilityCV": 0,
-        "avgDaysOnMarket": 628.4271623148147,
+        "avgDaysOnMarket": 628.6996558680556,
         "nListing": 3,
         "nDaysOnMarket": 3,
         "currency": "USD",
@@ -7014,7 +7306,7 @@
     "avgListing": 28.95,
     "taguchiListing": 28.95,
     "marketStabilityCV": 0,
-    "avgDaysOnMarket": 628.4271623148147,
+    "avgDaysOnMarket": 628.6996558680556,
     "nListing": 3,
     "currency": "USD",
     "basePriceUSD": 28.95,
@@ -7049,8 +7341,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 198.33982222875193,
+    "indexLevel": 100
   },
   "Jose Butto": {
     "match": {
@@ -7065,7 +7357,7 @@
         "avgListing": 100,
         "taguchiListing": 100,
         "marketStabilityCV": null,
-        "avgDaysOnMarket": 372.36244984953703,
+        "avgDaysOnMarket": 372.6349375115741,
         "nListing": 1,
         "nDaysOnMarket": 1,
         "currency": "USD",
@@ -7078,7 +7370,7 @@
     "avgListing": 100,
     "taguchiListing": 100,
     "marketStabilityCV": null,
-    "avgDaysOnMarket": 372.36244984953703,
+    "avgDaysOnMarket": 372.6349375115741,
     "nListing": 1,
     "currency": "USD",
     "basePriceUSD": 100,
@@ -7113,8 +7405,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 5.9722324248879755,
+    "indexLevel": 100
   },
   "Jose Castillo": {
     "match": {
@@ -7145,8 +7437,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 20.361838998436365,
+    "indexLevel": 100
   },
   "Jose Herrera": {
     "match": {
@@ -7177,8 +7469,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 8.466172041430985,
+    "indexLevel": 100
   },
   "Jose Lobaton": {
     "match": {
@@ -7209,8 +7501,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 7.470799970616323,
+    "indexLevel": 100
   },
   "Jose Lopez": {
     "match": {
@@ -7273,8 +7565,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 13.957246749430693,
+    "indexLevel": 100
   },
   "Jose Martinez": {
     "match": {
@@ -7305,8 +7597,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 1.8283177028494006,
+    "indexLevel": 100
   },
   "Jose Mijares": {
     "match": {
@@ -7337,8 +7629,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 13.443032395504297,
+    "indexLevel": 100
   },
   "Jose Nieves": {
     "match": {
@@ -7369,8 +7661,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 7.926246969808271,
+    "indexLevel": 100
   },
   "Jose Ortega": {
     "match": {
@@ -7401,8 +7693,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 40.35480790420921,
+    "indexLevel": 100
   },
   "Jose Osuna": {
     "match": {
@@ -7433,8 +7725,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 6.471754940130758,
+    "indexLevel": 100
   },
   "Jose Peraza": {
     "match": {
@@ -7465,8 +7757,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 6.207301843825754,
+    "indexLevel": 100
   },
   "Jose Pirela": {
     "match": {
@@ -7561,8 +7853,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 10.737635243622169,
+    "indexLevel": 100
   },
   "Jose Suarez": {
     "match": {
@@ -7625,8 +7917,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 6.118101394675258,
+    "indexLevel": 100
   },
   "Jose Torres": {
     "match": {
@@ -7689,8 +7981,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 12.928818041577903,
+    "indexLevel": 100
   },
   "Josmil Pinto": {
     "match": {
@@ -7721,8 +8013,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 5.476382869316095,
+    "indexLevel": 100
   },
   "Juan Castillo": {
     "match": {
@@ -7817,8 +8109,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 5.336810401821787,
+    "indexLevel": 100
   },
   "Juan Rincon": {
     "match": {
@@ -7849,8 +8141,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 15.947990891060016,
+    "indexLevel": 100
   },
   "Juan Rivera": {
     "match": {
@@ -7977,8 +8269,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 10.960111657973995,
+    "indexLevel": 100
   },
   "Keibert Ruiz": {
     "match": {
@@ -8073,8 +8365,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 7.517324126447759,
+    "indexLevel": 100
   },
   "Kenedy Corona": {
     "match": {
@@ -8201,8 +8493,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 99.66208771027694,
+    "indexLevel": 100
   },
   "Leo Rivas": {
     "match": {
@@ -8265,8 +8557,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 0.7272460148387571,
+    "indexLevel": 100
   },
   "Liu Rodriguez": {
     "match": {
@@ -8297,8 +8589,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 9.953720708146625,
+    "indexLevel": 100
   },
   "Livan Soto": {
     "match": {
@@ -8521,8 +8813,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 9.499403850391873,
+    "indexLevel": 100
   },
   "Luis Contreras": {
     "match": {
@@ -8585,8 +8877,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 9.968412546830235,
+    "indexLevel": 100
   },
   "Luis Garcia": {
     "match": {
@@ -8649,8 +8941,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 6.1375156100786015,
+    "indexLevel": 100
   },
   "Luis Hernandez": {
     "match": {
@@ -8681,8 +8973,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 15.947990891060016,
+    "indexLevel": 100
   },
   "Luis Jimenez": {
     "match": {
@@ -8809,8 +9101,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 6.229339601851172,
+    "indexLevel": 100
   },
   "Luis Ordaz": {
     "match": {
@@ -8841,8 +9133,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 3.856607654447954,
+    "indexLevel": 100
   },
   "Luis Oviedo": {
     "match": {
@@ -8873,8 +9165,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 15.940644971718209,
+    "indexLevel": 100
   },
   "Luis Perales": {
     "match": {
@@ -8937,8 +9229,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 2.4829207375303017,
+    "indexLevel": 100
   },
   "Luis Rivas": {
     "match": {
@@ -9097,8 +9389,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 0.9990450304855654,
+    "indexLevel": 100
   },
   "Luis Sojo": {
     "match": {
@@ -9129,8 +9421,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 0.7272460148387571,
+    "indexLevel": 100
   },
   "Luis Torrens": {
     "match": {
@@ -9193,8 +9485,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 4.951149636376993,
+    "indexLevel": 100
   },
   "Luis Valbuena": {
     "match": {
@@ -9225,8 +9517,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 19.885403658267833,
+    "indexLevel": 100
   },
   "Luisangel Acuna": {
     "match": {
@@ -9321,8 +9613,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 8.34129141262029,
+    "indexLevel": 100
   },
   "Maikel Garcia": {
     "match": {
@@ -9385,8 +9677,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 4.0255637993094835,
+    "indexLevel": 100
   },
   "Manny Sarmiento": {
     "match": {
@@ -9513,8 +9805,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 3.4709468890031587,
+    "indexLevel": 100
   },
   "Martin Perez": {
     "match": {
@@ -9545,8 +9837,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 7.669139792845074,
+    "indexLevel": 100
   },
   "Martin Prado": {
     "match": {
@@ -9609,8 +9901,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 4.973187394402409,
+    "indexLevel": 100
   },
   "Mauricio Llovera": {
     "match": {
@@ -9641,8 +9933,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 12.208917946080952,
+    "indexLevel": 100
   },
   "Mauricio Robles": {
     "match": {
@@ -9737,8 +10029,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 5.9722324248879755,
+    "indexLevel": 100
   },
   "Maximo Acosta": {
     "match": {
@@ -9865,8 +10157,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 1.2892088444868874,
+    "indexLevel": 100
   },
   "Miguel Garcia": {
     "match": {
@@ -9897,8 +10189,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 17.68897377506795,
+    "indexLevel": 100
   },
   "Miguel Gonzalez": {
     "match": {
@@ -9961,8 +10253,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 9.946374788804818,
+    "indexLevel": 100
   },
   "Miguel Perez": {
     "match": {
@@ -10057,8 +10349,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 2.233159479908911,
+    "indexLevel": 100
   },
   "Moises Ballesteros": {
     "match": {
@@ -10121,8 +10413,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 1.8585175934768239,
+    "indexLevel": 100
   },
   "Odubel Herrera": {
     "match": {
@@ -10153,8 +10445,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 1.1753470946889004,
+    "indexLevel": 100
   },
   "Omar Daal": {
     "match": {
@@ -10185,8 +10477,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 15.947990891060016,
+    "indexLevel": 100
   },
   "Omar Infante": {
     "match": {
@@ -10217,8 +10509,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 13.957246749430693,
+    "indexLevel": 100
   },
   "Omar Narvaez": {
     "match": {
@@ -10249,8 +10541,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 1.909939028869463,
+    "indexLevel": 100
   },
   "Omar Vizquel": {
     "match": {
@@ -10313,8 +10605,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 15.947990891060016,
+    "indexLevel": 100
   },
   "Orlando Arcia": {
     "match": {
@@ -10409,8 +10701,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 5.760250181024441,
+    "indexLevel": 100
   },
   "Oscar Hernandez": {
     "match": {
@@ -10473,8 +10765,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 10.110083848422203,
+    "indexLevel": 100
   },
   "Osleivis Basabe": {
     "match": {
@@ -10633,8 +10925,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 1.7472793863009097,
+    "indexLevel": 100
   },
   "Oswaldo Peraza": {
     "match": {
@@ -10825,8 +11117,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 2.3947697054286343,
+    "indexLevel": 100
   },
   "Pedro Castellano": {
     "match": {
@@ -10857,8 +11149,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 7.8344229780357,
+    "indexLevel": 100
   },
   "Pedro Hernandez": {
     "match": {
@@ -10889,8 +11181,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 2.9383677367222507,
+    "indexLevel": 100
   },
   "Pedro Pages": {
     "match": {
@@ -10985,8 +11277,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 9.07221038712995,
+    "indexLevel": 100
   },
   "Rafael Marchan": {
     "match": {
@@ -11017,8 +11309,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 4.277423891028533,
+    "indexLevel": 100
   },
   "Rafael Ortega": {
     "match": {
@@ -11049,8 +11341,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 1.909939028869463,
+    "indexLevel": 100
   },
   "Ramon Cabrera": {
     "match": {
@@ -11081,8 +11373,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 1.7850584000587673,
+    "indexLevel": 100
   },
   "Ramon Castro": {
     "match": {
@@ -11113,8 +11405,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 13.95724674943069,
+    "indexLevel": 100
   },
   "Ramon Flores": {
     "match": {
@@ -11145,8 +11437,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 2.5673988099610665,
+    "indexLevel": 100
   },
   "Ramon Garcia": {
     "match": {
@@ -11177,8 +11469,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 8.253140380518621,
+    "indexLevel": 100
   },
   "Ramon Hernandez": {
     "match": {
@@ -11305,8 +11597,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 12.23095570410637,
+    "indexLevel": 100
   },
   "Ray Monzant": {
     "match": {
@@ -11369,8 +11661,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 9.953720708146625,
+    "indexLevel": 100
   },
   "Renato Nunez": {
     "match": {
@@ -11433,8 +11725,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 2.020127818996548,
+    "indexLevel": 100
   },
   "Rene Reyes": {
     "match": {
@@ -11465,8 +11757,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 13.500167323718342,
+    "indexLevel": 100
   },
   "Renyel Pinto": {
     "match": {
@@ -11497,8 +11789,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 14.952618820245354,
+    "indexLevel": 100
   },
   "Ricardo Pinto": {
     "match": {
@@ -11529,8 +11821,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 7.764636744288547,
+    "indexLevel": 100
   },
   "Ricardo Rodriguez": {
     "match": {
@@ -11561,8 +11853,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 4.973187394402409,
+    "indexLevel": 100
   },
   "Ricardo Sanchez": {
     "match": {
@@ -11593,8 +11885,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 3.7553972101830766,
+    "indexLevel": 100
   },
   "Rich Garces": {
     "match": {
@@ -11625,8 +11917,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 1.101887901270844,
+    "indexLevel": 100
   },
   "Richard Hidalgo": {
     "match": {
@@ -11689,8 +11981,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 4.086363636363637,
+    "indexLevel": 100
   },
   "Robert Perez": {
     "match": {
@@ -11785,8 +12077,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 9.832513039006832,
+    "indexLevel": 100
   },
   "Roberto Rodriguez": {
     "match": {
@@ -11945,8 +12237,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 6.714170278410343,
+    "indexLevel": 100
   },
   "Ronald Herrera": {
     "match": {
@@ -12009,8 +12301,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 8.212737824138692,
+    "indexLevel": 100
   },
   "Ronny Cedeno": {
     "match": {
@@ -12041,8 +12333,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 13.957246749430691,
+    "indexLevel": 100
   },
   "Rosman Garcia": {
     "match": {
@@ -12073,8 +12365,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 7.962976566517299,
+    "indexLevel": 100
   },
   "Rougned Odor": {
     "match": {
@@ -12137,8 +12429,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 21.9275692352898,
+    "indexLevel": 100
   },
   "Salvador Perez": {
     "match": {
@@ -12233,8 +12525,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 2.9897891721148904,
+    "indexLevel": 100
   },
   "Sergio Escalona": {
     "match": {
@@ -12265,8 +12557,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 2.982443252773084,
+    "indexLevel": 100
   },
   "Simon Muzziotti": {
     "match": {
@@ -12329,8 +12621,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 7.4634540512745176,
+    "indexLevel": 100
   },
   "Thairo Estrada": {
     "match": {
@@ -12361,8 +12653,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 0.9402776757511203,
+    "indexLevel": 100
   },
   "Tomas Perez": {
     "match": {
@@ -12393,8 +12685,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 13.957246749430691,
+    "indexLevel": 100
   },
   "Tony Alvarez": {
     "match": {
@@ -12425,8 +12717,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 3.6341312400961265,
+    "indexLevel": 100
   },
   "Tony Armas": {
     "match": {
@@ -12457,8 +12749,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 1.49,
+    "indexLevel": 100
   },
   "Tony Castillo": {
     "match": {
@@ -12489,8 +12781,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 5.34048336149269,
+    "indexLevel": 100
   },
   "Tucupita Marcano": {
     "match": {
@@ -12553,8 +12845,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 3.481965768015867,
+    "indexLevel": 100
   },
   "Ugueth Urbina": {
     "match": {
@@ -12713,8 +13005,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 1.04,
+    "indexLevel": 100
   },
   "Victor Zambrano": {
     "match": {
@@ -12745,8 +13037,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 13.957246749430691,
+    "indexLevel": 100
   },
   "Wiki Gonzalez": {
     "match": {
@@ -12777,8 +13069,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 15.947990891060016,
+    "indexLevel": 100
   },
   "Wil Ledezma": {
     "match": {
@@ -12841,8 +13133,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 5.9722324248879755,
+    "indexLevel": 100
   },
   "Wilfredo Tovar": {
     "match": {
@@ -12873,8 +13165,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 2.960405494747668,
+    "indexLevel": 100
   },
   "William Bergolla": {
     "match": {
@@ -12969,8 +13261,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 5.472709909645193,
+    "indexLevel": 100
   },
   "Willians Astudillo": {
     "match": {
@@ -13033,8 +13325,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 0.99,
+    "indexLevel": 100
   },
   "Willie Martinez": {
     "match": {
@@ -13065,8 +13357,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 4.980533313744216,
+    "indexLevel": 100
   },
   "Willson Contreras": {
     "match": {
@@ -13097,8 +13389,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 3.099977962241975,
+    "indexLevel": 100
   },
   "Wilmer Flores": {
     "match": {
@@ -13161,8 +13453,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 3.478292808344964,
+    "indexLevel": 100
   },
   "Wilson Alvarez": {
     "match": {
@@ -13289,8 +13581,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 4.980533313744215,
+    "indexLevel": 100
   },
   "Yilber Diaz": {
     "match": {
@@ -13353,8 +13645,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 2.4829207375303017,
+    "indexLevel": 100
   },
   "Yoendrys Gomez": {
     "match": {
@@ -13417,8 +13709,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 13.949900830088886,
+    "indexLevel": 100
   },
   "Yohan Pino": {
     "match": {
@@ -13449,8 +13741,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 0.9990450304855654,
+    "indexLevel": 100
   },
   "Yohander Mendez": {
     "match": {
@@ -13481,8 +13773,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 6.717843238081246,
+    "indexLevel": 100
   },
   "Yohel Pozo": {
     "match": {
@@ -13577,8 +13869,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 3.495,
+    "indexLevel": 100
   },
   "Yonny Chirinos": {
     "match": {
@@ -13609,8 +13901,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 6.963931536031734,
+    "indexLevel": 100
   },
   "Yonny Hernandez": {
     "match": {
@@ -13705,8 +13997,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 11.951810769117754,
+    "indexLevel": 100
   },
   "Yorvit Torrealba": {
     "match": {
@@ -13737,8 +14029,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 14.952618820245354,
+    "indexLevel": 100
   },
   "Yusmeiro Petit": {
     "match": {
@@ -13769,8 +14061,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 12.315433776537134,
+    "indexLevel": 100
   },
   "Carl Herrera": {
     "match": {
@@ -13801,8 +14093,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 2.84654374494968,
+    "indexLevel": 100
   },
   "Greivis Vasquez": {
     "match": {
@@ -13897,8 +14189,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 2.982443252773084,
+    "indexLevel": 100
   },
   "Andres Borregales": {
     "match": {
@@ -13993,8 +14285,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 6.963931536031734,
+    "indexLevel": 100
   },
   "Yangel Herrera": {
     "match": {
@@ -14025,8 +14317,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 1.3332843605377214,
+    "indexLevel": 100
   },
   "Cristian Casseres Jr.": {
     "match": {
@@ -14089,8 +14381,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 2.9604054947476675,
+    "indexLevel": 100
   },
   "Alejandro Moreno": {
     "match": {
@@ -14249,8 +14541,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 20.42165577021964,
+    "indexLevel": 100
   },
   "Josef Martinez": {
     "match": {
@@ -14281,8 +14573,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 14.691838683611254,
+    "indexLevel": 100
   },
   "Junior Moreno": {
     "match": {
@@ -14313,8 +14605,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 3.3313744215088517,
+    "indexLevel": 100
   },
   "Kevin Kelsy": {
     "match": {
@@ -14473,8 +14765,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 4.400205685741571,
+    "indexLevel": 100
   },
   "Yeferson Soteldo": {
     "match": {
@@ -14505,8 +14797,8 @@
     "avgDaysOnMarket": null,
     "nListing": 0,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 33.034599280099904,
+    "indexLevel": 100
   },
   "Yordan Osorio": {
     "match": {
@@ -14571,5 +14863,37 @@
     "currency": "USD",
     "basePriceUSD": 110,
     "indexLevel": 100
+  },
+  "Carlos Guzman": {
+    "match": {
+      "mode": "player",
+      "value": "Carlos Guzman",
+      "validatedOn": "EBAY_CA"
+    },
+    "marketplaces": {
+      "EBAY_US": {
+        "aspectMode": "player",
+        "aspectValue": "Carlos Guzman",
+        "avgListing": 19.99,
+        "taguchiListing": 19.99,
+        "marketStabilityCV": null,
+        "avgDaysOnMarket": 669.3779963310185,
+        "nListing": 1,
+        "nDaysOnMarket": 1,
+        "currency": "USD",
+        "originalCurrency": "USD",
+        "fxRateUsed": 1
+      }
+    },
+    "avg": 19.99,
+    "n": 1,
+    "avgListing": 19.99,
+    "taguchiListing": 19.99,
+    "marketStabilityCV": null,
+    "avgDaysOnMarket": 669.3779963310185,
+    "nListing": 1,
+    "currency": "USD",
+    "basePriceUSD": 6.963931536031734,
+    "indexLevel": 287.0504957805907
   }
 }
