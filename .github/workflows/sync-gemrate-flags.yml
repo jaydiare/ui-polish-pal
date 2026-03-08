@@ -1,9 +1,8 @@
 name: Sync Gemrate Flags
 
 on:
-  workflow_run:
-    workflows: ["Gemrate Grading Sync"]
-    types: [completed]
+  schedule:
+    - cron: "0 14 * * 0" # Every Sunday at 14:00 UTC
   workflow_dispatch:
 
 jobs:
