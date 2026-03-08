@@ -101,6 +101,12 @@ export default function BlogDataTable() {
         gradedListedPrice: isGemrateEligible ? getEbayAvgNumber(a, gradedByName, gradedByKey) : null,
         gradedSoldPrice: isGemrateEligible && gradedSold != null && Number.isFinite(Number(gradedSold)) && Number(gradedSold) > 0 ? Number(gradedSold) : null,
         stabilityCV: getMarketStabilityCV(a, byName, byKey),
+        signalStrength: (() => {
+          const cv = getMarketStabilityCV(a, byName, byKey);
+          if (cv == null || cv < 0.01) return null;
+          const sn = 10 * Math.log10(1 / (cv * cv));
+          return Math.min(Math.round(sn * 100) / 100, 40);
+        })(),
         daysOnMarket: dom,
         indexLevel: rec?.indexLevel ?? null,
       };
@@ -152,6 +158,7 @@ export default function BlogDataTable() {
     { key: "gradedListedPrice", label: "PSA Listed", fmt: fmtPrice },
     { key: "gradedSoldPrice", label: "PSA Sold", fmt: fmtPrice },
     { key: "stabilityCV", label: "Stability (CV%)", fmt: fmtPct },
+    { key: "signalStrength", label: "Signal S/N", fmt: (v) => v == null ? "—" : v.toFixed(1) },
     { key: "daysOnMarket", label: "Days on Mkt", fmt: fmtDays },
     { key: "indexLevel", label: "Index", fmt: fmtIndex },
   ];
