@@ -243,16 +243,12 @@ export default function BlogDataTable() {
     { key: "indexLevel", label: "Index", fmt: fmtIndex },
     { key: "roi", label: "ROI", fmt: (v) => v == null ? "—" : v.toFixed(2), render: (_v, row) => {
       if (row.roi == null) return <span className="text-muted-foreground">—</span>;
-      const color = row.roiTier === "High" ? "text-green-400" : row.roiTier === "Medium" ? "text-vzla-yellow" : "text-red-400";
       return (
-        <span className="flex items-center gap-1.5">
-          <span className={color + " font-medium"}>{row.roi.toFixed(2)}</span>
-          <span className={`text-[10px] px-1.5 py-0.5 rounded-full font-semibold ${
-            row.roiTier === "High" ? "bg-green-400/15 text-green-400" :
-            row.roiTier === "Medium" ? "bg-vzla-yellow/15 text-vzla-yellow" :
-            "bg-red-400/15 text-red-400"
-          }`}>{row.roiTier}</span>
-        </span>
+        <span className={`text-[11px] px-2 py-0.5 rounded-full font-semibold ${
+          row.roiTier === "High" ? "bg-green-400/15 text-green-400" :
+          row.roiTier === "Medium" ? "bg-vzla-yellow/15 text-vzla-yellow" :
+          "bg-red-400/15 text-red-400"
+        }`}>{row.roiTier}</span>
       );
     }},
   ];
