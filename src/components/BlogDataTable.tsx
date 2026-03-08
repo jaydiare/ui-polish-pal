@@ -15,7 +15,7 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
-import { ArrowUp, ArrowDown, ArrowUpDown, Download } from "lucide-react";
+import { ArrowUp, ArrowDown, ArrowUpDown, Download, Filter } from "lucide-react";
 
 interface RowData {
   name: string;
