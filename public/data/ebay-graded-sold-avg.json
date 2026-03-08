@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-08T12:19:36.070Z",
+    "updatedAt": "2026-03-08T12:33:17.433Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA-only title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 160,
-      "endIdx": 170,
+      "startIdx": 170,
+      "endIdx": 180,
       "totalAthletes": 449
     },
     "maxPages": 4,
@@ -2407,8 +2407,8 @@
     "fxRateUsed": null
   },
   "Harvey Garcia": {
-    "keyword": "Harvey Garcia Baseball",
-    "nScraped": 0,
+    "keyword": "Harvey Garcia Baseball PSA",
+    "nScraped": 60,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -2419,8 +2419,8 @@
     "fxRateUsed": null
   },
   "Hector Gimenez": {
-    "keyword": "Hector Gimenez Baseball",
-    "nScraped": 0,
+    "keyword": "Hector Gimenez Baseball PSA",
+    "nScraped": 60,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -2431,19 +2431,19 @@
     "fxRateUsed": null
   },
   "Hector Rondon": {
-    "keyword": "Hector Rondon Baseball",
+    "keyword": "Hector Rondon Baseball PSA",
     "nScraped": 61,
-    "nSoldUsed": 0,
+    "nSoldUsed": 1,
     "avg": null,
     "taguchiSold": null,
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
   },
   "Hector Sanchez": {
-    "keyword": "Hector Sanchez Baseball",
+    "keyword": "Hector Sanchez Baseball PSA",
     "nScraped": 61,
     "nSoldUsed": 0,
     "avg": null,
@@ -2467,7 +2467,7 @@
     "fxRateUsed": null
   },
   "Henry Blanco": {
-    "keyword": "Henry Blanco Baseball",
+    "keyword": "Henry Blanco Baseball PSA",
     "nScraped": 60,
     "nSoldUsed": 0,
     "avg": null,
@@ -2479,8 +2479,8 @@
     "fxRateUsed": null
   },
   "Henry Rodriguez": {
-    "keyword": "Henry Rodriguez Baseball",
-    "nScraped": 180,
+    "keyword": "Henry Rodriguez Baseball PSA",
+    "nScraped": 240,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -2491,7 +2491,7 @@
     "fxRateUsed": null
   },
   "Hernan Iribarren": {
-    "keyword": "Hernan Iribarren Baseball",
+    "keyword": "Hernan Iribarren Baseball PSA",
     "nScraped": 17,
     "nSoldUsed": 0,
     "avg": null,
@@ -2503,7 +2503,7 @@
     "fxRateUsed": null
   },
   "Hernan Perez": {
-    "keyword": "Hernan Perez Baseball",
+    "keyword": "Hernan Perez Baseball PSA",
     "nScraped": 60,
     "nSoldUsed": 0,
     "avg": null,
@@ -2539,7 +2539,7 @@
     "fxRateUsed": null
   },
   "Humberto Quintero": {
-    "keyword": "Humberto Quintero Baseball",
+    "keyword": "Humberto Quintero Baseball PSA",
     "nScraped": 60,
     "nSoldUsed": 0,
     "avg": null,
@@ -2551,7 +2551,7 @@
     "fxRateUsed": null
   },
   "Ildemaro Vargas": {
-    "keyword": "Ildemaro Vargas Baseball",
+    "keyword": "Ildemaro Vargas Baseball PSA",
     "nScraped": 60,
     "nSoldUsed": 0,
     "avg": null,
