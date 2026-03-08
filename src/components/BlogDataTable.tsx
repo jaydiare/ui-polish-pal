@@ -109,11 +109,16 @@ export default function BlogDataTable() {
           const sn = 10 * Math.log10(1 / (cv * cv));
           return Math.min(Math.round(sn * 100) / 100, 40);
         })(),
+        psaPop: (() => {
+          const normName = a.name.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+          const pop = gemratePopMap[a.name] ?? gemratePopMap[normName] ?? null;
+          return pop != null && pop > 0 ? pop : null;
+        })(),
         daysOnMarket: dom,
         indexLevel: rec?.indexLevel ?? null,
       };
     });
-  }, [athletes, byName, byKey, gradedByName, gradedByKey, ebaySoldRaw, ebayGradedSoldRaw, athleteHistory]);
+  }, [athletes, byName, byKey, gradedByName, gradedByKey, ebaySoldRaw, ebayGradedSoldRaw, athleteHistory, gemratePopMap]);
 
   const sorted = useMemo(() => {
     const copy = [...rows];
