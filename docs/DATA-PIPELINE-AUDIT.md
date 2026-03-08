@@ -181,12 +181,14 @@ https://www.ebay.com/sch/i.html?
 
 ### 3.4 `graded-sold-update-ebay-avg.js` — Graded Sold Listings
 
-**Output:** `data/ebay-graded-sold-avg.json`
+**Output:** `data/ebay-graded-sold-avg.json`  
+**Progress:** `data/ebay-graded-sold-progress.json`  
+**Gemrate gated:** Yes — only processes athletes with `gemrate: "yes"` in `athletes.json`
 
 **Search URL construction:**
 ```
 https://www.ebay.com/sch/i.html?
-  _nkw={name} {sport} PSA        ← "PSA" keyword (not generic "graded")
+  _nkw={name} {sport} PSA        ← "PSA" keyword appended to search
   _sacat=261328
   LH_Sold=1
   LH_Complete=1
@@ -196,7 +198,7 @@ https://www.ebay.com/sch/i.html?
 **Filtering pipeline:**
 1. **URL-level:** "PSA" keyword in search + `League` aspect filter
 2. **Brand filter:** Removed — all brands accepted
-3. **Junk title filter:** Same as raw sold (includes "auto" and "signed" in junk list)
+3. **Junk title filter:** Same as raw sold
 4. **Name relevance:** All name parts must appear in title
 5. **PSA detection:** Skip if `isGradedTitle()` returns false (PSA-only regex — requires "PSA" + grade in title)
 6. **Price normalization:** Same as raw sold
