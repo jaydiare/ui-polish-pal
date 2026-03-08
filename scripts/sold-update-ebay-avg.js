@@ -57,7 +57,7 @@ const UNGRADED_BLOCKLIST = [
   "good", "gd", "creases", "crease", "wrinkle", "wrinkling",
   "corner wear", "surface wear", "paper loss", "stain", "stained",
   "water damage", "tape", "writing", "marked", "marked up",
-  "pin hole", "hole", "torn", "tear", "scratches", "scratch","licensed reprint", "reprint","Card Painting", "replica", "copy",
+  "pin hole", "hole", "torn", "tear", "scratches", "scratch","licensed reprint", "reprint","Card Painting", "replica", "copy","ERROR Card",
 ];
 
 // Junk title exclusion
