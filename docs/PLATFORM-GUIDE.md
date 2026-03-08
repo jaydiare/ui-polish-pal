@@ -163,6 +163,33 @@ Meaning: Cards are selling at or above list price in a volatile market — poten
 
 **Days-on-market fallback in signals:** The signal classifier uses the same DOM fallback chain as athlete cards — eBay API `avgDaysOnMarket` first, then snapshot-based `obsDays` from `athlete-history.json` when the API value is 0 or unavailable. This ensures "Fast Mover" and "Overpriced & Slow" classifications remain accurate even when the eBay Browse API omits listing creation dates.
 
+### 4.4 ROI Potential Score (Data Table)
+
+A composite metric shown in the Blog Data Table that estimates return-on-investment potential by combining pricing signal quality with supply scarcity:
+
+```
+ROI ≈ Signal S/N × (Raw Sold + PSA Sold)
+      ÷ (PSA Pop × Stability CV)
+```
+
+| Component | Source | Rationale |
+|-----------|--------|-----------|
+| **Signal S/N** | Taguchi S/N ratio (dB) | Higher = more predictable pricing → lower risk |
+| **Raw Sold** | `ebay-sold-avg.json` (taguchiSold or avg) | Actual market demand for ungraded cards |
+| **PSA Sold** | `ebay-graded-sold-avg.json` (taguchiSold or avg) | Actual market demand for graded cards |
+| **PSA Pop** | `gemrate.json` (PSA grades count) | Higher supply → lower scarcity premium |
+| **Stability CV** | Coefficient of Variation from listing data | Higher CV → more volatile / less predictable |
+
+**Tier classification:**
+
+| Tier | Threshold | Meaning |
+|------|-----------|---------|
+| 🟢 **High** | ROI ≥ 1.0 | Strong signal, high sold prices relative to supply — best candidates |
+| 🟡 **Medium** | 0.3 ≤ ROI < 1.0 | Moderate opportunity — worth monitoring |
+| 🔴 **Low** | ROI < 0.3 | Weak signal, high supply, or low sold prices |
+
+**Requirements:** ROI is only calculated when Signal S/N, PSA Pop, and Stability CV are all available and non-zero, and at least one sold price (Raw or PSA) is positive. Otherwise it displays "—".
+
 ---
 
 ## 5. Budget Optimizer (Knapsack Algorithm)
