@@ -192,13 +192,14 @@ export function runKnapsack(
       const priceCents = Math.round(c.price! * 100);
       const base = stabilityPoints(c.stabilityPct);
       const liq = liquidityMultiplier(c.daysOnMarket);
+      const snBonus = signalToNoiseMultiplier(c.signalToNoise ?? null);
       return {
         id: buildBudgetAthleteId(c.name, c.sport),
         name: c.name,
         priceCents,
         stabilityPct: c.stabilityPct,
         daysOnMarket: c.daysOnMarket,
-        valueScore: base * liq,
+        valueScore: base * liq * snBonus,
       };
     })
     .filter((x) => x.valueScore > 0 && x.priceCents <= budgetCents);
