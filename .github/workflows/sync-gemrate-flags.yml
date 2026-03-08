@@ -29,7 +29,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add data/athletes.json public/data/athletes.json
+          git add data/athletes.json public/data/athletes.json data/new-graded-athletes.json
           git diff --cached --quiet || git commit -m "🔄 Sync gemrate flags from grading data"
           git fetch origin main
           git rebase --autostash origin/main || (git rebase --abort && git pull --rebase origin main)
