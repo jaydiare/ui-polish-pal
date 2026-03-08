@@ -49,6 +49,7 @@ const FILTERABLE_COLS: { key: SortKey; label: string }[] = [
   { key: "signalStrength", label: "S/N" },
   { key: "daysOnMarket", label: "Days on Mkt" },
   { key: "indexLevel", label: "Index" },
+  { key: "roi", label: "ROI" },
 ];
 
 function fmtPrice(v: number | null) {
