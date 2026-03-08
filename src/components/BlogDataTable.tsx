@@ -26,6 +26,7 @@ interface RowData {
   gradedSoldPrice: number | null;
   stabilityCV: number | null;
   signalStrength: number | null;
+  psaPop: number | null;
   daysOnMarket: number | null;
   indexLevel: number | null;
 }
@@ -65,6 +66,7 @@ export default function BlogDataTable() {
     ebaySoldRaw,
     ebayGradedSoldRaw,
     athleteHistory,
+    gemratePopMap,
     lastUpdated,
   } = useAthleteData();
 
@@ -107,11 +109,16 @@ export default function BlogDataTable() {
           const sn = 10 * Math.log10(1 / (cv * cv));
           return Math.min(Math.round(sn * 100) / 100, 40);
         })(),
+        psaPop: (() => {
+          const normName = a.name.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+          const pop = gemratePopMap[a.name] ?? gemratePopMap[normName] ?? null;
+          return pop != null && pop > 0 ? pop : null;
+        })(),
         daysOnMarket: dom,
         indexLevel: rec?.indexLevel ?? null,
       };
     });
-  }, [athletes, byName, byKey, gradedByName, gradedByKey, ebaySoldRaw, ebayGradedSoldRaw, athleteHistory]);
+  }, [athletes, byName, byKey, gradedByName, gradedByKey, ebaySoldRaw, ebayGradedSoldRaw, athleteHistory, gemratePopMap]);
 
   const sorted = useMemo(() => {
     const copy = [...rows];
@@ -157,6 +164,7 @@ export default function BlogDataTable() {
     { key: "rawSoldPrice", label: "Raw Sold", fmt: fmtPrice },
     { key: "gradedListedPrice", label: "PSA Listed", fmt: fmtPrice },
     { key: "gradedSoldPrice", label: "PSA Sold", fmt: fmtPrice },
+    { key: "psaPop", label: "PSA Pop", fmt: (v) => v == null ? "—" : v.toLocaleString() },
     { key: "stabilityCV", label: "Stability (CV%)", fmt: fmtPct },
     { key: "signalStrength", label: "Signal S/N", fmt: (v) => v == null ? "—" : v.toFixed(1) },
     { key: "daysOnMarket", label: "Days on Mkt", fmt: fmtDays },
