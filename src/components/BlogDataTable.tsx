@@ -19,7 +19,7 @@ import { ArrowUp, ArrowDown, ArrowUpDown, Download } from "lucide-react";
 interface RowData {
   name: string;
   sport: string;
-  team: string;
+  
   rawListedPrice: number | null;
   rawSoldPrice: number | null;
   gradedListedPrice: number | null;
