@@ -1,4 +1,4 @@
-// scripts/sold-update-ebay-avg.js
+// scripts/graded-sold-update-ebay-avg.js
 // Node 20+ (uses global fetch)
 //
 // Scrapes eBay's PUBLIC sold listings search pages (LH_Sold=1&LH_Complete=1)
