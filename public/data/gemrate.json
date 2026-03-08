@@ -1,13 +1,13 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-08T08:39:16.028412+00:00",
-    "athleteCount": 450,
+    "updatedAt": "2026-03-08T10:33:54.220453+00:00",
+    "athleteCount": 451,
     "graders": [
       "PSA"
     ],
     "batchInfo": {
-      "startIdx": 560,
-      "endIdx": 568,
+      "startIdx": 0,
+      "endIdx": 20,
       "totalAthletes": 568
     }
   },
@@ -8110,6 +8110,24 @@
         "gems": 0,
         "grades": 4,
         "gemRate": 0.0
+      }
+    },
+    "Carlos Guzman": {
+      "name": "Carlos Guzman",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 2,
+          "gems": 1,
+          "grades": 2,
+          "gemRate": 50.0
+        }
+      },
+      "totals": {
+        "cards": 2,
+        "gems": 1,
+        "grades": 2,
+        "gemRate": 50.0
       }
     }
   }
