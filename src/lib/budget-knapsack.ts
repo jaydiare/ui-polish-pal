@@ -34,6 +34,19 @@ function liquidityMultiplier(days: number | null): number {
   return 0.75;
 }
 
+/**
+ * Signal-to-Noise bonus: non-restrictive multiplier that rewards predictable pricing.
+ * S/N = 10 * log10(mean² / variance) — higher = more predictable.
+ * Returns 1.0 (neutral) when data is unavailable so it never penalizes.
+ */
+function signalToNoiseMultiplier(sn: number | null): number {
+  if (sn == null || !Number.isFinite(sn)) return 1.0; // neutral — no penalty
+  // S/N typically ranges ~5–40 (capped at 40 in our analytics)
+  // Map to a gentle 1.0–1.25 bonus range
+  const clamped = Math.max(0, Math.min(sn, 40));
+  return 1.0 + (clamped / 40) * 0.25;
+}
+
 /** Standard 0/1 Knapsack: maximize valueScore under budget */
 function knapsackPick(items: KnapsackItem[], budgetCents: number): KnapsackItem[] {
   const dp = new Float64Array(budgetCents + 1);
