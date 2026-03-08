@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-08T18:55:05.966Z",
+    "updatedAt": "2026-03-08T19:38:10.497Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA-only title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 230,
-      "endIdx": 240,
+      "startIdx": 240,
+      "endIdx": 250,
       "totalAthletes": 450
     },
     "maxPages": 4,
@@ -3379,25 +3379,25 @@
     "fxRateUsed": null
   },
   "Juan Yepez": {
-    "keyword": "Juan Yepez Baseball",
-    "nScraped": 0,
-    "nSoldUsed": 0,
-    "avg": null,
-    "taguchiSold": null,
-    "medianSold": null,
-    "marketStabilityCV": null,
+    "keyword": "Juan Yepez Baseball PSA",
+    "nScraped": 262,
+    "nSoldUsed": 8,
+    "avg": 8.754999999999999,
+    "taguchiSold": 8.754999999999999,
+    "medianSold": 8.754999999999999,
+    "marketStabilityCV": 0.2753508169103447,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
   },
   "Julio Machado": {
-    "keyword": "Julio Machado Baseball",
-    "nScraped": 180,
-    "nSoldUsed": 3,
-    "avg": null,
-    "taguchiSold": null,
-    "medianSold": null,
-    "marketStabilityCV": null,
+    "keyword": "Julio Machado Baseball PSA",
+    "nScraped": 240,
+    "nSoldUsed": 4,
+    "avg": 64,
+    "taguchiSold": 64,
+    "medianSold": 64,
+    "marketStabilityCV": 0,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
@@ -3415,44 +3415,44 @@
     "fxRateUsed": null
   },
   "Junior Guerra": {
-    "keyword": "Junior Guerra Baseball",
-    "nScraped": 180,
-    "nSoldUsed": 3,
-    "avg": null,
-    "taguchiSold": null,
-    "medianSold": null,
-    "marketStabilityCV": null,
+    "keyword": "Junior Guerra Baseball PSA",
+    "nScraped": 240,
+    "nSoldUsed": 4,
+    "avg": 1,
+    "taguchiSold": 1,
+    "medianSold": 1,
+    "marketStabilityCV": 0,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
   },
   "Keibert Ruiz": {
-    "keyword": "Keibert Ruiz Baseball",
-    "nScraped": 186,
-    "nSoldUsed": 6,
-    "avg": 12.119999999999997,
-    "taguchiSold": 12.119999999999997,
-    "medianSold": 12.12,
-    "marketStabilityCV": 0.711316258674201,
+    "keyword": "Keibert Ruiz Baseball PSA",
+    "nScraped": 263,
+    "nSoldUsed": 24,
+    "avg": 12.75,
+    "taguchiSold": 12.75,
+    "medianSold": 12.75,
+    "marketStabilityCV": 0.4206208740219699,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
   },
   "Keider Montero": {
-    "keyword": "Keider Montero Baseball",
-    "nScraped": 209,
-    "nSoldUsed": 0,
-    "avg": null,
-    "taguchiSold": null,
-    "medianSold": null,
-    "marketStabilityCV": null,
+    "keyword": "Keider Montero Baseball PSA",
+    "nScraped": 262,
+    "nSoldUsed": 8,
+    "avg": 13.5,
+    "taguchiSold": 13.5,
+    "medianSold": 13.5,
+    "marketStabilityCV": 0.15837703224439964,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
   },
   "Kelvim Escobar": {
-    "keyword": "Kelvim Escobar Baseball",
-    "nScraped": 60,
+    "keyword": "Kelvim Escobar Baseball PSA",
+    "nScraped": 0,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -3463,8 +3463,8 @@
     "fxRateUsed": null
   },
   "Kenedy Corona": {
-    "keyword": "Kenedy Corona Baseball",
-    "nScraped": 180,
+    "keyword": "Kenedy Corona Baseball PSA",
+    "nScraped": 0,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -3487,8 +3487,8 @@
     "fxRateUsed": null
   },
   "Kervin Castro": {
-    "keyword": "Kervin Castro Baseball",
-    "nScraped": 120,
+    "keyword": "Kervin Castro Baseball PSA",
+    "nScraped": 0,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -3499,7 +3499,7 @@
     "fxRateUsed": null
   },
   "Lenyn Sosa": {
-    "keyword": "Lenyn Sosa Baseball",
+    "keyword": "Lenyn Sosa Baseball PSA",
     "nScraped": 0,
     "nSoldUsed": 0,
     "avg": null,
@@ -3511,7 +3511,7 @@
     "fxRateUsed": null
   },
   "Leo Hernandez": {
-    "keyword": "Leo Hernandez Baseball",
+    "keyword": "Leo Hernandez Baseball PSA",
     "nScraped": 0,
     "nSoldUsed": 0,
     "avg": null,
