@@ -87,14 +87,17 @@ export default function BlogDataTable() {
         if (last?.obsDays != null && last.obsDays > 0) dom = last.obsDays;
       }
 
+      // Gate graded data behind gemrate="yes"
+      const isGemrateEligible = a.gemrate?.toLowerCase() === "yes";
+
       return {
         name: a.name,
         sport: a.sport,
         team: a.team,
         rawListedPrice: getEbayAvgNumber(a, byName, byKey),
         rawSoldPrice: rawSold != null && Number.isFinite(Number(rawSold)) && Number(rawSold) > 0 ? Number(rawSold) : null,
-        gradedListedPrice: getEbayAvgNumber(a, gradedByName, gradedByKey),
-        gradedSoldPrice: gradedSold != null && Number.isFinite(Number(gradedSold)) && Number(gradedSold) > 0 ? Number(gradedSold) : null,
+        gradedListedPrice: isGemrateEligible ? getEbayAvgNumber(a, gradedByName, gradedByKey) : null,
+        gradedSoldPrice: isGemrateEligible && gradedSold != null && Number.isFinite(Number(gradedSold)) && Number(gradedSold) > 0 ? Number(gradedSold) : null,
         stabilityCV: getMarketStabilityCV(a, byName, byKey),
         daysOnMarket: dom,
         indexLevel: rec?.indexLevel ?? null,
@@ -144,8 +147,8 @@ export default function BlogDataTable() {
     { key: "team", label: "Team", fmt: (v) => v ?? "—" },
     { key: "rawListedPrice", label: "Raw Listed", fmt: fmtPrice },
     { key: "rawSoldPrice", label: "Raw Sold", fmt: fmtPrice },
-    { key: "gradedListedPrice", label: "Graded Listed", fmt: fmtPrice },
-    { key: "gradedSoldPrice", label: "Graded Sold", fmt: fmtPrice },
+    { key: "gradedListedPrice", label: "PSA Listed", fmt: fmtPrice },
+    { key: "gradedSoldPrice", label: "PSA Sold", fmt: fmtPrice },
     { key: "stabilityCV", label: "Stability (CV%)", fmt: fmtPct },
     { key: "daysOnMarket", label: "Days on Mkt", fmt: fmtDays },
     { key: "indexLevel", label: "Index", fmt: fmtIndex },
