@@ -158,7 +158,16 @@ export default function BlogDataTable() {
   };
 
   const columns: { key: SortKey; label: string; fmt: (v: any) => string; align?: string }[] = [
-    { key: "name", label: "Athlete", fmt: (v) => v ?? "—" },
+    { key: "name", label: "Athlete", fmt: (v: any, row?: RowData) => v ?? "—", render: (v: string, row: RowData) => (
+      <a
+        href={buildEbaySearchUrl(row.name, row.sport)}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="text-vzla-yellow hover:underline font-medium"
+      >
+        {row.name}
+      </a>
+    ) },
     { key: "sport", label: "Sport", fmt: (v) => v ?? "—" },
     
     { key: "rawListedPrice", label: "Raw Listed", fmt: fmtPrice },
