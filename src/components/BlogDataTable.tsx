@@ -14,7 +14,7 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
-import { ArrowUp, ArrowDown, ArrowUpDown } from "lucide-react";
+import { ArrowUp, ArrowDown, ArrowUpDown, Download } from "lucide-react";
 
 interface RowData {
   name: string;
@@ -155,6 +155,26 @@ export default function BlogDataTable() {
     { key: "indexLevel", label: "Index", fmt: fmtIndex },
   ];
 
+  const exportCsv = () => {
+    const header = columns.map((c) => c.label).join(",");
+    const rows = sorted.map((row) =>
+      columns.map((col) => {
+        const raw = (row as any)[col.key];
+        if (raw == null) return "";
+        if (typeof raw === "string") return `"${raw.replace(/"/g, '""')}"`;
+        return raw;
+      }).join(",")
+    );
+    const csv = [header, ...rows].join("\n");
+    const blob = new Blob([csv], { type: "text/csv;charset=utf-8;" });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = "vzla-athlete-market-data.csv";
+    a.click();
+    URL.revokeObjectURL(url);
+  };
+
   return (
     <div className="glass-panel rounded-xl overflow-hidden">
       <div
@@ -189,9 +209,17 @@ export default function BlogDataTable() {
           </TableBody>
         </Table>
       </div>
-      <div className="px-4 py-2 border-t border-border text-xs text-muted-foreground flex justify-between">
+      <div className="px-4 py-2 border-t border-border text-xs text-muted-foreground flex justify-between items-center">
         <span>{sorted.length} athletes · Scroll to see all · Click headers to sort</span>
-        <span>Last updated: {lastUpdated}</span>
+        <div className="flex items-center gap-3">
+          <span>Last updated: {lastUpdated}</span>
+          <button
+            onClick={exportCsv}
+            className="inline-flex items-center gap-1 px-2 py-1 rounded bg-vzla-yellow/10 text-vzla-yellow hover:bg-vzla-yellow/20 transition-colors font-medium"
+          >
+            <Download className="w-3 h-3" /> CSV
+          </button>
+        </div>
       </div>
     </div>
   );
