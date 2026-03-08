@@ -241,7 +241,7 @@ export default function BlogDataTable() {
     { key: "signalStrength", label: "Signal S/N", fmt: (v) => v == null ? "—" : v.toFixed(1) },
     { key: "daysOnMarket", label: "Days on Mkt", fmt: fmtDays },
     { key: "indexLevel", label: "Index", fmt: fmtIndex },
-    { key: "roi", label: "ROI Score", fmt: (v) => v == null ? "—" : v.toFixed(2), render: (_v, row) => {
+    { key: "roi", label: "ROI", fmt: (v) => v == null ? "—" : v.toFixed(2), render: (_v, row) => {
       if (row.roi == null) return <span className="text-muted-foreground">—</span>;
       const color = row.roiTier === "High" ? "text-green-400" : row.roiTier === "Medium" ? "text-vzla-yellow" : "text-red-400";
       return (
