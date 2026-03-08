@@ -1,13 +1,13 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-07T22:31:35.584420+00:00",
+    "updatedAt": "2026-03-08T02:45:21.220312+00:00",
     "athleteCount": 450,
     "graders": [
       "PSA"
     ],
     "batchInfo": {
-      "startIdx": 480,
-      "endIdx": 500,
+      "startIdx": 500,
+      "endIdx": 520,
       "totalAthletes": 568
     }
   },
@@ -7613,17 +7613,17 @@
       "sport": "Soccer",
       "graders": {
         "PSA": {
-          "cards": 23,
-          "gems": 17,
-          "grades": 63,
-          "gemRate": 27.0
+          "cards": 24,
+          "gems": 18,
+          "grades": 64,
+          "gemRate": 28.0
         }
       },
       "totals": {
-        "cards": 23,
-        "gems": 17,
-        "grades": 63,
-        "gemRate": 27.0
+        "cards": 24,
+        "gems": 18,
+        "grades": 64,
+        "gemRate": 28.0
       }
     },
     "Cristian Casseres Jr.": {
