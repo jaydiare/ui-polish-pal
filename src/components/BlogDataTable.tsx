@@ -72,6 +72,20 @@ function fmtIndex(v: number | null) {
   return v.toFixed(0);
 }
 
+function calcRoi(sn: number | null, rawSold: number | null, psaSold: number | null, psaPop: number | null, cv: number | null): number | null {
+  if (sn == null || cv == null || cv <= 0 || psaPop == null || psaPop <= 0) return null;
+  const soldSum = (rawSold ?? 0) + (psaSold ?? 0);
+  if (soldSum <= 0) return null;
+  return Math.round((sn * soldSum) / (psaPop * cv) * 100) / 100;
+}
+
+function roiTier(roi: number | null): string | null {
+  if (roi == null) return null;
+  if (roi >= 1) return "High";
+  if (roi >= 0.3) return "Medium";
+  return "Low";
+}
+
 export default function BlogDataTable() {
   const {
     athletes,
