@@ -26,6 +26,7 @@ interface RowData {
   gradedSoldPrice: number | null;
   stabilityCV: number | null;
   signalStrength: number | null;
+  psaPop: number | null;
   daysOnMarket: number | null;
   indexLevel: number | null;
 }
@@ -65,6 +66,7 @@ export default function BlogDataTable() {
     ebaySoldRaw,
     ebayGradedSoldRaw,
     athleteHistory,
+    gemratePopMap,
     lastUpdated,
   } = useAthleteData();
 
