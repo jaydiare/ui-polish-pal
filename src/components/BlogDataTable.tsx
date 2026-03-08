@@ -156,7 +156,15 @@ export default function BlogDataTable() {
         })(),
         daysOnMarket: dom,
         indexLevel: rec?.indexLevel ?? null,
+        roi: null as number | null,
+        roiTier: null as string | null,
       };
+
+      // Compute ROI after building the row
+      row.roi = calcRoi(row.signalStrength, row.rawSoldPrice, row.gradedSoldPrice, row.psaPop, row.stabilityCV);
+      row.roiTier = roiTier(row.roi);
+
+      return row;
     });
   }, [athletes, byName, byKey, gradedByName, gradedByKey, ebaySoldRaw, ebayGradedSoldRaw, athleteHistory, gemratePopMap]);
 
