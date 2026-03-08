@@ -324,6 +324,7 @@ export function useAthleteData() {
         return cv != null ? cv * 100 : null;
       })(),
       daysOnMarket: getAvgDaysOnMarket(a, useName, useKey),
+      signalToNoise: getSignalToNoise(a, useName, useKey),
     }));
 
     const result = runKnapsack(candidates, budgetDollars, maxCards);

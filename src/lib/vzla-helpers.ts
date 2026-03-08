@@ -94,6 +94,23 @@ export function getMarketStabilityCV(
   return Number.isFinite(n) && n >= 0 ? n : null;
 }
 
+/**
+ * Taguchi Signal-to-Noise ratio: 10 * log10(1 / CV²).
+ * Higher = more predictable pricing. Capped at 40, excludes CV < 0.01.
+ * Returns null when data is unavailable.
+ */
+export function getSignalToNoise(
+  athlete: Athlete,
+  byName: Record<string, EbayAvgRecord>,
+  byKey: Record<string, EbayAvgRecord>
+): number | null {
+  const cv = getMarketStabilityCV(athlete, byName, byKey);
+  if (cv == null || cv < 0.01) return null;
+  const sn = 10 * Math.log10(1 / (cv * cv));
+  if (!Number.isFinite(sn)) return null;
+  return Math.min(sn, 40);
+}
+
 export function getAvgDaysOnMarket(
   athlete: Athlete,
   byName: Record<string, EbayAvgRecord>,
