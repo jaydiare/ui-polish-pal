@@ -174,7 +174,7 @@ A **0/1 knapsack optimization** that recommends the best combination of athlete 
 1. User enters a **budget** (in USD) and optional **max card count**.
 2. Each athlete is scored using:
 
-   **Value Score = Stability Points × Liquidity Multiplier**
+   **Value Score = Stability Points × Liquidity Multiplier × S/N Bonus**
 
    **Stability Points** (from CV):
    | CV | Points |
@@ -192,6 +192,14 @@ A **0/1 knapsack optimization** that recommends the best combination of athlete 
    | ≤ 30 | 1.0× |
    | ≤ 60 | 0.9× |
    | > 60 | 0.75× |
+
+   **Signal-to-Noise Bonus** (from Taguchi S/N ratio):
+   | S/N Range | Multiplier | Effect |
+   |-----------|-----------|--------|
+   | Unavailable | 1.0× | Neutral — no penalty |
+   | 0–40 (linear) | 1.0×–1.25× | Gentle bonus for predictable pricing |
+
+   The S/N ratio is calculated as `10 × log₁₀(mean² / variance)` (capped at 40). This is a **non-restrictive** multiplier: athletes without S/N data receive 1.0× (no change), while athletes with highly predictable pricing receive up to a 25% boost. This ensures the optimizer favors stable, high-signal cards without excluding any candidates.
 
 3. The algorithm maximizes total value score within the budget constraint.
 4. Duplicate athletes (same name+sport) are de-duplicated, keeping the highest value score.
