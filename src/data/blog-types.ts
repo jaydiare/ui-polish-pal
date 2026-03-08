@@ -26,6 +26,6 @@ export interface BlogPost {
   coverImage: string;
   sections: BlogSection[];
   textSections?: BlogTextSection[];
-  type?: "ranked" | "roster";
+  type?: "ranked" | "roster" | "data-table";
   playerNames?: string[];
 }
