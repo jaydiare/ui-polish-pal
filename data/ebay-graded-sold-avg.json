@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-08T14:47:11.323Z",
+    "updatedAt": "2026-03-08T16:32:44.762Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA-only title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 190,
-      "endIdx": 200,
+      "startIdx": 200,
+      "endIdx": 210,
       "totalAthletes": 450
     },
     "maxPages": 4,
@@ -2827,7 +2827,7 @@
     "fxRateUsed": null
   },
   "Jhoulys Chacin": {
-    "keyword": "Jhoulys Chacin Baseball",
+    "keyword": "Jhoulys Chacin Baseball PSA",
     "nScraped": 60,
     "nSoldUsed": 0,
     "avg": null,
@@ -2839,31 +2839,31 @@
     "fxRateUsed": null
   },
   "Joe Ortiz": {
-    "keyword": "Joe Ortiz Baseball",
-    "nScraped": 183,
-    "nSoldUsed": 6,
+    "keyword": "Joe Ortiz Baseball PSA",
+    "nScraped": 240,
+    "nSoldUsed": 8,
     "avg": 42.75,
     "taguchiSold": 42.75,
     "medianSold": 42.75,
-    "marketStabilityCV": 0.7238906315565353,
+    "marketStabilityCV": 0.7064449201427826,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
   },
   "Johan Santana": {
-    "keyword": "Johan Santana Baseball",
-    "nScraped": 200,
-    "nSoldUsed": 33,
-    "avg": 72.26272727272725,
-    "taguchiSold": 72.26272727272725,
-    "medianSold": 69.99,
-    "marketStabilityCV": 0.2346993224942963,
+    "keyword": "Johan Santana Baseball PSA",
+    "nScraped": 270,
+    "nSoldUsed": 44,
+    "avg": 103.62636363636356,
+    "taguchiSold": 103.62636363636356,
+    "medianSold": 89.99,
+    "marketStabilityCV": 0.3284652652840226,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
   },
   "Johnny Paredes": {
-    "keyword": "Johnny Paredes Baseball",
+    "keyword": "Johnny Paredes Baseball PSA",
     "nScraped": 60,
     "nSoldUsed": 0,
     "avg": null,
@@ -2875,7 +2875,7 @@
     "fxRateUsed": null
   },
   "Jonathan Herrera": {
-    "keyword": "Jonathan Herrera Baseball",
+    "keyword": "Jonathan Herrera Baseball PSA",
     "nScraped": 60,
     "nSoldUsed": 0,
     "avg": null,
@@ -2887,32 +2887,32 @@
     "fxRateUsed": null
   },
   "Jorbit Vivas": {
-    "keyword": "Jorbit Vivas Baseball",
-    "nScraped": 0,
-    "nSoldUsed": 0,
-    "avg": null,
-    "taguchiSold": null,
-    "medianSold": null,
-    "marketStabilityCV": null,
+    "keyword": "Jorbit Vivas Baseball PSA",
+    "nScraped": 244,
+    "nSoldUsed": 36,
+    "avg": 20.299999999999994,
+    "taguchiSold": 20.299999999999994,
+    "medianSold": 20.5,
+    "marketStabilityCV": 0.2720404841859753,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
   },
   "Jorge Barrosa": {
-    "keyword": "Jorge Barrosa Baseball",
-    "nScraped": 0,
-    "nSoldUsed": 0,
-    "avg": null,
-    "taguchiSold": null,
-    "medianSold": null,
-    "marketStabilityCV": null,
+    "keyword": "Jorge Barrosa Baseball PSA",
+    "nScraped": 183,
+    "nSoldUsed": 9,
+    "avg": 20.49,
+    "taguchiSold": 20.49,
+    "medianSold": 20.49,
+    "marketStabilityCV": 0,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
   },
   "Jorge Julio": {
-    "keyword": "Jorge Julio Baseball",
-    "nScraped": 61,
+    "keyword": "Jorge Julio Baseball PSA",
+    "nScraped": 0,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -2935,8 +2935,8 @@
     "fxRateUsed": null
   },
   "Jorge Velandia": {
-    "keyword": "Jorge Velandia Baseball",
-    "nScraped": 60,
+    "keyword": "Jorge Velandia Baseball PSA",
+    "nScraped": 0,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -2947,16 +2947,16 @@
     "fxRateUsed": null
   },
   "Jose Altuve": {
-    "keyword": "Jose Altuve Baseball",
-    "nScraped": 180,
-    "nSoldUsed": 57,
-    "avg": 46.47087719298242,
-    "taguchiSold": 46.47087719298242,
-    "medianSold": 45.95,
-    "marketStabilityCV": 0.21668453762789705,
+    "keyword": "Jose Altuve Baseball PSA",
+    "nScraped": 0,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
   },
   "Jose Alvarado": {
     "keyword": "Jose Alvarado Baseball",
