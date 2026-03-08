@@ -166,7 +166,9 @@ export default function BlogDataTable() {
     if (hideEmptyFor.size === 0) return sorted;
     return sorted.filter((row) => {
       for (const key of hideEmptyFor) {
-        if (row[key] == null) return false;
+        const v = row[key];
+        if (v == null) return false;
+        if (key === "daysOnMarket" && v === 0) return false;
       }
       return true;
     });
