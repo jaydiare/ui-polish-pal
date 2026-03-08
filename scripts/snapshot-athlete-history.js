@@ -29,6 +29,7 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const DATA_DIR = join(__dirname, "..", "data");
 
 const HISTORY_FILE = join(DATA_DIR, "athlete-history.json");
+const FIRST_SEEN_FILE = join(DATA_DIR, "athlete-first-seen.json");
 const RAW_FILE = join(DATA_DIR, "ebay-avg.json");
 const GRADED_FILE = join(DATA_DIR, "ebay-graded-avg.json");
 const SOLD_FILE = join(DATA_DIR, "ebay-sold-avg.json");
