@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, lazy, Suspense } from "react";
 import { useParams, Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import SEOHead from "@/components/SEOHead";
@@ -11,6 +11,8 @@ import AthleteCard from "@/components/AthleteCard";
 import type { BlogPost as BlogPostType } from "@/data/blog-types";
 import { useAthleteData } from "@/hooks/useAthleteData";
 import type { Athlete } from "@/data/athletes";
+
+const BlogDataTable = lazy(() => import("@/components/BlogDataTable"));
 
 /** Auto-link URLs in text */
 function renderLinkedText(text: string) {
@@ -119,7 +121,11 @@ const BlogPost = () => {
           </div>
         )}
 
-        {post.type === "roster" && post.playerNames ? (
+        {post.type === "data-table" ? (
+          <Suspense fallback={<p className="text-muted-foreground text-center py-8">Loading table…</p>}>
+            <BlogDataTable />
+          </Suspense>
+        ) : post.type === "roster" && post.playerNames ? (
           <RosterSection playerNames={post.playerNames} excerpt={post.excerpt} />
         ) : (
           <div className="max-w-3xl">
