@@ -584,6 +584,26 @@ for (const [k, v] of Object.entries(prevRecords)) {
 
 **Status:** Cosmetic only. No functional impact.
 
+### 8.9 (March 8, 2026) Graded Sold Script Wrong Output Paths
+
+**Problem:** `graded-sold-update-ebay-avg.js` was writing to `data/ebay-sold-avg.json` and reading progress from `data/ebay-sold-progress.json` — the **raw sold** files — instead of its own `data/ebay-graded-sold-avg.json` and `data/ebay-graded-sold-progress.json`.
+
+**Impact:** The graded-sold script was overwriting raw sold data, and reading the raw sold progress tracker. Since raw sold progress was at index 450 (≥ 449 athletes), the graded-sold workflow would instantly log "All athletes processed. Resetting progress for next cycle." and do nothing on every run.
+
+**Fix:** Corrected `OUT_PATH` and `PROGRESS_PATH` to their correct graded-sold files.
+
+### 8.10 (March 8, 2026) Graded Sold Script Missing "PSA" Keyword in Search
+
+**Problem:** `graded-sold-update-ebay-avg.js` searched eBay with `{name} {sport}` as the keyword — identical to the raw sold script — without adding "PSA". This returned mostly raw/ungraded sold listings, which were then discarded by the post-fetch `isGradedTitle()` regex. Result: very low `nSoldUsed` counts and wasted scraping pages.
+
+**Fix:** Changed `buildKeyword()` to append `" PSA"` to the search keyword: `{name} {sport} PSA`. This focuses the search on PSA-graded sold listings, increasing valid sample sizes.
+
+### 8.11 (March 8, 2026) Graded Sold Script File Header Comment Wrong
+
+**Problem:** Line 1 of `graded-sold-update-ebay-avg.js` said `// scripts/sold-update-ebay-avg.js` — referencing the raw sold script name.
+
+**Fix:** Corrected to `// scripts/graded-sold-update-ebay-avg.js`.
+
 ---
 
 ## Appendix: Output File Schemas
