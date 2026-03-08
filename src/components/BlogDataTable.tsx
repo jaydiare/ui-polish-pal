@@ -134,37 +134,39 @@ export default function BlogDataTable() {
       // Gate graded data behind gemrate="yes"
       const isGemrateEligible = a.gemrate?.toLowerCase() === "yes";
 
+      const signalStrength = (() => {
+        const cv = getMarketStabilityCV(a, byName, byKey);
+        if (cv == null || cv < 0.01) return null;
+        const sn = 10 * Math.log10(1 / (cv * cv));
+        return Math.min(Math.round(sn * 100) / 100, 40);
+      })();
+
+      const psaPop = (() => {
+        const normName = a.name.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+        const pop = gemratePopMap[a.name] ?? gemratePopMap[normName] ?? null;
+        return pop != null && pop > 0 ? pop : null;
+      })();
+
+      const stabilityCV = getMarketStabilityCV(a, byName, byKey);
+      const rawSoldPrice = rawSold != null && Number.isFinite(Number(rawSold)) && Number(rawSold) > 0 ? Number(rawSold) : null;
+      const gradedSoldPrice = isGemrateEligible && gradedSold != null && Number.isFinite(Number(gradedSold)) && Number(gradedSold) > 0 ? Number(gradedSold) : null;
+      const roiVal = calcRoi(signalStrength, rawSoldPrice, gradedSoldPrice, psaPop, stabilityCV);
+
       return {
         name: a.name,
         sport: a.sport,
-        
         rawListedPrice: getEbayAvgNumber(a, byName, byKey),
-        rawSoldPrice: rawSold != null && Number.isFinite(Number(rawSold)) && Number(rawSold) > 0 ? Number(rawSold) : null,
+        rawSoldPrice,
         gradedListedPrice: isGemrateEligible ? getEbayAvgNumber(a, gradedByName, gradedByKey) : null,
-        gradedSoldPrice: isGemrateEligible && gradedSold != null && Number.isFinite(Number(gradedSold)) && Number(gradedSold) > 0 ? Number(gradedSold) : null,
-        stabilityCV: getMarketStabilityCV(a, byName, byKey),
-        signalStrength: (() => {
-          const cv = getMarketStabilityCV(a, byName, byKey);
-          if (cv == null || cv < 0.01) return null;
-          const sn = 10 * Math.log10(1 / (cv * cv));
-          return Math.min(Math.round(sn * 100) / 100, 40);
-        })(),
-        psaPop: (() => {
-          const normName = a.name.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
-          const pop = gemratePopMap[a.name] ?? gemratePopMap[normName] ?? null;
-          return pop != null && pop > 0 ? pop : null;
-        })(),
+        gradedSoldPrice,
+        stabilityCV,
+        signalStrength,
+        psaPop,
         daysOnMarket: dom,
         indexLevel: rec?.indexLevel ?? null,
-        roi: null as number | null,
-        roiTier: null as string | null,
+        roi: roiVal,
+        roiTier: roiTier(roiVal),
       };
-
-      // Compute ROI after building the row
-      row.roi = calcRoi(row.signalStrength, row.rawSoldPrice, row.gradedSoldPrice, row.psaPop, row.stabilityCV);
-      row.roiTier = roiTier(row.roi);
-
-      return row;
     });
   }, [athletes, byName, byKey, gradedByName, gradedByKey, ebaySoldRaw, ebayGradedSoldRaw, athleteHistory, gemratePopMap]);
 
