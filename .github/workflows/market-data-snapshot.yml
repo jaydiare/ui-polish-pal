@@ -1,0 +1,32 @@
+name: Weekly Market Data Snapshot
+
+on:
+  schedule:
+    - cron: "0 12 * * 0" # Every Sunday at 12:00 UTC
+  workflow_dispatch: # Allow manual trigger
+
+jobs:
+  snapshot:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Setup Node 20
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Run market data snapshot
+        run: node scripts/snapshot-market-data.js
+
+      - name: Commit & push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/vzla-athlete-market-data.json public/data/vzla-athlete-market-data.json
+          git diff --cached --quiet || git commit -m "📊 Weekly market data snapshot $(date -u +%Y-%m-%d)"
+          git push
