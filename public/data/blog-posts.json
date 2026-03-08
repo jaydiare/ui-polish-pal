@@ -276,5 +276,24 @@
       }
     ],
     "sections": []
+  },
+  {
+    "slug": "venezuelan-athlete-card-market-data",
+    "title": "Venezuelan Athlete Card Market Data",
+    "excerpt": "Full market dataset for 500+ Venezuelan athlete cards — raw & graded listing prices, sold prices, stability scores, days on market, and index levels. Sortable by any column.",
+    "date": "2026-03-08",
+    "author": "VZLA Sports Elite",
+    "coverImage": "",
+    "type": "data-table",
+    "textSections": [
+      {
+        "heading": "Complete Market Dataset",
+        "paragraphs": [
+          "This table contains the full dataset we track across 500+ Venezuelan athletes. It includes raw and graded listing averages, recent sold averages, market stability (CV%), average days on market, and the price index level. Click any column header to sort and scroll down to explore the entire roster.",
+          "Raw prices reflect ungraded Near Mint / Excellent condition cards. Graded prices cover PSA, BGS, and SGC authenticated cards. Stability CV% measures price consistency — lower is more stable. Days on Market shows average listing duration. The Index (base-100) tracks price movement over time."
+        ]
+      }
+    ],
+    "sections": []
   }
 ]

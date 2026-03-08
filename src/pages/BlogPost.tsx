@@ -119,7 +119,11 @@ const BlogPost = () => {
           </div>
         )}
 
-        {post.type === "roster" && post.playerNames ? (
+        {post.type === "data-table" ? (
+          <Suspense fallback={<p className="text-muted-foreground text-center py-8">Loading table…</p>}>
+            <BlogDataTable />
+          </Suspense>
+        ) : post.type === "roster" && post.playerNames ? (
           <RosterSection playerNames={post.playerNames} excerpt={post.excerpt} />
         ) : (
           <div className="max-w-3xl">
