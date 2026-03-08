@@ -227,7 +227,7 @@ export default function BlogDataTable() {
               <TableRow key={row.name + row.sport} className="text-xs">
                 {columns.map((col) => (
                   <TableCell key={col.key} className="whitespace-nowrap py-2 px-3">
-                    {col.fmt((row as any)[col.key])}
+                    {col.render ? col.render((row as any)[col.key], row) : col.fmt((row as any)[col.key])}
                   </TableCell>
                 ))}
               </TableRow>
