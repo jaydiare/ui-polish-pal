@@ -395,7 +395,18 @@ const Data = () => {
     for (const d of allComparison) {
       const rec = (signalMode === "graded" ? mergedGradedListed[d.name] : listedData[d.name]) as any;
       const cv: number | null = rec?.marketStabilityCV ?? rec?.marketplaces?.EBAY_US?.marketStabilityCV ?? null; // Market Stability Score
-      const days: number | null = rec?.avgDaysOnMarket ?? rec?.marketplaces?.EBAY_US?.avgDaysOnMarket ?? null;
+      const apiDays: number | null = rec?.avgDaysOnMarket ?? rec?.marketplaces?.EBAY_US?.avgDaysOnMarket ?? null;
+      // Fallback to snapshot-based observedDays when API days unavailable or zero
+      let days: number | null = apiDays != null && apiDays > 0 ? apiDays : null;
+      if (days == null) {
+        const hist = athleteHistory[d.name];
+        const key = signalMode === "graded" ? "graded" : "raw";
+        if (hist?.length) {
+          const last = hist[hist.length - 1];
+          const obsDays = last?.[key]?.obsDays;
+          if (obsDays != null && Number.isFinite(obsDays) && obsDays > 0) days = obsDays;
+        }
+      }
       const spreadPct = d.sold > 0 ? ((d.listed - d.sold) / d.sold) * 100 : 0;
 
       // Classic Taguchi S/N = 10 * log10(mean² / variance) = 10 * log10(1 / cv²)
@@ -427,7 +438,7 @@ const Data = () => {
     }
 
     return results;
-  }, [signalMode, rawComparison, gradedComparison, listedData, mergedGradedListed]);
+  }, [signalMode, rawComparison, gradedComparison, listedData, mergedGradedListed, athleteHistory]);
 
   const signalGroups = useMemo(() => {
     const groups: Record<SignalCategory, SignalAthlete[]> = {
