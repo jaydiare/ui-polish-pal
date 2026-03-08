@@ -1,14 +1,14 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-06T22:49:25.112Z",
-    "source": "eBay public sold listings — GRADED ONLY (HTML scrape, LH_Sold=1)",
-    "note": "GRADED sold comps only (PSA, BGS, SGC, etc.). Scraped in batches of 10. No brand filter. Junk titles removed. Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA.",
+    "updatedAt": "2026-03-08T12:10:41.937Z",
+    "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
+    "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA-only title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 140,
-      "endIdx": 150,
-      "totalAthletes": 568
+      "startIdx": 150,
+      "endIdx": 160,
+      "totalAthletes": 449
     },
-    "maxPages": 3,
+    "maxPages": 4,
     "minSampleSize": 4,
     "brands": "none (all brands accepted)",
     "categoryId": "261328",
@@ -22,9 +22,13 @@
       "sample": "winsorized",
       "trimPercent": 0.4
     },
+    "gradingFilter": {
+      "company": "PSA",
+      "grades": "1–10 including half grades"
+    },
     "fx": {
       "source": "CBSA Exchange Rates API",
-      "asOf": "2026-03-07T00:00:00.000Z"
+      "asOf": "2026-03-09T00:00:00.000Z"
     }
   },
   "Adbert Alzolay": {
@@ -2152,7 +2156,7 @@
   },
   "Gerardo Parra": {
     "keyword": "Gerardo Parra Baseball",
-    "nScraped": 61,
+    "nScraped": 166,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -2176,20 +2180,20 @@
   },
   "German Gonzalez": {
     "keyword": "German Gonzalez Baseball",
-    "nScraped": 180,
-    "nSoldUsed": 3,
-    "avg": null,
-    "taguchiSold": null,
-    "medianSold": null,
-    "marketStabilityCV": null,
+    "nScraped": 280,
+    "nSoldUsed": 4,
+    "avg": 137.74,
+    "taguchiSold": 137.74,
+    "medianSold": 137.74,
+    "marketStabilityCV": 0,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
   },
   "German Marquez": {
     "keyword": "German Marquez Baseball",
-    "nScraped": 189,
-    "nSoldUsed": 3,
+    "nScraped": 240,
+    "nSoldUsed": 1,
     "avg": null,
     "taguchiSold": null,
     "medianSold": null,
@@ -2200,7 +2204,7 @@
   },
   "Giomar Guevara": {
     "keyword": "Giomar Guevara Baseball",
-    "nScraped": 3,
+    "nScraped": 64,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -2212,7 +2216,7 @@
   },
   "Giovanni Carrara": {
     "keyword": "Giovanni Carrara Baseball",
-    "nScraped": 19,
+    "nScraped": 145,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -2224,19 +2228,19 @@
   },
   "Gleyber Torres": {
     "keyword": "Gleyber Torres Baseball",
-    "nScraped": 180,
-    "nSoldUsed": 70,
-    "avg": 11.376428571428576,
-    "taguchiSold": 11.376428571428576,
-    "medianSold": 10.25,
-    "marketStabilityCV": 0.12959767148924878,
+    "nScraped": 0,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
   },
   "Gonzalo Marquez": {
     "keyword": "Gonzalo Marquez Baseball",
-    "nScraped": 174,
+    "nScraped": 0,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -2248,7 +2252,7 @@
   },
   "Gorkys Hernandez": {
     "keyword": "Gorkys Hernandez Baseball",
-    "nScraped": 60,
+    "nScraped": 0,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -2260,7 +2264,7 @@
   },
   "Gregor Blanco": {
     "keyword": "Gregor Blanco Baseball",
-    "nScraped": 62,
+    "nScraped": 0,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -2272,7 +2276,7 @@
   },
   "Gregorio Petit": {
     "keyword": "Gregorio Petit Baseball",
-    "nScraped": 17,
+    "nScraped": 0,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
