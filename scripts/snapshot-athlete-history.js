@@ -7,10 +7,17 @@
 // Fields captured per athlete:
 //   - taguchiListing (raw price)
 //   - marketStabilityCV
-//   - avgDaysOnMarket
+//   - avgDaysOnMarket (from eBay API, if available)
+//   - observedDays (computed from firstSeen date — reliable fallback)
 //   - nListing
 //   - indexLevel
 //   - taguchiSold (from sold data)
+//
+// firstSeen tracking:
+//   When an athlete first appears with active listing data (nListing > 0),
+//   we record the date. On subsequent snapshots, observedDays = today - firstSeen.
+//   If listings disappear (nListing drops to 0), firstSeen is reset so the
+//   counter restarts when new listings appear.
 //
 // Keeps last 90 days of history to prevent unbounded file growth.
 
