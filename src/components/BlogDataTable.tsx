@@ -313,10 +313,12 @@ export default function BlogDataTable() {
         <Table>
           <TableHeader className="sticky top-0 z-10 bg-card">
             <TableRow>
-              {columns.map((col) => (
+              {columns.map((col, i) => (
                 <TableHead
                   key={col.key}
-                  className="cursor-pointer select-none whitespace-nowrap text-xs hover:text-vzla-yellow transition-colors"
+                  className={`cursor-pointer select-none whitespace-nowrap text-xs hover:text-vzla-yellow transition-colors ${
+                    i === 0 ? "sticky left-0 z-20 bg-card" : ""
+                  }`}
                   onClick={() => toggleSort(col.key)}
                 >
                   {col.label}
@@ -328,8 +330,10 @@ export default function BlogDataTable() {
           <TableBody>
             {filtered.map((row) => (
               <TableRow key={row.name + row.sport} className="text-xs">
-                {columns.map((col) => (
-                  <TableCell key={col.key} className="whitespace-nowrap py-2 px-3">
+                {columns.map((col, i) => (
+                  <TableCell key={col.key} className={`whitespace-nowrap py-2 px-3 ${
+                    i === 0 ? "sticky left-0 z-[5] bg-card" : ""
+                  }`}>
                     {col.render ? col.render((row as any)[col.key], row) : col.fmt((row as any)[col.key])}
                   </TableCell>
                 ))}
