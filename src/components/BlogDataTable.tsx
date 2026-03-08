@@ -30,6 +30,8 @@ interface RowData {
   psaPop: number | null;
   daysOnMarket: number | null;
   indexLevel: number | null;
+  roi: number | null;
+  roiTier: string | null;
 }
 
 type SortKey = keyof RowData;
