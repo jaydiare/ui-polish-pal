@@ -11,6 +11,7 @@ import {
   timeAgo,
   SortOption,
   sortAthletes,
+  getSignalToNoise,
 } from "@/lib/vzla-helpers";
 import { runKnapsack, BudgetCandidate, KnapsackResult } from "@/lib/budget-knapsack";
 
