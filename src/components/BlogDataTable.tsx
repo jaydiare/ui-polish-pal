@@ -157,8 +157,8 @@ export default function BlogDataTable() {
     );
   };
 
-  const columns: { key: SortKey; label: string; fmt: (v: any) => string; align?: string }[] = [
-    { key: "name", label: "Athlete", fmt: (v: any, row?: RowData) => v ?? "—", render: (v: string, row: RowData) => (
+  const columns: { key: SortKey; label: string; fmt: (v: any) => string; render?: (v: any, row: RowData) => React.ReactNode; align?: string }[] = [
+    { key: "name", label: "Athlete", fmt: (v) => v ?? "—", render: (_v, row) => (
       <a
         href={buildEbaySearchUrl(row.name, row.sport)}
         target="_blank"
