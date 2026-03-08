@@ -5,6 +5,7 @@ import {
   getMarketStabilityCV,
   getAvgDaysOnMarket,
   getEbayAvgFor,
+  buildEbaySearchUrl,
 } from "@/lib/vzla-helpers";
 import {
   Table,
@@ -156,8 +157,17 @@ export default function BlogDataTable() {
     );
   };
 
-  const columns: { key: SortKey; label: string; fmt: (v: any) => string; align?: string }[] = [
-    { key: "name", label: "Athlete", fmt: (v) => v ?? "—" },
+  const columns: { key: SortKey; label: string; fmt: (v: any) => string; render?: (v: any, row: RowData) => React.ReactNode; align?: string }[] = [
+    { key: "name", label: "Athlete", fmt: (v) => v ?? "—", render: (_v, row) => (
+      <a
+        href={buildEbaySearchUrl(row.name, row.sport)}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="text-vzla-yellow hover:underline font-medium"
+      >
+        {row.name}
+      </a>
+    ) },
     { key: "sport", label: "Sport", fmt: (v) => v ?? "—" },
     
     { key: "rawListedPrice", label: "Raw Listed", fmt: fmtPrice },
@@ -217,7 +227,7 @@ export default function BlogDataTable() {
               <TableRow key={row.name + row.sport} className="text-xs">
                 {columns.map((col) => (
                   <TableCell key={col.key} className="whitespace-nowrap py-2 px-3">
-                    {col.fmt((row as any)[col.key])}
+                    {col.render ? col.render((row as any)[col.key], row) : col.fmt((row as any)[col.key])}
                   </TableCell>
                 ))}
               </TableRow>
