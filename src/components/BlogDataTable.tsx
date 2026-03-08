@@ -239,7 +239,7 @@ export default function BlogDataTable() {
       {/* Filter bar */}
       <div className="px-4 py-2.5 border-b border-border flex items-center gap-2 flex-wrap">
         <span className="text-xs text-muted-foreground flex items-center gap-1 mr-1">
-          <Filter className="w-3 h-3" /> Hide "—":
+          <Filter className="w-3 h-3" /> Hide empty values:
         </span>
         {FILTERABLE_COLS.map((col) => {
           const active = hideEmptyFor.has(col.key);
