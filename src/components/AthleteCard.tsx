@@ -80,12 +80,16 @@ const AthleteCard = forwardRef<HTMLElement, AthleteCardProps>(({ athlete, byName
   const rawListingCv = avgNum != null ? getMarketStabilityCV(athlete, byName, byKey) : null;
   const rawCv = rawListingCv ?? rawSoldCv;
   const rawStability = marketStabilityScoreFromCV(rawCv);
-  const rawDom = avgNum != null ? getAvgDaysOnMarket(athlete, byName, byKey) : null;
+  const rawApiDom = avgNum != null ? getAvgDaysOnMarket(athlete, byName, byKey) : null;
+  const rawObsDays = latestHistoryEntry?.raw?.obsDays ?? null;
+  const rawDom = (rawApiDom != null && rawApiDom > 0) ? rawApiDom : rawObsDays;
 
   const gradedListingCv = gradedAvgNum != null ? getMarketStabilityCV(athlete, gradedByName, gradedByKey) : null;
   const gradedCvFinal = gradedListingCv ?? gradedSoldCv;
   const gradedStability = marketStabilityScoreFromCV(gradedCvFinal);
-  const gradedDom = gradedAvgNum != null ? getAvgDaysOnMarket(athlete, gradedByName, gradedByKey) : null;
+  const gradedApiDom = gradedAvgNum != null ? getAvgDaysOnMarket(athlete, gradedByName, gradedByKey) : null;
+  const gradedObsDays = latestHistoryEntry?.graded?.obsDays ?? null;
+  const gradedDom = (gradedApiDom != null && gradedApiDom > 0) ? gradedApiDom : gradedObsDays;
 
   const shopUrl = priceMode === "graded"
     ? buildEbayGradedSearchUrl(athlete.name, athlete.sport)
