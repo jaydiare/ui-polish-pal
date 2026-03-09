@@ -149,10 +149,10 @@ const CardTrackerPage = () => {
   const [data, setData] = useState<TrackerData | null>(null);
   const [scpData, setScpData] = useState<ScpHistoryData | null>(null);
   const [loading, setLoading] = useState(true);
-  const [range, setRange] = useState(30);
-  const [dataMode, setDataMode] = useState<DataMode>("listed");
-  const [cardMode, setCardMode] = useState<CardMode>("raw");
-  const [selectedGrade, setSelectedGrade] = useState("10");
+  const range = Infinity;
+  const dataMode: DataMode = "listed";
+  const cardMode: CardMode = "raw";
+  const selectedGrade = "10";
   const [scpRange, setScpRange] = useState(1825); // 5 years default
 
   const {
