@@ -355,16 +355,6 @@ const CardTrackerPage = () => {
           )}
         </div>
 
-        {/* Line Chart */}
-        <TrackerChart
-          acuna={acuna}
-          torres={torres}
-          range={range}
-          dataMode={dataMode}
-          cardMode={cardMode}
-          selectedGrade={selectedGrade}
-          filterSnapshots={filterSnapshots}
-        />
 
         {/* SportsCardsPro Long-Term History */}
         {scpData && (scpData["us250-acuna"] || scpData["us200-torres"]) && (
