@@ -1,0 +1,55 @@
+name: Card Tracker (daily snapshot)
+
+on:
+  schedule:
+    # Once daily at 14:00 UTC
+    - cron: "0 14 * * *"
+  workflow_dispatch: {}
+
+concurrency:
+  group: card-tracker
+  cancel-in-progress: true
+
+permissions:
+  contents: write
+
+jobs:
+  track:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install deps
+        if: hashFiles('package-lock.json') != ''
+        run: npm install --no-audit --no-fund
+
+      - name: Run card tracker
+        run: node scripts/card-tracker-update.js
+
+      - name: Commit & push (rebase-safe)
+        run: |
+          set -e
+
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          git add data/card-tracker.json public/data/card-tracker.json
+
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+            exit 0
+          fi
+
+          git commit -m "Card tracker daily snapshot"
+
+          git fetch origin main
+          git rebase --autostash origin/main || (git rebase --abort && git pull --rebase origin main)
+
+          git push origin HEAD:main
