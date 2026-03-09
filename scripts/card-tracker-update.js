@@ -235,7 +235,6 @@ function buildSearchURL(keyword, domain, page = 1, extraParams = {}) {
     _sacat: CATEGORY_ID,
     LH_BIN: "1",
     _ipg: "60",
-    _rss: "1",
     rt: "nc",
     ...extraParams,
   });
@@ -250,7 +249,6 @@ function buildSoldSearchURL(keyword, domain, page = 1, extraParams = {}) {
     LH_Complete: "1",
     LH_Sold: "1",
     _ipg: "60",
-    _rss: "1",
     rt: "nc",
     ...extraParams,
   });
