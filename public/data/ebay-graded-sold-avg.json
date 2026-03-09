@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-09T03:18:18.488Z",
+    "updatedAt": "2026-03-09T05:37:09.899Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA-only title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 340,
-      "endIdx": 350,
+      "startIdx": 350,
+      "endIdx": 360,
       "totalAthletes": 450
     },
     "maxPages": 4,
@@ -28,7 +28,7 @@
     },
     "fx": {
       "source": "CBSA Exchange Rates API",
-      "asOf": "2026-03-09T00:00:00.000Z"
+      "asOf": "2026-03-10T00:00:00.000Z"
     }
   },
   "Adbert Alzolay": {
@@ -4891,32 +4891,32 @@
     "fxRateUsed": null
   },
   "Rene Pinto": {
-    "keyword": "Rene Pinto Baseball",
+    "keyword": "Rene Pinto Baseball PSA",
     "nScraped": 60,
-    "nSoldUsed": 7,
-    "avg": 1.4642857142857142,
-    "taguchiSold": 1.4642857142857142,
-    "medianSold": 1.25,
-    "marketStabilityCV": 0.18251987252555812,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
   },
   "Rene Reyes": {
-    "keyword": "Rene Reyes Baseball",
+    "keyword": "Rene Reyes Baseball PSA",
     "nScraped": 60,
-    "nSoldUsed": 14,
-    "avg": 15.446428571428573,
-    "taguchiSold": 15.446428571428573,
-    "medianSold": 18.185,
-    "marketStabilityCV": 0.32320878067208464,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
   },
   "Renyel Pinto": {
-    "keyword": "Renyel Pinto Baseball",
-    "nScraped": 9,
+    "keyword": "Renyel Pinto Baseball PSA",
+    "nScraped": 10,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -4927,8 +4927,8 @@
     "fxRateUsed": null
   },
   "Ricardo Pinto": {
-    "keyword": "Ricardo Pinto Baseball",
-    "nScraped": 60,
+    "keyword": "Ricardo Pinto Baseball PSA",
+    "nScraped": 50,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -4939,8 +4939,8 @@
     "fxRateUsed": null
   },
   "Ricardo Rodriguez": {
-    "keyword": "Ricardo Rodriguez Baseball",
-    "nScraped": 0,
+    "keyword": "Ricardo Rodriguez Baseball PSA",
+    "nScraped": 60,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -4951,19 +4951,19 @@
     "fxRateUsed": null
   },
   "Ricardo Sanchez": {
-    "keyword": "Ricardo Sanchez Baseball",
-    "nScraped": 180,
-    "nSoldUsed": 5,
-    "avg": 8,
-    "taguchiSold": 8,
-    "medianSold": 8,
+    "keyword": "Ricardo Sanchez Baseball PSA",
+    "nScraped": 240,
+    "nSoldUsed": 4,
+    "avg": 4.95,
+    "taguchiSold": 4.95,
+    "medianSold": 4.95,
     "marketStabilityCV": 0,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
   },
   "Rich Garces": {
-    "keyword": "Rich Garces Baseball",
+    "keyword": "Rich Garces Baseball PSA",
     "nScraped": 60,
     "nSoldUsed": 0,
     "avg": null,
@@ -4975,40 +4975,40 @@
     "fxRateUsed": null
   },
   "Richard Hidalgo": {
-    "keyword": "Richard Hidalgo Baseball",
-    "nScraped": 180,
-    "nSoldUsed": 9,
-    "avg": 8.5,
-    "taguchiSold": 8.5,
-    "medianSold": 8.5,
-    "marketStabilityCV": 0,
+    "keyword": "Richard Hidalgo Baseball PSA",
+    "nScraped": 240,
+    "nSoldUsed": 8,
+    "avg": 4.86,
+    "taguchiSold": 4.86,
+    "medianSold": 4.86,
+    "marketStabilityCV": 0.6313084479742042,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
   },
   "Robert Machado": {
-    "keyword": "Robert Machado Baseball",
-    "nScraped": 183,
-    "nSoldUsed": 87,
-    "avg": 40.81551724137922,
-    "taguchiSold": 40.81551724137922,
-    "medianSold": 39.99,
-    "marketStabilityCV": 0.048760272198099155,
+    "keyword": "Robert Machado Brewers White Sox Baseball PSA",
+    "nScraped": 0,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
   },
   "Robert Perez": {
-    "keyword": "Robert Perez Baseball",
-    "nScraped": 201,
-    "nSoldUsed": 27,
-    "avg": 85.0037037037037,
-    "taguchiSold": 85.0037037037037,
-    "medianSold": 89.99,
-    "marketStabilityCV": 0.11298942763909717,
+    "keyword": "Robert Perez Baseball PSA",
+    "nScraped": 0,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
   },
   "Robert Suarez": {
     "keyword": "Robert Suarez Baseball",
