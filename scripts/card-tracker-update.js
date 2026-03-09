@@ -235,6 +235,7 @@ function buildSearchURL(keyword, domain, page = 1, extraParams = {}) {
     _sacat: CATEGORY_ID,
     LH_BIN: "1",
     _ipg: "60",
+    _rss: "1",
     rt: "nc",
     ...extraParams,
   });
@@ -249,6 +250,7 @@ function buildSoldSearchURL(keyword, domain, page = 1, extraParams = {}) {
     LH_Complete: "1",
     LH_Sold: "1",
     _ipg: "60",
+    _rss: "1",
     rt: "nc",
     ...extraParams,
   });
@@ -261,7 +263,7 @@ async function fetchPage(url) {
     const res = await fetch(url, {
       headers: {
         "User-Agent": randomUA(),
-        Accept: "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+        Accept: "application/rss+xml, application/xml, text/xml, text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
         "Accept-Language": "en-US,en;q=0.9",
         "Cache-Control": "no-cache",
         Referer: "https://www.ebay.com/",
@@ -321,21 +323,56 @@ function parseShippingText(text) {
   return match ? (safeNum(match[1]) || 0) : 0;
 }
 
+function parseRssListings(xml) {
+  const $ = cheerio.load(xml, { xmlMode: true });
+  const results = [];
+
+  $("item").each((_, el) => {
+    const $el = $(el);
+    const title = normSpaces($el.find("title").first().text());
+    if (!title || title === "Shop on eBay") return;
+
+    const desc = $el.find("description").first().text() || "";
+    const price = parsePriceText(desc) || parsePriceText($el.find("title").first().text());
+    const shippingCost = parseShippingText(desc);
+
+    if (price?.price != null) {
+      results.push({
+        title,
+        price: price.price,
+        currency: price.currency,
+        shippingCost,
+      });
+    }
+  });
+
+  return results;
+}
+
 function parseListings(html) {
+  if (/<rss[\s>]/i.test(html) || /<channel[\s>]/i.test(html)) {
+    const rssResults = parseRssListings(html);
+    if (rssResults.length) return rssResults;
+  }
+
   const $ = cheerio.load(html);
   const results = [];
-  $(".s-item").each((_, el) => {
+
+  $(".s-item, li.srp-results__item, .srp-river-results .s-item").each((_, el) => {
     const $el = $(el);
-    const title = normSpaces($el.find(".s-item__title, .s-item__title span").first().text());
+    const title = normSpaces($el.find(".s-item__title, .s-item__title span, [role='heading']").first().text());
     if (!title || title === "Shop on eBay") return;
+
     const priceText = $el.find(".s-item__price").first().text().trim();
     const parsed = parsePriceText(priceText);
     const shippingText = $el.find(".s-item__shipping, .s-item__freeXDays, .s-item__logisticsCost").first().text().trim();
     const shippingCost = parseShippingText(shippingText);
+
     if (parsed) {
       results.push({ title, price: parsed.price, currency: parsed.currency, shippingCost });
     }
   });
+
   return results;
 }
 
