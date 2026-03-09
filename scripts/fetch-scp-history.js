@@ -2,15 +2,17 @@
 // One-time script: Fetch 5-year historical price data from SportsCardsPro
 // for Acuña #US250 and Torres #US200 rookie cards.
 //
-// Uses the SportsCardsPro API (/api/product) for current prices, and scrapes
-// the product page HTML to extract Highcharts chart data for historical prices.
+// Uses the SportsCardsPro API (/api/product) for current prices, and
+// Puppeteer headless Chrome to render the product page and extract
+// Highcharts chart data for historical prices.
 //
-// Requires: SPORTSCARDSPRO secret (API token)
+// Requires: SPORTSCARDSPRO secret (API token), puppeteer installed
 // Output: data/scp-history.json, public/data/scp-history.json
 
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import puppeteer from "puppeteer";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -20,7 +22,7 @@ const PUBLIC_PATH = path.join(__dirname, "..", "public", "data", "scp-history.js
 
 const API_TOKEN = process.env.SPORTSCARDSPRO;
 if (!API_TOKEN) {
-  console.error("❌ SPORTSCARDSPRO secret not set. Set it as an environment variable.");
+  console.error("❌ SPORTSCARDSPRO secret not set.");
   process.exit(1);
 }
 
@@ -44,39 +46,18 @@ const CARDS = [
   },
 ];
 
-// Grade key mapping from SportsCardsPro API/chart fields
-// loose-price = Ungraded
-// cib-price = Grade 7 (or Grade 9 for sports cards)
-// new-price = Grade 8 (or PSA 10 for sports cards)
-// graded-price = Grade 9
-// box-only-price = Grade 9.5
-// manual-only-price = PSA 10
-const CONDITION_MAP = {
-  used: "ungraded",
-  loose: "ungraded",
-  cib: "grade_9",      // For sports cards, cib = Grade 9
-  new: "psa_10",        // For sports cards, new = PSA 10 (Grade 8 for other categories)
-  graded: "grade_9",
-  boxonly: "grade_9.5",
-  manualonly: "psa_10",
-};
-
-// More accurate mapping based on what we see on the page:
-// Ungraded, Grade 7, Grade 8, Grade 9, Grade 9.5, PSA 10
 const SCP_GRADE_MAP = {
   loose: { label: "Ungraded", grade: "ungraded" },
+  used: { label: "Ungraded", grade: "ungraded" },
   cib: { label: "Grade 9", grade: "9" },
-  new: { label: "Grade 8", grade: "8" },
+  new: { label: "PSA 10", grade: "10" },
   graded: { label: "Grade 9", grade: "9" },
   boxonly: { label: "Grade 9.5", grade: "9.5" },
   manualonly: { label: "PSA 10", grade: "10" },
-  // Additional keys from Highcharts series
-  "condition-17": { label: "CGC 10", grade: "cgc_10" },
-  "condition-18": { label: "SGC 10", grade: "sgc_10" },
-  bgs10: { label: "BGS 10", grade: "bgs_10" },
 };
 
-const UA = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36";
+const UA =
+  "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36";
 
 function sleep(ms) {
   return new Promise((r) => setTimeout(r, ms));
@@ -102,197 +83,136 @@ async function fetchCurrentPrices(productId) {
 }
 
 /**
- * Fetch the product page HTML and extract Highcharts chart data
+ * Use Puppeteer to render the product page and extract Highcharts series data.
+ * Highcharts stores rendered series data on window.Highcharts.charts[].
  */
-async function fetchChartData(slug) {
+async function fetchChartDataWithPuppeteer(browser, slug) {
   const url = `${BASE_URL}/${slug}`;
-  console.log(`  🌐 Fetching page: ${url}`);
-  const res = await fetch(url, {
-    headers: {
-      "User-Agent": UA,
-      Accept: "text/html,application/xhtml+xml",
-    },
-  });
-  if (!res.ok) {
-    console.error(`  ❌ Page fetch error: ${res.status}`);
-    return null;
-  }
-  const html = await res.text();
-  console.log(`  📄 HTML: ${html.length} chars`);
+  console.log(`  🌐 Puppeteer: Loading ${url}`);
 
-  // Extract chart data from inline scripts
-  // Highcharts data is typically embedded as JavaScript arrays in the page
-  // Look for patterns like: series: [{data: [[timestamp, price], ...]}]
-  // or variable assignments with price data arrays
+  const page = await browser.newPage();
+  await page.setUserAgent(UA);
+  await page.setViewport({ width: 1280, height: 900 });
 
-  const chartData = {};
-
-  // Pattern 1: Look for Highcharts series data
-  // The data is typically in format: [[timestamp_ms, price], [timestamp_ms, price], ...]
-  const seriesPatterns = [
-    // Match data arrays with timestamps
-    /data:\s*\[\s*\[\s*Date\.UTC\([^)]+\)\s*,\s*[\d.]+\s*\]/g,
-    // Match pre-computed arrays
-    /\[\s*(?:\[\s*\d{13}\s*,\s*[\d.]+\s*\]\s*,?\s*)+\]/g,
-  ];
-
-  // Pattern 2: Look for variable with "price" or "chart" data
-  // Common patterns in PriceCharting pages
-  const varPatterns = [
-    /var\s+(\w*(?:chart|price|data)\w*)\s*=\s*(\{[^;]*\}|\[[^;]*\]);/gi,
-    /var\s+(\w*history\w*)\s*=\s*(\{[^;]*\}|\[[^;]*\]);/gi,
-  ];
-
-  for (const pattern of varPatterns) {
-    let match;
-    while ((match = pattern.exec(html)) !== null) {
-      const varName = match[1];
-      console.log(`    Found variable: ${varName}`);
-      try {
-        // Try to parse as JSON (replace single quotes, handle JS-style)
-        let jsStr = match[2]
-          .replace(/'/g, '"')
-          .replace(/(\w+):/g, '"$1":')
-          .replace(/,\s*}/g, "}")
-          .replace(/,\s*\]/g, "]");
-        const parsed = JSON.parse(jsStr);
-        chartData[varName] = parsed;
-      } catch {
-        console.log(`    (Could not parse ${varName} as JSON)`);
-      }
-    }
-  }
-
-  // Pattern 3: Look for the specific Highcharts series configuration
-  // PriceCharting typically uses: {name: "Ungraded", data: [[ts, price], ...]}
-  const seriesBlockRegex = /series\s*:\s*\[([\s\S]*?)\]\s*(?:,|\})/g;
-  let seriesMatch = seriesBlockRegex.exec(html);
-  if (seriesMatch) {
-    console.log(`    Found Highcharts series block`);
-  }
-
-  // Pattern 4: Most reliable — look for the specific price data arrays
-  // PriceCharting embeds data as: chart_data["loose"] = [[ts, price], ...]
-  // or: vgpc.chart.data.loose = [[ts, price], ...]
-  const dataArrayRegex = /(?:chart_data|vgpc\.chart\.data|price_data)\s*(?:\[["'](\w+)["']\]|\.(\w+))\s*=\s*(\[\s*\[[\s\S]*?\]\s*\]);/g;
-  let dataMatch;
-  while ((dataMatch = dataArrayRegex.exec(html)) !== null) {
-    const key = dataMatch[1] || dataMatch[2];
-    console.log(`    Found data array: ${key}`);
-    try {
-      const arr = JSON.parse(dataMatch[3]);
-      chartData[key] = arr;
-    } catch {
-      console.log(`    (Could not parse ${key} array)`);
-    }
-  }
-
-  // Pattern 5: Look for inline JSON data in data attributes
-  const dataAttrRegex = /data-chart-data=["'](\{[^"']*\})["']/g;
-  let attrMatch;
-  while ((attrMatch = dataAttrRegex.exec(html)) !== null) {
-    console.log(`    Found data-chart-data attribute`);
-    try {
-      const parsed = JSON.parse(attrMatch[1]);
-      Object.assign(chartData, parsed);
-    } catch {
-      // ignore
-    }
-  }
-
-  // Pattern 6: Raw timestamp-price arrays anywhere in script tags
-  // Extract all script tag contents and look for arrays
-  const scriptRegex = /<script[^>]*>([\s\S]*?)<\/script>/gi;
-  let scriptMatch;
-  const allScripts = [];
-  while ((scriptMatch = scriptRegex.exec(html)) !== null) {
-    allScripts.push(scriptMatch[1]);
-  }
-
-  for (const script of allScripts) {
-    // Skip external scripts and analytics
-    if (script.length < 100 || script.includes("google-analytics") || script.includes("gtag")) continue;
-
-    // Look for Highcharts-style data definitions
-    // Pattern: {name: "Ungraded", ... data: [[1234567890000, 25.50], ...]}
-    const nameDataRegex = /name\s*:\s*["']([^"']+)["'][^}]*?data\s*:\s*(\[\s*\[[\s\S]*?\]\s*\])/g;
-    let ndMatch;
-    while ((ndMatch = nameDataRegex.exec(script)) !== null) {
-      const seriesName = ndMatch[1];
-      console.log(`    Found Highcharts series: "${seriesName}"`);
-      try {
-        const arr = JSON.parse(ndMatch[2]);
-        chartData[seriesName] = arr;
-      } catch {
-        // Try eval-safe approach for Date.UTC() calls
-        const dateUtcStr = ndMatch[2];
-        const converted = convertDateUtcArrays(dateUtcStr);
-        if (converted) {
-          chartData[seriesName] = converted;
-        } else {
-          console.log(`    (Could not parse "${seriesName}" data)`);
-        }
-      }
-    }
-
-    // Also look for: .setData([[ts, price], ...]) or addSeries({data: [...]})
-    const setDataRegex = /\.(?:setData|addPoint)\s*\(\s*(\[\s*\[[\s\S]*?\]\s*\])/g;
-    let sdMatch;
-    while ((sdMatch = setDataRegex.exec(script)) !== null) {
-      console.log(`    Found setData/addPoint call`);
-      try {
-        chartData["_setData"] = JSON.parse(sdMatch[1]);
-      } catch {
-        // ignore
-      }
-    }
-  }
-
-  // If no structured data found, try a broader extraction
-  if (Object.keys(chartData).length === 0) {
-    console.log(`    ⚠️  No structured chart data found, trying broader extraction...`);
-    
-    for (const script of allScripts) {
-      if (script.length < 200) continue;
-      
-      // Look for any large arrays of [number, number] pairs (timestamp, price)
-      const bigArrayRegex = /\[\s*\[\s*\d{10,13}\s*,\s*\d+(?:\.\d+)?\s*\](?:\s*,\s*\[\s*\d{10,13}\s*,\s*\d+(?:\.\d+)?\s*\]){5,}\s*\]/g;
-      let baMatch;
-      let idx = 0;
-      while ((baMatch = bigArrayRegex.exec(script)) !== null) {
-        console.log(`    Found large timestamp-price array (idx ${idx})`);
-        try {
-          chartData[`series_${idx}`] = JSON.parse(baMatch[0]);
-          idx++;
-        } catch {
-          // ignore
-        }
-      }
-    }
-  }
-
-  return chartData;
-}
-
-/**
- * Convert Date.UTC() calls to timestamps
- */
-function convertDateUtcArrays(str) {
   try {
-    // Replace Date.UTC(y,m,d) with actual timestamp
-    const converted = str.replace(/Date\.UTC\((\d+)\s*,\s*(\d+)\s*,\s*(\d+)\)/g, (_, y, m, d) => {
-      return String(Date.UTC(parseInt(y), parseInt(m), parseInt(d)));
+    // Navigate and wait for network to settle
+    await page.goto(url, { waitUntil: "networkidle2", timeout: 60000 });
+
+    // Wait a bit extra for Highcharts to fully render
+    await sleep(3000);
+
+    // Extract chart data from Highcharts global object
+    const chartData = await page.evaluate(() => {
+      const result = {};
+
+      // Method 1: Highcharts.charts array (most reliable)
+      if (window.Highcharts && window.Highcharts.charts) {
+        const charts = window.Highcharts.charts.filter(Boolean);
+        for (let ci = 0; ci < charts.length; ci++) {
+          const chart = charts[ci];
+          if (!chart.series) continue;
+          for (const series of chart.series) {
+            if (!series.data || series.data.length === 0) continue;
+            const name = series.name || series.options?.name || `series_${ci}`;
+            const points = series.data
+              .filter((p) => p && p.x != null && p.y != null)
+              .map((p) => [p.x, p.y]);
+            if (points.length > 0) {
+              result[name] = points;
+            }
+          }
+        }
+      }
+
+      // Method 2: Look for global chart data variables
+      for (const key of ["chart_data", "price_data", "vgpc"]) {
+        if (window[key]) {
+          try {
+            const obj = window[key];
+            if (typeof obj === "object") {
+              for (const [k, v] of Object.entries(obj)) {
+                if (Array.isArray(v) && v.length > 0 && Array.isArray(v[0])) {
+                  result[`${key}_${k}`] = v;
+                }
+              }
+            }
+          } catch {
+            // ignore
+          }
+        }
+      }
+
+      return result;
     });
-    return JSON.parse(converted);
-  } catch {
-    return null;
+
+    const seriesCount = Object.keys(chartData).length;
+    console.log(`  📊 Extracted ${seriesCount} chart series from Highcharts`);
+
+    if (seriesCount === 0) {
+      // Fallback: extract from inline scripts via page content
+      console.log(`  ⚠️  No Highcharts object found, trying inline script extraction...`);
+      const fallbackData = await page.evaluate(() => {
+        const scripts = document.querySelectorAll("script:not([src])");
+        const result = {};
+        for (const script of scripts) {
+          const text = script.textContent || "";
+          if (text.length < 200) continue;
+
+          // Look for data arrays with name/data pattern
+          const regex =
+            /name\s*:\s*["']([^"']+)["'][^}]*?data\s*:\s*(\[\s*\[[\s\S]*?\]\s*\])/g;
+          let m;
+          while ((m = regex.exec(text)) !== null) {
+            try {
+              result[m[1]] = JSON.parse(m[2]);
+            } catch {
+              // try converting Date.UTC
+              try {
+                const converted = m[2].replace(
+                  /Date\.UTC\((\d+)\s*,\s*(\d+)\s*,\s*(\d+)\)/g,
+                  (_, y, mo, d) =>
+                    String(Date.UTC(parseInt(y), parseInt(mo), parseInt(d)))
+                );
+                result[m[1]] = JSON.parse(converted);
+              } catch {
+                // skip
+              }
+            }
+          }
+
+          // Look for chart_data["key"] = [[ts, price], ...] pattern
+          const dataRegex =
+            /(?:chart_data|price_data)\s*\[["'](\w+)["']\]\s*=\s*(\[\s*\[[\s\S]*?\]\s*\]);/g;
+          let dm;
+          while ((dm = dataRegex.exec(text)) !== null) {
+            try {
+              result[dm[1]] = JSON.parse(dm[2]);
+            } catch {
+              // skip
+            }
+          }
+        }
+        return result;
+      });
+
+      const fbCount = Object.keys(fallbackData).length;
+      if (fbCount > 0) {
+        console.log(`  📊 Fallback extracted ${fbCount} series from inline scripts`);
+        Object.assign(chartData, fallbackData);
+      }
+    }
+
+    await page.close();
+    return chartData;
+  } catch (err) {
+    console.error(`  ❌ Puppeteer error: ${err.message}`);
+    await page.close();
+    return {};
   }
 }
 
 /**
  * Convert chart data timestamps to structured history
- * Input: [[timestamp_ms, price_in_cents_or_dollars], ...]
- * Output: [{date: "YYYY-MM-DD", price: dollars}, ...]
  */
 function normalizeChartSeries(rawData) {
   if (!Array.isArray(rawData) || rawData.length === 0) return [];
@@ -300,8 +220,7 @@ function normalizeChartSeries(rawData) {
   return rawData
     .filter((point) => Array.isArray(point) && point.length >= 2 && point[1] != null)
     .map(([ts, price]) => {
-      // SportsCardsPro prices in API are in cents; chart might be in dollars
-      // If all prices > 100 and we expect dollar values < $300, they're in cents
+      // SCP prices in API are in cents; chart might be in dollars or cents
       const priceValue = price > 10000 ? price / 100 : price;
       const date = new Date(ts);
       return {
@@ -312,23 +231,68 @@ function normalizeChartSeries(rawData) {
     .sort((a, b) => a.date.localeCompare(b.date));
 }
 
+/**
+ * Map a Highcharts series name to a grade key
+ */
+function mapSeriesName(name) {
+  const lower = name.toLowerCase().trim();
+
+  // Direct map from SCP keys
+  if (SCP_GRADE_MAP[lower]) return SCP_GRADE_MAP[lower];
+
+  // Name-based matching
+  if (lower.includes("ungraded") || lower.includes("raw") || lower === "loose")
+    return { label: "Ungraded", grade: "ungraded" };
+  if (lower.includes("psa 10") || lower.includes("gem mint"))
+    return { label: "PSA 10", grade: "10" };
+  if (lower.includes("bgs 10") || lower.includes("pristine"))
+    return { label: "BGS 10", grade: "bgs_10" };
+  if (lower.includes("sgc 10"))
+    return { label: "SGC 10", grade: "sgc_10" };
+  if (lower.includes("cgc 10"))
+    return { label: "CGC 10", grade: "cgc_10" };
+  if (lower.includes("9.5") || lower.includes("gem"))
+    return { label: "Grade 9.5", grade: "9.5" };
+  if (lower.includes("grade 9") || lower === "9" || lower.includes("mint"))
+    return { label: "Grade 9", grade: "9" };
+  if (lower.includes("grade 8") || lower === "8")
+    return { label: "Grade 8", grade: "8" };
+  if (lower.includes("grade 7") || lower === "7")
+    return { label: "Grade 7", grade: "7" };
+
+  return { label: name, grade: lower.replace(/\s+/g, "_") };
+}
+
 /* ── Main ── */
 async function main() {
-  console.log("🏷️  SportsCardsPro Historical Data Fetcher");
+  console.log("🏷️  SportsCardsPro Historical Data Fetcher (Puppeteer)");
   console.log("=".repeat(60));
+
+  // Launch browser once, reuse for both cards
+  console.log("🚀 Launching headless Chrome...");
+  const browser = await puppeteer.launch({
+    headless: "new",
+    args: [
+      "--no-sandbox",
+      "--disable-setuid-sandbox",
+      "--disable-dev-shm-usage",
+      "--disable-gpu",
+    ],
+  });
 
   const result = {
     _meta: {
-      description: "Historical price data from SportsCardsPro for 2018 Topps Update RC cards",
+      description:
+        "Historical price data from SportsCardsPro for 2018 Topps Update RC cards",
       source: "sportscardspro.com",
       fetchedAt: new Date().toISOString(),
       grades: {
         ungraded: "Ungraded / Raw card",
+        "7": "Grade 7",
+        "8": "Grade 8",
         "9": "PSA / BGS Grade 9",
         "9.5": "BGS Grade 9.5",
         "10": "PSA 10 (Gem Mint)",
-        "8": "Grade 8",
-        "7": "Grade 7",
       },
     },
   };
@@ -344,15 +308,12 @@ async function main() {
       console.log(`     Ungraded: $${(apiData["loose-price"] || 0) / 100}`);
       console.log(`     Grade 9:  $${(apiData["cib-price"] || 0) / 100}`);
       console.log(`     PSA 10:   $${(apiData["new-price"] || 0) / 100}`);
-      if (apiData["graded-price"]) console.log(`     Graded:   $${apiData["graded-price"] / 100}`);
-      if (apiData["box-only-price"]) console.log(`     Grade 9.5: $${apiData["box-only-price"] / 100}`);
-      if (apiData["manual-only-price"]) console.log(`     PSA 10 (manual): $${apiData["manual-only-price"] / 100}`);
     }
 
     await sleep(1500);
 
-    // 2. Fetch chart data from page
-    const chartData = await fetchChartData(card.slug);
+    // 2. Fetch chart data via Puppeteer
+    const chartData = await fetchChartDataWithPuppeteer(browser, card.slug);
 
     const cardResult = {
       name: card.name,
@@ -361,11 +322,8 @@ async function main() {
       currentPrices: apiData
         ? {
             ungraded: (apiData["loose-price"] || 0) / 100,
-            grade_7: (apiData["cib-price"] || 0) / 100,
-            grade_8: (apiData["new-price"] || 0) / 100,
-            grade_9: (apiData["graded-price"] || 0) / 100,
-            grade_9_5: (apiData["box-only-price"] || 0) / 100,
-            psa_10: (apiData["manual-only-price"] || 0) / 100,
+            grade_9: (apiData["cib-price"] || 0) / 100,
+            psa_10: (apiData["new-price"] || 0) / 100,
           }
         : null,
       history: {},
@@ -378,8 +336,7 @@ async function main() {
         if (!Array.isArray(data)) continue;
         const normalized = normalizeChartSeries(data);
         if (normalized.length > 0) {
-          // Map the key to a grade label
-          const gradeInfo = SCP_GRADE_MAP[key.toLowerCase()] || { label: key, grade: key.toLowerCase() };
+          const gradeInfo = mapSeriesName(key);
           cardResult.history[gradeInfo.grade] = {
             label: gradeInfo.label,
             dataPoints: normalized.length,
@@ -387,20 +344,24 @@ async function main() {
             lastDate: normalized[normalized.length - 1].date,
             data: normalized,
           };
-          console.log(`  📊 ${gradeInfo.label}: ${normalized.length} data points (${normalized[0].date} → ${normalized[normalized.length - 1].date})`);
+          console.log(
+            `  📊 ${gradeInfo.label}: ${normalized.length} data points (${normalized[0].date} → ${normalized[normalized.length - 1].date})`
+          );
         }
       }
     }
 
     if (Object.keys(cardResult.history).length === 0) {
-      console.log(`  ⚠️  No historical chart data extracted from page.`);
-      console.log(`  ℹ️  Chart data keys found: ${cardResult.rawChartKeys.join(", ") || "none"}`);
-      console.log(`  ℹ️  The chart may use dynamic loading. Try running with a headless browser.`);
+      console.log(`  ⚠️  No historical chart data extracted.`);
+      console.log(`  ℹ️  Chart keys found: ${cardResult.rawChartKeys.join(", ") || "none"}`);
     }
 
     result[card.key] = cardResult;
     await sleep(2000);
   }
+
+  await browser.close();
+  console.log("🛑 Browser closed.");
 
   // Save results
   fs.mkdirSync(path.dirname(DATA_PATH), { recursive: true });

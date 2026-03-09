@@ -18,6 +18,9 @@ jobs:
         with:
           node-version: "20"
 
+      - name: Install Puppeteer
+        run: npm install puppeteer@latest
+
       - name: Run SCP history fetch
         env:
           SPORTSCARDSPRO: ${{ secrets.SPORTSCARDSPRO }}
