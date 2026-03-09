@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-09T18:00:30.723Z",
+    "updatedAt": "2026-03-09T19:13:28.263Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA-only title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 430,
-      "endIdx": 440,
+      "startIdx": 440,
+      "endIdx": 450,
       "totalAthletes": 450
     },
     "maxPages": 4,
@@ -6523,19 +6523,19 @@
     "fxRateUsed": null
   },
   "Josef Martinez": {
-    "keyword": "Josef Martinez Soccer",
-    "nScraped": 180,
-    "nSoldUsed": 18,
-    "avg": 3.495000000000001,
-    "taguchiSold": 3.495000000000001,
-    "medianSold": 3.495,
-    "marketStabilityCV": 0.1457369950996427,
+    "keyword": "Josef Martinez Soccer PSA",
+    "nScraped": 60,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
   },
   "Junior Moreno": {
-    "keyword": "Junior Moreno Soccer",
+    "keyword": "Junior Moreno Soccer PSA",
     "nScraped": 60,
     "nSoldUsed": 0,
     "avg": null,
@@ -6547,16 +6547,16 @@
     "fxRateUsed": null
   },
   "Kevin Kelsy": {
-    "keyword": "Kevin Kelsy Soccer",
-    "nScraped": 180,
-    "nSoldUsed": 33,
-    "avg": 3.5409090909090906,
-    "taguchiSold": 3.5409090909090906,
-    "medianSold": 4,
-    "marketStabilityCV": 0.4136363666818926,
+    "keyword": "Kevin Kelsy Soccer PSA",
+    "nScraped": 240,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
   },
   "Luis Gonzalez": {
     "keyword": "Luis Gonzalez Soccer",
@@ -6607,16 +6607,16 @@
     "fxRateUsed": null
   },
   "Rafael Romo": {
-    "keyword": "Rafael Romo Soccer",
-    "nScraped": 180,
-    "nSoldUsed": 0,
-    "avg": null,
-    "taguchiSold": null,
-    "medianSold": null,
-    "marketStabilityCV": null,
+    "keyword": "Rafael Romo Soccer PSA",
+    "nScraped": 240,
+    "nSoldUsed": 4,
+    "avg": 95,
+    "taguchiSold": 95,
+    "medianSold": 95,
+    "marketStabilityCV": 0,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
   },
   "Renzo Zambrano": {
     "keyword": "Renzo Zambrano Soccer",
@@ -6703,28 +6703,28 @@
     "fxRateUsed": null
   },
   "Telasco Segovia": {
-    "keyword": "Telasco Segovia Soccer",
-    "nScraped": 183,
-    "nSoldUsed": 27,
-    "avg": 11.105555555555554,
-    "taguchiSold": 11.105555555555554,
-    "medianSold": 9.99,
-    "marketStabilityCV": 0.3698853098963963,
-    "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
-  },
-  "Wikelman Carmona": {
-    "keyword": "Wikelman Carmona Soccer",
-    "nScraped": 52,
-    "nSoldUsed": 2,
+    "keyword": "Telasco Segovia Soccer PSA",
+    "nScraped": 240,
+    "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
+  },
+  "Wikelman Carmona": {
+    "keyword": "Wikelman Carmona Soccer PSA",
+    "nScraped": 53,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
+    "currency": "USD",
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
   },
   "Deyna Castellanos": {
     "keyword": "Deyna Castellanos Soccer",
@@ -6739,16 +6739,16 @@
     "fxRateUsed": null
   },
   "Alejandro Marques": {
-    "keyword": "Alejandro Marques Soccer",
-    "nScraped": 183,
-    "nSoldUsed": 3,
+    "keyword": "Alejandro Marques Soccer PSA",
+    "nScraped": 244,
+    "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
   },
   "Luis Balbo": {
     "keyword": "Luis Balbo Soccer",
@@ -6787,8 +6787,8 @@
     "fxRateUsed": null
   },
   "Yeferson Soteldo": {
-    "keyword": "Yeferson Soteldo Soccer",
-    "nScraped": 16,
+    "keyword": "Yeferson Soteldo Soccer PSA",
+    "nScraped": 0,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -6799,16 +6799,16 @@
     "fxRateUsed": null
   },
   "Yordan Osorio": {
-    "keyword": "Yordan Osorio Soccer",
-    "nScraped": 63,
-    "nSoldUsed": 12,
-    "avg": 39.12,
-    "taguchiSold": 39.12,
-    "medianSold": 39.12,
-    "marketStabilityCV": 0.9576940980262089,
+    "keyword": "Yordan Osorio Soccer PSA",
+    "nScraped": 0,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
   },
   "Nahuel Ferraresi": {
     "keyword": "Nahuel Ferraresi Soccer",
@@ -6835,16 +6835,16 @@
     "fxRateUsed": null
   },
   "Garbine Muguruza": {
-    "keyword": "Garbine Muguruza Tennis",
-    "nScraped": 180,
-    "nSoldUsed": 9,
-    "avg": 14.599999999999998,
-    "taguchiSold": 14.599999999999998,
-    "medianSold": 14.6,
-    "marketStabilityCV": 1.290486952342829e-16,
+    "keyword": "Garbine Muguruza Tennis PSA",
+    "nScraped": 0,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
   },
   "David Concepcion": {
     "keyword": "David Concepcion Baseball",
