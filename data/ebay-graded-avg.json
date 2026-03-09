@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-09T08:50:26.666Z",
+    "updatedAt": "2026-03-09T17:44:18.656Z",
     "minSampleSize": 4,
     "marketplaces": [
       "EBAY_US"
@@ -517,7 +517,8 @@
       "Alejandro Marques": 4.400205685741571,
       "Yeferson Soteldo": 33.034599280099904,
       "Johan Santana": 119.99,
-      "William Contreras": 99.99
+      "William Contreras": 99.99,
+      "Alejandro Moreno": 13.957246749430691
     },
     "indexHistory": [
       {
@@ -562,10 +563,8 @@
       },
       {
         "date": "2026-03-09",
-        "Baseball": 138.7,
-        "Soccer": 100,
-        "Basketball": 100,
-        "All": 137
+        "Baseball": 100,
+        "All": 100
       }
     ]
   },
