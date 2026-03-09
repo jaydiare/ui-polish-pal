@@ -261,10 +261,14 @@ async function fetchPage(url) {
     const res = await fetch(url, {
       headers: {
         "User-Agent": randomUA(),
-        Accept: "application/rss+xml, application/xml, text/xml, text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+        "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
         "Accept-Language": "en-US,en;q=0.9",
+        "Accept-Encoding": "gzip, deflate",
         "Cache-Control": "no-cache",
-        Referer: "https://www.ebay.com/",
+        "Referer": "https://www.ebay.com/",
+        "Sec-Fetch-Dest": "document",
+        "Sec-Fetch-Mode": "navigate",
+        "Sec-Fetch-Site": "same-origin",
       },
       redirect: "follow",
     });
@@ -288,81 +292,70 @@ async function fetchPage(url) {
   throw new Error("Max retries exceeded");
 }
 
-function parsePriceText(text) {
-  if (!text) return null;
-  const t = text.replace(/,/g, "").trim();
-  const rangeMatch = t.match(/(?:(?:C|US|AU|CA)?\s*\$|(?:GBP|EUR|£|€)\s*)?([\d.]+)\s+to\s+(?:(?:C|US|AU|CA)?\s*\$|(?:GBP|EUR|£|€)\s*)?([\d.]+)/i);
-  if (rangeMatch) {
-    const low = safeNum(rangeMatch[1]);
-    const high = safeNum(rangeMatch[2]);
-    if (low != null && high != null) return { price: (low + high) / 2, currency: detectCurrency(t) };
-  }
-  const priceMatch = t.match(/([\d.]+)/);
-  if (!priceMatch) return null;
-  const price = safeNum(priceMatch[1]);
-  if (price == null) return null;
-  return { price, currency: detectCurrency(t) };
-}
-
-function detectCurrency(text) {
-  const t = text.toUpperCase();
-  if (t.includes("C $") || t.includes("CA $") || t.includes("CAD")) return "CAD";
-  if (t.includes("£") || t.includes("GBP")) return "GBP";
-  if (t.includes("€") || t.includes("EUR")) return "EUR";
-  if (t.includes("AU $") || t.includes("AUD")) return "AUD";
-  return "USD";
-}
-
-function parseShippingText(text) {
-  if (!text) return 0;
-  const t = norm(text);
-  if (t.includes("free")) return 0;
-  const match = text.replace(/,/g, "").match(/([\d.]+)/);
-  return match ? (safeNum(match[1]) || 0) : 0;
-}
-
-function parseRssListings(xml) {
-  const $ = cheerio.load(xml, { xmlMode: true });
+// Extract items from embedded JSON in <script> tags (SSR hydration data)
+function parseItemsFromScriptTags(html, isSold) {
   const results = [];
+  const priceKey = isSold ? "soldPrice" : "price";
 
-  $("item").each((_, el) => {
-    const $el = $(el);
-    const title = normSpaces($el.find("title").first().text());
-    if (!title || title === "Shop on eBay") return;
+  const scriptMatches = html.match(/<script[^>]*>([^<]*"(?:soldPrice|price)"[^<]*)<\/script>/gi) || [];
+  for (const scriptBlock of scriptMatches) {
+    try {
+      let jsonStr = scriptBlock;
+      let prev;
+      do { prev = jsonStr; jsonStr = jsonStr.replace(/<\/?script[^>]*>/gi, ""); } while (jsonStr !== prev);
+      jsonStr = jsonStr.trim();
+      const data = JSON.parse(jsonStr);
+      results.push(...extractItemsFromJSON(data));
+    } catch { /* skip */ }
+  }
 
-    const desc = $el.find("description").first().text() || "";
-    const price = parsePriceText(desc) || parsePriceText($el.find("title").first().text());
-    const shippingCost = parseShippingText(desc);
-
-    if (price?.price != null) {
-      results.push({
-        title,
-        price: price.price,
-        currency: price.currency,
-        shippingCost,
-      });
-    }
-  });
+  const nextDataMatch = html.match(/<script[^>]*id="__NEXT_DATA__"[^>]*>([^<]+)<\/script>/i);
+  if (nextDataMatch) {
+    try { results.push(...extractItemsFromJSON(JSON.parse(nextDataMatch[1]))); } catch { /* skip */ }
+  }
 
   return results;
 }
 
-function parseListings(html) {
-  if (/<rss[\s>]/i.test(html) || /<channel[\s>]/i.test(html)) {
-    const rssResults = parseRssListings(html);
-    if (rssResults.length) return rssResults;
+function extractItemsFromJSON(obj, depth = 0) {
+  if (depth > 8 || !obj || typeof obj !== "object") return [];
+  const results = [];
+
+  if (obj.title && (obj.price || obj.soldPrice || obj.sellingStatus)) {
+    const price = safeNum(obj.soldPrice?.value || obj.price?.value || obj.soldPrice || obj.price);
+    const currency = obj.soldPrice?.currency || obj.price?.currency || "USD";
+    if (price != null) {
+      results.push({
+        title: String(obj.title),
+        price,
+        currency: String(currency).toUpperCase(),
+        shippingCost: safeNum(obj.shippingCost?.value || obj.shippingCost) || 0,
+      });
+    }
   }
 
+  if (Array.isArray(obj)) {
+    for (const item of obj) results.push(...extractItemsFromJSON(item, depth + 1));
+  } else {
+    for (const val of Object.values(obj)) {
+      if (val && typeof val === "object") results.push(...extractItemsFromJSON(val, depth + 1));
+    }
+  }
+  return results;
+}
+
+function parseListings(html, isSold = false) {
   const $ = cheerio.load(html);
   const results = [];
 
-  // Primary selectors
-  $(".s-item, li.srp-results__item, .srp-river-results .s-item").each((_, el) => {
+  // Primary: .s-item selectors
+  $(".s-item").each((_, el) => {
     const $el = $(el);
     const title = normSpaces($el.find(".s-item__title, .s-item__title span, [role='heading']").first().text());
     if (!title || title === "Shop on eBay") return;
 
-    const priceText = $el.find(".s-item__price").first().text().trim();
+    const priceText = $el.find(".s-item__price").first().text().trim() ||
+                      $el.find(".s-item__detail--primary .POSITIVE").first().text().trim();
     const parsed = parsePriceText(priceText);
     const shippingText = $el.find(".s-item__shipping, .s-item__freeXDays, .s-item__logisticsCost").first().text().trim();
     const shippingCost = parseShippingText(shippingText);
@@ -374,30 +367,30 @@ function parseListings(html) {
 
   if (results.length) return results;
 
-  // Fallback: class-agnostic parse from any item links
-  const seen = new Set();
-  $("a[href*='/itm/'], a[href*='itmmeta=']").each((_, a) => {
-    const $a = $(a);
-    const href = String($a.attr("href") || "");
-    if (!href || href.includes("WatchListAdd")) return;
+  // Fallback: data-viewport selectors (newer eBay markup)
+  $("[data-viewport]").each((_, el) => {
+    const $el = $(el);
+    const title = normSpaces($el.find("[role='heading']").first().text());
+    if (!title || title === "Shop on eBay") return;
 
-    let title = normSpaces($a.text() || $a.attr("aria-label") || $a.attr("title") || "");
-    if (!title) return;
+    const priceText = $el.find("[class*='price'], .POSITIVE").first().text().trim();
+    const parsed = parsePriceText(priceText);
+    const shippingText = $el.find("[class*='shipping'], [class*='logistic']").first().text().trim();
+    const shippingCost = parseShippingText(shippingText);
 
-    title = title.replace(/Opens in a new window or tab/gi, "").trim();
-    const key = `${title}::${href.slice(0, 120)}`;
-    if (seen.has(key)) return;
-
-    const localBlockText = normSpaces($a.parent().text());
-    const nearbyText = normSpaces(`${localBlockText} ${$a.next().text()} ${$a.prev().text()}`);
-    const parsed = parsePriceText(nearbyText);
-    const shippingCost = parseShippingText(nearbyText);
-
-    if (parsed?.price != null) {
+    if (parsed) {
       results.push({ title, price: parsed.price, currency: parsed.currency, shippingCost });
-      seen.add(key);
     }
   });
+
+  if (results.length) return results;
+
+  // Fallback: script tag JSON extraction
+  const scriptItems = parseItemsFromScriptTags(html, isSold);
+  if (scriptItems.length) {
+    console.log(`    📜 Extracted ${scriptItems.length} items from embedded JSON`);
+    return scriptItems;
+  }
 
   return results;
 }
