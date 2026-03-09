@@ -358,6 +358,7 @@ function parseListings(html) {
   const $ = cheerio.load(html);
   const results = [];
 
+  // Primary selectors
   $(".s-item, li.srp-results__item, .srp-river-results .s-item").each((_, el) => {
     const $el = $(el);
     const title = normSpaces($el.find(".s-item__title, .s-item__title span, [role='heading']").first().text());
@@ -370,6 +371,33 @@ function parseListings(html) {
 
     if (parsed) {
       results.push({ title, price: parsed.price, currency: parsed.currency, shippingCost });
+    }
+  });
+
+  if (results.length) return results;
+
+  // Fallback: class-agnostic parse from any item links
+  const seen = new Set();
+  $("a[href*='/itm/'], a[href*='itmmeta=']").each((_, a) => {
+    const $a = $(a);
+    const href = String($a.attr("href") || "");
+    if (!href || href.includes("WatchListAdd")) return;
+
+    let title = normSpaces($a.text() || $a.attr("aria-label") || $a.attr("title") || "");
+    if (!title) return;
+
+    title = title.replace(/Opens in a new window or tab/gi, "").trim();
+    const key = `${title}::${href.slice(0, 120)}`;
+    if (seen.has(key)) return;
+
+    const localBlockText = normSpaces($a.parent().text());
+    const nearbyText = normSpaces(`${localBlockText} ${$a.next().text()} ${$a.prev().text()}`);
+    const parsed = parsePriceText(nearbyText);
+    const shippingCost = parseShippingText(nearbyText);
+
+    if (parsed?.price != null) {
+      results.push({ title, price: parsed.price, currency: parsed.currency, shippingCost });
+      seen.add(key);
     }
   });
 
