@@ -355,16 +355,6 @@ const CardTrackerPage = () => {
           )}
         </div>
 
-        {/* Line Chart */}
-        <TrackerChart
-          acuna={acuna}
-          torres={torres}
-          range={range}
-          dataMode={dataMode}
-          cardMode={cardMode}
-          selectedGrade={selectedGrade}
-          filterSnapshots={filterSnapshots}
-        />
 
         {/* SportsCardsPro Long-Term History */}
         {scpData && (scpData["us250-acuna"] || scpData["us200-torres"]) && (
@@ -395,102 +385,6 @@ const CardTrackerPage = () => {
   );
 };
 
-/* ── Chart Component ── */
-function TrackerChart({
-  acuna, torres, range, dataMode, cardMode, selectedGrade, filterSnapshots,
-}: {
-  acuna: CardEntry; torres: CardEntry; range: number;
-  dataMode: DataMode; cardMode: CardMode; selectedGrade: string;
-  filterSnapshots: (s: Snapshot[]) => Snapshot[];
-}) {
-  const chartData = useMemo(() => {
-    const acunaSnaps = filterSnapshots(acuna.snapshots);
-    const torresSnaps = filterSnapshots(torres.snapshots);
-    const dateMap = new Map<string, any>();
-
-    for (const s of acunaSnaps) {
-      const entry = dateMap.get(s.date) || { date: s.date };
-      entry.acuna = getChartValue(s, dataMode, cardMode, selectedGrade);
-      dateMap.set(s.date, entry);
-    }
-    for (const s of torresSnaps) {
-      const entry = dateMap.get(s.date) || { date: s.date };
-      entry.torres = getChartValue(s, dataMode, cardMode, selectedGrade);
-      dateMap.set(s.date, entry);
-    }
-
-    return Array.from(dateMap.values()).sort((a, b) => a.date.localeCompare(b.date));
-  }, [acuna, torres, range, dataMode, cardMode, selectedGrade, filterSnapshots]);
-
-  if (!chartData.length) {
-    return (
-      <div className="glass-panel p-8 text-center mb-8">
-        <p className="text-muted-foreground text-sm">
-          No snapshot data yet. Data collection starts with the next daily run.
-        </p>
-      </div>
-    );
-  }
-
-  const modeLabel = dataMode === "listed" ? "Listed" : "Sold";
-  const cardLabel = cardMode === "raw" ? "Raw Card" : `PSA ${selectedGrade}`;
-
-  return (
-    <motion.div
-      initial={{ opacity: 0, y: 12 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.4 }}
-      className="glass-panel p-4 md:p-6 rounded-xl mb-8"
-    >
-      <h2 className="text-lg font-display font-bold text-foreground mb-4">
-        {modeLabel} — {cardLabel} — Price Comparison
-      </h2>
-      <ResponsiveContainer width="100%" height={320}>
-        <LineChart data={chartData} margin={{ top: 5, right: 20, left: 10, bottom: 5 }}>
-          <CartesianGrid strokeDasharray="3 3" stroke="hsl(var(--border))" />
-          <XAxis
-            dataKey="date"
-            tick={{ fill: "hsl(var(--muted-foreground))", fontSize: 11 }}
-            tickFormatter={(d) => d.slice(5)}
-          />
-          <YAxis
-            tick={{ fill: "hsl(var(--muted-foreground))", fontSize: 11 }}
-            tickFormatter={(v) => `$${v}`}
-          />
-          <Tooltip
-            contentStyle={{
-              background: "hsl(var(--card))",
-              border: "1px solid hsl(var(--border))",
-              borderRadius: 8,
-              color: "hsl(var(--foreground))",
-              fontSize: 12,
-            }}
-            formatter={(v: number) => v != null ? [`$${v.toFixed(2)}`, ""] : ["N/A", ""]}
-          />
-          <Legend />
-          <Line
-            type="monotone"
-            dataKey="acuna"
-            name="Acuña Jr. #US250"
-            stroke="hsl(var(--vzla-yellow))"
-            strokeWidth={2}
-            dot={{ r: 3 }}
-            connectNulls
-          />
-          <Line
-            type="monotone"
-            dataKey="torres"
-            name="Torres #US200"
-            stroke="hsl(var(--vzla-blue))"
-            strokeWidth={2}
-            dot={{ r: 3 }}
-            connectNulls
-          />
-        </LineChart>
-      </ResponsiveContainer>
-    </motion.div>
-  );
-}
 
 /* ── Snapshot Table ── */
 function CardSnapshotTable({
