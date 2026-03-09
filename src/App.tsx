@@ -5,6 +5,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 const Index = lazy(() => import("./pages/Index"));
 const About = lazy(() => import("./pages/About"));
+const CardTrackerPage = lazy(() => import("./pages/CardTrackerPage"));
 const Privacy = lazy(() => import("./pages/privacy"));
 const EbaySuccess = lazy(() => import("./pages/EbaySuccess"));
 const EbayDenied = lazy(() => import("./pages/EbayDenied"));
