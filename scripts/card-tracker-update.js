@@ -428,7 +428,7 @@ async function scrapeAllMarketplaces(keyword, card, fxRates, { isSold, isGraded,
       try {
         const html = await fetchPage(url);
         if (page === 1) console.log(`    HTML: ${html.length} chars`);
-        const listings = parseListings(html);
+        const listings = parseListings(html, isSold);
         if (!listings.length) { if (page === 1) console.log(`    No results`); break; }
 
         for (const it of listings) {
