@@ -6,7 +6,7 @@
       "us200-torres": "2018 Topps Update #US200 Gleyber Torres RC"
     },
     "createdAt": "2026-03-09T00:00:00Z",
-    "lastUpdated": null
+    "lastUpdated": "2026-03-09T03:19:23.181Z"
   },
   "us250-acuna": {
     "name": "Ronald Acuna Jr.",
@@ -14,7 +14,30 @@
     "cardTitle": "2018 Topps Update Series #US250 Ronald Acuna Jr. Rookie RC",
     "searchKeywordRaw": "2018 Topps Update US250 Acuna",
     "searchKeywordGraded": "2018 Topps Update US250 Acuna PSA",
-    "snapshots": []
+    "snapshots": [
+      {
+        "date": "2026-03-09",
+        "listed": {
+          "raw": null,
+          "graded": {
+            "overall": null,
+            "byGrade": {}
+          }
+        },
+        "sold": {
+          "raw": null,
+          "graded": {
+            "overall": null,
+            "byGrade": {}
+          }
+        },
+        "raw": null,
+        "graded": {
+          "overall": null,
+          "byGrade": {}
+        }
+      }
+    ]
   },
   "us200-torres": {
     "name": "Gleyber Torres",
@@ -22,6 +45,29 @@
     "cardTitle": "2018 Topps Update #US200 Gleyber Torres RC",
     "searchKeywordRaw": "2018 Topps Update US200 Torres",
     "searchKeywordGraded": "2018 Topps Update US200 Torres PSA",
-    "snapshots": []
+    "snapshots": [
+      {
+        "date": "2026-03-09",
+        "listed": {
+          "raw": null,
+          "graded": {
+            "overall": null,
+            "byGrade": {}
+          }
+        },
+        "sold": {
+          "raw": null,
+          "graded": {
+            "overall": null,
+            "byGrade": {}
+          }
+        },
+        "raw": null,
+        "graded": {
+          "overall": null,
+          "byGrade": {}
+        }
+      }
+    ]
   }
 }
