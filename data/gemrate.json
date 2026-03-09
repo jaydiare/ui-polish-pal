@@ -1,13 +1,13 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-09T13:19:18.429756+00:00",
+    "updatedAt": "2026-03-09T14:59:59.201238+00:00",
     "athleteCount": 451,
     "graders": [
       "PSA"
     ],
     "batchInfo": {
-      "startIdx": 220,
-      "endIdx": 240,
+      "startIdx": 240,
+      "endIdx": 260,
       "totalAthletes": 568
     }
   },
@@ -3545,17 +3545,17 @@
       "sport": "Baseball",
       "graders": {
         "PSA": {
-          "cards": 64,
+          "cards": 65,
           "gems": 258,
-          "grades": 456,
-          "gemRate": 57.0
+          "grades": 457,
+          "gemRate": 56.0
         }
       },
       "totals": {
-        "cards": 64,
+        "cards": 65,
         "gems": 258,
-        "grades": 456,
-        "gemRate": 57.0
+        "grades": 457,
+        "gemRate": 56.0
       }
     },
     "Jorge Julio": {
@@ -3599,16 +3599,16 @@
       "sport": "Baseball",
       "graders": {
         "PSA": {
-          "cards": 4438,
-          "gems": 12890,
-          "grades": 25257,
+          "cards": 4441,
+          "gems": 12891,
+          "grades": 25268,
           "gemRate": 51.0
         }
       },
       "totals": {
-        "cards": 4438,
-        "gems": 12890,
-        "grades": 25257,
+        "cards": 4441,
+        "gems": 12891,
+        "grades": 25268,
         "gemRate": 51.0
       }
     },
