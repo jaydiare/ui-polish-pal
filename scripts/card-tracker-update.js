@@ -324,18 +324,66 @@ function parseShippingText(text) {
 function parseListings(html) {
   const $ = cheerio.load(html);
   const results = [];
-  $(".s-item").each((_, el) => {
+
+  // Primary selectors (eBay SRP variants)
+  const itemNodes = $(".s-item, li.srp-results__item, .srp-river-results .s-item");
+
+  itemNodes.each((_, el) => {
     const $el = $(el);
-    const title = normSpaces($el.find(".s-item__title, .s-item__title span").first().text());
+    const title = normSpaces($el.find(".s-item__title, .s-item__title span, [role='heading']").first().text());
     if (!title || title === "Shop on eBay") return;
+
     const priceText = $el.find(".s-item__price").first().text().trim();
     const parsed = parsePriceText(priceText);
-    const shippingText = $el.find(".s-item__shipping, .s-item__freeXDays, .s-item__logisticsCost").first().text().trim();
+
+    const shippingText = $el
+      .find(".s-item__shipping, .s-item__freeXDays, .s-item__logisticsCost")
+      .first()
+      .text()
+      .trim();
     const shippingCost = parseShippingText(shippingText);
+
     if (parsed) {
       results.push({ title, price: parsed.price, currency: parsed.currency, shippingCost });
     }
   });
+
+  // Fallback: parse structured data when card nodes are unavailable
+  if (results.length === 0) {
+    $("script[type='application/ld+json']").each((_, scriptEl) => {
+      const raw = $(scriptEl).contents().text();
+      if (!raw) return;
+
+      let json;
+      try {
+        json = JSON.parse(raw);
+      } catch {
+        return;
+      }
+
+      const candidates = Array.isArray(json) ? json : [json];
+
+      for (const node of candidates) {
+        if (!node || typeof node !== "object") continue;
+        const isItemList = node["@type"] === "ItemList" && Array.isArray(node.itemListElement);
+        if (!isItemList) continue;
+
+        for (const row of node.itemListElement) {
+          const item = row?.item || row;
+          const title = normSpaces(item?.name || "");
+          if (!title || title === "Shop on eBay") continue;
+
+          const offers = item?.offers || {};
+          const price = safeNum(offers?.price);
+          const currency = String(offers?.priceCurrency || "USD").toUpperCase();
+          if (price == null) continue;
+
+          results.push({ title, price, currency, shippingCost: 0 });
+        }
+      }
+    });
+  }
+
   return results;
 }
 
