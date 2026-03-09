@@ -302,6 +302,7 @@ const CardTrackerPage = () => {
         {/* Snapshot Tables */}
         {CARD_KEYS.map((cardKey) => {
           const card = data[cardKey];
+          if (!card || !card.snapshots) return null;
           const snaps = filterSnapshots(card.snapshots);
           return (
             <CardSnapshotTable
