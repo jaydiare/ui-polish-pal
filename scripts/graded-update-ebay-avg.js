@@ -465,8 +465,12 @@ async function computeAvgActiveListing({ token, marketplaceId, name, sport, aspe
     const data = await ebayBrowseSearch({ token, marketplaceId, q, categoryId: CATEGORY_ID, limit: PAGE_SIZE, offset, aspectFilter });
     const items = data?.itemSummaries || [];
 
+    const hasGradedAspectFilter = aspectFilter && aspectFilter.includes("Graded:{Yes}");
+
     for (const it of items) {
-      if (!isGradedListing(it)) continue;
+      // When graded aspect filters are active, the API already guarantees PSA-graded cards.
+      // Only fall back to title-based detection when no graded aspect filter is applied.
+      if (!hasGradedAspectFilter && !isGradedListing(it)) continue;
 
       const p = it?.price;
       const v = safeNum(p?.value);
