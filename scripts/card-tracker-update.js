@@ -98,6 +98,22 @@ function norm(s) { return String(s || "").normalize("NFKD").replace(/[\u0300-\u0
 function normSpaces(s) { return String(s || "").replace(/\s+/g, " ").trim(); }
 function safeNum(x) { const n = Number(x); return Number.isFinite(n) ? n : null; }
 
+function parsePriceText(text) {
+  if (!text) return null;
+  // Remove currency symbols, commas, whitespace; grab first number
+  const cleaned = text.replace(/[^0-9.,]/g, "").replace(/,/g, "");
+  const m = cleaned.match(/(\d+(?:\.\d+)?)/);
+  return m ? parseFloat(m[1]) : null;
+}
+
+function parseShippingText(text) {
+  if (!text) return 0;
+  const lower = text.toLowerCase();
+  if (lower.includes("free")) return 0;
+  const m = text.replace(/[^0-9.,]/g, "").replace(/,/g, "").match(/(\d+(?:\.\d+)?)/);
+  return m ? parseFloat(m[1]) : 0;
+}
+
 function avg(values) {
   if (!values.length) return null;
   return values.reduce((a, b) => a + b, 0) / values.length;
