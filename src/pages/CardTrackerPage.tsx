@@ -1,4 +1,5 @@
 import { useState, useEffect, useMemo } from "react";
+import { Download } from "lucide-react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import {
@@ -623,6 +624,32 @@ function ScpHistorySection({
             </button>
           ))}
         </div>
+
+        {/* CSV Download */}
+        <button
+          onClick={() => {
+            const headers = ["Date", ...selectedScpGrades.flatMap((g) => {
+              const cols: string[] = [];
+              if (acunaScp?.history?.[g]) cols.push(`Acuña ${gradeLabel(g)}`);
+              if (torresScp?.history?.[g]) cols.push(`Torres ${gradeLabel(g)}`);
+              return cols;
+            })];
+            const rows = chartData.map((row: any) => [
+              row.date,
+              ...selectedScpGrades.flatMap((g) => {
+                const vals: (number | null)[] = [];
+                if (acunaScp?.history?.[g]) vals.push(row[`acuna_${g}`] ?? null);
+                if (torresScp?.history?.[g]) vals.push(row[`torres_${g}`] ?? null);
+                return vals;
+              }),
+            ]);
+            downloadCsv(`SCP_History_${selectedScpGrades.join("_")}.csv`, headers, rows);
+          }}
+          className="px-3 py-1.5 text-xs font-medium rounded-md bg-accent text-accent-foreground hover:bg-accent/80 transition-colors flex items-center gap-1"
+          title="Download current view as CSV"
+        >
+          <Download className="w-3 h-3" /> CSV
+        </button>
       </div>
 
       {chartData.length > 0 ? (
