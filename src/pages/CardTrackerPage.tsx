@@ -593,13 +593,12 @@ function ScpHistorySection({
 
   // Build combined chart data
   const chartData = useMemo(() => {
-    const dateMap = new Map<string, Record<string, number | null>>();
+    const dateMap = new Map<string, any>();
     const cutoff = scpRange === Infinity ? null : new Date();
     if (cutoff) cutoff.setDate(cutoff.getDate() - scpRange);
     const cutoffStr = cutoff ? cutoff.toISOString().split("T")[0] : "";
 
     for (const grade of selectedScpGrades) {
-      // Acuña data
       const acunaHist = acunaScp?.history?.[grade]?.data;
       if (acunaHist) {
         for (const pt of acunaHist) {
@@ -609,7 +608,6 @@ function ScpHistorySection({
           dateMap.set(pt.date, entry);
         }
       }
-      // Torres data
       const torresHist = torresScp?.history?.[grade]?.data;
       if (torresHist) {
         for (const pt of torresHist) {
@@ -621,8 +619,8 @@ function ScpHistorySection({
       }
     }
 
-    return Array.from(dateMap.values()).sort((a, b) =>
-      (a.date as string).localeCompare(b.date as string)
+    return Array.from(dateMap.values()).sort((a: any, b: any) =>
+      a.date.localeCompare(b.date)
     );
   }, [acunaScp, torresScp, selectedScpGrades, scpRange]);
 
