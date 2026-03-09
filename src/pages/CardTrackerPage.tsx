@@ -165,7 +165,7 @@ const CardTrackerPage = () => {
           "@context": "https://schema.org",
           "@type": "Article",
           headline: "Acuña & Torres RC Tracker",
-          description: "Daily price tracking with Taguchi analysis for two iconic 2018 Topps Update rookie cards.",
+          description: "Daily price tracking for two iconic 2018 Topps Update rookie cards.",
           datePublished: "2026-03-09",
           author: { "@type": "Organization", name: "VZLA Sports Elite" },
           mainEntityOfPage: "https://vzlasportselite.com/blog/acuna-torres-tracker",
