@@ -101,10 +101,14 @@ const CardTrackerPage = () => {
   } = useAthleteData();
 
   useEffect(() => {
-    fetch(`${GITHUB_RAW}/card-tracker.json`, { cache: "no-store" })
-      .then((r) => r.json())
-      .then((d) => { setData(d); setLoading(false); })
-      .catch(() => setLoading(false));
+    (async () => {
+      try {
+        let r = await fetch(`${GITHUB_RAW}/card-tracker.json`, { cache: "no-store" });
+        if (!r.ok) r = await fetch("/data/card-tracker.json");
+        if (r.ok) { setData(await r.json()); }
+      } catch { /* fallback silently */ }
+      setLoading(false);
+    })();
   }, []);
 
   const normalize = (s: string) =>
