@@ -129,11 +129,13 @@ function getChartValue(snap: Snapshot, dataMode: DataMode, cardMode: CardMode, g
 /* ── Page ── */
 const CardTrackerPage = () => {
   const [data, setData] = useState<TrackerData | null>(null);
+  const [scpData, setScpData] = useState<ScpHistoryData | null>(null);
   const [loading, setLoading] = useState(true);
   const [range, setRange] = useState(30);
   const [dataMode, setDataMode] = useState<DataMode>("listed");
   const [cardMode, setCardMode] = useState<CardMode>("raw");
   const [selectedGrade, setSelectedGrade] = useState("10");
+  const [scpRange, setScpRange] = useState(1825); // 5 years default
 
   const {
     athletes, byName, byKey, gradedByName, gradedByKey,
@@ -147,6 +149,14 @@ const CardTrackerPage = () => {
         if (!r.ok) r = await fetch("/data/card-tracker.json");
         if (r.ok) { setData(await r.json()); }
       } catch { /* fallback silently */ }
+
+      // Fetch SCP history
+      try {
+        let r2 = await fetch(`${GITHUB_RAW}/scp-history.json`, { cache: "no-store" });
+        if (!r2.ok) r2 = await fetch("/data/scp-history.json");
+        if (r2.ok) { setScpData(await r2.json()); }
+      } catch { /* fallback silently */ }
+
       setLoading(false);
     })();
   }, []);
