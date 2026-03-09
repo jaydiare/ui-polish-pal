@@ -181,7 +181,7 @@ const CardTrackerPage = () => {
           Acuña & Torres RC Tracker
         </h1>
         <p className="text-muted-foreground text-sm mb-8">
-          Daily price snapshots with Taguchi analysis for 2018 Topps Update rookie cards — EBAY US & CA.
+          Daily price snapshots for 2018 Topps Update rookie cards — EBAY US & CA.
           Last updated: {data._meta?.lastUpdated ? new Date(data._meta.lastUpdated).toLocaleDateString() : "—"}
         </p>
 
