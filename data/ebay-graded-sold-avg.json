@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-09T17:59:00.903Z",
+    "updatedAt": "2026-03-09T18:00:30.723Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA-only title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 420,
-      "endIdx": 430,
+      "startIdx": 430,
+      "endIdx": 440,
       "totalAthletes": 450
     },
     "maxPages": 4,
@@ -6007,16 +6007,16 @@
     "fxRateUsed": null
   },
   "Tomas Rincon": {
-    "keyword": "Tomas Rincon Soccer",
+    "keyword": "Tomas Rincon Soccer PSA",
     "nScraped": 21,
-    "nSoldUsed": 1,
+    "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
   },
   "Yohandry Orozco": {
     "keyword": "Yohandry Orozco Soccer",
@@ -6163,16 +6163,16 @@
     "fxRateUsed": null
   },
   "Salomon Rondon": {
-    "keyword": "Salomon Rondon Soccer",
-    "nScraped": 181,
-    "nSoldUsed": 3,
+    "keyword": "Salomon Rondon Pachuca Mallorca Venezuela Oviedo Soccer PSA",
+    "nScraped": 2,
+    "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
   },
   "Victor Garcia": {
     "keyword": "Victor Garcia Soccer",
@@ -6187,28 +6187,28 @@
     "fxRateUsed": 1
   },
   "Yangel Herrera": {
-    "keyword": "Yangel Herrera Soccer",
-    "nScraped": 172,
-    "nSoldUsed": 18,
-    "avg": 25,
-    "taguchiSold": 25,
-    "medianSold": 25,
-    "marketStabilityCV": 0.20579830217101058,
+    "keyword": "Yangel Herrera Soccer PSA",
+    "nScraped": 57,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
   },
   "Cristian Casseres Jr.": {
-    "keyword": "Cristian Casseres Jr. Soccer",
+    "keyword": "Cristian Casseres Jr. Soccer PSA",
     "nScraped": 60,
-    "nSoldUsed": 12,
-    "avg": 78.99166666666666,
-    "taguchiSold": 78.99166666666666,
-    "medianSold": 38.55,
-    "marketStabilityCV": 0.7529531386728162,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
   },
   "Fernando Aristeguieta": {
     "keyword": "Fernando Aristeguieta Soccer",
@@ -6259,8 +6259,8 @@
     "fxRateUsed": null
   },
   "Wuilker Farinez": {
-    "keyword": "Wuilker Farinez Soccer",
-    "nScraped": 0,
+    "keyword": "Wuilker Farinez Soccer PSA",
+    "nScraped": 7,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -6295,16 +6295,16 @@
     "fxRateUsed": null
   },
   "Alejandro Moreno": {
-    "keyword": "Alejandro Moreno Soccer",
+    "keyword": "Alejandro Moreno Soccer PSA",
     "nScraped": 60,
-    "nSoldUsed": 4,
-    "avg": 9.15,
-    "taguchiSold": 9.15,
-    "medianSold": 9.15,
-    "marketStabilityCV": 0.18298533121856989,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
   },
   "Bernardo Anor": {
     "keyword": "Bernardo Anor Soccer",
@@ -6367,9 +6367,9 @@
     "fxRateUsed": 1
   },
   "Dani Pereira": {
-    "keyword": "Dani Pereira Soccer",
+    "keyword": "Dani Pereira Soccer PSA",
     "nScraped": 60,
-    "nSoldUsed": 2,
+    "nSoldUsed": 1,
     "avg": null,
     "taguchiSold": null,
     "medianSold": null,
@@ -6379,13 +6379,13 @@
     "fxRateUsed": 1
   },
   "David Martinez": {
-    "keyword": "David Martinez Soccer",
-    "nScraped": 127,
-    "nSoldUsed": 22,
-    "avg": 40.54545454545455,
-    "taguchiSold": 40.54545454545455,
-    "medianSold": 46,
-    "marketStabilityCV": 0.3636555254327299,
+    "keyword": "David Martinez Soccer PSA",
+    "nScraped": 243,
+    "nSoldUsed": 12,
+    "avg": 69.99,
+    "taguchiSold": 69.99,
+    "medianSold": 69.99,
+    "marketStabilityCV": 0,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
@@ -6403,8 +6403,8 @@
     "fxRateUsed": null
   },
   "Emilio Renteria": {
-    "keyword": "Emilio Renteria Soccer",
-    "nScraped": 10,
+    "keyword": "Emilio Renteria Soccer PSA",
+    "nScraped": 3,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -6475,16 +6475,16 @@
     "fxRateUsed": null
   },
   "Jefferson Savarino": {
-    "keyword": "Jefferson Savarino Soccer",
-    "nScraped": 60,
-    "nSoldUsed": 3,
+    "keyword": "Jefferson Savarino Soccer PSA",
+    "nScraped": 0,
+    "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
   },
   "Jesus Bueno": {
     "keyword": "Jesus Bueno Soccer",
