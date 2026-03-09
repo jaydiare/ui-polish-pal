@@ -466,7 +466,13 @@ async function computeAvgActiveListing({ token, marketplaceId, name, sport, aspe
     const items = data?.itemSummaries || [];
 
     for (const it of items) {
-      if (!isGradedListing(it)) continue;
+      // Aspect filter already enforces Graded:{Yes} + Professional Grader:{PSA},
+      // so we trust the API and only use isGradedListing as a soft fallback
+      // when aspectMode is NOT "player" with graded filters.
+      // With graded aspect filters active, skip the title-based check to avoid
+      // dropping listings that don't repeat "PSA 10" in the title.
+      const hasGradedAspectFilter = aspectFilter && aspectFilter.includes("Graded:{Yes}");
+      if (!hasGradedAspectFilter && !isGradedListing(it)) continue;
 
       const p = it?.price;
       const v = safeNum(p?.value);
