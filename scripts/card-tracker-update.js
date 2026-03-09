@@ -50,8 +50,8 @@ const CARDS = [
     name: "Ronald Acuna Jr.",
     sport: "Baseball",
     cardTitle: "2018 Topps Update Series #US250 Ronald Acuna Jr. Rookie RC",
-    searchKeywordRaw: "2018 Topps Update US250 Acuna",
-    searchKeywordGraded: "2018 Topps Update US250 Acuna PSA",
+    searchKeywordRaw: "2018 Topps Update US250 Acuna -rainbow -gold -foil -chrome -parallel -refractor -pink -camo -platinum -sapphire -silver -independence -vintage -negative",
+    searchKeywordGraded: "2018 Topps Update US250 Acuna PSA -rainbow -gold -foil -chrome -parallel -refractor -pink -camo -platinum -sapphire -silver -independence -vintage -negative",
     cardNumber: "US250",
   },
   {
