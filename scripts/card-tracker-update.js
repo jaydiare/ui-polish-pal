@@ -495,9 +495,17 @@ async function main() {
 
     // Check if already scraped today
     const existing = data[card.key].snapshots;
-    if (existing.length > 0 && existing[existing.length - 1].date === today) {
-      console.log(`⏭️ ${card.name}: already scraped today (${today}), skipping`);
+    const lastSnap = existing.length > 0 ? existing[existing.length - 1] : null;
+    const hasData = lastSnap && (lastSnap.raw || lastSnap.listed?.raw || lastSnap.sold?.raw ||
+      lastSnap.graded?.overall || lastSnap.listed?.graded?.overall || lastSnap.sold?.graded?.overall);
+    if (lastSnap && lastSnap.date === today && hasData) {
+      console.log(`⏭️ ${card.name}: already scraped today (${today}) with data, skipping`);
       continue;
+    }
+    // Remove empty snapshot for today so we can replace it
+    if (lastSnap && lastSnap.date === today && !hasData) {
+      existing.pop();
+      console.log(`🔄 ${card.name}: removing empty snapshot for ${today}, re-scraping`);
     }
 
     // Scrape all 4 combinations: listed raw, listed graded, sold raw, sold graded
