@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-08T23:50:30.943Z",
+    "updatedAt": "2026-03-09T00:05:35.683Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA-only title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 320,
-      "endIdx": 330,
+      "startIdx": 330,
+      "endIdx": 340,
       "totalAthletes": 450
     },
     "maxPages": 4,
@@ -4639,31 +4639,31 @@
     "fxRateUsed": null
   },
   "Pablo Torrealba": {
-    "keyword": "Pablo Torrealba Baseball",
-    "nScraped": 180,
-    "nSoldUsed": 6,
-    "avg": 13.97,
-    "taguchiSold": 13.97,
-    "medianSold": 13.969999999999999,
-    "marketStabilityCV": 0.31208815731862,
+    "keyword": "Pablo Torrealba Baseball PSA",
+    "nScraped": 240,
+    "nSoldUsed": 4,
+    "avg": 17.95,
+    "taguchiSold": 17.95,
+    "medianSold": 17.95,
+    "marketStabilityCV": 0,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
   },
   "Pedro Avila": {
-    "keyword": "Pedro Avila Baseball",
-    "nScraped": 183,
-    "nSoldUsed": 31,
-    "avg": 59.34967741935484,
-    "taguchiSold": 59.34967741935484,
-    "medianSold": 44.99,
-    "marketStabilityCV": 0.3375917296160022,
+    "keyword": "Pedro Avila Baseball PSA",
+    "nScraped": 60,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
   },
   "Pedro Castellano": {
-    "keyword": "Pedro Castellano Baseball",
+    "keyword": "Pedro Castellano Baseball PSA",
     "nScraped": 60,
     "nSoldUsed": 0,
     "avg": null,
@@ -4675,8 +4675,8 @@
     "fxRateUsed": null
   },
   "Pedro Hernandez": {
-    "keyword": "Pedro Hernandez Baseball",
-    "nScraped": 0,
+    "keyword": "Pedro Hernandez Baseball PSA",
+    "nScraped": 60,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -4687,8 +4687,8 @@
     "fxRateUsed": null
   },
   "Pedro Pages": {
-    "keyword": "Pedro Pages Baseball",
-    "nScraped": 0,
+    "keyword": "Pedro Pages Baseball PSA",
+    "nScraped": 242,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -4699,8 +4699,8 @@
     "fxRateUsed": null
   },
   "Pompeyo Davalillo": {
-    "keyword": "Pompeyo Davalillo Baseball",
-    "nScraped": 0,
+    "keyword": "Pompeyo Davalillo Baseball PSA",
+    "nScraped": 60,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -4711,20 +4711,20 @@
     "fxRateUsed": null
   },
   "Rafael Betancourt": {
-    "keyword": "Rafael Betancourt Baseball",
+    "keyword": "Rafael Betancourt Baseball PSA",
     "nScraped": 60,
-    "nSoldUsed": 1,
+    "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
   },
   "Rafael Marchan": {
-    "keyword": "Rafael Marchan Baseball",
-    "nScraped": 180,
+    "keyword": "Rafael Marchan Baseball PSA",
+    "nScraped": 240,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -4735,28 +4735,28 @@
     "fxRateUsed": null
   },
   "Rafael Ortega": {
-    "keyword": "Rafael Ortega Baseball",
+    "keyword": "Rafael Ortega Baseball PSA",
     "nScraped": 60,
-    "nSoldUsed": 6,
-    "avg": 23.505,
-    "taguchiSold": 23.505,
-    "medianSold": 23.505,
-    "marketStabilityCV": 0.07060622630251666,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
   },
   "Ramon Cabrera": {
-    "keyword": "Ramon Cabrera Baseball",
-    "nScraped": 60,
-    "nSoldUsed": 32,
-    "avg": 98.51187499999999,
-    "taguchiSold": 98.51187499999999,
-    "medianSold": 97.5,
-    "marketStabilityCV": 0.2613245751841708,
+    "keyword": "Ramon Cabrera Baseball PSA",
+    "nScraped": 0,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
   },
   "Ramon Castro": {
     "keyword": "Ramon Castro Baseball",
