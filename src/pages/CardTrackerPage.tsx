@@ -114,12 +114,6 @@ type DataMode = "listed" | "sold";
 type CardMode = "raw" | "graded";
 
 const CARD_KEYS = ["us250-acuna", "us200-torres"] as const;
-const RANGE_OPTIONS = [
-  { label: "7d", days: 7 },
-  { label: "30d", days: 30 },
-  { label: "90d", days: 90 },
-  { label: "All", days: Infinity },
-];
 
 const GITHUB_RAW = "https://raw.githubusercontent.com/jaydiare/ui-polish-pal/main/data";
 
@@ -149,10 +143,10 @@ const CardTrackerPage = () => {
   const [data, setData] = useState<TrackerData | null>(null);
   const [scpData, setScpData] = useState<ScpHistoryData | null>(null);
   const [loading, setLoading] = useState(true);
-  const [range, setRange] = useState(30);
-  const [dataMode, setDataMode] = useState<DataMode>("listed");
-  const [cardMode, setCardMode] = useState<CardMode>("raw");
-  const [selectedGrade, setSelectedGrade] = useState("10");
+  const range = Infinity;
+  const dataMode: DataMode = "listed";
+  const cardMode: CardMode = "raw";
+  const selectedGrade = "10";
   const [scpRange, setScpRange] = useState(1825); // 5 years default
 
   const {
@@ -282,79 +276,6 @@ const CardTrackerPage = () => {
           </section>
         )}
 
-        {/* Controls */}
-        <div className="flex flex-wrap items-center gap-3 mb-6">
-          {/* Time range */}
-          <div className="flex gap-1 bg-secondary rounded-lg p-1">
-            {RANGE_OPTIONS.map((opt) => (
-              <button
-                key={opt.label}
-                onClick={() => setRange(opt.days)}
-                className={`px-3 py-1.5 text-xs font-medium rounded-md transition-colors ${
-                  range === opt.days
-                    ? "bg-primary text-primary-foreground"
-                    : "text-muted-foreground hover:text-foreground"
-                }`}
-              >
-                {opt.label}
-              </button>
-            ))}
-          </div>
-
-          {/* Listed / Sold toggle */}
-          <div className="flex gap-1 bg-secondary rounded-lg p-1">
-            {(["listed", "sold"] as DataMode[]).map((m) => (
-              <button
-                key={m}
-                onClick={() => setDataMode(m)}
-                className={`px-3 py-1.5 text-xs font-medium rounded-md transition-colors capitalize ${
-                  dataMode === m
-                    ? "bg-primary text-primary-foreground"
-                    : "text-muted-foreground hover:text-foreground"
-                }`}
-              >
-                {m}
-              </button>
-            ))}
-          </div>
-
-          {/* Raw / Graded toggle */}
-          <div className="flex gap-1 bg-secondary rounded-lg p-1">
-            <button
-              onClick={() => setCardMode("raw")}
-              className={`px-3 py-1.5 text-xs font-medium rounded-md transition-colors ${
-                cardMode === "raw"
-                  ? "bg-primary text-primary-foreground"
-                  : "text-muted-foreground hover:text-foreground"
-              }`}
-            >
-              Raw
-            </button>
-            <button
-              onClick={() => setCardMode("graded")}
-              className={`px-3 py-1.5 text-xs font-medium rounded-md transition-colors ${
-                cardMode === "graded"
-                  ? "bg-primary text-primary-foreground"
-                  : "text-muted-foreground hover:text-foreground"
-              }`}
-            >
-              Graded (PSA)
-            </button>
-          </div>
-
-          {/* PSA grade picker */}
-          {cardMode === "graded" && (
-            <select
-              value={selectedGrade}
-              onChange={(e) => setSelectedGrade(e.target.value)}
-              className="bg-secondary text-foreground text-xs rounded-md px-3 py-1.5 border border-border"
-            >
-              {["10", "9.5", "9", "8.5", "8", "7.5", "7", "6.5", "6", "5.5", "5", "4.5", "4", "3.5", "3", "2.5", "2", "1.5", "1"].map((g) => (
-                <option key={g} value={g}>PSA {g}</option>
-              ))}
-            </select>
-          )}
-        </div>
 
 
         {/* SportsCardsPro Long-Term History */}
