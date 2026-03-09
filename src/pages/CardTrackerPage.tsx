@@ -31,8 +31,12 @@ interface GradedData {
 
 interface Snapshot {
   date: string;
-  raw: CardStats | null;
-  graded: GradedData | null;
+  // New structure: listed + sold
+  listed?: { raw: CardStats | null; graded: GradedData | null };
+  sold?: { raw: CardStats | null; graded: GradedData | null };
+  // Legacy compat
+  raw?: CardStats | null;
+  graded?: GradedData | null;
 }
 
 interface CardEntry {
@@ -48,6 +52,9 @@ interface TrackerData {
   "us200-torres": CardEntry;
 }
 
+type DataMode = "listed" | "sold";
+type CardMode = "raw" | "graded";
+
 const CARD_KEYS = ["us250-acuna", "us200-torres"] as const;
 const RANGE_OPTIONS = [
   { label: "7d", days: 7 },
@@ -58,12 +65,34 @@ const RANGE_OPTIONS = [
 
 const GITHUB_RAW = "https://raw.githubusercontent.com/hernanchu/vzla-sports-elite/refs/heads/main/public/data";
 
+/* Helper: get stats from snapshot respecting both new and legacy structure */
+function getStatsFromSnap(snap: Snapshot, dataMode: DataMode, cardMode: CardMode, grade: string): CardStats | null {
+  // Try new structure first
+  const branch = dataMode === "listed" ? snap.listed : snap.sold;
+  if (branch) {
+    if (cardMode === "raw") return branch.raw ?? null;
+    return branch.graded?.byGrade?.[grade] ?? branch.graded?.overall ?? null;
+  }
+  // Legacy fallback (only for listed)
+  if (dataMode === "listed") {
+    if (cardMode === "raw") return snap.raw ?? null;
+    return snap.graded?.byGrade?.[grade] ?? snap.graded?.overall ?? null;
+  }
+  return null;
+}
+
+function getChartValue(snap: Snapshot, dataMode: DataMode, cardMode: CardMode, grade: string): number | null {
+  const stats = getStatsFromSnap(snap, dataMode, cardMode, grade);
+  return stats?.taguchiMean ?? null;
+}
+
 /* ── Page ── */
 const CardTrackerPage = () => {
   const [data, setData] = useState<TrackerData | null>(null);
   const [loading, setLoading] = useState(true);
   const [range, setRange] = useState(30);
-  const [chartMode, setChartMode] = useState<"raw" | "graded">("raw");
+  const [dataMode, setDataMode] = useState<DataMode>("listed");
+  const [cardMode, setCardMode] = useState<CardMode>("raw");
   const [selectedGrade, setSelectedGrade] = useState("10");
 
   const {
@@ -78,7 +107,6 @@ const CardTrackerPage = () => {
       .catch(() => setLoading(false));
   }, []);
 
-  // Find athletes for reference cards
   const normalize = (s: string) =>
     s.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().trim();
   const refAthletes = useMemo(() => {
@@ -88,7 +116,6 @@ const CardTrackerPage = () => {
       .filter(Boolean) as Athlete[];
   }, [athletes]);
 
-  // Filter snapshots by range
   const filterSnapshots = (snapshots: Snapshot[]) => {
     if (range === Infinity) return snapshots;
     const cutoff = new Date();
@@ -127,7 +154,7 @@ const CardTrackerPage = () => {
     <div className="min-h-screen">
       <SEOHead
         title="Acuña & Torres RC Tracker"
-        description="Daily price tracking for 2018 Topps Update Ronald Acuña Jr. #US250 and Gleyber Torres #US200 rookie cards — raw and PSA graded."
+        description="Daily price tracking for 2018 Topps Update Ronald Acuña Jr. #US250 and Gleyber Torres #US200 rookie cards — raw and PSA graded, listed and sold."
         path="/blog/acuna-torres-tracker"
         type="article"
         jsonLd={{
@@ -150,7 +177,7 @@ const CardTrackerPage = () => {
           Acuña & Torres RC Tracker
         </h1>
         <p className="text-muted-foreground text-sm mb-8">
-          Daily price snapshots with Taguchi analysis for 2018 Topps Update rookie cards.
+          Daily price snapshots with Taguchi analysis for 2018 Topps Update rookie cards — EBAY US & CA.
           Last updated: {data._meta?.lastUpdated ? new Date(data._meta.lastUpdated).toLocaleDateString() : "—"}
         </p>
 
@@ -185,6 +212,7 @@ const CardTrackerPage = () => {
 
         {/* Controls */}
         <div className="flex flex-wrap items-center gap-3 mb-6">
+          {/* Time range */}
           <div className="flex gap-1 bg-secondary rounded-lg p-1">
             {RANGE_OPTIONS.map((opt) => (
               <button
@@ -200,11 +228,30 @@ const CardTrackerPage = () => {
               </button>
             ))}
           </div>
+
+          {/* Listed / Sold toggle */}
+          <div className="flex gap-1 bg-secondary rounded-lg p-1">
+            {(["listed", "sold"] as DataMode[]).map((m) => (
+              <button
+                key={m}
+                onClick={() => setDataMode(m)}
+                className={`px-3 py-1.5 text-xs font-medium rounded-md transition-colors capitalize ${
+                  dataMode === m
+                    ? "bg-primary text-primary-foreground"
+                    : "text-muted-foreground hover:text-foreground"
+                }`}
+              >
+                {m}
+              </button>
+            ))}
+          </div>
+
+          {/* Raw / Graded toggle */}
           <div className="flex gap-1 bg-secondary rounded-lg p-1">
             <button
-              onClick={() => setChartMode("raw")}
+              onClick={() => setCardMode("raw")}
               className={`px-3 py-1.5 text-xs font-medium rounded-md transition-colors ${
-                chartMode === "raw"
+                cardMode === "raw"
                   ? "bg-primary text-primary-foreground"
                   : "text-muted-foreground hover:text-foreground"
               }`}
@@ -212,9 +259,9 @@ const CardTrackerPage = () => {
               Raw
             </button>
             <button
-              onClick={() => setChartMode("graded")}
+              onClick={() => setCardMode("graded")}
               className={`px-3 py-1.5 text-xs font-medium rounded-md transition-colors ${
-                chartMode === "graded"
+                cardMode === "graded"
                   ? "bg-primary text-primary-foreground"
                   : "text-muted-foreground hover:text-foreground"
               }`}
@@ -222,7 +269,9 @@ const CardTrackerPage = () => {
               Graded (PSA)
             </button>
           </div>
-          {chartMode === "graded" && (
+
+          {/* PSA grade picker */}
+          {cardMode === "graded" && (
             <select
               value={selectedGrade}
               onChange={(e) => setSelectedGrade(e.target.value)}
@@ -240,7 +289,8 @@ const CardTrackerPage = () => {
           acuna={acuna}
           torres={torres}
           range={range}
-          chartMode={chartMode}
+          dataMode={dataMode}
+          cardMode={cardMode}
           selectedGrade={selectedGrade}
           filterSnapshots={filterSnapshots}
         />
@@ -254,7 +304,8 @@ const CardTrackerPage = () => {
               key={cardKey}
               card={card}
               snapshots={snaps}
-              chartMode={chartMode}
+              dataMode={dataMode}
+              cardMode={cardMode}
               selectedGrade={selectedGrade}
             />
           );
@@ -269,41 +320,30 @@ const CardTrackerPage = () => {
 
 /* ── Chart Component ── */
 function TrackerChart({
-  acuna, torres, range, chartMode, selectedGrade, filterSnapshots,
+  acuna, torres, range, dataMode, cardMode, selectedGrade, filterSnapshots,
 }: {
   acuna: CardEntry; torres: CardEntry; range: number;
-  chartMode: "raw" | "graded"; selectedGrade: string;
+  dataMode: DataMode; cardMode: CardMode; selectedGrade: string;
   filterSnapshots: (s: Snapshot[]) => Snapshot[];
 }) {
   const chartData = useMemo(() => {
     const acunaSnaps = filterSnapshots(acuna.snapshots);
     const torresSnaps = filterSnapshots(torres.snapshots);
-
-    // Merge by date
     const dateMap = new Map<string, any>();
-
-    const getValue = (snap: Snapshot) => {
-      if (chartMode === "raw") return snap.raw?.taguchiMean ?? null;
-      if (chartMode === "graded") {
-        const gradeData = snap.graded?.byGrade?.[selectedGrade];
-        return gradeData?.taguchiMean ?? null;
-      }
-      return null;
-    };
 
     for (const s of acunaSnaps) {
       const entry = dateMap.get(s.date) || { date: s.date };
-      entry.acuna = getValue(s);
+      entry.acuna = getChartValue(s, dataMode, cardMode, selectedGrade);
       dateMap.set(s.date, entry);
     }
     for (const s of torresSnaps) {
       const entry = dateMap.get(s.date) || { date: s.date };
-      entry.torres = getValue(s);
+      entry.torres = getChartValue(s, dataMode, cardMode, selectedGrade);
       dateMap.set(s.date, entry);
     }
 
     return Array.from(dateMap.values()).sort((a, b) => a.date.localeCompare(b.date));
-  }, [acuna, torres, range, chartMode, selectedGrade, filterSnapshots]);
+  }, [acuna, torres, range, dataMode, cardMode, selectedGrade, filterSnapshots]);
 
   if (!chartData.length) {
     return (
@@ -315,6 +355,9 @@ function TrackerChart({
     );
   }
 
+  const modeLabel = dataMode === "listed" ? "Listed" : "Sold";
+  const cardLabel = cardMode === "raw" ? "Raw Card" : `PSA ${selectedGrade}`;
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 12 }}
@@ -323,7 +366,7 @@ function TrackerChart({
       className="glass-panel p-4 md:p-6 rounded-xl mb-8"
     >
       <h2 className="text-lg font-display font-bold text-foreground mb-4">
-        {chartMode === "raw" ? "Raw Card" : `PSA ${selectedGrade}`} — Price Comparison
+        {modeLabel} — {cardLabel} — Price Comparison
       </h2>
       <ResponsiveContainer width="100%" height={320}>
         <LineChart data={chartData} margin={{ top: 5, right: 20, left: 10, bottom: 5 }}>
@@ -374,10 +417,10 @@ function TrackerChart({
 
 /* ── Snapshot Table ── */
 function CardSnapshotTable({
-  card, snapshots, chartMode, selectedGrade,
+  card, snapshots, dataMode, cardMode, selectedGrade,
 }: {
   card: CardEntry; snapshots: Snapshot[];
-  chartMode: "raw" | "graded"; selectedGrade: string;
+  dataMode: DataMode; cardMode: CardMode; selectedGrade: string;
 }) {
   if (!snapshots.length) {
     return (
@@ -389,11 +432,8 @@ function CardSnapshotTable({
   }
 
   const reversed = [...snapshots].reverse();
-
-  const getStats = (snap: Snapshot): CardStats | null => {
-    if (chartMode === "raw") return snap.raw;
-    return snap.graded?.byGrade?.[selectedGrade] ?? snap.graded?.overall ?? null;
-  };
+  const modeLabel = dataMode === "listed" ? "Listed" : "Sold";
+  const cardLabel = cardMode === "raw" ? "Raw (Near Mint/Mint)" : `PSA ${selectedGrade}`;
 
   return (
     <motion.div
@@ -404,7 +444,7 @@ function CardSnapshotTable({
     >
       <h3 className="text-base font-display font-bold text-foreground mb-1">{card.cardTitle}</h3>
       <p className="text-xs text-muted-foreground mb-4">
-        {chartMode === "raw" ? "Raw (Near Mint/Mint)" : `PSA ${selectedGrade}`} — {snapshots.length} snapshot{snapshots.length !== 1 ? "s" : ""}
+        {modeLabel} — {cardLabel} — {snapshots.length} snapshot{snapshots.length !== 1 ? "s" : ""}
       </p>
 
       <div className="overflow-x-auto">
@@ -423,7 +463,7 @@ function CardSnapshotTable({
           </thead>
           <tbody>
             {reversed.map((snap) => {
-              const stats = getStats(snap);
+              const stats = getStatsFromSnap(snap, dataMode, cardMode, selectedGrade);
               return (
                 <tr key={snap.date} className="border-b border-border/50 hover:bg-secondary/40 transition-colors">
                   <td className="py-2 px-2 text-foreground font-mono">{snap.date}</td>
