@@ -349,6 +349,11 @@ const CardTrackerPage = () => {
           filterSnapshots={filterSnapshots}
         />
 
+        {/* SportsCardsPro Long-Term History */}
+        {scpData && (scpData["us250-acuna"] || scpData["us200-torres"]) && (
+          <ScpHistorySection scpData={scpData} scpRange={scpRange} setScpRange={setScpRange} />
+        )}
+
         {/* Snapshot Tables */}
         {CARD_KEYS.map((cardKey) => {
           const card = data[cardKey];
