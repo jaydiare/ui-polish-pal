@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-09T19:39:05.660Z",
+    "updatedAt": "2026-03-09T20:56:12.491Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA-only title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 0,
-      "endIdx": 10,
+      "startIdx": 10,
+      "endIdx": 20,
       "totalAthletes": 450
     },
     "maxPages": 4,
@@ -152,7 +152,7 @@
     "fxRateUsed": null
   },
   "Alex Cabrera": {
-    "keyword": "Alex Cabrera Baseball",
+    "keyword": "Alex Cabrera Baseball PSA",
     "nScraped": 60,
     "nSoldUsed": 0,
     "avg": null,
@@ -164,7 +164,7 @@
     "fxRateUsed": null
   },
   "Alex Carrasquel": {
-    "keyword": "Alex Carrasquel Baseball",
+    "keyword": "Alex Carrasquel Baseball PSA",
     "nScraped": 60,
     "nSoldUsed": 0,
     "avg": null,
@@ -188,19 +188,19 @@
     "fxRateUsed": null
   },
   "Alex Escobar": {
-    "keyword": "Alex Escobar Baseball",
-    "nScraped": 181,
-    "nSoldUsed": 3,
-    "avg": null,
-    "taguchiSold": null,
-    "medianSold": null,
-    "marketStabilityCV": null,
+    "keyword": "Alex Escobar Baseball PSA",
+    "nScraped": 240,
+    "nSoldUsed": 4,
+    "avg": 7.14,
+    "taguchiSold": 7.14,
+    "medianSold": 7.14,
+    "marketStabilityCV": 0,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
   },
   "Alex Herrera": {
-    "keyword": "Alex Herrera Baseball",
+    "keyword": "Alex Herrera Baseball PSA",
     "nScraped": 60,
     "nSoldUsed": 0,
     "avg": null,
@@ -224,7 +224,7 @@
     "fxRateUsed": null
   },
   "Alex Prieto": {
-    "keyword": "Alex Prieto Baseball",
+    "keyword": "Alex Prieto Baseball PSA",
     "nScraped": 60,
     "nSoldUsed": 0,
     "avg": null,
@@ -236,19 +236,19 @@
     "fxRateUsed": null
   },
   "Alex Ramirez": {
-    "keyword": "Alex Ramirez Baseball",
-    "nScraped": 183,
-    "nSoldUsed": 5,
-    "avg": 8.99,
-    "taguchiSold": 8.99,
-    "medianSold": 8.99,
-    "marketStabilityCV": 0,
+    "keyword": "Alex Ramirez Baseball PSA",
+    "nScraped": 244,
+    "nSoldUsed": 31,
+    "avg": 18.059354838709684,
+    "taguchiSold": 18.059354838709684,
+    "medianSold": 19.99,
+    "marketStabilityCV": 0.11223667982747612,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
   },
   "Alex Romero": {
-    "keyword": "Alex Romero Baseball",
+    "keyword": "Alex Romero Baseball PSA",
     "nScraped": 60,
     "nSoldUsed": 0,
     "avg": null,
@@ -260,7 +260,7 @@
     "fxRateUsed": null
   },
   "Alex Serrano": {
-    "keyword": "Alex Serrano Baseball",
+    "keyword": "Alex Serrano Baseball PSA",
     "nScraped": 60,
     "nSoldUsed": 0,
     "avg": null,
@@ -272,8 +272,8 @@
     "fxRateUsed": null
   },
   "Alex Torres": {
-    "keyword": "Alex Torres Baseball",
-    "nScraped": 60,
+    "keyword": "Alex Torres Baseball PSA",
+    "nScraped": 0,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -284,8 +284,8 @@
     "fxRateUsed": null
   },
   "Alexi Amarista": {
-    "keyword": "Alexi Amarista Baseball",
-    "nScraped": 46,
+    "keyword": "Alexi Amarista Baseball PSA",
+    "nScraped": 0,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
