@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-09T19:38:16.733Z",
+    "updatedAt": "2026-03-09T19:39:05.660Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA-only title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 440,
-      "endIdx": 450,
+      "startIdx": 0,
+      "endIdx": 10,
       "totalAthletes": 450
     },
     "maxPages": 4,
@@ -32,19 +32,19 @@
     }
   },
   "Adbert Alzolay": {
-    "keyword": "Adbert Alzolay Baseball",
-    "nScraped": 183,
-    "nSoldUsed": 3,
-    "avg": null,
-    "taguchiSold": null,
-    "medianSold": null,
-    "marketStabilityCV": null,
+    "keyword": "Adbert Alzolay Baseball PSA",
+    "nScraped": 248,
+    "nSoldUsed": 20,
+    "avg": 10.020000000000001,
+    "taguchiSold": 10.020000000000001,
+    "medianSold": 10.02,
+    "marketStabilityCV": 1.818865930941179e-16,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
   },
   "Adrian Sanchez": {
-    "keyword": "Adrian Sanchez Baseball",
+    "keyword": "Adrian Sanchez Baseball PSA",
     "nScraped": 60,
     "nSoldUsed": 0,
     "avg": null,
@@ -56,19 +56,19 @@
     "fxRateUsed": null
   },
   "Al Pedrique": {
-    "keyword": "Al Pedrique Baseball",
-    "nScraped": 180,
-    "nSoldUsed": 3,
-    "avg": null,
-    "taguchiSold": null,
-    "medianSold": null,
-    "marketStabilityCV": null,
+    "keyword": "Al Pedrique Baseball PSA",
+    "nScraped": 240,
+    "nSoldUsed": 4,
+    "avg": 22.5,
+    "taguchiSold": 22.5,
+    "medianSold": 22.5,
+    "marketStabilityCV": 0,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
   },
   "Albert Suarez": {
-    "keyword": "Albert Suarez Baseball",
+    "keyword": "Albert Suarez Baseball PSA",
     "nScraped": 60,
     "nSoldUsed": 0,
     "avg": null,
@@ -80,8 +80,8 @@
     "fxRateUsed": null
   },
   "Alberto Callaspo": {
-    "keyword": "Alberto Callaspo Baseball",
-    "nScraped": 48,
+    "keyword": "Alberto Callaspo Baseball PSA",
+    "nScraped": 49,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -92,7 +92,7 @@
     "fxRateUsed": null
   },
   "Alberto Gonzalez": {
-    "keyword": "Alberto Gonzalez Baseball",
+    "keyword": "Alberto Gonzalez Baseball PSA",
     "nScraped": 60,
     "nSoldUsed": 0,
     "avg": null,
@@ -104,16 +104,16 @@
     "fxRateUsed": null
   },
   "Alcides Escobar": {
-    "keyword": "Alcides Escobar Baseball",
-    "nScraped": 63,
-    "nSoldUsed": 0,
+    "keyword": "Alcides Escobar Baseball PSA",
+    "nScraped": 62,
+    "nSoldUsed": 1,
     "avg": null,
     "taguchiSold": null,
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
   },
   "Alejandro Chacin": {
     "keyword": "Alejandro Chacin Baseball",
@@ -128,8 +128,8 @@
     "fxRateUsed": null
   },
   "Alejandro Freire": {
-    "keyword": "Alejandro Freire Baseball",
-    "nScraped": 60,
+    "keyword": "Alejandro Freire Baseball PSA",
+    "nScraped": 0,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -140,7 +140,7 @@
     "fxRateUsed": null
   },
   "Alejandro Machado": {
-    "keyword": "Alejandro Machado Baseball",
+    "keyword": "Alejandro Machado Baseball PSA",
     "nScraped": 0,
     "nSoldUsed": 0,
     "avg": null,
@@ -6860,6 +6860,18 @@
   },
   "David Peralta": {
     "keyword": "David Peralta Baseball",
+    "nScraped": 60,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
+    "currency": "USD",
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
+  },
+  "Carlos Guzman": {
+    "keyword": "Carlos Guzman Baseball PSA",
     "nScraped": 60,
     "nSoldUsed": 0,
     "avg": null,
