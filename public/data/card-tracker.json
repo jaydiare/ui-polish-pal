@@ -1,0 +1,26 @@
+{
+  "_meta": {
+    "description": "Daily card-specific tracker for 2018 Topps Update RC cards",
+    "cards": {
+      "us250-acuna": "2018 Topps Update Series #US250 Ronald Acuna Jr. RC",
+      "us200-torres": "2018 Topps Update #US200 Gleyber Torres RC"
+    },
+    "createdAt": "2026-03-09T00:00:00Z"
+  },
+  "us250-acuna": {
+    "name": "Ronald Acuna Jr.",
+    "sport": "Baseball",
+    "cardTitle": "2018 Topps Update Series #US250 Ronald Acuna Jr. Rookie RC",
+    "searchKeywordRaw": "2018 Topps Update US250 Acuna",
+    "searchKeywordGraded": "2018 Topps Update US250 Acuna PSA",
+    "snapshots": []
+  },
+  "us200-torres": {
+    "name": "Gleyber Torres",
+    "sport": "Baseball",
+    "cardTitle": "2018 Topps Update #US200 Gleyber Torres RC",
+    "searchKeywordRaw": "2018 Topps Update US200 Torres",
+    "searchKeywordGraded": "2018 Topps Update US200 Torres PSA",
+    "snapshots": []
+  }
+}
