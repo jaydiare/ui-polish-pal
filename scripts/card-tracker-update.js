@@ -440,14 +440,14 @@ async function scrapeAllMarketplaces(keyword, card, fxRates, { isSold, isGraded,
 async function scrapeRawListed(card, fxRates) {
   console.log(`\n📋 RAW LISTED: ${card.cardTitle}`);
   return scrapeAllMarketplaces(card.searchKeywordRaw, card, fxRates, {
-    isSold: false, isGraded: false, extraParams: { "Condition%20Type": "Ungraded" },
+    isSold: false, isGraded: false, extraParams: {},
   });
 }
 
 async function scrapeRawSold(card, fxRates) {
   console.log(`\n📋 RAW SOLD: ${card.cardTitle}`);
   return scrapeAllMarketplaces(card.searchKeywordRaw, card, fxRates, {
-    isSold: true, isGraded: false, extraParams: { "Condition%20Type": "Ungraded" },
+    isSold: true, isGraded: false, extraParams: {},
   });
 }
 
@@ -455,14 +455,14 @@ async function scrapeRawSold(card, fxRates) {
 async function scrapeGradedListed(card, fxRates) {
   console.log(`\n🏆 GRADED LISTED (PSA): ${card.cardTitle}`);
   return scrapeAllMarketplaces(card.searchKeywordGraded, card, fxRates, {
-    isSold: false, isGraded: true, extraParams: { Graded: "Yes" },
+    isSold: false, isGraded: true, extraParams: {},
   });
 }
 
 async function scrapeGradedSold(card, fxRates) {
   console.log(`\n🏆 GRADED SOLD (PSA): ${card.cardTitle}`);
   return scrapeAllMarketplaces(card.searchKeywordGraded, card, fxRates, {
-    isSold: true, isGraded: true, extraParams: { Graded: "Yes" },
+    isSold: true, isGraded: true, extraParams: {},
   });
 }
 
