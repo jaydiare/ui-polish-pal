@@ -1,13 +1,13 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-09T05:23:36.045891+00:00",
+    "updatedAt": "2026-03-09T07:12:43.489179+00:00",
     "athleteCount": 451,
     "graders": [
       "PSA"
     ],
     "batchInfo": {
-      "startIdx": 140,
-      "endIdx": 160,
+      "startIdx": 160,
+      "endIdx": 180,
       "totalAthletes": 568
     }
   },
@@ -2249,16 +2249,16 @@
       "sport": "Baseball",
       "graders": {
         "PSA": {
-          "cards": 1252,
+          "cards": 1253,
           "gems": 2206,
-          "grades": 4947,
+          "grades": 4951,
           "gemRate": 45.0
         }
       },
       "totals": {
-        "cards": 1252,
+        "cards": 1253,
         "gems": 2206,
-        "grades": 4947,
+        "grades": 4951,
         "gemRate": 45.0
       }
     },
@@ -2286,15 +2286,15 @@
       "graders": {
         "PSA": {
           "cards": 1885,
-          "gems": 8604,
-          "grades": 15148,
+          "gems": 8606,
+          "grades": 15150,
           "gemRate": 57.0
         }
       },
       "totals": {
         "cards": 1885,
-        "gems": 8604,
-        "grades": 15148,
+        "gems": 8606,
+        "grades": 15150,
         "gemRate": 57.0
       }
     },
@@ -2466,16 +2466,16 @@
       "graders": {
         "PSA": {
           "cards": 49,
-          "gems": 66,
-          "grades": 143,
-          "gemRate": 46.0
+          "gems": 67,
+          "grades": 144,
+          "gemRate": 47.0
         }
       },
       "totals": {
         "cards": 49,
-        "gems": 66,
-        "grades": 143,
-        "gemRate": 46.0
+        "gems": 67,
+        "grades": 144,
+        "gemRate": 47.0
       }
     },
     "Freddy Galvis": {
@@ -2537,16 +2537,16 @@
       "sport": "Baseball",
       "graders": {
         "PSA": {
-          "cards": 1066,
+          "cards": 1067,
           "gems": 3320,
-          "grades": 6101,
+          "grades": 6105,
           "gemRate": 54.0
         }
       },
       "totals": {
-        "cards": 1066,
+        "cards": 1067,
         "gems": 3320,
-        "grades": 6101,
+        "grades": 6105,
         "gemRate": 54.0
       }
     },
