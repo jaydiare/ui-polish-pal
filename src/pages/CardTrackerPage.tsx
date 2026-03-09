@@ -63,7 +63,7 @@ const RANGE_OPTIONS = [
   { label: "All", days: Infinity },
 ];
 
-const GITHUB_RAW = "https://raw.githubusercontent.com/hernanchu/vzla-sports-elite/refs/heads/main/public/data";
+const GITHUB_RAW = "https://raw.githubusercontent.com/jaydiare/ui-polish-pal/main/data";
 
 /* Helper: get stats from snapshot respecting both new and legacy structure */
 function getStatsFromSnap(snap: Snapshot, dataMode: DataMode, cardMode: CardMode, grade: string): CardStats | null {
@@ -101,10 +101,14 @@ const CardTrackerPage = () => {
   } = useAthleteData();
 
   useEffect(() => {
-    fetch(`${GITHUB_RAW}/card-tracker.json`, { cache: "no-store" })
-      .then((r) => r.json())
-      .then((d) => { setData(d); setLoading(false); })
-      .catch(() => setLoading(false));
+    (async () => {
+      try {
+        let r = await fetch(`${GITHUB_RAW}/card-tracker.json`, { cache: "no-store" });
+        if (!r.ok) r = await fetch("/data/card-tracker.json");
+        if (r.ok) { setData(await r.json()); }
+      } catch { /* fallback silently */ }
+      setLoading(false);
+    })();
   }, []);
 
   const normalize = (s: string) =>
