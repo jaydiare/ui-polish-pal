@@ -53,6 +53,23 @@ const SCP_RANGE_OPTIONS = [
   { label: "All", days: Infinity },
 ];
 
+/* ── CSV Download Helper ── */
+function downloadCsv(filename: string, headers: string[], rows: (string | number | null)[][]) {
+  const escape = (v: any) => {
+    if (v == null) return "";
+    const s = String(v);
+    return s.includes(",") || s.includes('"') ? `"${s.replace(/"/g, '""')}"` : s;
+  };
+  const csv = [headers.map(escape).join(","), ...rows.map((r) => r.map(escape).join(","))].join("\n");
+  const blob = new Blob([csv], { type: "text/csv;charset=utf-8;" });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement("a");
+  a.href = url;
+  a.download = filename;
+  a.click();
+  URL.revokeObjectURL(url);
+}
+
 /* ── Types ── */
 interface CardStats {
   taguchiMean: number | null;
