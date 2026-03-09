@@ -512,6 +512,25 @@ function CardSnapshotTable({
   const modeLabel = dataMode === "listed" ? "Listed" : "Sold";
   const cardLabel = cardMode === "raw" ? "Raw (Near Mint/Mint)" : `PSA ${selectedGrade}`;
 
+  const handleDownloadCsv = () => {
+    const headers = ["Date", "Avg Price", "Median", "CV", "S/N", "N", "Min", "Max"];
+    const rows = reversed.map((snap) => {
+      const stats = getStatsFromSnap(snap, dataMode, cardMode, selectedGrade);
+      return [
+        snap.date,
+        stats?.taguchiMean ?? null,
+        stats?.median ?? null,
+        stats?.cv != null ? (stats.cv * 100).toFixed(1) : null,
+        stats?.sn ?? null,
+        stats?.n ?? null,
+        stats?.min ?? null,
+        stats?.max ?? null,
+      ];
+    });
+    const safeName = card.cardTitle.replace(/[^a-zA-Z0-9]/g, "_").replace(/_+/g, "_");
+    downloadCsv(`${safeName}_${modeLabel}_${cardLabel}.csv`, headers, rows);
+  };
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 12 }}
@@ -519,7 +538,17 @@ function CardSnapshotTable({
       transition={{ duration: 0.3 }}
       className="glass-panel p-4 md:p-6 rounded-xl mb-8"
     >
-      <h3 className="text-base font-display font-bold text-foreground mb-1">{card.cardTitle}</h3>
+      <div className="flex items-center justify-between mb-1">
+        <h3 className="text-base font-display font-bold text-foreground">{card.cardTitle}</h3>
+        <button
+          onClick={handleDownloadCsv}
+          className="flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium rounded-md bg-secondary hover:bg-secondary/80 text-foreground transition-colors"
+          title="Download as CSV"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          CSV
+        </button>
+      </div>
       <p className="text-xs text-muted-foreground mb-4">
         {modeLabel} — {cardLabel} — {snapshots.length} snapshot{snapshots.length !== 1 ? "s" : ""}
       </p>
