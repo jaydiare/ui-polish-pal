@@ -114,12 +114,6 @@ type DataMode = "listed" | "sold";
 type CardMode = "raw" | "graded";
 
 const CARD_KEYS = ["us250-acuna", "us200-torres"] as const;
-const RANGE_OPTIONS = [
-  { label: "7d", days: 7 },
-  { label: "30d", days: 30 },
-  { label: "90d", days: 90 },
-  { label: "All", days: Infinity },
-];
 
 const GITHUB_RAW = "https://raw.githubusercontent.com/jaydiare/ui-polish-pal/main/data";
 
