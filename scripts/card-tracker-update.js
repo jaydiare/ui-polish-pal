@@ -100,10 +100,17 @@ function safeNum(x) { const n = Number(x); return Number.isFinite(n) ? n : null;
 
 function parsePriceText(text) {
   if (!text) return null;
+  // Detect currency from text
+  const t = String(text);
+  let currency = "USD";
+  if (t.includes("C $") || t.includes("C$") || t.includes("CAD")) currency = "CAD";
+  else if (t.includes("£") || t.includes("GBP")) currency = "GBP";
+  else if (t.includes("€") || t.includes("EUR")) currency = "EUR";
   // Remove currency symbols, commas, whitespace; grab first number
-  const cleaned = text.replace(/[^0-9.,]/g, "").replace(/,/g, "");
+  const cleaned = t.replace(/[^0-9.,]/g, "").replace(/,/g, "");
   const m = cleaned.match(/(\d+(?:\.\d+)?)/);
-  return m ? parseFloat(m[1]) : null;
+  if (!m) return null;
+  return { price: parseFloat(m[1]), currency };
 }
 
 function parseShippingText(text) {
