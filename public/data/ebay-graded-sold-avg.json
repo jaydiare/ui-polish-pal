@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-09T17:14:52.665Z",
+    "updatedAt": "2026-03-09T17:35:40.589Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA-only title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 410,
-      "endIdx": 420,
+      "startIdx": 420,
+      "endIdx": 430,
       "totalAthletes": 450
     },
     "maxPages": 4,
@@ -5839,56 +5839,8 @@
     "fxRateUsed": null
   },
   "Yorman Bazardo": {
-    "keyword": "Yorman Bazardo Baseball",
-    "nScraped": 32,
-    "nSoldUsed": 2,
-    "avg": null,
-    "taguchiSold": null,
-    "medianSold": null,
-    "marketStabilityCV": null,
-    "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
-  },
-  "Yorman Rodriguez": {
-    "keyword": "Yorman Rodriguez Baseball",
-    "nScraped": 180,
-    "nSoldUsed": 28,
-    "avg": 29.321428571428573,
-    "taguchiSold": 29.321428571428573,
-    "medianSold": 27,
-    "marketStabilityCV": 0.11925056709222923,
-    "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
-  },
-  "Yorvit Torrealba": {
-    "keyword": "Yorvit Torrealba Baseball",
-    "nScraped": 37,
-    "nSoldUsed": 3,
-    "avg": null,
-    "taguchiSold": null,
-    "medianSold": null,
-    "marketStabilityCV": null,
-    "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
-  },
-  "Yusmeiro Petit": {
-    "keyword": "Yusmeiro Petit Baseball",
-    "nScraped": 61,
-    "nSoldUsed": 2,
-    "avg": null,
-    "taguchiSold": null,
-    "medianSold": null,
-    "marketStabilityCV": null,
-    "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
-  },
-  "Carl Herrera": {
-    "keyword": "Carl Herrera Basketball",
-    "nScraped": 0,
+    "keyword": "Yorman Bazardo Baseball PSA",
+    "nScraped": 35,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -5898,9 +5850,57 @@
     "originalCurrencyExample": null,
     "fxRateUsed": null
   },
+  "Yorman Rodriguez": {
+    "keyword": "Yorman Rodriguez Baseball PSA",
+    "nScraped": 240,
+    "nSoldUsed": 4,
+    "avg": 7.06,
+    "taguchiSold": 7.06,
+    "medianSold": 7.06,
+    "marketStabilityCV": 0,
+    "currency": "USD",
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
+  },
+  "Yorvit Torrealba": {
+    "keyword": "Yorvit Torrealba Baseball PSA",
+    "nScraped": 37,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
+    "currency": "USD",
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
+  },
+  "Yusmeiro Petit": {
+    "keyword": "Yusmeiro Petit Baseball PSA",
+    "nScraped": 60,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
+    "currency": "USD",
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
+  },
+  "Carl Herrera": {
+    "keyword": "Carl Herrera Basketball PSA",
+    "nScraped": 265,
+    "nSoldUsed": 16,
+    "avg": 22.195000000000004,
+    "taguchiSold": 22.195000000000004,
+    "medianSold": 22.195,
+    "marketStabilityCV": 0.15332558535109633,
+    "currency": "USD",
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
+  },
   "Greivis Vasquez": {
-    "keyword": "Greivis Vasquez Basketball",
-    "nScraped": 0,
+    "keyword": "Greivis Vasquez Basketball PSA",
+    "nScraped": 62,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -5911,13 +5911,13 @@
     "fxRateUsed": null
   },
   "Oscar Torres": {
-    "keyword": "Oscar Torres Basketball",
-    "nScraped": 180,
-    "nSoldUsed": 3,
-    "avg": null,
-    "taguchiSold": null,
-    "medianSold": null,
-    "marketStabilityCV": null,
+    "keyword": "Oscar Torres Basketball PSA",
+    "nScraped": 240,
+    "nSoldUsed": 4,
+    "avg": 24.4,
+    "taguchiSold": 24.4,
+    "medianSold": 24.4,
+    "marketStabilityCV": 0,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
@@ -5935,8 +5935,8 @@
     "fxRateUsed": 1
   },
   "Amleto Monacelli": {
-    "keyword": "Amleto Monacelli Bowling",
-    "nScraped": 60,
+    "keyword": "Amleto Monacelli PBA Bowler Bowling Bowling PSA",
+    "nScraped": 0,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -5947,16 +5947,16 @@
     "fxRateUsed": null
   },
   "Andres Borregales": {
-    "keyword": "Andres Borregales Football",
-    "nScraped": 192,
-    "nSoldUsed": 22,
-    "avg": 30.677727272727278,
-    "taguchiSold": 30.677727272727278,
-    "medianSold": 30,
-    "marketStabilityCV": 0.12402267528801515,
+    "keyword": "Andres Borregales Football PSA",
+    "nScraped": 0,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
   },
   "Jhonattan Vegas": {
     "keyword": "Jhonattan Vegas Golf",
@@ -5971,16 +5971,16 @@
     "fxRateUsed": null
   },
   "Marlon Vera": {
-    "keyword": "Marlon Vera MMA",
-    "nScraped": 60,
-    "nSoldUsed": 2,
+    "keyword": "Marlon Vera MMA PSA",
+    "nScraped": 0,
+    "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
   },
   "Juan Arango": {
     "keyword": "Juan Arango Soccer",
