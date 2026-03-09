@@ -63,7 +63,7 @@ const RANGE_OPTIONS = [
   { label: "All", days: Infinity },
 ];
 
-const GITHUB_RAW = "https://raw.githubusercontent.com/hernanchu/vzla-sports-elite/refs/heads/main/public/data";
+const GITHUB_RAW = "https://raw.githubusercontent.com/jaydiare/ui-polish-pal/main/data";
 
 /* Helper: get stats from snapshot respecting both new and legacy structure */
 function getStatsFromSnap(snap: Snapshot, dataMode: DataMode, cardMode: CardMode, grade: string): CardStats | null {
