@@ -5,7 +5,7 @@
 //   - 2018 Topps Update Series #US250 Ronald Acuna Jr. RC
 //   - 2018 Topps Update #US200 Gleyber Torres RC
 //
-// For each card, collects:
+// For each card, collects LISTED + SOLD data from EBAY_US and EBAY_CA:
 //   RAW: Near Mint / Mint condition only, excludes graded
 //   GRADED: PSA only, individual grades 1-10 including sub-grades
 //
@@ -36,6 +36,12 @@ const BASE_DELAY_MS = 4000;
 const INTER_PAGE_DELAY_MS = 2500;
 const MIN_SAMPLE_SIZE = 3;
 const TAGUCHI_TRIM_PCT = 0.4;
+
+// Marketplaces to scrape
+const MARKETPLACES = [
+  { id: "EBAY_US", domain: "www.ebay.com" },
+  { id: "EBAY_CA", domain: "www.ebay.ca" },
+];
 
 // Cards to track
 const CARDS = [
@@ -163,18 +169,14 @@ function isJunkTitle(title) {
   return JUNK_PHRASES.some((p) => t.includes(p));
 }
 
-// Detect if title contains a specific card number
 function titleHasCardNumber(title, cardNumber) {
   const t = norm(title);
   const cn = norm(cardNumber);
-  // Match #US250, US250, # US250 etc.
   return t.includes(cn);
 }
 
-// Graded detection with PSA-only filter
 function extractPSAGrade(title) {
   const t = String(title || "");
-  // Match "PSA 10", "PSA 9.5", "PSA 9", etc.
   const match = t.match(/\bPSA\s+(10|9\.5|9|8\.5|8|7\.5|7|6\.5|6|5\.5|5|4\.5|4|3\.5|3|2\.5|2|1\.5|1)\b/i);
   return match ? match[1] : null;
 }
@@ -226,8 +228,8 @@ function convertToUSD(amount, currency, fxRates) {
   return amount * rate;
 }
 
-// --- eBay scraping (Buy It Now active listings) ---
-function buildSearchURL(keyword, page = 1, extraParams = {}) {
+// --- eBay scraping ---
+function buildSearchURL(keyword, domain, page = 1, extraParams = {}) {
   const params = new URLSearchParams({
     _nkw: keyword,
     _sacat: CATEGORY_ID,
@@ -237,7 +239,21 @@ function buildSearchURL(keyword, page = 1, extraParams = {}) {
     ...extraParams,
   });
   if (page > 1) params.set("_pgn", String(page));
-  return `https://www.ebay.com/sch/i.html?${params.toString()}`;
+  return `https://${domain}/sch/i.html?${params.toString()}`;
+}
+
+function buildSoldSearchURL(keyword, domain, page = 1, extraParams = {}) {
+  const params = new URLSearchParams({
+    _nkw: keyword,
+    _sacat: CATEGORY_ID,
+    LH_Complete: "1",
+    LH_Sold: "1",
+    _ipg: "60",
+    rt: "nc",
+    ...extraParams,
+  });
+  if (page > 1) params.set("_pgn", String(page));
+  return `https://${domain}/sch/i.html?${params.toString()}`;
 }
 
 async function fetchPage(url) {
@@ -341,110 +357,118 @@ function computeStats(pricesUSD) {
   };
 }
 
-// --- Scrape RAW listings for a card ---
-async function scrapeRaw(card, fxRates) {
-  console.log(`\n📋 RAW: ${card.cardTitle}`);
-  const pricesUSD = [];
-
-  for (let page = 1; page <= MAX_PAGES; page++) {
-    const url = buildSearchURL(card.searchKeywordRaw, page, { "Condition%20Type": "Ungraded" });
-    try {
-      const html = await fetchPage(url);
-      if (page === 1) console.log(`  HTML: ${html.length} chars`);
-      const listings = parseListings(html);
-      if (!listings.length) { if (page === 1) console.log(`  No results`); break; }
-
-      for (const it of listings) {
-        if (isJunkTitle(it.title)) continue;
-        if (!titleHasCardNumber(it.title, card.cardNumber)) continue;
-        if (isGradedTitle(it.title)) continue;
-        if (!ungradedPassesPolicy(it.title)) continue;
-        let totalPrice = it.price + (it.shippingCost || 0);
-        const usd = convertToUSD(totalPrice, it.currency, fxRates);
-        if (usd != null) pricesUSD.push(usd);
-      }
-
-      if (page < MAX_PAGES) await sleep(INTER_PAGE_DELAY_MS + Math.random() * 1500);
-    } catch (e) {
-      console.log(`  Page ${page} error: ${e.message}`);
-      break;
-    }
-  }
-
-  console.log(`  Raw prices collected: ${pricesUSD.length}`);
-  return computeStats(pricesUSD);
-}
-
-// --- Scrape GRADED (PSA) listings for a card ---
-async function scrapeGraded(card, fxRates) {
-  console.log(`\n🏆 GRADED (PSA): ${card.cardTitle}`);
+// --- Scrape across both marketplaces and merge prices ---
+async function scrapeAllMarketplaces(keyword, card, fxRates, { isSold, isGraded, extraParams }) {
   const allPricesUSD = [];
   const byGrade = {};
+  const label = `${isSold ? "SOLD" : "LISTED"} ${isGraded ? "GRADED" : "RAW"}`;
 
-  for (let page = 1; page <= MAX_PAGES; page++) {
-    const url = buildSearchURL(card.searchKeywordGraded, page, { Graded: "Yes" });
-    try {
-      const html = await fetchPage(url);
-      if (page === 1) console.log(`  HTML: ${html.length} chars`);
-      const listings = parseListings(html);
-      if (!listings.length) { if (page === 1) console.log(`  No results`); break; }
+  for (const mp of MARKETPLACES) {
+    console.log(`  🌐 ${mp.id}: ${label} — ${card.name}`);
 
-      for (const it of listings) {
-        if (isJunkTitle(it.title)) continue;
-        if (!titleHasCardNumber(it.title, card.cardNumber)) continue;
-        // Must be PSA specifically
-        const grade = extractPSAGrade(it.title);
-        if (!grade) continue;
-        if (!ungradedPassesPolicy(it.title)) continue;
+    for (let page = 1; page <= MAX_PAGES; page++) {
+      const urlFn = isSold ? buildSoldSearchURL : buildSearchURL;
+      const url = urlFn(keyword, mp.domain, page, extraParams);
+      try {
+        const html = await fetchPage(url);
+        if (page === 1) console.log(`    HTML: ${html.length} chars`);
+        const listings = parseListings(html);
+        if (!listings.length) { if (page === 1) console.log(`    No results`); break; }
 
-        let totalPrice = it.price + (it.shippingCost || 0);
-        const usd = convertToUSD(totalPrice, it.currency, fxRates);
-        if (usd == null) continue;
+        for (const it of listings) {
+          if (isJunkTitle(it.title)) continue;
+          if (!titleHasCardNumber(it.title, card.cardNumber)) continue;
 
-        allPricesUSD.push(usd);
-        if (!byGrade[grade]) byGrade[grade] = [];
-        byGrade[grade].push(usd);
-      }
+          if (isGraded) {
+            const grade = extractPSAGrade(it.title);
+            if (!grade) continue;
+            let totalPrice = it.price + (it.shippingCost || 0);
+            const usd = convertToUSD(totalPrice, it.currency, fxRates);
+            if (usd == null) continue;
+            allPricesUSD.push(usd);
+            if (!byGrade[grade]) byGrade[grade] = [];
+            byGrade[grade].push(usd);
+          } else {
+            if (isGradedTitle(it.title)) continue;
+            if (!ungradedPassesPolicy(it.title)) continue;
+            let totalPrice = it.price + (it.shippingCost || 0);
+            const usd = convertToUSD(totalPrice, it.currency, fxRates);
+            if (usd != null) allPricesUSD.push(usd);
+          }
+        }
 
-      if (page < MAX_PAGES) await sleep(INTER_PAGE_DELAY_MS + Math.random() * 1500);
-    } catch (e) {
-      console.log(`  Page ${page} error: ${e.message}`);
-      break;
-    }
-  }
-
-  console.log(`  Graded prices collected: ${allPricesUSD.length}`);
-
-  // Compute per-grade stats
-  const gradeStats = {};
-  for (const g of PSA_GRADES) {
-    if (byGrade[g] && byGrade[g].length > 0) {
-      const stats = computeStats(byGrade[g]);
-      if (stats) {
-        gradeStats[g] = stats;
-      } else {
-        // Below min sample but still report count
-        gradeStats[g] = {
-          taguchiMean: byGrade[g].length === 1 ? Math.round(byGrade[g][0] * 100) / 100 : null,
-          median: median(byGrade[g]),
-          cv: null,
-          sn: null,
-          n: byGrade[g].length,
-          min: Math.round(Math.min(...byGrade[g]) * 100) / 100,
-          max: Math.round(Math.max(...byGrade[g]) * 100) / 100,
-        };
+        if (page < MAX_PAGES) await sleep(INTER_PAGE_DELAY_MS + Math.random() * 1500);
+      } catch (e) {
+        console.log(`    Page ${page} error: ${e.message}`);
+        break;
       }
     }
+
+    // Delay between marketplaces
+    await sleep(BASE_DELAY_MS + Math.random() * 2000);
   }
 
-  const overall = computeStats(allPricesUSD);
+  console.log(`  ${label} total prices: ${allPricesUSD.length}`);
 
-  return { overall, byGrade: gradeStats };
+  if (isGraded) {
+    const gradeStats = {};
+    for (const g of PSA_GRADES) {
+      if (byGrade[g] && byGrade[g].length > 0) {
+        const stats = computeStats(byGrade[g]);
+        if (stats) {
+          gradeStats[g] = stats;
+        } else {
+          gradeStats[g] = {
+            taguchiMean: byGrade[g].length === 1 ? Math.round(byGrade[g][0] * 100) / 100 : null,
+            median: median(byGrade[g]),
+            cv: null,
+            sn: null,
+            n: byGrade[g].length,
+            min: Math.round(Math.min(...byGrade[g]) * 100) / 100,
+            max: Math.round(Math.max(...byGrade[g]) * 100) / 100,
+          };
+        }
+      }
+    }
+    return { overall: computeStats(allPricesUSD), byGrade: gradeStats };
+  }
+
+  return computeStats(allPricesUSD);
+}
+
+// --- Scrape RAW listings ---
+async function scrapeRawListed(card, fxRates) {
+  console.log(`\n📋 RAW LISTED: ${card.cardTitle}`);
+  return scrapeAllMarketplaces(card.searchKeywordRaw, card, fxRates, {
+    isSold: false, isGraded: false, extraParams: { "Condition%20Type": "Ungraded" },
+  });
+}
+
+async function scrapeRawSold(card, fxRates) {
+  console.log(`\n📋 RAW SOLD: ${card.cardTitle}`);
+  return scrapeAllMarketplaces(card.searchKeywordRaw, card, fxRates, {
+    isSold: true, isGraded: false, extraParams: { "Condition%20Type": "Ungraded" },
+  });
+}
+
+// --- Scrape GRADED (PSA) ---
+async function scrapeGradedListed(card, fxRates) {
+  console.log(`\n🏆 GRADED LISTED (PSA): ${card.cardTitle}`);
+  return scrapeAllMarketplaces(card.searchKeywordGraded, card, fxRates, {
+    isSold: false, isGraded: true, extraParams: { Graded: "Yes" },
+  });
+}
+
+async function scrapeGradedSold(card, fxRates) {
+  console.log(`\n🏆 GRADED SOLD (PSA): ${card.cardTitle}`);
+  return scrapeAllMarketplaces(card.searchKeywordGraded, card, fxRates, {
+    isSold: true, isGraded: true, extraParams: { Graded: "Yes" },
+  });
 }
 
 // --- main ---
 async function main() {
-  console.log("🔍 Card Tracker — daily snapshot\n");
+  console.log("🔍 Card Tracker — daily snapshot (Listed + Sold, EBAY_US + EBAY_CA)\n");
   const today = new Date().toISOString().split("T")[0];
 
   // Load existing data
@@ -476,32 +500,56 @@ async function main() {
       continue;
     }
 
-    const raw = await scrapeRaw(card, fxRates);
-    await sleep(BASE_DELAY_MS + Math.random() * 3000);
-    const graded = await scrapeGraded(card, fxRates);
+    // Scrape all 4 combinations: listed raw, listed graded, sold raw, sold graded
+    const listedRaw = await scrapeRawListed(card, fxRates);
+    await sleep(BASE_DELAY_MS + Math.random() * 2000);
 
-    const snapshot = { date: today, raw, graded };
+    const listedGraded = await scrapeGradedListed(card, fxRates);
+    await sleep(BASE_DELAY_MS + Math.random() * 2000);
+
+    const soldRaw = await scrapeRawSold(card, fxRates);
+    await sleep(BASE_DELAY_MS + Math.random() * 2000);
+
+    const soldGraded = await scrapeGradedSold(card, fxRates);
+
+    const snapshot = {
+      date: today,
+      listed: {
+        raw: listedRaw,
+        graded: listedGraded,
+      },
+      sold: {
+        raw: soldRaw,
+        graded: soldGraded,
+      },
+      // Legacy compat — kept for backward reading
+      raw: listedRaw,
+      graded: listedGraded,
+    };
     data[card.key].snapshots.push(snapshot);
 
     console.log(`\n✅ ${card.name} snapshot saved for ${today}`);
-
-    // Progressive save
-    fs.writeFileSync(DATA_PATH, JSON.stringify(data, null, 2));
-
     await sleep(BASE_DELAY_MS + Math.random() * 3000);
   }
 
-  data._meta.lastUpdated = new Date().toISOString();
-  fs.writeFileSync(DATA_PATH, JSON.stringify(data, null, 2));
+  data._meta = {
+    ...data._meta,
+    description: "Daily card-specific tracker for 2018 Topps Update RC cards (Listed + Sold, EBAY_US + EBAY_CA)",
+    lastUpdated: new Date().toISOString(),
+  };
 
-  // Copy to public
+  fs.mkdirSync(path.dirname(DATA_PATH), { recursive: true });
+  fs.writeFileSync(DATA_PATH, JSON.stringify(data, null, 2), "utf8");
+  console.log(`\n💾 Saved → ${DATA_PATH}`);
+
   fs.mkdirSync(path.dirname(PUBLIC_PATH), { recursive: true });
-  fs.copyFileSync(DATA_PATH, PUBLIC_PATH);
+  fs.writeFileSync(PUBLIC_PATH, JSON.stringify(data, null, 2), "utf8");
+  console.log(`📂 Copied → ${PUBLIC_PATH}`);
 
-  console.log(`\n🎯 Card tracker complete. Wrote ${DATA_PATH}`);
+  console.log("\n🏁 Card tracker complete.");
 }
 
 main().catch((err) => {
-  console.error(err);
+  console.error("❌ Card tracker failed:", err);
   process.exit(1);
 });
