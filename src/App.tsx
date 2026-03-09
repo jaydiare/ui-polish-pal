@@ -5,6 +5,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 const Index = lazy(() => import("./pages/Index"));
 const About = lazy(() => import("./pages/About"));
+const CardTrackerPage = lazy(() => import("./pages/CardTrackerPage"));
 const Privacy = lazy(() => import("./pages/privacy"));
 const EbaySuccess = lazy(() => import("./pages/EbaySuccess"));
 const EbayDenied = lazy(() => import("./pages/EbayDenied"));
@@ -34,6 +35,7 @@ const App = () => (
             <Route path="/ebay/success" element={<EbaySuccess />} />
             <Route path="/ebay/denied" element={<EbayDenied />} />
             <Route path="/blog" element={<Blog />} />
+            <Route path="/blog/acuna-torres-tracker" element={<CardTrackerPage />} />
             <Route path="/blog/:slug" element={<BlogPost />} />
             <Route path="/data" element={<Data />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
