@@ -50,8 +50,8 @@ const CARDS = [
     name: "Ronald Acuna Jr.",
     sport: "Baseball",
     cardTitle: "2018 Topps Update Series #US250 Ronald Acuna Jr. Rookie RC",
-    searchKeywordRaw: "2018 Topps Update US250 Acuna",
-    searchKeywordGraded: "2018 Topps Update US250 Acuna PSA",
+    searchKeywordRaw: "2018 Topps Update US250 Acuna -rainbow -gold -foil -chrome -parallel -refractor -pink -camo -platinum -sapphire -silver -independence -vintage -negative",
+    searchKeywordGraded: "2018 Topps Update US250 Acuna PSA -rainbow -gold -foil -chrome -parallel -refractor -pink -camo -platinum -sapphire -silver -independence -vintage -negative",
     cardNumber: "US250",
   },
   {
@@ -59,8 +59,8 @@ const CARDS = [
     name: "Gleyber Torres",
     sport: "Baseball",
     cardTitle: "2018 Topps Update #US200 Gleyber Torres RC",
-    searchKeywordRaw: "2018 Topps Update US200 Torres",
-    searchKeywordGraded: "2018 Topps Update US200 Torres PSA",
+    searchKeywordRaw: "2018 Topps Update US200 Torres -rainbow -gold -foil -chrome -parallel -refractor -pink -camo -platinum -sapphire -silver -independence -vintage -negative",
+    searchKeywordGraded: "2018 Topps Update US200 Torres PSA -rainbow -gold -foil -chrome -parallel -refractor -pink -camo -platinum -sapphire -silver -independence -vintage -negative",
     cardNumber: "US200",
   },
 ];
