@@ -165,7 +165,7 @@ const CardTrackerPage = () => {
           "@context": "https://schema.org",
           "@type": "Article",
           headline: "Acuña & Torres RC Tracker",
-          description: "Daily price tracking with Taguchi analysis for two iconic 2018 Topps Update rookie cards.",
+          description: "Daily price tracking for two iconic 2018 Topps Update rookie cards.",
           datePublished: "2026-03-09",
           author: { "@type": "Organization", name: "VZLA Sports Elite" },
           mainEntityOfPage: "https://vzlasportselite.com/blog/acuna-torres-tracker",
@@ -181,7 +181,7 @@ const CardTrackerPage = () => {
           Acuña & Torres RC Tracker
         </h1>
         <p className="text-muted-foreground text-sm mb-8">
-          Daily price snapshots with Taguchi analysis for 2018 Topps Update rookie cards — EBAY US & CA.
+          Daily price snapshots for 2018 Topps Update rookie cards — EBAY US & CA.
           Last updated: {data._meta?.lastUpdated ? new Date(data._meta.lastUpdated).toLocaleDateString() : "—"}
         </p>
 
@@ -456,7 +456,7 @@ function CardSnapshotTable({
           <thead>
             <tr className="border-b border-border">
               <th className="text-left py-2 px-2 text-muted-foreground font-medium">Date</th>
-              <th className="text-right py-2 px-2 text-muted-foreground font-medium">Taguchi Mean</th>
+              <th className="text-right py-2 px-2 text-muted-foreground font-medium">Avg Price</th>
               <th className="text-right py-2 px-2 text-muted-foreground font-medium">Median</th>
               <th className="text-right py-2 px-2 text-muted-foreground font-medium">CV</th>
               <th className="text-right py-2 px-2 text-muted-foreground font-medium">S/N</th>
