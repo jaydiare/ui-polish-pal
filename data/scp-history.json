@@ -1,0 +1,45 @@
+{
+  "_meta": {
+    "description": "Historical price data from SportsCardsPro for 2018 Topps Update RC cards",
+    "source": "sportscardspro.com",
+    "fetchedAt": "2026-03-09T20:12:40.540Z",
+    "grades": {
+      "7": "Grade 7",
+      "8": "Grade 8",
+      "9": "PSA / BGS Grade 9",
+      "10": "PSA 10 (Gem Mint)",
+      "ungraded": "Ungraded / Raw card",
+      "9.5": "BGS Grade 9.5"
+    }
+  },
+  "us250-acuna": {
+    "name": "Ronald Acuna Jr.",
+    "cardTitle": "2018 Topps Update Series #US250 Ronald Acuna Jr. RC",
+    "productId": "1559264",
+    "currentPrices": {
+      "ungraded": 8.93,
+      "grade_7": 0,
+      "grade_8": 0,
+      "grade_9": 0,
+      "grade_9_5": 0,
+      "psa_10": 0
+    },
+    "history": {},
+    "rawChartKeys": []
+  },
+  "us200-torres": {
+    "name": "Gleyber Torres",
+    "cardTitle": "2018 Topps Update #US200 Gleyber Torres RC",
+    "productId": "1559160",
+    "currentPrices": {
+      "ungraded": 1.37,
+      "grade_7": 0,
+      "grade_8": 0,
+      "grade_9": 0,
+      "grade_9_5": 0,
+      "psa_10": 0
+    },
+    "history": {},
+    "rawChartKeys": []
+  }
+}
