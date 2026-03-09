@@ -558,4 +558,242 @@ function CardSnapshotTable({
   );
 }
 
+/* ── SportsCardsPro Long-Term History Section ── */
+function ScpHistorySection({
+  scpData, scpRange, setScpRange,
+}: {
+  scpData: ScpHistoryData;
+  scpRange: number;
+  setScpRange: (d: number) => void;
+}) {
+  const [selectedScpGrades, setSelectedScpGrades] = useState<string[]>(["ungraded", "10"]);
+
+  const acunaScp = scpData["us250-acuna"];
+  const torresScp = scpData["us200-torres"];
+
+  // Collect all available grades across both cards
+  const allGrades = useMemo(() => {
+    const grades = new Set<string>();
+    for (const card of [acunaScp, torresScp]) {
+      if (card?.history) {
+        for (const g of Object.keys(card.history)) grades.add(g);
+      }
+    }
+    return Array.from(grades).sort((a, b) => {
+      const order = ["ungraded", "7", "8", "9", "9.5", "10"];
+      return order.indexOf(a) - order.indexOf(b);
+    });
+  }, [acunaScp, torresScp]);
+
+  const toggleGrade = (g: string) => {
+    setSelectedScpGrades((prev) =>
+      prev.includes(g) ? prev.filter((x) => x !== g) : [...prev, g]
+    );
+  };
+
+  // Build combined chart data
+  const chartData = useMemo(() => {
+    const dateMap = new Map<string, Record<string, number | null>>();
+    const cutoff = scpRange === Infinity ? null : new Date();
+    if (cutoff) cutoff.setDate(cutoff.getDate() - scpRange);
+    const cutoffStr = cutoff ? cutoff.toISOString().split("T")[0] : "";
+
+    for (const grade of selectedScpGrades) {
+      // Acuña data
+      const acunaHist = acunaScp?.history?.[grade]?.data;
+      if (acunaHist) {
+        for (const pt of acunaHist) {
+          if (cutoffStr && pt.date < cutoffStr) continue;
+          const entry = dateMap.get(pt.date) || { date: pt.date };
+          entry[`acuna_${grade}`] = pt.price;
+          dateMap.set(pt.date, entry);
+        }
+      }
+      // Torres data
+      const torresHist = torresScp?.history?.[grade]?.data;
+      if (torresHist) {
+        for (const pt of torresHist) {
+          if (cutoffStr && pt.date < cutoffStr) continue;
+          const entry = dateMap.get(pt.date) || { date: pt.date };
+          entry[`torres_${grade}`] = pt.price;
+          dateMap.set(pt.date, entry);
+        }
+      }
+    }
+
+    return Array.from(dateMap.values()).sort((a, b) =>
+      (a.date as string).localeCompare(b.date as string)
+    );
+  }, [acunaScp, torresScp, selectedScpGrades, scpRange]);
+
+  if (!chartData.length && allGrades.length === 0) return null;
+
+  const gradeLabel = (g: string) =>
+    g === "ungraded" ? "Raw" : g === "10" ? "PSA 10" : `Grade ${g}`;
+
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 12 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.4 }}
+      className="glass-panel p-4 md:p-6 rounded-xl mb-8"
+    >
+      <h2 className="text-lg font-display font-bold text-foreground mb-1">
+        📈 Long-Term Price History
+      </h2>
+      <p className="text-xs text-muted-foreground mb-4">
+        Historical sold prices from SportsCardsPro — up to 5 years of data.
+        {scpData._meta?.fetchedAt && (
+          <span className="ml-2">
+            Fetched: {new Date(scpData._meta.fetchedAt).toLocaleDateString()}
+          </span>
+        )}
+      </p>
+
+      {/* Controls */}
+      <div className="flex flex-wrap items-center gap-3 mb-4">
+        {/* Time range */}
+        <div className="flex gap-1 bg-secondary rounded-lg p-1">
+          {SCP_RANGE_OPTIONS.map((opt) => (
+            <button
+              key={opt.label}
+              onClick={() => setScpRange(opt.days)}
+              className={`px-3 py-1.5 text-xs font-medium rounded-md transition-colors ${
+                scpRange === opt.days
+                  ? "bg-primary text-primary-foreground"
+                  : "text-muted-foreground hover:text-foreground"
+              }`}
+            >
+              {opt.label}
+            </button>
+          ))}
+        </div>
+
+        {/* Grade toggles */}
+        <div className="flex flex-wrap gap-1">
+          {allGrades.map((g) => (
+            <button
+              key={g}
+              onClick={() => toggleGrade(g)}
+              className={`px-2.5 py-1 text-xs font-medium rounded-md border transition-colors ${
+                selectedScpGrades.includes(g)
+                  ? "border-primary bg-primary/20 text-primary"
+                  : "border-border text-muted-foreground hover:text-foreground"
+              }`}
+            >
+              {gradeLabel(g)}
+            </button>
+          ))}
+        </div>
+      </div>
+
+      {chartData.length > 0 ? (
+        <ResponsiveContainer width="100%" height={360}>
+          <LineChart data={chartData} margin={{ top: 5, right: 20, left: 10, bottom: 5 }}>
+            <CartesianGrid strokeDasharray="3 3" stroke="hsl(var(--border))" />
+            <XAxis
+              dataKey="date"
+              tick={{ fill: "hsl(var(--muted-foreground))", fontSize: 10 }}
+              tickFormatter={(d) => {
+                const parts = d.split("-");
+                return `${parts[1]}/${parts[0].slice(2)}`;
+              }}
+              interval="preserveStartEnd"
+              minTickGap={40}
+            />
+            <YAxis
+              tick={{ fill: "hsl(var(--muted-foreground))", fontSize: 11 }}
+              tickFormatter={(v) => `$${v}`}
+            />
+            <Tooltip
+              contentStyle={{
+                background: "hsl(var(--card))",
+                border: "1px solid hsl(var(--border))",
+                borderRadius: 8,
+                color: "hsl(var(--foreground))",
+                fontSize: 11,
+              }}
+              formatter={(v: number, name: string) => {
+                if (v == null) return ["N/A", ""];
+                const parts = name.split("_");
+                const player = parts[0] === "acuna" ? "Acuña" : "Torres";
+                const grade = gradeLabel(parts.slice(1).join("_"));
+                return [`$${v.toFixed(2)}`, `${player} ${grade}`];
+              }}
+              labelFormatter={(d) => d}
+            />
+            <Legend
+              formatter={(value: string) => {
+                const parts = value.split("_");
+                const player = parts[0] === "acuna" ? "Acuña" : "Torres";
+                const grade = gradeLabel(parts.slice(1).join("_"));
+                return `${player} ${grade}`;
+              }}
+            />
+            {selectedScpGrades.flatMap((grade) => {
+              const color = SCP_GRADE_COLORS[grade] || "hsl(var(--foreground))";
+              const lines = [];
+              if (acunaScp?.history?.[grade]) {
+                lines.push(
+                  <Line
+                    key={`acuna_${grade}`}
+                    type="monotone"
+                    dataKey={`acuna_${grade}`}
+                    name={`acuna_${grade}`}
+                    stroke={color}
+                    strokeWidth={2}
+                    dot={false}
+                    connectNulls
+                  />
+                );
+              }
+              if (torresScp?.history?.[grade]) {
+                lines.push(
+                  <Line
+                    key={`torres_${grade}`}
+                    type="monotone"
+                    dataKey={`torres_${grade}`}
+                    name={`torres_${grade}`}
+                    stroke={color}
+                    strokeWidth={2}
+                    strokeDasharray="5 3"
+                    dot={false}
+                    connectNulls
+                  />
+                );
+              }
+              return lines;
+            })}
+          </LineChart>
+        </ResponsiveContainer>
+      ) : (
+        <p className="text-muted-foreground text-sm text-center py-8">
+          No historical data available yet. Run the SportsCardsPro fetch workflow to populate.
+        </p>
+      )}
+
+      {/* Current prices from SCP */}
+      {(acunaScp?.currentPrices || torresScp?.currentPrices) && (
+        <div className="mt-4 grid grid-cols-1 md:grid-cols-2 gap-4">
+          {[acunaScp, torresScp].filter(Boolean).map((card) => (
+            <div key={card!.productId} className="bg-secondary/50 rounded-lg p-3">
+              <h4 className="text-xs font-bold text-foreground mb-2">{card!.name} — SCP Current</h4>
+              <div className="grid grid-cols-3 gap-2 text-xs">
+                {card!.currentPrices && Object.entries(card!.currentPrices)
+                  .filter(([, v]) => v > 0)
+                  .map(([k, v]) => (
+                    <div key={k}>
+                      <span className="text-muted-foreground capitalize">{k.replace(/_/g, " ")}</span>
+                      <span className="block font-bold text-vzla-yellow">${v.toFixed(2)}</span>
+                    </div>
+                  ))}
+              </div>
+            </div>
+          ))}
+        </div>
+      )}
+    </motion.div>
+  );
+}
+
 export default CardTrackerPage;
