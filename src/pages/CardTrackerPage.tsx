@@ -13,6 +13,46 @@ import AthleteCard from "@/components/AthleteCard";
 import { useAthleteData } from "@/hooks/useAthleteData";
 import type { Athlete } from "@/data/athletes";
 
+/* ── SCP History Types ── */
+interface ScpDataPoint {
+  date: string;
+  price: number;
+}
+interface ScpGradeSeries {
+  label: string;
+  dataPoints: number;
+  firstDate: string;
+  lastDate: string;
+  data: ScpDataPoint[];
+}
+interface ScpCardEntry {
+  name: string;
+  cardTitle: string;
+  productId: string;
+  currentPrices: Record<string, number> | null;
+  history: Record<string, ScpGradeSeries>;
+}
+interface ScpHistoryData {
+  _meta: any;
+  "us250-acuna"?: ScpCardEntry;
+  "us200-torres"?: ScpCardEntry;
+}
+
+const SCP_GRADE_COLORS: Record<string, string> = {
+  ungraded: "hsl(var(--muted-foreground))",
+  "7": "#9b87f5",
+  "8": "#6E59A5",
+  "9": "#1EAEDB",
+  "9.5": "#F97316",
+  "10": "hsl(var(--vzla-yellow))",
+};
+const SCP_RANGE_OPTIONS = [
+  { label: "1y", days: 365 },
+  { label: "2y", days: 730 },
+  { label: "5y", days: 1825 },
+  { label: "All", days: Infinity },
+];
+
 /* ── Types ── */
 interface CardStats {
   taguchiMean: number | null;
