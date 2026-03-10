@@ -1054,7 +1054,7 @@ async function main() {
       }
     }
 
-    // Always save progress after each athlete
+    // --- Step 5g: Progressive save (crash-safe) ---
     fs.writeFileSync(OUT_PATH, JSON.stringify(out, null, 2));
 
     await sleep(500);
