@@ -347,13 +347,17 @@ function isGradedListing(item) {
 
 ### 5.2 Raw Card Condition Policy
 
-**API-level (Browse API scripts only):**
-- `Condition Type:{Ungraded}` aspect filter
-- Card Condition URL param: `Near Mint or Better|Excellent`
+**API-level (Browse API scripts):**
+- **Raw script:** No `Condition Type` aspect filter (intentionally removed — see Bug 8.12)
+- **Graded script:** `Graded:{Yes}` + `Professional Grader:{PSA}` aspect filters
 
 **Post-fetch (all raw scripts):**
 - **Allowed conditions:** `near mint or better`, `near-mint or better`, `near mint`, `nm`, `nm-mt`, `nmt`, `excellent`, `ex`
-- **Blocklist:** `damaged`, `poor`, `fair`, `digital`, `very good`, `vg`, `good`, `gd`, `creases`, `wrinkle`, `corner wear`, `surface wear`, `paper loss`, `stain`, `water damage`, `tape`, `writing`, `marked`, `pin hole`, `torn`, `tear`, `scratches`
+- **Blocklist (word-boundary matched):** `damaged`, `damage`, `poor`, `fair`, `digital`, `very good`, `creases`, `crease`, `wrinkle`, `wrinkling`, `corner wear`, `surface wear`, `paper loss`, `stain`, `stained`, `water damage`, `tape`, `writing`, `marked up`, `pin hole`, `torn`, `scratches`, `scratch`, `licensed reprint`, `reprint`, `card painting`, `replica`, `error card`, `card lot`
+
+> **Important (March 10, 2026):** The blocklist now uses **word-boundary regex matching** (`\b...\b`) instead of substring matching (`.includes()`). This prevents false positives where blocklist words appear as substrings of legitimate card terms (e.g., "good" matching "Goodwin Champions", "hole" matching "whole", "copy" matching "Copyright", "tear" matching "Teardrop"). See Bug 8.13.
+
+**Removed from blocklist:** `good`, `gd`, `vg`, `hole`, `tear`, `copy`, `marked` — these caused too many false positives via substring matching and are not worth keeping even with word-boundary matching (too ambiguous in card titles).
 
 **Fallback behavior:**
 - Listed scripts: Accept if no explicit condition info is found (most eBay listings lack descriptors)
