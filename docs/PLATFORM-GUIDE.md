@@ -38,8 +38,8 @@ A sports-card market intelligence platform tracking **550+ Venezuelan athletes**
 | `graded-update-ebay-avg.js` | `ebay-graded.yml` | Daily | Fetches graded (PSA, BGS, SGC) active listings |
 
 - **API quota:** Both share one daily eBay Browse API production quota.
-- **Condition filter (Raw):** Accepts "Near Mint" and "Excellent" conditions. Blocklist excludes damaged/poor but explicitly allows `excellent`, `ex`, `auto`, and `signed`.
-- **Condition filter (Graded):** Matches listings containing grading company keywords (PSA, BGS, SGC, etc.).
+- **Condition filter (Raw):** No API-level condition filter (removed — too many raw listings lack the `Condition Type` tag). Post-fetch filtering via `isGradedListing()` excludes graded cards, and word-boundary blocklist rejects damaged/poor conditions. Accepts "Near Mint" and "Excellent".
+- **Condition filter (Graded):** API-level `Graded:{Yes}` + `Professional Grader:{PSA}` aspect filters. PSA-only detection.
 
 ### 2.3 Sold Listing Scripts (HTML Scraping — no API quota impact)
 

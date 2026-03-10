@@ -102,16 +102,17 @@ This ensures the UI always displays graded prices when any graded data source is
 **Query construction:**
 ```
 q = "{name} {sport} card"
-aspect_filter = "Condition Type:{Ungraded}" + Player/Athlete or Sport aspect
+aspect_filter = Player/Athlete or Sport aspect (NO Condition Type filter)
 filter = "buyingOptions:{FIXED_PRICE}"
 category_ids = "261328" (Trading Card Singles)
 ```
 
 **Filtering pipeline:**
-1. **API-level:** `Condition Type:{Ungraded}` aspect filter restricts to ungraded cards
-2. **Post-fetch graded detection:** Skip if `isGradedListing()` returns true (robust regex)
-3. **Ungraded condition policy:** Must match Near Mint/Excellent conditions; blocklist rejects damaged/poor
-4. **Price normalization:** Convert to USD via CBSA Exchange Rates API
+1. **Post-fetch graded detection:** Skip if `isGradedListing()` returns true (tight regex, see §5.1)
+2. **Ungraded condition policy:** Must match Near Mint/Excellent conditions; word-boundary blocklist rejects damaged/poor
+3. **Price normalization:** Convert to USD via CBSA Exchange Rates API
+
+> **Note:** `Condition Type:{Ungraded}` aspect filter was **intentionally removed** (Bug 8.12) because many valid raw eBay listings lack this metadata tag, causing 0 results. Instead, graded listings are excluded post-fetch via `isGradedListing()`.
 
 **Matching strategy:**
 1. Try `Player/Athlete:{name}` aspect match (with name variations: accent-stripped, no dots, no Jr.)
@@ -319,35 +320,44 @@ Used by `update-ebay-avg.js` and `sold-update-ebay-avg.js`:
 
 ```javascript
 // Detects ALL grading companies to exclude from raw data
-const graderWithGrade = /\b(psa|sgc|bgs|cgc|hga|isa|csa|beckett|bcg)\b[^\n]{0,14}\b(10|9\.5|9|8\.5|8|gem mint|mint|pristine|black label|gold label)\b/i;
-const slabOnly = /\b(gem mint|pristine|black label|gold label)\b/i;
+// Tightened: max 3-char gap (not 20), grades 4+ only, "PSA ready" excluded
+
+function isGradedListing(item) {
+  // eBay condition field says "graded" → graded
+  if (cond.includes("graded")) return true;
+
+  // "PSA ready / worthy / potential / candidate" → NOT graded (raw marketing)
+  if (/\b(psa|sgc|bgs|cgc|hga|beckett)\s*(ready|worthy|potential|candidate)\b/i.test(title))
+    return false;
+
+  // Grader + grade within 3 chars (tight adjacency). Grades start at 4 to avoid card-number FPs.
+  const graderGrade = /\b(psa|sgc|bgs|cgc|hga|isa|csa|beckett|bcg)\s{0,3}(10|9\.5|9|8\.5|8|7\.5|7|6\.5|6|5\.5|5|4\.5|4|gem\s?mint|pristine|authentic|dna)\b/i;
+  const slabOnly = /\b(gem mint|pristine|black label|gold label)\b/i;
+  return graderGrade.test(title) || slabOnly.test(title);
+}
 ```
 
-#### Graded scripts (to INCLUDE only PSA cards) — PSA-only
-
-Used by `graded-update-ebay-avg.js` and `graded-sold-update-ebay-avg.js`:
-
-```javascript
-// Only includes PSA-graded cards
-const psaWithGrade = /\bpsa\b[^\n]{0,14}\b(10|9\.5|9|8\.5|8|gem mint|mint|pristine|black label|gold label)\b/i;
-```
-
-**Key design decisions:**
+**Key design decisions (updated March 10, 2026):**
+- **Tight adjacency (`\s{0,3}`)** — The old `[^\n]{0,20}` gap allowed card numbers (#1, #2, #3) near grader mentions (e.g., "Jose Altuve #1 PSA Ready") to false-positive as graded. Now requires the grade to be directly next to the grader abbreviation.
+- **Grades start at 4** — Grades 1–3 are indistinguishable from card numbers in titles.
+- **"PSA ready" exclusion** — Raw cards marketed for grading (e.g., "PSA ready", "SGC worthy", "PSA 10 potential") are explicitly NOT flagged as graded.
 - **Raw scripts** detect ALL graders (PSA, BGS, SGC, CGC, HGA, etc.) to exclude them from raw averages
 - **Graded scripts** only detect PSA — BGS, SGC, and other graders are ignored
-- Requires **grading company + grade context** — prevents false positives from card #10 or "lot of 10"
 - The graded listing API also uses `Professional Grader:{Professional Sports Authenticator (PSA)}` aspect filter
-- The graded sold search uses "PSA" as the keyword instead of generic "graded"
 
 ### 5.2 Raw Card Condition Policy
 
-**API-level (Browse API scripts only):**
-- `Condition Type:{Ungraded}` aspect filter
-- Card Condition URL param: `Near Mint or Better|Excellent`
+**API-level (Browse API scripts):**
+- **Raw script:** No `Condition Type` aspect filter (intentionally removed — see Bug 8.12)
+- **Graded script:** `Graded:{Yes}` + `Professional Grader:{PSA}` aspect filters
 
 **Post-fetch (all raw scripts):**
 - **Allowed conditions:** `near mint or better`, `near-mint or better`, `near mint`, `nm`, `nm-mt`, `nmt`, `excellent`, `ex`
-- **Blocklist:** `damaged`, `poor`, `fair`, `digital`, `very good`, `vg`, `good`, `gd`, `creases`, `wrinkle`, `corner wear`, `surface wear`, `paper loss`, `stain`, `water damage`, `tape`, `writing`, `marked`, `pin hole`, `torn`, `tear`, `scratches`
+- **Blocklist (word-boundary matched):** `damaged`, `damage`, `poor`, `fair`, `digital`, `very good`, `creases`, `crease`, `wrinkle`, `wrinkling`, `corner wear`, `surface wear`, `paper loss`, `stain`, `stained`, `water damage`, `tape`, `writing`, `marked up`, `pin hole`, `torn`, `scratches`, `scratch`, `licensed reprint`, `reprint`, `card painting`, `replica`, `error card`, `card lot`
+
+> **Important (March 10, 2026):** The blocklist now uses **word-boundary regex matching** (`\b...\b`) instead of substring matching (`.includes()`). This prevents false positives where blocklist words appear as substrings of legitimate card terms (e.g., "good" matching "Goodwin Champions", "hole" matching "whole", "copy" matching "Copyright", "tear" matching "Teardrop"). See Bug 8.13.
+
+**Removed from blocklist:** `good`, `gd`, `vg`, `hole`, `tear`, `copy`, `marked` — these caused too many false positives via substring matching and are not worth keeping even with word-boundary matching (too ambiguous in card titles).
 
 **Fallback behavior:**
 - Listed scripts: Accept if no explicit condition info is found (most eBay listings lack descriptors)
@@ -504,7 +514,7 @@ This tries 6 variants per athlete to maximize API aspect matches.
 
 | Filter | Raw Listed | Graded Listed | Raw Sold | Graded Sold |
 |--------|-----------|---------------|----------|-------------|
-| **API Condition Type** | `Ungraded` | `Graded:{Yes}` | N/A (HTML) | N/A (HTML) |
+| **API Condition Type** | None (removed) | `Graded:{Yes}` | N/A (HTML) | N/A (HTML) |
 | **URL Condition Type** | N/A | N/A | `Ungraded` | N/A (uses "graded" keyword) |
 | **Condition policy** | NM/EX only | Skip ungraded | Blocklist only | N/A |
 | **Graded detection** | Skip graded | Skip ungraded | Skip graded | Skip ungraded |
@@ -609,6 +619,92 @@ for (const [k, v] of Object.entries(prevRecords)) {
 **Problem:** Line 1 of `graded-sold-update-ebay-avg.js` said `// scripts/sold-update-ebay-avg.js` — referencing the raw sold script name.
 
 **Fix:** Corrected to `// scripts/graded-sold-update-ebay-avg.js`.
+
+### 8.12 (March 10, 2026) `Condition Type:{Ungraded}` Aspect Filter Removed from Raw Script
+
+**Problem:** `update-ebay-avg.js` used `Condition Type:{Ungraded}` as an eBay API aspect filter. However, many valid raw card listings on eBay **do not have this metadata tag set**, causing the API to return 0 results for athletes that clearly have hundreds of raw listings (e.g., Jose Altuve returned nListing=2).
+
+**Root cause:** eBay's `Condition Type` aspect is seller-populated and inconsistently applied. Most raw card sellers don't explicitly tag their listings as "Ungraded." The filter effectively discarded ~95% of valid raw listings.
+
+**Fix:** Removed `Condition Type:{Ungraded}` from `buildAspectFilter()`. The script now relies on post-fetch filtering via `isGradedListing()` (§5.1) to exclude graded cards, and `ungradedPassesConditionPolicy()` (§5.2) to enforce condition quality.
+
+### 8.13 (March 10, 2026) Blocklist Substring Matching Caused Mass False Positives
+
+**Problem:** The `UNGRADED_BLOCKLIST` used `.includes()` (substring matching) to reject listings. Several blocklist words appeared as substrings of legitimate card-related terms:
+
+| Blocklist Word | False Positive Match | Context |
+|---------------|---------------------|---------|
+| `"good"` | "Goodwin Champions" | Card brand/set name |
+| `"hole"` | "whole" | Common listing description |
+| `"tear"` | "Teardrop" | Card subset/parallel name |
+| `"copy"` | "Copyright" | Legal text in listings |
+| `"marked"` | "Marketplace" | eBay listing metadata |
+| `"gd"` | Any word containing "gd" | Abbreviation overlap |
+
+**Impact:** Combined with Bug 8.12 (already low result count), these false rejections reduced sample sizes to near-zero for many athletes. Jose Altuve went from hundreds of valid listings to nListing=2.
+
+**Fix (two parts):**
+1. Changed `includesAny()` from `.includes()` to **word-boundary regex** (`\b...\b`) — e.g., `"good"` now only matches the standalone word "good", not "Goodwin"
+2. Removed the most ambiguous single-word entries (`good`, `gd`, `vg`, `hole`, `tear`, `copy`, `marked`) from the blocklist entirely. Kept compound phrases (`very good`, `marked up`, `corner wear`) which are unambiguous.
+
+### 8.14 (March 10, 2026) `isGradedListing()` Regex Too Loose — Card Number False Positives
+
+**Problem:** The graded detection regex used a 20-character gap (`[^\n]{0,20}`) between grader abbreviation and grade number. This caused card numbers (#1, #2, #3, etc.) appearing within 20 characters of a grader mention to be detected as graded:
+
+```
+Title: "Jose Altuve 2024 Topps #1 PSA Ready"
+Old regex: psa...(20 chars)...1 → MATCH (false positive!)
+New regex: psa\s{0,3}1 → NO MATCH (requires direct adjacency)
+```
+
+Additionally, grades 1–3 are indistinguishable from card numbers in listings, so these were removed from the detection list.
+
+**Impact:** Valid raw listings containing any grader abbreviation within 20 characters of any single-digit number were incorrectly classified as graded and excluded. For popular athletes with card numbers 1-10, this could exclude 30-50% of valid raw listings.
+
+**Fix:**
+1. Tightened gap from `[^\n]{0,20}` to `\s{0,3}` (direct adjacency — only whitespace allowed)
+2. Removed grades 1, 1.5, 2, 2.5, 3, 3.5 from detection (too easily confused with card numbers)
+3. Added explicit "PSA ready/worthy/potential/candidate" exclusion — returns `false` before the graded regex is tested
+
+### 8.15 (March 10, 2026) Graded Script Base Prices Contaminating Raw Base Prices
+
+**Problem:** `graded-update-ebay-avg.js` was writing base prices to `data/ebay-base-prices.json` — the same file used by the raw script. This meant graded card prices ($15-50 range) were being stored as base prices for the raw index calculation, inflating raw index levels.
+
+**Fix:** Separated graded base prices into `data/ebay-graded-base-prices.json`. Updated `ebay-graded.yml` workflow to track and commit this new file.
+
+### 8.16 (March 10, 2026) Debug Logging Added for Filter Transparency
+
+**Change:** Added per-page debug logging to `update-ebay-avg.js` showing how many listings were kept vs. filtered:
+
+```
+📋 Page: 60 items, kept=42, skippedGraded=12, skippedCondition=6
+```
+
+This makes it immediately visible in GitHub Actions logs when filters are too aggressive, preventing silent data loss.
+
+---
+
+## Lessons Learned & Anti-Patterns
+
+### L1: Never use substring matching for blocklists
+
+Substring matching (`.includes()`) on natural-language text is inherently fragile. Always use **word-boundary regex** (`\b...\b`) when matching blocklist/allowlist terms against free-text fields like eBay titles. This is a general rule applicable to all future scrapers.
+
+### L2: Avoid wide-gap regex for structured data extraction
+
+When matching structured patterns (e.g., "grader + grade") in unstructured text, keep the gap between pattern components **as tight as possible**. A 20-character gap allows too many false positives from unrelated text that happens to contain matching characters.
+
+### L3: API aspect filters are unreliable for seller-populated metadata
+
+eBay's `Condition Type` field is seller-populated and inconsistently applied. Pre-filtering on unreliable metadata at the API level silently eliminates valid data. Prefer **post-fetch filtering** with robust detection logic over API-level filters for optional/inconsistent metadata.
+
+### L4: Always add filter transparency logging
+
+When a pipeline filters data through multiple stages, add logging at each stage showing how many items were kept vs. rejected. This makes it immediately obvious when a filter is too aggressive, rather than requiring manual investigation when sample sizes are unexpectedly low.
+
+### L5: Isolate base prices between raw and graded pipelines
+
+Price comparison data (base prices for index calculations) must be stored in separate files per data category. Sharing a single base price file between raw and graded pipelines leads to cross-contamination that silently corrupts index calculations.
 
 ---
 
