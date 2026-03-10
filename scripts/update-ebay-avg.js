@@ -252,7 +252,10 @@ function normText(s) {
 
 function includesAny(text, arr) {
   const t = normText(text);
-  return arr.some((w) => t.includes(normText(w)));
+  return arr.some((w) => {
+    const escaped = normText(w).replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+    return new RegExp(`\\b${escaped}\\b`).test(t);
+  });
 }
 
 // Try to read condition descriptor names from multiple possible shapes.
