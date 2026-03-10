@@ -81,7 +81,16 @@ A sports-card market intelligence platform tracking **550+ Venezuelan athletes**
 | `snapshot-athlete-history.js` | `snapshot-history.yml` | Per-athlete: price, CV, days on market (API + observed), listing count, index level. Also maintains `data/athlete-first-seen.json` for snapshot-based DOM tracking. 90-day rolling window. |
 | (embedded in `update-ebay-avg.js`) | `ebay.yml` | Sport-level index to `data/index-history.json` — permanent archive. |
 
-### 2.6 Data Freshness Strategy
+### 2.7 Weekly Market Data Snapshot
+
+| Script | Workflow | Schedule |
+|--------|----------|----------|
+| `snapshot-market-data.js` | `market-data-snapshot.yml` | Weekly (Sunday 12:00 UTC) |
+
+- Aggregates all data sources (eBay listed/sold, SCP prices, gemrate, history) into a single `vzla-athlete-market-data.json` file per athlete.
+- Serves as a consolidated backup and the data source for the Blog Data Table.
+
+### 2.8 Data Freshness Strategy
 
 - Frontend fetches data from **GitHub raw URLs** (not local public/ copies) so updates are visible without republishing.
 - Fallback: local `public/data/` files if remote fetch fails.
