@@ -81,6 +81,8 @@ This ensures the UI always displays graded prices when any graded data source is
 | `ebay-graded-sold.yml` | `graded-sold-update-ebay-avg.js` | Every 3 hours (staggered) | 10 athletes/batch | Graded sold averages (PSA only, gemrate-gated) |
 | `gemrate.yml` | `fetch_gemrate.py` | Every 2 hours | 10 athletes/batch | PSA population counts |
 | `snapshot-history.yml` | `snapshot-athlete-history.js` | Daily | All athletes | Per-athlete time-series archive |
+| `scp-prices.yml` | `fetch-scp-prices.js` | Monthly (1st) | All athletes | SportsCardsPro current prices |
+| `market-data-snapshot.yml` | `snapshot-market-data.js` | Weekly (Sun 12 UTC) | All athletes | Unified market data snapshot |
 
 ### Concurrency & Safety
 
