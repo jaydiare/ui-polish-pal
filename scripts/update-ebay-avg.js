@@ -1196,10 +1196,10 @@ async function main() {
   fs.writeFileSync(HISTORY_PATH, JSON.stringify(fullHistory, null, 2));
   console.log(`Appended to ${HISTORY_PATH} (${fullHistory.length} total entries)`);
 
+  // --- Step 8: Final save of output + base prices ---
   fs.mkdirSync(path.dirname(OUT_PATH), { recursive: true });
   fs.writeFileSync(OUT_PATH, JSON.stringify(out, null, 2));
 
-  // FIX #3: final save of base prices
   saveBasePrices(basePrices);
 
   console.log(`Wrote ${OUT_PATH}`);
