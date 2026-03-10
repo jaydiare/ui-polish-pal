@@ -1,39 +1,40 @@
-// scripts/update-ebay-avg.js
-// Node 20+ (uses global fetch)
+// =============================================================================
+// scripts/update-ebay-avg.js — RAW ACTIVE LISTING PRICE COLLECTOR
+// =============================================================================
 //
-// Computes ACTIVE listing price from eBay Browse API:
-// - Buy It Now only (FIXED_PRICE) => excludes auctions
-// - Dual marketplace: EBAY_US + EBAY_CA (+ EBAY_ES if you keep it)
+// PURPOSE:
+//   Collects active (Buy It Now) listing prices for RAW (ungraded) sports cards
+//   from the eBay Browse API and computes robust statistical averages per athlete.
 //
-// Env vars required:
-//   EBAY_CLIENT_ID
-//   EBAY_CLIENT_SECRET
+// WORKFLOW: ebay.yml (daily at 1 PM UTC)
+// ENV VARS: EBAY_CLIENT_ID, EBAY_CLIENT_SECRET, EBAY_ONLY (optional)
+// INPUT:    data/athletes.json (master roster)
+// OUTPUT:   data/ebay-avg.json (active listing averages per athlete)
+//           data/ebay-base-prices.json (first-observed prices for index calculation)
+//           data/index-history.json (daily index snapshots, permanent)
 //
-// Output:
-//   data/ebay-avg.json
+// PIPELINE (per athlete):
+//   1. Authenticate with eBay Browse API (client credentials grant)
+//   2. Validate athlete exists via Player/Athlete aspect, fallback to Sport aspect
+//   3. Fetch up to 60 active Buy It Now listings from EBAY_US + EBAY_CA
+//   4. POST-FETCH FILTERING (no API-level condition filter — see Bug 8.12):
+//      a. Exclude graded cards via isGradedListing() — tight regex, grades 4+
+//      b. Exclude damaged/poor condition via word-boundary blocklist
+//   5. Convert all prices to USD via CBSA Exchange Rates API
+//   6. Compute Taguchi winsorized mean (40% trim) and market stability CV
+//   7. Compute base-100 price index per athlete (first price = base)
+//   8. Save progressive results after each athlete (crash-safe)
+//   9. Append daily index snapshot to indexHistory
 //
-// Matching rules (your latest):
-// 1) Prefer Player/Athlete aspect_filter match (with name variations / accents).
-// 2) If Player/Athlete is NOT matched, then only proceed if Sport aspect matches.
-// 3) If no Player/Athlete AND sport does not match => skip (avoid fake info).
+// KEY DESIGN DECISIONS:
+//   - No Condition Type:{Ungraded} API filter (many raw listings lack this tag)
+//   - isGradedListing() uses tight 3-char gap regex to avoid card-number FPs
+//   - Blocklist uses word-boundary matching (\b) to avoid substring FPs
+//   - Base prices stored in dedicated file to prevent graded contamination
+//   - Single-athlete mode via EBAY_ONLY env var for targeted testing
 //
-// Notes:
-// - Includes graded + listings under $1 (no price floor).
-// - Category used: Trading Card Singles (261328) - keep or change as needed.
-// - Normalizes listing prices to USD using CBSA Exchange Rates API as a base.
-// - Adds Manufacturer aspect filter to focus on major sports card makers.
-// - Uses TAGUCHI trimmed mean (winsorized mean, X%) for listing prices.
-// - Adds market stability CV (Coefficient of Variation) on the SAME winsorized sample:
-//        CV = s / mean  (lower CV => more stable)
-//
-// NEW (this change):
-// - Ungraded listings must be Card Condition: Near Mint or Better OR Excellent only
-// - Excludes damaged/low-condition ungraded listings using descriptors if present,
-//   otherwise falls back to title-based detection.
-//
-// NEW (this change):
-// - Adds average days on market for ACTIVE listings (avg age in days since listing created).
-//   This is NOT "time to sell" — it's "how long current listings have been live".
+// SEE ALSO: docs/DATA-PIPELINE-AUDIT.md §3.1, §5.1, §5.2
+// =============================================================================
 
 import fs from "node:fs";
 import path from "node:path";
@@ -832,13 +833,32 @@ function computeScriptIndex(outData, athletes, sport) {
   return { average, used };
 }
 
-// --- main ---
+// =============================================================================
+// MAIN EXECUTION FLOW
+// =============================================================================
+// Step 1: Authenticate + load exchange rates
+// Step 2: Load athlete roster (optionally filter to single athlete via EBAY_ONLY)
+// Step 3: Load base prices from dedicated file
+// Step 4: Load previous output (preserve existing records for partial runs)
+// Step 5: For each athlete:
+//   5a. Validate Player/Athlete aspect match on EBAY_CA, then EBAY_US
+//   5b. Fallback: validate Sport aspect match
+//   5c. If no match → skip (prevents data contamination)
+//   5d. Fetch listings from each marketplace, apply post-fetch filters
+//   5e. Pick best marketplace result (CA preferred, then US)
+//   5f. Compute base-100 index level (first observation = 100)
+//   5g. Save progress after each athlete (crash-safe)
+// Step 6: Create fallback records for athletes with base prices but no active data
+// Step 7: Compute and append daily index snapshot (weighted 70/30 raw/graded)
+// Step 8: Final save of output + base prices
+// =============================================================================
 async function main() {
+  // --- Step 1: Authenticate + load exchange rates ---
   const token = await getAppToken();
   const fx = await getFxRatesToUSD();
   let athletes = loadAthletes();
 
-  // ✅ Single-athlete mode: EBAY_ONLY env var (comma-separated names)
+  // --- Step 2: Optional single-athlete mode (EBAY_ONLY env var) ---
   const onlyNames = process.env.EBAY_ONLY;
   if (onlyNames) {
     const wanted = onlyNames.split(",").map((n) => normalizeNameForCompare(n.trim()));
@@ -846,10 +866,10 @@ async function main() {
     console.log(`🎯 Single-athlete mode: processing ${athletes.length} athlete(s)`);
   }
 
-  // FIX #3: load basePrices from dedicated file (survives output file deletion)
+  // --- Step 3: Load base prices from dedicated file (survives output file deletion) ---
   const basePrices = loadBasePrices();
 
-  // Load previous indexHistory from output file only (not basePrices)
+  // --- Step 4: Load previous output (preserve existing records for partial runs) ---
   let prevHistory = [];
   let prevOut = {};
   try {
@@ -863,7 +883,7 @@ async function main() {
     }
   } catch { /* ignore parse errors */ }
 
-  // In single-athlete mode, start from previous data so we don't wipe others
+  // --- Step 5: Initialize output (single-athlete: merge with existing; full: fresh start) ---
   const out = onlyNames ? { ...prevOut } : {
     _meta: {
       updatedAt: new Date().toISOString(),
@@ -905,6 +925,7 @@ async function main() {
     out._meta.updatedAt = new Date().toISOString();
   }
 
+  // --- Step 5: Process each athlete ---
   let errorCount = 0;
 
   for (let i = 0; i < athletes.length; i++) {
@@ -914,6 +935,7 @@ async function main() {
     const queryName = searchKeyword || name;
 
     try {
+      // --- Step 5a: Try Player/Athlete aspect match (6 name variants) ---
       let match = null;
 
       for (const marketplaceId of ["EBAY_CA", "EBAY_US"]) {
@@ -924,6 +946,7 @@ async function main() {
         }
       }
 
+      // --- Step 5b: Fallback — try Sport aspect match ---
       if (!match) {
         for (const marketplaceId of ["EBAY_CA", "EBAY_US"]) {
           const s = await validateSportMatch({ token, marketplaceId, name: queryName, sport });
@@ -934,6 +957,7 @@ async function main() {
         }
       }
 
+      // --- Step 5c: No match → skip to prevent data contamination ---
       if (!match) {
         console.log(`${name}: SKIPPED (no Player/Athlete match AND sport did not match)`);
         continue;
@@ -952,6 +976,7 @@ async function main() {
         currency: "USD",
       };
 
+      // --- Step 5d: Fetch listings from each marketplace ---
       for (const marketplaceId of MARKETPLACES) {
         try {
           const listing = await computeAvgActiveListing({
@@ -982,6 +1007,7 @@ async function main() {
         }
       }
 
+      // --- Step 5e: Pick best marketplace result (prefer CA with data, then US) ---
       const ca = rec.marketplaces.EBAY_CA;
       const us = rec.marketplaces.EBAY_US;
 
@@ -1001,7 +1027,7 @@ async function main() {
       rec.avg = rec.avgListing;
       rec.n = rec.nListing;
 
-      // --- Base=100 index per player ---
+      // --- Step 5f: Compute base-100 index level (first observation = base price) ---
       const robustPrice = rec.taguchiListing;
       if (robustPrice != null && Number.isFinite(robustPrice) && robustPrice > 0) {
         // FIX #3: basePrices now loaded from dedicated file — set on first observation only
@@ -1028,7 +1054,7 @@ async function main() {
       }
     }
 
-    // Always save progress after each athlete
+    // --- Step 5g: Progressive save (crash-safe) ---
     fs.writeFileSync(OUT_PATH, JSON.stringify(out, null, 2));
 
     await sleep(500);
@@ -1038,7 +1064,8 @@ async function main() {
     console.warn(`\n⚠️  ${errorCount} athlete(s) failed but data for ${Object.keys(out).length - 1} athletes was saved.`);
   }
 
-  // --- Ensure ALL athletes have a record with indexLevel (fallback to basePriceUSD) ---
+  // --- Step 6: Create fallback records for athletes with no active data ---
+  // Athletes with a known base price but no current listings get indexLevel=100
   let fallbackCount = 0;
   for (const a of athletes) {
     const existing = out[a.name];
@@ -1076,7 +1103,7 @@ async function main() {
     console.log(`📌 Created/patched ${fallbackCount} fallback records from base prices (indexLevel=100)`);
   }
 
-  // --- Append today's index snapshot to indexHistory (70/30 raw/graded weighted) ---
+  // --- Step 7: Compute and append daily index snapshot (weighted 70/30 raw/graded) ---
   const today = new Date().toISOString().slice(0, 10); // YYYY-MM-DD
 
   // Load graded data for weighted index
@@ -1169,10 +1196,10 @@ async function main() {
   fs.writeFileSync(HISTORY_PATH, JSON.stringify(fullHistory, null, 2));
   console.log(`Appended to ${HISTORY_PATH} (${fullHistory.length} total entries)`);
 
+  // --- Step 8: Final save of output + base prices ---
   fs.mkdirSync(path.dirname(OUT_PATH), { recursive: true });
   fs.writeFileSync(OUT_PATH, JSON.stringify(out, null, 2));
 
-  // FIX #3: final save of base prices
   saveBasePrices(basePrices);
 
   console.log(`Wrote ${OUT_PATH}`);
