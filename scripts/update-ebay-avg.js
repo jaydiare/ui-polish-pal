@@ -1064,7 +1064,8 @@ async function main() {
     console.warn(`\n⚠️  ${errorCount} athlete(s) failed but data for ${Object.keys(out).length - 1} athletes was saved.`);
   }
 
-  // --- Ensure ALL athletes have a record with indexLevel (fallback to basePriceUSD) ---
+  // --- Step 6: Create fallback records for athletes with no active data ---
+  // Athletes with a known base price but no current listings get indexLevel=100
   let fallbackCount = 0;
   for (const a of athletes) {
     const existing = out[a.name];
