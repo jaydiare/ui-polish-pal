@@ -320,25 +320,30 @@ Used by `update-ebay-avg.js` and `sold-update-ebay-avg.js`:
 
 ```javascript
 // Detects ALL grading companies to exclude from raw data
-const graderWithGrade = /\b(psa|sgc|bgs|cgc|hga|isa|csa|beckett|bcg)\b[^\n]{0,14}\b(10|9\.5|9|8\.5|8|gem mint|mint|pristine|black label|gold label)\b/i;
-const slabOnly = /\b(gem mint|pristine|black label|gold label)\b/i;
+// Tightened: max 3-char gap (not 20), grades 4+ only, "PSA ready" excluded
+
+function isGradedListing(item) {
+  // eBay condition field says "graded" → graded
+  if (cond.includes("graded")) return true;
+
+  // "PSA ready / worthy / potential / candidate" → NOT graded (raw marketing)
+  if (/\b(psa|sgc|bgs|cgc|hga|beckett)\s*(ready|worthy|potential|candidate)\b/i.test(title))
+    return false;
+
+  // Grader + grade within 3 chars (tight adjacency). Grades start at 4 to avoid card-number FPs.
+  const graderGrade = /\b(psa|sgc|bgs|cgc|hga|isa|csa|beckett|bcg)\s{0,3}(10|9\.5|9|8\.5|8|7\.5|7|6\.5|6|5\.5|5|4\.5|4|gem\s?mint|pristine|authentic|dna)\b/i;
+  const slabOnly = /\b(gem mint|pristine|black label|gold label)\b/i;
+  return graderGrade.test(title) || slabOnly.test(title);
+}
 ```
 
-#### Graded scripts (to INCLUDE only PSA cards) — PSA-only
-
-Used by `graded-update-ebay-avg.js` and `graded-sold-update-ebay-avg.js`:
-
-```javascript
-// Only includes PSA-graded cards
-const psaWithGrade = /\bpsa\b[^\n]{0,14}\b(10|9\.5|9|8\.5|8|gem mint|mint|pristine|black label|gold label)\b/i;
-```
-
-**Key design decisions:**
+**Key design decisions (updated March 10, 2026):**
+- **Tight adjacency (`\s{0,3}`)** — The old `[^\n]{0,20}` gap allowed card numbers (#1, #2, #3) near grader mentions (e.g., "Jose Altuve #1 PSA Ready") to false-positive as graded. Now requires the grade to be directly next to the grader abbreviation.
+- **Grades start at 4** — Grades 1–3 are indistinguishable from card numbers in titles.
+- **"PSA ready" exclusion** — Raw cards marketed for grading (e.g., "PSA ready", "SGC worthy", "PSA 10 potential") are explicitly NOT flagged as graded.
 - **Raw scripts** detect ALL graders (PSA, BGS, SGC, CGC, HGA, etc.) to exclude them from raw averages
 - **Graded scripts** only detect PSA — BGS, SGC, and other graders are ignored
-- Requires **grading company + grade context** — prevents false positives from card #10 or "lot of 10"
 - The graded listing API also uses `Professional Grader:{Professional Sports Authenticator (PSA)}` aspect filter
-- The graded sold search uses "PSA" as the keyword instead of generic "graded"
 
 ### 5.2 Raw Card Condition Policy
 
