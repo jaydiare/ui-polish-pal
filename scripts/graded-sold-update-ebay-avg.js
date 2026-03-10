@@ -187,7 +187,8 @@ function taguchiCV(values, trimPercent = TAGUCHI_TRIM_PCT) {
 // --- filters ---
 function isJunkTitle(title) {
   const t = norm(title);
-  return JUNK_PHRASES.some((p) => t.includes(p));
+  // FIX: Use word-boundary regex to prevent false positives (e.g. "lot" matching "Callaspo")
+  return JUNK_PHRASES.some((p) => new RegExp(`\\b${p.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}\\b`, 'i').test(t));
 }
 
 // Brand filter removed — hasAllowedBrand always returns true
