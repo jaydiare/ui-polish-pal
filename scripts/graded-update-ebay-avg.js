@@ -180,34 +180,7 @@ function includesAny(text, arr) {
   return arr.some((w) => t.includes(normText(w)));
 }
 
-function extractConditionDescriptorTexts(item) {
-  const out = [];
-  const cds = item?.conditionDescriptors;
-  if (Array.isArray(cds)) {
-    for (const d of cds) {
-      if (!d) continue;
-      out.push(d?.name, d?.descriptorName, d?.value, d?.valueName);
-    }
-  }
-  const cdv = item?.conditionDescriptorValues;
-  if (Array.isArray(cdv)) {
-    for (const d of cdv) {
-      if (!d) continue;
-      out.push(d?.name, d?.descriptorName, d?.value, d?.valueName);
-    }
-  }
-  return out.filter(Boolean).map(normText);
-}
-
-function ungradedPassesConditionPolicy(item) {
-  const title = normText(item?.title || "");
-  const cond = normText(item?.condition || "");
-  const descs = extractConditionDescriptorTexts(item);
-  const joined = [title, cond, ...descs].join(" | ");
-  if (includesAny(joined, UNGRADED_BLOCKLIST)) return false;
-  if (includesAny(joined, UNGRADED_ALLOWED_CONDITIONS)) return true;
-  return false;
-}
+// isGradedListing: fallback detection when API aspect filter is not available
 
 function isGradedListing(item) {
   const cond = normText(item?.condition || "");
