@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-10T11:05:18.620Z",
+    "updatedAt": "2026-03-10T13:40:44.354Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA-only title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 90,
-      "endIdx": 100,
+      "startIdx": 100,
+      "endIdx": 110,
       "totalAthletes": 450
     },
     "maxPages": 4,
@@ -1448,8 +1448,8 @@
     "fxRateUsed": null
   },
   "Eduardo Escobar": {
-    "keyword": "Eduardo Escobar Baseball",
-    "nScraped": 0,
+    "keyword": "Eduardo Escobar Baseball PSA",
+    "nScraped": 60,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -1460,7 +1460,7 @@
     "fxRateUsed": null
   },
   "Eduardo Jimenez": {
-    "keyword": "Eduardo Jimenez Baseball",
+    "keyword": "Eduardo Jimenez Baseball PSA",
     "nScraped": 60,
     "nSoldUsed": 0,
     "avg": null,
@@ -1484,13 +1484,13 @@
     "fxRateUsed": null
   },
   "Eduardo Rodriguez": {
-    "keyword": "Eduardo Rodriguez Baseball",
-    "nScraped": 185,
-    "nSoldUsed": 15,
-    "avg": 18.719999999999995,
-    "taguchiSold": 18.719999999999995,
+    "keyword": "Eduardo Rodriguez Baseball PSA",
+    "nScraped": 252,
+    "nSoldUsed": 20,
+    "avg": 18.720000000000006,
+    "taguchiSold": 18.720000000000006,
     "medianSold": 18.72,
-    "marketStabilityCV": 1.9644273653403055e-16,
+    "marketStabilityCV": 3.8942385957330363e-16,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
@@ -1508,7 +1508,7 @@
     "fxRateUsed": null
   },
   "Eduardo Sanchez": {
-    "keyword": "Eduardo Sanchez Baseball",
+    "keyword": "Eduardo Sanchez Baseball PSA",
     "nScraped": 60,
     "nSoldUsed": 0,
     "avg": null,
@@ -1520,7 +1520,7 @@
     "fxRateUsed": null
   },
   "Eduardo Villacis": {
-    "keyword": "Eduardo Villacis Baseball",
+    "keyword": "Eduardo Villacis Baseball PSA",
     "nScraped": 60,
     "nSoldUsed": 0,
     "avg": null,
@@ -1532,7 +1532,7 @@
     "fxRateUsed": null
   },
   "Edubray Ramos": {
-    "keyword": "Edubray Ramos Baseball",
+    "keyword": "Edubray Ramos Baseball PSA",
     "nScraped": 60,
     "nSoldUsed": 0,
     "avg": null,
@@ -1544,8 +1544,8 @@
     "fxRateUsed": null
   },
   "Edwar Colina": {
-    "keyword": "Edwar Colina Baseball",
-    "nScraped": 18,
+    "keyword": "Edwar Colina Baseball PSA",
+    "nScraped": 19,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -1556,7 +1556,7 @@
     "fxRateUsed": null
   },
   "Edward Mujica": {
-    "keyword": "Edward Mujica Baseball",
+    "keyword": "Edward Mujica Baseball PSA",
     "nScraped": 60,
     "nSoldUsed": 0,
     "avg": null,
@@ -1568,16 +1568,16 @@
     "fxRateUsed": null
   },
   "Edward Olivares": {
-    "keyword": "Edward Olivares Baseball",
-    "nScraped": 60,
-    "nSoldUsed": 0,
-    "avg": null,
-    "taguchiSold": null,
-    "medianSold": null,
-    "marketStabilityCV": null,
+    "keyword": "Edward Olivares Baseball PSA",
+    "nScraped": 120,
+    "nSoldUsed": 4,
+    "avg": 33.385000000000005,
+    "taguchiSold": 33.385000000000005,
+    "medianSold": 33.385000000000005,
+    "marketStabilityCV": 0.5321272362727208,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
   },
   "Edwin Bellorin": {
     "keyword": "Edwin Bellorin Baseball",
@@ -1592,8 +1592,8 @@
     "fxRateUsed": null
   },
   "Edwin Escobar": {
-    "keyword": "Edwin Escobar Baseball",
-    "nScraped": 60,
+    "keyword": "Edwin Escobar Baseball PSA",
+    "nScraped": 0,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
