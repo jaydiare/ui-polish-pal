@@ -60,7 +60,21 @@ A sports-card market intelligence platform tracking **550+ Venezuelan athletes**
 - Multi-layered parsing (regex + text fallback).
 - Anti-blocking: randomized delays, rotating User-Agents, session persistence.
 
-### 2.5 History Snapshots
+### 2.5 SportsCardsPro (SCP) Prices
+
+| Script | Workflow | Schedule |
+|--------|----------|----------|
+| `fetch-scp-prices.js` | `scp-prices.yml` | Monthly (1st at 10:00 UTC) |
+
+- Queries the SportsCardsPro `/api/products` endpoint for each athlete with `"{name} Raw"` and `"{name} PSA"` queries.
+- Extracts `loose-price` (raw) and `new-price`/`cib-price` (graded) from all matching products.
+- Applies a **Taguchi Winsorized Trimmed Mean** (20% trim) across all results — same robust averaging approach as eBay pipelines but with a lighter trim percentage due to smaller sample sizes.
+- Prices are stored in cents by SCP and converted to USD.
+- Rate limited: 500ms between requests, 3s pause every 50 athletes.
+- Output: `data/scp-prices.json` + `public/data/scp-prices.json`
+- Displayed as "SCP Raw" and "SCP Graded" columns in the Blog Data Table.
+
+### 2.6 History Snapshots
 
 | Script | Workflow | What It Records |
 |--------|----------|-----------------|
