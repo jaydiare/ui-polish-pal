@@ -98,6 +98,8 @@ const UNGRADED_ALLOWED_CONDITIONS = [
 ];
 
 // if any of these appear (descriptor/title), reject ungraded listing
+// IMPORTANT: matched with word-boundary regex (not substring) to avoid false positives
+// e.g. "good" must NOT match "Goodwin", "hole" must NOT match "whole"
 const UNGRADED_BLOCKLIST = [
   "damaged",
   "damage",
@@ -106,9 +108,6 @@ const UNGRADED_BLOCKLIST = [
   "digitalcard",
   "digital",
   "very good",
-  "vg",
-  "good",
-  "gd",
   "creases",
   "crease",
   "wrinkle",
@@ -121,18 +120,16 @@ const UNGRADED_BLOCKLIST = [
   "water damage",
   "tape",
   "writing",
-  "marked",
   "marked up",
   "pin hole",
-  "hole",
   "torn",
-  "tear",
   "scratches",
-  "scratch","licensed reprint", 
-  "reprint","Card Painting", 
-  "replica", 
-  "copy",
-  "ERROR Card",
+  "scratch",
+  "licensed reprint",
+  "reprint",
+  "card painting",
+  "replica",
+  "error card",
   "card lot",
 ];
 
@@ -156,7 +153,7 @@ function normalizeNameForCompare(s) {
   return normSpaces(
     stripDiacritics(s)
       .toLowerCase()
-      .replace(/[.'’"]/g, "")
+      .replace(/[.''"]/g, "")
       .replace(/\b(jr|jr\.|sr|sr\.)\b/g, "")
   );
 }
@@ -253,9 +250,13 @@ function normText(s) {
     .trim();
 }
 
+// Word-boundary matching to avoid false positives (e.g. "good" matching "Goodwin")
 function includesAny(text, arr) {
   const t = normText(text);
-  return arr.some((w) => t.includes(normText(w)));
+  return arr.some((w) => {
+    const escaped = normText(w).replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+    return new RegExp("\\b" + escaped + "\\b").test(t);
+  });
 }
 
 // Try to read condition descriptor names from multiple possible shapes.
@@ -305,26 +306,30 @@ function ungradedPassesConditionPolicy(item) {
   return true;
 }
 
-// You said you already filter graded vs not graded.
-// This keeps a compatible “graded” detector so the ungraded policy only applies when false.
+// Detect graded/slabbed listings to exclude from RAW data.
+// Tightened to avoid false positives from "PSA ready" raw cards and card numbers near grader text.
 function isGradedListing(item) {
   const cond = normText(item?.condition || "");
   const title = normText(item?.title || "");
 
+  // eBay condition field explicitly says "graded"
   if (cond.includes("graded")) return true;
 
-  // Avoid false positives from plain "10" in titles (e.g. "lot of 10", card #10)
-  // by requiring grading-company context.
-  //const graderWithGrade = /\b(psa|sgc|bgs|cgc|hga|isa|csa|beckett|bcg)\b[^\n]{0,14}\b(10|9\.5|9|8\.5|8|gem mint|mint|pristine|black label|gold label|dna|authentic)\b/i;
-  //const slabOnly = /\b(gem mint|pristine|black label|gold label)\b/i;
+  // Raw cards marketed as grading candidates — NOT graded
+  // e.g. "PSA ready", "PSA 10 potential", "SGC worthy"
+  if (/\b(psa|sgc|bgs|cgc|hga|beckett)\s*(ready|worthy|potential|candidate)\b/i.test(title)) {
+    return false;
+  }
 
-  const graderWithGrade = /\b(psa|sgc|bgs|cgc|hga|isa|csa|beckett|bcg)\b[^\n]{0,20}\b(10|9\.5|9|8\.5|8|7\.5|7|6\.5|6|5\.5|5|4\.5|4|3\.5|3|2\.5|2|1\.5|1|gem mint|mint|pristine|black label|gold label|authentic|dna)\b/i;
-  const slabOnly = /\b(gem mint|pristine|black label|gold label|psa\s?10|sgc\s?10|bgs\s?9\.5)\b/i;
+  // Require grader abbreviation DIRECTLY adjacent to a grade (max 3 chars gap).
+  // Only match numeric grades 4+ to avoid card-number false positives (#1, #2, #3).
+  const graderGrade = /\b(psa|sgc|bgs|cgc|hga|isa|csa|beckett|bcg)\s{0,3}(10|9\.5|9|8\.5|8|7\.5|7|6\.5|6|5\.5|5|4\.5|4|gem\s?mint|pristine|authentic|dna)\b/i;
+  const slabOnly = /\b(gem mint|pristine|black label|gold label)\b/i;
 
-  return graderWithGrade.test(title) || slabOnly.test(title);
+  return graderGrade.test(title) || slabOnly.test(title);
 }
 
-// ✅ NEW: listing “age” (days on market) for ACTIVE listings
+// ✅ NEW: listing "age" (days on market) for ACTIVE listings
 function extractListingStartISO(item) {
   // eBay Browse API commonly provides itemCreationDate for listing creation time.
   // We also check a few defensive alternatives.
@@ -643,14 +648,16 @@ async function computeAvgActiveListing({
     });
 
     const items = data?.itemSummaries || [];
+    let skippedGraded = 0;
+    let skippedCondition = 0;
 
     for (const it of items) {
       // ✅ RAW ONLY: skip graded listings entirely
-      if (isGradedListing(it)) continue;
+      if (isGradedListing(it)) { skippedGraded++; continue; }
 
       // ✅ enforce ungraded condition policy (Near Mint / Excellent only)
       const okUngraded = ungradedPassesConditionPolicy(it);
-      if (!okUngraded) continue;
+      if (!okUngraded) { skippedCondition++; continue; }
 
       const p = it?.price;
       const v = safeNum(p?.value);
@@ -676,6 +683,7 @@ async function computeAvgActiveListing({
       fxRateUsed = fxRateUsed || rateUsed;
     }
 
+    console.log(`    📋 Page: ${items.length} items, kept=${pricesUSD.length}, skippedGraded=${skippedGraded}, skippedCondition=${skippedCondition}`);
     if (items.length < PAGE_SIZE) break;
     offset += PAGE_SIZE;
     await sleep(120);
