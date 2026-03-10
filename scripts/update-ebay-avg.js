@@ -946,6 +946,7 @@ async function main() {
         }
       }
 
+      // --- Step 5b: Fallback — try Sport aspect match ---
       if (!match) {
         for (const marketplaceId of ["EBAY_CA", "EBAY_US"]) {
           const s = await validateSportMatch({ token, marketplaceId, name: queryName, sport });
@@ -956,6 +957,7 @@ async function main() {
         }
       }
 
+      // --- Step 5c: No match → skip to prevent data contamination ---
       if (!match) {
         console.log(`${name}: SKIPPED (no Player/Athlete match AND sport did not match)`);
         continue;
