@@ -32,8 +32,8 @@
 // ANTI-BLOCKING:
 //   Rotating User-Agents, exponential backoff, CAPTCHA detection, dynamic delays.
 //
-// ⚠️ WARNING: isGradedTitle() still uses the old 20-char gap regex — consider
-//   tightening to match update-ebay-avg.js (3-char gap) for consistency.
+// ✅ FIXED: isGradedTitle() regex gap tightened to {0,3} to match update-ebay-avg.js
+// ✅ FIXED: isJunkTitle() uses word-boundary regex to prevent false positives
 //
 // SEE ALSO: docs/DATA-PIPELINE-AUDIT.md §3.3, §5.1, §5.3
 // =============================================================================
