@@ -27,7 +27,6 @@ interface RowData {
   gradedListedPrice: number | null;
   gradedSoldPrice: number | null;
   scpRawPrice: number | null;
-  scpGradedPrice: number | null;
   stabilityCV: number | null;
   signalStrength: number | null;
   psaPop: number | null;
