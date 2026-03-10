@@ -27,6 +27,8 @@ A sports-card market intelligence platform tracking **550+ Venezuelan athletes**
 | `data/athlete-history.json` | Per-athlete daily snapshots (price, CV, days, index level) — 90-day rolling window |
 | `data/index-history.json` | Daily sport-level index snapshots (permanent, no cap) |
 | `data/gemrate.json` | PSA grading population counts from Gemrate.com |
+| `data/scp-prices.json` | SportsCardsPro current prices (raw + graded, monthly) |
+| `data/vzla-athlete-market-data.json` | Unified weekly snapshot of all market data |
 
 ### 2.2 Active Listing Scripts (eBay Browse API)
 
