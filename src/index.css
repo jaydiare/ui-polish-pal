@@ -254,17 +254,15 @@
   z-index: 1;
 }
 
-.hero-sub {
+.hero-guide {
   position: relative;
   border-radius: 14px;
-  padding: 16px 20px;
-  max-width: 900px;
+  padding: 20px;
+  max-width: 640px;
   width: 100%;
-  margin: 16px auto 0;
-  background: hsl(var(--secondary) / 0.6);
+  margin: 0 auto;
+  background: hsl(var(--secondary) / 0.5);
   border: 1px solid hsl(var(--border));
-  color: hsl(var(--foreground) / 0.85);
-  line-height: 1.65;
   backdrop-filter: blur(8px);
 }
 
