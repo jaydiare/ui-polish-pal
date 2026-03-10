@@ -27,6 +27,8 @@ A sports-card market intelligence platform tracking **550+ Venezuelan athletes**
 | `data/athlete-history.json` | Per-athlete daily snapshots (price, CV, days, index level) — 90-day rolling window |
 | `data/index-history.json` | Daily sport-level index snapshots (permanent, no cap) |
 | `data/gemrate.json` | PSA grading population counts from Gemrate.com |
+| `data/scp-prices.json` | SportsCardsPro current prices (raw + graded, monthly) |
+| `data/vzla-athlete-market-data.json` | Unified weekly snapshot of all market data |
 
 ### 2.2 Active Listing Scripts (eBay Browse API)
 
@@ -60,14 +62,37 @@ A sports-card market intelligence platform tracking **550+ Venezuelan athletes**
 - Multi-layered parsing (regex + text fallback).
 - Anti-blocking: randomized delays, rotating User-Agents, session persistence.
 
-### 2.5 History Snapshots
+### 2.5 SportsCardsPro (SCP) Prices
+
+| Script | Workflow | Schedule |
+|--------|----------|----------|
+| `fetch-scp-prices.js` | `scp-prices.yml` | Monthly (1st at 10:00 UTC) |
+
+- Queries the SportsCardsPro `/api/products` endpoint for each athlete with `"{name} Raw"` and `"{name} PSA"` queries.
+- Extracts `loose-price` (raw) and `new-price`/`cib-price` (graded) from all matching products.
+- Applies a **Taguchi Winsorized Trimmed Mean** (20% trim) across all results — same robust averaging approach as eBay pipelines but with a lighter trim percentage due to smaller sample sizes.
+- Prices are stored in cents by SCP and converted to USD.
+- Rate limited: 500ms between requests, 3s pause every 50 athletes.
+- Output: `data/scp-prices.json` + `public/data/scp-prices.json`
+- Displayed as "SCP Raw" and "SCP Graded" columns in the Blog Data Table.
+
+### 2.6 History Snapshots
 
 | Script | Workflow | What It Records |
 |--------|----------|-----------------|
 | `snapshot-athlete-history.js` | `snapshot-history.yml` | Per-athlete: price, CV, days on market (API + observed), listing count, index level. Also maintains `data/athlete-first-seen.json` for snapshot-based DOM tracking. 90-day rolling window. |
 | (embedded in `update-ebay-avg.js`) | `ebay.yml` | Sport-level index to `data/index-history.json` — permanent archive. |
 
-### 2.6 Data Freshness Strategy
+### 2.7 Weekly Market Data Snapshot
+
+| Script | Workflow | Schedule |
+|--------|----------|----------|
+| `snapshot-market-data.js` | `market-data-snapshot.yml` | Weekly (Sunday 12:00 UTC) |
+
+- Aggregates all data sources (eBay listed/sold, SCP prices, gemrate, history) into a single `vzla-athlete-market-data.json` file per athlete.
+- Serves as a consolidated backup and the data source for the Blog Data Table.
+
+### 2.8 Data Freshness Strategy
 
 - Frontend fetches data from **GitHub raw URLs** (not local public/ copies) so updates are visible without republishing.
 - Fallback: local `public/data/` files if remote fetch fails.
@@ -345,7 +370,7 @@ By default, athletes with no eBay data are hidden unless the user explicitly fil
 - **Data Pipelines:** Node.js scripts + Python scrapers
 - **CI/CD:** GitHub Actions (scheduled workflows)
 - **Hosting:** Lovable (frontend) + Render (OAuth server)
-- **APIs:** eBay Browse API (active listings), eBay HTML scraping (sold listings), Gemrate.com (PSA data), Wikipedia (athlete images)
+- **APIs:** eBay Browse API (active listings), eBay HTML scraping (sold listings), Gemrate.com (PSA data), SportsCardsPro (card prices), Wikipedia (athlete images)
 
 ---
 
@@ -362,5 +387,8 @@ By default, athletes with no eBay data are hidden unless the user explicitly fil
 | **Raw** | Ungraded cards in Near Mint or Excellent condition |
 | **Graded** | Professionally graded cards (PSA, BGS, SGC, etc.) |
 | **Gemrate** | Third-party site providing PSA grading population data |
+| **SCP** | SportsCardsPro — third-party pricing database for sports cards |
+| **SCP Raw** | SportsCardsPro loose/ungraded card price (Taguchi mean of all matches) |
+| **SCP Graded** | SportsCardsPro graded card price (Taguchi mean of PSA matches) |
 | **Stability Points** | Score derived from CV, used in budget optimizer (0-100) |
 | **Liquidity Multiplier** | Modifier based on DOM, boosts/penalizes fast/slow sellers |
