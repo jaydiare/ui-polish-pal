@@ -1,25 +1,42 @@
-// scripts/sold-update-ebay-avg.js
-// Node 20+ (uses global fetch)
+// =============================================================================
+// scripts/sold-update-ebay-avg.js — RAW SOLD LISTING PRICE COLLECTOR
+// =============================================================================
 //
-// Scrapes eBay's PUBLIC sold listings search pages (LH_Sold=1&LH_Complete=1)
-// to compute sold price averages — NO API keys needed, NO Apify.
+// PURPOSE:
+//   Scrapes eBay's public sold/completed listings search pages (HTML scraping,
+//   NO API keys needed) to compute sold price averages for RAW (ungraded) cards.
 //
-// Same statistical pipeline as update-ebay-avg.js:
-//   - Taguchi winsorized mean
-//   - Market stability CV (sd/mean on winsorized sample)
-//   - Ungraded condition policy
-//   - Manufacturer/brand filter
-//   - Junk title exclusion
-//   - Currency normalization to USD via CBSA Exchange Rates API
+// WORKFLOW: ebay-sold.yml (every 3 hours, 10 athletes per batch)
+// ENV VARS: EBAY_ONLY (optional single-athlete mode)
+// INPUT:    data/athletes.json (master roster)
+// OUTPUT:   data/ebay-sold-avg.json (sold price averages per athlete)
+// PROGRESS: data/ebay-sold-progress.json (batch cursor for incremental runs)
 //
-// Env:
-//   (none required — uses public eBay search pages)
+// PIPELINE (per athlete):
+//   1. Build eBay search URL with LH_Sold=1, Condition%20Type=Ungraded, League filter
+//   2. Fetch up to 3 pages of sold results (HTML) with retry + exponential backoff
+//   3. Parse listings via 3-tier extraction: .s-item CSS → [data-viewport] → script tags
+//   4. POST-FETCH FILTERING:
+//      a. Junk title exclusion (lots, digital, set breaks)
+//      b. Name relevance check (all name parts must appear in title)
+//      c. Graded detection — exclude graded cards (robust regex, all graders)
+//      d. Condition blocklist — exclude damaged/poor (substring matching)
+//   5. Convert prices to USD via CBSA Exchange Rates API (includes shipping)
+//   6. Compute Taguchi winsorized mean (40% trim), median, and market stability CV
+//   7. Progressive save after each athlete
 //
-// Input:
-//   data/athletes.json: [{ name, sport, ... }]
+// BATCH MODE:
+//   Processes 10 athletes per workflow run, tracked via progress file.
+//   After all athletes are done, resets for next cycle.
 //
-// Output:
-//   data/ebay-sold-avg.json
+// ANTI-BLOCKING:
+//   Rotating User-Agents, exponential backoff, CAPTCHA detection, dynamic delays.
+//
+// ⚠️ WARNING: isGradedTitle() still uses the old 20-char gap regex — consider
+//   tightening to match update-ebay-avg.js (3-char gap) for consistency.
+//
+// SEE ALSO: docs/DATA-PIPELINE-AUDIT.md §3.3, §5.1, §5.3
+// =============================================================================
 
 import fs from "node:fs";
 import path from "node:path";
