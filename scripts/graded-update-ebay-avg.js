@@ -580,7 +580,18 @@ function computeScriptIndex(outData, athletes, sport) {
   return { average, used };
 }
 
-// --- main ---
+// =============================================================================
+// MAIN EXECUTION FLOW
+// =============================================================================
+// Step 1: Authenticate + load exchange rates
+// Step 2: Load athlete roster (filtered to gemrate="yes", optional EBAY_ONLY)
+// Step 3: Load graded base prices from dedicated file
+// Step 4: Load previous output (preserve existing records for partial runs)
+// Step 5: For each athlete: validate → fetch → filter → compute → save
+// Step 6: Create fallback records for athletes with base prices but no active data
+// Step 7: Compute and append daily index snapshot
+// Step 8: Final save of output + base prices
+// =============================================================================
 async function main() {
   const token = await getAppToken();
   const fx = await getFxRatesToUSD();
