@@ -1,9 +1,10 @@
-// scripts/update-ebay-avg.js
+// scripts/graded-update-ebay-avg.js
 // Node 20+ (uses global fetch)
 //
-// Computes ACTIVE listing price from eBay Browse API:
+// Computes ACTIVE GRADED (PSA) listing price from eBay Browse API:
 // - Buy It Now only (FIXED_PRICE) => excludes auctions
-// - Dual marketplace: EBAY_US + EBAY_CA (+ EBAY_ES if you keep it)
+// - Graded:{Yes} + Professional Grader:{PSA} aspect filters
+// - EBAY_US marketplace only
 //
 // Env vars required:
 //   EBAY_CLIENT_ID
@@ -53,8 +54,8 @@ if (!EBAY_CLIENT_ID || !EBAY_CLIENT_SECRET) {
 const OUT_PATH = path.join(__dirname, "..", "data", "ebay-graded-avg.json");
 const ATHLETES_PATH = path.join(__dirname, "..", "data", "athletes.json");
 
-// FIX #3: dedicated base prices file — never overwritten by normal runs
-const BASE_PRICES_PATH = path.join(__dirname, "..", "data", "ebay-base-prices.json");
+// Graded base prices file — separate from raw to prevent contamination
+const BASE_PRICES_PATH = path.join(__dirname, "..", "data", "ebay-graded-base-prices.json");
 
 // FIX #2: max listings per athlete to fetch full item detail for date fallback
 const MAX_ITEM_DETAIL_FETCHES = 10;
@@ -81,26 +82,7 @@ const COUNTRY_OF_ORIGIN = ["United States", "Italy", "Venezuela", "Japan"];
 // Taguchi caps (winsorization %)
 const TAGUCHI_TRIM_PCT = 0.4;
 
-// --------------------
-// ✅ UNGRADED condition policy
-// --------------------
-const UNGRADED_ALLOWED_CONDITIONS = [
-  "near mint or better",
-  "near-mint or better",
-  "near mint",
-  "nm",
-  "nm-mt",
-  "nmt",
-];
-
-const UNGRADED_BLOCKLIST = [
-  "damaged", "damage", "poor", "fair", "digitalcard", "digital",
-  "very good", "vg", "good", "gd", "creases", "crease", "wrinkle",
-  "wrinkling", "corner wear", "surface wear", "paper loss", "stain",
-  "stained", "water damage", "tape", "writing", "marked", "marked up",
-  "pin hole", "hole", "torn", "tear", "scratches", "scratch",
-  "excellent", "ex", "auto", "signed","ERROR Card", "card lot",
-];
+// (No ungraded condition policy needed — this script collects GRADED cards only)
 
 // --- helpers ---
 function sleep(ms) {
@@ -198,34 +180,7 @@ function includesAny(text, arr) {
   return arr.some((w) => t.includes(normText(w)));
 }
 
-function extractConditionDescriptorTexts(item) {
-  const out = [];
-  const cds = item?.conditionDescriptors;
-  if (Array.isArray(cds)) {
-    for (const d of cds) {
-      if (!d) continue;
-      out.push(d?.name, d?.descriptorName, d?.value, d?.valueName);
-    }
-  }
-  const cdv = item?.conditionDescriptorValues;
-  if (Array.isArray(cdv)) {
-    for (const d of cdv) {
-      if (!d) continue;
-      out.push(d?.name, d?.descriptorName, d?.value, d?.valueName);
-    }
-  }
-  return out.filter(Boolean).map(normText);
-}
-
-function ungradedPassesConditionPolicy(item) {
-  const title = normText(item?.title || "");
-  const cond = normText(item?.condition || "");
-  const descs = extractConditionDescriptorTexts(item);
-  const joined = [title, cond, ...descs].join(" | ");
-  if (includesAny(joined, UNGRADED_BLOCKLIST)) return false;
-  if (includesAny(joined, UNGRADED_ALLOWED_CONDITIONS)) return true;
-  return false;
-}
+// isGradedListing: fallback detection when API aspect filter is not available
 
 function isGradedListing(item) {
   const cond = normText(item?.condition || "");
@@ -667,10 +622,10 @@ async function main() {
       marketplaces: MARKETPLACES,
       categoryId: CATEGORY_ID,
       note:
-        "Active listing robust mean (Browse API FIXED_PRICE). No sold data. Prices normalized to USD. " +
-        "Includes market stability CV (sd/mean). Ungraded restricted to Near Mint or Better / Excellent. " +
+        "GRADED (PSA) active listing robust mean (Browse API FIXED_PRICE). No sold data. Prices normalized to USD. " +
+        "Includes market stability CV (sd/mean). Filtered by Graded:{Yes} + Professional Grader:{PSA}. " +
         "Includes avg days-on-market for active listings (listing age). " +
-        "Base prices stored in dedicated ebay-base-prices.json (FIX #3).",
+        "Base prices stored in dedicated ebay-graded-base-prices.json.",
       fx: {
         source: "CBSA Exchange Rates API",
         asOf: fx.asOf,
@@ -679,7 +634,7 @@ async function main() {
       manufacturers: "none (all brands accepted)",
       listingStat: { method: "taguchi_winsorized_mean", trimPercent: TAGUCHI_TRIM_PCT },
       stabilityStat: { method: "cv", formula: "sd/mean", sample: "winsorized", trimPercent: TAGUCHI_TRIM_PCT },
-      ungradedPolicy: { allow: ["Near Mint or Better", "Excellent"], blocklist: "damaged/low-condition keywords" },
+      gradedPolicy: { grader: "PSA", aspectFilter: "Graded:{Yes},Professional Grader:{PSA}" },
       daysOnMarket: {
         meaning: "Average age of ACTIVE listings (not time-to-sell). Falls back to item detail fetch if summary omits creation date.",
         field: "avgDaysOnMarket",

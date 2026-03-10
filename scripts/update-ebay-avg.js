@@ -384,12 +384,11 @@ function sportAspectCandidates(sportRaw) {
 }
 
 // Build a combined eBay aspect_filter (no Manufacturer restriction)
-// Always includes Condition Type:{Ungraded} for raw card searches
+// NOTE: Removed Condition Type:{Ungraded} — many raw listings lack this aspect,
+// causing 0 results. Instead, rely on isGradedListing() + ungradedPassesConditionPolicy()
+// post-hoc filters to exclude graded cards and enforce condition quality.
 function buildAspectFilter({ aspectMode, aspectValue }) {
   const parts = [];
-
-  // Always restrict to ungraded (raw) cards
-  parts.push(`Condition Type:{Ungraded}`);
 
   if (aspectMode === "player" && aspectValue) {
     parts.push(`Player/Athlete:{${aspectValue}}`);
