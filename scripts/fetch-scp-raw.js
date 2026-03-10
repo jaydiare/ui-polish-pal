@@ -1,9 +1,9 @@
 #!/usr/bin/env node
-// scripts/fetch-scp-prices.js
+// scripts/fetch-scp-raw.js
 //
 // Monthly script: queries SportsCardsPro /api/products for every athlete
-// in data/athletes.json. Fetches both "raw" and "PSA" queries.
-// Output: data/scp-prices.json  +  public/data/scp-prices.json
+// in data/athletes.json using "{Name} {Sport} Raw" queries.
+// Output: data/scp-raw.json  +  public/data/scp-raw.json
 
 import { readFileSync, writeFileSync, mkdirSync } from "fs";
 import { join, dirname } from "path";
@@ -30,10 +30,6 @@ function sleep(ms) {
   return new Promise((r) => setTimeout(r, ms));
 }
 
-/**
- * Query SportsCardsPro /api/products endpoint
- * Returns the first matching product or null
- */
 async function querySCP(query) {
   const url = `${API_BASE}?t=${encodeURIComponent(API_TOKEN)}&q=${encodeURIComponent(query)}`;
   try {
@@ -50,7 +46,6 @@ async function querySCP(query) {
       console.warn(`  ⚠️  API error for "${query}": ${data["error-message"] || "unknown"}`);
       return null;
     }
-    // Response is { products: [...] } with product objects
     const products = data.products || [];
     return products.length > 0 ? products : null;
   } catch (err) {
@@ -61,8 +56,7 @@ async function querySCP(query) {
 
 /**
  * Taguchi Winsorized Trimmed Mean
- * Trims top/bottom 20% of values, then winsorizes remaining outliers
- * to the boundary values. Same formula used across eBay pipelines.
+ * Trims top/bottom 20%, winsorizes remaining outliers to boundary values.
  */
 function taguchiTrimmedMean(values) {
   if (!values || values.length === 0) return null;
@@ -70,10 +64,9 @@ function taguchiTrimmedMean(values) {
 
   const sorted = [...values].sort((a, b) => a - b);
   const n = sorted.length;
-  const trimCount = Math.max(1, Math.floor(n * 0.2)); // 20% each side
+  const trimCount = Math.max(1, Math.floor(n * 0.2));
 
   if (n <= 2 * trimCount) {
-    // Too few values to trim — use median
     const mid = Math.floor(n / 2);
     const median = n % 2 === 0 ? (sorted[mid - 1] + sorted[mid]) / 2 : sorted[mid];
     return Math.round(median * 100) / 100;
@@ -82,7 +75,6 @@ function taguchiTrimmedMean(values) {
   const lo = sorted[trimCount];
   const hi = sorted[n - 1 - trimCount];
 
-  // Winsorize: clamp all values to [lo, hi], then average
   let sum = 0;
   for (const v of sorted) {
     sum += Math.min(Math.max(v, lo), hi);
@@ -90,23 +82,10 @@ function taguchiTrimmedMean(values) {
   return Math.round((sum / n) * 100) / 100;
 }
 
-/**
- * Extract all raw prices from SCP product results and compute Taguchi mean
- * SCP prices are in cents
- */
 function extractRawPrice(products) {
   if (!products || products.length === 0) return null;
   const prices = products
     .map((p) => p["loose-price"] || 0)
-    .filter((v) => v > 0)
-    .map((v) => v / 100);
-  return taguchiTrimmedMean(prices);
-}
-
-function extractGradedPrice(products) {
-  if (!products || products.length === 0) return null;
-  const prices = products
-    .map((p) => p["new-price"] || p["cib-price"] || 0)
     .filter((v) => v > 0)
     .map((v) => v / 100);
   return taguchiTrimmedMean(prices);
@@ -125,7 +104,7 @@ function extractProductInfo(products) {
 
 /* ── Main ── */
 async function main() {
-  console.log("🏷️  SportsCardsPro Price Fetcher");
+  console.log("🏷️  SCP Raw Price Fetcher");
   console.log("=".repeat(60));
 
   const athletes = loadJson(join(DATA_DIR, "athletes.json")) || [];
@@ -134,52 +113,30 @@ async function main() {
     process.exit(1);
   }
 
-  // Load existing results so we can preserve them on partial failures
-  const existing = loadJson(join(DATA_DIR, "scp-prices.json"));
-  const existingMap = {};
-  if (existing?.athletes) {
-    for (const a of existing.athletes) {
-      existingMap[a.name] = a;
-    }
-  }
-
   const results = [];
-  let rawHits = 0;
-  let gradedHits = 0;
+  let hits = 0;
 
   for (let i = 0; i < athletes.length; i++) {
     const a = athletes[i];
     const progress = `[${i + 1}/${athletes.length}]`;
-    console.log(`${progress} ${a.name} (${a.sport})`);
+    const query = `${a.name} ${a.sport} Raw`;
+    console.log(`${progress} ${a.name} (${a.sport}) → "${query}"`);
 
-    // Query for raw cards: "Name Raw"
-    const rawQuery = `${a.name} Raw`;
-    const rawProducts = await querySCP(rawQuery);
-    const rawPrice = extractRawPrice(rawProducts);
-    const rawInfo = extractProductInfo(rawProducts);
-    if (rawPrice) rawHits++;
-
-    await sleep(500); // Rate limit
-
-    // Query for graded cards: "Name PSA"
-    const gradedQuery = `${a.name} PSA`;
-    const gradedProducts = await querySCP(gradedQuery);
-    const gradedPrice = extractGradedPrice(gradedProducts);
-    const gradedInfo = extractProductInfo(gradedProducts);
-    if (gradedPrice) gradedHits++;
+    const products = await querySCP(query);
+    const price = extractRawPrice(products);
+    const info = extractProductInfo(products);
+    if (price) hits++;
 
     results.push({
       name: a.name,
       sport: a.sport,
-      scpRawPrice: rawPrice,
-      scpGradedPrice: gradedPrice,
-      scpRawProduct: rawInfo?.productName || null,
-      scpGradedProduct: gradedInfo?.productName || null,
-      scpRawId: rawInfo?.id || null,
-      scpGradedId: gradedInfo?.id || null,
+      scpRawPrice: price,
+      scpRawProduct: info?.productName || null,
+      scpRawId: info?.id || null,
+      scpRawMatchCount: info?.matchCount || 0,
     });
 
-    // Rate limit: 500ms between requests, extra pause every 50 athletes
+    // Rate limit: 500ms between requests, extra pause every 50
     if ((i + 1) % 50 === 0) {
       console.log(`  ⏳ Pausing 3s after ${i + 1} athletes...`);
       await sleep(3000);
@@ -192,24 +149,23 @@ async function main() {
     _meta: {
       updatedAt: new Date().toISOString(),
       athleteCount: results.length,
-      rawHits,
-      gradedHits,
-      description: "SportsCardsPro price lookup for Venezuelan athlete cards",
+      hits,
+      type: "raw",
+      description: "SportsCardsPro RAW price lookup (query: Name Sport Raw)",
     },
     athletes: results,
   };
 
-  mkdirSync(dirname(join(DATA_DIR, "scp-prices.json")), { recursive: true });
-  mkdirSync(dirname(join(PUBLIC_DIR, "scp-prices.json")), { recursive: true });
+  mkdirSync(DATA_DIR, { recursive: true });
+  mkdirSync(PUBLIC_DIR, { recursive: true });
 
-  const outPath = join(DATA_DIR, "scp-prices.json");
-  const pubPath = join(PUBLIC_DIR, "scp-prices.json");
+  const outPath = join(DATA_DIR, "scp-raw.json");
+  const pubPath = join(PUBLIC_DIR, "scp-raw.json");
   writeFileSync(outPath, JSON.stringify(output, null, 2));
   writeFileSync(pubPath, JSON.stringify(output, null, 2));
 
   console.log(`\n✅ Done! ${results.length} athletes processed`);
-  console.log(`   Raw price hits:    ${rawHits}/${results.length}`);
-  console.log(`   Graded price hits: ${gradedHits}/${results.length}`);
+  console.log(`   Raw price hits: ${hits}/${results.length}`);
   console.log(`   Saved to ${outPath}`);
   console.log(`   Saved to ${pubPath}`);
 }

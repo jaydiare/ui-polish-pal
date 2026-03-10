@@ -20,15 +20,23 @@ jobs:
         with:
           node-version: "20"
 
-      - name: Fetch SCP prices
+      - name: Fetch SCP Raw prices
         env:
           SPORTSCARDSPRO: ${{ secrets.SPORTSCARDSPRO }}
-        run: node scripts/fetch-scp-prices.js
+        run: node scripts/fetch-scp-raw.js
+
+      - name: Fetch SCP Graded prices
+        env:
+          SPORTSCARDSPRO: ${{ secrets.SPORTSCARDSPRO }}
+        run: node scripts/fetch-scp-graded.js
+
+      - name: Merge raw + graded
+        run: node scripts/merge-scp-prices.js
 
       - name: Commit & push
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add data/scp-prices.json public/data/scp-prices.json
+          git add data/scp-raw.json data/scp-graded.json data/scp-prices.json public/data/scp-raw.json public/data/scp-graded.json public/data/scp-prices.json
           git diff --cached --quiet || git commit -m "🏷️ Monthly SCP prices $(date -u +%Y-%m-%d)"
           git push
