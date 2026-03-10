@@ -246,6 +246,8 @@ export default function BlogDataTable() {
     { key: "rawSoldPrice", label: "Raw Sold", fmt: fmtPrice },
     { key: "gradedListedPrice", label: "PSA Listed", fmt: fmtPrice },
     { key: "gradedSoldPrice", label: "PSA Sold", fmt: fmtPrice },
+    { key: "scpRawPrice", label: "SCP Raw", fmt: fmtPrice },
+    { key: "scpGradedPrice", label: "SCP Graded", fmt: fmtPrice },
     { key: "psaPop", label: "PSA Pop", fmt: (v) => v == null ? "—" : v.toLocaleString() },
     { key: "stabilityCV", label: "Stability", fmt: (v) => v == null ? "—" : marketStabilityScoreFromCV(v).label, render: (_v, row) => {
       if (row.stabilityCV == null) return <span className="text-muted-foreground">—</span>;
