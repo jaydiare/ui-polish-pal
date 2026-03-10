@@ -373,6 +373,11 @@ export default function BlogDataTable() {
             className="inline-flex items-center gap-1 px-2 py-1 rounded bg-vzla-yellow/10 text-vzla-yellow hover:bg-vzla-yellow/20 transition-colors font-medium"
           >
             <Download className="w-3 h-3" /> CSV
+            {csvDownloads > 0 && (
+              <span className="ml-1 text-[10px] bg-vzla-yellow/20 px-1.5 py-0.5 rounded-full text-vzla-yellow/80">
+                {csvDownloads}
+              </span>
+            )}
           </button>
         </div>
       </div>
