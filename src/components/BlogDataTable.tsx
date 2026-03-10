@@ -290,6 +290,9 @@ export default function BlogDataTable() {
     a.download = "vzla-athlete-market-data.csv";
     a.click();
     URL.revokeObjectURL(url);
+    const newCount = csvDownloads + 1;
+    setCsvDownloads(newCount);
+    try { localStorage.setItem("vzla-csv-downloads", String(newCount)); } catch {}
   };
 
   return (
