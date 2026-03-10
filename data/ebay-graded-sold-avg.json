@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-10T15:14:14.944Z",
+    "updatedAt": "2026-03-10T17:13:20.544Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA-only title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 110,
-      "endIdx": 120,
+      "startIdx": 120,
+      "endIdx": 130,
       "totalAthletes": 450
     },
     "maxPages": 4,
@@ -1724,7 +1724,7 @@
     "fxRateUsed": null
   },
   "Ender Inciarte": {
-    "keyword": "Ender Inciarte Baseball",
+    "keyword": "Ender Inciarte Baseball PSA",
     "nScraped": 60,
     "nSoldUsed": 0,
     "avg": null,
@@ -1748,16 +1748,16 @@
     "fxRateUsed": null
   },
   "Endy Chavez": {
-    "keyword": "Endy Chavez Baseball",
-    "nScraped": 180,
-    "nSoldUsed": 0,
-    "avg": null,
-    "taguchiSold": null,
-    "medianSold": null,
-    "marketStabilityCV": null,
+    "keyword": "Endy Chavez Baseball PSA",
+    "nScraped": 244,
+    "nSoldUsed": 4,
+    "avg": 0.99,
+    "taguchiSold": 0.99,
+    "medianSold": 0.99,
+    "marketStabilityCV": 0,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
   },
   "Engelb Vielma": {
     "keyword": "Engelb Vielma Baseball",
@@ -1772,7 +1772,7 @@
     "fxRateUsed": null
   },
   "Enmanuel De Jesus": {
-    "keyword": "Enmanuel De Jesus Baseball",
+    "keyword": "Enmanuel De Jesus Baseball PSA",
     "nScraped": 60,
     "nSoldUsed": 0,
     "avg": null,
@@ -1784,7 +1784,7 @@
     "fxRateUsed": null
   },
   "Enrique Gonzalez": {
-    "keyword": "Enrique Gonzalez Baseball",
+    "keyword": "Enrique Gonzalez Baseball PSA",
     "nScraped": 60,
     "nSoldUsed": 0,
     "avg": null,
@@ -1796,13 +1796,13 @@
     "fxRateUsed": null
   },
   "Enzo Hernandez": {
-    "keyword": "Enzo Hernandez Baseball",
-    "nScraped": 196,
-    "nSoldUsed": 33,
-    "avg": 21,
-    "taguchiSold": 21,
-    "medianSold": 21,
-    "marketStabilityCV": 0.06916041689656101,
+    "keyword": "Enzo Hernandez Baseball PSA",
+    "nScraped": 260,
+    "nSoldUsed": 44,
+    "avg": 19.313636363636363,
+    "taguchiSold": 19.313636363636363,
+    "medianSold": 19.5,
+    "marketStabilityCV": 0.08520033289339932,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
@@ -1820,7 +1820,19 @@
     "fxRateUsed": null
   },
   "Ethan Salas": {
-    "keyword": "Ethan Salas Baseball",
+    "keyword": "Ethan Salas Baseball PSA",
+    "nScraped": 180,
+    "nSoldUsed": 93,
+    "avg": 41.75268817204301,
+    "taguchiSold": 41.75268817204301,
+    "medianSold": 41,
+    "marketStabilityCV": 0.22604116312960246,
+    "currency": "USD",
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
+  },
+  "Eugenio Suarez": {
+    "keyword": "Eugenio Suarez Baseball PSA",
     "nScraped": 0,
     "nSoldUsed": 0,
     "avg": null,
@@ -1831,33 +1843,21 @@
     "originalCurrencyExample": null,
     "fxRateUsed": null
   },
-  "Eugenio Suarez": {
-    "keyword": "Eugenio Suarez Baseball",
-    "nScraped": 213,
-    "nSoldUsed": 27,
-    "avg": 43.77777777777778,
-    "taguchiSold": 43.77777777777778,
-    "medianSold": 46,
-    "marketStabilityCV": 0.5818696911706245,
-    "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
-  },
   "Everson Pereira": {
-    "keyword": "Everson Pereira Baseball",
-    "nScraped": 207,
-    "nSoldUsed": 24,
-    "avg": 19.965000000000007,
-    "taguchiSold": 19.965000000000007,
-    "medianSold": 19.965,
-    "marketStabilityCV": 0.0007674739571078411,
+    "keyword": "Everson Pereira Baseball PSA",
+    "nScraped": 0,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
   },
   "Ezequiel Carrera": {
-    "keyword": "Ezequiel Carrera Baseball",
-    "nScraped": 180,
+    "keyword": "Ezequiel Carrera Baseball PSA",
+    "nScraped": 0,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -1868,16 +1868,16 @@
     "fxRateUsed": null
   },
   "Ezequiel Tovar": {
-    "keyword": "Ezequiel Tovar Baseball",
-    "nScraped": 128,
-    "nSoldUsed": 10,
-    "avg": 50.49,
-    "taguchiSold": 50.49,
-    "medianSold": 50.49,
-    "marketStabilityCV": 0.11482489688338343,
+    "keyword": "Ezequiel Tovar Baseball PSA",
+    "nScraped": 0,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
   },
   "Felipe Lira": {
     "keyword": "Felipe Lira Baseball",
