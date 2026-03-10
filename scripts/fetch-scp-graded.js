@@ -166,7 +166,7 @@ async function main() {
       athleteCount: results.length,
       hits,
       type: "graded",
-      description: "SportsCardsPro GRADED (PSA) price lookup (query: Name Sport PSA)",
+      description: "SportsCardsPro GRADED price lookup (query: Name Sport Graded)",
     },
     athletes: results,
   };
