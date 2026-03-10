@@ -82,26 +82,7 @@ const COUNTRY_OF_ORIGIN = ["United States", "Italy", "Venezuela", "Japan"];
 // Taguchi caps (winsorization %)
 const TAGUCHI_TRIM_PCT = 0.4;
 
-// --------------------
-// ✅ UNGRADED condition policy
-// --------------------
-const UNGRADED_ALLOWED_CONDITIONS = [
-  "near mint or better",
-  "near-mint or better",
-  "near mint",
-  "nm",
-  "nm-mt",
-  "nmt",
-];
-
-const UNGRADED_BLOCKLIST = [
-  "damaged", "damage", "poor", "fair", "digitalcard", "digital",
-  "very good", "vg", "good", "gd", "creases", "crease", "wrinkle",
-  "wrinkling", "corner wear", "surface wear", "paper loss", "stain",
-  "stained", "water damage", "tape", "writing", "marked", "marked up",
-  "pin hole", "hole", "torn", "tear", "scratches", "scratch",
-  "excellent", "ex", "auto", "signed","ERROR Card", "card lot",
-];
+// (No ungraded condition policy needed — this script collects GRADED cards only)
 
 // --- helpers ---
 function sleep(ms) {
