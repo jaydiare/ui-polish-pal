@@ -54,8 +54,8 @@ if (!EBAY_CLIENT_ID || !EBAY_CLIENT_SECRET) {
 const OUT_PATH = path.join(__dirname, "..", "data", "ebay-graded-avg.json");
 const ATHLETES_PATH = path.join(__dirname, "..", "data", "athletes.json");
 
-// FIX #3: dedicated base prices file — never overwritten by normal runs
-const BASE_PRICES_PATH = path.join(__dirname, "..", "data", "ebay-base-prices.json");
+// Graded base prices file — separate from raw to prevent contamination
+const BASE_PRICES_PATH = path.join(__dirname, "..", "data", "ebay-graded-base-prices.json");
 
 // FIX #2: max listings per athlete to fetch full item detail for date fallback
 const MAX_ITEM_DETAIL_FETCHES = 10;
