@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-09T22:51:22.837Z",
+    "updatedAt": "2026-03-10T01:40:46.141Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA-only title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 20,
-      "endIdx": 30,
+      "startIdx": 30,
+      "endIdx": 40,
       "totalAthletes": 450
     },
     "maxPages": 4,
@@ -440,7 +440,7 @@
     "fxRateUsed": null
   },
   "Andres Machado": {
-    "keyword": "Andres Machado Baseball",
+    "keyword": "Andres Machado Baseball PSA",
     "nScraped": 60,
     "nSoldUsed": 0,
     "avg": null,
@@ -452,40 +452,40 @@
     "fxRateUsed": null
   },
   "Andruw Monasterio": {
-    "keyword": "Andruw Monasterio Baseball",
-    "nScraped": 180,
-    "nSoldUsed": 0,
-    "avg": null,
-    "taguchiSold": null,
-    "medianSold": null,
-    "marketStabilityCV": null,
+    "keyword": "Andruw Monasterio Baseball PSA",
+    "nScraped": 240,
+    "nSoldUsed": 4,
+    "avg": 7.5,
+    "taguchiSold": 7.5,
+    "medianSold": 7.5,
+    "marketStabilityCV": 0,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
   },
   "Andry Lara": {
-    "keyword": "Andry Lara Baseball",
-    "nScraped": 120,
-    "nSoldUsed": 2,
-    "avg": null,
-    "taguchiSold": null,
-    "medianSold": null,
-    "marketStabilityCV": null,
+    "keyword": "Andry Lara Baseball PSA",
+    "nScraped": 240,
+    "nSoldUsed": 4,
+    "avg": 5.5,
+    "taguchiSold": 5.5,
+    "medianSold": 5.5,
+    "marketStabilityCV": 0,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
   },
   "Angel Bravo": {
-    "keyword": "Angel Bravo Baseball",
-    "nScraped": 0,
-    "nSoldUsed": 0,
-    "avg": null,
-    "taguchiSold": null,
-    "medianSold": null,
-    "marketStabilityCV": null,
+    "keyword": "Angel Bravo Baseball PSA",
+    "nScraped": 240,
+    "nSoldUsed": 12,
+    "avg": 16.610000000000003,
+    "taguchiSold": 16.610000000000003,
+    "medianSold": 16.61,
+    "marketStabilityCV": 2.234008679665268e-16,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
   },
   "Angel Escobar": {
     "keyword": "Angel Escobar Baseball",
@@ -500,9 +500,9 @@
     "fxRateUsed": null
   },
   "Angel Guzman": {
-    "keyword": "Angel Guzman Baseball",
-    "nScraped": 188,
-    "nSoldUsed": 9,
+    "keyword": "Angel Guzman Baseball PSA",
+    "nScraped": 248,
+    "nSoldUsed": 20,
     "avg": 15,
     "taguchiSold": 15,
     "medianSold": 15,
@@ -512,7 +512,7 @@
     "fxRateUsed": 1
   },
   "Angel Nesbitt": {
-    "keyword": "Angel Nesbitt Baseball",
+    "keyword": "Angel Nesbitt Baseball PSA",
     "nScraped": 60,
     "nSoldUsed": 0,
     "avg": null,
@@ -524,8 +524,8 @@
     "fxRateUsed": null
   },
   "Angel Salazar": {
-    "keyword": "Angel Salazar Baseball",
-    "nScraped": 60,
+    "keyword": "Angel Salazar Baseball PSA",
+    "nScraped": 0,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -536,8 +536,8 @@
     "fxRateUsed": null
   },
   "Angel Zerpa": {
-    "keyword": "Angel Zerpa Baseball",
-    "nScraped": 182,
+    "keyword": "Angel Zerpa Baseball PSA",
+    "nScraped": 0,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -548,8 +548,8 @@
     "fxRateUsed": null
   },
   "Anibal Sanchez": {
-    "keyword": "Anibal Sanchez Baseball",
-    "nScraped": 180,
+    "keyword": "Anibal Sanchez Baseball PSA",
+    "nScraped": 0,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -572,8 +572,8 @@
     "fxRateUsed": null
   },
   "Anthony Molina": {
-    "keyword": "Anthony Molina Baseball",
-    "nScraped": 60,
+    "keyword": "Anthony Molina Baseball PSA",
+    "nScraped": 0,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
