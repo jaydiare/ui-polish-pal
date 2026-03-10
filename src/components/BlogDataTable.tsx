@@ -47,7 +47,6 @@ const FILTERABLE_COLS: { key: SortKey; label: string }[] = [
   { key: "gradedListedPrice", label: "PSA Listed" },
   { key: "gradedSoldPrice", label: "PSA Sold" },
   { key: "scpRawPrice", label: "SCP Raw" },
-  { key: "scpGradedPrice", label: "SCP Graded" },
   { key: "psaPop", label: "PSA Pop" },
   { key: "stabilityCV", label: "Stability" },
   { key: "signalStrength", label: "S/N" },
