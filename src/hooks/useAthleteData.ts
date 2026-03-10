@@ -110,7 +110,7 @@ export function useAthleteData() {
   const [athleteHistory, setAthleteHistory] = useState<Record<string, any[]>>({});
   const [indexHistory, setIndexHistory] = useState<any[]>([]);
   const [gemratePopMap, setGemratePopMap] = useState<Record<string, number>>({});
-  const [scpPrices, setScpPrices] = useState<Record<string, { scpRawPrice: number | null; scpGradedPrice: number | null }>>({});
+  const [scpPrices, setScpPrices] = useState<Record<string, { scpRawPrice: number | null }>>({});
   const [lastUpdated, setLastUpdated] = useState<string>("—");
   const [visibleCount, setVisibleCount] = useState(PAGE_SIZE);
   const [filters, setFilters] = useState<Filters>({
