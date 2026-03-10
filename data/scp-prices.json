@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-10T11:35:04.493Z",
+    "updatedAt": "2026-03-10T11:38:31.989Z",
     "athleteCount": 1,
     "rawHits": 1,
     "gradedHits": 0,
@@ -8,14 +8,14 @@
   },
   "athletes": [
     {
-      "name": "Andres Galarraga",
+      "name": "Jose Altuve",
       "sport": "Baseball",
-      "scpRawPrice": 5.31,
+      "scpRawPrice": 3.2,
       "scpGradedPrice": null,
-      "scpRawProduct": "Andres Galarraga [Pattern 35] #85",
-      "scpGradedProduct": "Andres Galarraga #40T",
-      "scpRawId": "2272326",
-      "scpGradedId": "1919725"
+      "scpRawProduct": "Jose Altuve [1983 Topps Baseball] #83-31",
+      "scpGradedProduct": "Jose Altuve #HA-40",
+      "scpRawId": "1555044",
+      "scpGradedId": "9611176"
     }
   ]
 }

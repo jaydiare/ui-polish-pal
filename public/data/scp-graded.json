@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-10T11:35:04.439Z",
+    "updatedAt": "2026-03-10T11:38:31.934Z",
     "athleteCount": 1,
     "hits": 0,
     "type": "graded",
@@ -8,11 +8,11 @@
   },
   "athletes": [
     {
-      "name": "Andres Galarraga",
+      "name": "Jose Altuve",
       "sport": "Baseball",
       "scpGradedPrice": null,
-      "scpGradedProduct": "Andres Galarraga #40T",
-      "scpGradedId": "1919725",
+      "scpGradedProduct": "Jose Altuve #HA-40",
+      "scpGradedId": "9611176",
       "scpGradedMatchCount": 100
     }
   ]
