@@ -20,7 +20,7 @@
 
 ## 1. Architecture Overview
 
-The platform collects eBay pricing data across **4 dimensions**:
+The platform collects market pricing data across **5 dimensions**:
 
 | Dimension | Data Type | Source | Script |
 |-----------|-----------|--------|--------|
