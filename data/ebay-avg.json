@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-10T13:55:29.164Z",
+    "updatedAt": "2026-03-10T21:15:16.164Z",
     "minSampleSize": 4,
     "marketplaces": [
       "EBAY_US",
@@ -602,10 +602,8 @@
       },
       {
         "date": "2026-03-10",
-        "Baseball": 73.7,
-        "Soccer": 89.2,
-        "Basketball": 52.3,
-        "All": 74.4
+        "Baseball": 3.6,
+        "All": 3.6
       }
     ]
   },
@@ -19609,15 +19607,15 @@
       "EBAY_US": {
         "aspectMode": "player",
         "aspectValue": "Ronald Acuna Jr.",
-        "avgListing": null,
-        "taguchiListing": null,
+        "avgListing": 1.48,
+        "taguchiListing": 1.48,
         "marketStabilityCV": null,
-        "avgDaysOnMarket": null,
-        "nListing": 0,
-        "nDaysOnMarket": 0,
+        "avgDaysOnMarket": 1148.9962583912038,
+        "nListing": 1,
+        "nDaysOnMarket": 1,
         "currency": "USD",
-        "originalCurrency": null,
-        "fxRateUsed": null
+        "originalCurrency": "USD",
+        "fxRateUsed": 1
       },
       "EBAY_CA": {
         "aspectMode": "player",
@@ -19633,16 +19631,16 @@
         "fxRateUsed": null
       }
     },
-    "avg": null,
-    "n": 0,
-    "avgListing": null,
-    "taguchiListing": null,
+    "avg": 1.48,
+    "n": 1,
+    "avgListing": 1.48,
+    "taguchiListing": 1.48,
     "marketStabilityCV": null,
-    "avgDaysOnMarket": null,
-    "nListing": 0,
+    "avgDaysOnMarket": 1148.9962583912038,
+    "nListing": 1,
     "currency": "USD",
     "basePriceUSD": 75,
-    "indexLevel": 100
+    "indexLevel": 1.9733333333333332
   },
   "Ronald Belisario": {
     "match": {
