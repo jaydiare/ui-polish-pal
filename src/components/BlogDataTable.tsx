@@ -102,6 +102,7 @@ export default function BlogDataTable() {
     ebayGradedSoldRaw,
     athleteHistory,
     gemratePopMap,
+    scpPrices,
     lastUpdated,
   } = useAthleteData();
 
