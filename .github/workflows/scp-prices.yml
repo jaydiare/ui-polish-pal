@@ -3,7 +3,12 @@ name: Monthly SportsCardsPro Prices
 on:
   schedule:
     - cron: "0 10 1 * *" # 1st of every month at 10:00 UTC
-  workflow_dispatch: # Allow manual trigger
+  workflow_dispatch:
+    inputs:
+      only:
+        description: "Single athlete name (e.g. Ronald Acuna Jr.) — leave empty for full batch"
+        required: false
+        default: ""
 
 jobs:
   fetch:
@@ -23,11 +28,13 @@ jobs:
       - name: Fetch SCP Raw prices
         env:
           SPORTSCARDSPRO: ${{ secrets.SPORTSCARDSPRO }}
+          SCP_ONLY: ${{ github.event.inputs.only }}
         run: node scripts/fetch-scp-raw.js
 
       - name: Fetch SCP Graded prices
         env:
           SPORTSCARDSPRO: ${{ secrets.SPORTSCARDSPRO }}
+          SCP_ONLY: ${{ github.event.inputs.only }}
         run: node scripts/fetch-scp-graded.js
 
       - name: Merge raw + graded
