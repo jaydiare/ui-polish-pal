@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-10T12:54:05.812Z",
+    "updatedAt": "2026-03-10T15:57:35.314Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. Taguchi winsorized mean + market stability CV. Ungraded condition policy (permissive for sold). Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 80,
-      "endIdx": 90,
+      "startIdx": 90,
+      "endIdx": 100,
       "totalAthletes": 568
     },
     "maxPages": 3,
@@ -1005,15 +1005,15 @@
   },
   "Chico Carrasquel": {
     "keyword": "Chico Carrasquel Baseball",
-    "nScraped": 0,
-    "nSoldUsed": 0,
-    "avg": null,
-    "taguchiSold": null,
-    "medianSold": null,
-    "marketStabilityCV": null,
+    "nScraped": 180,
+    "nSoldUsed": 71,
+    "avg": 5.500422535211267,
+    "taguchiSold": 5.500422535211267,
+    "medianSold": 5.75,
+    "marketStabilityCV": 0.2565242904554558,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
   },
   "Chucho Ramos": {
     "keyword": "Chucho Ramos Baseball",
@@ -1102,11 +1102,11 @@
   "Damaso Blanco": {
     "keyword": "Damaso Blanco Baseball",
     "nScraped": 180,
-    "nSoldUsed": 3,
-    "avg": null,
-    "taguchiSold": null,
-    "medianSold": null,
-    "marketStabilityCV": null,
+    "nSoldUsed": 6,
+    "avg": 6.495000000000001,
+    "taguchiSold": 6.495000000000001,
+    "medianSold": 6.495,
+    "marketStabilityCV": 0.5894658471071764,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
@@ -1114,30 +1114,30 @@
   "Daniel Palencia": {
     "keyword": "Daniel Palencia Baseball",
     "nScraped": 180,
-    "nSoldUsed": 107,
-    "avg": 3.4866355140186878,
-    "taguchiSold": 3.4866355140186878,
-    "medianSold": 2.99,
-    "marketStabilityCV": 0.3541248010687813,
+    "nSoldUsed": 118,
+    "avg": 3.6832203389830465,
+    "taguchiSold": 3.6832203389830465,
+    "medianSold": 3.49,
+    "marketStabilityCV": 0.3117403711450768,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
   },
   "Danny Leon": {
     "keyword": "Danny Leon Baseball",
-    "nScraped": 204,
-    "nSoldUsed": 36,
-    "avg": 10.657500000000002,
-    "taguchiSold": 10.657500000000002,
-    "medianSold": 10.145,
-    "marketStabilityCV": 0.19654856318967404,
+    "nScraped": 201,
+    "nSoldUsed": 42,
+    "avg": 11.035,
+    "taguchiSold": 11.035,
+    "medianSold": 11.245000000000001,
+    "marketStabilityCV": 0.22087955669484882,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
   },
   "Danny Sandoval": {
     "keyword": "Danny Sandoval Baseball",
-    "nScraped": 197,
+    "nScraped": 200,
     "nSoldUsed": 9,
     "avg": 1.8700000000000006,
     "taguchiSold": 1.8700000000000006,
@@ -1172,7 +1172,7 @@
     "fxRateUsed": null
   },
   "David Concepcion": {
-    "keyword": "David Concepcion Baseball",
+    "keyword": "Concepcion David Dave Baseball Baseball",
     "nScraped": 0,
     "nSoldUsed": 0,
     "avg": null,
@@ -3177,19 +3177,19 @@
   },
   "Clemente Alvarez": {
     "keyword": "Clemente Alvarez Baseball",
-    "nScraped": 203,
-    "nSoldUsed": 0,
-    "avg": null,
-    "taguchiSold": null,
-    "medianSold": null,
-    "marketStabilityCV": null,
+    "nScraped": 204,
+    "nSoldUsed": 6,
+    "avg": 4.9750000000000005,
+    "taguchiSold": 4.9750000000000005,
+    "medianSold": 4.975,
+    "marketStabilityCV": 0.2256947221880583,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
   },
   "Cris Colon": {
     "keyword": "Cris Colon Baseball",
-    "nScraped": 207,
+    "nScraped": 210,
     "nSoldUsed": 3,
     "avg": null,
     "taguchiSold": null,
@@ -3201,15 +3201,15 @@
   },
   "Darwin Cubillan": {
     "keyword": "Darwin Cubillan Baseball",
-    "nScraped": 183,
-    "nSoldUsed": 24,
-    "avg": 1.72,
-    "taguchiSold": 1.72,
-    "medianSold": 1.72,
-    "marketStabilityCV": 0.017816997155415685,
+    "nScraped": 0,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
   },
   "Darwinzon Hernandez": {
     "keyword": "Darwinzon Hernandez Baseball",
