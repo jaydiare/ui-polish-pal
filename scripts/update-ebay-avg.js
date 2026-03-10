@@ -1103,7 +1103,7 @@ async function main() {
     console.log(`📌 Created/patched ${fallbackCount} fallback records from base prices (indexLevel=100)`);
   }
 
-  // --- Append today's index snapshot to indexHistory (70/30 raw/graded weighted) ---
+  // --- Step 7: Compute and append daily index snapshot (weighted 70/30 raw/graded) ---
   const today = new Date().toISOString().slice(0, 10); // YYYY-MM-DD
 
   // Load graded data for weighted index
