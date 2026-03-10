@@ -883,7 +883,7 @@ async function main() {
     }
   } catch { /* ignore parse errors */ }
 
-  // In single-athlete mode, start from previous data so we don't wipe others
+  // --- Step 5: Initialize output (single-athlete: merge with existing; full: fresh start) ---
   const out = onlyNames ? { ...prevOut } : {
     _meta: {
       updatedAt: new Date().toISOString(),
