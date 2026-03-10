@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-10T01:46:36.432Z",
+    "updatedAt": "2026-03-10T04:29:06.547Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. Taguchi winsorized mean + market stability CV. Ungraded condition policy (permissive for sold). Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 40,
-      "endIdx": 50,
+      "startIdx": 50,
+      "endIdx": 60,
       "totalAthletes": 568
     },
     "maxPages": 3,
@@ -28,7 +28,7 @@
     },
     "fx": {
       "source": "CBSA Exchange Rates API",
-      "asOf": "2026-03-10T00:00:00.000Z"
+      "asOf": "2026-03-11T00:00:00.000Z"
     }
   },
   "Adbert Alzolay": {
@@ -585,12 +585,12 @@
   },
   "Armando Galarraga": {
     "keyword": "Armando Galarraga Baseball",
-    "nScraped": 147,
-    "nSoldUsed": 81,
-    "avg": 1.8397530864197529,
-    "taguchiSold": 1.8397530864197529,
-    "medianSold": 1.79,
-    "marketStabilityCV": 0.08480520308564839,
+    "nScraped": 149,
+    "nSoldUsed": 106,
+    "avg": 1.8523584905660375,
+    "taguchiSold": 1.8523584905660375,
+    "medianSold": 1.99,
+    "marketStabilityCV": 0.08175239214125062,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
@@ -621,27 +621,27 @@
   },
   "Beiker Graterol": {
     "keyword": "Beiker Graterol Baseball",
-    "nScraped": 180,
-    "nSoldUsed": 76,
-    "avg": 2.5171052631578963,
-    "taguchiSold": 2.5171052631578963,
-    "medianSold": 2.79,
-    "marketStabilityCV": 0.19479916356547156,
+    "nScraped": 120,
+    "nSoldUsed": 4,
+    "avg": 1.9900000000000002,
+    "taguchiSold": 1.9900000000000002,
+    "medianSold": 1.9900000000000002,
+    "marketStabilityCV": 0.5802515268237445,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
   },
   "Bo Diaz": {
     "keyword": "Bo Diaz Baseball",
-    "nScraped": 180,
-    "nSoldUsed": 40,
-    "avg": 5.126000000000002,
-    "taguchiSold": 5.126000000000002,
-    "medianSold": 4.995,
-    "marketStabilityCV": 0.15771091259170777,
+    "nScraped": 0,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
   },
   "Bobby Abreu": {
     "keyword": "Bobby Abreu Baseball",
@@ -2973,7 +2973,7 @@
   },
   "Arcenio Leon": {
     "keyword": "Arcenio Leon Baseball",
-    "nScraped": 0,
+    "nScraped": 180,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -2985,12 +2985,12 @@
   },
   "Argenis Diaz": {
     "keyword": "Argenis Diaz Baseball",
-    "nScraped": 188,
-    "nSoldUsed": 84,
-    "avg": 1.1966666666666657,
-    "taguchiSold": 1.1966666666666657,
-    "medianSold": 1.095,
-    "marketStabilityCV": 0.17934213496016477,
+    "nScraped": 186,
+    "nSoldUsed": 12,
+    "avg": 1.75,
+    "taguchiSold": 1.75,
+    "medianSold": 1.75,
+    "marketStabilityCV": 0.2984188387811963,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
@@ -2998,11 +2998,11 @@
   "Asdrubal Cabrera": {
     "keyword": "Asdrubal Cabrera Baseball",
     "nScraped": 180,
-    "nSoldUsed": 41,
-    "avg": 1.6217073170731713,
-    "taguchiSold": 1.6217073170731713,
-    "medianSold": 1.69,
-    "marketStabilityCV": 0.21768101171171106,
+    "nSoldUsed": 64,
+    "avg": 1.4579687500000003,
+    "taguchiSold": 1.4579687500000003,
+    "medianSold": 1.37,
+    "marketStabilityCV": 0.3264787378046963,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
@@ -3010,11 +3010,11 @@
   "Avisail Garcia": {
     "keyword": "Avisail Garcia Baseball",
     "nScraped": 180,
-    "nSoldUsed": 34,
-    "avg": 1.4811764705882358,
-    "taguchiSold": 1.4811764705882358,
-    "medianSold": 1.54,
-    "marketStabilityCV": 0.32670185475053615,
+    "nSoldUsed": 37,
+    "avg": 2.1764864864864863,
+    "taguchiSold": 2.1764864864864863,
+    "medianSold": 1.99,
+    "marketStabilityCV": 0.34663183889215543,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
