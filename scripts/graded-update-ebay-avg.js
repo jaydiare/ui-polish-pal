@@ -649,10 +649,10 @@ async function main() {
       marketplaces: MARKETPLACES,
       categoryId: CATEGORY_ID,
       note:
-        "Active listing robust mean (Browse API FIXED_PRICE). No sold data. Prices normalized to USD. " +
-        "Includes market stability CV (sd/mean). Ungraded restricted to Near Mint or Better / Excellent. " +
+        "GRADED (PSA) active listing robust mean (Browse API FIXED_PRICE). No sold data. Prices normalized to USD. " +
+        "Includes market stability CV (sd/mean). Filtered by Graded:{Yes} + Professional Grader:{PSA}. " +
         "Includes avg days-on-market for active listings (listing age). " +
-        "Base prices stored in dedicated ebay-base-prices.json (FIX #3).",
+        "Base prices stored in dedicated ebay-graded-base-prices.json.",
       fx: {
         source: "CBSA Exchange Rates API",
         asOf: fx.asOf,
@@ -661,7 +661,7 @@ async function main() {
       manufacturers: "none (all brands accepted)",
       listingStat: { method: "taguchi_winsorized_mean", trimPercent: TAGUCHI_TRIM_PCT },
       stabilityStat: { method: "cv", formula: "sd/mean", sample: "winsorized", trimPercent: TAGUCHI_TRIM_PCT },
-      ungradedPolicy: { allow: ["Near Mint or Better", "Excellent"], blocklist: "damaged/low-condition keywords" },
+      gradedPolicy: { grader: "PSA", aspectFilter: "Graded:{Yes},Professional Grader:{PSA}" },
       daysOnMarket: {
         meaning: "Average age of ACTIVE listings (not time-to-sell). Falls back to item detail fetch if summary omits creation date.",
         field: "avgDaysOnMarket",
