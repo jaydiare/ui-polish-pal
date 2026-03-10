@@ -102,16 +102,17 @@ This ensures the UI always displays graded prices when any graded data source is
 **Query construction:**
 ```
 q = "{name} {sport} card"
-aspect_filter = "Condition Type:{Ungraded}" + Player/Athlete or Sport aspect
+aspect_filter = Player/Athlete or Sport aspect (NO Condition Type filter)
 filter = "buyingOptions:{FIXED_PRICE}"
 category_ids = "261328" (Trading Card Singles)
 ```
 
 **Filtering pipeline:**
-1. **API-level:** `Condition Type:{Ungraded}` aspect filter restricts to ungraded cards
-2. **Post-fetch graded detection:** Skip if `isGradedListing()` returns true (robust regex)
-3. **Ungraded condition policy:** Must match Near Mint/Excellent conditions; blocklist rejects damaged/poor
-4. **Price normalization:** Convert to USD via CBSA Exchange Rates API
+1. **Post-fetch graded detection:** Skip if `isGradedListing()` returns true (tight regex, see §5.1)
+2. **Ungraded condition policy:** Must match Near Mint/Excellent conditions; word-boundary blocklist rejects damaged/poor
+3. **Price normalization:** Convert to USD via CBSA Exchange Rates API
+
+> **Note:** `Condition Type:{Ungraded}` aspect filter was **intentionally removed** (Bug 8.12) because many valid raw eBay listings lack this metadata tag, causing 0 results. Instead, graded listings are excluded post-fetch via `isGradedListing()`.
 
 **Matching strategy:**
 1. Try `Player/Athlete:{name}` aspect match (with name variations: accent-stripped, no dots, no Jr.)
