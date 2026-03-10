@@ -209,7 +209,7 @@ export function useAthleteData() {
         fetchJson("https://raw.githubusercontent.com/jaydiare/ui-polish-pal/main/data/athlete-history.json"),
         fetchJson("https://raw.githubusercontent.com/jaydiare/ui-polish-pal/main/data/index-history.json"),
         fetchJson("https://raw.githubusercontent.com/jaydiare/ui-polish-pal/main/data/gemrate.json"),
-        fetchJson("https://raw.githubusercontent.com/jaydiare/ui-polish-pal/main/data/scp-prices.json"),
+        fetchJson("https://raw.githubusercontent.com/jaydiare/ui-polish-pal/main/data/scp-raw.json"),
       ]);
 
       const patchedEbay = enrichWithBasePrices(fetchedEbay as EbayAvgData | null);
