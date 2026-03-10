@@ -833,13 +833,32 @@ function computeScriptIndex(outData, athletes, sport) {
   return { average, used };
 }
 
-// --- main ---
+// =============================================================================
+// MAIN EXECUTION FLOW
+// =============================================================================
+// Step 1: Authenticate + load exchange rates
+// Step 2: Load athlete roster (optionally filter to single athlete via EBAY_ONLY)
+// Step 3: Load base prices from dedicated file
+// Step 4: Load previous output (preserve existing records for partial runs)
+// Step 5: For each athlete:
+//   5a. Validate Player/Athlete aspect match on EBAY_CA, then EBAY_US
+//   5b. Fallback: validate Sport aspect match
+//   5c. If no match → skip (prevents data contamination)
+//   5d. Fetch listings from each marketplace, apply post-fetch filters
+//   5e. Pick best marketplace result (CA preferred, then US)
+//   5f. Compute base-100 index level (first observation = 100)
+//   5g. Save progress after each athlete (crash-safe)
+// Step 6: Create fallback records for athletes with base prices but no active data
+// Step 7: Compute and append daily index snapshot (weighted 70/30 raw/graded)
+// Step 8: Final save of output + base prices
+// =============================================================================
 async function main() {
+  // --- Step 1: Authenticate + load exchange rates ---
   const token = await getAppToken();
   const fx = await getFxRatesToUSD();
   let athletes = loadAthletes();
 
-  // ✅ Single-athlete mode: EBAY_ONLY env var (comma-separated names)
+  // --- Step 2: Optional single-athlete mode (EBAY_ONLY env var) ---
   const onlyNames = process.env.EBAY_ONLY;
   if (onlyNames) {
     const wanted = onlyNames.split(",").map((n) => normalizeNameForCompare(n.trim()));
@@ -847,7 +866,7 @@ async function main() {
     console.log(`🎯 Single-athlete mode: processing ${athletes.length} athlete(s)`);
   }
 
-  // FIX #3: load basePrices from dedicated file (survives output file deletion)
+  // --- Step 3: Load base prices from dedicated file (survives output file deletion) ---
   const basePrices = loadBasePrices();
 
   // Load previous indexHistory from output file only (not basePrices)
