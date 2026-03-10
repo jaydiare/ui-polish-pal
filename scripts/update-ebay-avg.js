@@ -935,6 +935,7 @@ async function main() {
     const queryName = searchKeyword || name;
 
     try {
+      // --- Step 5a: Try Player/Athlete aspect match (6 name variants) ---
       let match = null;
 
       for (const marketplaceId of ["EBAY_CA", "EBAY_US"]) {
