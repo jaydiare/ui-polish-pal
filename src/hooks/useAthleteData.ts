@@ -252,6 +252,13 @@ export function useAthleteData() {
         }
         setGemratePopMap(popMap);
       }
+      if (fetchedScp?.athletes && Array.isArray(fetchedScp.athletes)) {
+        const map: Record<string, { scpRawPrice: number | null; scpGradedPrice: number | null }> = {};
+        for (const a of fetchedScp.athletes) {
+          map[a.name] = { scpRawPrice: a.scpRawPrice ?? null, scpGradedPrice: a.scpGradedPrice ?? null };
+        }
+        setScpPrices(map);
+      }
     })();
   }, []);
 
