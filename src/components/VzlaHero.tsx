@@ -1,9 +1,17 @@
 import { forwardRef } from "react";
 import { motion } from "framer-motion";
+import { TrendingUp, BarChart3, Shield, Zap } from "lucide-react";
 
 interface VzlaHeroProps {
   lastUpdated: string;
 }
+
+const STABILITY_TIERS = [
+  { label: "Stable", range: "0–10%", icon: Shield, color: "text-emerald-400", bg: "bg-emerald-400/8", border: "border-emerald-400/15" },
+  { label: "Active", range: "10–20%", icon: Zap, color: "text-sky-400", bg: "bg-sky-400/8", border: "border-sky-400/15" },
+  { label: "Volatile", range: "20–35%", icon: BarChart3, color: "text-amber-400", bg: "bg-amber-400/8", border: "border-amber-400/15" },
+  { label: "Unstable", range: "35%+", icon: TrendingUp, color: "text-red-400", bg: "bg-red-400/8", border: "border-red-400/15" },
+];
 
 const VzlaHero = forwardRef<HTMLElement, VzlaHeroProps>(({ lastUpdated }, ref) => {
   return (
@@ -12,58 +20,85 @@ const VzlaHero = forwardRef<HTMLElement, VzlaHeroProps>(({ lastUpdated }, ref) =
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, ease: [0.4, 0, 0.2, 1] }}
-      className="hero-panel text-center mb-8 p-10 md:p-14"
+      className="hero-panel text-center mb-8 p-8 md:p-14"
     >
+      {/* Live badge */}
       <motion.div
         initial={{ opacity: 0, scale: 0.9 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.5, delay: 0.2 }}
-        className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-secondary border border-border text-xs font-semibold text-muted-foreground mb-6"
+        className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-secondary/80 border border-border text-xs font-semibold text-muted-foreground mb-5"
       >
-        <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+        <span className="relative flex h-2 w-2">
+          <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
+          <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-400" />
+        </span>
         Updated Daily · {lastUpdated}
       </motion.div>
 
-      <h1 className="text-4xl md:text-6xl font-display font-bold mb-4 leading-[1.05] text-glow">
+      {/* Title */}
+      <motion.h1
+        initial={{ opacity: 0, y: 10 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 0.3 }}
+        className="text-4xl md:text-6xl font-display font-bold mb-3 leading-[1.05] text-glow"
+      >
         VZLA <span className="text-flag-gradient">Sports Cards</span> Index
-      </h1>
+      </motion.h1>
 
-      <p className="text-muted-foreground text-sm md:text-base max-w-2xl mx-auto leading-relaxed mb-6">
-        Daily eBay market data for Venezuelan athletes' sports cards.
-        Track prices, stability scores, and market trends.
-      </p>
+      <motion.p
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.5, delay: 0.4 }}
+        className="text-muted-foreground text-sm md:text-base max-w-xl mx-auto leading-relaxed mb-8"
+      >
+        Daily eBay market data for 550+ Venezuelan athletes.
+        Track prices, stability, and investment signals.
+      </motion.p>
 
-      <div className="hero-sub text-sm leading-relaxed text-left md:text-center">
-        <p className="mb-2">
-          The <strong className="text-foreground">Stability Score</strong> measures how tightly listing prices cluster around a common level.
+      {/* Stability guide — horizontal card grid */}
+      <motion.div
+        initial={{ opacity: 0, y: 12 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 0.5 }}
+        className="hero-guide"
+      >
+        <p className="text-xs font-semibold text-muted-foreground uppercase tracking-widest mb-4">
+          Stability Score Guide
         </p>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mt-4">
-          {[
-            { label: "Stable", range: "0–10%", color: "text-emerald-400", desc: "Strong agreement" },
-            { label: "Active", range: "10–20%", color: "text-sky-400", desc: "Normal activity" },
-            { label: "Volatile", range: "20–35%", color: "text-amber-400", desc: "Price dispersion" },
-            { label: "Unstable", range: "35%+", color: "text-red-400", desc: "High speculation" },
-          ].map((item) => (
-            <div key={item.label} className="text-center p-2 rounded-lg bg-background/50">
-              <div className={`text-xs font-bold ${item.color}`}>{item.label}</div>
-              <div className="text-[10px] text-muted-foreground mt-0.5">{item.range}</div>
-            </div>
-          ))}
-        </div>
-        <div className="mt-4 flex items-center justify-center gap-2 px-3 py-2 rounded-lg bg-vzla-yellow/5 border border-vzla-yellow/15 w-fit mx-auto">
-          <span className="text-[13px]">🔄</span>
-          <span className="text-xs text-muted-foreground">
-            <strong className="text-vzla-yellow">Flip Potential</strong> — Cards marked Volatile or Unstable may offer buy-low, sell-high opportunities due to wide price swings.
-          </span>
-        </div>
-        <div className="mt-2 flex items-center justify-center gap-2 px-3 py-2 rounded-lg bg-emerald-500/5 border border-emerald-500/15 w-fit mx-auto">
-          <span className="text-[13px]">🔻</span>
-          <span className="text-xs text-muted-foreground">
-            <strong className="text-emerald-400">Buy Low</strong> — Cards where the average sold price is below the current listing price, signaling potential bargains.
-          </span>
-        </div>
-      </div>
 
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-2.5">
+          {STABILITY_TIERS.map((tier) => {
+            const Icon = tier.icon;
+            return (
+              <div
+                key={tier.label}
+                className={`flex flex-col items-center gap-1.5 p-3 rounded-xl ${tier.bg} border ${tier.border} transition-colors`}
+              >
+                <Icon className={`w-4 h-4 ${tier.color}`} />
+                <span className={`text-xs font-bold ${tier.color}`}>{tier.label}</span>
+                <span className="text-[10px] text-muted-foreground">{tier.range} CV</span>
+              </div>
+            );
+          })}
+        </div>
+
+        {/* Signal badges */}
+        <div className="flex flex-col sm:flex-row gap-2 mt-4 justify-center">
+          <div className="inline-flex items-center gap-2 px-3 py-2 rounded-lg bg-vzla-yellow/5 border border-vzla-yellow/15">
+            <span className="text-xs">🔄</span>
+            <span className="text-[11px] text-muted-foreground">
+              <strong className="text-vzla-yellow">Flip Potential</strong> — Volatile cards with buy-low, sell-high opportunity
+            </span>
+          </div>
+          <div className="inline-flex items-center gap-2 px-3 py-2 rounded-lg bg-emerald-500/5 border border-emerald-500/15">
+            <span className="text-xs">🔻</span>
+            <span className="text-[11px] text-muted-foreground">
+              <strong className="text-emerald-400">Buy Low</strong> — Sold price below listing price
+            </span>
+          </div>
+        </div>
+      </motion.div>
     </motion.section>
   );
 });

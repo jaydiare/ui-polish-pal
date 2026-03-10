@@ -254,17 +254,15 @@
   z-index: 1;
 }
 
-.hero-sub {
+.hero-guide {
   position: relative;
   border-radius: 14px;
-  padding: 16px 20px;
-  max-width: 900px;
+  padding: 20px;
+  max-width: 640px;
   width: 100%;
-  margin: 16px auto 0;
-  background: hsl(var(--secondary) / 0.6);
+  margin: 0 auto;
+  background: hsl(var(--secondary) / 0.5);
   border: 1px solid hsl(var(--border));
-  color: hsl(var(--foreground) / 0.85);
-  line-height: 1.65;
   backdrop-filter: blur(8px);
 }
 
@@ -274,23 +272,52 @@
 .athlete-card {
   min-width: 0;
   padding: 20px;
-  background: hsl(var(--card));
+  background: linear-gradient(
+    165deg,
+    hsl(var(--card)) 0%,
+    hsl(230 42% 9%) 100%
+  );
   border-radius: 16px;
   border: 1px solid hsl(var(--border));
-  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.3);
+  box-shadow:
+    0 2px 8px rgba(0, 0, 0, 0.2),
+    0 8px 32px rgba(0, 0, 0, 0.15);
   display: flex;
   flex-direction: column;
   min-height: 260px;
   text-align: left;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.athlete-card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    hsl(var(--vzla-yellow) / 0.15) 50%,
+    transparent 100%
+  );
+  opacity: 0;
+  transition: opacity 0.35s ease;
 }
 
 .athlete-card:hover {
   transform: translateY(-4px);
   border-color: hsl(var(--vzla-yellow) / 0.2);
   box-shadow:
-    0 12px 40px rgba(0, 0, 0, 0.4),
-    0 0 20px hsl(var(--vzla-yellow) / 0.05);
+    0 16px 48px rgba(0, 0, 0, 0.4),
+    0 0 24px hsl(var(--vzla-yellow) / 0.06);
+}
+
+.athlete-card:hover::after {
+  opacity: 1;
 }
 
 .athlete-card.is-recommended {
@@ -378,13 +405,12 @@
     border-radius: 16px;
   }
   .hero-panel h1 {
-    font-size: 36px !important;
+    font-size: 32px !important;
     line-height: 1.1 !important;
   }
-  .hero-sub {
+  .hero-guide {
     font-size: 13px;
-    padding: 14px 16px;
-    margin-top: 12px;
+    padding: 16px;
   }
 }
 

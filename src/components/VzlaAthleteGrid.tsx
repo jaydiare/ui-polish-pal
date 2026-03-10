@@ -58,7 +58,7 @@ const VzlaAthleteGrid = ({ athletes, byName, byKey, gradedByName, gradedByKey, e
         ))}
       </div>
 
-      <div className="grid grid-cols-[repeat(auto-fill,minmax(250px,1fr))] gap-5">
+      <div className="grid grid-cols-[repeat(auto-fill,minmax(260px,1fr))] gap-4 md:gap-5">
         {displayAthletes.map((a, i) => {
           // Per-athlete priceMode: gemrate "no" → raw only; otherwise respect global
           const effectivePriceMode = a.gemrate?.toLowerCase() === "no" ? "raw" : priceMode;
