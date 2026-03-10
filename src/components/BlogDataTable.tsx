@@ -27,7 +27,6 @@ interface RowData {
   gradedListedPrice: number | null;
   gradedSoldPrice: number | null;
   scpRawPrice: number | null;
-  scpGradedPrice: number | null;
   stabilityCV: number | null;
   signalStrength: number | null;
   psaPop: number | null;
@@ -48,7 +47,6 @@ const FILTERABLE_COLS: { key: SortKey; label: string }[] = [
   { key: "gradedListedPrice", label: "PSA Listed" },
   { key: "gradedSoldPrice", label: "PSA Sold" },
   { key: "scpRawPrice", label: "SCP Raw" },
-  { key: "scpGradedPrice", label: "SCP Graded" },
   { key: "psaPop", label: "PSA Pop" },
   { key: "stabilityCV", label: "Stability" },
   { key: "signalStrength", label: "S/N" },
@@ -168,7 +166,6 @@ export default function BlogDataTable() {
         gradedListedPrice: isGemrateEligible ? getEbayAvgNumber(a, gradedByName, gradedByKey) : null,
         gradedSoldPrice,
         scpRawPrice: scp?.scpRawPrice ?? null,
-        scpGradedPrice: scp?.scpGradedPrice ?? null,
         stabilityCV,
         signalStrength,
         psaPop,
@@ -247,7 +244,6 @@ export default function BlogDataTable() {
     { key: "gradedListedPrice", label: "PSA Listed", fmt: fmtPrice },
     { key: "gradedSoldPrice", label: "PSA Sold", fmt: fmtPrice },
     { key: "scpRawPrice", label: "SCP Raw", fmt: fmtPrice },
-    { key: "scpGradedPrice", label: "SCP Graded", fmt: fmtPrice },
     { key: "psaPop", label: "PSA Pop", fmt: (v) => v == null ? "—" : v.toLocaleString() },
     { key: "stabilityCV", label: "Stability", fmt: (v) => v == null ? "—" : marketStabilityScoreFromCV(v).label, render: (_v, row) => {
       if (row.stabilityCV == null) return <span className="text-muted-foreground">—</span>;

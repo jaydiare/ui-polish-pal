@@ -110,7 +110,7 @@ export function useAthleteData() {
   const [athleteHistory, setAthleteHistory] = useState<Record<string, any[]>>({});
   const [indexHistory, setIndexHistory] = useState<any[]>([]);
   const [gemratePopMap, setGemratePopMap] = useState<Record<string, number>>({});
-  const [scpPrices, setScpPrices] = useState<Record<string, { scpRawPrice: number | null; scpGradedPrice: number | null }>>({});
+  const [scpPrices, setScpPrices] = useState<Record<string, { scpRawPrice: number | null }>>({});
   const [lastUpdated, setLastUpdated] = useState<string>("—");
   const [visibleCount, setVisibleCount] = useState(PAGE_SIZE);
   const [filters, setFilters] = useState<Filters>({
@@ -253,9 +253,9 @@ export function useAthleteData() {
         setGemratePopMap(popMap);
       }
       if (fetchedScp?.athletes && Array.isArray(fetchedScp.athletes)) {
-        const map: Record<string, { scpRawPrice: number | null; scpGradedPrice: number | null }> = {};
+        const map: Record<string, { scpRawPrice: number | null }> = {};
         for (const a of fetchedScp.athletes) {
-          map[a.name] = { scpRawPrice: a.scpRawPrice ?? null, scpGradedPrice: a.scpGradedPrice ?? null };
+          map[a.name] = { scpRawPrice: a.scpRawPrice ?? null };
         }
         setScpPrices(map);
       }
