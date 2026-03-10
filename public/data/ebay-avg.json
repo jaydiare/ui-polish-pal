@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-10T21:15:16.164Z",
+    "updatedAt": "2026-03-10T21:23:01.238Z",
     "minSampleSize": 4,
     "marketplaces": [
       "EBAY_US",
@@ -602,8 +602,8 @@
       },
       {
         "date": "2026-03-10",
-        "Baseball": 3.6,
-        "All": 3.6
+        "Baseball": 148.1,
+        "All": 148.1
       }
     ]
   },
@@ -11597,15 +11597,15 @@
       "EBAY_US": {
         "aspectMode": "player",
         "aspectValue": "Jose Altuve",
-        "avgListing": null,
-        "taguchiListing": null,
+        "avgListing": 1.2349999999999999,
+        "taguchiListing": 1.2349999999999999,
         "marketStabilityCV": null,
-        "avgDaysOnMarket": null,
-        "nListing": 0,
-        "nDaysOnMarket": 0,
+        "avgDaysOnMarket": 1156.5709107291666,
+        "nListing": 2,
+        "nDaysOnMarket": 2,
         "currency": "USD",
-        "originalCurrency": null,
-        "fxRateUsed": null
+        "originalCurrency": "USD",
+        "fxRateUsed": 1
       },
       "EBAY_CA": {
         "aspectMode": "player",
@@ -11621,16 +11621,16 @@
         "fxRateUsed": null
       }
     },
-    "avg": null,
-    "n": 0,
-    "avgListing": null,
-    "taguchiListing": null,
+    "avg": 1.2349999999999999,
+    "n": 2,
+    "avgListing": 1.2349999999999999,
+    "taguchiListing": 1.2349999999999999,
     "marketStabilityCV": null,
-    "avgDaysOnMarket": null,
-    "nListing": 0,
+    "avgDaysOnMarket": 1156.5709107291666,
+    "nListing": 2,
     "currency": "USD",
     "basePriceUSD": 0.99,
-    "indexLevel": 100
+    "indexLevel": 124.74747474747474
   },
   "Jose Alvarado": {
     "match": {
