@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-10T13:40:44.354Z",
+    "updatedAt": "2026-03-10T15:14:14.944Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA-only title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 100,
-      "endIdx": 110,
+      "startIdx": 110,
+      "endIdx": 120,
       "totalAthletes": 450
     },
     "maxPages": 4,
@@ -1604,7 +1604,7 @@
     "fxRateUsed": null
   },
   "Edwin Hurtado": {
-    "keyword": "Edwin Hurtado Baseball",
+    "keyword": "Edwin Hurtado Baseball PSA",
     "nScraped": 60,
     "nSoldUsed": 0,
     "avg": null,
@@ -1616,7 +1616,7 @@
     "fxRateUsed": null
   },
   "Edwin Moreno": {
-    "keyword": "Edwin Moreno Baseball",
+    "keyword": "Edwin Moreno Baseball PSA",
     "nScraped": 60,
     "nSoldUsed": 0,
     "avg": null,
@@ -1628,7 +1628,7 @@
     "fxRateUsed": null
   },
   "Ehire Adrianza": {
-    "keyword": "Ehire Adrianza Baseball",
+    "keyword": "Ehire Adrianza Baseball PSA",
     "nScraped": 60,
     "nSoldUsed": 0,
     "avg": null,
@@ -1640,18 +1640,19 @@
     "fxRateUsed": null
   },
   "Eider Torres": {
-    "keyword": "Eider Torres Baseball",
-    "nScraped": 0,
+    "keyword": "Eider Torres Baseball PSA",
+    "nScraped": 60,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "error": "fetch failed"
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
   },
   "Elias Diaz": {
-    "keyword": "Elias Diaz Baseball",
+    "keyword": "Elias Diaz Baseball PSA",
     "nScraped": 60,
     "nSoldUsed": 0,
     "avg": null,
@@ -1663,7 +1664,7 @@
     "fxRateUsed": null
   },
   "Elieser Hernandez": {
-    "keyword": "Elieser Hernandez Baseball",
+    "keyword": "Elieser Hernandez Baseball PSA",
     "nScraped": 60,
     "nSoldUsed": 0,
     "avg": null,
@@ -1675,8 +1676,8 @@
     "fxRateUsed": null
   },
   "Eliezer Alfonzo": {
-    "keyword": "Eliezer Alfonzo Baseball",
-    "nScraped": 40,
+    "keyword": "Eliezer Alfonzo Baseball PSA",
+    "nScraped": 41,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -1687,31 +1688,31 @@
     "fxRateUsed": null
   },
   "Elio Chacon": {
-    "keyword": "Elio Chacon Baseball",
-    "nScraped": 186,
-    "nSoldUsed": 6,
-    "avg": 708.38,
-    "taguchiSold": 708.38,
-    "medianSold": 708.38,
-    "marketStabilityCV": 0.9587271068536035,
+    "keyword": "Elio Chacon Baseball PSA",
+    "nScraped": 248,
+    "nSoldUsed": 20,
+    "avg": 25.990000000000002,
+    "taguchiSold": 25.990000000000002,
+    "medianSold": 25.99,
+    "marketStabilityCV": 1.4024653041962765e-16,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
   },
   "Elvis Andrus": {
-    "keyword": "Elvis Andrus Baseball",
-    "nScraped": 190,
-    "nSoldUsed": 9,
-    "avg": 7.8500000000000005,
-    "taguchiSold": 7.8500000000000005,
-    "medianSold": 7.85,
-    "marketStabilityCV": 1.2000706690576623e-16,
+    "keyword": "Elvis Andrus Baseball PSA",
+    "nScraped": 252,
+    "nSoldUsed": 20,
+    "avg": 8.5,
+    "taguchiSold": 8.5,
+    "medianSold": 8.5,
+    "marketStabilityCV": 0,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
   },
   "Elvis Araujo": {
-    "keyword": "Elvis Araujo Baseball",
+    "keyword": "Elvis Araujo Baseball PSA",
     "nScraped": 15,
     "nSoldUsed": 0,
     "avg": null,
