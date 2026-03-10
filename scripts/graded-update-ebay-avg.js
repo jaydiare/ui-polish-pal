@@ -1,9 +1,10 @@
-// scripts/update-ebay-avg.js
+// scripts/graded-update-ebay-avg.js
 // Node 20+ (uses global fetch)
 //
-// Computes ACTIVE listing price from eBay Browse API:
+// Computes ACTIVE GRADED (PSA) listing price from eBay Browse API:
 // - Buy It Now only (FIXED_PRICE) => excludes auctions
-// - Dual marketplace: EBAY_US + EBAY_CA (+ EBAY_ES if you keep it)
+// - Graded:{Yes} + Professional Grader:{PSA} aspect filters
+// - EBAY_US marketplace only
 //
 // Env vars required:
 //   EBAY_CLIENT_ID
