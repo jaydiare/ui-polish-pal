@@ -107,6 +107,9 @@ export default function BlogDataTable() {
   const [sortKey, setSortKey] = useState<SortKey>("name");
   const [sortDir, setSortDir] = useState<SortDir>("asc");
   const [hideEmptyFor, setHideEmptyFor] = useState<Set<SortKey>>(new Set());
+  const [csvDownloads, setCsvDownloads] = useState<number>(() => {
+    try { return Number(localStorage.getItem("vzla-csv-downloads") || 0); } catch { return 0; }
+  });
 
   const toggleHideEmpty = useCallback((key: SortKey) => {
     setHideEmptyFor((prev) => {
