@@ -107,6 +107,9 @@ export default function BlogDataTable() {
   const [sortKey, setSortKey] = useState<SortKey>("name");
   const [sortDir, setSortDir] = useState<SortDir>("asc");
   const [hideEmptyFor, setHideEmptyFor] = useState<Set<SortKey>>(new Set());
+  const [csvDownloads, setCsvDownloads] = useState<number>(() => {
+    try { return Number(localStorage.getItem("vzla-csv-downloads") || 0); } catch { return 0; }
+  });
 
   const toggleHideEmpty = useCallback((key: SortKey) => {
     setHideEmptyFor((prev) => {
@@ -287,6 +290,9 @@ export default function BlogDataTable() {
     a.download = "vzla-athlete-market-data.csv";
     a.click();
     URL.revokeObjectURL(url);
+    const newCount = csvDownloads + 1;
+    setCsvDownloads(newCount);
+    try { localStorage.setItem("vzla-csv-downloads", String(newCount)); } catch {}
   };
 
   return (
@@ -367,6 +373,11 @@ export default function BlogDataTable() {
             className="inline-flex items-center gap-1 px-2 py-1 rounded bg-vzla-yellow/10 text-vzla-yellow hover:bg-vzla-yellow/20 transition-colors font-medium"
           >
             <Download className="w-3 h-3" /> CSV
+            {csvDownloads > 0 && (
+              <span className="ml-1 text-[10px] bg-vzla-yellow/20 px-1.5 py-0.5 rounded-full text-vzla-yellow/80">
+                {csvDownloads}
+              </span>
+            )}
           </button>
         </div>
       </div>
