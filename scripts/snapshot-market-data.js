@@ -84,6 +84,14 @@ function getSignalSN(cv) {
   return Math.min(Math.round(sn * 100) / 100, 40);
 }
 
+// Build SCP price map
+const scpPriceMap = {};
+if (scpPricesData?.athletes) {
+  for (const a of scpPricesData.athletes) {
+    scpPriceMap[a.name] = a;
+  }
+}
+
 const now = new Date().toISOString();
 const rows = [];
 
