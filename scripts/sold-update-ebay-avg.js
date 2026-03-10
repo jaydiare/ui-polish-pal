@@ -32,8 +32,8 @@
 // ANTI-BLOCKING:
 //   Rotating User-Agents, exponential backoff, CAPTCHA detection, dynamic delays.
 //
-// ⚠️ WARNING: isGradedTitle() still uses the old 20-char gap regex — consider
-//   tightening to match update-ebay-avg.js (3-char gap) for consistency.
+// ✅ FIXED: isGradedTitle() regex gap tightened to {0,3} to match update-ebay-avg.js
+// ✅ FIXED: isJunkTitle() uses word-boundary regex to prevent false positives
 //
 // SEE ALSO: docs/DATA-PIPELINE-AUDIT.md §3.3, §5.1, §5.3
 // =============================================================================
@@ -209,7 +209,8 @@ function taguchiCV(values, trimPercent = TAGUCHI_TRIM_PCT) {
 // --- filters ---
 function isJunkTitle(title) {
   const t = norm(title);
-  return JUNK_PHRASES.some((p) => t.includes(p));
+  // FIX: Use word-boundary regex to prevent false positives (e.g. "lot" matching "Callaspo")
+  return JUNK_PHRASES.some((p) => new RegExp(`\\b${p.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}\\b`, 'i').test(t));
 }
 
 // Brand filter removed — hasAllowedBrand always returns true
@@ -230,7 +231,8 @@ function isGradedTitle(title) {
   //const graderWithGrade = /\b(psa|sgc|bgs|cgc|hga|isa|csa|beckett|bcg)\b[^\n]{0,14}\b(10|9\.5|9|8\.5|8|gem mint|mint|pristine|black label|gold label|dna|authentic)\b/i;
   //const slabOnly = /\b(gem mint|pristine|black label|gold label)\b/i;
 
-  const graderWithGrade = /\b(psa|sgc|bgs|cgc|hga|isa|csa|beckett|bcg)\b[^\n]{0,20}\b(10|9\.5|9|8\.5|8|7\.5|7|6\.5|6|5\.5|5|4\.5|4|3\.5|3|2\.5|2|1\.5|1|gem mint|mint|pristine|black label|gold label|authentic|dna)\b/i;
+  // FIX: Tightened gap from {0,20} to {0,3} to prevent card numbers (e.g. "PSA #123") from matching as grades
+  const graderWithGrade = /\b(psa|sgc|bgs|cgc|hga|isa|csa|beckett|bcg)\b[^\n]{0,3}\b(10|9\.5|9|8\.5|8|7\.5|7|6\.5|6|5\.5|5|4\.5|4|3\.5|3|2\.5|2|1\.5|1|gem mint|mint|pristine|black label|gold label|authentic|dna)\b/i;
   const slabOnly = /\b(gem mint|pristine|black label|gold label|psa\s?10|sgc\s?10|bgs\s?9\.5)\b/i;
 
   return graderWithGrade.test(t) || slabOnly.test(t);
