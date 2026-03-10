@@ -373,6 +373,7 @@ export function useAthleteData() {
     ebaySoldRaw,
     ebayGradedSoldRaw: filteredGradedSoldRaw,
     gemratePopMap,
+    scpPrices,
     athleteHistory,
     indexHistory,
     lastUpdated,
