@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-10T05:29:50.944Z",
+    "updatedAt": "2026-03-10T07:11:28.449Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA-only title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 60,
-      "endIdx": 70,
+      "startIdx": 70,
+      "endIdx": 80,
       "totalAthletes": 450
     },
     "maxPages": 4,
@@ -1028,43 +1028,43 @@
     "fxRateUsed": null
   },
   "Carlos Valderrama": {
-    "keyword": "Carlos Valderrama Baseball",
+    "keyword": "Carlos Valderrama Baseball PSA",
     "nScraped": 60,
-    "nSoldUsed": 2,
-    "avg": null,
-    "taguchiSold": null,
-    "medianSold": null,
-    "marketStabilityCV": null,
+    "nSoldUsed": 6,
+    "avg": 101.75,
+    "taguchiSold": 101.75,
+    "medianSold": 101.75,
+    "marketStabilityCV": 0.01884057937364208,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
   },
   "Carlos Zambrano": {
-    "keyword": "Carlos Zambrano Baseball",
-    "nScraped": 186,
-    "nSoldUsed": 18,
-    "avg": 50.32499999999999,
-    "taguchiSold": 50.32499999999999,
-    "medianSold": 50.325,
-    "marketStabilityCV": 0.00684971994309866,
+    "keyword": "Carlos Zambrano Baseball PSA",
+    "nScraped": 252,
+    "nSoldUsed": 20,
+    "avg": 50.65999999999998,
+    "taguchiSold": 50.65999999999998,
+    "medianSold": 50.66,
+    "marketStabilityCV": 2.8780160486428143e-16,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
   },
   "Cesar Gutierrez": {
-    "keyword": "Cesar Gutierrez Baseball",
-    "nScraped": 197,
-    "nSoldUsed": 15,
-    "avg": 31,
-    "taguchiSold": 31,
-    "medianSold": 31,
-    "marketStabilityCV": 0,
+    "keyword": "Cesar Gutierrez Baseball PSA",
+    "nScraped": 259,
+    "nSoldUsed": 28,
+    "avg": 27.567142857142862,
+    "taguchiSold": 27.567142857142862,
+    "medianSold": 25,
+    "marketStabilityCV": 0.10982267112430966,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
   },
   "Cesar Hernandez": {
-    "keyword": "Cesar Hernandez Baseball",
+    "keyword": "Cesar Hernandez Baseball PSA",
     "nScraped": 60,
     "nSoldUsed": 0,
     "avg": null,
@@ -1076,7 +1076,7 @@
     "fxRateUsed": null
   },
   "Cesar Izturis": {
-    "keyword": "Cesar Izturis Baseball",
+    "keyword": "Cesar Izturis Baseball PSA",
     "nScraped": 60,
     "nSoldUsed": 0,
     "avg": null,
@@ -1088,7 +1088,7 @@
     "fxRateUsed": null
   },
   "Cesar Jimenez": {
-    "keyword": "Cesar Jimenez Baseball",
+    "keyword": "Cesar Jimenez Baseball PSA",
     "nScraped": 60,
     "nSoldUsed": 0,
     "avg": null,
@@ -1100,25 +1100,25 @@
     "fxRateUsed": null
   },
   "Cesar Tovar": {
-    "keyword": "Cesar Tovar Baseball",
-    "nScraped": 228,
-    "nSoldUsed": 51,
-    "avg": 25.428823529411762,
-    "taguchiSold": 25.428823529411762,
+    "keyword": "Cesar Tovar Baseball PSA",
+    "nScraped": 300,
+    "nSoldUsed": 96,
+    "avg": 25.39833333333333,
+    "taguchiSold": 25.39833333333333,
     "medianSold": 24.99,
-    "marketStabilityCV": 0.19637191775461946,
+    "marketStabilityCV": 0.19625434494436256,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
   },
   "Chico Carrasquel": {
-    "keyword": "Chico Carrasquel Baseball",
-    "nScraped": 227,
-    "nSoldUsed": 6,
-    "avg": 63.25,
-    "taguchiSold": 63.25,
-    "medianSold": 63.25,
-    "marketStabilityCV": 0.9828697276970175,
+    "keyword": "Chico Carrasquel Baseball PSA",
+    "nScraped": 74,
+    "nSoldUsed": 18,
+    "avg": 33.35055555555555,
+    "taguchiSold": 33.35055555555555,
+    "medianSold": 33.875,
+    "marketStabilityCV": 0.0510149893933355,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
@@ -1136,8 +1136,8 @@
     "fxRateUsed": 1
   },
   "Clemente Alvarez": {
-    "keyword": "Clemente Alvarez Baseball",
-    "nScraped": 60,
+    "keyword": "Clemente Alvarez Baseball PSA",
+    "nScraped": 0,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -1148,8 +1148,8 @@
     "fxRateUsed": null
   },
   "Cris Colon": {
-    "keyword": "Cris Colon Baseball",
-    "nScraped": 180,
+    "keyword": "Cris Colon Baseball PSA",
+    "nScraped": 0,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
