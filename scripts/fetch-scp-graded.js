@@ -134,7 +134,7 @@ async function main() {
   for (let i = 0; i < athletes.length; i++) {
     const a = athletes[i];
     const progress = `[${i + 1}/${athletes.length}]`;
-    const query = `${a.name} ${a.sport} PSA`;
+    const query = `${a.name} ${a.sport} Graded`;
     console.log(`${progress} ${a.name} (${a.sport}) → "${query}"`);
 
     const products = await querySCP(query);
