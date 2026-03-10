@@ -166,7 +166,6 @@ export default function BlogDataTable() {
         gradedListedPrice: isGemrateEligible ? getEbayAvgNumber(a, gradedByName, gradedByKey) : null,
         gradedSoldPrice,
         scpRawPrice: scp?.scpRawPrice ?? null,
-        scpGradedPrice: scp?.scpGradedPrice ?? null,
         stabilityCV,
         signalStrength,
         psaPop,
