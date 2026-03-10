@@ -1,24 +1,30 @@
-// scripts/graded-sold-update-ebay-avg.js
-// Node 20+ (uses global fetch)
+// =============================================================================
+// scripts/graded-sold-update-ebay-avg.js — GRADED (PSA) SOLD PRICE COLLECTOR
+// =============================================================================
 //
-// Scrapes eBay's PUBLIC sold listings search pages (LH_Sold=1&LH_Complete=1)
-// to compute sold price averages — NO API keys needed, NO Apify.
+// PURPOSE:
+//   Scrapes eBay's public sold/completed listings (HTML, no API keys) to compute
+//   sold price averages for PSA-GRADED cards only.
 //
-// Statistical pipeline:
-//   - Taguchi winsorized mean
-//   - Market stability CV (sd/mean on winsorized sample)
-//   - Junk title exclusion
-//   - PSA-only graded filter
-//   - Currency normalization to USD via CBSA Exchange Rates API
+// WORKFLOW: ebay-graded-sold.yml (every 2 hours, 10 athletes per batch)
+// ENV VARS: EBAY_ONLY (optional single-athlete mode)
+// INPUT:    data/athletes.json (filtered to gemrate="yes" only)
+// OUTPUT:   data/ebay-graded-sold-avg.json (graded sold averages per athlete)
+// PROGRESS: data/ebay-graded-sold-progress.json (batch cursor)
 //
-// Env:
-//   (none required — uses public eBay search pages)
+// PIPELINE (per athlete):
+//   1. Build search URL with "{name} {sport} PSA" keyword + League filter
+//   2. Fetch up to 4 pages with retry + exponential backoff
+//   3. Parse via 3-tier extraction: .s-item CSS → [data-viewport] → script tags
+//   4. POST-FETCH FILTERING:
+//      a. Junk title exclusion (lots, digital, auto, signed)
+//      b. Name relevance (all parts must appear in title)
+//      c. PSA-only detection — INCLUDE only PSA-graded titles
+//   5. Convert to USD via CBSA (includes shipping)
+//   6. Compute Taguchi winsorized mean, median, CV
 //
-// Input:
-//   data/athletes.json: [{ name, sport, ... }]
-//
-// Output:
-//   data/ebay-sold-avg.json
+// SEE ALSO: docs/DATA-PIPELINE-AUDIT.md §3.4, §5.1
+// =============================================================================
 
 import fs from "node:fs";
 import path from "node:path";
