@@ -107,10 +107,25 @@ async function main() {
   console.log("🏷️  SCP Graded (PSA) Price Fetcher");
   console.log("=".repeat(60));
 
-  const athletes = loadJson(join(DATA_DIR, "athletes.json")) || [];
+  let athletes = loadJson(join(DATA_DIR, "athletes.json")) || [];
   if (athletes.length === 0) {
     console.error("❌ No athletes found in data/athletes.json");
     process.exit(1);
+  }
+
+  // Single-athlete mode via SCP_ONLY env var
+  const only = (process.env.SCP_ONLY || "").trim();
+  if (only) {
+    const norm = only.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
+    athletes = athletes.filter((a) => {
+      const n = a.name.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
+      return n === norm || n.includes(norm);
+    });
+    if (athletes.length === 0) {
+      console.error(`❌ No athlete matching "${only}"`);
+      process.exit(1);
+    }
+    console.log(`🎯 Single-athlete mode: ${athletes.map((a) => a.name).join(", ")}`);
   }
 
   const results = [];
