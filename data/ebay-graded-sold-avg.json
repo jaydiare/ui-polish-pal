@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-10T20:54:43.326Z",
+    "updatedAt": "2026-03-10T22:50:37.761Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA-only title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 140,
-      "endIdx": 150,
+      "startIdx": 150,
+      "endIdx": 160,
       "totalAthletes": 450
     },
     "maxPages": 4,
@@ -2132,13 +2132,13 @@
     "fxRateUsed": null
   },
   "Gabriel Moreno": {
-    "keyword": "Gabriel Moreno Baseball",
-    "nScraped": 174,
-    "nSoldUsed": 37,
-    "avg": 12.14621621621622,
-    "taguchiSold": 12.14621621621622,
-    "medianSold": 13.61,
-    "marketStabilityCV": 0.16065700009802905,
+    "keyword": "Gabriel Moreno Baseball PSA",
+    "nScraped": 228,
+    "nSoldUsed": 82,
+    "avg": 21.51329268292683,
+    "taguchiSold": 21.51329268292683,
+    "medianSold": 20,
+    "marketStabilityCV": 0.32715393884731286,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
@@ -2217,7 +2217,7 @@
   },
   "Giovanni Carrara": {
     "keyword": "Giovanni Carrara Baseball PSA",
-    "nScraped": 20,
+    "nScraped": 22,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -2229,19 +2229,19 @@
   },
   "Gleyber Torres": {
     "keyword": "Gleyber Torres Baseball PSA",
-    "nScraped": 240,
-    "nSoldUsed": 128,
-    "avg": 12.455156250000007,
-    "taguchiSold": 12.455156250000007,
-    "medianSold": 12.495000000000001,
-    "marketStabilityCV": 0.1939283487522098,
+    "nScraped": 120,
+    "nSoldUsed": 67,
+    "avg": 17.39,
+    "taguchiSold": 17.39,
+    "medianSold": 14.99,
+    "marketStabilityCV": 0.2603580011717317,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
   },
   "Gonzalo Marquez": {
     "keyword": "Gonzalo Marquez Baseball PSA",
-    "nScraped": 120,
+    "nScraped": 0,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
