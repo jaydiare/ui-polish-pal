@@ -368,7 +368,7 @@ By default, athletes with no eBay data are hidden unless the user explicitly fil
 - **Data Pipelines:** Node.js scripts + Python scrapers
 - **CI/CD:** GitHub Actions (scheduled workflows)
 - **Hosting:** Lovable (frontend) + Render (OAuth server)
-- **APIs:** eBay Browse API (active listings), eBay HTML scraping (sold listings), Gemrate.com (PSA data), Wikipedia (athlete images)
+- **APIs:** eBay Browse API (active listings), eBay HTML scraping (sold listings), Gemrate.com (PSA data), SportsCardsPro (card prices), Wikipedia (athlete images)
 
 ---
 

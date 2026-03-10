@@ -612,6 +612,90 @@ for (const [k, v] of Object.entries(prevRecords)) {
 
 ---
 
+## 9. SportsCardsPro (SCP) Pipeline
+
+### 9.1 `fetch-scp-prices.js` — Monthly SCP Price Fetch
+
+**Output:** `data/scp-prices.json` + `public/data/scp-prices.json`  
+**Workflow:** `scp-prices.yml` — 1st of every month at 10:00 UTC  
+**API Token:** `SPORTSCARDSPRO` GitHub Secret
+
+**How it works:**
+
+1. Iterates through all athletes in `data/athletes.json`
+2. For each athlete, queries the SportsCardsPro `/api/products` endpoint twice:
+   - **Raw query:** `"{name} Raw"` — fetches `loose-price` from all matching products
+   - **Graded query:** `"{name} PSA"` — fetches `new-price` or `cib-price` from all matching products
+3. Applies **Taguchi Winsorized Trimmed Mean** (20% trim) across all matching product prices
+4. Rate limiting: 500ms between requests, 3s pause every 50 athletes
+
+**Taguchi formula (SCP variant):**
+
+```javascript
+// 20% trim (vs 40% in eBay scripts) — fewer products per query
+trimCount = Math.max(1, Math.floor(n * 0.2));
+
+// Winsorize: clamp all values to [lo, hi] boundaries, then average
+lo = sorted[trimCount];
+hi = sorted[n - 1 - trimCount];
+sum = sorted.map(v => Math.min(Math.max(v, lo), hi)).reduce((a, b) => a + b);
+mean = sum / n;
+```
+
+**Key differences from eBay Taguchi:**
+- Uses **20% trim** (not 40%) because SCP returns fewer products per query
+- Falls back to **median** when sample size ≤ 2× trim count
+- SCP prices are in **cents** — converted to dollars (`/ 100`) before computation
+
+**Output fields per athlete:**
+- `scpRawPrice` — Taguchi mean of raw card prices (USD)
+- `scpGradedPrice` — Taguchi mean of graded card prices (USD)
+- `scpRawProduct` — First matching product name (raw query)
+- `scpGradedProduct` — First matching product name (graded query)
+- `scpRawId` / `scpGradedId` — SCP product IDs
+
+### 9.2 `snapshot-market-data.js` — Weekly Unified Snapshot
+
+**Output:** `data/vzla-athlete-market-data.json` + `public/data/vzla-athlete-market-data.json`  
+**Workflow:** `market-data-snapshot.yml` — Every Sunday at 12:00 UTC
+
+Aggregates all data sources into a single file per athlete:
+- eBay raw/graded listed prices
+- eBay raw/graded sold prices
+- Stability CV and Signal S/N
+- PSA population counts (from gemrate)
+- Days on market
+- Index level
+- **SCP raw and graded prices** (from `scp-prices.json`)
+
+### 9.3 Output File Schema — scp-prices.json
+
+```json
+{
+  "_meta": {
+    "updatedAt": "ISO timestamp",
+    "athleteCount": 550,
+    "rawHits": 312,
+    "gradedHits": 245,
+    "description": "SportsCardsPro price lookup for Venezuelan athlete cards"
+  },
+  "athletes": [
+    {
+      "name": "José Altuve",
+      "sport": "Baseball",
+      "scpRawPrice": 2.45,
+      "scpGradedPrice": 18.50,
+      "scpRawProduct": "2014 Topps José Altuve",
+      "scpGradedProduct": "2014 Topps José Altuve PSA 10",
+      "scpRawId": "123456",
+      "scpGradedId": "789012"
+    }
+  ]
+}
+```
+
+---
+
 ## Appendix: Output File Schemas
 
 ### ebay-avg.json / ebay-graded-avg.json (Active Listings)
