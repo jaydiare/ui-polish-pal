@@ -1,39 +1,40 @@
-// scripts/update-ebay-avg.js
-// Node 20+ (uses global fetch)
+// =============================================================================
+// scripts/update-ebay-avg.js — RAW ACTIVE LISTING PRICE COLLECTOR
+// =============================================================================
 //
-// Computes ACTIVE listing price from eBay Browse API:
-// - Buy It Now only (FIXED_PRICE) => excludes auctions
-// - Dual marketplace: EBAY_US + EBAY_CA (+ EBAY_ES if you keep it)
+// PURPOSE:
+//   Collects active (Buy It Now) listing prices for RAW (ungraded) sports cards
+//   from the eBay Browse API and computes robust statistical averages per athlete.
 //
-// Env vars required:
-//   EBAY_CLIENT_ID
-//   EBAY_CLIENT_SECRET
+// WORKFLOW: ebay.yml (daily at 1 PM UTC)
+// ENV VARS: EBAY_CLIENT_ID, EBAY_CLIENT_SECRET, EBAY_ONLY (optional)
+// INPUT:    data/athletes.json (master roster)
+// OUTPUT:   data/ebay-avg.json (active listing averages per athlete)
+//           data/ebay-base-prices.json (first-observed prices for index calculation)
+//           data/index-history.json (daily index snapshots, permanent)
 //
-// Output:
-//   data/ebay-avg.json
+// PIPELINE (per athlete):
+//   1. Authenticate with eBay Browse API (client credentials grant)
+//   2. Validate athlete exists via Player/Athlete aspect, fallback to Sport aspect
+//   3. Fetch up to 60 active Buy It Now listings from EBAY_US + EBAY_CA
+//   4. POST-FETCH FILTERING (no API-level condition filter — see Bug 8.12):
+//      a. Exclude graded cards via isGradedListing() — tight regex, grades 4+
+//      b. Exclude damaged/poor condition via word-boundary blocklist
+//   5. Convert all prices to USD via CBSA Exchange Rates API
+//   6. Compute Taguchi winsorized mean (40% trim) and market stability CV
+//   7. Compute base-100 price index per athlete (first price = base)
+//   8. Save progressive results after each athlete (crash-safe)
+//   9. Append daily index snapshot to indexHistory
 //
-// Matching rules (your latest):
-// 1) Prefer Player/Athlete aspect_filter match (with name variations / accents).
-// 2) If Player/Athlete is NOT matched, then only proceed if Sport aspect matches.
-// 3) If no Player/Athlete AND sport does not match => skip (avoid fake info).
+// KEY DESIGN DECISIONS:
+//   - No Condition Type:{Ungraded} API filter (many raw listings lack this tag)
+//   - isGradedListing() uses tight 3-char gap regex to avoid card-number FPs
+//   - Blocklist uses word-boundary matching (\b) to avoid substring FPs
+//   - Base prices stored in dedicated file to prevent graded contamination
+//   - Single-athlete mode via EBAY_ONLY env var for targeted testing
 //
-// Notes:
-// - Includes graded + listings under $1 (no price floor).
-// - Category used: Trading Card Singles (261328) - keep or change as needed.
-// - Normalizes listing prices to USD using CBSA Exchange Rates API as a base.
-// - Adds Manufacturer aspect filter to focus on major sports card makers.
-// - Uses TAGUCHI trimmed mean (winsorized mean, X%) for listing prices.
-// - Adds market stability CV (Coefficient of Variation) on the SAME winsorized sample:
-//        CV = s / mean  (lower CV => more stable)
-//
-// NEW (this change):
-// - Ungraded listings must be Card Condition: Near Mint or Better OR Excellent only
-// - Excludes damaged/low-condition ungraded listings using descriptors if present,
-//   otherwise falls back to title-based detection.
-//
-// NEW (this change):
-// - Adds average days on market for ACTIVE listings (avg age in days since listing created).
-//   This is NOT "time to sell" — it's "how long current listings have been live".
+// SEE ALSO: docs/DATA-PIPELINE-AUDIT.md §3.1, §5.1, §5.2
+// =============================================================================
 
 import fs from "node:fs";
 import path from "node:path";
