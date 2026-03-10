@@ -1027,7 +1027,7 @@ async function main() {
       rec.avg = rec.avgListing;
       rec.n = rec.nListing;
 
-      // --- Base=100 index per player ---
+      // --- Step 5f: Compute base-100 index level (first observation = base price) ---
       const robustPrice = rec.taguchiListing;
       if (robustPrice != null && Number.isFinite(robustPrice) && robustPrice > 0) {
         // FIX #3: basePrices now loaded from dedicated file — set on first observation only
