@@ -925,6 +925,7 @@ async function main() {
     out._meta.updatedAt = new Date().toISOString();
   }
 
+  // --- Step 5: Process each athlete ---
   let errorCount = 0;
 
   for (let i = 0; i < athletes.length; i++) {
