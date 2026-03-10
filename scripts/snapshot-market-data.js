@@ -127,6 +127,8 @@ for (const a of athletes) {
     psaPop: psaPop > 0 ? psaPop : null,
     daysOnMarket: dom != null && dom > 0 ? Math.round(dom) : null,
     indexLevel: rawRec?.indexLevel ?? null,
+    scpRawPrice: scpPriceMap[a.name]?.scpRawPrice ?? null,
+    scpGradedPrice: scpPriceMap[a.name]?.scpGradedPrice ?? null,
   });
 }
 
