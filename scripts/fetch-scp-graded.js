@@ -84,8 +84,10 @@ function taguchiTrimmedMean(values) {
 
 function extractGradedPrice(products) {
   if (!products || products.length === 0) return null;
+  // Per SCP API docs: graded-price = Graded 9, new-price = Graded 8/8.5,
+  // manual-only-price = PSA 10, cib-price = Graded 7/7.5
   const prices = products
-    .map((p) => p["new-price"] || p["cib-price"] || 0)
+    .map((p) => p["graded-price"] || p["new-price"] || p["manual-only-price"] || p["cib-price"] || 0)
     .filter((v) => v > 0)
     .map((v) => v / 100);
   return taguchiTrimmedMean(prices);
