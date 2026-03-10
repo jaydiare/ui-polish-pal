@@ -1,40 +1,40 @@
-// scripts/graded-update-ebay-avg.js
-// Node 20+ (uses global fetch)
+// =============================================================================
+// scripts/graded-update-ebay-avg.js — GRADED (PSA) ACTIVE LISTING PRICE COLLECTOR
+// =============================================================================
 //
-// Computes ACTIVE GRADED (PSA) listing price from eBay Browse API:
-// - Buy It Now only (FIXED_PRICE) => excludes auctions
-// - Graded:{Yes} + Professional Grader:{PSA} aspect filters
-// - EBAY_US marketplace only
+// PURPOSE:
+//   Collects active (Buy It Now) listing prices for PSA-GRADED sports cards
+//   from the eBay Browse API and computes robust statistical averages per athlete.
 //
-// Env vars required:
-//   EBAY_CLIENT_ID
-//   EBAY_CLIENT_SECRET
+// WORKFLOW: ebay-graded.yml (daily at 8 AM UTC)
+// ENV VARS: EBAY_CLIENT_ID, EBAY_CLIENT_SECRET, EBAY_ONLY (optional)
+// INPUT:    data/athletes.json (master roster, filtered to gemrate="yes" only)
+// OUTPUT:   data/ebay-graded-avg.json (graded listing averages per athlete)
+//           data/ebay-graded-base-prices.json (first-observed graded prices for index)
 //
-// Output:
-//   data/ebay-graded-avg.json
+// PIPELINE (per athlete):
+//   1. Authenticate with eBay Browse API (client credentials grant)
+//   2. Validate athlete exists via Player/Athlete aspect, fallback to Sport aspect
+//   3. Fetch up to 60 active Buy It Now listings from EBAY_US only
+//      API FILTERS: Graded:{Yes} + Professional Grader:{PSA}
+//   4. POST-FETCH FILTERING:
+//      a. When aspect filter is present, trust API (no title regex needed)
+//      b. When aspect filter absent, fallback to PSA title regex
+//   5. Convert all prices to USD via CBSA Exchange Rates API
+//   6. Compute Taguchi winsorized mean (40% trim) and market stability CV
+//   7. Compute base-100 price index per athlete
+//   8. Save progressive results after each athlete (crash-safe)
+//   9. Append daily index snapshot
 //
-// Matching rules (your latest):
-// 1) Prefer Player/Athlete aspect_filter match (with name variations / accents).
-// 2) If Player/Athlete is NOT matched, then only proceed if Sport aspect matches.
-// 3) If no Player/Athlete AND sport does not match => skip (avoid fake info).
+// KEY DESIGN DECISIONS:
+//   - ONLY processes athletes with gemrate="yes" in athletes.json
+//   - Base prices stored in dedicated ebay-graded-base-prices.json (separate from raw)
+//   - API aspect filters (Graded:{Yes} + PSA) are trusted when present
+//   - Title-based PSA regex only used as fallback when API filter unavailable
+//   - Single-athlete mode via EBAY_ONLY env var for targeted testing
 //
-// Notes:
-// - Includes graded + listings under $1 (no price floor).
-// - Category used: Trading Card Singles (261328) - keep or change as needed.
-// - Normalizes listing prices to USD using CBSA Exchange Rates API as a base.
-// - Adds Manufacturer aspect filter to focus on major sports card makers.
-// - Uses TAGUCHI trimmed mean (winsorized mean, X%) for listing prices.
-// - Adds market stability CV (Coefficient of Variation) on the SAME winsorized sample:
-//        CV = s / mean  (lower CV => more stable)
-//
-// FIX #2:
-// - avgDaysOnMarket now falls back to fetching the full item detail endpoint
-//   (/buy/browse/v1/item/{itemId}) for listings missing itemCreationDate in summary.
-//   Capped at BASE_PRICES_PATH per athlete to avoid blowing rate limits.
-//
-// FIX #3:
-// - basePrices are now persisted in a dedicated data/ebay-base-prices.json file,
-//   separate from the main output. This survives output file deletions/regenerations.
+// SEE ALSO: docs/DATA-PIPELINE-AUDIT.md §3.2, §5.1
+// =============================================================================
 
 import fs from "node:fs";
 import path from "node:path";
