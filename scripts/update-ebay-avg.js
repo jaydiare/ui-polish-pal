@@ -98,6 +98,8 @@ const UNGRADED_ALLOWED_CONDITIONS = [
 ];
 
 // if any of these appear (descriptor/title), reject ungraded listing
+// IMPORTANT: use word-boundary matching (not substring) to avoid false positives
+// e.g. "good" must NOT match "Goodwin", "hole" must NOT match "whole"
 const UNGRADED_BLOCKLIST = [
   "damaged",
   "damage",
@@ -106,9 +108,6 @@ const UNGRADED_BLOCKLIST = [
   "digitalcard",
   "digital",
   "very good",
-  "vg",
-  "good",
-  "gd",
   "creases",
   "crease",
   "wrinkle",
@@ -121,18 +120,16 @@ const UNGRADED_BLOCKLIST = [
   "water damage",
   "tape",
   "writing",
-  "marked",
   "marked up",
   "pin hole",
-  "hole",
   "torn",
-  "tear",
   "scratches",
-  "scratch","licensed reprint", 
-  "reprint","Card Painting", 
-  "replica", 
-  "copy",
-  "ERROR Card",
+  "scratch",
+  "licensed reprint",
+  "reprint",
+  "card painting",
+  "replica",
+  "error card",
   "card lot",
 ];
 
