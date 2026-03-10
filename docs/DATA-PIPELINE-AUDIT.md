@@ -514,7 +514,7 @@ This tries 6 variants per athlete to maximize API aspect matches.
 
 | Filter | Raw Listed | Graded Listed | Raw Sold | Graded Sold |
 |--------|-----------|---------------|----------|-------------|
-| **API Condition Type** | `Ungraded` | `Graded:{Yes}` | N/A (HTML) | N/A (HTML) |
+| **API Condition Type** | None (removed) | `Graded:{Yes}` | N/A (HTML) | N/A (HTML) |
 | **URL Condition Type** | N/A | N/A | `Ungraded` | N/A (uses "graded" keyword) |
 | **Condition policy** | NM/EX only | Skip ungraded | Blocklist only | N/A |
 | **Graded detection** | Skip graded | Skip ungraded | Skip graded | Skip ungraded |
