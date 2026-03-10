@@ -28,6 +28,7 @@ const ebaySoldAvg = loadJson(join(DATA_DIR, "ebay-sold-avg.json")) || {};
 const ebayGradedSoldAvg = loadJson(join(DATA_DIR, "ebay-graded-sold-avg.json")) || {};
 const athleteHistory = loadJson(join(DATA_DIR, "athlete-history.json")) || {};
 const gemrate = loadJson(join(DATA_DIR, "gemrate.json"));
+const scpPricesData = loadJson(join(DATA_DIR, "scp-prices.json"));
 
 // Build gemrate pop map
 const gemratePopMap = {};
@@ -83,6 +84,14 @@ function getSignalSN(cv) {
   return Math.min(Math.round(sn * 100) / 100, 40);
 }
 
+// Build SCP price map
+const scpPriceMap = {};
+if (scpPricesData?.athletes) {
+  for (const a of scpPricesData.athletes) {
+    scpPriceMap[a.name] = a;
+  }
+}
+
 const now = new Date().toISOString();
 const rows = [];
 
@@ -118,6 +127,8 @@ for (const a of athletes) {
     psaPop: psaPop > 0 ? psaPop : null,
     daysOnMarket: dom != null && dom > 0 ? Math.round(dom) : null,
     indexLevel: rawRec?.indexLevel ?? null,
+    scpRawPrice: scpPriceMap[a.name]?.scpRawPrice ?? null,
+    scpGradedPrice: scpPriceMap[a.name]?.scpGradedPrice ?? null,
   });
 }
 

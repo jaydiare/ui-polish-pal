@@ -110,6 +110,7 @@ export function useAthleteData() {
   const [athleteHistory, setAthleteHistory] = useState<Record<string, any[]>>({});
   const [indexHistory, setIndexHistory] = useState<any[]>([]);
   const [gemratePopMap, setGemratePopMap] = useState<Record<string, number>>({});
+  const [scpPrices, setScpPrices] = useState<Record<string, { scpRawPrice: number | null; scpGradedPrice: number | null }>>({});
   const [lastUpdated, setLastUpdated] = useState<string>("—");
   const [visibleCount, setVisibleCount] = useState(PAGE_SIZE);
   const [filters, setFilters] = useState<Filters>({
@@ -198,7 +199,7 @@ export function useAthleteData() {
   // Fetch data on mount
   useEffect(() => {
     (async () => {
-      const [fetchedAthletes, fetchedEbay, fetchedGraded, fetchedSold, fetchedGradedSold, fetchedProgress, fetchedHistory, fetchedIndexHistory, fetchedGemrate] = await Promise.all([
+      const [fetchedAthletes, fetchedEbay, fetchedGraded, fetchedSold, fetchedGradedSold, fetchedProgress, fetchedHistory, fetchedIndexHistory, fetchedGemrate, fetchedScp] = await Promise.all([
         fetchJson("https://raw.githubusercontent.com/jaydiare/ui-polish-pal/main/data/athletes.json"),
         fetchJson("https://raw.githubusercontent.com/jaydiare/ui-polish-pal/main/data/ebay-avg.json"),
         fetchJson("https://raw.githubusercontent.com/jaydiare/ui-polish-pal/main/data/ebay-graded-avg.json"),
@@ -208,6 +209,7 @@ export function useAthleteData() {
         fetchJson("https://raw.githubusercontent.com/jaydiare/ui-polish-pal/main/data/athlete-history.json"),
         fetchJson("https://raw.githubusercontent.com/jaydiare/ui-polish-pal/main/data/index-history.json"),
         fetchJson("https://raw.githubusercontent.com/jaydiare/ui-polish-pal/main/data/gemrate.json"),
+        fetchJson("https://raw.githubusercontent.com/jaydiare/ui-polish-pal/main/data/scp-prices.json"),
       ]);
 
       const patchedEbay = enrichWithBasePrices(fetchedEbay as EbayAvgData | null);
@@ -249,6 +251,13 @@ export function useAthleteData() {
           }
         }
         setGemratePopMap(popMap);
+      }
+      if (fetchedScp?.athletes && Array.isArray(fetchedScp.athletes)) {
+        const map: Record<string, { scpRawPrice: number | null; scpGradedPrice: number | null }> = {};
+        for (const a of fetchedScp.athletes) {
+          map[a.name] = { scpRawPrice: a.scpRawPrice ?? null, scpGradedPrice: a.scpGradedPrice ?? null };
+        }
+        setScpPrices(map);
       }
     })();
   }, []);
@@ -364,6 +373,7 @@ export function useAthleteData() {
     ebaySoldRaw,
     ebayGradedSoldRaw: filteredGradedSoldRaw,
     gemratePopMap,
+    scpPrices,
     athleteHistory,
     indexHistory,
     lastUpdated,

@@ -26,6 +26,8 @@ interface RowData {
   rawSoldPrice: number | null;
   gradedListedPrice: number | null;
   gradedSoldPrice: number | null;
+  scpRawPrice: number | null;
+  scpGradedPrice: number | null;
   stabilityCV: number | null;
   signalStrength: number | null;
   psaPop: number | null;
@@ -45,6 +47,8 @@ const FILTERABLE_COLS: { key: SortKey; label: string }[] = [
   { key: "rawSoldPrice", label: "Raw Sold" },
   { key: "gradedListedPrice", label: "PSA Listed" },
   { key: "gradedSoldPrice", label: "PSA Sold" },
+  { key: "scpRawPrice", label: "SCP Raw" },
+  { key: "scpGradedPrice", label: "SCP Graded" },
   { key: "psaPop", label: "PSA Pop" },
   { key: "stabilityCV", label: "Stability" },
   { key: "signalStrength", label: "S/N" },
@@ -98,6 +102,7 @@ export default function BlogDataTable() {
     ebayGradedSoldRaw,
     athleteHistory,
     gemratePopMap,
+    scpPrices,
     lastUpdated,
   } = useAthleteData();
 
@@ -153,6 +158,8 @@ export default function BlogDataTable() {
       const gradedSoldPrice = isGemrateEligible && gradedSold != null && Number.isFinite(Number(gradedSold)) && Number(gradedSold) > 0 ? Number(gradedSold) : null;
       const roiVal = calcRoi(signalStrength, rawSoldPrice, gradedSoldPrice, psaPop, stabilityCV);
 
+      const scp = scpPrices?.[a.name];
+
       return {
         name: a.name,
         sport: a.sport,
@@ -160,6 +167,8 @@ export default function BlogDataTable() {
         rawSoldPrice,
         gradedListedPrice: isGemrateEligible ? getEbayAvgNumber(a, gradedByName, gradedByKey) : null,
         gradedSoldPrice,
+        scpRawPrice: scp?.scpRawPrice ?? null,
+        scpGradedPrice: scp?.scpGradedPrice ?? null,
         stabilityCV,
         signalStrength,
         psaPop,
@@ -169,7 +178,7 @@ export default function BlogDataTable() {
         roiTier: roiTier(roiVal),
       };
     });
-  }, [athletes, byName, byKey, gradedByName, gradedByKey, ebaySoldRaw, ebayGradedSoldRaw, athleteHistory, gemratePopMap]);
+  }, [athletes, byName, byKey, gradedByName, gradedByKey, ebaySoldRaw, ebayGradedSoldRaw, athleteHistory, gemratePopMap, scpPrices]);
 
   const sorted = useMemo(() => {
     const copy = [...rows];
@@ -237,6 +246,8 @@ export default function BlogDataTable() {
     { key: "rawSoldPrice", label: "Raw Sold", fmt: fmtPrice },
     { key: "gradedListedPrice", label: "PSA Listed", fmt: fmtPrice },
     { key: "gradedSoldPrice", label: "PSA Sold", fmt: fmtPrice },
+    { key: "scpRawPrice", label: "SCP Raw", fmt: fmtPrice },
+    { key: "scpGradedPrice", label: "SCP Graded", fmt: fmtPrice },
     { key: "psaPop", label: "PSA Pop", fmt: (v) => v == null ? "—" : v.toLocaleString() },
     { key: "stabilityCV", label: "Stability", fmt: (v) => v == null ? "—" : marketStabilityScoreFromCV(v).label, render: (_v, row) => {
       if (row.stabilityCV == null) return <span className="text-muted-foreground">—</span>;
