@@ -869,7 +869,7 @@ async function main() {
   // --- Step 3: Load base prices from dedicated file (survives output file deletion) ---
   const basePrices = loadBasePrices();
 
-  // Load previous indexHistory from output file only (not basePrices)
+  // --- Step 4: Load previous output (preserve existing records for partial runs) ---
   let prevHistory = [];
   let prevOut = {};
   try {
