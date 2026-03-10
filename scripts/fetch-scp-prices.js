@@ -60,31 +60,56 @@ async function querySCP(query) {
 }
 
 /**
- * Extract best price from SCP product results
- * SCP prices are in cents
+ * Taguchi Winsorized Trimmed Mean
+ * Trims top/bottom 20% of values, then winsorizes remaining outliers
+ * to the boundary values. Same formula used across eBay pipelines.
  */
-function extractPrice(products) {
-  if (!products || products.length === 0) return null;
-  // Pick first product's loose (raw) or new (graded) price
-  const p = products[0];
-  // loose-price = raw/ungraded, new-price = PSA 10 equivalent
-  const price = p["loose-price"] || p["new-price"] || p["cib-price"] || 0;
-  return price > 0 ? Math.round(price) / 100 : null;
+function taguchiTrimmedMean(values) {
+  if (!values || values.length === 0) return null;
+  if (values.length === 1) return Math.round(values[0] * 100) / 100;
+
+  const sorted = [...values].sort((a, b) => a - b);
+  const n = sorted.length;
+  const trimCount = Math.max(1, Math.floor(n * 0.2)); // 20% each side
+
+  if (n <= 2 * trimCount) {
+    // Too few values to trim — use median
+    const mid = Math.floor(n / 2);
+    const median = n % 2 === 0 ? (sorted[mid - 1] + sorted[mid]) / 2 : sorted[mid];
+    return Math.round(median * 100) / 100;
+  }
+
+  const lo = sorted[trimCount];
+  const hi = sorted[n - 1 - trimCount];
+
+  // Winsorize: clamp all values to [lo, hi], then average
+  let sum = 0;
+  for (const v of sorted) {
+    sum += Math.min(Math.max(v, lo), hi);
+  }
+  return Math.round((sum / n) * 100) / 100;
 }
 
+/**
+ * Extract all raw prices from SCP product results and compute Taguchi mean
+ * SCP prices are in cents
+ */
 function extractRawPrice(products) {
   if (!products || products.length === 0) return null;
-  const p = products[0];
-  const price = p["loose-price"] || 0;
-  return price > 0 ? Math.round(price) / 100 : null;
+  const prices = products
+    .map((p) => p["loose-price"] || 0)
+    .filter((v) => v > 0)
+    .map((v) => v / 100);
+  return taguchiTrimmedMean(prices);
 }
 
 function extractGradedPrice(products) {
   if (!products || products.length === 0) return null;
-  const p = products[0];
-  // new-price typically = PSA 10
-  const price = p["new-price"] || p["cib-price"] || 0;
-  return price > 0 ? Math.round(price) / 100 : null;
+  const prices = products
+    .map((p) => p["new-price"] || p["cib-price"] || 0)
+    .filter((v) => v > 0)
+    .map((v) => v / 100);
+  return taguchiTrimmedMean(prices);
 }
 
 function extractProductInfo(products) {
@@ -94,6 +119,7 @@ function extractProductInfo(products) {
     productName: p["product-name"] || null,
     consoleName: p["console-name"] || null,
     id: p.id || null,
+    matchCount: products.length,
   };
 }
 
