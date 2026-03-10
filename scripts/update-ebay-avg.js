@@ -976,6 +976,7 @@ async function main() {
         currency: "USD",
       };
 
+      // --- Step 5d: Fetch listings from each marketplace ---
       for (const marketplaceId of MARKETPLACES) {
         try {
           const listing = await computeAvgActiveListing({
