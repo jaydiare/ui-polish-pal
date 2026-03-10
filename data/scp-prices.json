@@ -1,0 +1,21 @@
+{
+  "_meta": {
+    "updatedAt": "2026-03-10T11:15:40.581Z",
+    "athleteCount": 1,
+    "rawHits": 1,
+    "gradedHits": 0,
+    "description": "SportsCardsPro merged prices (raw + graded)"
+  },
+  "athletes": [
+    {
+      "name": "Jose Altuve",
+      "sport": "Baseball",
+      "scpRawPrice": 3.2,
+      "scpGradedPrice": null,
+      "scpRawProduct": "Jose Altuve [1983 Topps Baseball] #83-31",
+      "scpGradedProduct": "Jose Altuve [1983 Topps Baseball] #83-31",
+      "scpRawId": "1555044",
+      "scpGradedId": "1555044"
+    }
+  ]
+}

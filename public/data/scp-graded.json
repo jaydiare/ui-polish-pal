@@ -1,0 +1,19 @@
+{
+  "_meta": {
+    "updatedAt": "2026-03-10T11:15:40.531Z",
+    "athleteCount": 1,
+    "hits": 0,
+    "type": "graded",
+    "description": "SportsCardsPro GRADED (PSA) price lookup (query: Name Sport PSA)"
+  },
+  "athletes": [
+    {
+      "name": "Jose Altuve",
+      "sport": "Baseball",
+      "scpGradedPrice": null,
+      "scpGradedProduct": "Jose Altuve [1983 Topps Baseball] #83-31",
+      "scpGradedId": "1555044",
+      "scpGradedMatchCount": 100
+    }
+  ]
+}
