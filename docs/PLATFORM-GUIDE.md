@@ -385,5 +385,8 @@ By default, athletes with no eBay data are hidden unless the user explicitly fil
 | **Raw** | Ungraded cards in Near Mint or Excellent condition |
 | **Graded** | Professionally graded cards (PSA, BGS, SGC, etc.) |
 | **Gemrate** | Third-party site providing PSA grading population data |
+| **SCP** | SportsCardsPro — third-party pricing database for sports cards |
+| **SCP Raw** | SportsCardsPro loose/ungraded card price (Taguchi mean of all matches) |
+| **SCP Graded** | SportsCardsPro graded card price (Taguchi mean of PSA matches) |
 | **Stability Points** | Score derived from CV, used in budget optimizer (0-100) |
 | **Liquidity Multiplier** | Modifier based on DOM, boosts/penalizes fast/slow sellers |
