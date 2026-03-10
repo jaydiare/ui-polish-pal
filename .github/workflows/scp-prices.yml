@@ -1,0 +1,34 @@
+name: Monthly SportsCardsPro Prices
+
+on:
+  schedule:
+    - cron: "0 10 1 * *" # 1st of every month at 10:00 UTC
+  workflow_dispatch: # Allow manual trigger
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Setup Node 20
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Fetch SCP prices
+        env:
+          SPORTSCARDSPRO: ${{ secrets.SPORTSCARDSPRO }}
+        run: node scripts/fetch-scp-prices.js
+
+      - name: Commit & push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/scp-prices.json public/data/scp-prices.json
+          git diff --cached --quiet || git commit -m "🏷️ Monthly SCP prices $(date -u +%Y-%m-%d)"
+          git push
