@@ -1007,6 +1007,7 @@ async function main() {
         }
       }
 
+      // --- Step 5e: Pick best marketplace result (prefer CA with data, then US) ---
       const ca = rec.marketplaces.EBAY_CA;
       const us = rec.marketplaces.EBAY_US;
 
