@@ -28,6 +28,7 @@ The platform collects market pricing data across **5 dimensions**:
 | **Graded Listed** | Active Buy It Now listings (PSA/BGS/SGC graded) | eBay Browse API | `graded-update-ebay-avg.js` |
 | **Raw Sold** | Completed/sold listings (ungraded) | HTML scraping | `sold-update-ebay-avg.js` |
 | **Graded Sold** | Completed/sold listings (graded) | HTML scraping | `graded-sold-update-ebay-avg.js` |
+| **SCP Prices** | Current market prices (raw + PSA graded) | SportsCardsPro API | `fetch-scp-prices.js` |
 
 ### Data Flow
 
