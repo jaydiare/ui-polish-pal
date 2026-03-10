@@ -41,6 +41,9 @@ athletes.json (550+ athletes)
     ├── HTML scraper scripts ──► ebay-sold-avg.json / ebay-graded-sold-avg.json
     │   (no API key needed)
     │
+    ├── SCP API script ──► scp-prices.json
+    │   (SPORTSCARDSPRO token)
+    │
     └── All JSON files ──► GitHub raw URLs ──► Frontend fetches live
 ```
 
