@@ -683,6 +683,7 @@ async function computeAvgActiveListing({
       fxRateUsed = fxRateUsed || rateUsed;
     }
 
+    console.log(`    📋 Page: ${items.length} items, kept=${pricesUSD.length}, skippedGraded=${skippedGraded}, skippedCondition=${skippedCondition}`);
     if (items.length < PAGE_SIZE) break;
     offset += PAGE_SIZE;
     await sleep(120);
