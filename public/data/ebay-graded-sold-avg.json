@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-10T17:13:20.544Z",
+    "updatedAt": "2026-03-10T19:11:43.991Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA-only title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 120,
-      "endIdx": 130,
+      "startIdx": 130,
+      "endIdx": 140,
       "totalAthletes": 450
     },
     "maxPages": 4,
@@ -1880,7 +1880,7 @@
     "fxRateUsed": null
   },
   "Felipe Lira": {
-    "keyword": "Felipe Lira Baseball",
+    "keyword": "Felipe Lira Baseball PSA",
     "nScraped": 60,
     "nSoldUsed": 0,
     "avg": null,
@@ -1892,20 +1892,20 @@
     "fxRateUsed": null
   },
   "Felipe Vazquez": {
-    "keyword": "Felipe Vazquez Baseball",
-    "nScraped": 180,
-    "nSoldUsed": 0,
-    "avg": null,
-    "taguchiSold": null,
-    "medianSold": null,
-    "marketStabilityCV": null,
+    "keyword": "Felipe Vazquez Baseball PSA",
+    "nScraped": 240,
+    "nSoldUsed": 4,
+    "avg": 31.29,
+    "taguchiSold": 31.29,
+    "medianSold": 31.29,
+    "marketStabilityCV": 0,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
   },
   "Felix Doubront": {
-    "keyword": "Felix Doubront Baseball",
-    "nScraped": 180,
+    "keyword": "Felix Doubront Baseball PSA",
+    "nScraped": 240,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -1916,8 +1916,8 @@
     "fxRateUsed": null
   },
   "Felix Escalona": {
-    "keyword": "Felix Escalona Baseball",
-    "nScraped": 0,
+    "keyword": "Felix Escalona Baseball PSA",
+    "nScraped": 60,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -1928,16 +1928,16 @@
     "fxRateUsed": null
   },
   "Felix Hernandez": {
-    "keyword": "Felix Hernandez Baseball",
-    "nScraped": 0,
-    "nSoldUsed": 0,
-    "avg": null,
-    "taguchiSold": null,
-    "medianSold": null,
-    "marketStabilityCV": null,
+    "keyword": "Felix Hernandez Baseball PSA",
+    "nScraped": 142,
+    "nSoldUsed": 86,
+    "avg": 96.18930232558128,
+    "taguchiSold": 96.18930232558128,
+    "medianSold": 80.5,
+    "marketStabilityCV": 0.2740953480687967,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
   },
   "Fernando Lunar": {
     "keyword": "Fernando Lunar Baseball",
@@ -1952,7 +1952,7 @@
     "fxRateUsed": null
   },
   "Fernando Nieve": {
-    "keyword": "Fernando Nieve Baseball",
+    "keyword": "Fernando Nieve Baseball PSA",
     "nScraped": 60,
     "nSoldUsed": 0,
     "avg": null,
@@ -1964,20 +1964,20 @@
     "fxRateUsed": null
   },
   "Francisco Alvarez": {
-    "keyword": "Francisco Alvarez Baseball",
+    "keyword": "Francisco Alvarez Baseball PSA",
     "nScraped": 180,
-    "nSoldUsed": 57,
-    "avg": 36.4842105263158,
-    "taguchiSold": 36.4842105263158,
-    "medianSold": 30,
-    "marketStabilityCV": 0.2579383029905638,
+    "nSoldUsed": 82,
+    "avg": 47.547560975609755,
+    "taguchiSold": 47.547560975609755,
+    "medianSold": 49.99,
+    "marketStabilityCV": 0.3415136562523428,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
   },
   "Francisco Arcia": {
-    "keyword": "Francisco Arcia Baseball",
-    "nScraped": 180,
+    "keyword": "Francisco Arcia Baseball PSA",
+    "nScraped": 0,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -1988,8 +1988,8 @@
     "fxRateUsed": null
   },
   "Francisco Cervelli": {
-    "keyword": "Francisco Cervelli Baseball",
-    "nScraped": 60,
+    "keyword": "Francisco Cervelli Baseball PSA",
+    "nScraped": 0,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -2000,8 +2000,8 @@
     "fxRateUsed": null
   },
   "Francisco Morales": {
-    "keyword": "Francisco Morales Baseball",
-    "nScraped": 180,
+    "keyword": "Francisco Morales Baseball PSA",
+    "nScraped": 0,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
