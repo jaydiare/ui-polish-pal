@@ -274,38 +274,40 @@ const CardTrackerPage = () => {
 
         {/* Reference Athlete Cards */}
         {refAthletes.length > 0 && (
-          <section className="mb-10">
-            <h2 className="text-lg font-display font-bold text-foreground mb-4">Athlete Reference</h2>
-            <div className="grid grid-cols-[repeat(auto-fill,minmax(280px,1fr))] gap-5">
-              {refAthletes.map((a, i) => (
-                <motion.div
-                  key={a.name}
-                  initial={{ opacity: 0, y: 12 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.3, delay: i * 0.1 }}
-                >
-                  <AthleteCard
-                    athlete={a}
-                    byName={byName}
-                    byKey={byKey}
-                    gradedByName={gradedByName}
-                    gradedByKey={gradedByKey}
-                    ebaySoldRaw={ebaySoldRaw}
-                    ebayGradedSoldRaw={ebayGradedSoldRaw}
-                    history={athleteHistory?.[a.name]}
-                    priceMode="both"
-                  />
-                </motion.div>
-              ))}
-            </div>
-          </section>
+          <SectionErrorBoundary label="Athlete Reference Cards">
+            <section className="mb-10">
+              <h2 className="text-lg font-display font-bold text-foreground mb-4">Athlete Reference</h2>
+              <div className="grid grid-cols-[repeat(auto-fill,minmax(280px,1fr))] gap-5">
+                {refAthletes.map((a, i) => (
+                  <motion.div
+                    key={a.name}
+                    initial={{ opacity: 0, y: 12 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.3, delay: i * 0.1 }}
+                  >
+                    <AthleteCard
+                      athlete={a}
+                      byName={byName}
+                      byKey={byKey}
+                      gradedByName={gradedByName}
+                      gradedByKey={gradedByKey}
+                      ebaySoldRaw={ebaySoldRaw}
+                      ebayGradedSoldRaw={ebayGradedSoldRaw}
+                      history={athleteHistory?.[a.name]}
+                      priceMode="both"
+                    />
+                  </motion.div>
+                ))}
+              </div>
+            </section>
+          </SectionErrorBoundary>
         )}
-
-
 
         {/* SportsCardsPro Long-Term History */}
         {scpData && (scpData["us250-acuna"] || scpData["us200-torres"]) && (
-          <ScpHistorySection scpData={scpData} scpRange={scpRange} setScpRange={setScpRange} />
+          <SectionErrorBoundary label="SCP Price History Chart">
+            <ScpHistorySection scpData={scpData} scpRange={scpRange} setScpRange={setScpRange} />
+          </SectionErrorBoundary>
         )}
 
         {/* Snapshot Tables */}
@@ -314,14 +316,15 @@ const CardTrackerPage = () => {
           if (!card || !card.snapshots) return null;
           const snaps = filterSnapshots(card.snapshots);
           return (
-            <CardSnapshotTable
-              key={cardKey}
-              card={card}
-              snapshots={snaps}
-              dataMode={dataMode}
-              cardMode={cardMode}
-              selectedGrade={selectedGrade}
-            />
+            <SectionErrorBoundary key={cardKey} label={card.cardTitle}>
+              <CardSnapshotTable
+                card={card}
+                snapshots={snaps}
+                dataMode={dataMode}
+                cardMode={cardMode}
+                selectedGrade={selectedGrade}
+              />
+            </SectionErrorBoundary>
           );
         })}
 
