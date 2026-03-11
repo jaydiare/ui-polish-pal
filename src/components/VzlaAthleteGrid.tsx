@@ -15,6 +15,7 @@ interface VzlaAthleteGridProps {
   ebayGradedSoldRaw?: Record<string, any>;
   athleteHistory?: Record<string, any[]>;
   gemratePopMap?: Record<string, number>;
+  snapshotFallback?: Record<string, { rawListedPrice: number | null; gradedListedPrice: number | null }>;
   hasMore: boolean;
   remainingCount: number;
   onLoadMore: () => void;
