@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-10T22:50:37.761Z",
+    "updatedAt": "2026-03-11T01:44:00.922Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA-only title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
@@ -5087,10 +5087,10 @@
     "keyword": "Ronald Acuna Jr. Baseball PSA",
     "nScraped": 240,
     "nSoldUsed": 56,
-    "avg": 58.735892857142794,
-    "taguchiSold": 58.735892857142794,
-    "medianSold": 51,
-    "marketStabilityCV": 0.252125099233539,
+    "avg": 82.14125000000008,
+    "taguchiSold": 82.14125000000008,
+    "medianSold": 74.995,
+    "marketStabilityCV": 0.32968818692577806,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
