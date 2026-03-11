@@ -15,6 +15,7 @@ interface VzlaAthleteGridProps {
   ebayGradedSoldRaw?: Record<string, any>;
   athleteHistory?: Record<string, any[]>;
   gemratePopMap?: Record<string, number>;
+  snapshotFallback?: Record<string, { rawListedPrice: number | null; gradedListedPrice: number | null }>;
   hasMore: boolean;
   remainingCount: number;
   onLoadMore: () => void;
@@ -30,7 +31,7 @@ const SORT_OPTIONS: { value: SortOption; label: string }[] = [
   { value: "stability_best", label: "Most Stable" },
 ];
 
-const VzlaAthleteGrid = ({ athletes, byName, byKey, gradedByName, gradedByKey, ebaySoldRaw, ebayGradedSoldRaw, athleteHistory, gemratePopMap, hasMore, remainingCount, onLoadMore, highlightedIds, sort, onSortChange, priceMode }: VzlaAthleteGridProps) => {
+const VzlaAthleteGrid = ({ athletes, byName, byKey, gradedByName, gradedByKey, ebaySoldRaw, ebayGradedSoldRaw, athleteHistory, gemratePopMap, snapshotFallback, hasMore, remainingCount, onLoadMore, highlightedIds, sort, onSortChange, priceMode }: VzlaAthleteGridProps) => {
   const hotSellers = useHotSellers();
 
   // If budget is active, filter to only highlighted cards
@@ -83,6 +84,7 @@ const VzlaAthleteGrid = ({ athletes, byName, byKey, gradedByName, gradedByKey, e
                 isRecommended={highlightedIds?.has(buildBudgetAthleteId(a.name, a.sport))}
                 isHotSeller={hotSellers.has(a.name)}
                 priceMode={effectivePriceMode}
+                snapshotFallback={snapshotFallback?.[a.name]}
               />
             </motion.div>
           );

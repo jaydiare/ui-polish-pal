@@ -122,6 +122,7 @@ export function useAthleteData() {
   const [indexHistory, setIndexHistory] = useState<any[]>([]);
   const [gemratePopMap, setGemratePopMap] = useState<Record<string, number>>({});
   const [scpPrices, setScpPrices] = useState<Record<string, { scpRawPrice: number | null }>>({});
+  const [snapshotFallback, setSnapshotFallback] = useState<Record<string, { rawListedPrice: number | null; gradedListedPrice: number | null }>>({});
   const [lastUpdated, setLastUpdated] = useState<string>("—");
   const [visibleCount, setVisibleCount] = useState(PAGE_SIZE);
   const [filters, setFilters] = useState<Filters>({
@@ -223,7 +224,7 @@ export function useAthleteData() {
   // Fetch data on mount
   useEffect(() => {
     (async () => {
-      const [fetchedAthletes, fetchedEbay, fetchedGraded, fetchedSold, fetchedGradedSold, fetchedProgress, fetchedHistory, fetchedIndexHistory, fetchedGemrate, fetchedScp] = await Promise.all([
+      const [fetchedAthletes, fetchedEbay, fetchedGraded, fetchedSold, fetchedGradedSold, fetchedProgress, fetchedHistory, fetchedIndexHistory, fetchedGemrate, fetchedScp, fetchedSnapshot] = await Promise.all([
         fetchJson("https://raw.githubusercontent.com/jaydiare/ui-polish-pal/main/data/athletes.json"),
         fetchJson("https://raw.githubusercontent.com/jaydiare/ui-polish-pal/main/data/ebay-avg.json"),
         fetchJson("https://raw.githubusercontent.com/jaydiare/ui-polish-pal/main/data/ebay-graded-avg.json"),
@@ -234,6 +235,7 @@ export function useAthleteData() {
         fetchJson("https://raw.githubusercontent.com/jaydiare/ui-polish-pal/main/data/index-history.json"),
         fetchJson("https://raw.githubusercontent.com/jaydiare/ui-polish-pal/main/data/gemrate.json"),
         fetchJson("https://raw.githubusercontent.com/jaydiare/ui-polish-pal/main/data/scp-raw.json"),
+        fetchJson("https://raw.githubusercontent.com/jaydiare/ui-polish-pal/main/data/vzla-athlete-market-data.json"),
       ]);
 
       const patchedEbay = enrichWithBasePrices(fetchedEbay as EbayAvgData | null);
@@ -282,6 +284,16 @@ export function useAthleteData() {
           map[a.name] = { scpRawPrice: a.scpRawPrice ?? null };
         }
         setScpPrices(map);
+      }
+      if (fetchedSnapshot?.athletes && Array.isArray(fetchedSnapshot.athletes)) {
+        const map: Record<string, { rawListedPrice: number | null; gradedListedPrice: number | null }> = {};
+        for (const a of fetchedSnapshot.athletes) {
+          map[a.name] = {
+            rawListedPrice: a.rawListedPrice ?? null,
+            gradedListedPrice: a.gradedListedPrice ?? null,
+          };
+        }
+        setSnapshotFallback(map);
       }
     })();
   }, []);
@@ -398,6 +410,7 @@ export function useAthleteData() {
     ebayGradedSoldRaw: filteredGradedSoldRaw,
     gemratePopMap,
     scpPrices,
+    snapshotFallback,
     athleteHistory,
     indexHistory,
     lastUpdated,
