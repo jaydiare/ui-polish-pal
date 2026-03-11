@@ -31,7 +31,7 @@ const VzlaEbayFooter = () => {
   return (
     <footer className="ebay-footer">
       <a href={url} target="_blank" rel="noopener noreferrer">
-        <img src={banner.img} alt={banner.alt} className="ebay-banner-img" loading="eager" />
+        <img src={banner.img} alt={banner.alt} className="ebay-banner-img" loading="lazy" width="728" height="90" />
       </a>
     </footer>
   );
