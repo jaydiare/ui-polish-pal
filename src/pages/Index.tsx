@@ -88,6 +88,7 @@ const Index = () => {
             ebayGradedSoldRaw={ebayGradedSoldRaw}
             athleteHistory={athleteHistory}
             gemratePopMap={gemratePopMap}
+            snapshotFallback={snapshotFallback}
             hasMore={budgetChosenIds.size > 0 ? false : hasMore}
             remainingCount={remainingCount}
             onLoadMore={loadMore}
