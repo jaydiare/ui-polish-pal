@@ -138,6 +138,31 @@ function getChartValue(snap: Snapshot, dataMode: DataMode, cardMode: CardMode, g
   return stats?.taguchiMean ?? null;
 }
 
+/* ── Error Boundary ── */
+class SectionErrorBoundary extends Component<{ label: string; children: ReactNode }, { hasError: boolean; error: string }> {
+  constructor(props: any) {
+    super(props);
+    this.state = { hasError: false, error: "" };
+  }
+  static getDerivedStateFromError(error: Error) {
+    return { hasError: true, error: error.message };
+  }
+  componentDidCatch(error: Error, info: any) {
+    console.error(`[${this.props.label}] render error:`, error, info);
+  }
+  render() {
+    if (this.state.hasError) {
+      return (
+        <div className="glass-panel p-6 rounded-xl mb-8 text-center">
+          <p className="text-sm text-destructive font-semibold mb-1">Failed to render {this.props.label}</p>
+          <p className="text-xs text-muted-foreground">{this.state.error}</p>
+        </div>
+      );
+    }
+    return this.props.children;
+  }
+}
+
 /* ── Page ── */
 const CardTrackerPage = () => {
   const [data, setData] = useState<TrackerData | null>(null);
