@@ -139,10 +139,12 @@ category_ids = "261328" (Trading Card Singles)
 **Query construction:**
 ```
 q = "{name} {sport} card"
-aspect_filter = "Graded:{Yes},Professional Grader:{Professional Sports Authenticator (PSA)}" + Player/Athlete or Sport aspect
+aspect_filter = "categoryId:261328,Graded:{Yes},Professional Grader:{Professional Sports Authenticator (PSA)}" + Player/Athlete or Sport aspect
 filter = "buyingOptions:{FIXED_PRICE}"
 category_ids = "261328"
 ```
+
+> **Important:** The `categoryId:261328` prefix is mandatory for all aspect_filter values. See Bug 8.17.
 
 **Filtering pipeline:**
 1. **API-level:** `Graded:{Yes}` + `Professional Grader:{PSA}` aspect filters restrict to PSA-graded cards
