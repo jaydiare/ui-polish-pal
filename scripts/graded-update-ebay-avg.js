@@ -396,7 +396,8 @@ async function validateSportMatch({ token, marketplaceId, name, sport }) {
   const candidates = sportAspectCandidates(sport);
   for (const s of candidates) {
     if (!s) continue;
-    const aspectFilter = `Sport:{${s}}`;
+    // eBay Browse API requires categoryId prefix in aspect_filter
+    const aspectFilter = `categoryId:${CATEGORY_ID},Graded:{Yes},Sport:{${s}}`;
     const data = await ebayBrowseSearch({ token, marketplaceId, q, categoryId: CATEGORY_ID, limit: 1, offset: 0, aspectFilter });
     const total = safeNum(data?.total) ?? 0;
     if (total > 0) return { ok: true, sportAspectValue: s };
