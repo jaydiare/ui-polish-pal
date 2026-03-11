@@ -567,7 +567,8 @@ async function validatePlayerAthleteMatch({ token, marketplaceId, name, sport })
   const q = buildQuery(name, sport);
 
   for (const cand of candidateAspectValuesForName(name)) {
-    const aspectFilter = `Player/Athlete:{${cand}}`;
+    // eBay Browse API requires categoryId prefix in aspect_filter
+    const aspectFilter = `categoryId:${CATEGORY_ID},Player/Athlete:{${cand}}`;
     const data = await ebayBrowseSearch({
       token,
       marketplaceId,
@@ -594,7 +595,8 @@ async function validateSportMatch({ token, marketplaceId, name, sport }) {
   for (const s of candidates) {
     if (!s) continue;
 
-    const aspectFilter = `Sport:{${s}}`;
+    // eBay Browse API requires categoryId prefix in aspect_filter
+    const aspectFilter = `categoryId:${CATEGORY_ID},Sport:{${s}}`;
     const data = await ebayBrowseSearch({
       token,
       marketplaceId,
