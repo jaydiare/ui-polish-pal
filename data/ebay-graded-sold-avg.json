@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-11T20:54:46.215Z",
+    "updatedAt": "2026-03-11T22:46:16.841Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA-only title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 250,
-      "endIdx": 260,
+      "startIdx": 260,
+      "endIdx": 270,
       "totalAthletes": 450
     },
     "maxPages": 4,
@@ -3716,12 +3716,12 @@
   },
   "Luis Garcia": {
     "keyword": "Luis Garcia Baseball PSA",
-    "nScraped": 318,
-    "nSoldUsed": 76,
-    "avg": 9.784736842105268,
-    "taguchiSold": 9.784736842105268,
+    "nScraped": 360,
+    "nSoldUsed": 84,
+    "avg": 10.436666666666659,
+    "taguchiSold": 10.436666666666659,
     "medianSold": 10,
-    "marketStabilityCV": 0.2121569031803333,
+    "marketStabilityCV": 0.04953072560924746,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
@@ -3752,7 +3752,7 @@
   },
   "Luis Jimenez": {
     "keyword": "Luis Jimenez Baseball PSA",
-    "nScraped": 243,
+    "nScraped": 242,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -3764,27 +3764,27 @@
   },
   "Luis Leal": {
     "keyword": "Luis Leal Baseball PSA",
-    "nScraped": 248,
-    "nSoldUsed": 4,
-    "avg": 11.5,
-    "taguchiSold": 11.5,
-    "medianSold": 11.5,
-    "marketStabilityCV": 0,
+    "nScraped": 125,
+    "nSoldUsed": 2,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
   },
   "Luis Matos": {
     "keyword": "Luis Matos Baseball PSA",
-    "nScraped": 81,
-    "nSoldUsed": 18,
-    "avg": 34.49555555555556,
-    "taguchiSold": 34.49555555555556,
-    "medianSold": 34.5,
-    "marketStabilityCV": 0.15525777163738144,
+    "nScraped": 0,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
   },
   "Luis Maza": {
     "keyword": "Luis Maza Baseball PSA",
