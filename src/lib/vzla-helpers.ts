@@ -83,6 +83,18 @@ export function getEbayAvgNumber(
   return v;
 }
 
+export function getBasePriceUSD(
+  athlete: Athlete,
+  byName: Record<string, EbayAvgRecord>,
+  byKey: Record<string, EbayAvgRecord>
+): number | null {
+  const rec = getEbayAvgFor(athlete, byName, byKey);
+  const base = rec?.basePriceUSD;
+  if (base == null) return null;
+  const v = Number(base);
+  return Number.isFinite(v) && v > 0 ? v : null;
+}
+
 export function getMarketStabilityCV(
   athlete: Athlete,
   byName: Record<string, EbayAvgRecord>,
@@ -287,8 +299,9 @@ export function filterAthletes(
     });
 
   // Hide athletes with no eBay data by default, unless user explicitly filters for them
+  // Include athletes with basePriceUSD (historical fallback) even if no active listings
   if (!wantsEmptyStates) {
-    filtered = filtered.filter((a) => getEbayAvgNumber(a, byName, byKey) != null);
+    filtered = filtered.filter((a) => getEbayAvgNumber(a, byName, byKey) != null || getBasePriceUSD(a, byName, byKey) != null);
   }
 
   if (filters.price === "none") {

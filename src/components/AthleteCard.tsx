@@ -2,6 +2,7 @@ import { useMemo, forwardRef, useRef, useCallback } from "react";
 import { Athlete, EbayAvgRecord } from "@/data/athletes";
 import {
   getEbayAvgNumber,
+  getBasePriceUSD,
   getMarketStabilityCV,
   getAvgDaysOnMarket,
   getIndexLevel,
@@ -32,15 +33,24 @@ interface AthleteCardProps {
 const AthleteCard = forwardRef<HTMLElement, AthleteCardProps>(({ athlete, byName, byKey, gradedByName, gradedByKey, ebaySoldRaw, ebayGradedSoldRaw, history, psaPop, isRecommended, isHotSeller, priceMode }, ref) => {
   const cardRef = useRef<HTMLElement>(null);
   const avgNum = getEbayAvgNumber(athlete, byName, byKey);
-  const money = avgNum != null ? formatCurrency(avgNum, "USD") : "—";
-
-  const hasPrice = avgNum != null;
+  const rawBasePrice = getBasePriceUSD(athlete, byName, byKey);
+  const rawFallback = avgNum == null && rawBasePrice != null;
+  const rawDisplayPrice = avgNum ?? rawBasePrice;
+  const money = rawDisplayPrice != null
+    ? `${rawFallback ? "~" : ""}${formatCurrency(rawDisplayPrice, "USD")}`
+    : "—";
+  const hasPrice = rawDisplayPrice != null;
 
   const rawIdx = getIndexLevel(athlete, byName, byKey);
   const gradedIdx = getIndexLevel(athlete, gradedByName, gradedByKey);
 
   const gradedAvgNum = getEbayAvgNumber(athlete, gradedByName, gradedByKey);
-  const gradedMoney = gradedAvgNum != null ? formatCurrency(gradedAvgNum, "USD") : null;
+  const gradedBasePrice = getBasePriceUSD(athlete, gradedByName, gradedByKey);
+  const gradedFallback = gradedAvgNum == null && gradedBasePrice != null;
+  const gradedDisplayPrice = gradedAvgNum ?? gradedBasePrice;
+  const gradedMoney = gradedDisplayPrice != null
+    ? `${gradedFallback ? "~" : ""}${formatCurrency(gradedDisplayPrice, "USD")}`
+    : null;
 
   const soldRecord = ebaySoldRaw?.[athlete.name];
   const rawSoldAvg = soldRecord?.taguchiSold != null ? soldRecord.taguchiSold : null;
@@ -188,6 +198,9 @@ const AthleteCard = forwardRef<HTMLElement, AthleteCardProps>(({ athlete, byName
           <div className="p-2.5 rounded-lg bg-secondary/50 border border-border/40">
             <div className="text-[9px] text-muted-foreground font-medium uppercase tracking-wider mb-1">Raw</div>
             <div className="text-base font-display font-bold text-foreground leading-none">{money}</div>
+            {rawFallback && (
+              <div className="text-[8px] text-muted-foreground/60 font-medium mt-0.5">Historical</div>
+            )}
             {rawIdx != null && (
               <div className={`text-[10px] font-semibold mt-1 ${rawIdx >= 100 ? "text-primary" : "text-destructive"}`}>
                 {rawIdx >= 100 ? "↗" : "↘"} {rawIdx.toFixed(0)}
@@ -210,6 +223,9 @@ const AthleteCard = forwardRef<HTMLElement, AthleteCardProps>(({ athlete, byName
               <div className="flex items-start justify-between gap-2">
                 <div>
                   <div className="text-base font-display font-bold text-foreground leading-none">{gradedMoney}</div>
+                  {gradedFallback && (
+                    <div className="text-[8px] text-muted-foreground/60 font-medium mt-0.5">Historical</div>
+                  )}
                   {gradedIdx != null && (
                     <div className={`text-[10px] font-semibold mt-1 ${gradedIdx >= 100 ? "text-primary" : "text-destructive"}`}>
                       {gradedIdx >= 100 ? "↗" : "↘"} {gradedIdx.toFixed(0)}
