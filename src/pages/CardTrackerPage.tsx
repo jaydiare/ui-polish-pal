@@ -448,6 +448,30 @@ function CardSnapshotTable({
   );
 }
 
+/* ── Lazy section wrapper: renders children only when scrolled into view ── */
+function LazySection({ children, placeholder }: { children: ReactNode; placeholder?: string }) {
+  const ref = useRef<HTMLDivElement>(null);
+  const [visible, setVisible] = useState(false);
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+    const obs = new IntersectionObserver(([entry]) => {
+      if (entry.isIntersecting) { setVisible(true); obs.disconnect(); }
+    }, { rootMargin: "200px" });
+    obs.observe(el);
+    return () => obs.disconnect();
+  }, []);
+  return (
+    <div ref={ref}>
+      {visible ? children : (
+        <div className="glass-panel p-6 rounded-xl mb-8 text-center">
+          <p className="text-sm text-muted-foreground">{placeholder || "Loading…"}</p>
+        </div>
+      )}
+    </div>
+  );
+}
+
 /* ── SportsCardsPro Long-Term History Section ── */
 function ScpHistorySection({
   scpData, scpRange, setScpRange,
