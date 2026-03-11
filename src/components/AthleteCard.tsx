@@ -223,6 +223,9 @@ const AthleteCard = forwardRef<HTMLElement, AthleteCardProps>(({ athlete, byName
               <div className="flex items-start justify-between gap-2">
                 <div>
                   <div className="text-base font-display font-bold text-foreground leading-none">{gradedMoney}</div>
+                  {gradedFallback && (
+                    <div className="text-[8px] text-muted-foreground/60 font-medium mt-0.5">Historical</div>
+                  )}
                   {gradedIdx != null && (
                     <div className={`text-[10px] font-semibold mt-1 ${gradedIdx >= 100 ? "text-primary" : "text-destructive"}`}>
                       {gradedIdx >= 100 ? "↗" : "↘"} {gradedIdx.toFixed(0)}
