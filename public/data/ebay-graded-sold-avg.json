@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-11T07:14:17.988Z",
+    "updatedAt": "2026-03-11T09:04:15.340Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA-only title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 180,
-      "endIdx": 190,
+      "startIdx": 190,
+      "endIdx": 200,
       "totalAthletes": 450
     },
     "maxPages": 4,
@@ -2793,15 +2793,15 @@
   },
   "Jhonathan Diaz": {
     "keyword": "Jhonathan Diaz Baseball PSA",
-    "nScraped": 61,
-    "nSoldUsed": 1,
+    "nScraped": 0,
+    "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
   },
   "Jhonny Pereda": {
     "keyword": "Jhonny Pereda Baseball PSA",
