@@ -1,4 +1,4 @@
-import { useState, useEffect, useMemo, Component, type ReactNode } from "react";
+import { useState, useEffect, useMemo, useRef, Component, type ReactNode } from "react";
 import { Download } from "lucide-react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
