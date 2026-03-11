@@ -120,7 +120,12 @@
     <!-- Preconnect to critical third-party origins -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="preconnect" href="https://raw.githubusercontent.com" crossorigin />
+    <link rel="preconnect" href="https://raw.githubusercontent.com" />
+
+    <!-- Prefetch critical data JSONs so they load in parallel with JS -->
+    <link rel="prefetch" href="https://raw.githubusercontent.com/jaydiare/ui-polish-pal/main/data/ebay-avg.json" />
+    <link rel="prefetch" href="https://raw.githubusercontent.com/jaydiare/ui-polish-pal/main/data/athletes.json" />
+    <link rel="prefetch" href="https://raw.githubusercontent.com/jaydiare/ui-polish-pal/main/data/ebay-graded-avg.json" />
 
     <!-- Non-render-blocking Google Fonts -->
     <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800;900&display=swap" />
