@@ -183,9 +183,13 @@ export function useAthleteData() {
       }
     }
     // Override with listed data where available (higher priority)
+    // Skip fallback records (nListing=0 or fallback=true) — sold data is more current
     for (const [key, val] of Object.entries(filteredGradedRaw)) {
       if (key === "_meta" || !val) continue;
       const r = val as any;
+      // Don't let fallback/zero-listing records override real sold data
+      const hasRealListings = (r.nListing != null && r.nListing > 0) || (r.n != null && r.n > 0);
+      if (r.fallback === true || !hasRealListings) continue;
       const listedPrice = r.avgListing ?? r.taguchiListing ?? r.trimmedListing ?? r.avg ?? r.average;
       if (listedPrice != null && Number.isFinite(listedPrice) && listedPrice > 0) {
         (merged as any)[key] = val;
