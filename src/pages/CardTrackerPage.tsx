@@ -481,7 +481,7 @@ function ScpHistorySection({
     );
   };
 
-  // Build combined chart data
+  // Build combined chart data with mobile downsampling
   const chartData = useMemo(() => {
     const dateMap = new Map<string, any>();
     const cutoff = scpRange === Infinity ? null : new Date();
@@ -509,9 +509,19 @@ function ScpHistorySection({
       }
     }
 
-    return Array.from(dateMap.values()).sort((a: any, b: any) =>
+    let sorted = Array.from(dateMap.values()).sort((a: any, b: any) =>
       a.date.localeCompare(b.date)
     );
+
+    // Downsample on mobile to prevent memory crashes (keep max ~200 points)
+    const isMobile = typeof window !== "undefined" && window.innerWidth < 768;
+    const MAX_POINTS = isMobile ? 150 : 600;
+    if (sorted.length > MAX_POINTS) {
+      const step = Math.ceil(sorted.length / MAX_POINTS);
+      sorted = sorted.filter((_, i) => i % step === 0 || i === sorted.length - 1);
+    }
+
+    return sorted;
   }, [acunaScp, torresScp, selectedScpGrades, scpRange]);
 
   if (!chartData.length && allGrades.length === 0) return null;
