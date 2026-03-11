@@ -1,18 +1,23 @@
-import { useState, useEffect, useMemo, Component, type ReactNode } from "react";
+import { useState, useEffect, useMemo, useRef, lazy, Suspense, Component, type ReactNode } from "react";
 import { Download } from "lucide-react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import {
-  LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend,
-  ResponsiveContainer,
-} from "recharts";
 import SEOHead from "@/components/SEOHead";
 import VzlaNavbar from "@/components/VzlaNavbar";
 import VzlaFooter from "@/components/VzlaFooter";
 import VzlaEbayFooter from "@/components/VzlaEbayFooter";
 import AthleteCard from "@/components/AthleteCard";
 import { useAthleteData } from "@/hooks/useAthleteData";
+import { useIsMobile } from "@/hooks/use-mobile";
 import type { Athlete } from "@/data/athletes";
+
+/* Lazy-load Recharts to avoid loading heavy chart code upfront on mobile */
+const RechartsModule = lazy(() =>
+  import("recharts").then((m) => ({
+    default: () => null, // placeholder; we use named exports below
+    ...m,
+  }))
+);
 
 /* ── SCP History Types ── */
 interface ScpDataPoint {
