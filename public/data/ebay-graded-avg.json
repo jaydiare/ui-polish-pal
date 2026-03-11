@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-11T00:00:29.069Z",
+    "updatedAt": "2026-03-10T21:51:04.831Z",
     "minSampleSize": 4,
     "marketplaces": [
       "EBAY_US"
@@ -537,11 +537,6 @@
         "Baseball": 100,
         "Soccer": 100,
         "Basketball": 100,
-        "All": 100
-      },
-      {
-        "date": "2026-03-11",
-        "Baseball": 100,
         "All": 100
       }
     ]

@@ -1,4 +1,4 @@
-import { useState, useEffect, useMemo, useRef, Component, type ReactNode } from "react";
+import { useState, useEffect, useMemo } from "react";
 import { Download } from "lucide-react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
@@ -10,6 +10,9 @@ import SEOHead from "@/components/SEOHead";
 import VzlaNavbar from "@/components/VzlaNavbar";
 import VzlaFooter from "@/components/VzlaFooter";
 import VzlaEbayFooter from "@/components/VzlaEbayFooter";
+import AthleteCard from "@/components/AthleteCard";
+import { useAthleteData } from "@/hooks/useAthleteData";
+import type { Athlete } from "@/data/athletes";
 
 /* ── SCP History Types ── */
 interface ScpDataPoint {
@@ -135,54 +138,6 @@ function getChartValue(snap: Snapshot, dataMode: DataMode, cardMode: CardMode, g
   return stats?.taguchiMean ?? null;
 }
 
-/* ── Error Boundary ── */
-class SectionErrorBoundary extends Component<{ label: string; children: ReactNode }, { hasError: boolean; error: string }> {
-  constructor(props: any) {
-    super(props);
-    this.state = { hasError: false, error: "" };
-  }
-  static getDerivedStateFromError(error: Error) {
-    return { hasError: true, error: error.message };
-  }
-  componentDidCatch(error: Error, info: any) {
-    console.error(`[${this.props.label}] render error:`, error, info);
-  }
-  render() {
-    if (this.state.hasError) {
-      return (
-        <div className="glass-panel p-6 rounded-xl mb-8 text-center">
-          <p className="text-sm text-destructive font-semibold mb-1">Failed to render {this.props.label}</p>
-          <p className="text-xs text-muted-foreground">{this.state.error}</p>
-        </div>
-      );
-    }
-    return this.props.children;
-  }
-}
-
-/* ── Lazy Section: only renders children when scrolled near viewport ── */
-function LazySection({ children, fallbackHeight = 200 }: { children: ReactNode; fallbackHeight?: number }) {
-  const ref = useRef<HTMLDivElement>(null);
-  const [visible, setVisible] = useState(false);
-
-  useEffect(() => {
-    const el = ref.current;
-    if (!el) return;
-    const obs = new IntersectionObserver(
-      ([entry]) => { if (entry.isIntersecting) { setVisible(true); obs.disconnect(); } },
-      { rootMargin: "300px" }
-    );
-    obs.observe(el);
-    return () => obs.disconnect();
-  }, []);
-
-  return (
-    <div ref={ref}>
-      {visible ? children : <div style={{ height: fallbackHeight }} className="flex items-center justify-center text-muted-foreground text-xs">Scroll to load…</div>}
-    </div>
-  );
-}
-
 /* ── Page ── */
 const CardTrackerPage = () => {
   const [data, setData] = useState<TrackerData | null>(null);
@@ -193,6 +148,11 @@ const CardTrackerPage = () => {
   const cardMode: CardMode = "raw";
   const selectedGrade = "10";
   const [scpRange, setScpRange] = useState(1825); // 5 years default
+
+  const {
+    athletes, byName, byKey, gradedByName, gradedByKey,
+    ebaySoldRaw, ebayGradedSoldRaw, athleteHistory,
+  } = useAthleteData();
 
   useEffect(() => {
     (async () => {
@@ -212,6 +172,15 @@ const CardTrackerPage = () => {
       setLoading(false);
     })();
   }, []);
+
+  const normalize = (s: string) =>
+    s.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().trim();
+  const refAthletes = useMemo(() => {
+    const names = ["Ronald Acuna Jr.", "Gleyber Torres"];
+    return names
+      .map((n) => athletes.find((a) => normalize(a.name) === normalize(n)))
+      .filter(Boolean) as Athlete[];
+  }, [athletes]);
 
   const filterSnapshots = (snapshots: Snapshot[]) => {
     if (range === Infinity) return snapshots;
@@ -278,32 +247,56 @@ const CardTrackerPage = () => {
           Last updated: {data._meta?.lastUpdated ? new Date(data._meta.lastUpdated).toLocaleDateString() : "—"}
         </p>
 
-        {/* SportsCardsPro Long-Term History — lazy loaded */}
-        {scpData && (scpData["us250-acuna"] || scpData["us200-torres"]) && (
-          <LazySection fallbackHeight={400}>
-            <SectionErrorBoundary label="SCP Price History Chart">
-              <ScpHistorySection scpData={scpData} scpRange={scpRange} setScpRange={setScpRange} />
-            </SectionErrorBoundary>
-          </LazySection>
+        {/* Reference Athlete Cards */}
+        {refAthletes.length > 0 && (
+          <section className="mb-10">
+            <h2 className="text-lg font-display font-bold text-foreground mb-4">Athlete Reference</h2>
+            <div className="grid grid-cols-[repeat(auto-fill,minmax(280px,1fr))] gap-5">
+              {refAthletes.map((a, i) => (
+                <motion.div
+                  key={a.name}
+                  initial={{ opacity: 0, y: 12 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.3, delay: i * 0.1 }}
+                >
+                  <AthleteCard
+                    athlete={a}
+                    byName={byName}
+                    byKey={byKey}
+                    gradedByName={gradedByName}
+                    gradedByKey={gradedByKey}
+                    ebaySoldRaw={ebaySoldRaw}
+                    ebayGradedSoldRaw={ebayGradedSoldRaw}
+                    history={athleteHistory?.[a.name]}
+                    priceMode="both"
+                  />
+                </motion.div>
+              ))}
+            </div>
+          </section>
         )}
 
-        {/* Snapshot Tables — lazy loaded */}
+
+
+        {/* SportsCardsPro Long-Term History */}
+        {scpData && (scpData["us250-acuna"] || scpData["us200-torres"]) && (
+          <ScpHistorySection scpData={scpData} scpRange={scpRange} setScpRange={setScpRange} />
+        )}
+
+        {/* Snapshot Tables */}
         {CARD_KEYS.map((cardKey) => {
           const card = data[cardKey];
           if (!card || !card.snapshots) return null;
           const snaps = filterSnapshots(card.snapshots);
           return (
-            <LazySection key={cardKey} fallbackHeight={300}>
-              <SectionErrorBoundary label={card.cardTitle}>
-                <CardSnapshotTable
-                  card={card}
-                  snapshots={snaps}
-                  dataMode={dataMode}
-                  cardMode={cardMode}
-                  selectedGrade={selectedGrade}
-                />
-              </SectionErrorBoundary>
-            </LazySection>
+            <CardSnapshotTable
+              key={cardKey}
+              card={card}
+              snapshots={snaps}
+              dataMode={dataMode}
+              cardMode={cardMode}
+              selectedGrade={selectedGrade}
+            />
           );
         })}
 
@@ -488,24 +481,9 @@ function ScpHistorySection({
       }
     }
 
-    let sorted = Array.from(dateMap.values()).sort((a: any, b: any) =>
+    return Array.from(dateMap.values()).sort((a: any, b: any) =>
       a.date.localeCompare(b.date)
     );
-
-    // Aggressively downsample on mobile to prevent memory crash
-    const isMob = typeof window !== "undefined" && window.innerWidth < 768;
-    const MAX_POINTS = isMob ? 80 : 500;
-    if (sorted.length > MAX_POINTS) {
-      const step = Math.ceil(sorted.length / MAX_POINTS);
-      const downsampled = sorted.filter((_, i) => i % step === 0);
-      // Always keep last point
-      if (downsampled[downsampled.length - 1] !== sorted[sorted.length - 1]) {
-        downsampled.push(sorted[sorted.length - 1]);
-      }
-      sorted = downsampled;
-    }
-
-    return sorted;
   }, [acunaScp, torresScp, selectedScpGrades, scpRange]);
 
   if (!chartData.length && allGrades.length === 0) return null;
