@@ -10,10 +10,6 @@ import SEOHead from "@/components/SEOHead";
 import VzlaNavbar from "@/components/VzlaNavbar";
 import VzlaFooter from "@/components/VzlaFooter";
 import VzlaEbayFooter from "@/components/VzlaEbayFooter";
-import AthleteCard from "@/components/AthleteCard";
-import { useAthleteData } from "@/hooks/useAthleteData";
-import { useIsMobile } from "@/hooks/use-mobile";
-import type { Athlete } from "@/data/athletes";
 
 /* ── SCP History Types ── */
 interface ScpDataPoint {
@@ -198,11 +194,6 @@ const CardTrackerPage = () => {
   const selectedGrade = "10";
   const [scpRange, setScpRange] = useState(1825); // 5 years default
 
-  const {
-    athletes, byName, byKey, gradedByName, gradedByKey,
-    ebaySoldRaw, ebayGradedSoldRaw, athleteHistory,
-  } = useAthleteData();
-
   useEffect(() => {
     (async () => {
       try {
@@ -221,15 +212,6 @@ const CardTrackerPage = () => {
       setLoading(false);
     })();
   }, []);
-
-  const normalize = (s: string) =>
-    s.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().trim();
-  const refAthletes = useMemo(() => {
-    const names = ["Ronald Acuna Jr.", "Gleyber Torres"];
-    return names
-      .map((n) => athletes.find((a) => normalize(a.name) === normalize(n)))
-      .filter(Boolean) as Athlete[];
-  }, [athletes]);
 
   const filterSnapshots = (snapshots: Snapshot[]) => {
     if (range === Infinity) return snapshots;
@@ -295,37 +277,6 @@ const CardTrackerPage = () => {
           Daily price snapshots for 2018 Topps Update rookie cards — EBAY US & CA.
           Last updated: {data._meta?.lastUpdated ? new Date(data._meta.lastUpdated).toLocaleDateString() : "—"}
         </p>
-
-        {/* Reference Athlete Cards */}
-        {refAthletes.length > 0 && (
-          <SectionErrorBoundary label="Athlete Reference Cards">
-            <section className="mb-10">
-              <h2 className="text-lg font-display font-bold text-foreground mb-4">Athlete Reference</h2>
-              <div className="grid grid-cols-[repeat(auto-fill,minmax(280px,1fr))] gap-5">
-                {refAthletes.map((a, i) => (
-                  <motion.div
-                    key={a.name}
-                    initial={{ opacity: 0, y: 12 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.3, delay: i * 0.1 }}
-                  >
-                    <AthleteCard
-                      athlete={a}
-                      byName={byName}
-                      byKey={byKey}
-                      gradedByName={gradedByName}
-                      gradedByKey={gradedByKey}
-                      ebaySoldRaw={ebaySoldRaw}
-                      ebayGradedSoldRaw={ebayGradedSoldRaw}
-                      history={athleteHistory?.[a.name]}
-                      priceMode="both"
-                    />
-                  </motion.div>
-                ))}
-              </div>
-            </section>
-          </SectionErrorBoundary>
-        )}
 
         {/* SportsCardsPro Long-Term History — lazy loaded */}
         {scpData && (scpData["us250-acuna"] || scpData["us200-torres"]) && (
