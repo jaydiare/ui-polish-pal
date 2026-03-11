@@ -33,9 +33,13 @@ interface AthleteCardProps {
 const AthleteCard = forwardRef<HTMLElement, AthleteCardProps>(({ athlete, byName, byKey, gradedByName, gradedByKey, ebaySoldRaw, ebayGradedSoldRaw, history, psaPop, isRecommended, isHotSeller, priceMode }, ref) => {
   const cardRef = useRef<HTMLElement>(null);
   const avgNum = getEbayAvgNumber(athlete, byName, byKey);
-  const money = avgNum != null ? formatCurrency(avgNum, "USD") : "—";
-
-  const hasPrice = avgNum != null;
+  const rawBasePrice = getBasePriceUSD(athlete, byName, byKey);
+  const rawFallback = avgNum == null && rawBasePrice != null;
+  const rawDisplayPrice = avgNum ?? rawBasePrice;
+  const money = rawDisplayPrice != null
+    ? `${rawFallback ? "~" : ""}${formatCurrency(rawDisplayPrice, "USD")}`
+    : "—";
+  const hasPrice = rawDisplayPrice != null;
 
   const rawIdx = getIndexLevel(athlete, byName, byKey);
   const gradedIdx = getIndexLevel(athlete, gradedByName, gradedByKey);
