@@ -299,8 +299,9 @@ export function filterAthletes(
     });
 
   // Hide athletes with no eBay data by default, unless user explicitly filters for them
+  // Include athletes with basePriceUSD (historical fallback) even if no active listings
   if (!wantsEmptyStates) {
-    filtered = filtered.filter((a) => getEbayAvgNumber(a, byName, byKey) != null);
+    filtered = filtered.filter((a) => getEbayAvgNumber(a, byName, byKey) != null || getBasePriceUSD(a, byName, byKey) != null);
   }
 
   if (filters.price === "none") {
