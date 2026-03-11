@@ -42,15 +42,22 @@ function enrichWithBasePrices(data: EbayAvgData | null): EbayAvgData | null {
   const merged: EbayAvgData = { ...data };
 
   // Step 1: Per-record basePriceUSD fallback
+  // Only fill in price from basePriceUSD when there are real listings (not fallback records)
   for (const key of Object.keys(merged)) {
     if (key === "_meta") continue;
     const rec = (merged as any)[key];
     if (!rec || typeof rec !== "object") continue;
 
+    // Skip fallback records or records with no real listings
+    if (rec.fallback === true) continue;
+    const hasRealListings = (rec.nListing != null && rec.nListing > 0) || (rec.n != null && rec.n > 0);
+
     const currentPrice = Number(
       rec.avgListing ?? rec.taguchiListing ?? rec.trimmedListing ?? rec.avg ?? rec.average
     );
     if (!Number.isFinite(currentPrice) || currentPrice <= 0) {
+      // Only use basePriceUSD if the record has real listings (price was just missing from the record)
+      if (!hasRealListings) continue;
       const base = Number(rec.basePriceUSD);
       if (Number.isFinite(base) && base > 0) {
         rec.avgListing = base;
@@ -80,6 +87,10 @@ function enrichWithBasePrices(data: EbayAvgData | null): EbayAvgData | null {
         ? { ...(merged as any)[existingKey] }
         : {}) as Record<string, any>;
 
+      // Skip fallback records
+      if (current.fallback === true) continue;
+      const hasRealListings = (current.nListing != null && current.nListing > 0) || (current.n != null && current.n > 0);
+
       const currentPrice = Number(
         current.avgListing ?? current.taguchiListing ?? current.trimmedListing ?? current.avg ?? current.average
       );
@@ -88,7 +99,7 @@ function enrichWithBasePrices(data: EbayAvgData | null): EbayAvgData | null {
       if (!current.basePriceUSD) {
         current.basePriceUSD = price;
       }
-      if (!Number.isFinite(currentPrice) || currentPrice <= 0) {
+      if ((!Number.isFinite(currentPrice) || currentPrice <= 0) && hasRealListings) {
         current.avgListing = price;
         current.taguchiListing = price;
         current.avg = price;
@@ -183,9 +194,13 @@ export function useAthleteData() {
       }
     }
     // Override with listed data where available (higher priority)
+    // Skip fallback records (nListing=0 or fallback=true) — sold data is more current
     for (const [key, val] of Object.entries(filteredGradedRaw)) {
       if (key === "_meta" || !val) continue;
       const r = val as any;
+      // Don't let fallback/zero-listing records override real sold data
+      const hasRealListings = (r.nListing != null && r.nListing > 0) || (r.n != null && r.n > 0);
+      if (r.fallback === true || !hasRealListings) continue;
       const listedPrice = r.avgListing ?? r.taguchiListing ?? r.trimmedListing ?? r.avg ?? r.average;
       if (listedPrice != null && Number.isFinite(listedPrice) && listedPrice > 0) {
         (merged as any)[key] = val;
