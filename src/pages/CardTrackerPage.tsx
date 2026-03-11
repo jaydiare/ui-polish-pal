@@ -193,41 +193,6 @@ const CardTrackerPage = () => {
   const cardMode: CardMode = "raw";
   const selectedGrade = "10";
   const [scpRange, setScpRange] = useState(1825); // 5 years default
-
-  const {
-    athletes, byName, byKey, gradedByName, gradedByKey,
-    ebaySoldRaw, ebayGradedSoldRaw, athleteHistory,
-  } = useAthleteData();
-
-  useEffect(() => {
-    (async () => {
-      try {
-        let r = await fetch(`${GITHUB_RAW}/card-tracker.json`, { cache: "no-store" });
-        if (!r.ok) r = await fetch("/data/card-tracker.json");
-        if (r.ok) { setData(await r.json()); }
-      } catch { /* fallback silently */ }
-
-      // Fetch SCP history
-      try {
-        let r2 = await fetch(`${GITHUB_RAW}/scp-history.json`, { cache: "no-store" });
-        if (!r2.ok) r2 = await fetch("/data/scp-history.json");
-        if (r2.ok) { setScpData(await r2.json()); }
-      } catch { /* fallback silently */ }
-
-      setLoading(false);
-    })();
-  }, []);
-
-  const normalize = (s: string) =>
-    s.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().trim();
-  const refAthletes = useMemo(() => {
-    const names = ["Ronald Acuna Jr.", "Gleyber Torres"];
-    return names
-      .map((n) => athletes.find((a) => normalize(a.name) === normalize(n)))
-      .filter(Boolean) as Athlete[];
-  }, [athletes]);
-
-  const filterSnapshots = (snapshots: Snapshot[]) => {
     if (range === Infinity) return snapshots;
     const cutoff = new Date();
     cutoff.setDate(cutoff.getDate() - range);
