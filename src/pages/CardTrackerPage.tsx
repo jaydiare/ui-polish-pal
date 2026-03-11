@@ -305,9 +305,11 @@ const CardTrackerPage = () => {
 
         {/* SportsCardsPro Long-Term History */}
         {scpData && (scpData["us250-acuna"] || scpData["us200-torres"]) && (
-          <SectionErrorBoundary label="SCP Price History Chart">
-            <ScpHistorySection scpData={scpData} scpRange={scpRange} setScpRange={setScpRange} />
-          </SectionErrorBoundary>
+          <LazySection placeholder="Loading price history chart…">
+            <SectionErrorBoundary label="SCP Price History Chart">
+              <ScpHistorySection scpData={scpData} scpRange={scpRange} setScpRange={setScpRange} />
+            </SectionErrorBoundary>
+          </LazySection>
         )}
 
         {/* Snapshot Tables */}
@@ -316,15 +318,17 @@ const CardTrackerPage = () => {
           if (!card || !card.snapshots) return null;
           const snaps = filterSnapshots(card.snapshots);
           return (
-            <SectionErrorBoundary key={cardKey} label={card.cardTitle}>
-              <CardSnapshotTable
-                card={card}
-                snapshots={snaps}
-                dataMode={dataMode}
-                cardMode={cardMode}
-                selectedGrade={selectedGrade}
-              />
-            </SectionErrorBoundary>
+            <LazySection key={cardKey} placeholder={`Loading ${card.cardTitle}…`}>
+              <SectionErrorBoundary label={card.cardTitle}>
+                <CardSnapshotTable
+                  card={card}
+                  snapshots={snaps}
+                  dataMode={dataMode}
+                  cardMode={cardMode}
+                  selectedGrade={selectedGrade}
+                />
+              </SectionErrorBoundary>
+            </LazySection>
           );
         })}
 
