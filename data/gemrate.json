@@ -1,13 +1,13 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-11T13:16:48.223423+00:00",
+    "updatedAt": "2026-03-11T14:55:39.983016+00:00",
     "athleteCount": 451,
     "graders": [
       "PSA"
     ],
     "batchInfo": {
-      "startIdx": 80,
-      "endIdx": 100,
+      "startIdx": 100,
+      "endIdx": 120,
       "totalAthletes": 568
     }
   },
@@ -1619,17 +1619,17 @@
       "sport": "Baseball",
       "graders": {
         "PSA": {
-          "cards": 57,
+          "cards": 59,
           "gems": 30,
-          "grades": 133,
-          "gemRate": 23.0
+          "grades": 137,
+          "gemRate": 22.0
         }
       },
       "totals": {
-        "cards": 57,
+        "cards": 59,
         "gems": 30,
-        "grades": 133,
-        "gemRate": 23.0
+        "grades": 137,
+        "gemRate": 22.0
       }
     },
     "Eduardo Escobar": {
