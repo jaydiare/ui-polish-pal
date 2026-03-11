@@ -537,9 +537,24 @@ function ScpHistorySection({
       }
     }
 
-    return Array.from(dateMap.values()).sort((a: any, b: any) =>
+    let sorted = Array.from(dateMap.values()).sort((a: any, b: any) =>
       a.date.localeCompare(b.date)
     );
+
+    // Aggressively downsample on mobile to prevent memory crash
+    const isMob = typeof window !== "undefined" && window.innerWidth < 768;
+    const MAX_POINTS = isMob ? 80 : 500;
+    if (sorted.length > MAX_POINTS) {
+      const step = Math.ceil(sorted.length / MAX_POINTS);
+      const downsampled = sorted.filter((_, i) => i % step === 0);
+      // Always keep last point
+      if (downsampled[downsampled.length - 1] !== sorted[sorted.length - 1]) {
+        downsampled.push(sorted[sorted.length - 1]);
+      }
+      sorted = downsampled;
+    }
+
+    return sorted;
   }, [acunaScp, torresScp, selectedScpGrades, scpRange]);
 
   if (!chartData.length && allGrades.length === 0) return null;
