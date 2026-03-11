@@ -39,7 +39,7 @@ A sports-card market intelligence platform tracking **550+ Venezuelan athletes**
 
 - **API quota:** Both share one daily eBay Browse API production quota.
 - **Condition filter (Raw):** No API-level condition filter (removed — too many raw listings lack the `Condition Type` tag). Post-fetch filtering via `isGradedListing()` excludes graded cards, and word-boundary blocklist rejects damaged/poor conditions. Accepts "Near Mint" and "Excellent".
-- **Condition filter (Graded):** API-level `Graded:{Yes}` + `Professional Grader:{PSA}` aspect filters. PSA-only detection.
+- **Condition filter (Graded):** API-level `categoryId:261328,Graded:{Yes},Professional Grader:{PSA}` aspect filters. PSA-only detection. The `categoryId:` prefix is mandatory — without it, eBay silently ignores all aspect filters (see DATA-PIPELINE-AUDIT.md §8.17).
 
 ### 2.3 Sold Listing Scripts (HTML Scraping — no API quota impact)
 
