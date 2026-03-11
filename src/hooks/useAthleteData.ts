@@ -195,6 +195,7 @@ export function useAthleteData() {
     }
     // Override with listed data where available (higher priority)
     // Skip fallback records (nListing=0 or fallback=true) — sold data is more current
+    // Sanity check: skip graded listed prices < 20% of sold avg (contaminated data)
     for (const [key, val] of Object.entries(filteredGradedRaw)) {
       if (key === "_meta" || !val) continue;
       const r = val as any;
@@ -203,6 +204,14 @@ export function useAthleteData() {
       if (r.fallback === true || !hasRealListings) continue;
       const listedPrice = r.avgListing ?? r.taguchiListing ?? r.trimmedListing ?? r.avg ?? r.average;
       if (listedPrice != null && Number.isFinite(listedPrice) && listedPrice > 0) {
+        // Sanity check: if sold data exists and listed is suspiciously low, skip
+        const soldRec = (merged as any)[key];
+        if (soldRec) {
+          const soldPrice = soldRec.avgListing ?? soldRec.taguchiListing ?? soldRec.avg;
+          if (Number.isFinite(soldPrice) && soldPrice > 0 && listedPrice < soldPrice * 0.2) {
+            continue; // contaminated listed data — sold is more reliable
+          }
+        }
         (merged as any)[key] = val;
       }
     }
