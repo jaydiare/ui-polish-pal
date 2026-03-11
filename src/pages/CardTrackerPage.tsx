@@ -1,4 +1,4 @@
-import { useState, useEffect, useMemo } from "react";
+import { useState, useEffect, useMemo, Component, type ReactNode } from "react";
 import { Download } from "lucide-react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
@@ -138,6 +138,31 @@ function getChartValue(snap: Snapshot, dataMode: DataMode, cardMode: CardMode, g
   return stats?.taguchiMean ?? null;
 }
 
+/* ── Error Boundary ── */
+class SectionErrorBoundary extends Component<{ label: string; children: ReactNode }, { hasError: boolean; error: string }> {
+  constructor(props: any) {
+    super(props);
+    this.state = { hasError: false, error: "" };
+  }
+  static getDerivedStateFromError(error: Error) {
+    return { hasError: true, error: error.message };
+  }
+  componentDidCatch(error: Error, info: any) {
+    console.error(`[${this.props.label}] render error:`, error, info);
+  }
+  render() {
+    if (this.state.hasError) {
+      return (
+        <div className="glass-panel p-6 rounded-xl mb-8 text-center">
+          <p className="text-sm text-destructive font-semibold mb-1">Failed to render {this.props.label}</p>
+          <p className="text-xs text-muted-foreground">{this.state.error}</p>
+        </div>
+      );
+    }
+    return this.props.children;
+  }
+}
+
 /* ── Page ── */
 const CardTrackerPage = () => {
   const [data, setData] = useState<TrackerData | null>(null);
@@ -249,38 +274,40 @@ const CardTrackerPage = () => {
 
         {/* Reference Athlete Cards */}
         {refAthletes.length > 0 && (
-          <section className="mb-10">
-            <h2 className="text-lg font-display font-bold text-foreground mb-4">Athlete Reference</h2>
-            <div className="grid grid-cols-[repeat(auto-fill,minmax(280px,1fr))] gap-5">
-              {refAthletes.map((a, i) => (
-                <motion.div
-                  key={a.name}
-                  initial={{ opacity: 0, y: 12 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.3, delay: i * 0.1 }}
-                >
-                  <AthleteCard
-                    athlete={a}
-                    byName={byName}
-                    byKey={byKey}
-                    gradedByName={gradedByName}
-                    gradedByKey={gradedByKey}
-                    ebaySoldRaw={ebaySoldRaw}
-                    ebayGradedSoldRaw={ebayGradedSoldRaw}
-                    history={athleteHistory?.[a.name]}
-                    priceMode="both"
-                  />
-                </motion.div>
-              ))}
-            </div>
-          </section>
+          <SectionErrorBoundary label="Athlete Reference Cards">
+            <section className="mb-10">
+              <h2 className="text-lg font-display font-bold text-foreground mb-4">Athlete Reference</h2>
+              <div className="grid grid-cols-[repeat(auto-fill,minmax(280px,1fr))] gap-5">
+                {refAthletes.map((a, i) => (
+                  <motion.div
+                    key={a.name}
+                    initial={{ opacity: 0, y: 12 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.3, delay: i * 0.1 }}
+                  >
+                    <AthleteCard
+                      athlete={a}
+                      byName={byName}
+                      byKey={byKey}
+                      gradedByName={gradedByName}
+                      gradedByKey={gradedByKey}
+                      ebaySoldRaw={ebaySoldRaw}
+                      ebayGradedSoldRaw={ebayGradedSoldRaw}
+                      history={athleteHistory?.[a.name]}
+                      priceMode="both"
+                    />
+                  </motion.div>
+                ))}
+              </div>
+            </section>
+          </SectionErrorBoundary>
         )}
-
-
 
         {/* SportsCardsPro Long-Term History */}
         {scpData && (scpData["us250-acuna"] || scpData["us200-torres"]) && (
-          <ScpHistorySection scpData={scpData} scpRange={scpRange} setScpRange={setScpRange} />
+          <SectionErrorBoundary label="SCP Price History Chart">
+            <ScpHistorySection scpData={scpData} scpRange={scpRange} setScpRange={setScpRange} />
+          </SectionErrorBoundary>
         )}
 
         {/* Snapshot Tables */}
@@ -289,14 +316,15 @@ const CardTrackerPage = () => {
           if (!card || !card.snapshots) return null;
           const snaps = filterSnapshots(card.snapshots);
           return (
-            <CardSnapshotTable
-              key={cardKey}
-              card={card}
-              snapshots={snaps}
-              dataMode={dataMode}
-              cardMode={cardMode}
-              selectedGrade={selectedGrade}
-            />
+            <SectionErrorBoundary key={cardKey} label={card.cardTitle}>
+              <CardSnapshotTable
+                card={card}
+                snapshots={snaps}
+                dataMode={dataMode}
+                cardMode={cardMode}
+                selectedGrade={selectedGrade}
+              />
+            </SectionErrorBoundary>
           );
         })}
 
