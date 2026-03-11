@@ -10,10 +10,6 @@ import SEOHead from "@/components/SEOHead";
 import VzlaNavbar from "@/components/VzlaNavbar";
 import VzlaFooter from "@/components/VzlaFooter";
 import VzlaEbayFooter from "@/components/VzlaEbayFooter";
-import AthleteCard from "@/components/AthleteCard";
-import { useAthleteData } from "@/hooks/useAthleteData";
-import { useIsMobile } from "@/hooks/use-mobile";
-import type { Athlete } from "@/data/athletes";
 
 /* ── SCP History Types ── */
 interface ScpDataPoint {
