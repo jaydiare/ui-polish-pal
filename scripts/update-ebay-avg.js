@@ -394,7 +394,9 @@ function sportAspectCandidates(sportRaw) {
 // causing 0 results. Instead, rely on isGradedListing() + ungradedPassesConditionPolicy()
 // post-hoc filters to exclude graded cards and enforce condition quality.
 function buildAspectFilter({ aspectMode, aspectValue }) {
+  // eBay Browse API requires categoryId prefix: aspect_filter=categoryId:XXXX,Aspect:{Value}
   const parts = [];
+  parts.push(`categoryId:${CATEGORY_ID}`);
 
   if (aspectMode === "player" && aspectValue) {
     parts.push(`Player/Athlete:{${aspectValue}}`);
@@ -402,7 +404,7 @@ function buildAspectFilter({ aspectMode, aspectValue }) {
     parts.push(`Sport:{${aspectValue}}`);
   }
 
-  return parts.length ? parts.join(",") : null;
+  return parts.length > 1 ? parts.join(",") : null;
 }
 
 // --- FX (Normalize ANY currency -> USD) ---
