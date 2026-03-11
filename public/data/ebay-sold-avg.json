@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-11T01:46:52.126Z",
+    "updatedAt": "2026-03-11T03:02:42.974Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. Taguchi winsorized mean + market stability CV. Ungraded condition policy (permissive for sold). Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
@@ -1401,15 +1401,15 @@
   },
   "Eduard Bazardo": {
     "keyword": "Eduard Bazardo Baseball",
-    "nScraped": 0,
-    "nSoldUsed": 0,
-    "avg": null,
-    "taguchiSold": null,
-    "medianSold": null,
-    "marketStabilityCV": null,
+    "nScraped": 156,
+    "nSoldUsed": 33,
+    "avg": 15.453636363636365,
+    "taguchiSold": 15.453636363636365,
+    "medianSold": 19.99,
+    "marketStabilityCV": 0.32714999061269434,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
   },
   "Eduardo Escobar": {
     "keyword": "Eduardo Escobar Baseball",
