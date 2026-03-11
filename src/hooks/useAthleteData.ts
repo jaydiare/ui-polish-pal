@@ -285,6 +285,16 @@ export function useAthleteData() {
         }
         setScpPrices(map);
       }
+      if (fetchedSnapshot?.athletes && Array.isArray(fetchedSnapshot.athletes)) {
+        const map: Record<string, { rawListedPrice: number | null; gradedListedPrice: number | null }> = {};
+        for (const a of fetchedSnapshot.athletes) {
+          map[a.name] = {
+            rawListedPrice: a.rawListedPrice ?? null,
+            gradedListedPrice: a.gradedListedPrice ?? null,
+          };
+        }
+        setSnapshotFallback(map);
+      }
     })();
   }, []);
 
