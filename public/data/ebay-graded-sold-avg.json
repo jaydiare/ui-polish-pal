@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-11T09:04:15.340Z",
+    "updatedAt": "2026-03-11T11:04:20.338Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA-only title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 190,
-      "endIdx": 200,
+      "startIdx": 200,
+      "endIdx": 210,
       "totalAthletes": 450
     },
     "maxPages": 4,
@@ -2841,7 +2841,7 @@
   },
   "Joe Ortiz": {
     "keyword": "Joe Ortiz Baseball PSA",
-    "nScraped": 240,
+    "nScraped": 244,
     "nSoldUsed": 8,
     "avg": 42.75,
     "taguchiSold": 42.75,
@@ -2853,7 +2853,7 @@
   },
   "Johan Santana": {
     "keyword": "Johan Santana Baseball PSA",
-    "nScraped": 270,
+    "nScraped": 264,
     "nSoldUsed": 44,
     "avg": 103.62636363636356,
     "taguchiSold": 103.62636363636356,
@@ -2901,8 +2901,8 @@
   },
   "Jorge Barrosa": {
     "keyword": "Jorge Barrosa Baseball PSA",
-    "nScraped": 183,
-    "nSoldUsed": 9,
+    "nScraped": 122,
+    "nSoldUsed": 6,
     "avg": 20.49,
     "taguchiSold": 20.49,
     "medianSold": 20.49,
@@ -2949,15 +2949,15 @@
   },
   "Jose Altuve": {
     "keyword": "Jose Altuve Baseball PSA",
-    "nScraped": 240,
-    "nSoldUsed": 94,
-    "avg": 66.09595744680851,
-    "taguchiSold": 66.09595744680851,
-    "medianSold": 65.78,
-    "marketStabilityCV": 0.2926562331570035,
+    "nScraped": 0,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
   },
   "Jose Alvarado": {
     "keyword": "Jose Alvarado Baseball PSA",
