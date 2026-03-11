@@ -27,14 +27,15 @@ interface AthleteCardProps {
   isRecommended?: boolean;
   isHotSeller?: boolean;
   priceMode: "raw" | "graded" | "both";
+  snapshotFallback?: { rawListedPrice: number | null; gradedListedPrice: number | null };
 }
 
-const AthleteCard = forwardRef<HTMLElement, AthleteCardProps>(({ athlete, byName, byKey, gradedByName, gradedByKey, ebaySoldRaw, ebayGradedSoldRaw, history, psaPop, isRecommended, isHotSeller, priceMode }, ref) => {
+const AthleteCard = forwardRef<HTMLElement, AthleteCardProps>(({ athlete, byName, byKey, gradedByName, gradedByKey, ebaySoldRaw, ebayGradedSoldRaw, history, psaPop, isRecommended, isHotSeller, priceMode, snapshotFallback }, ref) => {
   const cardRef = useRef<HTMLElement>(null);
   const avgNum = getEbayAvgNumber(athlete, byName, byKey);
-  const rawBasePrice = getBasePriceUSD(athlete, byName, byKey);
-  const rawFallback = avgNum == null && rawBasePrice != null;
-  const rawDisplayPrice = avgNum ?? rawBasePrice;
+  const rawSnapPrice = snapshotFallback?.rawListedPrice ?? null;
+  const rawFallback = avgNum == null && rawSnapPrice != null;
+  const rawDisplayPrice = avgNum ?? rawSnapPrice;
   const money = rawDisplayPrice != null
     ? `${rawFallback ? "~" : ""}${formatCurrency(rawDisplayPrice, "USD")}`
     : "—";
@@ -44,9 +45,9 @@ const AthleteCard = forwardRef<HTMLElement, AthleteCardProps>(({ athlete, byName
   const gradedIdx = getIndexLevel(athlete, gradedByName, gradedByKey);
 
   const gradedAvgNum = getEbayAvgNumber(athlete, gradedByName, gradedByKey);
-  const gradedBasePrice = getBasePriceUSD(athlete, gradedByName, gradedByKey);
-  const gradedFallback = gradedAvgNum == null && gradedBasePrice != null;
-  const gradedDisplayPrice = gradedAvgNum ?? gradedBasePrice;
+  const gradedSnapPrice = snapshotFallback?.gradedListedPrice ?? null;
+  const gradedFallback = gradedAvgNum == null && gradedSnapPrice != null;
+  const gradedDisplayPrice = gradedAvgNum ?? gradedSnapPrice;
   const gradedMoney = gradedDisplayPrice != null
     ? `${gradedFallback ? "~" : ""}${formatCurrency(gradedDisplayPrice, "USD")}`
     : null;
