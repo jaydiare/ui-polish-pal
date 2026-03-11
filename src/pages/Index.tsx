@@ -26,6 +26,7 @@ const Index = () => {
     ebaySoldRaw,
     ebayGradedSoldRaw,
     gemratePopMap,
+    snapshotFallback,
     athleteHistory,
     indexHistory,
     lastUpdated,
