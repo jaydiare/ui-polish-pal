@@ -84,6 +84,7 @@ const VzlaAthleteGrid = ({ athletes, byName, byKey, gradedByName, gradedByKey, e
                 isRecommended={highlightedIds?.has(buildBudgetAthleteId(a.name, a.sport))}
                 isHotSeller={hotSellers.has(a.name)}
                 priceMode={effectivePriceMode}
+                snapshotFallback={snapshotFallback?.[a.name]}
               />
             </motion.div>
           );
