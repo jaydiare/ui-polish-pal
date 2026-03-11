@@ -1,4 +1,4 @@
-import { useState, useEffect, useMemo, Component, type ReactNode } from "react";
+import { useState, useEffect, useMemo, useRef, Component, type ReactNode } from "react";
 import { Download } from "lucide-react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
@@ -305,9 +305,11 @@ const CardTrackerPage = () => {
 
         {/* SportsCardsPro Long-Term History */}
         {scpData && (scpData["us250-acuna"] || scpData["us200-torres"]) && (
-          <SectionErrorBoundary label="SCP Price History Chart">
-            <ScpHistorySection scpData={scpData} scpRange={scpRange} setScpRange={setScpRange} />
-          </SectionErrorBoundary>
+          <LazySection placeholder="Loading price history chart…">
+            <SectionErrorBoundary label="SCP Price History Chart">
+              <ScpHistorySection scpData={scpData} scpRange={scpRange} setScpRange={setScpRange} />
+            </SectionErrorBoundary>
+          </LazySection>
         )}
 
         {/* Snapshot Tables */}
@@ -316,15 +318,17 @@ const CardTrackerPage = () => {
           if (!card || !card.snapshots) return null;
           const snaps = filterSnapshots(card.snapshots);
           return (
-            <SectionErrorBoundary key={cardKey} label={card.cardTitle}>
-              <CardSnapshotTable
-                card={card}
-                snapshots={snaps}
-                dataMode={dataMode}
-                cardMode={cardMode}
-                selectedGrade={selectedGrade}
-              />
-            </SectionErrorBoundary>
+            <LazySection key={cardKey} placeholder={`Loading ${card.cardTitle}…`}>
+              <SectionErrorBoundary label={card.cardTitle}>
+                <CardSnapshotTable
+                  card={card}
+                  snapshots={snaps}
+                  dataMode={dataMode}
+                  cardMode={cardMode}
+                  selectedGrade={selectedGrade}
+                />
+              </SectionErrorBoundary>
+            </LazySection>
           );
         })}
 
@@ -448,6 +452,30 @@ function CardSnapshotTable({
   );
 }
 
+/* ── Lazy section wrapper: renders children only when scrolled into view ── */
+function LazySection({ children, placeholder }: { children: ReactNode; placeholder?: string }) {
+  const ref = useRef<HTMLDivElement>(null);
+  const [visible, setVisible] = useState(false);
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+    const obs = new IntersectionObserver(([entry]) => {
+      if (entry.isIntersecting) { setVisible(true); obs.disconnect(); }
+    }, { rootMargin: "200px" });
+    obs.observe(el);
+    return () => obs.disconnect();
+  }, []);
+  return (
+    <div ref={ref}>
+      {visible ? children : (
+        <div className="glass-panel p-6 rounded-xl mb-8 text-center">
+          <p className="text-sm text-muted-foreground">{placeholder || "Loading…"}</p>
+        </div>
+      )}
+    </div>
+  );
+}
+
 /* ── SportsCardsPro Long-Term History Section ── */
 function ScpHistorySection({
   scpData, scpRange, setScpRange,
@@ -481,7 +509,7 @@ function ScpHistorySection({
     );
   };
 
-  // Build combined chart data
+  // Build combined chart data with mobile downsampling
   const chartData = useMemo(() => {
     const dateMap = new Map<string, any>();
     const cutoff = scpRange === Infinity ? null : new Date();
@@ -509,9 +537,19 @@ function ScpHistorySection({
       }
     }
 
-    return Array.from(dateMap.values()).sort((a: any, b: any) =>
+    let sorted = Array.from(dateMap.values()).sort((a: any, b: any) =>
       a.date.localeCompare(b.date)
     );
+
+    // Downsample on mobile to prevent memory crashes (keep max ~200 points)
+    const isMobile = typeof window !== "undefined" && window.innerWidth < 768;
+    const MAX_POINTS = isMobile ? 150 : 600;
+    if (sorted.length > MAX_POINTS) {
+      const step = Math.ceil(sorted.length / MAX_POINTS);
+      sorted = sorted.filter((_, i) => i % step === 0 || i === sorted.length - 1);
+    }
+
+    return sorted;
   }, [acunaScp, torresScp, selectedScpGrades, scpRange]);
 
   if (!chartData.length && allGrades.length === 0) return null;
