@@ -247,7 +247,9 @@ function sportAspectCandidates(sportRaw) {
 }
 
 function buildAspectFilter({ aspectMode, aspectValue }) {
+  // eBay Browse API requires categoryId prefix: aspect_filter=categoryId:XXXX,Aspect:{Value}
   const parts = [];
+  parts.push(`categoryId:${CATEGORY_ID}`);
   parts.push(`Graded:{Yes}`);
   parts.push(`Professional Grader:{Professional Sports Authenticator (PSA)}`);
   if (aspectMode === "player" && aspectValue) {
@@ -255,7 +257,7 @@ function buildAspectFilter({ aspectMode, aspectValue }) {
   } else if (aspectMode === "sport" && aspectValue) {
     parts.push(`Sport:{${aspectValue}}`);
   }
-  return parts.length ? parts.join(",") : null;
+  return parts.join(",");
 }
 
 // --- FX ---
