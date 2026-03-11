@@ -45,7 +45,12 @@ const AthleteCard = forwardRef<HTMLElement, AthleteCardProps>(({ athlete, byName
   const gradedIdx = getIndexLevel(athlete, gradedByName, gradedByKey);
 
   const gradedAvgNum = getEbayAvgNumber(athlete, gradedByName, gradedByKey);
-  const gradedMoney = gradedAvgNum != null ? formatCurrency(gradedAvgNum, "USD") : null;
+  const gradedBasePrice = getBasePriceUSD(athlete, gradedByName, gradedByKey);
+  const gradedFallback = gradedAvgNum == null && gradedBasePrice != null;
+  const gradedDisplayPrice = gradedAvgNum ?? gradedBasePrice;
+  const gradedMoney = gradedDisplayPrice != null
+    ? `${gradedFallback ? "~" : ""}${formatCurrency(gradedDisplayPrice, "USD")}`
+    : null;
 
   const soldRecord = ebaySoldRaw?.[athlete.name];
   const rawSoldAvg = soldRecord?.taguchiSold != null ? soldRecord.taguchiSold : null;
