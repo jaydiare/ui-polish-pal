@@ -2,7 +2,6 @@ import { useMemo, forwardRef, useRef, useCallback } from "react";
 import { Athlete, EbayAvgRecord } from "@/data/athletes";
 import {
   getEbayAvgNumber,
-  getBasePriceUSD,
   getMarketStabilityCV,
   getAvgDaysOnMarket,
   getIndexLevel,
