@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-11T01:44:00.922Z",
+    "updatedAt": "2026-03-11T03:08:41.315Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA-only title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 150,
-      "endIdx": 160,
+      "startIdx": 160,
+      "endIdx": 170,
       "totalAthletes": 450
     },
     "maxPages": 4,
@@ -2277,7 +2277,7 @@
   },
   "Gregorio Petit": {
     "keyword": "Gregorio Petit Baseball PSA",
-    "nScraped": 0,
+    "nScraped": 18,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -2289,7 +2289,7 @@
   },
   "Gregory Infante": {
     "keyword": "Gregory Infante Baseball PSA",
-    "nScraped": 44,
+    "nScraped": 46,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -2301,7 +2301,7 @@
   },
   "Guilder Rodriguez": {
     "keyword": "Guilder Rodriguez Baseball PSA",
-    "nScraped": 324,
+    "nScraped": 320,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -2349,24 +2349,24 @@
   },
   "Gus Gil": {
     "keyword": "Gus Gil Baseball PSA",
-    "nScraped": 241,
-    "nSoldUsed": 12,
-    "avg": 51.09000000000001,
-    "taguchiSold": 51.09000000000001,
-    "medianSold": 51.09,
-    "marketStabilityCV": 1.4526085014382503e-16,
+    "nScraped": 244,
+    "nSoldUsed": 20,
+    "avg": 53.489999999999995,
+    "taguchiSold": 53.489999999999995,
+    "medianSold": 53.49,
+    "marketStabilityCV": 1.3628743038347817e-16,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
   },
   "Gus Polidor": {
     "keyword": "Gus Polidor Baseball PSA",
-    "nScraped": 240,
-    "nSoldUsed": 4,
-    "avg": 75,
-    "taguchiSold": 75,
-    "medianSold": 75,
-    "marketStabilityCV": 0,
+    "nScraped": 120,
+    "nSoldUsed": 2,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
