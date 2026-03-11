@@ -12,6 +12,7 @@ import VzlaFooter from "@/components/VzlaFooter";
 import VzlaEbayFooter from "@/components/VzlaEbayFooter";
 import AthleteCard from "@/components/AthleteCard";
 import { useAthleteData } from "@/hooks/useAthleteData";
+import { useIsMobile } from "@/hooks/use-mobile";
 import type { Athlete } from "@/data/athletes";
 
 /* ── SCP History Types ── */
@@ -163,6 +164,29 @@ class SectionErrorBoundary extends Component<{ label: string; children: ReactNod
   }
 }
 
+/* ── Lazy Section: only renders children when scrolled near viewport ── */
+function LazySection({ children, fallbackHeight = 200 }: { children: ReactNode; fallbackHeight?: number }) {
+  const ref = useRef<HTMLDivElement>(null);
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+    const obs = new IntersectionObserver(
+      ([entry]) => { if (entry.isIntersecting) { setVisible(true); obs.disconnect(); } },
+      { rootMargin: "300px" }
+    );
+    obs.observe(el);
+    return () => obs.disconnect();
+  }, []);
+
+  return (
+    <div ref={ref}>
+      {visible ? children : <div style={{ height: fallbackHeight }} className="flex items-center justify-center text-muted-foreground text-xs">Scroll to load…</div>}
+    </div>
+  );
+}
+
 /* ── Page ── */
 const CardTrackerPage = () => {
   const [data, setData] = useState<TrackerData | null>(null);
@@ -303,22 +327,22 @@ const CardTrackerPage = () => {
           </SectionErrorBoundary>
         )}
 
-        {/* SportsCardsPro Long-Term History */}
+        {/* SportsCardsPro Long-Term History — lazy loaded */}
         {scpData && (scpData["us250-acuna"] || scpData["us200-torres"]) && (
-          <LazySection placeholder="Loading price history chart…">
+          <LazySection fallbackHeight={400}>
             <SectionErrorBoundary label="SCP Price History Chart">
               <ScpHistorySection scpData={scpData} scpRange={scpRange} setScpRange={setScpRange} />
             </SectionErrorBoundary>
           </LazySection>
         )}
 
-        {/* Snapshot Tables */}
+        {/* Snapshot Tables — lazy loaded */}
         {CARD_KEYS.map((cardKey) => {
           const card = data[cardKey];
           if (!card || !card.snapshots) return null;
           const snaps = filterSnapshots(card.snapshots);
           return (
-            <LazySection key={cardKey} placeholder={`Loading ${card.cardTitle}…`}>
+            <LazySection key={cardKey} fallbackHeight={300}>
               <SectionErrorBoundary label={card.cardTitle}>
                 <CardSnapshotTable
                   card={card}
@@ -452,30 +476,6 @@ function CardSnapshotTable({
   );
 }
 
-/* ── Lazy section wrapper: renders children only when scrolled into view ── */
-function LazySection({ children, placeholder }: { children: ReactNode; placeholder?: string }) {
-  const ref = useRef<HTMLDivElement>(null);
-  const [visible, setVisible] = useState(false);
-  useEffect(() => {
-    const el = ref.current;
-    if (!el) return;
-    const obs = new IntersectionObserver(([entry]) => {
-      if (entry.isIntersecting) { setVisible(true); obs.disconnect(); }
-    }, { rootMargin: "200px" });
-    obs.observe(el);
-    return () => obs.disconnect();
-  }, []);
-  return (
-    <div ref={ref}>
-      {visible ? children : (
-        <div className="glass-panel p-6 rounded-xl mb-8 text-center">
-          <p className="text-sm text-muted-foreground">{placeholder || "Loading…"}</p>
-        </div>
-      )}
-    </div>
-  );
-}
-
 /* ── SportsCardsPro Long-Term History Section ── */
 function ScpHistorySection({
   scpData, scpRange, setScpRange,
@@ -509,7 +509,7 @@ function ScpHistorySection({
     );
   };
 
-  // Build combined chart data with mobile downsampling
+  // Build combined chart data
   const chartData = useMemo(() => {
     const dateMap = new Map<string, any>();
     const cutoff = scpRange === Infinity ? null : new Date();
@@ -541,12 +541,17 @@ function ScpHistorySection({
       a.date.localeCompare(b.date)
     );
 
-    // Downsample on mobile to prevent memory crashes (keep max ~200 points)
-    const isMobile = typeof window !== "undefined" && window.innerWidth < 768;
-    const MAX_POINTS = isMobile ? 150 : 600;
+    // Aggressively downsample on mobile to prevent memory crash
+    const isMob = typeof window !== "undefined" && window.innerWidth < 768;
+    const MAX_POINTS = isMob ? 80 : 500;
     if (sorted.length > MAX_POINTS) {
       const step = Math.ceil(sorted.length / MAX_POINTS);
-      sorted = sorted.filter((_, i) => i % step === 0 || i === sorted.length - 1);
+      const downsampled = sorted.filter((_, i) => i % step === 0);
+      // Always keep last point
+      if (downsampled[downsampled.length - 1] !== sorted[sorted.length - 1]) {
+        downsampled.push(sorted[sorted.length - 1]);
+      }
+      sorted = downsampled;
     }
 
     return sorted;
