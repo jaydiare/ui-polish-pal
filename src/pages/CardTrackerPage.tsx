@@ -164,6 +164,29 @@ class SectionErrorBoundary extends Component<{ label: string; children: ReactNod
   }
 }
 
+/* ── Lazy Section: only renders children when scrolled near viewport ── */
+function LazySection({ children, fallbackHeight = 200 }: { children: ReactNode; fallbackHeight?: number }) {
+  const ref = useRef<HTMLDivElement>(null);
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+    const obs = new IntersectionObserver(
+      ([entry]) => { if (entry.isIntersecting) { setVisible(true); obs.disconnect(); } },
+      { rootMargin: "300px" }
+    );
+    obs.observe(el);
+    return () => obs.disconnect();
+  }, []);
+
+  return (
+    <div ref={ref}>
+      {visible ? children : <div style={{ height: fallbackHeight }} className="flex items-center justify-center text-muted-foreground text-xs">Scroll to load…</div>}
+    </div>
+  );
+}
+
 /* ── Page ── */
 const CardTrackerPage = () => {
   const [data, setData] = useState<TrackerData | null>(null);
