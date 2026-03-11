@@ -247,7 +247,9 @@ function sportAspectCandidates(sportRaw) {
 }
 
 function buildAspectFilter({ aspectMode, aspectValue }) {
+  // eBay Browse API requires categoryId prefix: aspect_filter=categoryId:XXXX,Aspect:{Value}
   const parts = [];
+  parts.push(`categoryId:${CATEGORY_ID}`);
   parts.push(`Graded:{Yes}`);
   parts.push(`Professional Grader:{Professional Sports Authenticator (PSA)}`);
   if (aspectMode === "player" && aspectValue) {
@@ -255,7 +257,7 @@ function buildAspectFilter({ aspectMode, aspectValue }) {
   } else if (aspectMode === "sport" && aspectValue) {
     parts.push(`Sport:{${aspectValue}}`);
   }
-  return parts.length ? parts.join(",") : null;
+  return parts.join(",");
 }
 
 // --- FX ---
@@ -379,7 +381,8 @@ function candidateAspectValuesForName(name) {
 async function validatePlayerAthleteMatch({ token, marketplaceId, name, sport }) {
   const q = buildQuery(name, sport);
   for (const cand of candidateAspectValuesForName(name)) {
-    const aspectFilter = `Player/Athlete:{${cand}}`;
+    // eBay Browse API requires categoryId prefix in aspect_filter
+    const aspectFilter = `categoryId:${CATEGORY_ID},Graded:{Yes},Player/Athlete:{${cand}}`;
     const data = await ebayBrowseSearch({ token, marketplaceId, q, categoryId: CATEGORY_ID, limit: 1, offset: 0, aspectFilter });
     const total = safeNum(data?.total) ?? 0;
     if (total > 0) return { ok: true, aspectValue: cand };
@@ -393,7 +396,8 @@ async function validateSportMatch({ token, marketplaceId, name, sport }) {
   const candidates = sportAspectCandidates(sport);
   for (const s of candidates) {
     if (!s) continue;
-    const aspectFilter = `Sport:{${s}}`;
+    // eBay Browse API requires categoryId prefix in aspect_filter
+    const aspectFilter = `categoryId:${CATEGORY_ID},Graded:{Yes},Sport:{${s}}`;
     const data = await ebayBrowseSearch({ token, marketplaceId, q, categoryId: CATEGORY_ID, limit: 1, offset: 0, aspectFilter });
     const total = safeNum(data?.total) ?? 0;
     if (total > 0) return { ok: true, sportAspectValue: s };

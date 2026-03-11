@@ -394,7 +394,9 @@ function sportAspectCandidates(sportRaw) {
 // causing 0 results. Instead, rely on isGradedListing() + ungradedPassesConditionPolicy()
 // post-hoc filters to exclude graded cards and enforce condition quality.
 function buildAspectFilter({ aspectMode, aspectValue }) {
+  // eBay Browse API requires categoryId prefix: aspect_filter=categoryId:XXXX,Aspect:{Value}
   const parts = [];
+  parts.push(`categoryId:${CATEGORY_ID}`);
 
   if (aspectMode === "player" && aspectValue) {
     parts.push(`Player/Athlete:{${aspectValue}}`);
@@ -402,7 +404,7 @@ function buildAspectFilter({ aspectMode, aspectValue }) {
     parts.push(`Sport:{${aspectValue}}`);
   }
 
-  return parts.length ? parts.join(",") : null;
+  return parts.length > 1 ? parts.join(",") : null;
 }
 
 // --- FX (Normalize ANY currency -> USD) ---
@@ -565,7 +567,8 @@ async function validatePlayerAthleteMatch({ token, marketplaceId, name, sport })
   const q = buildQuery(name, sport);
 
   for (const cand of candidateAspectValuesForName(name)) {
-    const aspectFilter = `Player/Athlete:{${cand}}`;
+    // eBay Browse API requires categoryId prefix in aspect_filter
+    const aspectFilter = `categoryId:${CATEGORY_ID},Player/Athlete:{${cand}}`;
     const data = await ebayBrowseSearch({
       token,
       marketplaceId,
@@ -592,7 +595,8 @@ async function validateSportMatch({ token, marketplaceId, name, sport }) {
   for (const s of candidates) {
     if (!s) continue;
 
-    const aspectFilter = `Sport:{${s}}`;
+    // eBay Browse API requires categoryId prefix in aspect_filter
+    const aspectFilter = `categoryId:${CATEGORY_ID},Sport:{${s}}`;
     const data = await ebayBrowseSearch({
       token,
       marketplaceId,
