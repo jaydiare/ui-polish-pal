@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-11T19:13:25.448Z",
+    "updatedAt": "2026-03-11T20:54:46.215Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA-only title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 240,
-      "endIdx": 250,
+      "startIdx": 250,
+      "endIdx": 260,
       "totalAthletes": 450
     },
     "maxPages": 4,
@@ -3596,12 +3596,12 @@
   },
   "Livan Soto": {
     "keyword": "Livan Soto Baseball PSA",
-    "nScraped": 244,
-    "nSoldUsed": 4,
-    "avg": 5.5,
-    "taguchiSold": 5.5,
-    "medianSold": 5.5,
-    "marketStabilityCV": 0,
+    "nScraped": 248,
+    "nSoldUsed": 8,
+    "avg": 6.004999999999999,
+    "taguchiSold": 6.004999999999999,
+    "medianSold": 6.005,
+    "marketStabilityCV": 0.08990303225030763,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
@@ -3633,18 +3633,6 @@
   "Luis Alexander Basabe": {
     "keyword": "Luis Alexander Basabe Baseball PSA",
     "nScraped": 240,
-    "nSoldUsed": 4,
-    "avg": 3,
-    "taguchiSold": 3,
-    "medianSold": 3,
-    "marketStabilityCV": 0,
-    "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
-  },
-  "Luis Aparicio": {
-    "keyword": "Luis Aparicio Baseball PSA",
-    "nScraped": 0,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -3653,6 +3641,18 @@
     "currency": "USD",
     "originalCurrencyExample": null,
     "fxRateUsed": null
+  },
+  "Luis Aparicio": {
+    "keyword": "Luis Aparicio Baseball PSA",
+    "nScraped": 60,
+    "nSoldUsed": 36,
+    "avg": 64.53083333333333,
+    "taguchiSold": 64.53083333333333,
+    "medianSold": 60.93,
+    "marketStabilityCV": 0.22310893339687332,
+    "currency": "USD",
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
   },
   "Luis Aponte": {
     "keyword": "Luis Aponte Baseball PSA",
