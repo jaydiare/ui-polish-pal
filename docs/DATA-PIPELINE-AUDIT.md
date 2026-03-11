@@ -102,10 +102,12 @@ This ensures the UI always displays graded prices when any graded data source is
 **Query construction:**
 ```
 q = "{name} {sport} card"
-aspect_filter = Player/Athlete or Sport aspect (NO Condition Type filter)
+aspect_filter = "categoryId:261328,Player/Athlete:{name}" or "categoryId:261328,Sport:{sport}"
 filter = "buyingOptions:{FIXED_PRICE}"
 category_ids = "261328" (Trading Card Singles)
 ```
+
+> **Important:** The eBay Browse API requires the `categoryId:XXXX` prefix as the first element of the `aspect_filter` parameter. Without it, aspect filters are silently ignored. See Bug 8.17.
 
 **Filtering pipeline:**
 1. **Post-fetch graded detection:** Skip if `isGradedListing()` returns true (tight regex, see §5.1)
