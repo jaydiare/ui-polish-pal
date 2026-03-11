@@ -686,6 +686,34 @@ Additionally, grades 1–3 are indistinguishable from card numbers in listings, 
 
 This makes it immediately visible in GitHub Actions logs when filters are too aggressive, preventing silent data loss.
 
+### 8.17 (March 11, 2026) Missing `categoryId:` Prefix in `aspect_filter` — Graded Filters Silently Ignored
+
+**Problem:** Both `graded-update-ebay-avg.js` and `update-ebay-avg.js` constructed `aspect_filter` values without the required `categoryId:261328` prefix. The eBay Browse API documentation specifies that `aspect_filter` must begin with `categoryId:XXXX`:
+
+```
+// eBay required format:
+aspect_filter=categoryId:261328,Graded:{Yes},Player/Athlete:{name}
+
+// What our scripts were sending:
+aspect_filter=Graded:{Yes},Player/Athlete:{name}
+```
+
+Without the prefix, eBay **silently ignored** all aspect filters — `Graded:{Yes}`, `Professional Grader:{PSA}`, `Player/Athlete`, and `Sport` — and returned unfiltered results across all card types.
+
+**Impact (graded script):** The `Graded:{Yes}` and `Professional Grader:{PSA}` filters were never applied. The API returned a mix of raw and graded listings. Since raw cards ($2-5) vastly outnumber PSA graded slabs ($50+), the Taguchi mean was dominated by raw prices. Result: graded listed prices showed $2-3 instead of $50+ for athletes like Jackson Chourio, Jose Altuve, and Salvador Perez.
+
+**Impact (raw script):** The `Player/Athlete` and `Sport` aspect filters were also silently ignored. The raw script still produced reasonable results because it relies heavily on post-fetch filtering (`isGradedListing()`, name matching, condition policy). However, without working aspect filters, the API returned broader result sets than intended.
+
+**Impact (validation functions):** `validatePlayerAthleteMatch()` and `validateSportMatch()` in both scripts also omitted the `categoryId:` prefix. Validation always succeeded because it was searching unfiltered results, masking cases where eBay didn't recognize an athlete's name as a valid `Player/Athlete` aspect value.
+
+**Fix:** Added `categoryId:${CATEGORY_ID}` as the first element of all `aspect_filter` values in both scripts:
+- `buildAspectFilter()` — now starts with `categoryId:261328`
+- `validatePlayerAthleteMatch()` — aspect filter includes `categoryId:261328`
+- `validateSportMatch()` — aspect filter includes `categoryId:261328`
+- Graded script validation also includes `Graded:{Yes}` to validate against graded inventory specifically
+
+**Verification:** Re-run "Update eBay graded averages" for a single athlete (e.g., `Jackson Chourio`) and confirm graded listed prices are $50+ instead of $2-3.
+
 ---
 
 ## Lessons Learned & Anti-Patterns
@@ -709,6 +737,10 @@ When a pipeline filters data through multiple stages, add logging at each stage 
 ### L5: Isolate base prices between raw and graded pipelines
 
 Price comparison data (base prices for index calculations) must be stored in separate files per data category. Sharing a single base price file between raw and graded pipelines leads to cross-contamination that silently corrupts index calculations.
+
+### L6: Always include `categoryId:` prefix in eBay Browse API `aspect_filter`
+
+The eBay Browse API **silently ignores** `aspect_filter` values that don't start with `categoryId:XXXX`. The API returns unfiltered results without any error or warning. Always format as: `aspect_filter=categoryId:261328,AspectName:{Value}`. This is required even though `category_ids` is also set as a separate query parameter — the category must appear in both places.
 
 ---
 
