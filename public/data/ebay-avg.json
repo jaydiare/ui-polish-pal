@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-12T13:56:14.891Z",
+    "updatedAt": "2026-03-12T23:59:38.002Z",
     "minSampleSize": 4,
     "marketplaces": [
       "EBAY_US",
@@ -613,10 +613,8 @@
       },
       {
         "date": "2026-03-12",
-        "Baseball": 561.6,
-        "Soccer": 241.6,
-        "Basketball": 1742.1,
-        "All": 547.9
+        "Baseball": 0,
+        "All": 0
       }
     ]
   },
@@ -25324,5 +25322,50 @@
     "currency": "USD",
     "basePriceUSD": 110,
     "indexLevel": 100
+  },
+  "Dave Concepcion": {
+    "match": {
+      "mode": "player",
+      "value": "Concepcion David Dave Baseball",
+      "validatedOn": "EBAY_CA"
+    },
+    "marketplaces": {
+      "EBAY_US": {
+        "aspectMode": "player",
+        "aspectValue": "Concepcion David Dave Baseball",
+        "avgListing": null,
+        "taguchiListing": null,
+        "marketStabilityCV": null,
+        "avgDaysOnMarket": null,
+        "nListing": 0,
+        "nDaysOnMarket": 0,
+        "currency": "USD",
+        "originalCurrency": null,
+        "fxRateUsed": null
+      },
+      "EBAY_CA": {
+        "aspectMode": "player",
+        "aspectValue": "Concepcion David Dave Baseball",
+        "avgListing": null,
+        "taguchiListing": null,
+        "marketStabilityCV": null,
+        "avgDaysOnMarket": null,
+        "nListing": 0,
+        "nDaysOnMarket": 0,
+        "currency": "USD",
+        "originalCurrency": null,
+        "fxRateUsed": null
+      }
+    },
+    "avg": null,
+    "n": 0,
+    "avgListing": null,
+    "taguchiListing": null,
+    "marketStabilityCV": null,
+    "avgDaysOnMarket": null,
+    "nListing": 0,
+    "currency": "USD",
+    "basePriceUSD": null,
+    "indexLevel": null
   }
 }
