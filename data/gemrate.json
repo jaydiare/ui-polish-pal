@@ -1,13 +1,13 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-12T07:06:35.449234+00:00",
+    "updatedAt": "2026-03-12T08:55:25.743696+00:00",
     "athleteCount": 451,
     "graders": [
       "PSA"
     ],
     "batchInfo": {
-      "startIdx": 240,
-      "endIdx": 260,
+      "startIdx": 260,
+      "endIdx": 280,
       "totalAthletes": 568
     }
   },
@@ -3906,16 +3906,16 @@
       "graders": {
         "PSA": {
           "cards": 106,
-          "gems": 173,
-          "grades": 296,
-          "gemRate": 58.0
+          "gems": 177,
+          "grades": 300,
+          "gemRate": 59.0
         }
       },
       "totals": {
         "cards": 106,
-        "gems": 173,
-        "grades": 296,
-        "gemRate": 58.0
+        "gems": 177,
+        "grades": 300,
+        "gemRate": 59.0
       }
     },
     "Jose Pirela": {
