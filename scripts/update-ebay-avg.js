@@ -1033,15 +1033,22 @@ async function main() {
 
       // --- Step 5f: Compute base-100 index level (first observation = base price) ---
       const robustPrice = rec.taguchiListing;
+      // SANITY CHECK: flag raw base prices above $150 as potentially contaminated graded prices
+      const RAW_BASE_PRICE_CEILING = 150;
+
       if (robustPrice != null && Number.isFinite(robustPrice) && robustPrice > 0) {
         // FIX #3: basePrices now loaded from dedicated file — set on first observation only
         if (!basePrices[name] || !Number.isFinite(basePrices[name]) || basePrices[name] <= 0) {
-          basePrices[name] = robustPrice;
-          // FIX #3: persist immediately so a crash mid-run doesn't lose new base prices
-          saveBasePrices(basePrices);
+          if (robustPrice > RAW_BASE_PRICE_CEILING) {
+            console.warn(`  ⚠️  SANITY CHECK: ${name} raw base price $${robustPrice.toFixed(2)} exceeds $${RAW_BASE_PRICE_CEILING} ceiling — likely graded contamination. Skipping base price write.`);
+          } else {
+            basePrices[name] = robustPrice;
+            // FIX #3: persist immediately so a crash mid-run doesn't lose new base prices
+            saveBasePrices(basePrices);
+          }
         }
-        rec.basePriceUSD = basePrices[name];
-        rec.indexLevel = 100 * (robustPrice / basePrices[name]);
+        rec.basePriceUSD = basePrices[name] ?? null;
+        rec.indexLevel = basePrices[name] ? 100 * (robustPrice / basePrices[name]) : null;
       } else {
         rec.basePriceUSD = basePrices[name] ?? null;
         rec.indexLevel = null;
