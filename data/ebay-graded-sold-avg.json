@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-12T20:57:25.284Z",
+    "updatedAt": "2026-03-12T22:49:14.722Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA-only title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 360,
-      "endIdx": 370,
+      "startIdx": 370,
+      "endIdx": 380,
       "totalAthletes": 450
     },
     "maxPages": 4,
@@ -5155,7 +5155,7 @@
   },
   "Rougned Odor": {
     "keyword": "Rougned Odor Baseball PSA",
-    "nScraped": 242,
+    "nScraped": 246,
     "nSoldUsed": 16,
     "avg": 13.275000000000004,
     "taguchiSold": 13.275000000000004,
@@ -5180,11 +5180,11 @@
   "Salvador Perez": {
     "keyword": "Salvador Perez Baseball PSA",
     "nScraped": 240,
-    "nSoldUsed": 64,
-    "avg": 65.32015625000004,
-    "taguchiSold": 65.32015625000004,
-    "medianSold": 64.995,
-    "marketStabilityCV": 0.21905095430448043,
+    "nSoldUsed": 68,
+    "avg": 65.15794117647063,
+    "taguchiSold": 65.15794117647063,
+    "medianSold": 62.495,
+    "marketStabilityCV": 0.21954643453430586,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
@@ -5239,8 +5239,8 @@
   },
   "Simon Muzziotti": {
     "keyword": "Simon Muzziotti Baseball PSA",
-    "nScraped": 120,
-    "nSoldUsed": 6,
+    "nScraped": 241,
+    "nSoldUsed": 12,
     "avg": 9.44,
     "taguchiSold": 9.44,
     "medianSold": 9.44,
@@ -5251,7 +5251,7 @@
   },
   "Steve Torrealba": {
     "keyword": "Steve Torrealba Baseball PSA",
-    "nScraped": 0,
+    "nScraped": 60,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -5263,15 +5263,15 @@
   },
   "Thairo Estrada": {
     "keyword": "Thairo Estrada Baseball PSA",
-    "nScraped": 0,
-    "nSoldUsed": 0,
-    "avg": null,
-    "taguchiSold": null,
-    "medianSold": null,
-    "marketStabilityCV": null,
+    "nScraped": 121,
+    "nSoldUsed": 8,
+    "avg": 19.995,
+    "taguchiSold": 19.995,
+    "medianSold": 19.994999999999997,
+    "marketStabilityCV": 0.5343888197878832,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
   },
   "Toby Hernandez": {
     "keyword": "Toby Hernandez Baseball",
