@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-12T17:15:24.420Z",
+    "updatedAt": "2026-03-12T19:14:38.569Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA-only title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 340,
-      "endIdx": 350,
+      "startIdx": 350,
+      "endIdx": 360,
       "totalAthletes": 450
     },
     "maxPages": 4,
@@ -4915,7 +4915,7 @@
   },
   "Renyel Pinto": {
     "keyword": "Renyel Pinto Baseball PSA",
-    "nScraped": 10,
+    "nScraped": 11,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -4927,7 +4927,7 @@
   },
   "Ricardo Pinto": {
     "keyword": "Ricardo Pinto Baseball PSA",
-    "nScraped": 50,
+    "nScraped": 56,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
