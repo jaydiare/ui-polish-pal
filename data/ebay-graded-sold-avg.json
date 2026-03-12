@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-12T07:16:03.738Z",
+    "updatedAt": "2026-03-12T09:05:18.620Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA-only title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 290,
-      "endIdx": 300,
+      "startIdx": 300,
+      "endIdx": 310,
       "totalAthletes": 450
     },
     "maxPages": 4,
@@ -4221,17 +4221,17 @@
     "keyword": "Miguel Cabrera Baseball PSA",
     "nScraped": 240,
     "nSoldUsed": 109,
-    "avg": 83.96027522935778,
-    "taguchiSold": 83.96027522935778,
-    "medianSold": 87.85,
-    "marketStabilityCV": 0.3208772928826479,
+    "avg": 84.2635779816514,
+    "taguchiSold": 84.2635779816514,
+    "medianSold": 86.51,
+    "marketStabilityCV": 0.28826043293745107,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
   },
   "Miguel Cairo": {
     "keyword": "Miguel Cairo Baseball PSA",
-    "nScraped": 61,
+    "nScraped": 62,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -4255,12 +4255,12 @@
   },
   "Miguel Gonzalez": {
     "keyword": "Miguel Gonzalez Baseball PSA",
-    "nScraped": 244,
-    "nSoldUsed": 8,
-    "avg": 180.885,
-    "taguchiSold": 180.885,
-    "medianSold": 180.885,
-    "marketStabilityCV": 0.5607780178314484,
+    "nScraped": 240,
+    "nSoldUsed": 4,
+    "avg": 275.77,
+    "taguchiSold": 275.77,
+    "medianSold": 275.77,
+    "marketStabilityCV": 0,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
@@ -4291,7 +4291,7 @@
   },
   "Miguel Rojas": {
     "keyword": "Miguel Rojas Baseball PSA",
-    "nScraped": 122,
+    "nScraped": 124,
     "nSoldUsed": 6,
     "avg": 175.5,
     "taguchiSold": 175.5,
