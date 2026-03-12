@@ -3,6 +3,7 @@ import SEOHead from "@/components/SEOHead";
 import VzlaNavbar from "@/components/VzlaNavbar";
 import VzlaHero from "@/components/VzlaHero";
 import VzlaIndexCards from "@/components/VzlaIndexCards";
+import VzlaSideBanner from "@/components/VzlaSideBanner";
 
 const VzlaHowToMoney = lazy(() => import("@/components/VzlaHowToMoney"));
 const VzlaTopDeals = lazy(() => import("@/components/VzlaTopDeals"));
