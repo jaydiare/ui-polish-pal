@@ -1,13 +1,13 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-12T08:55:25.743696+00:00",
+    "updatedAt": "2026-03-12T10:50:37.582053+00:00",
     "athleteCount": 451,
     "graders": [
       "PSA"
     ],
     "batchInfo": {
-      "startIdx": 260,
-      "endIdx": 280,
+      "startIdx": 280,
+      "endIdx": 300,
       "totalAthletes": 568
     }
   },
@@ -4211,16 +4211,16 @@
       "sport": "Baseball",
       "graders": {
         "PSA": {
-          "cards": 598,
+          "cards": 599,
           "gems": 1653,
-          "grades": 2819,
+          "grades": 2821,
           "gemRate": 59.0
         }
       },
       "totals": {
-        "cards": 598,
+        "cards": 599,
         "gems": 1653,
-        "grades": 2819,
+        "grades": 2821,
         "gemRate": 59.0
       }
     },
@@ -4229,17 +4229,17 @@
       "sport": "Baseball",
       "graders": {
         "PSA": {
-          "cards": 60,
-          "gems": 28,
-          "grades": 87,
-          "gemRate": 32.0
+          "cards": 61,
+          "gems": 29,
+          "grades": 88,
+          "gemRate": 33.0
         }
       },
       "totals": {
-        "cards": 60,
-        "gems": 28,
-        "grades": 87,
-        "gemRate": 32.0
+        "cards": 61,
+        "gems": 29,
+        "grades": 88,
+        "gemRate": 33.0
       }
     },
     "Kelvim Escobar": {
@@ -4302,15 +4302,15 @@
       "graders": {
         "PSA": {
           "cards": 226,
-          "gems": 811,
-          "grades": 1517,
+          "gems": 812,
+          "grades": 1518,
           "gemRate": 53.0
         }
       },
       "totals": {
         "cards": 226,
-        "gems": 811,
-        "grades": 1517,
+        "gems": 812,
+        "grades": 1518,
         "gemRate": 53.0
       }
     },
@@ -4338,16 +4338,16 @@
       "graders": {
         "PSA": {
           "cards": 22,
-          "gems": 17,
-          "grades": 29,
-          "gemRate": 59.0
+          "gems": 18,
+          "grades": 30,
+          "gemRate": 60.0
         }
       },
       "totals": {
         "cards": 22,
-        "gems": 17,
-        "grades": 29,
-        "gemRate": 59.0
+        "gems": 18,
+        "grades": 30,
+        "gemRate": 60.0
       }
     },
     "Les Straker": {
