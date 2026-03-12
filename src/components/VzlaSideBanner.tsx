@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 
 const EBAY_BASE = "https://www.ebay.ca/sch/i.html?_nkw=trading+cards&mkevt=1&mkcid=1&mkrid=706-53473-19255-0&toolid=10001";
 const CARDHEDGE = "https://www.cardhedger.com?via=vzlaelite";
@@ -23,6 +23,32 @@ const BANNERS = [
   },
 ];
 
+const AdSenseBlock = () => {
+  const pushed = useRef(false);
+
+  useEffect(() => {
+    if (pushed.current) return;
+    try {
+      ((window as any).adsbygoogle = (window as any).adsbygoogle || []).push({});
+      pushed.current = true;
+    } catch {
+      // adsbygoogle not loaded yet
+    }
+  }, []);
+
+  return (
+    <div className="w-full flex justify-center">
+      <ins
+        className="adsbygoogle"
+        style={{ display: "block" }}
+        data-ad-client="ca-pub-1118000382291516"
+        data-ad-slot="3005539188"
+        data-ad-format="autorelaxed"
+      />
+    </div>
+  );
+};
+
 const VzlaSideBanner = () => {
   const [topBanner, setTopBanner] = useState(BANNERS[0]);
 
@@ -31,7 +57,6 @@ const VzlaSideBanner = () => {
       .then((r) => r.ok ? r.json() : null)
       .then((data: EpnData | null) => {
         if (!data?.bestBanner) return;
-        // If the best performing placement is sidebar-ebay-alt, swap to that image
         const match = BANNERS.find((b) => b.id === data.bestBanner);
         if (match) setTopBanner(match);
       })
@@ -42,6 +67,7 @@ const VzlaSideBanner = () => {
 
   return (
     <aside className="side-banner">
+      <AdSenseBlock />
       <a href={CARDHEDGE} target="_blank" rel="noopener noreferrer" title="Card Hedge Sports & Trading Card Analytics">
         <img src="./assets/cardhedge.jpg" alt="Card Hedge Sports & Trading Card Analytics" />
       </a>
