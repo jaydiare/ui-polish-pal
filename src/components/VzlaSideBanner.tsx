@@ -25,26 +25,41 @@ const BANNERS = [
 
 const AdSenseBlock = () => {
   const pushed = useRef(false);
+  const containerRef = useRef<HTMLDivElement>(null);
+  const [inView, setInView] = useState(false);
 
   useEffect(() => {
-    if (pushed.current) return;
+    const el = containerRef.current;
+    if (!el) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => { if (entry.isIntersecting) { setInView(true); observer.disconnect(); } },
+      { rootMargin: "200px" }
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
+
+  useEffect(() => {
+    if (!inView || pushed.current) return;
     try {
       ((window as any).adsbygoogle = (window as any).adsbygoogle || []).push({});
       pushed.current = true;
     } catch {
       // adsbygoogle not loaded yet
     }
-  }, []);
+  }, [inView]);
 
   return (
-    <div className="w-full flex justify-center">
-      <ins
-        className="adsbygoogle"
-        style={{ display: "block" }}
-        data-ad-client="ca-pub-1118000382291516"
-        data-ad-slot="3005539188"
-        data-ad-format="autorelaxed"
-      />
+    <div ref={containerRef} className="w-full flex justify-center">
+      {inView && (
+        <ins
+          className="adsbygoogle"
+          style={{ display: "block" }}
+          data-ad-client="ca-pub-1118000382291516"
+          data-ad-slot="3005539188"
+          data-ad-format="autorelaxed"
+        />
+      )}
     </div>
   );
 };
@@ -78,27 +93,21 @@ const VzlaSideBanner = () => {
       .catch(() => {});
   }, []);
 
-  // Pick 2 of 3 affiliates randomly each mount (eBay + 1 of CardHedge/BCW)
-  const [selectedAffiliates] = useState(() => {
-    const shuffled = [...AFFILIATES].sort(() => Math.random() - 0.5);
-    const ebayUrl = `${EBAY_BASE}&campid=${CAMPAIGN_ID}&customid=${topBanner.id}`;
-    const ebayAffiliate = {
-      id: topBanner.id,
-      href: ebayUrl,
-      img: topBanner.img,
-      alt: topBanner.alt,
-    };
-    return [ebayAffiliate, shuffled[0]];
-  });
+  const ebayUrl = `${EBAY_BASE}&campid=${CAMPAIGN_ID}&customid=${topBanner.id}`;
 
   return (
     <aside className="side-banner">
-      <AdSenseBlock />
-      {selectedAffiliates.map((a) => (
+      {/* Affiliate banners — always show all 3 */}
+      <a href={ebayUrl} target="_blank" rel="noopener noreferrer" title={topBanner.alt}>
+        <img src={topBanner.img} alt={topBanner.alt} />
+      </a>
+      {AFFILIATES.map((a) => (
         <a key={a.id} href={a.href} target="_blank" rel="noopener noreferrer" title={a.alt}>
           <img src={a.img} alt={a.alt} />
         </a>
       ))}
+      {/* AdSense loads only when scrolled near — keeps ad density low above the fold */}
+      <AdSenseBlock />
     </aside>
   );
 };
