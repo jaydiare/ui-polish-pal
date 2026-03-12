@@ -127,6 +127,39 @@ const BlogPost = () => {
           </Suspense>
         ) : post.type === "roster" && post.playerNames ? (
           <RosterSection playerNames={post.playerNames} excerpt={post.excerpt} />
+        ) : post.type === "ebay-cards" && post.ebayCards ? (
+          <section className="mb-12">
+            <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+              {post.ebayCards.map((card, i) => (
+                <motion.a
+                  key={i}
+                  href={card.ebayUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="glass-panel p-4 no-underline flex flex-col gap-3 hover:border-vzla-yellow/50 transition-colors group"
+                  initial={{ opacity: 0, y: 12 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.3, delay: Math.min(i * 0.06, 0.6) }}
+                >
+                  <img
+                    src={card.imageUrl}
+                    alt={card.title}
+                    className="w-full h-56 object-contain rounded-lg bg-secondary"
+                    loading="lazy"
+                  />
+                  <h3 className="text-sm font-semibold text-foreground leading-snug group-hover:text-vzla-yellow transition-colors">
+                    {card.title}
+                  </h3>
+                  {card.price && (
+                    <span className="text-vzla-yellow font-display font-bold text-lg">{card.price}</span>
+                  )}
+                  <span className="text-xs text-muted-foreground group-hover:text-vzla-yellow transition-colors">
+                    View on eBay ↗
+                  </span>
+                </motion.a>
+              ))}
+            </div>
+          </section>
         ) : (
           <div className="max-w-3xl">
             {post.sections.map((section, si) => (

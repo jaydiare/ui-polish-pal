@@ -17,6 +17,13 @@ export interface BlogTextSection {
   paragraphs: string[];
 }
 
+export interface EbayCard {
+  title: string;
+  imageUrl: string;
+  ebayUrl: string;
+  price?: string;
+}
+
 export interface BlogPost {
   slug: string;
   title: string;
@@ -26,6 +33,7 @@ export interface BlogPost {
   coverImage: string;
   sections: BlogSection[];
   textSections?: BlogTextSection[];
-  type?: "ranked" | "roster" | "data-table";
+  type?: "ranked" | "roster" | "data-table" | "ebay-cards";
   playerNames?: string[];
+  ebayCards?: EbayCard[];
 }
