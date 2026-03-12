@@ -164,10 +164,11 @@ const VzlaNavbar = () => {
         <div className="fixed inset-0 z-[10000] bg-background/95 backdrop-blur-xl p-5">
           <div className="flex items-center justify-between">
             <Link to="/" className="flex items-center gap-3 no-underline" onClick={closeMobileInstant}>
-              <div className="w-8 h-8 rounded-lg cta-flag flex items-center justify-center">
-                <span className="font-display font-bold text-xs text-white">VZ</span>
-              </div>
-              <span className="font-display font-bold text-sm text-foreground">VZLA SPORTS</span>
+              <img 
+                src={logoImage} 
+                alt="VZLA Sports Elite" 
+                className="h-8 w-auto rounded-lg"
+              />
             </Link>
             <button
               className="w-10 h-10 rounded-lg border border-border bg-secondary text-foreground flex items-center justify-center cursor-pointer"
