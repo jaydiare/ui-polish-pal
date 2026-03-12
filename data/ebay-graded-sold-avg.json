@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-11T22:46:16.841Z",
+    "updatedAt": "2026-03-12T03:15:12.810Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA-only title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 260,
-      "endIdx": 270,
+      "startIdx": 270,
+      "endIdx": 280,
       "totalAthletes": 450
     },
     "maxPages": 4,
@@ -3824,7 +3824,7 @@
   },
   "Luis Perales": {
     "keyword": "Luis Perales Baseball PSA",
-    "nScraped": 252,
+    "nScraped": 257,
     "nSoldUsed": 20,
     "avg": 105,
     "taguchiSold": 105,
@@ -3836,15 +3836,14 @@
   },
   "Luis Rengifo": {
     "keyword": "Luis Rengifo Baseball PSA",
-    "nScraped": 240,
-    "nSoldUsed": 12,
-    "avg": 109.99,
-    "taguchiSold": 109.99,
-    "medianSold": 109.99,
-    "marketStabilityCV": 0,
+    "nScraped": 120,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "error": "eBay page fetch failed (503) after 4 attempts"
   },
   "Luis Rivas": {
     "keyword": "Luis Rivas Baseball PSA",
@@ -3860,7 +3859,7 @@
   },
   "Luis Rodriguez": {
     "keyword": "Luis Rodriguez Baseball PSA",
-    "nScraped": 309,
+    "nScraped": 288,
     "nSoldUsed": 72,
     "avg": 16.273333333333337,
     "taguchiSold": 16.273333333333337,
@@ -3872,7 +3871,7 @@
   },
   "Luis Salazar": {
     "keyword": "Luis Salazar Baseball PSA",
-    "nScraped": 240,
+    "nScraped": 247,
     "nSoldUsed": 16,
     "avg": 37,
     "taguchiSold": 37,
@@ -3884,7 +3883,7 @@
   },
   "Luis Sanchez": {
     "keyword": "Luis Sanchez Baseball PSA",
-    "nScraped": 0,
+    "nScraped": 121,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
