@@ -3,6 +3,7 @@ import SEOHead from "@/components/SEOHead";
 import VzlaNavbar from "@/components/VzlaNavbar";
 import VzlaHero from "@/components/VzlaHero";
 import VzlaIndexCards from "@/components/VzlaIndexCards";
+import VzlaSideBanner from "@/components/VzlaSideBanner";
 
 const VzlaHowToMoney = lazy(() => import("@/components/VzlaHowToMoney"));
 const VzlaTopDeals = lazy(() => import("@/components/VzlaTopDeals"));
@@ -49,6 +50,7 @@ const Index = () => {
 
   return (
     <div id="top" className="min-h-screen">
+      <VzlaSideBanner />
       <SEOHead
         title="Venezuelan Athletes Sports Cards – Daily eBay Price Index | VZLA Sports Elite"
         description="Track 550+ Venezuelan athletes' trading card prices updated daily. eBay market averages, stability scores, sold comps, and investment signals for baseball, soccer, and more."
