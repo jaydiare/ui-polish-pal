@@ -6,7 +6,7 @@
       "us200-torres": "2018 Topps Update #US200 Gleyber Torres RC"
     },
     "createdAt": "2026-03-09T00:00:00Z",
-    "lastUpdated": "2026-03-11T14:44:21.603Z"
+    "lastUpdated": "2026-03-12T14:45:26.159Z"
   },
   "us250-acuna": {
     "name": "Ronald Acuna Jr.",
@@ -611,6 +611,205 @@
             }
           }
         }
+      },
+      {
+        "date": "2026-03-12",
+        "listed": {
+          "raw": {
+            "taguchiMean": 21.62,
+            "median": 21.05,
+            "cv": 0.1542,
+            "sn": 16.24,
+            "n": 182,
+            "min": 6,
+            "max": 5000
+          },
+          "graded": {
+            "overall": {
+              "taguchiMean": 51.54,
+              "median": 50.01,
+              "cv": 0.1169,
+              "sn": 18.65,
+              "n": 255,
+              "min": 10.99,
+              "max": 6500
+            },
+            "byGrade": {
+              "5": {
+                "taguchiMean": null,
+                "median": 18.653770147935525,
+                "cv": null,
+                "sn": null,
+                "n": 2,
+                "min": 18.65,
+                "max": 18.66
+              },
+              "7": {
+                "taguchiMean": 25.01,
+                "median": 25.01,
+                "cv": 0,
+                "sn": null,
+                "n": 3,
+                "min": 25,
+                "max": 25.54
+              },
+              "8": {
+                "taguchiMean": 23,
+                "median": 22.99,
+                "cv": 0.0451,
+                "sn": 26.92,
+                "n": 16,
+                "min": 10.99,
+                "max": 199.04
+              },
+              "9": {
+                "taguchiMean": 31.27,
+                "median": 30.01,
+                "cv": 0.0468,
+                "sn": 26.59,
+                "n": 93,
+                "min": 19.95,
+                "max": 1899.99
+              },
+              "10": {
+                "taguchiMean": 68.46,
+                "median": 60.03,
+                "cv": 0.1467,
+                "sn": 16.67,
+                "n": 136,
+                "min": 40,
+                "max": 6500
+              },
+              "8.5": {
+                "taguchiMean": 24.4,
+                "median": 24.4,
+                "cv": 0,
+                "sn": null,
+                "n": 5,
+                "min": 17.49,
+                "max": 80
+              }
+            }
+          }
+        },
+        "sold": {
+          "raw": {
+            "taguchiMean": 22.08,
+            "median": 16,
+            "cv": 0.515,
+            "sn": 5.76,
+            "n": 238,
+            "min": 3.62,
+            "max": 1600.7
+          },
+          "graded": {
+            "overall": {
+              "taguchiMean": 41.46,
+              "median": 40.01,
+              "cv": 0.0393,
+              "sn": 28.11,
+              "n": 130,
+              "min": 0.99,
+              "max": 5000
+            },
+            "byGrade": {
+              "9": {
+                "taguchiMean": 21.39,
+                "median": 19.99,
+                "cv": 0.1457,
+                "sn": 16.73,
+                "n": 29,
+                "min": 0.99,
+                "max": 160.07
+              },
+              "10": {
+                "taguchiMean": 42.47,
+                "median": 42.02,
+                "cv": 0.0564,
+                "sn": 24.97,
+                "n": 101,
+                "min": 24.5,
+                "max": 5000
+              }
+            }
+          }
+        },
+        "raw": {
+          "taguchiMean": 21.62,
+          "median": 21.05,
+          "cv": 0.1542,
+          "sn": 16.24,
+          "n": 182,
+          "min": 6,
+          "max": 5000
+        },
+        "graded": {
+          "overall": {
+            "taguchiMean": 51.54,
+            "median": 50.01,
+            "cv": 0.1169,
+            "sn": 18.65,
+            "n": 255,
+            "min": 10.99,
+            "max": 6500
+          },
+          "byGrade": {
+            "5": {
+              "taguchiMean": null,
+              "median": 18.653770147935525,
+              "cv": null,
+              "sn": null,
+              "n": 2,
+              "min": 18.65,
+              "max": 18.66
+            },
+            "7": {
+              "taguchiMean": 25.01,
+              "median": 25.01,
+              "cv": 0,
+              "sn": null,
+              "n": 3,
+              "min": 25,
+              "max": 25.54
+            },
+            "8": {
+              "taguchiMean": 23,
+              "median": 22.99,
+              "cv": 0.0451,
+              "sn": 26.92,
+              "n": 16,
+              "min": 10.99,
+              "max": 199.04
+            },
+            "9": {
+              "taguchiMean": 31.27,
+              "median": 30.01,
+              "cv": 0.0468,
+              "sn": 26.59,
+              "n": 93,
+              "min": 19.95,
+              "max": 1899.99
+            },
+            "10": {
+              "taguchiMean": 68.46,
+              "median": 60.03,
+              "cv": 0.1467,
+              "sn": 16.67,
+              "n": 136,
+              "min": 40,
+              "max": 6500
+            },
+            "8.5": {
+              "taguchiMean": 24.4,
+              "median": 24.4,
+              "cv": 0,
+              "sn": null,
+              "n": 5,
+              "min": 17.49,
+              "max": 80
+            }
+          }
+        }
       }
     ]
   },
@@ -1061,6 +1260,142 @@
               "n": 2,
               "min": 22.99,
               "max": 23.01
+            }
+          }
+        }
+      },
+      {
+        "date": "2026-03-12",
+        "listed": {
+          "raw": {
+            "taguchiMean": 5.12,
+            "median": 4.99,
+            "cv": 0.353,
+            "sn": 9.05,
+            "n": 273,
+            "min": 0.99,
+            "max": 200.09
+          },
+          "graded": {
+            "overall": {
+              "taguchiMean": 16.41,
+              "median": 15,
+              "cv": 0.2025,
+              "sn": 13.87,
+              "n": 214,
+              "min": 4.99,
+              "max": 199.99
+            },
+            "byGrade": {
+              "8": {
+                "taguchiMean": 11.99,
+                "median": 11.99,
+                "cv": 0,
+                "sn": null,
+                "n": 5,
+                "min": 7,
+                "max": 20
+              },
+              "9": {
+                "taguchiMean": 12.86,
+                "median": 12,
+                "cv": 0.1398,
+                "sn": 17.09,
+                "n": 89,
+                "min": 4.99,
+                "max": 80.03
+              },
+              "10": {
+                "taguchiMean": 17.74,
+                "median": 18.99,
+                "cv": 0.1349,
+                "sn": 17.4,
+                "n": 118,
+                "min": 5.99,
+                "max": 199.99
+              },
+              "8.5": {
+                "taguchiMean": null,
+                "median": 22.99496320011776,
+                "cv": null,
+                "sn": null,
+                "n": 2,
+                "min": 22.99,
+                "max": 23
+              }
+            }
+          }
+        },
+        "sold": {
+          "raw": {
+            "taguchiMean": 5.87,
+            "median": 5.99,
+            "cv": 0.2612,
+            "sn": 11.66,
+            "n": 87,
+            "min": 0.99,
+            "max": 23.59
+          },
+          "graded": {
+            "overall": null,
+            "byGrade": {}
+          }
+        },
+        "raw": {
+          "taguchiMean": 5.12,
+          "median": 4.99,
+          "cv": 0.353,
+          "sn": 9.05,
+          "n": 273,
+          "min": 0.99,
+          "max": 200.09
+        },
+        "graded": {
+          "overall": {
+            "taguchiMean": 16.41,
+            "median": 15,
+            "cv": 0.2025,
+            "sn": 13.87,
+            "n": 214,
+            "min": 4.99,
+            "max": 199.99
+          },
+          "byGrade": {
+            "8": {
+              "taguchiMean": 11.99,
+              "median": 11.99,
+              "cv": 0,
+              "sn": null,
+              "n": 5,
+              "min": 7,
+              "max": 20
+            },
+            "9": {
+              "taguchiMean": 12.86,
+              "median": 12,
+              "cv": 0.1398,
+              "sn": 17.09,
+              "n": 89,
+              "min": 4.99,
+              "max": 80.03
+            },
+            "10": {
+              "taguchiMean": 17.74,
+              "median": 18.99,
+              "cv": 0.1349,
+              "sn": 17.4,
+              "n": 118,
+              "min": 5.99,
+              "max": 199.99
+            },
+            "8.5": {
+              "taguchiMean": null,
+              "median": 22.99496320011776,
+              "cv": null,
+              "sn": null,
+              "n": 2,
+              "min": 22.99,
+              "max": 23
             }
           }
         }
