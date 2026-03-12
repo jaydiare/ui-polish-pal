@@ -53,17 +53,11 @@ const VzlaNavbar = () => {
     <>
       <nav className="vzla-nav px-6 py-4 flex items-center justify-between relative" aria-label="Main navigation">
         <Link to="/" className="flex items-center gap-3 no-underline select-none group">
-          <div className="w-9 h-9 rounded-lg cta-flag flex items-center justify-center">
-            <span className="font-display font-bold text-xs text-white">VZ</span>
-          </div>
-          <span className="flex flex-col leading-none">
-            <span className="font-display font-bold text-sm tracking-wide text-foreground">
-              VZLA SPORTS
-            </span>
-            <span className="text-[9px] tracking-[0.3em] uppercase text-muted-foreground font-semibold mt-0.5 text-center">
-              ELITE
-            </span>
-          </span>
+          <img 
+            src={logoImage} 
+            alt="VZLA Sports Elite" 
+            className="h-9 w-auto rounded-lg"
+          />
         </Link>
 
         {/* Desktop nav */}
