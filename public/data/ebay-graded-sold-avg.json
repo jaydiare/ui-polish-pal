@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-12T11:03:41.200Z",
+    "updatedAt": "2026-03-12T13:39:28.689Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA-only title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 310,
-      "endIdx": 320,
+      "startIdx": 320,
+      "endIdx": 330,
       "totalAthletes": 450
     },
     "maxPages": 4,
@@ -4507,7 +4507,7 @@
   },
   "Osleivis Basabe": {
     "keyword": "Osleivis Basabe Baseball PSA",
-    "nScraped": 248,
+    "nScraped": 250,
     "nSoldUsed": 8,
     "avg": 10.165,
     "taguchiSold": 10.165,
@@ -4544,11 +4544,11 @@
   "Oswald Peraza": {
     "keyword": "Oswald Peraza Baseball PSA",
     "nScraped": 137,
-    "nSoldUsed": 67,
-    "avg": 12.607164179104489,
-    "taguchiSold": 12.607164179104489,
-    "medianSold": 7,
-    "marketStabilityCV": 0.5121147841337831,
+    "nSoldUsed": 68,
+    "avg": 13.65073529411765,
+    "taguchiSold": 13.65073529411765,
+    "medianSold": 17.615,
+    "marketStabilityCV": 0.4795125339466334,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
@@ -4568,11 +4568,11 @@
   "Oswaldo Cabrera": {
     "keyword": "Oswaldo Cabrera Baseball PSA",
     "nScraped": 228,
-    "nSoldUsed": 112,
-    "avg": 41.66410714285707,
-    "taguchiSold": 41.66410714285707,
+    "nSoldUsed": 109,
+    "avg": 40.97137614678893,
+    "taguchiSold": 40.97137614678893,
     "medianSold": 39.99,
-    "marketStabilityCV": 0.16881164220953662,
+    "marketStabilityCV": 0.1905104247944675,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
