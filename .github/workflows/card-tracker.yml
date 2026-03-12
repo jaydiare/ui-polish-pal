@@ -2,8 +2,8 @@ name: Card Tracker (daily snapshot)
 
 on:
   schedule:
-    # Once daily at 14:00 UTC
-    - cron: "0 14 * * *"
+    # Once a month
+    - cron: "0 10 1 * *" # 1st of every month at 10:00 UTC
   workflow_dispatch: {}
 
 concurrency:
