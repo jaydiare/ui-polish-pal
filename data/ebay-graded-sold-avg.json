@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-12T15:13:37.287Z",
+    "updatedAt": "2026-03-12T17:15:24.420Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA-only title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 330,
-      "endIdx": 340,
+      "startIdx": 340,
+      "endIdx": 350,
       "totalAthletes": 450
     },
     "maxPages": 4,
@@ -4795,7 +4795,7 @@
   },
   "Ramon Hernandez": {
     "keyword": "Ramon Hernandez Baseball PSA",
-    "nScraped": 270,
+    "nScraped": 276,
     "nSoldUsed": 40,
     "avg": 50.49000000000001,
     "taguchiSold": 50.49000000000001,
@@ -4807,7 +4807,7 @@
   },
   "Ramon Ramirez": {
     "keyword": "Ramon Ramirez Baseball PSA",
-    "nScraped": 287,
+    "nScraped": 295,
     "nSoldUsed": 24,
     "avg": 36.50999999999999,
     "taguchiSold": 36.50999999999999,
@@ -4819,7 +4819,7 @@
   },
   "Ranger Suarez": {
     "keyword": "Ranger Suarez Baseball PSA",
-    "nScraped": 260,
+    "nScraped": 274,
     "nSoldUsed": 44,
     "avg": 94.91818181818172,
     "taguchiSold": 94.91818181818172,
@@ -4843,15 +4843,15 @@
   },
   "Ray Monzant": {
     "keyword": "Ray Monzant Baseball PSA",
-    "nScraped": 0,
-    "nSoldUsed": 0,
-    "avg": null,
-    "taguchiSold": null,
-    "medianSold": null,
-    "marketStabilityCV": null,
+    "nScraped": 63,
+    "nSoldUsed": 14,
+    "avg": 22.635714285714283,
+    "taguchiSold": 22.635714285714283,
+    "medianSold": 21.5,
+    "marketStabilityCV": 0.3198129383223155,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
   },
   "Ray Olmedo": {
     "keyword": "Ray Olmedo Baseball PSA",
