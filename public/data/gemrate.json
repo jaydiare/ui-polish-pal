@@ -1,13 +1,13 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-12T17:05:01.958524+00:00",
+    "updatedAt": "2026-03-12T19:03:59.205687+00:00",
     "athleteCount": 452,
     "graders": [
       "PSA"
     ],
     "batchInfo": {
-      "startIdx": 340,
-      "endIdx": 360,
+      "startIdx": 360,
+      "endIdx": 380,
       "totalAthletes": 568
     }
   },
@@ -5381,17 +5381,17 @@
       "sport": "Baseball",
       "graders": {
         "PSA": {
-          "cards": 310,
-          "gems": 1155,
-          "grades": 2117,
-          "gemRate": 55.0
+          "cards": 331,
+          "gems": 1170,
+          "grades": 2154,
+          "gemRate": 54.0
         }
       },
       "totals": {
-        "cards": 310,
-        "gems": 1155,
-        "grades": 2117,
-        "gemRate": 55.0
+        "cards": 331,
+        "gems": 1170,
+        "grades": 2154,
+        "gemRate": 54.0
       }
     },
     "Nivaldo Rodriguez": {
@@ -5399,17 +5399,17 @@
       "sport": "Baseball",
       "graders": {
         "PSA": {
-          "cards": 8,
+          "cards": 9,
           "gems": 5,
-          "grades": 12,
-          "gemRate": 42.0
+          "grades": 13,
+          "gemRate": 38.0
         }
       },
       "totals": {
-        "cards": 8,
+        "cards": 9,
         "gems": 5,
-        "grades": 12,
-        "gemRate": 42.0
+        "grades": 13,
+        "gemRate": 38.0
       }
     },
     "Odubel Herrera": {
@@ -5490,15 +5490,15 @@
       "graders": {
         "PSA": {
           "cards": 572,
-          "gems": 4168,
-          "grades": 8457,
+          "gems": 4171,
+          "grades": 8461,
           "gemRate": 49.0
         }
       },
       "totals": {
         "cards": 572,
-        "gems": 4168,
-        "grades": 8457,
+        "gems": 4171,
+        "grades": 8461,
         "gemRate": 49.0
       }
     },
@@ -5580,15 +5580,15 @@
       "graders": {
         "PSA": {
           "cards": 747,
-          "gems": 1005,
-          "grades": 2423,
+          "gems": 1006,
+          "grades": 2429,
           "gemRate": 41.0
         }
       },
       "totals": {
         "cards": 747,
-        "gems": 1005,
-        "grades": 2423,
+        "gems": 1006,
+        "grades": 2429,
         "gemRate": 41.0
       }
     },
