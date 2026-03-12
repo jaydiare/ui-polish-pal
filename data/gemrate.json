@@ -1,13 +1,13 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-12T19:03:59.205687+00:00",
+    "updatedAt": "2026-03-12T20:44:07.645707+00:00",
     "athleteCount": 452,
     "graders": [
       "PSA"
     ],
     "batchInfo": {
-      "startIdx": 360,
-      "endIdx": 380,
+      "startIdx": 380,
+      "endIdx": 400,
       "totalAthletes": 568
     }
   },
@@ -5724,15 +5724,15 @@
       "graders": {
         "PSA": {
           "cards": 206,
-          "gems": 897,
-          "grades": 2344,
+          "gems": 898,
+          "grades": 2345,
           "gemRate": 38.0
         }
       },
       "totals": {
         "cards": 206,
-        "gems": 897,
-        "grades": 2344,
+        "gems": 898,
+        "grades": 2345,
         "gemRate": 38.0
       }
     },
@@ -5903,17 +5903,17 @@
       "sport": "Baseball",
       "graders": {
         "PSA": {
-          "cards": 59,
-          "gems": 35,
-          "grades": 77,
-          "gemRate": 45.0
+          "cards": 60,
+          "gems": 36,
+          "grades": 78,
+          "gemRate": 46.0
         }
       },
       "totals": {
-        "cards": 59,
-        "gems": 35,
-        "grades": 77,
-        "gemRate": 45.0
+        "cards": 60,
+        "gems": 36,
+        "grades": 78,
+        "gemRate": 46.0
       }
     },
     "Rafael Ortega": {
