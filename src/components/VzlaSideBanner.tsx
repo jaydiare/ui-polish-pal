@@ -49,6 +49,21 @@ const AdSenseBlock = () => {
   );
 };
 
+const AFFILIATES = [
+  {
+    id: "sidebar-cardhedge",
+    href: CARDHEDGE,
+    img: "./assets/cardhedge.jpg",
+    alt: "Card Hedge Sports & Trading Card Analytics",
+  },
+  {
+    id: "sidebar-bcw",
+    href: BCW,
+    img: "./assets/BCW.jpg",
+    alt: "BCW - Protect, Store, Display",
+  },
+];
+
 const VzlaSideBanner = () => {
   const [topBanner, setTopBanner] = useState(BANNERS[0]);
 
@@ -63,20 +78,27 @@ const VzlaSideBanner = () => {
       .catch(() => {});
   }, []);
 
-  const ebayUrl = `${EBAY_BASE}&campid=${CAMPAIGN_ID}&customid=${topBanner.id}`;
+  // Pick 2 of 3 affiliates randomly each mount (eBay + 1 of CardHedge/BCW)
+  const [selectedAffiliates] = useState(() => {
+    const shuffled = [...AFFILIATES].sort(() => Math.random() - 0.5);
+    const ebayUrl = `${EBAY_BASE}&campid=${CAMPAIGN_ID}&customid=${topBanner.id}`;
+    const ebayAffiliate = {
+      id: topBanner.id,
+      href: ebayUrl,
+      img: topBanner.img,
+      alt: topBanner.alt,
+    };
+    return [ebayAffiliate, shuffled[0]];
+  });
 
   return (
     <aside className="side-banner">
       <AdSenseBlock />
-      <a href={CARDHEDGE} target="_blank" rel="noopener noreferrer" title="Card Hedge Sports & Trading Card Analytics">
-        <img src="./assets/cardhedge.jpg" alt="Card Hedge Sports & Trading Card Analytics" />
-      </a>
-      <a href={ebayUrl} target="_blank" rel="noopener noreferrer">
-        <img src={topBanner.img} alt={topBanner.alt} />
-      </a>
-      <a href={BCW} target="_blank" rel="noopener noreferrer">
-        <img src="./assets/BCW.jpg" alt="BCW - Protect, Store, Display" />
-      </a>
+      {selectedAffiliates.map((a) => (
+        <a key={a.id} href={a.href} target="_blank" rel="noopener noreferrer" title={a.alt}>
+          <img src={a.img} alt={a.alt} />
+        </a>
+      ))}
     </aside>
   );
 };
