@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-11T21:29:42.068Z",
+    "updatedAt": "2026-03-12T04:05:02.972Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. Taguchi winsorized mean + market stability CV. Ungraded condition policy (permissive for sold). Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 210,
-      "endIdx": 220,
+      "startIdx": 220,
+      "endIdx": 230,
       "totalAthletes": 568
     },
     "maxPages": 3,
@@ -28,7 +28,7 @@
     },
     "fx": {
       "source": "CBSA Exchange Rates API",
-      "asOf": "2026-03-12T00:00:00.000Z"
+      "asOf": "2026-03-13T00:00:00.000Z"
     }
   },
   "Adbert Alzolay": {
@@ -2611,27 +2611,27 @@
   },
   "Javier Sanoja": {
     "keyword": "Javier Sanoja Baseball",
-    "nScraped": 0,
-    "nSoldUsed": 0,
-    "avg": null,
-    "taguchiSold": null,
-    "medianSold": null,
-    "marketStabilityCV": null,
+    "nScraped": 178,
+    "nSoldUsed": 95,
+    "avg": 4.991052631578948,
+    "taguchiSold": 4.991052631578948,
+    "medianSold": 4.99,
+    "marketStabilityCV": 0.19281287529782778,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
   },
   "Jean Machi": {
     "keyword": "Jean Machi Baseball",
-    "nScraped": 0,
-    "nSoldUsed": 0,
+    "nScraped": 183,
+    "nSoldUsed": 3,
     "avg": null,
     "taguchiSold": null,
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
   },
   "Jeanmar Gomez": {
     "keyword": "Jeanmar Gomez Baseball",
@@ -2647,12 +2647,12 @@
   },
   "Jeferson Quero": {
     "keyword": "Jeferson Quero Baseball",
-    "nScraped": 180,
-    "nSoldUsed": 109,
-    "avg": 3.001926605504591,
-    "taguchiSold": 3.001926605504591,
-    "medianSold": 2.99,
-    "marketStabilityCV": 0.3108078142617818,
+    "nScraped": 179,
+    "nSoldUsed": 111,
+    "avg": 4.174774774774774,
+    "taguchiSold": 4.174774774774774,
+    "medianSold": 3.8,
+    "marketStabilityCV": 0.3905988812970744,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
@@ -2660,11 +2660,11 @@
   "Jermaine Palacios": {
     "keyword": "Jermaine Palacios Baseball",
     "nScraped": 180,
-    "nSoldUsed": 82,
-    "avg": 1.3953658536585383,
-    "taguchiSold": 1.3953658536585383,
-    "medianSold": 1.395,
-    "marketStabilityCV": 0.25888548110032467,
+    "nSoldUsed": 77,
+    "avg": 1.3744155844155854,
+    "taguchiSold": 1.3744155844155854,
+    "medianSold": 1.29,
+    "marketStabilityCV": 0.2676236346041084,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
@@ -2672,62 +2672,62 @@
   "Jesus Aguilar": {
     "keyword": "Jesus Aguilar Baseball",
     "nScraped": 180,
-    "nSoldUsed": 66,
-    "avg": 1.6521212121212108,
-    "taguchiSold": 1.6521212121212108,
-    "medianSold": 1.755,
-    "marketStabilityCV": 0.20484762688816952,
+    "nSoldUsed": 64,
+    "avg": 1.4154687499999987,
+    "taguchiSold": 1.4154687499999987,
+    "medianSold": 1.4049999999999998,
+    "marketStabilityCV": 0.2836857484118533,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
   },
   "Jesus Delgado": {
     "keyword": "Jesus Delgado Baseball",
-    "nScraped": 183,
-    "nSoldUsed": 18,
-    "avg": 1.1999999999999997,
-    "taguchiSold": 1.1999999999999997,
+    "nScraped": 124,
+    "nSoldUsed": 12,
+    "avg": 1.2000000000000002,
+    "taguchiSold": 1.2000000000000002,
     "medianSold": 1.2,
-    "marketStabilityCV": 0.17149858514250885,
+    "marketStabilityCV": 0.1740776559556978,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
   },
   "Jesus Flores": {
     "keyword": "Jesus Flores Baseball",
-    "nScraped": 228,
-    "nSoldUsed": 48,
-    "avg": 0.9900000000000002,
-    "taguchiSold": 0.9900000000000002,
-    "medianSold": 0.99,
-    "marketStabilityCV": 2.266609583031167e-16,
+    "nScraped": 0,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
   },
   "Jesus Guzman": {
     "keyword": "Jesus Guzman Baseball",
-    "nScraped": 238,
-    "nSoldUsed": 24,
-    "avg": 0.5500000000000002,
-    "taguchiSold": 0.5500000000000002,
-    "medianSold": 0.55,
-    "marketStabilityCV": 0.8172062695283986,
+    "nScraped": 0,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
   },
   "Jesus Montero": {
     "keyword": "Jesus Montero Baseball",
-    "nScraped": 60,
-    "nSoldUsed": 31,
-    "avg": 0.7306451612903228,
-    "taguchiSold": 0.7306451612903228,
-    "medianSold": 0.79,
-    "marketStabilityCV": 0.7226173427183458,
+    "nScraped": 0,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
   },
   "Jesus Sucre": {
     "keyword": "Jesus Sucre Baseball",
