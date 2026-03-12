@@ -97,6 +97,36 @@ export default function Privacy() {
                 channels.
               </p>
             </section>
+
+            <div className="border-t border-border my-10" />
+
+            <section id="disclaimer">
+              <h2 className="text-lg font-semibold text-foreground mb-2">Financial Disclaimer</h2>
+              <p>
+                The information provided on vzlasportselite.com — including but not limited to
+                price indexes, market stability scores, investment signals (such as "Flip Potential",
+                "Buy Low", "Signal Strength", "Fast Mover", and "Overpriced &amp; Slow"), budget
+                optimization results, and any other data-driven metrics — is for{" "}
+                <strong>informational and educational purposes only</strong>.
+              </p>
+              <p className="mt-3">
+                Nothing on this website constitutes financial advice, investment advice, trading
+                advice, or any other form of professional advice. The purchase and sale of sports
+                cards and collectibles involves risk, and past performance is not indicative of
+                future results.
+              </p>
+              <p className="mt-3">
+                We do not guarantee the accuracy, completeness, or timeliness of any data
+                displayed. Market prices are sourced from third-party platforms (such as eBay)
+                and may not reflect actual transaction values at the time of viewing.
+              </p>
+              <p className="mt-3">
+                You should conduct your own research and consult with a qualified financial
+                advisor before making any investment decisions. Vzla Sports Elite and its
+                operators are not responsible for any losses incurred based on information
+                presented on this site.
+              </p>
+            </section>
           </div>
 
           <div className="mt-10">
