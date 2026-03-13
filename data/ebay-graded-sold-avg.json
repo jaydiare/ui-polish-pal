@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-13T04:13:51.538Z",
+    "updatedAt": "2026-03-13T05:30:34.068Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA-only title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 380,
-      "endIdx": 390,
+      "startIdx": 390,
+      "endIdx": 400,
       "totalAthletes": 450
     },
     "maxPages": 4,
@@ -28,7 +28,7 @@
     },
     "fx": {
       "source": "CBSA Exchange Rates API",
-      "asOf": "2026-03-13T00:00:00.000Z"
+      "asOf": "2026-03-14T00:00:00.000Z"
     }
   },
   "Adbert Alzolay": {
@@ -5467,7 +5467,7 @@
   },
   "Wil Ledezma": {
     "keyword": "Wil Ledezma Baseball PSA",
-    "nScraped": 54,
+    "nScraped": 58,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -5551,12 +5551,12 @@
   },
   "William Contreras": {
     "keyword": "William Contreras Baseball PSA",
-    "nScraped": 324,
-    "nSoldUsed": 56,
-    "avg": 35.20928571428572,
-    "taguchiSold": 35.20928571428572,
-    "medianSold": 33.495000000000005,
-    "marketStabilityCV": 0.12201874221910189,
+    "nScraped": 340,
+    "nSoldUsed": 68,
+    "avg": 34.991176470588215,
+    "taguchiSold": 34.991176470588215,
+    "medianSold": 32,
+    "marketStabilityCV": 0.12331446126491716,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
