@@ -37,7 +37,7 @@ A sports-card market intelligence platform tracking **550+ Venezuelan athletes**
 | `update-ebay-avg.js` | `ebay.yml` | Every ~5 days (1 PM UTC) | Fetches raw (Near Mint + Excellent) active listings |
 | `graded-update-ebay-avg.js` | `ebay-graded.yml` | Every ~5 days (8 AM UTC) | Fetches graded (PSA, BGS, SGC) active listings |
 
-- **API quota:** Both share one daily eBay Browse API production quota.
+- **API quota:** Both share the eBay Browse API production quota. Running every ~5 days (cron `*/5` day-of-month) instead of daily reduces API consumption to ~7 runs/month, synced with the ~5.6-day sold-average batch cycle.
 - **Condition filter (Raw):** No API-level condition filter (removed — too many raw listings lack the `Condition Type` tag). Post-fetch filtering via `isGradedListing()` excludes graded cards, and word-boundary blocklist rejects damaged/poor conditions. Accepts "Near Mint" and "Excellent".
 - **Condition filter (Graded):** API-level `categoryId:261328,Graded:{Yes},Professional Grader:{PSA}` aspect filters. PSA-only detection. The `categoryId:` prefix is mandatory — without it, eBay silently ignores all aspect filters (see DATA-PIPELINE-AUDIT.md §8.17).
 
