@@ -1,13 +1,13 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-13T20:43:58.402834+00:00",
+    "updatedAt": "2026-03-13T22:36:04.835345+00:00",
     "athleteCount": 452,
     "graders": [
       "PSA"
     ],
     "batchInfo": {
-      "startIdx": 20,
-      "endIdx": 40,
+      "startIdx": 40,
+      "endIdx": 60,
       "totalAthletes": 568
     }
   },
@@ -575,16 +575,16 @@
       "sport": "Baseball",
       "graders": {
         "PSA": {
-          "cards": 227,
+          "cards": 228,
           "gems": 424,
-          "grades": 882,
+          "grades": 885,
           "gemRate": 48.0
         }
       },
       "totals": {
-        "cards": 227,
+        "cards": 228,
         "gems": 424,
-        "grades": 882,
+        "grades": 885,
         "gemRate": 48.0
       }
     },
@@ -684,15 +684,15 @@
       "graders": {
         "PSA": {
           "cards": 66,
-          "gems": 267,
-          "grades": 722,
+          "gems": 268,
+          "grades": 723,
           "gemRate": 37.0
         }
       },
       "totals": {
         "cards": 66,
-        "gems": 267,
-        "grades": 722,
+        "gems": 268,
+        "grades": 723,
         "gemRate": 37.0
       }
     },
@@ -701,17 +701,17 @@
       "sport": "Baseball",
       "graders": {
         "PSA": {
-          "cards": 250,
+          "cards": 251,
           "gems": 123,
-          "grades": 403,
-          "gemRate": 31.0
+          "grades": 404,
+          "gemRate": 30.0
         }
       },
       "totals": {
-        "cards": 250,
+        "cards": 251,
         "gems": 123,
-        "grades": 403,
-        "gemRate": 31.0
+        "grades": 404,
+        "gemRate": 30.0
       }
     },
     "Brayan Rocchio": {
@@ -719,16 +719,16 @@
       "sport": "Baseball",
       "graders": {
         "PSA": {
-          "cards": 237,
+          "cards": 238,
           "gems": 879,
-          "grades": 1402,
+          "grades": 1403,
           "gemRate": 63.0
         }
       },
       "totals": {
-        "cards": 237,
+        "cards": 238,
         "gems": 879,
-        "grades": 1402,
+        "grades": 1403,
         "gemRate": 63.0
       }
     },
