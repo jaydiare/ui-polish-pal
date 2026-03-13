@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-13T04:11:22.678Z",
+    "updatedAt": "2026-03-13T04:13:51.538Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA-only title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
@@ -6884,11 +6884,11 @@
   "Dave Concepcion": {
     "keyword": "Dave Concepcion Baseball PSA",
     "nScraped": 198,
-    "nSoldUsed": 82,
-    "avg": 35.900609756097566,
-    "taguchiSold": 35.900609756097566,
-    "medianSold": 35.995000000000005,
-    "marketStabilityCV": 0.15636051019978878,
+    "nSoldUsed": 83,
+    "avg": 35.974096385542175,
+    "taguchiSold": 35.974096385542175,
+    "medianSold": 36,
+    "marketStabilityCV": 0.15619935517499658,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
