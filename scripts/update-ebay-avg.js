@@ -96,6 +96,7 @@ const UNGRADED_ALLOWED_CONDITIONS = [
   "nmt",
   "excellent",
   "ex",
+  "very good",
 ];
 
 // if any of these appear (descriptor/title), reject ungraded listing
@@ -108,7 +109,6 @@ const UNGRADED_BLOCKLIST = [
   "fair",
   "digitalcard",
   "digital",
-  "very good",
   "creases",
   "crease",
   "wrinkle",
@@ -133,8 +133,6 @@ const UNGRADED_BLOCKLIST = [
   "error card",
   "card lot",
   "beckett",
-  "auto 10",
-  "auto 10 backett",
 ];
 
 // --- helpers ---
