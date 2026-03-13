@@ -24,16 +24,11 @@ if (!DATABASE_URL) {
 }
 
 // Files to back up (relative to repo root)
-const FILES = [
-  "data/athlete-history.json",
-  "data/ebay-avg.json",
-  "data/ebay-sold-avg.json",
-  "data/ebay-graded-avg.json",
-  "data/ebay-graded-sold-avg.json",
-  "data/vzla-athlete-market-data.json",
-  "data/index-history.json",
-  "data/scp-history.json",
-];
+// Dynamically find all JSON files in data/
+const DATA_DIR = path.join(ROOT, "data");
+const FILES = fs.readdirSync(DATA_DIR)
+  .filter((f) => f.endsWith(".json"))
+  .map((f) => path.join("data", f));
 
 async function main() {
   const client = new pg.Client({
