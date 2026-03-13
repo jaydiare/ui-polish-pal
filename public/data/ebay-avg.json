@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-13T04:05:42.609Z",
+    "updatedAt": "2026-03-13T04:06:33.269Z",
     "minSampleSize": 4,
     "marketplaces": [
       "EBAY_US",
@@ -535,7 +535,8 @@
       "Rafael Romo": 1.9443333333333315,
       "Telasco Segovia": 9.79166666666667,
       "Yordan Osorio": 2.5008333333333335,
-      "Salvador Perez": 21.962169721056892
+      "Salvador Perez": 21.962169721056892,
+      "Dave Concepcion": 29.94785929353015
     },
     "indexHistory": [
       {
@@ -618,8 +619,8 @@
       },
       {
         "date": "2026-03-13",
-        "Soccer": 670.7,
-        "All": 670.7
+        "Baseball": 100,
+        "All": 100
       }
     ]
   },
@@ -25351,26 +25352,26 @@
       "EBAY_CA": {
         "aspectMode": "player",
         "aspectValue": "Dave Concepcion",
-        "avgListing": null,
-        "taguchiListing": null,
+        "avgListing": 29.94785929353015,
+        "taguchiListing": 29.94785929353015,
         "marketStabilityCV": null,
-        "avgDaysOnMarket": null,
-        "nListing": 0,
-        "nDaysOnMarket": 0,
+        "avgDaysOnMarket": 2181.4267753703703,
+        "nListing": 1,
+        "nDaysOnMarket": 1,
         "currency": "USD",
-        "originalCurrency": null,
-        "fxRateUsed": null
+        "originalCurrency": "CAD",
+        "fxRateUsed": 0.7343761474627305
       }
     },
-    "avg": null,
-    "n": 0,
-    "avgListing": null,
-    "taguchiListing": null,
+    "avg": 29.94785929353015,
+    "n": 1,
+    "avgListing": 29.94785929353015,
+    "taguchiListing": 29.94785929353015,
     "marketStabilityCV": null,
-    "avgDaysOnMarket": null,
-    "nListing": 0,
+    "avgDaysOnMarket": 2181.4267753703703,
+    "nListing": 1,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 29.94785929353015,
+    "indexLevel": 100
   }
 }
