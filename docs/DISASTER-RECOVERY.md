@@ -132,12 +132,12 @@ border-bottom: 1px solid hsl(var(--vzla-purple) / 0.25);
 | File | Content | Update Frequency |
 |------|---------|-----------------|
 | `data/athletes.json` | Master roster (~553 athletes: name, sport, league, team, gemrate flag) | Manual |
-| `data/ebay-avg.json` | Raw active listing averages (Taguchi mean, CV, DOM, index level) | Daily |
-| `data/ebay-graded-avg.json` | Graded (PSA) active listing averages | Daily |
+| `data/ebay-avg.json` | Raw active listing averages (Taguchi mean, CV, DOM, index level) | Every ~5 days |
+| `data/ebay-graded-avg.json` | Graded (PSA) active listing averages | Every ~5 days |
 | `data/ebay-sold-avg.json` | Raw sold listing averages | Every 3 hours |
 | `data/ebay-graded-sold-avg.json` | Graded sold listing averages | Every 2 hours |
-| `data/ebay-base-prices.json` | Baseline prices for raw index calculation | Daily (append-only) |
-| `data/ebay-graded-base-prices.json` | Baseline prices for graded index | Daily (append-only) |
+| `data/ebay-base-prices.json` | Baseline prices for raw index calculation | Every ~5 days (append-only) |
+| `data/ebay-graded-base-prices.json` | Baseline prices for graded index | Every ~5 days (append-only) |
 | `data/athlete-history.json` | Per-athlete daily snapshots (90-day rolling) | Daily |
 | `data/athlete-first-seen.json` | First-seen dates for DOM calculation | Daily |
 | `data/index-history.json` | Sport-level index history (permanent) | Daily |
@@ -466,8 +466,8 @@ https://www.ebay.ca/str/localherossportscards?mkcid=1&mkrid=706-53473-19255-0&..
 
 | Workflow | Script | Schedule | Purpose |
 |----------|--------|----------|---------|
-| `ebay.yml` | `update-ebay-avg.js` | Daily 1 PM UTC | Raw active listings |
-| `ebay-graded.yml` | `graded-update-ebay-avg.js` | Daily | Graded active listings |
+| `ebay.yml` | `update-ebay-avg.js` | Every ~5 days (1 PM UTC) | Raw active listings |
+| `ebay-graded.yml` | `graded-update-ebay-avg.js` | Every ~5 days (8 AM UTC) | Graded active listings |
 | `ebay-sold.yml` | `sold-update-ebay-avg.js` | Every 3 hours | Raw sold (HTML scraping) |
 | `ebay-graded-sold.yml` | `graded-sold-update-ebay-avg.js` | Every 2 hours | Graded sold (HTML scraping) |
 | `gemrate.yml` | `fetch_gemrate.py` | Every 2 hours | PSA population data |

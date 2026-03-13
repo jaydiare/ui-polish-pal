@@ -75,8 +75,8 @@ This ensures the UI always displays graded prices when any graded data source is
 
 | Workflow File | Script | Schedule | Batch Size | Description |
 |--------------|--------|----------|------------|-------------|
-| `ebay.yml` | `update-ebay-avg.js` | Daily 1 PM UTC | All athletes | Raw active listing averages |
-| `ebay-graded.yml` | `graded-update-ebay-avg.js` | Daily | All athletes | Graded active listing averages |
+| `ebay.yml` | `update-ebay-avg.js` | Every ~5 days (1 PM UTC) | All athletes | Raw active listing averages |
+| `ebay-graded.yml` | `graded-update-ebay-avg.js` | Every ~5 days (8 AM UTC) | All athletes | Graded active listing averages |
 | `ebay-sold.yml` | `sold-update-ebay-avg.js` | Every 3 hours | 10 athletes/batch | Raw sold averages |
 | `ebay-graded-sold.yml` | `graded-sold-update-ebay-avg.js` | Every 3 hours (staggered) | 10 athletes/batch | Graded sold averages (PSA only, gemrate-gated) |
 | `gemrate.yml` | `fetch_gemrate.py` | Every 2 hours | 10 athletes/batch | PSA population counts |
