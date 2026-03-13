@@ -132,12 +132,12 @@ border-bottom: 1px solid hsl(var(--vzla-purple) / 0.25);
 | File | Content | Update Frequency |
 |------|---------|-----------------|
 | `data/athletes.json` | Master roster (~553 athletes: name, sport, league, team, gemrate flag) | Manual |
-| `data/ebay-avg.json` | Raw active listing averages (Taguchi mean, CV, DOM, index level) | Daily |
-| `data/ebay-graded-avg.json` | Graded (PSA) active listing averages | Daily |
+| `data/ebay-avg.json` | Raw active listing averages (Taguchi mean, CV, DOM, index level) | Every ~5 days |
+| `data/ebay-graded-avg.json` | Graded (PSA) active listing averages | Every ~5 days |
 | `data/ebay-sold-avg.json` | Raw sold listing averages | Every 3 hours |
 | `data/ebay-graded-sold-avg.json` | Graded sold listing averages | Every 2 hours |
-| `data/ebay-base-prices.json` | Baseline prices for raw index calculation | Daily (append-only) |
-| `data/ebay-graded-base-prices.json` | Baseline prices for graded index | Daily (append-only) |
+| `data/ebay-base-prices.json` | Baseline prices for raw index calculation | Every ~5 days (append-only) |
+| `data/ebay-graded-base-prices.json` | Baseline prices for graded index | Every ~5 days (append-only) |
 | `data/athlete-history.json` | Per-athlete daily snapshots (90-day rolling) | Daily |
 | `data/athlete-first-seen.json` | First-seen dates for DOM calculation | Daily |
 | `data/index-history.json` | Sport-level index history (permanent) | Daily |
