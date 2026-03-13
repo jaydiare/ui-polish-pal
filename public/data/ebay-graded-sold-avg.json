@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-13T20:57:19.836Z",
+    "updatedAt": "2026-03-13T22:49:08.792Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA-only title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 30,
-      "endIdx": 40,
+      "startIdx": 40,
+      "endIdx": 50,
       "totalAthletes": 450
     },
     "maxPages": 4,
@@ -597,7 +597,7 @@
   },
   "Anthony Santander": {
     "keyword": "Anthony Santander Baseball PSA",
-    "nScraped": 268,
+    "nScraped": 265,
     "nSoldUsed": 20,
     "avg": 30.149999999999988,
     "taguchiSold": 30.149999999999988,
@@ -609,7 +609,7 @@
   },
   "Antonio Senzatela": {
     "keyword": "Antonio Senzatela Baseball PSA",
-    "nScraped": 240,
+    "nScraped": 242,
     "nSoldUsed": 8,
     "avg": 5.725,
     "taguchiSold": 5.725,
@@ -657,27 +657,27 @@
   },
   "Asdrubal Cabrera": {
     "keyword": "Asdrubal Cabrera Baseball PSA",
-    "nScraped": 240,
-    "nSoldUsed": 8,
-    "avg": 36.995000000000005,
-    "taguchiSold": 36.995000000000005,
-    "medianSold": 36.995,
-    "marketStabilityCV": 0.635878754240616,
+    "nScraped": 241,
+    "nSoldUsed": 7,
+    "avg": 40.13857142857143,
+    "taguchiSold": 40.13857142857143,
+    "medianSold": 59,
+    "marketStabilityCV": 0.5860780211122937,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
   },
   "Avisail Garcia": {
     "keyword": "Avisail Garcia Baseball PSA",
-    "nScraped": 0,
-    "nSoldUsed": 0,
+    "nScraped": 60,
+    "nSoldUsed": 1,
     "avg": null,
     "taguchiSold": null,
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
   },
   "Beiker Graterol": {
     "keyword": "Beiker Graterol Baseball",
