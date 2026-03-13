@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-13T09:02:54.568Z",
+    "updatedAt": "2026-03-13T11:01:04.804Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA-only title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 410,
-      "endIdx": 420,
+      "startIdx": 420,
+      "endIdx": 430,
       "totalAthletes": 450
     },
     "maxPages": 4,
@@ -5839,7 +5839,7 @@
   },
   "Yorman Bazardo": {
     "keyword": "Yorman Bazardo Baseball PSA",
-    "nScraped": 35,
+    "nScraped": 34,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -5863,7 +5863,7 @@
   },
   "Yorvit Torrealba": {
     "keyword": "Yorvit Torrealba Baseball PSA",
-    "nScraped": 37,
+    "nScraped": 38,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -5887,7 +5887,7 @@
   },
   "Carl Herrera": {
     "keyword": "Carl Herrera Basketball PSA",
-    "nScraped": 265,
+    "nScraped": 267,
     "nSoldUsed": 16,
     "avg": 22.195000000000004,
     "taguchiSold": 22.195000000000004,
@@ -5899,7 +5899,7 @@
   },
   "Greivis Vasquez": {
     "keyword": "Greivis Vasquez Basketball PSA",
-    "nScraped": 62,
+    "nScraped": 241,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -5911,12 +5911,12 @@
   },
   "Oscar Torres": {
     "keyword": "Oscar Torres Basketball PSA",
-    "nScraped": 240,
-    "nSoldUsed": 4,
-    "avg": 24.4,
-    "taguchiSold": 24.4,
-    "medianSold": 24.4,
-    "marketStabilityCV": 0,
+    "nScraped": 180,
+    "nSoldUsed": 3,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
