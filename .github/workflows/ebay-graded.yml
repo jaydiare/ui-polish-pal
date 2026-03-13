@@ -2,8 +2,8 @@ name: Update eBay graded averages
 
 on:
   schedule:
-    # Every ~6 days (1st,7th,13th,19th,25th,31st) — synced with sold avg cycle
-    - cron: "0 8 */6 * *"
+    # Every ~5 days (1st,6th,11th,16th,21st,26th,31st) — matches sold avg ~5.6-day cycle
+    - cron: "0 8 */5 * *"
   workflow_dispatch:
     inputs:
       only:
