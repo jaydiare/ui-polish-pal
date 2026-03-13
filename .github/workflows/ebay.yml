@@ -2,7 +2,8 @@ name: Update eBay averages
 
 on:
   schedule:
-    - cron: "0 13 * * *"
+    # Every ~6 days (1st,7th,13th,19th,25th,31st) — synced with sold avg cycle
+    - cron: "0 13 */6 * *"
   workflow_dispatch:
     inputs:
       only:
