@@ -1,0 +1,35 @@
+name: Weekly backup to Render PostgreSQL
+
+on:
+  schedule:
+    - cron: "30 13 * * 0"   # Every Sunday at 1:30 PM UTC (after snapshot workflow)
+  workflow_dispatch:          # Manual trigger
+
+concurrency:
+  group: backup-render
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
+jobs:
+  backup:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Install deps
+        run: npm install --no-audit --no-fund
+
+      - name: Run backup
+        run: node scripts/backup-to-render.js
+        env:
+          RENDER_DATABASE_URL: ${{ secrets.RENDER_DATABASE_URL }}
