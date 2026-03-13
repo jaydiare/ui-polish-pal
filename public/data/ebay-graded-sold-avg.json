@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-12T22:49:14.722Z",
+    "updatedAt": "2026-03-13T03:11:47.575Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA-only title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 370,
-      "endIdx": 380,
+      "startIdx": 380,
+      "endIdx": 390,
       "totalAthletes": 450
     },
     "maxPages": 4,
@@ -5323,12 +5323,12 @@
   },
   "Tony Armas": {
     "keyword": "Tony Armas Baseball PSA",
-    "nScraped": 308,
-    "nSoldUsed": 28,
-    "avg": 25.502857142857145,
-    "taguchiSold": 25.502857142857145,
-    "medianSold": 25.55,
-    "marketStabilityCV": 0.2404830210825883,
+    "nScraped": 313,
+    "nSoldUsed": 32,
+    "avg": 28.775000000000006,
+    "taguchiSold": 28.775000000000006,
+    "medianSold": 28.775,
+    "marketStabilityCV": 0.11386979241024899,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
@@ -5347,11 +5347,11 @@
   },
   "Tucupita Marcano": {
     "keyword": "Tucupita Marcano Baseball PSA",
-    "nScraped": 240,
+    "nScraped": 242,
     "nSoldUsed": 12,
-    "avg": 16.94,
-    "taguchiSold": 16.94,
-    "medianSold": 16.94,
+    "avg": 16.91,
+    "taguchiSold": 16.91,
+    "medianSold": 16.91,
     "marketStabilityCV": 0,
     "currency": "USD",
     "originalCurrencyExample": "USD",
@@ -5359,7 +5359,7 @@
   },
   "Ubaldo Heredia": {
     "keyword": "Ubaldo Heredia Baseball PSA",
-    "nScraped": 27,
+    "nScraped": 32,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
