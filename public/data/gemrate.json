@@ -1,13 +1,13 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-13T10:49:34.539734+00:00",
+    "updatedAt": "2026-03-13T13:16:36.152003+00:00",
     "athleteCount": 452,
     "graders": [
       "PSA"
     ],
     "batchInfo": {
-      "startIdx": 500,
-      "endIdx": 520,
+      "startIdx": 520,
+      "endIdx": 540,
       "totalAthletes": 568
     }
   },
@@ -7705,15 +7705,15 @@
         "PSA": {
           "cards": 35,
           "gems": 31,
-          "grades": 63,
-          "gemRate": 49.0
+          "grades": 64,
+          "gemRate": 48.0
         }
       },
       "totals": {
         "cards": 35,
         "gems": 31,
-        "grades": 63,
-        "gemRate": 49.0
+        "grades": 64,
+        "gemRate": 48.0
       }
     },
     "Emilio Renteria": {
