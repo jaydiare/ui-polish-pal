@@ -6,7 +6,7 @@
 //   Collects active (Buy It Now) listing prices for PSA-GRADED sports cards
 //   from the eBay Browse API and computes robust statistical averages per athlete.
 //
-// WORKFLOW: ebay-graded.yml (daily at 8 AM UTC)
+// WORKFLOW: ebay-graded.yml (every ~5 days at 8 AM UTC — synced with sold avg cycle)
 // ENV VARS: EBAY_CLIENT_ID, EBAY_CLIENT_SECRET, EBAY_ONLY (optional)
 // INPUT:    data/athletes.json (master roster, filtered to gemrate="yes" only)
 // OUTPUT:   data/ebay-graded-avg.json (graded listing averages per athlete)

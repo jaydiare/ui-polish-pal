@@ -6,7 +6,7 @@
 //   Collects active (Buy It Now) listing prices for RAW (ungraded) sports cards
 //   from the eBay Browse API and computes robust statistical averages per athlete.
 //
-// WORKFLOW: ebay.yml (daily at 1 PM UTC)
+// WORKFLOW: ebay.yml (every ~5 days at 1 PM UTC — synced with sold avg cycle)
 // ENV VARS: EBAY_CLIENT_ID, EBAY_CLIENT_SECRET, EBAY_ONLY (optional)
 // INPUT:    data/athletes.json (master roster)
 // OUTPUT:   data/ebay-avg.json (active listing averages per athlete)
