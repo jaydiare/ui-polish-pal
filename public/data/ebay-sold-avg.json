@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-13T01:50:41.006Z",
+    "updatedAt": "2026-03-13T04:14:58.627Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. Taguchi winsorized mean + market stability CV. Ungraded condition policy (permissive for sold). Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
@@ -7644,6 +7644,18 @@
     "taguchiSold": 1.5699999999999996,
     "medianSold": 1.5699999999999998,
     "marketStabilityCV": 0.2528006723433065,
+    "currency": "USD",
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
+  },
+  "Dave Concepcion": {
+    "keyword": "Dave Concepcion Baseball",
+    "nScraped": 240,
+    "nSoldUsed": 69,
+    "avg": 3.7797101449275354,
+    "taguchiSold": 3.7797101449275354,
+    "medianSold": 3,
+    "marketStabilityCV": 0.39827625327014926,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
