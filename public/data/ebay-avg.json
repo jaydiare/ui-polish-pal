@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-13T00:07:24.448Z",
+    "updatedAt": "2026-03-13T03:37:04.882Z",
     "minSampleSize": 4,
     "marketplaces": [
       "EBAY_US",
@@ -618,8 +618,8 @@
       },
       {
         "date": "2026-03-13",
-        "Baseball": 0,
-        "All": 0
+        "Soccer": 265.1,
+        "All": 265.1
       }
     ]
   },
@@ -24541,27 +24541,27 @@
       "EBAY_CA": {
         "aspectMode": "player",
         "aspectValue": "Josef Martinez",
-        "avgListing": 100.03679988224036,
-        "taguchiListing": 100.03679988224036,
+        "avgListing": null,
+        "taguchiListing": null,
         "marketStabilityCV": null,
-        "avgDaysOnMarket": 1067.0409950347223,
-        "nListing": 1,
-        "nDaysOnMarket": 1,
+        "avgDaysOnMarket": null,
+        "nListing": 0,
+        "nDaysOnMarket": 0,
         "currency": "USD",
-        "originalCurrency": "CAD",
-        "fxRateUsed": 0.7359976448075366
+        "originalCurrency": null,
+        "fxRateUsed": null
       }
     },
-    "avg": 100.03679988224036,
-    "n": 1,
-    "avgListing": 100.03679988224036,
-    "taguchiListing": 100.03679988224036,
+    "avg": null,
+    "n": 0,
+    "avgListing": null,
+    "taguchiListing": null,
     "marketStabilityCV": null,
-    "avgDaysOnMarket": 1067.0409950347223,
-    "nListing": 1,
+    "avgDaysOnMarket": null,
+    "nListing": 0,
     "currency": "USD",
     "basePriceUSD": 14.691838683611254,
-    "indexLevel": 680.900478398469
+    "indexLevel": 100
   },
   "Junior Moreno": {
     "match": {
