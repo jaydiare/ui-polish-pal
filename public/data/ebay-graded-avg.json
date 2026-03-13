@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-13T03:52:23.269Z",
+    "updatedAt": "2026-03-13T04:08:43.228Z",
     "minSampleSize": 4,
     "marketplaces": [
       "EBAY_US"
@@ -9,7 +9,7 @@
     "note": "GRADED (PSA) active listing robust mean (Browse API FIXED_PRICE). No sold data. Prices normalized to USD. Includes market stability CV (sd/mean). Filtered by Graded:{Yes} + Professional Grader:{PSA}. Includes avg days-on-market for active listings (listing age). Base prices stored in dedicated ebay-graded-base-prices.json.",
     "fx": {
       "source": "CBSA Exchange Rates API",
-      "asOf": "2026-03-13T00:00:00.000Z",
+      "asOf": "2026-03-14T00:00:00.000Z",
       "ratesToUSD": {
         "USD": 1,
         "CAD": 0.7343761474627305,
@@ -484,7 +484,8 @@
       "Alejandro Marques": 3.9730000000000034,
       "Yeferson Soteldo": 4.005666666666667,
       "Yordan Osorio": 2.4925,
-      "Garbine Muguruza": 8.109666666666671
+      "Garbine Muguruza": 8.109666666666671,
+      "Dave Concepcion": 41.431750000000015
     },
     "indexHistory": [
       {
@@ -496,8 +497,8 @@
       },
       {
         "date": "2026-03-13",
-        "Soccer": 650.3,
-        "All": 650.3
+        "Baseball": 100,
+        "All": 100
       }
     ]
   },
@@ -14052,5 +14053,37 @@
     "indexLevel": 100,
     "sport": "Soccer",
     "fallback": true
+  },
+  "Dave Concepcion": {
+    "match": {
+      "mode": "player",
+      "value": "Dave Concepcion",
+      "validatedOn": "EBAY_CA"
+    },
+    "marketplaces": {
+      "EBAY_US": {
+        "aspectMode": "player",
+        "aspectValue": "Dave Concepcion",
+        "avgListing": 41.431750000000015,
+        "taguchiListing": 41.431750000000015,
+        "marketStabilityCV": 0.16795807465815787,
+        "avgDaysOnMarket": 217.5002437620081,
+        "nListing": 80,
+        "nDaysOnMarket": 80,
+        "currency": "USD",
+        "originalCurrency": "USD",
+        "fxRateUsed": 1
+      }
+    },
+    "avg": 41.431750000000015,
+    "n": 80,
+    "avgListing": 41.431750000000015,
+    "taguchiListing": 41.431750000000015,
+    "marketStabilityCV": 0.16795807465815787,
+    "avgDaysOnMarket": 217.5002437620081,
+    "nListing": 80,
+    "currency": "USD",
+    "basePriceUSD": 41.431750000000015,
+    "indexLevel": 100
   }
 }
