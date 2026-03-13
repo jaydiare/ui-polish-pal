@@ -466,8 +466,8 @@ https://www.ebay.ca/str/localherossportscards?mkcid=1&mkrid=706-53473-19255-0&..
 
 | Workflow | Script | Schedule | Purpose |
 |----------|--------|----------|---------|
-| `ebay.yml` | `update-ebay-avg.js` | Daily 1 PM UTC | Raw active listings |
-| `ebay-graded.yml` | `graded-update-ebay-avg.js` | Daily | Graded active listings |
+| `ebay.yml` | `update-ebay-avg.js` | Every ~5 days (1 PM UTC) | Raw active listings |
+| `ebay-graded.yml` | `graded-update-ebay-avg.js` | Every ~5 days (8 AM UTC) | Graded active listings |
 | `ebay-sold.yml` | `sold-update-ebay-avg.js` | Every 3 hours | Raw sold (HTML scraping) |
 | `ebay-graded-sold.yml` | `graded-sold-update-ebay-avg.js` | Every 2 hours | Graded sold (HTML scraping) |
 | `gemrate.yml` | `fetch_gemrate.py` | Every 2 hours | PSA population data |
