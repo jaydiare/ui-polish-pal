@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-12T23:59:38.002Z",
+    "updatedAt": "2026-03-13T00:07:24.448Z",
     "minSampleSize": 4,
     "marketplaces": [
       "EBAY_US",
@@ -613,6 +613,11 @@
       },
       {
         "date": "2026-03-12",
+        "Baseball": 0,
+        "All": 0
+      },
+      {
+        "date": "2026-03-13",
         "Baseball": 0,
         "All": 0
       }
@@ -25326,13 +25331,13 @@
   "Dave Concepcion": {
     "match": {
       "mode": "player",
-      "value": "Concepcion David Dave Baseball",
+      "value": "Dave Concepcion",
       "validatedOn": "EBAY_CA"
     },
     "marketplaces": {
       "EBAY_US": {
         "aspectMode": "player",
-        "aspectValue": "Concepcion David Dave Baseball",
+        "aspectValue": "Dave Concepcion",
         "avgListing": null,
         "taguchiListing": null,
         "marketStabilityCV": null,
@@ -25345,7 +25350,7 @@
       },
       "EBAY_CA": {
         "aspectMode": "player",
-        "aspectValue": "Concepcion David Dave Baseball",
+        "aspectValue": "Dave Concepcion",
         "avgListing": null,
         "taguchiListing": null,
         "marketStabilityCV": null,
