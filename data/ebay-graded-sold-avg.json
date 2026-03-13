@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-13T19:05:26.432Z",
+    "updatedAt": "2026-03-13T20:57:19.836Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA-only title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 20,
-      "endIdx": 30,
+      "startIdx": 30,
+      "endIdx": 40,
       "totalAthletes": 450
     },
     "maxPages": 4,
@@ -453,7 +453,7 @@
   },
   "Andruw Monasterio": {
     "keyword": "Andruw Monasterio Baseball PSA",
-    "nScraped": 240,
+    "nScraped": 242,
     "nSoldUsed": 4,
     "avg": 7.5,
     "taguchiSold": 7.5,
@@ -465,7 +465,7 @@
   },
   "Andry Lara": {
     "keyword": "Andry Lara Baseball PSA",
-    "nScraped": 240,
+    "nScraped": 241,
     "nSoldUsed": 4,
     "avg": 5.5,
     "taguchiSold": 5.5,
@@ -477,12 +477,12 @@
   },
   "Angel Bravo": {
     "keyword": "Angel Bravo Baseball PSA",
-    "nScraped": 240,
-    "nSoldUsed": 12,
-    "avg": 16.610000000000003,
-    "taguchiSold": 16.610000000000003,
+    "nScraped": 242,
+    "nSoldUsed": 15,
+    "avg": 20.52066666666667,
+    "taguchiSold": 20.52066666666667,
     "medianSold": 16.61,
-    "marketStabilityCV": 2.234008679665268e-16,
+    "marketStabilityCV": 0.21088074098449136,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
@@ -501,7 +501,7 @@
   },
   "Angel Guzman": {
     "keyword": "Angel Guzman Baseball PSA",
-    "nScraped": 248,
+    "nScraped": 250,
     "nSoldUsed": 20,
     "avg": 15,
     "taguchiSold": 15,
