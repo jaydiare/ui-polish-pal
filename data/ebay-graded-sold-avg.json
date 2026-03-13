@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-13T11:01:04.804Z",
+    "updatedAt": "2026-03-13T13:36:34.030Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA-only title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 420,
-      "endIdx": 430,
+      "startIdx": 430,
+      "endIdx": 440,
       "totalAthletes": 450
     },
     "maxPages": 4,
@@ -6007,7 +6007,7 @@
   },
   "Tomas Rincon": {
     "keyword": "Tomas Rincon Soccer PSA",
-    "nScraped": 21,
+    "nScraped": 22,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -6187,15 +6187,15 @@
   },
   "Yangel Herrera": {
     "keyword": "Yangel Herrera Soccer PSA",
-    "nScraped": 57,
-    "nSoldUsed": 0,
-    "avg": null,
-    "taguchiSold": null,
-    "medianSold": null,
-    "marketStabilityCV": null,
+    "nScraped": 240,
+    "nSoldUsed": 4,
+    "avg": 15.5,
+    "taguchiSold": 15.5,
+    "medianSold": 15.5,
+    "marketStabilityCV": 0,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
   },
   "Cristian Casseres Jr.": {
     "keyword": "Cristian Casseres Jr. Soccer PSA",
@@ -6379,7 +6379,7 @@
   },
   "David Martinez": {
     "keyword": "David Martinez Soccer PSA",
-    "nScraped": 243,
+    "nScraped": 245,
     "nSoldUsed": 12,
     "avg": 69.99,
     "taguchiSold": 69.99,
@@ -6403,7 +6403,7 @@
   },
   "Emilio Renteria": {
     "keyword": "Emilio Renteria Soccer PSA",
-    "nScraped": 3,
+    "nScraped": 0,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
