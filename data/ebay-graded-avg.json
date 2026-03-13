@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-12T08:49:25.824Z",
+    "updatedAt": "2026-03-13T03:52:23.269Z",
     "minSampleSize": 4,
     "marketplaces": [
       "EBAY_US"
@@ -12,8 +12,8 @@
       "asOf": "2026-03-13T00:00:00.000Z",
       "ratesToUSD": {
         "USD": 1,
-        "CAD": 0.7359976448075366,
-        "EUR": 1.1578714948112165
+        "CAD": 0.7343761474627305,
+        "EUR": 1.1524564882132629
       }
     },
     "manufacturers": "none (all brands accepted)",
@@ -493,6 +493,11 @@
         "Soccer": 696.6,
         "Basketball": 5511,
         "All": 1743.4
+      },
+      {
+        "date": "2026-03-13",
+        "Soccer": 650.3,
+        "All": 650.3
       }
     ]
   },
@@ -13021,7 +13026,7 @@
         "avgListing": 54.99,
         "taguchiListing": 54.99,
         "marketStabilityCV": 0.1738618219310142,
-        "avgDaysOnMarket": 287.49964060828194,
+        "avgDaysOnMarket": 288.2850203536523,
         "nListing": 9,
         "nDaysOnMarket": 9,
         "currency": "USD",
@@ -13034,7 +13039,7 @@
     "avgListing": 54.99,
     "taguchiListing": 54.99,
     "marketStabilityCV": 0.1738618219310142,
-    "avgDaysOnMarket": 287.49964060828194,
+    "avgDaysOnMarket": 288.2850203536523,
     "nListing": 9,
     "currency": "USD",
     "basePriceUSD": 8.455499999999999,
