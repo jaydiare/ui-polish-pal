@@ -34,8 +34,8 @@ A sports-card market intelligence platform tracking **550+ Venezuelan athletes**
 
 | Script | Workflow | Schedule | What It Does |
 |--------|----------|----------|--------------|
-| `update-ebay-avg.js` | `ebay.yml` | Daily 1 PM UTC | Fetches raw (Near Mint + Excellent) active listings |
-| `graded-update-ebay-avg.js` | `ebay-graded.yml` | Daily | Fetches graded (PSA, BGS, SGC) active listings |
+| `update-ebay-avg.js` | `ebay.yml` | Every ~5 days (1 PM UTC) | Fetches raw (Near Mint + Excellent) active listings |
+| `graded-update-ebay-avg.js` | `ebay-graded.yml` | Every ~5 days (8 AM UTC) | Fetches graded (PSA, BGS, SGC) active listings |
 
 - **API quota:** Both share one daily eBay Browse API production quota.
 - **Condition filter (Raw):** No API-level condition filter (removed — too many raw listings lack the `Condition Type` tag). Post-fetch filtering via `isGradedListing()` excludes graded cards, and word-boundary blocklist rejects damaged/poor conditions. Accepts "Near Mint" and "Excellent".
