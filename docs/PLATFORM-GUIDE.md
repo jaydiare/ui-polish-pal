@@ -105,7 +105,7 @@ A sports-card market intelligence platform tracking **550+ Venezuelan athletes**
 - Estimated ~7-8 MB per weekly snapshot; Render 1GB free tier supports ~125+ weeks.
 - **Recovery:** Query `SELECT data FROM snapshots WHERE file_name = 'athletes.json' ORDER BY snapshot_date DESC LIMIT 1` to restore any file.
 
-### 2.8 Data Freshness Strategy
+### 2.9 Data Freshness Strategy
 
 - Frontend fetches data from **GitHub raw URLs** (not local public/ copies) so updates are visible without republishing.
 - Fallback: local `public/data/` files if remote fetch fails.
