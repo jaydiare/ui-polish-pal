@@ -67,8 +67,8 @@ const MAX_ITEM_DETAIL_FETCHES = 10;
 const CATEGORY_ID = "261328";
 
 // Listing sampling
-const LISTING_PAGE_LIMIT = 60; // max active listings to sample per marketplace
-const PAGE_SIZE = 60;
+const LISTING_PAGE_LIMIT = 80; // max active listings to sample per marketplace
+const PAGE_SIZE = 80;
 
 // Your UI threshold
 const MIN_EBAY_SAMPLE_SIZE = 4;
