@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-13T05:30:34.068Z",
+    "updatedAt": "2026-03-13T07:15:20.405Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA-only title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 390,
-      "endIdx": 400,
+      "startIdx": 400,
+      "endIdx": 410,
       "totalAthletes": 450
     },
     "maxPages": 4,
@@ -5623,24 +5623,24 @@
   },
   "Willson Contreras": {
     "keyword": "Willson Contreras Baseball PSA",
-    "nScraped": 345,
-    "nSoldUsed": 76,
-    "avg": 26.047368421052635,
-    "taguchiSold": 26.047368421052635,
-    "medianSold": 24.99,
-    "marketStabilityCV": 0.13457251229805187,
+    "nScraped": 208,
+    "nSoldUsed": 80,
+    "avg": 26.8405,
+    "taguchiSold": 26.8405,
+    "medianSold": 25.494999999999997,
+    "marketStabilityCV": 0.10818726077052454,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
   },
   "Wilmer Flores": {
     "keyword": "Wilmer Flores Baseball PSA",
-    "nScraped": 245,
-    "nSoldUsed": 8,
-    "avg": 15.990000000000002,
-    "taguchiSold": 15.990000000000002,
-    "medianSold": 15.99,
-    "marketStabilityCV": 0.30018836177280434,
+    "nScraped": 241,
+    "nSoldUsed": 4,
+    "avg": 11.5,
+    "taguchiSold": 11.5,
+    "medianSold": 11.5,
+    "marketStabilityCV": 0,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
@@ -5659,7 +5659,7 @@
   },
   "Wilson Alvarez": {
     "keyword": "Wilson Alvarez Baseball PSA",
-    "nScraped": 245,
+    "nScraped": 244,
     "nSoldUsed": 4,
     "avg": 11.18,
     "taguchiSold": 11.18,
@@ -5683,15 +5683,15 @@
   },
   "Wilyer Abreu": {
     "keyword": "Wilyer Abreu Baseball PSA",
-    "nScraped": 60,
-    "nSoldUsed": 28,
-    "avg": 97.67321428571428,
-    "taguchiSold": 97.67321428571428,
-    "medianSold": 99.99,
-    "marketStabilityCV": 0.07569084534944488,
+    "nScraped": 0,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
   },
   "Yangervis Solarte": {
     "keyword": "Yangervis Solarte Baseball PSA",
