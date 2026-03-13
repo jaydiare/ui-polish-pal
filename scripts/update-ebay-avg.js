@@ -133,6 +133,8 @@ const UNGRADED_BLOCKLIST = [
   "error card",
   "card lot",
   "beckett",
+  "auto 10",
+  "auto 10 backett",
 ];
 
 // --- helpers ---
