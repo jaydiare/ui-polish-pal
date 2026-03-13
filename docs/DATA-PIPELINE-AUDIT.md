@@ -83,6 +83,7 @@ This ensures the UI always displays graded prices when any graded data source is
 | `snapshot-history.yml` | `snapshot-athlete-history.js` | Daily | All athletes | Per-athlete time-series archive |
 | `scp-prices.yml` | `fetch-scp-prices.js` | Monthly (1st) | All athletes | SportsCardsPro current prices |
 | `market-data-snapshot.yml` | `snapshot-market-data.js` | Weekly (Sun 12 UTC) | All athletes | Unified market data snapshot |
+| `backup-render.yml` | `backup-to-render.js` | Weekly (Sun 1:30 PM UTC) | All data/ files | Full database backup to Render PostgreSQL |
 
 ### Concurrency & Safety
 
@@ -799,6 +800,19 @@ Aggregates all data sources into a single file per athlete:
 - Days on market
 - Index level
 - **SCP raw and graded prices** (from `scp-prices.json`)
+
+### 9.3 `backup-to-render.js` — Weekly Database Backup
+
+**Output:** Render PostgreSQL `snapshots` table (JSONB)  
+**Workflow:** `backup-render.yml` — Every Sunday at 1:30 PM UTC (after snapshot workflow)  
+**Env:** `RENDER_DATABASE_URL` GitHub Secret
+
+Backs up **all JSON files** in the `data/` directory to a Render PostgreSQL database:
+- Dynamically discovers all `*.json` files in `data/` at runtime
+- Stores each file as a JSONB row with `file_name`, `snapshot_date`, `size_bytes`, and `data`
+- Uses idempotent upsert (`ON CONFLICT (file_name, snapshot_date) DO UPDATE`) — safe to re-run multiple times per day
+- Reports total table size and recent snapshot history after each run
+- Estimated ~7-8 MB per weekly snapshot; Render 1GB free tier supports ~125+ weeks of backups
 
 ### 9.3 Output File Schema — scp-prices.json
 

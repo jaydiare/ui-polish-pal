@@ -474,6 +474,7 @@ https://www.ebay.ca/str/localherossportscards?mkcid=1&mkrid=706-53473-19255-0&..
 | `scp-prices.yml` | `fetch-scp-prices.js` | Monthly 1st | SportsCardsPro prices |
 | `snapshot-history.yml` | `snapshot-athlete-history.js` | Daily | Per-athlete history snapshots |
 | `market-data-snapshot.yml` | `snapshot-market-data.js` | Weekly Sunday | Unified data backup |
+| `backup-render.yml` | `backup-to-render.js` | Weekly Sunday 1:30 PM UTC | Full data/ backup to Render PostgreSQL |
 | `card-tracker.yml` | `card-tracker-update.js` | Varies | Card tracker blog data |
 | `update.yml` | Various | Varies | Sync public/ copies |
 
@@ -629,8 +630,8 @@ docs/                          # Documentation
 ### Phase 6: Data Pipelines
 - [ ] Restore all scripts in `scripts/`
 - [ ] Restore all GitHub Actions workflows
-- [ ] Set up GitHub Secrets (EBAY_CLIENT_ID, EBAY_CLIENT_SECRET)
-- [ ] Restore data files from backup or re-run pipelines
+- [ ] Set up GitHub Secrets (EBAY_CLIENT_ID, EBAY_CLIENT_SECRET, RENDER_DATABASE_URL)
+- [ ] Restore data files from Render PostgreSQL backup (`snapshots` table) or re-run pipelines
 
 ### Phase 7: OAuth Server
 - [ ] Deploy Express server to Render
