@@ -92,6 +92,19 @@ A sports-card market intelligence platform tracking **550+ Venezuelan athletes**
 - Aggregates all data sources (eBay listed/sold, SCP prices, gemrate, history) into a single `vzla-athlete-market-data.json` file per athlete.
 - Serves as a consolidated backup and the data source for the Blog Data Table.
 
+### 2.8 Database Backup (Render PostgreSQL)
+
+| Script | Workflow | Schedule |
+|--------|----------|----------|
+| `backup-to-render.js` | `backup-render.yml` | Weekly (Sunday 1:30 PM UTC) |
+
+- Backs up **all JSON files** in the `data/` directory to a Render PostgreSQL database.
+- Dynamically discovers files at runtime — no hardcoded list.
+- Each file stored as a JSONB row in a `snapshots` table with `file_name`, `snapshot_date`, `size_bytes`.
+- Idempotent upsert: safe to re-run multiple times per day (same day overwrites, no duplicates).
+- Estimated ~7-8 MB per weekly snapshot; Render 1GB free tier supports ~125+ weeks.
+- **Recovery:** Query `SELECT data FROM snapshots WHERE file_name = 'athletes.json' ORDER BY snapshot_date DESC LIMIT 1` to restore any file.
+
 ### 2.8 Data Freshness Strategy
 
 - Frontend fetches data from **GitHub raw URLs** (not local public/ copies) so updates are visible without republishing.
