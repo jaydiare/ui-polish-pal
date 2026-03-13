@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-13T07:15:20.405Z",
+    "updatedAt": "2026-03-13T09:02:54.568Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA-only title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 400,
-      "endIdx": 410,
+      "startIdx": 410,
+      "endIdx": 420,
       "totalAthletes": 450
     },
     "maxPages": 4,
@@ -5731,7 +5731,7 @@
   },
   "Yoendrys Gomez": {
     "keyword": "Yoendrys Gomez Baseball PSA",
-    "nScraped": 240,
+    "nScraped": 241,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -5755,7 +5755,7 @@
   },
   "Yohan Pino": {
     "keyword": "Yohan Pino Baseball PSA",
-    "nScraped": 2,
+    "nScraped": 3,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -5781,9 +5781,9 @@
     "keyword": "Yohel Pozo Baseball PSA",
     "nScraped": 240,
     "nSoldUsed": 4,
-    "avg": 8.48,
-    "taguchiSold": 8.48,
-    "medianSold": 8.48,
+    "avg": 8.43,
+    "taguchiSold": 8.43,
+    "medianSold": 8.43,
     "marketStabilityCV": 0,
     "currency": "USD",
     "originalCurrencyExample": "USD",
@@ -5815,7 +5815,7 @@
   },
   "Yonny Chirinos": {
     "keyword": "Yonny Chirinos Baseball PSA",
-    "nScraped": 30,
+    "nScraped": 0,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
