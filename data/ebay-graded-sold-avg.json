@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-13T22:49:08.792Z",
+    "updatedAt": "2026-03-14T03:09:39.683Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA-only title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 40,
-      "endIdx": 50,
+      "startIdx": 50,
+      "endIdx": 60,
       "totalAthletes": 450
     },
     "maxPages": 4,
@@ -741,7 +741,7 @@
   },
   "Brayan Villarreal": {
     "keyword": "Brayan Villarreal Baseball PSA",
-    "nScraped": 60,
+    "nScraped": 240,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -777,12 +777,12 @@
   },
   "Brusdar Graterol": {
     "keyword": "Brusdar Graterol Baseball PSA",
-    "nScraped": 248,
-    "nSoldUsed": 12,
-    "avg": 9.019999999999998,
-    "taguchiSold": 9.019999999999998,
-    "medianSold": 9.02,
-    "marketStabilityCV": 2.0569226257893636e-16,
+    "nScraped": 247,
+    "nSoldUsed": 16,
+    "avg": 9.234999999999998,
+    "taguchiSold": 9.234999999999998,
+    "medianSold": 9.235,
+    "marketStabilityCV": 0.02404450949459215,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
@@ -813,20 +813,20 @@
   },
   "Carlos Carrasco": {
     "keyword": "Carlos Carrasco Baseball PSA",
-    "nScraped": 240,
-    "nSoldUsed": 0,
-    "avg": null,
-    "taguchiSold": null,
-    "medianSold": null,
-    "marketStabilityCV": null,
+    "nScraped": 242,
+    "nSoldUsed": 4,
+    "avg": 19.99,
+    "taguchiSold": 19.99,
+    "medianSold": 19.99,
+    "marketStabilityCV": 0,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
   },
   "Carlos Garcia": {
     "keyword": "Carlos Garcia Baseball PSA",
-    "nScraped": 244,
-    "nSoldUsed": 12,
+    "nScraped": 122,
+    "nSoldUsed": 6,
     "avg": 22.5,
     "taguchiSold": 22.5,
     "medianSold": 22.5,
