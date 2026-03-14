@@ -1,13 +1,13 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-14T08:45:01.104762+00:00",
+    "updatedAt": "2026-03-14T10:37:08.360147+00:00",
     "athleteCount": 453,
     "graders": [
       "PSA"
     ],
     "batchInfo": {
-      "startIdx": 120,
-      "endIdx": 140,
+      "startIdx": 140,
+      "endIdx": 160,
       "totalAthletes": 568
     }
   },
@@ -1962,15 +1962,15 @@
       "graders": {
         "PSA": {
           "cards": 262,
-          "gems": 456,
-          "grades": 842,
+          "gems": 458,
+          "grades": 844,
           "gemRate": 54.0
         }
       },
       "totals": {
         "cards": 262,
-        "gems": 456,
-        "grades": 842,
+        "gems": 458,
+        "grades": 844,
         "gemRate": 54.0
       }
     },
@@ -2070,15 +2070,15 @@
       "graders": {
         "PSA": {
           "cards": 19,
-          "gems": 74,
-          "grades": 1780,
+          "gems": 75,
+          "grades": 1781,
           "gemRate": 4.0
         }
       },
       "totals": {
         "cards": 19,
-        "gems": 74,
-        "grades": 1780,
+        "gems": 75,
+        "grades": 1781,
         "gemRate": 4.0
       }
     },
@@ -2087,16 +2087,16 @@
       "sport": "Baseball",
       "graders": {
         "PSA": {
-          "cards": 1046,
-          "gems": 9249,
-          "grades": 15798,
+          "cards": 1051,
+          "gems": 9255,
+          "grades": 15811,
           "gemRate": 59.0
         }
       },
       "totals": {
-        "cards": 1046,
-        "gems": 9249,
-        "grades": 15798,
+        "cards": 1051,
+        "gems": 9255,
+        "grades": 15811,
         "gemRate": 59.0
       }
     },
@@ -2106,15 +2106,15 @@
       "graders": {
         "PSA": {
           "cards": 278,
-          "gems": 593,
-          "grades": 974,
+          "gems": 597,
+          "grades": 978,
           "gemRate": 61.0
         }
       },
       "totals": {
         "cards": 278,
-        "gems": 593,
-        "grades": 974,
+        "gems": 597,
+        "grades": 978,
         "gemRate": 61.0
       }
     },
