@@ -1,4 +1,4 @@
-import { useState, useEffect, useMemo } from "react";
+import { useState, useEffect, useMemo, lazy, Suspense } from "react";
 import { Download } from "lucide-react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
@@ -10,9 +10,9 @@ import SEOHead from "@/components/SEOHead";
 import VzlaNavbar from "@/components/VzlaNavbar";
 import VzlaFooter from "@/components/VzlaFooter";
 import VzlaEbayFooter from "@/components/VzlaEbayFooter";
-import AthleteCard from "@/components/AthleteCard";
-import { useAthleteData } from "@/hooks/useAthleteData";
-import type { Athlete } from "@/data/athletes";
+import { useIsMobile } from "@/hooks/use-mobile";
+
+const LazyAthleteReference = lazy(() => import("@/components/CardTrackerAthleteRef"));
 
 /* ── SCP History Types ── */
 interface ScpDataPoint {
