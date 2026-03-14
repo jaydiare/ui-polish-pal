@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-13T08:43:08.656Z",
+    "updatedAt": "2026-03-14T18:49:20.741Z",
     "minSampleSize": 4,
     "marketplaces": [
       "EBAY_US"
@@ -9,11 +9,11 @@
     "note": "GRADED (PSA) active listing robust mean (Browse API FIXED_PRICE). No sold data. Prices normalized to USD. Includes market stability CV (sd/mean). Filtered by Graded:{Yes} + Professional Grader:{PSA}. Includes avg days-on-market for active listings (listing age). Base prices stored in dedicated ebay-graded-base-prices.json.",
     "fx": {
       "source": "CBSA Exchange Rates API",
-      "asOf": "2026-03-14T00:00:00.000Z",
+      "asOf": "2026-03-15T00:00:00.000Z",
       "ratesToUSD": {
         "USD": 1,
-        "CAD": 0.7343761474627305,
-        "EUR": 1.1524564882132629
+        "CAD": 0.7290755322251385,
+        "EUR": 1.14530475357247
       }
     },
     "manufacturers": "none (all brands accepted)",
@@ -501,6 +501,10 @@
         "Soccer": 696.6,
         "Basketball": 5511,
         "All": 1759.5
+      },
+      {
+        "date": "2026-03-14",
+        "All": 0
       }
     ]
   },
