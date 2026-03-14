@@ -264,14 +264,15 @@ const Data = () => {
         }
       }
       // Also populate sport map from eBay data keys (which carry .sport)
+      // Only add if the athlete is already in the roster to avoid removed athletes reappearing
+      const rosterNames = new Set(Object.keys(map));
       for (const src of [listed, gradedListed]) {
         if (!src || typeof src !== "object") continue;
         for (const [key, rec] of Object.entries(src)) {
           if (key === "_meta" || !rec) continue;
           const sport = (rec as any)?.sport;
-          if (sport && !map[key]) {
+          if (sport && !map[key] && (rosterNames.has(key) || rosterNames.has(norm(key)))) {
             map[key] = sport;
-            map[norm(key)] = sport;
           }
         }
       }
