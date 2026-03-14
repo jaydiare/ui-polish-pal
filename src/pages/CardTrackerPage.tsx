@@ -245,7 +245,7 @@ const CardTrackerPage = () => {
 
         {/* SportsCardsPro Long-Term History */}
         {scpData && (scpData["us250-acuna"] || scpData["us200-torres"]) && (
-          <ScpHistorySection scpData={scpData} scpRange={scpRange} setScpRange={setScpRange} />
+          <ScpHistorySection scpData={scpData} scpRange={scpRange} setScpRange={setScpRange} isMobile={isMobile} />
         )}
 
         {/* Snapshot Tables */}
@@ -387,11 +387,12 @@ function CardSnapshotTable({
 
 /* ── SportsCardsPro Long-Term History Section ── */
 function ScpHistorySection({
-  scpData, scpRange, setScpRange,
+  scpData, scpRange, setScpRange, isMobile,
 }: {
   scpData: ScpHistoryData;
   scpRange: number;
   setScpRange: (d: number) => void;
+  isMobile: boolean;
 }) {
   const [selectedScpGrades, setSelectedScpGrades] = useState<string[]>(["ungraded", "10"]);
 
@@ -446,10 +447,16 @@ function ScpHistorySection({
       }
     }
 
-    return Array.from(dateMap.values()).sort((a: any, b: any) =>
+    const sorted = Array.from(dateMap.values()).sort((a: any, b: any) =>
       a.date.localeCompare(b.date)
     );
-  }, [acunaScp, torresScp, selectedScpGrades, scpRange]);
+    // Cap data points on mobile to prevent memory crash
+    if (isMobile && sorted.length > 80) {
+      const step = Math.ceil(sorted.length / 80);
+      return sorted.filter((_, i) => i % step === 0 || i === sorted.length - 1);
+    }
+    return sorted;
+  }, [acunaScp, torresScp, selectedScpGrades, scpRange, isMobile]);
 
   if (!chartData.length && allGrades.length === 0) return null;
 
