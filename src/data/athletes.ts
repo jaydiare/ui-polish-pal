@@ -63,7 +63,7 @@ export const athleteDataRaw: Athlete[] = [
 
   { name: "Jhonattan Vegas", sport: "Golf", league: "PGA", team: "Golf" },
   { name: "Garbiñe Muguruza", sport: "Tennis", league: "WTA", team: "Venezuela" },
-  { name: "Marlon Vera", sport: "MMA", league: "UFC", team: "Venezuela" },
+  
   { name: "Andres Borregales", sport: "Football", league: "NFL", team: "New England Patriots" },
   { name: "Amleto Monacelli", sport: "Bowling", league: "Bowling", team: "PBA50" },
 ];
