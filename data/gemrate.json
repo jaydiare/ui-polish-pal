@@ -1,13 +1,13 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-14T10:37:08.360147+00:00",
+    "updatedAt": "2026-03-14T13:07:20.880689+00:00",
     "athleteCount": 453,
     "graders": [
       "PSA"
     ],
     "batchInfo": {
-      "startIdx": 140,
-      "endIdx": 160,
+      "startIdx": 160,
+      "endIdx": 180,
       "totalAthletes": 568
     }
   },
@@ -2249,16 +2249,16 @@
       "sport": "Baseball",
       "graders": {
         "PSA": {
-          "cards": 1254,
-          "gems": 2207,
-          "grades": 4953,
+          "cards": 1255,
+          "gems": 2210,
+          "grades": 4957,
           "gemRate": 45.0
         }
       },
       "totals": {
-        "cards": 1254,
-        "gems": 2207,
-        "grades": 4953,
+        "cards": 1255,
+        "gems": 2210,
+        "grades": 4957,
         "gemRate": 45.0
       }
     },
@@ -2285,16 +2285,16 @@
       "sport": "Baseball",
       "graders": {
         "PSA": {
-          "cards": 1887,
-          "gems": 8608,
-          "grades": 15156,
+          "cards": 1888,
+          "gems": 8610,
+          "grades": 15161,
           "gemRate": 57.0
         }
       },
       "totals": {
-        "cards": 1887,
-        "gems": 8608,
-        "grades": 15156,
+        "cards": 1888,
+        "gems": 8610,
+        "grades": 15161,
         "gemRate": 57.0
       }
     },
@@ -2359,14 +2359,14 @@
         "PSA": {
           "cards": 118,
           "gems": 228,
-          "grades": 765,
+          "grades": 766,
           "gemRate": 30.0
         }
       },
       "totals": {
         "cards": 118,
         "gems": 228,
-        "grades": 765,
+        "grades": 766,
         "gemRate": 30.0
       }
     },
@@ -2467,15 +2467,15 @@
         "PSA": {
           "cards": 49,
           "gems": 67,
-          "grades": 144,
-          "gemRate": 47.0
+          "grades": 146,
+          "gemRate": 46.0
         }
       },
       "totals": {
         "cards": 49,
         "gems": 67,
-        "grades": 144,
-        "gemRate": 47.0
+        "grades": 146,
+        "gemRate": 46.0
       }
     },
     "Freddy Galvis": {
@@ -2519,16 +2519,16 @@
       "sport": "Baseball",
       "graders": {
         "PSA": {
-          "cards": 412,
+          "cards": 413,
           "gems": 762,
-          "grades": 1722,
+          "grades": 1723,
           "gemRate": 44.0
         }
       },
       "totals": {
-        "cards": 412,
+        "cards": 413,
         "gems": 762,
-        "grades": 1722,
+        "grades": 1723,
         "gemRate": 44.0
       }
     },
