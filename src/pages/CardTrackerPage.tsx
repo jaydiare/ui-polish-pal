@@ -215,40 +215,11 @@ const CardTrackerPage = () => {
           Last updated: {data._meta?.lastUpdated ? new Date(data._meta.lastUpdated).toLocaleDateString() : "—"}
         </p>
 
-        {/* Reference Athlete Cards */}
-        {refAthletes.length > 0 && (
-          <section className="mb-10">
-            <h2 className="text-lg font-display font-bold text-foreground mb-4">Athlete Reference</h2>
-            <div className="grid grid-cols-[repeat(auto-fill,minmax(280px,1fr))] gap-5">
-              {refAthletes.map((a, i) => (
-                <motion.div
-                  key={a.name}
-                  initial={{ opacity: 0, y: 12 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.3, delay: i * 0.1 }}
-                >
-                  <AthleteCard
-                    athlete={a}
-                    byName={byName}
-                    byKey={byKey}
-                    gradedByName={gradedByName}
-                    gradedByKey={gradedByKey}
-                    ebaySoldRaw={ebaySoldRaw}
-                    ebayGradedSoldRaw={ebayGradedSoldRaw}
-                    history={athleteHistory?.[a.name]}
-                    priceMode="both"
-                  />
-                </motion.div>
-              ))}
-            </div>
-          </section>
-        )}
-
-
-
-        {/* SportsCardsPro Long-Term History */}
-        {scpData && (scpData["us250-acuna"] || scpData["us200-torres"]) && (
-          <ScpHistorySection scpData={scpData} scpRange={scpRange} setScpRange={setScpRange} />
+        {/* Reference Athlete Cards — skip on mobile to avoid memory crash */}
+        {!isMobile && (
+          <Suspense fallback={<p className="text-muted-foreground text-sm mb-10">Loading athlete data…</p>}>
+            <LazyAthleteReference />
+          </Suspense>
         )}
 
         {/* Snapshot Tables */}
