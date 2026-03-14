@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-14T05:27:49.134Z",
+    "updatedAt": "2026-03-14T07:08:57.314Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA-only title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 60,
-      "endIdx": 70,
+      "startIdx": 70,
+      "endIdx": 80,
       "totalAthletes": 450
     },
     "maxPages": 4,
@@ -1030,18 +1030,18 @@
   "Carlos Valderrama": {
     "keyword": "Carlos Valderrama Baseball PSA",
     "nScraped": 60,
-    "nSoldUsed": 6,
-    "avg": 101.75,
-    "taguchiSold": 101.75,
-    "medianSold": 101.75,
-    "marketStabilityCV": 0.01884057937364208,
+    "nSoldUsed": 5,
+    "avg": 100,
+    "taguchiSold": 100,
+    "medianSold": 100,
+    "marketStabilityCV": 0,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
   },
   "Carlos Zambrano": {
     "keyword": "Carlos Zambrano Baseball PSA",
-    "nScraped": 252,
+    "nScraped": 250,
     "nSoldUsed": 20,
     "avg": 50.65999999999998,
     "taguchiSold": 50.65999999999998,
@@ -1053,7 +1053,7 @@
   },
   "Cesar Gutierrez": {
     "keyword": "Cesar Gutierrez Baseball PSA",
-    "nScraped": 259,
+    "nScraped": 263,
     "nSoldUsed": 28,
     "avg": 27.567142857142862,
     "taguchiSold": 27.567142857142862,
@@ -1101,7 +1101,7 @@
   },
   "Cesar Tovar": {
     "keyword": "Cesar Tovar Baseball PSA",
-    "nScraped": 300,
+    "nScraped": 312,
     "nSoldUsed": 96,
     "avg": 25.39833333333333,
     "taguchiSold": 25.39833333333333,
@@ -1113,15 +1113,15 @@
   },
   "Chico Carrasquel": {
     "keyword": "Chico Carrasquel Baseball PSA",
-    "nScraped": 74,
-    "nSoldUsed": 18,
-    "avg": 33.35055555555555,
-    "taguchiSold": 33.35055555555555,
-    "medianSold": 33.875,
-    "marketStabilityCV": 0.0510149893933355,
+    "nScraped": 0,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
   },
   "Chucho Ramos": {
     "keyword": "Chucho Ramos Ovenca Venezuelan League Baseball PSA",
