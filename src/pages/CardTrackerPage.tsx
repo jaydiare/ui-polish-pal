@@ -387,11 +387,12 @@ function CardSnapshotTable({
 
 /* ── SportsCardsPro Long-Term History Section ── */
 function ScpHistorySection({
-  scpData, scpRange, setScpRange,
+  scpData, scpRange, setScpRange, isMobile,
 }: {
   scpData: ScpHistoryData;
   scpRange: number;
   setScpRange: (d: number) => void;
+  isMobile: boolean;
 }) {
   const [selectedScpGrades, setSelectedScpGrades] = useState<string[]>(["ungraded", "10"]);
 
