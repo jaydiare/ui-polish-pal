@@ -245,7 +245,7 @@ const CardTrackerPage = () => {
 
         {/* SportsCardsPro Long-Term History */}
         {scpData && (scpData["us250-acuna"] || scpData["us200-torres"]) && (
-          <ScpHistorySection scpData={scpData} scpRange={scpRange} setScpRange={setScpRange} />
+          <ScpHistorySection scpData={scpData} scpRange={scpRange} setScpRange={setScpRange} isMobile={isMobile} />
         )}
 
         {/* Snapshot Tables */}
