@@ -143,6 +143,11 @@ const CardTrackerPage = () => {
   const [data, setData] = useState<TrackerData | null>(null);
   const [scpData, setScpData] = useState<ScpHistoryData | null>(null);
   const [loading, setLoading] = useState(true);
+  const range = Infinity;
+  const dataMode: DataMode = "listed";
+  const cardMode: CardMode = "raw";
+  const selectedGrade = "10";
+  const [scpRange, setScpRange] = useState(1825);
   const isMobile = useIsMobile();
 
   const filterSnapshots = (snapshots: Snapshot[]) => {
