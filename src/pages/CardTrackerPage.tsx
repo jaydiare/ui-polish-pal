@@ -1,4 +1,4 @@
-import { useState, useEffect, useMemo } from "react";
+import { useState, useEffect, useMemo, lazy, Suspense } from "react";
 import { Download } from "lucide-react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
@@ -10,9 +10,9 @@ import SEOHead from "@/components/SEOHead";
 import VzlaNavbar from "@/components/VzlaNavbar";
 import VzlaFooter from "@/components/VzlaFooter";
 import VzlaEbayFooter from "@/components/VzlaEbayFooter";
-import AthleteCard from "@/components/AthleteCard";
-import { useAthleteData } from "@/hooks/useAthleteData";
-import type { Athlete } from "@/data/athletes";
+import { useIsMobile } from "@/hooks/use-mobile";
+
+const LazyAthleteReference = lazy(() => import("@/components/CardTrackerAthleteRef"));
 
 /* ── SCP History Types ── */
 interface ScpDataPoint {
@@ -147,40 +147,8 @@ const CardTrackerPage = () => {
   const dataMode: DataMode = "listed";
   const cardMode: CardMode = "raw";
   const selectedGrade = "10";
-  const [scpRange, setScpRange] = useState(1825); // 5 years default
-
-  const {
-    athletes, byName, byKey, gradedByName, gradedByKey,
-    ebaySoldRaw, ebayGradedSoldRaw, athleteHistory,
-  } = useAthleteData();
-
-  useEffect(() => {
-    (async () => {
-      try {
-        let r = await fetch(`${GITHUB_RAW}/card-tracker.json`, { cache: "no-store" });
-        if (!r.ok) r = await fetch("/data/card-tracker.json");
-        if (r.ok) { setData(await r.json()); }
-      } catch { /* fallback silently */ }
-
-      // Fetch SCP history
-      try {
-        let r2 = await fetch(`${GITHUB_RAW}/scp-history.json`, { cache: "no-store" });
-        if (!r2.ok) r2 = await fetch("/data/scp-history.json");
-        if (r2.ok) { setScpData(await r2.json()); }
-      } catch { /* fallback silently */ }
-
-      setLoading(false);
-    })();
-  }, []);
-
-  const normalize = (s: string) =>
-    s.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().trim();
-  const refAthletes = useMemo(() => {
-    const names = ["Ronald Acuna Jr.", "Gleyber Torres"];
-    return names
-      .map((n) => athletes.find((a) => normalize(a.name) === normalize(n)))
-      .filter(Boolean) as Athlete[];
-  }, [athletes]);
+  const [scpRange, setScpRange] = useState(1825);
+  const isMobile = useIsMobile();
 
   const filterSnapshots = (snapshots: Snapshot[]) => {
     if (range === Infinity) return snapshots;
@@ -247,36 +215,12 @@ const CardTrackerPage = () => {
           Last updated: {data._meta?.lastUpdated ? new Date(data._meta.lastUpdated).toLocaleDateString() : "—"}
         </p>
 
-        {/* Reference Athlete Cards */}
-        {refAthletes.length > 0 && (
-          <section className="mb-10">
-            <h2 className="text-lg font-display font-bold text-foreground mb-4">Athlete Reference</h2>
-            <div className="grid grid-cols-[repeat(auto-fill,minmax(280px,1fr))] gap-5">
-              {refAthletes.map((a, i) => (
-                <motion.div
-                  key={a.name}
-                  initial={{ opacity: 0, y: 12 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.3, delay: i * 0.1 }}
-                >
-                  <AthleteCard
-                    athlete={a}
-                    byName={byName}
-                    byKey={byKey}
-                    gradedByName={gradedByName}
-                    gradedByKey={gradedByKey}
-                    ebaySoldRaw={ebaySoldRaw}
-                    ebayGradedSoldRaw={ebayGradedSoldRaw}
-                    history={athleteHistory?.[a.name]}
-                    priceMode="both"
-                  />
-                </motion.div>
-              ))}
-            </div>
-          </section>
+        {/* Reference Athlete Cards — skip on mobile to avoid memory crash */}
+        {!isMobile && (
+          <Suspense fallback={<p className="text-muted-foreground text-sm mb-10">Loading athlete data…</p>}>
+            <LazyAthleteReference />
+          </Suspense>
         )}
-
-
 
         {/* SportsCardsPro Long-Term History */}
         {scpData && (scpData["us250-acuna"] || scpData["us200-torres"]) && (
