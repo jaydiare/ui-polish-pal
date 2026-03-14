@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-14T14:51:04.850Z",
+    "updatedAt": "2026-03-14T16:53:10.829Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA-only title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 110,
-      "endIdx": 120,
+      "startIdx": 120,
+      "endIdx": 130,
       "totalAthletes": 450
     },
     "maxPages": 4,
@@ -1749,7 +1749,7 @@
   },
   "Endy Chavez": {
     "keyword": "Endy Chavez Baseball PSA",
-    "nScraped": 244,
+    "nScraped": 241,
     "nSoldUsed": 4,
     "avg": 0.99,
     "taguchiSold": 0.99,
@@ -1797,12 +1797,12 @@
   },
   "Enzo Hernandez": {
     "keyword": "Enzo Hernandez Baseball PSA",
-    "nScraped": 260,
-    "nSoldUsed": 44,
-    "avg": 19.313636363636363,
-    "taguchiSold": 19.313636363636363,
-    "medianSold": 19.5,
-    "marketStabilityCV": 0.08520033289339932,
+    "nScraped": 266,
+    "nSoldUsed": 40,
+    "avg": 21,
+    "taguchiSold": 21,
+    "medianSold": 21,
+    "marketStabilityCV": 0.07233852622026189,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
@@ -1822,26 +1822,26 @@
   "Ethan Salas": {
     "keyword": "Ethan Salas Baseball PSA",
     "nScraped": 180,
-    "nSoldUsed": 93,
-    "avg": 41.75268817204301,
-    "taguchiSold": 41.75268817204301,
-    "medianSold": 41,
-    "marketStabilityCV": 0.22604116312960246,
+    "nSoldUsed": 99,
+    "avg": 38.24232323232323,
+    "taguchiSold": 38.24232323232323,
+    "medianSold": 34.99,
+    "marketStabilityCV": 0.2818080111519794,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
   },
   "Eugenio Suarez": {
     "keyword": "Eugenio Suarez Baseball PSA",
-    "nScraped": 0,
-    "nSoldUsed": 0,
-    "avg": null,
-    "taguchiSold": null,
-    "medianSold": null,
-    "marketStabilityCV": null,
+    "nScraped": 73,
+    "nSoldUsed": 12,
+    "avg": 79.07916666666667,
+    "taguchiSold": 79.07916666666667,
+    "medianSold": 84.5,
+    "marketStabilityCV": 0.39490935279475703,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
   },
   "Everson Pereira": {
     "keyword": "Everson Pereira Baseball PSA",
