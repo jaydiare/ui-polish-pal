@@ -150,6 +150,27 @@ const CardTrackerPage = () => {
   const [scpRange, setScpRange] = useState(1825);
   const isMobile = useIsMobile();
 
+  useEffect(() => {
+    (async () => {
+      try {
+        const [trackerRes, scpRes] = await Promise.all([
+          fetch(`${GITHUB_RAW}/card-tracker.json`, { cache: "no-store" }),
+          fetch(`${GITHUB_RAW}/scp-history.json`, { cache: "no-store" }),
+        ]);
+        if (trackerRes.ok) {
+          setData(await trackerRes.json());
+        }
+        if (scpRes.ok) {
+          setScpData(await scpRes.json());
+        }
+      } catch (e) {
+        console.error("Failed to load tracker data", e);
+      } finally {
+        setLoading(false);
+      }
+    })();
+  }, []);
+
   const filterSnapshots = (snapshots: Snapshot[]) => {
     if (range === Infinity) return snapshots;
     const cutoff = new Date();
