@@ -10,7 +10,6 @@ const SPORT_TO_WIKI: Record<string, string> = {
   Basketball: "basketball",
   Tennis: "tennis",
   Golf: "golfer",
-  MMA: "mixed martial artist",
   BMX: "cyclist",
   Bowling: "bowler",
 };

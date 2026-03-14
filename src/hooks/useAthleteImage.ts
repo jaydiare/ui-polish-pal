@@ -48,7 +48,6 @@ const SPORT_TO_TSDB: Record<string, string[]> = {
   Basketball: ["Basketball"],
   Tennis: ["Tennis"],
   Golf: ["Golf"],
-  MMA: ["Fighting"],
   BMX: ["Cycling", "Motorsport"],
   Bowling: ["Bowling"],
 };
