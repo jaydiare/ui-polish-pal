@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-13T15:55:00.357Z",
+    "updatedAt": "2026-03-14T18:48:24.594Z",
     "minSampleSize": 4,
     "marketplaces": [
       "EBAY_US",
@@ -622,6 +622,11 @@
         "date": "2026-03-13",
         "Baseball": 744.8,
         "All": 744.8
+      },
+      {
+        "date": "2026-03-14",
+        "Baseball": 0,
+        "All": 0
       }
     ]
   },
@@ -25300,5 +25305,50 @@
     "indexLevel": 100,
     "sport": "Baseball",
     "fallback": true
+  },
+  "Nestor Isaias Chavez": {
+    "match": {
+      "mode": "player",
+      "value": "Nestor Isaias Chavez Latigo",
+      "validatedOn": "EBAY_CA"
+    },
+    "marketplaces": {
+      "EBAY_US": {
+        "aspectMode": "player",
+        "aspectValue": "Nestor Isaias Chavez Latigo",
+        "avgListing": 1000,
+        "taguchiListing": 1000,
+        "marketStabilityCV": null,
+        "avgDaysOnMarket": 1149.951513263889,
+        "nListing": 1,
+        "nDaysOnMarket": 1,
+        "currency": "USD",
+        "originalCurrency": "USD",
+        "fxRateUsed": 1
+      },
+      "EBAY_CA": {
+        "aspectMode": "player",
+        "aspectValue": "Nestor Isaias Chavez Latigo",
+        "avgListing": 1000.1458151064451,
+        "taguchiListing": 1000.1458151064451,
+        "marketStabilityCV": null,
+        "avgDaysOnMarket": 1149.9515187268519,
+        "nListing": 1,
+        "nDaysOnMarket": 1,
+        "currency": "USD",
+        "originalCurrency": "CAD",
+        "fxRateUsed": 0.7290755322251385
+      }
+    },
+    "avg": 1000.1458151064451,
+    "n": 1,
+    "avgListing": 1000.1458151064451,
+    "taguchiListing": 1000.1458151064451,
+    "marketStabilityCV": null,
+    "avgDaysOnMarket": 1149.9515187268519,
+    "nListing": 1,
+    "currency": "USD",
+    "basePriceUSD": null,
+    "indexLevel": null
   }
 }
