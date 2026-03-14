@@ -446,10 +446,16 @@ function ScpHistorySection({
       }
     }
 
-    return Array.from(dateMap.values()).sort((a: any, b: any) =>
+    const sorted = Array.from(dateMap.values()).sort((a: any, b: any) =>
       a.date.localeCompare(b.date)
     );
-  }, [acunaScp, torresScp, selectedScpGrades, scpRange]);
+    // Cap data points on mobile to prevent memory crash
+    if (isMobile && sorted.length > 80) {
+      const step = Math.ceil(sorted.length / 80);
+      return sorted.filter((_, i) => i % step === 0 || i === sorted.length - 1);
+    }
+    return sorted;
+  }, [acunaScp, torresScp, selectedScpGrades, scpRange, isMobile]);
 
   if (!chartData.length && allGrades.length === 0) return null;
 
