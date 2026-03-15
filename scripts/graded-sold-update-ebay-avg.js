@@ -13,7 +13,7 @@
 // PROGRESS: data/ebay-graded-sold-progress.json (batch cursor)
 //
 // PIPELINE (per athlete):
-//   1. Build search URL with "{name} {sport} PSA" keyword + League filter
+//   1. Build search URL with "{name} {sport} graded" keyword + League filter
 //   2. Fetch up to 4 pages with retry + exponential backoff
 //   3. Parse via 3-tier extraction: .s-item CSS → [data-viewport] → script tags
 //   4. POST-FETCH FILTERING:
