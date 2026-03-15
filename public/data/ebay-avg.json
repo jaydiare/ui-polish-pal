@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-15T14:52:05.735Z",
+    "updatedAt": "2026-03-15T14:52:50.951Z",
     "minSampleSize": 4,
     "marketplaces": [
       "EBAY_US",
@@ -631,8 +631,8 @@
       },
       {
         "date": "2026-03-15",
-        "Baseball": 3207,
-        "All": 3207
+        "Baseball": 909.1,
+        "All": 909.1
       }
     ]
   },
@@ -11671,40 +11671,40 @@
       "EBAY_US": {
         "aspectMode": "player",
         "aspectValue": "Jose Alvarado",
-        "avgListing": null,
-        "taguchiListing": null,
-        "marketStabilityCV": null,
-        "avgDaysOnMarket": null,
-        "nListing": 0,
-        "nDaysOnMarket": 0,
+        "avgListing": 2.430540540540542,
+        "taguchiListing": 2.430540540540542,
+        "marketStabilityCV": 0.19840756346878036,
+        "avgDaysOnMarket": 283.0113880416353,
+        "nListing": 74,
+        "nDaysOnMarket": 74,
         "currency": "USD",
-        "originalCurrency": null,
-        "fxRateUsed": null
+        "originalCurrency": "USD",
+        "fxRateUsed": 1
       },
       "EBAY_CA": {
         "aspectMode": "player",
         "aspectValue": "Jose Alvarado",
-        "avgListing": null,
-        "taguchiListing": null,
-        "marketStabilityCV": null,
-        "avgDaysOnMarket": null,
-        "nListing": 0,
-        "nDaysOnMarket": 0,
+        "avgListing": 6.818925224437043,
+        "taguchiListing": 6.818925224437043,
+        "marketStabilityCV": 0.4474179938463748,
+        "avgDaysOnMarket": 394.43786427536907,
+        "nListing": 74,
+        "nDaysOnMarket": 74,
         "currency": "USD",
-        "originalCurrency": null,
-        "fxRateUsed": null
+        "originalCurrency": "CAD",
+        "fxRateUsed": 0.7290755322251385
       }
     },
-    "avg": null,
-    "n": 0,
-    "avgListing": null,
-    "taguchiListing": null,
-    "marketStabilityCV": null,
-    "avgDaysOnMarket": null,
-    "nListing": 0,
+    "avg": 6.818925224437043,
+    "n": 74,
+    "avgListing": 6.818925224437043,
+    "taguchiListing": 6.818925224437043,
+    "marketStabilityCV": 0.4474179938463748,
+    "avgDaysOnMarket": 394.43786427536907,
+    "nListing": 74,
     "currency": "USD",
     "basePriceUSD": 62.94499999999999,
-    "indexLevel": 100
+    "indexLevel": 10.833148342897838
   },
   "Jose Alvarez": {
     "match": {
