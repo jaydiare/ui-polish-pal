@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-15T14:55:10.001Z",
+    "updatedAt": "2026-03-15T14:56:16.271Z",
     "minSampleSize": 4,
     "marketplaces": [
       "EBAY_US",
@@ -632,8 +632,8 @@
       },
       {
         "date": "2026-03-15",
-        "Baseball": 293.4,
-        "All": 293.4
+        "Baseball": 294.3,
+        "All": 294.3
       }
     ]
   },
@@ -15545,7 +15545,7 @@
         "avgListing": 10.545000000000003,
         "taguchiListing": 10.545000000000003,
         "marketStabilityCV": 0.4007381036132545,
-        "avgDaysOnMarket": 73.98026450121999,
+        "avgDaysOnMarket": 73.98103541291292,
         "nListing": 74,
         "nDaysOnMarket": 74,
         "currency": "USD",
@@ -15555,27 +15555,27 @@
       "EBAY_CA": {
         "aspectMode": "player",
         "aspectValue": "Maikel Garcia",
-        "avgListing": 18.16774076949302,
-        "taguchiListing": 18.16774076949302,
-        "marketStabilityCV": 0.3429964734525889,
-        "avgDaysOnMarket": 134.80241767377407,
-        "nListing": 71,
-        "nDaysOnMarket": 71,
+        "avgListing": 18.39478398533517,
+        "taguchiListing": 18.39478398533517,
+        "marketStabilityCV": 0.330699397628103,
+        "avgDaysOnMarket": 136.7247470780423,
+        "nListing": 70,
+        "nDaysOnMarket": 70,
         "currency": "USD",
         "originalCurrency": "CAD",
         "fxRateUsed": 0.7290755322251385
       }
     },
-    "avg": 18.16774076949302,
-    "n": 71,
-    "avgListing": 18.16774076949302,
-    "taguchiListing": 18.16774076949302,
-    "marketStabilityCV": 0.3429964734525889,
-    "avgDaysOnMarket": 134.80241767377407,
-    "nListing": 71,
+    "avg": 18.39478398533517,
+    "n": 70,
+    "avgListing": 18.39478398533517,
+    "taguchiListing": 18.39478398533517,
+    "marketStabilityCV": 0.330699397628103,
+    "avgDaysOnMarket": 136.7247470780423,
+    "nListing": 70,
     "currency": "USD",
     "basePriceUSD": 18.16774076949302,
-    "indexLevel": 100
+    "indexLevel": 101.24970528104078
   },
   "Manny Pina": {
     "match": {
