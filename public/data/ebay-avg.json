@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-15T14:54:16.958Z",
+    "updatedAt": "2026-03-15T14:55:10.001Z",
     "minSampleSize": 4,
     "marketplaces": [
       "EBAY_US",
@@ -538,7 +538,8 @@
       "Salvador Perez": 21.962169721056892,
       "Dave Concepcion": 29.94785929353015,
       "Eduardo Salazar": 2.504222662847911,
-      "Isaias Chavez": 63.62642169728784
+      "Isaias Chavez": 63.62642169728784,
+      "Maikel Garcia": 18.16774076949302
     },
     "indexHistory": [
       {
@@ -631,8 +632,8 @@
       },
       {
         "date": "2026-03-15",
-        "Baseball": 487.3,
-        "All": 487.3
+        "Baseball": 293.4,
+        "All": 293.4
       }
     ]
   },
@@ -15541,40 +15542,40 @@
       "EBAY_US": {
         "aspectMode": "player",
         "aspectValue": "Maikel Garcia",
-        "avgListing": null,
-        "taguchiListing": null,
-        "marketStabilityCV": null,
-        "avgDaysOnMarket": null,
-        "nListing": 0,
-        "nDaysOnMarket": 0,
+        "avgListing": 10.545000000000003,
+        "taguchiListing": 10.545000000000003,
+        "marketStabilityCV": 0.4007381036132545,
+        "avgDaysOnMarket": 73.98026450121999,
+        "nListing": 74,
+        "nDaysOnMarket": 74,
         "currency": "USD",
-        "originalCurrency": null,
-        "fxRateUsed": null
+        "originalCurrency": "USD",
+        "fxRateUsed": 1
       },
       "EBAY_CA": {
         "aspectMode": "player",
         "aspectValue": "Maikel Garcia",
-        "avgListing": null,
-        "taguchiListing": null,
-        "marketStabilityCV": null,
-        "avgDaysOnMarket": null,
-        "nListing": 0,
-        "nDaysOnMarket": 0,
+        "avgListing": 18.16774076949302,
+        "taguchiListing": 18.16774076949302,
+        "marketStabilityCV": 0.3429964734525889,
+        "avgDaysOnMarket": 134.80241767377407,
+        "nListing": 71,
+        "nDaysOnMarket": 71,
         "currency": "USD",
-        "originalCurrency": null,
-        "fxRateUsed": null
+        "originalCurrency": "CAD",
+        "fxRateUsed": 0.7290755322251385
       }
     },
-    "avg": null,
-    "n": 0,
-    "avgListing": null,
-    "taguchiListing": null,
-    "marketStabilityCV": null,
-    "avgDaysOnMarket": null,
-    "nListing": 0,
+    "avg": 18.16774076949302,
+    "n": 71,
+    "avgListing": 18.16774076949302,
+    "taguchiListing": 18.16774076949302,
+    "marketStabilityCV": 0.3429964734525889,
+    "avgDaysOnMarket": 134.80241767377407,
+    "nListing": 71,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 18.16774076949302,
+    "indexLevel": 100
   },
   "Manny Pina": {
     "match": {
