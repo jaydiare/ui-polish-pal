@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-15T05:08:17.173Z",
+    "updatedAt": "2026-03-15T05:15:09.924Z",
     "minSampleSize": 4,
     "marketplaces": [
       "EBAY_US"
@@ -508,7 +508,8 @@
       },
       {
         "date": "2026-03-15",
-        "All": 0
+        "Baseball": 2332.6,
+        "All": 2332.6
       }
     ]
   },
@@ -11210,10 +11211,10 @@
       "EBAY_US": {
         "aspectMode": "player",
         "aspectValue": "Salvador Perez",
-        "avgListing": 59.722375,
-        "taguchiListing": 59.722375,
-        "marketStabilityCV": 0.24120284857776175,
-        "avgDaysOnMarket": 103.4946878809317,
+        "avgListing": 65.191125,
+        "taguchiListing": 65.191125,
+        "marketStabilityCV": 0.30974190610466684,
+        "avgDaysOnMarket": 95.1253384147859,
         "nListing": 80,
         "nDaysOnMarket": 80,
         "currency": "USD",
@@ -11221,16 +11222,16 @@
         "fxRateUsed": 1
       }
     },
-    "avg": 59.722375,
+    "avg": 65.191125,
     "n": 80,
-    "avgListing": 59.722375,
-    "taguchiListing": 59.722375,
-    "marketStabilityCV": 0.24120284857776175,
-    "avgDaysOnMarket": 103.4946878809317,
+    "avgListing": 65.191125,
+    "taguchiListing": 65.191125,
+    "marketStabilityCV": 0.30974190610466684,
+    "avgDaysOnMarket": 95.1253384147859,
     "nListing": 80,
     "currency": "USD",
     "basePriceUSD": 2.7948333333333335,
-    "indexLevel": 2136.885025940724
+    "indexLevel": 2332.558590255829
   },
   "Sandy Leon": {
     "match": {
