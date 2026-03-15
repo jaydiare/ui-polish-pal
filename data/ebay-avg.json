@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-15T14:56:16.271Z",
+    "updatedAt": "2026-03-15T14:56:58.102Z",
     "minSampleSize": 4,
     "marketplaces": [
       "EBAY_US",
@@ -632,8 +632,8 @@
       },
       {
         "date": "2026-03-15",
-        "Baseball": 294.3,
-        "All": 294.3
+        "Baseball": 618.9,
+        "All": 618.9
       }
     ]
   },
@@ -10367,40 +10367,40 @@
       "EBAY_US": {
         "aspectMode": "player",
         "aspectValue": "Jackson Chourio",
-        "avgListing": null,
-        "taguchiListing": null,
-        "marketStabilityCV": null,
-        "avgDaysOnMarket": null,
-        "nListing": 0,
-        "nDaysOnMarket": 0,
+        "avgListing": 2.89652777777778,
+        "taguchiListing": 2.89652777777778,
+        "marketStabilityCV": 0.336441457165855,
+        "avgDaysOnMarket": 168.18491134050285,
+        "nListing": 72,
+        "nDaysOnMarket": 72,
         "currency": "USD",
-        "originalCurrency": null,
-        "fxRateUsed": null
+        "originalCurrency": "USD",
+        "fxRateUsed": 1
       },
       "EBAY_CA": {
         "aspectMode": "player",
         "aspectValue": "Jackson Chourio",
-        "avgListing": null,
-        "taguchiListing": null,
-        "marketStabilityCV": null,
-        "avgDaysOnMarket": null,
-        "nListing": 0,
-        "nDaysOnMarket": 0,
+        "avgListing": 7.717157291613063,
+        "taguchiListing": 7.717157291613063,
+        "marketStabilityCV": 0.4962102472463849,
+        "avgDaysOnMarket": 231.57411429040718,
+        "nListing": 68,
+        "nDaysOnMarket": 68,
         "currency": "USD",
-        "originalCurrency": null,
-        "fxRateUsed": null
+        "originalCurrency": "CAD",
+        "fxRateUsed": 0.7290755322251385
       }
     },
-    "avg": null,
-    "n": 0,
-    "avgListing": null,
-    "taguchiListing": null,
-    "marketStabilityCV": null,
-    "avgDaysOnMarket": null,
-    "nListing": 0,
+    "avg": 7.717157291613063,
+    "n": 68,
+    "avgListing": 7.717157291613063,
+    "taguchiListing": 7.717157291613063,
+    "marketStabilityCV": 0.4962102472463849,
+    "avgDaysOnMarket": 231.57411429040718,
+    "nListing": 68,
     "currency": "USD",
     "basePriceUSD": 152.49,
-    "indexLevel": 100
+    "indexLevel": 5.0607628641963815
   },
   "Jairo Diaz": {
     "match": {
