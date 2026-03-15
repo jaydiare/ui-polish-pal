@@ -16,7 +16,7 @@
 //   1. Authenticate with eBay Browse API (client credentials grant)
 //   2. Validate athlete exists via Player/Athlete aspect, fallback to Sport aspect
 //   3. Fetch up to 60 active Buy It Now listings from EBAY_US only
-//      API FILTERS: Graded:{Yes} + Professional Grader:{PSA}
+//      API FILTERS: Graded:{Yes} (all professional graders: PSA, BGS, SGC)
 //   4. POST-FETCH FILTERING:
 //      a. When aspect filter is present, trust API (no title regex needed)
 //      b. When aspect filter absent, fallback to PSA title regex
