@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-15T04:44:51.930Z",
+    "updatedAt": "2026-03-15T04:55:23.476Z",
     "minSampleSize": 4,
     "marketplaces": [
       "EBAY_US",
@@ -537,7 +537,8 @@
       "Yordan Osorio": 2.5008333333333335,
       "Salvador Perez": 21.962169721056892,
       "Dave Concepcion": 29.94785929353015,
-      "Eduardo Salazar": 2.504222662847911
+      "Eduardo Salazar": 2.504222662847911,
+      "Isaias Chavez": 63.62642169728784
     },
     "indexHistory": [
       {
@@ -630,8 +631,8 @@
       },
       {
         "date": "2026-03-15",
-        "Baseball": 99.2,
-        "All": 99.2
+        "Baseball": 100,
+        "All": 100
       }
     ]
   },
@@ -25355,5 +25356,50 @@
     "currency": "USD",
     "basePriceUSD": null,
     "indexLevel": null
+  },
+  "Isaias Chavez": {
+    "match": {
+      "mode": "player",
+      "value": "Isaias Latigo Chavez",
+      "validatedOn": "EBAY_CA"
+    },
+    "marketplaces": {
+      "EBAY_US": {
+        "aspectMode": "player",
+        "aspectValue": "Isaias Latigo Chavez",
+        "avgListing": 58.57142857142857,
+        "taguchiListing": 58.57142857142857,
+        "marketStabilityCV": 0.34750748411646365,
+        "avgDaysOnMarket": 349.7044145155423,
+        "nListing": 7,
+        "nDaysOnMarket": 7,
+        "currency": "USD",
+        "originalCurrency": "USD",
+        "fxRateUsed": 1
+      },
+      "EBAY_CA": {
+        "aspectMode": "player",
+        "aspectValue": "Isaias Latigo Chavez",
+        "avgListing": 63.62642169728784,
+        "taguchiListing": 63.62642169728784,
+        "marketStabilityCV": 0.24459672615483127,
+        "avgDaysOnMarket": 274.61408143904316,
+        "nListing": 9,
+        "nDaysOnMarket": 9,
+        "currency": "USD",
+        "originalCurrency": "CAD",
+        "fxRateUsed": 0.7290755322251385
+      }
+    },
+    "avg": 63.62642169728784,
+    "n": 9,
+    "avgListing": 63.62642169728784,
+    "taguchiListing": 63.62642169728784,
+    "marketStabilityCV": 0.24459672615483127,
+    "avgDaysOnMarket": 274.61408143904316,
+    "nListing": 9,
+    "currency": "USD",
+    "basePriceUSD": 63.62642169728784,
+    "indexLevel": 100
   }
 }
