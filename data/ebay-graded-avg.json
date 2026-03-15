@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-14T18:49:20.741Z",
+    "updatedAt": "2026-03-15T04:51:07.862Z",
     "minSampleSize": 4,
     "marketplaces": [
       "EBAY_US"
@@ -9,7 +9,7 @@
     "note": "GRADED (PSA) active listing robust mean (Browse API FIXED_PRICE). No sold data. Prices normalized to USD. Includes market stability CV (sd/mean). Filtered by Graded:{Yes} + Professional Grader:{PSA}. Includes avg days-on-market for active listings (listing age). Base prices stored in dedicated ebay-graded-base-prices.json.",
     "fx": {
       "source": "CBSA Exchange Rates API",
-      "asOf": "2026-03-15T00:00:00.000Z",
+      "asOf": "2026-03-16T00:00:00.000Z",
       "ratesToUSD": {
         "USD": 1,
         "CAD": 0.7290755322251385,
@@ -505,6 +505,11 @@
       {
         "date": "2026-03-14",
         "All": 0
+      },
+      {
+        "date": "2026-03-15",
+        "Baseball": 100,
+        "All": 100
       }
     ]
   },
