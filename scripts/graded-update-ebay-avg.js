@@ -249,10 +249,10 @@ function sportAspectCandidates(sportRaw) {
 
 function buildAspectFilter({ aspectMode, aspectValue }) {
   // eBay Browse API requires categoryId prefix: aspect_filter=categoryId:XXXX,Aspect:{Value}
+  // Graded:{Yes} covers all professional graders (PSA, BGS, SGC) without restricting to one
   const parts = [];
   parts.push(`categoryId:${CATEGORY_ID}`);
   parts.push(`Graded:{Yes}`);
-  parts.push(`Professional Grader:{Professional Sports Authenticator (PSA)}`);
   if (aspectMode === "player" && aspectValue) {
     parts.push(`Player/Athlete:{${aspectValue}}`);
   } else if (aspectMode === "sport" && aspectValue) {
