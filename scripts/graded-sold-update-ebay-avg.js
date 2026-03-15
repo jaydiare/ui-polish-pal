@@ -635,7 +635,7 @@ function loadAthletes() {
 
 function buildKeyword(name, sport) {
   const sportHint = sport ? ` ${sport}` : "";
-  return `${name}${sportHint} PSA`;
+  return `${name}${sportHint} graded`;
 }
 
 // --- progress tracking ---
