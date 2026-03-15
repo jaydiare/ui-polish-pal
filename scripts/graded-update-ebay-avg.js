@@ -29,8 +29,8 @@
 // KEY DESIGN DECISIONS:
 //   - ONLY processes athletes with gemrate="yes" in athletes.json
 //   - Base prices stored in dedicated ebay-graded-base-prices.json (separate from raw)
-//   - API aspect filters (Graded:{Yes} + PSA) are trusted when present
-//   - Title-based PSA regex only used as fallback when API filter unavailable
+//   - API aspect filter Graded:{Yes} is trusted when present (covers PSA/BGS/SGC)
+//   - Title-based grader regex only used as fallback when API filter unavailable
 //   - Single-athlete mode via EBAY_ONLY env var for targeted testing
 //
 // SEE ALSO: docs/DATA-PIPELINE-AUDIT.md §3.2, §5.1
