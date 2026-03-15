@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-15T14:56:58.102Z",
+    "updatedAt": "2026-03-15T14:57:37.383Z",
     "minSampleSize": 4,
     "marketplaces": [
       "EBAY_US",
@@ -539,7 +539,8 @@
       "Dave Concepcion": 29.94785929353015,
       "Eduardo Salazar": 2.504222662847911,
       "Isaias Chavez": 63.62642169728784,
-      "Maikel Garcia": 18.16774076949302
+      "Maikel Garcia": 18.16774076949302,
+      "Eduard Bazardo": 24.997569748225917
     },
     "indexHistory": [
       {
@@ -632,8 +633,8 @@
       },
       {
         "date": "2026-03-15",
-        "Baseball": 618.9,
-        "All": 618.9
+        "Baseball": 100,
+        "All": 100
       }
     ]
   },
@@ -5957,40 +5958,40 @@
       "EBAY_US": {
         "aspectMode": "player",
         "aspectValue": "Eduard Bazardo",
-        "avgListing": null,
-        "taguchiListing": null,
-        "marketStabilityCV": null,
-        "avgDaysOnMarket": null,
-        "nListing": 0,
-        "nDaysOnMarket": 0,
+        "avgListing": 24.994444444444444,
+        "taguchiListing": 24.994444444444444,
+        "marketStabilityCV": 0.5695473634217466,
+        "avgDaysOnMarket": 510.6538896000514,
+        "nListing": 9,
+        "nDaysOnMarket": 9,
         "currency": "USD",
-        "originalCurrency": null,
-        "fxRateUsed": null
+        "originalCurrency": "USD",
+        "fxRateUsed": 1
       },
       "EBAY_CA": {
         "aspectMode": "player",
         "aspectValue": "Eduard Bazardo",
-        "avgListing": null,
-        "taguchiListing": null,
-        "marketStabilityCV": null,
-        "avgDaysOnMarket": null,
-        "nListing": 0,
-        "nDaysOnMarket": 0,
+        "avgListing": 24.997569748225917,
+        "taguchiListing": 24.997569748225917,
+        "marketStabilityCV": 0.5695235626542798,
+        "avgDaysOnMarket": 510.65389634902266,
+        "nListing": 9,
+        "nDaysOnMarket": 9,
         "currency": "USD",
-        "originalCurrency": null,
-        "fxRateUsed": null
+        "originalCurrency": "CAD",
+        "fxRateUsed": 0.7290755322251385
       }
     },
-    "avg": null,
-    "n": 0,
-    "avgListing": null,
-    "taguchiListing": null,
-    "marketStabilityCV": null,
-    "avgDaysOnMarket": null,
-    "nListing": 0,
+    "avg": 24.997569748225917,
+    "n": 9,
+    "avgListing": 24.997569748225917,
+    "taguchiListing": 24.997569748225917,
+    "marketStabilityCV": 0.5695235626542798,
+    "avgDaysOnMarket": 510.65389634902266,
+    "nListing": 9,
     "currency": "USD",
-    "basePriceUSD": null,
-    "indexLevel": null
+    "basePriceUSD": 24.997569748225917,
+    "indexLevel": 100
   },
   "Eduardo Escobar": {
     "match": {
