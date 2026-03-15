@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-15T16:53:40.525Z",
+    "updatedAt": "2026-03-15T19:02:13.129Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA/BGS/SGC grader title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 220,
-      "endIdx": 230,
+      "startIdx": 230,
+      "endIdx": 240,
       "totalAthletes": 451
     },
     "maxPages": 4,
@@ -3253,7 +3253,7 @@
   },
   "Jose Suarez": {
     "keyword": "Jose Suarez Baseball PSA",
-    "nScraped": 240,
+    "nScraped": 243,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -3289,18 +3289,19 @@
   },
   "Josh Barfield": {
     "keyword": "Josh Barfield Baseball PSA",
-    "nScraped": 120,
-    "nSoldUsed": 0,
-    "avg": null,
-    "taguchiSold": null,
-    "medianSold": null,
-    "marketStabilityCV": null,
+    "nScraped": 240,
+    "nSoldUsed": 4,
+    "avg": 4.25,
+    "taguchiSold": 4.25,
+    "medianSold": 4.25,
+    "marketStabilityCV": 0,
     "currency": "USD",
-    "error": "eBay page fetch failed (503) after 4 attempts"
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
   },
   "Josmil Pinto": {
     "keyword": "Josmil Pinto Baseball PSA",
-    "nScraped": 22,
+    "nScraped": 23,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -3312,7 +3313,7 @@
   },
   "Juan Castillo": {
     "keyword": "Juan Castillo Baseball PSA",
-    "nScraped": 244,
+    "nScraped": 184,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
