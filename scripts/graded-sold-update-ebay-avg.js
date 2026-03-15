@@ -203,18 +203,18 @@ function titleLooksRelevantToPlayer(title, playerName) {
   return parts.every((part) => t.includes(part));
 }
 
-// PSA-only detector: grades 1–10 including half grades
+// Grader detector: PSA, BGS (Beckett), SGC — grades 1–10 including half grades
 function isGradedTitle(title) {
   const t = norm(title);
 
   // FIX: Tightened gap from {0,18} to {0,3} to prevent card numbers from matching as grades
-  const psaNumeric =
-    /\bpsa\b[^\n]{0,3}\b(10|9\.5|9|8\.5|8|7\.5|7|6\.5|6|5\.5|5|4\.5|4|3\.5|3|2\.5|2|1\.5|1)\b/i;
+  const graderNumeric =
+    /\b(psa|bgs|sgc|beckett)\b[^\n]{0,3}\b(10|9\.5|9|8\.5|8|7\.5|7|6\.5|6|5\.5|5|4\.5|4|3\.5|3|2\.5|2|1\.5|1)\b/i;
 
-  const psaLabel =
-    /\bpsa\b[^\n]{0,3}\b(gem mint|mint|dna|authentic)\b/i;
+  const graderLabel =
+    /\b(psa|bgs|sgc)\b[^\n]{0,3}\b(gem mint|mint|pristine|dna|authentic)\b/i;
 
-  return psaNumeric.test(t) || psaLabel.test(t);
+  return graderNumeric.test(t) || graderLabel.test(t);
 }
 
 function randomUA() {
