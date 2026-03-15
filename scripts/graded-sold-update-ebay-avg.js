@@ -19,7 +19,7 @@
 //   4. POST-FETCH FILTERING:
 //      a. Junk title exclusion (lots, digital, auto, signed)
 //      b. Name relevance (all parts must appear in title)
-//      c. PSA-only detection — INCLUDE only PSA-graded titles
+//      c. Grader detection — INCLUDE only PSA/BGS/SGC graded titles
 //   5. Convert to USD via CBSA (includes shipping)
 //   6. Compute Taguchi winsorized mean, median, CV
 //
