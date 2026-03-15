@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-15T15:03:45.721Z",
+    "updatedAt": "2026-03-15T15:05:55.809Z",
     "minSampleSize": 4,
     "marketplaces": [
       "EBAY_US",
@@ -633,8 +633,8 @@
       },
       {
         "date": "2026-03-15",
-        "Baseball": 431.6,
-        "All": 431.6
+        "Baseball": 340.1,
+        "All": 340.1
       }
     ]
   },
@@ -10503,40 +10503,40 @@
       "EBAY_US": {
         "aspectMode": "player",
         "aspectValue": "Javier Sanoja",
-        "avgListing": null,
-        "taguchiListing": null,
-        "marketStabilityCV": null,
-        "avgDaysOnMarket": null,
-        "nListing": 0,
-        "nDaysOnMarket": 0,
+        "avgListing": 6.415875000000004,
+        "taguchiListing": 6.415875000000004,
+        "marketStabilityCV": 0.22248696334106388,
+        "avgDaysOnMarket": 65.73309178790508,
+        "nListing": 80,
+        "nDaysOnMarket": 80,
         "currency": "USD",
-        "originalCurrency": null,
-        "fxRateUsed": null
+        "originalCurrency": "USD",
+        "fxRateUsed": 1
       },
       "EBAY_CA": {
         "aspectMode": "player",
         "aspectValue": "Javier Sanoja",
-        "avgListing": null,
-        "taguchiListing": null,
-        "marketStabilityCV": null,
-        "avgDaysOnMarket": null,
-        "nListing": 0,
-        "nDaysOnMarket": 0,
+        "avgListing": 14.634415356200112,
+        "taguchiListing": 14.634415356200112,
+        "marketStabilityCV": 0.23022927579607638,
+        "avgDaysOnMarket": 92.77412745667144,
+        "nListing": 78,
+        "nDaysOnMarket": 78,
         "currency": "USD",
-        "originalCurrency": null,
-        "fxRateUsed": null
+        "originalCurrency": "CAD",
+        "fxRateUsed": 0.7290755322251385
       }
     },
-    "avg": null,
-    "n": 0,
-    "avgListing": null,
-    "taguchiListing": null,
-    "marketStabilityCV": null,
-    "avgDaysOnMarket": null,
-    "nListing": 0,
+    "avg": 14.634415356200112,
+    "n": 78,
+    "avgListing": 14.634415356200112,
+    "taguchiListing": 14.634415356200112,
+    "marketStabilityCV": 0.23022927579607638,
+    "avgDaysOnMarket": 92.77412745667144,
+    "nListing": 78,
     "currency": "USD",
     "basePriceUSD": 7.786000000000001,
-    "indexLevel": 100
+    "indexLevel": 187.9580703339341
   },
   "Jean Machi": {
     "match": {
