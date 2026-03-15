@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-15T09:31:43.342Z",
+    "updatedAt": "2026-03-15T12:44:47.563Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. Taguchi winsorized mean + market stability CV. Ungraded condition policy (permissive for sold). Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 490,
-      "endIdx": 500,
+      "startIdx": 500,
+      "endIdx": 510,
       "totalAthletes": 567
     },
     "maxPages": 4,
@@ -6774,7 +6774,7 @@
   },
   "Yohandry Orozco": {
     "keyword": "Yohandry Orozco Soccer",
-    "nScraped": 25,
+    "nScraped": 32,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -6798,7 +6798,7 @@
   },
   "Christian Santos": {
     "keyword": "Christian Santos Soccer",
-    "nScraped": 183,
+    "nScraped": 244,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -6810,31 +6810,31 @@
   },
   "Fernando Amorebieta": {
     "keyword": "Fernando Amorebieta Soccer",
-    "nScraped": 180,
-    "nSoldUsed": 3,
-    "avg": null,
-    "taguchiSold": null,
-    "medianSold": null,
-    "marketStabilityCV": null,
+    "nScraped": 240,
+    "nSoldUsed": 4,
+    "avg": 7.04,
+    "taguchiSold": 7.04,
+    "medianSold": 7.04,
+    "marketStabilityCV": 0,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
   },
   "Jeffren Suarez": {
     "keyword": "Jeffren Suarez Soccer",
-    "nScraped": 180,
-    "nSoldUsed": 12,
-    "avg": 1.7899999999999998,
-    "taguchiSold": 1.7899999999999998,
+    "nScraped": 240,
+    "nSoldUsed": 16,
+    "avg": 1.7899999999999994,
+    "taguchiSold": 1.7899999999999994,
     "medianSold": 1.79,
-    "marketStabilityCV": 0.11670010455130583,
+    "marketStabilityCV": 0.11539615184230666,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
   },
   "Jon Aramburu": {
     "keyword": "Jon Aramburu Soccer",
-    "nScraped": 59,
+    "nScraped": 57,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -6894,15 +6894,15 @@
   },
   "Roberto Rosales": {
     "keyword": "Roberto Rosales Soccer",
-    "nScraped": 180,
-    "nSoldUsed": 3,
+    "nScraped": 0,
+    "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
   },
   "Ruben Suarez Estrada": {
     "keyword": "Ruben Suarez Estrada Soccer",
