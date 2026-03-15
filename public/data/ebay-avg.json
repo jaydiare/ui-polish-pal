@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-15T15:00:02.798Z",
+    "updatedAt": "2026-03-15T15:01:16.386Z",
     "minSampleSize": 4,
     "marketplaces": [
       "EBAY_US",
@@ -633,8 +633,8 @@
       },
       {
         "date": "2026-03-15",
-        "Baseball": 367,
-        "All": 367
+        "Baseball": 1107.3,
+        "All": 1107.3
       }
     ]
   },
@@ -4878,40 +4878,40 @@
       "EBAY_US": {
         "aspectMode": "player",
         "aspectValue": "Daniel Palencia",
-        "avgListing": null,
-        "taguchiListing": null,
-        "marketStabilityCV": null,
-        "avgDaysOnMarket": null,
-        "nListing": 0,
-        "nDaysOnMarket": 0,
+        "avgListing": 2.4885897435897437,
+        "taguchiListing": 2.4885897435897437,
+        "marketStabilityCV": 0.19644681550291854,
+        "avgDaysOnMarket": 68.96468588541666,
+        "nListing": 78,
+        "nDaysOnMarket": 78,
         "currency": "USD",
-        "originalCurrency": null,
-        "fxRateUsed": null
+        "originalCurrency": "USD",
+        "fxRateUsed": 1
       },
       "EBAY_CA": {
         "aspectMode": "player",
         "aspectValue": "Daniel Palencia",
-        "avgListing": null,
-        "taguchiListing": null,
-        "marketStabilityCV": null,
-        "avgDaysOnMarket": null,
-        "nListing": 0,
-        "nDaysOnMarket": 0,
+        "avgListing": 8.255759696704569,
+        "taguchiListing": 8.255759696704569,
+        "marketStabilityCV": 0.556983899799427,
+        "avgDaysOnMarket": 103.46227759660495,
+        "nListing": 75,
+        "nDaysOnMarket": 75,
         "currency": "USD",
-        "originalCurrency": null,
-        "fxRateUsed": null
+        "originalCurrency": "CAD",
+        "fxRateUsed": 0.7290755322251385
       }
     },
-    "avg": null,
-    "n": 0,
-    "avgListing": null,
-    "taguchiListing": null,
-    "marketStabilityCV": null,
-    "avgDaysOnMarket": null,
-    "nListing": 0,
+    "avg": 8.255759696704569,
+    "n": 75,
+    "avgListing": 8.255759696704569,
+    "taguchiListing": 8.255759696704569,
+    "marketStabilityCV": 0.556983899799427,
+    "avgDaysOnMarket": 103.46227759660495,
+    "nListing": 75,
     "currency": "USD",
     "basePriceUSD": 4.261000000000002,
-    "indexLevel": 100
+    "indexLevel": 193.7516943605859
   },
   "Danny Leon": {
     "match": {
