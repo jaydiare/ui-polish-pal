@@ -1,10 +1,10 @@
 // =============================================================================
-// scripts/graded-sold-update-ebay-avg.js — GRADED (PSA) SOLD PRICE COLLECTOR
+// scripts/graded-sold-update-ebay-avg.js — GRADED (PSA/BGS/SGC) SOLD PRICE COLLECTOR
 // =============================================================================
 //
 // PURPOSE:
 //   Scrapes eBay's public sold/completed listings (HTML, no API keys) to compute
-//   sold price averages for PSA-GRADED cards only.
+//   sold price averages for GRADED (PSA, BGS, SGC) cards.
 //
 // WORKFLOW: ebay-graded-sold.yml (every 2 hours, 10 athletes per batch)
 // ENV VARS: EBAY_ONLY (optional single-athlete mode)
