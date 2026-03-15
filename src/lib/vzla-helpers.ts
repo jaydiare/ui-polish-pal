@@ -287,7 +287,29 @@ export function filterAthletes(
   ebaySoldRaw?: Record<string, any>
 ): Athlete[] {
   const q = normalizeName(filters.search);
-...
+
+  // Determine if user explicitly requested empty-state cards
+  const wantsNoPrice = filters.price === "none";
+  const wantsNoStability = filters.stability === "none";
+  const wantsNoDays = filters.daysListed === "none";
+  const hasSearch = q.length > 0;
+  const wantsEmptyStates = wantsNoPrice || wantsNoStability || wantsNoDays || hasSearch;
+
+  let filtered = list
+    .filter((a) => {
+      if (filters.category === "all") return true;
+      if (filters.category === "Other") return !["Baseball", "Soccer", "Basketball"].includes(a.sport);
+      return a.sport === filters.category;
+    })
+    .filter((a) => {
+      if (filters.stability === "all") return true;
+      const price = getEbayAvgNumber(a, byName, byKey);
+      const cv = price != null ? getMarketStabilityCV(a, byName, byKey) : null;
+      const bucket = marketStabilityScoreFromCV(cv).bucket;
+      if (filters.stability === "none") return price == null || cv == null || bucket === "none";
+      if (price == null || cv == null) return false;
+      return bucket === filters.stability;
+    })
     .filter((a) => !q || fuzzyNameMatch(q, normalizeName(a.name)))
     .filter((a) => {
       if (filters.daysListed === "all") return true;
