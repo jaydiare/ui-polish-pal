@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-15T15:26:13.944Z",
+    "updatedAt": "2026-03-15T18:34:53.679Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. Taguchi winsorized mean + market stability CV. Ungraded condition policy (permissive for sold). Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 510,
-      "endIdx": 520,
+      "startIdx": 520,
+      "endIdx": 530,
       "totalAthletes": 567
     },
     "maxPages": 4,
@@ -7026,7 +7026,7 @@
   },
   "Abel Caputo": {
     "keyword": "Abel Caputo Soccer",
-    "nScraped": 39,
+    "nScraped": 36,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -7038,7 +7038,7 @@
   },
   "Alejandro Fuenmayor": {
     "keyword": "Alejandro Fuenmayor Soccer",
-    "nScraped": 180,
+    "nScraped": 240,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -7050,19 +7050,19 @@
   },
   "Alejandro Moreno": {
     "keyword": "Alejandro Moreno Soccer",
-    "nScraped": 185,
-    "nSoldUsed": 9,
-    "avg": 2,
-    "taguchiSold": 2,
-    "medianSold": 2,
-    "marketStabilityCV": 0,
+    "nScraped": 252,
+    "nSoldUsed": 8,
+    "avg": 5.495,
+    "taguchiSold": 5.495,
+    "medianSold": 5.495,
+    "marketStabilityCV": 0.8744962929181784,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
   },
   "Bernardo Anor": {
     "keyword": "Bernardo Anor Soccer",
-    "nScraped": 180,
+    "nScraped": 241,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -7134,15 +7134,15 @@
   },
   "David Martinez": {
     "keyword": "David Martinez Soccer",
-    "nScraped": 156,
-    "nSoldUsed": 133,
-    "avg": 9.390902255639098,
-    "taguchiSold": 9.390902255639098,
-    "medianSold": 8.59,
-    "marketStabilityCV": 0.39896587175331244,
+    "nScraped": 0,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
   },
   "Eduardo Sosa": {
     "keyword": "Eduardo Sosa Soccer",
