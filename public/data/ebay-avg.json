@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-15T04:38:16.380Z",
+    "updatedAt": "2026-03-15T04:44:51.930Z",
     "minSampleSize": 4,
     "marketplaces": [
       "EBAY_US",
@@ -630,7 +630,8 @@
       },
       {
         "date": "2026-03-15",
-        "All": 0
+        "Baseball": 99.2,
+        "All": 99.2
       }
     ]
   },
@@ -7214,40 +7215,40 @@
       "EBAY_US": {
         "aspectMode": "player",
         "aspectValue": "Enmanuel De Jesus",
-        "avgListing": null,
-        "taguchiListing": null,
-        "marketStabilityCV": null,
-        "avgDaysOnMarket": null,
-        "nListing": 0,
-        "nDaysOnMarket": 0,
+        "avgListing": 1.6681249999999976,
+        "taguchiListing": 1.6681249999999976,
+        "marketStabilityCV": 0.10164083475262987,
+        "avgDaysOnMarket": 340.64458298524323,
+        "nListing": 80,
+        "nDaysOnMarket": 80,
         "currency": "USD",
-        "originalCurrency": null,
-        "fxRateUsed": null
+        "originalCurrency": "USD",
+        "fxRateUsed": 1
       },
       "EBAY_CA": {
         "aspectMode": "player",
         "aspectValue": "Enmanuel De Jesus",
-        "avgListing": null,
-        "taguchiListing": null,
-        "marketStabilityCV": null,
-        "avgDaysOnMarket": null,
-        "nListing": 0,
-        "nDaysOnMarket": 0,
+        "avgListing": 1.7393008165645973,
+        "taguchiListing": 1.7393008165645973,
+        "marketStabilityCV": 0.1363745571802372,
+        "avgDaysOnMarket": 332.57855047294544,
+        "nListing": 80,
+        "nDaysOnMarket": 80,
         "currency": "USD",
-        "originalCurrency": null,
-        "fxRateUsed": null
+        "originalCurrency": "CAD",
+        "fxRateUsed": 0.7290755322251385
       }
     },
-    "avg": null,
-    "n": 0,
-    "avgListing": null,
-    "taguchiListing": null,
-    "marketStabilityCV": null,
-    "avgDaysOnMarket": null,
-    "nListing": 0,
+    "avg": 1.7393008165645973,
+    "n": 80,
+    "avgListing": 1.7393008165645973,
+    "taguchiListing": 1.7393008165645973,
+    "marketStabilityCV": 0.1363745571802372,
+    "avgDaysOnMarket": 332.57855047294544,
+    "nListing": 80,
     "currency": "USD",
     "basePriceUSD": 1.7589999999999981,
-    "indexLevel": 100
+    "indexLevel": 98.88009190247864
   },
   "Enrique Gonzalez": {
     "match": {
