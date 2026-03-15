@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-15T15:02:00.539Z",
+    "updatedAt": "2026-03-15T15:03:45.721Z",
     "minSampleSize": 4,
     "marketplaces": [
       "EBAY_US",
@@ -2181,7 +2181,7 @@
         "avgListing": 4.483026315789473,
         "taguchiListing": 4.483026315789473,
         "marketStabilityCV": 0.31679827993068926,
-        "avgDaysOnMarket": 109.30528580531193,
+        "avgDaysOnMarket": 109.3065019452059,
         "nListing": 76,
         "nDaysOnMarket": 76,
         "currency": "USD",
@@ -2194,7 +2194,7 @@
         "avgListing": 6.9672280548264744,
         "taguchiListing": 6.9672280548264744,
         "marketStabilityCV": 0.43545009076892294,
-        "avgDaysOnMarket": 95.4877649832819,
+        "avgDaysOnMarket": 95.48898037856866,
         "nListing": 72,
         "nDaysOnMarket": 72,
         "currency": "USD",
@@ -2207,7 +2207,7 @@
     "avgListing": 6.9672280548264744,
     "taguchiListing": 6.9672280548264744,
     "marketStabilityCV": 0.43545009076892294,
-    "avgDaysOnMarket": 95.4877649832819,
+    "avgDaysOnMarket": 95.48898037856866,
     "nListing": 72,
     "currency": "USD",
     "basePriceUSD": 100,
