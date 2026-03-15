@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-15T15:01:16.386Z",
+    "updatedAt": "2026-03-15T15:02:00.539Z",
     "minSampleSize": 4,
     "marketplaces": [
       "EBAY_US",
@@ -633,8 +633,8 @@
       },
       {
         "date": "2026-03-15",
-        "Baseball": 1107.3,
-        "All": 1107.3
+        "Baseball": 431.6,
+        "All": 431.6
       }
     ]
   },
@@ -2178,40 +2178,40 @@
       "EBAY_US": {
         "aspectMode": "player",
         "aspectValue": "Andres Gimenez",
-        "avgListing": null,
-        "taguchiListing": null,
-        "marketStabilityCV": null,
-        "avgDaysOnMarket": null,
-        "nListing": 0,
-        "nDaysOnMarket": 0,
+        "avgListing": 4.483026315789473,
+        "taguchiListing": 4.483026315789473,
+        "marketStabilityCV": 0.31679827993068926,
+        "avgDaysOnMarket": 109.30528580531193,
+        "nListing": 76,
+        "nDaysOnMarket": 76,
         "currency": "USD",
-        "originalCurrency": null,
-        "fxRateUsed": null
+        "originalCurrency": "USD",
+        "fxRateUsed": 1
       },
       "EBAY_CA": {
         "aspectMode": "player",
         "aspectValue": "Andres Gimenez",
-        "avgListing": null,
-        "taguchiListing": null,
-        "marketStabilityCV": null,
-        "avgDaysOnMarket": null,
-        "nListing": 0,
-        "nDaysOnMarket": 0,
+        "avgListing": 6.9672280548264744,
+        "taguchiListing": 6.9672280548264744,
+        "marketStabilityCV": 0.43545009076892294,
+        "avgDaysOnMarket": 95.4877649832819,
+        "nListing": 72,
+        "nDaysOnMarket": 72,
         "currency": "USD",
-        "originalCurrency": null,
-        "fxRateUsed": null
+        "originalCurrency": "CAD",
+        "fxRateUsed": 0.7290755322251385
       }
     },
-    "avg": null,
-    "n": 0,
-    "avgListing": null,
-    "taguchiListing": null,
-    "marketStabilityCV": null,
-    "avgDaysOnMarket": null,
-    "nListing": 0,
+    "avg": 6.9672280548264744,
+    "n": 72,
+    "avgListing": 6.9672280548264744,
+    "taguchiListing": 6.9672280548264744,
+    "marketStabilityCV": 0.43545009076892294,
+    "avgDaysOnMarket": 95.4877649832819,
+    "nListing": 72,
     "currency": "USD",
     "basePriceUSD": 100,
-    "indexLevel": 100
+    "indexLevel": 6.9672280548264744
   },
   "Andres Machado": {
     "match": {
