@@ -19,7 +19,7 @@
 //      API FILTERS: Graded:{Yes} (all professional graders: PSA, BGS, SGC)
 //   4. POST-FETCH FILTERING:
 //      a. When aspect filter is present, trust API (no title regex needed)
-//      b. When aspect filter absent, fallback to PSA title regex
+//      b. When aspect filter absent, fallback to PSA/BGS/SGC title regex
 //   5. Convert all prices to USD via CBSA Exchange Rates API
 //   6. Compute Taguchi winsorized mean (40% trim) and market stability CV
 //   7. Compute base-100 price index per athlete
