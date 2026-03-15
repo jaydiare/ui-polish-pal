@@ -621,6 +621,7 @@ function ScpHistorySection({
                     strokeDasharray="5 3"
                     dot={false}
                     connectNulls
+                    isAnimationActive={!isMobile}
                   />
                 );
               }
