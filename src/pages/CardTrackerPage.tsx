@@ -452,8 +452,8 @@ function ScpHistorySection({
       a.date.localeCompare(b.date)
     );
     // Cap data points on mobile to prevent memory crash
-    if (isMobile && sorted.length > 80) {
-      const step = Math.ceil(sorted.length / 80);
+    if (isMobile && sorted.length > MAX_CHART_POINTS_MOBILE) {
+      const step = Math.ceil(sorted.length / MAX_CHART_POINTS_MOBILE);
       return sorted.filter((_, i) => i % step === 0 || i === sorted.length - 1);
     }
     return sorted;
