@@ -53,6 +53,7 @@ const SCP_RANGE_OPTIONS = [
   { label: "5y", days: 1825 },
   { label: "All", days: Infinity },
 ];
+const MAX_CHART_POINTS_MOBILE = 50;
 
 /* ── CSV Download Helper ── */
 function downloadCsv(filename: string, headers: string[], rows: (string | number | null)[][]) {
