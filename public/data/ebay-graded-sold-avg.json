@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-15T05:20:55.521Z",
+    "updatedAt": "2026-03-15T05:23:45.494Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA-only title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
@@ -5082,15 +5082,16 @@
     "fxRateUsed": 1
   },
   "Ronald Acuna Jr.": {
-    "keyword": "Ronald Acuna Jr. Baseball graded",
-    "nScraped": 0,
-    "nSoldUsed": 0,
-    "avg": null,
-    "taguchiSold": null,
-    "medianSold": null,
-    "marketStabilityCV": null,
+    "keyword": "Ronald Acuna Jr. Baseball PSA",
+    "nScraped": 240,
+    "nSoldUsed": 47,
+    "avg": 49.4691489361702,
+    "taguchiSold": 49.4691489361702,
+    "medianSold": 45,
+    "marketStabilityCV": 0.18916117827062917,
     "currency": "USD",
-    "error": "fetch failed"
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
   },
   "Ronald Belisario": {
     "keyword": "Ronald Belisario Baseball PSA",
