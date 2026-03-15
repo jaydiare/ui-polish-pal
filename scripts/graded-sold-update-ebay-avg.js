@@ -756,7 +756,7 @@ async function main() {
     source: "eBay public sold listings (HTML scrape, LH_Sold=1)",
     note:
       "SOLD comps scraped in batches of " + BATCH_SIZE + ". No brand filter. Junk titles removed. " +
-      "PSA-only title filter (grades 1–10 including half grades). " +
+      "PSA/BGS/SGC grader title filter (grades 1–10 including half grades). " +
       "Taguchi winsorized mean + market stability CV. " +
       "Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     batchInfo: { startIdx, endIdx, totalAthletes: athletes.length },
@@ -772,7 +772,7 @@ async function main() {
       trimPercent: TAGUCHI_TRIM_PCT,
     },
     gradingFilter: {
-      company: "PSA",
+      companies: ["PSA", "BGS", "SGC"],
       grades: "1–10 including half grades",
     },
     fx: { source: "CBSA Exchange Rates API", asOf: fx.asOf },
