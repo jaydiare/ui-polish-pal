@@ -977,8 +977,30 @@ async function main() {
   // --- Step 2: Optional single-athlete mode (EBAY_ONLY env var) ---
   const onlyNames = process.env.EBAY_ONLY;
   if (onlyNames) {
-    const wanted = onlyNames.split(",").map((n) => normalizeNameForCompare(n.trim()));
-    athletes = athletes.filter((a) => wanted.includes(normalizeNameForCompare(a.name)));
+    const { resolved, matchedPairs, unmatched } = resolveSingleAthleteInputs(athletes, onlyNames);
+
+    athletes = resolved;
+
+    if (matchedPairs.length) {
+      for (const pair of matchedPairs) {
+        if (normalizeNameForCompare(pair.requestName) !== normalizeNameForCompare(pair.matchedName)) {
+          console.log(`ℹ️  EBAY_ONLY matched "${pair.requestName}" → "${pair.matchedName}"`);
+        }
+      }
+    }
+
+    if (unmatched.length) {
+      for (const miss of unmatched) {
+        const hint = miss.suggestions.length ? ` Closest: ${miss.suggestions.join(" | ")}` : "";
+        console.warn(`⚠️  EBAY_ONLY no roster match for "${miss.requestName}".${hint}`);
+      }
+    }
+
+    if (!athletes.length) {
+      console.error("❌ EBAY_ONLY resolved to 0 athletes. Aborting to avoid writing a misleading snapshot.");
+      process.exit(1);
+    }
+
     console.log(`🎯 Single-athlete mode: processing ${athletes.length} athlete(s)`);
   }
 
