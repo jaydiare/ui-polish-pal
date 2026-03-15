@@ -53,6 +53,7 @@ const SCP_RANGE_OPTIONS = [
   { label: "5y", days: 1825 },
   { label: "All", days: Infinity },
 ];
+const MAX_CHART_POINTS_MOBILE = 50;
 
 /* ── CSV Download Helper ── */
 function downloadCsv(filename: string, headers: string[], rows: (string | number | null)[][]) {
@@ -451,8 +452,8 @@ function ScpHistorySection({
       a.date.localeCompare(b.date)
     );
     // Cap data points on mobile to prevent memory crash
-    if (isMobile && sorted.length > 80) {
-      const step = Math.ceil(sorted.length / 80);
+    if (isMobile && sorted.length > MAX_CHART_POINTS_MOBILE) {
+      const step = Math.ceil(sorted.length / MAX_CHART_POINTS_MOBILE);
       return sorted.filter((_, i) => i % step === 0 || i === sorted.length - 1);
     }
     return sorted;
@@ -546,7 +547,7 @@ function ScpHistorySection({
       </div>
 
       {chartData.length > 0 ? (
-        <ResponsiveContainer width="100%" height={360}>
+        <ResponsiveContainer width="100%" height={isMobile ? 280 : 360}>
           <LineChart data={chartData} margin={{ top: 5, right: 20, left: 10, bottom: 5 }}>
             <CartesianGrid strokeDasharray="3 3" stroke="hsl(var(--border))" />
             <XAxis
@@ -557,7 +558,7 @@ function ScpHistorySection({
                 return `${parts[1]}/${parts[0].slice(2)}`;
               }}
               interval="preserveStartEnd"
-              minTickGap={40}
+              minTickGap={isMobile ? 24 : 40}
             />
             <YAxis
               tick={{ fill: "hsl(var(--muted-foreground))", fontSize: 11 }}
@@ -580,14 +581,16 @@ function ScpHistorySection({
               }}
               labelFormatter={(d) => d}
             />
-            <Legend
-              formatter={(value: string) => {
-                const parts = value.split("_");
-                const player = parts[0] === "acuna" ? "Acuña" : "Torres";
-                const grade = gradeLabel(parts.slice(1).join("_"));
-                return `${player} ${grade}`;
-              }}
-            />
+            {!isMobile && (
+              <Legend
+                formatter={(value: string) => {
+                  const parts = value.split("_");
+                  const player = parts[0] === "acuna" ? "Acuña" : "Torres";
+                  const grade = gradeLabel(parts.slice(1).join("_"));
+                  return `${player} ${grade}`;
+                }}
+              />
+            )}
             {selectedScpGrades.flatMap((grade) => {
               const color = SCP_GRADE_COLORS[grade] || "hsl(var(--foreground))";
               const lines = [];
@@ -602,6 +605,7 @@ function ScpHistorySection({
                     strokeWidth={2}
                     dot={false}
                     connectNulls
+                    isAnimationActive={!isMobile}
                   />
                 );
               }
@@ -617,6 +621,7 @@ function ScpHistorySection({
                     strokeDasharray="5 3"
                     dot={false}
                     connectNulls
+                    isAnimationActive={!isMobile}
                   />
                 );
               }
