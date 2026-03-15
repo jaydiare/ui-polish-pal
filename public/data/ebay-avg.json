@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-15T14:50:20.855Z",
+    "updatedAt": "2026-03-15T14:52:05.735Z",
     "minSampleSize": 4,
     "marketplaces": [
       "EBAY_US",
@@ -14146,10 +14146,10 @@
       "EBAY_US": {
         "aspectMode": "player",
         "aspectValue": "Luinder Avila",
-        "avgListing": 1.7351898734177202,
-        "taguchiListing": 1.7351898734177202,
-        "marketStabilityCV": 0.13649700397947925,
-        "avgDaysOnMarket": 17.214800366268165,
+        "avgListing": 1.7413924050632896,
+        "taguchiListing": 1.7413924050632896,
+        "marketStabilityCV": 0.13611297158321953,
+        "avgDaysOnMarket": 17.190129028070796,
         "nListing": 79,
         "nDaysOnMarket": 79,
         "currency": "USD",
@@ -14162,7 +14162,7 @@
         "avgListing": 4.93824084225759,
         "taguchiListing": 4.93824084225759,
         "marketStabilityCV": 0.37409864207545956,
-        "avgDaysOnMarket": 29.459941328527886,
+        "avgDaysOnMarket": 29.461151925398497,
         "nListing": 79,
         "nDaysOnMarket": 79,
         "currency": "USD",
@@ -14175,7 +14175,7 @@
     "avgListing": 4.93824084225759,
     "taguchiListing": 4.93824084225759,
     "marketStabilityCV": 0.37409864207545956,
-    "avgDaysOnMarket": 29.459941328527886,
+    "avgDaysOnMarket": 29.461151925398497,
     "nListing": 79,
     "currency": "USD",
     "basePriceUSD": 2.3056666666666663,
