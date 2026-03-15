@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-15T18:34:53.679Z",
+    "updatedAt": "2026-03-15T21:25:32.686Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. Taguchi winsorized mean + market stability CV. Ungraded condition policy (permissive for sold). Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 520,
-      "endIdx": 530,
+      "startIdx": 530,
+      "endIdx": 540,
       "totalAthletes": 567
     },
     "maxPages": 4,
@@ -7158,7 +7158,7 @@
   },
   "Emilio Renteria": {
     "keyword": "Emilio Renteria Soccer",
-    "nScraped": 129,
+    "nScraped": 176,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -7182,7 +7182,7 @@
   },
   "Erickson Gallardo": {
     "keyword": "Erickson Gallardo Soccer",
-    "nScraped": 38,
+    "nScraped": 36,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -7206,12 +7206,12 @@
   },
   "Gustavo Caraballo": {
     "keyword": "Gustavo Caraballo Soccer",
-    "nScraped": 72,
-    "nSoldUsed": 66,
-    "avg": 6.425757575757578,
-    "taguchiSold": 6.425757575757578,
+    "nScraped": 165,
+    "nSoldUsed": 154,
+    "avg": 5.814805194805197,
+    "taguchiSold": 5.814805194805197,
     "medianSold": 5,
-    "marketStabilityCV": 0.3447428548634967,
+    "marketStabilityCV": 0.2581163959932808,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
@@ -7230,12 +7230,12 @@
   },
   "Jefferson Savarino": {
     "keyword": "Jefferson Savarino Soccer",
-    "nScraped": 66,
-    "nSoldUsed": 42,
-    "avg": 4.446428571428568,
-    "taguchiSold": 4.446428571428568,
-    "medianSold": 4.625,
-    "marketStabilityCV": 0.307379391399937,
+    "nScraped": 72,
+    "nSoldUsed": 50,
+    "avg": 4.6712,
+    "taguchiSold": 4.6712,
+    "medianSold": 5,
+    "marketStabilityCV": 0.2779051197470487,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
@@ -7254,7 +7254,7 @@
   },
   "Jesus Castellano": {
     "keyword": "Jesus Castellano Soccer",
-    "nScraped": 60,
+    "nScraped": 0,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
