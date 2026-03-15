@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-15T14:52:50.951Z",
+    "updatedAt": "2026-03-15T14:53:20.674Z",
     "minSampleSize": 4,
     "marketplaces": [
       "EBAY_US",
@@ -631,8 +631,8 @@
       },
       {
         "date": "2026-03-15",
-        "Baseball": 909.1,
-        "All": 909.1
+        "Baseball": 339.7,
+        "All": 339.7
       }
     ]
   },
@@ -7576,40 +7576,40 @@
       "EBAY_US": {
         "aspectMode": "player",
         "aspectValue": "Ezequiel Tovar",
-        "avgListing": null,
-        "taguchiListing": null,
-        "marketStabilityCV": null,
-        "avgDaysOnMarket": null,
-        "nListing": 0,
-        "nDaysOnMarket": 0,
+        "avgListing": 7.496901408450709,
+        "taguchiListing": 7.496901408450709,
+        "marketStabilityCV": 0.3159388363854612,
+        "avgDaysOnMarket": 45.52502890535341,
+        "nListing": 71,
+        "nDaysOnMarket": 71,
         "currency": "USD",
-        "originalCurrency": null,
-        "fxRateUsed": null
+        "originalCurrency": "USD",
+        "fxRateUsed": 1
       },
       "EBAY_CA": {
         "aspectMode": "player",
         "aspectValue": "Ezequiel Tovar",
-        "avgListing": null,
-        "taguchiListing": null,
-        "marketStabilityCV": null,
-        "avgDaysOnMarket": null,
-        "nListing": 0,
-        "nDaysOnMarket": 0,
+        "avgListing": 15.409320303888565,
+        "taguchiListing": 15.409320303888565,
+        "marketStabilityCV": 0.39930047559151305,
+        "avgDaysOnMarket": 55.35224020460608,
+        "nListing": 59,
+        "nDaysOnMarket": 59,
         "currency": "USD",
-        "originalCurrency": null,
-        "fxRateUsed": null
+        "originalCurrency": "CAD",
+        "fxRateUsed": 0.7290755322251385
       }
     },
-    "avg": null,
-    "n": 0,
-    "avgListing": null,
-    "taguchiListing": null,
-    "marketStabilityCV": null,
-    "avgDaysOnMarket": null,
-    "nListing": 0,
+    "avg": 15.409320303888565,
+    "n": 59,
+    "avgListing": 15.409320303888565,
+    "taguchiListing": 15.409320303888565,
+    "marketStabilityCV": 0.39930047559151305,
+    "avgDaysOnMarket": 55.35224020460608,
+    "nListing": 59,
     "currency": "USD",
     "basePriceUSD": 61.66,
-    "indexLevel": 100
+    "indexLevel": 24.990788686163746
   },
   "Felipe Lira": {
     "match": {
