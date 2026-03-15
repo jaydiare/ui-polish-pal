@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-15T14:57:37.383Z",
+    "updatedAt": "2026-03-15T15:00:02.798Z",
     "minSampleSize": 4,
     "marketplaces": [
       "EBAY_US",
@@ -633,8 +633,8 @@
       },
       {
         "date": "2026-03-15",
-        "Baseball": 100,
-        "All": 100
+        "Baseball": 367,
+        "All": 367
       }
     ]
   },
@@ -14328,40 +14328,40 @@
       "EBAY_US": {
         "aspectMode": "player",
         "aspectValue": "Luis Arraez",
-        "avgListing": null,
-        "taguchiListing": null,
-        "marketStabilityCV": null,
-        "avgDaysOnMarket": null,
-        "nListing": 0,
-        "nDaysOnMarket": 0,
+        "avgListing": 6.195285714285718,
+        "taguchiListing": 6.195285714285718,
+        "marketStabilityCV": 0.5636109558380727,
+        "avgDaysOnMarket": 102.09784219593251,
+        "nListing": 70,
+        "nDaysOnMarket": 70,
         "currency": "USD",
-        "originalCurrency": null,
-        "fxRateUsed": null
+        "originalCurrency": "USD",
+        "fxRateUsed": 1
       },
       "EBAY_CA": {
         "aspectMode": "player",
         "aspectValue": "Luis Arraez",
-        "avgListing": null,
-        "taguchiListing": null,
-        "marketStabilityCV": null,
-        "avgDaysOnMarket": null,
-        "nListing": 0,
-        "nDaysOnMarket": 0,
+        "avgListing": 11.519981373296082,
+        "taguchiListing": 11.519981373296082,
+        "marketStabilityCV": 0.6756995243652313,
+        "avgDaysOnMarket": 213.42429950324816,
+        "nListing": 62,
+        "nDaysOnMarket": 62,
         "currency": "USD",
-        "originalCurrency": null,
-        "fxRateUsed": null
+        "originalCurrency": "CAD",
+        "fxRateUsed": 0.7290755322251385
       }
     },
-    "avg": null,
-    "n": 0,
-    "avgListing": null,
-    "taguchiListing": null,
-    "marketStabilityCV": null,
-    "avgDaysOnMarket": null,
-    "nListing": 0,
+    "avg": 11.519981373296082,
+    "n": 62,
+    "avgListing": 11.519981373296082,
+    "taguchiListing": 11.519981373296082,
+    "marketStabilityCV": 0.6756995243652313,
+    "avgDaysOnMarket": 213.42429950324816,
+    "nListing": 62,
     "currency": "USD",
     "basePriceUSD": 64.995,
-    "indexLevel": 100
+    "indexLevel": 17.724411682892654
   },
   "Luis Avilan": {
     "match": {
