@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-15T05:06:04.129Z",
+    "updatedAt": "2026-03-15T05:06:52.195Z",
     "minSampleSize": 4,
     "marketplaces": [
       "EBAY_US"
@@ -508,7 +508,8 @@
       },
       {
         "date": "2026-03-15",
-        "All": 0
+        "Baseball": 95.5,
+        "All": 95.5
       }
     ]
   },
@@ -14074,10 +14075,10 @@
       "EBAY_US": {
         "aspectMode": "player",
         "aspectValue": "Dave Concepcion",
-        "avgListing": 41.481625000000015,
-        "taguchiListing": 41.481625000000015,
-        "marketStabilityCV": 0.1671493539456942,
-        "avgDaysOnMarket": 218.22460458912036,
+        "avgListing": 39.57849999999995,
+        "taguchiListing": 39.57849999999995,
+        "marketStabilityCV": 0.1516563592300583,
+        "avgDaysOnMarket": 151.4414787037037,
         "nListing": 80,
         "nDaysOnMarket": 80,
         "currency": "USD",
@@ -14085,15 +14086,15 @@
         "fxRateUsed": 1
       }
     },
-    "avg": 41.481625000000015,
+    "avg": 39.57849999999995,
     "n": 80,
-    "avgListing": 41.481625000000015,
-    "taguchiListing": 41.481625000000015,
-    "marketStabilityCV": 0.1671493539456942,
-    "avgDaysOnMarket": 218.22460458912036,
+    "avgListing": 39.57849999999995,
+    "taguchiListing": 39.57849999999995,
+    "marketStabilityCV": 0.1516563592300583,
+    "avgDaysOnMarket": 151.4414787037037,
     "nListing": 80,
     "currency": "USD",
     "basePriceUSD": 41.431750000000015,
-    "indexLevel": 100.12037869508288
+    "indexLevel": 95.52698111955188
   }
 }
