@@ -314,9 +314,6 @@ function isGradedListing(item) {
   const cond = normText(item?.condition || "");
   const title = normText(item?.title || "");
 
-  // eBay condition field explicitly says "graded"
-  if (cond.includes("graded")) return true;
-
   // Raw cards marketed as grading candidates — NOT graded
   // e.g. "PSA ready", "PSA 10 potential", "SGC worthy"
   if (/\b(psa|sgc|bgs|cgc|hga|beckett)\s*(ready|worthy|potential|candidate)\b/i.test(title)) {
@@ -328,7 +325,18 @@ function isGradedListing(item) {
   const graderGrade = /\b(psa|sgc|bgs|cgc|hga|isa|csa|beckett|bcg)\s{0,3}(10|9\.5|9|8\.5|8|7\.5|7|6\.5|6|5\.5|5|4\.5|4|gem\s?mint|pristine|authentic|dna)\b/i;
   const slabOnly = /\b(gem mint|pristine|black label|gold label)\b/i;
 
-  return graderGrade.test(title) || slabOnly.test(title);
+  // Title-based graded detection (most reliable)
+  if (graderGrade.test(title) || slabOnly.test(title)) return true;
+
+  // eBay condition field says "graded" — only trust it if title also mentions a grader.
+  // Many raw/Pre-Owned listings in Trading Card Singles get condition metadata = "Graded"
+  // from eBay's category system even when they're clearly ungraded.
+  if (cond.includes("graded")) {
+    const hasGraderInTitle = /\b(psa|sgc|bgs|cgc|hga|isa|csa|beckett|bcg)\b/i.test(title);
+    return hasGraderInTitle;
+  }
+
+  return false;
 }
 
 // ✅ NEW: listing "age" (days on market) for ACTIVE listings
