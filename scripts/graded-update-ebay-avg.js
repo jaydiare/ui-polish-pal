@@ -1,10 +1,10 @@
 // =============================================================================
-// scripts/graded-update-ebay-avg.js — GRADED (PSA) ACTIVE LISTING PRICE COLLECTOR
+// scripts/graded-update-ebay-avg.js — GRADED (PSA/BGS/SGC) ACTIVE LISTING PRICE COLLECTOR
 // =============================================================================
 //
 // PURPOSE:
-//   Collects active (Buy It Now) listing prices for PSA-GRADED sports cards
-//   from the eBay Browse API and computes robust statistical averages per athlete.
+//   Collects active (Buy It Now) listing prices for GRADED (PSA, BGS, SGC)
+//   sports cards from the eBay Browse API and computes robust statistical averages per athlete.
 //
 // WORKFLOW: ebay-graded.yml (every ~5 days at 8 AM UTC — synced with sold avg cycle)
 // ENV VARS: EBAY_CLIENT_ID, EBAY_CLIENT_SECRET, EBAY_ONLY (optional)
