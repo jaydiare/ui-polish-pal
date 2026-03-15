@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-15T04:57:21.249Z",
+    "updatedAt": "2026-03-15T14:50:20.855Z",
     "minSampleSize": 4,
     "marketplaces": [
       "EBAY_US",
@@ -631,8 +631,8 @@
       },
       {
         "date": "2026-03-15",
-        "Baseball": 100,
-        "All": 100
+        "Baseball": 3207,
+        "All": 3207
       }
     ]
   },
@@ -14146,40 +14146,40 @@
       "EBAY_US": {
         "aspectMode": "player",
         "aspectValue": "Luinder Avila",
-        "avgListing": null,
-        "taguchiListing": null,
-        "marketStabilityCV": null,
-        "avgDaysOnMarket": null,
-        "nListing": 0,
-        "nDaysOnMarket": 0,
+        "avgListing": 1.7351898734177202,
+        "taguchiListing": 1.7351898734177202,
+        "marketStabilityCV": 0.13649700397947925,
+        "avgDaysOnMarket": 17.214800366268165,
+        "nListing": 79,
+        "nDaysOnMarket": 79,
         "currency": "USD",
-        "originalCurrency": null,
-        "fxRateUsed": null
+        "originalCurrency": "USD",
+        "fxRateUsed": 1
       },
       "EBAY_CA": {
         "aspectMode": "player",
         "aspectValue": "Luinder Avila",
-        "avgListing": null,
-        "taguchiListing": null,
-        "marketStabilityCV": null,
-        "avgDaysOnMarket": null,
-        "nListing": 0,
-        "nDaysOnMarket": 0,
+        "avgListing": 4.93824084225759,
+        "taguchiListing": 4.93824084225759,
+        "marketStabilityCV": 0.37409864207545956,
+        "avgDaysOnMarket": 29.459941328527886,
+        "nListing": 79,
+        "nDaysOnMarket": 79,
         "currency": "USD",
-        "originalCurrency": null,
-        "fxRateUsed": null
+        "originalCurrency": "CAD",
+        "fxRateUsed": 0.7290755322251385
       }
     },
-    "avg": null,
-    "n": 0,
-    "avgListing": null,
-    "taguchiListing": null,
-    "marketStabilityCV": null,
-    "avgDaysOnMarket": null,
-    "nListing": 0,
+    "avg": 4.93824084225759,
+    "n": 79,
+    "avgListing": 4.93824084225759,
+    "taguchiListing": 4.93824084225759,
+    "marketStabilityCV": 0.37409864207545956,
+    "avgDaysOnMarket": 29.459941328527886,
+    "nListing": 79,
     "currency": "USD",
     "basePriceUSD": 2.3056666666666663,
-    "indexLevel": 100
+    "indexLevel": 214.17843757080774
   },
   "Luis Alexander Basabe": {
     "match": {
