@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-14T22:48:58.926Z",
+    "updatedAt": "2026-03-15T03:38:07.206Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA-only title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 140,
-      "endIdx": 150,
+      "startIdx": 150,
+      "endIdx": 160,
       "totalAthletes": 449
     },
     "maxPages": 4,
@@ -2133,12 +2133,12 @@
   },
   "Gabriel Moreno": {
     "keyword": "Gabriel Moreno Baseball PSA",
-    "nScraped": 228,
-    "nSoldUsed": 82,
-    "avg": 21.51329268292683,
-    "taguchiSold": 21.51329268292683,
-    "medianSold": 20,
-    "marketStabilityCV": 0.32715393884731286,
+    "nScraped": 225,
+    "nSoldUsed": 78,
+    "avg": 27.14294871794872,
+    "taguchiSold": 27.14294871794872,
+    "medianSold": 24.99,
+    "marketStabilityCV": 0.26597832029730395,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
@@ -2193,12 +2193,12 @@
   },
   "German Marquez": {
     "keyword": "German Marquez Baseball PSA",
-    "nScraped": 252,
-    "nSoldUsed": 12,
-    "avg": 10,
-    "taguchiSold": 10,
-    "medianSold": 10,
-    "marketStabilityCV": 0,
+    "nScraped": 248,
+    "nSoldUsed": 16,
+    "avg": 9.995000000000001,
+    "taguchiSold": 9.995000000000001,
+    "medianSold": 9.995000000000001,
+    "marketStabilityCV": 0.0005166561075480852,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
@@ -2217,7 +2217,7 @@
   },
   "Giovanni Carrara": {
     "keyword": "Giovanni Carrara Baseball PSA",
-    "nScraped": 22,
+    "nScraped": 19,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -2230,11 +2230,11 @@
   "Gleyber Torres": {
     "keyword": "Gleyber Torres Baseball PSA",
     "nScraped": 120,
-    "nSoldUsed": 67,
-    "avg": 17.39,
-    "taguchiSold": 17.39,
-    "medianSold": 14.99,
-    "marketStabilityCV": 0.2603580011717317,
+    "nSoldUsed": 78,
+    "avg": 12.769871794871799,
+    "taguchiSold": 12.769871794871799,
+    "medianSold": 13.52,
+    "marketStabilityCV": 0.24301486710295195,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
