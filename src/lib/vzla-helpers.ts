@@ -254,6 +254,31 @@ export interface Filters {
   signal: string;
 }
 
+// Simple edit distance for fuzzy search (max distance 2)
+function editDist(a: string, b: string): number {
+  if (Math.abs(a.length - b.length) > 2) return 3;
+  const m = a.length, n = b.length;
+  let prev = Array.from({ length: n + 1 }, (_, i) => i);
+  for (let i = 1; i <= m; i++) {
+    const curr = [i];
+    for (let j = 1; j <= n; j++) {
+      curr[j] = a[i - 1] === b[j - 1] ? prev[j - 1] : 1 + Math.min(prev[j - 1], prev[j], curr[j - 1]);
+    }
+    prev = curr;
+  }
+  return prev[n];
+}
+
+function fuzzyNameMatch(query: string, name: string): boolean {
+  // Exact substring first
+  if (name.includes(query)) return true;
+  if (query.length < 3) return false;
+  // Token-level fuzzy: every query token must fuzzy-match some name token
+  const qTokens = query.split(/\s+/).filter(Boolean);
+  const nTokens = name.split(/\s+/).filter(Boolean);
+  return qTokens.every((qt) => nTokens.some((nt) => editDist(qt, nt) <= Math.min(2, Math.floor(qt.length / 3))));
+}
+
 export function filterAthletes(
   list: Athlete[],
   filters: Filters,
@@ -261,31 +286,9 @@ export function filterAthletes(
   byKey: Record<string, EbayAvgRecord>,
   ebaySoldRaw?: Record<string, any>
 ): Athlete[] {
-  const q = norm(filters.search);
-
-  // Determine if user explicitly requested empty-state cards
-  const wantsNoPrice = filters.price === "none";
-  const wantsNoStability = filters.stability === "none";
-  const wantsNoDays = filters.daysListed === "none";
-  const hasSearch = q.length > 0;
-  const wantsEmptyStates = wantsNoPrice || wantsNoStability || wantsNoDays || hasSearch;
-
-  let filtered = list
-    .filter((a) => {
-      if (filters.category === "all") return true;
-      if (filters.category === "Other") return !["Baseball", "Soccer", "Basketball"].includes(a.sport);
-      return a.sport === filters.category;
-    })
-    .filter((a) => {
-      if (filters.stability === "all") return true;
-      const price = getEbayAvgNumber(a, byName, byKey);
-      const cv = price != null ? getMarketStabilityCV(a, byName, byKey) : null;
-      const bucket = marketStabilityScoreFromCV(cv).bucket;
-      if (filters.stability === "none") return price == null || cv == null || bucket === "none";
-      if (price == null || cv == null) return false;
-      return bucket === filters.stability;
-    })
-    .filter((a) => !q || norm(a.name).includes(q))
+  const q = normalizeName(filters.search);
+...
+    .filter((a) => !q || fuzzyNameMatch(q, normalizeName(a.name)))
     .filter((a) => {
       if (filters.daysListed === "all") return true;
       const price = getEbayAvgNumber(a, byName, byKey);
