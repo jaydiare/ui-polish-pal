@@ -1,10 +1,10 @@
 // =============================================================================
-// scripts/graded-sold-update-ebay-avg.js — GRADED (PSA) SOLD PRICE COLLECTOR
+// scripts/graded-sold-update-ebay-avg.js — GRADED (PSA/BGS/SGC) SOLD PRICE COLLECTOR
 // =============================================================================
 //
 // PURPOSE:
 //   Scrapes eBay's public sold/completed listings (HTML, no API keys) to compute
-//   sold price averages for PSA-GRADED cards only.
+//   sold price averages for GRADED (PSA, BGS, SGC) cards.
 //
 // WORKFLOW: ebay-graded-sold.yml (every 2 hours, 10 athletes per batch)
 // ENV VARS: EBAY_ONLY (optional single-athlete mode)
@@ -13,13 +13,13 @@
 // PROGRESS: data/ebay-graded-sold-progress.json (batch cursor)
 //
 // PIPELINE (per athlete):
-//   1. Build search URL with "{name} {sport} PSA" keyword + League filter
+//   1. Build search URL with "{name} {sport} graded" keyword + League filter
 //   2. Fetch up to 4 pages with retry + exponential backoff
 //   3. Parse via 3-tier extraction: .s-item CSS → [data-viewport] → script tags
 //   4. POST-FETCH FILTERING:
 //      a. Junk title exclusion (lots, digital, auto, signed)
 //      b. Name relevance (all parts must appear in title)
-//      c. PSA-only detection — INCLUDE only PSA-graded titles
+//      c. Grader detection — INCLUDE only PSA/BGS/SGC graded titles
 //   5. Convert to USD via CBSA (includes shipping)
 //   6. Compute Taguchi winsorized mean, median, CV
 //
@@ -203,18 +203,18 @@ function titleLooksRelevantToPlayer(title, playerName) {
   return parts.every((part) => t.includes(part));
 }
 
-// PSA-only detector: grades 1–10 including half grades
+// Grader detector: PSA, BGS (Beckett), SGC — grades 1–10 including half grades
 function isGradedTitle(title) {
   const t = norm(title);
 
   // FIX: Tightened gap from {0,18} to {0,3} to prevent card numbers from matching as grades
-  const psaNumeric =
-    /\bpsa\b[^\n]{0,3}\b(10|9\.5|9|8\.5|8|7\.5|7|6\.5|6|5\.5|5|4\.5|4|3\.5|3|2\.5|2|1\.5|1)\b/i;
+  const graderNumeric =
+    /\b(psa|bgs|sgc|beckett)\b[^\n]{0,3}\b(10|9\.5|9|8\.5|8|7\.5|7|6\.5|6|5\.5|5|4\.5|4|3\.5|3|2\.5|2|1\.5|1)\b/i;
 
-  const psaLabel =
-    /\bpsa\b[^\n]{0,3}\b(gem mint|mint|dna|authentic)\b/i;
+  const graderLabel =
+    /\b(psa|bgs|sgc)\b[^\n]{0,3}\b(gem mint|mint|pristine|dna|authentic)\b/i;
 
-  return psaNumeric.test(t) || psaLabel.test(t);
+  return graderNumeric.test(t) || graderLabel.test(t);
 }
 
 function randomUA() {
@@ -635,7 +635,7 @@ function loadAthletes() {
 
 function buildKeyword(name, sport) {
   const sportHint = sport ? ` ${sport}` : "";
-  return `${name}${sportHint} PSA`;
+  return `${name}${sportHint} graded`;
 }
 
 // --- progress tracking ---
@@ -756,7 +756,7 @@ async function main() {
     source: "eBay public sold listings (HTML scrape, LH_Sold=1)",
     note:
       "SOLD comps scraped in batches of " + BATCH_SIZE + ". No brand filter. Junk titles removed. " +
-      "PSA-only title filter (grades 1–10 including half grades). " +
+      "PSA/BGS/SGC grader title filter (grades 1–10 including half grades). " +
       "Taguchi winsorized mean + market stability CV. " +
       "Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     batchInfo: { startIdx, endIdx, totalAthletes: athletes.length },
@@ -772,7 +772,7 @@ async function main() {
       trimPercent: TAGUCHI_TRIM_PCT,
     },
     gradingFilter: {
-      company: "PSA",
+      companies: ["PSA", "BGS", "SGC"],
       grades: "1–10 including half grades",
     },
     fx: { source: "CBSA Exchange Rates API", asOf: fx.asOf },

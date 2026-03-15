@@ -1,10 +1,10 @@
 // =============================================================================
-// scripts/graded-update-ebay-avg.js — GRADED (PSA) ACTIVE LISTING PRICE COLLECTOR
+// scripts/graded-update-ebay-avg.js — GRADED (PSA/BGS/SGC) ACTIVE LISTING PRICE COLLECTOR
 // =============================================================================
 //
 // PURPOSE:
-//   Collects active (Buy It Now) listing prices for PSA-GRADED sports cards
-//   from the eBay Browse API and computes robust statistical averages per athlete.
+//   Collects active (Buy It Now) listing prices for GRADED (PSA, BGS, SGC)
+//   sports cards from the eBay Browse API and computes robust statistical averages per athlete.
 //
 // WORKFLOW: ebay-graded.yml (every ~5 days at 8 AM UTC — synced with sold avg cycle)
 // ENV VARS: EBAY_CLIENT_ID, EBAY_CLIENT_SECRET, EBAY_ONLY (optional)
@@ -16,10 +16,10 @@
 //   1. Authenticate with eBay Browse API (client credentials grant)
 //   2. Validate athlete exists via Player/Athlete aspect, fallback to Sport aspect
 //   3. Fetch up to 60 active Buy It Now listings from EBAY_US only
-//      API FILTERS: Graded:{Yes} + Professional Grader:{PSA}
+//      API FILTERS: Graded:{Yes} (all professional graders: PSA, BGS, SGC)
 //   4. POST-FETCH FILTERING:
 //      a. When aspect filter is present, trust API (no title regex needed)
-//      b. When aspect filter absent, fallback to PSA title regex
+//      b. When aspect filter absent, fallback to PSA/BGS/SGC title regex
 //   5. Convert all prices to USD via CBSA Exchange Rates API
 //   6. Compute Taguchi winsorized mean (40% trim) and market stability CV
 //   7. Compute base-100 price index per athlete
@@ -29,8 +29,8 @@
 // KEY DESIGN DECISIONS:
 //   - ONLY processes athletes with gemrate="yes" in athletes.json
 //   - Base prices stored in dedicated ebay-graded-base-prices.json (separate from raw)
-//   - API aspect filters (Graded:{Yes} + PSA) are trusted when present
-//   - Title-based PSA regex only used as fallback when API filter unavailable
+//   - API aspect filter Graded:{Yes} is trusted when present (covers PSA/BGS/SGC)
+//   - Title-based grader regex only used as fallback when API filter unavailable
 //   - Single-athlete mode via EBAY_ONLY env var for targeted testing
 //
 // SEE ALSO: docs/DATA-PIPELINE-AUDIT.md §3.2, §5.1
@@ -181,18 +181,19 @@ function includesAny(text, arr) {
 }
 
 // isGradedListing: fallback detection when API aspect filter is not available
+// Detects PSA, BGS (Beckett), and SGC graded cards
 
 function isGradedListing(item) {
   const cond = normText(item?.condition || "");
   const title = normText(item?.title || "");
-  const hasPSA = /\bpsa\b/i.test(title);
-  if (cond.includes("graded") && hasPSA) return true;
+  const hasGrader = /\b(psa|bgs|sgc|beckett)\b/i.test(title);
+  if (cond.includes("graded") && hasGrader) return true;
   // FIX: Tightened gap from {0,18} to {0,3} to prevent card numbers from matching as grades
-  const psaNumeric =
-    /\bpsa\b[^\n]{0,3}\b(10|9\.5|9|8\.5|8|7\.5|7|6\.5|6|5\.5|5|4\.5|4|3\.5|3|2\.5|2|1\.5|1)\b/i;
-  const psaLabel =
-    /\bpsa\b[^\n]{0,3}\b(gem mint|mint|dna|authentic)\b/i;
-  return psaNumeric.test(title) || psaLabel.test(title);
+  const graderNumeric =
+    /\b(psa|bgs|sgc|beckett)\b[^\n]{0,3}\b(10|9\.5|9|8\.5|8|7\.5|7|6\.5|6|5\.5|5|4\.5|4|3\.5|3|2\.5|2|1\.5|1)\b/i;
+  const graderLabel =
+    /\b(psa|bgs|sgc)\b[^\n]{0,3}\b(gem mint|mint|pristine|dna|authentic)\b/i;
+  return graderNumeric.test(title) || graderLabel.test(title);
 }
 
 // FIX #2: extract creation date from item summary OR full item detail fields
@@ -248,10 +249,10 @@ function sportAspectCandidates(sportRaw) {
 
 function buildAspectFilter({ aspectMode, aspectValue }) {
   // eBay Browse API requires categoryId prefix: aspect_filter=categoryId:XXXX,Aspect:{Value}
+  // Graded:{Yes} covers all professional graders (PSA, BGS, SGC) without restricting to one
   const parts = [];
   parts.push(`categoryId:${CATEGORY_ID}`);
   parts.push(`Graded:{Yes}`);
-  parts.push(`Professional Grader:{Professional Sports Authenticator (PSA)}`);
   if (aspectMode === "player" && aspectValue) {
     parts.push(`Player/Athlete:{${aspectValue}}`);
   } else if (aspectMode === "sport" && aspectValue) {
@@ -381,7 +382,7 @@ function candidateAspectValuesForName(name) {
 async function validatePlayerAthleteMatch({ token, marketplaceId, name, sport }) {
   const q = buildQuery(name, sport);
   for (const cand of candidateAspectValuesForName(name)) {
-    // eBay Browse API requires categoryId prefix in aspect_filter
+    // eBay Browse API requires categoryId prefix in aspect_filter (Graded:{Yes} covers PSA/BGS/SGC)
     const aspectFilter = `categoryId:${CATEGORY_ID},Graded:{Yes},Player/Athlete:{${cand}}`;
     const data = await ebayBrowseSearch({ token, marketplaceId, q, categoryId: CATEGORY_ID, limit: 1, offset: 0, aspectFilter });
     const total = safeNum(data?.total) ?? 0;
