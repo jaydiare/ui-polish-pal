@@ -12,10 +12,11 @@ const TEAM_COLORS: Record<string, string> = {
 };
 
 const FALLBACK_ODDS = [
-  { team: "USA", pct: 51, color: "hsl(217, 91%, 60%)" },
-  { team: "Dominican Republic", pct: 22, color: "hsl(265, 70%, 55%)" },
-  { team: "Japan", pct: 22, color: "hsl(45, 93%, 55%)" },
-  { team: "Venezuela", pct: 4.5, color: "hsl(16, 90%, 55%)" },
+  { team: "Dominican Republic", pct: 38, color: "hsl(265, 70%, 55%)" },
+  { team: "USA", pct: 25, color: "hsl(217, 91%, 60%)" },
+  { team: "Venezuela", pct: 16, color: "hsl(16, 90%, 55%)" },
+  { team: "Japan", pct: 10, color: "hsl(45, 93%, 55%)" },
+  { team: "Italy", pct: 9, color: "hsl(145, 63%, 42%)" },
 ];
 
 type MarketOutcome = {
