@@ -2407,7 +2407,7 @@
     "league": "MLB",
     "team": "Marlins",
     "provider": "manual",
-    "gemrate": "no"
+    "gemrate": "yes"
   },
   {
     "name": "Luinder Avila",
@@ -2896,7 +2896,7 @@
     "team": "Giants/Magallanes",
     "provider": "manual",
     "searchKeyword": "Isaias Latigo Chavez",
-    "gemrate": "no"
+    "gemrate": "yes"
   },
   {
     "name": "Niuman Romero",
@@ -3963,7 +3963,7 @@
     "league": "PBA50",
     "team": "Unknown",
     "provider": "manual",
-     "searchKeyword": "Amleto Monacelli PBA Bowler Bowling",
+    "searchKeyword": "Amleto Monacelli PBA Bowler Bowling",
     "gemrate": "yes"
   },
   {
