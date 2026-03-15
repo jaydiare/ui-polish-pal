@@ -75,7 +75,7 @@ const WbcPolymarketOdds = () => {
         hour: "numeric",
         minute: "2-digit",
       })
-    : "Mar 6, 2026";
+    : "Mar 15, 2026";
 
   return (
     <section className="mb-10 glass-panel p-6 rounded-xl">
