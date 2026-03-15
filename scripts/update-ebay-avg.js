@@ -160,6 +160,109 @@ function normalizeNameForCompare(s) {
   );
 }
 
+function levenshtein(a, b) {
+  const s = String(a || "");
+  const t = String(b || "");
+  const m = s.length;
+  const n = t.length;
+  if (m === 0) return n;
+  if (n === 0) return m;
+
+  const dp = Array.from({ length: m + 1 }, () => new Array(n + 1).fill(0));
+  for (let i = 0; i <= m; i++) dp[i][0] = i;
+  for (let j = 0; j <= n; j++) dp[0][j] = j;
+
+  for (let i = 1; i <= m; i++) {
+    for (let j = 1; j <= n; j++) {
+      const cost = s[i - 1] === t[j - 1] ? 0 : 1;
+      dp[i][j] = Math.min(
+        dp[i - 1][j] + 1,
+        dp[i][j - 1] + 1,
+        dp[i - 1][j - 1] + cost
+      );
+    }
+  }
+
+  return dp[m][n];
+}
+
+function isCloseNameToken(a, b) {
+  if (!a || !b) return false;
+  if (a === b) return true;
+  if (a.includes(b) || b.includes(a)) return true;
+  const d = levenshtein(a, b);
+  if (d <= 1) return true;
+  return d <= 2 && Math.min(a.length, b.length) >= 7;
+}
+
+function isLikelyNameMatch(inputNorm, athleteNorm) {
+  if (!inputNorm || !athleteNorm) return false;
+  if (inputNorm === athleteNorm) return true;
+
+  const inTokens = inputNorm.split(" ").filter(Boolean);
+  const atTokens = athleteNorm.split(" ").filter(Boolean);
+  if (!inTokens.length || !atTokens.length) return false;
+  if (Math.abs(inTokens.length - atTokens.length) > 1) return false;
+
+  return inTokens.every((token) => atTokens.some((candidate) => isCloseNameToken(token, candidate)));
+}
+
+function resolveSingleAthleteInputs(allAthletes, onlyNamesRaw) {
+  const requested = String(onlyNamesRaw || "")
+    .split(",")
+    .map((n) => normSpaces(n))
+    .filter(Boolean);
+
+  const normalizedAthletes = allAthletes.map((athlete) => ({
+    athlete,
+    normName: normalizeNameForCompare(athlete.name),
+  }));
+
+  const resolved = [];
+  const matchedPairs = [];
+  const unmatched = [];
+
+  for (const requestName of requested) {
+    const wantedNorm = normalizeNameForCompare(requestName);
+
+    let candidates = normalizedAthletes.filter((x) => x.normName === wantedNorm);
+    if (!candidates.length) {
+      candidates = normalizedAthletes.filter((x) => isLikelyNameMatch(wantedNorm, x.normName));
+    }
+
+    if (!candidates.length) {
+      const suggestions = normalizedAthletes
+        .map((x) => ({
+          name: x.athlete.name,
+          dist: levenshtein(wantedNorm, x.normName),
+        }))
+        .sort((a, b) => a.dist - b.dist)
+        .slice(0, 3)
+        .map((x) => x.name);
+
+      unmatched.push({
+        requestName,
+        suggestions,
+      });
+      continue;
+    }
+
+    candidates.sort((a, b) => levenshtein(wantedNorm, a.normName) - levenshtein(wantedNorm, b.normName));
+    const best = candidates[0].athlete;
+
+    if (!resolved.some((a) => a.name === best.name)) {
+      resolved.push(best);
+    }
+
+    matchedPairs.push({
+      requestName,
+      matchedName: best.name,
+    });
+  }
+
+  return { resolved, matchedPairs, unmatched };
+}
+
 function safeNum(x) {
   const n = Number(x);
   return Number.isFinite(n) ? n : null;
