@@ -547,7 +547,7 @@ function ScpHistorySection({
       </div>
 
       {chartData.length > 0 ? (
-        <ResponsiveContainer width="100%" height={360}>
+        <ResponsiveContainer width="100%" height={isMobile ? 280 : 360}>
           <LineChart data={chartData} margin={{ top: 5, right: 20, left: 10, bottom: 5 }}>
             <CartesianGrid strokeDasharray="3 3" stroke="hsl(var(--border))" />
             <XAxis
@@ -558,7 +558,7 @@ function ScpHistorySection({
                 return `${parts[1]}/${parts[0].slice(2)}`;
               }}
               interval="preserveStartEnd"
-              minTickGap={40}
+              minTickGap={isMobile ? 24 : 40}
             />
             <YAxis
               tick={{ fill: "hsl(var(--muted-foreground))", fontSize: 11 }}
@@ -581,14 +581,16 @@ function ScpHistorySection({
               }}
               labelFormatter={(d) => d}
             />
-            <Legend
-              formatter={(value: string) => {
-                const parts = value.split("_");
-                const player = parts[0] === "acuna" ? "Acuña" : "Torres";
-                const grade = gradeLabel(parts.slice(1).join("_"));
-                return `${player} ${grade}`;
-              }}
-            />
+            {!isMobile && (
+              <Legend
+                formatter={(value: string) => {
+                  const parts = value.split("_");
+                  const player = parts[0] === "acuna" ? "Acuña" : "Torres";
+                  const grade = gradeLabel(parts.slice(1).join("_"));
+                  return `${player} ${grade}`;
+                }}
+              />
+            )}
             {selectedScpGrades.flatMap((grade) => {
               const color = SCP_GRADE_COLORS[grade] || "hsl(var(--foreground))";
               const lines = [];
