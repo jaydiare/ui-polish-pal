@@ -1,12 +1,12 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-15T13:27:01.229Z",
+    "updatedAt": "2026-03-15T14:52:51.871Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA/BGS/SGC grader title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 200,
-      "endIdx": 210,
-      "totalAthletes": 449
+      "startIdx": 210,
+      "endIdx": 220,
+      "totalAthletes": 451
     },
     "maxPages": 4,
     "minSampleSize": 4,
@@ -2965,19 +2965,19 @@
   },
   "Jose Alvarado": {
     "keyword": "Jose Alvarado Baseball PSA",
-    "nScraped": 240,
-    "nSoldUsed": 80,
-    "avg": 71.11999999999998,
-    "taguchiSold": 71.11999999999998,
-    "medianSold": 69.995,
-    "marketStabilityCV": 0.05068320020621423,
+    "nScraped": 241,
+    "nSoldUsed": 74,
+    "avg": 67.97189189189189,
+    "taguchiSold": 67.97189189189189,
+    "medianSold": 69.99,
+    "marketStabilityCV": 0.1021718523829998,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
   },
   "Jose Alvarez": {
     "keyword": "Jose Alvarez Baseball PSA",
-    "nScraped": 256,
+    "nScraped": 250,
     "nSoldUsed": 8,
     "avg": 263.37,
     "taguchiSold": 263.37,
@@ -3025,7 +3025,7 @@
   },
   "Jose Campos": {
     "keyword": "Jose Campos Baseball PSA",
-    "nScraped": 120,
+    "nScraped": 180,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
