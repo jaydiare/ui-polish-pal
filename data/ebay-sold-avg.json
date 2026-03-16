@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-16T13:04:27.003Z",
+    "updatedAt": "2026-03-16T13:56:36.390Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. Taguchi winsorized mean + market stability CV. Ungraded condition policy (permissive for sold). Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
@@ -2838,16 +2838,16 @@
     "fxRateUsed": null
   },
   "Alex Ramirez": {
-    "keyword": "Alex Ramirez Baseball",
-    "nScraped": 0,
-    "nSoldUsed": 0,
-    "avg": null,
-    "taguchiSold": null,
-    "medianSold": null,
-    "marketStabilityCV": null,
+    "keyword": "Alex Ramirez BBM NPB Baseball",
+    "nScraped": 60,
+    "nSoldUsed": 14,
+    "avg": 10.998571428571429,
+    "taguchiSold": 10.998571428571429,
+    "medianSold": 10.99,
+    "marketStabilityCV": 0.7990223689166257,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
   },
   "Alfredo Gonzalez": {
     "keyword": "Alfredo Gonzalez Baseball",
