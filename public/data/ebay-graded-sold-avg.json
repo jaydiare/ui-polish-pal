@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-16T09:37:11.472Z",
+    "updatedAt": "2026-03-16T11:15:28.405Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA/BGS/SGC grader title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 290,
-      "endIdx": 300,
+      "startIdx": 300,
+      "endIdx": 310,
       "totalAthletes": 451
     },
     "maxPages": 4,
@@ -4213,24 +4213,24 @@
   },
   "Melvin Mora": {
     "keyword": "Melvin Mora Baseball PSA",
-    "nScraped": 0,
-    "nSoldUsed": 0,
-    "avg": null,
-    "taguchiSold": null,
-    "medianSold": null,
-    "marketStabilityCV": null,
+    "nScraped": 240,
+    "nSoldUsed": 8,
+    "avg": 23.995,
+    "taguchiSold": 23.995,
+    "medianSold": 23.994999999999997,
+    "marketStabilityCV": 0.2670941688293368,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
   },
   "Miguel Cabrera": {
     "keyword": "Miguel Cabrera Baseball PSA",
     "nScraped": 240,
-    "nSoldUsed": 109,
-    "avg": 84.2635779816514,
-    "taguchiSold": 84.2635779816514,
-    "medianSold": 86.51,
-    "marketStabilityCV": 0.28826043293745107,
+    "nSoldUsed": 108,
+    "avg": 80.7835185185185,
+    "taguchiSold": 80.7835185185185,
+    "medianSold": 87.18,
+    "marketStabilityCV": 0.2348144835219664,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
@@ -4262,7 +4262,7 @@
   "Miguel Gonzalez": {
     "keyword": "Miguel Gonzalez Baseball PSA",
     "nScraped": 240,
-    "nSoldUsed": 4,
+    "nSoldUsed": 6,
     "avg": 275.77,
     "taguchiSold": 275.77,
     "medianSold": 275.77,
@@ -4297,15 +4297,15 @@
   },
   "Miguel Rojas": {
     "keyword": "Miguel Rojas Baseball PSA",
-    "nScraped": 124,
-    "nSoldUsed": 6,
-    "avg": 175.5,
-    "taguchiSold": 175.5,
-    "medianSold": 175.5,
-    "marketStabilityCV": 0,
+    "nScraped": 0,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
   },
   "Miguel Socolovich": {
     "keyword": "Miguel Socolovich Baseball",
