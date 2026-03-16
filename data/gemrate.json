@@ -1,13 +1,13 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-16T20:48:07.727144+00:00",
+    "updatedAt": "2026-03-16T22:45:34.394251+00:00",
     "athleteCount": 454,
     "graders": [
       "PSA"
     ],
     "batchInfo": {
-      "startIdx": 100,
-      "endIdx": 120,
+      "startIdx": 120,
+      "endIdx": 140,
       "totalAthletes": 568
     }
   },
@@ -1889,17 +1889,17 @@
       "sport": "Baseball",
       "graders": {
         "PSA": {
-          "cards": 43,
-          "gems": 25,
-          "grades": 57,
-          "gemRate": 44.0
+          "cards": 44,
+          "gems": 26,
+          "grades": 58,
+          "gemRate": 45.0
         }
       },
       "totals": {
-        "cards": 43,
-        "gems": 25,
-        "grades": 57,
-        "gemRate": 44.0
+        "cards": 44,
+        "gems": 26,
+        "grades": 58,
+        "gemRate": 45.0
       }
     },
     "Elieser Hernandez": {
