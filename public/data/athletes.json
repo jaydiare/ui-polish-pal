@@ -146,9 +146,10 @@
   {
     "name": "Alex Ramirez",
     "sport": "Baseball",
-    "league": "MLB",
-    "team": "Pirates",
+    "league": "MLB/NPB",
+    "team": "Pirates/Cleveland/DeNA Baystars/Cardenales",
     "provider": "manual",
+    "searchKeyword": "Alex Ramirez BBM NPB",
     "gemrate": "yes"
   },
   {
