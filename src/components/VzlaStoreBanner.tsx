@@ -1,66 +1,68 @@
 import { motion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 
+const EPN_PARAMS = "?mkevt=1&mkcid=1&mkrid=706-53473-19255-0&campid=5339142305&toolid=10001&customid=store-banner";
+
 const FEATURED_CARDS = [
   {
     title: "Carl Yastrzemski 1964 Venezuela Topps #210 SGC 2.5 POP 1",
     price: "C $750",
     img: "https://i.ebayimg.com/images/g/etcAAOSwHMlmx9zE/s-l300.webp",
-    url: "https://www.ebay.ca/itm/387460090857",
+    url: `https://www.ebay.ca/itm/387460090857${EPN_PARAMS}`,
   },
   {
     title: "Sandy Koufax 1966 Venezuela Topps #100 SGC 1",
     price: "C $485",
     img: "https://i.ebayimg.com/images/g/RJoAAOSwPWlmx9z3/s-l300.webp",
-    url: "https://www.ebay.ca/itm/387460090851",
+    url: `https://www.ebay.ca/itm/387460090851${EPN_PARAMS}`,
   },
   {
     title: "1964 Venezuelan Topps #350 Willie McCovey PSA 2 HOF",
     price: "C $350",
     img: "https://i.ebayimg.com/images/g/wtgAAeSwyqlpKML6/s-l300.webp",
-    url: "https://www.ebay.ca/itm/389298118420",
+    url: `https://www.ebay.ca/itm/389298118420${EPN_PARAMS}`,
   },
   {
     title: "2024 Topps Now Ballon D'Or Lamine Yamal RC SGC 10",
     price: "C $350",
     img: "https://i.ebayimg.com/images/g/ZRkAAeSwzgdn-7GH/s-l300.webp",
-    url: "https://www.ebay.ca/itm/388642978342",
+    url: `https://www.ebay.ca/itm/388642978342${EPN_PARAMS}`,
   },
   {
     title: "Jackson Chourio 2022 Leaf Metal Auto /3 SGC 9.5",
     price: "C $350",
     img: "https://i.ebayimg.com/images/g/pzgAAOSwsbRnDA9t/s-l300.webp",
-    url: "https://www.ebay.ca/itm/387340542370",
+    url: `https://www.ebay.ca/itm/387340542370${EPN_PARAMS}`,
   },
   {
     title: "Miguel Cabrera 2000 Topps Chrome Traded RC SGC 8",
     price: "C $350",
     img: "https://i.ebayimg.com/images/g/AkQAAOSwUPdnG~U8/s-l300.webp",
-    url: "https://www.ebay.ca/itm/389404762804",
+    url: `https://www.ebay.ca/itm/389404762804${EPN_PARAMS}`,
   },
   {
     title: "Lamine Yamal & Pau Cubarsi 2024 Topps Now UCL RC SGC 10",
     price: "C $300",
     img: "https://i.ebayimg.com/images/g/F8AAAeSwxgFn-7G9/s-l300.webp",
-    url: "https://www.ebay.ca/itm/388642975400",
+    url: `https://www.ebay.ca/itm/388642975400${EPN_PARAMS}`,
   },
   {
     title: "Victor Wembanyama 2023-24 Panini Stickers RC SGC 10",
     price: "C $250",
     img: "https://i.ebayimg.com/images/g/An0AAOSwt6dnG~bx/s-l300.webp",
-    url: "https://www.ebay.ca/itm/387437068686",
+    url: `https://www.ebay.ca/itm/387437068686${EPN_PARAMS}`,
   },
   {
     title: "Lionel Messi 2023-24 Megacracks EA Magicos SGC 10 POP 1",
     price: "C $165",
     img: "https://i.ebayimg.com/images/g/etcAAOSwVwFmBMSd/s-l300.webp",
-    url: "https://www.ebay.ca/itm/386857947465",
+    url: `https://www.ebay.ca/itm/386857947465${EPN_PARAMS}`,
   },
   {
     title: "Victor Wembanyama 2023-24 Hoops Teal Explosion RC SGC 9.5",
     price: "C $199",
     img: "https://i.ebayimg.com/images/g/vJYAAOSwhu1mx9~J/s-l300.webp",
-    url: "https://www.ebay.ca/itm/387307819965",
+    url: `https://www.ebay.ca/itm/387307819965${EPN_PARAMS}`,
   },
 ];
 
