@@ -68,7 +68,15 @@ async function main() {
 
     const raw = fs.readFileSync(fullPath, "utf-8");
     const sizeBytes = Buffer.byteLength(raw, "utf-8");
-    const json = JSON.parse(raw);
+
+    let json;
+    try {
+      json = JSON.parse(raw);
+    } catch (parseErr) {
+      console.warn(`⚠️  ${fileName} has invalid JSON (${parseErr.message}), skipping`);
+      skipped++;
+      continue;
+    }
 
     // Upsert: if same file+date exists, update it
     await client.query(
