@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-16T13:50:23.593Z",
+    "updatedAt": "2026-03-16T13:51:27.985Z",
     "minSampleSize": 4,
     "marketplaces": [
       "EBAY_US",
@@ -638,8 +638,8 @@
       },
       {
         "date": "2026-03-16",
-        "Baseball": 870.5,
-        "All": 870.5
+        "Baseball": 45.1,
+        "All": 45.1
       }
     ]
   },
@@ -1148,12 +1148,12 @@
       "EBAY_US": {
         "aspectMode": "player",
         "aspectValue": "Alex Cabrera",
-        "avgListing": 4.6850000000000005,
-        "taguchiListing": 4.6850000000000005,
-        "marketStabilityCV": null,
-        "avgDaysOnMarket": 2228.6515858969906,
-        "nListing": 2,
-        "nDaysOnMarket": 2,
+        "avgListing": 3.043037974683547,
+        "taguchiListing": 3.043037974683547,
+        "marketStabilityCV": 0.26247160724345836,
+        "avgDaysOnMarket": 577.5932491301863,
+        "nListing": 79,
+        "nDaysOnMarket": 79,
         "currency": "USD",
         "originalCurrency": "USD",
         "fxRateUsed": 1
@@ -1161,27 +1161,27 @@
       "EBAY_CA": {
         "aspectMode": "player",
         "aspectValue": "Alex Cabrera",
-        "avgListing": 9.205405008445327,
-        "taguchiListing": 9.205405008445327,
-        "marketStabilityCV": null,
-        "avgDaysOnMarket": 1967.1102053472223,
-        "nListing": 2,
-        "nDaysOnMarket": 2,
+        "avgListing": 4.741667312682964,
+        "taguchiListing": 4.741667312682964,
+        "marketStabilityCV": 0.2829553014030782,
+        "avgDaysOnMarket": 602.8169837183542,
+        "nListing": 79,
+        "nDaysOnMarket": 79,
         "currency": "USD",
         "originalCurrency": "CAD",
-        "fxRateUsed": 0.7343761474627305
+        "fxRateUsed": 0.7290755322251385
       }
     },
-    "avg": 9.205405008445327,
-    "n": 2,
-    "avgListing": 9.205405008445327,
-    "taguchiListing": 9.205405008445327,
-    "marketStabilityCV": null,
-    "avgDaysOnMarket": 1967.1102053472223,
-    "nListing": 2,
+    "avg": 4.741667312682964,
+    "n": 79,
+    "avgListing": 4.741667312682964,
+    "taguchiListing": 4.741667312682964,
+    "marketStabilityCV": 0.2829553014030782,
+    "avgDaysOnMarket": 602.8169837183542,
+    "nListing": 79,
     "currency": "USD",
     "basePriceUSD": 9.160361419231617,
-    "indexLevel": 100.49172283878607
+    "indexLevel": 51.76288462514289
   },
   "Alex Carrasquel": {
     "match": {
