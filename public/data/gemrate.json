@@ -1,13 +1,13 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-16T17:11:06.954805+00:00",
+    "updatedAt": "2026-03-16T19:14:42.535522+00:00",
     "athleteCount": 454,
     "graders": [
       "PSA"
     ],
     "batchInfo": {
-      "startIdx": 60,
-      "endIdx": 80,
+      "startIdx": 80,
+      "endIdx": 100,
       "totalAthletes": 568
     }
   },
@@ -1314,16 +1314,16 @@
       "graders": {
         "PSA": {
           "cards": 47,
-          "gems": 47,
-          "grades": 106,
-          "gemRate": 44.0
+          "gems": 48,
+          "grades": 107,
+          "gemRate": 45.0
         }
       },
       "totals": {
         "cards": 47,
-        "gems": 47,
-        "grades": 106,
-        "gemRate": 44.0
+        "gems": 48,
+        "grades": 107,
+        "gemRate": 45.0
       }
     },
     "Danny Leon": {
