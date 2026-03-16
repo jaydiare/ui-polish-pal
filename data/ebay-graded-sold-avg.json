@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-16T11:15:28.405Z",
+    "updatedAt": "2026-03-16T13:52:22.953Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA/BGS/SGC grader title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
