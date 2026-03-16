@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-15T22:51:20.154Z",
+    "updatedAt": "2026-03-16T03:41:11.680Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA/BGS/SGC grader title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 250,
-      "endIdx": 260,
+      "startIdx": 260,
+      "endIdx": 270,
       "totalAthletes": 451
     },
     "maxPages": 4,
@@ -3685,7 +3685,7 @@
   },
   "Luis Avilan": {
     "keyword": "Luis Avilan Baseball PSA",
-    "nScraped": 0,
+    "nScraped": 60,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -3721,12 +3721,12 @@
   },
   "Luis Garcia": {
     "keyword": "Luis Garcia Baseball PSA",
-    "nScraped": 360,
-    "nSoldUsed": 84,
-    "avg": 10.436666666666659,
-    "taguchiSold": 10.436666666666659,
-    "medianSold": 10,
-    "marketStabilityCV": 0.04953072560924746,
+    "nScraped": 355,
+    "nSoldUsed": 112,
+    "avg": 8.838571428571429,
+    "taguchiSold": 8.838571428571429,
+    "medianSold": 9.99,
+    "marketStabilityCV": 0.14162303889610736,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
@@ -3769,15 +3769,15 @@
   },
   "Luis Leal": {
     "keyword": "Luis Leal Baseball PSA",
-    "nScraped": 125,
-    "nSoldUsed": 2,
+    "nScraped": 0,
+    "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
   },
   "Luis Matos": {
     "keyword": "Luis Matos Baseball PSA",
