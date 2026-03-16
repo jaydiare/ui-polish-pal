@@ -1,12 +1,12 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-16T13:57:38.637Z",
+    "updatedAt": "2026-03-16T15:35:47.264Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA/BGS/SGC grader title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 310,
-      "endIdx": 320,
-      "totalAthletes": 451
+      "startIdx": 320,
+      "endIdx": 330,
+      "totalAthletes": 452
     },
     "maxPages": 4,
     "minSampleSize": 4,
@@ -4465,19 +4465,19 @@
   },
   "Oscar Azocar": {
     "keyword": "Oscar Azocar Baseball PSA",
-    "nScraped": 0,
-    "nSoldUsed": 0,
-    "avg": null,
-    "taguchiSold": null,
-    "medianSold": null,
-    "marketStabilityCV": null,
+    "nScraped": 240,
+    "nSoldUsed": 4,
+    "avg": 52,
+    "taguchiSold": 52,
+    "medianSold": 52,
+    "marketStabilityCV": 0,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
   },
   "Oscar Henriquez": {
     "keyword": "Oscar Henriquez Baseball PSA",
-    "nScraped": 0,
+    "nScraped": 60,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -4489,15 +4489,15 @@
   },
   "Oscar Hernandez": {
     "keyword": "Oscar Hernandez Royals Diamondbacks Baseball PSA",
-    "nScraped": 0,
-    "nSoldUsed": 0,
+    "nScraped": 11,
+    "nSoldUsed": 1,
     "avg": null,
     "taguchiSold": null,
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
   },
   "Oscar Salazar": {
     "keyword": "Oscar Salazar Baseball PSA",
@@ -4513,12 +4513,12 @@
   },
   "Osleivis Basabe": {
     "keyword": "Osleivis Basabe Baseball PSA",
-    "nScraped": 250,
-    "nSoldUsed": 8,
-    "avg": 10.165,
-    "taguchiSold": 10.165,
-    "medianSold": 10.165,
-    "marketStabilityCV": 0.4338229701480572,
+    "nScraped": 251,
+    "nSoldUsed": 12,
+    "avg": 14.289999999999994,
+    "taguchiSold": 14.289999999999994,
+    "medianSold": 14.29,
+    "marketStabilityCV": 3.8950543214737713e-16,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
@@ -4549,12 +4549,12 @@
   },
   "Oswald Peraza": {
     "keyword": "Oswald Peraza Baseball PSA",
-    "nScraped": 137,
-    "nSoldUsed": 68,
-    "avg": 13.65073529411765,
-    "taguchiSold": 13.65073529411765,
-    "medianSold": 17.615,
-    "marketStabilityCV": 0.4795125339466334,
+    "nScraped": 141,
+    "nSoldUsed": 71,
+    "avg": 17.878028169014087,
+    "taguchiSold": 17.878028169014087,
+    "medianSold": 19.99,
+    "marketStabilityCV": 0.13840718108195588,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
@@ -4562,6 +4562,18 @@
   "Oswaldo Arcia": {
     "keyword": "Oswaldo Arcia Baseball PSA",
     "nScraped": 60,
+    "nSoldUsed": 1,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
+    "currency": "USD",
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
+  },
+  "Oswaldo Cabrera": {
+    "keyword": "Oswaldo Cabrera Baseball PSA",
+    "nScraped": 0,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -4571,21 +4583,9 @@
     "originalCurrencyExample": null,
     "fxRateUsed": null
   },
-  "Oswaldo Cabrera": {
-    "keyword": "Oswaldo Cabrera Baseball PSA",
-    "nScraped": 228,
-    "nSoldUsed": 109,
-    "avg": 40.97137614678893,
-    "taguchiSold": 40.97137614678893,
-    "medianSold": 39.99,
-    "marketStabilityCV": 0.1905104247944675,
-    "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
-  },
   "Oswaldo Navarro": {
     "keyword": "Oswaldo Navarro Baseball PSA",
-    "nScraped": 60,
+    "nScraped": 0,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -4597,7 +4597,7 @@
   },
   "Oswaldo Peraza": {
     "keyword": "Oswaldo Peraza Baseball PSA",
-    "nScraped": 87,
+    "nScraped": 0,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
