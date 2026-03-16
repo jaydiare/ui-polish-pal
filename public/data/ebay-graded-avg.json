@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-16T08:42:54.108Z",
+    "updatedAt": "2026-03-16T16:48:11.166Z",
     "minSampleSize": 4,
     "marketplaces": [
       "EBAY_US"
@@ -512,10 +512,8 @@
       },
       {
         "date": "2026-03-16",
-        "Baseball": 1396.7,
-        "Soccer": 904.8,
-        "Basketball": 735.8,
-        "All": 1366.9
+        "Baseball": 622.2,
+        "All": 622.2
       }
     ]
   },
@@ -8788,7 +8786,7 @@
         "avgListing": 102.47428571428571,
         "taguchiListing": 102.47428571428571,
         "marketStabilityCV": 0.20405385368225024,
-        "avgDaysOnMarket": 274.0763047679674,
+        "avgDaysOnMarket": 274.4071853582453,
         "nListing": 42,
         "nDaysOnMarket": 42,
         "currency": "USD",
@@ -8801,7 +8799,7 @@
     "avgListing": 102.47428571428571,
     "taguchiListing": 102.47428571428571,
     "marketStabilityCV": 0.20405385368225024,
-    "avgDaysOnMarket": 274.0763047679674,
+    "avgDaysOnMarket": 274.4071853582453,
     "nListing": 42,
     "currency": "USD",
     "basePriceUSD": 16.470166666666675,
