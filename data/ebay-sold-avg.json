@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-16T16:02:43.262Z",
+    "updatedAt": "2026-03-16T16:48:51.702Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. Taguchi winsorized mean + market stability CV. Ungraded condition policy (permissive for sold). Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
@@ -4747,11 +4747,11 @@
   "Maikel Garcia": {
     "keyword": "Maikel Garcia Baseball",
     "nScraped": 240,
-    "nSoldUsed": 128,
-    "avg": 10.459140625000003,
-    "taguchiSold": 10.459140625000003,
-    "medianSold": 12.5,
-    "marketStabilityCV": 0.43148524742035405,
+    "nSoldUsed": 131,
+    "avg": 11.87404580152672,
+    "taguchiSold": 11.87404580152672,
+    "medianSold": 12.99,
+    "marketStabilityCV": 0.2644965725355256,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
