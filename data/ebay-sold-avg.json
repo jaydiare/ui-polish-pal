@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-16T13:56:36.390Z",
+    "updatedAt": "2026-03-16T13:57:27.492Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. Taguchi winsorized mean + market stability CV. Ungraded condition policy (permissive for sold). Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
@@ -153,12 +153,12 @@
   },
   "Alex Cabrera": {
     "keyword": "Alex Cabrera Baseball",
-    "nScraped": 153,
-    "nSoldUsed": 87,
-    "avg": 2.108275862068967,
-    "taguchiSold": 2.108275862068967,
+    "nScraped": 220,
+    "nSoldUsed": 132,
+    "avg": 1.8609090909090902,
+    "taguchiSold": 1.8609090909090902,
     "medianSold": 1.99,
-    "marketStabilityCV": 0.19282520088122113,
+    "marketStabilityCV": 0.08140026188923025,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
