@@ -1,12 +1,12 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-16T14:15:14.362Z",
+    "updatedAt": "2026-03-16T16:02:43.262Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. Taguchi winsorized mean + market stability CV. Ungraded condition policy (permissive for sold). Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 0,
-      "endIdx": 10,
-      "totalAthletes": 567
+      "startIdx": 10,
+      "endIdx": 20,
+      "totalAthletes": 568
     },
     "maxPages": 4,
     "minSampleSize": 4,
@@ -129,6 +129,78 @@
   },
   "Alejandro Freire": {
     "keyword": "Alejandro Freire Baseball",
+    "nScraped": 244,
+    "nSoldUsed": 28,
+    "avg": 0.9899999999999994,
+    "taguchiSold": 0.9899999999999994,
+    "medianSold": 0.99,
+    "marketStabilityCV": 5.710079740322788e-16,
+    "currency": "USD",
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
+  },
+  "Alejandro Machado": {
+    "keyword": "Alejandro Machado Baseball",
+    "nScraped": 250,
+    "nSoldUsed": 40,
+    "avg": 2.175000000000001,
+    "taguchiSold": 2.175000000000001,
+    "medianSold": 2.175,
+    "marketStabilityCV": 0.36086115378843275,
+    "currency": "USD",
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
+  },
+  "Alex Cabrera": {
+    "keyword": "Alex Cabrera BBM NPB Diamondbacks Baseball",
+    "nScraped": 11,
+    "nSoldUsed": 11,
+    "avg": 1.4763636363636365,
+    "taguchiSold": 1.4763636363636365,
+    "medianSold": 1.49,
+    "marketStabilityCV": 0.05089277332742335,
+    "currency": "USD",
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
+  },
+  "Alex Carrasquel": {
+    "keyword": "Alex Carrasquel Baseball",
+    "nScraped": 242,
+    "nSoldUsed": 12,
+    "avg": 4.450000000000001,
+    "taguchiSold": 4.450000000000001,
+    "medianSold": 4.45,
+    "marketStabilityCV": 2.0846564140022528e-16,
+    "currency": "USD",
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
+  },
+  "Alex Delgado": {
+    "keyword": "Alex Delgado Baseball",
+    "nScraped": 284,
+    "nSoldUsed": 36,
+    "avg": 2.172222222222222,
+    "taguchiSold": 2.172222222222222,
+    "medianSold": 1.75,
+    "marketStabilityCV": 0.27528182453921185,
+    "currency": "USD",
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
+  },
+  "Alex Escobar": {
+    "keyword": "Alex Escobar Baseball",
+    "nScraped": 170,
+    "nSoldUsed": 69,
+    "avg": 1.5037681159420277,
+    "taguchiSold": 1.5037681159420277,
+    "medianSold": 1.49,
+    "marketStabilityCV": 0.31098604065769114,
+    "currency": "USD",
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
+  },
+  "Alex Herrera": {
+    "keyword": "Alex Herrera Baseball",
     "nScraped": 0,
     "nSoldUsed": 0,
     "avg": null,
@@ -139,81 +211,9 @@
     "originalCurrencyExample": null,
     "fxRateUsed": null
   },
-  "Alejandro Machado": {
-    "keyword": "Alejandro Machado Baseball",
-    "nScraped": 190,
-    "nSoldUsed": 33,
-    "avg": 2.7181818181818174,
-    "taguchiSold": 2.7181818181818174,
-    "medianSold": 2.95,
-    "marketStabilityCV": 0.46210533476821936,
-    "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
-  },
-  "Alex Cabrera": {
-    "keyword": "Alex Cabrera Baseball",
-    "nScraped": 220,
-    "nSoldUsed": 132,
-    "avg": 1.8609090909090902,
-    "taguchiSold": 1.8609090909090902,
-    "medianSold": 1.99,
-    "marketStabilityCV": 0.08140026188923025,
-    "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
-  },
-  "Alex Carrasquel": {
-    "keyword": "Alex Carrasquel Baseball",
-    "nScraped": 181,
-    "nSoldUsed": 6,
-    "avg": 3.3350000000000004,
-    "taguchiSold": 3.3350000000000004,
-    "medianSold": 3.335,
-    "marketStabilityCV": 0.5173391472687475,
-    "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
-  },
-  "Alex Delgado": {
-    "keyword": "Alex Delgado Baseball",
-    "nScraped": 218,
-    "nSoldUsed": 30,
-    "avg": 2.289999999999999,
-    "taguchiSold": 2.289999999999999,
-    "medianSold": 2.29,
-    "marketStabilityCV": 0.23983905586587623,
-    "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
-  },
-  "Alex Escobar": {
-    "keyword": "Alex Escobar Baseball",
-    "nScraped": 152,
-    "nSoldUsed": 59,
-    "avg": 1.517118644067796,
-    "taguchiSold": 1.517118644067796,
-    "medianSold": 1.69,
-    "marketStabilityCV": 0.3072290271404993,
-    "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
-  },
-  "Alex Herrera": {
-    "keyword": "Alex Herrera Baseball",
-    "nScraped": 210,
-    "nSoldUsed": 3,
-    "avg": null,
-    "taguchiSold": null,
-    "medianSold": null,
-    "marketStabilityCV": null,
-    "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
-  },
   "Alex Pacheco": {
     "keyword": "Alex Pacheco Baseball",
-    "nScraped": 125,
+    "nScraped": 0,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -2839,15 +2839,15 @@
   },
   "Alex Ramirez": {
     "keyword": "Alex Ramirez BBM NPB Baseball",
-    "nScraped": 60,
-    "nSoldUsed": 14,
-    "avg": 10.998571428571429,
-    "taguchiSold": 10.998571428571429,
-    "medianSold": 10.99,
-    "marketStabilityCV": 0.7990223689166257,
+    "nScraped": 0,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
   },
   "Alfredo Gonzalez": {
     "keyword": "Alfredo Gonzalez Baseball",
