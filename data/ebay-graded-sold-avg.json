@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-16T03:41:11.680Z",
+    "updatedAt": "2026-03-16T06:00:22.914Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA/BGS/SGC grader title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 260,
-      "endIdx": 270,
+      "startIdx": 270,
+      "endIdx": 280,
       "totalAthletes": 451
     },
     "maxPages": 4,
@@ -32,7 +32,7 @@
     },
     "fx": {
       "source": "CBSA Exchange Rates API",
-      "asOf": "2026-03-16T00:00:00.000Z"
+      "asOf": "2026-03-17T00:00:00.000Z"
     }
   },
   "Adbert Alzolay": {
@@ -3805,7 +3805,7 @@
   },
   "Luis Ordaz": {
     "keyword": "Luis Ordaz Baseball PSA",
-    "nScraped": 0,
+    "nScraped": 241,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -3829,26 +3829,27 @@
   },
   "Luis Perales": {
     "keyword": "Luis Perales Baseball PSA",
-    "nScraped": 257,
-    "nSoldUsed": 20,
-    "avg": 105,
-    "taguchiSold": 105,
-    "medianSold": 105,
-    "marketStabilityCV": 0,
+    "nScraped": 253,
+    "nSoldUsed": 24,
+    "avg": 92.5,
+    "taguchiSold": 92.5,
+    "medianSold": 92.5,
+    "marketStabilityCV": 0.13804159958249976,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
   },
   "Luis Rengifo": {
     "keyword": "Luis Rengifo Baseball PSA",
-    "nScraped": 120,
-    "nSoldUsed": 0,
-    "avg": null,
-    "taguchiSold": null,
-    "medianSold": null,
-    "marketStabilityCV": null,
+    "nScraped": 240,
+    "nSoldUsed": 12,
+    "avg": 109.99,
+    "taguchiSold": 109.99,
+    "medianSold": 109.99,
+    "marketStabilityCV": 0,
     "currency": "USD",
-    "error": "eBay page fetch failed (503) after 4 attempts"
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
   },
   "Luis Rivas": {
     "keyword": "Luis Rivas Baseball PSA",
@@ -3864,31 +3865,31 @@
   },
   "Luis Rodriguez": {
     "keyword": "Luis Rodriguez Baseball PSA",
-    "nScraped": 288,
-    "nSoldUsed": 72,
-    "avg": 16.273333333333337,
-    "taguchiSold": 16.273333333333337,
-    "medianSold": 16.5,
-    "marketStabilityCV": 0.10399440787204997,
+    "nScraped": 298,
+    "nSoldUsed": 83,
+    "avg": 14.658192771084341,
+    "taguchiSold": 14.658192771084341,
+    "medianSold": 15.5,
+    "marketStabilityCV": 0.23191140495387272,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
   },
   "Luis Salazar": {
     "keyword": "Luis Salazar Baseball PSA",
-    "nScraped": 247,
-    "nSoldUsed": 16,
-    "avg": 37,
-    "taguchiSold": 37,
-    "medianSold": 37,
-    "marketStabilityCV": 0.36287411532033453,
+    "nScraped": 0,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
   },
   "Luis Sanchez": {
     "keyword": "Luis Sanchez Baseball PSA",
-    "nScraped": 121,
+    "nScraped": 0,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
