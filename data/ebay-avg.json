@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-16T13:51:27.985Z",
+    "updatedAt": "2026-03-16T14:14:14.050Z",
     "minSampleSize": 4,
     "marketplaces": [
       "EBAY_US",
@@ -540,7 +540,8 @@
       "Eduardo Salazar": 2.504222662847911,
       "Isaias Chavez": 63.62642169728784,
       "Maikel Garcia": 18.16774076949302,
-      "Eduard Bazardo": 24.997569748225917
+      "Eduard Bazardo": 24.997569748225917,
+      "J.J D'Orazio": 4.877515310586177
     },
     "indexHistory": [
       {
@@ -638,8 +639,8 @@
       },
       {
         "date": "2026-03-16",
-        "Baseball": 45.1,
-        "All": 45.1
+        "Baseball": 100,
+        "All": 100
       }
     ]
   },
@@ -25407,6 +25408,51 @@
     "nListing": 9,
     "currency": "USD",
     "basePriceUSD": 63.62642169728784,
+    "indexLevel": 100
+  },
+  "J.J D'Orazio": {
+    "match": {
+      "mode": "player",
+      "value": "J.J D'Orazio",
+      "validatedOn": "EBAY_CA"
+    },
+    "marketplaces": {
+      "EBAY_US": {
+        "aspectMode": "player",
+        "aspectValue": "J.J D'Orazio",
+        "avgListing": 4.88,
+        "taguchiListing": 4.88,
+        "marketStabilityCV": 0,
+        "avgDaysOnMarket": 79.00759852237654,
+        "nListing": 9,
+        "nDaysOnMarket": 9,
+        "currency": "USD",
+        "originalCurrency": "USD",
+        "fxRateUsed": 1
+      },
+      "EBAY_CA": {
+        "aspectMode": "player",
+        "aspectValue": "J.J D'Orazio",
+        "avgListing": 4.877515310586177,
+        "taguchiListing": 4.877515310586177,
+        "marketStabilityCV": 0,
+        "avgDaysOnMarket": 79.00760499356997,
+        "nListing": 9,
+        "nDaysOnMarket": 9,
+        "currency": "USD",
+        "originalCurrency": "CAD",
+        "fxRateUsed": 0.7290755322251385
+      }
+    },
+    "avg": 4.877515310586177,
+    "n": 9,
+    "avgListing": 4.877515310586177,
+    "taguchiListing": 4.877515310586177,
+    "marketStabilityCV": 0,
+    "avgDaysOnMarket": 79.00760499356997,
+    "nListing": 9,
+    "currency": "USD",
+    "basePriceUSD": 4.877515310586177,
     "indexLevel": 100
   }
 }
