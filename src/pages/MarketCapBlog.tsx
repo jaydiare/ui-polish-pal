@@ -524,6 +524,25 @@ const MarketCapBlog = () => {
           </div>
         </section>
 
+        {/* ── Disclaimer ── */}
+        <section className="glass-panel p-6 rounded-xl mb-10 border-yellow-500/20">
+          <h2 className="text-sm font-display font-bold text-muted-foreground mb-2">⚠️ Disclaimer — Not Financial Advice</h2>
+          <div className="space-y-2 text-muted-foreground text-xs leading-6 text-justify">
+            <p>
+              This article is a <strong className="text-foreground">data-driven market analysis</strong> based entirely on publicly available information collected and processed by VZLA Sports Elite. All figures, projections, market cap estimates, revenue forecasts, and investment signals referenced herein are derived from automated data pipelines (eBay Browse API, sold listing scraping, PSA Population Reports, and SportsCardsPro benchmarks) and are presented <strong className="text-foreground">for informational and educational purposes only</strong>.
+            </p>
+            <p>
+              <strong className="text-foreground">Nothing in this article constitutes financial, investment, or professional advice.</strong> The terms "invest," "investment," "returns," and similar language are used colloquially to describe collecting strategies and market observations — they do not imply guaranteed financial returns or recommend any specific purchase or sale of sports cards or other collectibles.
+            </p>
+            <p>
+              Sports card values are highly volatile and influenced by factors including but not limited to: athlete performance, injuries, market sentiment, grading outcomes, product supply, and macroeconomic conditions. Past performance and historical data do not guarantee future results. All projections are speculative estimates based on current trends and assumptions that may not materialize.
+            </p>
+            <p>
+              Readers should conduct their own research and consult qualified professionals before making any financial decisions. VZLA Sports Elite assumes no liability for decisions made based on the information presented in this article. For more details, please review our <Link to="/privacy" className="text-vzla-yellow hover:underline">Privacy Policy & Financial Disclaimer</Link>.
+            </p>
+          </div>
+        </section>
+
         <VzlaFooter />
       </main>
       <VzlaEbayFooter />
