@@ -365,6 +365,52 @@ const MarketCapBlog = () => {
           </div>
         </section>
 
+        {/* ── Global Collectibles Market ── */}
+        <section className="glass-panel p-6 rounded-xl mb-10">
+          <h2 className="text-lg font-display font-bold text-flag-gradient mb-1">The Global Collectibles Boom</h2>
+          <p className="text-xs text-muted-foreground mb-4">Global collectibles market size ($ billions) — sports cards and eBay collectibles segments</p>
+          <div className="h-72">
+            <ResponsiveContainer width="100%" height="100%">
+              <AreaChart data={collectiblesData}>
+                <CartesianGrid strokeDasharray="3 3" stroke="hsl(var(--border))" />
+                <XAxis dataKey="year" tick={{ fontSize: 11, fill: "hsl(var(--muted-foreground))" }} />
+                <YAxis tickFormatter={(v: number) => `$${v}B`} tick={{ fontSize: 11, fill: "hsl(var(--muted-foreground))" }} />
+                <Tooltip
+                  formatter={(v: number, name: string) => [`$${v}B`, name]}
+                  contentStyle={{ background: "hsl(var(--card))", border: "1px solid hsl(var(--border))", borderRadius: 8 }}
+                  labelStyle={{ color: "hsl(var(--foreground))" }}
+                />
+                <Legend />
+                <Area type="monotone" dataKey="Global Collectibles" stroke="#8b5cf6" fill="#8b5cf6" fillOpacity={0.12} strokeWidth={2} />
+                <Area type="monotone" dataKey="Sports Cards" stroke="#fbbf24" fill="#fbbf24" fillOpacity={0.2} strokeWidth={2} />
+                <Area type="monotone" dataKey="eBay Collectibles" stroke="#22c55e" fill="#22c55e" fillOpacity={0.15} strokeWidth={1.5} />
+              </AreaChart>
+            </ResponsiveContainer>
+          </div>
+        </section>
+
+        {/* ── Collectibles Industry Context ── */}
+        <section className="glass-panel p-6 rounded-xl mb-10">
+          <h2 className="text-lg font-display font-bold text-flag-gradient mb-3">The Collectibles Industry & Where Venezuelan Cards Fit</h2>
+          <div className="space-y-4 text-muted-foreground text-sm leading-7 text-justify">
+            <p>
+              <strong className="text-foreground">A $580+ Billion Industry:</strong> The global collectibles market — spanning trading cards, memorabilia, art, coins, and luxury goods — has grown from $372 billion in 2020 to an estimated $579 billion in 2026, a compound annual growth rate (CAGR) of roughly 7.7%. Industry analysts project the market to surpass $900 billion by 2032, driven by digitalization, fractional ownership platforms, and a new generation of collectors entering through social media.
+            </p>
+            <p>
+              <strong className="text-foreground">Sports Cards: The Fastest-Growing Segment:</strong> Within the broader collectibles universe, sports trading cards have been the breakout category. After the pandemic-driven "card boom" that pushed the segment to $22 billion in 2021, the market corrected but has rebounded strongly to an estimated $22 billion in 2026. The sports card market is projected to reach $50 billion by 2032, fueled by institutional investment (e.g., Alt Funds, Rally, PWCC vaults), PSA/BGS grading backlogs validating demand, and a shift toward cards as alternative investment assets.
+            </p>
+            <p>
+              <strong className="text-foreground">eBay's Collectibles Dominance:</strong> eBay processes an estimated $16 billion in collectibles transactions annually (2026), making it the single largest marketplace for secondary card sales. The platform's authentication programs (eBay Authenticity Guarantee for cards over $750) and integrated grading partnerships have increased buyer confidence and average sale prices. Venezuelan athlete cards benefit directly from this infrastructure.
+            </p>
+            <p>
+              <strong className="text-foreground">Venezuelan Market Share Opportunity:</strong> With an estimated market cap of <strong className="text-vzla-yellow">{metrics ? "$" + metrics.totalMarketCap.toLocaleString(undefined, { maximumFractionDigits: 0 }) : "—"}</strong> and projected moderate annual revenue of <strong className="text-vzla-yellow">{metrics ? "$" + metrics.annualModerate.toLocaleString(undefined, { maximumFractionDigits: 0 }) : "—"}</strong>, Venezuelan athlete cards represent a micro-niche with outsized growth potential. As the Venezuelan talent pipeline deepens — particularly with young MLB prospects and MLS expansion — this segment could capture an increasing share of the broader Latin American sports card market, estimated at $2–4 billion and growing 12–18% annually.
+            </p>
+            <p>
+              <strong className="text-foreground">Emerging Trends Favoring Growth:</strong> Several macro trends align with bullish projections for Venezuelan sports cards: (1) Fanatics' takeover of Topps and aggressive licensing deals creating new product supply, (2) cross-sport collecting becoming mainstream (baseball + soccer cards from the same country), (3) Latin American collector bases growing with mobile-first eBay access, and (4) international tournament cycles (WBC, Copa América) creating recurring demand catalysts every 2–4 years.
+            </p>
+          </div>
+        </section>
+
         {/* ── Analysis Text ── */}
         <section className="glass-panel p-6 rounded-xl mb-10">
           <h2 className="text-lg font-display font-bold text-flag-gradient mb-3">Growth Catalysts & Market Drivers</h2>
