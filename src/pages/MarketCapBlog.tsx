@@ -104,7 +104,7 @@ const MarketCapBlog = () => {
   return (
     <div className="min-h-screen">
       <SEOHead
-        title="The Case for Investing in Venezuelan Sports Cards — Market Cap & eBay Revenue Projections"
+        title="The Case for Investing in Venezuelan Athletes Sports Cards — Market Cap & eBay Revenue Projections"
         description="Why collectors and investors should pay attention to Venezuelan athlete sports cards on eBay — market cap analysis, investment signals, revenue projections, and growth forecasts through 2032."
         path={`/blog/${slug}`}
         type="article"
