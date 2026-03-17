@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-17T17:32:55.828Z",
+    "updatedAt": "2026-03-17T19:32:08.246Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA/BGS/SGC grader title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 440,
-      "endIdx": 450,
+      "startIdx": 450,
+      "endIdx": 452,
       "totalAthletes": 452
     },
     "maxPages": 4,
@@ -6805,7 +6805,7 @@
   },
   "Yordan Osorio": {
     "keyword": "Yordan Osorio Soccer PSA",
-    "nScraped": 0,
+    "nScraped": 88,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -6841,7 +6841,7 @@
   },
   "Garbine Muguruza": {
     "keyword": "Garbine Muguruza Tennis PSA",
-    "nScraped": 0,
+    "nScraped": 240,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
