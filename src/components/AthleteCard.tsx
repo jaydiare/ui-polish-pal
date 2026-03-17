@@ -199,7 +199,7 @@ const AthleteCard = forwardRef<HTMLElement, AthleteCardProps>(({ athlete, byName
             <div className="text-[9px] text-muted-foreground font-medium uppercase tracking-wider mb-1">Raw</div>
             <div className="text-base font-display font-bold text-foreground leading-none">{money}</div>
             {rawFallback && (
-              <div className="text-[8px] text-muted-foreground/60 font-medium mt-0.5">Historical</div>
+              <div className="text-[8px] text-muted-foreground font-medium mt-0.5">Historical</div>
             )}
             {rawIdx != null && (
               <div className={`text-[10px] font-semibold mt-1 ${rawIdx >= 100 ? "text-primary" : "text-destructive"}`}>
@@ -224,7 +224,7 @@ const AthleteCard = forwardRef<HTMLElement, AthleteCardProps>(({ athlete, byName
                 <div>
                   <div className="text-base font-display font-bold text-foreground leading-none">{gradedMoney}</div>
                   {gradedFallback && (
-                    <div className="text-[8px] text-muted-foreground/60 font-medium mt-0.5">Historical</div>
+                    <div className="text-[8px] text-muted-foreground font-medium mt-0.5">Historical</div>
                   )}
                   {gradedIdx != null && (
                     <div className={`text-[10px] font-semibold mt-1 ${gradedIdx >= 100 ? "text-primary" : "text-destructive"}`}>
