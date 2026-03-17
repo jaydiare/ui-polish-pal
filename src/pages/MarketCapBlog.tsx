@@ -111,7 +111,7 @@ const MarketCapBlog = () => {
         jsonLd={{
           "@context": "https://schema.org",
           "@type": "Article",
-          headline: "Why You Should Invest in Venezuelan Sports Cards",
+          headline: "The Case for Investing in Venezuelan Sports Cards",
           description: "Data-driven investment thesis for the Venezuelan athlete card market on eBay.",
           datePublished: "2026-03-17",
           author: { "@type": "Person", name: "VZLA Sports Elite" },
