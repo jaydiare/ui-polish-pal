@@ -507,19 +507,68 @@ const MarketCapBlog = () => {
 
         {/* ── Methodology ── */}
         <section className="glass-panel p-6 rounded-xl mb-10">
-          <h2 className="text-lg font-display font-bold text-flag-gradient mb-3">Methodology & Data Sources</h2>
-          <div className="space-y-3 text-muted-foreground text-sm leading-7 text-justify">
+          <h2 className="text-lg font-display font-bold text-flag-gradient mb-3">📐 How We Estimated the Market Cap</h2>
+          <div className="space-y-4 text-muted-foreground text-sm leading-7 text-justify">
             <p>
-              <strong className="text-foreground">Market Cap Calculation:</strong> Estimated as the sum of (average listed price × PSA population) across all tracked athletes for both raw and graded cards. This represents the total value of graded inventory in circulation.
+              Transparency matters. Here's exactly how the numbers in this article are calculated, so you can evaluate the analysis for yourself.
             </p>
-            <p>
-              <strong className="text-foreground">Revenue Estimates:</strong> Based on average sold prices multiplied by estimated monthly transaction volume per athlete (conservative: 30, moderate: 75, aggressive: 150 transactions/month), extrapolated annually.
-            </p>
-            <p>
-              <strong className="text-foreground">Data Sources:</strong> eBay Browse API (active listings), eBay HTML scraping (sold comps), PSA Population Report, SportsCardsPro (raw pricing benchmarks). Prices normalized to USD using CBSA exchange rates.
-            </p>
-            <p className="text-xs italic">
-              Note: Projections are estimates based on current trends and historical data. Actual market performance may vary based on player performance, market sentiment, and macroeconomic factors.
+
+            <div className="border border-border/50 rounded-lg p-4 bg-secondary/20">
+              <h3 className="font-display font-bold text-foreground text-sm mb-2">1. Market Cap (Snapshot Value)</h3>
+              <p className="mb-2">
+                We estimate the <strong className="text-foreground">total market cap</strong> as the sum of each athlete's inventory value:
+              </p>
+              <div className="bg-background/60 rounded-md p-3 text-center font-mono text-xs text-vzla-yellow mb-2">
+                Market Cap = Σ (Average Listed Price × PSA Population) for each athlete
+              </div>
+              <p className="text-xs">
+                For <strong className="text-foreground">raw cards</strong>, we use the Taguchi Winsorized Mean of active eBay listings as the price, multiplied by the PSA population count (or a conservative default of 10 if no PSA data exists). For <strong className="text-foreground">graded cards</strong>, we apply the same formula using graded listing prices and graded PSA pop (default 5). The two are summed to produce the total market cap figure of <strong className="text-vzla-yellow">{metrics ? "$" + metrics.totalMarketCap.toLocaleString(undefined, { maximumFractionDigits: 0 }) : "—"}</strong>.
+              </p>
+            </div>
+
+            <div className="border border-border/50 rounded-lg p-4 bg-secondary/20">
+              <h3 className="font-display font-bold text-foreground text-sm mb-2">2. Annual Revenue Estimates</h3>
+              <p className="mb-2">
+                Revenue projections estimate how much money flows through the Venezuelan card market each year:
+              </p>
+              <div className="bg-background/60 rounded-md p-3 text-center font-mono text-xs text-vzla-yellow mb-2">
+                Annual Revenue = Athletes × Monthly Sales per Athlete × Avg Sold Price × 12
+              </div>
+              <p className="text-xs">
+                We model three scenarios based on estimated monthly transaction volume per athlete: <strong className="text-foreground">Conservative</strong> (30 sales/month), <strong className="text-foreground">Moderate</strong> (75 sales/month), and <strong className="text-foreground">Aggressive</strong> (150 sales/month). The average sold price is the midpoint of raw and graded sold averages from eBay completed listings.
+              </p>
+            </div>
+
+            <div className="border border-border/50 rounded-lg p-4 bg-secondary/20">
+              <h3 className="font-display font-bold text-foreground text-sm mb-2">3. Pricing Methodology</h3>
+              <p className="text-xs">
+                All prices use the <strong className="text-foreground">Taguchi Winsorized Mean</strong> — a robust statistical average that removes extreme outliers (top/bottom 10%) before calculating the mean. This produces more reliable price estimates than simple averages. The <strong className="text-foreground">Coefficient of Variation (CV)</strong> measures price stability, and the <strong className="text-foreground">Signal-to-Noise ratio</strong> (10 × log₁₀(1 / CV²)) quantifies pricing predictability on a decibel scale.
+              </p>
+            </div>
+
+            <div className="border border-border/50 rounded-lg p-4 bg-secondary/20">
+              <h3 className="font-display font-bold text-foreground text-sm mb-2">4. Growth Projections</h3>
+              <p className="text-xs">
+                Projections through 2032 apply compound annual growth rates (8%, 15%, 25%) to the moderate annual revenue baseline. These rates are informed by historical sports card market growth trends and broader collectibles industry forecasts — they are <strong className="text-foreground">not guarantees</strong> and represent scenarios, not predictions.
+              </p>
+            </div>
+
+            <div className="border border-border/50 rounded-lg p-4 bg-secondary/20">
+              <h3 className="font-display font-bold text-foreground text-sm mb-2">5. Data Sources</h3>
+              <ul className="list-disc list-inside text-xs space-y-1">
+                <li><strong className="text-foreground">eBay Browse API</strong> — active listing prices, days on market, and listing counts</li>
+                <li><strong className="text-foreground">eBay Sold Listings</strong> — completed sale prices via HTML scraping for sold comps</li>
+                <li><strong className="text-foreground">PSA Population Report</strong> — graded card counts by athlete (gem rate, total grades)</li>
+                <li><strong className="text-foreground">SportsCardsPro</strong> — raw pricing benchmarks and historical price data</li>
+                <li><strong className="text-foreground">VZLA Sports Elite Platform</strong> — proprietary index calculations, base-100 price indices, and daily automated snapshots</li>
+              </ul>
+              <p className="text-xs mt-2">
+                All prices are normalized to USD. Data is refreshed daily via automated pipelines and weekly via consolidated market snapshots.
+              </p>
+            </div>
+
+            <p className="text-xs italic border-l-2 border-vzla-yellow/40 pl-3">
+              <strong className="text-foreground">Important:</strong> These estimates are observational analyses derived from the data this platform collects and processes. They reflect market conditions at the time of calculation and should not be interpreted as precise valuations or financial forecasts. Actual market values depend on factors beyond what any data pipeline can capture — including buyer intent, card condition nuances, and real-time market sentiment.
             </p>
           </div>
         </section>
