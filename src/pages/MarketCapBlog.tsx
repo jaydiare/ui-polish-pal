@@ -104,14 +104,14 @@ const MarketCapBlog = () => {
   return (
     <div className="min-h-screen">
       <SEOHead
-        title="The Case for Investing in Venezuelan Sports Cards — Market Cap & eBay Revenue Projections"
+        title="The Case for Investing in Venezuelan Athletes Sports Cards — Market Cap & eBay Revenue Projections"
         description="Why collectors and investors should pay attention to Venezuelan athlete sports cards on eBay — market cap analysis, investment signals, revenue projections, and growth forecasts through 2032."
         path={`/blog/${slug}`}
         type="article"
         jsonLd={{
           "@context": "https://schema.org",
           "@type": "Article",
-          headline: "The Case for Investing in Venezuelan Sports Cards",
+          headline: "The Case for Investing in Venezuelan Athletes Sports Cards",
           description: "Data-driven investment thesis for the Venezuelan athlete card market on eBay.",
           datePublished: "2026-03-17",
           author: { "@type": "Person", name: "VZLA Sports Elite" },
@@ -126,7 +126,7 @@ const MarketCapBlog = () => {
         </Link>
 
         <h1 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-2">
-          The Case for Investing in Venezuelan Sports Cards
+          The Case for Investing in Venezuelan Athletes Sports Cards
         </h1>
         <p className="text-base text-muted-foreground mb-1">Market Cap, eBay Revenue & Growth Projections Through 2032</p>
         <div className="flex items-center justify-between mb-8">
