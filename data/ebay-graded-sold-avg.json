@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-17T13:54:30.709Z",
+    "updatedAt": "2026-03-17T15:35:06.206Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA/BGS/SGC grader title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 420,
-      "endIdx": 430,
+      "startIdx": 430,
+      "endIdx": 440,
       "totalAthletes": 452
     },
     "maxPages": 4,
@@ -5941,7 +5941,7 @@
   },
   "Amleto Monacelli": {
     "keyword": "Amleto Monacelli PBA Bowler Bowling Bowling PSA",
-    "nScraped": 0,
+    "nScraped": 4,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -5953,7 +5953,7 @@
   },
   "Andres Borregales": {
     "keyword": "Andres Borregales Football PSA",
-    "nScraped": 0,
+    "nScraped": 248,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -6193,7 +6193,7 @@
   },
   "Yangel Herrera": {
     "keyword": "Yangel Herrera Soccer PSA",
-    "nScraped": 240,
+    "nScraped": 228,
     "nSoldUsed": 4,
     "avg": 15.5,
     "taguchiSold": 15.5,
@@ -6385,15 +6385,15 @@
   },
   "David Martinez": {
     "keyword": "David Martinez Soccer PSA",
-    "nScraped": 245,
-    "nSoldUsed": 12,
-    "avg": 69.99,
-    "taguchiSold": 69.99,
-    "medianSold": 69.99,
-    "marketStabilityCV": 0,
+    "nScraped": 0,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
   },
   "Eduardo Sosa": {
     "keyword": "Eduardo Sosa Soccer",
