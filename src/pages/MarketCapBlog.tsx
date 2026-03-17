@@ -78,11 +78,11 @@ const MarketCapBlog = () => {
   useEffect(() => {
     Promise.all([
       fetch("/data/vzla-athlete-market-data.json", { cache: "no-store" }).then((r) => r.json()),
-      fetch("/data/ebay-avg.json", { cache: "no-store" }).then((r) => r.json()),
+      fetch("https://raw.githubusercontent.com/jaydiare/ui-polish-pal/main/data/index-history.json", { cache: "no-store" }).then((r) => r.json()),
     ])
-      .then(([mkt, ebay]) => {
+      .then(([mkt, history]) => {
         setAthletes(mkt.athletes ?? []);
-        setIndexHistory(ebay._meta?.indexHistory ?? []);
+        setIndexHistory(Array.isArray(history) ? history : []);
         setLoading(false);
       })
       .catch(() => setLoading(false));
