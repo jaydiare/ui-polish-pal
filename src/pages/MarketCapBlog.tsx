@@ -126,7 +126,7 @@ const MarketCapBlog = () => {
         </Link>
 
         <h1 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-2">
-          Why You Should Invest in Venezuelan Sports Cards
+          The Case for Investing in Venezuelan Sports Cards
         </h1>
         <p className="text-base text-muted-foreground mb-1">Market Cap, eBay Revenue & Growth Projections Through 2032</p>
         <div className="flex items-center justify-between mb-8">
