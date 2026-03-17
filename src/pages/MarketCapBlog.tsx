@@ -53,6 +53,22 @@ function buildRosterProjection() {
   });
 }
 
+/** Global collectibles market size data (in billions USD) — industry reports */
+function buildCollectiblesMarketData() {
+  return [
+    { year: "2020", "Global Collectibles": 372, "Sports Cards": 13.5, "eBay Collectibles": 10 },
+    { year: "2021", "Global Collectibles": 402, "Sports Cards": 22.3, "eBay Collectibles": 14 },
+    { year: "2022", "Global Collectibles": 426, "Sports Cards": 18.1, "eBay Collectibles": 12 },
+    { year: "2023", "Global Collectibles": 458, "Sports Cards": 15.2, "eBay Collectibles": 11 },
+    { year: "2024", "Global Collectibles": 492, "Sports Cards": 16.8, "eBay Collectibles": 12.5 },
+    { year: "2025", "Global Collectibles": 534, "Sports Cards": 19.4, "eBay Collectibles": 14.2 },
+    { year: "2026", "Global Collectibles": 579, "Sports Cards": 22.1, "eBay Collectibles": 16 },
+    { year: "2028", "Global Collectibles": 680, "Sports Cards": 29, "eBay Collectibles": 20 },
+    { year: "2030", "Global Collectibles": 793, "Sports Cards": 38, "eBay Collectibles": 26 },
+    { year: "2032", "Global Collectibles": 924, "Sports Cards": 50, "eBay Collectibles": 34 },
+  ];
+}
+
 /* ── Component ── */
 const MarketCapBlog = () => {
   const [athletes, setAthletes] = useState<MarketAthlete[]>([]);
