@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-16T22:54:53.636Z",
+    "updatedAt": "2026-03-17T03:16:28.830Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA/BGS/SGC grader title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 360,
-      "endIdx": 370,
+      "startIdx": 370,
+      "endIdx": 380,
       "totalAthletes": 452
     },
     "maxPages": 4,
@@ -5125,7 +5125,7 @@
   },
   "Ronald Torreyes": {
     "keyword": "Ronald Torreyes Baseball PSA",
-    "nScraped": 0,
+    "nScraped": 60,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -5137,7 +5137,7 @@
   },
   "Ronny Cedeno": {
     "keyword": "Ronny Cedeno Baseball PSA",
-    "nScraped": 0,
+    "nScraped": 60,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -5161,12 +5161,12 @@
   },
   "Rougned Odor": {
     "keyword": "Rougned Odor Baseball PSA",
-    "nScraped": 246,
-    "nSoldUsed": 16,
-    "avg": 13.275000000000004,
-    "taguchiSold": 13.275000000000004,
-    "medianSold": 13.275,
-    "marketStabilityCV": 0.060295032633988686,
+    "nScraped": 248,
+    "nSoldUsed": 42,
+    "avg": 18.019047619047633,
+    "taguchiSold": 18.019047619047633,
+    "medianSold": 15,
+    "marketStabilityCV": 0.2476158617238489,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
@@ -5186,11 +5186,11 @@
   "Salvador Perez": {
     "keyword": "Salvador Perez Baseball PSA",
     "nScraped": 240,
-    "nSoldUsed": 68,
-    "avg": 65.15794117647063,
-    "taguchiSold": 65.15794117647063,
-    "medianSold": 62.495,
-    "marketStabilityCV": 0.21954643453430586,
+    "nSoldUsed": 69,
+    "avg": 65.72797101449275,
+    "taguchiSold": 65.72797101449275,
+    "medianSold": 64.99,
+    "marketStabilityCV": 0.22341332570444367,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
@@ -5209,7 +5209,7 @@
   },
   "Sebastian Rivero": {
     "keyword": "Sebastian Rivero Baseball PSA",
-    "nScraped": 60,
+    "nScraped": 0,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -5221,7 +5221,7 @@
   },
   "Sergio Escalona": {
     "keyword": "Sergio Escalona Baseball PSA",
-    "nScraped": 17,
+    "nScraped": 0,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
