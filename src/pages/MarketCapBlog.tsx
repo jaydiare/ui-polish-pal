@@ -146,6 +146,9 @@ const MarketCapBlog = () => {
           <p className="text-muted-foreground text-sm leading-7 text-justify">
             Below we break down the market cap, annual revenue potential, growth catalysts, and why the Venezuelan card market sits at the intersection of three powerful trends: <strong className="text-foreground">a global collectibles boom</strong>, <strong className="text-foreground">an unprecedented Latin American talent pipeline</strong>, and <strong className="text-foreground">eBay's expanding authentication infrastructure</strong>.
           </p>
+          <p className="text-muted-foreground text-sm leading-7 text-justify mt-4">
+            To date, the highest-sold sports card by a Venezuelan athlete is the <strong className="text-foreground">2018 Topps Update Ronald Acuña Jr. Rookie Card #US250 PSA 10</strong>, which has sold for over <strong className="text-foreground">$400,000 USD</strong>. That's not an outlier — it's a preview. With the massive and growing volume of Venezuelan athletes entering the MLB pipeline every year, we are about to see more record-breaking sales like this as the market matures and collectors recognize the depth of this talent pool.
+          </p>
         </section>
 
         {/* ── Why Invest: 5 Reasons ── */}
