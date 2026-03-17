@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-17T11:11:45.929Z",
+    "updatedAt": "2026-03-17T13:54:30.709Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA/BGS/SGC grader title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 410,
-      "endIdx": 420,
+      "startIdx": 420,
+      "endIdx": 430,
       "totalAthletes": 452
     },
     "maxPages": 4,
@@ -5821,7 +5821,7 @@
   },
   "Yonny Chirinos": {
     "keyword": "Yonny Chirinos Baseball PSA",
-    "nScraped": 0,
+    "nScraped": 28,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -5833,19 +5833,19 @@
   },
   "Yonny Hernandez": {
     "keyword": "Yonny Hernandez Baseball PSA",
-    "nScraped": 0,
-    "nSoldUsed": 0,
-    "avg": null,
-    "taguchiSold": null,
-    "medianSold": null,
-    "marketStabilityCV": null,
+    "nScraped": 243,
+    "nSoldUsed": 4,
+    "avg": 10.5,
+    "taguchiSold": 10.5,
+    "medianSold": 10.5,
+    "marketStabilityCV": 0,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
   },
   "Yorman Bazardo": {
     "keyword": "Yorman Bazardo Baseball PSA",
-    "nScraped": 34,
+    "nScraped": 35,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -5857,7 +5857,7 @@
   },
   "Yorman Rodriguez": {
     "keyword": "Yorman Rodriguez Baseball PSA",
-    "nScraped": 240,
+    "nScraped": 241,
     "nSoldUsed": 4,
     "avg": 7.06,
     "taguchiSold": 7.06,
@@ -5893,19 +5893,19 @@
   },
   "Carl Herrera": {
     "keyword": "Carl Herrera Basketball PSA",
-    "nScraped": 267,
-    "nSoldUsed": 16,
-    "avg": 22.195000000000004,
-    "taguchiSold": 22.195000000000004,
-    "medianSold": 22.195,
-    "marketStabilityCV": 0.15332558535109633,
+    "nScraped": 132,
+    "nSoldUsed": 6,
+    "avg": 25.49,
+    "taguchiSold": 25.49,
+    "medianSold": 25.49,
+    "marketStabilityCV": 0,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
   },
   "Greivis Vasquez": {
     "keyword": "Greivis Vasquez Basketball PSA",
-    "nScraped": 241,
+    "nScraped": 0,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -5917,15 +5917,15 @@
   },
   "Oscar Torres": {
     "keyword": "Oscar Torres Basketball PSA",
-    "nScraped": 180,
-    "nSoldUsed": 3,
+    "nScraped": 0,
+    "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
   },
   "Pedro Chourio": {
     "keyword": "Pedro Chourio Basketball",
