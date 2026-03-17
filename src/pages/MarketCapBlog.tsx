@@ -1,4 +1,4 @@
-import { useEffect, useState, useMemo } from "react";
+import { useMemo } from "react";
 import { Link } from "react-router-dom";
 import SEOHead from "@/components/SEOHead";
 import SocialShare from "@/components/SocialShare";
@@ -10,183 +10,96 @@ import {
   ResponsiveContainer, BarChart, Bar, AreaChart, Area,
 } from "recharts";
 
-/* ── Types ── */
-interface MarketAthlete {
-  name: string;
-  sport: string;
-  rawListedPrice: number | null;
-  rawSoldPrice: number | null;
-  gradedListedPrice: number | null;
-  gradedSoldPrice: number | null;
-  psaPop: number | null;
-  indexLevel: number | null;
-}
+/* ══════════════════════════════════════════════════════════════
+   SNAPSHOT DATA — March 15 2026
+   Source: vzla-athlete-market-data.json + index-history.json
+   This is a point-in-time analysis, not live data.
+   ══════════════════════════════════════════════════════════════ */
 
-interface IndexEntry { date: string; Baseball?: number; Soccer?: number; Basketball?: number; All?: number }
+const SNAPSHOT = {
+  date: "March 17, 2026",
+  athleteCount: 567,
+  avgRawListed: "9.56",
+  avgRawSold: "4.10",
+  avgGradedListed: "52.93",
+  avgGradedSold: "38.93",
+  totalPsaPop: "760,168",
+  totalMarketCap: 72_186_425,
+  annualConservative: 4_391_606,
+  annualModerate: 10_979_015,
+  annualAggressive: 21_958_030,
+} as const;
+
+const SPORT_BREAKDOWN = [
+  { sport: "Baseball", "Athlete Count": 491, "Avg Sold Price": 3.89 },
+  { sport: "Soccer", "Athlete Count": 53, "Avg Sold Price": 5.24 },
+  { sport: "Basketball", "Athlete Count": 9, "Avg Sold Price": 6.41 },
+  { sport: "MMA", "Athlete Count": 3, "Avg Sold Price": 4.12 },
+  { sport: "Tennis", "Athlete Count": 1, "Avg Sold Price": 8.50 },
+];
+
+const INDEX_HISTORY = [
+  { date: "03-02", All: 246.3, Baseball: 248.1, Soccer: 101.3 },
+  { date: "03-04", All: 207.7, Baseball: 219.7, Soccer: 107.6, Basketball: 225.5 },
+  { date: "03-05", All: 203.4, Baseball: 215.7, Soccer: 112, Basketball: 80.2 },
+  { date: "03-06", All: 100, Baseball: 100, Soccer: 100, Basketball: 100 },
+  { date: "03-08", All: 89.8, Baseball: 89.8, Soccer: 94.9, Basketball: 69.9 },
+  { date: "03-09", All: 96.3, Baseball: 96.7, Soccer: 94.5, Basketball: 69.9 },
+  { date: "03-10", All: 148.1, Baseball: 148.1 },
+  { date: "03-11", All: 94.3, Baseball: 93.9, Soccer: 99.5, Basketball: 99.8 },
+  { date: "03-15", All: 340.1, Baseball: 340.1 },
+  { date: "03-16", All: 385.3, Baseball: 406.4, Soccer: 208, Basketball: 209.3 },
+];
 
 /* ── Projection helpers ── */
-const CURRENT_YEAR = 2026;
 const PROJECTION_YEARS = [2026, 2027, 2028, 2029, 2030, 2031, 2032];
 
 function buildGrowthProjection(baseCap: number, scenarios: { label: string; rate: number }[]) {
   return PROJECTION_YEARS.map((yr) => {
     const row: Record<string, number | string> = { year: yr.toString() };
     scenarios.forEach(({ label, rate }) => {
-      const elapsed = yr - CURRENT_YEAR;
-      row[label] = Math.round(baseCap * Math.pow(1 + rate, elapsed));
+      row[label] = Math.round(baseCap * Math.pow(1 + rate, yr - 2026));
     });
     return row;
   });
 }
 
-function buildRosterProjection() {
-  // Historical: ~80 active MLB Venezuelans (2024), growing ~5/yr on avg
-  // MLS pipeline is newer with ~15 active, growing ~3/yr
-  return PROJECTION_YEARS.map((yr) => {
-    const elapsed = yr - CURRENT_YEAR;
-    return {
-      year: yr.toString(),
-      "MLB Athletes": 82 + elapsed * 5,
-      "MLS Athletes": 18 + elapsed * 4,
-      "Total Tracked": 570 + elapsed * 15,
-    };
-  });
-}
+const ROSTER_DATA = PROJECTION_YEARS.map((yr) => {
+  const e = yr - 2026;
+  return { year: yr.toString(), "MLB Athletes": 82 + e * 5, "MLS Athletes": 18 + e * 4, "Total Tracked": 570 + e * 15 };
+});
 
-/** Global collectibles market size data (in billions USD) — industry reports */
-function buildCollectiblesMarketData() {
-  return [
-    { year: "2020", "Global Collectibles": 372, "Sports Cards": 13.5, "eBay Collectibles": 10 },
-    { year: "2021", "Global Collectibles": 402, "Sports Cards": 22.3, "eBay Collectibles": 14 },
-    { year: "2022", "Global Collectibles": 426, "Sports Cards": 18.1, "eBay Collectibles": 12 },
-    { year: "2023", "Global Collectibles": 458, "Sports Cards": 15.2, "eBay Collectibles": 11 },
-    { year: "2024", "Global Collectibles": 492, "Sports Cards": 16.8, "eBay Collectibles": 12.5 },
-    { year: "2025", "Global Collectibles": 534, "Sports Cards": 19.4, "eBay Collectibles": 14.2 },
-    { year: "2026", "Global Collectibles": 579, "Sports Cards": 22.1, "eBay Collectibles": 16 },
-    { year: "2028", "Global Collectibles": 680, "Sports Cards": 29, "eBay Collectibles": 20 },
-    { year: "2030", "Global Collectibles": 793, "Sports Cards": 38, "eBay Collectibles": 26 },
-    { year: "2032", "Global Collectibles": 924, "Sports Cards": 50, "eBay Collectibles": 34 },
-  ];
-}
+const COLLECTIBLES_DATA = [
+  { year: "2020", "Global Collectibles": 372, "Sports Cards": 13.5, "eBay Collectibles": 10 },
+  { year: "2021", "Global Collectibles": 402, "Sports Cards": 22.3, "eBay Collectibles": 14 },
+  { year: "2022", "Global Collectibles": 426, "Sports Cards": 18.1, "eBay Collectibles": 12 },
+  { year: "2023", "Global Collectibles": 458, "Sports Cards": 15.2, "eBay Collectibles": 11 },
+  { year: "2024", "Global Collectibles": 492, "Sports Cards": 16.8, "eBay Collectibles": 12.5 },
+  { year: "2025", "Global Collectibles": 534, "Sports Cards": 19.4, "eBay Collectibles": 14.2 },
+  { year: "2026", "Global Collectibles": 579, "Sports Cards": 22.1, "eBay Collectibles": 16 },
+  { year: "2028", "Global Collectibles": 680, "Sports Cards": 29, "eBay Collectibles": 20 },
+  { year: "2030", "Global Collectibles": 793, "Sports Cards": 38, "eBay Collectibles": 26 },
+  { year: "2032", "Global Collectibles": 924, "Sports Cards": 50, "eBay Collectibles": 34 },
+];
+
+const GROWTH_DATA = buildGrowthProjection(SNAPSHOT.annualModerate, [
+  { label: "Conservative (8%)", rate: 0.08 },
+  { label: "Moderate (15%)", rate: 0.15 },
+  { label: "Aggressive (25%)", rate: 0.25 },
+]);
+
+/* ── Shared chart tooltip style ── */
+const tooltipStyle = {
+  contentStyle: { background: "hsl(var(--card))", border: "1px solid hsl(var(--border))", borderRadius: 8 },
+  labelStyle: { color: "hsl(var(--foreground))" },
+};
+const tickStyle = { fontSize: 11, fill: "hsl(var(--muted-foreground))" };
 
 /* ── Component ── */
 const MarketCapBlog = () => {
-  const [athletes, setAthletes] = useState<MarketAthlete[]>([]);
-  const [indexHistory, setIndexHistory] = useState<IndexEntry[]>([]);
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    Promise.all([
-      fetch("/data/vzla-athlete-market-data.json", { cache: "no-store" }).then((r) => r.json()),
-      fetch("https://raw.githubusercontent.com/jaydiare/ui-polish-pal/main/data/index-history.json", { cache: "no-store" }).then((r) => r.json()),
-    ])
-      .then(([mkt, history]) => {
-        setAthletes(mkt.athletes ?? []);
-        setIndexHistory(Array.isArray(history) ? history : []);
-        setLoading(false);
-      })
-      .catch(() => setLoading(false));
-  }, []);
-
-  /* ── Calculated metrics ── */
-  const metrics = useMemo(() => {
-    if (!athletes.length) return null;
-
-    const withRawListed = athletes.filter((a) => a.rawListedPrice && a.rawListedPrice > 0);
-    const withRawSold = athletes.filter((a) => a.rawSoldPrice && a.rawSoldPrice > 0);
-    const withGradedListed = athletes.filter((a) => a.gradedListedPrice && a.gradedListedPrice > 0);
-    const withGradedSold = athletes.filter((a) => a.gradedSoldPrice && a.gradedSoldPrice > 0);
-
-    const avgRawListed = withRawListed.reduce((s, a) => s + (a.rawListedPrice ?? 0), 0) / (withRawListed.length || 1);
-    const avgRawSold = withRawSold.reduce((s, a) => s + (a.rawSoldPrice ?? 0), 0) / (withRawSold.length || 1);
-    const avgGradedListed = withGradedListed.reduce((s, a) => s + (a.gradedListedPrice ?? 0), 0) / (withGradedListed.length || 1);
-    const avgGradedSold = withGradedSold.reduce((s, a) => s + (a.gradedSoldPrice ?? 0), 0) / (withGradedSold.length || 1);
-
-    const totalPsaPop = athletes.reduce((s, a) => s + (a.psaPop ?? 0), 0);
-
-    // Market cap estimate: (avg sold price × estimated volume per athlete × number of athletes)
-    // Conservative: each athlete has ~50 card sales/month, moderate ~100, aggressive ~200
-    const athleteCount = athletes.length;
-    const avgSoldPrice = (avgRawSold + avgGradedSold) / 2;
-
-    const monthlyVolumeConservative = athleteCount * 30 * avgSoldPrice;
-    const monthlyVolumeModerate = athleteCount * 75 * avgSoldPrice;
-    const monthlyVolumeAggressive = athleteCount * 150 * avgSoldPrice;
-
-    const annualConservative = monthlyVolumeConservative * 12;
-    const annualModerate = monthlyVolumeModerate * 12;
-    const annualAggressive = monthlyVolumeAggressive * 12;
-
-    // Listed inventory value (market cap snapshot)
-    const rawMarketCap = withRawListed.reduce((s, a) => s + (a.rawListedPrice ?? 0) * (a.psaPop ?? 10), 0);
-    const gradedMarketCap = withGradedListed.reduce((s, a) => s + (a.gradedListedPrice ?? 0) * (a.psaPop ?? 5), 0);
-    const totalMarketCap = rawMarketCap + gradedMarketCap;
-
-    return {
-      athleteCount,
-      avgRawListed: avgRawListed.toFixed(2),
-      avgRawSold: avgRawSold.toFixed(2),
-      avgGradedListed: avgGradedListed.toFixed(2),
-      avgGradedSold: avgGradedSold.toFixed(2),
-      totalPsaPop: totalPsaPop.toLocaleString(),
-      totalMarketCap,
-      annualConservative,
-      annualModerate,
-      annualAggressive,
-    };
-  }, [athletes]);
-
-  const growthData = useMemo(
-    () => (metrics ? buildGrowthProjection(metrics.annualModerate, [
-      { label: "Conservative (8%)", rate: 0.08 },
-      { label: "Moderate (15%)", rate: 0.15 },
-      { label: "Aggressive (25%)", rate: 0.25 },
-    ]) : []),
-    [metrics],
-  );
-
-  const rosterData = useMemo(() => buildRosterProjection(), []);
-  const collectiblesData = useMemo(() => buildCollectiblesMarketData(), []);
-
-  /* Sport breakdown for bar chart */
-  const sportBreakdown = useMemo(() => {
-    const bySport: Record<string, { count: number; avgPrice: number; totalPop: number }> = {};
-    athletes.forEach((a) => {
-      if (!bySport[a.sport]) bySport[a.sport] = { count: 0, avgPrice: 0, totalPop: 0 };
-      bySport[a.sport].count++;
-      bySport[a.sport].avgPrice += a.rawSoldPrice ?? a.rawListedPrice ?? 0;
-      bySport[a.sport].totalPop += a.psaPop ?? 0;
-    });
-    return Object.entries(bySport).map(([sport, d]) => ({
-      sport,
-      "Athlete Count": d.count,
-      "Avg Sold Price": +(d.avgPrice / (d.count || 1)).toFixed(2),
-      "PSA Pop": d.totalPop,
-    }));
-  }, [athletes]);
-
-  /* Clean index history (filter out zeroes & spikes) */
-  const cleanHistory = useMemo(() =>
-    indexHistory
-      .filter((e) => (e.All ?? 0) > 0 && (e.All ?? 0) < 2000)
-      .map((e) => ({ ...e, date: e.date.slice(5) })),
-    [indexHistory],
-  );
-
-  const slug = "venezuelan-sports-cards-market-cap";
-
-  if (loading) {
-    return (
-      <div className="min-h-screen">
-        <VzlaNavbar />
-        <main className="page-shell pt-8">
-          <p className="text-muted-foreground text-center py-12">Loading market data…</p>
-        </main>
-      </div>
-    );
-  }
-
+  const m = SNAPSHOT;
   const fmt = (n: number) => "$" + n.toLocaleString(undefined, { maximumFractionDigits: 0 });
+  const slug = "venezuelan-sports-cards-market-cap";
 
   return (
     <div className="min-h-screen">
@@ -217,7 +130,7 @@ const MarketCapBlog = () => {
         </h1>
         <p className="text-base text-muted-foreground mb-1">Market Cap, eBay Revenue & Growth Projections Through 2032</p>
         <div className="flex items-center justify-between mb-8">
-          <p className="text-sm text-muted-foreground">March 17, 2026 · VZLA Sports Elite</p>
+          <p className="text-sm text-muted-foreground">{m.date} · VZLA Sports Elite</p>
           <SocialShare url={`https://vzlasportselite.com/blog/${slug}`} title="Why Invest in Venezuelan Sports Cards" compact />
         </div>
 
@@ -225,10 +138,10 @@ const MarketCapBlog = () => {
         <section className="glass-panel p-6 rounded-xl mb-8">
           <h2 className="text-lg font-display font-bold text-flag-gradient mb-3">The Investment Case for Venezuelan Cards</h2>
           <p className="text-muted-foreground text-sm leading-7 text-justify mb-4">
-            If you're a collector looking for the next undervalued niche with explosive upside, Venezuelan athlete sports cards deserve your attention. With <strong className="text-foreground">{metrics?.athleteCount ?? 0} athletes</strong> currently tracked across MLB, MLS, and NBA, this is one of the deepest talent pools feeding into North American professional sports — and the card market hasn't fully priced it in yet.
+            If you're a collector looking for the next undervalued niche with explosive upside, Venezuelan athlete sports cards deserve your attention. With <strong className="text-foreground">{m.athleteCount} athletes</strong> currently tracked across MLB, MLS, and NBA, this is one of the deepest talent pools feeding into North American professional sports — and the card market hasn't fully priced it in yet.
           </p>
           <p className="text-muted-foreground text-sm leading-7 text-justify mb-4">
-            This analysis uses <strong className="text-foreground">live data from our platform</strong> — active eBay listings, sold comps, PSA population reports, Taguchi statistical pricing, and historical indices — to make the investment case. Whether you're a long-term holder, a flipper looking for arbitrage, or a new collector entering the hobby, the numbers tell a compelling story.
+            This analysis uses <strong className="text-foreground">snapshot data from our platform</strong> — active eBay listings, sold comps, PSA population reports, Taguchi statistical pricing, and historical indices — to make the investment case. Whether you're a long-term holder, a flipper looking for arbitrage, or a new collector entering the hobby, the numbers tell a compelling story.
           </p>
           <p className="text-muted-foreground text-sm leading-7 text-justify">
             Below we break down the market cap, annual revenue potential, growth catalysts, and why the Venezuelan card market sits at the intersection of three powerful trends: <strong className="text-foreground">a global collectibles boom</strong>, <strong className="text-foreground">an unprecedented Latin American talent pipeline</strong>, and <strong className="text-foreground">eBay's expanding authentication infrastructure</strong>.
@@ -240,36 +153,12 @@ const MarketCapBlog = () => {
           <h2 className="text-lg font-display font-bold text-flag-gradient mb-4">5 Reasons to Invest Now</h2>
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {[
-              {
-                icon: "📈",
-                title: "Undervalued Market",
-                desc: `Average raw card sells for just $${metrics?.avgRawSold ?? "—"} — significantly below comparable markets for Dominican or Cuban athletes. Early entry means maximum upside.`,
-              },
-              {
-                icon: "⚾",
-                title: "Deep Talent Pipeline",
-                desc: "Venezuela produces ~80+ active MLB players annually with dozens more in minor league systems. Every call-up creates instant card demand.",
-              },
-              {
-                icon: "🏆",
-                title: "Tournament Catalysts",
-                desc: "WBC, Copa América, and Olympic cycles create recurring 200–400% price spikes every 2–4 years. Timing purchases between events maximizes returns.",
-              },
-              {
-                icon: "🔐",
-                title: "PSA-Graded Liquidity",
-                desc: `With ${metrics?.totalPsaPop ?? "—"} total graded cards, the certified market provides price floors and institutional-grade liquidity that raw cards lack.`,
-              },
-              {
-                icon: "⚽",
-                title: "Multi-Sport Diversification",
-                desc: "Unlike most country-specific niches, Venezuelan cards span baseball, soccer, and basketball — hedging against single-sport downturns.",
-              },
-              {
-                icon: "💰",
-                title: "Grading Premium Arbitrage",
-                desc: `Raw cards average $${metrics?.avgRawListed ?? "—"} listed vs $${metrics?.avgGradedListed ?? "—"} graded — a ${metrics ? Math.round(parseFloat(metrics.avgGradedListed) / parseFloat(metrics.avgRawListed)) : "—"}x premium. Buy raw, grade, and capture the spread.`,
-              },
+              { icon: "📈", title: "Undervalued Market", desc: `Average raw card sells for just $${m.avgRawSold} — significantly below comparable markets for Dominican or Cuban athletes. Early entry means maximum upside.` },
+              { icon: "⚾", title: "Deep Talent Pipeline", desc: "Venezuela produces ~80+ active MLB players annually with dozens more in minor league systems. Every call-up creates instant card demand." },
+              { icon: "🏆", title: "Tournament Catalysts", desc: "WBC, Copa América, and Olympic cycles create recurring 200–400% price spikes every 2–4 years. Timing purchases between events maximizes returns." },
+              { icon: "🔐", title: "PSA-Graded Liquidity", desc: `With ${m.totalPsaPop} total graded cards, the certified market provides price floors and institutional-grade liquidity that raw cards lack.` },
+              { icon: "⚽", title: "Multi-Sport Diversification", desc: "Unlike most country-specific niches, Venezuelan cards span baseball, soccer, and basketball — hedging against single-sport downturns." },
+              { icon: "💰", title: "Grading Premium Arbitrage", desc: `Raw cards average $${m.avgRawListed} listed vs $${m.avgGradedListed} graded — a ${Math.round(parseFloat(m.avgGradedListed) / parseFloat(m.avgRawListed))}x premium. Buy raw, grade, and capture the spread.` },
             ].map(({ icon, title, desc }) => (
               <div key={title} className="border border-border/50 rounded-lg p-4 bg-secondary/30">
                 <div className="text-2xl mb-2">{icon}</div>
@@ -304,107 +193,89 @@ const MarketCapBlog = () => {
         </section>
 
         {/* ── Key Metrics Grid ── */}
-        {metrics && (
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10">
-            {[
-              { label: "Athletes Tracked", value: metrics.athleteCount.toString() },
-              { label: "Est. Market Cap", value: fmt(metrics.totalMarketCap) },
-              { label: "Total PSA Pop", value: metrics.totalPsaPop },
-              { label: "Avg Raw Sold", value: `$${metrics.avgRawSold}` },
-              { label: "Avg Raw Listed", value: `$${metrics.avgRawListed}` },
-              { label: "Avg Graded Listed", value: `$${metrics.avgGradedListed}` },
-              { label: "Avg Graded Sold", value: `$${metrics.avgGradedSold}` },
-              { label: "Annual Rev (Moderate)", value: fmt(metrics.annualModerate) },
-            ].map(({ label, value }) => (
-              <div key={label} className="glass-panel p-4 rounded-xl text-center">
-                <p className="text-xs text-muted-foreground mb-1">{label}</p>
-                <p className="text-lg font-display font-bold text-vzla-yellow">{value}</p>
-              </div>
-            ))}
-          </div>
-        )}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10">
+          {[
+            { label: "Athletes Tracked", value: m.athleteCount.toString() },
+            { label: "Est. Market Cap", value: fmt(m.totalMarketCap) },
+            { label: "Total PSA Pop", value: m.totalPsaPop },
+            { label: "Avg Raw Sold", value: `$${m.avgRawSold}` },
+            { label: "Avg Raw Listed", value: `$${m.avgRawListed}` },
+            { label: "Avg Graded Listed", value: `$${m.avgGradedListed}` },
+            { label: "Avg Graded Sold", value: `$${m.avgGradedSold}` },
+            { label: "Annual Rev (Moderate)", value: fmt(m.annualModerate) },
+          ].map(({ label, value }) => (
+            <div key={label} className="glass-panel p-4 rounded-xl text-center">
+              <p className="text-xs text-muted-foreground mb-1">{label}</p>
+              <p className="text-lg font-display font-bold text-vzla-yellow">{value}</p>
+            </div>
+          ))}
+        </div>
 
         {/* ── Market Index History ── */}
-        {cleanHistory.length > 0 && (
-          <section className="glass-panel p-6 rounded-xl mb-10">
-            <h2 className="text-lg font-display font-bold text-flag-gradient mb-1">Market Index — Recent Trend</h2>
-            <p className="text-xs text-muted-foreground mb-4">Base-100 price index across all tracked athletes (filtered for outliers)</p>
-            <div className="h-72">
-              <ResponsiveContainer width="100%" height="100%">
-                <LineChart data={cleanHistory}>
-                  <CartesianGrid strokeDasharray="3 3" stroke="hsl(var(--border))" />
-                  <XAxis dataKey="date" tick={{ fontSize: 11, fill: "hsl(var(--muted-foreground))" }} />
-                  <YAxis tick={{ fontSize: 11, fill: "hsl(var(--muted-foreground))" }} />
-                  <Tooltip
-                    contentStyle={{ background: "hsl(var(--card))", border: "1px solid hsl(var(--border))", borderRadius: 8 }}
-                    labelStyle={{ color: "hsl(var(--foreground))" }}
-                  />
-                  <Legend />
-                  <Line type="monotone" dataKey="All" stroke="hsl(var(--vzla-yellow))" strokeWidth={2} dot={false} name="All Sports" />
-                  <Line type="monotone" dataKey="Baseball" stroke="#ef4444" strokeWidth={1.5} dot={false} />
-                  <Line type="monotone" dataKey="Soccer" stroke="#3b82f6" strokeWidth={1.5} dot={false} />
-                  <Line type="monotone" dataKey="Basketball" stroke="#f97316" strokeWidth={1.5} dot={false} />
-                </LineChart>
-              </ResponsiveContainer>
-            </div>
-          </section>
-        )}
+        <section className="glass-panel p-6 rounded-xl mb-10">
+          <h2 className="text-lg font-display font-bold text-flag-gradient mb-1">Market Index — Recent Trend</h2>
+          <p className="text-xs text-muted-foreground mb-4">Base-100 price index across all tracked athletes (filtered for outliers)</p>
+          <div className="h-72">
+            <ResponsiveContainer width="100%" height="100%">
+              <LineChart data={INDEX_HISTORY}>
+                <CartesianGrid strokeDasharray="3 3" stroke="hsl(var(--border))" />
+                <XAxis dataKey="date" tick={tickStyle} />
+                <YAxis tick={tickStyle} />
+                <Tooltip {...tooltipStyle} />
+                <Legend />
+                <Line type="monotone" dataKey="All" stroke="hsl(var(--vzla-yellow))" strokeWidth={2} dot={false} name="All Sports" />
+                <Line type="monotone" dataKey="Baseball" stroke="#ef4444" strokeWidth={1.5} dot={false} />
+                <Line type="monotone" dataKey="Soccer" stroke="#3b82f6" strokeWidth={1.5} dot={false} />
+                <Line type="monotone" dataKey="Basketball" stroke="#f97316" strokeWidth={1.5} dot={false} />
+              </LineChart>
+            </ResponsiveContainer>
+          </div>
+        </section>
 
         {/* ── Sport Breakdown Bar Chart ── */}
-        {sportBreakdown.length > 0 && (
-          <section className="glass-panel p-6 rounded-xl mb-10">
-            <h2 className="text-lg font-display font-bold text-flag-gradient mb-1">Market Breakdown by Sport</h2>
-            <p className="text-xs text-muted-foreground mb-4">Athlete count, average sold price, and total PSA graded population</p>
-            <div className="h-64">
-              <ResponsiveContainer width="100%" height="100%">
-                <BarChart data={sportBreakdown}>
-                  <CartesianGrid strokeDasharray="3 3" stroke="hsl(var(--border))" />
-                  <XAxis dataKey="sport" tick={{ fontSize: 11, fill: "hsl(var(--muted-foreground))" }} />
-                  <YAxis tick={{ fontSize: 11, fill: "hsl(var(--muted-foreground))" }} />
-                  <Tooltip
-                    contentStyle={{ background: "hsl(var(--card))", border: "1px solid hsl(var(--border))", borderRadius: 8 }}
-                    labelStyle={{ color: "hsl(var(--foreground))" }}
-                  />
-                  <Legend />
-                  <Bar dataKey="Athlete Count" fill="#fbbf24" radius={[4, 4, 0, 0]} />
-                  <Bar dataKey="Avg Sold Price" fill="#3b82f6" radius={[4, 4, 0, 0]} />
-                </BarChart>
-              </ResponsiveContainer>
-            </div>
-          </section>
-        )}
+        <section className="glass-panel p-6 rounded-xl mb-10">
+          <h2 className="text-lg font-display font-bold text-flag-gradient mb-1">Market Breakdown by Sport</h2>
+          <p className="text-xs text-muted-foreground mb-4">Athlete count and average sold price by sport</p>
+          <div className="h-64">
+            <ResponsiveContainer width="100%" height="100%">
+              <BarChart data={SPORT_BREAKDOWN}>
+                <CartesianGrid strokeDasharray="3 3" stroke="hsl(var(--border))" />
+                <XAxis dataKey="sport" tick={tickStyle} />
+                <YAxis tick={tickStyle} />
+                <Tooltip {...tooltipStyle} />
+                <Legend />
+                <Bar dataKey="Athlete Count" fill="#fbbf24" radius={[4, 4, 0, 0]} />
+                <Bar dataKey="Avg Sold Price" fill="#3b82f6" radius={[4, 4, 0, 0]} />
+              </BarChart>
+            </ResponsiveContainer>
+          </div>
+        </section>
 
         {/* ── Revenue Projections ── */}
         <section className="glass-panel p-6 rounded-xl mb-10">
           <h2 className="text-lg font-display font-bold text-flag-gradient mb-1">Annual Revenue Projections (2026–2032)</h2>
           <p className="text-xs text-muted-foreground mb-4">Three growth scenarios based on current market data and athlete pipeline expansion</p>
-          {metrics && (
-            <div className="grid grid-cols-3 gap-3 mb-6">
-              <div className="text-center p-3 rounded-lg bg-secondary/50">
-                <p className="text-xs text-muted-foreground">Conservative (8%/yr)</p>
-                <p className="text-sm font-bold text-foreground">{fmt(metrics.annualConservative)}</p>
-              </div>
-              <div className="text-center p-3 rounded-lg bg-secondary/50">
-                <p className="text-xs text-muted-foreground">Moderate (15%/yr)</p>
-                <p className="text-sm font-bold text-vzla-yellow">{fmt(metrics.annualModerate)}</p>
-              </div>
-              <div className="text-center p-3 rounded-lg bg-secondary/50">
-                <p className="text-xs text-muted-foreground">Aggressive (25%/yr)</p>
-                <p className="text-sm font-bold text-foreground">{fmt(metrics.annualAggressive)}</p>
-              </div>
+          <div className="grid grid-cols-3 gap-3 mb-6">
+            <div className="text-center p-3 rounded-lg bg-secondary/50">
+              <p className="text-xs text-muted-foreground">Conservative (8%/yr)</p>
+              <p className="text-sm font-bold text-foreground">{fmt(m.annualConservative)}</p>
             </div>
-          )}
+            <div className="text-center p-3 rounded-lg bg-secondary/50">
+              <p className="text-xs text-muted-foreground">Moderate (15%/yr)</p>
+              <p className="text-sm font-bold text-vzla-yellow">{fmt(m.annualModerate)}</p>
+            </div>
+            <div className="text-center p-3 rounded-lg bg-secondary/50">
+              <p className="text-xs text-muted-foreground">Aggressive (25%/yr)</p>
+              <p className="text-sm font-bold text-foreground">{fmt(m.annualAggressive)}</p>
+            </div>
+          </div>
           <div className="h-72">
             <ResponsiveContainer width="100%" height="100%">
-              <AreaChart data={growthData}>
+              <AreaChart data={GROWTH_DATA}>
                 <CartesianGrid strokeDasharray="3 3" stroke="hsl(var(--border))" />
-                <XAxis dataKey="year" tick={{ fontSize: 11, fill: "hsl(var(--muted-foreground))" }} />
-                <YAxis tickFormatter={(v: number) => `$${(v / 1000).toFixed(0)}k`} tick={{ fontSize: 11, fill: "hsl(var(--muted-foreground))" }} />
-                <Tooltip
-                  formatter={(v: number) => fmt(v)}
-                  contentStyle={{ background: "hsl(var(--card))", border: "1px solid hsl(var(--border))", borderRadius: 8 }}
-                  labelStyle={{ color: "hsl(var(--foreground))" }}
-                />
+                <XAxis dataKey="year" tick={tickStyle} />
+                <YAxis tickFormatter={(v: number) => `$${(v / 1000).toFixed(0)}k`} tick={tickStyle} />
+                <Tooltip formatter={(v: number) => fmt(v)} {...tooltipStyle} />
                 <Legend />
                 <Area type="monotone" dataKey="Conservative (8%)" stroke="#94a3b8" fill="#94a3b8" fillOpacity={0.15} strokeWidth={1.5} />
                 <Area type="monotone" dataKey="Moderate (15%)" stroke="#fbbf24" fill="#fbbf24" fillOpacity={0.2} strokeWidth={2} />
@@ -420,14 +291,11 @@ const MarketCapBlog = () => {
           <p className="text-xs text-muted-foreground mb-4">Projected active athletes in MLB and MLS, and total tracked roster</p>
           <div className="h-64">
             <ResponsiveContainer width="100%" height="100%">
-              <LineChart data={rosterData}>
+              <LineChart data={ROSTER_DATA}>
                 <CartesianGrid strokeDasharray="3 3" stroke="hsl(var(--border))" />
-                <XAxis dataKey="year" tick={{ fontSize: 11, fill: "hsl(var(--muted-foreground))" }} />
-                <YAxis tick={{ fontSize: 11, fill: "hsl(var(--muted-foreground))" }} />
-                <Tooltip
-                  contentStyle={{ background: "hsl(var(--card))", border: "1px solid hsl(var(--border))", borderRadius: 8 }}
-                  labelStyle={{ color: "hsl(var(--foreground))" }}
-                />
+                <XAxis dataKey="year" tick={tickStyle} />
+                <YAxis tick={tickStyle} />
+                <Tooltip {...tooltipStyle} />
                 <Legend />
                 <Line type="monotone" dataKey="MLB Athletes" stroke="#ef4444" strokeWidth={2} />
                 <Line type="monotone" dataKey="MLS Athletes" stroke="#3b82f6" strokeWidth={2} />
@@ -443,15 +311,11 @@ const MarketCapBlog = () => {
           <p className="text-xs text-muted-foreground mb-4">Global collectibles market size ($ billions) — sports cards and eBay collectibles segments</p>
           <div className="h-72">
             <ResponsiveContainer width="100%" height="100%">
-              <AreaChart data={collectiblesData}>
+              <AreaChart data={COLLECTIBLES_DATA}>
                 <CartesianGrid strokeDasharray="3 3" stroke="hsl(var(--border))" />
-                <XAxis dataKey="year" tick={{ fontSize: 11, fill: "hsl(var(--muted-foreground))" }} />
-                <YAxis tickFormatter={(v: number) => `$${v}B`} tick={{ fontSize: 11, fill: "hsl(var(--muted-foreground))" }} />
-                <Tooltip
-                  formatter={(v: number, name: string) => [`$${v}B`, name]}
-                  contentStyle={{ background: "hsl(var(--card))", border: "1px solid hsl(var(--border))", borderRadius: 8 }}
-                  labelStyle={{ color: "hsl(var(--foreground))" }}
-                />
+                <XAxis dataKey="year" tick={tickStyle} />
+                <YAxis tickFormatter={(v: number) => `$${v}B`} tick={tickStyle} />
+                <Tooltip formatter={(v: number, name: string) => [`$${v}B`, name]} {...tooltipStyle} />
                 <Legend />
                 <Area type="monotone" dataKey="Global Collectibles" stroke="#8b5cf6" fill="#8b5cf6" fillOpacity={0.12} strokeWidth={2} />
                 <Area type="monotone" dataKey="Sports Cards" stroke="#fbbf24" fill="#fbbf24" fillOpacity={0.2} strokeWidth={2} />
@@ -475,7 +339,7 @@ const MarketCapBlog = () => {
               <strong className="text-foreground">eBay's Collectibles Dominance:</strong> eBay processes an estimated $16 billion in collectibles transactions annually (2026), making it the single largest marketplace for secondary card sales. The platform's authentication programs (eBay Authenticity Guarantee for cards over $750) and integrated grading partnerships have increased buyer confidence and average sale prices. Venezuelan athlete cards benefit directly from this infrastructure.
             </p>
             <p>
-              <strong className="text-foreground">Venezuelan Market Share Opportunity:</strong> With an estimated market cap of <strong className="text-vzla-yellow">{metrics ? "$" + metrics.totalMarketCap.toLocaleString(undefined, { maximumFractionDigits: 0 }) : "—"}</strong> and projected moderate annual revenue of <strong className="text-vzla-yellow">{metrics ? "$" + metrics.annualModerate.toLocaleString(undefined, { maximumFractionDigits: 0 }) : "—"}</strong>, Venezuelan athlete cards represent a micro-niche with outsized growth potential. As the Venezuelan talent pipeline deepens — particularly with young MLB prospects and MLS expansion — this segment could capture an increasing share of the broader Latin American sports card market, estimated at $2–4 billion and growing 12–18% annually.
+              <strong className="text-foreground">Venezuelan Market Share Opportunity:</strong> With an estimated market cap of <strong className="text-vzla-yellow">{fmt(m.totalMarketCap)}</strong> and projected moderate annual revenue of <strong className="text-vzla-yellow">{fmt(m.annualModerate)}</strong>, Venezuelan athlete cards represent a micro-niche with outsized growth potential. As the Venezuelan talent pipeline deepens — particularly with young MLB prospects and MLS expansion — this segment could capture an increasing share of the broader Latin American sports card market, estimated at $2–4 billion and growing 12–18% annually.
             </p>
             <p>
               <strong className="text-foreground">Emerging Trends Favoring Growth:</strong> Several macro trends align with bullish projections for Venezuelan sports cards: (1) Fanatics' takeover of Topps and aggressive licensing deals creating new product supply, (2) cross-sport collecting becoming mainstream (baseball + soccer cards from the same country), (3) Latin American collector bases growing with mobile-first eBay access, and (4) international tournament cycles (WBC, Copa América) creating recurring demand catalysts every 2–4 years.
@@ -494,7 +358,7 @@ const MarketCapBlog = () => {
               <strong className="text-foreground">MLS Expansion:</strong> Major League Soccer's continued expansion (30+ teams by 2026) has created new demand for Latin American talent. Venezuelan soccer players like Josef Martínez and emerging prospects are beginning to appear in Topps and Panini products, adding a new vertical to the collectibles market that barely existed five years ago.
             </p>
             <p>
-              <strong className="text-foreground">PSA Grading Volume:</strong> With a combined PSA population of <strong className="text-vzla-yellow">{metrics?.totalPsaPop}</strong> graded cards across all tracked athletes, the certified card market provides price floors and institutional-grade liquidity. Graded cards command a significant premium — our data shows an average graded listed price of <strong className="text-vzla-yellow">${metrics?.avgGradedListed}</strong> versus <strong className="text-vzla-yellow">${metrics?.avgRawListed}</strong> for raw cards.
+              <strong className="text-foreground">PSA Grading Volume:</strong> With a combined PSA population of <strong className="text-vzla-yellow">{m.totalPsaPop}</strong> graded cards across all tracked athletes, the certified card market provides price floors and institutional-grade liquidity. Graded cards command a significant premium — our data shows an average graded listed price of <strong className="text-vzla-yellow">${m.avgGradedListed}</strong> versus <strong className="text-vzla-yellow">${m.avgRawListed}</strong> for raw cards.
             </p>
             <p>
               <strong className="text-foreground">World Baseball Classic Effect:</strong> International tournaments like the WBC create massive demand spikes. During the 2023 WBC, Venezuelan player card prices surged 200–400% for key athletes. With Venezuela expected to field a competitive roster in future tournaments, these events serve as market-wide catalysts.
@@ -509,28 +373,22 @@ const MarketCapBlog = () => {
         <section className="glass-panel p-6 rounded-xl mb-10">
           <h2 className="text-lg font-display font-bold text-flag-gradient mb-3">📐 How We Estimated the Market Cap</h2>
           <div className="space-y-4 text-muted-foreground text-sm leading-7 text-justify">
-            <p>
-              Transparency matters. Here's exactly how the numbers in this article are calculated, so you can evaluate the analysis for yourself.
-            </p>
+            <p>Transparency matters. Here's exactly how the numbers in this article are calculated, so you can evaluate the analysis for yourself.</p>
 
             <div className="border border-border/50 rounded-lg p-4 bg-secondary/20">
               <h3 className="font-display font-bold text-foreground text-sm mb-2">1. Market Cap (Snapshot Value)</h3>
-              <p className="mb-2">
-                We estimate the <strong className="text-foreground">total market cap</strong> as the sum of each athlete's inventory value:
-              </p>
+              <p className="mb-2">We estimate the <strong className="text-foreground">total market cap</strong> as the sum of each athlete's inventory value:</p>
               <div className="bg-background/60 rounded-md p-3 text-center font-mono text-xs text-vzla-yellow mb-2">
                 Market Cap = Σ (Average Listed Price × PSA Population) for each athlete
               </div>
               <p className="text-xs">
-                For <strong className="text-foreground">raw cards</strong>, we use the Taguchi Winsorized Mean of active eBay listings as the price, multiplied by the PSA population count (or a conservative default of 10 if no PSA data exists). For <strong className="text-foreground">graded cards</strong>, we apply the same formula using graded listing prices and graded PSA pop (default 5). The two are summed to produce the total market cap figure of <strong className="text-vzla-yellow">{metrics ? "$" + metrics.totalMarketCap.toLocaleString(undefined, { maximumFractionDigits: 0 }) : "—"}</strong>.
+                For <strong className="text-foreground">raw cards</strong>, we use the Taguchi Winsorized Mean of active eBay listings as the price, multiplied by the PSA population count (or a conservative default of 10 if no PSA data exists). For <strong className="text-foreground">graded cards</strong>, we apply the same formula using graded listing prices and graded PSA pop (default 5). The two are summed to produce the total market cap figure of <strong className="text-vzla-yellow">{fmt(m.totalMarketCap)}</strong>.
               </p>
             </div>
 
             <div className="border border-border/50 rounded-lg p-4 bg-secondary/20">
               <h3 className="font-display font-bold text-foreground text-sm mb-2">2. Annual Revenue Estimates</h3>
-              <p className="mb-2">
-                Revenue projections estimate how much money flows through the Venezuelan card market each year:
-              </p>
+              <p className="mb-2">Revenue projections estimate how much money flows through the Venezuelan card market each year:</p>
               <div className="bg-background/60 rounded-md p-3 text-center font-mono text-xs text-vzla-yellow mb-2">
                 Annual Revenue = Athletes × Monthly Sales per Athlete × Avg Sold Price × 12
               </div>
@@ -562,9 +420,7 @@ const MarketCapBlog = () => {
                 <li><strong className="text-foreground">SportsCardsPro</strong> — raw pricing benchmarks and historical price data</li>
                 <li><strong className="text-foreground">VZLA Sports Elite Platform</strong> — proprietary index calculations, base-100 price indices, and daily automated snapshots</li>
               </ul>
-              <p className="text-xs mt-2">
-                All prices are normalized to USD. Data is refreshed daily via automated pipelines and weekly via consolidated market snapshots.
-              </p>
+              <p className="text-xs mt-2">All prices are normalized to USD. Data snapshot taken {m.date}.</p>
             </div>
 
             <p className="text-xs italic border-l-2 border-vzla-yellow/40 pl-3">
