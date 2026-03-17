@@ -191,15 +191,15 @@ const MarketCapBlog = () => {
   return (
     <div className="min-h-screen">
       <SEOHead
-        title="Venezuelan Sports Cards Market Cap & eBay Revenue Projections"
-        description="Data-driven analysis of the Venezuelan athlete sports card market on eBay — market cap estimates, revenue projections, and growth forecasts through 2032."
+        title="Why You Should Invest in Venezuelan Sports Cards — Market Cap & eBay Revenue Projections"
+        description="Why collectors and investors should pay attention to Venezuelan athlete sports cards on eBay — market cap analysis, investment signals, revenue projections, and growth forecasts through 2032."
         path={`/blog/${slug}`}
         type="article"
         jsonLd={{
           "@context": "https://schema.org",
           "@type": "Article",
-          headline: "Venezuelan Sports Cards Market Cap & Revenue Projections",
-          description: "Data-driven analysis of the Venezuelan athlete card market on eBay.",
+          headline: "Why You Should Invest in Venezuelan Sports Cards",
+          description: "Data-driven investment thesis for the Venezuelan athlete card market on eBay.",
           datePublished: "2026-03-17",
           author: { "@type": "Person", name: "VZLA Sports Elite" },
           publisher: { "@type": "Organization", name: "VZLA Sports Elite" },
@@ -213,21 +213,93 @@ const MarketCapBlog = () => {
         </Link>
 
         <h1 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-2">
-          Venezuelan Sports Cards on eBay: Market Cap & Revenue Projections
+          Why You Should Invest in Venezuelan Sports Cards
         </h1>
+        <p className="text-base text-muted-foreground mb-1">Market Cap, eBay Revenue & Growth Projections Through 2032</p>
         <div className="flex items-center justify-between mb-8">
           <p className="text-sm text-muted-foreground">March 17, 2026 · VZLA Sports Elite</p>
-          <SocialShare url={`https://vzlasportselite.com/blog/${slug}`} title="Venezuelan Sports Cards Market Cap" compact />
+          <SocialShare url={`https://vzlasportselite.com/blog/${slug}`} title="Why Invest in Venezuelan Sports Cards" compact />
         </div>
 
         {/* ── Intro ── */}
         <section className="glass-panel p-6 rounded-xl mb-8">
-          <h2 className="text-lg font-display font-bold text-flag-gradient mb-3">The Venezuelan Card Market at a Glance</h2>
+          <h2 className="text-lg font-display font-bold text-flag-gradient mb-3">The Investment Case for Venezuelan Cards</h2>
           <p className="text-muted-foreground text-sm leading-7 text-justify mb-4">
-            Venezuela has quietly become one of the most prolific talent pipelines in professional sports. With <strong className="text-foreground">{metrics?.athleteCount ?? 0} athletes</strong> currently tracked across MLB, MLS, and NBA, the secondary market for their sports cards on eBay represents a vibrant and growing niche. This analysis uses live data from our platform — covering active listings, sold comps, PSA population reports, and historical price indices — to estimate the total market capitalization and project future revenue.
+            If you're a collector looking for the next undervalued niche with explosive upside, Venezuelan athlete sports cards deserve your attention. With <strong className="text-foreground">{metrics?.athleteCount ?? 0} athletes</strong> currently tracked across MLB, MLS, and NBA, this is one of the deepest talent pools feeding into North American professional sports — and the card market hasn't fully priced it in yet.
+          </p>
+          <p className="text-muted-foreground text-sm leading-7 text-justify mb-4">
+            This analysis uses <strong className="text-foreground">live data from our platform</strong> — active eBay listings, sold comps, PSA population reports, Taguchi statistical pricing, and historical indices — to make the investment case. Whether you're a long-term holder, a flipper looking for arbitrage, or a new collector entering the hobby, the numbers tell a compelling story.
           </p>
           <p className="text-muted-foreground text-sm leading-7 text-justify">
-            As more Venezuelan prospects enter the MLB pipeline and MLS continues to attract Latin American talent, the addressable market for collectible cards is poised for significant expansion.
+            Below we break down the market cap, annual revenue potential, growth catalysts, and why the Venezuelan card market sits at the intersection of three powerful trends: <strong className="text-foreground">a global collectibles boom</strong>, <strong className="text-foreground">an unprecedented Latin American talent pipeline</strong>, and <strong className="text-foreground">eBay's expanding authentication infrastructure</strong>.
+          </p>
+        </section>
+
+        {/* ── Why Invest: 5 Reasons ── */}
+        <section className="glass-panel p-6 rounded-xl mb-10">
+          <h2 className="text-lg font-display font-bold text-flag-gradient mb-4">5 Reasons to Invest Now</h2>
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {[
+              {
+                icon: "📈",
+                title: "Undervalued Market",
+                desc: `Average raw card sells for just $${metrics?.avgRawSold ?? "—"} — significantly below comparable markets for Dominican or Cuban athletes. Early entry means maximum upside.`,
+              },
+              {
+                icon: "⚾",
+                title: "Deep Talent Pipeline",
+                desc: "Venezuela produces ~80+ active MLB players annually with dozens more in minor league systems. Every call-up creates instant card demand.",
+              },
+              {
+                icon: "🏆",
+                title: "Tournament Catalysts",
+                desc: "WBC, Copa América, and Olympic cycles create recurring 200–400% price spikes every 2–4 years. Timing purchases between events maximizes returns.",
+              },
+              {
+                icon: "🔐",
+                title: "PSA-Graded Liquidity",
+                desc: `With ${metrics?.totalPsaPop ?? "—"} total graded cards, the certified market provides price floors and institutional-grade liquidity that raw cards lack.`,
+              },
+              {
+                icon: "⚽",
+                title: "Multi-Sport Diversification",
+                desc: "Unlike most country-specific niches, Venezuelan cards span baseball, soccer, and basketball — hedging against single-sport downturns.",
+              },
+              {
+                icon: "💰",
+                title: "Grading Premium Arbitrage",
+                desc: `Raw cards average $${metrics?.avgRawListed ?? "—"} listed vs $${metrics?.avgGradedListed ?? "—"} graded — a ${metrics ? Math.round(parseFloat(metrics.avgGradedListed) / parseFloat(metrics.avgRawListed)) : "—"}x premium. Buy raw, grade, and capture the spread.`,
+              },
+            ].map(({ icon, title, desc }) => (
+              <div key={title} className="border border-border/50 rounded-lg p-4 bg-secondary/30">
+                <div className="text-2xl mb-2">{icon}</div>
+                <h3 className="font-display font-bold text-foreground text-sm mb-1">{title}</h3>
+                <p className="text-xs text-muted-foreground leading-relaxed">{desc}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* ── Investment Signal Snapshot ── */}
+        <section className="glass-panel p-6 rounded-xl mb-10">
+          <h2 className="text-lg font-display font-bold text-flag-gradient mb-3">Investment Signals From Our Data</h2>
+          <p className="text-xs text-muted-foreground mb-4">Our platform tracks five key investment signals using Taguchi statistical methods and eBay market data</p>
+          <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-5">
+            {[
+              { signal: "Buy Low", desc: "Listed price below avg sold — undervalued cards ready to buy", color: "text-green-400" },
+              { signal: "Flip Potential", desc: "High volatility = arbitrage opportunities for active traders", color: "text-vzla-yellow" },
+              { signal: "Signal Strength", desc: "Taguchi S/N ratio measures pricing predictability", color: "text-blue-400" },
+              { signal: "Fast Mover", desc: "Low days on market — high-demand cards that sell quickly", color: "text-orange-400" },
+              { signal: "Overpriced & Slow", desc: "High price gaps + high DOM — cards to avoid or negotiate", color: "text-red-400" },
+            ].map(({ signal, desc, color }) => (
+              <div key={signal} className="text-center p-3 rounded-lg bg-secondary/40 border border-border/30">
+                <p className={`font-display font-bold text-sm ${color} mb-1`}>{signal}</p>
+                <p className="text-[10px] text-muted-foreground leading-snug">{desc}</p>
+              </div>
+            ))}
+          </div>
+          <p className="text-xs text-muted-foreground mt-4 italic">
+            These signals are available for every athlete on our <Link to="/data" className="text-vzla-yellow hover:underline">Market Intel dashboard</Link>, updated daily with live eBay data.
           </p>
         </section>
 
