@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-17T19:32:08.246Z",
+    "updatedAt": "2026-03-17T22:56:51.717Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA/BGS/SGC grader title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 450,
-      "endIdx": 452,
+      "startIdx": 0,
+      "endIdx": 10,
       "totalAthletes": 452
     },
     "maxPages": 4,
@@ -37,12 +37,12 @@
   },
   "Adbert Alzolay": {
     "keyword": "Adbert Alzolay Baseball PSA",
-    "nScraped": 254,
-    "nSoldUsed": 20,
-    "avg": 10.020000000000001,
-    "taguchiSold": 10.020000000000001,
-    "medianSold": 10.02,
-    "marketStabilityCV": 1.818865930941179e-16,
+    "nScraped": 256,
+    "nSoldUsed": 24,
+    "avg": 11.009999999999998,
+    "taguchiSold": 11.009999999999998,
+    "medianSold": 11.01,
+    "marketStabilityCV": 0.09185220331892768,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
@@ -62,11 +62,11 @@
   "Al Pedrique": {
     "keyword": "Al Pedrique Baseball PSA",
     "nScraped": 240,
-    "nSoldUsed": 4,
-    "avg": 22.5,
-    "taguchiSold": 22.5,
-    "medianSold": 22.5,
-    "marketStabilityCV": 0,
+    "nSoldUsed": 8,
+    "avg": 186.245,
+    "taguchiSold": 186.245,
+    "medianSold": 186.245,
+    "marketStabilityCV": 0.9398951286090886,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
@@ -85,7 +85,7 @@
   },
   "Alberto Callaspo": {
     "keyword": "Alberto Callaspo Baseball PSA",
-    "nScraped": 49,
+    "nScraped": 47,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -6902,6 +6902,18 @@
   "Isaias Chavez": {
     "keyword": "Isaias Latigo Chavez Baseball PSA",
     "nScraped": 25,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
+    "currency": "USD",
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
+  },
+  "J.J. D'Orazio": {
+    "keyword": "JJ D'Orazio Baseball Baseball PSA",
+    "nScraped": 60,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
