@@ -146,6 +146,7 @@ const MarketCapBlog = () => {
   );
 
   const rosterData = useMemo(() => buildRosterProjection(), []);
+  const collectiblesData = useMemo(() => buildCollectiblesMarketData(), []);
 
   /* Sport breakdown for bar chart */
   const sportBreakdown = useMemo(() => {
