@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-17T15:35:06.206Z",
+    "updatedAt": "2026-03-17T17:32:55.828Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA/BGS/SGC grader title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 430,
-      "endIdx": 440,
+      "startIdx": 440,
+      "endIdx": 450,
       "totalAthletes": 452
     },
     "maxPages": 4,
@@ -6409,7 +6409,7 @@
   },
   "Emilio Renteria": {
     "keyword": "Emilio Renteria Soccer PSA",
-    "nScraped": 0,
+    "nScraped": 4,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -6481,7 +6481,7 @@
   },
   "Jefferson Savarino": {
     "keyword": "Jefferson Savarino Soccer PSA",
-    "nScraped": 0,
+    "nScraped": 60,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -6553,7 +6553,7 @@
   },
   "Kevin Kelsy": {
     "keyword": "Kevin Kelsy Soccer PSA",
-    "nScraped": 241,
+    "nScraped": 240,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -6709,7 +6709,7 @@
   },
   "Telasco Segovia": {
     "keyword": "Telasco Segovia Soccer PSA",
-    "nScraped": 243,
+    "nScraped": 242,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -6721,7 +6721,7 @@
   },
   "Wikelman Carmona": {
     "keyword": "Wikelman Carmona Soccer PSA",
-    "nScraped": 51,
+    "nScraped": 0,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -6745,7 +6745,7 @@
   },
   "Alejandro Marques": {
     "keyword": "Alejandro Marques Soccer PSA",
-    "nScraped": 122,
+    "nScraped": 0,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
