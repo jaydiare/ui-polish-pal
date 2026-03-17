@@ -37,6 +37,7 @@ const App = () => (
             <Route path="/ebay/denied" element={<EbayDenied />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="/blog/acuna-torres-tracker" element={<CardTrackerPage />} />
+            <Route path="/blog/venezuelan-sports-cards-market-cap" element={<MarketCapBlog />} />
             <Route path="/blog/:slug" element={<BlogPost />} />
             <Route path="/data" element={<Data />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
