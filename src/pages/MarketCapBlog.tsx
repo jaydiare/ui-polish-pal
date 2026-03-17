@@ -169,6 +169,23 @@ const MarketCapBlog = () => {
           </div>
         </section>
 
+        {/* ── Untapped Demand: Venezuelan Diaspora ── */}
+        <section className="glass-panel p-6 rounded-xl mb-10">
+          <h2 className="text-lg font-display font-bold text-flag-gradient mb-3">🌎 The Untapped 40-Million-Person Demand Wave</h2>
+          <p className="text-muted-foreground text-sm leading-7 text-justify mb-4">
+            Here's a factor most collectors overlook: there are approximately <strong className="text-foreground">40 million Venezuelans</strong> — both living in Venezuela and across the global diaspora — who are largely <strong className="text-foreground">unaware that their national athletes' sports cards hold real monetary value</strong> on platforms like eBay. The culture of sports card collecting and investing hasn't yet penetrated the Venezuelan mainstream the way it has in the U.S. or Japan.
+          </p>
+          <p className="text-muted-foreground text-sm leading-7 text-justify mb-4">
+            Consider what happens when even a small fraction of that population begins to understand the market. If just <strong className="text-foreground">1% of Venezuelans</strong> (400,000 people) entered the hobby as buyers — even casually — the demand shock on a market with only <strong className="text-foreground">{m.totalPsaPop} graded cards</strong> in total PSA population would be extraordinary. Supply is fixed; graded cards don't multiply. A wave of national pride–driven demand would compress supply almost overnight.
+          </p>
+          <p className="text-muted-foreground text-sm leading-7 text-justify mb-4">
+            The Venezuelan diaspora is already deeply connected through social media and sports culture — events like the <strong className="text-foreground">World Baseball Classic</strong> and <strong className="text-foreground">Copa América</strong> unite millions of fans worldwide. Once the connection between <em>supporting your athletes</em> and <em>owning their cards as collectible assets</em> clicks, the demand curve could shift dramatically. We've seen this pattern before with Japanese collectors and Ohtani, or Dominican fans and Soto — but Venezuela's awakening hasn't happened yet.
+          </p>
+          <p className="text-muted-foreground text-sm leading-7 text-justify">
+            This is arguably the <strong className="text-foreground">single biggest asymmetric opportunity</strong> in the market: you're buying cards today at prices set by a small pool of U.S.-based collectors, before a potential 40-million-person demand wave even knows the market exists.
+          </p>
+        </section>
+
         {/* ── Investment Signal Snapshot ── */}
         <section className="glass-panel p-6 rounded-xl mb-10">
           <h2 className="text-lg font-display font-bold text-flag-gradient mb-3">Investment Signals From Our Data</h2>
