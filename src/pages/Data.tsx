@@ -1418,10 +1418,14 @@ const GemrateChart = () => {
                     wrapperStyle={{ fontSize: 11, paddingTop: 12 }}
                     formatter={(value: string) => <span className="text-muted-foreground text-xs">{value}</span>}
                   />
-                  <Bar dataKey="PSA" name="PSA Grades" stackId="graders" fill={PSA_COLOR} radius={[0, 0, 0, 0]} isAnimationActive={false} cursor="pointer"
-                    onClick={(data: any) => { if (data?.name) window.open(buildEbayGradedSearchUrl(data.name, data.sport), "_blank", "noopener,noreferrer"); }} />
-                  <Bar dataKey="Beckett" name="Beckett Grades" stackId="graders" fill={BECKETT_COLOR} radius={[0, 4, 4, 0]} isAnimationActive={false} cursor="pointer"
-                    onClick={(data: any) => { if (data?.name) window.open(buildEbayGradedSearchUrl(data.name, data.sport), "_blank", "noopener,noreferrer"); }} />
+                  {graderFilter !== "beckett" && (
+                    <Bar dataKey="PSA" name="PSA Grades" stackId="graders" fill={PSA_COLOR} radius={graderFilter === "psa" ? [0, 4, 4, 0] : [0, 0, 0, 0]} isAnimationActive={false} cursor="pointer"
+                      onClick={(data: any) => { if (data?.name) window.open(buildEbayGradedSearchUrl(data.name, data.sport), "_blank", "noopener,noreferrer"); }} />
+                  )}
+                  {graderFilter !== "psa" && (
+                    <Bar dataKey="Beckett" name="Beckett Grades" stackId="graders" fill={BECKETT_COLOR} radius={[0, 4, 4, 0]} isAnimationActive={false} cursor="pointer"
+                      onClick={(data: any) => { if (data?.name) window.open(buildEbayGradedSearchUrl(data.name, data.sport), "_blank", "noopener,noreferrer"); }} />
+                  )}
                 </BarChart>
               </ResponsiveContainer>
             </div>
