@@ -1,13 +1,13 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-18T23:35:50.090052+00:00",
-    "athleteCount": 33,
+    "updatedAt": "2026-03-18T23:38:13.701664+00:00",
+    "athleteCount": 50,
     "graders": [
       "beckett"
     ],
     "batchInfo": {
-      "startIdx": 60,
-      "endIdx": 80,
+      "startIdx": 80,
+      "endIdx": 100,
       "totalAthletes": 568
     }
   },
@@ -604,6 +604,312 @@
         "gems": 4,
         "grades": 19,
         "gemRate": 21.0
+      }
+    },
+    "Carlos Rivero": {
+      "name": "Carlos Rivero",
+      "sport": "Baseball",
+      "graders": {
+        "beckett": {
+          "cards": 5,
+          "gems": 7,
+          "grades": 12,
+          "gemRate": 58.0
+        }
+      },
+      "totals": {
+        "cards": 5,
+        "gems": 7,
+        "grades": 12,
+        "gemRate": 58.0
+      }
+    },
+    "Carlos Silva": {
+      "name": "Carlos Silva",
+      "sport": "Baseball",
+      "graders": {
+        "beckett": {
+          "cards": 7,
+          "gems": 5,
+          "grades": 9,
+          "gemRate": 56.0
+        }
+      },
+      "totals": {
+        "cards": 7,
+        "gems": 5,
+        "grades": 9,
+        "gemRate": 56.0
+      }
+    },
+    "Carlos Tocci": {
+      "name": "Carlos Tocci",
+      "sport": "Baseball",
+      "graders": {
+        "beckett": {
+          "cards": 22,
+          "gems": 46,
+          "grades": 79,
+          "gemRate": 58.0
+        }
+      },
+      "totals": {
+        "cards": 22,
+        "gems": 46,
+        "grades": 79,
+        "gemRate": 58.0
+      }
+    },
+    "Carlos Valderrama": {
+      "name": "Carlos Valderrama",
+      "sport": "Baseball",
+      "graders": {
+        "beckett": {
+          "cards": 13,
+          "gems": 130,
+          "grades": 2017,
+          "gemRate": 6.0
+        }
+      },
+      "totals": {
+        "cards": 13,
+        "gems": 130,
+        "grades": 2017,
+        "gemRate": 6.0
+      }
+    },
+    "Carlos Zambrano": {
+      "name": "Carlos Zambrano",
+      "sport": "Baseball",
+      "graders": {
+        "beckett": {
+          "cards": 77,
+          "gems": 522,
+          "grades": 1070,
+          "gemRate": 49.0
+        }
+      },
+      "totals": {
+        "cards": 77,
+        "gems": 522,
+        "grades": 1070,
+        "gemRate": 49.0
+      }
+    },
+    "Cesar Gutierrez": {
+      "name": "Cesar Gutierrez",
+      "sport": "Baseball",
+      "graders": {
+        "beckett": {
+          "cards": 5,
+          "gems": 0,
+          "grades": 15,
+          "gemRate": 0.0
+        }
+      },
+      "totals": {
+        "cards": 5,
+        "gems": 0,
+        "grades": 15,
+        "gemRate": 0.0
+      }
+    },
+    "Cesar Hernandez": {
+      "name": "Cesar Hernandez",
+      "sport": "Baseball",
+      "graders": {
+        "beckett": {
+          "cards": 13,
+          "gems": 12,
+          "grades": 19,
+          "gemRate": 63.0
+        }
+      },
+      "totals": {
+        "cards": 13,
+        "gems": 12,
+        "grades": 19,
+        "gemRate": 63.0
+      }
+    },
+    "Cesar Izturis": {
+      "name": "Cesar Izturis",
+      "sport": "Baseball",
+      "graders": {
+        "beckett": {
+          "cards": 11,
+          "gems": 11,
+          "grades": 31,
+          "gemRate": 35.0
+        }
+      },
+      "totals": {
+        "cards": 11,
+        "gems": 11,
+        "grades": 31,
+        "gemRate": 35.0
+      }
+    },
+    "Cesar Jimenez": {
+      "name": "Cesar Jimenez",
+      "sport": "Baseball",
+      "graders": {
+        "beckett": {
+          "cards": 2,
+          "gems": 2,
+          "grades": 3,
+          "gemRate": 67.0
+        }
+      },
+      "totals": {
+        "cards": 2,
+        "gems": 2,
+        "grades": 3,
+        "gemRate": 67.0
+      }
+    },
+    "Cesar Tovar": {
+      "name": "Cesar Tovar",
+      "sport": "Baseball",
+      "graders": {
+        "beckett": {
+          "cards": 15,
+          "gems": 2,
+          "grades": 47,
+          "gemRate": 4.0
+        }
+      },
+      "totals": {
+        "cards": 15,
+        "gems": 2,
+        "grades": 47,
+        "gemRate": 4.0
+      }
+    },
+    "Chico Carrasquel": {
+      "name": "Chico Carrasquel",
+      "sport": "Baseball",
+      "graders": {
+        "beckett": {
+          "cards": 19,
+          "gems": 0,
+          "grades": 108,
+          "gemRate": 0.0
+        }
+      },
+      "totals": {
+        "cards": 19,
+        "gems": 0,
+        "grades": 108,
+        "gemRate": 0.0
+      }
+    },
+    "Cris Colon": {
+      "name": "Cris Colon",
+      "sport": "Baseball",
+      "graders": {
+        "beckett": {
+          "cards": 1,
+          "gems": 1,
+          "grades": 1,
+          "gemRate": 100.0
+        }
+      },
+      "totals": {
+        "cards": 1,
+        "gems": 1,
+        "grades": 1,
+        "gemRate": 100.0
+      }
+    },
+    "Daniel Palencia": {
+      "name": "Daniel Palencia",
+      "sport": "Baseball",
+      "graders": {
+        "beckett": {
+          "cards": 3,
+          "gems": 1,
+          "grades": 3,
+          "gemRate": 33.0
+        }
+      },
+      "totals": {
+        "cards": 3,
+        "gems": 1,
+        "grades": 3,
+        "gemRate": 33.0
+      }
+    },
+    "Danny Leon": {
+      "name": "Danny Leon",
+      "sport": "Baseball",
+      "graders": {
+        "beckett": {
+          "cards": 1,
+          "gems": 0,
+          "grades": 1,
+          "gemRate": 0.0
+        }
+      },
+      "totals": {
+        "cards": 1,
+        "gems": 0,
+        "grades": 1,
+        "gemRate": 0.0
+      }
+    },
+    "Danny Sandoval": {
+      "name": "Danny Sandoval",
+      "sport": "Baseball",
+      "graders": {
+        "beckett": {
+          "cards": 2,
+          "gems": 0,
+          "grades": 3,
+          "gemRate": 0.0
+        }
+      },
+      "totals": {
+        "cards": 2,
+        "gems": 0,
+        "grades": 3,
+        "gemRate": 0.0
+      }
+    },
+    "Darwin Cubillan": {
+      "name": "Darwin Cubillan",
+      "sport": "Baseball",
+      "graders": {
+        "beckett": {
+          "cards": 2,
+          "gems": 0,
+          "grades": 3,
+          "gemRate": 0.0
+        }
+      },
+      "totals": {
+        "cards": 2,
+        "gems": 0,
+        "grades": 3,
+        "gemRate": 0.0
+      }
+    },
+    "Darwinzon Hernandez": {
+      "name": "Darwinzon Hernandez",
+      "sport": "Baseball",
+      "graders": {
+        "beckett": {
+          "cards": 19,
+          "gems": 42,
+          "grades": 83,
+          "gemRate": 51.0
+        }
+      },
+      "totals": {
+        "cards": 19,
+        "gems": 42,
+        "grades": 83,
+        "gemRate": 51.0
       }
     }
   }
