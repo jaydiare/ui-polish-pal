@@ -1392,12 +1392,14 @@ const GemrateChart = () => {
                           <div className="font-display font-bold text-foreground mb-1">{d.name}</div>
                           <div className="text-muted-foreground text-[10px] mb-1.5">{d.sport}</div>
                           <div className="flex flex-col gap-0.5">
-                            <span className="text-muted-foreground flex items-center gap-1">
-                              <span className="w-2 h-2 rounded-sm inline-block" style={{ background: PSA_COLOR }} />
-                              PSA: <strong className="text-foreground">{d.PSA.toLocaleString()}</strong>
-                              {d.gemRate != null && <span className="opacity-60">({d.gemRate}% gem)</span>}
-                            </span>
-                            {d.Beckett > 0 && (
+                            {graderFilter !== "beckett" && (
+                              <span className="text-muted-foreground flex items-center gap-1">
+                                <span className="w-2 h-2 rounded-sm inline-block" style={{ background: PSA_COLOR }} />
+                                PSA: <strong className="text-foreground">{d.PSA.toLocaleString()}</strong>
+                                {d.gemRate != null && <span className="opacity-60">({d.gemRate}% gem)</span>}
+                              </span>
+                            )}
+                            {graderFilter !== "psa" && d.Beckett > 0 && (
                               <span className="text-muted-foreground flex items-center gap-1">
                                 <span className="w-2 h-2 rounded-sm inline-block" style={{ background: BECKETT_COLOR }} />
                                 Beckett: <strong className="text-foreground">{d.Beckett.toLocaleString()}</strong>
@@ -1405,7 +1407,7 @@ const GemrateChart = () => {
                               </span>
                             )}
                             <span className="text-muted-foreground border-t border-border/30 pt-0.5 mt-0.5">
-                              Total: <strong className="text-foreground">{d.total.toLocaleString()}</strong>
+                              {graderFilter === "psa" ? "PSA Total" : graderFilter === "beckett" ? "BGS Total" : "Total"}: <strong className="text-foreground">{(graderFilter === "psa" ? d.PSA : graderFilter === "beckett" ? d.Beckett : d.total).toLocaleString()}</strong>
                             </span>
                           </div>
                           <div className="text-[9px] text-muted-foreground/60 mt-1.5">Click bar to search graded cards on eBay</div>
