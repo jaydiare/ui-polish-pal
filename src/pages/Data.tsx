@@ -1332,12 +1332,32 @@ const GemrateChart = () => {
 
   return (
     <section className="my-8" aria-label="Gemrate grading data">
-      <h2 className="font-display font-bold text-lg text-foreground mb-1 flex items-center gap-2">
-        <span className="w-1 h-5 rounded-full bg-primary inline-block" />
-        Graded Cards – Top 10
-      </h2>
+      <div className="flex items-center justify-between flex-wrap gap-2 mb-1">
+        <h2 className="font-display font-bold text-lg text-foreground flex items-center gap-2">
+          <span className="w-1 h-5 rounded-full bg-primary inline-block" />
+          Graded Cards – Top 10
+        </h2>
+        <div className="flex items-center gap-1 bg-muted/50 rounded-lg p-0.5">
+          {(["all", "psa", "beckett"] as GraderFilter[]).map((f) => (
+            <button
+              key={f}
+              onClick={() => setGraderFilter(f)}
+              className={cn(
+                "px-3 py-1 text-xs rounded-md font-medium transition-colors",
+                graderFilter === f
+                  ? "bg-background text-foreground shadow-sm"
+                  : "text-muted-foreground hover:text-foreground"
+              )}
+            >
+              {f === "all" ? "All" : f === "psa" ? "PSA" : "Beckett"}
+            </button>
+          ))}
+        </div>
+      </div>
       <p className="text-xs text-muted-foreground mb-4 ml-3">
-        Total graded cards by PSA & Beckett for Venezuelan athletes.
+        {graderFilter === "all" && "Total graded cards by PSA & Beckett for Venezuelan athletes."}
+        {graderFilter === "psa" && "Top 10 athletes by PSA graded card count."}
+        {graderFilter === "beckett" && "Top 10 athletes by Beckett graded card count."}
         {updatedAt && <span className="ml-1 opacity-70">Updated {updatedAt}.</span>}
       </p>
       <div className="glass-panel p-4 md:p-6">
