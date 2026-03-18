@@ -258,6 +258,7 @@ export default function BlogDataTable() {
     { key: "gradedSoldPrice", label: "PSA Sold", fmt: fmtPrice },
     { key: "scpRawPrice", label: "SCP Raw", fmt: fmtPrice },
     { key: "psaPop", label: "PSA Pop", fmt: (v) => v == null ? "—" : v.toLocaleString() },
+    { key: "bgsPop", label: "BGS Pop", fmt: (v) => v == null ? "—" : v.toLocaleString() },
     { key: "stabilityCV", label: "Stability", fmt: (v) => v == null ? "—" : marketStabilityScoreFromCV(v).label, render: (_v, row) => {
       if (row.stabilityCV == null) return <span className="text-muted-foreground">—</span>;
       const s = marketStabilityScoreFromCV(row.stabilityCV);
