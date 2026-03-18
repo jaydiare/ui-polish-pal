@@ -157,6 +157,12 @@ export default function BlogDataTable() {
         return pop != null && pop > 0 ? pop : null;
       })();
 
+      const bgsPop = (() => {
+        const normName = a.name.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+        const pop = beckettPopMap[a.name] ?? beckettPopMap[normName] ?? null;
+        return pop != null && pop > 0 ? pop : null;
+      })();
+
       const stabilityCV = getMarketStabilityCV(a, byName, byKey);
       const rawSoldPrice = rawSold != null && Number.isFinite(Number(rawSold)) && Number(rawSold) > 0 ? Number(rawSold) : null;
       const gradedSoldPrice = isGemrateEligible && gradedSold != null && Number.isFinite(Number(gradedSold)) && Number(gradedSold) > 0 ? Number(gradedSold) : null;
