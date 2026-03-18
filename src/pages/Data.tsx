@@ -1370,12 +1370,11 @@ const GemrateChart = () => {
           <>
             <div className="w-full h-[450px] md:h-[550px]">
               <ResponsiveContainer width="100%" height="100%">
-                <BarChart data={top10} layout="vertical" margin={{ top: 5, right: 30, left: 20, bottom: 20 }} stackOffset="none">
+                <BarChart data={top10} layout="vertical" margin={{ top: 5, right: 30, left: 20, bottom: 40 }} stackOffset="none">
                   <CartesianGrid strokeDasharray="3 3" stroke="hsl(var(--border))" opacity={0.5} />
                   <XAxis
                     type="number"
                     tick={{ fill: "hsl(var(--muted-foreground))", fontSize: 10 }}
-                    label={{ value: graderFilter === "psa" ? "PSA Grades" : graderFilter === "beckett" ? "Beckett Grades" : "Total Grades (PSA + Beckett)", position: "insideBottom", offset: -10, style: { fill: "hsl(var(--muted-foreground))", fontSize: 11 } }}
                   />
                   <YAxis type="category" dataKey="name" width={150} tick={{ fill: "hsl(var(--muted-foreground))", fontSize: 11 }} />
                   <Tooltip
@@ -1391,7 +1390,7 @@ const GemrateChart = () => {
                             <span className="text-muted-foreground flex items-center gap-1">
                               <span className="w-2 h-2 rounded-sm inline-block" style={{ background: PSA_COLOR }} />
                               PSA: <strong className="text-foreground">{d.PSA.toLocaleString()}</strong>
-                              <span className="opacity-60">({d.gemRate}% gem)</span>
+                              {d.gemRate != null && <span className="opacity-60">({d.gemRate}% gem)</span>}
                             </span>
                             {d.Beckett > 0 && (
                               <span className="text-muted-foreground flex items-center gap-1">
@@ -1410,7 +1409,8 @@ const GemrateChart = () => {
                     }}
                   />
                   <Legend
-                    wrapperStyle={{ fontSize: 11 }}
+                    verticalAlign="bottom"
+                    wrapperStyle={{ fontSize: 11, paddingTop: 12 }}
                     formatter={(value: string) => <span className="text-muted-foreground text-xs">{value}</span>}
                   />
                   <Bar dataKey="PSA" name="PSA Grades" stackId="graders" fill={PSA_COLOR} radius={[0, 0, 0, 0]} isAnimationActive={false} cursor="pointer"
