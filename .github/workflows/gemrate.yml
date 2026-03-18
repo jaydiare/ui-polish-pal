@@ -3,8 +3,8 @@ name: Gemrate Grading Sync
 on:
   workflow_dispatch:
   schedule:
-    # Run every 2 hours to process batches of 10 athletes
-    - cron: '0 */2 * * *'
+    # Run every 4 hours at :00
+    - cron: '0 */4 * * *'
 
 concurrency:
   group: gemrate-sync
