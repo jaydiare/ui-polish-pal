@@ -1375,7 +1375,7 @@ const GemrateChart = () => {
           <>
             <div className="w-full h-[450px] md:h-[550px]">
               <ResponsiveContainer width="100%" height="100%">
-                <BarChart data={top10} layout="vertical" margin={{ top: 5, right: 30, left: 20, bottom: 40 }} stackOffset="none">
+                <BarChart key={graderFilter} data={top10} layout="vertical" margin={{ top: 5, right: 30, left: 20, bottom: 40 }} stackOffset="none">
                   <CartesianGrid strokeDasharray="3 3" stroke="hsl(var(--border))" opacity={0.5} />
                   <XAxis
                     type="number"
