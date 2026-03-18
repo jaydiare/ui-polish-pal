@@ -30,6 +30,12 @@ jobs:
         with:
           python-version: '3.10'
 
+      - name: Sync to latest main before scraping
+        run: |
+          set -e
+          git fetch origin main
+          git checkout -B main origin/main
+
       - name: Install dependencies
         run: pip install requests
 
