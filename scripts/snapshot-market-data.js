@@ -139,6 +139,7 @@ for (const a of athletes) {
     stabilityCV: cv,
     signalStrength: getSignalSN(cv),
     psaPop: psaPop > 0 ? psaPop : null,
+    bgsPop: beckettPopMap[a.name] ?? beckettPopMap[normName] ?? null,
     daysOnMarket: dom != null && dom > 0 ? Math.round(dom) : null,
     indexLevel: rawRec?.indexLevel ?? null,
     scpRawPrice: scpPriceMap[a.name]?.scpRawPrice ?? null,
