@@ -41,7 +41,6 @@ CAT_MAP = {
     "Soccer": "soccer-cards",
     "Basketball": "basketball-cards",
     "Football": "football-cards",
-    "Boxing": "boxing-wrestling-cards-mma",
     "Tennis": "",
     "Golf": "golf-cards",
 }
