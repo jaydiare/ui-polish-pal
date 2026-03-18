@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-18T09:10:54.855Z",
+    "updatedAt": "2026-03-18T11:13:08.380Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA/BGS/SGC grader title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 40,
-      "endIdx": 50,
+      "startIdx": 50,
+      "endIdx": 60,
       "totalAthletes": 452
     },
     "maxPages": 4,
@@ -733,15 +733,15 @@
   },
   "Brayan Rocchio": {
     "keyword": "Brayan Rocchio Baseball PSA",
-    "nScraped": 0,
-    "nSoldUsed": 0,
-    "avg": null,
-    "taguchiSold": null,
-    "medianSold": null,
-    "marketStabilityCV": null,
+    "nScraped": 280,
+    "nSoldUsed": 69,
+    "avg": 29.309420289855076,
+    "taguchiSold": 29.309420289855076,
+    "medianSold": 28.99,
+    "marketStabilityCV": 0.17576550650924253,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
   },
   "Brayan Villarreal": {
     "keyword": "Brayan Villarreal Baseball PSA",
@@ -781,12 +781,12 @@
   },
   "Brusdar Graterol": {
     "keyword": "Brusdar Graterol Baseball PSA",
-    "nScraped": 247,
-    "nSoldUsed": 16,
-    "avg": 9.234999999999998,
-    "taguchiSold": 9.234999999999998,
-    "medianSold": 9.235,
-    "marketStabilityCV": 0.02404450949459215,
+    "nScraped": 253,
+    "nSoldUsed": 20,
+    "avg": 9.449999999999998,
+    "taguchiSold": 9.449999999999998,
+    "medianSold": 9.45,
+    "marketStabilityCV": 1.9285753045535048e-16,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
@@ -806,6 +806,30 @@
   "Carlos Asuaje": {
     "keyword": "Carlos Asuaje Baseball PSA",
     "nScraped": 60,
+    "nSoldUsed": 1,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
+    "currency": "USD",
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
+  },
+  "Carlos Carrasco": {
+    "keyword": "Carlos Carrasco Baseball PSA",
+    "nScraped": 120,
+    "nSoldUsed": 2,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
+    "currency": "USD",
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
+  },
+  "Carlos Garcia": {
+    "keyword": "Carlos Garcia Baseball PSA",
+    "nScraped": 0,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -814,30 +838,6 @@
     "currency": "USD",
     "originalCurrencyExample": null,
     "fxRateUsed": null
-  },
-  "Carlos Carrasco": {
-    "keyword": "Carlos Carrasco Baseball PSA",
-    "nScraped": 242,
-    "nSoldUsed": 4,
-    "avg": 19.99,
-    "taguchiSold": 19.99,
-    "medianSold": 19.99,
-    "marketStabilityCV": 0,
-    "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
-  },
-  "Carlos Garcia": {
-    "keyword": "Carlos Garcia Baseball PSA",
-    "nScraped": 122,
-    "nSoldUsed": 6,
-    "avg": 22.5,
-    "taguchiSold": 22.5,
-    "medianSold": 22.5,
-    "marketStabilityCV": 0,
-    "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
   },
   "Carlos Gonzalez": {
     "keyword": "Carlos Gonzalez Baseball PSA",
