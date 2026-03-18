@@ -1,0 +1,58 @@
+name: Gemrate Beckett Grading Sync
+
+on:
+  workflow_dispatch:
+  schedule:
+    # Run every 2 hours, offset by 1 hour from PSA workflow
+    - cron: '30 */2 * * *'
+
+concurrency:
+  group: gemrate-beckett-sync
+  cancel-in-progress: true
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: Install dependencies
+        run: pip install requests
+
+      - name: Fetch Gemrate Beckett data (batch)
+        run: python scripts/fetch_gemrate_beckett.py
+
+      - name: Commit and Push changes
+        run: |
+          set -e
+
+          git config --global user.name "GitHub Actions"
+          git config --global user.email "actions@github.com"
+
+          git add data/gemrate_beckett.json public/data/gemrate_beckett.json data/gemrate-progress_beckett.json data/gemrate-cooldown_beckett.json || true
+
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+            exit 0
+          fi
+
+          git commit -m "Automated sync: Updated Beckett grading data (batch)"
+
+          git fetch origin main
+          git rebase --autostash origin/main || (git rebase --abort && git pull --rebase origin main)
+
+          git push origin HEAD:main
