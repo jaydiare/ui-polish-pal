@@ -3,8 +3,8 @@ name: Gemrate Beckett Grading Sync
 on:
   workflow_dispatch:
   schedule:
-    # Run every 2 hours, offset by 1 hour from PSA workflow
-    - cron: '30 */2 * * *'
+    # Run every 4 hours, offset by 2 hours from PSA workflow
+    - cron: '0 2/4 * * *'
 
 concurrency:
   group: gemrate-beckett-sync
