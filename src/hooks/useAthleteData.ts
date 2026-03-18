@@ -297,6 +297,19 @@ export function useAthleteData() {
         }
         setSnapshotFallback(map);
       }
+      // Beckett pop map
+      if (fetchedBeckett?.athletes && typeof fetchedBeckett.athletes === "object") {
+        const bMap: Record<string, number> = {};
+        for (const [name, athlete] of Object.entries(fetchedBeckett.athletes as Record<string, any>)) {
+          const pop = athlete?.graders?.beckett?.grades ?? athlete?.totals?.grades;
+          if (pop != null && Number.isFinite(pop) && pop > 0) {
+            bMap[name] = pop;
+            const normalized = name.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+            if (normalized !== name) bMap[normalized] = pop;
+          }
+        }
+        setBeckettPopMap(bMap);
+      }
     })();
   }, []);
 
