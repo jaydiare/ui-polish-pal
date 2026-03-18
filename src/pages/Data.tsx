@@ -1375,7 +1375,7 @@ const GemrateChart = () => {
                   <XAxis
                     type="number"
                     tick={{ fill: "hsl(var(--muted-foreground))", fontSize: 10 }}
-                    label={{ value: "Total Grades (PSA + Beckett)", position: "insideBottom", offset: -10, style: { fill: "hsl(var(--muted-foreground))", fontSize: 11 } }}
+                    label={{ value: graderFilter === "psa" ? "PSA Grades" : graderFilter === "beckett" ? "Beckett Grades" : "Total Grades (PSA + Beckett)", position: "insideBottom", offset: -10, style: { fill: "hsl(var(--muted-foreground))", fontSize: 11 } }}
                   />
                   <YAxis type="category" dataKey="name" width={150} tick={{ fill: "hsl(var(--muted-foreground))", fontSize: 11 }} />
                   <Tooltip
