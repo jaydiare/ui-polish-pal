@@ -1342,12 +1342,11 @@ const GemrateChart = () => {
             <button
               key={f}
               onClick={() => setGraderFilter(f)}
-              className={cn(
-                "px-3 py-1 text-xs rounded-md font-medium transition-colors",
+              className={`px-3 py-1 text-xs rounded-md font-medium transition-colors ${
                 graderFilter === f
                   ? "bg-background text-foreground shadow-sm"
                   : "text-muted-foreground hover:text-foreground"
-              )}
+              }`}
             >
               {f === "all" ? "All" : f === "psa" ? "PSA" : "Beckett"}
             </button>
