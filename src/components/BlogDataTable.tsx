@@ -30,6 +30,7 @@ interface RowData {
   stabilityCV: number | null;
   signalStrength: number | null;
   psaPop: number | null;
+  bgsPop: number | null;
   daysOnMarket: number | null;
   indexLevel: number | null;
   roi: number | null;
@@ -48,6 +49,7 @@ const FILTERABLE_COLS: { key: SortKey; label: string }[] = [
   { key: "gradedSoldPrice", label: "PSA Sold" },
   { key: "scpRawPrice", label: "SCP Raw" },
   { key: "psaPop", label: "PSA Pop" },
+  { key: "bgsPop", label: "BGS Pop" },
   { key: "stabilityCV", label: "Stability" },
   { key: "signalStrength", label: "S/N" },
   { key: "daysOnMarket", label: "Days on Mkt" },
@@ -100,6 +102,7 @@ export default function BlogDataTable() {
     ebayGradedSoldRaw,
     athleteHistory,
     gemratePopMap,
+    beckettPopMap,
     scpPrices,
     lastUpdated,
   } = useAthleteData();
@@ -154,6 +157,12 @@ export default function BlogDataTable() {
         return pop != null && pop > 0 ? pop : null;
       })();
 
+      const bgsPop = (() => {
+        const normName = a.name.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+        const pop = beckettPopMap[a.name] ?? beckettPopMap[normName] ?? null;
+        return pop != null && pop > 0 ? pop : null;
+      })();
+
       const stabilityCV = getMarketStabilityCV(a, byName, byKey);
       const rawSoldPrice = rawSold != null && Number.isFinite(Number(rawSold)) && Number(rawSold) > 0 ? Number(rawSold) : null;
       const gradedSoldPrice = isGemrateEligible && gradedSold != null && Number.isFinite(Number(gradedSold)) && Number(gradedSold) > 0 ? Number(gradedSold) : null;
@@ -172,13 +181,14 @@ export default function BlogDataTable() {
         stabilityCV,
         signalStrength,
         psaPop,
+        bgsPop,
         daysOnMarket: dom,
         indexLevel: rec?.indexLevel ?? null,
         roi: roiVal,
         roiTier: roiTier(roiVal),
       };
     });
-  }, [athletes, byName, byKey, gradedByName, gradedByKey, ebaySoldRaw, ebayGradedSoldRaw, athleteHistory, gemratePopMap, scpPrices]);
+  }, [athletes, byName, byKey, gradedByName, gradedByKey, ebaySoldRaw, ebayGradedSoldRaw, athleteHistory, gemratePopMap, beckettPopMap, scpPrices]);
 
   const sorted = useMemo(() => {
     const copy = [...rows];
@@ -248,6 +258,7 @@ export default function BlogDataTable() {
     { key: "gradedSoldPrice", label: "PSA Sold", fmt: fmtPrice },
     { key: "scpRawPrice", label: "SCP Raw", fmt: fmtPrice },
     { key: "psaPop", label: "PSA Pop", fmt: (v) => v == null ? "—" : v.toLocaleString() },
+    { key: "bgsPop", label: "BGS Pop", fmt: (v) => v == null ? "—" : v.toLocaleString() },
     { key: "stabilityCV", label: "Stability", fmt: (v) => v == null ? "—" : marketStabilityScoreFromCV(v).label, render: (_v, row) => {
       if (row.stabilityCV == null) return <span className="text-muted-foreground">—</span>;
       const s = marketStabilityScoreFromCV(row.stabilityCV);
