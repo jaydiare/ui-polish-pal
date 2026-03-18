@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-18T11:13:08.380Z",
+    "updatedAt": "2026-03-18T13:57:03.800Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA/BGS/SGC grader title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 50,
-      "endIdx": 60,
+      "startIdx": 60,
+      "endIdx": 70,
       "totalAthletes": 452
     },
     "maxPages": 4,
@@ -865,7 +865,7 @@
   },
   "Carlos Hernandez": {
     "keyword": "Carlos Hernandez Baseball PSA",
-    "nScraped": 0,
+    "nScraped": 244,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -889,12 +889,12 @@
   },
   "Carlos Martinez": {
     "keyword": "Carlos Martinez Baseball PSA",
-    "nScraped": 244,
-    "nSoldUsed": 12,
-    "avg": 14.990000000000002,
-    "taguchiSold": 14.990000000000002,
+    "nScraped": 249,
+    "nSoldUsed": 20,
+    "avg": 14.990000000000004,
+    "taguchiSold": 14.990000000000004,
     "medianSold": 14.99,
-    "marketStabilityCV": 1.2377212864990028e-16,
+    "marketStabilityCV": 2.431625967715892e-16,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
@@ -937,19 +937,19 @@
   },
   "Carlos Narvaez": {
     "keyword": "Carlos Narvaez Baseball PSA",
-    "nScraped": 286,
-    "nSoldUsed": 48,
-    "avg": 42.9175,
-    "taguchiSold": 42.9175,
-    "medianSold": 42.504999999999995,
-    "marketStabilityCV": 0.08622824311102664,
+    "nScraped": 304,
+    "nSoldUsed": 56,
+    "avg": 62.99642857142851,
+    "taguchiSold": 62.99642857142851,
+    "medianSold": 45.004999999999995,
+    "marketStabilityCV": 0.3749706045890168,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
   },
   "Carlos Perez": {
     "keyword": "Carlos Perez Baseball PSA",
-    "nScraped": 245,
+    "nScraped": 253,
     "nSoldUsed": 4,
     "avg": 8.5,
     "taguchiSold": 8.5,
@@ -973,15 +973,15 @@
   },
   "Carlos Quintana": {
     "keyword": "Carlos Quintana Baseball PSA",
-    "nScraped": 120,
-    "nSoldUsed": 4,
-    "avg": 63.97,
-    "taguchiSold": 63.97,
-    "medianSold": 63.97,
-    "marketStabilityCV": 1.0111978139753894,
+    "nScraped": 0,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
   },
   "Carlos Rivero": {
     "keyword": "Carlos Rivero Baseball PSA",
