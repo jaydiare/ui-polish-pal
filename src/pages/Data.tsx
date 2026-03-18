@@ -1337,20 +1337,25 @@ const GemrateChart = () => {
           <span className="w-1 h-5 rounded-full bg-primary inline-block" />
           Graded Cards – Top 10
         </h2>
-        <div className="flex items-center gap-1 bg-muted/50 rounded-lg p-0.5">
-          {(["all", "psa", "beckett"] as GraderFilter[]).map((f) => (
-            <button
-              key={f}
-              onClick={() => setGraderFilter(f)}
-              className={`px-3 py-1 text-xs rounded-md font-medium transition-colors ${
-                graderFilter === f
-                  ? "bg-background text-foreground shadow-sm"
-                  : "text-muted-foreground hover:text-foreground"
-              }`}
-            >
-              {f === "all" ? "All" : f === "psa" ? "PSA" : "Beckett"}
-            </button>
-          ))}
+        <div className="inline-flex items-center rounded-full border border-border/50 bg-card/80 backdrop-blur-sm p-0.5">
+          <button
+            onClick={() => setGraderFilter("psa")}
+            className={`px-3 py-1 rounded-full text-[10px] font-bold tracking-wide transition-all ${graderFilter === "psa" ? "bg-primary/20 text-primary" : "text-muted-foreground hover:text-foreground"}`}
+          >
+            🔵 PSA
+          </button>
+          <button
+            onClick={() => setGraderFilter("beckett")}
+            className={`px-3 py-1 rounded-full text-[10px] font-bold tracking-wide transition-all ${graderFilter === "beckett" ? "bg-primary/20 text-primary" : "text-muted-foreground hover:text-foreground"}`}
+          >
+            🟣 BGS
+          </button>
+          <button
+            onClick={() => setGraderFilter("all")}
+            className={`px-3 py-1 rounded-full text-[10px] font-bold tracking-wide transition-all ${graderFilter === "all" ? "bg-primary/20 text-primary" : "text-muted-foreground hover:text-foreground"}`}
+          >
+            ⚖️ All
+          </button>
         </div>
       </div>
       <p className="text-xs text-muted-foreground mb-4 ml-3">
