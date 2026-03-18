@@ -148,10 +148,10 @@ def parse_summary(html_content: str):
 
 
 def fetch_gemrate(session, player: str, category: str = ""):
-    """POST to gemrate.com and return parsed beckett stats or None."""
+    """POST to gemrate.com and return parsed beckett (BGS) stats or None."""
     data = {
         "player": player,
-        "grader": "beckett",
+        "grader": "bgs",
         "category": category,
         "submit": "Submit",
     }
