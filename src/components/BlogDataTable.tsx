@@ -30,6 +30,7 @@ interface RowData {
   stabilityCV: number | null;
   signalStrength: number | null;
   psaPop: number | null;
+  bgsPop: number | null;
   daysOnMarket: number | null;
   indexLevel: number | null;
   roi: number | null;
