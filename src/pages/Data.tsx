@@ -1267,34 +1267,46 @@ interface GemrateData {
 }
 
 const PSA_COLOR = "hsl(200, 80%, 50%)";
+const BECKETT_COLOR = "hsl(340, 75%, 55%)";
 
 const GemrateChart = () => {
   const [gemrateData, setGemrateData] = useState<GemrateData | null>(null);
+  const [beckettData, setBeckettData] = useState<GemrateData | null>(null);
 
   useEffect(() => {
     (async () => {
       let d = await fetchJson("https://raw.githubusercontent.com/jaydiare/ui-polish-pal/main/data/gemrate.json");
-      if (!d || !d.athletes) {
-        d = await fetchJson("data/gemrate.json");
-      }
+      if (!d || !d.athletes) d = await fetchJson("data/gemrate.json");
       if (d && d.athletes) setGemrateData(d);
+
+      let b = await fetchJson("https://raw.githubusercontent.com/jaydiare/ui-polish-pal/main/data/gemrate_beckett.json");
+      if (!b || !b.athletes) b = await fetchJson("data/gemrate_beckett.json");
+      if (b && b.athletes) setBeckettData(b);
     })();
   }, []);
 
   const top10 = useMemo(() => {
     if (!gemrateData?.athletes) return [];
+    const beckettAthletes = beckettData?.athletes || {};
+
     return Object.values(gemrateData.athletes)
       .filter((a) => a.totals && a.totals.grades > 0)
-      .sort((a, b) => b.totals.grades - a.totals.grades)
+      .sort((a, b) => {
+        const totalA = (a.graders?.PSA?.grades || a.totals.grades) + (beckettAthletes[a.name]?.totals?.grades || 0);
+        const totalB = (b.graders?.PSA?.grades || b.totals.grades) + (beckettAthletes[b.name]?.totals?.grades || 0);
+        return totalB - totalA;
+      })
       .slice(0, 10)
       .map((a) => ({
         name: a.name,
         sport: a.sport,
         PSA: a.graders?.PSA?.grades || a.totals.grades,
-        total: a.totals.grades,
+        Beckett: beckettAthletes[a.name]?.totals?.grades || 0,
+        total: (a.graders?.PSA?.grades || a.totals.grades) + (beckettAthletes[a.name]?.totals?.grades || 0),
         gemRate: a.totals.gemRate,
+        beckettGemRate: beckettAthletes[a.name]?.totals?.gemRate || null,
       }));
-  }, [gemrateData]);
+  }, [gemrateData, beckettData]);
 
   const isEmpty = !gemrateData || top10.length === 0;
 
@@ -1309,7 +1321,7 @@ const GemrateChart = () => {
         Graded Cards – Top 10
       </h2>
       <p className="text-xs text-muted-foreground mb-4 ml-3">
-        Total graded cards by PSA for Venezuelan athletes.
+        Total graded cards by PSA & Beckett for Venezuelan athletes.
         {updatedAt && <span className="ml-1 opacity-70">Updated {updatedAt}.</span>}
       </p>
       <div className="glass-panel p-4 md:p-6">
@@ -1323,12 +1335,12 @@ const GemrateChart = () => {
           <>
             <div className="w-full h-[450px] md:h-[550px]">
               <ResponsiveContainer width="100%" height="100%">
-                <BarChart data={top10} layout="vertical" margin={{ top: 5, right: 30, left: 20, bottom: 5 }}>
+                <BarChart data={top10} layout="vertical" margin={{ top: 5, right: 30, left: 20, bottom: 20 }} stackOffset="none">
                   <CartesianGrid strokeDasharray="3 3" stroke="hsl(var(--border))" opacity={0.5} />
                   <XAxis
                     type="number"
                     tick={{ fill: "hsl(var(--muted-foreground))", fontSize: 10 }}
-                    label={{ value: "Total PSA Grades", position: "insideBottom", offset: -5, style: { fill: "hsl(var(--muted-foreground))", fontSize: 11 } }}
+                    label={{ value: "Total Grades (PSA + Beckett)", position: "insideBottom", offset: -10, style: { fill: "hsl(var(--muted-foreground))", fontSize: 11 } }}
                   />
                   <YAxis type="category" dataKey="name" width={150} tick={{ fill: "hsl(var(--muted-foreground))", fontSize: 11 }} />
                   <Tooltip
@@ -1341,15 +1353,34 @@ const GemrateChart = () => {
                           <div className="font-display font-bold text-foreground mb-1">{d.name}</div>
                           <div className="text-muted-foreground text-[10px] mb-1.5">{d.sport}</div>
                           <div className="flex flex-col gap-0.5">
-                            <span className="text-muted-foreground">PSA Grades: <strong className="text-foreground">{d.PSA.toLocaleString()}</strong></span>
-                            <span className="text-muted-foreground">Gem Rate: <strong className="text-foreground">{d.gemRate}%</strong></span>
+                            <span className="text-muted-foreground flex items-center gap-1">
+                              <span className="w-2 h-2 rounded-sm inline-block" style={{ background: PSA_COLOR }} />
+                              PSA: <strong className="text-foreground">{d.PSA.toLocaleString()}</strong>
+                              <span className="opacity-60">({d.gemRate}% gem)</span>
+                            </span>
+                            {d.Beckett > 0 && (
+                              <span className="text-muted-foreground flex items-center gap-1">
+                                <span className="w-2 h-2 rounded-sm inline-block" style={{ background: BECKETT_COLOR }} />
+                                Beckett: <strong className="text-foreground">{d.Beckett.toLocaleString()}</strong>
+                                {d.beckettGemRate != null && <span className="opacity-60">({d.beckettGemRate}% gem)</span>}
+                              </span>
+                            )}
+                            <span className="text-muted-foreground border-t border-border/30 pt-0.5 mt-0.5">
+                              Total: <strong className="text-foreground">{d.total.toLocaleString()}</strong>
+                            </span>
                           </div>
                           <div className="text-[9px] text-muted-foreground/60 mt-1.5">Click bar to search graded cards on eBay</div>
                         </div>
                       );
                     }}
                   />
-                  <Bar dataKey="PSA" name="PSA Grades" fill={PSA_COLOR} radius={[0, 4, 4, 0]} isAnimationActive={false} cursor="pointer"
+                  <Legend
+                    wrapperStyle={{ fontSize: 11 }}
+                    formatter={(value: string) => <span className="text-muted-foreground text-xs">{value}</span>}
+                  />
+                  <Bar dataKey="PSA" name="PSA Grades" stackId="graders" fill={PSA_COLOR} radius={[0, 0, 0, 0]} isAnimationActive={false} cursor="pointer"
+                    onClick={(data: any) => { if (data?.name) window.open(buildEbayGradedSearchUrl(data.name, data.sport), "_blank", "noopener,noreferrer"); }} />
+                  <Bar dataKey="Beckett" name="Beckett Grades" stackId="graders" fill={BECKETT_COLOR} radius={[0, 4, 4, 0]} isAnimationActive={false} cursor="pointer"
                     onClick={(data: any) => { if (data?.name) window.open(buildEbayGradedSearchUrl(data.name, data.sport), "_blank", "noopener,noreferrer"); }} />
                 </BarChart>
               </ResponsiveContainer>
