@@ -1,13 +1,13 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-18T23:38:13.701664+00:00",
-    "athleteCount": 50,
+    "updatedAt": "2026-03-18T23:46:04.350229+00:00",
+    "athleteCount": 60,
     "graders": [
       "beckett"
     ],
     "batchInfo": {
-      "startIdx": 80,
-      "endIdx": 100,
+      "startIdx": 100,
+      "endIdx": 120,
       "totalAthletes": 568
     }
   },
@@ -910,6 +910,186 @@
         "gems": 42,
         "grades": 83,
         "gemRate": 51.0
+      }
+    },
+    "Dave Concepcion": {
+      "name": "Dave Concepcion",
+      "sport": "Baseball",
+      "graders": {
+        "beckett": {
+          "cards": 84,
+          "gems": 28,
+          "grades": 386,
+          "gemRate": 7.0
+        }
+      },
+      "totals": {
+        "cards": 84,
+        "gems": 28,
+        "grades": 386,
+        "gemRate": 7.0
+      }
+    },
+    "David Peralta": {
+      "name": "David Peralta",
+      "sport": "Baseball",
+      "graders": {
+        "beckett": {
+          "cards": 8,
+          "gems": 4,
+          "grades": 8,
+          "gemRate": 50.0
+        }
+      },
+      "totals": {
+        "cards": 8,
+        "gems": 4,
+        "grades": 8,
+        "gemRate": 50.0
+      }
+    },
+    "Deolis Guerra": {
+      "name": "Deolis Guerra",
+      "sport": "Baseball",
+      "graders": {
+        "beckett": {
+          "cards": 18,
+          "gems": 85,
+          "grades": 122,
+          "gemRate": 70.0
+        }
+      },
+      "totals": {
+        "cards": 18,
+        "gems": 85,
+        "grades": 122,
+        "gemRate": 70.0
+      }
+    },
+    "Dioner Navarro": {
+      "name": "Dioner Navarro",
+      "sport": "Baseball",
+      "graders": {
+        "beckett": {
+          "cards": 46,
+          "gems": 92,
+          "grades": 199,
+          "gemRate": 46.0
+        }
+      },
+      "totals": {
+        "cards": 46,
+        "gems": 92,
+        "grades": 199,
+        "gemRate": 46.0
+      }
+    },
+    "Dixon Machado": {
+      "name": "Dixon Machado",
+      "sport": "Baseball",
+      "graders": {
+        "beckett": {
+          "cards": 14,
+          "gems": 29,
+          "grades": 47,
+          "gemRate": 62.0
+        }
+      },
+      "totals": {
+        "cards": 14,
+        "gems": 29,
+        "grades": 47,
+        "gemRate": 62.0
+      }
+    },
+    "Donaldo Mendez": {
+      "name": "Donaldo Mendez",
+      "sport": "Baseball",
+      "graders": {
+        "beckett": {
+          "cards": 5,
+          "gems": 1,
+          "grades": 9,
+          "gemRate": 11.0
+        }
+      },
+      "totals": {
+        "cards": 5,
+        "gems": 1,
+        "grades": 9,
+        "gemRate": 11.0
+      }
+    },
+    "Eddy Diaz": {
+      "name": "Eddy Diaz",
+      "sport": "Baseball",
+      "graders": {
+        "beckett": {
+          "cards": 11,
+          "gems": 6,
+          "grades": 13,
+          "gemRate": 46.0
+        }
+      },
+      "totals": {
+        "cards": 11,
+        "gems": 6,
+        "grades": 13,
+        "gemRate": 46.0
+      }
+    },
+    "Edgar Navarro": {
+      "name": "Edgar Navarro",
+      "sport": "Baseball",
+      "graders": {
+        "beckett": {
+          "cards": 1,
+          "gems": 1,
+          "grades": 1,
+          "gemRate": 100.0
+        }
+      },
+      "totals": {
+        "cards": 1,
+        "gems": 1,
+        "grades": 1,
+        "gemRate": 100.0
+      }
+    },
+    "Edgardo Alfonzo": {
+      "name": "Edgardo Alfonzo",
+      "sport": "Baseball",
+      "graders": {
+        "beckett": {
+          "cards": 76,
+          "gems": 109,
+          "grades": 908,
+          "gemRate": 12.0
+        }
+      },
+      "totals": {
+        "cards": 76,
+        "gems": 109,
+        "grades": 908,
+        "gemRate": 12.0
+      }
+    },
+    "Edgardo Henriquez": {
+      "name": "Edgardo Henriquez",
+      "sport": "Baseball",
+      "graders": {
+        "beckett": {
+          "cards": 1,
+          "gems": 0,
+          "grades": 1,
+          "gemRate": 0.0
+        }
+      },
+      "totals": {
+        "cards": 1,
+        "gems": 0,
+        "grades": 1,
+        "gemRate": 0.0
       }
     }
   }
