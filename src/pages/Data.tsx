@@ -1269,9 +1269,12 @@ interface GemrateData {
 const PSA_COLOR = "hsl(200, 80%, 50%)";
 const BECKETT_COLOR = "hsl(340, 75%, 55%)";
 
+type GraderFilter = "all" | "psa" | "beckett";
+
 const GemrateChart = () => {
   const [gemrateData, setGemrateData] = useState<GemrateData | null>(null);
   const [beckettData, setBeckettData] = useState<GemrateData | null>(null);
+  const [graderFilter, setGraderFilter] = useState<GraderFilter>("all");
 
   useEffect(() => {
     (async () => {
@@ -1286,29 +1289,42 @@ const GemrateChart = () => {
   }, []);
 
   const top10 = useMemo(() => {
-    if (!gemrateData?.athletes) return [];
+    const psaAthletes = gemrateData?.athletes || {};
     const beckettAthletes = beckettData?.athletes || {};
 
-    return Object.values(gemrateData.athletes)
-      .filter((a) => a.totals && a.totals.grades > 0)
-      .sort((a, b) => {
-        const totalA = (a.graders?.PSA?.grades || a.totals.grades) + (beckettAthletes[a.name]?.totals?.grades || 0);
-        const totalB = (b.graders?.PSA?.grades || b.totals.grades) + (beckettAthletes[b.name]?.totals?.grades || 0);
-        return totalB - totalA;
-      })
-      .slice(0, 10)
-      .map((a) => ({
-        name: a.name,
-        sport: a.sport,
-        PSA: a.graders?.PSA?.grades || a.totals.grades,
-        Beckett: beckettAthletes[a.name]?.totals?.grades || 0,
-        total: (a.graders?.PSA?.grades || a.totals.grades) + (beckettAthletes[a.name]?.totals?.grades || 0),
-        gemRate: a.totals.gemRate,
-        beckettGemRate: beckettAthletes[a.name]?.totals?.gemRate || null,
-      }));
-  }, [gemrateData, beckettData]);
+    // Build a unified list of all athletes from both sources
+    const allNames = new Set<string>();
+    for (const a of Object.values(psaAthletes)) if (a.name) allNames.add(a.name);
+    for (const a of Object.values(beckettAthletes)) if (a.name) allNames.add(a.name);
 
-  const isEmpty = !gemrateData || top10.length === 0;
+    if (allNames.size === 0) return [];
+
+    const rows = Array.from(allNames).map((name) => {
+      const psaRec = Object.values(psaAthletes).find((a) => a.name === name);
+      const beckettRec = beckettAthletes[name];
+      const psaGrades = psaRec?.graders?.PSA?.grades ?? psaRec?.totals?.grades ?? 0;
+      const beckettGrades = beckettRec?.totals?.grades ?? 0;
+
+      return {
+        name,
+        sport: psaRec?.sport ?? beckettRec?.sport ?? "",
+        PSA: psaGrades,
+        Beckett: beckettGrades,
+        total: psaGrades + beckettGrades,
+        gemRate: psaRec?.totals?.gemRate ?? null,
+        beckettGemRate: beckettRec?.totals?.gemRate ?? null,
+      };
+    });
+
+    // Sort by the relevant metric based on filter
+    const sortKey = graderFilter === "psa" ? "PSA" : graderFilter === "beckett" ? "Beckett" : "total";
+    return rows
+      .filter((r) => r[sortKey] > 0)
+      .sort((a, b) => b[sortKey] - a[sortKey])
+      .slice(0, 10);
+  }, [gemrateData, beckettData, graderFilter]);
+
+  const isEmpty = (!gemrateData && !beckettData) || top10.length === 0;
 
   const updatedAt = gemrateData?._meta?.updatedAt
     ? new Date(gemrateData._meta.updatedAt).toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" })
@@ -1316,12 +1332,31 @@ const GemrateChart = () => {
 
   return (
     <section className="my-8" aria-label="Gemrate grading data">
-      <h2 className="font-display font-bold text-lg text-foreground mb-1 flex items-center gap-2">
-        <span className="w-1 h-5 rounded-full bg-primary inline-block" />
-        Graded Cards – Top 10
-      </h2>
+      <div className="flex items-center justify-between flex-wrap gap-2 mb-1">
+        <h2 className="font-display font-bold text-lg text-foreground flex items-center gap-2">
+          <span className="w-1 h-5 rounded-full bg-primary inline-block" />
+          Graded Cards – Top 10
+        </h2>
+        <div className="flex items-center gap-1 bg-muted/50 rounded-lg p-0.5">
+          {(["all", "psa", "beckett"] as GraderFilter[]).map((f) => (
+            <button
+              key={f}
+              onClick={() => setGraderFilter(f)}
+              className={`px-3 py-1 text-xs rounded-md font-medium transition-colors ${
+                graderFilter === f
+                  ? "bg-background text-foreground shadow-sm"
+                  : "text-muted-foreground hover:text-foreground"
+              }`}
+            >
+              {f === "all" ? "All" : f === "psa" ? "PSA" : "Beckett"}
+            </button>
+          ))}
+        </div>
+      </div>
       <p className="text-xs text-muted-foreground mb-4 ml-3">
-        Total graded cards by PSA & Beckett for Venezuelan athletes.
+        {graderFilter === "all" && "Total graded cards by PSA & Beckett for Venezuelan athletes."}
+        {graderFilter === "psa" && "Top 10 athletes by PSA graded card count."}
+        {graderFilter === "beckett" && "Top 10 athletes by Beckett graded card count."}
         {updatedAt && <span className="ml-1 opacity-70">Updated {updatedAt}.</span>}
       </p>
       <div className="glass-panel p-4 md:p-6">
@@ -1340,7 +1375,7 @@ const GemrateChart = () => {
                   <XAxis
                     type="number"
                     tick={{ fill: "hsl(var(--muted-foreground))", fontSize: 10 }}
-                    label={{ value: "Total Grades (PSA + Beckett)", position: "insideBottom", offset: -10, style: { fill: "hsl(var(--muted-foreground))", fontSize: 11 } }}
+                    label={{ value: graderFilter === "psa" ? "PSA Grades" : graderFilter === "beckett" ? "Beckett Grades" : "Total Grades (PSA + Beckett)", position: "insideBottom", offset: -10, style: { fill: "hsl(var(--muted-foreground))", fontSize: 11 } }}
                   />
                   <YAxis type="category" dataKey="name" width={150} tick={{ fill: "hsl(var(--muted-foreground))", fontSize: 11 }} />
                   <Tooltip
