@@ -121,6 +121,7 @@ export function useAthleteData() {
   const [athleteHistory, setAthleteHistory] = useState<Record<string, any[]>>({});
   const [indexHistory, setIndexHistory] = useState<any[]>([]);
   const [gemratePopMap, setGemratePopMap] = useState<Record<string, number>>({});
+  const [beckettPopMap, setBeckettPopMap] = useState<Record<string, number>>({});
   const [scpPrices, setScpPrices] = useState<Record<string, { scpRawPrice: number | null }>>({});
   const [snapshotFallback, setSnapshotFallback] = useState<Record<string, { rawListedPrice: number | null; gradedListedPrice: number | null }>>({});
   const [lastUpdated, setLastUpdated] = useState<string>("—");
