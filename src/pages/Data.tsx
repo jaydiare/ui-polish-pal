@@ -551,7 +551,7 @@ const Data = () => {
             Market Intel
           </h1>
           <p className="text-muted-foreground text-sm max-w-xl">
-            Listed vs sold price analytics for Venezuelan athletes trading cards. Data powered by eBay market scans.
+            Listed vs sold price analytics for Venezuelan athletes trading cards. Data powered by eBay.
           </p>
           <div className="mt-3 flex items-center gap-3 flex-wrap">
             <div className="inline-flex items-center gap-2 rounded-full border border-border/50 bg-card/80 backdrop-blur-sm px-4 py-1.5">
