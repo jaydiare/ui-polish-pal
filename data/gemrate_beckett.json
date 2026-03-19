@@ -1,13 +1,13 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-19T03:09:11.802842+00:00",
-    "athleteCount": 232,
+    "updatedAt": "2026-03-19T03:11:46.310053+00:00",
+    "athleteCount": 247,
     "graders": [
       "beckett"
     ],
     "batchInfo": {
-      "startIdx": 320,
-      "endIdx": 340,
+      "startIdx": 340,
+      "endIdx": 360,
       "totalAthletes": 568
     }
   },
@@ -4172,6 +4172,276 @@
     },
     "Marcos Armas": {
       "name": "Marcos Armas",
+      "sport": "Baseball",
+      "graders": {
+        "beckett": {
+          "cards": 1,
+          "gems": 2,
+          "grades": 2,
+          "gemRate": 100.0
+        }
+      },
+      "totals": {
+        "cards": 1,
+        "gems": 2,
+        "grades": 2,
+        "gemRate": 100.0
+      }
+    },
+    "Martin Perez": {
+      "name": "Martin Perez",
+      "sport": "Baseball",
+      "graders": {
+        "beckett": {
+          "cards": 48,
+          "gems": 131,
+          "grades": 241,
+          "gemRate": 54.0
+        }
+      },
+      "totals": {
+        "cards": 48,
+        "gems": 131,
+        "grades": 241,
+        "gemRate": 54.0
+      }
+    },
+    "Martin Prado": {
+      "name": "Martin Prado",
+      "sport": "Baseball",
+      "graders": {
+        "beckett": {
+          "cards": 52,
+          "gems": 103,
+          "grades": 183,
+          "gemRate": 56.0
+        }
+      },
+      "totals": {
+        "cards": 52,
+        "gems": 103,
+        "grades": 183,
+        "gemRate": 56.0
+      }
+    },
+    "Marwin Gonzalez": {
+      "name": "Marwin Gonzalez",
+      "sport": "Baseball",
+      "graders": {
+        "beckett": {
+          "cards": 10,
+          "gems": 17,
+          "grades": 17,
+          "gemRate": 100.0
+        }
+      },
+      "totals": {
+        "cards": 10,
+        "gems": 17,
+        "grades": 17,
+        "gemRate": 100.0
+      }
+    },
+    "Mauricio Robles": {
+      "name": "Mauricio Robles",
+      "sport": "Baseball",
+      "graders": {
+        "beckett": {
+          "cards": 8,
+          "gems": 20,
+          "grades": 23,
+          "gemRate": 87.0
+        }
+      },
+      "totals": {
+        "cards": 8,
+        "gems": 20,
+        "grades": 23,
+        "gemRate": 87.0
+      }
+    },
+    "Max Castillo": {
+      "name": "Max Castillo",
+      "sport": "Baseball",
+      "graders": {
+        "beckett": {
+          "cards": 1,
+          "gems": 0,
+          "grades": 1,
+          "gemRate": 0.0
+        }
+      },
+      "totals": {
+        "cards": 1,
+        "gems": 0,
+        "grades": 1,
+        "gemRate": 0.0
+      }
+    },
+    "Max Ramirez": {
+      "name": "Max Ramirez",
+      "sport": "Baseball",
+      "graders": {
+        "beckett": {
+          "cards": 23,
+          "gems": 123,
+          "grades": 162,
+          "gemRate": 76.0
+        }
+      },
+      "totals": {
+        "cards": 23,
+        "gems": 123,
+        "grades": 162,
+        "gemRate": 76.0
+      }
+    },
+    "Maximo Acosta": {
+      "name": "Maximo Acosta",
+      "sport": "Baseball",
+      "graders": {
+        "beckett": {
+          "cards": 46,
+          "gems": 76,
+          "grades": 128,
+          "gemRate": 59.0
+        }
+      },
+      "totals": {
+        "cards": 46,
+        "gems": 76,
+        "grades": 128,
+        "gemRate": 59.0
+      }
+    },
+    "Melvin Dorta": {
+      "name": "Melvin Dorta",
+      "sport": "Baseball",
+      "graders": {
+        "beckett": {
+          "cards": 1,
+          "gems": 0,
+          "grades": 1,
+          "gemRate": 0.0
+        }
+      },
+      "totals": {
+        "cards": 1,
+        "gems": 0,
+        "grades": 1,
+        "gemRate": 0.0
+      }
+    },
+    "Melvin Mora": {
+      "name": "Melvin Mora",
+      "sport": "Baseball",
+      "graders": {
+        "beckett": {
+          "cards": 35,
+          "gems": 33,
+          "grades": 74,
+          "gemRate": 45.0
+        }
+      },
+      "totals": {
+        "cards": 35,
+        "gems": 33,
+        "grades": 74,
+        "gemRate": 45.0
+      }
+    },
+    "Miguel Cabrera": {
+      "name": "Miguel Cabrera",
+      "sport": "Baseball",
+      "graders": {
+        "beckett": {
+          "cards": 2098,
+          "gems": 4459,
+          "grades": 10471,
+          "gemRate": 43.0
+        }
+      },
+      "totals": {
+        "cards": 2098,
+        "gems": 4459,
+        "grades": 10471,
+        "gemRate": 43.0
+      }
+    },
+    "Miguel Cairo": {
+      "name": "Miguel Cairo",
+      "sport": "Baseball",
+      "graders": {
+        "beckett": {
+          "cards": 4,
+          "gems": 2,
+          "grades": 4,
+          "gemRate": 50.0
+        }
+      },
+      "totals": {
+        "cards": 4,
+        "gems": 2,
+        "grades": 4,
+        "gemRate": 50.0
+      }
+    },
+    "Miguel Gonzalez": {
+      "name": "Miguel Gonzalez",
+      "sport": "Baseball",
+      "graders": {
+        "beckett": {
+          "cards": 5,
+          "gems": 2,
+          "grades": 5,
+          "gemRate": 40.0
+        }
+      },
+      "totals": {
+        "cards": 5,
+        "gems": 2,
+        "grades": 5,
+        "gemRate": 40.0
+      }
+    },
+    "Miguel Montero": {
+      "name": "Miguel Montero",
+      "sport": "Baseball",
+      "graders": {
+        "beckett": {
+          "cards": 61,
+          "gems": 139,
+          "grades": 202,
+          "gemRate": 69.0
+        }
+      },
+      "totals": {
+        "cards": 61,
+        "gems": 139,
+        "grades": 202,
+        "gemRate": 69.0
+      }
+    },
+    "Miguel Perez": {
+      "name": "Miguel Perez",
+      "sport": "Baseball",
+      "graders": {
+        "beckett": {
+          "cards": 6,
+          "gems": 4,
+          "grades": 9,
+          "gemRate": 44.0
+        }
+      },
+      "totals": {
+        "cards": 6,
+        "gems": 4,
+        "grades": 9,
+        "gemRate": 44.0
+      }
+    },
+    "Miguel Rojas": {
+      "name": "Miguel Rojas",
       "sport": "Baseball",
       "graders": {
         "beckett": {
