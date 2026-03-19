@@ -104,6 +104,13 @@ for name, entries in history.items():
             sport = a.get("sport")
             break
 
+    # Filter: only include the focus sport
+    if sport and sport != FOCUS_SPORT:
+        continue
+    if not sport:
+        # Try to match from athletes list; skip unknowns
+        continue
+
     rec = {
         "name": name,
         "sport": sport or "Unknown",
