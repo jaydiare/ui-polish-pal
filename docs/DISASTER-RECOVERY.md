@@ -145,6 +145,7 @@ border-bottom: 1px solid hsl(var(--vzla-purple) / 0.25);
 | `data/scp-raw.json` | SportsCardsPro raw prices | Monthly |
 | `data/scp-history.json` | SCP historical price tracker | Monthly |
 | `data/vzla-athlete-market-data.json` | Weekly unified snapshot | Weekly (Sunday) |
+| `data/analysis/YYYYMMDD_vzlasports.json` | AI-generated bi-weekly market reports (Baseball) | Bi-weekly (1st & 15th) |
 | `data/epn-performance.json` | eBay Partner Network click data | Manual |
 
 ### 4.2 Data Freshness Strategy
