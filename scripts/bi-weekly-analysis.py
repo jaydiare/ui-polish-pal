@@ -248,6 +248,26 @@ def call_gemini(prompt, api_key, max_retries=2):
 
 
 def build_prompt(stats):
+    # Build data snippets outside the f-string to avoid {{}} brace issues
+    baseball_json = json.dumps(stats['sportSummary'], separators=(',',':'))
+    gainers_json = json.dumps(
+        [{'name':g['name'],'chg':g['listedPriceChange'],'price':g['listedPrice']}
+         for g in stats['topMovers']['gainers'][:3]], separators=(',',':'))
+    losers_json = json.dumps(
+        [{'name':l['name'],'chg':l['listedPriceChange'],'price':l['listedPrice']}
+         for l in stats['topMovers']['losers'][:3]], separators=(',',':'))
+    volatile_json = json.dumps(
+        [{'name':v['name'],'cv':v['cv'],'price':v['listedPrice']}
+         for v in stats['mostVolatile'][:3]], separators=(',',':'))
+    anomalies_json = json.dumps(
+        [{'name':a['name'],'reason':a['reason']}
+         for a in stats['anomalies'][:5]], separators=(',',':'))
+    cheapest_json = json.dumps(
+        [{'name':c['name'],'price':c['listedPrice']}
+         for c in stats['cheapestListed'][:3]], separators=(',',':'))
+    start = stats['period']['start']
+    end = stats['period']['end']
+
     return f"""You are a sports card market analyst specializing in Venezuelan baseball players.
 Analyze this bi-weekly BASEBALL-ONLY market data and produce a JSON report with these fields:
 
@@ -258,19 +278,19 @@ Analyze this bi-weekly BASEBALL-ONLY market data and produce a JSON report with 
 - "watchList": Array of 3 baseball player names worth watching and why (objects with "name" and "reason")
 - "riskAlerts": Array of any concerning trends (strings), empty if none
 
-Data for {stats['period']['start']} to {stats['period']['end']}:
+Data for {start} to {end}:
 
-BASEBALL: {json.dumps(stats['sportSummary'], separators=(',',':'))}
+BASEBALL: {baseball_json}
 
-GAINERS: {json.dumps([{{'name':g['name'],'chg':g['listedPriceChange'],'price':g['listedPrice']}} for g in stats['topMovers']['gainers'][:3]], separators=(',',':'))}
+GAINERS: {gainers_json}
 
-LOSERS: {json.dumps([{{'name':l['name'],'chg':l['listedPriceChange'],'price':l['listedPrice']}} for l in stats['topMovers']['losers'][:3]], separators=(',',':'))}
+LOSERS: {losers_json}
 
-VOLATILE: {json.dumps([{{'name':v['name'],'cv':v['cv'],'price':v['listedPrice']}} for v in stats['mostVolatile'][:3]], separators=(',',':'))}
+VOLATILE: {volatile_json}
 
-ANOMALIES: {json.dumps([{{'name':a['name'],'reason':a['reason']}} for a in stats['anomalies'][:5]], separators=(',',':'))}
+ANOMALIES: {anomalies_json}
 
-CHEAPEST: {json.dumps([{{'name':c['name'],'price':c['listedPrice']}} for c in stats['cheapestListed'][:3]], separators=(',',':'))}
+CHEAPEST: {cheapest_json}
 
 Return ONLY valid JSON matching the schema above."""
 
