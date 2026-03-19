@@ -303,7 +303,8 @@ output = {
     "_meta": {
         "generatedAt": today.isoformat() + "Z",
         "period": {"start": period_start, "end": period_end},
-        "version": "1.0",
+        "focusSport": FOCUS_SPORT,
+        "version": "1.1",
         "llmUsed": narrative is not None,
     },
     "stats": stats,
@@ -312,7 +313,60 @@ output = {
 if narrative:
     output["narrative"] = narrative
 
+# ---------------------------------------------------------------------------
+# 5. Generate plain-text summary
+# ---------------------------------------------------------------------------
+
+lines = []
+lines.append(f"=== VZLA Sports Baseball Market Report ===")
+lines.append(f"Period: {period_start} → {period_end}")
+lines.append(f"Baseball athletes analyzed: {len(top_movers)}")
+lines.append("")
+
+if sport_summary.get(FOCUS_SPORT):
+    s = sport_summary[FOCUS_SPORT]
+    lines.append(f"Avg listed price: ${s['avgPrice']:.2f}  |  Median: ${s['medianPrice']:.2f}  |  Avg change: {s['avgChange']:+.1f}%")
+    lines.append("")
+
+gainers = stats["topMovers"]["gainers"][:5]
+losers = stats["topMovers"]["losers"][:5]
+
+if gainers:
+    lines.append("TOP GAINERS:")
+    for g in gainers:
+        lines.append(f"  ▲ {g['name']}: {g['listedPriceChange']:+.1f}% (${g['listedPrice']:.2f})")
+    lines.append("")
+
+if losers:
+    lines.append("TOP LOSERS:")
+    for l in losers:
+        lines.append(f"  ▼ {l['name']}: {l['listedPriceChange']:+.1f}% (${l['listedPrice']:.2f})")
+    lines.append("")
+
+if anomalies:
+    lines.append(f"ANOMALIES ({len(anomalies)}):")
+    for a in anomalies[:5]:
+        reasons = "; ".join(a.get("reason", []))
+        lines.append(f"  ⚠ {a['name']}: {reasons}")
+    lines.append("")
+
+if stats["cheapestListed"]:
+    lines.append("VALUE PICKS (cheapest listed):")
+    for c in stats["cheapestListed"][:5]:
+        lines.append(f"  💰 {c['name']}: ${c['listedPrice']:.2f}")
+    lines.append("")
+
+if narrative:
+    lines.append("AI NARRATIVE:")
+    lines.append(narrative.get("headline", ""))
+    lines.append("")
+    lines.append(narrative.get("summary", ""))
+
+text_summary = "\n".join(lines)
+output["textSummary"] = text_summary
+
 out_path = OUT_DIR / f"{date_stamp}_vzlasports.json"
 out_path.write_text(json.dumps(output, indent=2, ensure_ascii=False), encoding="utf-8")
 
+print(f"\n{text_summary}")
 print(f"\n✅ Wrote {out_path.relative_to(ROOT)}")
