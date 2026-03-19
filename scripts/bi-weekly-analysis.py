@@ -398,7 +398,13 @@ text_summary = "\n".join(lines)
 output["textSummary"] = text_summary
 
 out_path = OUT_DIR / f"{date_stamp}_vzlasports.json"
-out_path.write_text(json.dumps(output, indent=2, ensure_ascii=False), encoding="utf-8")
+out_json = json.dumps(output, indent=2, ensure_ascii=False)
+out_path.write_text(out_json, encoding="utf-8")
+
+# Also write a fixed "latest" copy so the frontend can fetch it
+latest_path = DATA / "analysis-latest.json"
+latest_path.write_text(out_json, encoding="utf-8")
 
 print(f"\n{text_summary}")
 print(f"\n✅ Wrote {out_path.relative_to(ROOT)}")
+print(f"   Also wrote {latest_path.relative_to(ROOT)}")

@@ -5,6 +5,8 @@ import VzlaHero from "@/components/VzlaHero";
 import VzlaIndexCards from "@/components/VzlaIndexCards";
 import VzlaSideBanner from "@/components/VzlaSideBanner";
 
+const VzlaMarketInsights = lazy(() => import("@/components/VzlaMarketInsights"));
+
 const VzlaHowToMoney = lazy(() => import("@/components/VzlaHowToMoney"));
 const VzlaTopDeals = lazy(() => import("@/components/VzlaTopDeals"));
 const VzlaBudgetBar = lazy(() => import("@/components/VzlaBudgetBar"));
@@ -62,6 +64,9 @@ const Index = () => {
       <main id="main-content" className="page-shell" role="main" aria-label="Athlete cards and market data">
         <VzlaHero lastUpdated={lastUpdated} />
         <VzlaIndexCards athletes={athletes} byName={byName} byKey={byKey} indexHistory={indexHistory} />
+        <Suspense fallback={null}>
+          <VzlaMarketInsights />
+        </Suspense>
         <Suspense fallback={<div className="min-h-[200px]" />}>
           <VzlaHowToMoney />
           <VzlaTopDeals />
