@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-19T13:45:19.715Z",
+    "updatedAt": "2026-03-19T15:09:45.575Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA/BGS/SGC grader title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 130,
-      "endIdx": 140,
+      "startIdx": 140,
+      "endIdx": 150,
       "totalAthletes": 452
     },
     "maxPages": 4,
@@ -2005,19 +2005,19 @@
   },
   "Francisco Morales": {
     "keyword": "Francisco Morales Baseball PSA",
-    "nScraped": 0,
-    "nSoldUsed": 0,
-    "avg": null,
-    "taguchiSold": null,
-    "medianSold": null,
-    "marketStabilityCV": null,
+    "nScraped": 244,
+    "nSoldUsed": 4,
+    "avg": 4.26,
+    "taguchiSold": 4.26,
+    "medianSold": 4.26,
+    "marketStabilityCV": 0,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
   },
   "Francisco Rodriguez": {
     "keyword": "Francisco Rodriguez Baseball PSA",
-    "nScraped": 249,
+    "nScraped": 248,
     "nSoldUsed": 20,
     "avg": 7.99,
     "taguchiSold": 7.99,
@@ -2041,15 +2041,15 @@
   },
   "Franklin Barreto": {
     "keyword": "Franklin Barreto Baseball PSA",
-    "nScraped": 243,
-    "nSoldUsed": 0,
-    "avg": null,
-    "taguchiSold": null,
-    "medianSold": null,
-    "marketStabilityCV": null,
+    "nScraped": 240,
+    "nSoldUsed": 8,
+    "avg": 3.625,
+    "taguchiSold": 3.625,
+    "medianSold": 3.625,
+    "marketStabilityCV": 0.1843180978706375,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
   },
   "Franklin Gutierrez": {
     "keyword": "Franklin Gutierrez Baseball PSA",
@@ -2077,15 +2077,15 @@
   },
   "Fred Manrique": {
     "keyword": "Fred Manrique Baseball PSA",
-    "nScraped": 248,
-    "nSoldUsed": 12,
-    "avg": 5.740000000000001,
-    "taguchiSold": 5.740000000000001,
-    "medianSold": 5.74,
-    "marketStabilityCV": 1.6161534916916423e-16,
+    "nScraped": 0,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
   },
   "Freddy Fermin": {
     "keyword": "Freddy Fermin Baseball PSA",
