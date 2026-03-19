@@ -1,13 +1,13 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-19T03:15:07.212617+00:00",
-    "athleteCount": 261,
+    "updatedAt": "2026-03-19T03:38:18.702784+00:00",
+    "athleteCount": 278,
     "graders": [
       "beckett"
     ],
     "batchInfo": {
-      "startIdx": 360,
-      "endIdx": 380,
+      "startIdx": 380,
+      "endIdx": 400,
       "totalAthletes": 568
     }
   },
@@ -4708,6 +4708,312 @@
         "gems": 379,
         "grades": 487,
         "gemRate": 78.0
+      }
+    },
+    "Oswaldo Arcia": {
+      "name": "Oswaldo Arcia",
+      "sport": "Baseball",
+      "graders": {
+        "beckett": {
+          "cards": 88,
+          "gems": 419,
+          "grades": 525,
+          "gemRate": 80.0
+        }
+      },
+      "totals": {
+        "cards": 88,
+        "gems": 419,
+        "grades": 525,
+        "gemRate": 80.0
+      }
+    },
+    "Oswaldo Cabrera": {
+      "name": "Oswaldo Cabrera",
+      "sport": "Baseball",
+      "graders": {
+        "beckett": {
+          "cards": 79,
+          "gems": 91,
+          "grades": 177,
+          "gemRate": 51.0
+        }
+      },
+      "totals": {
+        "cards": 79,
+        "gems": 91,
+        "grades": 177,
+        "gemRate": 51.0
+      }
+    },
+    "Oswaldo Navarro": {
+      "name": "Oswaldo Navarro",
+      "sport": "Baseball",
+      "graders": {
+        "beckett": {
+          "cards": 7,
+          "gems": 7,
+          "grades": 12,
+          "gemRate": 58.0
+        }
+      },
+      "totals": {
+        "cards": 7,
+        "gems": 7,
+        "grades": 12,
+        "gemRate": 58.0
+      }
+    },
+    "Ozzie Guillen": {
+      "name": "Ozzie Guillen",
+      "sport": "Baseball",
+      "graders": {
+        "beckett": {
+          "cards": 33,
+          "gems": 32,
+          "grades": 109,
+          "gemRate": 29.0
+        }
+      },
+      "totals": {
+        "cards": 33,
+        "gems": 32,
+        "grades": 109,
+        "gemRate": 29.0
+      }
+    },
+    "Pablo Lopez": {
+      "name": "Pablo Lopez",
+      "sport": "Baseball",
+      "graders": {
+        "beckett": {
+          "cards": 17,
+          "gems": 14,
+          "grades": 20,
+          "gemRate": 70.0
+        }
+      },
+      "totals": {
+        "cards": 17,
+        "gems": 14,
+        "grades": 20,
+        "gemRate": 70.0
+      }
+    },
+    "Pablo Sandoval": {
+      "name": "Pablo Sandoval",
+      "sport": "Baseball",
+      "graders": {
+        "beckett": {
+          "cards": 183,
+          "gems": 290,
+          "grades": 657,
+          "gemRate": 44.0
+        }
+      },
+      "totals": {
+        "cards": 183,
+        "gems": 290,
+        "grades": 657,
+        "gemRate": 44.0
+      }
+    },
+    "Pablo Torrealba": {
+      "name": "Pablo Torrealba",
+      "sport": "Baseball",
+      "graders": {
+        "beckett": {
+          "cards": 2,
+          "gems": 0,
+          "grades": 7,
+          "gemRate": 0.0
+        }
+      },
+      "totals": {
+        "cards": 2,
+        "gems": 0,
+        "grades": 7,
+        "gemRate": 0.0
+      }
+    },
+    "Pedro Avila": {
+      "name": "Pedro Avila",
+      "sport": "Baseball",
+      "graders": {
+        "beckett": {
+          "cards": 17,
+          "gems": 31,
+          "grades": 51,
+          "gemRate": 61.0
+        }
+      },
+      "totals": {
+        "cards": 17,
+        "gems": 31,
+        "grades": 51,
+        "gemRate": 61.0
+      }
+    },
+    "Pedro Castellano": {
+      "name": "Pedro Castellano",
+      "sport": "Baseball",
+      "graders": {
+        "beckett": {
+          "cards": 1,
+          "gems": 0,
+          "grades": 1,
+          "gemRate": 0.0
+        }
+      },
+      "totals": {
+        "cards": 1,
+        "gems": 0,
+        "grades": 1,
+        "gemRate": 0.0
+      }
+    },
+    "Pedro Hernandez": {
+      "name": "Pedro Hernandez",
+      "sport": "Baseball",
+      "graders": {
+        "beckett": {
+          "cards": 1,
+          "gems": 1,
+          "grades": 1,
+          "gemRate": 100.0
+        }
+      },
+      "totals": {
+        "cards": 1,
+        "gems": 1,
+        "grades": 1,
+        "gemRate": 100.0
+      }
+    },
+    "Pedro Pages": {
+      "name": "Pedro Pages",
+      "sport": "Baseball",
+      "graders": {
+        "beckett": {
+          "cards": 7,
+          "gems": 3,
+          "grades": 8,
+          "gemRate": 38.0
+        }
+      },
+      "totals": {
+        "cards": 7,
+        "gems": 3,
+        "grades": 8,
+        "gemRate": 38.0
+      }
+    },
+    "Rafael Betancourt": {
+      "name": "Rafael Betancourt",
+      "sport": "Baseball",
+      "graders": {
+        "beckett": {
+          "cards": 1,
+          "gems": 2,
+          "grades": 2,
+          "gemRate": 100.0
+        }
+      },
+      "totals": {
+        "cards": 1,
+        "gems": 2,
+        "grades": 2,
+        "gemRate": 100.0
+      }
+    },
+    "Rafael Marchan": {
+      "name": "Rafael Marchan",
+      "sport": "Baseball",
+      "graders": {
+        "beckett": {
+          "cards": 10,
+          "gems": 61,
+          "grades": 64,
+          "gemRate": 95.0
+        }
+      },
+      "totals": {
+        "cards": 10,
+        "gems": 61,
+        "grades": 64,
+        "gemRate": 95.0
+      }
+    },
+    "Rafael Ortega": {
+      "name": "Rafael Ortega",
+      "sport": "Baseball",
+      "graders": {
+        "beckett": {
+          "cards": 3,
+          "gems": 3,
+          "grades": 4,
+          "gemRate": 75.0
+        }
+      },
+      "totals": {
+        "cards": 3,
+        "gems": 3,
+        "grades": 4,
+        "gemRate": 75.0
+      }
+    },
+    "Ramon Castro": {
+      "name": "Ramon Castro",
+      "sport": "Baseball",
+      "graders": {
+        "beckett": {
+          "cards": 6,
+          "gems": 0,
+          "grades": 7,
+          "gemRate": 0.0
+        }
+      },
+      "totals": {
+        "cards": 6,
+        "gems": 0,
+        "grades": 7,
+        "gemRate": 0.0
+      }
+    },
+    "Ramon Flores": {
+      "name": "Ramon Flores",
+      "sport": "Baseball",
+      "graders": {
+        "beckett": {
+          "cards": 5,
+          "gems": 19,
+          "grades": 19,
+          "gemRate": 100.0
+        }
+      },
+      "totals": {
+        "cards": 5,
+        "gems": 19,
+        "grades": 19,
+        "gemRate": 100.0
+      }
+    },
+    "Ramon Garcia": {
+      "name": "Ramon Garcia",
+      "sport": "Baseball",
+      "graders": {
+        "beckett": {
+          "cards": 2,
+          "gems": 1,
+          "grades": 2,
+          "gemRate": 50.0
+        }
+      },
+      "totals": {
+        "cards": 2,
+        "gems": 1,
+        "grades": 2,
+        "gemRate": 50.0
       }
     }
   }
