@@ -1,13 +1,13 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-18T20:35:47.096172+00:00",
+    "updatedAt": "2026-03-19T01:52:39.178429+00:00",
     "athleteCount": 454,
     "graders": [
       "PSA"
     ],
     "batchInfo": {
-      "startIdx": 500,
-      "endIdx": 520,
+      "startIdx": 520,
+      "endIdx": 540,
       "totalAthletes": 568
     }
   },
@@ -7685,17 +7685,17 @@
       "sport": "Soccer",
       "graders": {
         "PSA": {
-          "cards": 4,
+          "cards": 5,
           "gems": 1,
-          "grades": 8,
-          "gemRate": 12.0
+          "grades": 9,
+          "gemRate": 11.0
         }
       },
       "totals": {
-        "cards": 4,
+        "cards": 5,
         "gems": 1,
-        "grades": 8,
-        "gemRate": 12.0
+        "grades": 9,
+        "gemRate": 11.0
       }
     },
     "David Martinez": {
