@@ -44,7 +44,10 @@ date_stamp = today.strftime("%Y%m%d")
 period_start = (today - timedelta(days=14)).strftime("%Y-%m-%d")
 period_end = today.strftime("%Y-%m-%d")
 
+FOCUS_SPORT = "Baseball"
+
 print(f"📊 Analysis period: {period_start} → {period_end}")
+print(f"   Focus sport: {FOCUS_SPORT}")
 print(f"   Athletes in history: {len(history)}")
 
 # ---------------------------------------------------------------------------
@@ -100,6 +103,13 @@ for name, entries in history.items():
         if a.get("name") == name:
             sport = a.get("sport")
             break
+
+    # Filter: only include the focus sport
+    if sport and sport != FOCUS_SPORT:
+        continue
+    if not sport:
+        # Try to match from athletes list; skip unknowns
+        continue
 
     rec = {
         "name": name,
@@ -175,8 +185,9 @@ for entry in index_hist[-7:]:
 # Build the stats payload
 stats = {
     "period": {"start": period_start, "end": period_end},
+    "focusSport": FOCUS_SPORT,
     "totalAthletes": len(history),
-    "athletesAnalyzed": len(top_movers) + len([e for e in history.values() if len(e) < 2]),
+    "baseballAthletesAnalyzed": len(top_movers),
     "sportSummary": sport_summary,
     "indexTrend": index_trend,
     "topMovers": {
@@ -189,9 +200,8 @@ stats = {
     "anomalies": anomalies[:15],
 }
 
-print(f"   Top movers: {len(top_movers)}")
+print(f"   Baseball athletes analyzed: {len(top_movers)}")
 print(f"   Anomalies: {len(anomalies)}")
-print(f"   Sports tracked: {list(sport_summary.keys())}")
 
 # ---------------------------------------------------------------------------
 # 3. LLM narrative generation (Google Gemini free tier)
@@ -230,19 +240,19 @@ def call_gemini(prompt, api_key, max_retries=4):
 
 
 def build_prompt(stats):
-    return f"""You are a sports card market analyst for Venezuelan athletes.
-Analyze this bi-weekly market data and produce a JSON report with these fields:
+    return f"""You are a sports card market analyst specializing in Venezuelan baseball players.
+Analyze this bi-weekly BASEBALL-ONLY market data and produce a JSON report with these fields:
 
 - "headline": A punchy one-line market headline (max 15 words)
-- "summary": 2-3 paragraph market overview (plain text, ~150 words)
+- "summary": 2-3 paragraph market overview focused on baseball cards (plain text, ~200 words)
 - "keyInsights": Array of 3-5 bullet-point insights (strings)
-- "sportOutlook": Object with sport names as keys, each a 1-2 sentence outlook
-- "watchList": Array of 3-5 athlete names worth watching and why (objects with "name" and "reason")
+- "baseballOutlook": A 2-3 sentence outlook for the Venezuelan baseball card market
+- "watchList": Array of 3-5 baseball player names worth watching and why (objects with "name" and "reason")
 - "riskAlerts": Array of any concerning trends (strings), empty if none
 
 Market data for {stats['period']['start']} to {stats['period']['end']}:
 
-SPORT SUMMARY:
+BASEBALL SUMMARY:
 {json.dumps(stats['sportSummary'], indent=2)}
 
 INDEX TREND (recent):
@@ -293,7 +303,8 @@ output = {
     "_meta": {
         "generatedAt": today.isoformat() + "Z",
         "period": {"start": period_start, "end": period_end},
-        "version": "1.0",
+        "focusSport": FOCUS_SPORT,
+        "version": "1.1",
         "llmUsed": narrative is not None,
     },
     "stats": stats,
@@ -302,7 +313,60 @@ output = {
 if narrative:
     output["narrative"] = narrative
 
+# ---------------------------------------------------------------------------
+# 5. Generate plain-text summary
+# ---------------------------------------------------------------------------
+
+lines = []
+lines.append(f"=== VZLA Sports Baseball Market Report ===")
+lines.append(f"Period: {period_start} → {period_end}")
+lines.append(f"Baseball athletes analyzed: {len(top_movers)}")
+lines.append("")
+
+if sport_summary.get(FOCUS_SPORT):
+    s = sport_summary[FOCUS_SPORT]
+    lines.append(f"Avg listed price: ${s['avgPrice']:.2f}  |  Median: ${s['medianPrice']:.2f}  |  Avg change: {s['avgChange']:+.1f}%")
+    lines.append("")
+
+gainers = stats["topMovers"]["gainers"][:5]
+losers = stats["topMovers"]["losers"][:5]
+
+if gainers:
+    lines.append("TOP GAINERS:")
+    for g in gainers:
+        lines.append(f"  ▲ {g['name']}: {g['listedPriceChange']:+.1f}% (${g['listedPrice']:.2f})")
+    lines.append("")
+
+if losers:
+    lines.append("TOP LOSERS:")
+    for l in losers:
+        lines.append(f"  ▼ {l['name']}: {l['listedPriceChange']:+.1f}% (${l['listedPrice']:.2f})")
+    lines.append("")
+
+if anomalies:
+    lines.append(f"ANOMALIES ({len(anomalies)}):")
+    for a in anomalies[:5]:
+        reasons = "; ".join(a.get("reason", []))
+        lines.append(f"  ⚠ {a['name']}: {reasons}")
+    lines.append("")
+
+if stats["cheapestListed"]:
+    lines.append("VALUE PICKS (cheapest listed):")
+    for c in stats["cheapestListed"][:5]:
+        lines.append(f"  💰 {c['name']}: ${c['listedPrice']:.2f}")
+    lines.append("")
+
+if narrative:
+    lines.append("AI NARRATIVE:")
+    lines.append(narrative.get("headline", ""))
+    lines.append("")
+    lines.append(narrative.get("summary", ""))
+
+text_summary = "\n".join(lines)
+output["textSummary"] = text_summary
+
 out_path = OUT_DIR / f"{date_stamp}_vzlasports.json"
 out_path.write_text(json.dumps(output, indent=2, ensure_ascii=False), encoding="utf-8")
 
+print(f"\n{text_summary}")
 print(f"\n✅ Wrote {out_path.relative_to(ROOT)}")
