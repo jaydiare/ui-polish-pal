@@ -207,11 +207,19 @@ print(f"   Anomalies: {len(anomalies)}")
 # 3. LLM narrative generation (Google Gemini free tier)
 # ---------------------------------------------------------------------------
 
-def call_gemini(prompt, api_key, max_retries=4):
-    """Call Gemini API with exponential backoff for rate limits."""
+def call_gemini(prompt, api_key, max_retries=2):
+    """Call Gemini API with conservative backoff to stay within free-tier limits.
+    
+    Free-tier limits (Gemini 2.5 Flash):
+      - 5 requests per minute (RPM)
+      - ~20 requests per day (RPD)
+      - ~200K input tokens per minute (TPM)
+    We only make 1 request per run, so RPD is fine.
+    Retries use 60s+ gaps to respect RPM.
+    """
     import requests, time
 
-    url = "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent"
+    url = "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent"
     headers = {"Content-Type": "application/json"}
     params = {"key": api_key}
 
@@ -219,15 +227,15 @@ def call_gemini(prompt, api_key, max_retries=4):
         "contents": [{"parts": [{"text": prompt}]}],
         "generationConfig": {
             "temperature": 0.7,
-            "maxOutputTokens": 2000,
+            "maxOutputTokens": 1500,
             "responseMimeType": "application/json",
         },
     }
 
     for attempt in range(max_retries + 1):
-        resp = requests.post(url, headers=headers, params=params, json=payload, timeout=60)
+        resp = requests.post(url, headers=headers, params=params, json=payload, timeout=90)
         if resp.status_code == 429 and attempt < max_retries:
-            wait = 2 ** attempt * 15  # 15s, 30s, 60s, 120s
+            wait = 60 * (attempt + 1)  # 60s, 120s
             print(f"   ⏳ Rate limited, retrying in {wait}s (attempt {attempt + 1}/{max_retries})...")
             time.sleep(wait)
             continue
