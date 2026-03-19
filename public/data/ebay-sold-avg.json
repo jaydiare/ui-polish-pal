@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-19T01:58:06.713Z",
+    "updatedAt": "2026-03-19T04:51:23.886Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. Taguchi winsorized mean + market stability CV. Ungraded condition policy (permissive for sold). Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 180,
-      "endIdx": 190,
+      "startIdx": 190,
+      "endIdx": 200,
       "totalAthletes": 568
     },
     "maxPages": 4,
@@ -28,7 +28,7 @@
     },
     "fx": {
       "source": "CBSA Exchange Rates API",
-      "asOf": "2026-03-19T00:00:00.000Z"
+      "asOf": "2026-03-20T00:00:00.000Z"
     }
   },
   "Adbert Alzolay": {
@@ -2229,24 +2229,24 @@
   },
   "Gregorio Petit": {
     "keyword": "Gregorio Petit Baseball",
-    "nScraped": 0,
-    "nSoldUsed": 0,
-    "avg": null,
-    "taguchiSold": null,
-    "medianSold": null,
-    "marketStabilityCV": null,
+    "nScraped": 240,
+    "nSoldUsed": 28,
+    "avg": 1.3542857142857139,
+    "taguchiSold": 1.3542857142857139,
+    "medianSold": 1.11,
+    "marketStabilityCV": 0.28502795927308777,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
   },
   "Gregory Infante": {
     "keyword": "Gregory Infante Baseball",
-    "nScraped": 186,
-    "nSoldUsed": 15,
-    "avg": 1.5,
-    "taguchiSold": 1.5,
-    "medianSold": 1.5,
-    "marketStabilityCV": 0,
+    "nScraped": 244,
+    "nSoldUsed": 16,
+    "avg": 1.7449999999999994,
+    "taguchiSold": 1.7449999999999994,
+    "medianSold": 1.745,
+    "marketStabilityCV": 0.14500568020184412,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
@@ -2277,24 +2277,24 @@
   },
   "Guillermo Moscoso": {
     "keyword": "Guillermo Moscoso Baseball",
-    "nScraped": 183,
-    "nSoldUsed": 9,
-    "avg": 0.33999999999999997,
-    "taguchiSold": 0.33999999999999997,
+    "nScraped": 244,
+    "nSoldUsed": 12,
+    "avg": 0.3399999999999999,
+    "taguchiSold": 0.3399999999999999,
     "medianSold": 0.34,
-    "marketStabilityCV": 1.7317196235482812e-16,
+    "marketStabilityCV": 3.410559206731629e-16,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
   },
   "Guillermo Quiroz": {
     "keyword": "Guillermo Quiroz Baseball",
-    "nScraped": 62,
-    "nSoldUsed": 32,
-    "avg": 1.5503124999999993,
-    "taguchiSold": 1.5503124999999993,
-    "medianSold": 1.5899999999999999,
-    "marketStabilityCV": 0.09165397311393467,
+    "nScraped": 232,
+    "nSoldUsed": 128,
+    "avg": 1.5603124999999967,
+    "taguchiSold": 1.5603124999999967,
+    "medianSold": 1.63,
+    "marketStabilityCV": 0.09094269882213504,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
@@ -2313,26 +2313,27 @@
   },
   "Gus Gil": {
     "keyword": "Gus Gil Baseball",
-    "nScraped": 116,
-    "nSoldUsed": 56,
-    "avg": 2.118750000000003,
-    "taguchiSold": 2.118750000000003,
-    "medianSold": 2,
-    "marketStabilityCV": 0.06999998926422205,
-    "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
-  },
-  "Gus Polidor": {
-    "keyword": "Gus Polidor Baseball",
-    "nScraped": 128,
+    "nScraped": 0,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "error": "eBay page fetch failed (503) after 4 attempts"
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
+  },
+  "Gus Polidor": {
+    "keyword": "Gus Polidor Baseball",
+    "nScraped": 0,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
+    "currency": "USD",
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
   },
   "Gustavo Chacin": {
     "keyword": "Gustavo Chacin Baseball",
@@ -3487,27 +3488,27 @@
   },
   "Guilder Rodriguez": {
     "keyword": "Guilder Rodriguez Baseball",
-    "nScraped": 124,
-    "nSoldUsed": 6,
-    "avg": 1.99,
-    "taguchiSold": 1.99,
+    "nScraped": 176,
+    "nSoldUsed": 10,
+    "avg": 1.9899999999999998,
+    "taguchiSold": 1.9899999999999998,
     "medianSold": 1.99,
-    "marketStabilityCV": 0,
+    "marketStabilityCV": 1.1761586159385935e-16,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
   },
   "Guillermo Rodriguez": {
     "keyword": "Guillermo Rodriguez Baseball",
-    "nScraped": 180,
-    "nSoldUsed": 6,
-    "avg": 0.9900000000000001,
-    "taguchiSold": 0.9900000000000001,
-    "medianSold": 0.99,
-    "marketStabilityCV": 1.2284731200986093e-16,
+    "nScraped": 0,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
   },
   "Harvey Garcia": {
     "keyword": "Harvey Garcia Baseball",
