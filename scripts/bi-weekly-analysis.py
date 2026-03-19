@@ -197,9 +197,9 @@ print(f"   Sports tracked: {list(sport_summary.keys())}")
 # 3. LLM narrative generation (Google Gemini free tier)
 # ---------------------------------------------------------------------------
 
-def call_gemini(prompt, api_key):
-    """Call Gemini API for narrative generation."""
-    import requests
+def call_gemini(prompt, api_key, max_retries=4):
+    """Call Gemini API with exponential backoff for rate limits."""
+    import requests, time
 
     url = "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent"
     headers = {"Content-Type": "application/json"}
@@ -214,10 +214,17 @@ def call_gemini(prompt, api_key):
         },
     }
 
-    resp = requests.post(url, headers=headers, params=params, json=payload, timeout=60)
-    resp.raise_for_status()
-    data = resp.json()
+    for attempt in range(max_retries + 1):
+        resp = requests.post(url, headers=headers, params=params, json=payload, timeout=60)
+        if resp.status_code == 429 and attempt < max_retries:
+            wait = 2 ** attempt * 15  # 15s, 30s, 60s, 120s
+            print(f"   ⏳ Rate limited, retrying in {wait}s (attempt {attempt + 1}/{max_retries})...")
+            time.sleep(wait)
+            continue
+        resp.raise_for_status()
+        break
 
+    data = resp.json()
     text = data["candidates"][0]["content"]["parts"][0]["text"]
     return json.loads(text)
 
