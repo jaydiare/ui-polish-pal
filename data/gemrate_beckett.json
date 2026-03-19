@@ -1,13 +1,13 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-19T03:06:25.820105+00:00",
-    "athleteCount": 213,
+    "updatedAt": "2026-03-19T03:09:11.802842+00:00",
+    "athleteCount": 232,
     "graders": [
       "beckett"
     ],
     "batchInfo": {
-      "startIdx": 300,
-      "endIdx": 320,
+      "startIdx": 320,
+      "endIdx": 340,
       "totalAthletes": 568
     }
   },
@@ -3844,6 +3844,348 @@
         "gems": 1,
         "grades": 4,
         "gemRate": 25.0
+      }
+    },
+    "Luis Rengifo": {
+      "name": "Luis Rengifo",
+      "sport": "Baseball",
+      "graders": {
+        "beckett": {
+          "cards": 3,
+          "gems": 1,
+          "grades": 3,
+          "gemRate": 33.0
+        }
+      },
+      "totals": {
+        "cards": 3,
+        "gems": 1,
+        "grades": 3,
+        "gemRate": 33.0
+      }
+    },
+    "Luis Rivas": {
+      "name": "Luis Rivas",
+      "sport": "Baseball",
+      "graders": {
+        "beckett": {
+          "cards": 11,
+          "gems": 0,
+          "grades": 32,
+          "gemRate": 0.0
+        }
+      },
+      "totals": {
+        "cards": 11,
+        "gems": 0,
+        "grades": 32,
+        "gemRate": 0.0
+      }
+    },
+    "Luis Rodriguez": {
+      "name": "Luis Rodriguez",
+      "sport": "Baseball",
+      "graders": {
+        "beckett": {
+          "cards": 81,
+          "gems": 175,
+          "grades": 286,
+          "gemRate": 61.0
+        }
+      },
+      "totals": {
+        "cards": 81,
+        "gems": 175,
+        "grades": 286,
+        "gemRate": 61.0
+      }
+    },
+    "Luis Salazar": {
+      "name": "Luis Salazar",
+      "sport": "Baseball",
+      "graders": {
+        "beckett": {
+          "cards": 9,
+          "gems": 8,
+          "grades": 14,
+          "gemRate": 57.0
+        }
+      },
+      "totals": {
+        "cards": 9,
+        "gems": 8,
+        "grades": 14,
+        "gemRate": 57.0
+      }
+    },
+    "Luis Sanchez": {
+      "name": "Luis Sanchez",
+      "sport": "Baseball",
+      "graders": {
+        "beckett": {
+          "cards": 4,
+          "gems": 6,
+          "grades": 10,
+          "gemRate": 60.0
+        }
+      },
+      "totals": {
+        "cards": 4,
+        "gems": 6,
+        "grades": 10,
+        "gemRate": 60.0
+      }
+    },
+    "Luis Sardinas": {
+      "name": "Luis Sardinas",
+      "sport": "Baseball",
+      "graders": {
+        "beckett": {
+          "cards": 29,
+          "gems": 113,
+          "grades": 141,
+          "gemRate": 80.0
+        }
+      },
+      "totals": {
+        "cards": 29,
+        "gems": 113,
+        "grades": 141,
+        "gemRate": 80.0
+      }
+    },
+    "Luis Sojo": {
+      "name": "Luis Sojo",
+      "sport": "Baseball",
+      "graders": {
+        "beckett": {
+          "cards": 7,
+          "gems": 3,
+          "grades": 13,
+          "gemRate": 23.0
+        }
+      },
+      "totals": {
+        "cards": 7,
+        "gems": 3,
+        "grades": 13,
+        "gemRate": 23.0
+      }
+    },
+    "Luis Torrens": {
+      "name": "Luis Torrens",
+      "sport": "Baseball",
+      "graders": {
+        "beckett": {
+          "cards": 21,
+          "gems": 86,
+          "grades": 98,
+          "gemRate": 88.0
+        }
+      },
+      "totals": {
+        "cards": 21,
+        "gems": 86,
+        "grades": 98,
+        "gemRate": 88.0
+      }
+    },
+    "Luis Ugueto": {
+      "name": "Luis Ugueto",
+      "sport": "Baseball",
+      "graders": {
+        "beckett": {
+          "cards": 4,
+          "gems": 1,
+          "grades": 8,
+          "gemRate": 12.0
+        }
+      },
+      "totals": {
+        "cards": 4,
+        "gems": 1,
+        "grades": 8,
+        "gemRate": 12.0
+      }
+    },
+    "Luis Valbuena": {
+      "name": "Luis Valbuena",
+      "sport": "Baseball",
+      "graders": {
+        "beckett": {
+          "cards": 2,
+          "gems": 4,
+          "grades": 5,
+          "gemRate": 80.0
+        }
+      },
+      "totals": {
+        "cards": 2,
+        "gems": 4,
+        "grades": 5,
+        "gemRate": 80.0
+      }
+    },
+    "Luisangel Acuna": {
+      "name": "Luisangel Acuna",
+      "sport": "Baseball",
+      "graders": {
+        "beckett": {
+          "cards": 157,
+          "gems": 292,
+          "grades": 499,
+          "gemRate": 59.0
+        }
+      },
+      "totals": {
+        "cards": 157,
+        "gems": 292,
+        "grades": 499,
+        "gemRate": 59.0
+      }
+    },
+    "Magglio Ordonez": {
+      "name": "Magglio Ordonez",
+      "sport": "Baseball",
+      "graders": {
+        "beckett": {
+          "cards": 297,
+          "gems": 418,
+          "grades": 2972,
+          "gemRate": 14.0
+        }
+      },
+      "totals": {
+        "cards": 297,
+        "gems": 418,
+        "grades": 2972,
+        "gemRate": 14.0
+      }
+    },
+    "Maicer Izturis": {
+      "name": "Maicer Izturis",
+      "sport": "Baseball",
+      "graders": {
+        "beckett": {
+          "cards": 6,
+          "gems": 2,
+          "grades": 11,
+          "gemRate": 18.0
+        }
+      },
+      "totals": {
+        "cards": 6,
+        "gems": 2,
+        "grades": 11,
+        "gemRate": 18.0
+      }
+    },
+    "Maikel Garcia": {
+      "name": "Maikel Garcia",
+      "sport": "Baseball",
+      "graders": {
+        "beckett": {
+          "cards": 18,
+          "gems": 14,
+          "grades": 38,
+          "gemRate": 37.0
+        }
+      },
+      "totals": {
+        "cards": 18,
+        "gems": 14,
+        "grades": 38,
+        "gemRate": 37.0
+      }
+    },
+    "Manny Pina": {
+      "name": "Manny Pina",
+      "sport": "Baseball",
+      "graders": {
+        "beckett": {
+          "cards": 1,
+          "gems": 0,
+          "grades": 1,
+          "gemRate": 0.0
+        }
+      },
+      "totals": {
+        "cards": 1,
+        "gems": 0,
+        "grades": 1,
+        "gemRate": 0.0
+      }
+    },
+    "Manny Sarmiento": {
+      "name": "Manny Sarmiento",
+      "sport": "Baseball",
+      "graders": {
+        "beckett": {
+          "cards": 3,
+          "gems": 0,
+          "grades": 8,
+          "gemRate": 0.0
+        }
+      },
+      "totals": {
+        "cards": 3,
+        "gems": 0,
+        "grades": 8,
+        "gemRate": 0.0
+      }
+    },
+    "Manny Trillo": {
+      "name": "Manny Trillo",
+      "sport": "Baseball",
+      "graders": {
+        "beckett": {
+          "cards": 20,
+          "gems": 4,
+          "grades": 40,
+          "gemRate": 10.0
+        }
+      },
+      "totals": {
+        "cards": 20,
+        "gems": 4,
+        "grades": 40,
+        "gemRate": 10.0
+      }
+    },
+    "Marco Scutaro": {
+      "name": "Marco Scutaro",
+      "sport": "Baseball",
+      "graders": {
+        "beckett": {
+          "cards": 9,
+          "gems": 6,
+          "grades": 9,
+          "gemRate": 67.0
+        }
+      },
+      "totals": {
+        "cards": 9,
+        "gems": 6,
+        "grades": 9,
+        "gemRate": 67.0
+      }
+    },
+    "Marcos Armas": {
+      "name": "Marcos Armas",
+      "sport": "Baseball",
+      "graders": {
+        "beckett": {
+          "cards": 1,
+          "gems": 2,
+          "grades": 2,
+          "gemRate": 100.0
+        }
+      },
+      "totals": {
+        "cards": 1,
+        "gems": 2,
+        "grades": 2,
+        "gemRate": 100.0
       }
     }
   }
