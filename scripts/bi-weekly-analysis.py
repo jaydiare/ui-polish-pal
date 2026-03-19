@@ -207,11 +207,19 @@ print(f"   Anomalies: {len(anomalies)}")
 # 3. LLM narrative generation (Google Gemini free tier)
 # ---------------------------------------------------------------------------
 
-def call_gemini(prompt, api_key, max_retries=4):
-    """Call Gemini API with exponential backoff for rate limits."""
+def call_gemini(prompt, api_key, max_retries=2):
+    """Call Gemini API with conservative backoff to stay within free-tier limits.
+    
+    Free-tier limits (Gemini 2.5 Flash):
+      - 5 requests per minute (RPM)
+      - ~20 requests per day (RPD)
+      - ~200K input tokens per minute (TPM)
+    We only make 1 request per run, so RPD is fine.
+    Retries use 60s+ gaps to respect RPM.
+    """
     import requests, time
 
-    url = "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent"
+    url = "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent"
     headers = {"Content-Type": "application/json"}
     params = {"key": api_key}
 
@@ -219,15 +227,15 @@ def call_gemini(prompt, api_key, max_retries=4):
         "contents": [{"parts": [{"text": prompt}]}],
         "generationConfig": {
             "temperature": 0.7,
-            "maxOutputTokens": 2000,
+            "maxOutputTokens": 1500,
             "responseMimeType": "application/json",
         },
     }
 
     for attempt in range(max_retries + 1):
-        resp = requests.post(url, headers=headers, params=params, json=payload, timeout=60)
+        resp = requests.post(url, headers=headers, params=params, json=payload, timeout=90)
         if resp.status_code == 429 and attempt < max_retries:
-            wait = 2 ** attempt * 15  # 15s, 30s, 60s, 120s
+            wait = 60 * (attempt + 1)  # 60s, 120s
             print(f"   ⏳ Rate limited, retrying in {wait}s (attempt {attempt + 1}/{max_retries})...")
             time.sleep(wait)
             continue
@@ -244,34 +252,25 @@ def build_prompt(stats):
 Analyze this bi-weekly BASEBALL-ONLY market data and produce a JSON report with these fields:
 
 - "headline": A punchy one-line market headline (max 15 words)
-- "summary": 2-3 paragraph market overview focused on baseball cards (plain text, ~200 words)
-- "keyInsights": Array of 3-5 bullet-point insights (strings)
+- "summary": 2-3 paragraph market overview focused on baseball cards (plain text, ~150 words)
+- "keyInsights": Array of 3-4 bullet-point insights (strings)
 - "baseballOutlook": A 2-3 sentence outlook for the Venezuelan baseball card market
-- "watchList": Array of 3-5 baseball player names worth watching and why (objects with "name" and "reason")
+- "watchList": Array of 3 baseball player names worth watching and why (objects with "name" and "reason")
 - "riskAlerts": Array of any concerning trends (strings), empty if none
 
-Market data for {stats['period']['start']} to {stats['period']['end']}:
+Data for {stats['period']['start']} to {stats['period']['end']}:
 
-BASEBALL SUMMARY:
-{json.dumps(stats['sportSummary'], indent=2)}
+BASEBALL: {json.dumps(stats['sportSummary'], separators=(',',':'))}
 
-INDEX TREND (recent):
-{json.dumps(stats['indexTrend'], indent=2)}
+GAINERS: {json.dumps([{{'name':g['name'],'chg':g['listedPriceChange'],'price':g['listedPrice']}} for g in stats['topMovers']['gainers'][:3]], separators=(',',':'))}
 
-TOP GAINERS:
-{json.dumps(stats['topMovers']['gainers'][:5], indent=2)}
+LOSERS: {json.dumps([{{'name':l['name'],'chg':l['listedPriceChange'],'price':l['listedPrice']}} for l in stats['topMovers']['losers'][:3]], separators=(',',':'))}
 
-TOP LOSERS:
-{json.dumps(stats['topMovers']['losers'][:5], indent=2)}
+VOLATILE: {json.dumps([{{'name':v['name'],'cv':v['cv'],'price':v['listedPrice']}} for v in stats['mostVolatile'][:3]], separators=(',',':'))}
 
-MOST VOLATILE:
-{json.dumps(stats['mostVolatile'][:5], indent=2)}
+ANOMALIES: {json.dumps([{{'name':a['name'],'reason':a['reason']}} for a in stats['anomalies'][:5]], separators=(',',':'))}
 
-ANOMALIES:
-{json.dumps(stats['anomalies'][:10], indent=2)}
-
-CHEAPEST LISTED (value opportunities):
-{json.dumps(stats['cheapestListed'][:5], indent=2)}
+CHEAPEST: {json.dumps([{{'name':c['name'],'price':c['listedPrice']}} for c in stats['cheapestListed'][:3]], separators=(',',':'))}
 
 Return ONLY valid JSON matching the schema above."""
 
