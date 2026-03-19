@@ -39,7 +39,7 @@ athletes_list = load_json(DATA / "athletes.json") or []
 gemrate = load_json(DATA / "gemrate.json")
 market_data = load_json(DATA / "vzla-athlete-market-data.json")
 
-today = datetime.utcnow()
+today = datetime.now(tz=None)  # UTC in CI
 date_stamp = today.strftime("%Y%m%d")
 period_start = (today - timedelta(days=14)).strftime("%Y-%m-%d")
 period_end = today.strftime("%Y-%m-%d")
