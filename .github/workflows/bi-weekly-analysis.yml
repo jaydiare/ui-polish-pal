@@ -1,0 +1,59 @@
+name: Bi-Weekly Market Analysis
+
+on:
+  schedule:
+    - cron: "0 14 1,15 * *"  # 1st and 15th of each month at 14:00 UTC
+  workflow_dispatch: {}
+
+concurrency:
+  group: bi-weekly-analysis
+  cancel-in-progress: true
+
+permissions:
+  contents: write
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
+jobs:
+  analyze:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install requests
+
+      - name: Run bi-weekly analysis
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: python scripts/bi-weekly-analysis.py
+
+      - name: Commit & push
+        run: |
+          set -e
+
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          git add data/analysis/
+
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+            exit 0
+          fi
+
+          git commit -m "📊 Bi-weekly market analysis $(date -u +%Y-%m-%d)"
+
+          git fetch origin main
+          git rebase --autostash origin/main || (git rebase --abort && git pull --rebase origin main)
+
+          git push origin HEAD:main
