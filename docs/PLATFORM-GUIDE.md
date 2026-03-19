@@ -29,6 +29,7 @@ A sports-card market intelligence platform tracking **550+ Venezuelan athletes**
 | `data/gemrate.json` | PSA grading population counts from Gemrate.com |
 | `data/scp-prices.json` | SportsCardsPro current prices (raw + graded, monthly) |
 | `data/vzla-athlete-market-data.json` | Unified weekly snapshot of all market data |
+| `data/analysis/YYYYMMDD_vzlasports.json` | Bi-weekly AI market analysis reports |
 
 ### 2.2 Active Listing Scripts (eBay Browse API)
 
