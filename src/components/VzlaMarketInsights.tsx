@@ -74,9 +74,10 @@ export default function VzlaMarketInsights() {
                 {narrative?.headline ?? "Bi-Weekly Market Report"}
               </h2>
             </div>
-            {narrative?.summary && (
-              <p className="text-sm text-muted-foreground max-w-2xl">{narrative.summary}</p>
-            )}
+            <p className="text-xs text-muted-foreground max-w-2xl">
+              Based on <span className="text-foreground font-medium">raw card listed prices</span> from eBay.
+              {narrative?.summary ? ` ${narrative.summary}` : ""}
+            </p>
           </div>
           <div className="flex items-center gap-1.5 text-xs text-muted-foreground shrink-0">
             <Calendar className="w-3.5 h-3.5" />
