@@ -1,13 +1,13 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-19T03:11:46.310053+00:00",
-    "athleteCount": 247,
+    "updatedAt": "2026-03-19T03:15:07.212617+00:00",
+    "athleteCount": 261,
     "graders": [
       "beckett"
     ],
     "batchInfo": {
-      "startIdx": 340,
-      "endIdx": 360,
+      "startIdx": 360,
+      "endIdx": 380,
       "totalAthletes": 568
     }
   },
@@ -4456,6 +4456,258 @@
         "gems": 2,
         "grades": 2,
         "gemRate": 100.0
+      }
+    },
+    "Miguel Yajure": {
+      "name": "Miguel Yajure",
+      "sport": "Baseball",
+      "graders": {
+        "beckett": {
+          "cards": 4,
+          "gems": 4,
+          "grades": 4,
+          "gemRate": 100.0
+        }
+      },
+      "totals": {
+        "cards": 4,
+        "gems": 4,
+        "grades": 4,
+        "gemRate": 100.0
+      }
+    },
+    "Moises Ballesteros": {
+      "name": "Moises Ballesteros",
+      "sport": "Baseball",
+      "graders": {
+        "beckett": {
+          "cards": 27,
+          "gems": 61,
+          "grades": 77,
+          "gemRate": 79.0
+        }
+      },
+      "totals": {
+        "cards": 27,
+        "gems": 61,
+        "grades": 77,
+        "gemRate": 79.0
+      }
+    },
+    "Nivaldo Rodriguez": {
+      "name": "Nivaldo Rodriguez",
+      "sport": "Baseball",
+      "graders": {
+        "beckett": {
+          "cards": 1,
+          "gems": 1,
+          "grades": 1,
+          "gemRate": 100.0
+        }
+      },
+      "totals": {
+        "cards": 1,
+        "gems": 1,
+        "grades": 1,
+        "gemRate": 100.0
+      }
+    },
+    "Odubel Herrera": {
+      "name": "Odubel Herrera",
+      "sport": "Baseball",
+      "graders": {
+        "beckett": {
+          "cards": 22,
+          "gems": 23,
+          "grades": 42,
+          "gemRate": 55.0
+        }
+      },
+      "totals": {
+        "cards": 22,
+        "gems": 23,
+        "grades": 42,
+        "gemRate": 55.0
+      }
+    },
+    "Omar Daal": {
+      "name": "Omar Daal",
+      "sport": "Baseball",
+      "graders": {
+        "beckett": {
+          "cards": 3,
+          "gems": 1,
+          "grades": 3,
+          "gemRate": 33.0
+        }
+      },
+      "totals": {
+        "cards": 3,
+        "gems": 1,
+        "grades": 3,
+        "gemRate": 33.0
+      }
+    },
+    "Omar Infante": {
+      "name": "Omar Infante",
+      "sport": "Baseball",
+      "graders": {
+        "beckett": {
+          "cards": 6,
+          "gems": 2,
+          "grades": 12,
+          "gemRate": 17.0
+        }
+      },
+      "totals": {
+        "cards": 6,
+        "gems": 2,
+        "grades": 12,
+        "gemRate": 17.0
+      }
+    },
+    "Omar Vizquel": {
+      "name": "Omar Vizquel",
+      "sport": "Baseball",
+      "graders": {
+        "beckett": {
+          "cards": 245,
+          "gems": 409,
+          "grades": 911,
+          "gemRate": 45.0
+        }
+      },
+      "totals": {
+        "cards": 245,
+        "gems": 409,
+        "grades": 911,
+        "gemRate": 45.0
+      }
+    },
+    "Orber Moreno": {
+      "name": "Orber Moreno",
+      "sport": "Baseball",
+      "graders": {
+        "beckett": {
+          "cards": 2,
+          "gems": 0,
+          "grades": 4,
+          "gemRate": 0.0
+        }
+      },
+      "totals": {
+        "cards": 2,
+        "gems": 0,
+        "grades": 4,
+        "gemRate": 0.0
+      }
+    },
+    "Orlando Arcia": {
+      "name": "Orlando Arcia",
+      "sport": "Baseball",
+      "graders": {
+        "beckett": {
+          "cards": 172,
+          "gems": 531,
+          "grades": 786,
+          "gemRate": 68.0
+        }
+      },
+      "totals": {
+        "cards": 172,
+        "gems": 531,
+        "grades": 786,
+        "gemRate": 68.0
+      }
+    },
+    "Oscar Azocar": {
+      "name": "Oscar Azocar",
+      "sport": "Baseball",
+      "graders": {
+        "beckett": {
+          "cards": 1,
+          "gems": 1,
+          "grades": 4,
+          "gemRate": 25.0
+        }
+      },
+      "totals": {
+        "cards": 1,
+        "gems": 1,
+        "grades": 4,
+        "gemRate": 25.0
+      }
+    },
+    "Oscar Hernandez": {
+      "name": "Oscar Hernandez",
+      "sport": "Baseball",
+      "graders": {
+        "beckett": {
+          "cards": 87,
+          "gems": 160,
+          "grades": 277,
+          "gemRate": 58.0
+        }
+      },
+      "totals": {
+        "cards": 87,
+        "gems": 160,
+        "grades": 277,
+        "gemRate": 58.0
+      }
+    },
+    "Oscar Salazar": {
+      "name": "Oscar Salazar",
+      "sport": "Baseball",
+      "graders": {
+        "beckett": {
+          "cards": 5,
+          "gems": 0,
+          "grades": 7,
+          "gemRate": 0.0
+        }
+      },
+      "totals": {
+        "cards": 5,
+        "gems": 0,
+        "grades": 7,
+        "gemRate": 0.0
+      }
+    },
+    "Osleivis Basabe": {
+      "name": "Osleivis Basabe",
+      "sport": "Baseball",
+      "graders": {
+        "beckett": {
+          "cards": 19,
+          "gems": 50,
+          "grades": 55,
+          "gemRate": 91.0
+        }
+      },
+      "totals": {
+        "cards": 19,
+        "gems": 50,
+        "grades": 55,
+        "gemRate": 91.0
+      }
+    },
+    "Oswald Peraza": {
+      "name": "Oswald Peraza",
+      "sport": "Baseball",
+      "graders": {
+        "beckett": {
+          "cards": 135,
+          "gems": 379,
+          "grades": 487,
+          "gemRate": 78.0
+        }
+      },
+      "totals": {
+        "cards": 135,
+        "gems": 379,
+        "grades": 487,
+        "gemRate": 78.0
       }
     }
   }
