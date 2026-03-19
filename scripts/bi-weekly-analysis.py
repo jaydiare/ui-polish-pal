@@ -290,31 +290,22 @@ def build_prompt(stats):
     start = stats['period']['start']
     end = stats['period']['end']
 
-    return f"""You are a sports card market analyst specializing in Venezuelan baseball players.
-Analyze this bi-weekly BASEBALL-ONLY market data and produce a JSON report with these fields:
+    return f"""Sports card analyst for Venezuelan baseball players. Be concise.
+Produce a SHORT JSON report from this {start} to {end} data:
 
-- "headline": A punchy one-line market headline (max 15 words)
-- "summary": 2-3 paragraph market overview focused on baseball cards (plain text, ~150 words)
-- "keyInsights": Array of 3-4 bullet-point insights (strings)
-- "baseballOutlook": A 2-3 sentence outlook for the Venezuelan baseball card market
-- "watchList": Array of 3 baseball player names worth watching and why (objects with "name" and "reason")
-- "riskAlerts": Array of any concerning trends (strings), empty if none
+- "headline": max 10 words, punchy
+- "summary": 2-3 sentences only, ~50 words max
+- "keyInsights": 3 short bullet strings (1 sentence each)
+- "watchList": 2 players [{{"name":"...","reason":"10 words max"}}]
+- "riskAlerts": 1-2 short strings or empty array
 
-Data for {start} to {end}:
+Data: {baseball_json}
+Gainers: {gainers_json}
+Losers: {losers_json}
+Volatile: {volatile_json}
+Anomalies: {anomalies_json}
 
-BASEBALL: {baseball_json}
-
-GAINERS: {gainers_json}
-
-LOSERS: {losers_json}
-
-VOLATILE: {volatile_json}
-
-ANOMALIES: {anomalies_json}
-
-CHEAPEST: {cheapest_json}
-
-Return ONLY valid JSON matching the schema above."""
+Return ONLY valid JSON, no markdown."""
 
 
 narrative = None
