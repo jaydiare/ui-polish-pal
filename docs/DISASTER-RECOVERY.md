@@ -475,6 +475,7 @@ https://www.ebay.ca/str/localherossportscards?mkcid=1&mkrid=706-53473-19255-0&..
 | `snapshot-history.yml` | `snapshot-athlete-history.js` | Daily | Per-athlete history snapshots |
 | `market-data-snapshot.yml` | `snapshot-market-data.js` | Weekly Sunday | Unified data backup |
 | `backup-render.yml` | `backup-to-render.js` | Weekly Sunday 1:30 PM UTC | Full data/ backup to Render PostgreSQL |
+| `bi-weekly-analysis.yml` | `bi-weekly-analysis.py` | 1st & 15th (2 PM UTC) | AI market analysis (Baseball, Gemini) |
 | `card-tracker.yml` | `card-tracker-update.js` | Varies | Card tracker blog data |
 | `update.yml` | Various | Varies | Sync public/ copies |
 
