@@ -1,13 +1,13 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-19T02:00:33.761256+00:00",
-    "athleteCount": 121,
+    "updatedAt": "2026-03-19T02:15:13.324026+00:00",
+    "athleteCount": 135,
     "graders": [
       "beckett"
     ],
     "batchInfo": {
-      "startIdx": 180,
-      "endIdx": 200,
+      "startIdx": 200,
+      "endIdx": 220,
       "totalAthletes": 568
     }
   },
@@ -2188,6 +2188,258 @@
         "gems": 1,
         "grades": 1,
         "gemRate": 100.0
+      }
+    },
+    "Harold Castro": {
+      "name": "Harold Castro",
+      "sport": "Baseball",
+      "graders": {
+        "beckett": {
+          "cards": 12,
+          "gems": 26,
+          "grades": 35,
+          "gemRate": 74.0
+        }
+      },
+      "totals": {
+        "cards": 12,
+        "gems": 26,
+        "grades": 35,
+        "gemRate": 74.0
+      }
+    },
+    "Harvey Garcia": {
+      "name": "Harvey Garcia",
+      "sport": "Baseball",
+      "graders": {
+        "beckett": {
+          "cards": 3,
+          "gems": 2,
+          "grades": 7,
+          "gemRate": 29.0
+        }
+      },
+      "totals": {
+        "cards": 3,
+        "gems": 2,
+        "grades": 7,
+        "gemRate": 29.0
+      }
+    },
+    "Hector Gimenez": {
+      "name": "Hector Gimenez",
+      "sport": "Baseball",
+      "graders": {
+        "beckett": {
+          "cards": 21,
+          "gems": 17,
+          "grades": 46,
+          "gemRate": 37.0
+        }
+      },
+      "totals": {
+        "cards": 21,
+        "gems": 17,
+        "grades": 46,
+        "gemRate": 37.0
+      }
+    },
+    "Hector Rondon": {
+      "name": "Hector Rondon",
+      "sport": "Baseball",
+      "graders": {
+        "beckett": {
+          "cards": 15,
+          "gems": 13,
+          "grades": 28,
+          "gemRate": 46.0
+        }
+      },
+      "totals": {
+        "cards": 15,
+        "gems": 13,
+        "grades": 28,
+        "gemRate": 46.0
+      }
+    },
+    "Hector Sanchez": {
+      "name": "Hector Sanchez",
+      "sport": "Baseball",
+      "graders": {
+        "beckett": {
+          "cards": 4,
+          "gems": 2,
+          "grades": 5,
+          "gemRate": 40.0
+        }
+      },
+      "totals": {
+        "cards": 4,
+        "gems": 2,
+        "grades": 5,
+        "gemRate": 40.0
+      }
+    },
+    "Henry Blanco": {
+      "name": "Henry Blanco",
+      "sport": "Baseball",
+      "graders": {
+        "beckett": {
+          "cards": 1,
+          "gems": 0,
+          "grades": 1,
+          "gemRate": 0.0
+        }
+      },
+      "totals": {
+        "cards": 1,
+        "gems": 0,
+        "grades": 1,
+        "gemRate": 0.0
+      }
+    },
+    "Henry Rodriguez": {
+      "name": "Henry Rodriguez",
+      "sport": "Baseball",
+      "graders": {
+        "beckett": {
+          "cards": 45,
+          "gems": 70,
+          "grades": 120,
+          "gemRate": 58.0
+        }
+      },
+      "totals": {
+        "cards": 45,
+        "gems": 70,
+        "grades": 120,
+        "gemRate": 58.0
+      }
+    },
+    "Hernan Iribarren": {
+      "name": "Hernan Iribarren",
+      "sport": "Baseball",
+      "graders": {
+        "beckett": {
+          "cards": 21,
+          "gems": 42,
+          "grades": 67,
+          "gemRate": 63.0
+        }
+      },
+      "totals": {
+        "cards": 21,
+        "gems": 42,
+        "grades": 67,
+        "gemRate": 63.0
+      }
+    },
+    "Hernan Perez": {
+      "name": "Hernan Perez",
+      "sport": "Baseball",
+      "graders": {
+        "beckett": {
+          "cards": 8,
+          "gems": 5,
+          "grades": 10,
+          "gemRate": 50.0
+        }
+      },
+      "totals": {
+        "cards": 8,
+        "gems": 5,
+        "grades": 10,
+        "gemRate": 50.0
+      }
+    },
+    "Horacio Estrada": {
+      "name": "Horacio Estrada",
+      "sport": "Baseball",
+      "graders": {
+        "beckett": {
+          "cards": 1,
+          "gems": 0,
+          "grades": 1,
+          "gemRate": 0.0
+        }
+      },
+      "totals": {
+        "cards": 1,
+        "gems": 0,
+        "grades": 1,
+        "gemRate": 0.0
+      }
+    },
+    "Humberto Quintero": {
+      "name": "Humberto Quintero",
+      "sport": "Baseball",
+      "graders": {
+        "beckett": {
+          "cards": 3,
+          "gems": 1,
+          "grades": 3,
+          "gemRate": 33.0
+        }
+      },
+      "totals": {
+        "cards": 3,
+        "gems": 1,
+        "grades": 3,
+        "gemRate": 33.0
+      }
+    },
+    "Israel Pineda": {
+      "name": "Israel Pineda",
+      "sport": "Baseball",
+      "graders": {
+        "beckett": {
+          "cards": 15,
+          "gems": 36,
+          "grades": 45,
+          "gemRate": 80.0
+        }
+      },
+      "totals": {
+        "cards": 15,
+        "gems": 36,
+        "grades": 45,
+        "gemRate": 80.0
+      }
+    },
+    "Ivan Ochoa": {
+      "name": "Ivan Ochoa",
+      "sport": "Baseball",
+      "graders": {
+        "beckett": {
+          "cards": 3,
+          "gems": 1,
+          "grades": 4,
+          "gemRate": 25.0
+        }
+      },
+      "totals": {
+        "cards": 3,
+        "gems": 1,
+        "grades": 4,
+        "gemRate": 25.0
+      }
+    },
+    "Jackson Chourio": {
+      "name": "Jackson Chourio",
+      "sport": "Baseball",
+      "graders": {
+        "beckett": {
+          "cards": 630,
+          "gems": 929,
+          "grades": 1702,
+          "gemRate": 55.0
+        }
+      },
+      "totals": {
+        "cards": 630,
+        "gems": 929,
+        "grades": 1702,
+        "gemRate": 55.0
       }
     }
   }
