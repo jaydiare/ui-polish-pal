@@ -240,19 +240,19 @@ def call_gemini(prompt, api_key, max_retries=4):
 
 
 def build_prompt(stats):
-    return f"""You are a sports card market analyst for Venezuelan athletes.
-Analyze this bi-weekly market data and produce a JSON report with these fields:
+    return f"""You are a sports card market analyst specializing in Venezuelan baseball players.
+Analyze this bi-weekly BASEBALL-ONLY market data and produce a JSON report with these fields:
 
 - "headline": A punchy one-line market headline (max 15 words)
-- "summary": 2-3 paragraph market overview (plain text, ~150 words)
+- "summary": 2-3 paragraph market overview focused on baseball cards (plain text, ~200 words)
 - "keyInsights": Array of 3-5 bullet-point insights (strings)
-- "sportOutlook": Object with sport names as keys, each a 1-2 sentence outlook
-- "watchList": Array of 3-5 athlete names worth watching and why (objects with "name" and "reason")
+- "baseballOutlook": A 2-3 sentence outlook for the Venezuelan baseball card market
+- "watchList": Array of 3-5 baseball player names worth watching and why (objects with "name" and "reason")
 - "riskAlerts": Array of any concerning trends (strings), empty if none
 
 Market data for {stats['period']['start']} to {stats['period']['end']}:
 
-SPORT SUMMARY:
+BASEBALL SUMMARY:
 {json.dumps(stats['sportSummary'], indent=2)}
 
 INDEX TREND (recent):
