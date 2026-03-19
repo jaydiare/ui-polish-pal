@@ -145,6 +145,7 @@ border-bottom: 1px solid hsl(var(--vzla-purple) / 0.25);
 | `data/scp-raw.json` | SportsCardsPro raw prices | Monthly |
 | `data/scp-history.json` | SCP historical price tracker | Monthly |
 | `data/vzla-athlete-market-data.json` | Weekly unified snapshot | Weekly (Sunday) |
+| `data/analysis/YYYYMMDD_vzlasports.json` | AI-generated bi-weekly market reports (Baseball) | Bi-weekly (1st & 15th) |
 | `data/epn-performance.json` | eBay Partner Network click data | Manual |
 
 ### 4.2 Data Freshness Strategy
@@ -475,6 +476,7 @@ https://www.ebay.ca/str/localherossportscards?mkcid=1&mkrid=706-53473-19255-0&..
 | `snapshot-history.yml` | `snapshot-athlete-history.js` | Daily | Per-athlete history snapshots |
 | `market-data-snapshot.yml` | `snapshot-market-data.js` | Weekly Sunday | Unified data backup |
 | `backup-render.yml` | `backup-to-render.js` | Weekly Sunday 1:30 PM UTC | Full data/ backup to Render PostgreSQL |
+| `bi-weekly-analysis.yml` | `bi-weekly-analysis.py` | 1st & 15th (2 PM UTC) | AI market analysis (Baseball, Gemini) |
 | `card-tracker.yml` | `card-tracker-update.js` | Varies | Card tracker blog data |
 | `update.yml` | Various | Varies | Sync public/ copies |
 
@@ -630,7 +632,7 @@ docs/                          # Documentation
 ### Phase 6: Data Pipelines
 - [ ] Restore all scripts in `scripts/`
 - [ ] Restore all GitHub Actions workflows
-- [ ] Set up GitHub Secrets (EBAY_CLIENT_ID, EBAY_CLIENT_SECRET, RENDER_DATABASE_URL)
+- [ ] Set up GitHub Secrets (EBAY_CLIENT_ID, EBAY_CLIENT_SECRET, RENDER_DATABASE_URL, GEMINI_API_KEY)
 - [ ] Restore data files from Render PostgreSQL backup (`snapshots` table) or re-run pipelines
 
 ### Phase 7: OAuth Server
