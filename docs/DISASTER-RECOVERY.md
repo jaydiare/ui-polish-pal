@@ -632,7 +632,7 @@ docs/                          # Documentation
 ### Phase 6: Data Pipelines
 - [ ] Restore all scripts in `scripts/`
 - [ ] Restore all GitHub Actions workflows
-- [ ] Set up GitHub Secrets (EBAY_CLIENT_ID, EBAY_CLIENT_SECRET, RENDER_DATABASE_URL)
+- [ ] Set up GitHub Secrets (EBAY_CLIENT_ID, EBAY_CLIENT_SECRET, RENDER_DATABASE_URL, GEMINI_API_KEY)
 - [ ] Restore data files from Render PostgreSQL backup (`snapshots` table) or re-run pipelines
 
 ### Phase 7: OAuth Server

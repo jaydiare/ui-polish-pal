@@ -84,6 +84,7 @@ This ensures the UI always displays graded prices when any graded data source is
 | `scp-prices.yml` | `fetch-scp-prices.js` | Monthly (1st) | All athletes | SportsCardsPro current prices |
 | `market-data-snapshot.yml` | `snapshot-market-data.js` | Weekly (Sun 12 UTC) | All athletes | Unified market data snapshot |
 | `backup-render.yml` | `backup-to-render.js` | Weekly (Sun 1:30 PM UTC) | All data/ files | Full database backup to Render PostgreSQL |
+| `bi-weekly-analysis.yml` | `bi-weekly-analysis.py` | 1st & 15th (2 PM UTC) | Baseball athletes | AI-powered market narrative via Google Gemini |
 
 ### Concurrency & Safety
 
