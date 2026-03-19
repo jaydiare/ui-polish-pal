@@ -1,13 +1,13 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-19T04:26:19.756324+00:00",
-    "athleteCount": 337,
+    "updatedAt": "2026-03-19T07:03:03.861557+00:00",
+    "athleteCount": 350,
     "graders": [
       "beckett"
     ],
     "batchInfo": {
-      "startIdx": 460,
-      "endIdx": 480,
+      "startIdx": 480,
+      "endIdx": 500,
       "totalAthletes": 568
     }
   },
@@ -6076,6 +6076,240 @@
         "gems": 15,
         "grades": 27,
         "gemRate": 56.0
+      }
+    },
+    "Yohan Pino": {
+      "name": "Yohan Pino",
+      "sport": "Baseball",
+      "graders": {
+        "beckett": {
+          "cards": 5,
+          "gems": 4,
+          "grades": 5,
+          "gemRate": 80.0
+        }
+      },
+      "totals": {
+        "cards": 5,
+        "gems": 4,
+        "grades": 5,
+        "gemRate": 80.0
+      }
+    },
+    "Yohander Mendez": {
+      "name": "Yohander Mendez",
+      "sport": "Baseball",
+      "graders": {
+        "beckett": {
+          "cards": 22,
+          "gems": 255,
+          "grades": 292,
+          "gemRate": 87.0
+        }
+      },
+      "totals": {
+        "cards": 22,
+        "gems": 255,
+        "grades": 292,
+        "gemRate": 87.0
+      }
+    },
+    "Yohel Pozo": {
+      "name": "Yohel Pozo",
+      "sport": "Baseball",
+      "graders": {
+        "beckett": {
+          "cards": 8,
+          "gems": 101,
+          "grades": 107,
+          "gemRate": 94.0
+        }
+      },
+      "totals": {
+        "cards": 8,
+        "gems": 101,
+        "grades": 107,
+        "gemRate": 94.0
+      }
+    },
+    "Yonathan Daza": {
+      "name": "Yonathan Daza",
+      "sport": "Baseball",
+      "graders": {
+        "beckett": {
+          "cards": 4,
+          "gems": 5,
+          "grades": 5,
+          "gemRate": 100.0
+        }
+      },
+      "totals": {
+        "cards": 4,
+        "gems": 5,
+        "grades": 5,
+        "gemRate": 100.0
+      }
+    },
+    "Yonny Chirinos": {
+      "name": "Yonny Chirinos",
+      "sport": "Baseball",
+      "graders": {
+        "beckett": {
+          "cards": 1,
+          "gems": 0,
+          "grades": 1,
+          "gemRate": 0.0
+        }
+      },
+      "totals": {
+        "cards": 1,
+        "gems": 0,
+        "grades": 1,
+        "gemRate": 0.0
+      }
+    },
+    "Yonny Hernandez": {
+      "name": "Yonny Hernandez",
+      "sport": "Baseball",
+      "graders": {
+        "beckett": {
+          "cards": 11,
+          "gems": 6,
+          "grades": 11,
+          "gemRate": 55.0
+        }
+      },
+      "totals": {
+        "cards": 11,
+        "gems": 6,
+        "grades": 11,
+        "gemRate": 55.0
+      }
+    },
+    "Yorman Bazardo": {
+      "name": "Yorman Bazardo",
+      "sport": "Baseball",
+      "graders": {
+        "beckett": {
+          "cards": 5,
+          "gems": 2,
+          "grades": 6,
+          "gemRate": 33.0
+        }
+      },
+      "totals": {
+        "cards": 5,
+        "gems": 2,
+        "grades": 6,
+        "gemRate": 33.0
+      }
+    },
+    "Yorman Rodriguez": {
+      "name": "Yorman Rodriguez",
+      "sport": "Baseball",
+      "graders": {
+        "beckett": {
+          "cards": 21,
+          "gems": 41,
+          "grades": 53,
+          "gemRate": 77.0
+        }
+      },
+      "totals": {
+        "cards": 21,
+        "gems": 41,
+        "grades": 53,
+        "gemRate": 77.0
+      }
+    },
+    "Yorvit Torrealba": {
+      "name": "Yorvit Torrealba",
+      "sport": "Baseball",
+      "graders": {
+        "beckett": {
+          "cards": 4,
+          "gems": 8,
+          "grades": 11,
+          "gemRate": 73.0
+        }
+      },
+      "totals": {
+        "cards": 4,
+        "gems": 8,
+        "grades": 11,
+        "gemRate": 73.0
+      }
+    },
+    "Yusmeiro Petit": {
+      "name": "Yusmeiro Petit",
+      "sport": "Baseball",
+      "graders": {
+        "beckett": {
+          "cards": 20,
+          "gems": 107,
+          "grades": 172,
+          "gemRate": 62.0
+        }
+      },
+      "totals": {
+        "cards": 20,
+        "gems": 107,
+        "grades": 172,
+        "gemRate": 62.0
+      }
+    },
+    "Carl Herrera": {
+      "name": "Carl Herrera",
+      "sport": "Basketball",
+      "graders": {
+        "beckett": {
+          "cards": 2,
+          "gems": 1,
+          "grades": 3,
+          "gemRate": 33.0
+        }
+      },
+      "totals": {
+        "cards": 2,
+        "gems": 1,
+        "grades": 3,
+        "gemRate": 33.0
+      }
+    },
+    "Greivis Vasquez": {
+      "name": "Greivis Vasquez",
+      "sport": "Basketball",
+      "graders": {
+        "beckett": {
+          "cards": 19,
+          "gems": 25,
+          "grades": 53,
+          "gemRate": 47.0
+        }
+      },
+      "totals": {
+        "cards": 19,
+        "gems": 25,
+        "grades": 53,
+        "gemRate": 47.0
+      }
+    },
+    "Oscar Torres": {
+      "name": "Oscar Torres",
+      "sport": "Basketball",
+      "graders": {
+        "beckett": {
+          "cards": 1,
+          "gems": 1,
+          "grades": 1,
+          "gemRate": 100.0
+        }
+      },
+      "totals": {
+        "cards": 1,
+        "gems": 1,
+        "grades": 1,
+        "gemRate": 100.0
       }
     }
   }
