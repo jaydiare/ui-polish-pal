@@ -1,13 +1,13 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-19T16:20:49.139947+00:00",
-    "athleteCount": 354,
+    "updatedAt": "2026-03-19T19:01:07.117298+00:00",
+    "athleteCount": 357,
     "graders": [
       "beckett"
     ],
     "batchInfo": {
-      "startIdx": 540,
-      "endIdx": 560,
+      "startIdx": 560,
+      "endIdx": 568,
       "totalAthletes": 568
     }
   },
@@ -6381,6 +6381,60 @@
         "cards": 1,
         "gems": 1,
         "grades": 1,
+        "gemRate": 100.0
+      }
+    },
+    "Alejandro Marques": {
+      "name": "Alejandro Marques",
+      "sport": "Soccer",
+      "graders": {
+        "beckett": {
+          "cards": 1,
+          "gems": 0,
+          "grades": 1,
+          "gemRate": 0.0
+        }
+      },
+      "totals": {
+        "cards": 1,
+        "gems": 0,
+        "grades": 1,
+        "gemRate": 0.0
+      }
+    },
+    "Yeferson Soteldo": {
+      "name": "Yeferson Soteldo",
+      "sport": "Soccer",
+      "graders": {
+        "beckett": {
+          "cards": 1,
+          "gems": 0,
+          "grades": 1,
+          "gemRate": 0.0
+        }
+      },
+      "totals": {
+        "cards": 1,
+        "gems": 0,
+        "grades": 1,
+        "gemRate": 0.0
+      }
+    },
+    "Garbine Muguruza": {
+      "name": "Garbine Muguruza",
+      "sport": "Tennis",
+      "graders": {
+        "beckett": {
+          "cards": 2,
+          "gems": 2,
+          "grades": 2,
+          "gemRate": 100.0
+        }
+      },
+      "totals": {
+        "cards": 2,
+        "gems": 2,
+        "grades": 2,
         "gemRate": 100.0
       }
     }
