@@ -52,7 +52,7 @@ print(f"   Athletes in history: {len(history)}")
 # ---------------------------------------------------------------------------
 
 def safe_pct(old, new):
-    if not old or old == 0:
+    if old is None or new is None or old == 0:
         return None
     return round((new - old) / old * 100, 2)
 
