@@ -1,13 +1,13 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-19T02:59:31.755918+00:00",
-    "athleteCount": 197,
+    "updatedAt": "2026-03-19T03:06:25.820105+00:00",
+    "athleteCount": 213,
     "graders": [
       "beckett"
     ],
     "batchInfo": {
-      "startIdx": 280,
-      "endIdx": 300,
+      "startIdx": 300,
+      "endIdx": 320,
       "totalAthletes": 568
     }
   },
@@ -3556,6 +3556,294 @@
         "gems": 0,
         "grades": 1,
         "gemRate": 0.0
+      }
+    },
+    "Livan Soto": {
+      "name": "Livan Soto",
+      "sport": "Baseball",
+      "graders": {
+        "beckett": {
+          "cards": 14,
+          "gems": 27,
+          "grades": 38,
+          "gemRate": 71.0
+        }
+      },
+      "totals": {
+        "cards": 14,
+        "gems": 27,
+        "grades": 38,
+        "gemRate": 71.0
+      }
+    },
+    "Luinder Avila": {
+      "name": "Luinder Avila",
+      "sport": "Baseball",
+      "graders": {
+        "beckett": {
+          "cards": 2,
+          "gems": 1,
+          "grades": 2,
+          "gemRate": 50.0
+        }
+      },
+      "totals": {
+        "cards": 2,
+        "gems": 1,
+        "grades": 2,
+        "gemRate": 50.0
+      }
+    },
+    "Luis Alexander Basabe": {
+      "name": "Luis Alexander Basabe",
+      "sport": "Baseball",
+      "graders": {
+        "beckett": {
+          "cards": 23,
+          "gems": 289,
+          "grades": 334,
+          "gemRate": 87.0
+        }
+      },
+      "totals": {
+        "cards": 23,
+        "gems": 289,
+        "grades": 334,
+        "gemRate": 87.0
+      }
+    },
+    "Luis Aparicio": {
+      "name": "Luis Aparicio",
+      "sport": "Baseball",
+      "graders": {
+        "beckett": {
+          "cards": 236,
+          "gems": 100,
+          "grades": 1727,
+          "gemRate": 6.0
+        }
+      },
+      "totals": {
+        "cards": 236,
+        "gems": 100,
+        "grades": 1727,
+        "gemRate": 6.0
+      }
+    },
+    "Luis Aponte": {
+      "name": "Luis Aponte",
+      "sport": "Baseball",
+      "graders": {
+        "beckett": {
+          "cards": 1,
+          "gems": 1,
+          "grades": 1,
+          "gemRate": 100.0
+        }
+      },
+      "totals": {
+        "cards": 1,
+        "gems": 1,
+        "grades": 1,
+        "gemRate": 100.0
+      }
+    },
+    "Luis Arraez": {
+      "name": "Luis Arraez",
+      "sport": "Baseball",
+      "graders": {
+        "beckett": {
+          "cards": 119,
+          "gems": 580,
+          "grades": 751,
+          "gemRate": 77.0
+        }
+      },
+      "totals": {
+        "cards": 119,
+        "gems": 580,
+        "grades": 751,
+        "gemRate": 77.0
+      }
+    },
+    "Luis Contreras": {
+      "name": "Luis Contreras",
+      "sport": "Baseball",
+      "graders": {
+        "beckett": {
+          "cards": 2,
+          "gems": 1,
+          "grades": 2,
+          "gemRate": 50.0
+        }
+      },
+      "totals": {
+        "cards": 2,
+        "gems": 1,
+        "grades": 2,
+        "gemRate": 50.0
+      }
+    },
+    "Luis Garcia": {
+      "name": "Luis Garcia",
+      "sport": "Baseball",
+      "graders": {
+        "beckett": {
+          "cards": 203,
+          "gems": 722,
+          "grades": 1078,
+          "gemRate": 67.0
+        }
+      },
+      "totals": {
+        "cards": 203,
+        "gems": 722,
+        "grades": 1078,
+        "gemRate": 67.0
+      }
+    },
+    "Luis Guillorme": {
+      "name": "Luis Guillorme",
+      "sport": "Baseball",
+      "graders": {
+        "beckett": {
+          "cards": 15,
+          "gems": 16,
+          "grades": 26,
+          "gemRate": 62.0
+        }
+      },
+      "totals": {
+        "cards": 15,
+        "gems": 16,
+        "grades": 26,
+        "gemRate": 62.0
+      }
+    },
+    "Luis Hernandez": {
+      "name": "Luis Hernandez",
+      "sport": "Baseball",
+      "graders": {
+        "beckett": {
+          "cards": 14,
+          "gems": 13,
+          "grades": 18,
+          "gemRate": 72.0
+        }
+      },
+      "totals": {
+        "cards": 14,
+        "gems": 13,
+        "grades": 18,
+        "gemRate": 72.0
+      }
+    },
+    "Luis Jimenez": {
+      "name": "Luis Jimenez",
+      "sport": "Baseball",
+      "graders": {
+        "beckett": {
+          "cards": 5,
+          "gems": 12,
+          "grades": 13,
+          "gemRate": 92.0
+        }
+      },
+      "totals": {
+        "cards": 5,
+        "gems": 12,
+        "grades": 13,
+        "gemRate": 92.0
+      }
+    },
+    "Luis Leal": {
+      "name": "Luis Leal",
+      "sport": "Baseball",
+      "graders": {
+        "beckett": {
+          "cards": 2,
+          "gems": 0,
+          "grades": 4,
+          "gemRate": 0.0
+        }
+      },
+      "totals": {
+        "cards": 2,
+        "gems": 0,
+        "grades": 4,
+        "gemRate": 0.0
+      }
+    },
+    "Luis Matos": {
+      "name": "Luis Matos",
+      "sport": "Baseball",
+      "graders": {
+        "beckett": {
+          "cards": 80,
+          "gems": 211,
+          "grades": 376,
+          "gemRate": 56.0
+        }
+      },
+      "totals": {
+        "cards": 80,
+        "gems": 211,
+        "grades": 376,
+        "gemRate": 56.0
+      }
+    },
+    "Luis Maza": {
+      "name": "Luis Maza",
+      "sport": "Baseball",
+      "graders": {
+        "beckett": {
+          "cards": 1,
+          "gems": 0,
+          "grades": 1,
+          "gemRate": 0.0
+        }
+      },
+      "totals": {
+        "cards": 1,
+        "gems": 0,
+        "grades": 1,
+        "gemRate": 0.0
+      }
+    },
+    "Luis Ordaz": {
+      "name": "Luis Ordaz",
+      "sport": "Baseball",
+      "graders": {
+        "beckett": {
+          "cards": 1,
+          "gems": 2,
+          "grades": 3,
+          "gemRate": 67.0
+        }
+      },
+      "totals": {
+        "cards": 1,
+        "gems": 2,
+        "grades": 3,
+        "gemRate": 67.0
+      }
+    },
+    "Luis Perales": {
+      "name": "Luis Perales",
+      "sport": "Baseball",
+      "graders": {
+        "beckett": {
+          "cards": 4,
+          "gems": 1,
+          "grades": 4,
+          "gemRate": 25.0
+        }
+      },
+      "totals": {
+        "cards": 4,
+        "gems": 1,
+        "grades": 4,
+        "gemRate": 25.0
       }
     }
   }
