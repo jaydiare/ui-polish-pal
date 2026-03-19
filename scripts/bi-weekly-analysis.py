@@ -252,34 +252,25 @@ def build_prompt(stats):
 Analyze this bi-weekly BASEBALL-ONLY market data and produce a JSON report with these fields:
 
 - "headline": A punchy one-line market headline (max 15 words)
-- "summary": 2-3 paragraph market overview focused on baseball cards (plain text, ~200 words)
-- "keyInsights": Array of 3-5 bullet-point insights (strings)
+- "summary": 2-3 paragraph market overview focused on baseball cards (plain text, ~150 words)
+- "keyInsights": Array of 3-4 bullet-point insights (strings)
 - "baseballOutlook": A 2-3 sentence outlook for the Venezuelan baseball card market
-- "watchList": Array of 3-5 baseball player names worth watching and why (objects with "name" and "reason")
+- "watchList": Array of 3 baseball player names worth watching and why (objects with "name" and "reason")
 - "riskAlerts": Array of any concerning trends (strings), empty if none
 
-Market data for {stats['period']['start']} to {stats['period']['end']}:
+Data for {stats['period']['start']} to {stats['period']['end']}:
 
-BASEBALL SUMMARY:
-{json.dumps(stats['sportSummary'], indent=2)}
+BASEBALL: {json.dumps(stats['sportSummary'], separators=(',',':'))}
 
-INDEX TREND (recent):
-{json.dumps(stats['indexTrend'], indent=2)}
+GAINERS: {json.dumps([{{'name':g['name'],'chg':g['listedPriceChange'],'price':g['listedPrice']}} for g in stats['topMovers']['gainers'][:3]], separators=(',',':'))}
 
-TOP GAINERS:
-{json.dumps(stats['topMovers']['gainers'][:5], indent=2)}
+LOSERS: {json.dumps([{{'name':l['name'],'chg':l['listedPriceChange'],'price':l['listedPrice']}} for l in stats['topMovers']['losers'][:3]], separators=(',',':'))}
 
-TOP LOSERS:
-{json.dumps(stats['topMovers']['losers'][:5], indent=2)}
+VOLATILE: {json.dumps([{{'name':v['name'],'cv':v['cv'],'price':v['listedPrice']}} for v in stats['mostVolatile'][:3]], separators=(',',':'))}
 
-MOST VOLATILE:
-{json.dumps(stats['mostVolatile'][:5], indent=2)}
+ANOMALIES: {json.dumps([{{'name':a['name'],'reason':a['reason']}} for a in stats['anomalies'][:5]], separators=(',',':'))}
 
-ANOMALIES:
-{json.dumps(stats['anomalies'][:10], indent=2)}
-
-CHEAPEST LISTED (value opportunities):
-{json.dumps(stats['cheapestListed'][:5], indent=2)}
+CHEAPEST: {json.dumps([{{'name':c['name'],'price':c['listedPrice']}} for c in stats['cheapestListed'][:3]], separators=(',',':'))}
 
 Return ONLY valid JSON matching the schema above."""
 
