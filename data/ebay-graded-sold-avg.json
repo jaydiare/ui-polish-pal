@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-19T21:00:58.377Z",
+    "updatedAt": "2026-03-19T22:52:22.817Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA/BGS/SGC grader title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 170,
-      "endIdx": 180,
+      "startIdx": 180,
+      "endIdx": 190,
       "totalAthletes": 452
     },
     "maxPages": 4,
@@ -2545,7 +2545,7 @@
   },
   "Humberto Quintero": {
     "keyword": "Humberto Quintero Baseball PSA",
-    "nScraped": 0,
+    "nScraped": 60,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -2618,11 +2618,11 @@
   "Jackson Chourio": {
     "keyword": "Jackson Chourio Baseball PSA",
     "nScraped": 240,
-    "nSoldUsed": 100,
-    "avg": 60.198899999999995,
-    "taguchiSold": 60.198899999999995,
-    "medianSold": 53.995000000000005,
-    "marketStabilityCV": 0.23603583438225206,
+    "nSoldUsed": 113,
+    "avg": 63.23973451327432,
+    "taguchiSold": 63.23973451327432,
+    "medianSold": 60.95,
+    "marketStabilityCV": 0.25927793117614073,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
@@ -2641,7 +2641,7 @@
   },
   "Jairo Iriarte": {
     "keyword": "Jairo Iriarte Baseball PSA",
-    "nScraped": 255,
+    "nScraped": 252,
     "nSoldUsed": 8,
     "avg": 19.495,
     "taguchiSold": 19.495,
@@ -2653,15 +2653,15 @@
   },
   "Javier Sanoja": {
     "keyword": "Javier Sanoja Baseball PSA",
-    "nScraped": 134,
-    "nSoldUsed": 6,
-    "avg": 76,
-    "taguchiSold": 76,
-    "medianSold": 76,
-    "marketStabilityCV": 0,
+    "nScraped": 0,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
   },
   "Jean Machi": {
     "keyword": "Jean Machi Baseball PSA",
