@@ -1363,6 +1363,12 @@ const GemrateChart = () => {
         {graderFilter === "psa" && "Top 10 athletes by PSA graded card count."}
         {graderFilter === "beckett" && "Top 10 athletes by Beckett graded card count."}
         {updatedAt && <span className="ml-1 opacity-70">Updated {updatedAt}.</span>}
+        <span className="ml-1 opacity-60">
+          Data via{" "}
+          <a href="https://www.gemrate.com" target="_blank" rel="noopener noreferrer" className="underline hover:opacity-80">
+            gemrate.com
+          </a>
+        </span>
       </p>
       <div className="glass-panel p-4 md:p-6">
         {isEmpty ? (
