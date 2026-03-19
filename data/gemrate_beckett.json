@@ -1,13 +1,13 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-19T03:49:14.687186+00:00",
-    "athleteCount": 321,
+    "updatedAt": "2026-03-19T04:26:19.756324+00:00",
+    "athleteCount": 337,
     "graders": [
       "beckett"
     ],
     "batchInfo": {
-      "startIdx": 440,
-      "endIdx": 460,
+      "startIdx": 460,
+      "endIdx": 480,
       "totalAthletes": 568
     }
   },
@@ -5788,6 +5788,294 @@
         "gems": 4,
         "grades": 6,
         "gemRate": 67.0
+      }
+    },
+    "William Bergolla": {
+      "name": "William Bergolla",
+      "sport": "Baseball",
+      "graders": {
+        "beckett": {
+          "cards": 35,
+          "gems": 58,
+          "grades": 70,
+          "gemRate": 83.0
+        }
+      },
+      "totals": {
+        "cards": 35,
+        "gems": 58,
+        "grades": 70,
+        "gemRate": 83.0
+      }
+    },
+    "William Contreras": {
+      "name": "William Contreras",
+      "sport": "Baseball",
+      "graders": {
+        "beckett": {
+          "cards": 89,
+          "gems": 282,
+          "grades": 452,
+          "gemRate": 62.0
+        }
+      },
+      "totals": {
+        "cards": 89,
+        "gems": 282,
+        "grades": 452,
+        "gemRate": 62.0
+      }
+    },
+    "William Cuevas": {
+      "name": "William Cuevas",
+      "sport": "Baseball",
+      "graders": {
+        "beckett": {
+          "cards": 4,
+          "gems": 3,
+          "grades": 4,
+          "gemRate": 75.0
+        }
+      },
+      "totals": {
+        "cards": 4,
+        "gems": 3,
+        "grades": 4,
+        "gemRate": 75.0
+      }
+    },
+    "Williams Perez": {
+      "name": "Williams Perez",
+      "sport": "Baseball",
+      "graders": {
+        "beckett": {
+          "cards": 4,
+          "gems": 4,
+          "grades": 4,
+          "gemRate": 100.0
+        }
+      },
+      "totals": {
+        "cards": 4,
+        "gems": 4,
+        "grades": 4,
+        "gemRate": 100.0
+      }
+    },
+    "Willians Astudillo": {
+      "name": "Willians Astudillo",
+      "sport": "Baseball",
+      "graders": {
+        "beckett": {
+          "cards": 29,
+          "gems": 24,
+          "grades": 34,
+          "gemRate": 71.0
+        }
+      },
+      "totals": {
+        "cards": 29,
+        "gems": 24,
+        "grades": 34,
+        "gemRate": 71.0
+      }
+    },
+    "Willie Martinez": {
+      "name": "Willie Martinez",
+      "sport": "Baseball",
+      "graders": {
+        "beckett": {
+          "cards": 3,
+          "gems": 0,
+          "grades": 3,
+          "gemRate": 0.0
+        }
+      },
+      "totals": {
+        "cards": 3,
+        "gems": 0,
+        "grades": 3,
+        "gemRate": 0.0
+      }
+    },
+    "Willson Contreras": {
+      "name": "Willson Contreras",
+      "sport": "Baseball",
+      "graders": {
+        "beckett": {
+          "cards": 350,
+          "gems": 1327,
+          "grades": 1966,
+          "gemRate": 67.0
+        }
+      },
+      "totals": {
+        "cards": 350,
+        "gems": 1327,
+        "grades": 1966,
+        "gemRate": 67.0
+      }
+    },
+    "Wilmer Flores": {
+      "name": "Wilmer Flores",
+      "sport": "Baseball",
+      "graders": {
+        "beckett": {
+          "cards": 81,
+          "gems": 282,
+          "grades": 464,
+          "gemRate": 61.0
+        }
+      },
+      "totals": {
+        "cards": 81,
+        "gems": 282,
+        "grades": 464,
+        "gemRate": 61.0
+      }
+    },
+    "Wilmer Font": {
+      "name": "Wilmer Font",
+      "sport": "Baseball",
+      "graders": {
+        "beckett": {
+          "cards": 11,
+          "gems": 23,
+          "grades": 32,
+          "gemRate": 72.0
+        }
+      },
+      "totals": {
+        "cards": 11,
+        "gems": 23,
+        "grades": 32,
+        "gemRate": 72.0
+      }
+    },
+    "Wilson Alvarez": {
+      "name": "Wilson Alvarez",
+      "sport": "Baseball",
+      "graders": {
+        "beckett": {
+          "cards": 11,
+          "gems": 6,
+          "grades": 16,
+          "gemRate": 38.0
+        }
+      },
+      "totals": {
+        "cards": 11,
+        "gems": 6,
+        "grades": 16,
+        "gemRate": 38.0
+      }
+    },
+    "Wilson Ramos": {
+      "name": "Wilson Ramos",
+      "sport": "Baseball",
+      "graders": {
+        "beckett": {
+          "cards": 33,
+          "gems": 40,
+          "grades": 75,
+          "gemRate": 53.0
+        }
+      },
+      "totals": {
+        "cards": 33,
+        "gems": 40,
+        "grades": 75,
+        "gemRate": 53.0
+      }
+    },
+    "Wilyer Abreu": {
+      "name": "Wilyer Abreu",
+      "sport": "Baseball",
+      "graders": {
+        "beckett": {
+          "cards": 31,
+          "gems": 20,
+          "grades": 39,
+          "gemRate": 51.0
+        }
+      },
+      "totals": {
+        "cards": 31,
+        "gems": 20,
+        "grades": 39,
+        "gemRate": 51.0
+      }
+    },
+    "Yangervis Solarte": {
+      "name": "Yangervis Solarte",
+      "sport": "Baseball",
+      "graders": {
+        "beckett": {
+          "cards": 47,
+          "gems": 76,
+          "grades": 94,
+          "gemRate": 81.0
+        }
+      },
+      "totals": {
+        "cards": 47,
+        "gems": 76,
+        "grades": 94,
+        "gemRate": 81.0
+      }
+    },
+    "Yilber Diaz": {
+      "name": "Yilber Diaz",
+      "sport": "Baseball",
+      "graders": {
+        "beckett": {
+          "cards": 2,
+          "gems": 0,
+          "grades": 2,
+          "gemRate": 0.0
+        }
+      },
+      "totals": {
+        "cards": 2,
+        "gems": 0,
+        "grades": 2,
+        "gemRate": 0.0
+      }
+    },
+    "Yoel Hernandez": {
+      "name": "Yoel Hernandez",
+      "sport": "Baseball",
+      "graders": {
+        "beckett": {
+          "cards": 2,
+          "gems": 3,
+          "grades": 4,
+          "gemRate": 75.0
+        }
+      },
+      "totals": {
+        "cards": 2,
+        "gems": 3,
+        "grades": 4,
+        "gemRate": 75.0
+      }
+    },
+    "Yoendrys Gomez": {
+      "name": "Yoendrys Gomez",
+      "sport": "Baseball",
+      "graders": {
+        "beckett": {
+          "cards": 11,
+          "gems": 15,
+          "grades": 27,
+          "gemRate": 56.0
+        }
+      },
+      "totals": {
+        "cards": 11,
+        "gems": 15,
+        "grades": 27,
+        "gemRate": 56.0
       }
     }
   }
