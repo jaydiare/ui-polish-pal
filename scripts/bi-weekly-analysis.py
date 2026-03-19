@@ -227,7 +227,7 @@ def call_gemini(prompt, api_key, max_retries=2):
         "contents": [{"parts": [{"text": prompt}]}],
         "generationConfig": {
             "temperature": 0.7,
-            "maxOutputTokens": 1500,
+            "maxOutputTokens": 2048,
             "responseMimeType": "application/json",
         },
     }
@@ -243,8 +243,30 @@ def call_gemini(prompt, api_key, max_retries=2):
         break
 
     data = resp.json()
-    text = data["candidates"][0]["content"]["parts"][0]["text"]
-    return json.loads(text)
+    candidate = data["candidates"][0]
+    text = candidate["content"]["parts"][0]["text"]
+
+    # Check for truncation
+    finish = candidate.get("finishReason", "")
+    if finish == "MAX_TOKENS":
+        print("   ⚠️  Response was truncated (MAX_TOKENS), attempting JSON recovery...")
+
+    # Try parsing, with recovery for truncated JSON
+    try:
+        return json.loads(text)
+    except json.JSONDecodeError:
+        # Attempt to repair truncated JSON object
+        last_brace = text.rfind("}")
+        if last_brace > 0:
+            repaired = text[:last_brace + 1]
+            # Close any unclosed strings by checking for odd quotes
+            try:
+                result = json.loads(repaired)
+                print("   🔧 Recovered JSON from truncated response")
+                return result
+            except json.JSONDecodeError:
+                pass
+        raise ValueError(f"Cannot parse Gemini response (truncated?). First 200 chars: {text[:200]}")
 
 
 def build_prompt(stats):
