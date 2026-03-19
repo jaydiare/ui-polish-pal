@@ -93,7 +93,21 @@ A sports-card market intelligence platform tracking **550+ Venezuelan athletes**
 - Aggregates all data sources (eBay listed/sold, SCP prices, gemrate, history) into a single `vzla-athlete-market-data.json` file per athlete.
 - Serves as a consolidated backup and the data source for the Blog Data Table.
 
-### 2.8 Database Backup (Render PostgreSQL)
+### 2.8 Bi-Weekly AI Market Analysis
+
+| Script | Workflow | Schedule |
+|--------|----------|----------|
+| `bi-weekly-analysis.py` | `bi-weekly-analysis.yml` | 1st & 15th of each month (2 PM UTC) |
+
+- Loads athlete history, eBay averages, and index data to compute statistical insights for **Baseball** athletes.
+- Identifies top movers (gainers/losers), most volatile, cheapest listed, most liquid, and anomalies (>50% price change or CV > 1.0).
+- Calls **Google Gemini** (free tier, `gemini-2.5-flash`) to generate a short executive narrative: headline (~10 words), summary (~50 words), 3 key insights, 2-player watchlist, and risk alerts.
+- Includes truncated-JSON recovery logic and rate-limit retry (60s backoff) to handle free-tier constraints.
+- Output: `data/analysis/YYYYMMDD_vzlasports.json` with stats payload, optional AI narrative, and plain-text summary.
+- Falls back gracefully: runs stats-only if `GEMINI_API_KEY` is not set or `SKIP_LLM=1`.
+- GitHub Secret required: `GEMINI_API_KEY` (free key from https://ai.google.dev).
+
+### 2.9 Database Backup (Render PostgreSQL)
 
 | Script | Workflow | Schedule |
 |--------|----------|----------|
