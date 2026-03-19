@@ -185,8 +185,9 @@ for entry in index_hist[-7:]:
 # Build the stats payload
 stats = {
     "period": {"start": period_start, "end": period_end},
+    "focusSport": FOCUS_SPORT,
     "totalAthletes": len(history),
-    "athletesAnalyzed": len(top_movers) + len([e for e in history.values() if len(e) < 2]),
+    "baseballAthletesAnalyzed": len(top_movers),
     "sportSummary": sport_summary,
     "indexTrend": index_trend,
     "topMovers": {
@@ -199,9 +200,8 @@ stats = {
     "anomalies": anomalies[:15],
 }
 
-print(f"   Top movers: {len(top_movers)}")
+print(f"   Baseball athletes analyzed: {len(top_movers)}")
 print(f"   Anomalies: {len(anomalies)}")
-print(f"   Sports tracked: {list(sport_summary.keys())}")
 
 # ---------------------------------------------------------------------------
 # 3. LLM narrative generation (Google Gemini free tier)
