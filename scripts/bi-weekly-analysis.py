@@ -44,7 +44,10 @@ date_stamp = today.strftime("%Y%m%d")
 period_start = (today - timedelta(days=14)).strftime("%Y-%m-%d")
 period_end = today.strftime("%Y-%m-%d")
 
+FOCUS_SPORT = "Baseball"
+
 print(f"📊 Analysis period: {period_start} → {period_end}")
+print(f"   Focus sport: {FOCUS_SPORT}")
 print(f"   Athletes in history: {len(history)}")
 
 # ---------------------------------------------------------------------------
