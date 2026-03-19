@@ -64,6 +64,9 @@ const Index = () => {
       <main id="main-content" className="page-shell" role="main" aria-label="Athlete cards and market data">
         <VzlaHero lastUpdated={lastUpdated} />
         <VzlaIndexCards athletes={athletes} byName={byName} byKey={byKey} indexHistory={indexHistory} />
+        <Suspense fallback={null}>
+          <VzlaMarketInsights />
+        </Suspense>
         <Suspense fallback={<div className="min-h-[200px]" />}>
           <VzlaHowToMoney />
           <VzlaTopDeals />
