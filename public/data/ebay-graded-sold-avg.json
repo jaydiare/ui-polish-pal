@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-19T07:30:06.284Z",
+    "updatedAt": "2026-03-19T09:06:19.714Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA/BGS/SGC grader title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 100,
-      "endIdx": 110,
+      "startIdx": 110,
+      "endIdx": 120,
       "totalAthletes": 452
     },
     "maxPages": 4,
@@ -1597,7 +1597,7 @@
   },
   "Edwin Escobar": {
     "keyword": "Edwin Escobar Baseball PSA",
-    "nScraped": 0,
+    "nScraped": 60,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -1681,7 +1681,7 @@
   },
   "Eliezer Alfonzo": {
     "keyword": "Eliezer Alfonzo Baseball PSA",
-    "nScraped": 41,
+    "nScraped": 42,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -1693,27 +1693,27 @@
   },
   "Elio Chacon": {
     "keyword": "Elio Chacon Baseball PSA",
-    "nScraped": 252,
-    "nSoldUsed": 20,
-    "avg": 25.990000000000002,
-    "taguchiSold": 25.990000000000002,
-    "medianSold": 25.99,
-    "marketStabilityCV": 1.4024653041962765e-16,
+    "nScraped": 248,
+    "nSoldUsed": 24,
+    "avg": 30.495000000000005,
+    "taguchiSold": 30.495000000000005,
+    "medianSold": 30.494999999999997,
+    "marketStabilityCV": 0.15090647008630254,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
   },
   "Elvis Andrus": {
     "keyword": "Elvis Andrus Baseball PSA",
-    "nScraped": 128,
-    "nSoldUsed": 10,
-    "avg": 8.5,
-    "taguchiSold": 8.5,
-    "medianSold": 8.5,
-    "marketStabilityCV": 0,
+    "nScraped": 0,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
   },
   "Elvis Araujo": {
     "keyword": "Elvis Araujo Baseball PSA",
