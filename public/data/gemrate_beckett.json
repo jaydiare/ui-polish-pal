@@ -1,13 +1,13 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-19T10:47:07.623495+00:00",
-    "athleteCount": 351,
+    "updatedAt": "2026-03-19T14:56:00.887987+00:00",
+    "athleteCount": 352,
     "graders": [
       "beckett"
     ],
     "batchInfo": {
-      "startIdx": 500,
-      "endIdx": 520,
+      "startIdx": 520,
+      "endIdx": 540,
       "totalAthletes": 568
     }
   },
@@ -6328,6 +6328,24 @@
         "gems": 0,
         "grades": 2,
         "gemRate": 0.0
+      }
+    },
+    "Dani Pereira": {
+      "name": "Dani Pereira",
+      "sport": "Soccer",
+      "graders": {
+        "beckett": {
+          "cards": 1,
+          "gems": 1,
+          "grades": 1,
+          "gemRate": 100.0
+        }
+      },
+      "totals": {
+        "cards": 1,
+        "gems": 1,
+        "grades": 1,
+        "gemRate": 100.0
       }
     }
   }
