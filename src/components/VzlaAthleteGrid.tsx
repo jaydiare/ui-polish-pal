@@ -97,6 +97,9 @@ const VzlaAthleteGrid = ({ athletes, byName, byKey, gradedByName, gradedByKey, e
           );
         })}
       </div>
+      )}
+
+
 
       {!highlightedIds?.size && hasMore && (
         <div className="flex justify-center mt-8">
