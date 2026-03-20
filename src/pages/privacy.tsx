@@ -6,6 +6,11 @@ import { Link } from "react-router-dom";
 export default function Privacy() {
   return (
     <div className="min-h-screen flex flex-col">
+      <SEOHead
+        title="Privacy Policy"
+        description="How VZLA Sports Elite collects, uses, and protects your data. Covers cookies, Google Analytics, eBay affiliate links, and our financial disclaimer for investment signals."
+        path="/privacy"
+      />
       <VzlaNavbar />
       <main className="page-shell flex-1 py-12 px-6">
         <div className="max-w-3xl mx-auto">
