@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-20T13:37:41.599Z",
+    "updatedAt": "2026-03-20T15:11:09.409Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA/BGS/SGC grader title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 240,
-      "endIdx": 250,
+      "startIdx": 250,
+      "endIdx": 260,
       "totalAthletes": 452
     },
     "maxPages": 4,
@@ -3517,7 +3517,7 @@
   },
   "Leo Hernandez": {
     "keyword": "Leo Hernandez Baseball PSA",
-    "nScraped": 0,
+    "nScraped": 244,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -3601,7 +3601,7 @@
   },
   "Livan Soto": {
     "keyword": "Livan Soto Baseball PSA",
-    "nScraped": 247,
+    "nScraped": 252,
     "nSoldUsed": 8,
     "avg": 6.004999999999999,
     "taguchiSold": 6.004999999999999,
@@ -3625,8 +3625,8 @@
   },
   "Luinder Avila": {
     "keyword": "Luinder Avila Baseball PSA",
-    "nScraped": 243,
-    "nSoldUsed": 4,
+    "nScraped": 180,
+    "nSoldUsed": 9,
     "avg": 49.97,
     "taguchiSold": 49.97,
     "medianSold": 49.97,
@@ -3637,15 +3637,15 @@
   },
   "Luis Alexander Basabe": {
     "keyword": "Luis Alexander Basabe Baseball PSA",
-    "nScraped": 120,
-    "nSoldUsed": 4,
-    "avg": 9,
-    "taguchiSold": 9,
-    "medianSold": 9,
-    "marketStabilityCV": 0,
+    "nScraped": 0,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
   },
   "Luis Aparicio": {
     "keyword": "Luis Aparicio Baseball PSA",
