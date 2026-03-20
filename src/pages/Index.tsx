@@ -112,6 +112,7 @@ const Index = () => {
       <Suspense fallback={null}>
         <VzlaEbayFooter />
       </Suspense>
+      <BackToTop />
     </div>
   );
 };
