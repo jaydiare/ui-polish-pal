@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-20T09:02:38.555Z",
+    "updatedAt": "2026-03-20T11:01:09.855Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA/BGS/SGC grader title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 220,
-      "endIdx": 230,
+      "startIdx": 230,
+      "endIdx": 240,
       "totalAthletes": 452
     },
     "maxPages": 4,
@@ -3229,7 +3229,7 @@
   },
   "Jose Rondon": {
     "keyword": "Jose Rondon Baseball PSA",
-    "nScraped": 0,
+    "nScraped": 60,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -3253,7 +3253,7 @@
   },
   "Jose Suarez": {
     "keyword": "Jose Suarez Baseball PSA",
-    "nScraped": 243,
+    "nScraped": 244,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -3301,7 +3301,7 @@
   },
   "Josmil Pinto": {
     "keyword": "Josmil Pinto Baseball PSA",
-    "nScraped": 23,
+    "nScraped": 21,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -3313,7 +3313,7 @@
   },
   "Juan Castillo": {
     "keyword": "Juan Castillo Baseball PSA",
-    "nScraped": 184,
+    "nScraped": 0,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
