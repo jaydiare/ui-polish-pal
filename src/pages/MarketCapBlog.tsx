@@ -7,7 +7,7 @@ import VzlaFooter from "@/components/VzlaFooter";
 import VzlaEbayFooter from "@/components/VzlaEbayFooter";
 import {
   LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend,
-  ResponsiveContainer, BarChart, Bar, AreaChart, Area,
+  ResponsiveContainer, AreaChart, Area,
 } from "recharts";
 
 /* ══════════════════════════════════════════════════════════════
