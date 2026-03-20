@@ -42,7 +42,7 @@ const VzlaSearchFilters = ({
   };
 
   return (
-    <div className="glass-panel p-5 mb-6 sticky top-0 z-40 backdrop-blur-xl" role="search" aria-label="Filter athletes">
+    <div className="glass-panel p-5 mb-6 sticky top-[64px] z-40 backdrop-blur-xl" role="search" aria-label="Filter athletes">
       {/* Price mode toggle */}
       <div className="flex items-center justify-between mb-4">
         <span className="text-[10px] tracking-widest uppercase font-bold text-muted-foreground">
