@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-20T07:27:10.662Z",
+    "updatedAt": "2026-03-20T09:02:38.555Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA/BGS/SGC grader title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 210,
-      "endIdx": 220,
+      "startIdx": 220,
+      "endIdx": 230,
       "totalAthletes": 452
     },
     "maxPages": 4,
@@ -3097,15 +3097,15 @@
   },
   "Jose Lopez": {
     "keyword": "Jose Lopez Baseball PSA",
-    "nScraped": 0,
-    "nSoldUsed": 0,
+    "nScraped": 60,
+    "nSoldUsed": 1,
     "avg": null,
     "taguchiSold": null,
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
   },
   "Jose Malave": {
     "keyword": "Jose Malave Baseball PSA",
@@ -3122,11 +3122,11 @@
   "Jose Martinez": {
     "keyword": "Jose Martinez Cardinals Baseball PSA",
     "nScraped": 60,
-    "nSoldUsed": 4,
-    "avg": 244,
-    "taguchiSold": 244,
-    "medianSold": 244,
-    "marketStabilityCV": 0.9701377474087974,
+    "nSoldUsed": 5,
+    "avg": 39,
+    "taguchiSold": 39,
+    "medianSold": 39,
+    "marketStabilityCV": 0,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
@@ -3193,7 +3193,7 @@
   },
   "Jose Peraza": {
     "keyword": "Jose Peraza Baseball PSA",
-    "nScraped": 242,
+    "nScraped": 244,
     "nSoldUsed": 4,
     "avg": 11.61,
     "taguchiSold": 11.61,
@@ -3205,15 +3205,15 @@
   },
   "Jose Pirela": {
     "keyword": "Jose Pirela Baseball PSA",
-    "nScraped": 198,
-    "nSoldUsed": 18,
-    "avg": 21.859999999999996,
-    "taguchiSold": 21.859999999999996,
-    "medianSold": 21.86,
-    "marketStabilityCV": 0.23959591904173017,
+    "nScraped": 0,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
   },
   "Jose Rodriguez": {
     "keyword": "Jose Rodriguez Baseball PSA",
