@@ -29,6 +29,7 @@ In the VZLA Sports Elite project, the AI partner:
 - Debugged API edge cases (eBay aspect filter silent failures, graded detection regex gaps)
 - Authored all four technical documentation files
 - Designed the database backup schema and recovery procedures
+- Applied ISO 9241 usability standards to the interface — WCAG-compliant contrast ratios, keyboard navigation, focus-visible outlines, ARIA landmarks, `prefers-reduced-motion` support, and search/filter layouts optimized for cognitive efficiency
 
 ### What the Human Does
 

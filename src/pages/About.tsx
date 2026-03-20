@@ -159,6 +159,11 @@ const About = () => {
                 desc: "We take daily snapshots of every athlete's pricing data, building a historical record that powers sparkline trends, market index calculations, and the bi-weekly market analysis reports you see on the homepage.",
               },
               {
+                icon: "🎯",
+                title: "ISO 9241 UX Standards",
+                desc: "Our interface follows ISO 9241 usability guidelines — the international standard for human–computer interaction. This means WCAG-compliant contrast ratios, keyboard-accessible navigation, reduced-motion support, and search/filter layouts designed for efficiency and minimal cognitive load.",
+              },
+              {
                 icon: "🔐",
                 title: "Resilient by Design",
                 desc: "Every pipeline includes exponential backoff for API failures, batch checkpointing to resume after crashes, and rebase-safe Git commits. If something goes wrong at 3 AM, the system recovers automatically without losing data.",
