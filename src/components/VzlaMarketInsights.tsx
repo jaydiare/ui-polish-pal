@@ -34,18 +34,54 @@ interface AnalysisData {
   };
 }
 
+function MarketInsightsSkeleton() {
+  return (
+    <section className="glass-panel p-5 mb-6 animate-pulse" aria-label="Loading market insights">
+      {/* Header */}
+      <div className="flex items-center gap-2 mb-4">
+        <div className="h-4 w-4 rounded bg-muted" />
+        <div className="h-4 w-40 rounded bg-muted" />
+        <div className="ml-auto h-3 w-28 rounded bg-muted" />
+      </div>
+      {/* Headline */}
+      <div className="h-5 w-3/4 rounded bg-muted mb-2" />
+      <div className="h-3 w-full rounded bg-muted mb-1" />
+      <div className="h-3 w-5/6 rounded bg-muted mb-4" />
+      {/* Stat cards row */}
+      <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-4">
+        {Array.from({ length: 4 }).map((_, i) => (
+          <div key={i} className="rounded-lg bg-secondary/60 p-3">
+            <div className="h-3 w-16 rounded bg-muted mb-2" />
+            <div className="h-5 w-12 rounded bg-muted" />
+          </div>
+        ))}
+      </div>
+      {/* Movers list */}
+      <div className="space-y-2">
+        {Array.from({ length: 3 }).map((_, i) => (
+          <div key={i} className="flex items-center gap-3">
+            <div className="h-3 w-24 rounded bg-muted" />
+            <div className="h-3 w-16 rounded bg-muted ml-auto" />
+          </div>
+        ))}
+      </div>
+    </section>
+  );
+}
+
 export default function VzlaMarketInsights() {
   const [data, setData] = useState<AnalysisData | null>(null);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // Fetch the directory listing isn't possible, so we try the latest known file
-    // The workflow copies latest to a fixed path
     fetch(`${GITHUB_RAW}/analysis-latest.json`, { cache: "no-store" })
       .then((r) => (r.ok ? r.json() : null))
       .then(setData)
-      .catch(() => {});
+      .catch(() => {})
+      .finally(() => setLoading(false));
   }, []);
 
+  if (loading) return <MarketInsightsSkeleton />;
   if (!data) return null;
 
   const { stats, narrative, _meta } = data;
