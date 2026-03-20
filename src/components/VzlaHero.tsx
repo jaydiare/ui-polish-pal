@@ -34,7 +34,7 @@ const VzlaHero = forwardRef<HTMLElement, VzlaHeroProps>(({ lastUpdated }, ref) =
       </p>
 
       <p className="text-muted-foreground text-xs max-w-2xl mx-auto leading-relaxed mb-6">
-        Every card below is backed by live eBay data, processed through our <strong className="text-foreground">Taguchi Winsorized Mean</strong> pricing model — a statistical method that removes extreme outliers to give you the most accurate average price. Stability scores measure how tightly listing prices agree with each other, helping you identify reliable investments vs speculative opportunities. Data updates automatically every 24 hours across 550+ athletes.
+        Every card below is backed by live eBay data, processed through our <strong className="text-foreground">statistical pricing model</strong> — which removes extreme outliers to give you the most accurate average price. Stability scores measure how tightly listing prices agree with each other, helping you identify reliable investments vs speculative opportunities. Data updates automatically every 24 hours across 550+ athletes.
       </p>
 
       <div className="hero-sub text-sm leading-relaxed text-left md:text-center">
