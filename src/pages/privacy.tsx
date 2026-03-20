@@ -1,3 +1,4 @@
+import SEOHead from "@/components/SEOHead";
 import VzlaNavbar from "@/components/VzlaNavbar";
 import VzlaFooter from "@/components/VzlaFooter";
 import { Link } from "react-router-dom";
