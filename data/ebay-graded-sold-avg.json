@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-20T17:06:40.147Z",
+    "updatedAt": "2026-03-20T19:09:18.998Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA/BGS/SGC grader title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 260,
-      "endIdx": 270,
+      "startIdx": 270,
+      "endIdx": 280,
       "totalAthletes": 452
     },
     "maxPages": 4,
@@ -3793,7 +3793,7 @@
   },
   "Luis Maza": {
     "keyword": "Luis Maza Baseball PSA",
-    "nScraped": 0,
+    "nScraped": 104,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -3805,7 +3805,7 @@
   },
   "Luis Ordaz": {
     "keyword": "Luis Ordaz Baseball PSA",
-    "nScraped": 241,
+    "nScraped": 240,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -3829,12 +3829,12 @@
   },
   "Luis Perales": {
     "keyword": "Luis Perales Baseball PSA",
-    "nScraped": 253,
-    "nSoldUsed": 24,
-    "avg": 92.5,
-    "taguchiSold": 92.5,
-    "medianSold": 92.5,
-    "marketStabilityCV": 0.13804159958249976,
+    "nScraped": 252,
+    "nSoldUsed": 20,
+    "avg": 80,
+    "taguchiSold": 80,
+    "medianSold": 80,
+    "marketStabilityCV": 0,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
@@ -3865,12 +3865,12 @@
   },
   "Luis Rodriguez": {
     "keyword": "Luis Rodriguez Baseball PSA",
-    "nScraped": 298,
-    "nSoldUsed": 83,
-    "avg": 14.658192771084341,
-    "taguchiSold": 14.658192771084341,
+    "nScraped": 201,
+    "nSoldUsed": 63,
+    "avg": 14.086666666666671,
+    "taguchiSold": 14.086666666666671,
     "medianSold": 15.5,
-    "marketStabilityCV": 0.23191140495387272,
+    "marketStabilityCV": 0.275535043308129,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
