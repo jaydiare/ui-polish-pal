@@ -56,7 +56,7 @@ const About = () => {
 
         {/* ── Our Story ── */}
         <motion.section {...fadeUp()} className="glass-panel p-6 md:p-8 rounded-xl mb-8">
-          <h2 className="text-lg font-display font-bold text-flag-gradient mb-4">Our Story</h2>
+          <h2 className="text-lg font-display font-bold text-flag-gradient mb-4 text-center">Our Story</h2>
           <div className="max-w-3xl mx-auto space-y-5 text-foreground/80 text-sm leading-7 text-justify text-pretty">
             <p>
               In Venezuela, many of us grew up trading sports cards, especially baseball cards, and collecting World Cup sticker albums. We remember the excitement of racing to complete an album before kickoff and the pride of finally finishing it.
