@@ -4,6 +4,7 @@ import VzlaNavbar from "@/components/VzlaNavbar";
 import VzlaHero from "@/components/VzlaHero";
 import VzlaIndexCards from "@/components/VzlaIndexCards";
 import VzlaSideBanner from "@/components/VzlaSideBanner";
+import BackToTop from "@/components/BackToTop";
 
 const VzlaMarketInsights = lazy(() => import("@/components/VzlaMarketInsights"));
 
