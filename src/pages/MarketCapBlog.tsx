@@ -240,45 +240,6 @@ const MarketCapBlog = () => {
           ))}
         </div>
 
-        {/* ── Market Index History ── */}
-        <section className="glass-panel p-6 rounded-xl mb-10">
-          <h2 className="text-lg font-display font-bold text-flag-gradient mb-1">Market Index — Recent Trend</h2>
-          <p className="text-xs text-muted-foreground mb-4">Base-100 price index across all tracked athletes (filtered for outliers)</p>
-          <div className="h-72">
-            <ResponsiveContainer width="100%" height="100%">
-              <LineChart data={INDEX_HISTORY}>
-                <CartesianGrid strokeDasharray="3 3" stroke="hsl(var(--border))" />
-                <XAxis dataKey="date" tick={tickStyle} />
-                <YAxis tick={tickStyle} />
-                <Tooltip {...tooltipStyle} />
-                <Legend />
-                <Line type="monotone" dataKey="All" stroke="hsl(var(--vzla-yellow))" strokeWidth={2} dot={false} name="All Sports" />
-                <Line type="monotone" dataKey="Baseball" stroke="#ef4444" strokeWidth={1.5} dot={false} />
-                <Line type="monotone" dataKey="Soccer" stroke="#3b82f6" strokeWidth={1.5} dot={false} />
-                <Line type="monotone" dataKey="Basketball" stroke="#f97316" strokeWidth={1.5} dot={false} />
-              </LineChart>
-            </ResponsiveContainer>
-          </div>
-        </section>
-
-        {/* ── Sport Breakdown Bar Chart ── */}
-        <section className="glass-panel p-6 rounded-xl mb-10">
-          <h2 className="text-lg font-display font-bold text-flag-gradient mb-1">Market Breakdown by Sport</h2>
-          <p className="text-xs text-muted-foreground mb-4">Athlete count and average sold price by sport</p>
-          <div className="h-64">
-            <ResponsiveContainer width="100%" height="100%">
-              <BarChart data={SPORT_BREAKDOWN}>
-                <CartesianGrid strokeDasharray="3 3" stroke="hsl(var(--border))" />
-                <XAxis dataKey="sport" tick={tickStyle} />
-                <YAxis tick={tickStyle} />
-                <Tooltip {...tooltipStyle} />
-                <Legend />
-                <Bar dataKey="Athlete Count" fill="#fbbf24" radius={[4, 4, 0, 0]} />
-                <Bar dataKey="Avg Sold Price" fill="#3b82f6" radius={[4, 4, 0, 0]} />
-              </BarChart>
-            </ResponsiveContainer>
-          </div>
-        </section>
 
         {/* ── Revenue Projections ── */}
         <section className="glass-panel p-6 rounded-xl mb-10">
