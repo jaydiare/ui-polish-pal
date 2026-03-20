@@ -28,9 +28,13 @@ const VzlaHero = forwardRef<HTMLElement, VzlaHeroProps>(({ lastUpdated }, ref) =
         VZLA <span className="text-flag-gradient">Sports Cards</span> Index
       </h1>
 
-      <p className="text-muted-foreground text-sm md:text-base max-w-2xl mx-auto leading-relaxed mb-6">
+      <p className="text-muted-foreground text-sm md:text-base max-w-2xl mx-auto leading-relaxed mb-3">
         Daily eBay market data for Venezuelan athletes' sports cards.
         Track prices, stability scores, and market trends.
+      </p>
+
+      <p className="text-muted-foreground text-xs max-w-2xl mx-auto leading-relaxed mb-6">
+        Every card below is backed by live eBay data, processed through our <strong className="text-foreground">Taguchi Winsorized Mean</strong> pricing model — a statistical method that removes extreme outliers to give you the most accurate average price. Stability scores measure how tightly listing prices agree with each other, helping you identify reliable investments vs speculative opportunities. Data updates automatically every 24 hours across 550+ athletes.
       </p>
 
       <div className="hero-sub text-sm leading-relaxed text-left md:text-center">

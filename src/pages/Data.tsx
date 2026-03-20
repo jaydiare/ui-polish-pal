@@ -550,9 +550,17 @@ const Data = () => {
           <h1 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-1">
             Market Intel
           </h1>
-          <p className="text-muted-foreground text-sm max-w-xl">
+          <p className="text-muted-foreground text-sm max-w-2xl leading-relaxed mb-3">
             Listed vs sold price analytics for Venezuelan athletes trading cards. Data powered by eBay.
           </p>
+          <div className="text-muted-foreground text-xs max-w-2xl leading-relaxed space-y-2 mb-2">
+            <p>
+              This dashboard compares what cards are <strong className="text-foreground">listed for</strong> against what they actually <strong className="text-foreground">sell for</strong> on eBay — revealing where the market is overpricing, underpricing, or fairly valuing each athlete's cards. Prices are calculated using the <strong className="text-foreground">Taguchi Winsorized Mean</strong>, which removes extreme outliers for accuracy, and updated daily from live eBay market scans across 550+ Venezuelan athletes.
+            </p>
+            <p>
+              Use the scatter plots to spot arbitrage opportunities, the price gap charts to find the biggest spreads, and the investment signal grid to identify undervalued, volatile, or overpriced cards at a glance.
+            </p>
+          </div>
           <div className="mt-3 flex items-center gap-3 flex-wrap">
             <div className="inline-flex items-center gap-2 rounded-full border border-border/50 bg-card/80 backdrop-blur-sm px-4 py-1.5">
               <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
