@@ -7,7 +7,7 @@ import VzlaFooter from "@/components/VzlaFooter";
 import VzlaEbayFooter from "@/components/VzlaEbayFooter";
 import {
   LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend,
-  ResponsiveContainer, BarChart, Bar, AreaChart, Area,
+  ResponsiveContainer, AreaChart, Area,
 } from "recharts";
 
 /* ══════════════════════════════════════════════════════════════
@@ -30,26 +30,6 @@ const SNAPSHOT = {
   annualAggressive: 21_958_030,
 } as const;
 
-const SPORT_BREAKDOWN = [
-  { sport: "Baseball", "Athlete Count": 491, "Avg Sold Price": 3.89 },
-  { sport: "Soccer", "Athlete Count": 53, "Avg Sold Price": 5.24 },
-  { sport: "Basketball", "Athlete Count": 9, "Avg Sold Price": 6.41 },
-  { sport: "MMA", "Athlete Count": 3, "Avg Sold Price": 4.12 },
-  { sport: "Tennis", "Athlete Count": 1, "Avg Sold Price": 8.50 },
-];
-
-const INDEX_HISTORY = [
-  { date: "03-02", All: 246.3, Baseball: 248.1, Soccer: 101.3 },
-  { date: "03-04", All: 207.7, Baseball: 219.7, Soccer: 107.6, Basketball: 225.5 },
-  { date: "03-05", All: 203.4, Baseball: 215.7, Soccer: 112, Basketball: 80.2 },
-  { date: "03-06", All: 100, Baseball: 100, Soccer: 100, Basketball: 100 },
-  { date: "03-08", All: 89.8, Baseball: 89.8, Soccer: 94.9, Basketball: 69.9 },
-  { date: "03-09", All: 96.3, Baseball: 96.7, Soccer: 94.5, Basketball: 69.9 },
-  { date: "03-10", All: 148.1, Baseball: 148.1 },
-  { date: "03-11", All: 94.3, Baseball: 93.9, Soccer: 99.5, Basketball: 99.8 },
-  { date: "03-15", All: 340.1, Baseball: 340.1 },
-  { date: "03-16", All: 385.3, Baseball: 406.4, Soccer: 208, Basketball: 209.3 },
-];
 
 /* ── Projection helpers ── */
 const PROJECTION_YEARS = [2026, 2027, 2028, 2029, 2030, 2031, 2032];
@@ -240,45 +220,6 @@ const MarketCapBlog = () => {
           ))}
         </div>
 
-        {/* ── Market Index History ── */}
-        <section className="glass-panel p-6 rounded-xl mb-10">
-          <h2 className="text-lg font-display font-bold text-flag-gradient mb-1">Market Index — Recent Trend</h2>
-          <p className="text-xs text-muted-foreground mb-4">Base-100 price index across all tracked athletes (filtered for outliers)</p>
-          <div className="h-72">
-            <ResponsiveContainer width="100%" height="100%">
-              <LineChart data={INDEX_HISTORY}>
-                <CartesianGrid strokeDasharray="3 3" stroke="hsl(var(--border))" />
-                <XAxis dataKey="date" tick={tickStyle} />
-                <YAxis tick={tickStyle} />
-                <Tooltip {...tooltipStyle} />
-                <Legend />
-                <Line type="monotone" dataKey="All" stroke="hsl(var(--vzla-yellow))" strokeWidth={2} dot={false} name="All Sports" />
-                <Line type="monotone" dataKey="Baseball" stroke="#ef4444" strokeWidth={1.5} dot={false} />
-                <Line type="monotone" dataKey="Soccer" stroke="#3b82f6" strokeWidth={1.5} dot={false} />
-                <Line type="monotone" dataKey="Basketball" stroke="#f97316" strokeWidth={1.5} dot={false} />
-              </LineChart>
-            </ResponsiveContainer>
-          </div>
-        </section>
-
-        {/* ── Sport Breakdown Bar Chart ── */}
-        <section className="glass-panel p-6 rounded-xl mb-10">
-          <h2 className="text-lg font-display font-bold text-flag-gradient mb-1">Market Breakdown by Sport</h2>
-          <p className="text-xs text-muted-foreground mb-4">Athlete count and average sold price by sport</p>
-          <div className="h-64">
-            <ResponsiveContainer width="100%" height="100%">
-              <BarChart data={SPORT_BREAKDOWN}>
-                <CartesianGrid strokeDasharray="3 3" stroke="hsl(var(--border))" />
-                <XAxis dataKey="sport" tick={tickStyle} />
-                <YAxis tick={tickStyle} />
-                <Tooltip {...tooltipStyle} />
-                <Legend />
-                <Bar dataKey="Athlete Count" fill="#fbbf24" radius={[4, 4, 0, 0]} />
-                <Bar dataKey="Avg Sold Price" fill="#3b82f6" radius={[4, 4, 0, 0]} />
-              </BarChart>
-            </ResponsiveContainer>
-          </div>
-        </section>
 
         {/* ── Revenue Projections ── */}
         <section className="glass-panel p-6 rounded-xl mb-10">
