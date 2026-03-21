@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-21T05:15:53.540Z",
+    "updatedAt": "2026-03-21T07:06:24.741Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA/BGS/SGC grader title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 310,
-      "endIdx": 320,
+      "startIdx": 320,
+      "endIdx": 330,
       "totalAthletes": 452
     },
     "maxPages": 4,
@@ -4465,7 +4465,7 @@
   },
   "Oscar Azocar": {
     "keyword": "Oscar Azocar Baseball PSA",
-    "nScraped": 240,
+    "nScraped": 241,
     "nSoldUsed": 4,
     "avg": 52,
     "taguchiSold": 52,
@@ -4489,7 +4489,7 @@
   },
   "Oscar Hernandez": {
     "keyword": "Oscar Hernandez Royals Diamondbacks Baseball PSA",
-    "nScraped": 11,
+    "nScraped": 10,
     "nSoldUsed": 1,
     "avg": null,
     "taguchiSold": null,
@@ -4513,7 +4513,7 @@
   },
   "Osleivis Basabe": {
     "keyword": "Osleivis Basabe Baseball PSA",
-    "nScraped": 251,
+    "nScraped": 249,
     "nSoldUsed": 12,
     "avg": 14.289999999999994,
     "taguchiSold": 14.289999999999994,
@@ -4549,12 +4549,12 @@
   },
   "Oswald Peraza": {
     "keyword": "Oswald Peraza Baseball PSA",
-    "nScraped": 141,
+    "nScraped": 137,
     "nSoldUsed": 71,
-    "avg": 17.878028169014087,
-    "taguchiSold": 17.878028169014087,
+    "avg": 17.096760563380283,
+    "taguchiSold": 17.096760563380283,
     "medianSold": 19.99,
-    "marketStabilityCV": 0.13840718108195588,
+    "marketStabilityCV": 0.19378516588575495,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
