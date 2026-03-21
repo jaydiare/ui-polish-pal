@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-21T08:54:11.238Z",
+    "updatedAt": "2026-03-21T10:49:21.473Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA/BGS/SGC grader title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 330,
-      "endIdx": 340,
+      "startIdx": 340,
+      "endIdx": 350,
       "totalAthletes": 452
     },
     "maxPages": 4,
@@ -4729,7 +4729,7 @@
   },
   "Rafael Marchan": {
     "keyword": "Rafael Marchan Baseball PSA",
-    "nScraped": 243,
+    "nScraped": 242,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -4801,24 +4801,24 @@
   },
   "Ramon Hernandez": {
     "keyword": "Ramon Hernandez Baseball PSA",
-    "nScraped": 277,
-    "nSoldUsed": 40,
-    "avg": 50.49000000000001,
-    "taguchiSold": 50.49000000000001,
-    "medianSold": 50.489999999999995,
-    "marketStabilityCV": 0.11011961032460538,
+    "nScraped": 281,
+    "nSoldUsed": 36,
+    "avg": 46.071111111111115,
+    "taguchiSold": 46.071111111111115,
+    "medianSold": 45,
+    "marketStabilityCV": 0.20304644402211622,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
   },
   "Ramon Ramirez": {
     "keyword": "Ramon Ramirez Baseball PSA",
-    "nScraped": 214,
-    "nSoldUsed": 21,
+    "nScraped": 155,
+    "nSoldUsed": 14,
     "avg": 40.145714285714284,
     "taguchiSold": 40.145714285714284,
     "medianSold": 41.02,
-    "marketStabilityCV": 0.1892673726029953,
+    "marketStabilityCV": 0.19167851913954595,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
