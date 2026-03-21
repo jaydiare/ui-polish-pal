@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-21T14:49:23.355Z",
+    "updatedAt": "2026-03-21T16:51:26.858Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA/BGS/SGC grader title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 360,
-      "endIdx": 370,
+      "startIdx": 370,
+      "endIdx": 380,
       "totalAthletes": 452
     },
     "maxPages": 4,
@@ -5161,12 +5161,12 @@
   },
   "Rougned Odor": {
     "keyword": "Rougned Odor Baseball PSA",
-    "nScraped": 248,
+    "nScraped": 255,
     "nSoldUsed": 42,
-    "avg": 18.019047619047633,
-    "taguchiSold": 18.019047619047633,
-    "medianSold": 15,
-    "marketStabilityCV": 0.2476158617238489,
+    "avg": 24.342857142857145,
+    "taguchiSold": 24.342857142857145,
+    "medianSold": 23.1,
+    "marketStabilityCV": 0.3952910188371395,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
@@ -5186,11 +5186,11 @@
   "Salvador Perez": {
     "keyword": "Salvador Perez Baseball PSA",
     "nScraped": 240,
-    "nSoldUsed": 69,
-    "avg": 65.72797101449275,
-    "taguchiSold": 65.72797101449275,
-    "medianSold": 64.99,
-    "marketStabilityCV": 0.22341332570444367,
+    "nSoldUsed": 73,
+    "avg": 64.95643835616438,
+    "taguchiSold": 64.95643835616438,
+    "medianSold": 61,
+    "marketStabilityCV": 0.21748810156452184,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
