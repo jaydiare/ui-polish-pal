@@ -21,7 +21,7 @@ Juan's career spans the full spectrum of engineering leadership:
 ### Academic Credentials
 
 - **Master's Degree** with a concentration in **Product Innovation** — where he studied iterative development, MVP methodology, and the intersection of engineering and market strategy
-- **UX Design Coursework** — formal training in ISO 9241 interaction principles, usability evaluation, and user-centered design
+- **UX Design Certificate from George Brown College (Toronto)** — formal training in user-centered design, usability evaluation, and interaction design
 - **Engineering Degree** — the foundation of systematic thinking and first-principles problem solving
 
 ### Teaching
