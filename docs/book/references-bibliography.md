@@ -376,9 +376,9 @@ Quick lookup — which plays cite which sources:
 | **Play 6** | [Release-It], [SRE-Book], [GHA-Concurrency], [Continuous-Delivery] |
 | **Play 7** | [Phoenix], [DevOps-Handbook], [Accelerate] |
 | **Play 8** | [12-Factor], [Infrastructure-Code], [Continuous-Delivery] |
-| **Play 9** | [Taguchi-1986], [Robust-Statistics], [Knapsack], [PostgreSQL-Docs], [CV-Reference] |
+| **Play 9** | [Taguchi-1986], [Wheeler-Industrial], [Robust-Statistics], [Knapsack], [PostgreSQL-Docs], [CV-Reference] |
 | **Play 10** | [eBay-Browse-API], [eBay-OAuth], [OAuth-RFC], [Release-It], [OWASP-Top10] |
-| **Play 11** | [Taguchi-1986], [CV-Reference], [SRE-Book], [DevOps-Handbook] |
+| **Play 11** | [Taguchi-1986], [Wheeler-Industrial], [CV-Reference], [SRE-Book], [DevOps-Handbook] |
 | **Play 12** | [Accelerate], [DevOps-Handbook] |
 | **Play 13** | [SRE-Book], [SRE-Workbook], [Render-Docs] |
 | **Play 14** | [Gemini-API], [AI-Pair-Programming], [Lovable-Docs], [Prompt-Engineering] |
