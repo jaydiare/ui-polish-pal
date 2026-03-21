@@ -1,13 +1,13 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-21T05:06:21.021676+00:00",
+    "updatedAt": "2026-03-21T08:27:58.097249+00:00",
     "athleteCount": 454,
     "graders": [
       "PSA"
     ],
     "batchInfo": {
-      "startIdx": 200,
-      "endIdx": 220,
+      "startIdx": 220,
+      "endIdx": 240,
       "totalAthletes": 568
     }
   },
@@ -3167,16 +3167,16 @@
       "sport": "Baseball",
       "graders": {
         "PSA": {
-          "cards": 46,
+          "cards": 47,
           "gems": 16,
-          "grades": 57,
+          "grades": 58,
           "gemRate": 28.0
         }
       },
       "totals": {
-        "cards": 46,
+        "cards": 47,
         "gems": 16,
-        "grades": 57,
+        "grades": 58,
         "gemRate": 28.0
       }
     },
@@ -3187,15 +3187,15 @@
         "PSA": {
           "cards": 84,
           "gems": 135,
-          "grades": 359,
-          "gemRate": 38.0
+          "grades": 362,
+          "gemRate": 37.0
         }
       },
       "totals": {
         "cards": 84,
         "gems": 135,
-        "grades": 359,
-        "gemRate": 38.0
+        "grades": 362,
+        "gemRate": 37.0
       }
     },
     "Jean Machi": {
@@ -3420,15 +3420,15 @@
       "graders": {
         "PSA": {
           "cards": 127,
-          "gems": 564,
-          "grades": 1318,
+          "gems": 568,
+          "grades": 1331,
           "gemRate": 43.0
         }
       },
       "totals": {
         "cards": 127,
-        "gems": 564,
-        "grades": 1318,
+        "gems": 568,
+        "grades": 1331,
         "gemRate": 43.0
       }
     },
@@ -3473,16 +3473,16 @@
       "sport": "Baseball",
       "graders": {
         "PSA": {
-          "cards": 509,
-          "gems": 732,
-          "grades": 1799,
+          "cards": 511,
+          "gems": 735,
+          "grades": 1805,
           "gemRate": 41.0
         }
       },
       "totals": {
-        "cards": 509,
-        "gems": 732,
-        "grades": 1799,
+        "cards": 511,
+        "gems": 735,
+        "grades": 1805,
         "gemRate": 41.0
       }
     },
