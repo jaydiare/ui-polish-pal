@@ -94,6 +94,11 @@ Wilcox, R.R. (2012). *Introduction to Robust Estimation and Hypothesis Testing* 
 ISBN: 978-0123869838  
 **Relevance:** Winsorized trimmed mean methodology, practical robust statistical methods. Appendix B.
 
+### [Wheeler-Industrial]
+Wheeler, D.J. (1990). *Understanding Industrial Experimentation* (2nd ed.). SPC Press.  
+ISBN: 978-0945320098  
+**Relevance:** Accessible explanation of Taguchi experimental design methods, signal-to-noise ratios, and robust parameter design — bridges the gap between Taguchi's theoretical frameworks and practical industrial application. Plays 9, 11, Appendix B.
+
 ### [CV-Reference]
 Abdi, H. (2010). "Coefficient of Variation." In N.J. Salkind (Ed.), *Encyclopedia of Research Design*. Sage Publications.  
 DOI: 10.4135/9781412961288.n56  
