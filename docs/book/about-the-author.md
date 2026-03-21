@@ -37,7 +37,7 @@ VZLA Sports Elite — the platform documented in this book — sits at the cross
 | **Engineering** | 15+ automated pipelines with resilience patterns |
 | **DevOps** | Git-as-database, CI/CD orchestration, disaster recovery |
 | **Data Analytics** | Taguchi statistical methods, signal-to-noise ratios, knapsack optimization |
-| **UX Design** | ISO 9241-compliant interface, sparklines, investment signal visualization |
+| **UX Design** | George Brown College certificate — user-centered interface, sparklines, investment signal visualization |
 | **Product Innovation** | Iterative architecture — 10 capability layers built incrementally |
 | **Teaching** | Every design decision documented for learning |
 | **Sports Cards** | Domain expertise tracking 550+ Venezuelan athletes |
