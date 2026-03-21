@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-21T07:06:24.741Z",
+    "updatedAt": "2026-03-21T08:54:11.238Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA/BGS/SGC grader title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 320,
-      "endIdx": 330,
+      "startIdx": 330,
+      "endIdx": 340,
       "totalAthletes": 452
     },
     "maxPages": 4,
@@ -4609,19 +4609,19 @@
   },
   "Ozzie Guillen": {
     "keyword": "Ozzie Guillen Baseball PSA",
-    "nScraped": 326,
+    "nScraped": 315,
     "nSoldUsed": 68,
-    "avg": 27.71764705882351,
-    "taguchiSold": 27.71764705882351,
-    "medianSold": 29.75,
-    "marketStabilityCV": 0.19519414410882477,
+    "avg": 27.62529411764708,
+    "taguchiSold": 27.62529411764708,
+    "medianSold": 22.72,
+    "marketStabilityCV": 0.23372609853509418,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
   },
   "Pablo Lopez": {
     "keyword": "Pablo Lopez Baseball PSA",
-    "nScraped": 246,
+    "nScraped": 247,
     "nSoldUsed": 12,
     "avg": 19.990000000000002,
     "taguchiSold": 19.990000000000002,
@@ -4633,19 +4633,19 @@
   },
   "Pablo Sandoval": {
     "keyword": "Pablo Sandoval Baseball PSA",
-    "nScraped": 249,
-    "nSoldUsed": 26,
-    "avg": 23.32538461538462,
-    "taguchiSold": 23.32538461538462,
+    "nScraped": 261,
+    "nSoldUsed": 30,
+    "avg": 29.990000000000006,
+    "taguchiSold": 29.990000000000006,
     "medianSold": 29.99,
-    "marketStabilityCV": 0.31472869585256585,
+    "marketStabilityCV": 2.409768740655931e-16,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
   },
   "Pablo Torrealba": {
     "keyword": "Pablo Torrealba Baseball PSA",
-    "nScraped": 240,
+    "nScraped": 241,
     "nSoldUsed": 8,
     "avg": 32.02,
     "taguchiSold": 32.02,
