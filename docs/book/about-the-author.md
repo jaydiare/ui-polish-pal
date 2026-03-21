@@ -21,7 +21,7 @@ Juan's career spans the full spectrum of engineering leadership:
 ### Academic Credentials
 
 - **Master's Degree** with a concentration in **Product Innovation** — where he studied iterative development, MVP methodology, and the intersection of engineering and market strategy
-- **UX Design Coursework** — formal training in ISO 9241 interaction principles, usability evaluation, and user-centered design
+- **UX Design Certificate from George Brown College (Toronto)** — formal training in user-centered design, usability evaluation, and interaction design
 - **Engineering Degree** — the foundation of systematic thinking and first-principles problem solving
 
 ### Teaching
@@ -37,7 +37,7 @@ VZLA Sports Elite — the platform documented in this book — sits at the cross
 | **Engineering** | 15+ automated pipelines with resilience patterns |
 | **DevOps** | Git-as-database, CI/CD orchestration, disaster recovery |
 | **Data Analytics** | Taguchi statistical methods, signal-to-noise ratios, knapsack optimization |
-| **UX Design** | ISO 9241-compliant interface, sparklines, investment signal visualization |
+| **UX Design** | George Brown College certificate — user-centered interface, sparklines, investment signal visualization |
 | **Product Innovation** | Iterative architecture — 10 capability layers built incrementally |
 | **Teaching** | Every design decision documented for learning |
 | **Sports Cards** | Domain expertise tracking 550+ Venezuelan athletes |

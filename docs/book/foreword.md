@@ -21,7 +21,7 @@ But here's the part I didn't expect: the platform became a *classroom*.
 Every pipeline I built encoded a DevOps principle. Every failure I debugged taught a resilience pattern. Every data architecture decision reflected something I'd studied in my Master's program or taught at York University or practiced across eighteen years in telecom. The project wasn't just a website — it was the intersection of everything I'd ever learned:
 
 - **My engineering background** — systematic thinking, structured problem-solving, first-principles design
-- **My UX coursework** — ISO 9241 interaction principles, user-centered design, information architecture
+- **My UX Design Certificate from George Brown College** — user-centered design, information architecture, usability evaluation
 - **My DevOps passion** — automation, version control, observability, continuous improvement
 - **My teaching at York University** — breaking complex systems into teachable patterns
 - **My Master's concentration in Product Innovation** — iterative development, MVP thinking, rapid experimentation
