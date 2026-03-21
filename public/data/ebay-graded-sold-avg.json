@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-21T16:51:26.858Z",
+    "updatedAt": "2026-03-21T18:57:39.662Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA/BGS/SGC grader title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 370,
-      "endIdx": 380,
+      "startIdx": 380,
+      "endIdx": 390,
       "totalAthletes": 452
     },
     "maxPages": 4,
@@ -5245,7 +5245,7 @@
   },
   "Simon Muzziotti": {
     "keyword": "Simon Muzziotti Baseball PSA",
-    "nScraped": 240,
+    "nScraped": 241,
     "nSoldUsed": 12,
     "avg": 9.44,
     "taguchiSold": 9.44,
@@ -5329,19 +5329,19 @@
   },
   "Tony Armas": {
     "keyword": "Tony Armas Baseball PSA",
-    "nScraped": 308,
-    "nSoldUsed": 32,
-    "avg": 28.775000000000006,
-    "taguchiSold": 28.775000000000006,
-    "medianSold": 28.775,
-    "marketStabilityCV": 0.11386979241024899,
+    "nScraped": 310,
+    "nSoldUsed": 40,
+    "avg": 22.74999999999998,
+    "taguchiSold": 22.74999999999998,
+    "medianSold": 22.75,
+    "marketStabilityCV": 0.1246448451795284,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
   },
   "Tony Castillo": {
     "keyword": "Tony Castillo Baseball PSA",
-    "nScraped": 120,
+    "nScraped": 181,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
