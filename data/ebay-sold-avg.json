@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-21T04:25:01.966Z",
+    "updatedAt": "2026-03-21T06:38:53.682Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. Taguchi winsorized mean + market stability CV. Ungraded condition policy (permissive for sold). Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 350,
-      "endIdx": 360,
+      "startIdx": 360,
+      "endIdx": 370,
       "totalAthletes": 568
     },
     "maxPages": 4,
@@ -5073,12 +5073,12 @@
   },
   "Miguel Yajure": {
     "keyword": "Miguel Yajure Baseball",
-    "nScraped": 60,
-    "nSoldUsed": 29,
-    "avg": 1.7889655172413792,
-    "taguchiSold": 1.7889655172413792,
-    "medianSold": 1.99,
-    "marketStabilityCV": 0.13832770084009396,
+    "nScraped": 138,
+    "nSoldUsed": 92,
+    "avg": 2.426630434782611,
+    "taguchiSold": 2.426630434782611,
+    "medianSold": 2,
+    "marketStabilityCV": 0.1982859820477904,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
@@ -5086,11 +5086,11 @@
   "Moises Ballesteros": {
     "keyword": "Moises Ballesteros Baseball",
     "nScraped": 240,
-    "nSoldUsed": 153,
-    "avg": 7.787647058823531,
-    "taguchiSold": 7.787647058823531,
-    "medianSold": 6.99,
-    "marketStabilityCV": 0.48033158702401807,
+    "nSoldUsed": 182,
+    "avg": 11.53291208791209,
+    "taguchiSold": 11.53291208791209,
+    "medianSold": 10,
+    "marketStabilityCV": 0.4654621905678712,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
@@ -5121,7 +5121,7 @@
   },
   "Nivaldo Rodriguez": {
     "keyword": "Nivaldo Rodriguez Baseball",
-    "nScraped": 272,
+    "nScraped": 270,
     "nSoldUsed": 84,
     "avg": 1.8795238095238094,
     "taguchiSold": 1.8795238095238094,
@@ -5133,27 +5133,27 @@
   },
   "Odubel Herrera": {
     "keyword": "Odubel Herrera Baseball",
-    "nScraped": 219,
-    "nSoldUsed": 112,
-    "avg": 0.6124107142857145,
-    "taguchiSold": 0.6124107142857145,
-    "medianSold": 0.99,
-    "marketStabilityCV": 0.672127153888223,
+    "nScraped": 0,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
   },
   "Omar Daal": {
     "keyword": "Omar Daal Baseball",
-    "nScraped": 136,
-    "nSoldUsed": 37,
-    "avg": 1.8462162162162163,
-    "taguchiSold": 1.8462162162162163,
-    "medianSold": 1.79,
-    "marketStabilityCV": 0.1946853629591997,
+    "nScraped": 0,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
   },
   "Omar Infante": {
     "keyword": "Omar Infante Baseball",
@@ -7671,6 +7671,18 @@
     "taguchiSold": 4.879999999999999,
     "medianSold": 4.88,
     "marketStabilityCV": 1.8673193266424814e-16,
+    "currency": "USD",
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
+  },
+  "Isaias Chavez": {
+    "keyword": "Isaias Latigo Chavez Baseball",
+    "nScraped": 24,
+    "nSoldUsed": 4,
+    "avg": 19.99,
+    "taguchiSold": 19.99,
+    "medianSold": 19.99,
+    "marketStabilityCV": 0,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
