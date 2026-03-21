@@ -1,4 +1,4 @@
-# VZLA Sports Elite: Building DevOps Infrastructure with AI
+# VZLA Sports Elite: DevOps with an AI Partner
 
 ---
 
@@ -11,123 +11,130 @@
 
 ## Introduction
 
-In January 2026, Juan Rodriguez, a Professional Engineer and Technical Program Manager at TELUS Health in Toronto, sat at his home office desk staring at a growing list of automated pipelines. What had started a few months earlier as a personal side project — a simple website to track the market value of Venezuelan sports cards — had evolved into a full-scale data platform with fifteen automated workflows, six external data integrations, statistical pricing algorithms, and a React-based frontend serving hundreds of athlete profiles.¹
+In January 2026, Juan Rodriguez, a Professional Engineer and Technical Program Manager at TELUS Health in Toronto, reviewed the commit history of a project that should not have existed.¹ Over the previous months, he had built a production-grade data platform — fifteen automated pipelines, six external API integrations, statistical pricing algorithms, and a responsive React frontend — without writing a single line of code himself. His engineering partner was Lovable, a conversational AI development tool that generated code, configured infrastructure, and authored documentation through natural-language dialogue.²
 
-Rodriguez had built the entire platform without a development team. His engineering partner was an artificial intelligence — a conversational AI coding tool called Lovable that could write code, configure deployment pipelines, debug errors, and author documentation through natural-language conversation.² The platform, named VZLA Sports Elite, now tracked over 550 Venezuelan athletes across baseball, soccer, basketball, and other sports, pulling daily data from eBay's Browse API, scraping sold-listing prices, collecting grading population counts from PSA and Beckett, and computing robust statistical pricing using methods adapted from industrial quality engineering.³
+The platform, VZLA Sports Elite, tracked over 550 Venezuelan athletes across professional sports, aggregating market pricing data from eBay, grading population statistics from PSA and Beckett, and historical trends from SportsCardsPro.³ It was, by any objective measure, a real piece of infrastructure: workflows executed on schedules, data flowed through fallback chains, and pricing algorithms applied industrial statistical methods to filter marketplace noise.
 
-Rodriguez faced a decision. The platform worked — pipelines ran on schedule, data flowed through fallback chains, and the statistical engine produced reliable pricing signals. But he had built everything iteratively, one feature at a time, in conversation with an AI that had no memory between sessions. Every architectural choice lived in documentation files and Git commit history rather than in any engineer's head. The codebase had grown to over fifteen thousand lines across fifty-plus files, with no formal testing framework, no staging environment, and no human besides Rodriguez who understood the system.⁴
+But Rodriguez had built it using a development methodology that challenged conventional DevOps assumptions. His AI partner retained no memory between sessions.⁴ Every conversation started from zero — no recollection of what had been built, what had failed, or what architectural decisions had been made. The entire system's continuity depended not on an engineering team's institutional knowledge but on documentation, version control, and the DevOps principles Rodriguez applied to compensate for his partner's amnesia.
 
-The question was not whether to continue building. The question was whether the DevOps principles that had guided the platform's construction — automation, version control, resilience, observability, continuous improvement — were sufficient to sustain a system built entirely through human-AI collaboration. Could one person and an AI operate production infrastructure reliably? Or did the absence of a traditional engineering team create risks that no amount of automation could mitigate?
+Rodriguez now faced a question that extended beyond his personal project: could DevOps principles — automation, version control, resilience, observability, and continuous improvement — serve as a sufficient framework for human-AI software collaboration? Or did this model introduce structural risks that traditional DevOps was not designed to address?
 
 ---
 
 ## Background
 
-### The Sports Card Market
+### Rodriguez's Approach to Engineering
 
-The global sports trading card market had experienced significant growth through the early 2020s, driven by increased collector interest, online marketplaces, and the emergence of grading services that authenticated and scored card condition.⁵ Venezuelan athletes occupied a distinctive niche within this market. Players like Ronald Acuña Jr. (MLB), José Altuve (MLB), and Yeferson Soteldo (soccer) attracted both domestic Venezuelan collectors and international investors, but pricing data for these athletes was scattered across multiple platforms with no centralized source.⁶
+Rodriguez brought a cross-disciplinary background to the project. He held a Professional Engineer (P.Eng.) designation, a Master's degree with a concentration in Product Innovation, and a UX Design Certificate from George Brown College in Toronto.⁵ He had spent over eighteen years in the telecommunications industry and lectured at York University on engineering and technology topics. His professional role at TELUS Health involved managing cross-functional technical programs.
 
-Rodriguez, a Venezuelan-born collector himself, recognized the gap. Collectors had to manually search eBay, cross-reference grading populations on PSA's website, and check historical prices on SportsCardsPro — a time-consuming process that yielded inconsistent results. A centralized platform that aggregated these sources and applied statistical methods to produce reliable pricing signals would serve both casual collectors and serious investors.
+Rather than treating the card platform as a casual project, Rodriguez applied the engineering rigour he practised professionally. He framed every infrastructure choice as a DevOps decision: How would this pipeline recover from failure? Where did this architectural knowledge live? What happened when the system's only developer — the AI — forgot everything?
 
-### Rodriguez's Professional Background
+### The AI as Development Partner
 
-Rodriguez brought an unusual combination of credentials to the project. He held a Professional Engineer (P.Eng.) designation, a Master's degree with a concentration in Product Innovation, and a UX Design Certificate from George Brown College in Toronto.⁷ He had spent over eighteen years in the telecommunications industry and served as a lecturer at York University, where he taught engineering and technology courses. His professional role at TELUS Health involved managing cross-functional technical programs at the intersection of healthcare technology and enterprise infrastructure.
+Lovable operated through natural-language conversation.⁶ Rodriguez described requirements in plain English; the AI generated React components, JavaScript and Python scripts, GitHub Actions workflows, and technical documentation in response. The tool produced a full-stack application using React, Vite, TypeScript, and Tailwind CSS, deployed with continuous integration.
 
-This background shaped his approach. Rather than treating the sports card platform as a casual hobby project, Rodriguez applied the same engineering rigour he used in his professional work: version-controlled infrastructure, automated testing of data quality, documented architectural decisions, and systematic resilience patterns.
+The AI's technical output was substantial. It wrote every script in the repository, designed every automated workflow, implemented statistical formulas adapted from industrial quality engineering, and authored four comprehensive documentation files totalling over two thousand lines.⁷ It debugged eBay API edge cases, designed database backup schemas, and applied accessibility standards to the frontend interface.
 
-### The AI Development Model
+However, the AI operated under a fundamental constraint: it had no persistent memory.⁸ Each conversation session was independent. The AI could not recall previous sessions, prior architectural decisions, bugs that had been discovered, or conventions the codebase followed. Every session began as though the project did not exist.
 
-Rodriguez chose Lovable, an AI-powered web application development platform, as his primary development tool.⁸ Unlike traditional code editors, Lovable operated through natural-language conversation — Rodriguez described what he wanted to build, and the AI generated the code, configured the deployment, and iterated on the design in real time. The platform produced React applications with Vite build tooling, Tailwind CSS styling, and TypeScript throughout.
-
-The AI's capabilities were substantial. It could write JavaScript and Python scripts, configure GitHub Actions workflows, design database schemas, apply statistical formulas, debug API integration issues, and author technical documentation. However, it had one critical limitation: it retained no memory between conversation sessions.⁹ Every time Rodriguez started a new session, the AI began with no context about the project's history, architecture, or previous decisions.
-
-This limitation became the foundational constraint that shaped every architectural choice in the platform. If the AI could not remember, then every decision had to be written down. If every decision was written down, then the documentation became the system's institutional memory. And if documentation was institutional memory, then documentation was not a nice-to-have — it was infrastructure.
+This constraint became the defining challenge of the collaboration — and the lens through which Rodriguez applied DevOps principles.
 
 ---
 
-## The Platform Architecture
+## DevOps Principles as Collaboration Infrastructure
 
-### Data Pipeline Design
+Rodriguez did not set out to test DevOps theory. The principles emerged organically as solutions to the practical problems of building software with a stateless partner. In retrospect, he identified six principles that had made the collaboration viable.
 
-By January 2026, VZLA Sports Elite operated fifteen automated pipelines on GitHub Actions, each executing on a defined schedule (see Exhibit 1).¹⁰ The pipelines fell into five functional categories:
+### Principle 1: Version Control as the Single Source of Truth
 
-1. **Market Data Collection** — Daily fetches from eBay's Browse API for active listings, scraping of sold listings for completed sale prices, and queries to SportsCardsPro for third-party pricing.
-2. **Grading Population Tracking** — Scraping of Gemrate.com for PSA population data and Beckett grading statistics, with cooldown management to respect rate limits.
-3. **Statistical Processing** — Computation of Taguchi winsorized means, coefficient of variation stability scores, signal-to-noise ratios, and momentum indicators.
-4. **Data Aggregation** — Consolidation of multiple sources into unified athlete profiles with fallback chains for missing data.
-5. **Backup and Recovery** — Weekly snapshots of all data files to a managed PostgreSQL database on Render.
+Every artifact — code, data, documentation, workflow configuration — lived in a single Git repository.⁹ There were no external wikis, no shared drives, no chat messages containing critical decisions. Git was not merely a code repository; it was the project's institutional memory.
 
-Each pipeline was configured as a standalone GitHub Actions workflow with explicit scheduling, concurrency controls, and error-handling patterns. Rodriguez had adopted a "stateless architecture" principle: no pipeline assumed that any previous pipeline had run successfully.¹¹ Each workflow fetched its own dependencies, validated its own inputs, and committed its own outputs to the Git repository.
+This was a direct response to the AI's amnesia. When the AI had no memory, the repository had to contain everything needed to reconstruct context. Rodriguez adopted a "Git-as-Database" pattern: market data was stored as JSON files committed directly to the repository, and pipeline outputs were versioned alongside the code that produced them.¹⁰ Every data change was a code change, subject to the same version control discipline.
 
-### The Git-as-Database Pattern
+The approach had trade-offs. Git was not designed for query operations, and repository size grew with each commit. But it eliminated an entire category of risk: there was no database server to fail, no credentials to expire, no external state to synchronize. The repository was the system.
 
-One of the platform's most distinctive architectural decisions was using Git as the primary data store.¹² Rather than deploying a traditional database for the main data layer, all market data was stored as JSON files committed directly to the GitHub repository. Pipeline outputs were committed to the `data/` directory, and the frontend fetched data from GitHub's raw content URLs.
+### Principle 2: Documentation as Infrastructure
 
-This approach offered several advantages: automatic versioning of every data change, full audit history through Git log, zero database hosting costs for the primary data layer, and atomic updates through Git's commit model. It also created a natural alignment with DevOps principles — every data change was a code change, subject to the same version control discipline.
+In traditional engineering teams, institutional knowledge lived in engineers' heads, supplemented by documentation. When the "engineer" forgot everything between sessions, documentation became the sole carrier of architectural context.¹¹
 
-The disadvantage was performance. Git was not designed as a database, and large JSON files created repository bloat over time. Rodriguez mitigated this by keeping individual files focused (one concern per file) and using the PostgreSQL backup as the true archival layer.
+Rodriguez maintained four living technical documents: a Platform Guide (422 lines), a Disaster Recovery Plan (656 lines), a Data Pipeline Audit (894 lines), and a Headshot Fixes reference (68 lines).¹² Combined, this was over two thousand lines of documentation for roughly fifteen thousand lines of code — a 1:7 ratio that was unusually high for any project, let alone a personal one.
 
-### Statistical Pricing Engine
+These documents were not written for human readers. They were written for the AI. Traditional documentation explained *what* a system did. Rodriguez's documentation explained *what, why, and what not to do*:
 
-The platform's pricing engine applied methods from industrial quality engineering — specifically, Genichi Taguchi's robust design methodology — to the problem of noisy eBay market data.¹³ Raw eBay prices were inherently noisy: a single outlier listing (a mispriced card, a lot sale, a damaged item listed without disclosure) could dramatically skew a simple average.
+> The sold listing scraper uses HTML scraping (NOT the Browse API) because eBay's Browse API does not reliably return sold listings. **DO NOT** add API authentication to the sold scripts — they work without it.¹³
 
-The Taguchi winsorized mean addressed this by trimming the outer 40% of price observations and replacing them with boundary values before computing the mean.¹⁴ This produced a pricing signal that was resistant to outliers while still reflecting genuine market movement. The platform also computed a coefficient of variation (CV) for each athlete's pricing data, expressed as a "stability score" — a CV below 15% indicated stable, reliable pricing, while a CV above 40% signalled high volatility and risk.¹⁵
+Every "DO NOT" in the documentation represented a mistake that had been made and corrected. The documentation was a registry of lessons learned, encoded in a format the AI could consume at the start of each session.
 
-### Frontend Design
+The Disaster Recovery document was the most revealing. Its opening line read: "A complete system prompt–style specification to rebuild this website from scratch."¹⁴ It included exact CSS token values, component hierarchies, data flow diagrams, and ten known gotchas. It was simultaneously disaster recovery for the codebase and context recovery for the AI.
 
-The frontend was a single-page React application displaying athlete cards with pricing data, investment signals, and interactive sparkline charts showing 90-day price trends.¹⁶ Rodriguez applied user-centred design principles from his George Brown College training: clear visual hierarchy, colour-coded investment signals (green for buy, yellow for hold, red for caution), and responsive layouts optimized for both desktop and mobile viewing.
+### Principle 3: Automation Over Manual Intervention
+
+No data collection, processing, or deployment step required manual execution.¹⁵ Fifteen GitHub Actions workflows ran on cron schedules, covering data collection, statistical processing, snapshot generation, and disaster recovery backups (see Exhibit 1). The only manual interventions were debugging sessions triggered by failure notifications or anomalous data.
+
+Automation was not just an efficiency choice — it was a reliability requirement. Because Rodriguez could not pair-program with the AI continuously, every pipeline had to operate independently. Each workflow fetched its own dependencies, validated its own inputs, and committed its own outputs. Rodriguez adopted a "stateless architecture" principle: no pipeline assumed that any previous pipeline had run successfully.¹⁶
+
+### Principle 4: Resilience Through Layered Redundancy
+
+The platform implemented a three-layer data availability model (see Exhibit 2).¹⁷ The primary layer served data from GitHub's raw content URLs. If that failed, the frontend fell back to local copies bundled at build time. If those were corrupted, a weekly PostgreSQL backup on Render provided disaster recovery.
+
+Within individual data fields, a price fallback chain provided graceful degradation: `taguchiListing → avgListing → trimmedListing → avg → average` (see Exhibit 3). Each level used a less robust but more available pricing method, ensuring that no athlete profile displayed empty data.¹⁸
+
+This redundancy pattern emerged from a specific failure. Early in the project, an eBay API quota exhaustion caused a pipeline to overwrite valid data with an empty object. The AI fixed the immediate bug, but Rodriguez documented the failure pattern and required all subsequent pipelines to implement merge-before-write logic. The documentation ensured the AI applied the same protection to every future pipeline without re-learning the lesson.¹⁹
+
+### Principle 5: Observability Through Data Quality
+
+Rather than traditional application performance monitoring, the platform monitored data quality.²⁰ Were prices within expected ranges? Were grading population counts increasing monotonically? Were pipeline commit timestamps on schedule?
+
+The pricing engine applied a Taguchi winsorized mean — a method from industrial quality engineering — to eBay's inherently noisy marketplace data.²¹ By trimming the outer 40% of price observations and replacing them with boundary values, the algorithm produced pricing signals resistant to outliers.²² A coefficient of variation (CV) for each athlete's data served as a stability score: below 15% indicated reliable pricing; above 40% signalled high volatility.²³
+
+Data anomalies were the primary alert mechanism. When Ronald Acuña Jr.'s price appeared unexpectedly low, Rodriguez investigated and discovered that the graded-card filter was matching "PSA ready" listings (ungraded cards marketed as submission candidates) as graded cards. The AI fixed the regex, and Rodriguez documented the edge case for future sessions.²⁴
+
+### Principle 6: Iterative Development with Session Boundaries
+
+The platform was built in ten incremental capability layers, each adding one functional area before moving to the next (see Exhibit 4).²⁵ At no point was the system in a half-migrated state. Each iteration produced committed, working code.
+
+This was the natural rhythm of AI-assisted development. Each conversation session had a clear lifecycle: context loading (the AI read documentation and relevant code), implementation (the AI wrote and tested code), and documentation update (the session's decisions were captured for future sessions).²⁶ The documentation update was not optional — it was the mechanism by which the current session's knowledge transferred to the next.
+
+Rodriguez estimated that documentation updates cost roughly thirty minutes per session, totalling fifteen to twenty hours over the project's life. Each hour of documentation saved five to ten hours of re-explanation in future sessions — a roughly 10:1 return on investment.²⁷
 
 ---
 
-## The DevOps Principles in Practice
+## The Human-AI Division of Labour
 
-Rodriguez identified six core DevOps principles that had emerged organically through the platform's development:
+The collaboration was not "human thinks, AI types." The AI proposed architectures, identified edge cases, and suggested patterns from its training data that Rodriguez had never encountered. The interaction was genuinely bidirectional (see Exhibit 5).²⁸
 
-### Principle 1: Version Control as Source of Truth
+But there was an asymmetry. Rodriguez accumulated context across sessions; the AI did not. Rodriguez knew *why* the Beckett grading pipeline was offset by two hours from the PSA pipeline (to prevent concurrent load on the Gemrate server), *why* SGC grading was excluded (insufficient market share to justify the API calls), and *why* Best Offer listings were filtered from sold data (the displayed price was the asking price, not the accepted offer).²⁹
 
-Every artifact in the system — code, data, documentation, workflow configurations — lived in a single Git repository.¹⁷ There were no external wikis, no shared drives, no Slack messages containing critical decisions. If it was not in the repository, it did not exist.
+Without Rodriguez providing this narrative context — the *why behind the why* — the AI might add SGC support because it seemed like a logical extension, or schedule both grading pipelines at the same time because no documentation said otherwise. The human's role was not primarily technical. It was curatorial: maintaining the narrative of the project so that each session's AI partner could execute within the correct constraints.³⁰
 
-### Principle 2: Automation Over Manual Intervention
+Rodriguez described his role as shifting from **producer** to **curator**:
 
-No data collection, processing, or deployment step required manual execution. Every pipeline ran on a cron schedule, and the only manual interventions were debugging sessions triggered by failure notifications.¹⁸
-
-### Principle 3: Resilience Through Redundancy
-
-The three-layer data availability model (GitHub raw URLs → local build copies → PostgreSQL backup) ensured that no single point of failure could take the platform offline.¹⁹ Within individual data fields, the price fallback chain (`taguchiListing → avgListing → trimmedListing → avg → average`) provided graceful degradation.
-
-### Principle 4: Documentation as Infrastructure
-
-Because the AI partner had no persistent memory, documentation was not optional — it was the mechanism by which architectural decisions survived between development sessions.²⁰ Four comprehensive documents (Platform Guide, Data Pipeline Audit, Disaster Recovery Plan, and Headshot Fixes) served as the system's institutional knowledge base.
-
-### Principle 5: Observability Through Data Quality Monitoring
-
-Rather than traditional application performance monitoring, the platform monitored data quality: Were prices within expected ranges? Were population counts increasing monotonically? Were pipeline commit timestamps on schedule?²¹ Data anomalies served as the primary alert mechanism.
-
-### Principle 6: Continuous Improvement Through Iteration
-
-The platform was built in ten incremental capability layers, each adding one functional area before moving to the next.²² Rodriguez never attempted to design the full system upfront. Each iteration was a complete, working system — the next iteration simply made it better.
+- **Curator of context** — deciding what documentation to write and maintain
+- **Curator of quality** — reviewing AI-generated code for correctness
+- **Curator of direction** — choosing what to build next
+- **Curator of constraints** — encoding lessons learned to prevent future mistakes
 
 ---
 
 ## The Decision
 
-By January 2026, Rodriguez had proven that one person and an AI could build and operate a production data platform using DevOps principles. But several challenges remained unresolved:
+By January 2026, the DevOps principles had proven sufficient to build the platform. But Rodriguez questioned whether they were sufficient to sustain it. Several challenges remained:
 
-**Scalability.** The platform tracked 553 athletes, but eBay's Browse API had rate limits. Adding more athletes or increasing data collection frequency would require architectural changes — batching strategies, queue management, or API tier upgrades — that Rodriguez had not yet designed.²³
+**Testing gap.** The platform had no automated test suite.³¹ Data quality was monitored through statistical methods and pipeline outputs, but there were no unit tests, integration tests, or end-to-end tests. Rodriguez relied on the robustness of the Taguchi methods and manual verification to catch errors.
 
-**Testing.** The platform had no automated test suite. Data quality was monitored through pipeline outputs, but there were no unit tests, integration tests, or end-to-end tests. Rodriguez relied on manual verification and the robustness of the statistical methods to catch errors.
+**Bus factor.** Despite over two thousand lines of documentation, Rodriguez was the only person who understood the system holistically.³² The AI could reconstruct understanding from documentation, but only if the documentation was comprehensive and current. Any gap in documentation was a gap in recoverability.
 
-**Bus Factor.** Despite extensive documentation, Rodriguez was the only person who understood the system holistically. The AI partner could reconstruct understanding from documentation, but only if the documentation was comprehensive and current. Any gap in documentation was a gap in the system's recoverability.
+**Scalability.** eBay's Browse API had rate limits.³³ Adding athletes or increasing collection frequency required architectural changes that Rodriguez had not designed — batching strategies, queue management, or API tier upgrades.
 
-**Sustainability.** The platform ran on GitHub Actions' free tier (2,000 minutes per month) and Render's free PostgreSQL tier (1 GB).²⁴ Growth in data volume or pipeline complexity could push the platform past these limits, requiring paid infrastructure.
+**Infrastructure costs.** The platform ran on free tiers: GitHub Actions (2,000 minutes per month) and Render PostgreSQL (1 GB).³⁴ Growth in data volume or pipeline complexity could exceed these limits.
 
-Rodriguez considered three paths forward:
+Rodriguez considered three paths:
 
-1. **Maintain the status quo** — continue operating the platform as a personal project with incremental improvements, accepting the risks of no testing and single-operator dependency.
-2. **Formalize the infrastructure** — invest in automated testing, staging environments, and operational runbooks to bring the platform to professional-grade reliability, potentially open-sourcing the codebase.
-3. **Scale the model** — use the platform as a case study to demonstrate that human-AI DevOps collaboration could be applied to larger, more complex systems, potentially developing consulting or educational offerings around the methodology.
+1. **Maintain the status quo** — continue operating the platform with incremental improvements, accepting the risks of no testing and single-operator dependency.
+2. **Formalize the infrastructure** — invest in automated testing, staging environments, and operational runbooks to bring the platform to professional-grade reliability.
+3. **Scale the methodology** — use the platform as a case study to demonstrate that human-AI DevOps collaboration could be applied to larger systems, developing educational or consulting offerings around the approach.
 
-Each path had different implications for time investment, technical risk, and the original goal of creating a legacy project for his children. Rodriguez needed to decide which direction would best honour both the engineering principles he had applied and the personal motivation that had started the project.
+Each path had different implications for time investment, technical risk, and Rodriguez's original goal: creating a technical legacy for his children that demonstrated what one person and an AI could build using sound engineering principles.³⁵
 
 ---
 
@@ -136,51 +143,62 @@ Each path had different implications for time investment, technical risk, and th
 1. Juan D. Rodriguez, personal project records, VZLA Sports Elite repository, GitHub, January 2026.
 2. Lovable, "Lovable Documentation — AI-Powered Web Application Development," accessed March 2026, https://docs.lovable.dev/.
 3. Professional Sports Authenticator, "PSA Population Report," accessed March 2026, https://www.psacard.com/pop; Beckett Grading Services, "Beckett Grading — Card Authentication & Grading," accessed March 2026, https://www.beckett.com/grading.
-4. Rodriguez, personal project records.
-5. Grand View Research, "Sports Trading Card Market Size, Share & Trends Analysis Report," 2023, https://www.grandviewresearch.com/industry-analysis/sports-trading-card-market.
-6. eBay, "Browse API — eBay Developers Program," accessed March 2026, https://developer.ebay.com/api-docs/buy/browse/overview.html.
-7. Juan D. Rodriguez, LinkedIn profile, accessed March 2026.
-8. Lovable, "Lovable Documentation."
-9. Shraddha Barke, Michael B. James, and Nadia Polikarpova, "Grounded Copilot: How Programmers Interact with Code-Generating Models," *Proceedings of the ACM on Programming Languages (OOPSLA)* 7 (2023), https://doi.org/10.1145/3586030.
-10. GitHub, "GitHub Actions Documentation," accessed March 2026, https://docs.github.com/en/actions.
-11. Adam Wiggins, "The Twelve-Factor App," 2017, https://12factor.net/.
-12. Scott Chacon and Ben Straub, *Pro Git*, 2nd ed. (New York: Apress, 2014), https://git-scm.com/book/en/v2.
-13. Genichi Taguchi, *Introduction to Quality Engineering: Designing Quality into Products and Processes* (Tokyo: Asian Productivity Organization, 1986), 22.
-14. Donald J. Wheeler, *Understanding Industrial Experimentation*, 2nd ed. (Knoxville, TN: SPC Press, 1990), 88.
-15. Hervé Abdi, "Coefficient of Variation," in *Encyclopedia of Research Design*, ed. Neil J. Salkind (Thousand Oaks, CA: Sage Publications, 2010), https://doi.org/10.4135/9781412961288.n56.
-16. Meta, "React Documentation," accessed March 2026, https://react.dev/.
-17. Thomas A. Limoncelli, "GitOps: A Path to More Self-Service IT," *Communications of the ACM* 61, no. 9 (2018): 38, https://doi.org/10.1145/3233241.
-18. GitHub, "Events That Trigger Workflows — Scheduled Events," accessed March 2026, https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows#schedule.
-19. Michael L. Nygard, *Release It! Design and Deploy Production-Ready Software*, 2nd ed. (Raleigh, NC: Pragmatic Bookshelf, 2018), 75.
-20. Daniele Procida, "Diátaxis: A Systematic Approach to Technical Documentation," accessed March 2026, https://diataxis.fr/.
-21. Betsy Beyer et al., *Site Reliability Engineering: How Google Runs Production Systems* (Sebastopol, CA: O'Reilly Media, 2016), 63, https://sre.google/sre-book/table-of-contents/.
-22. Eric Ries, *The Lean Startup: How Today's Entrepreneurs Use Continuous Innovation to Create Radically Successful Businesses* (New York: Crown Business, 2011), 77.
-23. eBay, "Browse API."
-24. Render, "Render Documentation — PostgreSQL," accessed March 2026, https://docs.render.com/databases.
+4. Shraddha Barke, Michael B. James, and Nadia Polikarpova, "Grounded Copilot: How Programmers Interact with Code-Generating Models," *Proceedings of the ACM on Programming Languages (OOPSLA)* 7 (2023), https://doi.org/10.1145/3586030.
+5. Juan D. Rodriguez, LinkedIn profile, accessed March 2026.
+6. Lovable, "Lovable Documentation."
+7. Rodriguez, personal project records.
+8. Barke, James, and Polikarpova, "Grounded Copilot."
+9. Thomas A. Limoncelli, "GitOps: A Path to More Self-Service IT," *Communications of the ACM* 61, no. 9 (2018): 38, https://doi.org/10.1145/3233241.
+10. Scott Chacon and Ben Straub, *Pro Git*, 2nd ed. (New York: Apress, 2014), https://git-scm.com/book/en/v2.
+11. Daniele Procida, "Diátaxis: A Systematic Approach to Technical Documentation," accessed March 2026, https://diataxis.fr/.
+12. Rodriguez, personal project records.
+13. Rodriguez, personal project records, `docs/DATA-PIPELINE-AUDIT.md`.
+14. Rodriguez, personal project records, `docs/DISASTER-RECOVERY.md`.
+15. GitHub, "GitHub Actions Documentation," accessed March 2026, https://docs.github.com/en/actions.
+16. Adam Wiggins, "The Twelve-Factor App," 2017, https://12factor.net/.
+17. Michael L. Nygard, *Release It! Design and Deploy Production-Ready Software*, 2nd ed. (Raleigh, NC: Pragmatic Bookshelf, 2018), 75.
+18. Genichi Taguchi, *Introduction to Quality Engineering: Designing Quality into Products and Processes* (Tokyo: Asian Productivity Organization, 1986), 22.
+19. Rodriguez, personal project records, `docs/DATA-PIPELINE-AUDIT.md`, Bug 8.7: Empty-Run Data Wipe.
+20. Betsy Beyer et al., *Site Reliability Engineering: How Google Runs Production Systems* (Sebastopol, CA: O'Reilly Media, 2016), 63, https://sre.google/sre-book/table-of-contents/.
+21. Taguchi, *Introduction to Quality Engineering*, 22.
+22. Donald J. Wheeler, *Understanding Industrial Experimentation*, 2nd ed. (Knoxville, TN: SPC Press, 1990), 88.
+23. Hervé Abdi, "Coefficient of Variation," in *Encyclopedia of Research Design*, ed. Neil J. Salkind (Thousand Oaks, CA: Sage Publications, 2010), https://doi.org/10.4135/9781412961288.n56.
+24. Rodriguez, personal project records, `docs/DATA-PIPELINE-AUDIT.md`, Bug 8.17.
+25. Eric Ries, *The Lean Startup: How Today's Entrepreneurs Use Continuous Innovation to Create Radically Successful Businesses* (New York: Crown Business, 2011), 77.
+26. Rodriguez, personal project records.
+27. Rodriguez, personal project records.
+28. Barke, James, and Polikarpova, "Grounded Copilot."
+29. Rodriguez, personal project records, `docs/PLATFORM-GUIDE.md`.
+30. Rodriguez, personal project records.
+31. Rodriguez, personal project records.
+32. Rodriguez, personal project records, `docs/DISASTER-RECOVERY.md`.
+33. eBay, "Browse API — eBay Developers Program," accessed March 2026, https://developer.ebay.com/api-docs/buy/browse/overview.html.
+34. Render, "Render Documentation — PostgreSQL," accessed March 2026, https://docs.render.com/databases.
+35. Rodriguez, personal project records.
 
 ---
 
 ## Exhibits
 
-### Exhibit 1: VZLA Sports Elite — Automated Pipeline Schedule (January 2026)
+### Exhibit 1: Automated Pipeline Schedule (January 2026)
 
-| Pipeline | Schedule (UTC) | Data Source | Function |
-|----------|---------------|-------------|----------|
-| eBay Browse API | Daily 06:00 | eBay | Active listing prices for raw cards |
-| eBay Graded | Daily 07:00 | eBay | Active listing prices for graded cards |
-| eBay Sold Scraper | Daily 08:00 | eBay | Completed sale prices (raw) |
-| eBay Graded Sold | Daily 09:00 | eBay | Completed sale prices (graded) |
-| SCP Prices | Daily 10:00 | SportsCardsPro | Third-party pricing reference |
-| SCP History | Weekly (Sun) | SportsCardsPro | Historical price trends |
-| Gemrate PSA | Daily 11:00 | Gemrate.com | PSA grading population counts |
-| Gemrate Beckett | Daily 12:00 | Gemrate.com | Beckett grading population counts |
-| Market Data Snapshot | Daily 12:00 | Internal | Unified athlete data consolidation |
-| Card Tracker | Daily 13:00 | Internal | Portfolio tracking updates |
-| Athlete History | Weekly (Sun) | Internal | Time-series snapshots |
-| Bi-Weekly Analysis | Bi-weekly | Gemini AI | AI-generated market narrative |
-| Backup to Render | Weekly (Sun) | Internal | PostgreSQL disaster recovery |
-| Sync Gemrate Flags | Daily 14:00 | Internal | New athlete detection |
-| EPN Data | Daily 15:00 | eBay Partner Network | Affiliate performance tracking |
+| Pipeline | Schedule (UTC) | Data Source | DevOps Principle |
+|----------|---------------|-------------|-----------------|
+| eBay Browse API | Every 5 days | eBay | Automation |
+| eBay Graded | Every 5 days | eBay | Automation |
+| eBay Sold Scraper | Every 5 days | eBay | Automation |
+| eBay Graded Sold | Every 5 days | eBay | Automation |
+| SCP Prices | Daily | SportsCardsPro | Automation |
+| SCP History | Weekly (Sun) | SportsCardsPro | Version control |
+| Gemrate PSA | Every 4 hours | Gemrate.com | Orchestration |
+| Gemrate Beckett | Every 4 hours (offset 2h) | Gemrate.com | Orchestration |
+| Market Data Snapshot | Every 5 days | Internal | Data quality |
+| Card Tracker | Daily | Internal | Automation |
+| Athlete History | Daily | Internal | Observability |
+| Bi-Weekly Analysis | 1st & 15th | Gemini AI | AI collaboration |
+| Backup to Render | Weekly (Sun) | Internal | Resilience |
+| Sync Gemrate Flags | Weekly (Sun) | Internal | Automation |
+| EPN Data | Daily | eBay Partner Network | Observability |
 
 *Source: Created by the author using pipeline configuration data from the VZLA Sports Elite GitHub repository.*
 
@@ -196,22 +214,20 @@ Each path had different implications for time investment, technical risk, and th
                        ▼
 ┌─────────────────────────────────────────────────────────┐
 │  LAYER 1: GitHub Raw URLs (Primary)                     │
-│  • Always reflects latest committed data                │
-│  • Zero-latency updates (no redeploy needed)            │
+│  • Latest committed data, no redeploy needed            │
 │  • Availability: ~99.9% (GitHub SLA)                    │
 └──────────────────────┬──────────────────────────────────┘
                        │ fetch fails?
                        ▼
 ┌─────────────────────────────────────────────────────────┐
 │  LAYER 2: Local Build Copies (Fallback)                 │
-│  • Bundled in frontend at build time                    │
-│  • Potentially stale (from last deploy)                 │
-│  • Availability: 100% (served with app)                 │
+│  • Bundled at build time, potentially stale             │
+│  • Availability: 100% (served with application)         │
 └──────────────────────┬──────────────────────────────────┘
                        │ build corrupted?
                        ▼
 ┌─────────────────────────────────────────────────────────┐
-│  LAYER 3: Render PostgreSQL (Disaster Recovery)         │
+│  LAYER 3: PostgreSQL Backup (Disaster Recovery)         │
 │  • Weekly JSONB snapshots of all data files              │
 │  • Idempotent upserts with conflict resolution          │
 │  • Recovery: single SQL query per file                  │
@@ -236,38 +252,39 @@ Each path had different implications for time investment, technical risk, and th
 
 ---
 
-### Exhibit 4: Capability Layers — Iterative Development Timeline
+### Exhibit 4: Iterative Development Layers
 
-| Layer | Capability Added | Key DevOps Principle |
-|-------|-----------------|---------------------|
-| 1 | Static athlete roster with manual data | Version control |
-| 2 | eBay Browse API integration | Automation |
-| 3 | Scheduled pipeline execution | Scheduling strategies |
-| 4 | Sold-listing price scraping | API integration patterns |
-| 5 | Taguchi statistical pricing | Data quality monitoring |
-| 6 | Grading population tracking | Pipeline orchestration |
-| 7 | PostgreSQL backup layer | Disaster recovery |
-| 8 | AI-generated market analysis | AI as DevOps partner |
-| 9 | Time-series history and sparklines | Progress tracking |
-| 10 | Budget optimizer and investment signals | Iterative architecture |
+| Layer | Capability Added | DevOps Principle Applied |
+|-------|-----------------|------------------------|
+| 1 | Static athlete roster with manual data | Version control as source of truth |
+| 2 | eBay Browse API integration | Automation over manual intervention |
+| 3 | Scheduled pipeline execution | Automation over manual intervention |
+| 4 | Sold-listing price scraping | Resilience through redundancy |
+| 5 | Taguchi statistical pricing | Observability through data quality |
+| 6 | Grading population tracking | Automation; pipeline orchestration |
+| 7 | PostgreSQL backup layer | Resilience; disaster recovery |
+| 8 | AI-generated market analysis | AI collaboration as DevOps pattern |
+| 9 | Time-series history and sparklines | Observability; progress tracking |
+| 10 | Budget optimizer and investment signals | Iterative development |
 
 *Source: Created by the author using development history from the VZLA Sports Elite Git log.*
 
 ---
 
-### Exhibit 5: Human-AI Responsibility Division
+### Exhibit 5: Human-AI Responsibility Matrix
 
-| Responsibility | Human (Rodriguez) | AI (Lovable) |
-|---------------|-------------------|--------------|
-| Define requirements | ✓ | |
-| Architectural decisions | ✓ | Proposes options |
-| Domain expertise | ✓ | |
-| Code implementation | | ✓ |
-| Pipeline configuration | | ✓ |
-| Debugging | Identifies symptoms | Diagnoses and fixes |
-| Documentation | Reviews | Authors |
-| Testing in production | ✓ | |
-| Session continuity | ✓ (via documentation) | No memory |
-| Statistical methods | Selects approach | Implements formulas |
+| Activity | Human (Rodriguez) | AI (Lovable) |
+|----------|-------------------|--------------|
+| Define what to build | ✓ | |
+| Propose architecture | Selects approach | Proposes options |
+| Provide domain expertise | ✓ | |
+| Write code | | ✓ |
+| Configure pipelines | | ✓ |
+| Debug issues | Identifies symptoms | Diagnoses and fixes |
+| Author documentation | Reviews and directs | Writes content |
+| Test in production | ✓ | |
+| Maintain session continuity | ✓ (via documentation) | No memory |
+| Apply statistical methods | Selects methodology | Implements formulas |
+| Sequence work across sessions | ✓ | |
 
 *Source: Created by the author based on development session records.*
