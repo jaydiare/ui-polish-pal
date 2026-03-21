@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-21T18:31:42.280Z",
+    "updatedAt": "2026-03-21T21:21:37.467Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. Taguchi winsorized mean + market stability CV. Ungraded condition policy (permissive for sold). Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 400,
-      "endIdx": 410,
+      "startIdx": 410,
+      "endIdx": 420,
       "totalAthletes": 568
     },
     "maxPages": 4,
@@ -5673,6 +5673,66 @@
   },
   "Renyel Pinto": {
     "keyword": "Renyel Pinto Baseball",
+    "nScraped": 244,
+    "nSoldUsed": 16,
+    "avg": 0.525,
+    "taguchiSold": 0.525,
+    "medianSold": 0.525,
+    "marketStabilityCV": 0.9147617808185139,
+    "currency": "USD",
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
+  },
+  "Ricardo Pinto": {
+    "keyword": "Ricardo Pinto Baseball",
+    "nScraped": 241,
+    "nSoldUsed": 16,
+    "avg": 1.0949999999999998,
+    "taguchiSold": 1.0949999999999998,
+    "medianSold": 1.095,
+    "marketStabilityCV": 0.09903519058795221,
+    "currency": "USD",
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
+  },
+  "Ricardo Rodriguez": {
+    "keyword": "Ricardo Rodriguez Baseball",
+    "nScraped": 358,
+    "nSoldUsed": 86,
+    "avg": 1.8383720930232557,
+    "taguchiSold": 1.8383720930232557,
+    "medianSold": 1.66,
+    "marketStabilityCV": 0.3172195337246177,
+    "currency": "USD",
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
+  },
+  "Ricardo Sanchez": {
+    "keyword": "Ricardo Sanchez Baseball",
+    "nScraped": 253,
+    "nSoldUsed": 48,
+    "avg": 1.624166666666668,
+    "taguchiSold": 1.624166666666668,
+    "medianSold": 1.495,
+    "marketStabilityCV": 0.17415485062788308,
+    "currency": "USD",
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
+  },
+  "Rich Garces": {
+    "keyword": "Rich Garces Baseball",
+    "nScraped": 253,
+    "nSoldUsed": 40,
+    "avg": 1.59,
+    "taguchiSold": 1.59,
+    "medianSold": 1.5899999999999999,
+    "marketStabilityCV": 0.03184714990829137,
+    "currency": "USD",
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
+  },
+  "Richard Hidalgo": {
+    "keyword": "Richard Hidalgo Baseball",
     "nScraped": 0,
     "nSoldUsed": 0,
     "avg": null,
@@ -5682,66 +5742,6 @@
     "currency": "USD",
     "originalCurrencyExample": null,
     "fxRateUsed": null
-  },
-  "Ricardo Pinto": {
-    "keyword": "Ricardo Pinto Baseball",
-    "nScraped": 266,
-    "nSoldUsed": 12,
-    "avg": 0.9900000000000001,
-    "taguchiSold": 0.9900000000000001,
-    "medianSold": 0.99,
-    "marketStabilityCV": 1.1713031619078315e-16,
-    "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
-  },
-  "Ricardo Rodriguez": {
-    "keyword": "Ricardo Rodriguez Baseball",
-    "nScraped": 370,
-    "nSoldUsed": 63,
-    "avg": 1.1620634920634925,
-    "taguchiSold": 1.1620634920634925,
-    "medianSold": 1.25,
-    "marketStabilityCV": 0.11943142214002203,
-    "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
-  },
-  "Ricardo Sanchez": {
-    "keyword": "Ricardo Sanchez Baseball",
-    "nScraped": 263,
-    "nSoldUsed": 36,
-    "avg": 1.474444444444445,
-    "taguchiSold": 1.474444444444445,
-    "medianSold": 1.35,
-    "marketStabilityCV": 0.3256611560564498,
-    "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
-  },
-  "Rich Garces": {
-    "keyword": "Rich Garces Baseball",
-    "nScraped": 348,
-    "nSoldUsed": 44,
-    "avg": 1.34,
-    "taguchiSold": 1.34,
-    "medianSold": 1.54,
-    "marketStabilityCV": 0.23522127291496064,
-    "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
-  },
-  "Richard Hidalgo": {
-    "keyword": "Richard Hidalgo Baseball",
-    "nScraped": 240,
-    "nSoldUsed": 86,
-    "avg": 1.7848837209302333,
-    "taguchiSold": 1.7848837209302333,
-    "medianSold": 1.72,
-    "marketStabilityCV": 0.10563547521978457,
-    "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
   },
   "Robert Machado": {
     "keyword": "Robert Machado Brewers White Sox Baseball",
