@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-21T01:46:32.665Z",
+    "updatedAt": "2026-03-21T04:25:01.966Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. Taguchi winsorized mean + market stability CV. Ungraded condition policy (permissive for sold). Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 340,
-      "endIdx": 350,
+      "startIdx": 350,
+      "endIdx": 360,
       "totalAthletes": 568
     },
     "maxPages": 4,
@@ -28,7 +28,7 @@
     },
     "fx": {
       "source": "CBSA Exchange Rates API",
-      "asOf": "2026-03-21T00:00:00.000Z"
+      "asOf": "2026-03-22T00:00:00.000Z"
     }
   },
   "Adbert Alzolay": {
@@ -4953,55 +4953,55 @@
   },
   "Melvin Dorta": {
     "keyword": "Melvin Dorta Baseball",
-    "nScraped": 0,
-    "nSoldUsed": 0,
-    "avg": null,
-    "taguchiSold": null,
-    "medianSold": null,
-    "marketStabilityCV": null,
+    "nScraped": 240,
+    "nSoldUsed": 8,
+    "avg": 1.19,
+    "taguchiSold": 1.19,
+    "medianSold": 1.19,
+    "marketStabilityCV": 0.1796714231344029,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
   },
   "Melvin Mora": {
     "keyword": "Melvin Mora Baseball",
     "nScraped": 240,
-    "nSoldUsed": 78,
-    "avg": 3.00935897435897,
-    "taguchiSold": 3.00935897435897,
-    "medianSold": 2.92,
-    "marketStabilityCV": 0.27968625508815675,
+    "nSoldUsed": 79,
+    "avg": 3.118860759493673,
+    "taguchiSold": 3.118860759493673,
+    "medianSold": 2.99,
+    "marketStabilityCV": 0.25169197414908334,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
   },
   "Miguel Cabrera": {
     "keyword": "Miguel Cabrera Baseball",
-    "nScraped": 240,
-    "nSoldUsed": 181,
-    "avg": 1.587403314917127,
-    "taguchiSold": 1.587403314917127,
-    "medianSold": 1.45,
-    "marketStabilityCV": 0.3732432658135885,
+    "nScraped": 238,
+    "nSoldUsed": 123,
+    "avg": 5.967479674796757,
+    "taguchiSold": 5.967479674796757,
+    "medianSold": 5.5,
+    "marketStabilityCV": 0.2838246289028877,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
   },
   "Miguel Cairo": {
     "keyword": "Miguel Cairo Baseball",
-    "nScraped": 215,
-    "nSoldUsed": 84,
-    "avg": 1.406904761904764,
-    "taguchiSold": 1.406904761904764,
-    "medianSold": 1.4,
-    "marketStabilityCV": 0.26165089979411205,
+    "nScraped": 219,
+    "nSoldUsed": 95,
+    "avg": 1.385263157894739,
+    "taguchiSold": 1.385263157894739,
+    "medianSold": 1.35,
+    "marketStabilityCV": 0.2708686111682239,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
   },
   "Miguel Garcia": {
     "keyword": "Miguel Garcia Baseball",
-    "nScraped": 265,
+    "nScraped": 272,
     "nSoldUsed": 32,
     "avg": 0.9950000000000001,
     "taguchiSold": 0.9950000000000001,
@@ -5013,27 +5013,27 @@
   },
   "Miguel Gonzalez": {
     "keyword": "Miguel Gonzalez Baseball",
-    "nScraped": 66,
-    "nSoldUsed": 27,
-    "avg": 1.9662962962962969,
-    "taguchiSold": 1.9662962962962969,
-    "medianSold": 1.38,
-    "marketStabilityCV": 0.4461374661423957,
+    "nScraped": 0,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
   },
   "Miguel Montero": {
     "keyword": "Miguel Montero Baseball",
-    "nScraped": 60,
-    "nSoldUsed": 17,
-    "avg": 2.0223529411764702,
-    "taguchiSold": 2.0223529411764702,
-    "medianSold": 1.99,
-    "marketStabilityCV": 0.12906764898102802,
+    "nScraped": 0,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
   },
   "Miguel Perez": {
     "keyword": "Miguel Perez Baseball",
