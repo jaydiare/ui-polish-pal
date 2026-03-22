@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-22T01:58:05.558Z",
+    "updatedAt": "2026-03-22T04:49:53.457Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. Taguchi winsorized mean + market stability CV. Ungraded condition policy (permissive for sold). Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 420,
-      "endIdx": 430,
+      "startIdx": 430,
+      "endIdx": 440,
       "totalAthletes": 568
     },
     "maxPages": 4,
@@ -28,7 +28,7 @@
     },
     "fx": {
       "source": "CBSA Exchange Rates API",
-      "asOf": "2026-03-22T00:00:00.000Z"
+      "asOf": "2026-03-23T00:00:00.000Z"
     }
   },
   "Adbert Alzolay": {
@@ -5913,6 +5913,66 @@
   },
   "Rougned Odor": {
     "keyword": "Rougned Odor Baseball",
+    "nScraped": 240,
+    "nSoldUsed": 61,
+    "avg": 3.309016393442621,
+    "taguchiSold": 3.309016393442621,
+    "medianSold": 2.25,
+    "marketStabilityCV": 0.4395703245453044,
+    "currency": "USD",
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
+  },
+  "Ruben Quevedo": {
+    "keyword": "Ruben Quevedo Baseball",
+    "nScraped": 244,
+    "nSoldUsed": 20,
+    "avg": 1,
+    "taguchiSold": 1,
+    "medianSold": 1,
+    "marketStabilityCV": 0,
+    "currency": "USD",
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
+  },
+  "Salvador Perez": {
+    "keyword": "Salvador Perez Baseball",
+    "nScraped": 240,
+    "nSoldUsed": 103,
+    "avg": 3.96572815533981,
+    "taguchiSold": 3.96572815533981,
+    "medianSold": 3.99,
+    "marketStabilityCV": 0.2401646865543976,
+    "currency": "USD",
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
+  },
+  "Sandy Leon": {
+    "keyword": "Sandy Leon Baseball",
+    "nScraped": 99,
+    "nSoldUsed": 42,
+    "avg": 1.3366666666666662,
+    "taguchiSold": 1.3366666666666662,
+    "medianSold": 1.5,
+    "marketStabilityCV": 0.23660053263164185,
+    "currency": "USD",
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
+  },
+  "Sebastian Rivero": {
+    "keyword": "Sebastian Rivero Baseball",
+    "nScraped": 248,
+    "nSoldUsed": 64,
+    "avg": 1.6356249999999999,
+    "taguchiSold": 1.6356249999999999,
+    "medianSold": 1.5699999999999998,
+    "marketStabilityCV": 0.14311323742374962,
+    "currency": "USD",
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
+  },
+  "Sergio Escalona": {
+    "keyword": "Sergio Escalona Baseball",
     "nScraped": 0,
     "nSoldUsed": 0,
     "avg": null,
@@ -5923,77 +5983,17 @@
     "originalCurrencyExample": null,
     "fxRateUsed": null
   },
-  "Ruben Quevedo": {
-    "keyword": "Ruben Quevedo Baseball",
-    "nScraped": 240,
-    "nSoldUsed": 16,
-    "avg": 1.4949999999999997,
-    "taguchiSold": 1.4949999999999997,
-    "medianSold": 1.495,
-    "marketStabilityCV": 0.3419624091634643,
-    "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
-  },
-  "Salvador Perez": {
-    "keyword": "Salvador Perez Baseball",
-    "nScraped": 240,
-    "nSoldUsed": 105,
-    "avg": 2.364571428571432,
-    "taguchiSold": 2.364571428571432,
-    "medianSold": 1.99,
-    "marketStabilityCV": 0.23606207591578324,
-    "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
-  },
-  "Sandy Leon": {
-    "keyword": "Sandy Leon Baseball",
-    "nScraped": 91,
-    "nSoldUsed": 35,
-    "avg": 1.256,
-    "taguchiSold": 1.256,
-    "medianSold": 1.49,
-    "marketStabilityCV": 0.20308929051001956,
-    "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
-  },
-  "Sebastian Rivero": {
-    "keyword": "Sebastian Rivero Baseball",
-    "nScraped": 252,
-    "nSoldUsed": 76,
-    "avg": 1.6426315789473684,
-    "taguchiSold": 1.6426315789473684,
-    "medianSold": 1.65,
-    "marketStabilityCV": 0.14026558436355158,
-    "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
-  },
-  "Sergio Escalona": {
-    "keyword": "Sergio Escalona Baseball",
-    "nScraped": 240,
-    "nSoldUsed": 20,
-    "avg": 4.989999999999999,
-    "taguchiSold": 4.989999999999999,
-    "medianSold": 4.99,
-    "marketStabilityCV": 1.826155974752567e-16,
-    "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
-  },
   "Silvino Bracho": {
     "keyword": "Silvino Bracho Baseball",
-    "nScraped": 152,
-    "nSoldUsed": 36,
-    "avg": 1.6433333333333335,
-    "taguchiSold": 1.6433333333333335,
-    "medianSold": 1.59,
-    "marketStabilityCV": 0.05933787263805699,
+    "nScraped": 0,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
   },
   "Simon Muzziotti": {
     "keyword": "Simon Muzziotti Baseball",
