@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-22T09:29:05.018Z",
+    "updatedAt": "2026-03-22T12:43:29.312Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. Taguchi winsorized mean + market stability CV. Ungraded condition policy (permissive for sold). Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 450,
-      "endIdx": 460,
+      "startIdx": 460,
+      "endIdx": 470,
       "totalAthletes": 568
     },
     "maxPages": 4,
@@ -6273,7 +6273,7 @@
   },
   "Wilkelman Gonzalez": {
     "keyword": "Wilkelman Gonzalez Baseball",
-    "nScraped": 0,
+    "nScraped": 60,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -6285,12 +6285,12 @@
   },
   "Wilking Rodriguez": {
     "keyword": "Wilking Rodriguez Baseball",
-    "nScraped": 240,
-    "nSoldUsed": 4,
-    "avg": 2.99,
-    "taguchiSold": 2.99,
-    "medianSold": 2.99,
-    "marketStabilityCV": 0,
+    "nScraped": 244,
+    "nSoldUsed": 8,
+    "avg": 2.74,
+    "taguchiSold": 2.74,
+    "medianSold": 2.74,
+    "marketStabilityCV": 0.09754059923811109,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
@@ -6298,11 +6298,11 @@
   "William Bergolla": {
     "keyword": "William Bergolla Baseball",
     "nScraped": 240,
-    "nSoldUsed": 148,
-    "avg": 3.1249324324324363,
-    "taguchiSold": 3.1249324324324363,
-    "medianSold": 2.995,
-    "marketStabilityCV": 0.26325396323200356,
+    "nSoldUsed": 149,
+    "avg": 2.8706040268456436,
+    "taguchiSold": 2.8706040268456436,
+    "medianSold": 2.91,
+    "marketStabilityCV": 0.2879542547888586,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
@@ -6310,18 +6310,18 @@
   "William Contreras": {
     "keyword": "William Contreras Baseball",
     "nScraped": 240,
-    "nSoldUsed": 74,
-    "avg": 4.982162162162162,
-    "taguchiSold": 4.982162162162162,
-    "medianSold": 4.135,
-    "marketStabilityCV": 0.45631158728786114,
+    "nSoldUsed": 63,
+    "avg": 3.570158730158732,
+    "taguchiSold": 3.570158730158732,
+    "medianSold": 3,
+    "marketStabilityCV": 0.37112164110506557,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
   },
   "William Cuevas": {
     "keyword": "William Cuevas Baseball",
-    "nScraped": 240,
+    "nScraped": 246,
     "nSoldUsed": 8,
     "avg": 0.9900000000000001,
     "taguchiSold": 0.9900000000000001,
@@ -6333,12 +6333,12 @@
   },
   "Williams Perez": {
     "keyword": "Williams Perez Atlanta Braves Baseball",
-    "nScraped": 273,
-    "nSoldUsed": 32,
-    "avg": 0.9899999999999993,
-    "taguchiSold": 0.9899999999999993,
+    "nScraped": 141,
+    "nSoldUsed": 16,
+    "avg": 0.9900000000000001,
+    "taguchiSold": 0.9900000000000001,
     "medianSold": 0.99,
-    "marketStabilityCV": 6.836289218226938e-16,
+    "marketStabilityCV": 1.158215564969497e-16,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
