@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-22T20:48:34.466Z",
+    "updatedAt": "2026-03-22T22:48:43.446Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA/BGS/SGC grader title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 30,
-      "endIdx": 40,
+      "startIdx": 40,
+      "endIdx": 50,
       "totalAthletes": 451
     },
     "maxPages": 4,
@@ -601,7 +601,7 @@
   },
   "Anthony Santander": {
     "keyword": "Anthony Santander Baseball PSA",
-    "nScraped": 273,
+    "nScraped": 271,
     "nSoldUsed": 20,
     "avg": 30.149999999999988,
     "taguchiSold": 30.149999999999988,
@@ -613,7 +613,7 @@
   },
   "Antonio Senzatela": {
     "keyword": "Antonio Senzatela Baseball PSA",
-    "nScraped": 240,
+    "nScraped": 242,
     "nSoldUsed": 8,
     "avg": 5.725,
     "taguchiSold": 5.725,
@@ -661,12 +661,12 @@
   },
   "Asdrubal Cabrera": {
     "keyword": "Asdrubal Cabrera Baseball PSA",
-    "nScraped": 121,
-    "nSoldUsed": 4,
+    "nScraped": 241,
+    "nSoldUsed": 8,
     "avg": 36.995000000000005,
     "taguchiSold": 36.995000000000005,
     "medianSold": 36.995,
-    "marketStabilityCV": 0.6868275536433417,
+    "marketStabilityCV": 0.635878754240616,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
@@ -733,15 +733,15 @@
   },
   "Brayan Rocchio": {
     "keyword": "Brayan Rocchio Baseball PSA",
-    "nScraped": 280,
-    "nSoldUsed": 69,
-    "avg": 29.309420289855076,
-    "taguchiSold": 29.309420289855076,
-    "medianSold": 28.99,
-    "marketStabilityCV": 0.17576550650924253,
+    "nScraped": 0,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
   },
   "Brayan Villarreal": {
     "keyword": "Brayan Villarreal Baseball PSA",
