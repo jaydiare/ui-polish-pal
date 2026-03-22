@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-22T16:51:55.066Z",
+    "updatedAt": "2026-03-22T18:59:08.671Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA/BGS/SGC grader title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 10,
-      "endIdx": 20,
+      "startIdx": 20,
+      "endIdx": 30,
       "totalAthletes": 451
     },
     "maxPages": 4,
@@ -373,7 +373,7 @@
   },
   "Anderson Espinoza": {
     "keyword": "Anderson Espinoza Baseball PSA",
-    "nScraped": 241,
+    "nScraped": 240,
     "nSoldUsed": 25,
     "avg": 8.02,
     "taguchiSold": 8.02,
@@ -409,15 +409,15 @@
   },
   "Andres Chaparro": {
     "keyword": "Andres Chaparro Baseball PSA",
-    "nScraped": 0,
-    "nSoldUsed": 0,
+    "nScraped": 189,
+    "nSoldUsed": 3,
     "avg": null,
     "taguchiSold": null,
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
   },
   "Andres Galarraga": {
     "keyword": "Andres Galarraga Baseball PSA",
@@ -433,15 +433,15 @@
   },
   "Andres Gimenez": {
     "keyword": "Andres Gimenez Baseball PSA",
-    "nScraped": 337,
-    "nSoldUsed": 52,
-    "avg": 17.691538461538464,
-    "taguchiSold": 17.691538461538464,
-    "medianSold": 19.99,
-    "marketStabilityCV": 0.14222580768926832,
+    "nScraped": 0,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
   },
   "Andres Machado": {
     "keyword": "Andres Machado Baseball PSA",
