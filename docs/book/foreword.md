@@ -2,7 +2,7 @@
 
 ---
 
-> *For Sebastián and Isabella — may you always build things that matter.*
+> *For Thomas and Lara — may you always build things that matter.*
 
 ---
 
