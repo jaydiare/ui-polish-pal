@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-22T12:43:29.312Z",
+    "updatedAt": "2026-03-22T15:22:56.546Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. Taguchi winsorized mean + market stability CV. Ungraded condition policy (permissive for sold). Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 460,
-      "endIdx": 470,
+      "startIdx": 470,
+      "endIdx": 480,
       "totalAthletes": 568
     },
     "maxPages": 4,
@@ -6393,6 +6393,66 @@
   },
   "Wilmer Flores": {
     "keyword": "Wilmer Flores Baseball",
+    "nScraped": 240,
+    "nSoldUsed": 67,
+    "avg": 2.7135820895522396,
+    "taguchiSold": 2.7135820895522396,
+    "medianSold": 2.25,
+    "marketStabilityCV": 0.41503327997559686,
+    "currency": "USD",
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
+  },
+  "Wilmer Font": {
+    "keyword": "Wilmer Font Baseball",
+    "nScraped": 268,
+    "nSoldUsed": 40,
+    "avg": 1.1100000000000005,
+    "taguchiSold": 1.1100000000000005,
+    "medianSold": 1.1099999999999999,
+    "marketStabilityCV": 0.09123778081834832,
+    "currency": "USD",
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
+  },
+  "Wilson Alvarez": {
+    "keyword": "Wilson Alvarez Baseball",
+    "nScraped": 240,
+    "nSoldUsed": 70,
+    "avg": 1.7255714285714265,
+    "taguchiSold": 1.7255714285714265,
+    "medianSold": 1.59,
+    "marketStabilityCV": 0.13440243354588433,
+    "currency": "USD",
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
+  },
+  "Wilson Ramos": {
+    "keyword": "Wilson Ramos Baseball",
+    "nScraped": 240,
+    "nSoldUsed": 108,
+    "avg": 1.2587037037037052,
+    "taguchiSold": 1.2587037037037052,
+    "medianSold": 1.375,
+    "marketStabilityCV": 0.2018417706027434,
+    "currency": "USD",
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
+  },
+  "Wilyer Abreu": {
+    "keyword": "Wilyer Abreu Baseball",
+    "nScraped": 240,
+    "nSoldUsed": 156,
+    "avg": 5.102435897435901,
+    "taguchiSold": 5.102435897435901,
+    "medianSold": 4.390000000000001,
+    "marketStabilityCV": 0.5056940838511736,
+    "currency": "USD",
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
+  },
+  "Yangervis Solarte": {
+    "keyword": "Yangervis Solarte Baseball",
     "nScraped": 0,
     "nSoldUsed": 0,
     "avg": null,
@@ -6402,66 +6462,6 @@
     "currency": "USD",
     "originalCurrencyExample": null,
     "fxRateUsed": null
-  },
-  "Wilmer Font": {
-    "keyword": "Wilmer Font Baseball",
-    "nScraped": 261,
-    "nSoldUsed": 24,
-    "avg": 1.2399999999999995,
-    "taguchiSold": 1.2399999999999995,
-    "medianSold": 1.24,
-    "marketStabilityCV": 0.20594916066743926,
-    "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
-  },
-  "Wilson Alvarez": {
-    "keyword": "Wilson Alvarez Baseball",
-    "nScraped": 240,
-    "nSoldUsed": 69,
-    "avg": 1.6294202898550751,
-    "taguchiSold": 1.6294202898550751,
-    "medianSold": 1.59,
-    "marketStabilityCV": 0.08653604552181343,
-    "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
-  },
-  "Wilson Ramos": {
-    "keyword": "Wilson Ramos Baseball",
-    "nScraped": 240,
-    "nSoldUsed": 105,
-    "avg": 1.254190476190478,
-    "taguchiSold": 1.254190476190478,
-    "medianSold": 1.29,
-    "marketStabilityCV": 0.2036932092621168,
-    "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
-  },
-  "Wilyer Abreu": {
-    "keyword": "Wilyer Abreu Baseball",
-    "nScraped": 240,
-    "nSoldUsed": 131,
-    "avg": 9.063053435114506,
-    "taguchiSold": 9.063053435114506,
-    "medianSold": 6.99,
-    "marketStabilityCV": 0.6417452916435455,
-    "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
-  },
-  "Yangervis Solarte": {
-    "keyword": "Yangervis Solarte Baseball",
-    "nScraped": 105,
-    "nSoldUsed": 69,
-    "avg": 2.1110144927536236,
-    "taguchiSold": 2.1110144927536236,
-    "medianSold": 2,
-    "marketStabilityCV": 0.061281726266195914,
-    "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
   },
   "Yilber Diaz": {
     "keyword": "Yilber Diaz Baseball",
