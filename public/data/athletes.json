@@ -7,14 +7,14 @@
     "provider": "manual",
     "gemrate": "yes"
   },
-   {
+  {
     "name": "J.J. D'Orazio",
     "sport": "Baseball",
     "league": "MLB/WBC",
     "team": "Diamondbacks / Italy / Tigres / Hillsboro Hops",
     "provider": "manual",
     "searchKeyword": "JJ D'Orazio Baseball",
-    "gemrate": "yes"
+    "gemrate": "no"
   },
   {
     "name": "Carlos Guzman",
