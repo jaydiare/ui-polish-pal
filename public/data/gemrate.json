@@ -1,13 +1,13 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-22T08:30:10.554909+00:00",
+    "updatedAt": "2026-03-22T12:40:09.704753+00:00",
     "athleteCount": 454,
     "graders": [
       "PSA"
     ],
     "batchInfo": {
-      "startIdx": 340,
-      "endIdx": 360,
+      "startIdx": 360,
+      "endIdx": 380,
       "totalAthletes": 568
     }
   },
@@ -5381,16 +5381,16 @@
       "sport": "Baseball",
       "graders": {
         "PSA": {
-          "cards": 335,
-          "gems": 1176,
-          "grades": 2169,
+          "cards": 338,
+          "gems": 1180,
+          "grades": 2181,
           "gemRate": 54.0
         }
       },
       "totals": {
-        "cards": 335,
-        "gems": 1176,
-        "grades": 2169,
+        "cards": 338,
+        "gems": 1180,
+        "grades": 2181,
         "gemRate": 54.0
       }
     },
@@ -5579,16 +5579,16 @@
       "sport": "Baseball",
       "graders": {
         "PSA": {
-          "cards": 750,
-          "gems": 1007,
-          "grades": 2438,
+          "cards": 751,
+          "gems": 1014,
+          "grades": 2449,
           "gemRate": 41.0
         }
       },
       "totals": {
-        "cards": 750,
-        "gems": 1007,
-        "grades": 2438,
+        "cards": 751,
+        "gems": 1014,
+        "grades": 2449,
         "gemRate": 41.0
       }
     },
