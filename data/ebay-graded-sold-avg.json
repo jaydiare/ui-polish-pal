@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-22T03:23:39.494Z",
+    "updatedAt": "2026-03-22T05:35:20.478Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA/BGS/SGC grader title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 410,
-      "endIdx": 420,
+      "startIdx": 420,
+      "endIdx": 430,
       "totalAthletes": 452
     },
     "maxPages": 4,
@@ -32,7 +32,7 @@
     },
     "fx": {
       "source": "CBSA Exchange Rates API",
-      "asOf": "2026-03-22T00:00:00.000Z"
+      "asOf": "2026-03-23T00:00:00.000Z"
     }
   },
   "Adbert Alzolay": {
@@ -5821,7 +5821,7 @@
   },
   "Yonny Chirinos": {
     "keyword": "Yonny Chirinos Baseball PSA",
-    "nScraped": 28,
+    "nScraped": 29,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -5833,7 +5833,7 @@
   },
   "Yonny Hernandez": {
     "keyword": "Yonny Hernandez Baseball PSA",
-    "nScraped": 243,
+    "nScraped": 244,
     "nSoldUsed": 4,
     "avg": 10.5,
     "taguchiSold": 10.5,
@@ -5845,7 +5845,7 @@
   },
   "Yorman Bazardo": {
     "keyword": "Yorman Bazardo Baseball PSA",
-    "nScraped": 35,
+    "nScraped": 36,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -5857,7 +5857,7 @@
   },
   "Yorman Rodriguez": {
     "keyword": "Yorman Rodriguez Baseball PSA",
-    "nScraped": 241,
+    "nScraped": 242,
     "nSoldUsed": 4,
     "avg": 7.06,
     "taguchiSold": 7.06,
@@ -5869,7 +5869,7 @@
   },
   "Yorvit Torrealba": {
     "keyword": "Yorvit Torrealba Baseball PSA",
-    "nScraped": 38,
+    "nScraped": 40,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -5893,7 +5893,7 @@
   },
   "Carl Herrera": {
     "keyword": "Carl Herrera Basketball PSA",
-    "nScraped": 132,
+    "nScraped": 135,
     "nSoldUsed": 6,
     "avg": 25.49,
     "taguchiSold": 25.49,
