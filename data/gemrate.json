@@ -1,13 +1,13 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-22T12:40:09.704753+00:00",
+    "updatedAt": "2026-03-22T16:25:22.011958+00:00",
     "athleteCount": 454,
     "graders": [
       "PSA"
     ],
     "batchInfo": {
-      "startIdx": 360,
-      "endIdx": 380,
+      "startIdx": 380,
+      "endIdx": 400,
       "totalAthletes": 568
     }
   },
@@ -5670,15 +5670,15 @@
       "graders": {
         "PSA": {
           "cards": 532,
-          "gems": 4190,
-          "grades": 6818,
+          "gems": 4191,
+          "grades": 6819,
           "gemRate": 61.0
         }
       },
       "totals": {
         "cards": 532,
-        "gems": 4190,
-        "grades": 6818,
+        "gems": 4191,
+        "grades": 6819,
         "gemRate": 61.0
       }
     },
@@ -5725,14 +5725,14 @@
         "PSA": {
           "cards": 205,
           "gems": 899,
-          "grades": 2349,
+          "grades": 2350,
           "gemRate": 38.0
         }
       },
       "totals": {
         "cards": 205,
         "gems": 899,
-        "grades": 2349,
+        "grades": 2350,
         "gemRate": 38.0
       }
     },
@@ -5741,16 +5741,16 @@
       "sport": "Baseball",
       "graders": {
         "PSA": {
-          "cards": 194,
-          "gems": 264,
-          "grades": 492,
+          "cards": 195,
+          "gems": 265,
+          "grades": 493,
           "gemRate": 54.0
         }
       },
       "totals": {
-        "cards": 194,
-        "gems": 264,
-        "grades": 492,
+        "cards": 195,
+        "gems": 265,
+        "grades": 493,
         "gemRate": 54.0
       }
     },
@@ -5903,17 +5903,17 @@
       "sport": "Baseball",
       "graders": {
         "PSA": {
-          "cards": 60,
+          "cards": 61,
           "gems": 37,
-          "grades": 79,
-          "gemRate": 47.0
+          "grades": 80,
+          "gemRate": 46.0
         }
       },
       "totals": {
-        "cards": 60,
+        "cards": 61,
         "gems": 37,
-        "grades": 79,
-        "gemRate": 47.0
+        "grades": 80,
+        "gemRate": 46.0
       }
     },
     "Rafael Ortega": {
