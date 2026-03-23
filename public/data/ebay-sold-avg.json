@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-22T21:22:50.904Z",
+    "updatedAt": "2026-03-23T01:59:15.466Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. Taguchi winsorized mean + market stability CV. Ungraded condition policy (permissive for sold). Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 490,
-      "endIdx": 500,
+      "startIdx": 500,
+      "endIdx": 510,
       "totalAthletes": 568
     },
     "maxPages": 4,
@@ -6765,19 +6765,19 @@
   },
   "Tomas Rincon": {
     "keyword": "Tomas Rincon Soccer",
-    "nScraped": 0,
-    "nSoldUsed": 0,
-    "avg": null,
-    "taguchiSold": null,
-    "medianSold": null,
-    "marketStabilityCV": null,
+    "nScraped": 244,
+    "nSoldUsed": 24,
+    "avg": 5.97,
+    "taguchiSold": 5.97,
+    "medianSold": 5.970000000000001,
+    "marketStabilityCV": 0.1676847035464469,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
   },
   "Yohandry Orozco": {
     "keyword": "Yohandry Orozco Soccer",
-    "nScraped": 32,
+    "nScraped": 34,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -6813,7 +6813,7 @@
   },
   "Fernando Amorebieta": {
     "keyword": "Fernando Amorebieta Soccer",
-    "nScraped": 240,
+    "nScraped": 244,
     "nSoldUsed": 4,
     "avg": 7.04,
     "taguchiSold": 7.04,
@@ -6837,7 +6837,7 @@
   },
   "Jon Aramburu": {
     "keyword": "Jon Aramburu Soccer",
-    "nScraped": 57,
+    "nScraped": 0,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -6849,7 +6849,7 @@
   },
   "Jorge Gomez": {
     "keyword": "Jorge Gomez Soccer",
-    "nScraped": 60,
+    "nScraped": 0,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
