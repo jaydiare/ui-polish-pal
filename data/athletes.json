@@ -1990,9 +1990,10 @@
   {
     "name": "Jose Alvarez",
     "sport": "Baseball",
-    "league": "MLB",
-    "team": "Giants",
+    "league": "MLB/LVBP",
+    "team": "Giants/Phillies/Angels/Caribes",
     "provider": "manual",
+    "searchKeyword": "José Álvarez Phillies Giants",
     "gemrate": "yes"
   },
   {
