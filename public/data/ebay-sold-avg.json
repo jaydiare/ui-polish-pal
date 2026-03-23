@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-23T13:00:19.639Z",
+    "updatedAt": "2026-03-23T15:12:08.752Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. Taguchi winsorized mean + market stability CV. Ungraded condition policy (permissive for sold). Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
@@ -3740,16 +3740,16 @@
     "fxRateUsed": null
   },
   "Jose Alvarez": {
-    "keyword": "Jose Alvarez Baseball",
-    "nScraped": 0,
-    "nSoldUsed": 0,
+    "keyword": "José Álvarez Angels Phillies Giants Baseball",
+    "nScraped": 60,
+    "nSoldUsed": 1,
     "avg": null,
     "taguchiSold": null,
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
   },
   "Jose Azocar": {
     "keyword": "Jose Azocar Baseball",
