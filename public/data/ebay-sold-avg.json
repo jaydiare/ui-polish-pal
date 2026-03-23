@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-23T05:00:31.284Z",
+    "updatedAt": "2026-03-23T07:05:52.226Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. Taguchi winsorized mean + market stability CV. Ungraded condition policy (permissive for sold). Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 510,
-      "endIdx": 520,
+      "startIdx": 520,
+      "endIdx": 530,
       "totalAthletes": 568
     },
     "maxPages": 4,
@@ -7017,7 +7017,7 @@
   },
   "Wuilker Farinez": {
     "keyword": "Wuilker Farinez Soccer",
-    "nScraped": 0,
+    "nScraped": 20,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -7029,7 +7029,7 @@
   },
   "Abel Caputo": {
     "keyword": "Abel Caputo Soccer",
-    "nScraped": 36,
+    "nScraped": 34,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -7053,7 +7053,7 @@
   },
   "Alejandro Moreno": {
     "keyword": "Alejandro Moreno Soccer",
-    "nScraped": 252,
+    "nScraped": 251,
     "nSoldUsed": 8,
     "avg": 5.495,
     "taguchiSold": 5.495,
@@ -7065,7 +7065,7 @@
   },
   "Bernardo Anor": {
     "keyword": "Bernardo Anor Soccer",
-    "nScraped": 241,
+    "nScraped": 240,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -7113,7 +7113,7 @@
   },
   "Christian Makoun": {
     "keyword": "Christian Makoun Soccer",
-    "nScraped": 0,
+    "nScraped": 246,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -7125,15 +7125,15 @@
   },
   "Dani Pereira": {
     "keyword": "Dani Pereira Soccer",
-    "nScraped": 0,
-    "nSoldUsed": 0,
-    "avg": null,
-    "taguchiSold": null,
-    "medianSold": null,
-    "marketStabilityCV": null,
+    "nScraped": 207,
+    "nSoldUsed": 132,
+    "avg": 3.38545454545455,
+    "taguchiSold": 3.38545454545455,
+    "medianSold": 3.125,
+    "marketStabilityCV": 0.1609331544229328,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
   },
   "David Martinez": {
     "keyword": "David Martinez Soccer",
