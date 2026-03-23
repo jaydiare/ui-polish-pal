@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-23T17:13:22.648Z",
+    "updatedAt": "2026-03-23T19:25:15.178Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA/BGS/SGC grader title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 120,
-      "endIdx": 130,
+      "startIdx": 130,
+      "endIdx": 140,
       "totalAthletes": 451
     },
     "maxPages": 4,
@@ -1933,12 +1933,12 @@
   },
   "Felix Hernandez": {
     "keyword": "Felix Hernandez Baseball PSA",
-    "nScraped": 150,
-    "nSoldUsed": 91,
-    "avg": 97.37461538461538,
-    "taguchiSold": 97.37461538461538,
+    "nScraped": 148,
+    "nSoldUsed": 89,
+    "avg": 98.3834831460674,
+    "taguchiSold": 98.3834831460674,
     "medianSold": 99.99,
-    "marketStabilityCV": 0.2690078359131868,
+    "marketStabilityCV": 0.2615779604000614,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
@@ -1957,7 +1957,7 @@
   },
   "Fernando Nieve": {
     "keyword": "Fernando Nieve Baseball PSA",
-    "nScraped": 0,
+    "nScraped": 60,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -1969,15 +1969,15 @@
   },
   "Francisco Alvarez": {
     "keyword": "Francisco Alvarez Baseball PSA",
-    "nScraped": 0,
-    "nSoldUsed": 0,
-    "avg": null,
-    "taguchiSold": null,
-    "medianSold": null,
-    "marketStabilityCV": null,
+    "nScraped": 180,
+    "nSoldUsed": 74,
+    "avg": 42.68378378378379,
+    "taguchiSold": 42.68378378378379,
+    "medianSold": 46,
+    "marketStabilityCV": 0.27560888103851244,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
   },
   "Francisco Arcia": {
     "keyword": "Francisco Arcia Baseball PSA",
@@ -2005,15 +2005,15 @@
   },
   "Francisco Morales": {
     "keyword": "Francisco Morales Baseball PSA",
-    "nScraped": 244,
-    "nSoldUsed": 4,
-    "avg": 4.26,
-    "taguchiSold": 4.26,
-    "medianSold": 4.26,
-    "marketStabilityCV": 0,
+    "nScraped": 0,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
   },
   "Francisco Rodriguez": {
     "keyword": "Francisco Rodriguez Baseball PSA",
