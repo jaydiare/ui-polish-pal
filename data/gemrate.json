@@ -1,13 +1,13 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-23T01:51:20.193139+00:00",
+    "updatedAt": "2026-03-23T05:29:39.065894+00:00",
     "athleteCount": 454,
     "graders": [
       "PSA"
     ],
     "batchInfo": {
-      "startIdx": 420,
-      "endIdx": 440,
+      "startIdx": 440,
+      "endIdx": 460,
       "totalAthletes": 568
     }
   },
@@ -6713,17 +6713,17 @@
       "sport": "Baseball",
       "graders": {
         "PSA": {
-          "cards": 112,
+          "cards": 114,
           "gems": 420,
-          "grades": 1374,
-          "gemRate": 31.0
+          "grades": 1395,
+          "gemRate": 30.0
         }
       },
       "totals": {
-        "cards": 112,
+        "cards": 114,
         "gems": 420,
-        "grades": 1374,
-        "gemRate": 31.0
+        "grades": 1395,
+        "gemRate": 30.0
       }
     },
     "Tony Castillo": {
