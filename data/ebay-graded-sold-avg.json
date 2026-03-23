@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-23T15:13:33.879Z",
+    "updatedAt": "2026-03-23T15:32:02.191Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA/BGS/SGC grader title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 100,
-      "endIdx": 110,
+      "startIdx": 110,
+      "endIdx": 120,
       "totalAthletes": 451
     },
     "maxPages": 4,
@@ -1681,7 +1681,7 @@
   },
   "Eliezer Alfonzo": {
     "keyword": "Eliezer Alfonzo Baseball PSA",
-    "nScraped": 42,
+    "nScraped": 43,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -1693,7 +1693,7 @@
   },
   "Elio Chacon": {
     "keyword": "Elio Chacon Baseball PSA",
-    "nScraped": 248,
+    "nScraped": 255,
     "nSoldUsed": 24,
     "avg": 30.495000000000005,
     "taguchiSold": 30.495000000000005,
@@ -1705,19 +1705,19 @@
   },
   "Elvis Andrus": {
     "keyword": "Elvis Andrus Baseball PSA",
-    "nScraped": 0,
-    "nSoldUsed": 0,
-    "avg": null,
-    "taguchiSold": null,
-    "medianSold": null,
-    "marketStabilityCV": null,
+    "nScraped": 134,
+    "nSoldUsed": 13,
+    "avg": 9.307692307692308,
+    "taguchiSold": 9.307692307692308,
+    "medianSold": 10,
+    "marketStabilityCV": 0.08362027415226471,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
   },
   "Elvis Araujo": {
     "keyword": "Elvis Araujo Baseball PSA",
-    "nScraped": 19,
+    "nScraped": 0,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
