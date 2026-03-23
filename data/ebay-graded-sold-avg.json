@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-23T03:27:04.731Z",
+    "updatedAt": "2026-03-23T05:51:48.268Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA/BGS/SGC grader title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 50,
-      "endIdx": 60,
+      "startIdx": 60,
+      "endIdx": 70,
       "totalAthletes": 451
     },
     "maxPages": 4,
@@ -32,7 +32,7 @@
     },
     "fx": {
       "source": "CBSA Exchange Rates API",
-      "asOf": "2026-03-23T00:00:00.000Z"
+      "asOf": "2026-03-24T00:00:00.000Z"
     }
   },
   "Adbert Alzolay": {
@@ -889,7 +889,7 @@
   },
   "Carlos Martinez": {
     "keyword": "Carlos Martinez Baseball PSA",
-    "nScraped": 249,
+    "nScraped": 245,
     "nSoldUsed": 20,
     "avg": 14.990000000000004,
     "taguchiSold": 14.990000000000004,
@@ -925,31 +925,31 @@
   },
   "Carlos Monasterios": {
     "keyword": "Carlos Monasterios Baseball PSA",
-    "nScraped": 60,
-    "nSoldUsed": 0,
-    "avg": null,
-    "taguchiSold": null,
-    "medianSold": null,
-    "marketStabilityCV": null,
+    "nScraped": 240,
+    "nSoldUsed": 4,
+    "avg": 5.5,
+    "taguchiSold": 5.5,
+    "medianSold": 5.5,
+    "marketStabilityCV": 0,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
   },
   "Carlos Narvaez": {
     "keyword": "Carlos Narvaez Baseball PSA",
-    "nScraped": 304,
-    "nSoldUsed": 56,
-    "avg": 62.99642857142851,
-    "taguchiSold": 62.99642857142851,
-    "medianSold": 45.004999999999995,
-    "marketStabilityCV": 0.3749706045890168,
+    "nScraped": 306,
+    "nSoldUsed": 68,
+    "avg": 39.41235294117647,
+    "taguchiSold": 39.41235294117647,
+    "medianSold": 42,
+    "marketStabilityCV": 0.1878565721609798,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
   },
   "Carlos Perez": {
     "keyword": "Carlos Perez Baseball PSA",
-    "nScraped": 253,
+    "nScraped": 250,
     "nSoldUsed": 4,
     "avg": 8.5,
     "taguchiSold": 8.5,
@@ -1021,7 +1021,7 @@
   },
   "Carlos Tocci": {
     "keyword": "Carlos Tocci Baseball PSA",
-    "nScraped": 60,
+    "nScraped": 0,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
