@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-23T01:59:15.466Z",
+    "updatedAt": "2026-03-23T05:00:31.284Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. Taguchi winsorized mean + market stability CV. Ungraded condition policy (permissive for sold). Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 500,
-      "endIdx": 510,
+      "startIdx": 510,
+      "endIdx": 520,
       "totalAthletes": 568
     },
     "maxPages": 4,
@@ -28,7 +28,7 @@
     },
     "fx": {
       "source": "CBSA Exchange Rates API",
-      "asOf": "2026-03-23T00:00:00.000Z"
+      "asOf": "2026-03-24T00:00:00.000Z"
     }
   },
   "Adbert Alzolay": {
@@ -6897,15 +6897,15 @@
   },
   "Roberto Rosales": {
     "keyword": "Roberto Rosales Soccer",
-    "nScraped": 0,
-    "nSoldUsed": 0,
-    "avg": null,
-    "taguchiSold": null,
-    "medianSold": null,
-    "marketStabilityCV": null,
+    "nScraped": 240,
+    "nSoldUsed": 4,
+    "avg": 99,
+    "taguchiSold": 99,
+    "medianSold": 99,
+    "marketStabilityCV": 0,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
   },
   "Ruben Suarez Estrada": {
     "keyword": "Ruben Suarez Estrada Soccer",
@@ -6945,19 +6945,19 @@
   },
   "Yangel Herrera": {
     "keyword": "Yangel Herrera Soccer",
-    "nScraped": 60,
-    "nSoldUsed": 29,
-    "avg": 3.1213793103448273,
-    "taguchiSold": 3.1213793103448273,
-    "medianSold": 3.26,
-    "marketStabilityCV": 0.34729385676392366,
+    "nScraped": 212,
+    "nSoldUsed": 100,
+    "avg": 3.6155999999999993,
+    "taguchiSold": 3.6155999999999993,
+    "medianSold": 3.29,
+    "marketStabilityCV": 0.16727593334945876,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
   },
   "Cristian Casseres Jr.": {
     "keyword": "Cristian Casseres Jr. Soccer",
-    "nScraped": 84,
+    "nScraped": 92,
     "nSoldUsed": 8,
     "avg": 2.995,
     "taguchiSold": 2.995,
@@ -6969,19 +6969,19 @@
   },
   "Fernando Aristeguieta": {
     "keyword": "Fernando Aristeguieta Soccer",
-    "nScraped": 240,
-    "nSoldUsed": 4,
-    "avg": 1.89,
-    "taguchiSold": 1.89,
-    "medianSold": 1.89,
-    "marketStabilityCV": 0,
+    "nScraped": 120,
+    "nSoldUsed": 2,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
   },
   "Gabriel Cichero": {
     "keyword": "Gabriel Cichero Soccer",
-    "nScraped": 240,
+    "nScraped": 0,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
