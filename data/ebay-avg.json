@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-21T13:41:32.020Z",
+    "updatedAt": "2026-03-23T15:09:02.438Z",
     "minSampleSize": 4,
     "marketplaces": [
       "EBAY_US",
@@ -701,6 +701,11 @@
         "Soccer": 194,
         "Basketball": 238.8,
         "All": 393.1
+      },
+      {
+        "date": "2026-03-23",
+        "Baseball": 709.8,
+        "All": 709.8
       }
     ]
   },
@@ -11732,47 +11737,47 @@
   "Jose Alvarez": {
     "match": {
       "mode": "player",
-      "value": "Jose Alvarez",
+      "value": "José Álvarez Angels Phillies Giants",
       "validatedOn": "EBAY_CA"
     },
     "marketplaces": {
       "EBAY_US": {
         "aspectMode": "player",
-        "aspectValue": "Jose Alvarez",
-        "avgListing": 1.5633750000000026,
-        "taguchiListing": 1.5633750000000026,
-        "marketStabilityCV": 0.049535398786545094,
-        "avgDaysOnMarket": 388.2542264144964,
-        "nListing": 80,
-        "nDaysOnMarket": 80,
+        "aspectValue": "José Álvarez Angels Phillies Giants",
+        "avgListing": 0.99,
+        "taguchiListing": 0.99,
+        "marketStabilityCV": 0,
+        "avgDaysOnMarket": 631.832625488426,
+        "nListing": 5,
+        "nDaysOnMarket": 5,
         "currency": "USD",
         "originalCurrency": "USD",
         "fxRateUsed": 1
       },
       "EBAY_CA": {
         "aspectMode": "player",
-        "aspectValue": "Jose Alvarez",
-        "avgListing": 1.489369356405366,
-        "taguchiListing": 1.489369356405366,
-        "marketStabilityCV": 0.2882404973037731,
-        "avgDaysOnMarket": 523.8666039172978,
-        "nListing": 77,
-        "nDaysOnMarket": 77,
+        "aspectValue": "José Álvarez Angels Phillies Giants",
+        "avgListing": 0.9913981629975217,
+        "taguchiListing": 0.9913981629975217,
+        "marketStabilityCV": 0,
+        "avgDaysOnMarket": 631.832633275463,
+        "nListing": 5,
+        "nDaysOnMarket": 5,
         "currency": "USD",
         "originalCurrency": "CAD",
         "fxRateUsed": 0.7289692374981777
       }
     },
-    "avg": 1.489369356405366,
-    "n": 77,
-    "avgListing": 1.489369356405366,
-    "taguchiListing": 1.489369356405366,
-    "marketStabilityCV": 0.2882404973037731,
-    "avgDaysOnMarket": 523.8666039172978,
-    "nListing": 77,
+    "avg": 0.9913981629975217,
+    "n": 5,
+    "avgListing": 0.9913981629975217,
+    "taguchiListing": 0.9913981629975217,
+    "marketStabilityCV": 0,
+    "avgDaysOnMarket": 631.832633275463,
+    "nListing": 5,
     "currency": "USD",
     "basePriceUSD": 5.340483361492691,
-    "indexLevel": 27.88828754985729
+    "indexLevel": 18.563828325839427
   },
   "Jose Azocar": {
     "match": {
