@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-23T19:25:15.178Z",
+    "updatedAt": "2026-03-23T20:59:06.323Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA/BGS/SGC grader title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 130,
-      "endIdx": 140,
+      "startIdx": 140,
+      "endIdx": 150,
       "totalAthletes": 451
     },
     "maxPages": 4,
@@ -2041,7 +2041,7 @@
   },
   "Franklin Barreto": {
     "keyword": "Franklin Barreto Baseball PSA",
-    "nScraped": 240,
+    "nScraped": 246,
     "nSoldUsed": 8,
     "avg": 3.625,
     "taguchiSold": 3.625,
@@ -2053,15 +2053,15 @@
   },
   "Franklin Gutierrez": {
     "keyword": "Franklin Gutierrez Baseball PSA",
-    "nScraped": 240,
-    "nSoldUsed": 16,
-    "avg": 24.690000000000005,
-    "taguchiSold": 24.690000000000005,
-    "medianSold": 24.689999999999998,
-    "marketStabilityCV": 0.012549156245305473,
+    "nScraped": 60,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
   },
   "Franklin Morales": {
     "keyword": "Franklin Morales Baseball PSA",
@@ -2077,27 +2077,27 @@
   },
   "Fred Manrique": {
     "keyword": "Fred Manrique Baseball PSA",
-    "nScraped": 0,
-    "nSoldUsed": 0,
-    "avg": null,
-    "taguchiSold": null,
-    "medianSold": null,
-    "marketStabilityCV": null,
+    "nScraped": 244,
+    "nSoldUsed": 8,
+    "avg": 6.124999999999999,
+    "taguchiSold": 6.124999999999999,
+    "medianSold": 6.125,
+    "marketStabilityCV": 0.06719711225226668,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
   },
   "Freddy Fermin": {
     "keyword": "Freddy Fermin Baseball PSA",
-    "nScraped": 0,
-    "nSoldUsed": 0,
-    "avg": null,
-    "taguchiSold": null,
-    "medianSold": null,
-    "marketStabilityCV": null,
+    "nScraped": 125,
+    "nSoldUsed": 4,
+    "avg": 75.5,
+    "taguchiSold": 75.5,
+    "medianSold": 75.5,
+    "marketStabilityCV": 0.38999819508173394,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
   },
   "Freddy Galvis": {
     "keyword": "Freddy Galvis Baseball PSA",
@@ -2125,15 +2125,15 @@
   },
   "Gabriel Arias": {
     "keyword": "Gabriel Arias Baseball PSA",
-    "nScraped": 256,
-    "nSoldUsed": 28,
-    "avg": 10.5,
-    "taguchiSold": 10.5,
-    "medianSold": 10.5,
-    "marketStabilityCV": 0,
+    "nScraped": 0,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
   },
   "Gabriel Moreno": {
     "keyword": "Gabriel Moreno Baseball PSA",
