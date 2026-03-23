@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-23T07:42:58.405Z",
+    "updatedAt": "2026-03-23T09:33:33.120Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA/BGS/SGC grader title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 70,
-      "endIdx": 80,
+      "startIdx": 80,
+      "endIdx": 90,
       "totalAthletes": 451
     },
     "maxPages": 4,
@@ -1177,7 +1177,7 @@
   },
   "Daniel Palencia": {
     "keyword": "Daniel Palencia Baseball PSA",
-    "nScraped": 247,
+    "nScraped": 249,
     "nSoldUsed": 8,
     "avg": 310,
     "taguchiSold": 310,
@@ -1213,7 +1213,7 @@
   },
   "Darwin Cubillan": {
     "keyword": "Darwin Cubillan Baseball PSA",
-    "nScraped": 36,
+    "nScraped": 40,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -1225,12 +1225,12 @@
   },
   "Darwinzon Hernandez": {
     "keyword": "Darwinzon Hernandez Baseball PSA",
-    "nScraped": 120,
-    "nSoldUsed": 2,
-    "avg": null,
-    "taguchiSold": null,
-    "medianSold": null,
-    "marketStabilityCV": null,
+    "nScraped": 240,
+    "nSoldUsed": 4,
+    "avg": 8.88,
+    "taguchiSold": 8.88,
+    "medianSold": 8.88,
+    "marketStabilityCV": 0,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
@@ -1249,15 +1249,15 @@
   },
   "Diego Castillo": {
     "keyword": "Diego Castillo Baseball PSA",
-    "nScraped": 247,
-    "nSoldUsed": 4,
-    "avg": 13.5,
-    "taguchiSold": 13.5,
-    "medianSold": 13.5,
-    "marketStabilityCV": 0,
+    "nScraped": 0,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
   },
   "Diego Moreno": {
     "keyword": "Diego Moreno Baseball",
@@ -6889,15 +6889,15 @@
   },
   "Dave Concepcion": {
     "keyword": "Dave Concepcion Baseball PSA",
-    "nScraped": 0,
-    "nSoldUsed": 0,
-    "avg": null,
-    "taguchiSold": null,
-    "medianSold": null,
-    "marketStabilityCV": null,
+    "nScraped": 120,
+    "nSoldUsed": 49,
+    "avg": 37.45612244897959,
+    "taguchiSold": 37.45612244897959,
+    "medianSold": 38.56,
+    "marketStabilityCV": 0.18624784310980072,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
   },
   "Isaias Chavez": {
     "keyword": "Isaias Latigo Chavez Baseball PSA",
