@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-23T11:12:46.195Z",
+    "updatedAt": "2026-03-23T13:53:12.938Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA/BGS/SGC grader title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 90,
-      "endIdx": 100,
+      "startIdx": 100,
+      "endIdx": 110,
       "totalAthletes": 451
     },
     "maxPages": 4,
@@ -1491,10 +1491,10 @@
     "keyword": "Eduardo Rodriguez Baseball PSA",
     "nScraped": 268,
     "nSoldUsed": 44,
-    "avg": 22.340909090909093,
-    "taguchiSold": 22.340909090909093,
-    "medianSold": 20.8,
-    "marketStabilityCV": 0.11037174143471222,
+    "avg": 19.780909090909077,
+    "taguchiSold": 19.780909090909077,
+    "medianSold": 19.99,
+    "marketStabilityCV": 0.050821352231938496,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
@@ -1561,7 +1561,7 @@
   },
   "Edward Mujica": {
     "keyword": "Edward Mujica Baseball PSA",
-    "nScraped": 0,
+    "nScraped": 60,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -1573,15 +1573,15 @@
   },
   "Edward Olivares": {
     "keyword": "Edward Olivares Baseball PSA",
-    "nScraped": 0,
-    "nSoldUsed": 0,
-    "avg": null,
-    "taguchiSold": null,
-    "medianSold": null,
-    "marketStabilityCV": null,
+    "nScraped": 186,
+    "nSoldUsed": 15,
+    "avg": 4.25,
+    "taguchiSold": 4.25,
+    "medianSold": 4.25,
+    "marketStabilityCV": 0,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
   },
   "Edwin Bellorin": {
     "keyword": "Edwin Bellorin Baseball",
@@ -1597,7 +1597,7 @@
   },
   "Edwin Escobar": {
     "keyword": "Edwin Escobar Baseball PSA",
-    "nScraped": 60,
+    "nScraped": 0,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
