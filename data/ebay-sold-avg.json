@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-23T15:57:39.446Z",
+    "updatedAt": "2026-03-23T18:50:33.411Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. Taguchi winsorized mean + market stability CV. Ungraded condition policy (permissive for sold). Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 550,
-      "endIdx": 560,
+      "startIdx": 560,
+      "endIdx": 568,
       "totalAthletes": 568
     },
     "maxPages": 4,
@@ -7497,15 +7497,15 @@
   },
   "Alejandro Marques": {
     "keyword": "Alejandro Marques Soccer",
-    "nScraped": 0,
-    "nSoldUsed": 0,
-    "avg": null,
-    "taguchiSold": null,
-    "medianSold": null,
-    "marketStabilityCV": null,
+    "nScraped": 249,
+    "nSoldUsed": 44,
+    "avg": 3.795454545454544,
+    "taguchiSold": 3.795454545454544,
+    "medianSold": 3.25,
+    "marketStabilityCV": 0.15924928974186714,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
   },
   "Luis Balbo": {
     "keyword": "Luis Balbo Soccer",
@@ -7545,7 +7545,7 @@
   },
   "Yeferson Soteldo": {
     "keyword": "Yeferson Soteldo Soccer",
-    "nScraped": 60,
+    "nScraped": 56,
     "nSoldUsed": 4,
     "avg": 2.12,
     "taguchiSold": 2.12,
@@ -7557,7 +7557,7 @@
   },
   "Yordan Osorio": {
     "keyword": "Yordan Osorio Soccer",
-    "nScraped": 252,
+    "nScraped": 256,
     "nSoldUsed": 16,
     "avg": 2.12,
     "taguchiSold": 2.12,
@@ -7581,7 +7581,7 @@
   },
   "Daniele Quieto": {
     "keyword": "Daniele Quieto Soccer",
-    "nScraped": 60,
+    "nScraped": 0,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -7593,15 +7593,15 @@
   },
   "Garbine Muguruza": {
     "keyword": "Garbine Muguruza Tennis",
-    "nScraped": 71,
-    "nSoldUsed": 66,
-    "avg": 6.785,
-    "taguchiSold": 6.785,
-    "medianSold": 7.135,
-    "marketStabilityCV": 0.24155810900483057,
+    "nScraped": 0,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
   },
   "Geremi Gonzalez": {
     "keyword": "Geremi Gonzalez Baseball",
