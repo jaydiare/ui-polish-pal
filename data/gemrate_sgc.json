@@ -1,13 +1,13 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-24T11:06:47.629849+00:00",
-    "athleteCount": 152,
+    "updatedAt": "2026-03-24T11:11:46.915888+00:00",
+    "athleteCount": 163,
     "graders": [
       "SGC"
     ],
     "batchInfo": {
-      "startIdx": 240,
-      "endIdx": 260,
+      "startIdx": 260,
+      "endIdx": 280,
       "totalAthletes": 568
     }
   },
@@ -2745,6 +2745,204 @@
         "cards": 5,
         "gems": 0,
         "grades": 11,
+        "gemRate": 0.0
+      }
+    },
+    "Jose Martinez": {
+      "name": "Jose Martinez",
+      "sport": "Baseball",
+      "graders": {
+        "SGC": {
+          "cards": 5,
+          "gems": 0,
+          "grades": 43,
+          "gemRate": 0.0
+        }
+      },
+      "totals": {
+        "cards": 5,
+        "gems": 0,
+        "grades": 43,
+        "gemRate": 0.0
+      }
+    },
+    "Jose Mujica": {
+      "name": "Jose Mujica",
+      "sport": "Baseball",
+      "graders": {
+        "SGC": {
+          "cards": 1,
+          "gems": 0,
+          "grades": 1,
+          "gemRate": 0.0
+        }
+      },
+      "totals": {
+        "cards": 1,
+        "gems": 0,
+        "grades": 1,
+        "gemRate": 0.0
+      }
+    },
+    "Jose Peraza": {
+      "name": "Jose Peraza",
+      "sport": "Baseball",
+      "graders": {
+        "SGC": {
+          "cards": 9,
+          "gems": 6,
+          "grades": 12,
+          "gemRate": 50.0
+        }
+      },
+      "totals": {
+        "cards": 9,
+        "gems": 6,
+        "grades": 12,
+        "gemRate": 50.0
+      }
+    },
+    "Jose Pirela": {
+      "name": "Jose Pirela",
+      "sport": "Baseball",
+      "graders": {
+        "SGC": {
+          "cards": 7,
+          "gems": 1,
+          "grades": 7,
+          "gemRate": 14.0
+        }
+      },
+      "totals": {
+        "cards": 7,
+        "gems": 1,
+        "grades": 7,
+        "gemRate": 14.0
+      }
+    },
+    "Jose Rodriguez": {
+      "name": "Jose Rodriguez",
+      "sport": "Baseball",
+      "graders": {
+        "SGC": {
+          "cards": 114,
+          "gems": 79,
+          "grades": 218,
+          "gemRate": 36.0
+        }
+      },
+      "totals": {
+        "cards": 114,
+        "gems": 79,
+        "grades": 218,
+        "gemRate": 36.0
+      }
+    },
+    "Jose Rondon": {
+      "name": "Jose Rondon",
+      "sport": "Baseball",
+      "graders": {
+        "SGC": {
+          "cards": 4,
+          "gems": 0,
+          "grades": 4,
+          "gemRate": 0.0
+        }
+      },
+      "totals": {
+        "cards": 4,
+        "gems": 0,
+        "grades": 4,
+        "gemRate": 0.0
+      }
+    },
+    "Jose Suarez": {
+      "name": "Jose Suarez",
+      "sport": "Baseball",
+      "graders": {
+        "SGC": {
+          "cards": 5,
+          "gems": 2,
+          "grades": 5,
+          "gemRate": 40.0
+        }
+      },
+      "totals": {
+        "cards": 5,
+        "gems": 2,
+        "grades": 5,
+        "gemRate": 40.0
+      }
+    },
+    "Jose Tabata": {
+      "name": "Jose Tabata",
+      "sport": "Baseball",
+      "graders": {
+        "SGC": {
+          "cards": 7,
+          "gems": 3,
+          "grades": 9,
+          "gemRate": 33.0
+        }
+      },
+      "totals": {
+        "cards": 7,
+        "gems": 3,
+        "grades": 9,
+        "gemRate": 33.0
+      }
+    },
+    "Jose Torres": {
+      "name": "Jose Torres",
+      "sport": "Baseball",
+      "graders": {
+        "SGC": {
+          "cards": 20,
+          "gems": 8,
+          "grades": 29,
+          "gemRate": 28.0
+        }
+      },
+      "totals": {
+        "cards": 20,
+        "gems": 8,
+        "grades": 29,
+        "gemRate": 28.0
+      }
+    },
+    "Josh Barfield": {
+      "name": "Josh Barfield",
+      "sport": "Baseball",
+      "graders": {
+        "SGC": {
+          "cards": 6,
+          "gems": 3,
+          "grades": 8,
+          "gemRate": 38.0
+        }
+      },
+      "totals": {
+        "cards": 6,
+        "gems": 3,
+        "grades": 8,
+        "gemRate": 38.0
+      }
+    },
+    "Josmil Pinto": {
+      "name": "Josmil Pinto",
+      "sport": "Baseball",
+      "graders": {
+        "SGC": {
+          "cards": 1,
+          "gems": 0,
+          "grades": 1,
+          "gemRate": 0.0
+        }
+      },
+      "totals": {
+        "cards": 1,
+        "gems": 0,
+        "grades": 1,
         "gemRate": 0.0
       }
     }
