@@ -1,13 +1,13 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-24T02:10:59.168032+00:00",
-    "athleteCount": 22,
+    "updatedAt": "2026-03-24T02:19:12.388505+00:00",
+    "athleteCount": 33,
     "graders": [
       "SGC"
     ],
     "batchInfo": {
-      "startIdx": 20,
-      "endIdx": 40,
+      "startIdx": 40,
+      "endIdx": 60,
       "totalAthletes": 568
     }
   },
@@ -406,6 +406,204 @@
         "gems": 0,
         "grades": 23,
         "gemRate": 0.0
+      }
+    },
+    "Angel Guzman": {
+      "name": "Angel Guzman",
+      "sport": "Baseball",
+      "graders": {
+        "SGC": {
+          "cards": 3,
+          "gems": 0,
+          "grades": 4,
+          "gemRate": 0.0
+        }
+      },
+      "totals": {
+        "cards": 3,
+        "gems": 0,
+        "grades": 4,
+        "gemRate": 0.0
+      }
+    },
+    "Angel Salazar": {
+      "name": "Angel Salazar",
+      "sport": "Baseball",
+      "graders": {
+        "SGC": {
+          "cards": 1,
+          "gems": 1,
+          "grades": 1,
+          "gemRate": 100.0
+        }
+      },
+      "totals": {
+        "cards": 1,
+        "gems": 1,
+        "grades": 1,
+        "gemRate": 100.0
+      }
+    },
+    "Angel Zerpa": {
+      "name": "Angel Zerpa",
+      "sport": "Baseball",
+      "graders": {
+        "SGC": {
+          "cards": 11,
+          "gems": 5,
+          "grades": 12,
+          "gemRate": 42.0
+        }
+      },
+      "totals": {
+        "cards": 11,
+        "gems": 5,
+        "grades": 12,
+        "gemRate": 42.0
+      }
+    },
+    "Anibal Sanchez": {
+      "name": "Anibal Sanchez",
+      "sport": "Baseball",
+      "graders": {
+        "SGC": {
+          "cards": 5,
+          "gems": 0,
+          "grades": 5,
+          "gemRate": 0.0
+        }
+      },
+      "totals": {
+        "cards": 5,
+        "gems": 0,
+        "grades": 5,
+        "gemRate": 0.0
+      }
+    },
+    "Anthony Santander": {
+      "name": "Anthony Santander",
+      "sport": "Baseball",
+      "graders": {
+        "SGC": {
+          "cards": 87,
+          "gems": 61,
+          "grades": 141,
+          "gemRate": 43.0
+        }
+      },
+      "totals": {
+        "cards": 87,
+        "gems": 61,
+        "grades": 141,
+        "gemRate": 43.0
+      }
+    },
+    "Antonio Senzatela": {
+      "name": "Antonio Senzatela",
+      "sport": "Baseball",
+      "graders": {
+        "SGC": {
+          "cards": 7,
+          "gems": 3,
+          "grades": 7,
+          "gemRate": 43.0
+        }
+      },
+      "totals": {
+        "cards": 7,
+        "gems": 3,
+        "grades": 7,
+        "gemRate": 43.0
+      }
+    },
+    "Armando Galarraga": {
+      "name": "Armando Galarraga",
+      "sport": "Baseball",
+      "graders": {
+        "SGC": {
+          "cards": 4,
+          "gems": 3,
+          "grades": 7,
+          "gemRate": 43.0
+        }
+      },
+      "totals": {
+        "cards": 4,
+        "gems": 3,
+        "grades": 7,
+        "gemRate": 43.0
+      }
+    },
+    "Asdrubal Cabrera": {
+      "name": "Asdrubal Cabrera",
+      "sport": "Baseball",
+      "graders": {
+        "SGC": {
+          "cards": 18,
+          "gems": 10,
+          "grades": 26,
+          "gemRate": 38.0
+        }
+      },
+      "totals": {
+        "cards": 18,
+        "gems": 10,
+        "grades": 26,
+        "gemRate": 38.0
+      }
+    },
+    "Avisail Garcia": {
+      "name": "Avisail Garcia",
+      "sport": "Baseball",
+      "graders": {
+        "SGC": {
+          "cards": 27,
+          "gems": 11,
+          "grades": 32,
+          "gemRate": 34.0
+        }
+      },
+      "totals": {
+        "cards": 27,
+        "gems": 11,
+        "grades": 32,
+        "gemRate": 34.0
+      }
+    },
+    "Bo Diaz": {
+      "name": "Bo Diaz",
+      "sport": "Baseball",
+      "graders": {
+        "SGC": {
+          "cards": 10,
+          "gems": 4,
+          "grades": 11,
+          "gemRate": 36.0
+        }
+      },
+      "totals": {
+        "cards": 10,
+        "gems": 4,
+        "grades": 11,
+        "gemRate": 36.0
+      }
+    },
+    "Bob Abreu": {
+      "name": "Bob Abreu",
+      "sport": "Baseball",
+      "graders": {
+        "SGC": {
+          "cards": 44,
+          "gems": 32,
+          "grades": 288,
+          "gemRate": 11.0
+        }
+      },
+      "totals": {
+        "cards": 44,
+        "gems": 32,
+        "grades": 288,
+        "gemRate": 11.0
       }
     }
   }
