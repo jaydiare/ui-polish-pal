@@ -1,13 +1,13 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-24T11:42:34.250517+00:00",
-    "athleteCount": 205,
+    "updatedAt": "2026-03-24T11:52:21.205785+00:00",
+    "athleteCount": 218,
     "graders": [
       "SGC"
     ],
     "batchInfo": {
-      "startIdx": 320,
-      "endIdx": 340,
+      "startIdx": 340,
+      "endIdx": 360,
       "totalAthletes": 568
     }
   },
@@ -3700,6 +3700,240 @@
         "gems": 0,
         "grades": 1,
         "gemRate": 0.0
+      }
+    },
+    "Martin Perez": {
+      "name": "Martin Perez",
+      "sport": "Baseball",
+      "graders": {
+        "SGC": {
+          "cards": 16,
+          "gems": 8,
+          "grades": 17,
+          "gemRate": 47.0
+        }
+      },
+      "totals": {
+        "cards": 16,
+        "gems": 8,
+        "grades": 17,
+        "gemRate": 47.0
+      }
+    },
+    "Martin Prado": {
+      "name": "Martin Prado",
+      "sport": "Baseball",
+      "graders": {
+        "SGC": {
+          "cards": 5,
+          "gems": 2,
+          "grades": 7,
+          "gemRate": 29.0
+        }
+      },
+      "totals": {
+        "cards": 5,
+        "gems": 2,
+        "grades": 7,
+        "gemRate": 29.0
+      }
+    },
+    "Marwin Gonzalez": {
+      "name": "Marwin Gonzalez",
+      "sport": "Baseball",
+      "graders": {
+        "SGC": {
+          "cards": 3,
+          "gems": 3,
+          "grades": 4,
+          "gemRate": 75.0
+        }
+      },
+      "totals": {
+        "cards": 3,
+        "gems": 3,
+        "grades": 4,
+        "gemRate": 75.0
+      }
+    },
+    "Max Castillo": {
+      "name": "Max Castillo",
+      "sport": "Baseball",
+      "graders": {
+        "SGC": {
+          "cards": 19,
+          "gems": 17,
+          "grades": 37,
+          "gemRate": 46.0
+        }
+      },
+      "totals": {
+        "cards": 19,
+        "gems": 17,
+        "grades": 37,
+        "gemRate": 46.0
+      }
+    },
+    "Max Ramirez": {
+      "name": "Max Ramirez",
+      "sport": "Baseball",
+      "graders": {
+        "SGC": {
+          "cards": 2,
+          "gems": 2,
+          "grades": 2,
+          "gemRate": 100.0
+        }
+      },
+      "totals": {
+        "cards": 2,
+        "gems": 2,
+        "grades": 2,
+        "gemRate": 100.0
+      }
+    },
+    "Maximo Acosta": {
+      "name": "Maximo Acosta",
+      "sport": "Baseball",
+      "graders": {
+        "SGC": {
+          "cards": 108,
+          "gems": 204,
+          "grades": 493,
+          "gemRate": 41.0
+        }
+      },
+      "totals": {
+        "cards": 108,
+        "gems": 204,
+        "grades": 493,
+        "gemRate": 41.0
+      }
+    },
+    "Melvin Mora": {
+      "name": "Melvin Mora",
+      "sport": "Baseball",
+      "graders": {
+        "SGC": {
+          "cards": 10,
+          "gems": 4,
+          "grades": 18,
+          "gemRate": 22.0
+        }
+      },
+      "totals": {
+        "cards": 10,
+        "gems": 4,
+        "grades": 18,
+        "gemRate": 22.0
+      }
+    },
+    "Miguel Cabrera": {
+      "name": "Miguel Cabrera",
+      "sport": "Baseball",
+      "graders": {
+        "SGC": {
+          "cards": 2114,
+          "gems": 1566,
+          "grades": 5327,
+          "gemRate": 29.0
+        }
+      },
+      "totals": {
+        "cards": 2114,
+        "gems": 1566,
+        "grades": 5327,
+        "gemRate": 29.0
+      }
+    },
+    "Miguel Cairo": {
+      "name": "Miguel Cairo",
+      "sport": "Baseball",
+      "graders": {
+        "SGC": {
+          "cards": 1,
+          "gems": 0,
+          "grades": 1,
+          "gemRate": 0.0
+        }
+      },
+      "totals": {
+        "cards": 1,
+        "gems": 0,
+        "grades": 1,
+        "gemRate": 0.0
+      }
+    },
+    "Miguel Gonzalez": {
+      "name": "Miguel Gonzalez",
+      "sport": "Baseball",
+      "graders": {
+        "SGC": {
+          "cards": 8,
+          "gems": 0,
+          "grades": 31,
+          "gemRate": 0.0
+        }
+      },
+      "totals": {
+        "cards": 8,
+        "gems": 0,
+        "grades": 31,
+        "gemRate": 0.0
+      }
+    },
+    "Miguel Montero": {
+      "name": "Miguel Montero",
+      "sport": "Baseball",
+      "graders": {
+        "SGC": {
+          "cards": 5,
+          "gems": 2,
+          "grades": 5,
+          "gemRate": 40.0
+        }
+      },
+      "totals": {
+        "cards": 5,
+        "gems": 2,
+        "grades": 5,
+        "gemRate": 40.0
+      }
+    },
+    "Miguel Perez": {
+      "name": "Miguel Perez",
+      "sport": "Baseball",
+      "graders": {
+        "SGC": {
+          "cards": 2,
+          "gems": 0,
+          "grades": 2,
+          "gemRate": 0.0
+        }
+      },
+      "totals": {
+        "cards": 2,
+        "gems": 0,
+        "grades": 2,
+        "gemRate": 0.0
+      }
+    },
+    "Miguel Rojas": {
+      "name": "Miguel Rojas",
+      "sport": "Baseball",
+      "graders": {
+        "SGC": {
+          "cards": 20,
+          "gems": 7,
+          "grades": 22,
+          "gemRate": 32.0
+        }
+      },
+      "totals": {
+        "cards": 20,
+        "gems": 7,
+        "grades": 22,
+        "gemRate": 32.0
       }
     }
   }
