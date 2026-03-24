@@ -1283,6 +1283,7 @@ type GraderFilter = "all" | "psa" | "beckett" | "sgc";
 const GemrateChart = () => {
   const [gemrateData, setGemrateData] = useState<GemrateData | null>(null);
   const [beckettData, setBeckettData] = useState<GemrateData | null>(null);
+  const [sgcData, setSgcData] = useState<GemrateData | null>(null);
   const [graderFilter, setGraderFilter] = useState<GraderFilter>("all");
 
   useEffect(() => {
@@ -1294,6 +1295,10 @@ const GemrateChart = () => {
       let b = await fetchJson("https://raw.githubusercontent.com/jaydiare/ui-polish-pal/main/data/gemrate_beckett.json");
       if (!b || !b.athletes) b = await fetchJson("data/gemrate_beckett.json");
       if (b && b.athletes) setBeckettData(b);
+
+      let s = await fetchJson("https://raw.githubusercontent.com/jaydiare/ui-polish-pal/main/data/gemrate_sgc.json");
+      if (!s || !s.athletes) s = await fetchJson("data/gemrate_sgc.json");
+      if (s && s.athletes) setSgcData(s);
     })();
   }, []);
 
