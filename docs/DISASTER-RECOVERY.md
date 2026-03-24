@@ -141,7 +141,9 @@ border-bottom: 1px solid hsl(var(--vzla-purple) / 0.25);
 | `data/athlete-history.json` | Per-athlete daily snapshots (90-day rolling) | Daily |
 | `data/athlete-first-seen.json` | First-seen dates for DOM calculation | Daily |
 | `data/index-history.json` | Sport-level index history (permanent) | Daily |
-| `data/gemrate.json` | PSA population counts from Gemrate.com | Every 2 hours |
+| `data/gemrate.json` | PSA population counts from Gemrate.com | Every 4 hours |
+| `data/gemrate_beckett.json` | Beckett (BGS) population counts from Gemrate.com | Every 4 hours (offset +2h) |
+| `data/gemrate_sgc.json` | SGC population counts from Gemrate.com | Every 4 hours (offset +3h) |
 | `data/scp-raw.json` | SportsCardsPro raw prices | Monthly |
 | `data/scp-history.json` | SCP historical price tracker | Monthly |
 | `data/vzla-athlete-market-data.json` | Weekly unified snapshot | Weekly (Sunday) |
@@ -158,7 +160,7 @@ This ensures updates are visible without republishing the frontend. Local `publi
 
 ### 4.3 Data Fetch Pattern (useAthleteData hook)
 
-On mount, fetch 10 JSON files in parallel via `Promise.all`:
+On mount, fetch 13 JSON files in parallel via `Promise.all`:
 1. `athletes.json` → merge with local `athleteDataRaw` (keep best metadata)
 2. `ebay-avg.json` → enrich with base prices → build `byName`/`byKey` indexes
 3. `ebay-graded-avg.json` → filter by `gemrate="yes"` athletes → merge with graded sold as fallback
@@ -169,6 +171,9 @@ On mount, fetch 10 JSON files in parallel via `Promise.all`:
 8. `index-history.json` → sport-level index cards
 9. `gemrate.json` → PSA population map
 10. `scp-raw.json` → SportsCardsPro prices
+11. `vzla-athlete-market-data.json` → weekly snapshot fallback
+12. `gemrate_beckett.json` → Beckett (BGS) population map
+13. `gemrate_sgc.json` → SGC population map
 
 ### 4.4 eBay Index Lookup Chain
 
@@ -471,11 +476,14 @@ https://www.ebay.ca/str/localherossportscards?mkcid=1&mkrid=706-53473-19255-0&..
 | `ebay-graded.yml` | `graded-update-ebay-avg.js` | Every ~5 days (8 AM UTC) | Graded active listings |
 | `ebay-sold.yml` | `sold-update-ebay-avg.js` | Every 3 hours | Raw sold (HTML scraping) |
 | `ebay-graded-sold.yml` | `graded-sold-update-ebay-avg.js` | Every 2 hours | Graded sold (HTML scraping) |
-| `gemrate.yml` | `fetch_gemrate.py` | Every 2 hours | PSA population data |
+| `gemrate.yml` | `fetch_gemrate.py` | Every 4 hours (offset 0) | PSA population data |
+| `gemrate-beckett.yml` | `fetch_gemrate_beckett.py` | Every 4 hours (offset +2h) | Beckett (BGS) population data |
+| `gemrate-sgc.yml` | `fetch_gemrate_sgc.py` | Every 4 hours (offset +3h) | SGC population data |
+| `sync-gemrate-flags.yml` | `sync-gemrate-flags.cjs` | Weekly Sunday 2 PM UTC | Sync gemrate flags across PSA/BGS/SGC |
 | `scp-prices.yml` | `fetch-scp-prices.js` | Monthly 1st | SportsCardsPro prices |
 | `snapshot-history.yml` | `snapshot-athlete-history.js` | Daily | Per-athlete history snapshots |
 | `market-data-snapshot.yml` | `snapshot-market-data.js` | Weekly Sunday | Unified data backup |
-| `backup-render.yml` | `backup-to-render.js` | Weekly Sunday 1:30 PM UTC | Full data/ backup to Render PostgreSQL |
+| `backup-render.yml` | `backup-to-render.js` | Tri-weekly (1st & 4th Sundays, 1:30 PM UTC) | Full data/ backup to Render PostgreSQL |
 | `bi-weekly-analysis.yml` | `bi-weekly-analysis.py` | 1st & 15th (2 PM UTC) | AI market analysis (Baseball, Gemini) |
 | `card-tracker.yml` | `card-tracker-update.js` | Varies | Card tracker blog data |
 | `update.yml` | Various | Varies | Sync public/ copies |
