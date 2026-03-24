@@ -191,6 +191,7 @@ export default function BlogDataTable() {
         signalStrength,
         psaPop,
         bgsPop,
+        sgcPop,
         daysOnMarket: dom,
         indexLevel: rec?.indexLevel ?? null,
         roi: roiVal,
