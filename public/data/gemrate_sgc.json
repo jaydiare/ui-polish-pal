@@ -1,13 +1,13 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-24T02:19:12.388505+00:00",
-    "athleteCount": 33,
+    "updatedAt": "2026-03-24T02:24:58.427610+00:00",
+    "athleteCount": 47,
     "graders": [
       "SGC"
     ],
     "batchInfo": {
-      "startIdx": 40,
-      "endIdx": 60,
+      "startIdx": 60,
+      "endIdx": 80,
       "totalAthletes": 568
     }
   },
@@ -604,6 +604,258 @@
         "gems": 32,
         "grades": 288,
         "gemRate": 11.0
+      }
+    },
+    "Brayan Rocchio": {
+      "name": "Brayan Rocchio",
+      "sport": "Baseball",
+      "graders": {
+        "SGC": {
+          "cards": 103,
+          "gems": 85,
+          "grades": 164,
+          "gemRate": 52.0
+        }
+      },
+      "totals": {
+        "cards": 103,
+        "gems": 85,
+        "grades": 164,
+        "gemRate": 52.0
+      }
+    },
+    "Bruce Rondon": {
+      "name": "Bruce Rondon",
+      "sport": "Baseball",
+      "graders": {
+        "SGC": {
+          "cards": 1,
+          "gems": 0,
+          "grades": 1,
+          "gemRate": 0.0
+        }
+      },
+      "totals": {
+        "cards": 1,
+        "gems": 0,
+        "grades": 1,
+        "gemRate": 0.0
+      }
+    },
+    "Brusdar Graterol": {
+      "name": "Brusdar Graterol",
+      "sport": "Baseball",
+      "graders": {
+        "SGC": {
+          "cards": 80,
+          "gems": 46,
+          "grades": 108,
+          "gemRate": 43.0
+        }
+      },
+      "totals": {
+        "cards": 80,
+        "gems": 46,
+        "grades": 108,
+        "gemRate": 43.0
+      }
+    },
+    "Carlos Asuaje": {
+      "name": "Carlos Asuaje",
+      "sport": "Baseball",
+      "graders": {
+        "SGC": {
+          "cards": 1,
+          "gems": 0,
+          "grades": 1,
+          "gemRate": 0.0
+        }
+      },
+      "totals": {
+        "cards": 1,
+        "gems": 0,
+        "grades": 1,
+        "gemRate": 0.0
+      }
+    },
+    "Carlos Carrasco": {
+      "name": "Carlos Carrasco",
+      "sport": "Baseball",
+      "graders": {
+        "SGC": {
+          "cards": 46,
+          "gems": 16,
+          "grades": 53,
+          "gemRate": 30.0
+        }
+      },
+      "totals": {
+        "cards": 46,
+        "gems": 16,
+        "grades": 53,
+        "gemRate": 30.0
+      }
+    },
+    "Carlos Garcia": {
+      "name": "Carlos Garcia",
+      "sport": "Baseball",
+      "graders": {
+        "SGC": {
+          "cards": 5,
+          "gems": 1,
+          "grades": 11,
+          "gemRate": 9.0
+        }
+      },
+      "totals": {
+        "cards": 5,
+        "gems": 1,
+        "grades": 11,
+        "gemRate": 9.0
+      }
+    },
+    "Carlos Gonzalez": {
+      "name": "Carlos Gonzalez",
+      "sport": "Baseball",
+      "graders": {
+        "SGC": {
+          "cards": 33,
+          "gems": 16,
+          "grades": 49,
+          "gemRate": 33.0
+        }
+      },
+      "totals": {
+        "cards": 33,
+        "gems": 16,
+        "grades": 49,
+        "gemRate": 33.0
+      }
+    },
+    "Carlos Guillen": {
+      "name": "Carlos Guillen",
+      "sport": "Baseball",
+      "graders": {
+        "SGC": {
+          "cards": 8,
+          "gems": 2,
+          "grades": 23,
+          "gemRate": 9.0
+        }
+      },
+      "totals": {
+        "cards": 8,
+        "gems": 2,
+        "grades": 23,
+        "gemRate": 9.0
+      }
+    },
+    "Carlos Hernandez": {
+      "name": "Carlos Hernandez",
+      "sport": "Baseball",
+      "graders": {
+        "SGC": {
+          "cards": 12,
+          "gems": 8,
+          "grades": 21,
+          "gemRate": 38.0
+        }
+      },
+      "totals": {
+        "cards": 12,
+        "gems": 8,
+        "grades": 21,
+        "gemRate": 38.0
+      }
+    },
+    "Carlos Maldonado": {
+      "name": "Carlos Maldonado",
+      "sport": "Baseball",
+      "graders": {
+        "SGC": {
+          "cards": 1,
+          "gems": 0,
+          "grades": 3,
+          "gemRate": 0.0
+        }
+      },
+      "totals": {
+        "cards": 1,
+        "gems": 0,
+        "grades": 3,
+        "gemRate": 0.0
+      }
+    },
+    "Carlos Martinez": {
+      "name": "Carlos Martinez",
+      "sport": "Baseball",
+      "graders": {
+        "SGC": {
+          "cards": 29,
+          "gems": 8,
+          "grades": 47,
+          "gemRate": 17.0
+        }
+      },
+      "totals": {
+        "cards": 29,
+        "gems": 8,
+        "grades": 47,
+        "gemRate": 17.0
+      }
+    },
+    "Carlos Narvaez": {
+      "name": "Carlos Narvaez",
+      "sport": "Baseball",
+      "graders": {
+        "SGC": {
+          "cards": 18,
+          "gems": 8,
+          "grades": 24,
+          "gemRate": 33.0
+        }
+      },
+      "totals": {
+        "cards": 18,
+        "gems": 8,
+        "grades": 24,
+        "gemRate": 33.0
+      }
+    },
+    "Carlos Perez": {
+      "name": "Carlos Perez",
+      "sport": "Baseball",
+      "graders": {
+        "SGC": {
+          "cards": 48,
+          "gems": 71,
+          "grades": 152,
+          "gemRate": 47.0
+        }
+      },
+      "totals": {
+        "cards": 48,
+        "gems": 71,
+        "grades": 152,
+        "gemRate": 47.0
+      }
+    },
+    "Carlos Quintana": {
+      "name": "Carlos Quintana",
+      "sport": "Baseball",
+      "graders": {
+        "SGC": {
+          "cards": 3,
+          "gems": 0,
+          "grades": 7,
+          "gemRate": 0.0
+        }
+      },
+      "totals": {
+        "cards": 3,
+        "gems": 0,
+        "grades": 7,
+        "gemRate": 0.0
       }
     }
   }
