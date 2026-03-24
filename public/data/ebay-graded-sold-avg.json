@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-24T21:00:44.091Z",
+    "updatedAt": "2026-03-24T22:55:17.202Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA/BGS/SGC grader title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 250,
-      "endIdx": 260,
+      "startIdx": 260,
+      "endIdx": 270,
       "totalAthletes": 452
     },
     "maxPages": 4,
@@ -3721,12 +3721,12 @@
   },
   "Luis Garcia": {
     "keyword": "Luis Garcia Baseball PSA",
-    "nScraped": 300,
-    "nSoldUsed": 112,
-    "avg": 8.838571428571429,
-    "taguchiSold": 8.838571428571429,
+    "nScraped": 365,
+    "nSoldUsed": 109,
+    "avg": 8.758440366972467,
+    "taguchiSold": 8.758440366972467,
     "medianSold": 9.99,
-    "marketStabilityCV": 0.14162303889610736,
+    "marketStabilityCV": 0.26321009981518095,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
@@ -3757,7 +3757,7 @@
   },
   "Luis Jimenez": {
     "keyword": "Luis Jimenez Baseball PSA",
-    "nScraped": 180,
+    "nScraped": 244,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -3793,7 +3793,7 @@
   },
   "Luis Maza": {
     "keyword": "Luis Maza Baseball PSA",
-    "nScraped": 104,
+    "nScraped": 0,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
