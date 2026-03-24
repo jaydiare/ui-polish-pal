@@ -476,11 +476,14 @@ https://www.ebay.ca/str/localherossportscards?mkcid=1&mkrid=706-53473-19255-0&..
 | `ebay-graded.yml` | `graded-update-ebay-avg.js` | Every ~5 days (8 AM UTC) | Graded active listings |
 | `ebay-sold.yml` | `sold-update-ebay-avg.js` | Every 3 hours | Raw sold (HTML scraping) |
 | `ebay-graded-sold.yml` | `graded-sold-update-ebay-avg.js` | Every 2 hours | Graded sold (HTML scraping) |
-| `gemrate.yml` | `fetch_gemrate.py` | Every 2 hours | PSA population data |
+| `gemrate.yml` | `fetch_gemrate.py` | Every 4 hours (offset 0) | PSA population data |
+| `gemrate-beckett.yml` | `fetch_gemrate_beckett.py` | Every 4 hours (offset +2h) | Beckett (BGS) population data |
+| `gemrate-sgc.yml` | `fetch_gemrate_sgc.py` | Every 4 hours (offset +3h) | SGC population data |
+| `sync-gemrate-flags.yml` | `sync-gemrate-flags.cjs` | Weekly Sunday 2 PM UTC | Sync gemrate flags across PSA/BGS/SGC |
 | `scp-prices.yml` | `fetch-scp-prices.js` | Monthly 1st | SportsCardsPro prices |
 | `snapshot-history.yml` | `snapshot-athlete-history.js` | Daily | Per-athlete history snapshots |
 | `market-data-snapshot.yml` | `snapshot-market-data.js` | Weekly Sunday | Unified data backup |
-| `backup-render.yml` | `backup-to-render.js` | Weekly Sunday 1:30 PM UTC | Full data/ backup to Render PostgreSQL |
+| `backup-render.yml` | `backup-to-render.js` | Tri-weekly (1st & 4th Sundays, 1:30 PM UTC) | Full data/ backup to Render PostgreSQL |
 | `bi-weekly-analysis.yml` | `bi-weekly-analysis.py` | 1st & 15th (2 PM UTC) | AI market analysis (Baseball, Gemini) |
 | `card-tracker.yml` | `card-tracker-update.js` | Varies | Card tracker blog data |
 | `update.yml` | Various | Varies | Sync public/ copies |
