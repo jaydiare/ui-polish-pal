@@ -105,6 +105,7 @@ export default function BlogDataTable() {
     athleteHistory,
     gemratePopMap,
     beckettPopMap,
+    sgcPopMap,
     scpPrices,
     lastUpdated,
   } = useAthleteData();
