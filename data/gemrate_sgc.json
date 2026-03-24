@@ -1,14 +1,14 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-24T12:59:29.962278+00:00",
-    "athleteCount": 305,
+    "updatedAt": "2026-03-24T13:18:16.409135+00:00",
+    "athleteCount": 306,
     "graders": [
       "SGC"
     ],
     "batchInfo": {
-      "startIdx": 500,
-      "endIdx": 520,
-      "totalAthletes": 568
+      "startIdx": 520,
+      "endIdx": 540,
+      "totalAthletes": 569
     }
   },
   "athletes": {
@@ -5486,6 +5486,24 @@
     },
     "Yangel Herrera": {
       "name": "Yangel Herrera",
+      "sport": "Soccer",
+      "graders": {
+        "SGC": {
+          "cards": 1,
+          "gems": 0,
+          "grades": 1,
+          "gemRate": 0.0
+        }
+      },
+      "totals": {
+        "cards": 1,
+        "gems": 0,
+        "grades": 1,
+        "gemRate": 0.0
+      }
+    },
+    "David Martinez": {
+      "name": "David Martinez",
       "sport": "Soccer",
       "graders": {
         "SGC": {
