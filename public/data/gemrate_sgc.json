@@ -1,13 +1,13 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-24T02:53:39.700937+00:00",
-    "athleteCount": 110,
+    "updatedAt": "2026-03-24T04:48:50.254498+00:00",
+    "athleteCount": 119,
     "graders": [
       "SGC"
     ],
     "batchInfo": {
-      "startIdx": 160,
-      "endIdx": 180,
+      "startIdx": 180,
+      "endIdx": 200,
       "totalAthletes": 568
     }
   },
@@ -1990,6 +1990,168 @@
         "gems": 1044,
         "grades": 1991,
         "gemRate": 52.0
+      }
+    },
+    "Gerardo Parra": {
+      "name": "Gerardo Parra",
+      "sport": "Baseball",
+      "graders": {
+        "SGC": {
+          "cards": 3,
+          "gems": 0,
+          "grades": 4,
+          "gemRate": 0.0
+        }
+      },
+      "totals": {
+        "cards": 3,
+        "gems": 0,
+        "grades": 4,
+        "gemRate": 0.0
+      }
+    },
+    "German Marquez": {
+      "name": "German Marquez",
+      "sport": "Baseball",
+      "graders": {
+        "SGC": {
+          "cards": 35,
+          "gems": 19,
+          "grades": 42,
+          "gemRate": 45.0
+        }
+      },
+      "totals": {
+        "cards": 35,
+        "gems": 19,
+        "grades": 42,
+        "gemRate": 45.0
+      }
+    },
+    "Gleyber Torres": {
+      "name": "Gleyber Torres",
+      "sport": "Baseball",
+      "graders": {
+        "SGC": {
+          "cards": 898,
+          "gems": 1941,
+          "grades": 4042,
+          "gemRate": 48.0
+        }
+      },
+      "totals": {
+        "cards": 898,
+        "gems": 1941,
+        "grades": 4042,
+        "gemRate": 48.0
+      }
+    },
+    "Gonzalo Marquez": {
+      "name": "Gonzalo Marquez",
+      "sport": "Baseball",
+      "graders": {
+        "SGC": {
+          "cards": 3,
+          "gems": 0,
+          "grades": 6,
+          "gemRate": 0.0
+        }
+      },
+      "totals": {
+        "cards": 3,
+        "gems": 0,
+        "grades": 6,
+        "gemRate": 0.0
+      }
+    },
+    "Gorkys Hernandez": {
+      "name": "Gorkys Hernandez",
+      "sport": "Baseball",
+      "graders": {
+        "SGC": {
+          "cards": 1,
+          "gems": 1,
+          "grades": 1,
+          "gemRate": 100.0
+        }
+      },
+      "totals": {
+        "cards": 1,
+        "gems": 1,
+        "grades": 1,
+        "gemRate": 100.0
+      }
+    },
+    "Gregor Blanco": {
+      "name": "Gregor Blanco",
+      "sport": "Baseball",
+      "graders": {
+        "SGC": {
+          "cards": 1,
+          "gems": 0,
+          "grades": 1,
+          "gemRate": 0.0
+        }
+      },
+      "totals": {
+        "cards": 1,
+        "gems": 0,
+        "grades": 1,
+        "gemRate": 0.0
+      }
+    },
+    "Gus Gil": {
+      "name": "Gus Gil",
+      "sport": "Baseball",
+      "graders": {
+        "SGC": {
+          "cards": 2,
+          "gems": 0,
+          "grades": 4,
+          "gemRate": 0.0
+        }
+      },
+      "totals": {
+        "cards": 2,
+        "gems": 0,
+        "grades": 4,
+        "gemRate": 0.0
+      }
+    },
+    "Gus Polidor": {
+      "name": "Gus Polidor",
+      "sport": "Baseball",
+      "graders": {
+        "SGC": {
+          "cards": 1,
+          "gems": 1,
+          "grades": 1,
+          "gemRate": 100.0
+        }
+      },
+      "totals": {
+        "cards": 1,
+        "gems": 1,
+        "grades": 1,
+        "gemRate": 100.0
+      }
+    },
+    "Gustavo Chacin": {
+      "name": "Gustavo Chacin",
+      "sport": "Baseball",
+      "graders": {
+        "SGC": {
+          "cards": 1,
+          "gems": 1,
+          "grades": 1,
+          "gemRate": 100.0
+        }
+      },
+      "totals": {
+        "cards": 1,
+        "gems": 1,
+        "grades": 1,
+        "gemRate": 100.0
       }
     }
   }
