@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-24T01:50:47.015Z",
+    "updatedAt": "2026-03-24T13:04:01.352Z",
     "minSampleSize": 4,
     "marketplaces": [
       "EBAY_US",
@@ -710,8 +710,8 @@
       },
       {
         "date": "2026-03-24",
-        "Baseball": 100,
-        "All": 100
+        "Baseball": 515.4,
+        "All": 515.4
       }
     ]
   },
@@ -19355,12 +19355,12 @@
       "EBAY_US": {
         "aspectMode": "player",
         "aspectValue": "Robert Perez",
-        "avgListing": 1.6771250000000015,
-        "taguchiListing": 1.6771250000000015,
-        "marketStabilityCV": 0.06799844670033389,
-        "avgDaysOnMarket": 496.2133300462962,
-        "nListing": 80,
-        "nDaysOnMarket": 80,
+        "avgListing": 1.8181012658227844,
+        "taguchiListing": 1.8181012658227844,
+        "marketStabilityCV": 0.06741618786440533,
+        "avgDaysOnMarket": 349.0814910113396,
+        "nListing": 79,
+        "nDaysOnMarket": 79,
         "currency": "USD",
         "originalCurrency": "USD",
         "fxRateUsed": 1
@@ -19368,27 +19368,27 @@
       "EBAY_CA": {
         "aspectMode": "player",
         "aspectValue": "Robert Perez",
-        "avgListing": 1.364357049132527,
-        "taguchiListing": 1.364357049132527,
-        "marketStabilityCV": 0.20681882605707955,
-        "avgDaysOnMarket": 499.4747908438947,
-        "nListing": 80,
-        "nDaysOnMarket": 80,
+        "avgListing": 1.4406958749329795,
+        "taguchiListing": 1.4406958749329795,
+        "marketStabilityCV": 0.23312099609526357,
+        "avgDaysOnMarket": 506.5623014282994,
+        "nListing": 79,
+        "nDaysOnMarket": 79,
         "currency": "USD",
         "originalCurrency": "CAD",
-        "fxRateUsed": 0.7289692374981777
+        "fxRateUsed": 0.7290223809870964
       }
     },
-    "avg": 1.364357049132527,
-    "n": 80,
-    "avgListing": 1.364357049132527,
-    "taguchiListing": 1.364357049132527,
-    "marketStabilityCV": 0.20681882605707955,
-    "avgDaysOnMarket": 499.4747908438947,
-    "nListing": 80,
+    "avg": 1.4406958749329795,
+    "n": 79,
+    "avgListing": 1.4406958749329795,
+    "taguchiListing": 1.4406958749329795,
+    "marketStabilityCV": 0.23312099609526357,
+    "avgDaysOnMarket": 506.5623014282994,
+    "nListing": 79,
     "currency": "USD",
     "basePriceUSD": 52.495000000000005,
-    "indexLevel": 2.599022857667448
+    "indexLevel": 2.7444439945384884
   },
   "Robert Suarez": {
     "match": {
