@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-24T15:38:11.702Z",
+    "updatedAt": "2026-03-24T17:28:50.079Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA/BGS/SGC grader title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 220,
-      "endIdx": 230,
+      "startIdx": 230,
+      "endIdx": 240,
       "totalAthletes": 452
     },
     "maxPages": 4,
@@ -3265,7 +3265,7 @@
   },
   "Jose Tabata": {
     "keyword": "Jose Tabata Baseball PSA",
-    "nScraped": 240,
+    "nScraped": 245,
     "nSoldUsed": 16,
     "avg": 8.244999999999997,
     "taguchiSold": 8.244999999999997,
@@ -3289,7 +3289,7 @@
   },
   "Josh Barfield": {
     "keyword": "Josh Barfield Baseball PSA",
-    "nScraped": 240,
+    "nScraped": 241,
     "nSoldUsed": 4,
     "avg": 4.25,
     "taguchiSold": 4.25,
@@ -3313,7 +3313,7 @@
   },
   "Juan Castillo": {
     "keyword": "Juan Castillo Baseball PSA",
-    "nScraped": 0,
+    "nScraped": 122,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -3373,15 +3373,15 @@
   },
   "Juan Rivera": {
     "keyword": "Juan Rivera Baseball PSA",
-    "nScraped": 240,
-    "nSoldUsed": 8,
-    "avg": 11.600000000000001,
-    "taguchiSold": 11.600000000000001,
-    "medianSold": 11.6,
-    "marketStabilityCV": 0.7695280586099116,
+    "nScraped": 0,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
   },
   "Juan Yepez": {
     "keyword": "Juan Yepez Baseball PSA",
