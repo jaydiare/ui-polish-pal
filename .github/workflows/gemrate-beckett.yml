@@ -1,10 +1,16 @@
 name: Gemrate Beckett Grading Sync
 
 on:
-  workflow_dispatch:
   schedule:
     # Run every 4 hours, offset by 2 hours from PSA workflow
     - cron: '0 2/4 * * *'
+  workflow_dispatch:
+    inputs:
+      only:
+        description: "Single athlete name (e.g. Ronald Acuna Jr.) — leave empty for full batch"
+        required: false
+        default: ""
+   
 
 concurrency:
   group: gemrate-beckett-sync
