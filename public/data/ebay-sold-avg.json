@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-24T01:50:54.256Z",
+    "updatedAt": "2026-03-24T04:51:03.161Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. Taguchi winsorized mean + market stability CV. Ungraded condition policy (permissive for sold). Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 0,
-      "endIdx": 10,
+      "startIdx": 10,
+      "endIdx": 20,
       "totalAthletes": 568
     },
     "maxPages": 4,
@@ -28,7 +28,7 @@
     },
     "fx": {
       "source": "CBSA Exchange Rates API",
-      "asOf": "2026-03-24T00:00:00.000Z"
+      "asOf": "2026-03-25T00:00:00.000Z"
     }
   },
   "Adbert Alzolay": {
@@ -130,23 +130,23 @@
   "Alejandro Freire": {
     "keyword": "Alejandro Freire Baseball",
     "nScraped": 244,
-    "nSoldUsed": 28,
-    "avg": 0.9899999999999994,
-    "taguchiSold": 0.9899999999999994,
+    "nSoldUsed": 24,
+    "avg": 0.9899999999999997,
+    "taguchiSold": 0.9899999999999997,
     "medianSold": 0.99,
-    "marketStabilityCV": 5.710079740322788e-16,
+    "marketStabilityCV": 3.4366712738578033e-16,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
   },
   "Alejandro Machado": {
     "keyword": "Alejandro Machado Baseball",
-    "nScraped": 250,
-    "nSoldUsed": 40,
-    "avg": 2.175000000000001,
-    "taguchiSold": 2.175000000000001,
-    "medianSold": 2.175,
-    "marketStabilityCV": 0.36086115378843275,
+    "nScraped": 257,
+    "nSoldUsed": 36,
+    "avg": 2.110000000000001,
+    "taguchiSold": 2.110000000000001,
+    "medianSold": 1.59,
+    "marketStabilityCV": 0.36215123448501135,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
@@ -165,7 +165,7 @@
   },
   "Alex Carrasquel": {
     "keyword": "Alex Carrasquel Baseball",
-    "nScraped": 242,
+    "nScraped": 248,
     "nSoldUsed": 12,
     "avg": 4.450000000000001,
     "taguchiSold": 4.450000000000001,
@@ -177,24 +177,24 @@
   },
   "Alex Delgado": {
     "keyword": "Alex Delgado Baseball",
-    "nScraped": 284,
-    "nSoldUsed": 36,
-    "avg": 2.172222222222222,
-    "taguchiSold": 2.172222222222222,
-    "medianSold": 1.75,
-    "marketStabilityCV": 0.27528182453921185,
+    "nScraped": 296,
+    "nSoldUsed": 48,
+    "avg": 1.3516666666666668,
+    "taguchiSold": 1.3516666666666668,
+    "medianSold": 1.685,
+    "marketStabilityCV": 0.3369549933546686,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
   },
   "Alex Escobar": {
     "keyword": "Alex Escobar Baseball",
-    "nScraped": 170,
-    "nSoldUsed": 69,
-    "avg": 1.5037681159420277,
-    "taguchiSold": 1.5037681159420277,
-    "medianSold": 1.49,
-    "marketStabilityCV": 0.31098604065769114,
+    "nScraped": 115,
+    "nSoldUsed": 52,
+    "avg": 0.9209615384615386,
+    "taguchiSold": 0.9209615384615386,
+    "medianSold": 1,
+    "marketStabilityCV": 0.6276227544225305,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
