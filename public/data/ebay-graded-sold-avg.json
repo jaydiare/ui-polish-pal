@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-23T22:56:13.429Z",
+    "updatedAt": "2026-03-24T01:51:52.951Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA/BGS/SGC grader title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
@@ -6922,5 +6922,17 @@
     "currency": "USD",
     "originalCurrencyExample": null,
     "fxRateUsed": null
+  },
+  "Bob Abreu": {
+    "keyword": "Bob Abreu Baseball PSA",
+    "nScraped": 278,
+    "nSoldUsed": 14,
+    "avg": 12.281428571428572,
+    "taguchiSold": 12.281428571428572,
+    "medianSold": 6.5,
+    "marketStabilityCV": 0.5640894634101035,
+    "currency": "USD",
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
   }
 }
