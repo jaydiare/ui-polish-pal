@@ -141,7 +141,9 @@ border-bottom: 1px solid hsl(var(--vzla-purple) / 0.25);
 | `data/athlete-history.json` | Per-athlete daily snapshots (90-day rolling) | Daily |
 | `data/athlete-first-seen.json` | First-seen dates for DOM calculation | Daily |
 | `data/index-history.json` | Sport-level index history (permanent) | Daily |
-| `data/gemrate.json` | PSA population counts from Gemrate.com | Every 2 hours |
+| `data/gemrate.json` | PSA population counts from Gemrate.com | Every 4 hours |
+| `data/gemrate_beckett.json` | Beckett (BGS) population counts from Gemrate.com | Every 4 hours (offset +2h) |
+| `data/gemrate_sgc.json` | SGC population counts from Gemrate.com | Every 4 hours (offset +3h) |
 | `data/scp-raw.json` | SportsCardsPro raw prices | Monthly |
 | `data/scp-history.json` | SCP historical price tracker | Monthly |
 | `data/vzla-athlete-market-data.json` | Weekly unified snapshot | Weekly (Sunday) |
