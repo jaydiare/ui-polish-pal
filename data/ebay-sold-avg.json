@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-24T04:51:03.161Z",
+    "updatedAt": "2026-03-24T07:00:31.785Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. Taguchi winsorized mean + market stability CV. Ungraded condition policy (permissive for sold). Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 10,
-      "endIdx": 20,
+      "startIdx": 20,
+      "endIdx": 30,
       "totalAthletes": 568
     },
     "maxPages": 4,
@@ -249,19 +249,19 @@
   },
   "Alex Romero": {
     "keyword": "Alex Romero Baseball",
-    "nScraped": 278,
-    "nSoldUsed": 40,
-    "avg": 1.7450000000000003,
-    "taguchiSold": 1.7450000000000003,
-    "medianSold": 1.745,
-    "marketStabilityCV": 0.14218976787134574,
+    "nScraped": 285,
+    "nSoldUsed": 36,
+    "avg": 1.4955555555555557,
+    "taguchiSold": 1.4955555555555557,
+    "medianSold": 1.5,
+    "marketStabilityCV": 0.3164798595566017,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
   },
   "Alex Serrano": {
     "keyword": "Alex Serrano Baseball",
-    "nScraped": 248,
+    "nScraped": 244,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -274,18 +274,18 @@
   "Alex Torres": {
     "keyword": "Alex Torres Baseball",
     "nScraped": 261,
-    "nSoldUsed": 12,
+    "nSoldUsed": 13,
     "avg": 0.9900000000000001,
     "taguchiSold": 0.9900000000000001,
     "medianSold": 0.99,
-    "marketStabilityCV": 1.1713031619078315e-16,
+    "marketStabilityCV": 1.1672290516094138e-16,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
   },
   "Alexi Amarista": {
     "keyword": "Alexi Amarista Baseball",
-    "nScraped": 244,
+    "nScraped": 249,
     "nSoldUsed": 48,
     "avg": 0.5816666666666663,
     "taguchiSold": 0.5816666666666663,
@@ -297,7 +297,7 @@
   },
   "Alexis Infante": {
     "keyword": "Alexis Infante Baseball",
-    "nScraped": 244,
+    "nScraped": 245,
     "nSoldUsed": 8,
     "avg": 1.29,
     "taguchiSold": 1.29,
@@ -2853,12 +2853,12 @@
   },
   "Alfredo Gonzalez": {
     "keyword": "Alfredo Gonzalez Baseball",
-    "nScraped": 61,
-    "nSoldUsed": 14,
-    "avg": 2.8642857142857148,
-    "taguchiSold": 2.8642857142857148,
-    "medianSold": 3.04,
-    "marketStabilityCV": 0.38848861149446734,
+    "nScraped": 255,
+    "nSoldUsed": 44,
+    "avg": 1.9763636363636372,
+    "taguchiSold": 1.9763636363636372,
+    "medianSold": 1.99,
+    "marketStabilityCV": 0.4758150791978758,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
