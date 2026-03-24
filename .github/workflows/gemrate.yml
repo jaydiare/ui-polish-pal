@@ -1,10 +1,16 @@
 name: Gemrate Grading Sync
 
 on:
-  workflow_dispatch:
   schedule:
     # Run every 4 hours at :00
     - cron: '0 */4 * * *'
+  workflow_dispatch:
+    inputs:
+      only:
+        description: "Single athlete name (e.g. Ronald Acuna Jr.) — leave empty for full batch"
+        required: false
+        default: ""
+    
 
 concurrency:
   group: gemrate-sync
