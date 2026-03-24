@@ -1276,8 +1276,9 @@ interface GemrateData {
 
 const PSA_COLOR = "hsl(200, 80%, 50%)";
 const BECKETT_COLOR = "hsl(340, 75%, 55%)";
+const SGC_COLOR = "hsl(45, 85%, 50%)";
 
-type GraderFilter = "all" | "psa" | "beckett";
+type GraderFilter = "all" | "psa" | "beckett" | "sgc";
 
 const GemrateChart = () => {
   const [gemrateData, setGemrateData] = useState<GemrateData | null>(null);
