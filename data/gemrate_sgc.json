@@ -1,13 +1,13 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-24T12:07:30.695739+00:00",
-    "athleteCount": 260,
+    "updatedAt": "2026-03-24T12:13:34.049465+00:00",
+    "athleteCount": 271,
     "graders": [
       "SGC"
     ],
     "batchInfo": {
-      "startIdx": 400,
-      "endIdx": 420,
+      "startIdx": 420,
+      "endIdx": 440,
       "totalAthletes": 568
     }
   },
@@ -4690,6 +4690,204 @@
         "gems": 2,
         "grades": 4,
         "gemRate": 50.0
+      }
+    },
+    "Roberto Rodriguez": {
+      "name": "Roberto Rodriguez",
+      "sport": "Baseball",
+      "graders": {
+        "SGC": {
+          "cards": 1,
+          "gems": 0,
+          "grades": 2,
+          "gemRate": 0.0
+        }
+      },
+      "totals": {
+        "cards": 1,
+        "gems": 0,
+        "grades": 2,
+        "gemRate": 0.0
+      }
+    },
+    "Robinson Chirinos": {
+      "name": "Robinson Chirinos",
+      "sport": "Baseball",
+      "graders": {
+        "SGC": {
+          "cards": 4,
+          "gems": 1,
+          "grades": 7,
+          "gemRate": 14.0
+        }
+      },
+      "totals": {
+        "cards": 4,
+        "gems": 1,
+        "grades": 7,
+        "gemRate": 14.0
+      }
+    },
+    "Roger Cedeno": {
+      "name": "Roger Cedeno",
+      "sport": "Baseball",
+      "graders": {
+        "SGC": {
+          "cards": 8,
+          "gems": 8,
+          "grades": 73,
+          "gemRate": 11.0
+        }
+      },
+      "totals": {
+        "cards": 8,
+        "gems": 8,
+        "grades": 73,
+        "gemRate": 11.0
+      }
+    },
+    "Ronald Acuna Jr.": {
+      "name": "Ronald Acuna Jr.",
+      "sport": "Baseball",
+      "graders": {
+        "SGC": {
+          "cards": 5501,
+          "gems": 14339,
+          "grades": 30857,
+          "gemRate": 46.0
+        }
+      },
+      "totals": {
+        "cards": 5501,
+        "gems": 14339,
+        "grades": 30857,
+        "gemRate": 46.0
+      }
+    },
+    "Ronald Herrera": {
+      "name": "Ronald Herrera",
+      "sport": "Baseball",
+      "graders": {
+        "SGC": {
+          "cards": 1,
+          "gems": 0,
+          "grades": 1,
+          "gemRate": 0.0
+        }
+      },
+      "totals": {
+        "cards": 1,
+        "gems": 0,
+        "grades": 1,
+        "gemRate": 0.0
+      }
+    },
+    "Rougned Odor": {
+      "name": "Rougned Odor",
+      "sport": "Baseball",
+      "graders": {
+        "SGC": {
+          "cards": 25,
+          "gems": 9,
+          "grades": 26,
+          "gemRate": 35.0
+        }
+      },
+      "totals": {
+        "cards": 25,
+        "gems": 9,
+        "grades": 26,
+        "gemRate": 35.0
+      }
+    },
+    "Ruben Quevedo": {
+      "name": "Ruben Quevedo",
+      "sport": "Baseball",
+      "graders": {
+        "SGC": {
+          "cards": 4,
+          "gems": 3,
+          "grades": 12,
+          "gemRate": 25.0
+        }
+      },
+      "totals": {
+        "cards": 4,
+        "gems": 3,
+        "grades": 12,
+        "gemRate": 25.0
+      }
+    },
+    "Salvador Perez": {
+      "name": "Salvador Perez",
+      "sport": "Baseball",
+      "graders": {
+        "SGC": {
+          "cards": 575,
+          "gems": 398,
+          "grades": 1016,
+          "gemRate": 39.0
+        }
+      },
+      "totals": {
+        "cards": 575,
+        "gems": 398,
+        "grades": 1016,
+        "gemRate": 39.0
+      }
+    },
+    "Sebastian Rivero": {
+      "name": "Sebastian Rivero",
+      "sport": "Baseball",
+      "graders": {
+        "SGC": {
+          "cards": 1,
+          "gems": 1,
+          "grades": 1,
+          "gemRate": 100.0
+        }
+      },
+      "totals": {
+        "cards": 1,
+        "gems": 1,
+        "grades": 1,
+        "gemRate": 100.0
+      }
+    },
+    "Simon Muzziotti": {
+      "name": "Simon Muzziotti",
+      "sport": "Baseball",
+      "graders": {
+        "SGC": {
+          "cards": 30,
+          "gems": 40,
+          "grades": 92,
+          "gemRate": 43.0
+        }
+      },
+      "totals": {
+        "cards": 30,
+        "gems": 40,
+        "grades": 92,
+        "gemRate": 43.0
+      }
+    },
+    "Thairo Estrada": {
+      "name": "Thairo Estrada",
+      "sport": "Baseball",
+      "graders": {
+        "SGC": {
+          "cards": 22,
+          "gems": 17,
+          "grades": 36,
+          "gemRate": 47.0
+        }
+      },
+      "totals": {
+        "cards": 22,
+        "gems": 17,
+        "grades": 36,
+        "gemRate": 47.0
       }
     }
   }
