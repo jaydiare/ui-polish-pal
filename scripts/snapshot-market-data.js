@@ -58,6 +58,19 @@ if (gemrateBeckett?.athletes) {
   }
 }
 
+// Build SGC pop map
+const sgcPopMap = {};
+if (gemrateSgc?.athletes) {
+  for (const [name, data] of Object.entries(gemrateSgc.athletes)) {
+    const pop = data?.graders?.SGC?.grades ?? data?.totals?.grades;
+    if (pop != null && Number.isFinite(pop) && pop > 0) {
+      sgcPopMap[name] = pop;
+      const norm = name.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+      if (norm !== name) sgcPopMap[norm] = pop;
+    }
+  }
+}
+
 // Lookup helpers
 function findRecord(name, sport, data) {
   if (!data || typeof data !== "object") return null;
