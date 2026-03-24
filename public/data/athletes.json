@@ -3348,18 +3348,20 @@
     "name": "Robert Perez",
     "sport": "Baseball",
     "league": "MLB/LVBP",
-    "team": "Brewers/Blue Jays/Cardenales",
+    "team": "Blue Jays/ Cardenales/Yankees/ Brewers",
     "provider": "manual",
+     "searchKeyword": "Robert Perez Blue Jays Cardenales",
     "gemrate": "yes"
   },
-   {
+    {
     "name": "Robert Perez Jr.",
     "sport": "Baseball",
-    "league": "MLB",
-    "team": "Mariners",
+    "league": "MiLB/LVBP",
+    "team": "Mariners / Padres / Cardenales",
     "provider": "manual",
+    "searchKeyword": "Robert Perez Jr. Prospects ",
     "gemrate": "yes"
-  }, 
+  },
   {
     "name": "Robert Suarez",
     "sport": "Baseball",
