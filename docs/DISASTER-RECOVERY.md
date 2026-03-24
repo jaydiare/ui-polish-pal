@@ -160,7 +160,7 @@ This ensures updates are visible without republishing the frontend. Local `publi
 
 ### 4.3 Data Fetch Pattern (useAthleteData hook)
 
-On mount, fetch 10 JSON files in parallel via `Promise.all`:
+On mount, fetch 13 JSON files in parallel via `Promise.all`:
 1. `athletes.json` → merge with local `athleteDataRaw` (keep best metadata)
 2. `ebay-avg.json` → enrich with base prices → build `byName`/`byKey` indexes
 3. `ebay-graded-avg.json` → filter by `gemrate="yes"` athletes → merge with graded sold as fallback
@@ -171,6 +171,9 @@ On mount, fetch 10 JSON files in parallel via `Promise.all`:
 8. `index-history.json` → sport-level index cards
 9. `gemrate.json` → PSA population map
 10. `scp-raw.json` → SportsCardsPro prices
+11. `vzla-athlete-market-data.json` → weekly snapshot fallback
+12. `gemrate_beckett.json` → Beckett (BGS) population map
+13. `gemrate_sgc.json` → SGC population map
 
 ### 4.4 eBay Index Lookup Chain
 
