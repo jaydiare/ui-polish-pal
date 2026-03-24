@@ -1,13 +1,13 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-24T02:49:48.993090+00:00",
-    "athleteCount": 96,
+    "updatedAt": "2026-03-24T02:53:39.700937+00:00",
+    "athleteCount": 110,
     "graders": [
       "SGC"
     ],
     "batchInfo": {
-      "startIdx": 140,
-      "endIdx": 160,
+      "startIdx": 160,
+      "endIdx": 180,
       "totalAthletes": 568
     }
   },
@@ -1738,6 +1738,258 @@
         "gems": 0,
         "grades": 1,
         "gemRate": 0.0
+      }
+    },
+    "Felix Escalona": {
+      "name": "Felix Escalona",
+      "sport": "Baseball",
+      "graders": {
+        "SGC": {
+          "cards": 1,
+          "gems": 0,
+          "grades": 1,
+          "gemRate": 0.0
+        }
+      },
+      "totals": {
+        "cards": 1,
+        "gems": 0,
+        "grades": 1,
+        "gemRate": 0.0
+      }
+    },
+    "Felix Hernandez": {
+      "name": "Felix Hernandez",
+      "sport": "Baseball",
+      "graders": {
+        "SGC": {
+          "cards": 250,
+          "gems": 113,
+          "grades": 414,
+          "gemRate": 27.0
+        }
+      },
+      "totals": {
+        "cards": 250,
+        "gems": 113,
+        "grades": 414,
+        "gemRate": 27.0
+      }
+    },
+    "Francisco Alvarez": {
+      "name": "Francisco Alvarez",
+      "sport": "Baseball",
+      "graders": {
+        "SGC": {
+          "cards": 1065,
+          "gems": 2542,
+          "grades": 5054,
+          "gemRate": 50.0
+        }
+      },
+      "totals": {
+        "cards": 1065,
+        "gems": 2542,
+        "grades": 5054,
+        "gemRate": 50.0
+      }
+    },
+    "Francisco Arcia": {
+      "name": "Francisco Arcia",
+      "sport": "Baseball",
+      "graders": {
+        "SGC": {
+          "cards": 2,
+          "gems": 1,
+          "grades": 2,
+          "gemRate": 50.0
+        }
+      },
+      "totals": {
+        "cards": 2,
+        "gems": 1,
+        "grades": 2,
+        "gemRate": 50.0
+      }
+    },
+    "Francisco Morales": {
+      "name": "Francisco Morales",
+      "sport": "Baseball",
+      "graders": {
+        "SGC": {
+          "cards": 6,
+          "gems": 2,
+          "grades": 8,
+          "gemRate": 25.0
+        }
+      },
+      "totals": {
+        "cards": 6,
+        "gems": 2,
+        "grades": 8,
+        "gemRate": 25.0
+      }
+    },
+    "Francisco Rodriguez": {
+      "name": "Francisco Rodriguez",
+      "sport": "Baseball",
+      "graders": {
+        "SGC": {
+          "cards": 34,
+          "gems": 13,
+          "grades": 61,
+          "gemRate": 21.0
+        }
+      },
+      "totals": {
+        "cards": 34,
+        "gems": 13,
+        "grades": 61,
+        "gemRate": 21.0
+      }
+    },
+    "Franklin Barreto": {
+      "name": "Franklin Barreto",
+      "sport": "Baseball",
+      "graders": {
+        "SGC": {
+          "cards": 3,
+          "gems": 1,
+          "grades": 3,
+          "gemRate": 33.0
+        }
+      },
+      "totals": {
+        "cards": 3,
+        "gems": 1,
+        "grades": 3,
+        "gemRate": 33.0
+      }
+    },
+    "Franklin Gutierrez": {
+      "name": "Franklin Gutierrez",
+      "sport": "Baseball",
+      "graders": {
+        "SGC": {
+          "cards": 2,
+          "gems": 0,
+          "grades": 3,
+          "gemRate": 0.0
+        }
+      },
+      "totals": {
+        "cards": 2,
+        "gems": 0,
+        "grades": 3,
+        "gemRate": 0.0
+      }
+    },
+    "Fred Manrique": {
+      "name": "Fred Manrique",
+      "sport": "Baseball",
+      "graders": {
+        "SGC": {
+          "cards": 4,
+          "gems": 1,
+          "grades": 5,
+          "gemRate": 20.0
+        }
+      },
+      "totals": {
+        "cards": 4,
+        "gems": 1,
+        "grades": 5,
+        "gemRate": 20.0
+      }
+    },
+    "Freddy Fermin": {
+      "name": "Freddy Fermin",
+      "sport": "Baseball",
+      "graders": {
+        "SGC": {
+          "cards": 20,
+          "gems": 28,
+          "grades": 85,
+          "gemRate": 33.0
+        }
+      },
+      "totals": {
+        "cards": 20,
+        "gems": 28,
+        "grades": 85,
+        "gemRate": 33.0
+      }
+    },
+    "Freddy Galvis": {
+      "name": "Freddy Galvis",
+      "sport": "Baseball",
+      "graders": {
+        "SGC": {
+          "cards": 2,
+          "gems": 1,
+          "grades": 2,
+          "gemRate": 50.0
+        }
+      },
+      "totals": {
+        "cards": 2,
+        "gems": 1,
+        "grades": 2,
+        "gemRate": 50.0
+      }
+    },
+    "Freddy Garcia": {
+      "name": "Freddy Garcia",
+      "sport": "Baseball",
+      "graders": {
+        "SGC": {
+          "cards": 32,
+          "gems": 31,
+          "grades": 208,
+          "gemRate": 15.0
+        }
+      },
+      "totals": {
+        "cards": 32,
+        "gems": 31,
+        "grades": 208,
+        "gemRate": 15.0
+      }
+    },
+    "Gabriel Arias": {
+      "name": "Gabriel Arias",
+      "sport": "Baseball",
+      "graders": {
+        "SGC": {
+          "cards": 140,
+          "gems": 114,
+          "grades": 291,
+          "gemRate": 39.0
+        }
+      },
+      "totals": {
+        "cards": 140,
+        "gems": 114,
+        "grades": 291,
+        "gemRate": 39.0
+      }
+    },
+    "Gabriel Moreno": {
+      "name": "Gabriel Moreno",
+      "sport": "Baseball",
+      "graders": {
+        "SGC": {
+          "cards": 530,
+          "gems": 1044,
+          "grades": 1991,
+          "gemRate": 52.0
+        }
+      },
+      "totals": {
+        "cards": 530,
+        "gems": 1044,
+        "grades": 1991,
+        "gemRate": 52.0
       }
     }
   }
