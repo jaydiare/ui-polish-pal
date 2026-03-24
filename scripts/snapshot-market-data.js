@@ -29,6 +29,7 @@ const ebayGradedSoldAvg = loadJson(join(DATA_DIR, "ebay-graded-sold-avg.json")) 
 const athleteHistory = loadJson(join(DATA_DIR, "athlete-history.json")) || {};
 const gemrate = loadJson(join(DATA_DIR, "gemrate.json"));
 const gemrateBeckett = loadJson(join(DATA_DIR, "gemrate_beckett.json"));
+const gemrateSgc = loadJson(join(DATA_DIR, "gemrate_sgc.json"));
 const scpPricesData = loadJson(join(DATA_DIR, "scp-prices.json"));
 
 // Build gemrate pop map
@@ -53,6 +54,19 @@ if (gemrateBeckett?.athletes) {
       beckettPopMap[name] = pop;
       const norm = name.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
       if (norm !== name) beckettPopMap[norm] = pop;
+    }
+  }
+}
+
+// Build SGC pop map
+const sgcPopMap = {};
+if (gemrateSgc?.athletes) {
+  for (const [name, data] of Object.entries(gemrateSgc.athletes)) {
+    const pop = data?.graders?.SGC?.grades ?? data?.totals?.grades;
+    if (pop != null && Number.isFinite(pop) && pop > 0) {
+      sgcPopMap[name] = pop;
+      const norm = name.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+      if (norm !== name) sgcPopMap[norm] = pop;
     }
   }
 }
@@ -140,6 +154,7 @@ for (const a of athletes) {
     signalStrength: getSignalSN(cv),
     psaPop: psaPop > 0 ? psaPop : null,
     bgsPop: beckettPopMap[a.name] ?? beckettPopMap[normName] ?? null,
+    sgcPop: sgcPopMap[a.name] ?? sgcPopMap[normName] ?? null,
     daysOnMarket: dom != null && dom > 0 ? Math.round(dom) : null,
     indexLevel: rawRec?.indexLevel ?? null,
     scpRawPrice: scpPriceMap[a.name]?.scpRawPrice ?? null,
