@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-24T03:17:04.995Z",
+    "updatedAt": "2026-03-24T05:40:25.608Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA/BGS/SGC grader title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 160,
-      "endIdx": 170,
+      "startIdx": 170,
+      "endIdx": 180,
       "totalAthletes": 451
     },
     "maxPages": 4,
@@ -32,7 +32,7 @@
     },
     "fx": {
       "source": "CBSA Exchange Rates API",
-      "asOf": "2026-03-24T00:00:00.000Z"
+      "asOf": "2026-03-25T00:00:00.000Z"
     }
   },
   "Adbert Alzolay": {
@@ -2401,7 +2401,7 @@
   },
   "Harold Castro": {
     "keyword": "Harold Castro Baseball PSA",
-    "nScraped": 240,
+    "nScraped": 242,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -2485,7 +2485,7 @@
   },
   "Henry Rodriguez": {
     "keyword": "Henry Rodriguez Baseball PSA",
-    "nScraped": 180,
+    "nScraped": 242,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -2545,7 +2545,7 @@
   },
   "Humberto Quintero": {
     "keyword": "Humberto Quintero Baseball PSA",
-    "nScraped": 60,
+    "nScraped": 0,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
