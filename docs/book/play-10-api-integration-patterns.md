@@ -16,6 +16,7 @@ VZLA Sports Elite integrates with six external data sources. Each required a dif
 | eBay Sold Listings | HTML scraping | None | 10 athletes/3h, rotating UAs | Cached `ebay-sold-avg.json` |
 | Gemrate.com (PSA) | HTML scraping | None | 20 athletes/4h, random delays | Cached `gemrate.json` |
 | Gemrate.com (Beckett) | HTML scraping | None | 20 athletes/4h, staggered | Cached `gemrate_beckett.json` |
+| Gemrate.com (SGC) | HTML scraping | None | 20 athletes/4h, staggered | Cached `gemrate_sgc.json` |
 | SportsCardsPro | REST API | Token in URL | 500ms delay, 3s pause every 50 | Cached `scp-prices.json` |
 | Google Gemini | REST | API key | 1 call per bi-weekly run | Statistical-only report |
 | Wikipedia Images | REST | None | Per-request, cached results | Initials avatar |
