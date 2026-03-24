@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-23T15:10:48.483Z",
+    "updatedAt": "2026-03-24T01:54:46.196Z",
     "minSampleSize": 4,
     "marketplaces": [
       "EBAY_US"
@@ -12,8 +12,8 @@
       "asOf": "2026-03-24T00:00:00.000Z",
       "ratesToUSD": {
         "USD": 1,
-        "CAD": 0.7289692374981777,
-        "EUR": 1.1555620352821112
+        "CAD": 0.7290223809870964,
+        "EUR": 1.1602391193409638
       }
     },
     "manufacturers": "none (all brands accepted)",
@@ -485,7 +485,8 @@
       "Yeferson Soteldo": 4.005666666666667,
       "Yordan Osorio": 2.4925,
       "Garbine Muguruza": 8.109666666666671,
-      "Dave Concepcion": 41.431750000000015
+      "Dave Concepcion": 41.431750000000015,
+      "Bob Abreu": 33.23379746835447
     },
     "indexHistory": [
       {
@@ -526,6 +527,11 @@
         "date": "2026-03-23",
         "Baseball": 2322.8,
         "All": 2322.8
+      },
+      {
+        "date": "2026-03-24",
+        "Baseball": 100,
+        "All": 100
       }
     ]
   },
@@ -14112,5 +14118,37 @@
     "currency": "USD",
     "basePriceUSD": 41.431750000000015,
     "indexLevel": 103.67954527626738
+  },
+  "Bob Abreu": {
+    "match": {
+      "mode": "player",
+      "value": "Bob Abreu",
+      "validatedOn": "EBAY_CA"
+    },
+    "marketplaces": {
+      "EBAY_US": {
+        "aspectMode": "player",
+        "aspectValue": "Bob Abreu",
+        "avgListing": 33.23379746835447,
+        "taguchiListing": 33.23379746835447,
+        "marketStabilityCV": 0.23599779283664227,
+        "avgDaysOnMarket": 674.1368962255334,
+        "nListing": 79,
+        "nDaysOnMarket": 79,
+        "currency": "USD",
+        "originalCurrency": "USD",
+        "fxRateUsed": 1
+      }
+    },
+    "avg": 33.23379746835447,
+    "n": 79,
+    "avgListing": 33.23379746835447,
+    "taguchiListing": 33.23379746835447,
+    "marketStabilityCV": 0.23599779283664227,
+    "avgDaysOnMarket": 674.1368962255334,
+    "nListing": 79,
+    "currency": "USD",
+    "basePriceUSD": 33.23379746835447,
+    "indexLevel": 100
   }
 }
