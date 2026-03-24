@@ -1305,38 +1305,44 @@ const GemrateChart = () => {
   const top10 = useMemo(() => {
     const psaAthletes = gemrateData?.athletes || {};
     const beckettAthletes = beckettData?.athletes || {};
+    const sgcAthletes = sgcData?.athletes || {};
 
-    // Build a unified list of all athletes from both sources
+    // Build a unified list of all athletes from all sources
     const allNames = new Set<string>();
     for (const a of Object.values(psaAthletes)) if (a.name) allNames.add(a.name);
     for (const a of Object.values(beckettAthletes)) if (a.name) allNames.add(a.name);
+    for (const a of Object.values(sgcAthletes)) if (a.name) allNames.add(a.name);
 
     if (allNames.size === 0) return [];
 
     const rows = Array.from(allNames).map((name) => {
       const psaRec = Object.values(psaAthletes).find((a) => a.name === name);
       const beckettRec = beckettAthletes[name];
+      const sgcRec = sgcAthletes[name];
       const psaGrades = psaRec?.graders?.PSA?.grades ?? psaRec?.totals?.grades ?? 0;
       const beckettGrades = beckettRec?.totals?.grades ?? 0;
+      const sgcGrades = sgcRec?.graders?.SGC?.grades ?? sgcRec?.totals?.grades ?? 0;
 
       return {
         name,
-        sport: psaRec?.sport ?? beckettRec?.sport ?? "",
+        sport: psaRec?.sport ?? beckettRec?.sport ?? sgcRec?.sport ?? "",
         PSA: psaGrades,
         Beckett: beckettGrades,
-        total: psaGrades + beckettGrades,
+        SGC: sgcGrades,
+        total: psaGrades + beckettGrades + sgcGrades,
         gemRate: psaRec?.totals?.gemRate ?? null,
         beckettGemRate: beckettRec?.totals?.gemRate ?? null,
+        sgcGemRate: sgcRec?.totals?.gemRate ?? null,
       };
     });
 
     // Sort by the relevant metric based on filter
-    const sortKey = graderFilter === "psa" ? "PSA" : graderFilter === "beckett" ? "Beckett" : "total";
+    const sortKey = graderFilter === "psa" ? "PSA" : graderFilter === "beckett" ? "Beckett" : graderFilter === "sgc" ? "SGC" : "total";
     return rows
       .filter((r) => r[sortKey] > 0)
       .sort((a, b) => b[sortKey] - a[sortKey])
       .slice(0, 10);
-  }, [gemrateData, beckettData, graderFilter]);
+  }, [gemrateData, beckettData, sgcData, graderFilter]);
 
   const isEmpty = (!gemrateData && !beckettData) || top10.length === 0;
 
