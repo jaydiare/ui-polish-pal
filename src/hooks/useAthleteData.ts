@@ -122,6 +122,7 @@ export function useAthleteData() {
   const [indexHistory, setIndexHistory] = useState<any[]>([]);
   const [gemratePopMap, setGemratePopMap] = useState<Record<string, number>>({});
   const [beckettPopMap, setBeckettPopMap] = useState<Record<string, number>>({});
+  const [sgcPopMap, setSgcPopMap] = useState<Record<string, number>>({});
   const [scpPrices, setScpPrices] = useState<Record<string, { scpRawPrice: number | null }>>({});
   const [snapshotFallback, setSnapshotFallback] = useState<Record<string, { rawListedPrice: number | null; gradedListedPrice: number | null }>>({});
   const [lastUpdated, setLastUpdated] = useState<string>("—");
@@ -225,7 +226,7 @@ export function useAthleteData() {
   // Fetch data on mount
   useEffect(() => {
     (async () => {
-      const [fetchedAthletes, fetchedEbay, fetchedGraded, fetchedSold, fetchedGradedSold, fetchedProgress, fetchedHistory, fetchedIndexHistory, fetchedGemrate, fetchedScp, fetchedSnapshot, fetchedBeckett] = await Promise.all([
+      const [fetchedAthletes, fetchedEbay, fetchedGraded, fetchedSold, fetchedGradedSold, fetchedProgress, fetchedHistory, fetchedIndexHistory, fetchedGemrate, fetchedScp, fetchedSnapshot, fetchedBeckett, fetchedSgc] = await Promise.all([
         fetchJson("https://raw.githubusercontent.com/jaydiare/ui-polish-pal/main/data/athletes.json"),
         fetchJson("https://raw.githubusercontent.com/jaydiare/ui-polish-pal/main/data/ebay-avg.json"),
         fetchJson("https://raw.githubusercontent.com/jaydiare/ui-polish-pal/main/data/ebay-graded-avg.json"),
@@ -238,6 +239,7 @@ export function useAthleteData() {
         fetchJson("https://raw.githubusercontent.com/jaydiare/ui-polish-pal/main/data/scp-raw.json"),
         fetchJson("https://raw.githubusercontent.com/jaydiare/ui-polish-pal/main/data/vzla-athlete-market-data.json"),
         fetchJson("https://raw.githubusercontent.com/jaydiare/ui-polish-pal/main/data/gemrate_beckett.json"),
+        fetchJson("https://raw.githubusercontent.com/jaydiare/ui-polish-pal/main/data/gemrate_sgc.json"),
       ]);
 
       const patchedEbay = enrichWithBasePrices(fetchedEbay as EbayAvgData | null);
@@ -309,6 +311,19 @@ export function useAthleteData() {
           }
         }
         setBeckettPopMap(bMap);
+      }
+      // SGC pop map
+      if (fetchedSgc?.athletes && typeof fetchedSgc.athletes === "object") {
+        const sMap: Record<string, number> = {};
+        for (const [name, athlete] of Object.entries(fetchedSgc.athletes as Record<string, any>)) {
+          const pop = athlete?.graders?.SGC?.grades ?? athlete?.totals?.grades;
+          if (pop != null && Number.isFinite(pop) && pop > 0) {
+            sMap[name] = pop;
+            const normalized = name.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+            if (normalized !== name) sMap[normalized] = pop;
+          }
+        }
+        setSgcPopMap(sMap);
       }
     })();
   }, []);
@@ -425,6 +440,7 @@ export function useAthleteData() {
     ebayGradedSoldRaw: filteredGradedSoldRaw,
     gemratePopMap,
     beckettPopMap,
+    sgcPopMap,
     scpPrices,
     snapshotFallback,
     athleteHistory,
