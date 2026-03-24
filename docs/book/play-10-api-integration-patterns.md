@@ -6,9 +6,9 @@
 
 ---
 
-## Six APIs, Six Strategies
+## Seven APIs, Seven Strategies
 
-VZLA Sports Elite integrates with six external data sources. Each required a different strategy for authentication, rate limiting, error handling, and graceful degradation.
+VZLA Sports Elite integrates with seven external data sources. Each required a different strategy for authentication, rate limiting, error handling, and graceful degradation.
 
 | Source | Method | Auth | Rate Strategy | Fallback |
 |--------|--------|------|---------------|----------|
