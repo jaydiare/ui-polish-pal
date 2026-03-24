@@ -1,13 +1,13 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-24T07:48:25.040268+00:00",
-    "athleteCount": 127,
+    "updatedAt": "2026-03-24T10:59:54.523528+00:00",
+    "athleteCount": 141,
     "graders": [
       "SGC"
     ],
     "batchInfo": {
-      "startIdx": 200,
-      "endIdx": 220,
+      "startIdx": 220,
+      "endIdx": 240,
       "totalAthletes": 568
     }
   },
@@ -2296,6 +2296,258 @@
         "gems": 7394,
         "grades": 14241,
         "gemRate": 52.0
+      }
+    },
+    "Jairo Iriarte": {
+      "name": "Jairo Iriarte",
+      "sport": "Baseball",
+      "graders": {
+        "SGC": {
+          "cards": 6,
+          "gems": 3,
+          "grades": 7,
+          "gemRate": 43.0
+        }
+      },
+      "totals": {
+        "cards": 6,
+        "gems": 3,
+        "grades": 7,
+        "gemRate": 43.0
+      }
+    },
+    "Javier Sanoja": {
+      "name": "Javier Sanoja",
+      "sport": "Baseball",
+      "graders": {
+        "SGC": {
+          "cards": 23,
+          "gems": 19,
+          "grades": 43,
+          "gemRate": 44.0
+        }
+      },
+      "totals": {
+        "cards": 23,
+        "gems": 19,
+        "grades": 43,
+        "gemRate": 44.0
+      }
+    },
+    "Jean Machi": {
+      "name": "Jean Machi",
+      "sport": "Baseball",
+      "graders": {
+        "SGC": {
+          "cards": 1,
+          "gems": 1,
+          "grades": 1,
+          "gemRate": 100.0
+        }
+      },
+      "totals": {
+        "cards": 1,
+        "gems": 1,
+        "grades": 1,
+        "gemRate": 100.0
+      }
+    },
+    "Jeanmar Gomez": {
+      "name": "Jeanmar Gomez",
+      "sport": "Baseball",
+      "graders": {
+        "SGC": {
+          "cards": 1,
+          "gems": 0,
+          "grades": 1,
+          "gemRate": 0.0
+        }
+      },
+      "totals": {
+        "cards": 1,
+        "gems": 0,
+        "grades": 1,
+        "gemRate": 0.0
+      }
+    },
+    "Jeferson Quero": {
+      "name": "Jeferson Quero",
+      "sport": "Baseball",
+      "graders": {
+        "SGC": {
+          "cards": 54,
+          "gems": 70,
+          "grades": 150,
+          "gemRate": 47.0
+        }
+      },
+      "totals": {
+        "cards": 54,
+        "gems": 70,
+        "grades": 150,
+        "gemRate": 47.0
+      }
+    },
+    "Jermaine Palacios": {
+      "name": "Jermaine Palacios",
+      "sport": "Baseball",
+      "graders": {
+        "SGC": {
+          "cards": 32,
+          "gems": 41,
+          "grades": 86,
+          "gemRate": 48.0
+        }
+      },
+      "totals": {
+        "cards": 32,
+        "gems": 41,
+        "grades": 86,
+        "gemRate": 48.0
+      }
+    },
+    "Jesus Aguilar": {
+      "name": "Jesus Aguilar",
+      "sport": "Baseball",
+      "graders": {
+        "SGC": {
+          "cards": 8,
+          "gems": 1,
+          "grades": 9,
+          "gemRate": 11.0
+        }
+      },
+      "totals": {
+        "cards": 8,
+        "gems": 1,
+        "grades": 9,
+        "gemRate": 11.0
+      }
+    },
+    "Jesus Delgado": {
+      "name": "Jesus Delgado",
+      "sport": "Baseball",
+      "graders": {
+        "SGC": {
+          "cards": 1,
+          "gems": 1,
+          "grades": 1,
+          "gemRate": 100.0
+        }
+      },
+      "totals": {
+        "cards": 1,
+        "gems": 1,
+        "grades": 1,
+        "gemRate": 100.0
+      }
+    },
+    "Jesus Montero": {
+      "name": "Jesus Montero",
+      "sport": "Baseball",
+      "graders": {
+        "SGC": {
+          "cards": 25,
+          "gems": 23,
+          "grades": 97,
+          "gemRate": 24.0
+        }
+      },
+      "totals": {
+        "cards": 25,
+        "gems": 23,
+        "grades": 97,
+        "gemRate": 24.0
+      }
+    },
+    "Jesus Tinoco": {
+      "name": "Jesus Tinoco",
+      "sport": "Baseball",
+      "graders": {
+        "SGC": {
+          "cards": 3,
+          "gems": 5,
+          "grades": 5,
+          "gemRate": 100.0
+        }
+      },
+      "totals": {
+        "cards": 3,
+        "gems": 5,
+        "grades": 5,
+        "gemRate": 100.0
+      }
+    },
+    "Jhonathan Diaz": {
+      "name": "Jhonathan Diaz",
+      "sport": "Baseball",
+      "graders": {
+        "SGC": {
+          "cards": 2,
+          "gems": 1,
+          "grades": 2,
+          "gemRate": 50.0
+        }
+      },
+      "totals": {
+        "cards": 2,
+        "gems": 1,
+        "grades": 2,
+        "gemRate": 50.0
+      }
+    },
+    "Jhostynxon Garcia": {
+      "name": "Jhostynxon Garcia",
+      "sport": "Baseball",
+      "graders": {
+        "SGC": {
+          "cards": 42,
+          "gems": 26,
+          "grades": 63,
+          "gemRate": 41.0
+        }
+      },
+      "totals": {
+        "cards": 42,
+        "gems": 26,
+        "grades": 63,
+        "gemRate": 41.0
+      }
+    },
+    "Jhoulys Chacin": {
+      "name": "Jhoulys Chacin",
+      "sport": "Baseball",
+      "graders": {
+        "SGC": {
+          "cards": 5,
+          "gems": 2,
+          "grades": 5,
+          "gemRate": 40.0
+        }
+      },
+      "totals": {
+        "cards": 5,
+        "gems": 2,
+        "grades": 5,
+        "gemRate": 40.0
+      }
+    },
+    "Johan Santana": {
+      "name": "Johan Santana",
+      "sport": "Baseball",
+      "graders": {
+        "SGC": {
+          "cards": 86,
+          "gems": 56,
+          "grades": 204,
+          "gemRate": 27.0
+        }
+      },
+      "totals": {
+        "cards": 86,
+        "gems": 56,
+        "grades": 204,
+        "gemRate": 27.0
       }
     }
   }
