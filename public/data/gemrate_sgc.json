@@ -1,13 +1,13 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-24T11:11:46.915888+00:00",
-    "athleteCount": 163,
+    "updatedAt": "2026-03-24T11:18:11.994102+00:00",
+    "athleteCount": 176,
     "graders": [
       "SGC"
     ],
     "batchInfo": {
-      "startIdx": 260,
-      "endIdx": 280,
+      "startIdx": 280,
+      "endIdx": 300,
       "totalAthletes": 568
     }
   },
@@ -2944,6 +2944,240 @@
         "gems": 0,
         "grades": 1,
         "gemRate": 0.0
+      }
+    },
+    "Juan Rincon": {
+      "name": "Juan Rincon",
+      "sport": "Baseball",
+      "graders": {
+        "SGC": {
+          "cards": 1,
+          "gems": 0,
+          "grades": 1,
+          "gemRate": 0.0
+        }
+      },
+      "totals": {
+        "cards": 1,
+        "gems": 0,
+        "grades": 1,
+        "gemRate": 0.0
+      }
+    },
+    "Juan Rivera": {
+      "name": "Juan Rivera",
+      "sport": "Baseball",
+      "graders": {
+        "SGC": {
+          "cards": 11,
+          "gems": 27,
+          "grades": 108,
+          "gemRate": 25.0
+        }
+      },
+      "totals": {
+        "cards": 11,
+        "gems": 27,
+        "grades": 108,
+        "gemRate": 25.0
+      }
+    },
+    "Juan Yepez": {
+      "name": "Juan Yepez",
+      "sport": "Baseball",
+      "graders": {
+        "SGC": {
+          "cards": 144,
+          "gems": 99,
+          "grades": 253,
+          "gemRate": 39.0
+        }
+      },
+      "totals": {
+        "cards": 144,
+        "gems": 99,
+        "grades": 253,
+        "gemRate": 39.0
+      }
+    },
+    "Julio Machado": {
+      "name": "Julio Machado",
+      "sport": "Baseball",
+      "graders": {
+        "SGC": {
+          "cards": 3,
+          "gems": 0,
+          "grades": 6,
+          "gemRate": 0.0
+        }
+      },
+      "totals": {
+        "cards": 3,
+        "gems": 0,
+        "grades": 6,
+        "gemRate": 0.0
+      }
+    },
+    "Keibert Ruiz": {
+      "name": "Keibert Ruiz",
+      "sport": "Baseball",
+      "graders": {
+        "SGC": {
+          "cards": 252,
+          "gems": 132,
+          "grades": 365,
+          "gemRate": 36.0
+        }
+      },
+      "totals": {
+        "cards": 252,
+        "gems": 132,
+        "grades": 365,
+        "gemRate": 36.0
+      }
+    },
+    "Keider Montero": {
+      "name": "Keider Montero",
+      "sport": "Baseball",
+      "graders": {
+        "SGC": {
+          "cards": 3,
+          "gems": 2,
+          "grades": 3,
+          "gemRate": 67.0
+        }
+      },
+      "totals": {
+        "cards": 3,
+        "gems": 2,
+        "grades": 3,
+        "gemRate": 67.0
+      }
+    },
+    "Kelvim Escobar": {
+      "name": "Kelvim Escobar",
+      "sport": "Baseball",
+      "graders": {
+        "SGC": {
+          "cards": 2,
+          "gems": 0,
+          "grades": 4,
+          "gemRate": 0.0
+        }
+      },
+      "totals": {
+        "cards": 2,
+        "gems": 0,
+        "grades": 4,
+        "gemRate": 0.0
+      }
+    },
+    "Kenedy Corona": {
+      "name": "Kenedy Corona",
+      "sport": "Baseball",
+      "graders": {
+        "SGC": {
+          "cards": 46,
+          "gems": 67,
+          "grades": 130,
+          "gemRate": 52.0
+        }
+      },
+      "totals": {
+        "cards": 46,
+        "gems": 67,
+        "grades": 130,
+        "gemRate": 52.0
+      }
+    },
+    "Kervin Castro": {
+      "name": "Kervin Castro",
+      "sport": "Baseball",
+      "graders": {
+        "SGC": {
+          "cards": 5,
+          "gems": 2,
+          "grades": 5,
+          "gemRate": 40.0
+        }
+      },
+      "totals": {
+        "cards": 5,
+        "gems": 2,
+        "grades": 5,
+        "gemRate": 40.0
+      }
+    },
+    "Lenyn Sosa": {
+      "name": "Lenyn Sosa",
+      "sport": "Baseball",
+      "graders": {
+        "SGC": {
+          "cards": 135,
+          "gems": 199,
+          "grades": 426,
+          "gemRate": 47.0
+        }
+      },
+      "totals": {
+        "cards": 135,
+        "gems": 199,
+        "grades": 426,
+        "gemRate": 47.0
+      }
+    },
+    "Leo Hernandez": {
+      "name": "Leo Hernandez",
+      "sport": "Baseball",
+      "graders": {
+        "SGC": {
+          "cards": 1,
+          "gems": 0,
+          "grades": 1,
+          "gemRate": 0.0
+        }
+      },
+      "totals": {
+        "cards": 1,
+        "gems": 0,
+        "grades": 1,
+        "gemRate": 0.0
+      }
+    },
+    "Leo Rivas": {
+      "name": "Leo Rivas",
+      "sport": "Baseball",
+      "graders": {
+        "SGC": {
+          "cards": 6,
+          "gems": 3,
+          "grades": 6,
+          "gemRate": 50.0
+        }
+      },
+      "totals": {
+        "cards": 6,
+        "gems": 3,
+        "grades": 6,
+        "gemRate": 50.0
+      }
+    },
+    "Les Straker": {
+      "name": "Les Straker",
+      "sport": "Baseball",
+      "graders": {
+        "SGC": {
+          "cards": 4,
+          "gems": 1,
+          "grades": 6,
+          "gemRate": 17.0
+        }
+      },
+      "totals": {
+        "cards": 4,
+        "gems": 1,
+        "grades": 6,
+        "gemRate": 17.0
       }
     }
   }
