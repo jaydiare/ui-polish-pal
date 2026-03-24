@@ -1,4 +1,178 @@
 {
-  "_meta": {},
-  "athletes": {}
+  "_meta": {
+    "updatedAt": "2026-03-24T02:07:54.559082+00:00",
+    "athleteCount": 9,
+    "graders": [
+      "SGC"
+    ],
+    "batchInfo": {
+      "startIdx": 0,
+      "endIdx": 20,
+      "totalAthletes": 568
+    }
+  },
+  "athletes": {
+    "Adbert Alzolay": {
+      "name": "Adbert Alzolay",
+      "sport": "Baseball",
+      "graders": {
+        "SGC": {
+          "cards": 69,
+          "gems": 23,
+          "grades": 81,
+          "gemRate": 28.0
+        }
+      },
+      "totals": {
+        "cards": 69,
+        "gems": 23,
+        "grades": 81,
+        "gemRate": 28.0
+      }
+    },
+    "Adrian Sanchez": {
+      "name": "Adrian Sanchez",
+      "sport": "Baseball",
+      "graders": {
+        "SGC": {
+          "cards": 2,
+          "gems": 1,
+          "grades": 3,
+          "gemRate": 33.0
+        }
+      },
+      "totals": {
+        "cards": 2,
+        "gems": 1,
+        "grades": 3,
+        "gemRate": 33.0
+      }
+    },
+    "Al Pedrique": {
+      "name": "Al Pedrique",
+      "sport": "Baseball",
+      "graders": {
+        "SGC": {
+          "cards": 1,
+          "gems": 1,
+          "grades": 1,
+          "gemRate": 100.0
+        }
+      },
+      "totals": {
+        "cards": 1,
+        "gems": 1,
+        "grades": 1,
+        "gemRate": 100.0
+      }
+    },
+    "Alberto Gonzalez": {
+      "name": "Alberto Gonzalez",
+      "sport": "Baseball",
+      "graders": {
+        "SGC": {
+          "cards": 1,
+          "gems": 0,
+          "grades": 1,
+          "gemRate": 0.0
+        }
+      },
+      "totals": {
+        "cards": 1,
+        "gems": 0,
+        "grades": 1,
+        "gemRate": 0.0
+      }
+    },
+    "Alcides Escobar": {
+      "name": "Alcides Escobar",
+      "sport": "Baseball",
+      "graders": {
+        "SGC": {
+          "cards": 9,
+          "gems": 2,
+          "grades": 9,
+          "gemRate": 22.0
+        }
+      },
+      "totals": {
+        "cards": 9,
+        "gems": 2,
+        "grades": 9,
+        "gemRate": 22.0
+      }
+    },
+    "Alejandro Freire": {
+      "name": "Alejandro Freire",
+      "sport": "Baseball",
+      "graders": {
+        "SGC": {
+          "cards": 1,
+          "gems": 0,
+          "grades": 1,
+          "gemRate": 0.0
+        }
+      },
+      "totals": {
+        "cards": 1,
+        "gems": 0,
+        "grades": 1,
+        "gemRate": 0.0
+      }
+    },
+    "Alex Cabrera": {
+      "name": "Alex Cabrera",
+      "sport": "Baseball",
+      "graders": {
+        "SGC": {
+          "cards": 3,
+          "gems": 1,
+          "grades": 4,
+          "gemRate": 25.0
+        }
+      },
+      "totals": {
+        "cards": 3,
+        "gems": 1,
+        "grades": 4,
+        "gemRate": 25.0
+      }
+    },
+    "Alex Escobar": {
+      "name": "Alex Escobar",
+      "sport": "Baseball",
+      "graders": {
+        "SGC": {
+          "cards": 25,
+          "gems": 14,
+          "grades": 170,
+          "gemRate": 8.0
+        }
+      },
+      "totals": {
+        "cards": 25,
+        "gems": 14,
+        "grades": 170,
+        "gemRate": 8.0
+      }
+    },
+    "Alex Ramirez": {
+      "name": "Alex Ramirez",
+      "sport": "Baseball",
+      "graders": {
+        "SGC": {
+          "cards": 117,
+          "gems": 206,
+          "grades": 359,
+          "gemRate": 57.0
+        }
+      },
+      "totals": {
+        "cards": 117,
+        "gems": 206,
+        "grades": 359,
+        "gemRate": 57.0
+      }
+    }
+  }
 }
