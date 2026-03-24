@@ -1,14 +1,14 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-24T13:01:22.726627+00:00",
-    "athleteCount": 454,
+    "updatedAt": "2026-03-24T14:08:14.578937+00:00",
+    "athleteCount": 455,
     "graders": [
       "PSA"
     ],
     "batchInfo": {
-      "startIdx": 20,
-      "endIdx": 40,
-      "totalAthletes": 568
+      "startIdx": 40,
+      "endIdx": 60,
+      "totalAthletes": 569
     }
   },
   "athletes": {
@@ -575,16 +575,16 @@
       "sport": "Baseball",
       "graders": {
         "PSA": {
-          "cards": 228,
-          "gems": 425,
-          "grades": 887,
+          "cards": 229,
+          "gems": 427,
+          "grades": 891,
           "gemRate": 48.0
         }
       },
       "totals": {
-        "cards": 228,
-        "gems": 425,
-        "grades": 887,
+        "cards": 229,
+        "gems": 427,
+        "grades": 891,
         "gemRate": 48.0
       }
     },
@@ -8182,6 +8182,24 @@
         "gems": 0,
         "grades": 6,
         "gemRate": 0.0
+      }
+    },
+    "Bob Abreu": {
+      "name": "Bob Abreu",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 113,
+          "gems": 266,
+          "grades": 1686,
+          "gemRate": 16.0
+        }
+      },
+      "totals": {
+        "cards": 113,
+        "gems": 266,
+        "grades": 1686,
+        "gemRate": 16.0
       }
     }
   }
