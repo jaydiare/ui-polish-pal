@@ -226,7 +226,7 @@ export function useAthleteData() {
   // Fetch data on mount
   useEffect(() => {
     (async () => {
-      const [fetchedAthletes, fetchedEbay, fetchedGraded, fetchedSold, fetchedGradedSold, fetchedProgress, fetchedHistory, fetchedIndexHistory, fetchedGemrate, fetchedScp, fetchedSnapshot, fetchedBeckett] = await Promise.all([
+      const [fetchedAthletes, fetchedEbay, fetchedGraded, fetchedSold, fetchedGradedSold, fetchedProgress, fetchedHistory, fetchedIndexHistory, fetchedGemrate, fetchedScp, fetchedSnapshot, fetchedBeckett, fetchedSgc] = await Promise.all([
         fetchJson("https://raw.githubusercontent.com/jaydiare/ui-polish-pal/main/data/athletes.json"),
         fetchJson("https://raw.githubusercontent.com/jaydiare/ui-polish-pal/main/data/ebay-avg.json"),
         fetchJson("https://raw.githubusercontent.com/jaydiare/ui-polish-pal/main/data/ebay-graded-avg.json"),
@@ -239,6 +239,7 @@ export function useAthleteData() {
         fetchJson("https://raw.githubusercontent.com/jaydiare/ui-polish-pal/main/data/scp-raw.json"),
         fetchJson("https://raw.githubusercontent.com/jaydiare/ui-polish-pal/main/data/vzla-athlete-market-data.json"),
         fetchJson("https://raw.githubusercontent.com/jaydiare/ui-polish-pal/main/data/gemrate_beckett.json"),
+        fetchJson("https://raw.githubusercontent.com/jaydiare/ui-polish-pal/main/data/gemrate_sgc.json"),
       ]);
 
       const patchedEbay = enrichWithBasePrices(fetchedEbay as EbayAvgData | null);
