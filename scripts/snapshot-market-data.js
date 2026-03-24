@@ -29,6 +29,7 @@ const ebayGradedSoldAvg = loadJson(join(DATA_DIR, "ebay-graded-sold-avg.json")) 
 const athleteHistory = loadJson(join(DATA_DIR, "athlete-history.json")) || {};
 const gemrate = loadJson(join(DATA_DIR, "gemrate.json"));
 const gemrateBeckett = loadJson(join(DATA_DIR, "gemrate_beckett.json"));
+const gemrateSgc = loadJson(join(DATA_DIR, "gemrate_sgc.json"));
 const scpPricesData = loadJson(join(DATA_DIR, "scp-prices.json"));
 
 // Build gemrate pop map
