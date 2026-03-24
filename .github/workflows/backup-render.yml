@@ -1,8 +1,8 @@
-name: Weekly backup to Render PostgreSQL
+name: Tri-weekly backup to Render PostgreSQL
 
 on:
   schedule:
-    - cron: "30 13 * * 0"   # Every Sunday at 1:30 PM UTC (after snapshot workflow)
+    - cron: "30 13 1-7,22-28 * 0"   # 1st & ~4th Sundays each month (~every 3 weeks)
   workflow_dispatch:          # Manual trigger
 
 concurrency:
