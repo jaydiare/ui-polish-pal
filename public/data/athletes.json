@@ -3347,11 +3347,19 @@
   {
     "name": "Robert Perez",
     "sport": "Baseball",
-    "league": "MLB",
-    "team": "Brewers",
+    "league": "MLB/LVBP",
+    "team": "Brewers/Blue Jays/Cardenales",
     "provider": "manual",
     "gemrate": "yes"
   },
+   {
+    "name": "Robert Perez Jr.",
+    "sport": "Baseball",
+    "league": "MLB",
+    "team": "Mariners",
+    "provider": "manual",
+    "gemrate": "yes"
+  }, 
   {
     "name": "Robert Suarez",
     "sport": "Baseball",
