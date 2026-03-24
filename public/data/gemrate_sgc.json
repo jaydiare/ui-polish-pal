@@ -1,13 +1,13 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-24T12:52:21.639330+00:00",
-    "athleteCount": 303,
+    "updatedAt": "2026-03-24T12:59:29.962278+00:00",
+    "athleteCount": 305,
     "graders": [
       "SGC"
     ],
     "batchInfo": {
-      "startIdx": 480,
-      "endIdx": 500,
+      "startIdx": 500,
+      "endIdx": 520,
       "totalAthletes": 568
     }
   },
@@ -5463,6 +5463,42 @@
         "cards": 2,
         "gems": 0,
         "grades": 2,
+        "gemRate": 0.0
+      }
+    },
+    "Salomon Rondon": {
+      "name": "Salomon Rondon",
+      "sport": "Soccer",
+      "graders": {
+        "SGC": {
+          "cards": 4,
+          "gems": 0,
+          "grades": 4,
+          "gemRate": 0.0
+        }
+      },
+      "totals": {
+        "cards": 4,
+        "gems": 0,
+        "grades": 4,
+        "gemRate": 0.0
+      }
+    },
+    "Yangel Herrera": {
+      "name": "Yangel Herrera",
+      "sport": "Soccer",
+      "graders": {
+        "SGC": {
+          "cards": 1,
+          "gems": 0,
+          "grades": 1,
+          "gemRate": 0.0
+        }
+      },
+      "totals": {
+        "cards": 1,
+        "gems": 0,
+        "grades": 1,
         "gemRate": 0.0
       }
     }
