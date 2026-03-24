@@ -6,9 +6,9 @@
 
 ---
 
-## Six APIs, Six Strategies
+## Seven APIs, Seven Strategies
 
-VZLA Sports Elite integrates with six external data sources. Each required a different strategy for authentication, rate limiting, error handling, and graceful degradation.
+VZLA Sports Elite integrates with seven external data sources. Each required a different strategy for authentication, rate limiting, error handling, and graceful degradation.
 
 | Source | Method | Auth | Rate Strategy | Fallback |
 |--------|--------|------|---------------|----------|
@@ -16,6 +16,7 @@ VZLA Sports Elite integrates with six external data sources. Each required a dif
 | eBay Sold Listings | HTML scraping | None | 10 athletes/3h, rotating UAs | Cached `ebay-sold-avg.json` |
 | Gemrate.com (PSA) | HTML scraping | None | 20 athletes/4h, random delays | Cached `gemrate.json` |
 | Gemrate.com (Beckett) | HTML scraping | None | 20 athletes/4h, staggered | Cached `gemrate_beckett.json` |
+| Gemrate.com (SGC) | HTML scraping | None | 20 athletes/4h, staggered | Cached `gemrate_sgc.json` |
 | SportsCardsPro | REST API | Token in URL | 500ms delay, 3s pause every 50 | Cached `scp-prices.json` |
 | Google Gemini | REST | API key | 1 call per bi-weekly run | Statistical-only report |
 | Wikipedia Images | REST | None | Per-request, cached results | Initials avatar |
@@ -114,7 +115,15 @@ If all three fail, the athlete is skipped and retried in the next batch.
 
 ## Pattern 3: Polite Scraping (Gemrate.com)
 
-Gemrate.com provides PSA grading population data — how many cards of each athlete have been professionally graded. It's a smaller service with fewer resources than eBay, so politeness is paramount.
+Gemrate.com provides grading population data — how many cards of each athlete have been professionally graded by PSA, Beckett (BGS), and SGC. It's a smaller service with fewer resources than eBay, so politeness is paramount.
+
+The platform runs three separate scraping pipelines against Gemrate, one per grader, each staggered to avoid overlapping requests:
+
+- **PSA** (`fetch_gemrate.py`) — runs at :00 every 4 hours, using the `psa` grader identifier
+- **Beckett** (`fetch_gemrate_beckett.py`) — runs at :02 every 4 hours, using the `bgs` grader identifier
+- **SGC** (`fetch_gemrate_sgc.py`) — runs at :03 every 4 hours, using the `sgc` grader identifier
+
+All three scripts share the same polite scraping strategy:
 
 ```python
 DELAY_MIN = 3   # Minimum seconds between requests
@@ -126,9 +135,11 @@ COOLDOWN_DAYS = 30  # Don't re-scrape recently successful athletes
 
 **Randomized Delays** — Instead of a fixed delay, each request waits a random interval between 3 and 6 seconds. Fixed intervals are a scraping fingerprint; random intervals mimic human behavior.
 
-**Cooldown Tracking** — Once an athlete's grading data is successfully scraped, they're placed on a 30-day cooldown. The `gemrate-cooldown.json` file tracks when each athlete was last scraped. Athletes whose data was recently collected are skipped, focusing each batch on athletes with stale or missing data.
+**Cooldown Tracking** — Once an athlete's grading data is successfully scraped, they're placed on a 30-day cooldown. Each grader maintains its own cooldown file (`gemrate-cooldown.json`, `gemrate-cooldown_beckett.json`, `gemrate-cooldown_sgc.json`). Athletes whose data was recently collected are skipped, focusing each batch on athletes with stale or missing data.
 
 **Session Persistence** — The scraper maintains HTTP session cookies across requests within a batch. This mimics a user browsing multiple pages, rather than making disconnected anonymous requests.
+
+**Roster Synchronization** — A weekly workflow runs `sync-gemrate-flags.cjs` to set the `gemrate` flag in `athletes.json`. An athlete is marked `"yes"` if they appear in *any* of the three grader files (PSA, Beckett, or SGC), gating graded data visibility in the frontend.
 
 ---
 
