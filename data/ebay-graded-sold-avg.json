@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-24T17:28:50.079Z",
+    "updatedAt": "2026-03-24T19:32:40.009Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA/BGS/SGC grader title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 230,
-      "endIdx": 240,
+      "startIdx": 240,
+      "endIdx": 250,
       "totalAthletes": 452
     },
     "maxPages": 4,
@@ -3385,12 +3385,12 @@
   },
   "Juan Yepez": {
     "keyword": "Juan Yepez Baseball PSA",
-    "nScraped": 252,
-    "nSoldUsed": 18,
-    "avg": 17.782222222222217,
-    "taguchiSold": 17.782222222222217,
-    "medianSold": 23.2,
-    "marketStabilityCV": 0.3505112427161753,
+    "nScraped": 265,
+    "nSoldUsed": 14,
+    "avg": 16.23428571428571,
+    "taguchiSold": 16.23428571428571,
+    "medianSold": 11.01,
+    "marketStabilityCV": 0.385616355078735,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
@@ -3421,7 +3421,7 @@
   },
   "Junior Guerra": {
     "keyword": "Junior Guerra Baseball PSA",
-    "nScraped": 240,
+    "nScraped": 241,
     "nSoldUsed": 4,
     "avg": 1,
     "taguchiSold": 1,
@@ -3433,27 +3433,27 @@
   },
   "Keibert Ruiz": {
     "keyword": "Keibert Ruiz Baseball PSA",
-    "nScraped": 256,
-    "nSoldUsed": 40,
-    "avg": 6.7450000000000045,
-    "taguchiSold": 6.7450000000000045,
-    "medianSold": 6.745,
-    "marketStabilityCV": 0.03678593698080032,
+    "nScraped": 273,
+    "nSoldUsed": 44,
+    "avg": 6.99909090909091,
+    "taguchiSold": 6.99909090909091,
+    "medianSold": 6.99,
+    "marketStabilityCV": 0.06890203262192723,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
   },
   "Keider Montero": {
     "keyword": "Keider Montero Baseball PSA",
-    "nScraped": 0,
-    "nSoldUsed": 0,
-    "avg": null,
-    "taguchiSold": null,
-    "medianSold": null,
-    "marketStabilityCV": null,
+    "nScraped": 267,
+    "nSoldUsed": 8,
+    "avg": 13.5,
+    "taguchiSold": 13.5,
+    "medianSold": 13.5,
+    "marketStabilityCV": 0.15837703224439964,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
   },
   "Kelvim Escobar": {
     "keyword": "Kelvim Escobar Baseball PSA",
@@ -3517,7 +3517,7 @@
   },
   "Leo Hernandez": {
     "keyword": "Leo Hernandez Baseball PSA",
-    "nScraped": 244,
+    "nScraped": 0,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
