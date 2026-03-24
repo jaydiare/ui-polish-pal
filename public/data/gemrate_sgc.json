@@ -1,13 +1,13 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-24T02:33:46.092110+00:00",
-    "athleteCount": 60,
+    "updatedAt": "2026-03-24T02:42:22.391241+00:00",
+    "athleteCount": 71,
     "graders": [
       "SGC"
     ],
     "batchInfo": {
-      "startIdx": 80,
-      "endIdx": 100,
+      "startIdx": 100,
+      "endIdx": 120,
       "totalAthletes": 568
     }
   },
@@ -1090,6 +1090,204 @@
         "gems": 0,
         "grades": 4,
         "gemRate": 0.0
+      }
+    },
+    "Dave Concepcion": {
+      "name": "Dave Concepcion",
+      "sport": "Baseball",
+      "graders": {
+        "SGC": {
+          "cards": 75,
+          "gems": 15,
+          "grades": 885,
+          "gemRate": 2.0
+        }
+      },
+      "totals": {
+        "cards": 75,
+        "gems": 15,
+        "grades": 885,
+        "gemRate": 2.0
+      }
+    },
+    "David Peralta": {
+      "name": "David Peralta",
+      "sport": "Baseball",
+      "graders": {
+        "SGC": {
+          "cards": 14,
+          "gems": 7,
+          "grades": 16,
+          "gemRate": 44.0
+        }
+      },
+      "totals": {
+        "cards": 14,
+        "gems": 7,
+        "grades": 16,
+        "gemRate": 44.0
+      }
+    },
+    "Diego Castillo": {
+      "name": "Diego Castillo",
+      "sport": "Baseball",
+      "graders": {
+        "SGC": {
+          "cards": 5,
+          "gems": 4,
+          "grades": 5,
+          "gemRate": 80.0
+        }
+      },
+      "totals": {
+        "cards": 5,
+        "gems": 4,
+        "grades": 5,
+        "gemRate": 80.0
+      }
+    },
+    "Dioner Navarro": {
+      "name": "Dioner Navarro",
+      "sport": "Baseball",
+      "graders": {
+        "SGC": {
+          "cards": 6,
+          "gems": 1,
+          "grades": 6,
+          "gemRate": 17.0
+        }
+      },
+      "totals": {
+        "cards": 6,
+        "gems": 1,
+        "grades": 6,
+        "gemRate": 17.0
+      }
+    },
+    "Dixon Machado": {
+      "name": "Dixon Machado",
+      "sport": "Baseball",
+      "graders": {
+        "SGC": {
+          "cards": 1,
+          "gems": 1,
+          "grades": 1,
+          "gemRate": 100.0
+        }
+      },
+      "totals": {
+        "cards": 1,
+        "gems": 1,
+        "grades": 1,
+        "gemRate": 100.0
+      }
+    },
+    "Eddie Perez": {
+      "name": "Eddie Perez",
+      "sport": "Baseball",
+      "graders": {
+        "SGC": {
+          "cards": 1,
+          "gems": 0,
+          "grades": 1,
+          "gemRate": 0.0
+        }
+      },
+      "totals": {
+        "cards": 1,
+        "gems": 0,
+        "grades": 1,
+        "gemRate": 0.0
+      }
+    },
+    "Eddy Diaz": {
+      "name": "Eddy Diaz",
+      "sport": "Baseball",
+      "graders": {
+        "SGC": {
+          "cards": 21,
+          "gems": 20,
+          "grades": 49,
+          "gemRate": 41.0
+        }
+      },
+      "totals": {
+        "cards": 21,
+        "gems": 20,
+        "grades": 49,
+        "gemRate": 41.0
+      }
+    },
+    "Edgar Navarro": {
+      "name": "Edgar Navarro",
+      "sport": "Baseball",
+      "graders": {
+        "SGC": {
+          "cards": 4,
+          "gems": 3,
+          "grades": 5,
+          "gemRate": 60.0
+        }
+      },
+      "totals": {
+        "cards": 4,
+        "gems": 3,
+        "grades": 5,
+        "gemRate": 60.0
+      }
+    },
+    "Chucho Ramos": {
+      "name": "Chucho Ramos",
+      "sport": "Baseball",
+      "graders": {
+        "SGC": {
+          "cards": 1,
+          "gems": 0,
+          "grades": 1,
+          "gemRate": 0.0
+        }
+      },
+      "totals": {
+        "cards": 1,
+        "gems": 0,
+        "grades": 1,
+        "gemRate": 0.0
+      }
+    },
+    "Edgardo Alfonzo": {
+      "name": "Edgardo Alfonzo",
+      "sport": "Baseball",
+      "graders": {
+        "SGC": {
+          "cards": 45,
+          "gems": 99,
+          "grades": 486,
+          "gemRate": 20.0
+        }
+      },
+      "totals": {
+        "cards": 45,
+        "gems": 99,
+        "grades": 486,
+        "gemRate": 20.0
+      }
+    },
+    "Edgardo Henriquez": {
+      "name": "Edgardo Henriquez",
+      "sport": "Baseball",
+      "graders": {
+        "SGC": {
+          "cards": 6,
+          "gems": 1,
+          "grades": 6,
+          "gemRate": 17.0
+        }
+      },
+      "totals": {
+        "cards": 6,
+        "gems": 1,
+        "grades": 6,
+        "gemRate": 17.0
       }
     }
   }
