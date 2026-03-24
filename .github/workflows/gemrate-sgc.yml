@@ -1,11 +1,17 @@
 name: Gemrate SGC Grading Sync
 
 on:
-  workflow_dispatch:
   schedule:
     # Run every 4 hours, offset by 3 hours from PSA (1h after Beckett)
     - cron: '0 3/4 * * *'
+  workflow_dispatch:
+    inputs:
+      only:
+        description: "Single athlete name (e.g. Ronald Acuna Jr.) — leave empty for full batch"
+        required: false
+        default: ""
 
+        
 concurrency:
   group: gemrate-sgc-sync
   cancel-in-progress: true
