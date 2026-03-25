@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-24T01:54:46.196Z",
+    "updatedAt": "2026-03-25T01:31:52.332Z",
     "minSampleSize": 4,
     "marketplaces": [
       "EBAY_US"
@@ -9,11 +9,11 @@
     "note": "GRADED (PSA) active listing robust mean (Browse API FIXED_PRICE). No sold data. Prices normalized to USD. Includes market stability CV (sd/mean). Filtered by Graded:{Yes} + Professional Grader:{PSA}. Includes avg days-on-market for active listings (listing age). Base prices stored in dedicated ebay-graded-base-prices.json.",
     "fx": {
       "source": "CBSA Exchange Rates API",
-      "asOf": "2026-03-24T00:00:00.000Z",
+      "asOf": "2026-03-25T00:00:00.000Z",
       "ratesToUSD": {
         "USD": 1,
-        "CAD": 0.7290223809870964,
-        "EUR": 1.1602391193409638
+        "CAD": 0.7266913741733885,
+        "EUR": 1.158273381294964
       }
     },
     "manufacturers": "none (all brands accepted)",
@@ -486,7 +486,8 @@
       "Yordan Osorio": 2.4925,
       "Garbine Muguruza": 8.109666666666671,
       "Dave Concepcion": 41.431750000000015,
-      "Bob Abreu": 33.23379746835447
+      "Bob Abreu": 33.23379746835447,
+      "Robert Perez Jr.": 38.85850000000001
     },
     "indexHistory": [
       {
@@ -532,6 +533,11 @@
         "date": "2026-03-24",
         "Baseball": 100,
         "All": 100
+      },
+      {
+        "date": "2026-03-25",
+        "Baseball": 905.8,
+        "All": 905.8
       }
     ]
   },
@@ -14149,6 +14155,38 @@
     "nListing": 79,
     "currency": "USD",
     "basePriceUSD": 33.23379746835447,
+    "indexLevel": 100
+  },
+  "Robert Perez Jr.": {
+    "match": {
+      "mode": "player",
+      "value": "Robert Perez Jr. Prospects",
+      "validatedOn": "EBAY_CA"
+    },
+    "marketplaces": {
+      "EBAY_US": {
+        "aspectMode": "player",
+        "aspectValue": "Robert Perez Jr. Prospects",
+        "avgListing": 38.85850000000001,
+        "taguchiListing": 38.85850000000001,
+        "marketStabilityCV": 0.14564905774775888,
+        "avgDaysOnMarket": 453.8082580497686,
+        "nListing": 80,
+        "nDaysOnMarket": 80,
+        "currency": "USD",
+        "originalCurrency": "USD",
+        "fxRateUsed": 1
+      }
+    },
+    "avg": 38.85850000000001,
+    "n": 80,
+    "avgListing": 38.85850000000001,
+    "taguchiListing": 38.85850000000001,
+    "marketStabilityCV": 0.14564905774775888,
+    "avgDaysOnMarket": 453.8082580497686,
+    "nListing": 80,
+    "currency": "USD",
+    "basePriceUSD": 38.85850000000001,
     "indexLevel": 100
   }
 }
