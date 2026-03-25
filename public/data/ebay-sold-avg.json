@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-25T18:52:47.980Z",
+    "updatedAt": "2026-03-25T21:35:53.178Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. Taguchi winsorized mean + market stability CV. Ungraded condition policy (permissive for sold). Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 140,
-      "endIdx": 150,
+      "startIdx": 150,
+      "endIdx": 160,
       "totalAthletes": 569
     },
     "maxPages": 4,
@@ -1773,12 +1773,12 @@
   },
   "Erick Castillo": {
     "keyword": "Erick Castillo Baseball",
-    "nScraped": 255,
+    "nScraped": 244,
     "nSoldUsed": 12,
-    "avg": 5.980000000000001,
-    "taguchiSold": 5.980000000000001,
-    "medianSold": 5.98,
-    "marketStabilityCV": 1.551291144199001e-16,
+    "avg": 6.950000000000002,
+    "taguchiSold": 6.950000000000002,
+    "medianSold": 6.95,
+    "marketStabilityCV": 2.669560012175547e-16,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
@@ -1786,11 +1786,11 @@
   "Ethan Salas": {
     "keyword": "Ethan Salas Baseball",
     "nScraped": 240,
-    "nSoldUsed": 139,
-    "avg": 9.805611510791367,
-    "taguchiSold": 9.805611510791367,
-    "medianSold": 8.49,
-    "marketStabilityCV": 0.47564729239752146,
+    "nSoldUsed": 165,
+    "avg": 15.00533333333335,
+    "taguchiSold": 15.00533333333335,
+    "medianSold": 15.5,
+    "marketStabilityCV": 0.5004396494433057,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
@@ -1810,11 +1810,11 @@
   "Everson Pereira": {
     "keyword": "Everson Pereira Baseball",
     "nScraped": 240,
-    "nSoldUsed": 112,
-    "avg": 3.3408928571428578,
-    "taguchiSold": 3.3408928571428578,
-    "medianSold": 3.0700000000000003,
-    "marketStabilityCV": 0.2447414351471694,
+    "nSoldUsed": 87,
+    "avg": 3.5396551724137924,
+    "taguchiSold": 3.5396551724137924,
+    "medianSold": 3.25,
+    "marketStabilityCV": 0.1709193541954271,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
@@ -3369,12 +3369,12 @@
   },
   "Enzo Hernandez": {
     "keyword": "Enzo Hernandez Baseball",
-    "nScraped": 207,
-    "nSoldUsed": 83,
-    "avg": 3.421084337349401,
-    "taguchiSold": 3.421084337349401,
-    "medianSold": 2.99,
-    "marketStabilityCV": 0.41600963782941525,
+    "nScraped": 240,
+    "nSoldUsed": 63,
+    "avg": 3.483174603174603,
+    "taguchiSold": 3.483174603174603,
+    "medianSold": 3.5,
+    "marketStabilityCV": 0.4149722576222823,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
@@ -3382,11 +3382,11 @@
   "Eugenio Suarez": {
     "keyword": "Eugenio Suarez Baseball",
     "nScraped": 240,
-    "nSoldUsed": 124,
-    "avg": 6.650322580645171,
-    "taguchiSold": 6.650322580645171,
-    "medianSold": 5,
-    "marketStabilityCV": 0.4269872419261443,
+    "nSoldUsed": 104,
+    "avg": 2.958942307692307,
+    "taguchiSold": 2.958942307692307,
+    "medianSold": 2.755,
+    "marketStabilityCV": 0.3249231550258848,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
