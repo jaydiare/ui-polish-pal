@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-25T01:30:13.098Z",
+    "updatedAt": "2026-03-25T03:21:38.939Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA/BGS/SGC grader title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 260,
-      "endIdx": 270,
+      "startIdx": 270,
+      "endIdx": 280,
       "totalAthletes": 452
     },
     "maxPages": 4,
@@ -3805,7 +3805,7 @@
   },
   "Luis Ordaz": {
     "keyword": "Luis Ordaz Baseball PSA",
-    "nScraped": 240,
+    "nScraped": 241,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -3829,7 +3829,7 @@
   },
   "Luis Perales": {
     "keyword": "Luis Perales Baseball PSA",
-    "nScraped": 252,
+    "nScraped": 264,
     "nSoldUsed": 20,
     "avg": 80,
     "taguchiSold": 80,
@@ -3865,12 +3865,12 @@
   },
   "Luis Rodriguez": {
     "keyword": "Luis Rodriguez Baseball PSA",
-    "nScraped": 201,
-    "nSoldUsed": 63,
-    "avg": 14.086666666666671,
-    "taguchiSold": 14.086666666666671,
-    "medianSold": 15.5,
-    "marketStabilityCV": 0.275535043308129,
+    "nScraped": 306,
+    "nSoldUsed": 85,
+    "avg": 15.002705882352947,
+    "taguchiSold": 15.002705882352947,
+    "medianSold": 17.5,
+    "marketStabilityCV": 0.32113915842521307,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
@@ -3913,15 +3913,15 @@
   },
   "Luis Sojo": {
     "keyword": "Luis Sojo Baseball PSA",
-    "nScraped": 240,
-    "nSoldUsed": 12,
-    "avg": 75,
-    "taguchiSold": 75,
-    "medianSold": 75,
-    "marketStabilityCV": 0,
+    "nScraped": 0,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
   },
   "Luis Torrens": {
     "keyword": "Luis Torrens Baseball PSA",
