@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-25T17:32:11.943Z",
+    "updatedAt": "2026-03-25T19:14:52.845Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA/BGS/SGC grader title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 340,
-      "endIdx": 350,
+      "startIdx": 350,
+      "endIdx": 360,
       "totalAthletes": 452
     },
     "maxPages": 4,
@@ -4885,12 +4885,12 @@
   },
   "Renato Nunez": {
     "keyword": "Renato Nunez Baseball PSA",
-    "nScraped": 240,
-    "nSoldUsed": 12,
-    "avg": 58.61000000000001,
-    "taguchiSold": 58.61000000000001,
-    "medianSold": 58.61,
-    "marketStabilityCV": 1.266230478390722e-16,
+    "nScraped": 241,
+    "nSoldUsed": 20,
+    "avg": 13,
+    "taguchiSold": 13,
+    "medianSold": 13,
+    "marketStabilityCV": 0,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
@@ -4921,7 +4921,7 @@
   },
   "Renyel Pinto": {
     "keyword": "Renyel Pinto Baseball PSA",
-    "nScraped": 10,
+    "nScraped": 11,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -4933,7 +4933,7 @@
   },
   "Ricardo Pinto": {
     "keyword": "Ricardo Pinto Baseball PSA",
-    "nScraped": 55,
+    "nScraped": 57,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -4957,19 +4957,19 @@
   },
   "Ricardo Sanchez": {
     "keyword": "Ricardo Sanchez Baseball PSA",
-    "nScraped": 0,
-    "nSoldUsed": 0,
-    "avg": null,
-    "taguchiSold": null,
-    "medianSold": null,
-    "marketStabilityCV": null,
+    "nScraped": 240,
+    "nSoldUsed": 4,
+    "avg": 4.95,
+    "taguchiSold": 4.95,
+    "medianSold": 4.95,
+    "marketStabilityCV": 0,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
   },
   "Rich Garces": {
     "keyword": "Rich Garces Baseball PSA",
-    "nScraped": 0,
+    "nScraped": 60,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -4981,12 +4981,12 @@
   },
   "Richard Hidalgo": {
     "keyword": "Richard Hidalgo Baseball PSA",
-    "nScraped": 240,
-    "nSoldUsed": 4,
-    "avg": 7.73,
-    "taguchiSold": 7.73,
-    "medianSold": 7.73,
-    "marketStabilityCV": 0,
+    "nScraped": 60,
+    "nSoldUsed": 1,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
