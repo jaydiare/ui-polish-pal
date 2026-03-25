@@ -14,6 +14,7 @@ const BlogPost = lazy(() => import("./pages/BlogPost"));
 const Data = lazy(() => import("./pages/Data"));
 const MarketCapBlog = lazy(() => import("./pages/MarketCapBlog"));
 const HowItWorks = lazy(() => import("./pages/HowItWorks"));
+const ChecklistIntel = lazy(() => import("./pages/ChecklistIntel"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 const Toaster = lazy(() => import("@/components/ui/toaster").then(m => ({ default: m.Toaster })));
 const Sonner = lazy(() => import("@/components/ui/sonner").then(m => ({ default: m.Toaster })));
