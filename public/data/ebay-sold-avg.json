@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-25T01:56:47.028Z",
+    "updatedAt": "2026-03-25T04:51:27.025Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. Taguchi winsorized mean + market stability CV. Ungraded condition policy (permissive for sold). Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 80,
-      "endIdx": 90,
+      "startIdx": 90,
+      "endIdx": 100,
       "totalAthletes": 569
     },
     "maxPages": 4,
@@ -28,7 +28,7 @@
     },
     "fx": {
       "source": "CBSA Exchange Rates API",
-      "asOf": "2026-03-25T00:00:00.000Z"
+      "asOf": "2026-03-26T00:00:00.000Z"
     }
   },
   "Adbert Alzolay": {
@@ -994,11 +994,11 @@
   "Cesar Tovar": {
     "keyword": "Cesar Tovar Baseball",
     "nScraped": 240,
-    "nSoldUsed": 53,
-    "avg": 1.8694339622641512,
-    "taguchiSold": 1.8694339622641512,
-    "medianSold": 1.99,
-    "marketStabilityCV": 0.07866893463881823,
+    "nSoldUsed": 48,
+    "avg": 1.995,
+    "taguchiSold": 1.995,
+    "medianSold": 1.995,
+    "marketStabilityCV": 0.0025327877325308874,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
@@ -1006,11 +1006,11 @@
   "Chico Carrasquel": {
     "keyword": "Chico Carrasquel Baseball",
     "nScraped": 240,
-    "nSoldUsed": 89,
-    "avg": 5.923258426966296,
-    "taguchiSold": 5.923258426966296,
-    "medianSold": 5.88,
-    "marketStabilityCV": 0.23834920748847552,
+    "nSoldUsed": 87,
+    "avg": 5.580804597701154,
+    "taguchiSold": 5.580804597701154,
+    "medianSold": 5,
+    "marketStabilityCV": 0.3112676990966469,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
@@ -1113,15 +1113,15 @@
   },
   "Daniel Palencia": {
     "keyword": "Daniel Palencia Baseball",
-    "nScraped": 60,
-    "nSoldUsed": 35,
-    "avg": 8.898571428571428,
-    "taguchiSold": 8.898571428571428,
-    "medianSold": 10,
-    "marketStabilityCV": 0.35232101933034005,
+    "nScraped": 0,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
   },
   "Danny Leon": {
     "keyword": "Danny Leon Baseball",
@@ -3177,7 +3177,7 @@
   },
   "Clemente Alvarez": {
     "keyword": "Clemente Alvarez Baseball",
-    "nScraped": 265,
+    "nScraped": 264,
     "nSoldUsed": 8,
     "avg": 4.975,
     "taguchiSold": 4.975,
@@ -3189,7 +3189,7 @@
   },
   "Cris Colon": {
     "keyword": "Cris Colon Baseball",
-    "nScraped": 286,
+    "nScraped": 277,
     "nSoldUsed": 4,
     "avg": 1,
     "taguchiSold": 1,
