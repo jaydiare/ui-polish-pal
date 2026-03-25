@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-25T13:53:20.791Z",
+    "updatedAt": "2026-03-25T15:40:08.270Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA/BGS/SGC grader title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 320,
-      "endIdx": 330,
+      "startIdx": 330,
+      "endIdx": 340,
       "totalAthletes": 452
     },
     "maxPages": 4,
@@ -4621,7 +4621,7 @@
   },
   "Pablo Lopez": {
     "keyword": "Pablo Lopez Baseball PSA",
-    "nScraped": 247,
+    "nScraped": 248,
     "nSoldUsed": 12,
     "avg": 19.990000000000002,
     "taguchiSold": 19.990000000000002,
@@ -4633,19 +4633,19 @@
   },
   "Pablo Sandoval": {
     "keyword": "Pablo Sandoval Baseball PSA",
-    "nScraped": 261,
-    "nSoldUsed": 30,
+    "nScraped": 258,
+    "nSoldUsed": 33,
     "avg": 29.990000000000006,
     "taguchiSold": 29.990000000000006,
     "medianSold": 29.99,
-    "marketStabilityCV": 2.409768740655931e-16,
+    "marketStabilityCV": 2.406000530781158e-16,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
   },
   "Pablo Torrealba": {
     "keyword": "Pablo Torrealba Baseball PSA",
-    "nScraped": 241,
+    "nScraped": 240,
     "nSoldUsed": 8,
     "avg": 32.02,
     "taguchiSold": 32.02,
@@ -4681,7 +4681,7 @@
   },
   "Pedro Hernandez": {
     "keyword": "Pedro Hernandez Baseball PSA",
-    "nScraped": 0,
+    "nScraped": 60,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -4693,15 +4693,15 @@
   },
   "Pedro Pages": {
     "keyword": "Pedro Pages Baseball PSA",
-    "nScraped": 0,
-    "nSoldUsed": 0,
-    "avg": null,
-    "taguchiSold": null,
-    "medianSold": null,
-    "marketStabilityCV": null,
+    "nScraped": 123,
+    "nSoldUsed": 4,
+    "avg": 17.189999999999998,
+    "taguchiSold": 17.189999999999998,
+    "medianSold": 17.189999999999998,
+    "marketStabilityCV": 0.5165588795890893,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
   },
   "Pompeyo Davalillo": {
     "keyword": "Pompeyo Davalillo Baseball PSA",
@@ -4729,7 +4729,7 @@
   },
   "Rafael Marchan": {
     "keyword": "Rafael Marchan Baseball PSA",
-    "nScraped": 242,
+    "nScraped": 0,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
