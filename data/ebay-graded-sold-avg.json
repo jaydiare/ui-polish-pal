@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-25T15:40:08.270Z",
+    "updatedAt": "2026-03-25T17:32:11.943Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA/BGS/SGC grader title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 330,
-      "endIdx": 340,
+      "startIdx": 340,
+      "endIdx": 350,
       "totalAthletes": 452
     },
     "maxPages": 4,
@@ -4801,39 +4801,39 @@
   },
   "Ramon Hernandez": {
     "keyword": "Ramon Hernandez Baseball PSA",
-    "nScraped": 281,
+    "nScraped": 273,
     "nSoldUsed": 36,
-    "avg": 46.071111111111115,
-    "taguchiSold": 46.071111111111115,
+    "avg": 46.022222222222226,
+    "taguchiSold": 46.022222222222226,
     "medianSold": 45,
-    "marketStabilityCV": 0.20304644402211622,
+    "marketStabilityCV": 0.2043886930727453,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
   },
   "Ramon Ramirez": {
     "keyword": "Ramon Ramirez Baseball PSA",
-    "nScraped": 155,
-    "nSoldUsed": 14,
+    "nScraped": 289,
+    "nSoldUsed": 28,
     "avg": 40.145714285714284,
     "taguchiSold": 40.145714285714284,
     "medianSold": 41.02,
-    "marketStabilityCV": 0.19167851913954595,
+    "marketStabilityCV": 0.18809542713914612,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
   },
   "Ranger Suarez": {
     "keyword": "Ranger Suarez Baseball PSA",
-    "nScraped": 0,
-    "nSoldUsed": 0,
-    "avg": null,
-    "taguchiSold": null,
-    "medianSold": null,
-    "marketStabilityCV": null,
+    "nScraped": 142,
+    "nSoldUsed": 22,
+    "avg": 78.15454545454548,
+    "taguchiSold": 78.15454545454548,
+    "medianSold": 89,
+    "marketStabilityCV": 0.27934311773259546,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
   },
   "Raul Chavez": {
     "keyword": "Raul Chavez Baseball PSA",
@@ -4849,15 +4849,15 @@
   },
   "Ray Monzant": {
     "keyword": "Ray Monzant Baseball PSA",
-    "nScraped": 256,
-    "nSoldUsed": 60,
-    "avg": 20.969999999999995,
-    "taguchiSold": 20.969999999999995,
-    "medianSold": 16,
-    "marketStabilityCV": 0.2712821966563118,
+    "nScraped": 0,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
   },
   "Ray Olmedo": {
     "keyword": "Ray Olmedo Baseball PSA",
