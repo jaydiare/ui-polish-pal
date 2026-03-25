@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-25T07:34:00.436Z",
+    "updatedAt": "2026-03-25T09:12:23.130Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA/BGS/SGC grader title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 290,
-      "endIdx": 300,
+      "startIdx": 300,
+      "endIdx": 310,
       "totalAthletes": 452
     },
     "maxPages": 4,
@@ -4226,11 +4226,11 @@
   "Miguel Cabrera": {
     "keyword": "Miguel Cabrera Baseball PSA",
     "nScraped": 240,
-    "nSoldUsed": 116,
-    "avg": 80.65215517241377,
-    "taguchiSold": 80.65215517241377,
-    "medianSold": 85.75,
-    "marketStabilityCV": 0.34838020105818035,
+    "nSoldUsed": 114,
+    "avg": 72.2707017543859,
+    "taguchiSold": 72.2707017543859,
+    "medianSold": 70,
+    "marketStabilityCV": 0.3472156204800755,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
@@ -4273,7 +4273,7 @@
   },
   "Miguel Montero": {
     "keyword": "Miguel Montero Baseball PSA",
-    "nScraped": 0,
+    "nScraped": 240,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -4333,15 +4333,15 @@
   },
   "Moises Ballesteros": {
     "keyword": "Moises Ballesteros Baseball PSA",
-    "nScraped": 138,
-    "nSoldUsed": 70,
-    "avg": 120.94514285714276,
-    "taguchiSold": 120.94514285714276,
-    "medianSold": 125,
-    "marketStabilityCV": 0.15641061959804214,
+    "nScraped": 0,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
   },
   "Nestor Chavez": {
     "keyword": "Nestor Chavez Baseball",
