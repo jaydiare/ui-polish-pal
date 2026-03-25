@@ -376,7 +376,26 @@ export async function extractTextFromFile(file: File): Promise<string> {
     for (let i = 1; i <= pdf.numPages; i++) {
       const page = await pdf.getPage(i);
       const content = await page.getTextContent();
-      pages.push(content.items.map((item: any) => item.str).join(" "));
+      // Reconstruct lines using y-position changes and hasEOL flags
+      let currentLine = "";
+      let lastY: number | null = null;
+      for (const item of content.items as any[]) {
+        const y = item.transform ? item.transform[5] : null;
+        // Detect line break: significant y-position change
+        if (lastY !== null && y !== null && Math.abs(y - lastY) > 2) {
+          if (currentLine.trim()) pages.push(currentLine.trim());
+          currentLine = "";
+        }
+        currentLine += item.str;
+        if (item.hasEOL) {
+          if (currentLine.trim()) pages.push(currentLine.trim());
+          currentLine = "";
+          lastY = null;
+        } else {
+          lastY = y;
+        }
+      }
+      if (currentLine.trim()) pages.push(currentLine.trim());
     }
     return pages.join("\n");
   }
