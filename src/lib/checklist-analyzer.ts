@@ -377,6 +377,31 @@ export function summarize(entries: ChecklistEntry[]): AnalysisSummary {
   return { count: entries.length, byTier, byType };
 }
 
+// ── Load pdf.js from CDN ───────────────────────────────────────────────
+async function loadPdfJs(): Promise<any> {
+  if ((window as any).pdfjsLib) return (window as any).pdfjsLib;
+  return new Promise((resolve, reject) => {
+    const script = document.createElement("script");
+    script.src = "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.9.155/pdf.min.mjs";
+    script.type = "module";
+    // For module scripts we need a different approach - use dynamic import
+    reject = () => {};
+    import("https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.9.155/pdf.min.mjs" as any)
+      .then((mod) => {
+        (window as any).pdfjsLib = mod;
+        resolve(mod);
+      })
+      .catch(() => {
+        // Fallback: load UMD build via script tag
+        const s = document.createElement("script");
+        s.src = "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.9.155/pdf.min.js";
+        s.onload = () => resolve((window as any).pdfjsLib);
+        s.onerror = reject;
+        document.head.appendChild(s);
+      });
+  });
+}
+
 // ── PDF text extraction (browser) ─────────────────────────────────────
 export async function extractTextFromFile(file: File): Promise<string> {
   const name = file.name.toLowerCase();
@@ -384,11 +409,10 @@ export async function extractTextFromFile(file: File): Promise<string> {
     return file.text();
   }
   if (name.endsWith(".pdf")) {
-    // Load pdfjs from CDN to avoid Vite bundling issues
-    const pdfjsLib = (window as any).pdfjsLib ?? await loadPdfJs();
-    pdfjsLib.GlobalWorkerOptions.workerSrc = `https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.9.155/pdf.worker.min.mjs`;
+    const pdfjsLib = await loadPdfJs();
+    pdfjsLib.GlobalWorkerOptions.workerSrc = `https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.9.155/pdf.worker.min.js`;
     const arrayBuffer = await file.arrayBuffer();
-    const pdf = await getDocument({ data: arrayBuffer }).promise;
+    const pdf = await pdfjsLib.getDocument({ data: arrayBuffer }).promise;
     const pages: string[] = [];
     for (let i = 1; i <= pdf.numPages; i++) {
       const page = await pdf.getPage(i);
