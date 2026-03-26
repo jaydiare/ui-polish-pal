@@ -423,25 +423,29 @@ export function summarize(entries: ChecklistEntry[]): AnalysisSummary {
 // ── Load pdf.js from CDN ───────────────────────────────────────────────
 async function loadPdfJs(): Promise<any> {
   if ((window as any).pdfjsLib) return (window as any).pdfjsLib;
-  return new Promise((resolve, reject) => {
-    const script = document.createElement("script");
-    script.src = "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.9.155/pdf.min.mjs";
-    script.type = "module";
-    // For module scripts we need a different approach - use dynamic import
-    reject = () => {};
-    import("https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.9.155/pdf.min.mjs" as any)
-      .then((mod) => {
-        (window as any).pdfjsLib = mod;
-        resolve(mod);
-      })
-      .catch(() => {
-        // Fallback: load UMD build via script tag
-        const s = document.createElement("script");
-        s.src = "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.9.155/pdf.min.js";
-        s.onload = () => resolve((window as any).pdfjsLib);
-        s.onerror = reject;
-        document.head.appendChild(s);
-      });
+
+  // Try ESM dynamic import first
+  try {
+    const mod = await (Function('return import("https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.9.155/pdf.min.mjs")')() as Promise<any>);
+    (window as any).pdfjsLib = mod;
+    return mod;
+  } catch {
+    // ESM failed — fall back to UMD script tag
+  }
+
+  return new Promise<any>((resolve, reject) => {
+    const s = document.createElement("script");
+    s.src = "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.9.155/pdf.min.js";
+    s.onload = () => {
+      const lib = (window as any).pdfjsLib;
+      if (lib) {
+        resolve(lib);
+      } else {
+        reject(new Error("pdf.js loaded but pdfjsLib not found on window"));
+      }
+    };
+    s.onerror = () => reject(new Error("Failed to load pdf.js from CDN"));
+    document.head.appendChild(s);
   });
 }
 
