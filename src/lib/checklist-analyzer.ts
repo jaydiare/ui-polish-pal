@@ -742,9 +742,13 @@ export async function analyzeChecklist(opts: {
 
   report({ step: 2, totalSteps, label: "Parsing card entries" });
   const entries = parseChecklist(checklistText);
-  const matches = findMatches(entries, opts.athlete);
+  const directMatches = findMatches(entries, opts.athlete);
 
-  report({ step: 3, totalSteps, label: "Processing odds", detail: `${matches.length} cards matched` });
+  // Generate implied parallel variants for matched cards
+  const impliedParallels = generateImpliedParallels(entries, directMatches);
+  const matches = [...directMatches, ...impliedParallels];
+
+  report({ step: 3, totalSteps, label: "Processing odds", detail: `${directMatches.length} direct + ${impliedParallels.length} parallel variants` });
   await new Promise((r) => setTimeout(r, 0));
 
   let oddsEntries: OddsEntry[] = [];
