@@ -486,9 +486,18 @@ const ChecklistIntel = () => {
               </div>
 
               {result.results.length === 0 && (
-                <div className="glass-panel rounded-xl p-8 text-center">
-                  <p className="text-muted-foreground text-lg">No matching cards found for this athlete.</p>
-                  <p className="text-sm text-muted-foreground mt-1">Try a different spelling or check the checklist document.</p>
+                <div className="glass-panel rounded-xl p-8 text-center border border-destructive/30">
+                  <p className="text-2xl mb-2">🔍</p>
+                  <p className="text-foreground text-lg font-semibold">No matching cards found</p>
+                  <p className="text-sm text-muted-foreground mt-2 max-w-md mx-auto">
+                    <strong>"{result.athlete}"</strong> wasn't found in this checklist. This usually means:
+                  </p>
+                  <ul className="text-sm text-muted-foreground mt-2 space-y-1 text-left max-w-sm mx-auto">
+                    <li>• The athlete isn't in this product's checklist</li>
+                    <li>• Try the full name (e.g. "Ronald Acuña Jr." not "Acuña")</li>
+                    <li>• Check for accented characters or suffixes (Jr., II, III)</li>
+                    <li>• The PDF might have unusual formatting — try TXT or CSV</li>
+                  </ul>
                 </div>
               )}
 
