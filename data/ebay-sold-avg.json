@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-26T02:03:02.010Z",
+    "updatedAt": "2026-03-26T05:02:48.623Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. Taguchi winsorized mean + market stability CV. Ungraded condition policy (permissive for sold). Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 160,
-      "endIdx": 170,
+      "startIdx": 170,
+      "endIdx": 180,
       "totalAthletes": 569
     },
     "maxPages": 4,
@@ -28,7 +28,7 @@
     },
     "fx": {
       "source": "CBSA Exchange Rates API",
-      "asOf": "2026-03-26T00:00:00.000Z"
+      "asOf": "2026-03-27T00:00:00.000Z"
     }
   },
   "Adbert Alzolay": {
@@ -1965,12 +1965,12 @@
   },
   "Franklin Barreto": {
     "keyword": "Franklin Barreto Baseball",
-    "nScraped": 134,
-    "nSoldUsed": 66,
-    "avg": 1.7565151515151494,
-    "taguchiSold": 1.7565151515151494,
-    "medianSold": 1.8900000000000001,
-    "marketStabilityCV": 0.13795071904461303,
+    "nScraped": 237,
+    "nSoldUsed": 131,
+    "avg": 1.634427480916033,
+    "taguchiSold": 1.634427480916033,
+    "medianSold": 1.75,
+    "marketStabilityCV": 0.2158408124982682,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
@@ -1989,24 +1989,24 @@
   },
   "Franklin Morales": {
     "keyword": "Franklin Morales Baseball",
-    "nScraped": 340,
-    "nSoldUsed": 108,
-    "avg": 1.9022222222222198,
-    "taguchiSold": 1.9022222222222198,
-    "medianSold": 1.45,
-    "marketStabilityCV": 0.47896618403915925,
+    "nScraped": 390,
+    "nSoldUsed": 104,
+    "avg": 1.4926923076923075,
+    "taguchiSold": 1.4926923076923075,
+    "medianSold": 1.42,
+    "marketStabilityCV": 0.3191922584329102,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
   },
   "Fred Manrique": {
     "keyword": "Fred Manrique Baseball",
-    "nScraped": 90,
-    "nSoldUsed": 33,
-    "avg": 1.2984848484848481,
-    "taguchiSold": 1.2984848484848481,
-    "medianSold": 1.49,
-    "marketStabilityCV": 0.21119042369251867,
+    "nScraped": 98,
+    "nSoldUsed": 37,
+    "avg": 1.5159459459459461,
+    "taguchiSold": 1.5159459459459461,
+    "medianSold": 1.55,
+    "marketStabilityCV": 0.15550886073558196,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
@@ -2014,11 +2014,11 @@
   "Freddy Fermin": {
     "keyword": "Freddy Fermin Baseball",
     "nScraped": 240,
-    "nSoldUsed": 69,
-    "avg": 3.683478260869569,
-    "taguchiSold": 3.683478260869569,
-    "medianSold": 3.28,
-    "marketStabilityCV": 0.3219332329384452,
+    "nSoldUsed": 75,
+    "avg": 3.4974666666666674,
+    "taguchiSold": 3.4974666666666674,
+    "medianSold": 3,
+    "marketStabilityCV": 0.28607694305625464,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
@@ -3441,12 +3441,12 @@
   },
   "Franklin Gutierrez": {
     "keyword": "Franklin Gutierrez Baseball",
-    "nScraped": 181,
-    "nSoldUsed": 103,
-    "avg": 1.7868932038834944,
-    "taguchiSold": 1.7868932038834944,
-    "medianSold": 1.79,
-    "marketStabilityCV": 0.12033913919469519,
+    "nScraped": 218,
+    "nSoldUsed": 133,
+    "avg": 1.7490977443609055,
+    "taguchiSold": 1.7490977443609055,
+    "medianSold": 1.75,
+    "marketStabilityCV": 0.13586876407277165,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
