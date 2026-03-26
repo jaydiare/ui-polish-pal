@@ -271,11 +271,12 @@ const ChecklistIntel = () => {
                 </Label>
                 <Input
                   id="athlete"
-                  placeholder="e.g. Ronald Acuña Jr."
+                  placeholder="e.g. Ronald Acuña Jr., Julio Rodriguez"
                   value={athlete}
                   onChange={(e) => setAthlete(e.target.value)}
                   className="bg-secondary border-border"
                 />
+                <p className="text-[11px] text-muted-foreground">Separate multiple athletes with commas</p>
               </div>
               <div className="space-y-2">
                 <Label className="text-foreground font-semibold">Format</Label>
