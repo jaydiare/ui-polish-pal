@@ -20,6 +20,7 @@ from universal_card_odds_analyzer import (
     parse_manual_odds,
     parse_odds,
     pretty_odds,
+    preview_text,
     summarize,
 )
 
@@ -44,6 +45,7 @@ with st.sidebar:
     packs_per_box = st.number_input("Packs per box (optional)", min_value=0, value=0)
     boxes_per_case = st.number_input("Boxes per case (optional)", min_value=0, value=12)
     include_standard = st.checkbox("Show standard cards too", value=True)
+    show_preview = st.checkbox("Show parsed text preview", value=True)
     manual = st.text_area(
         "Manual odds overrides (optional)",
         placeholder="gold=1:480\nautograph=1:24\ndowntown=1:2400",
@@ -59,6 +61,9 @@ if run:
 
     checklist_path = save_uploaded_file(checklist_file)
     checklist_text = extract_text(checklist_path)
+    if show_preview:
+        with st.expander("Parsed checklist text preview", expanded=False):
+            st.text(preview_text(checklist_text))
     entries = parse_checklist(checklist_text)
     matches = find_matches(entries, athlete)
 
