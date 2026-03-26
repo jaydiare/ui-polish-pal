@@ -474,6 +474,14 @@ export function previewText(text: string, maxLines = 20, maxChars = 4000): strin
   return preview;
 }
 
+// ── Progress callback type ─────────────────────────────────────────────
+export type ProgressStep = {
+  step: number;
+  totalSteps: number;
+  label: string;
+  detail?: string;
+};
+
 // ── Main analysis pipeline ─────────────────────────────────────────────
 export async function analyzeChecklist(opts: {
   checklistFile: File;
@@ -483,10 +491,23 @@ export async function analyzeChecklist(opts: {
   packsPerBox?: number | null;
   boxesPerCase?: number | null;
   manualOddsLines?: string[];
+  onProgress?: (p: ProgressStep) => void;
 }): Promise<AnalysisResult> {
+  const report = opts.onProgress || (() => {});
+  const totalSteps = 6;
+
+  report({ step: 1, totalSteps, label: "Reading checklist", detail: opts.checklistFile.name });
   const checklistText = await extractTextFromFile(opts.checklistFile);
+
+  // Yield to UI thread between steps
+  await new Promise((r) => setTimeout(r, 0));
+
+  report({ step: 2, totalSteps, label: "Parsing card entries" });
   const entries = parseChecklist(checklistText);
   const matches = findMatches(entries, opts.athlete);
+
+  report({ step: 3, totalSteps, label: "Processing odds", detail: `${matches.length} cards matched` });
+  await new Promise((r) => setTimeout(r, 0));
 
   let oddsEntries: OddsEntry[] = [];
   if (opts.oddsFile) {
@@ -516,16 +537,25 @@ export async function analyzeChecklist(opts: {
   const manual = parseManualOdds(manualLines);
   if (Object.keys(manual).length) applyManualOdds(matches, manual);
 
+  report({ step: 4, totalSteps, label: "Ranking cards" });
+  await new Promise((r) => setTimeout(r, 0));
+
   matches.sort((a, b) => {
     if (b.score !== a.score) return b.score - a.score;
     return (a.serialNumber ?? 999999) - (b.serialNumber ?? 999999);
   });
 
-  // ── Taguchi Robust Scoring ─────────────────────────────────────────
+  // ── Pull Signal Scoring ────────────────────────────────────────────
+  report({ step: 5, totalSteps, label: "Running Pull Signal simulations", detail: `${matches.length} cards × 60 scenarios` });
+  await new Promise((r) => setTimeout(r, 0));
+
   const resultsWithRobust = matches.map((m) => {
     const robust = computeRobustScore(m, opts.athlete);
     return { ...m, displayOdds: prettyOdds(m.estimatedPackOdds), robust };
   });
+
+  report({ step: 6, totalSteps, label: "Generating summary" });
+  await new Promise((r) => setTimeout(r, 0));
 
   // Product-level summary
   const cardsWithSn = resultsWithRobust.filter((r) => r.robust && isFinite(r.robust.signalStrength));

@@ -4,6 +4,7 @@ import VzlaNavbar from "@/components/VzlaNavbar";
 import BackToTop from "@/components/BackToTop";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import { Progress } from "@/components/ui/progress";
 import { Label } from "@/components/ui/label";
 import { Badge } from "@/components/ui/badge";
 import {
@@ -29,6 +30,7 @@ import {
   type AnalysisResult,
   type ChecklistEntry,
   type RobustScore,
+  type ProgressStep,
   analyzeChecklist,
   prettyOdds,
 } from "@/lib/checklist-analyzer";
@@ -71,6 +73,7 @@ const ChecklistIntel = () => {
   const [manualOdds, setManualOdds] = useState("");
   const [showStandard, setShowStandard] = useState(true);
   const [loading, setLoading] = useState(false);
+  const [progress, setProgress] = useState<ProgressStep | null>(null);
   const [result, setResult] = useState<AnalysisResult | null>(null);
   const [error, setError] = useState<string | null>(null);
 
@@ -81,6 +84,7 @@ const ChecklistIntel = () => {
     }
     setError(null);
     setLoading(true);
+    setProgress(null);
     try {
       const res = await analyzeChecklist({
         checklistFile,
@@ -90,12 +94,14 @@ const ChecklistIntel = () => {
         packsPerBox: packsPerBox ? parseInt(packsPerBox) : null,
         boxesPerCase: boxesPerCase ? parseInt(boxesPerCase) : null,
         manualOddsLines: manualOdds.split("\n").filter(Boolean),
+        onProgress: setProgress,
       });
       setResult(res);
     } catch (e: any) {
       setError(e.message || "Analysis failed");
     } finally {
       setLoading(false);
+      setProgress(null);
     }
   }, [checklistFile, oddsFile, athlete, formatName, packsPerBox, boxesPerCase, manualOdds]);
 
@@ -262,6 +268,28 @@ const ChecklistIntel = () => {
                 Clear
               </Button>
             </div>
+
+            {/* Progress indicator */}
+            {loading && progress && (
+              <div className="space-y-2 pt-1">
+                <div className="flex items-center justify-between text-xs">
+                  <span className="text-foreground font-medium flex items-center gap-1.5">
+                    <span className="inline-block h-2 w-2 rounded-full bg-vzla-yellow animate-pulse" />
+                    {progress.label}
+                  </span>
+                  <span className="text-muted-foreground">
+                    {progress.step}/{progress.totalSteps}
+                  </span>
+                </div>
+                <Progress
+                  value={(progress.step / progress.totalSteps) * 100}
+                  className="h-1.5 bg-secondary"
+                />
+                {progress.detail && (
+                  <p className="text-[11px] text-muted-foreground">{progress.detail}</p>
+                )}
+              </div>
+            )}
 
             {error && (
               <p className="text-destructive text-sm font-medium">{error}</p>
