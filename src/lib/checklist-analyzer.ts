@@ -619,7 +619,6 @@ export async function extractTextFromFile(file: File): Promise<string> {
       const fallbackTask = pdfjsLib.getDocument({ data: arrayBuffer, disableWorker: true });
       pdf = await withTimeout(fallbackTask.promise, 60_000, "Opening PDF document (fallback)");
     }
-    );
     console.log(`[ChecklistIntel] PDF opened: ${pdf.numPages} pages`);
     const allLines: string[] = [];
     for (let i = 1; i <= pdf.numPages; i++) {
