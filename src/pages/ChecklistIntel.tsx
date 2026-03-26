@@ -67,6 +67,7 @@ const ChecklistIntel = () => {
   const [checklistFile, setChecklistFile] = useState<File | null>(null);
   const [oddsFile, setOddsFile] = useState<File | null>(null);
   const [athlete, setAthlete] = useState("");
+  const [multiResults, setMultiResults] = useState<AnalysisResult[]>([]);
   const [formatName, setFormatName] = useState("auto-detect");
   const [packsPerBox, setPacksPerBox] = useState("");
   const [boxesPerCase, setBoxesPerCase] = useState("12");
@@ -85,23 +86,66 @@ const ChecklistIntel = () => {
     setError(null);
     setLoading(true);
     setProgress(null);
-    const ANALYSIS_TIMEOUT = 120_000; // 2 minutes
+    setMultiResults([]);
+
+    const athletes = athlete.split(",").map((a) => a.trim()).filter(Boolean);
+    const ANALYSIS_TIMEOUT = 120_000;
+
     try {
-      const analysisPromise = analyzeChecklist({
-        checklistFile,
-        oddsFile,
-        athlete: athlete.trim(),
-        formatName: formatName === "auto-detect" ? null : formatName,
-        packsPerBox: packsPerBox ? parseInt(packsPerBox) : null,
-        boxesPerCase: boxesPerCase ? parseInt(boxesPerCase) : null,
-        manualOddsLines: manualOdds.split("\n").filter(Boolean),
-        onProgress: setProgress,
-      });
-      const timer = new Promise<never>((_, reject) =>
-        setTimeout(() => reject(new Error("Analysis timed out after 2 minutes. Try a smaller file or a different format (TXT/CSV).")), ANALYSIS_TIMEOUT),
-      );
-      const res = await Promise.race([analysisPromise, timer]);
-      setResult(res);
+      const allResults: AnalysisResult[] = [];
+      const notFound: string[] = [];
+
+      for (let i = 0; i < athletes.length; i++) {
+        const name = athletes[i];
+        setProgress({ step: 1, totalSteps: 6, label: `Analyzing ${name}${athletes.length > 1 ? ` (${i + 1}/${athletes.length})` : ""}`, detail: checklistFile.name });
+
+        const analysisPromise = analyzeChecklist({
+          checklistFile,
+          oddsFile,
+          athlete: name,
+          formatName: formatName === "auto-detect" ? null : formatName,
+          packsPerBox: packsPerBox ? parseInt(packsPerBox) : null,
+          boxesPerCase: boxesPerCase ? parseInt(boxesPerCase) : null,
+          manualOddsLines: manualOdds.split("\n").filter(Boolean),
+          onProgress: (p) => setProgress({ ...p, label: `${name}${athletes.length > 1 ? ` (${i + 1}/${athletes.length})` : ""}: ${p.label}` }),
+        });
+        const timer = new Promise<never>((_, reject) =>
+          setTimeout(() => reject(new Error("Analysis timed out after 2 minutes. Try a smaller file or a different format (TXT/CSV).")), ANALYSIS_TIMEOUT),
+        );
+        const res = await Promise.race([analysisPromise, timer]);
+        allResults.push(res);
+        if (res.results.length === 0) notFound.push(name);
+      }
+
+      // Merge results for display — use first result as base, combine all
+      if (allResults.length === 1) {
+        setResult(allResults[0]);
+      } else {
+        const merged: AnalysisResult = {
+          athlete: allResults.map((r) => r.athlete).join(", "),
+          summary: {
+            count: allResults.reduce((s, r) => s + r.summary.count, 0),
+            byTier: {
+              elite: allResults.reduce((s, r) => s + (r.summary.byTier.elite || 0), 0),
+              premium: allResults.reduce((s, r) => s + (r.summary.byTier.premium || 0), 0),
+              notable: allResults.reduce((s, r) => s + (r.summary.byTier.notable || 0), 0),
+              standard: allResults.reduce((s, r) => s + (r.summary.byTier.standard || 0), 0),
+            },
+            byType: allResults.reduce((acc, r) => {
+              Object.entries(r.summary.byType).forEach(([k, v]) => { acc[k] = (acc[k] || 0) + v; });
+              return acc;
+            }, {} as Record<string, number>),
+          },
+          results: allResults.flatMap((r) => r.results),
+          robustSummary: allResults.find((r) => r.robustSummary)?.robustSummary,
+        };
+        setResult(merged);
+        setMultiResults(allResults);
+      }
+
+      if (notFound.length > 0) {
+        setError(`⚠️ Not found in checklist: ${notFound.join(", ")}. Check spelling, try full name (first + last), or verify the athlete is in this product.`);
+      }
     } catch (e: any) {
       setError(e.message || "Analysis failed. Please try again.");
     } finally {
@@ -231,11 +275,12 @@ const ChecklistIntel = () => {
                 </Label>
                 <Input
                   id="athlete"
-                  placeholder="e.g. Ronald Acuña Jr."
+                  placeholder="e.g. Ronald Acuña Jr., Julio Rodriguez"
                   value={athlete}
                   onChange={(e) => setAthlete(e.target.value)}
                   className="bg-secondary border-border"
                 />
+                <p className="text-[11px] text-muted-foreground">Separate multiple athletes with commas</p>
               </div>
               <div className="space-y-2">
                 <Label className="text-foreground font-semibold">Format</Label>
@@ -445,9 +490,18 @@ const ChecklistIntel = () => {
               </div>
 
               {result.results.length === 0 && (
-                <div className="glass-panel rounded-xl p-8 text-center">
-                  <p className="text-muted-foreground text-lg">No matching cards found for this athlete.</p>
-                  <p className="text-sm text-muted-foreground mt-1">Try a different spelling or check the checklist document.</p>
+                <div className="glass-panel rounded-xl p-8 text-center border border-destructive/30">
+                  <p className="text-2xl mb-2">🔍</p>
+                  <p className="text-foreground text-lg font-semibold">No matching cards found</p>
+                  <p className="text-sm text-muted-foreground mt-2 max-w-md mx-auto">
+                    <strong>"{result.athlete}"</strong> wasn't found in this checklist. This usually means:
+                  </p>
+                  <ul className="text-sm text-muted-foreground mt-2 space-y-1 text-left max-w-sm mx-auto">
+                    <li>• The athlete isn't in this product's checklist</li>
+                    <li>• Try the full name (e.g. "Ronald Acuña Jr." not "Acuña")</li>
+                    <li>• Check for accented characters or suffixes (Jr., II, III)</li>
+                    <li>• The PDF might have unusual formatting — try TXT or CSV</li>
+                  </ul>
                 </div>
               )}
 
