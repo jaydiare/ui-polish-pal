@@ -2,6 +2,8 @@ import { useState, useCallback, useMemo } from "react";
 import SEOHead from "@/components/SEOHead";
 import VzlaNavbar from "@/components/VzlaNavbar";
 import BackToTop from "@/components/BackToTop";
+import VzlaSideBanner from "@/components/VzlaSideBanner";
+import VzlaSideBannerRight from "@/components/VzlaSideBannerRight";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Progress } from "@/components/ui/progress";
