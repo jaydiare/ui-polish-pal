@@ -131,6 +131,10 @@ const ChecklistIntel = () => {
               notable: allResults.reduce((s, r) => s + (r.summary.byTier.notable || 0), 0),
               standard: allResults.reduce((s, r) => s + (r.summary.byTier.standard || 0), 0),
             },
+            byType: allResults.reduce((acc, r) => {
+              Object.entries(r.summary.byType).forEach(([k, v]) => { acc[k] = (acc[k] || 0) + v; });
+              return acc;
+            }, {} as Record<string, number>),
           },
           results: allResults.flatMap((r) => r.results),
           robustSummary: allResults.find((r) => r.robustSummary)?.robustSummary,
