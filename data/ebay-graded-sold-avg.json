@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-26T09:31:21.015Z",
+    "updatedAt": "2026-03-26T11:26:17.613Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA/BGS/SGC grader title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 410,
-      "endIdx": 420,
+      "startIdx": 420,
+      "endIdx": 430,
       "totalAthletes": 452
     },
     "maxPages": 4,
@@ -5821,7 +5821,7 @@
   },
   "Yonny Chirinos": {
     "keyword": "Yonny Chirinos Baseball PSA",
-    "nScraped": 29,
+    "nScraped": 28,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -5857,7 +5857,7 @@
   },
   "Yorman Rodriguez": {
     "keyword": "Yorman Rodriguez Baseball PSA",
-    "nScraped": 242,
+    "nScraped": 240,
     "nSoldUsed": 4,
     "avg": 7.06,
     "taguchiSold": 7.06,
@@ -5869,7 +5869,7 @@
   },
   "Yorvit Torrealba": {
     "keyword": "Yorvit Torrealba Baseball PSA",
-    "nScraped": 40,
+    "nScraped": 42,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -5893,12 +5893,12 @@
   },
   "Carl Herrera": {
     "keyword": "Carl Herrera Basketball PSA",
-    "nScraped": 135,
-    "nSoldUsed": 6,
-    "avg": 25.49,
-    "taguchiSold": 25.49,
+    "nScraped": 198,
+    "nSoldUsed": 9,
+    "avg": 25.490000000000002,
+    "taguchiSold": 25.490000000000002,
     "medianSold": 25.49,
-    "marketStabilityCV": 0,
+    "marketStabilityCV": 1.4783138096669515e-16,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
