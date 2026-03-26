@@ -505,9 +505,6 @@ const ChecklistIntel = () => {
 
               {/* Download */}
               <div className="flex gap-3">
-                <Button onClick={handleDownloadCSV} variant="outline" className="border-border">
-                  📊 Download CSV
-                </Button>
                 <Button onClick={handleDownloadJSON} variant="outline" className="border-border">
                   📥 Download JSON
                 </Button>
