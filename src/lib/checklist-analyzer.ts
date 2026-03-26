@@ -614,7 +614,7 @@ export async function extractTextFromFile(file: File): Promise<string> {
     console.log("[ChecklistIntel] pdf.js loaded, parsing PDF…");
     pdfjsLib.GlobalWorkerOptions.workerSrc = `https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.9.155/pdf.worker.min.js`;
     const arrayBuffer = await file.arrayBuffer();
-    const pdf = await withTimeout(
+    const pdf: any = await withTimeout(
       pdfjsLib.getDocument({ data: arrayBuffer }).promise,
       30_000,
       "Opening PDF document",
