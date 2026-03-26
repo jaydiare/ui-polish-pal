@@ -372,6 +372,101 @@ export function findMatches(entries: ChecklistEntry[], athlete: string, threshol
   });
 }
 
+// ── Implied Parallel Generation ────────────────────────────────────────
+
+/**
+ * Known parallel tiers common across Bowman Chrome, Topps Chrome, etc.
+ * { label, serial, tier, cardTypes }
+ */
+const KNOWN_PARALLELS: { label: string; serial: number | null; tier: RarityTier; cardTypes: string[] }[] = [
+  { label: "Refractor", serial: null, tier: "notable", cardTypes: ["parallel"] },
+  { label: "Purple Refractor /250", serial: 250, tier: "notable", cardTypes: ["parallel"] },
+  { label: "Blue Refractor /150", serial: 150, tier: "notable", cardTypes: ["parallel"] },
+  { label: "Green Refractor /99", serial: 99, tier: "notable", cardTypes: ["parallel"] },
+  { label: "Gold Refractor /50", serial: 50, tier: "premium", cardTypes: ["parallel"] },
+  { label: "Orange Refractor /25", serial: 25, tier: "premium", cardTypes: ["parallel"] },
+  { label: "Red Refractor /5", serial: 5, tier: "elite", cardTypes: ["parallel"] },
+  { label: "SuperFractor 1/1", serial: 1, tier: "elite", cardTypes: ["parallel"] },
+];
+
+/**
+ * Detect which parallel tiers are mentioned in the full checklist sections,
+ * then generate implied parallel entries for each matched athlete card.
+ */
+function generateImpliedParallels(
+  allEntries: ChecklistEntry[],
+  matches: ChecklistEntry[],
+): ChecklistEntry[] {
+  if (matches.length === 0) return [];
+
+  // Collect all section names to detect if parallels are explicitly listed
+  const allSections = new Set(allEntries.map((e) => e.section.toLowerCase()));
+  const allSectionsStr = [...allSections].join(" ");
+
+  // Check which parallel tiers are NOT already explicitly represented in matches
+  // (i.e., the athlete doesn't already have a "Gold Refractor" card found by the parser)
+  const matchedSectionsLower = new Set(matches.map((m) => m.section.toLowerCase()));
+
+  const impliedCards: ChecklistEntry[] = [];
+
+  for (const match of matches) {
+    // Only generate parallels for base cards, base inserts, and prospect cards
+    const isBaseOrInsert = match.cardTypes.includes("base") ||
+      match.cardTypes.includes("insert") ||
+      match.cardTypes.includes("unknown") ||
+      match.section.toLowerCase().includes("prospect") ||
+      match.section.toLowerCase().includes("bgp");
+
+    if (!isBaseOrInsert) continue;
+
+    for (const parallel of KNOWN_PARALLELS) {
+      const parallelLower = parallel.label.toLowerCase();
+      // Skip if this athlete already has an explicit card in a matching parallel section
+      const alreadyHasParallel = matches.some((m) => {
+        const secLower = m.section.toLowerCase();
+        return secLower.includes(parallelLower.split(" ")[0]) && m !== match;
+      });
+      if (alreadyHasParallel) continue;
+
+      // Check if the checklist mentions this parallel type anywhere in section headers
+      const parallelKeyword = parallelLower.split(" ")[0]; // "gold", "orange", etc.
+      const mentionedInChecklist = allSectionsStr.includes(parallelKeyword) ||
+        allSectionsStr.includes("refractor") ||
+        allSectionsStr.includes("parallel") ||
+        allSectionsStr.includes("variation");
+
+      // For standard parallels (refractor, gold, etc.), generate even without explicit mention
+      // since nearly all Chrome/Prizm products have them
+      const isStandardParallel = ["refractor", "gold", "orange", "red", "superfractor"].includes(parallelKeyword);
+
+      if (!mentionedInChecklist && !isStandardParallel) continue;
+
+      const sectionLabel = `${match.section} — ${parallel.label} (implied)`;
+      const [tier, score] = rarityFromText(
+        `${match.rawText} ${parallel.label}`,
+        parallel.serial,
+        parallel.cardTypes,
+      );
+
+      impliedCards.push({
+        section: sectionLabel,
+        cardCode: match.cardCode,
+        athlete: match.athlete,
+        team: match.team,
+        rawText: `${match.rawText} [${parallel.label}]`,
+        cardTypes: parallel.cardTypes,
+        serialNumber: parallel.serial,
+        rarityTier: tier,
+        score,
+        matchedOdds: null,
+        estimatedPackOdds: null,
+      });
+    }
+  }
+
+  return impliedCards;
+
+
 export function parseManualOdds(items: string[]): Record<string, number> {
   const result: Record<string, number> = {};
   for (const item of items) {
