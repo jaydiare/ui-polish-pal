@@ -144,10 +144,14 @@ function looksLikeHeader(line: string): boolean {
   // Lines starting with a card code (e.g. "AD-8", "BCP-12", "#45") are entries, not headers
   if (/^#?\d+[A-Z]?\s/.test(s) || /^[A-Z]{1,6}-?\d+\s/.test(s)) return false;
 
-  // If the line has many words (4+) with mixed case, it's likely a player entry, not a header
   const words = s.split(" ");
+
+  // If the line has many words (4+) with mixed case, it's likely a player entry, not a header
   const mixedCaseWords = words.filter((w) => /[a-z]/.test(w) && /[A-Z]/.test(w));
   if (words.length >= 4 && mixedCaseWords.length >= 2) return false;
+
+  // Reject lines that look like "Name - Team" player entries
+  if (/\s-\s/.test(s) && words.length >= 4) return false;
 
   const alphaCount = [...s].filter((c) => /[A-Za-z]/.test(c)).length;
   const upperCount = [...s].filter((c) => /[A-Z]/.test(c)).length;
@@ -156,9 +160,21 @@ function looksLikeHeader(line: string): boolean {
   // Strong header signal: mostly uppercase
   if (upperRatio > 0.7) return true;
 
-  // Hint-based: only if short (section title-like) and not too many words
-  const hint = SECTION_HINTS.some((h) => s.toLowerCase().includes(h));
-  if (hint && words.length <= 5 && upperRatio > 0.4) return true;
+  const lower = s.toLowerCase();
+  const hint = SECTION_HINTS.some((h) => lower.includes(h));
+
+  // Short lines (≤3 words) containing a section hint are almost always headers
+  // e.g. "Autographs", "Gold Refractor /50", "Rookie Autographs"
+  if (hint && words.length <= 4) return true;
+
+  // Lines with a serial number pattern and a hint (e.g. "Red Refractor /5")
+  if (hint && /\/\d{1,4}\b/.test(s)) return true;
+
+  // Hint-based with moderate uppercase
+  if (hint && words.length <= 6 && upperRatio > 0.3) return true;
+
+  // Standalone "1/1" type headers
+  if (/\b1\/1\b/.test(s) && words.length <= 4) return true;
 
   return false;
 }
