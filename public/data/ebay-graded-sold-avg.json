@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-26T15:47:25.286Z",
+    "updatedAt": "2026-03-26T17:32:52.492Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA/BGS/SGC grader title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 440,
-      "endIdx": 450,
+      "startIdx": 450,
+      "endIdx": 452,
       "totalAthletes": 452
     },
     "maxPages": 4,
@@ -6805,7 +6805,7 @@
   },
   "Yordan Osorio": {
     "keyword": "Yordan Osorio Soccer PSA",
-    "nScraped": 92,
+    "nScraped": 88,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
