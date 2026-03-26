@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-25T21:35:53.178Z",
+    "updatedAt": "2026-03-26T02:03:02.010Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. Taguchi winsorized mean + market stability CV. Ungraded condition policy (permissive for sold). Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 150,
-      "endIdx": 160,
+      "startIdx": 160,
+      "endIdx": 170,
       "totalAthletes": 569
     },
     "maxPages": 4,
@@ -1869,7 +1869,7 @@
   },
   "Fernando Lunar": {
     "keyword": "Fernando Lunar Baseball",
-    "nScraped": 271,
+    "nScraped": 264,
     "nSoldUsed": 84,
     "avg": 8.730476190476192,
     "taguchiSold": 8.730476190476192,
@@ -1881,12 +1881,12 @@
   },
   "Fernando Nieve": {
     "keyword": "Fernando Nieve Baseball",
-    "nScraped": 258,
-    "nSoldUsed": 92,
-    "avg": 2.0882608695652194,
-    "taguchiSold": 2.0882608695652194,
-    "medianSold": 1.95,
-    "marketStabilityCV": 0.17227909141452835,
+    "nScraped": 216,
+    "nSoldUsed": 112,
+    "avg": 1.7671428571428518,
+    "taguchiSold": 1.7671428571428518,
+    "medianSold": 1.7149999999999999,
+    "marketStabilityCV": 0.0624136652700302,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
@@ -1894,26 +1894,26 @@
   "Francisco Alvarez": {
     "keyword": "Francisco Alvarez Baseball",
     "nScraped": 240,
-    "nSoldUsed": 81,
-    "avg": 6.142098765432091,
-    "taguchiSold": 6.142098765432091,
-    "medianSold": 5.5,
-    "marketStabilityCV": 0.5062743527684498,
+    "nSoldUsed": 93,
+    "avg": 4.071612903225807,
+    "taguchiSold": 4.071612903225807,
+    "medianSold": 4.95,
+    "marketStabilityCV": 0.2382357336262369,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
   },
   "Francisco Arcia": {
     "keyword": "Francisco Arcia Baseball",
-    "nScraped": 60,
-    "nSoldUsed": 39,
-    "avg": 0.6158974358974356,
-    "taguchiSold": 0.6158974358974356,
-    "medianSold": 0.99,
-    "marketStabilityCV": 0.7000607237032411,
+    "nScraped": 0,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
   },
   "Francisco Cervelli": {
     "keyword": "Francisco Cervelli Baseball",
@@ -3405,12 +3405,12 @@
   },
   "Felix Escalona": {
     "keyword": "Felix Escalona Baseball",
-    "nScraped": 240,
-    "nSoldUsed": 28,
-    "avg": 1.43,
-    "taguchiSold": 1.43,
-    "medianSold": 1.07,
-    "marketStabilityCV": 0.345869221277229,
+    "nScraped": 241,
+    "nSoldUsed": 20,
+    "avg": 0.9899999999999999,
+    "taguchiSold": 0.9899999999999999,
+    "medianSold": 0.99,
+    "marketStabilityCV": 1.1505704941938521e-16,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
@@ -3418,11 +3418,11 @@
   "Felix Hernandez": {
     "keyword": "Felix Hernandez Baseball",
     "nScraped": 240,
-    "nSoldUsed": 128,
-    "avg": 5.189531250000004,
-    "taguchiSold": 5.189531250000004,
-    "medianSold": 4.865,
-    "marketStabilityCV": 0.31758705702862655,
+    "nSoldUsed": 133,
+    "avg": 4.813007518796996,
+    "taguchiSold": 4.813007518796996,
+    "medianSold": 3.75,
+    "marketStabilityCV": 0.3963741418345006,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
