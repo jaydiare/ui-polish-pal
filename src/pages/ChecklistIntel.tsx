@@ -86,23 +86,62 @@ const ChecklistIntel = () => {
     setError(null);
     setLoading(true);
     setProgress(null);
-    const ANALYSIS_TIMEOUT = 120_000; // 2 minutes
+    setMultiResults([]);
+
+    const athletes = athlete.split(",").map((a) => a.trim()).filter(Boolean);
+    const ANALYSIS_TIMEOUT = 120_000;
+
     try {
-      const analysisPromise = analyzeChecklist({
-        checklistFile,
-        oddsFile,
-        athlete: athlete.trim(),
-        formatName: formatName === "auto-detect" ? null : formatName,
-        packsPerBox: packsPerBox ? parseInt(packsPerBox) : null,
-        boxesPerCase: boxesPerCase ? parseInt(boxesPerCase) : null,
-        manualOddsLines: manualOdds.split("\n").filter(Boolean),
-        onProgress: setProgress,
-      });
-      const timer = new Promise<never>((_, reject) =>
-        setTimeout(() => reject(new Error("Analysis timed out after 2 minutes. Try a smaller file or a different format (TXT/CSV).")), ANALYSIS_TIMEOUT),
-      );
-      const res = await Promise.race([analysisPromise, timer]);
-      setResult(res);
+      const allResults: AnalysisResult[] = [];
+      const notFound: string[] = [];
+
+      for (let i = 0; i < athletes.length; i++) {
+        const name = athletes[i];
+        setProgress({ step: 1, totalSteps: 6, label: `Analyzing ${name}${athletes.length > 1 ? ` (${i + 1}/${athletes.length})` : ""}`, detail: checklistFile.name });
+
+        const analysisPromise = analyzeChecklist({
+          checklistFile,
+          oddsFile,
+          athlete: name,
+          formatName: formatName === "auto-detect" ? null : formatName,
+          packsPerBox: packsPerBox ? parseInt(packsPerBox) : null,
+          boxesPerCase: boxesPerCase ? parseInt(boxesPerCase) : null,
+          manualOddsLines: manualOdds.split("\n").filter(Boolean),
+          onProgress: (p) => setProgress({ ...p, label: `${name}${athletes.length > 1 ? ` (${i + 1}/${athletes.length})` : ""}: ${p.label}` }),
+        });
+        const timer = new Promise<never>((_, reject) =>
+          setTimeout(() => reject(new Error("Analysis timed out after 2 minutes. Try a smaller file or a different format (TXT/CSV).")), ANALYSIS_TIMEOUT),
+        );
+        const res = await Promise.race([analysisPromise, timer]);
+        allResults.push(res);
+        if (res.results.length === 0) notFound.push(name);
+      }
+
+      // Merge results for display — use first result as base, combine all
+      if (allResults.length === 1) {
+        setResult(allResults[0]);
+      } else {
+        const merged: AnalysisResult = {
+          athlete: allResults.map((r) => r.athlete).join(", "),
+          summary: {
+            count: allResults.reduce((s, r) => s + r.summary.count, 0),
+            byTier: {
+              elite: allResults.reduce((s, r) => s + (r.summary.byTier.elite || 0), 0),
+              premium: allResults.reduce((s, r) => s + (r.summary.byTier.premium || 0), 0),
+              notable: allResults.reduce((s, r) => s + (r.summary.byTier.notable || 0), 0),
+              standard: allResults.reduce((s, r) => s + (r.summary.byTier.standard || 0), 0),
+            },
+          },
+          results: allResults.flatMap((r) => r.results),
+          robustSummary: allResults.find((r) => r.robustSummary)?.robustSummary,
+        };
+        setResult(merged);
+        setMultiResults(allResults);
+      }
+
+      if (notFound.length > 0) {
+        setError(`⚠️ Not found in checklist: ${notFound.join(", ")}. Check spelling, try full name (first + last), or verify the athlete is in this product.`);
+      }
     } catch (e: any) {
       setError(e.message || "Analysis failed. Please try again.");
     } finally {
