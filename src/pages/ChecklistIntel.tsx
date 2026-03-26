@@ -20,8 +20,15 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
+import {
   type AnalysisResult,
   type ChecklistEntry,
+  type RobustScore,
   analyzeChecklist,
   prettyOdds,
 } from "@/lib/checklist-analyzer";
@@ -38,6 +45,20 @@ const TIER_ICONS: Record<string, string> = {
   premium: "⭐",
   notable: "🔹",
   standard: "📄",
+};
+
+const GRADE_COLORS: Record<string, string> = {
+  exceptional: "text-vzla-yellow",
+  strong: "text-vzla-mint",
+  moderate: "text-vzla-purple",
+  weak: "text-muted-foreground",
+};
+
+const GRADE_LABELS: Record<string, string> = {
+  exceptional: "🎯 Exceptional",
+  strong: "✅ Strong",
+  moderate: "⚠️ Moderate",
+  weak: "❓ Weak",
 };
 
 const ChecklistIntel = () => {
@@ -127,7 +148,7 @@ const ChecklistIntel = () => {
             </h1>
             <p className="text-muted-foreground max-w-2xl mx-auto">
               Upload a sports card set checklist (PDF, TXT, or CSV) and optionally an odds document.
-              Enter an athlete's name to discover every parallel, autograph, and numbered card — with estimated pull odds.
+              Enter an athlete's name to discover every parallel, autograph, and numbered card — with estimated pull odds and <span className="text-vzla-yellow font-semibold">Taguchi robust scoring</span>.
             </p>
           </div>
 
@@ -265,6 +286,34 @@ const ChecklistIntel = () => {
                 ))}
               </div>
 
+              {/* Taguchi Robust Summary */}
+              {result.robustSummary && (
+                <div className="glass-panel rounded-xl p-5 border border-vzla-yellow/20">
+                  <div className="flex items-center gap-2 mb-3">
+                    <span className="text-lg">📐</span>
+                    <h3 className="font-display font-bold text-foreground">Taguchi Robust Analysis</h3>
+                  </div>
+                  <p className="text-sm text-foreground mb-3 leading-relaxed">
+                    {result.robustSummary.recommendation}
+                  </p>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
+                    <div className="bg-secondary/60 rounded-lg p-3">
+                      <span className="text-muted-foreground">Best Robust Card</span>
+                      <p className="text-foreground font-medium mt-0.5 truncate">{result.robustSummary.bestRobustCard}</p>
+                    </div>
+                    <div className="bg-secondary/60 rounded-lg p-3">
+                      <span className="text-muted-foreground">Avg S/N Ratio</span>
+                      <p className="text-foreground font-medium mt-0.5">
+                        {result.robustSummary.avgSnRatio} dB
+                        <span className="text-muted-foreground ml-1">
+                          ({result.robustSummary.avgSnRatio >= 22 ? "highly predictable" : result.robustSummary.avgSnRatio >= 15 ? "reliable" : "variable"})
+                        </span>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              )}
+
               {/* Type breakdown */}
               <div className="glass-panel rounded-xl p-4">
                 <h3 className="text-sm font-semibold text-foreground mb-2">Card Types Found</h3>
@@ -344,9 +393,10 @@ const ChecklistIntel = () => {
   );
 };
 
-function CardResult({ card }: { card: ChecklistEntry & { displayOdds: string } }) {
+function CardResult({ card }: { card: ChecklistEntry & { displayOdds: string; robust?: RobustScore } }) {
+  const r = card.robust;
   return (
-    <div className="bg-secondary/50 rounded-lg p-3 border border-border/50 space-y-1.5">
+    <div className="bg-secondary/50 rounded-lg p-3 border border-border/50 space-y-2">
       <div className="flex items-start justify-between gap-2">
         <div className="flex-1 min-w-0">
           <p className="text-sm font-semibold text-foreground truncate">{card.section}</p>
@@ -364,6 +414,58 @@ function CardResult({ card }: { card: ChecklistEntry & { displayOdds: string } }
           Odds: {card.displayOdds}
         </span>
       </div>
+
+      {/* Taguchi Robust Score Row */}
+      {r && (
+        <TooltipProvider>
+          <div className="flex flex-wrap items-center gap-x-3 gap-y-1 text-[11px] pt-1 border-t border-border/30">
+            <Tooltip>
+              <TooltipTrigger asChild>
+                <span className="font-medium text-foreground">
+                  Desirability: {r.desirability}
+                </span>
+              </TooltipTrigger>
+              <TooltipContent side="top" className="max-w-[220px]">
+                <p>Multi-factor score from autographs, relics, serial numbering, rookie status, and section quality.</p>
+              </TooltipContent>
+            </Tooltip>
+
+            <Tooltip>
+              <TooltipTrigger asChild>
+                <span className="text-muted-foreground">
+                  S/N: <span className="text-foreground font-medium">{r.snRatio} dB</span>
+                </span>
+              </TooltipTrigger>
+              <TooltipContent side="top" className="max-w-[240px]">
+                <p>Taguchi Signal-to-Noise ratio. Higher = more predictable value under odds uncertainty. Simulated across {60} scenarios.</p>
+              </TooltipContent>
+            </Tooltip>
+
+            <Tooltip>
+              <TooltipTrigger asChild>
+                <span className={`font-semibold ${GRADE_COLORS[r.grade]}`}>
+                  {GRADE_LABELS[r.grade]}
+                </span>
+              </TooltipTrigger>
+              <TooltipContent side="top" className="max-w-[240px]">
+                <p>{r.insight}</p>
+              </TooltipContent>
+            </Tooltip>
+
+            <Tooltip>
+              <TooltipTrigger asChild>
+                <span className="text-muted-foreground/70">
+                  Loss: {r.expectedLoss}
+                </span>
+              </TooltipTrigger>
+              <TooltipContent side="top" className="max-w-[220px]">
+                <p>Expected loss vs ideal card profile. Lower = closer to an optimal pull. Formula: variance + (mean − target)²</p>
+              </TooltipContent>
+            </Tooltip>
+          </div>
+        </TooltipProvider>
+      )}
+
       {card.matchedOdds && (
         <p className="text-[11px] text-muted-foreground/70 italic">
           Matched odds: {card.matchedOdds.name}
