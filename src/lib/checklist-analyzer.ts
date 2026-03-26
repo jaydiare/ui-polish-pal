@@ -690,7 +690,7 @@ function generateProductRecommendation(
   const withRobust = results.filter((r) => r.robust);
   if (!withRobust.length) return "Insufficient data for a product recommendation.";
 
-  const avgSn = withRobust.reduce((s, r) => s + r.robust!.snRatio, 0) / withRobust.length;
+  const avgSn = withRobust.reduce((s, r) => s + r.robust!.signalStrength, 0) / withRobust.length;
   const premiumPlus = withRobust.filter((r) => r.rarityTier === "elite" || r.rarityTier === "premium");
   const strongPremium = premiumPlus.filter((r) => r.robust!.grade === "exceptional" || r.robust!.grade === "strong");
 

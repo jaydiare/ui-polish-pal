@@ -415,14 +415,14 @@ function CardResult({ card }: { card: ChecklistEntry & { displayOdds: string; ro
         </span>
       </div>
 
-      {/* Taguchi Robust Score Row */}
+      {/* Pull Signal Row */}
       {r && (
         <TooltipProvider>
           <div className="flex flex-wrap items-center gap-x-3 gap-y-1 text-[11px] pt-1 border-t border-border/30">
             <Tooltip>
               <TooltipTrigger asChild>
                 <span className="font-medium text-foreground">
-                  Desirability: {r.desirability}
+                  Card Score: {r.desirability}
                 </span>
               </TooltipTrigger>
               <TooltipContent side="top" className="max-w-[220px]">
@@ -433,11 +433,11 @@ function CardResult({ card }: { card: ChecklistEntry & { displayOdds: string; ro
             <Tooltip>
               <TooltipTrigger asChild>
                 <span className="text-muted-foreground">
-                  S/N: <span className="text-foreground font-medium">{r.snRatio} dB</span>
+                  Signal: <span className="text-foreground font-medium">{r.signalStrength} dB</span>
                 </span>
               </TooltipTrigger>
               <TooltipContent side="top" className="max-w-[240px]">
-                <p>Taguchi Signal-to-Noise ratio. Higher = more predictable value under odds uncertainty. Simulated across {60} scenarios.</p>
+                <p>Signal Strength — higher means more predictable value under odds uncertainty. Simulated across 60 scenarios.</p>
               </TooltipContent>
             </Tooltip>
 
@@ -455,11 +455,11 @@ function CardResult({ card }: { card: ChecklistEntry & { displayOdds: string; ro
             <Tooltip>
               <TooltipTrigger asChild>
                 <span className="text-muted-foreground/70">
-                  Loss: {r.expectedLoss}
+                  Risk: {r.risk}
                 </span>
               </TooltipTrigger>
               <TooltipContent side="top" className="max-w-[220px]">
-                <p>Expected loss vs ideal card profile. Lower = closer to an optimal pull. Formula: variance + (mean − target)²</p>
+                <p>Risk distance from an ideal card profile. Lower = closer to an optimal pull.</p>
               </TooltipContent>
             </Tooltip>
           </div>
