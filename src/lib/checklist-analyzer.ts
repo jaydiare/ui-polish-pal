@@ -32,21 +32,21 @@ export interface AnalysisSummary {
   byType: Record<string, number>;
 }
 
-// ── Taguchi Robust Scoring ────────────────────────────────────────────
+// ── Pull Signal Scoring (Taguchi S/N under the hood) ──────────────────
 export interface RobustScore {
-  /** Raw desirability score (multi-factor, 0-100) */
+  /** Multi-factor card score (0-100) */
   desirability: number;
   /** Mean score across uncertainty simulations */
   meanScore: number;
-  /** Variance of score across simulations */
+  /** Variance across simulations — higher = less stable */
   variance: number;
-  /** Taguchi S/N ratio: 10*log10(mean²/variance). Higher = more robust */
-  snRatio: number;
-  /** Expected loss vs user's ideal card: variance + (mean - target)² */
-  expectedLoss: number;
-  /** Human-readable robustness grade */
+  /** Signal Strength: 10*log10(mean²/variance), capped at 40 */
+  signalStrength: number;
+  /** Risk vs ideal card profile: variance + (mean - target)² */
+  risk: number;
+  /** Stability grade */
   grade: "exceptional" | "strong" | "moderate" | "weak";
-  /** One-line recommendation */
+  /** One-line insight */
   insight: string;
 }
 
@@ -54,10 +54,10 @@ export interface AnalysisResult {
   athlete: string;
   summary: AnalysisSummary;
   results: (ChecklistEntry & { displayOdds: string; robust?: RobustScore })[];
-  /** Product-level Taguchi summary across all matched cards */
+  /** Product-level pull signal summary */
   robustSummary?: {
-    bestRobustCard: string;
-    avgSnRatio: number;
+    bestSignalCard: string;
+    avgSignalStrength: number;
     recommendation: string;
   };
 }
@@ -528,15 +528,15 @@ export async function analyzeChecklist(opts: {
   });
 
   // Product-level summary
-  const cardsWithSn = resultsWithRobust.filter((r) => r.robust && isFinite(r.robust.snRatio));
+  const cardsWithSn = resultsWithRobust.filter((r) => r.robust && isFinite(r.robust.signalStrength));
   let robustSummary: AnalysisResult["robustSummary"];
   if (cardsWithSn.length > 0) {
-    const avgSn = cardsWithSn.reduce((s, r) => s + r.robust!.snRatio, 0) / cardsWithSn.length;
-    const best = cardsWithSn.reduce((a, b) => (a.robust!.snRatio > b.robust!.snRatio ? a : b));
+    const avgSn = cardsWithSn.reduce((s, r) => s + r.robust!.signalStrength, 0) / cardsWithSn.length;
+    const best = cardsWithSn.reduce((a, b) => (a.robust!.signalStrength > b.robust!.signalStrength ? a : b));
     const bestLabel = `${best.section} — ${best.rawText}`.slice(0, 80);
     robustSummary = {
-      bestRobustCard: bestLabel,
-      avgSnRatio: Math.round(avgSn * 10) / 10,
+      bestSignalCard: bestLabel,
+      avgSignalStrength: Math.round(avgSn * 10) / 10,
       recommendation: generateProductRecommendation(resultsWithRobust, opts.athlete),
     };
   }
@@ -655,8 +655,8 @@ function computeRobustScore(entry: ChecklistEntry, athlete: string): RobustScore
     desirability: Math.round(baseDesirability),
     meanScore: Math.round(mean * 10) / 10,
     variance: Math.round(variance * 10) / 10,
-    snRatio: Math.round(cappedSn * 10) / 10,
-    expectedLoss: Math.round(expectedLoss),
+    signalStrength: Math.round(cappedSn * 10) / 10,
+    risk: Math.round(expectedLoss),
     grade,
     insight,
   };
@@ -690,7 +690,7 @@ function generateProductRecommendation(
   const withRobust = results.filter((r) => r.robust);
   if (!withRobust.length) return "Insufficient data for a product recommendation.";
 
-  const avgSn = withRobust.reduce((s, r) => s + r.robust!.snRatio, 0) / withRobust.length;
+  const avgSn = withRobust.reduce((s, r) => s + r.robust!.signalStrength, 0) / withRobust.length;
   const premiumPlus = withRobust.filter((r) => r.rarityTier === "elite" || r.rarityTier === "premium");
   const strongPremium = premiumPlus.filter((r) => r.robust!.grade === "exceptional" || r.robust!.grade === "strong");
 
