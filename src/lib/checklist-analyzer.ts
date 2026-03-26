@@ -376,22 +376,31 @@ export function findMatches(entries: ChecklistEntry[], athlete: string, threshol
 
 /**
  * Known parallel tiers common across Bowman Chrome, Topps Chrome, etc.
- * { label, serial, tier, cardTypes }
+ * defaultPackOdds = estimated 1-in-N packs for a specific card in hobby format.
+ * These are per-card odds calculated as: (base insertion rate) × (set size).
+ * E.g., Refractor ~1:3 packs insertion, 100-card set → ~1:300 for a specific card.
  */
-const KNOWN_PARALLELS: { label: string; serial: number | null; tier: RarityTier; cardTypes: string[] }[] = [
-  { label: "Refractor", serial: null, tier: "notable", cardTypes: ["parallel"] },
-  { label: "Purple Refractor /250", serial: 250, tier: "notable", cardTypes: ["parallel"] },
-  { label: "Blue Refractor /150", serial: 150, tier: "notable", cardTypes: ["parallel"] },
-  { label: "Green Refractor /99", serial: 99, tier: "notable", cardTypes: ["parallel"] },
-  { label: "Gold Refractor /50", serial: 50, tier: "premium", cardTypes: ["parallel"] },
-  { label: "Orange Refractor /25", serial: 25, tier: "premium", cardTypes: ["parallel"] },
-  { label: "Red Refractor /5", serial: 5, tier: "elite", cardTypes: ["parallel"] },
-  { label: "SuperFractor 1/1", serial: 1, tier: "elite", cardTypes: ["parallel"] },
+const KNOWN_PARALLELS: {
+  label: string;
+  serial: number | null;
+  tier: RarityTier;
+  cardTypes: string[];
+  defaultPackOdds: number;
+}[] = [
+  { label: "Refractor", serial: null, tier: "notable", cardTypes: ["parallel"], defaultPackOdds: 300 },
+  { label: "Purple Refractor /250", serial: 250, tier: "notable", cardTypes: ["parallel"], defaultPackOdds: 960 },
+  { label: "Blue Refractor /150", serial: 150, tier: "notable", cardTypes: ["parallel"], defaultPackOdds: 1600 },
+  { label: "Green Refractor /99", serial: 99, tier: "notable", cardTypes: ["parallel"], defaultPackOdds: 2400 },
+  { label: "Gold Refractor /50", serial: 50, tier: "premium", cardTypes: ["parallel"], defaultPackOdds: 4800 },
+  { label: "Orange Refractor /25", serial: 25, tier: "premium", cardTypes: ["parallel"], defaultPackOdds: 9600 },
+  { label: "Red Refractor /5", serial: 5, tier: "elite", cardTypes: ["parallel"], defaultPackOdds: 48000 },
+  { label: "SuperFractor 1/1", serial: 1, tier: "elite", cardTypes: ["parallel"], defaultPackOdds: 240000 },
 ];
 
 /**
  * Detect which parallel tiers are mentioned in the full checklist sections,
  * then generate implied parallel entries for each matched athlete card.
+ * Estimates per-card odds using set size from the parent section.
  */
 function generateImpliedParallels(
   allEntries: ChecklistEntry[],
@@ -399,18 +408,18 @@ function generateImpliedParallels(
 ): ChecklistEntry[] {
   if (matches.length === 0) return [];
 
-  // Collect all section names to detect if parallels are explicitly listed
+  // Count cards per section to scale odds by set size
+  const sectionCardCounts: Record<string, number> = {};
+  for (const e of allEntries) {
+    sectionCardCounts[e.section] = (sectionCardCounts[e.section] || 0) + 1;
+  }
+
   const allSections = new Set(allEntries.map((e) => e.section.toLowerCase()));
   const allSectionsStr = [...allSections].join(" ");
-
-  // Check which parallel tiers are NOT already explicitly represented in matches
-  // (i.e., the athlete doesn't already have a "Gold Refractor" card found by the parser)
-  const matchedSectionsLower = new Set(matches.map((m) => m.section.toLowerCase()));
 
   const impliedCards: ChecklistEntry[] = [];
 
   for (const match of matches) {
-    // Only generate parallels for base cards, base inserts, and prospect cards
     const isBaseOrInsert = match.cardTypes.includes("base") ||
       match.cardTypes.includes("insert") ||
       match.cardTypes.includes("unknown") ||
@@ -419,26 +428,24 @@ function generateImpliedParallels(
 
     if (!isBaseOrInsert) continue;
 
+    // Use actual set size to refine odds estimates
+    const setSize = sectionCardCounts[match.section] || 100;
+
     for (const parallel of KNOWN_PARALLELS) {
       const parallelLower = parallel.label.toLowerCase();
-      // Skip if this athlete already has an explicit card in a matching parallel section
       const alreadyHasParallel = matches.some((m) => {
         const secLower = m.section.toLowerCase();
         return secLower.includes(parallelLower.split(" ")[0]) && m !== match;
       });
       if (alreadyHasParallel) continue;
 
-      // Check if the checklist mentions this parallel type anywhere in section headers
-      const parallelKeyword = parallelLower.split(" ")[0]; // "gold", "orange", etc.
+      const parallelKeyword = parallelLower.split(" ")[0];
       const mentionedInChecklist = allSectionsStr.includes(parallelKeyword) ||
         allSectionsStr.includes("refractor") ||
         allSectionsStr.includes("parallel") ||
         allSectionsStr.includes("variation");
 
-      // For standard parallels (refractor, gold, etc.), generate even without explicit mention
-      // since nearly all Chrome/Prizm products have them
       const isStandardParallel = ["refractor", "gold", "orange", "red", "superfractor"].includes(parallelKeyword);
-
       if (!mentionedInChecklist && !isStandardParallel) continue;
 
       const sectionLabel = `${match.section} — ${parallel.label} (implied)`;
@@ -447,6 +454,9 @@ function generateImpliedParallels(
         parallel.serial,
         parallel.cardTypes,
       );
+
+      // Scale default odds by actual set size (base assumption is 100-card set)
+      const scaledOdds = Math.round(parallel.defaultPackOdds * (setSize / 100));
 
       impliedCards.push({
         section: sectionLabel,
@@ -458,8 +468,8 @@ function generateImpliedParallels(
         serialNumber: parallel.serial,
         rarityTier: tier,
         score,
-        matchedOdds: null,
-        estimatedPackOdds: null,
+        matchedOdds: { name: parallel.label, rawText: `~1:${scaledOdds} packs (estimated)`, unit: "packs" },
+        estimatedPackOdds: scaledOdds,
       });
     }
   }
