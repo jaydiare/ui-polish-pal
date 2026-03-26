@@ -64,9 +64,12 @@ export interface AnalysisResult {
 
 // ── Constants ──────────────────────────────────────────────────────────
 const SECTION_HINTS = [
-  "base", "insert", "autograph", "auto", "relic", "memorabilia", "variation",
+  "base", "insert", "autograph", "autographs", "auto", "relic", "memorabilia", "variation",
   "parallel", "prizm", "refractor", "signatures", "prospects", "rookie",
   "image variation", "short print", "ssp", "case hit", "downtown", "kaboom",
+  "superfractor", "gold", "orange", "red", "blue", "green", "black", "purple", "pink",
+  "silver", "sepia", "shimmer", "mojo", "x-fractor", "wave", "nebula", "finite",
+  "chrome", "optic", "select", "mosaic", "bowman", "sapphire", "fractors",
 ];
 
 const CARD_TYPE_KEYWORDS: Record<string, string[]> = {
