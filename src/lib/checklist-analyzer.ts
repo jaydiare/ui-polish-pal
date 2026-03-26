@@ -445,7 +445,142 @@ async function loadPdfJs(): Promise<any> {
   });
 }
 
-// ── PDF text extraction (browser) ─────────────────────────────────────
+// ── PDF text extraction (browser) — multi-column aware ────────────────
+
+interface TextItem {
+  str: string;
+  x: number;
+  y: number;
+  width: number;
+  hasEOL: boolean;
+}
+
+/**
+ * Detect column boundaries by clustering x-positions of text items.
+ * Returns sorted column left-edge breakpoints.
+ */
+function detectColumns(items: TextItem[], pageWidth: number): number[] {
+  if (items.length < 5) return [0];
+
+  // Build histogram of x-positions in coarse buckets
+  const bucketSize = Math.max(8, pageWidth / 80);
+  const hist = new Map<number, number>();
+  for (const it of items) {
+    const bucket = Math.floor(it.x / bucketSize);
+    hist.set(bucket, (hist.get(bucket) || 0) + 1);
+  }
+
+  // Find peaks — buckets with significant item counts
+  const threshold = items.length * 0.04;
+  const peaks: number[] = [];
+  const sortedBuckets = [...hist.entries()].sort((a, b) => a[0] - b[0]);
+
+  for (let i = 0; i < sortedBuckets.length; i++) {
+    const [bucket, count] = sortedBuckets[i];
+    if (count < threshold) continue;
+    // Only add if sufficiently far from previous peak
+    const xPos = bucket * bucketSize;
+    if (peaks.length === 0 || xPos - peaks[peaks.length - 1] > pageWidth * 0.15) {
+      peaks.push(xPos);
+    }
+  }
+
+  // If only one peak or columns too close, treat as single-column
+  if (peaks.length <= 1) return [0];
+
+  return peaks;
+}
+
+/**
+ * Assign each text item to the nearest column and reconstruct lines
+ * within each column, processing columns left-to-right.
+ */
+function reconstructMultiColumnText(items: TextItem[], pageWidth: number): string[] {
+  const colEdges = detectColumns(items, pageWidth);
+
+  if (colEdges.length <= 1) {
+    // Single column — use simple y-based line reconstruction
+    return reconstructSingleColumnLines(items);
+  }
+
+  // Assign items to columns based on nearest column edge
+  const columns: TextItem[][] = colEdges.map(() => []);
+  for (const it of items) {
+    let bestCol = 0;
+    let bestDist = Infinity;
+    for (let c = 0; c < colEdges.length; c++) {
+      const dist = Math.abs(it.x - colEdges[c]);
+      if (dist < bestDist) { bestDist = dist; bestCol = c; }
+    }
+    columns[bestCol].push(it);
+  }
+
+  // Process each column independently, left-to-right
+  const allLines: string[] = [];
+  for (const colItems of columns) {
+    if (colItems.length === 0) continue;
+    const lines = reconstructSingleColumnLines(colItems);
+    allLines.push(...lines);
+  }
+
+  return allLines;
+}
+
+/**
+ * Reconstruct lines from text items in a single column using y-position.
+ * Groups items by y-coordinate (with tolerance), sorts left-to-right within
+ * each row, then outputs rows top-to-bottom.
+ */
+function reconstructSingleColumnLines(items: TextItem[]): string[] {
+  if (items.length === 0) return [];
+
+  // Sort by y descending (PDF y=0 is bottom), then x ascending
+  const sorted = [...items].sort((a, b) => {
+    if (Math.abs(a.y - b.y) > 2) return b.y - a.y; // higher y first (top of page)
+    return a.x - b.x;
+  });
+
+  // Group into rows by y-proximity
+  const rows: TextItem[][] = [];
+  let currentRow: TextItem[] = [sorted[0]];
+  let currentY = sorted[0].y;
+
+  for (let i = 1; i < sorted.length; i++) {
+    const it = sorted[i];
+    if (Math.abs(it.y - currentY) <= 2) {
+      currentRow.push(it);
+    } else {
+      rows.push(currentRow);
+      currentRow = [it];
+      currentY = it.y;
+    }
+  }
+  rows.push(currentRow);
+
+  // Build lines: sort each row by x, join with appropriate spacing
+  const lines: string[] = [];
+  for (const row of rows) {
+    row.sort((a, b) => a.x - b.x);
+    let line = "";
+    for (let i = 0; i < row.length; i++) {
+      const it = row[i];
+      if (i > 0) {
+        const prev = row[i - 1];
+        const gap = it.x - (prev.x + prev.width);
+        // Add space if there's a visible gap between items
+        if (gap > 1 && !line.endsWith(" ") && !it.str.startsWith(" ")) {
+          line += " ";
+        }
+      }
+      line += it.str;
+    }
+    const trimmed = line.trim();
+    if (trimmed) lines.push(trimmed);
+  }
+
+  return lines;
+}
+
 export async function extractTextFromFile(file: File): Promise<string> {
   const name = file.name.toLowerCase();
   if (name.endsWith(".txt") || name.endsWith(".csv")) {
@@ -456,32 +591,24 @@ export async function extractTextFromFile(file: File): Promise<string> {
     pdfjsLib.GlobalWorkerOptions.workerSrc = `https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.9.155/pdf.worker.min.js`;
     const arrayBuffer = await file.arrayBuffer();
     const pdf = await pdfjsLib.getDocument({ data: arrayBuffer }).promise;
-    const pages: string[] = [];
+    const allLines: string[] = [];
     for (let i = 1; i <= pdf.numPages; i++) {
       const page = await pdf.getPage(i);
+      const viewport = page.getViewport({ scale: 1 });
       const content = await page.getTextContent();
-      // Reconstruct lines using y-position changes and hasEOL flags
-      let currentLine = "";
-      let lastY: number | null = null;
-      for (const item of content.items as any[]) {
-        const y = item.transform ? item.transform[5] : null;
-        // Detect line break: significant y-position change
-        if (lastY !== null && y !== null && Math.abs(y - lastY) > 2) {
-          if (currentLine.trim()) pages.push(currentLine.trim());
-          currentLine = "";
-        }
-        currentLine += item.str;
-        if (item.hasEOL) {
-          if (currentLine.trim()) pages.push(currentLine.trim());
-          currentLine = "";
-          lastY = null;
-        } else {
-          lastY = y;
-        }
-      }
-      if (currentLine.trim()) pages.push(currentLine.trim());
+      const items: TextItem[] = (content.items as any[])
+        .filter((it: any) => it.str !== undefined)
+        .map((it: any) => ({
+          str: it.str,
+          x: it.transform ? it.transform[4] : 0,
+          y: it.transform ? it.transform[5] : 0,
+          width: it.width || 0,
+          hasEOL: !!it.hasEOL,
+        }));
+      const lines = reconstructMultiColumnText(items, viewport.width);
+      allLines.push(...lines);
     }
-    return pages.join("\n");
+    return allLines.join("\n");
   }
   throw new Error(`Unsupported file type: ${file.name}`);
 }
