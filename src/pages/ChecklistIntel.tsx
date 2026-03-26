@@ -286,27 +286,27 @@ const ChecklistIntel = () => {
                 ))}
               </div>
 
-              {/* Taguchi Robust Summary */}
+              {/* Pull Signal Analysis */}
               {result.robustSummary && (
                 <div className="glass-panel rounded-xl p-5 border border-vzla-yellow/20">
                   <div className="flex items-center gap-2 mb-3">
-                    <span className="text-lg">📐</span>
-                    <h3 className="font-display font-bold text-foreground">Taguchi Robust Analysis</h3>
+                    <span className="text-lg">📡</span>
+                    <h3 className="font-display font-bold text-foreground">Pull Signal Analysis</h3>
                   </div>
                   <p className="text-sm text-foreground mb-3 leading-relaxed">
                     {result.robustSummary.recommendation}
                   </p>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
                     <div className="bg-secondary/60 rounded-lg p-3">
-                      <span className="text-muted-foreground">Best Robust Card</span>
-                      <p className="text-foreground font-medium mt-0.5 truncate">{result.robustSummary.bestRobustCard}</p>
+                      <span className="text-muted-foreground">Best Signal Card</span>
+                      <p className="text-foreground font-medium mt-0.5 truncate">{result.robustSummary.bestSignalCard}</p>
                     </div>
                     <div className="bg-secondary/60 rounded-lg p-3">
-                      <span className="text-muted-foreground">Avg S/N Ratio</span>
+                      <span className="text-muted-foreground">Avg Signal Strength</span>
                       <p className="text-foreground font-medium mt-0.5">
-                        {result.robustSummary.avgSnRatio} dB
+                        {result.robustSummary.avgSignalStrength} dB
                         <span className="text-muted-foreground ml-1">
-                          ({result.robustSummary.avgSnRatio >= 22 ? "highly predictable" : result.robustSummary.avgSnRatio >= 15 ? "reliable" : "variable"})
+                          ({result.robustSummary.avgSignalStrength >= 22 ? "highly predictable" : result.robustSummary.avgSignalStrength >= 15 ? "reliable" : "variable"})
                         </span>
                       </p>
                     </div>
