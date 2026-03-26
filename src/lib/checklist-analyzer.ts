@@ -434,23 +434,11 @@ function withTimeout<T>(promise: Promise<T>, ms: number, label: string): Promise
 async function loadPdfJs(): Promise<any> {
   if ((window as any).pdfjsLib) return (window as any).pdfjsLib;
 
-  // Try ESM dynamic import first (15s timeout)
-  try {
-    const mod = await withTimeout(
-      Function('return import("https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.9.155/pdf.min.mjs")')() as Promise<any>,
-      15_000,
-      "PDF.js ESM load",
-    );
-    (window as any).pdfjsLib = mod;
-    return mod;
-  } catch {
-    // ESM failed — fall back to UMD script tag
-  }
-
   return withTimeout(
     new Promise<any>((resolve, reject) => {
       const s = document.createElement("script");
       s.src = "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.9.155/pdf.min.js";
+      s.async = true;
       s.onload = () => {
         const lib = (window as any).pdfjsLib;
         if (lib) {
@@ -463,7 +451,7 @@ async function loadPdfJs(): Promise<any> {
       document.head.appendChild(s);
     }),
     15_000,
-    "PDF.js UMD load",
+    "Loading PDF library",
   );
 }
 
@@ -612,18 +600,25 @@ export async function extractTextFromFile(file: File): Promise<string> {
     console.log("[ChecklistIntel] Loading pdf.js library…");
     const pdfjsLib = await withTimeout(loadPdfJs(), 20_000, "Loading PDF library");
     console.log("[ChecklistIntel] pdf.js loaded, configuring worker…");
-    // Set worker src to satisfy pdf.js warning, but use disableWorker for reliability
     if (pdfjsLib.GlobalWorkerOptions) {
-      pdfjsLib.GlobalWorkerOptions.workerSrc = `https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.9.155/pdf.worker.min.js`;
+      pdfjsLib.GlobalWorkerOptions.workerSrc = "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.9.155/pdf.worker.min.js";
     }
+
     const arrayBuffer = await file.arrayBuffer();
     console.log(`[ChecklistIntel] PDF file read (${(arrayBuffer.byteLength / 1024).toFixed(0)} KB), opening document…`);
-    const loadingTask = pdfjsLib.getDocument({ data: arrayBuffer, disableWorker: true });
-    const pdf: any = await withTimeout(
-      loadingTask.promise,
-      60_000,
-      "Opening PDF document",
-    );
+
+    let pdf: any;
+    try {
+      const loadingTask = pdfjsLib.getDocument({ data: arrayBuffer });
+      pdf = await withTimeout(loadingTask.promise, 60_000, "Opening PDF document");
+    } catch (err) {
+      console.warn("[ChecklistIntel] Worker-based PDF open failed; retrying without worker", err);
+      if (pdfjsLib.GlobalWorkerOptions) {
+        pdfjsLib.GlobalWorkerOptions.workerSrc = "";
+      }
+      const fallbackTask = pdfjsLib.getDocument({ data: arrayBuffer, disableWorker: true });
+      pdf = await withTimeout(fallbackTask.promise, 60_000, "Opening PDF document (fallback)");
+    }
     console.log(`[ChecklistIntel] PDF opened: ${pdf.numPages} pages`);
     const allLines: string[] = [];
     for (let i = 1; i <= pdf.numPages; i++) {
