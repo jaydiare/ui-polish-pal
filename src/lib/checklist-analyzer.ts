@@ -528,15 +528,15 @@ export async function analyzeChecklist(opts: {
   });
 
   // Product-level summary
-  const cardsWithSn = resultsWithRobust.filter((r) => r.robust && isFinite(r.robust.snRatio));
+  const cardsWithSn = resultsWithRobust.filter((r) => r.robust && isFinite(r.robust.signalStrength));
   let robustSummary: AnalysisResult["robustSummary"];
   if (cardsWithSn.length > 0) {
-    const avgSn = cardsWithSn.reduce((s, r) => s + r.robust!.snRatio, 0) / cardsWithSn.length;
-    const best = cardsWithSn.reduce((a, b) => (a.robust!.snRatio > b.robust!.snRatio ? a : b));
+    const avgSn = cardsWithSn.reduce((s, r) => s + r.robust!.signalStrength, 0) / cardsWithSn.length;
+    const best = cardsWithSn.reduce((a, b) => (a.robust!.signalStrength > b.robust!.signalStrength ? a : b));
     const bestLabel = `${best.section} — ${best.rawText}`.slice(0, 80);
     robustSummary = {
-      bestRobustCard: bestLabel,
-      avgSnRatio: Math.round(avgSn * 10) / 10,
+      bestSignalCard: bestLabel,
+      avgSignalStrength: Math.round(avgSn * 10) / 10,
       recommendation: generateProductRecommendation(resultsWithRobust, opts.athlete),
     };
   }
