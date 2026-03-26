@@ -67,6 +67,7 @@ const ChecklistIntel = () => {
   const [checklistFile, setChecklistFile] = useState<File | null>(null);
   const [oddsFile, setOddsFile] = useState<File | null>(null);
   const [athlete, setAthlete] = useState("");
+  const [multiResults, setMultiResults] = useState<AnalysisResult[]>([]);
   const [formatName, setFormatName] = useState("auto-detect");
   const [packsPerBox, setPacksPerBox] = useState("");
   const [boxesPerCase, setBoxesPerCase] = useState("12");
