@@ -443,6 +443,13 @@ export async function extractTextFromFile(file: File): Promise<string> {
   throw new Error(`Unsupported file type: ${file.name}`);
 }
 
+export function previewText(text: string, maxLines = 20, maxChars = 4000): string {
+  const lines = text.split("\n").map(normalizeSpaces).filter(Boolean);
+  let preview = lines.slice(0, maxLines).join("\n");
+  if (preview.length > maxChars) preview = preview.slice(0, maxChars).trimEnd() + "\n...";
+  return preview;
+}
+
 // ── Main analysis pipeline ─────────────────────────────────────────────
 export async function analyzeChecklist(opts: {
   checklistFile: File;

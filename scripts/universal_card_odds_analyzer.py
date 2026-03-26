@@ -30,9 +30,13 @@ from pathlib import Path
 from typing import Dict, Iterable, List, Optional, Tuple
 
 try:
-    import PyPDF2
+    import PyPDF2  # type: ignore
 except Exception:  # pragma: no cover
     PyPDF2 = None
+try:
+    import pypdf  # type: ignore
+except Exception:  # pragma: no cover
+    pypdf = None
 
 SECTION_HINTS = [
     "base", "insert", "autograph", "auto", "relic", "memorabilia", "variation",
@@ -108,11 +112,12 @@ def extract_text(path: str) -> str:
     if suffix == ".csv":
         return p.read_text(encoding="utf-8", errors="ignore")
     if suffix == ".pdf":
-        if PyPDF2 is None:
-            raise RuntimeError("PyPDF2 is required to read PDF files.")
+        reader_mod = PyPDF2 or pypdf
+        if reader_mod is None:
+            raise RuntimeError("PyPDF2 or pypdf is required to read PDF files.")
         text_parts: List[str] = []
         with p.open("rb") as f:
-            reader = PyPDF2.PdfReader(f)
+            reader = reader_mod.PdfReader(f)
             for page in reader.pages:
                 text_parts.append(page.extract_text() or "")
         return "\n".join(text_parts)
@@ -121,6 +126,16 @@ def extract_text(path: str) -> str:
 
 def normalize_spaces(text: str) -> str:
     return re.sub(r"\s+", " ", text).strip()
+
+
+def preview_text(text: str, max_lines: int = 20, max_chars: int = 4000) -> str:
+    """Return a compact preview of parsed text for debugging extraction issues."""
+    lines = [normalize_spaces(x) for x in text.splitlines()]
+    lines = [x for x in lines if x]
+    preview = "\n".join(lines[:max_lines])
+    if len(preview) > max_chars:
+        preview = preview[:max_chars].rstrip() + "\n..."
+    return preview
 
 
 def normalize_name(text: str) -> str:
@@ -138,12 +153,38 @@ def looks_like_header(line: str) -> bool:
     s = normalize_spaces(line)
     if len(s) < 3 or len(s) > 80:
         return False
+
     letters = re.sub(r"[^A-Za-z]", "", s)
     if not letters:
         return False
-    upper_ratio = sum(1 for c in s if c.isupper()) / max(1, sum(1 for c in s if c.isalpha()))
+
+    # Lines starting with a card code are card entries, not headers.
+    # Examples: "AD-8 Kristian Campbell ...", "BCP-12 ...", "#45 ..."
+    if re.match(r"^#?\d+[A-Z]?\s", s) or re.match(r"^[A-Z]{1,6}-?\d+\s", s):
+        return False
+
+    words = s.split(" ")
+
+    # Mixed-case, multi-word lines usually describe player entries, not section titles.
+    mixed_case_words = [w for w in words if re.search(r"[A-Z]", w) and re.search(r"[a-z]", w)]
+    if len(words) >= 4 and len(mixed_case_words) >= 2:
+        return False
+
+    alpha_count = sum(1 for c in s if c.isalpha())
+    upper_count = sum(1 for c in s if c.isupper())
+    upper_ratio = upper_count / max(1, alpha_count)
+
+    # Strong header signal: mostly uppercase and title-like.
+    if upper_ratio > 0.7:
+        return True
+
+    # Hint-based detection should be conservative; many player lines contain
+    # words like "Rookie" or "Autograph".
     hint = any(h in s.lower() for h in SECTION_HINTS)
-    return upper_ratio > 0.6 or hint
+    if hint and len(words) <= 5 and upper_ratio > 0.4:
+        return True
+
+    return False
 
 
 def tokenize(line: str) -> List[str]:
@@ -494,9 +535,14 @@ def main() -> int:
     parser.add_argument("--manual-odds", action="append", default=[], help='Manual odds override like "gold=1:480" or "downtown=240 packs"')
     parser.add_argument("--csv-out", help="Optional CSV export path")
     parser.add_argument("--json-out", help="Optional JSON export path")
+    parser.add_argument("--show-preview", action="store_true", help="Print parsed checklist text preview before analysis")
     args = parser.parse_args()
 
     checklist_text = extract_text(args.checklist)
+    if args.show_preview:
+        print("=== Parsed checklist text preview ===")
+        print(preview_text(checklist_text))
+        print("=== End preview ===\n")
     entries = parse_checklist(checklist_text)
     matches = find_matches(entries, args.athlete)
     matches.sort(key=lambda e: (e.score, -(e.serial_number or 999999)), reverse=True)
