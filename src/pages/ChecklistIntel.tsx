@@ -376,6 +376,38 @@ const ChecklistIntel = () => {
                       </p>
                     </div>
                   </div>
+
+                  {/* Beginner-friendly metric explainer */}
+                  <Accordion type="single" collapsible className="mt-3">
+                    <AccordionItem value="metrics-help" className="border-border/30">
+                      <AccordionTrigger className="text-xs text-muted-foreground hover:text-foreground py-2">
+                        💡 What do these metrics mean?
+                      </AccordionTrigger>
+                      <AccordionContent className="text-xs text-muted-foreground space-y-2 pb-2">
+                        <p>
+                          <strong className="text-foreground">Card Score (0–100):</strong> How desirable a card is based on what makes it special — autographs, relics, serial numbering (/50, /25, etc.), and rookie status. Higher = more valuable pull.
+                        </p>
+                        <p>
+                          <strong className="text-foreground">Signal Strength (dB):</strong> How confident we are in the card's value. Think of it like a Wi-Fi signal — higher means we're more sure this card will hold its worth regardless of odds uncertainty. 20+ is strong, 10–20 is moderate.
+                        </p>
+                        <p>
+                          <strong className="text-foreground">Grade:</strong> A quick verdict on the card's pull quality:
+                        </p>
+                        <ul className="list-disc ml-4 space-y-0.5">
+                          <li><span className="text-vzla-yellow font-medium">🎯 Exceptional</span> — Chase card, worth hunting for</li>
+                          <li><span className="text-vzla-mint font-medium">✅ Strong</span> — Solid pull with reliable value</li>
+                          <li><span className="text-vzla-purple font-medium">⚡ Moderate</span> — Decent but uncertain upside</li>
+                          <li><span className="text-muted-foreground font-medium">📄 Weak</span> — Common card, low collector demand</li>
+                        </ul>
+                        <p>
+                          <strong className="text-foreground">Risk:</strong> How far a card is from being an "ideal hit." Lower risk = closer to the dream pull. High risk means the card is common or the odds are unpredictable.
+                        </p>
+                        <p>
+                          <strong className="text-foreground">Estimated Odds:</strong> Roughly how many packs you'd need to open to pull this specific card. "1 in 4,800 packs" means you'd statistically need ~4,800 packs (or ~200 hobby boxes) to find it.
+                        </p>
+                      </AccordionContent>
+                    </AccordionItem>
+                  </Accordion>
                 </div>
               )}
 
