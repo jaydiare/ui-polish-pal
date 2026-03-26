@@ -33,6 +33,28 @@ function makeFile(content: string, name: string): File {
   return file;
 }
 
+const MIXED_CASE_CHECKLIST = `2024 Topps Chrome Baseball Checklist
+
+Base Set
+1 Ronald Acuña Jr. - Atlanta Braves
+2 Shohei Ohtani - Los Angeles Dodgers
+
+Gold Refractor /50
+1 Ronald Acuña Jr. - Atlanta Braves
+
+Autographs
+RA Ronald Acuña Jr. - Atlanta Braves
+
+SuperFractor 1/1
+1 Ronald Acuña Jr. - Atlanta Braves
+
+Red Refractor /5
+1 Ronald Acuña Jr. - Atlanta Braves
+
+Rookie Autographs
+RC1 Ronald Acuña Jr. - Atlanta Braves
+`;
+
 describe("parseChecklist", () => {
   it("detects sections and card types from uppercase headers", () => {
     const entries = parseChecklist(SAMPLE_CHECKLIST);
@@ -48,6 +70,30 @@ describe("parseChecklist", () => {
     const entries = parseChecklist(SAMPLE_CHECKLIST);
     const withSerial = entries.filter((e) => e.serialNumber !== null);
     expect(withSerial.length).toBeGreaterThan(0);
+  });
+
+  it("detects mixed-case section headers", () => {
+    const entries = parseChecklist(MIXED_CASE_CHECKLIST);
+    const acunaCards = entries.filter((e) => e.athlete.toLowerCase().includes("acuña") || e.athlete.toLowerCase().includes("acuna"));
+
+    expect(acunaCards.length).toBeGreaterThanOrEqual(4);
+
+    const sections = new Set(acunaCards.map((e) => e.section));
+    // Should detect multiple distinct sections, not just "Uncategorized"
+    expect(sections.has("Uncategorized")).toBe(false);
+    expect(sections.size).toBeGreaterThanOrEqual(4);
+
+    // Autograph cards should be typed correctly
+    const autoCards = acunaCards.filter((e) => e.cardTypes.includes("autograph"));
+    expect(autoCards.length).toBeGreaterThanOrEqual(1);
+
+    // Serial numbered cards should be detected
+    const serialCards = acunaCards.filter((e) => e.serialNumber !== null);
+    expect(serialCards.length).toBeGreaterThanOrEqual(2);
+
+    // Elite tier for 1/1 and /5
+    const eliteCards = acunaCards.filter((e) => e.rarityTier === "elite");
+    expect(eliteCards.length).toBeGreaterThanOrEqual(1);
   });
 });
 
