@@ -376,6 +376,38 @@ const ChecklistIntel = () => {
                       </p>
                     </div>
                   </div>
+
+                  {/* Beginner-friendly metric explainer */}
+                  <Accordion type="single" collapsible className="mt-3">
+                    <AccordionItem value="metrics-help" className="border-border/30">
+                      <AccordionTrigger className="text-xs text-muted-foreground hover:text-foreground py-2">
+                        💡 What do these metrics mean?
+                      </AccordionTrigger>
+                      <AccordionContent className="text-xs text-muted-foreground space-y-2 pb-2">
+                        <p>
+                          <strong className="text-foreground">Card Score (0–100):</strong> How desirable a card is based on what makes it special — autographs, relics, serial numbering (/50, /25, etc.), and rookie status. Higher = more valuable pull.
+                        </p>
+                        <p>
+                          <strong className="text-foreground">Signal Strength (dB):</strong> How confident we are in the card's value. Think of it like a Wi-Fi signal — higher means we're more sure this card will hold its worth regardless of odds uncertainty. 20+ is strong, 10–20 is moderate.
+                        </p>
+                        <p>
+                          <strong className="text-foreground">Grade:</strong> A quick verdict on the card's pull quality:
+                        </p>
+                        <ul className="list-disc ml-4 space-y-0.5">
+                          <li><span className="text-vzla-yellow font-medium">🎯 Exceptional</span> — Chase card, worth hunting for</li>
+                          <li><span className="text-vzla-mint font-medium">✅ Strong</span> — Solid pull with reliable value</li>
+                          <li><span className="text-vzla-purple font-medium">⚡ Moderate</span> — Decent but uncertain upside</li>
+                          <li><span className="text-muted-foreground font-medium">📄 Weak</span> — Common card, low collector demand</li>
+                        </ul>
+                        <p>
+                          <strong className="text-foreground">Risk:</strong> How far a card is from being an "ideal hit." Lower risk = closer to the dream pull. High risk means the card is common or the odds are unpredictable.
+                        </p>
+                        <p>
+                          <strong className="text-foreground">Estimated Odds:</strong> Roughly how many packs you'd need to open to pull this specific card. "1 in 4,800 packs" means you'd statistically need ~4,800 packs (or ~200 hobby boxes) to find it.
+                        </p>
+                      </AccordionContent>
+                    </AccordionItem>
+                  </Accordion>
                 </div>
               )}
 
@@ -494,7 +526,7 @@ function CardResult({ card }: { card: ChecklistEntry & { displayOdds: string; ro
                 </span>
               </TooltipTrigger>
               <TooltipContent side="top" className="max-w-[220px]">
-                <p>Multi-factor score from autographs, relics, serial numbering, rookie status, and section quality.</p>
+                <p>How desirable this card is (0–100) based on autographs, relics, serial numbering, and rookie status.</p>
               </TooltipContent>
             </Tooltip>
 
@@ -504,8 +536,8 @@ function CardResult({ card }: { card: ChecklistEntry & { displayOdds: string; ro
                   Signal: <span className="text-foreground font-medium">{r.signalStrength} dB</span>
                 </span>
               </TooltipTrigger>
-              <TooltipContent side="top" className="max-w-[240px]">
-                <p>Signal Strength — higher means more predictable value under odds uncertainty. Simulated across 60 scenarios.</p>
+              <TooltipContent side="top" className="max-w-[260px]">
+                <p>Like a Wi-Fi signal for card value — higher means we're more confident this card will hold its worth. 20+ = strong, 10–20 = moderate.</p>
               </TooltipContent>
             </Tooltip>
 
@@ -515,8 +547,8 @@ function CardResult({ card }: { card: ChecklistEntry & { displayOdds: string; ro
                   {GRADE_LABELS[r.grade]}
                 </span>
               </TooltipTrigger>
-              <TooltipContent side="top" className="max-w-[240px]">
-                <p>{r.insight}</p>
+              <TooltipContent side="top" className="max-w-[260px]">
+                <p>{r.grade === "exceptional" ? "🔥 Chase card — worth hunting for!" : r.grade === "strong" ? "Solid pull with reliable collector demand." : r.grade === "moderate" ? "Decent card but uncertain upside — odds or demand may vary." : "Common card with low collector premium."}{r.insight ? ` ${r.insight}` : ""}</p>
               </TooltipContent>
             </Tooltip>
 
@@ -526,8 +558,8 @@ function CardResult({ card }: { card: ChecklistEntry & { displayOdds: string; ro
                   Risk: {r.risk}
                 </span>
               </TooltipTrigger>
-              <TooltipContent side="top" className="max-w-[220px]">
-                <p>Risk distance from an ideal card profile. Lower = closer to an optimal pull.</p>
+              <TooltipContent side="top" className="max-w-[240px]">
+                <p>How far from a "dream pull" — lower is better. High risk means the card is common or the pull odds are unpredictable.</p>
               </TooltipContent>
             </Tooltip>
           </div>
