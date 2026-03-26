@@ -526,7 +526,7 @@ function CardResult({ card }: { card: ChecklistEntry & { displayOdds: string; ro
                 </span>
               </TooltipTrigger>
               <TooltipContent side="top" className="max-w-[220px]">
-                <p>Multi-factor score from autographs, relics, serial numbering, rookie status, and section quality.</p>
+                <p>How desirable this card is (0–100) based on autographs, relics, serial numbering, and rookie status.</p>
               </TooltipContent>
             </Tooltip>
 
@@ -536,8 +536,8 @@ function CardResult({ card }: { card: ChecklistEntry & { displayOdds: string; ro
                   Signal: <span className="text-foreground font-medium">{r.signalStrength} dB</span>
                 </span>
               </TooltipTrigger>
-              <TooltipContent side="top" className="max-w-[240px]">
-                <p>Signal Strength — higher means more predictable value under odds uncertainty. Simulated across 60 scenarios.</p>
+              <TooltipContent side="top" className="max-w-[260px]">
+                <p>Like a Wi-Fi signal for card value — higher means we're more confident this card will hold its worth. 20+ = strong, 10–20 = moderate.</p>
               </TooltipContent>
             </Tooltip>
 
@@ -547,8 +547,8 @@ function CardResult({ card }: { card: ChecklistEntry & { displayOdds: string; ro
                   {GRADE_LABELS[r.grade]}
                 </span>
               </TooltipTrigger>
-              <TooltipContent side="top" className="max-w-[240px]">
-                <p>{r.insight}</p>
+              <TooltipContent side="top" className="max-w-[260px]">
+                <p>{r.grade === "exceptional" ? "🔥 Chase card — worth hunting for!" : r.grade === "strong" ? "Solid pull with reliable collector demand." : r.grade === "moderate" ? "Decent card but uncertain upside — odds or demand may vary." : "Common card with low collector premium."}{r.insight ? ` ${r.insight}` : ""}</p>
               </TooltipContent>
             </Tooltip>
 
@@ -558,8 +558,8 @@ function CardResult({ card }: { card: ChecklistEntry & { displayOdds: string; ro
                   Risk: {r.risk}
                 </span>
               </TooltipTrigger>
-              <TooltipContent side="top" className="max-w-[220px]">
-                <p>Risk distance from an ideal card profile. Lower = closer to an optimal pull.</p>
+              <TooltipContent side="top" className="max-w-[240px]">
+                <p>How far from a "dream pull" — lower is better. High risk means the card is common or the pull odds are unpredictable.</p>
               </TooltipContent>
             </Tooltip>
           </div>
