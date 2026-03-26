@@ -2,6 +2,7 @@
  * Universal sports-card checklist analyzer — TypeScript port.
  * Runs entirely in-browser. No server needed.
  */
+import * as pdfjsLib from "pdfjs-dist";
 
 // ── Types ──────────────────────────────────────────────────────────────
 export interface ChecklistEntry {
