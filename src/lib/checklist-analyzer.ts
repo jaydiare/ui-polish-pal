@@ -384,8 +384,9 @@ export async function extractTextFromFile(file: File): Promise<string> {
     return file.text();
   }
   if (name.endsWith(".pdf")) {
-    const { getDocument, GlobalWorkerOptions } = await import("pdfjs-dist");
-    GlobalWorkerOptions.workerSrc = `https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.9.155/pdf.worker.min.mjs`;
+    // Load pdfjs from CDN to avoid Vite bundling issues
+    const pdfjsLib = (window as any).pdfjsLib ?? await loadPdfJs();
+    pdfjsLib.GlobalWorkerOptions.workerSrc = `https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.9.155/pdf.worker.min.mjs`;
     const arrayBuffer = await file.arrayBuffer();
     const pdf = await getDocument({ data: arrayBuffer }).promise;
     const pages: string[] = [];
