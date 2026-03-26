@@ -190,6 +190,8 @@ const ChecklistIntel = () => {
 
   return (
     <div className="min-h-screen">
+      <VzlaSideBanner />
+      <VzlaSideBannerRight />
       <SEOHead
         title="Checklist Intel – Sports Card Odds Analyzer | VZLA Sports Elite"
         description="Upload any sports card checklist and odds document to analyze your chances of pulling rare parallels, autographs, and numbered cards for any athlete."
