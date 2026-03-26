@@ -622,9 +622,9 @@ export async function extractTextFromFile(file: File): Promise<string> {
     console.log(`[ChecklistIntel] PDF opened: ${pdf.numPages} pages`);
     const allLines: string[] = [];
     for (let i = 1; i <= pdf.numPages; i++) {
-      const page = await withTimeout(pdf.getPage(i), 10_000, `Reading page ${i}`);
+      const page: any = await withTimeout(pdf.getPage(i), 10_000, `Reading page ${i}`);
       const viewport = page.getViewport({ scale: 1 });
-      const content = await withTimeout(page.getTextContent(), 10_000, `Extracting text from page ${i}`);
+      const content: any = await withTimeout(page.getTextContent(), 10_000, `Extracting text from page ${i}`);
       const items: TextItem[] = (content.items as any[])
         .filter((it: any) => it.str !== undefined)
         .map((it: any) => ({
