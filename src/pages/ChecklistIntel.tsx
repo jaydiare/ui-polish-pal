@@ -2,6 +2,8 @@ import { useState, useCallback, useMemo } from "react";
 import SEOHead from "@/components/SEOHead";
 import VzlaNavbar from "@/components/VzlaNavbar";
 import BackToTop from "@/components/BackToTop";
+import VzlaSideBanner from "@/components/VzlaSideBanner";
+import VzlaSideBannerRight from "@/components/VzlaSideBannerRight";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Progress } from "@/components/ui/progress";
@@ -188,6 +190,8 @@ const ChecklistIntel = () => {
 
   return (
     <div className="min-h-screen">
+      <VzlaSideBanner />
+      <VzlaSideBannerRight />
       <SEOHead
         title="Checklist Intel – Sports Card Odds Analyzer | VZLA Sports Elite"
         description="Upload any sports card checklist and odds document to analyze your chances of pulling rare parallels, autographs, and numbered cards for any athlete."
