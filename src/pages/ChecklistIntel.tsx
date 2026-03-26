@@ -136,6 +136,38 @@ const ChecklistIntel = () => {
     URL.revokeObjectURL(url);
   };
 
+  const handleDownloadCSV = () => {
+    if (!result) return;
+    const headers = ["Section", "Card Code", "Athlete", "Team", "Card Types", "Serial", "Rarity Tier", "Score", "Odds", "Signal Strength", "Grade", "Risk", "Insight"];
+    const rows = result.results.map((r) => [
+      r.section,
+      r.cardCode || "",
+      r.athlete,
+      r.team || "",
+      r.cardTypes.join("; "),
+      r.serialNumber != null ? `/${r.serialNumber}` : "",
+      r.rarityTier,
+      r.score,
+      r.displayOdds,
+      r.robust?.signalStrength ?? "",
+      r.robust?.grade ?? "",
+      r.robust?.risk ?? "",
+      r.robust?.insight ?? "",
+    ]);
+    const escape = (v: string | number) => {
+      const s = String(v);
+      return s.includes(",") || s.includes('"') || s.includes("\n") ? `"${s.replace(/"/g, '""')}"` : s;
+    };
+    const csv = [headers.map(escape).join(","), ...rows.map((r) => r.map(escape).join(","))].join("\n");
+    const blob = new Blob([csv], { type: "text/csv;charset=utf-8;" });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = `${result.athlete.replace(/\s+/g, "_")}_checklist_analysis.csv`;
+    a.click();
+    URL.revokeObjectURL(url);
+  };
+
   return (
     <div className="min-h-screen">
       <SEOHead
@@ -408,6 +440,9 @@ const ChecklistIntel = () => {
 
               {/* Download */}
               <div className="flex gap-3">
+                <Button onClick={handleDownloadCSV} variant="outline" className="border-border">
+                  📊 Download CSV
+                </Button>
                 <Button onClick={handleDownloadJSON} variant="outline" className="border-border">
                   📥 Download JSON
                 </Button>
