@@ -1,27 +1,27 @@
 import { describe, it, expect } from "vitest";
-import { analyzeChecklist } from "@/lib/checklist-analyzer";
+import { analyzeChecklist, parseChecklist } from "@/lib/checklist-analyzer";
 
-const SAMPLE_CHECKLIST = `2024 Topps Chrome Baseball Checklist
+const SAMPLE_CHECKLIST = `2024 TOPPS CHROME BASEBALL CHECKLIST
 
-Base Set
+BASE SET
 1 Ronald Acuña Jr. - Atlanta Braves
 2 Shohei Ohtani - Los Angeles Dodgers
 3 Mookie Betts - Los Angeles Dodgers
 
-Gold Refractor /50
+GOLD REFRACTOR /50
 1 Ronald Acuña Jr. - Atlanta Braves
 2 Shohei Ohtani - Los Angeles Dodgers
 
-Autographs
+AUTOGRAPHS
 RA Ronald Acuña Jr. - Atlanta Braves
 
-SuperFractor 1/1
+SUPERFRACTOR 1/1
 1 Ronald Acuña Jr. - Atlanta Braves
 
-Red Refractor /5
+RED REFRACTOR /5
 1 Ronald Acuña Jr. - Atlanta Braves
 
-Rookie Autographs
+ROOKIE AUTOGRAPHS
 RC1 Ronald Acuña Jr. - Atlanta Braves
 `;
 
@@ -33,8 +33,26 @@ function makeFile(content: string, name: string): File {
   return file;
 }
 
-describe("Checklist Analyzer – end-to-end", () => {
-  it("parses a TXT checklist and returns results for the target athlete", async () => {
+describe("parseChecklist", () => {
+  it("detects sections and card types from uppercase headers", () => {
+    const entries = parseChecklist(SAMPLE_CHECKLIST);
+    const acunaCards = entries.filter((e) => e.athlete.toLowerCase().includes("acuña") || e.athlete.toLowerCase().includes("acuna"));
+
+    expect(acunaCards.length).toBeGreaterThanOrEqual(4);
+
+    const sections = new Set(acunaCards.map((e) => e.section));
+    expect(sections.size).toBeGreaterThan(1);
+  });
+
+  it("detects serial numbers from section text", () => {
+    const entries = parseChecklist(SAMPLE_CHECKLIST);
+    const withSerial = entries.filter((e) => e.serialNumber !== null);
+    expect(withSerial.length).toBeGreaterThan(0);
+  });
+});
+
+describe("analyzeChecklist – end-to-end", () => {
+  it("finds matching cards for a target athlete", async () => {
     const result = await analyzeChecklist({
       checklistFile: makeFile(SAMPLE_CHECKLIST, "checklist.txt"),
       oddsFile: null,
@@ -48,18 +66,6 @@ describe("Checklist Analyzer – end-to-end", () => {
     expect(result.athlete).toContain("Acuña");
     expect(result.results.length).toBeGreaterThan(0);
     expect(result.summary.count).toBeGreaterThan(0);
-
-    // Log for debugging what tiers/types are detected
-    console.log("Tiers:", result.summary.byTier);
-    console.log("Types:", result.summary.byType);
-    console.log("Results:", result.results.map(r => ({
-      section: r.section,
-      tier: r.rarityTier,
-      types: r.cardTypes,
-      serial: r.serialNumber,
-      score: r.score,
-      robust: r.robust ? { grade: r.robust.grade, signal: r.robust.signalStrength } : null,
-    })));
   });
 
   it("returns empty results for an athlete not in the checklist", async () => {
@@ -77,7 +83,30 @@ describe("Checklist Analyzer – end-to-end", () => {
     expect(result.summary.count).toBe(0);
   });
 
-  it("applies manual odds overrides", async () => {
+  it("produces Pull Signal Analysis (robust scores)", async () => {
+    const result = await analyzeChecklist({
+      checklistFile: makeFile(SAMPLE_CHECKLIST, "checklist.txt"),
+      oddsFile: null,
+      athlete: "Acuña",
+      formatName: null,
+      packsPerBox: null,
+      boxesPerCase: 12,
+      manualOddsLines: [],
+    });
+
+    if (result.results.length > 0) {
+      expect(result.robustSummary).toBeDefined();
+      const withRobust = result.results.filter((r) => r.robust);
+      expect(withRobust.length).toBeGreaterThan(0);
+
+      const r = withRobust[0].robust!;
+      expect(r.signalStrength).toBeGreaterThanOrEqual(0);
+      expect(["exceptional", "strong", "moderate", "weak"]).toContain(r.grade);
+      expect(r.insight).toBeTruthy();
+    }
+  });
+
+  it("processes manual odds overrides without errors", async () => {
     const result = await analyzeChecklist({
       checklistFile: makeFile(SAMPLE_CHECKLIST, "checklist.txt"),
       oddsFile: null,
@@ -89,32 +118,5 @@ describe("Checklist Analyzer – end-to-end", () => {
     });
 
     expect(result.results.length).toBeGreaterThan(0);
-    console.log("Odds results:", result.results.map(r => ({
-      section: r.section,
-      matchedOdds: r.matchedOdds,
-      estimatedPackOdds: r.estimatedPackOdds,
-    })));
-  });
-
-  it("includes Pull Signal Analysis on scored cards", async () => {
-    const result = await analyzeChecklist({
-      checklistFile: makeFile(SAMPLE_CHECKLIST, "checklist.txt"),
-      oddsFile: null,
-      athlete: "Acuña",
-      formatName: null,
-      packsPerBox: null,
-      boxesPerCase: 12,
-      manualOddsLines: [],
-    });
-
-    console.log("Robust scores:", result.results.map(r => ({
-      section: r.section,
-      robust: r.robust,
-    })));
-
-    // robustSummary should exist if any cards found
-    if (result.results.length > 0) {
-      expect(result.robustSummary).toBeDefined();
-    }
   });
 });
