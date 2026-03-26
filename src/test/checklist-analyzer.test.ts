@@ -26,7 +26,12 @@ RC1 Ronald Acuña Jr. - Atlanta Braves
 `;
 
 function makeFile(content: string, name: string): File {
-  return new File([content], name, { type: "text/plain" });
+  const file = new File([content], name, { type: "text/plain" });
+  // jsdom File doesn't implement .text(), polyfill it
+  if (!file.text) {
+    (file as any).text = () => Promise.resolve(content);
+  }
+  return file;
 }
 
 describe("Checklist Analyzer – end-to-end", () => {
