@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-26T11:26:17.613Z",
+    "updatedAt": "2026-03-26T14:02:26.782Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA/BGS/SGC grader title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 420,
-      "endIdx": 430,
+      "startIdx": 430,
+      "endIdx": 440,
       "totalAthletes": 452
     },
     "maxPages": 4,
@@ -5941,7 +5941,7 @@
   },
   "Amleto Monacelli": {
     "keyword": "Amleto Monacelli PBA Bowler Bowling Bowling PSA",
-    "nScraped": 4,
+    "nScraped": 5,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -5953,7 +5953,7 @@
   },
   "Andres Borregales": {
     "keyword": "Andres Borregales Football PSA",
-    "nScraped": 248,
+    "nScraped": 244,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -6013,7 +6013,7 @@
   },
   "Tomas Rincon": {
     "keyword": "Tomas Rincon Soccer PSA",
-    "nScraped": 22,
+    "nScraped": 21,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -6193,7 +6193,7 @@
   },
   "Yangel Herrera": {
     "keyword": "Yangel Herrera Soccer PSA",
-    "nScraped": 216,
+    "nScraped": 212,
     "nSoldUsed": 4,
     "avg": 15.5,
     "taguchiSold": 15.5,
@@ -6265,7 +6265,7 @@
   },
   "Wuilker Farinez": {
     "keyword": "Wuilker Farinez Soccer PSA",
-    "nScraped": 6,
+    "nScraped": 5,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
