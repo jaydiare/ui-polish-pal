@@ -577,34 +577,19 @@ export async function extractTextFromFile(file: File): Promise<string> {
     return file.text();
   }
   if (name.endsWith(".pdf")) {
-    console.log("[ChecklistIntel] Loading pdf.js library…");
-    const pdfjsLib = await withTimeout(loadPdfJs(), 20_000, "Loading PDF library");
-    console.log("[ChecklistIntel] pdf.js loaded, configuring worker…");
-    if (pdfjsLib.GlobalWorkerOptions) {
-      pdfjsLib.GlobalWorkerOptions.workerSrc = "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.9.155/pdf.worker.min.js";
-    }
-
+    console.log("[ChecklistIntel] Reading PDF file…");
     const arrayBuffer = await file.arrayBuffer();
     console.log(`[ChecklistIntel] PDF file read (${(arrayBuffer.byteLength / 1024).toFixed(0)} KB), opening document…`);
 
-    let pdf: any;
-    try {
-      const loadingTask = pdfjsLib.getDocument({ data: arrayBuffer });
-      pdf = await withTimeout(loadingTask.promise, 60_000, "Opening PDF document");
-    } catch (err) {
-      console.warn("[ChecklistIntel] Worker-based PDF open failed; retrying without worker", err);
-      if (pdfjsLib.GlobalWorkerOptions) {
-        pdfjsLib.GlobalWorkerOptions.workerSrc = "";
-      }
-      const fallbackTask = pdfjsLib.getDocument({ data: arrayBuffer, disableWorker: true });
-      pdf = await withTimeout(fallbackTask.promise, 60_000, "Opening PDF document (fallback)");
-    }
+    const loadingTask = pdfjsLib.getDocument({ data: new Uint8Array(arrayBuffer) });
+    const pdf = await withTimeout(loadingTask.promise, 60_000, "Opening PDF document");
+
     console.log(`[ChecklistIntel] PDF opened: ${pdf.numPages} pages`);
     const allLines: string[] = [];
     for (let i = 1; i <= pdf.numPages; i++) {
-      const page: any = await withTimeout(pdf.getPage(i), 10_000, `Reading page ${i}`);
+      const page = await withTimeout(pdf.getPage(i), 10_000, `Reading page ${i}`);
       const viewport = page.getViewport({ scale: 1 });
-      const content: any = await withTimeout(page.getTextContent(), 10_000, `Extracting text from page ${i}`);
+      const content = await withTimeout(page.getTextContent(), 10_000, `Extracting text from page ${i}`);
       const items: TextItem[] = (content.items as any[])
         .filter((it: any) => it.str !== undefined)
         .map((it: any) => ({
@@ -617,6 +602,11 @@ export async function extractTextFromFile(file: File): Promise<string> {
       const lines = reconstructMultiColumnText(items, viewport.width);
       allLines.push(...lines);
     }
+    console.log(`[ChecklistIntel] Extracted ${allLines.length} lines from PDF`);
+    return allLines.join("\n");
+  }
+  throw new Error(`Unsupported file type: ${file.name}`);
+}
     console.log(`[ChecklistIntel] Extracted ${allLines.length} lines from PDF`);
     return allLines.join("\n");
   }
