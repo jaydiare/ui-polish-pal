@@ -609,15 +609,22 @@ export async function extractTextFromFile(file: File): Promise<string> {
     return file.text();
   }
   if (name.endsWith(".pdf")) {
-    const pdfjsLib = await loadPdfJs();
+    console.log("[ChecklistIntel] Loading pdf.js library…");
+    const pdfjsLib = await withTimeout(loadPdfJs(), 20_000, "Loading PDF library");
+    console.log("[ChecklistIntel] pdf.js loaded, parsing PDF…");
     pdfjsLib.GlobalWorkerOptions.workerSrc = `https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.9.155/pdf.worker.min.js`;
     const arrayBuffer = await file.arrayBuffer();
-    const pdf = await pdfjsLib.getDocument({ data: arrayBuffer }).promise;
+    const pdf: any = await withTimeout(
+      pdfjsLib.getDocument({ data: arrayBuffer }).promise,
+      30_000,
+      "Opening PDF document",
+    );
+    console.log(`[ChecklistIntel] PDF opened: ${pdf.numPages} pages`);
     const allLines: string[] = [];
     for (let i = 1; i <= pdf.numPages; i++) {
-      const page = await pdf.getPage(i);
+      const page: any = await withTimeout(pdf.getPage(i), 10_000, `Reading page ${i}`);
       const viewport = page.getViewport({ scale: 1 });
-      const content = await page.getTextContent();
+      const content: any = await withTimeout(page.getTextContent(), 10_000, `Extracting text from page ${i}`);
       const items: TextItem[] = (content.items as any[])
         .filter((it: any) => it.str !== undefined)
         .map((it: any) => ({
@@ -630,6 +637,7 @@ export async function extractTextFromFile(file: File): Promise<string> {
       const lines = reconstructMultiColumnText(items, viewport.width);
       allLines.push(...lines);
     }
+    console.log(`[ChecklistIntel] Extracted ${allLines.length} lines from PDF`);
     return allLines.join("\n");
   }
   throw new Error(`Unsupported file type: ${file.name}`);
