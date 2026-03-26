@@ -426,7 +426,7 @@ async function loadPdfJs(): Promise<any> {
 
   // Try ESM dynamic import first
   try {
-    const mod = await import(/* @vite-ignore */ "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.9.155/pdf.min.mjs");
+    const mod = await (Function('return import("https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.9.155/pdf.min.mjs")')() as Promise<any>);
     (window as any).pdfjsLib = mod;
     return mod;
   } catch {
