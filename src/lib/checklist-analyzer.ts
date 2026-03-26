@@ -655,8 +655,8 @@ function computeRobustScore(entry: ChecklistEntry, athlete: string): RobustScore
     desirability: Math.round(baseDesirability),
     meanScore: Math.round(mean * 10) / 10,
     variance: Math.round(variance * 10) / 10,
-    snRatio: Math.round(cappedSn * 10) / 10,
-    expectedLoss: Math.round(expectedLoss),
+    signalStrength: Math.round(cappedSn * 10) / 10,
+    risk: Math.round(expectedLoss),
     grade,
     insight,
   };
