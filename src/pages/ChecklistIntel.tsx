@@ -411,6 +411,11 @@ const ChecklistIntel = () => {
                 </div>
               )}
 
+              {/* Odds Comparison Chart */}
+              {result.results.some((r) => r.estimatedPackOdds) && (
+                <OddsComparisonChart results={result.results} />
+              )}
+
               {/* Type breakdown */}
               <div className="glass-panel rounded-xl p-4">
                 <h3 className="text-sm font-semibold text-foreground mb-2">Card Types Found</h3>
