@@ -85,8 +85,9 @@ const ChecklistIntel = () => {
     setError(null);
     setLoading(true);
     setProgress(null);
+    const ANALYSIS_TIMEOUT = 120_000; // 2 minutes
     try {
-      const res = await analyzeChecklist({
+      const analysisPromise = analyzeChecklist({
         checklistFile,
         oddsFile,
         athlete: athlete.trim(),
@@ -96,9 +97,13 @@ const ChecklistIntel = () => {
         manualOddsLines: manualOdds.split("\n").filter(Boolean),
         onProgress: setProgress,
       });
+      const timer = new Promise<never>((_, reject) =>
+        setTimeout(() => reject(new Error("Analysis timed out after 2 minutes. Try a smaller file or a different format (TXT/CSV).")), ANALYSIS_TIMEOUT),
+      );
+      const res = await Promise.race([analysisPromise, timer]);
       setResult(res);
     } catch (e: any) {
-      setError(e.message || "Analysis failed");
+      setError(e.message || "Analysis failed. Please try again.");
     } finally {
       setLoading(false);
       setProgress(null);

@@ -421,32 +421,50 @@ export function summarize(entries: ChecklistEntry[]): AnalysisSummary {
 }
 
 // ── Load pdf.js from CDN ───────────────────────────────────────────────
+function withTimeout<T>(promise: Promise<T>, ms: number, label: string): Promise<T> {
+  return new Promise<T>((resolve, reject) => {
+    const timer = setTimeout(() => reject(new Error(`${label} timed out after ${Math.round(ms / 1000)}s. Check your connection and try again.`)), ms);
+    promise.then(
+      (v) => { clearTimeout(timer); resolve(v); },
+      (e) => { clearTimeout(timer); reject(e); },
+    );
+  });
+}
+
 async function loadPdfJs(): Promise<any> {
   if ((window as any).pdfjsLib) return (window as any).pdfjsLib;
 
-  // Try ESM dynamic import first
+  // Try ESM dynamic import first (15s timeout)
   try {
-    const mod = await (Function('return import("https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.9.155/pdf.min.mjs")')() as Promise<any>);
+    const mod = await withTimeout(
+      Function('return import("https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.9.155/pdf.min.mjs")')() as Promise<any>,
+      15_000,
+      "PDF.js ESM load",
+    );
     (window as any).pdfjsLib = mod;
     return mod;
   } catch {
     // ESM failed — fall back to UMD script tag
   }
 
-  return new Promise<any>((resolve, reject) => {
-    const s = document.createElement("script");
-    s.src = "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.9.155/pdf.min.js";
-    s.onload = () => {
-      const lib = (window as any).pdfjsLib;
-      if (lib) {
-        resolve(lib);
-      } else {
-        reject(new Error("pdf.js loaded but pdfjsLib not found on window"));
-      }
-    };
-    s.onerror = () => reject(new Error("Failed to load pdf.js from CDN"));
-    document.head.appendChild(s);
-  });
+  return withTimeout(
+    new Promise<any>((resolve, reject) => {
+      const s = document.createElement("script");
+      s.src = "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.9.155/pdf.min.js";
+      s.onload = () => {
+        const lib = (window as any).pdfjsLib;
+        if (lib) {
+          resolve(lib);
+        } else {
+          reject(new Error("pdf.js loaded but pdfjsLib not found on window"));
+        }
+      };
+      s.onerror = () => reject(new Error("Failed to load pdf.js from CDN"));
+      document.head.appendChild(s);
+    }),
+    15_000,
+    "PDF.js UMD load",
+  );
 }
 
 // ── PDF text extraction (browser) — multi-column aware ────────────────
