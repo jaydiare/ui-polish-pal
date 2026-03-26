@@ -7,7 +7,7 @@ from pathlib import Path
 
 import streamlit as st
 
-from universal_card_odds_analyzer_v3 import (
+from universal_card_odds_analyzer import (
     ChecklistEntry,
     apply_manual_odds,
     asdict,
