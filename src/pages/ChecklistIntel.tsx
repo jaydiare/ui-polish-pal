@@ -1,4 +1,4 @@
-import { useState, useCallback } from "react";
+import { useState, useCallback, useMemo } from "react";
 import SEOHead from "@/components/SEOHead";
 import VzlaNavbar from "@/components/VzlaNavbar";
 import BackToTop from "@/components/BackToTop";
@@ -411,6 +411,11 @@ const ChecklistIntel = () => {
                 </div>
               )}
 
+              {/* Odds Comparison Chart */}
+              {result.results.some((r) => r.estimatedPackOdds) && (
+                <OddsComparisonChart results={result.results} />
+              )}
+
               {/* Type breakdown */}
               <div className="glass-panel rounded-xl p-4">
                 <h3 className="text-sm font-semibold text-foreground mb-2">Card Types Found</h3>
@@ -492,6 +497,77 @@ const ChecklistIntel = () => {
     </div>
   );
 };
+
+/** Horizontal bar chart showing relative rarity of each parallel tier */
+function OddsComparisonChart({ results }: { results: Array<ChecklistEntry & { displayOdds: string; robust?: RobustScore }> }) {
+  const data = useMemo(() => {
+    const withOdds = results
+      .filter((r) => r.estimatedPackOdds && r.estimatedPackOdds > 0)
+      .sort((a, b) => (a.estimatedPackOdds ?? 0) - (b.estimatedPackOdds ?? 0));
+
+    // Deduplicate by section label (keep the one with lowest odds per tier name)
+    const seen = new Map<string, typeof withOdds[0]>();
+    for (const card of withOdds) {
+      const label = card.section.length > 40 ? card.section.slice(0, 37) + "…" : card.section;
+      if (!seen.has(label)) seen.set(label, card);
+    }
+    return Array.from(seen.values()).slice(0, 12);
+  }, [results]);
+
+  if (data.length < 2) return null;
+
+  const maxOdds = Math.max(...data.map((d) => d.estimatedPackOdds ?? 0));
+
+  const tierBarColors: Record<string, string> = {
+    elite: "bg-vzla-yellow",
+    premium: "bg-vzla-purple",
+    notable: "bg-vzla-mint",
+    standard: "bg-muted-foreground",
+  };
+
+  return (
+    <div className="glass-panel rounded-xl p-5">
+      <div className="flex items-center gap-2 mb-4">
+        <span className="text-lg">📊</span>
+        <h3 className="font-display font-bold text-foreground">Parallel Rarity Comparison</h3>
+      </div>
+      <p className="text-xs text-muted-foreground mb-4">
+        Longer bars = rarer cards. Each bar shows how many packs you'd need to open on average.
+      </p>
+      <div className="space-y-2.5">
+        {data.map((card, i) => {
+          const odds = card.estimatedPackOdds ?? 0;
+          const pct = maxOdds > 0 ? (odds / maxOdds) * 100 : 0;
+          const barColor = tierBarColors[card.rarityTier] || "bg-muted-foreground";
+          const label = card.section.length > 35 ? card.section.slice(0, 32) + "…" : card.section;
+
+          return (
+            <div key={`${card.rawText}-${i}`} className="space-y-0.5">
+              <div className="flex items-center justify-between text-xs">
+                <span className="text-foreground font-medium truncate max-w-[60%]">
+                  {TIER_ICONS[card.rarityTier]} {label}
+                  {card.serialNumber ? ` /${card.serialNumber}` : ""}
+                </span>
+                <span className="text-muted-foreground font-mono shrink-0 ml-2">
+                  ~1:{odds.toLocaleString()} packs
+                </span>
+              </div>
+              <div className="h-3 w-full bg-secondary rounded-full overflow-hidden">
+                <div
+                  className={`h-full rounded-full ${barColor} transition-all duration-500`}
+                  style={{ width: `${Math.max(pct, 2)}%` }}
+                />
+              </div>
+            </div>
+          );
+        })}
+      </div>
+      <p className="text-[10px] text-muted-foreground/60 mt-3 italic">
+        Odds are estimates based on typical hobby box distributions and set size.
+      </p>
+    </div>
+  );
+}
 
 function CardResult({ card }: { card: ChecklistEntry & { displayOdds: string; robust?: RobustScore } }) {
   const r = card.robust;
