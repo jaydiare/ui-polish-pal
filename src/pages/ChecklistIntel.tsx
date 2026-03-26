@@ -148,7 +148,7 @@ const ChecklistIntel = () => {
             </h1>
             <p className="text-muted-foreground max-w-2xl mx-auto">
               Upload a sports card set checklist (PDF, TXT, or CSV) and optionally an odds document.
-              Enter an athlete's name to discover every parallel, autograph, and numbered card — with estimated pull odds and <span className="text-vzla-yellow font-semibold">Taguchi robust scoring</span>.
+              Enter an athlete's name to discover every parallel, autograph, and numbered card — with estimated pull odds and <span className="text-vzla-yellow font-semibold">Pull Signal Analysis</span>.
             </p>
           </div>
 
