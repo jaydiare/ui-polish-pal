@@ -611,12 +611,17 @@ export async function extractTextFromFile(file: File): Promise<string> {
   if (name.endsWith(".pdf")) {
     console.log("[ChecklistIntel] Loading pdf.js library…");
     const pdfjsLib = await withTimeout(loadPdfJs(), 20_000, "Loading PDF library");
-    console.log("[ChecklistIntel] pdf.js loaded, parsing PDF…");
-    pdfjsLib.GlobalWorkerOptions.workerSrc = `https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.9.155/pdf.worker.min.js`;
+    console.log("[ChecklistIntel] pdf.js loaded, configuring worker…");
+    // Disable worker to avoid cross-origin/CDN loading issues that cause hangs
+    if (pdfjsLib.GlobalWorkerOptions) {
+      pdfjsLib.GlobalWorkerOptions.workerSrc = "";
+    }
     const arrayBuffer = await file.arrayBuffer();
+    console.log(`[ChecklistIntel] PDF file read (${(arrayBuffer.byteLength / 1024).toFixed(0)} KB), opening document…`);
+    const loadingTask = pdfjsLib.getDocument({ data: arrayBuffer, disableWorker: true });
     const pdf: any = await withTimeout(
-      pdfjsLib.getDocument({ data: arrayBuffer }).promise,
-      30_000,
+      loadingTask.promise,
+      60_000,
       "Opening PDF document",
     );
     console.log(`[ChecklistIntel] PDF opened: ${pdf.numPages} pages`);
