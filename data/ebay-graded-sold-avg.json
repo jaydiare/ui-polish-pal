@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-26T14:02:26.782Z",
+    "updatedAt": "2026-03-26T15:47:25.286Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA/BGS/SGC grader title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 430,
-      "endIdx": 440,
+      "startIdx": 440,
+      "endIdx": 450,
       "totalAthletes": 452
     },
     "maxPages": 4,
@@ -6553,7 +6553,7 @@
   },
   "Kevin Kelsy": {
     "keyword": "Kevin Kelsy Soccer PSA",
-    "nScraped": 241,
+    "nScraped": 242,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -6613,15 +6613,15 @@
   },
   "Rafael Romo": {
     "keyword": "Rafael Romo Soccer PSA",
-    "nScraped": 240,
-    "nSoldUsed": 4,
-    "avg": 95,
-    "taguchiSold": 95,
-    "medianSold": 95,
-    "marketStabilityCV": 0,
+    "nScraped": 60,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
   },
   "Renzo Zambrano": {
     "keyword": "Renzo Zambrano Soccer",
@@ -6709,7 +6709,7 @@
   },
   "Telasco Segovia": {
     "keyword": "Telasco Segovia Soccer PSA",
-    "nScraped": 243,
+    "nScraped": 244,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -6721,7 +6721,7 @@
   },
   "Wikelman Carmona": {
     "keyword": "Wikelman Carmona Soccer PSA",
-    "nScraped": 0,
+    "nScraped": 49,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
