@@ -607,11 +607,8 @@ export async function extractTextFromFile(file: File): Promise<string> {
   }
   throw new Error(`Unsupported file type: ${file.name}`);
 }
-    console.log(`[ChecklistIntel] Extracted ${allLines.length} lines from PDF`);
-    return allLines.join("\n");
-  }
-  throw new Error(`Unsupported file type: ${file.name}`);
-}
+
+
 
 export function previewText(text: string, maxLines = 20, maxChars = 4000): string {
   const lines = text.split("\n").map(normalizeSpaces).filter(Boolean);
