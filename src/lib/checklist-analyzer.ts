@@ -113,11 +113,27 @@ function looksLikeHeader(line: string): boolean {
   if (s.length < 3 || s.length > 80) return false;
   const letters = s.replace(/[^A-Za-z]/g, "");
   if (!letters) return false;
+
+  // Lines starting with a card code (e.g. "AD-8", "BCP-12", "#45") are entries, not headers
+  if (/^#?\d+[A-Z]?\s/.test(s) || /^[A-Z]{1,6}-?\d+\s/.test(s)) return false;
+
+  // If the line has many words (4+) with mixed case, it's likely a player entry, not a header
+  const words = s.split(" ");
+  const mixedCaseWords = words.filter((w) => /[a-z]/.test(w) && /[A-Z]/.test(w));
+  if (words.length >= 4 && mixedCaseWords.length >= 2) return false;
+
   const alphaCount = [...s].filter((c) => /[A-Za-z]/.test(c)).length;
   const upperCount = [...s].filter((c) => /[A-Z]/.test(c)).length;
   const upperRatio = upperCount / Math.max(1, alphaCount);
+
+  // Strong header signal: mostly uppercase
+  if (upperRatio > 0.7) return true;
+
+  // Hint-based: only if short (section title-like) and not too many words
   const hint = SECTION_HINTS.some((h) => s.toLowerCase().includes(h));
-  return upperRatio > 0.6 || hint;
+  if (hint && words.length <= 5 && upperRatio > 0.4) return true;
+
+  return false;
 }
 
 function detectCardTypes(text: string, section: string): string[] {
