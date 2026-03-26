@@ -32,21 +32,21 @@ export interface AnalysisSummary {
   byType: Record<string, number>;
 }
 
-// ── Taguchi Robust Scoring ────────────────────────────────────────────
+// ── Pull Signal Scoring (Taguchi S/N under the hood) ──────────────────
 export interface RobustScore {
-  /** Raw desirability score (multi-factor, 0-100) */
+  /** Multi-factor card score (0-100) */
   desirability: number;
   /** Mean score across uncertainty simulations */
   meanScore: number;
-  /** Variance of score across simulations */
+  /** Variance across simulations — higher = less stable */
   variance: number;
-  /** Taguchi S/N ratio: 10*log10(mean²/variance). Higher = more robust */
-  snRatio: number;
-  /** Expected loss vs user's ideal card: variance + (mean - target)² */
-  expectedLoss: number;
-  /** Human-readable robustness grade */
+  /** Signal Strength: 10*log10(mean²/variance), capped at 40 */
+  signalStrength: number;
+  /** Risk vs ideal card profile: variance + (mean - target)² */
+  risk: number;
+  /** Stability grade */
   grade: "exceptional" | "strong" | "moderate" | "weak";
-  /** One-line recommendation */
+  /** One-line insight */
   insight: string;
 }
 
@@ -54,10 +54,10 @@ export interface AnalysisResult {
   athlete: string;
   summary: AnalysisSummary;
   results: (ChecklistEntry & { displayOdds: string; robust?: RobustScore })[];
-  /** Product-level Taguchi summary across all matched cards */
+  /** Product-level pull signal summary */
   robustSummary?: {
-    bestRobustCard: string;
-    avgSnRatio: number;
+    bestSignalCard: string;
+    avgSignalStrength: number;
     recommendation: string;
   };
 }
