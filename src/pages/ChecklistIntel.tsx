@@ -569,7 +569,7 @@ function OddsComparisonChart({ results }: { results: Array<ChecklistEntry & { di
   );
 }
 
-
+function CardResult({ card }: { card: ChecklistEntry & { displayOdds: string; robust?: RobustScore } }) {
   const r = card.robust;
   return (
     <div className="bg-secondary/50 rounded-lg p-3 border border-border/50 space-y-2">
