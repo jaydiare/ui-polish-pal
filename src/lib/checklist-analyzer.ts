@@ -521,9 +521,195 @@ export async function analyzeChecklist(opts: {
     return (a.serialNumber ?? 999999) - (b.serialNumber ?? 999999);
   });
 
+  // ── Taguchi Robust Scoring ─────────────────────────────────────────
+  const resultsWithRobust = matches.map((m) => {
+    const robust = computeRobustScore(m, opts.athlete);
+    return { ...m, displayOdds: prettyOdds(m.estimatedPackOdds), robust };
+  });
+
+  // Product-level summary
+  const cardsWithSn = resultsWithRobust.filter((r) => r.robust && isFinite(r.robust.snRatio));
+  let robustSummary: AnalysisResult["robustSummary"];
+  if (cardsWithSn.length > 0) {
+    const avgSn = cardsWithSn.reduce((s, r) => s + r.robust!.snRatio, 0) / cardsWithSn.length;
+    const best = cardsWithSn.reduce((a, b) => (a.robust!.snRatio > b.robust!.snRatio ? a : b));
+    const bestLabel = `${best.section} — ${best.rawText}`.slice(0, 80);
+    robustSummary = {
+      bestRobustCard: bestLabel,
+      avgSnRatio: Math.round(avgSn * 10) / 10,
+      recommendation: generateProductRecommendation(resultsWithRobust, opts.athlete),
+    };
+  }
+
   return {
     athlete: opts.athlete,
     summary: summarize(matches),
-    results: matches.map((m) => ({ ...m, displayOdds: prettyOdds(m.estimatedPackOdds) })),
+    results: resultsWithRobust,
+    robustSummary,
   };
+}
+
+// ── Taguchi Engine ────────────────────────────────────────────────────
+
+/** Multi-factor desirability score (deterministic, 0–100) */
+function computeDesirability(entry: ChecklistEntry): number {
+  let d = 0;
+
+  // Factor weights
+  if (entry.cardTypes.includes("autograph")) d += 28;
+  if (entry.cardTypes.includes("relic")) d += 18;
+  if (entry.cardTypes.includes("variation")) d += 12;
+  if (entry.cardTypes.includes("insert")) d += 10;
+  if (entry.cardTypes.includes("parallel")) d += 8;
+
+  // Serial numbering (lower = rarer = better)
+  if (entry.serialNumber !== null) {
+    if (entry.serialNumber <= 1) d += 25;
+    else if (entry.serialNumber <= 5) d += 22;
+    else if (entry.serialNumber <= 10) d += 18;
+    else if (entry.serialNumber <= 25) d += 14;
+    else if (entry.serialNumber <= 50) d += 10;
+    else if (entry.serialNumber <= 99) d += 7;
+    else if (entry.serialNumber <= 199) d += 4;
+    else d += 2;
+  }
+
+  // Rookie/prospect bonus
+  const hay = `${entry.section} ${entry.rawText}`.toLowerCase();
+  if (/\b(rookie|prospect|1st bowman|first bowman)\b/.test(hay)) d += 12;
+
+  // Section quality (autograph sections > insert > base)
+  const sectionLower = entry.section.toLowerCase();
+  if (/auto|signature/.test(sectionLower)) d += 6;
+  else if (/insert|downtown|kaboom/.test(sectionLower)) d += 4;
+  else if (/parallel|refractor|prizm/.test(sectionLower)) d += 3;
+
+  // Manufacturer prestige keywords
+  if (/\b(chrome|sapphire|sterling|national treasures|immaculate|flawless)\b/.test(hay)) d += 5;
+
+  return Math.min(100, d);
+}
+
+const SIM_RUNS = 60;
+const NOISE_ODDS = 0.30;      // ±30% odds uncertainty
+const NOISE_MAPPING = 0.15;   // ±15% fuzzy mapping error
+const NOISE_FORMAT = 0.10;    // ±10% format assumption noise
+
+/** Seeded-ish pseudo-random for reproducibility within a session */
+function noise(center: number, pct: number, rng: () => number): number {
+  return center * (1 + (rng() * 2 - 1) * pct);
+}
+
+function simpleRng(seed: number): () => number {
+  let s = seed;
+  return () => {
+    s = (s * 1664525 + 1013904223) & 0x7fffffff;
+    return s / 0x7fffffff;
+  };
+}
+
+function computeRobustScore(entry: ChecklistEntry, athlete: string): RobustScore {
+  const baseDesirability = computeDesirability(entry);
+  const baseOdds = entry.estimatedPackOdds ?? 500; // default uncertainty when missing
+  const hasRealOdds = entry.estimatedPackOdds !== null;
+  const oddsUncertainty = hasRealOdds ? NOISE_ODDS : 0.60; // much wider when guessing
+
+  const rng = simpleRng(hashCode(`${entry.rawText}${athlete}`));
+  const scores: number[] = [];
+
+  for (let i = 0; i < SIM_RUNS; i++) {
+    // Perturb desirability by mapping noise
+    const simDesirability = Math.max(0, Math.min(100, noise(baseDesirability, NOISE_MAPPING, rng)));
+
+    // Perturb odds
+    const simOdds = Math.max(1, noise(baseOdds, oddsUncertainty, rng));
+
+    // Format assumption noise on odds
+    const simOddsAdj = Math.max(1, noise(simOdds, NOISE_FORMAT, rng));
+
+    // Combined score: desirability weighted by accessibility (inverse odds)
+    // Higher desirability + lower odds = better score
+    const accessibility = 100 / Math.sqrt(simOddsAdj);
+    const combined = 0.65 * simDesirability + 0.35 * accessibility;
+    scores.push(combined);
+  }
+
+  const mean = scores.reduce((a, b) => a + b, 0) / scores.length;
+  const variance = scores.reduce((a, b) => a + (b - mean) ** 2, 0) / scores.length;
+  const snRatio = variance > 0.001 ? 10 * Math.log10((mean * mean) / variance) : 40; // cap at 40
+  const cappedSn = Math.min(40, snRatio);
+
+  // Target: user ideally wants desirability=90 accessibility=high → target combined ~70
+  const target = 70;
+  const expectedLoss = variance + (mean - target) ** 2;
+
+  let grade: RobustScore["grade"];
+  if (cappedSn >= 25) grade = "exceptional";
+  else if (cappedSn >= 18) grade = "strong";
+  else if (cappedSn >= 10) grade = "moderate";
+  else grade = "weak";
+
+  const insight = generateCardInsight(entry, cappedSn, mean, hasRealOdds, grade);
+
+  return {
+    desirability: Math.round(baseDesirability),
+    meanScore: Math.round(mean * 10) / 10,
+    variance: Math.round(variance * 10) / 10,
+    snRatio: Math.round(cappedSn * 10) / 10,
+    expectedLoss: Math.round(expectedLoss),
+    grade,
+    insight,
+  };
+}
+
+function generateCardInsight(
+  entry: ChecklistEntry, sn: number, mean: number,
+  hasOdds: boolean, grade: RobustScore["grade"],
+): string {
+  const tier = entry.rarityTier;
+  if (grade === "exceptional") {
+    return `High-confidence pull with predictable value${tier === "elite" ? " — elite ceiling" : ""}.`;
+  }
+  if (grade === "strong") {
+    if (!hasOdds) return "Strong desirability despite uncertain odds — worth the gamble.";
+    return `Reliable card with solid fundamentals${mean > 40 ? " and good accessibility" : ""}.`;
+  }
+  if (grade === "moderate") {
+    if (tier === "elite" || tier === "premium") {
+      return "High raw ceiling but volatile pull probability — boom-or-bust.";
+    }
+    return "Moderate robustness; odds uncertainty limits confidence.";
+  }
+  return "Uncertain value under realistic conditions — high variance play.";
+}
+
+function generateProductRecommendation(
+  results: { robust?: RobustScore; rarityTier: string; rawText: string }[],
+  athlete: string,
+): string {
+  const withRobust = results.filter((r) => r.robust);
+  if (!withRobust.length) return "Insufficient data for a product recommendation.";
+
+  const avgSn = withRobust.reduce((s, r) => s + r.robust!.snRatio, 0) / withRobust.length;
+  const premiumPlus = withRobust.filter((r) => r.rarityTier === "elite" || r.rarityTier === "premium");
+  const strongPremium = premiumPlus.filter((r) => r.robust!.grade === "exceptional" || r.robust!.grade === "strong");
+
+  if (avgSn >= 22 && strongPremium.length >= 2) {
+    return `This product offers the best robust chance of producing a premium ${athlete} card under uncertain odds.`;
+  }
+  if (avgSn >= 15 && strongPremium.length >= 1) {
+    return `Solid product with reliable pull paths to premium ${athlete} cards, though some variance exists.`;
+  }
+  if (premiumPlus.length > 0) {
+    return `Premium ${athlete} cards exist here, but high odds uncertainty makes this a higher-variance play.`;
+  }
+  return `Limited premium upside for ${athlete} — mostly standard cards with uncertain pull rates.`;
+}
+
+function hashCode(s: string): number {
+  let h = 0;
+  for (let i = 0; i < s.length; i++) {
+    h = ((h << 5) - h + s.charCodeAt(i)) | 0;
+  }
+  return Math.abs(h);
 }
