@@ -434,23 +434,11 @@ function withTimeout<T>(promise: Promise<T>, ms: number, label: string): Promise
 async function loadPdfJs(): Promise<any> {
   if ((window as any).pdfjsLib) return (window as any).pdfjsLib;
 
-  // Try ESM dynamic import first (15s timeout)
-  try {
-    const mod = await withTimeout(
-      Function('return import("https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.9.155/pdf.min.mjs")')() as Promise<any>,
-      15_000,
-      "PDF.js ESM load",
-    );
-    (window as any).pdfjsLib = mod;
-    return mod;
-  } catch {
-    // ESM failed — fall back to UMD script tag
-  }
-
   return withTimeout(
     new Promise<any>((resolve, reject) => {
       const s = document.createElement("script");
       s.src = "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.9.155/pdf.min.js";
+      s.async = true;
       s.onload = () => {
         const lib = (window as any).pdfjsLib;
         if (lib) {
@@ -463,7 +451,7 @@ async function loadPdfJs(): Promise<any> {
       document.head.appendChild(s);
     }),
     15_000,
-    "PDF.js UMD load",
+    "Loading PDF library",
   );
 }
 
