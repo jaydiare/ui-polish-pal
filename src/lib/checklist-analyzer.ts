@@ -32,10 +32,34 @@ export interface AnalysisSummary {
   byType: Record<string, number>;
 }
 
+// ── Taguchi Robust Scoring ────────────────────────────────────────────
+export interface RobustScore {
+  /** Raw desirability score (multi-factor, 0-100) */
+  desirability: number;
+  /** Mean score across uncertainty simulations */
+  meanScore: number;
+  /** Variance of score across simulations */
+  variance: number;
+  /** Taguchi S/N ratio: 10*log10(mean²/variance). Higher = more robust */
+  snRatio: number;
+  /** Expected loss vs user's ideal card: variance + (mean - target)² */
+  expectedLoss: number;
+  /** Human-readable robustness grade */
+  grade: "exceptional" | "strong" | "moderate" | "weak";
+  /** One-line recommendation */
+  insight: string;
+}
+
 export interface AnalysisResult {
   athlete: string;
   summary: AnalysisSummary;
-  results: (ChecklistEntry & { displayOdds: string })[];
+  results: (ChecklistEntry & { displayOdds: string; robust?: RobustScore })[];
+  /** Product-level Taguchi summary across all matched cards */
+  robustSummary?: {
+    bestRobustCard: string;
+    avgSnRatio: number;
+    recommendation: string;
+  };
 }
 
 // ── Constants ──────────────────────────────────────────────────────────
