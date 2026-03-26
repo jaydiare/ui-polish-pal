@@ -30,6 +30,7 @@ import {
   type AnalysisResult,
   type ChecklistEntry,
   type RobustScore,
+  type ProgressStep,
   analyzeChecklist,
   prettyOdds,
 } from "@/lib/checklist-analyzer";
