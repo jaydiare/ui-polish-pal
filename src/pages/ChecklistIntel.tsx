@@ -269,6 +269,28 @@ const ChecklistIntel = () => {
               </Button>
             </div>
 
+            {/* Progress indicator */}
+            {loading && progress && (
+              <div className="space-y-2 pt-1">
+                <div className="flex items-center justify-between text-xs">
+                  <span className="text-foreground font-medium flex items-center gap-1.5">
+                    <span className="inline-block h-2 w-2 rounded-full bg-vzla-yellow animate-pulse" />
+                    {progress.label}
+                  </span>
+                  <span className="text-muted-foreground">
+                    {progress.step}/{progress.totalSteps}
+                  </span>
+                </div>
+                <Progress
+                  value={(progress.step / progress.totalSteps) * 100}
+                  className="h-1.5 bg-secondary"
+                />
+                {progress.detail && (
+                  <p className="text-[11px] text-muted-foreground">{progress.detail}</p>
+                )}
+              </div>
+            )}
+
             {error && (
               <p className="text-destructive text-sm font-medium">{error}</p>
             )}
