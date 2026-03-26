@@ -1,4 +1,4 @@
-import { useState, useCallback } from "react";
+import { useState, useCallback, useMemo } from "react";
 import SEOHead from "@/components/SEOHead";
 import VzlaNavbar from "@/components/VzlaNavbar";
 import BackToTop from "@/components/BackToTop";
