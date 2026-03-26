@@ -73,6 +73,7 @@ const ChecklistIntel = () => {
   const [manualOdds, setManualOdds] = useState("");
   const [showStandard, setShowStandard] = useState(true);
   const [loading, setLoading] = useState(false);
+  const [progress, setProgress] = useState<ProgressStep | null>(null);
   const [result, setResult] = useState<AnalysisResult | null>(null);
   const [error, setError] = useState<string | null>(null);
 
@@ -83,6 +84,7 @@ const ChecklistIntel = () => {
     }
     setError(null);
     setLoading(true);
+    setProgress(null);
     try {
       const res = await analyzeChecklist({
         checklistFile,
@@ -92,12 +94,14 @@ const ChecklistIntel = () => {
         packsPerBox: packsPerBox ? parseInt(packsPerBox) : null,
         boxesPerCase: boxesPerCase ? parseInt(boxesPerCase) : null,
         manualOddsLines: manualOdds.split("\n").filter(Boolean),
+        onProgress: setProgress,
       });
       setResult(res);
     } catch (e: any) {
       setError(e.message || "Analysis failed");
     } finally {
       setLoading(false);
+      setProgress(null);
     }
   }, [checklistFile, oddsFile, athlete, formatName, packsPerBox, boxesPerCase, manualOdds]);
 
