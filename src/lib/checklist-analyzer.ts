@@ -465,7 +465,7 @@ function generateImpliedParallels(
   }
 
   return impliedCards;
-
+}
 
 export function parseManualOdds(items: string[]): Record<string, number> {
   const result: Record<string, number> = {};
