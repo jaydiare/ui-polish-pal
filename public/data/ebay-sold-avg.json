@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-27T05:04:26.499Z",
+    "updatedAt": "2026-03-27T07:02:52.855Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. Taguchi winsorized mean + market stability CV. Ungraded condition policy (permissive for sold). Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 250,
-      "endIdx": 260,
+      "startIdx": 260,
+      "endIdx": 270,
       "totalAthletes": 569
     },
     "maxPages": 4,
@@ -3885,19 +3885,19 @@
   },
   "Jose Martinez": {
     "keyword": "Jose Martinez Cardinals Baseball",
-    "nScraped": 315,
-    "nSoldUsed": 224,
-    "avg": 2.294107142857146,
-    "taguchiSold": 2.294107142857146,
-    "medianSold": 2.015,
-    "marketStabilityCV": 0.2640772969551894,
+    "nScraped": 323,
+    "nSoldUsed": 228,
+    "avg": 1.943771929824557,
+    "taguchiSold": 1.943771929824557,
+    "medianSold": 1.99,
+    "marketStabilityCV": 0.12187046231764326,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
   },
   "Jose Mijares": {
     "keyword": "Jose Mijares Baseball",
-    "nScraped": 240,
+    "nScraped": 242,
     "nSoldUsed": 32,
     "avg": 1.9599999999999993,
     "taguchiSold": 1.9599999999999993,
@@ -3945,12 +3945,12 @@
   },
   "Jose Osuna": {
     "keyword": "Jose Osuna Baseball",
-    "nScraped": 170,
-    "nSoldUsed": 38,
-    "avg": 1.453157894736842,
-    "taguchiSold": 1.453157894736842,
-    "medianSold": 1.24,
-    "marketStabilityCV": 0.334045212530806,
+    "nScraped": 259,
+    "nSoldUsed": 60,
+    "avg": 1.7145000000000001,
+    "taguchiSold": 1.7145000000000001,
+    "medianSold": 1.62,
+    "marketStabilityCV": 0.15466488937593456,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
