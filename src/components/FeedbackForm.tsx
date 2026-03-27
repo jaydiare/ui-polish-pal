@@ -12,6 +12,7 @@ const API_URL = "https://api.vzlasportselite.com/api/feedback";
 
 const FeedbackForm = ({ onClose }: { onClose?: () => void }) => {
   const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
   const [category, setCategory] = useState("general");
   const [message, setMessage] = useState("");
   const [sending, setSending] = useState(false);
