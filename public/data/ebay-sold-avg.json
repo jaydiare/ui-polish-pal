@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-27T02:03:19.468Z",
+    "updatedAt": "2026-03-27T05:04:26.499Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. Taguchi winsorized mean + market stability CV. Ungraded condition policy (permissive for sold). Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 240,
-      "endIdx": 250,
+      "startIdx": 250,
+      "endIdx": 260,
       "totalAthletes": 569
     },
     "maxPages": 4,
@@ -28,7 +28,7 @@
     },
     "fx": {
       "source": "CBSA Exchange Rates API",
-      "asOf": "2026-03-27T00:00:00.000Z"
+      "asOf": "2026-03-28T00:00:00.000Z"
     }
   },
   "Adbert Alzolay": {
@@ -3765,31 +3765,31 @@
   },
   "Jose Briceno": {
     "keyword": "Jose Briceno Baseball",
-    "nScraped": 292,
+    "nScraped": 293,
     "nSoldUsed": 84,
-    "avg": 1.818095238095238,
-    "taguchiSold": 1.818095238095238,
-    "medianSold": 1.99,
-    "marketStabilityCV": 0.10930879530264505,
+    "avg": 1.7519047619047607,
+    "taguchiSold": 1.7519047619047607,
+    "medianSold": 1.98,
+    "marketStabilityCV": 0.14345078005002235,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
   },
   "Jose Butto": {
     "keyword": "Jose Butto Baseball",
-    "nScraped": 200,
-    "nSoldUsed": 146,
-    "avg": 1.9149999999999991,
-    "taguchiSold": 1.9149999999999991,
-    "medianSold": 1.99,
-    "marketStabilityCV": 0.17181637081168938,
+    "nScraped": 214,
+    "nSoldUsed": 156,
+    "avg": 1.693782051282052,
+    "taguchiSold": 1.693782051282052,
+    "medianSold": 1.93,
+    "marketStabilityCV": 0.1866345654251301,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
   },
   "Jose Campos": {
     "keyword": "Jose Campos Baseball",
-    "nScraped": 252,
+    "nScraped": 250,
     "nSoldUsed": 24,
     "avg": 2.0250000000000004,
     "taguchiSold": 2.0250000000000004,
@@ -3801,19 +3801,19 @@
   },
   "Jose Castillo": {
     "keyword": "Jose Castillo Baseball",
-    "nScraped": 379,
-    "nSoldUsed": 72,
-    "avg": 2.0944444444444437,
-    "taguchiSold": 2.0944444444444437,
-    "medianSold": 1.8900000000000001,
-    "marketStabilityCV": 0.3962292585702102,
+    "nScraped": 220,
+    "nSoldUsed": 92,
+    "avg": 1.4713043478260857,
+    "taguchiSold": 1.4713043478260857,
+    "medianSold": 1.25,
+    "marketStabilityCV": 0.33050971571186033,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
   },
   "Jose Escobar": {
     "keyword": "Jose Escobar Baseball",
-    "nScraped": 264,
+    "nScraped": 267,
     "nSoldUsed": 20,
     "avg": 2.25,
     "taguchiSold": 2.25,
