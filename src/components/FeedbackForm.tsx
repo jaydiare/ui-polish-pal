@@ -61,6 +61,15 @@ const FeedbackForm = ({ onClose }: { onClose?: () => void }) => {
         className="w-full rounded-lg border border-border bg-secondary px-3 py-2 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-1 focus:ring-vzla-yellow/40"
       />
 
+      <input
+        type="email"
+        placeholder="Email (optional)"
+        value={email}
+        onChange={(e) => setEmail(e.target.value)}
+        maxLength={255}
+        className="w-full rounded-lg border border-border bg-secondary px-3 py-2 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-1 focus:ring-vzla-yellow/40"
+      />
+
       <select
         value={category}
         onChange={(e) => setCategory(e.target.value)}
