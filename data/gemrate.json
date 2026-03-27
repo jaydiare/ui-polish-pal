@@ -1,13 +1,13 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-27T05:42:12.688278+00:00",
-    "athleteCount": 455,
+    "updatedAt": "2026-03-27T08:46:13.484376+00:00",
+    "athleteCount": 456,
     "graders": [
       "PSA"
     ],
     "batchInfo": {
-      "startIdx": 380,
-      "endIdx": 400,
+      "startIdx": 400,
+      "endIdx": 420,
       "totalAthletes": 569
     }
   },
@@ -6030,15 +6030,15 @@
       "graders": {
         "PSA": {
           "cards": 43,
-          "gems": 461,
-          "grades": 707,
+          "gems": 462,
+          "grades": 708,
           "gemRate": 65.0
         }
       },
       "totals": {
         "cards": 43,
-        "gems": 461,
-        "grades": 707,
+        "gems": 462,
+        "grades": 708,
         "gemRate": 65.0
       }
     },
@@ -8200,6 +8200,24 @@
         "gems": 266,
         "grades": 1686,
         "gemRate": 16.0
+      }
+    },
+    "Robert Perez Jr.": {
+      "name": "Robert Perez Jr.",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 89,
+          "gems": 258,
+          "grades": 480,
+          "gemRate": 54.0
+        }
+      },
+      "totals": {
+        "cards": 89,
+        "gems": 258,
+        "grades": 480,
+        "gemRate": 54.0
       }
     }
   }
