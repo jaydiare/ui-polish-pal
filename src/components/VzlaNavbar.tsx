@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Link, useLocation } from "react-router-dom";
+import FeedbackForm from "./FeedbackForm";
 
 const SOCIAL_LINKS = {
   instagram: "https://www.instagram.com/localheros_sportscards/",
