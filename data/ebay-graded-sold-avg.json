@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-27T03:35:44.994Z",
+    "updatedAt": "2026-03-27T05:54:21.260Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA/BGS/SGC grader title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 20,
-      "endIdx": 30,
+      "startIdx": 30,
+      "endIdx": 40,
       "totalAthletes": 452
     },
     "maxPages": 4,
@@ -32,7 +32,7 @@
     },
     "fx": {
       "source": "CBSA Exchange Rates API",
-      "asOf": "2026-03-27T00:00:00.000Z"
+      "asOf": "2026-03-28T00:00:00.000Z"
     }
   },
   "Adbert Alzolay": {
@@ -481,12 +481,12 @@
   },
   "Angel Bravo": {
     "keyword": "Angel Bravo Baseball PSA",
-    "nScraped": 241,
+    "nScraped": 240,
     "nSoldUsed": 12,
-    "avg": 16.610000000000003,
-    "taguchiSold": 16.610000000000003,
-    "medianSold": 16.61,
-    "marketStabilityCV": 2.234008679665268e-16,
+    "avg": 24.72,
+    "taguchiSold": 24.72,
+    "medianSold": 24.72,
+    "marketStabilityCV": 0,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
@@ -505,7 +505,7 @@
   },
   "Angel Guzman": {
     "keyword": "Angel Guzman Baseball PSA",
-    "nScraped": 248,
+    "nScraped": 250,
     "nSoldUsed": 16,
     "avg": 17.5,
     "taguchiSold": 17.5,
