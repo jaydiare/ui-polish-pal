@@ -1,13 +1,13 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-27T12:55:25.759126+00:00",
+    "updatedAt": "2026-03-27T16:49:23.739603+00:00",
     "athleteCount": 456,
     "graders": [
       "PSA"
     ],
     "batchInfo": {
-      "startIdx": 420,
-      "endIdx": 440,
+      "startIdx": 440,
+      "endIdx": 460,
       "totalAthletes": 569
     }
   },
@@ -6715,14 +6715,14 @@
         "PSA": {
           "cards": 114,
           "gems": 420,
-          "grades": 1395,
+          "grades": 1397,
           "gemRate": 30.0
         }
       },
       "totals": {
         "cards": 114,
         "gems": 420,
-        "grades": 1395,
+        "grades": 1397,
         "gemRate": 30.0
       }
     },
@@ -6823,14 +6823,14 @@
         "PSA": {
           "cards": 46,
           "gems": 91,
-          "grades": 3358,
+          "grades": 3359,
           "gemRate": 3.0
         }
       },
       "totals": {
         "cards": 46,
         "gems": 91,
-        "grades": 3358,
+        "grades": 3359,
         "gemRate": 3.0
       }
     },
@@ -6841,14 +6841,14 @@
         "PSA": {
           "cards": 342,
           "gems": 384,
-          "grades": 826,
+          "grades": 827,
           "gemRate": 46.0
         }
       },
       "totals": {
         "cards": 342,
         "gems": 384,
-        "grades": 826,
+        "grades": 827,
         "gemRate": 46.0
       }
     },
