@@ -13,11 +13,14 @@ const app = express();
 app.use(cookieParser());
 app.use(express.json());
 
-// Restrict CORS to production frontend origin
-const FRONTEND_URL = process.env.FRONTEND_URL || "https://www.vzlasportselite.com";
+// Restrict CORS to production frontend origins
+const ALLOWED_ORIGINS = (process.env.FRONTEND_URL || "https://www.vzlasportselite.com")
+  .split(",")
+  .map((o) => o.trim());
+ALLOWED_ORIGINS.push("https://quick-shine-ui.lovable.app");
 app.use(
   cors({
-    origin: FRONTEND_URL,
+    origin: ALLOWED_ORIGINS,
     credentials: true,
   })
 );
