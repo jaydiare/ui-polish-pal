@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-27T09:11:24.402Z",
+    "updatedAt": "2026-03-27T11:10:04.231Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA/BGS/SGC grader title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 50,
-      "endIdx": 60,
+      "startIdx": 60,
+      "endIdx": 70,
       "totalAthletes": 452
     },
     "maxPages": 4,
@@ -889,7 +889,7 @@
   },
   "Carlos Martinez": {
     "keyword": "Carlos Martinez Baseball PSA",
-    "nScraped": 245,
+    "nScraped": 242,
     "nSoldUsed": 20,
     "avg": 14.990000000000004,
     "taguchiSold": 14.990000000000004,
@@ -937,19 +937,19 @@
   },
   "Carlos Narvaez": {
     "keyword": "Carlos Narvaez Baseball PSA",
-    "nScraped": 306,
-    "nSoldUsed": 68,
-    "avg": 39.41235294117647,
-    "taguchiSold": 39.41235294117647,
-    "medianSold": 42,
-    "marketStabilityCV": 0.1878565721609798,
+    "nScraped": 319,
+    "nSoldUsed": 72,
+    "avg": 37.39333333333337,
+    "taguchiSold": 37.39333333333337,
+    "medianSold": 40.5,
+    "marketStabilityCV": 0.15589373662467146,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
   },
   "Carlos Perez": {
     "keyword": "Carlos Perez Baseball PSA",
-    "nScraped": 250,
+    "nScraped": 254,
     "nSoldUsed": 4,
     "avg": 8.5,
     "taguchiSold": 8.5,
@@ -973,15 +973,15 @@
   },
   "Carlos Quintana": {
     "keyword": "Carlos Quintana Baseball PSA",
-    "nScraped": 0,
-    "nSoldUsed": 0,
-    "avg": null,
-    "taguchiSold": null,
-    "medianSold": null,
-    "marketStabilityCV": null,
+    "nScraped": 180,
+    "nSoldUsed": 6,
+    "avg": 63.97,
+    "taguchiSold": 63.97,
+    "medianSold": 63.97,
+    "marketStabilityCV": 0.9593064771436425,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
   },
   "Carlos Rivero": {
     "keyword": "Carlos Rivero Baseball PSA",
