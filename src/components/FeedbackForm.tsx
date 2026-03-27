@@ -25,13 +25,12 @@ const FeedbackForm = ({ onClose }: { onClose?: () => void }) => {
     }
     setSending(true);
     try {
-      const res = await fetch(API_URL, {
+      await fetch(API_URL, {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        mode: "no-cors",
+        headers: { "Content-Type": "text/plain" },
         body: JSON.stringify({ name: name.trim(), email: email.trim(), category, message: message.trim() }),
       });
-      const data = await res.json();
-      if (!res.ok) throw new Error(data.error || "Failed to submit");
       toast.success("Thanks for your feedback!");
       setName("");
       setEmail("");
