@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-27T13:46:42.880Z",
+    "updatedAt": "2026-03-27T15:13:02.103Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA/BGS/SGC grader title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 70,
-      "endIdx": 80,
+      "startIdx": 80,
+      "endIdx": 90,
       "totalAthletes": 452
     },
     "maxPages": 4,
@@ -1177,12 +1177,12 @@
   },
   "Daniel Palencia": {
     "keyword": "Daniel Palencia Baseball PSA",
-    "nScraped": 249,
-    "nSoldUsed": 8,
-    "avg": 310,
-    "taguchiSold": 310,
-    "medianSold": 310,
-    "marketStabilityCV": 0.6552211092046534,
+    "nScraped": 251,
+    "nSoldUsed": 12,
+    "avg": 129,
+    "taguchiSold": 129,
+    "medianSold": 129,
+    "marketStabilityCV": 0,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
@@ -1213,7 +1213,7 @@
   },
   "Darwin Cubillan": {
     "keyword": "Darwin Cubillan Baseball PSA",
-    "nScraped": 40,
+    "nScraped": 43,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -6865,7 +6865,7 @@
   },
   "David Peralta": {
     "keyword": "David Peralta Baseball PSA",
-    "nScraped": 0,
+    "nScraped": 60,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -6889,12 +6889,12 @@
   },
   "Dave Concepcion": {
     "keyword": "Dave Concepcion Baseball PSA",
-    "nScraped": 120,
-    "nSoldUsed": 49,
-    "avg": 37.45612244897959,
-    "taguchiSold": 37.45612244897959,
-    "medianSold": 38.56,
-    "marketStabilityCV": 0.18624784310980072,
+    "nScraped": 205,
+    "nSoldUsed": 84,
+    "avg": 37.07928571428569,
+    "taguchiSold": 37.07928571428569,
+    "medianSold": 36.495000000000005,
+    "marketStabilityCV": 0.18005854112152692,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
