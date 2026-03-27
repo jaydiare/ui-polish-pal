@@ -12,6 +12,7 @@ const API_URL = "https://api.vzlasportselite.com/api/feedback";
 
 const FeedbackForm = ({ onClose }: { onClose?: () => void }) => {
   const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
   const [category, setCategory] = useState("general");
   const [message, setMessage] = useState("");
   const [sending, setSending] = useState(false);
@@ -27,12 +28,13 @@ const FeedbackForm = ({ onClose }: { onClose?: () => void }) => {
       const res = await fetch(API_URL, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ name: name.trim(), category, message: message.trim() }),
+        body: JSON.stringify({ name: name.trim(), email: email.trim(), category, message: message.trim() }),
       });
       const data = await res.json();
       if (!res.ok) throw new Error(data.error || "Failed to submit");
       toast.success("Thanks for your feedback!");
       setName("");
+      setEmail("");
       setMessage("");
       setCategory("general");
       onClose?.();
@@ -56,6 +58,15 @@ const FeedbackForm = ({ onClose }: { onClose?: () => void }) => {
         value={name}
         onChange={(e) => setName(e.target.value)}
         maxLength={100}
+        className="w-full rounded-lg border border-border bg-secondary px-3 py-2 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-1 focus:ring-vzla-yellow/40"
+      />
+
+      <input
+        type="email"
+        placeholder="Email (optional)"
+        value={email}
+        onChange={(e) => setEmail(e.target.value)}
+        maxLength={255}
         className="w-full rounded-lg border border-border bg-secondary px-3 py-2 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-1 focus:ring-vzla-yellow/40"
       />
 
