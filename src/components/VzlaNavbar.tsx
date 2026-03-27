@@ -216,6 +216,9 @@ const VzlaNavbar = () => {
             <div className="mt-4 p-4 rounded-xl border border-border bg-secondary/50 flex justify-center">
               <SocialIcons />
             </div>
+            <div className="mt-3 p-4 rounded-xl border border-border bg-secondary/50">
+              <FeedbackForm onClose={closeMobileInstant} />
+            </div>
           </div>
         </div>
       )}
