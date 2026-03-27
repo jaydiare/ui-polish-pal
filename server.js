@@ -45,7 +45,7 @@ const feedbackLimiter = rateLimit({
 
 app.post("/api/feedback", feedbackLimiter, async (req, res) => {
   try {
-    const { name, category, message } = req.body;
+    const { name, email, category, message } = req.body;
 
     if (!message || typeof message !== "string" || message.trim().length === 0) {
       return res.status(400).json({ error: "Message is required." });
@@ -55,6 +55,9 @@ app.post("/api/feedback", feedbackLimiter, async (req, res) => {
     }
     if (name && name.length > 100) {
       return res.status(400).json({ error: "Name must be under 100 characters." });
+    }
+    if (email && (email.length > 255 || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email))) {
+      return res.status(400).json({ error: "Invalid email address." });
     }
 
     const GITHUB_TOKEN = process.env.GITHUB_FEEDBACK_TOKEN;
@@ -70,7 +73,13 @@ app.post("/api/feedback", feedbackLimiter, async (req, res) => {
     const title = `[Feedback${cat !== "general" ? ` - ${cat}` : ""}] ${message.trim().slice(0, 80)}`;
     const body = [
       `**From:** ${name?.trim() || "Anonymous"}`,
+      email?.trim() ? `**Email:** ${email.trim()}` : null,
       `**Category:** ${cat}`,
+      "",
+      "---",
+      "",
+      message.trim(),
+    ].filter(Boolean).join("\n");
       "",
       "---",
       "",
