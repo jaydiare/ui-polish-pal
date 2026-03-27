@@ -8,7 +8,7 @@ const CATEGORIES = [
   { value: "data", label: "Data / Accuracy" },
 ];
 
-const API_URL = "https://api.vzlasportselite.com/api/feedback";
+const API_URL = "https://script.google.com/macros/s/AKfycbyGuGb3lyDbupU1TUqDMCIWAKDszPWGmWmOvjaEYz-n_dc67VpaDqDTywpGCqYEvbQtrg/exec";
 
 const FeedbackForm = ({ onClose }: { onClose?: () => void }) => {
   const [name, setName] = useState("");
