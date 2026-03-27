@@ -199,7 +199,6 @@
     "graded": "2026-03-08"
   },
   "Bobby Abreu": {
-    "raw": "2026-03-08",
     "graded": "2026-03-08"
   },
   "Brayan Rocchio": {
@@ -1250,8 +1249,7 @@
     "raw": "2026-03-13"
   },
   "Robert Perez": {
-    "graded": "2026-03-08",
-    "raw": "2026-03-13"
+    "graded": "2026-03-08"
   },
   "Robert Suarez": {
     "graded": "2026-03-08",
@@ -2060,6 +2058,10 @@
     "graded": "2026-03-24"
   },
   "Robert Perez Jr.": {
-    "graded": "2026-03-25"
+    "graded": "2026-03-25",
+    "raw": "2026-03-27"
+  },
+  "Jesus Bueno": {
+    "raw": "2026-03-27"
   }
 }
