@@ -83,11 +83,6 @@ app.post("/api/feedback", feedbackLimiter, async (req, res) => {
       "",
       message.trim(),
     ].filter(Boolean).join("\n");
-      "",
-      "---",
-      "",
-      message.trim(),
-    ].join("\n");
 
     const ghRes = await fetch("https://api.github.com/repos/jaydiare/ui-polish-pal/issues", {
       method: "POST",
