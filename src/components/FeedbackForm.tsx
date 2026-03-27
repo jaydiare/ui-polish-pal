@@ -34,6 +34,7 @@ const FeedbackForm = ({ onClose }: { onClose?: () => void }) => {
       if (!res.ok) throw new Error(data.error || "Failed to submit");
       toast.success("Thanks for your feedback!");
       setName("");
+      setEmail("");
       setMessage("");
       setCategory("general");
       onClose?.();
