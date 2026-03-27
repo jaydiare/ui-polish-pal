@@ -28,7 +28,7 @@ const FeedbackForm = ({ onClose }: { onClose?: () => void }) => {
       const res = await fetch(API_URL, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ name: name.trim(), category, message: message.trim() }),
+        body: JSON.stringify({ name: name.trim(), email: email.trim(), category, message: message.trim() }),
       });
       const data = await res.json();
       if (!res.ok) throw new Error(data.error || "Failed to submit");
