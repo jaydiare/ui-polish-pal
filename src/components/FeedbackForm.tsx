@@ -8,7 +8,7 @@ const CATEGORIES = [
   { value: "data", label: "Data / Accuracy" },
 ];
 
-const API_URL = "https://api.vzlasportselite.com/api/feedback";
+const API_URL = "https://script.google.com/macros/s/AKfycbyGuGb3lyDbupU1TUqDMCIWAKDszPWGmWmOvjaEYz-n_dc67VpaDqDTywpGCqYEvbQtrg/exec";
 
 const FeedbackForm = ({ onClose }: { onClose?: () => void }) => {
   const [name, setName] = useState("");
@@ -25,13 +25,12 @@ const FeedbackForm = ({ onClose }: { onClose?: () => void }) => {
     }
     setSending(true);
     try {
-      const res = await fetch(API_URL, {
+      await fetch(API_URL, {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        mode: "no-cors",
+        headers: { "Content-Type": "text/plain" },
         body: JSON.stringify({ name: name.trim(), email: email.trim(), category, message: message.trim() }),
       });
-      const data = await res.json();
-      if (!res.ok) throw new Error(data.error || "Failed to submit");
       toast.success("Thanks for your feedback!");
       setName("");
       setEmail("");
