@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Link, useLocation } from "react-router-dom";
+import FeedbackForm from "./FeedbackForm";
 
 const SOCIAL_LINKS = {
   instagram: "https://www.instagram.com/localheros_sportscards/",
@@ -144,9 +145,11 @@ const VzlaNavbar = () => {
                   animate={{ opacity: 1, y: 0, scale: 1 }}
                   exit={{ opacity: 0, y: 8, scale: 0.96 }}
                   transition={{ duration: 0.15 }}
-                  className="absolute right-0 top-[calc(100%+8px)] glass-panel p-3 z-[99999]"
+                  className="absolute right-0 top-[calc(100%+8px)] glass-panel p-4 z-[99999] min-w-[300px]"
                 >
                   <SocialIcons />
+                  <div className="border-t border-border my-3" />
+                  <FeedbackForm onClose={() => setContactOpen(false)} />
                 </motion.div>
               )}
             </AnimatePresence>
@@ -212,6 +215,9 @@ const VzlaNavbar = () => {
             </a>
             <div className="mt-4 p-4 rounded-xl border border-border bg-secondary/50 flex justify-center">
               <SocialIcons />
+            </div>
+            <div className="mt-3 p-4 rounded-xl border border-border bg-secondary/50">
+              <FeedbackForm onClose={closeMobileInstant} />
             </div>
           </div>
         </div>
