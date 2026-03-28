@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-28T05:37:44.003Z",
+    "updatedAt": "2026-03-28T07:27:13.234Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA/BGS/SGC grader title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 140,
-      "endIdx": 150,
+      "startIdx": 150,
+      "endIdx": 160,
       "totalAthletes": 452
     },
     "maxPages": 4,
@@ -2137,12 +2137,12 @@
   },
   "Gabriel Moreno": {
     "keyword": "Gabriel Moreno Baseball PSA",
-    "nScraped": 128,
+    "nScraped": 126,
     "nSoldUsed": 44,
-    "avg": 28.58636363636364,
-    "taguchiSold": 28.58636363636364,
-    "medianSold": 25,
-    "marketStabilityCV": 0.3029777161543959,
+    "avg": 30.050227272727273,
+    "taguchiSold": 30.050227272727273,
+    "medianSold": 29.494999999999997,
+    "marketStabilityCV": 0.29776461164410556,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
@@ -2185,7 +2185,7 @@
   },
   "German Gonzalez": {
     "keyword": "German Gonzalez Baseball PSA",
-    "nScraped": 241,
+    "nScraped": 240,
     "nSoldUsed": 4,
     "avg": 137.74,
     "taguchiSold": 137.74,
@@ -2197,12 +2197,12 @@
   },
   "German Marquez": {
     "keyword": "German Marquez Baseball PSA",
-    "nScraped": 251,
-    "nSoldUsed": 12,
-    "avg": 9.989999999999998,
-    "taguchiSold": 9.989999999999998,
-    "medianSold": 9.99,
-    "marketStabilityCV": 1.8572014098718777e-16,
+    "nScraped": 248,
+    "nSoldUsed": 8,
+    "avg": 12.495000000000001,
+    "taguchiSold": 12.495000000000001,
+    "medianSold": 12.495000000000001,
+    "marketStabilityCV": 0.2143223404531806,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
@@ -2233,12 +2233,12 @@
   },
   "Gleyber Torres": {
     "keyword": "Gleyber Torres Baseball PSA",
-    "nScraped": 180,
-    "nSoldUsed": 120,
-    "avg": 11.105250000000014,
-    "taguchiSold": 11.105250000000014,
-    "medianSold": 9.995000000000001,
-    "marketStabilityCV": 0.3166780590641199,
+    "nScraped": 120,
+    "nSoldUsed": 86,
+    "avg": 8.38523255813954,
+    "taguchiSold": 8.38523255813954,
+    "medianSold": 7.745,
+    "marketStabilityCV": 0.16935973089466116,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
