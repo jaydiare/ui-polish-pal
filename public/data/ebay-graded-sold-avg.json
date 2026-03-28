@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-28T13:29:51.078Z",
+    "updatedAt": "2026-03-28T14:55:13.961Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA/BGS/SGC grader title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 180,
-      "endIdx": 190,
+      "startIdx": 190,
+      "endIdx": 200,
       "totalAthletes": 452
     },
     "maxPages": 4,
@@ -2701,19 +2701,19 @@
   },
   "Jermaine Palacios": {
     "keyword": "Jermaine Palacios Baseball PSA",
-    "nScraped": 245,
-    "nSoldUsed": 15,
-    "avg": 11.470666666666668,
-    "taguchiSold": 11.470666666666668,
-    "medianSold": 10.5,
-    "marketStabilityCV": 0.2200676808864738,
+    "nScraped": 244,
+    "nSoldUsed": 20,
+    "avg": 9.03,
+    "taguchiSold": 9.03,
+    "medianSold": 9.03,
+    "marketStabilityCV": 0,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
   },
   "Jesus Aguilar": {
     "keyword": "Jesus Aguilar Baseball PSA",
-    "nScraped": 241,
+    "nScraped": 240,
     "nSoldUsed": 4,
     "avg": 12.5,
     "taguchiSold": 12.5,
@@ -2763,10 +2763,10 @@
     "keyword": "Jesus Montero Baseball PSA",
     "nScraped": 240,
     "nSoldUsed": 16,
-    "avg": 129.99,
-    "taguchiSold": 129.99,
-    "medianSold": 129.99,
-    "marketStabilityCV": 0.5561634674144558,
+    "avg": 121.24000000000001,
+    "taguchiSold": 121.24000000000001,
+    "medianSold": 59.99,
+    "marketStabilityCV": 0.591625332907598,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
@@ -2797,15 +2797,15 @@
   },
   "Jhonathan Diaz": {
     "keyword": "Jhonathan Diaz Baseball PSA",
-    "nScraped": 0,
-    "nSoldUsed": 0,
+    "nScraped": 183,
+    "nSoldUsed": 3,
     "avg": null,
     "taguchiSold": null,
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
   },
   "Jhonny Pereda": {
     "keyword": "Jhonny Pereda Baseball PSA",
