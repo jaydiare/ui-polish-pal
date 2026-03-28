@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-28T16:56:08.168Z",
+    "updatedAt": "2026-03-28T19:04:21.096Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA/BGS/SGC grader title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 200,
-      "endIdx": 210,
+      "startIdx": 210,
+      "endIdx": 220,
       "totalAthletes": 452
     },
     "maxPages": 4,
@@ -2966,11 +2966,11 @@
   "Jose Alvarado": {
     "keyword": "Jose Alvarado Baseball PSA",
     "nScraped": 244,
-    "nSoldUsed": 68,
-    "avg": 71.24529411764706,
-    "taguchiSold": 71.24529411764706,
+    "nSoldUsed": 71,
+    "avg": 71.15704225352113,
+    "taguchiSold": 71.15704225352113,
     "medianSold": 70,
-    "marketStabilityCV": 0.050970911135848535,
+    "marketStabilityCV": 0.05039822664230426,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
@@ -3013,7 +3013,7 @@
   },
   "Jose Butto": {
     "keyword": "Jose Butto Baseball PSA",
-    "nScraped": 244,
+    "nScraped": 245,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -3073,15 +3073,15 @@
   },
   "Jose Herrera": {
     "keyword": "Jose Herrera Baseball PSA",
-    "nScraped": 61,
-    "nSoldUsed": 2,
+    "nScraped": 0,
+    "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
   },
   "Jose Lobaton": {
     "keyword": "Jose Lobaton Baseball PSA",
