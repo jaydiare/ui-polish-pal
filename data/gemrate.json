@@ -1,13 +1,13 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-27T20:34:19.708373+00:00",
+    "updatedAt": "2026-03-28T01:46:34.856042+00:00",
     "athleteCount": 456,
     "graders": [
       "PSA"
     ],
     "batchInfo": {
-      "startIdx": 460,
-      "endIdx": 480,
+      "startIdx": 480,
+      "endIdx": 500,
       "totalAthletes": 569
     }
   },
@@ -7308,16 +7308,16 @@
       "graders": {
         "PSA": {
           "cards": 37,
-          "gems": 23,
-          "grades": 52,
-          "gemRate": 44.0
+          "gems": 24,
+          "grades": 53,
+          "gemRate": 45.0
         }
       },
       "totals": {
         "cards": 37,
-        "gems": 23,
-        "grades": 52,
-        "gemRate": 44.0
+        "gems": 24,
+        "grades": 53,
+        "gemRate": 45.0
       }
     },
     "Yolmer Sanchez": {
