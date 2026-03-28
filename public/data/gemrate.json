@@ -1,13 +1,13 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-28T12:44:59.519080+00:00",
+    "updatedAt": "2026-03-28T16:28:11.188314+00:00",
     "athleteCount": 456,
     "graders": [
       "PSA"
     ],
     "batchInfo": {
-      "startIdx": 540,
-      "endIdx": 560,
+      "startIdx": 560,
+      "endIdx": 569,
       "totalAthletes": 569
     }
   },
@@ -7937,17 +7937,17 @@
       "sport": "Tennis",
       "graders": {
         "PSA": {
-          "cards": 20,
+          "cards": 21,
           "gems": 13,
-          "grades": 31,
-          "gemRate": 42.0
+          "grades": 32,
+          "gemRate": 41.0
         }
       },
       "totals": {
-        "cards": 20,
+        "cards": 21,
         "gems": 13,
-        "grades": 31,
-        "gemRate": 42.0
+        "grades": 32,
+        "gemRate": 41.0
       }
     },
     "Adbert Alzolay": {
