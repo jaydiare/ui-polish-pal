@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-28T09:33:51.170Z",
+    "updatedAt": "2026-03-28T12:48:24.566Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. Taguchi winsorized mean + market stability CV. Ungraded condition policy (permissive for sold). Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 350,
-      "endIdx": 360,
+      "startIdx": 360,
+      "endIdx": 370,
       "totalAthletes": 569
     },
     "maxPages": 4,
@@ -5073,12 +5073,12 @@
   },
   "Miguel Yajure": {
     "keyword": "Miguel Yajure Baseball",
-    "nScraped": 138,
-    "nSoldUsed": 92,
-    "avg": 2.426630434782611,
-    "taguchiSold": 2.426630434782611,
+    "nScraped": 135,
+    "nSoldUsed": 85,
+    "avg": 2.301176470588232,
+    "taguchiSold": 2.301176470588232,
     "medianSold": 2,
-    "marketStabilityCV": 0.1982859820477904,
+    "marketStabilityCV": 0.1513840921727371,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
@@ -5086,11 +5086,11 @@
   "Moises Ballesteros": {
     "keyword": "Moises Ballesteros Baseball",
     "nScraped": 240,
-    "nSoldUsed": 182,
-    "avg": 11.53291208791209,
-    "taguchiSold": 11.53291208791209,
-    "medianSold": 10,
-    "marketStabilityCV": 0.4654621905678712,
+    "nSoldUsed": 159,
+    "avg": 6.560691823899375,
+    "taguchiSold": 6.560691823899375,
+    "medianSold": 6.29,
+    "marketStabilityCV": 0.48991240118000234,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
@@ -5121,12 +5121,12 @@
   },
   "Nivaldo Rodriguez": {
     "keyword": "Nivaldo Rodriguez Baseball",
-    "nScraped": 270,
-    "nSoldUsed": 84,
-    "avg": 1.8795238095238094,
-    "taguchiSold": 1.8795238095238094,
-    "medianSold": 1.92,
-    "marketStabilityCV": 0.06440920334457531,
+    "nScraped": 258,
+    "nSoldUsed": 88,
+    "avg": 1.8572727272727276,
+    "taguchiSold": 1.8572727272727276,
+    "medianSold": 1.8599999999999999,
+    "marketStabilityCV": 0.07460945038257068,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
@@ -7677,7 +7677,7 @@
   },
   "Isaias Chavez": {
     "keyword": "Isaias Latigo Chavez Baseball",
-    "nScraped": 24,
+    "nScraped": 20,
     "nSoldUsed": 4,
     "avg": 19.99,
     "taguchiSold": 19.99,
