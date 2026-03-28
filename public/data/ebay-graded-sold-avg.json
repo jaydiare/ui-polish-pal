@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-28T07:27:13.234Z",
+    "updatedAt": "2026-03-28T09:01:17.238Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA/BGS/SGC grader title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 150,
-      "endIdx": 160,
+      "startIdx": 160,
+      "endIdx": 170,
       "totalAthletes": 452
     },
     "maxPages": 4,
@@ -2281,7 +2281,7 @@
   },
   "Gregorio Petit": {
     "keyword": "Gregorio Petit Baseball PSA",
-    "nScraped": 20,
+    "nScraped": 22,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -2293,7 +2293,7 @@
   },
   "Gregory Infante": {
     "keyword": "Gregory Infante Baseball PSA",
-    "nScraped": 54,
+    "nScraped": 51,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -2305,7 +2305,7 @@
   },
   "Guilder Rodriguez": {
     "keyword": "Guilder Rodriguez Baseball PSA",
-    "nScraped": 332,
+    "nScraped": 334,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -2317,7 +2317,7 @@
   },
   "Guillermo Moscoso": {
     "keyword": "Guillermo Moscoso Baseball PSA",
-    "nScraped": 13,
+    "nScraped": 14,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -2353,20 +2353,20 @@
   },
   "Gus Gil": {
     "keyword": "Gus Gil Baseball PSA",
-    "nScraped": 245,
-    "nSoldUsed": 20,
-    "avg": 53.489999999999995,
-    "taguchiSold": 53.489999999999995,
-    "medianSold": 53.49,
-    "marketStabilityCV": 1.3628743038347817e-16,
+    "nScraped": 246,
+    "nSoldUsed": 16,
+    "avg": 54.045,
+    "taguchiSold": 54.045,
+    "medianSold": 54.045,
+    "marketStabilityCV": 0.05646980991417232,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
   },
   "Gus Polidor": {
     "keyword": "Gus Polidor Baseball PSA",
-    "nScraped": 120,
-    "nSoldUsed": 2,
+    "nScraped": 180,
+    "nSoldUsed": 3,
     "avg": null,
     "taguchiSold": null,
     "medianSold": null,
