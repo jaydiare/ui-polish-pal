@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-27T22:57:18.461Z",
+    "updatedAt": "2026-03-28T03:19:50.654Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA/BGS/SGC grader title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 120,
-      "endIdx": 130,
+      "startIdx": 130,
+      "endIdx": 140,
       "totalAthletes": 452
     },
     "maxPages": 4,
@@ -1933,12 +1933,12 @@
   },
   "Felix Hernandez": {
     "keyword": "Felix Hernandez Baseball PSA",
-    "nScraped": 148,
-    "nSoldUsed": 89,
-    "avg": 98.3834831460674,
-    "taguchiSold": 98.3834831460674,
-    "medianSold": 99.99,
-    "marketStabilityCV": 0.2615779604000614,
+    "nScraped": 154,
+    "nSoldUsed": 93,
+    "avg": 102.78365591397846,
+    "taguchiSold": 102.78365591397846,
+    "medianSold": 102.5,
+    "marketStabilityCV": 0.24961308389243636,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
@@ -1970,11 +1970,11 @@
   "Francisco Alvarez": {
     "keyword": "Francisco Alvarez Baseball PSA",
     "nScraped": 180,
-    "nSoldUsed": 74,
-    "avg": 42.68378378378379,
-    "taguchiSold": 42.68378378378379,
-    "medianSold": 46,
-    "marketStabilityCV": 0.27560888103851244,
+    "nSoldUsed": 75,
+    "avg": 55.550933333333326,
+    "taguchiSold": 55.550933333333326,
+    "medianSold": 49.99,
+    "marketStabilityCV": 0.32145384429065144,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
