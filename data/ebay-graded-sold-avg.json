@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-28T19:04:21.096Z",
+    "updatedAt": "2026-03-28T20:52:54.989Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA/BGS/SGC grader title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 210,
-      "endIdx": 220,
+      "startIdx": 220,
+      "endIdx": 230,
       "totalAthletes": 452
     },
     "maxPages": 4,
@@ -3122,11 +3122,11 @@
   "Jose Martinez": {
     "keyword": "Jose Martinez Cardinals Baseball PSA",
     "nScraped": 60,
-    "nSoldUsed": 5,
-    "avg": 39,
-    "taguchiSold": 39,
-    "medianSold": 39,
-    "marketStabilityCV": 0,
+    "nSoldUsed": 6,
+    "avg": 39.425,
+    "taguchiSold": 39.425,
+    "medianSold": 39.425,
+    "marketStabilityCV": 0.011808856661493772,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
@@ -3205,7 +3205,7 @@
   },
   "Jose Pirela": {
     "keyword": "Jose Pirela Baseball PSA",
-    "nScraped": 261,
+    "nScraped": 262,
     "nSoldUsed": 22,
     "avg": 21.397272727272725,
     "taguchiSold": 21.397272727272725,
@@ -3217,19 +3217,19 @@
   },
   "Jose Rodriguez": {
     "keyword": "Jose Rodriguez Baseball PSA",
-    "nScraped": 0,
-    "nSoldUsed": 0,
-    "avg": null,
-    "taguchiSold": null,
-    "medianSold": null,
-    "marketStabilityCV": null,
+    "nScraped": 257,
+    "nSoldUsed": 8,
+    "avg": 18.745,
+    "taguchiSold": 18.745,
+    "medianSold": 18.744999999999997,
+    "marketStabilityCV": 0.07100352012397293,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
   },
   "Jose Rondon": {
     "keyword": "Jose Rondon Baseball PSA",
-    "nScraped": 0,
+    "nScraped": 60,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
