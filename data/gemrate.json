@@ -1,13 +1,13 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-28T16:28:11.188314+00:00",
+    "updatedAt": "2026-03-28T20:25:33.573293+00:00",
     "athleteCount": 456,
     "graders": [
       "PSA"
     ],
     "batchInfo": {
-      "startIdx": 560,
-      "endIdx": 569,
+      "startIdx": 0,
+      "endIdx": 20,
       "totalAthletes": 569
     }
   },
@@ -7957,14 +7957,14 @@
         "PSA": {
           "cards": 340,
           "gems": 540,
-          "grades": 1051,
+          "grades": 1052,
           "gemRate": 51.0
         }
       },
       "totals": {
         "cards": 340,
         "gems": 540,
-        "grades": 1051,
+        "grades": 1052,
         "gemRate": 51.0
       }
     },
@@ -8063,17 +8063,17 @@
       "sport": "Baseball",
       "graders": {
         "PSA": {
-          "cards": 65,
-          "gems": 78,
-          "grades": 146,
-          "gemRate": 53.0
+          "cards": 66,
+          "gems": 79,
+          "grades": 147,
+          "gemRate": 54.0
         }
       },
       "totals": {
-        "cards": 65,
-        "gems": 78,
-        "grades": 146,
-        "gemRate": 53.0
+        "cards": 66,
+        "gems": 79,
+        "grades": 147,
+        "gemRate": 54.0
       }
     },
     "Alejandro Freire": {
