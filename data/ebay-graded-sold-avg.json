@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-28T14:55:13.961Z",
+    "updatedAt": "2026-03-28T16:56:08.168Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA/BGS/SGC grader title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 190,
-      "endIdx": 200,
+      "startIdx": 200,
+      "endIdx": 210,
       "totalAthletes": 452
     },
     "maxPages": 4,
@@ -2857,12 +2857,12 @@
   },
   "Johan Santana": {
     "keyword": "Johan Santana Baseball PSA",
-    "nScraped": 274,
-    "nSoldUsed": 37,
-    "avg": 91.61594594594594,
-    "taguchiSold": 91.61594594594594,
-    "medianSold": 69.99,
-    "marketStabilityCV": 0.49401328045193577,
+    "nScraped": 281,
+    "nSoldUsed": 40,
+    "avg": 104.49449999999999,
+    "taguchiSold": 104.49449999999999,
+    "medianSold": 99.99000000000001,
+    "marketStabilityCV": 0.3350432291449711,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
@@ -2893,7 +2893,7 @@
   },
   "Jorbit Vivas": {
     "keyword": "Jorbit Vivas Baseball PSA",
-    "nScraped": 266,
+    "nScraped": 269,
     "nSoldUsed": 36,
     "avg": 20.299999999999994,
     "taguchiSold": 20.299999999999994,
@@ -2905,19 +2905,19 @@
   },
   "Jorge Barrosa": {
     "keyword": "Jorge Barrosa Baseball PSA",
-    "nScraped": 251,
-    "nSoldUsed": 14,
-    "avg": 17.494285714285716,
-    "taguchiSold": 17.494285714285716,
+    "nScraped": 247,
+    "nSoldUsed": 20,
+    "avg": 20.490000000000002,
+    "taguchiSold": 20.490000000000002,
     "medianSold": 20.49,
-    "marketStabilityCV": 0.20519458009366937,
+    "marketStabilityCV": 1.778920119866336e-16,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
   },
   "Jorge Julio": {
     "keyword": "Jorge Julio Baseball PSA",
-    "nScraped": 0,
+    "nScraped": 61,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
