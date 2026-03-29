@@ -33,6 +33,13 @@ export interface ShowRankingPlayer {
   pot: string;
 }
 
+export interface ShowRankingSection {
+  title: string;
+  sourceUrl: string;
+  sourceLabel: string;
+  players: ShowRankingPlayer[];
+}
+
 export interface BlogPost {
   slug: string;
   title: string;
@@ -46,4 +53,5 @@ export interface BlogPost {
   playerNames?: string[];
   ebayCards?: EbayCard[];
   showRankingPlayers?: ShowRankingPlayer[];
+  showRankingSections?: ShowRankingSection[];
 }
