@@ -495,8 +495,8 @@
   },
   {
     "slug": "venezuelan-players-mlb-the-show-26-top-100",
-    "title": "Venezuelan Players in MLB The Show 26 Top 100",
-    "excerpt": "All Venezuelan players ranked in the MLB The Show 26 Top 100 — see their ratings, positions, and find their cards on eBay.",
+    "title": "Venezuelan Players in MLB The Show 26 Rankings",
+    "excerpt": "All Venezuelan players ranked in the MLB The Show 26 Top 100 and Best Outfielders — see their ratings, positions, and find their cards on eBay.",
     "date": "2026-03-29",
     "author": "VZLA Sports Elite",
     "coverImage": "",
@@ -507,18 +507,37 @@
         "heading": "Venezuela in MLB The Show 26",
         "paragraphs": [
           "MLB The Show 26 features 7 Venezuelan players in its Top 100 rankings, led by Ronald Acuña Jr. at #17 with a 95 OVR rating. From seasoned veterans like Jose Altuve to rising stars like Jackson Chourio, Venezuela continues to produce elite talent that dominates both the real diamond and the virtual one.",
-          "Each player name links directly to eBay so you can find and collect their baseball cards. Whether you're looking for rookie cards, graded gems, or affordable raw singles — these are the Venezuelan names to watch in 2026."
+          "In the Best Outfielders list, Venezuela places 5 players — with Acuña Jr. ranked #4 overall and Wilyer Abreu and Anthony Santander adding depth beyond the Top 100. Each player name links directly to eBay so you can find and collect their baseball cards."
         ]
       }
     ],
-    "showRankingPlayers": [
-      { "rank": 17, "name": "Ronald Acuña Jr.", "team": "Braves", "position": "Outfielder", "ovr": 95, "pot": "A" },
-      { "rank": 57, "name": "Ranger Suarez", "team": "Red Sox", "position": "Pitcher", "ovr": 88, "pot": "A" },
-      { "rank": 71, "name": "William Contreras", "team": "Brewers", "position": "Catcher", "ovr": 87, "pot": "A" },
-      { "rank": 78, "name": "Eugenio Suárez", "team": "Reds", "position": "Third Base", "ovr": 86, "pot": "A" },
-      { "rank": 84, "name": "Jackson Chourio", "team": "Brewers", "position": "Outfielder", "ovr": 85, "pot": "A" },
-      { "rank": 85, "name": "Jose Altuve", "team": "Astros", "position": "Outfielder", "ovr": 85, "pot": "A" },
-      { "rank": 99, "name": "Gabriel Moreno", "team": "Diamondbacks", "position": "Catcher", "ovr": 84, "pot": "B" }
+    "showRankingSections": [
+      {
+        "title": "Top 100 Players",
+        "sourceUrl": "https://www.theshowratings.com/lists/top-100-players",
+        "sourceLabel": "TheShowRatings.com – Top 100",
+        "players": [
+          { "rank": 17, "name": "Ronald Acuña Jr.", "team": "Braves", "position": "Outfielder", "ovr": 95, "pot": "A" },
+          { "rank": 57, "name": "Ranger Suarez", "team": "Red Sox", "position": "Pitcher", "ovr": 88, "pot": "A" },
+          { "rank": 71, "name": "William Contreras", "team": "Brewers", "position": "Catcher", "ovr": 87, "pot": "A" },
+          { "rank": 78, "name": "Eugenio Suárez", "team": "Reds", "position": "Third Base", "ovr": 86, "pot": "A" },
+          { "rank": 84, "name": "Jackson Chourio", "team": "Brewers", "position": "Outfielder", "ovr": 85, "pot": "A" },
+          { "rank": 85, "name": "Jose Altuve", "team": "Astros", "position": "Outfielder", "ovr": 85, "pot": "A" },
+          { "rank": 99, "name": "Gabriel Moreno", "team": "Diamondbacks", "position": "Catcher", "ovr": 84, "pot": "B" }
+        ]
+      },
+      {
+        "title": "Best Outfielders",
+        "sourceUrl": "https://www.theshowratings.com/lists/outfielders",
+        "sourceLabel": "TheShowRatings.com – Outfielders",
+        "players": [
+          { "rank": 4, "name": "Ronald Acuña Jr.", "team": "Braves", "position": "Outfielder", "ovr": 95, "pot": "A" },
+          { "rank": 16, "name": "Jackson Chourio", "team": "Brewers", "position": "Outfielder", "ovr": 85, "pot": "A" },
+          { "rank": 17, "name": "Jose Altuve", "team": "Astros", "position": "Outfielder", "ovr": 85, "pot": "A" },
+          { "rank": 33, "name": "Wilyer Abreu", "team": "Red Sox", "position": "Outfielder", "ovr": 82, "pot": "B" },
+          { "rank": 43, "name": "Anthony Santander", "team": "Blue Jays", "position": "Outfielder", "ovr": 79, "pot": "B" }
+        ]
+      }
     ]
   }
 ]
