@@ -496,7 +496,7 @@
   {
     "slug": "venezuelan-players-mlb-the-show-26-top-100",
     "title": "Venezuelan Players in MLB The Show 26 Rankings",
-    "excerpt": "All Venezuelan players ranked in the MLB The Show 26 Top 100 and Best Outfielders — see their ratings, positions, and find their cards on eBay.",
+    "excerpt": "All Venezuelan players ranked in the MLB The Show 26 Top 100, Best Outfielders, and Best Infielders — see their ratings, positions, and find their cards on eBay.",
     "date": "2026-03-29",
     "author": "VZLA Sports Elite",
     "coverImage": "",
@@ -507,7 +507,7 @@
         "heading": "Venezuela in MLB The Show 26",
         "paragraphs": [
           "MLB The Show 26 features 7 Venezuelan players in its Top 100 rankings, led by Ronald Acuña Jr. at #17 with a 95 OVR rating. From seasoned veterans like Jose Altuve to rising stars like Jackson Chourio, Venezuela continues to produce elite talent that dominates both the real diamond and the virtual one.",
-          "In the Best Outfielders list, Venezuela places 5 players — with Acuña Jr. ranked #4 overall and Wilyer Abreu and Anthony Santander adding depth beyond the Top 100. Each player name links directly to eBay so you can find and collect their baseball cards."
+          "In the Best Outfielders list, Venezuela places 5 players — with Acuña Jr. ranked #4 overall. The Best Infielders list features 7 Venezuelan players led by Eugenio Suárez at #21, including rising names like Luisangel Acuña. Each player name links directly to eBay so you can find and collect their baseball cards."
         ]
       }
     ],
@@ -536,6 +536,20 @@
           { "rank": 17, "name": "Jose Altuve", "team": "Astros", "position": "Outfielder", "ovr": 85, "pot": "A" },
           { "rank": 33, "name": "Wilyer Abreu", "team": "Red Sox", "position": "Outfielder", "ovr": 82, "pot": "B" },
           { "rank": 43, "name": "Anthony Santander", "team": "Blue Jays", "position": "Outfielder", "ovr": 79, "pot": "B" }
+        ]
+      },
+      {
+        "title": "Best Infielders",
+        "sourceUrl": "https://www.theshowratings.com/lists/infielders",
+        "sourceLabel": "TheShowRatings.com – Infielders",
+        "players": [
+          { "rank": 21, "name": "Eugenio Suárez", "team": "Reds", "position": "Third Base", "ovr": 86, "pot": "A" },
+          { "rank": 44, "name": "Willson Contreras", "team": "Red Sox", "position": "First Base", "ovr": 82, "pot": "B" },
+          { "rank": 48, "name": "Maikel Garcia", "team": "Royals", "position": "Third Base", "ovr": 81, "pot": "B" },
+          { "rank": 56, "name": "Andrés Giménez", "team": "Blue Jays", "position": "Second Base", "ovr": 79, "pot": "B" },
+          { "rank": 65, "name": "Gleyber Torres", "team": "Tigers", "position": "Second Base", "ovr": 78, "pot": "B" },
+          { "rank": 70, "name": "Ezequiel Tovar", "team": "Rockies", "position": "Shortstop", "ovr": 77, "pot": "B" },
+          { "rank": 79, "name": "Luisangel Acuña", "team": "White Sox", "position": "Second Base", "ovr": 76, "pot": "C" }
         ]
       }
     ]
