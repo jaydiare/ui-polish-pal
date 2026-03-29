@@ -1,6 +1,19 @@
 import { useState, useEffect, useRef } from "react";
 
 const cache = new Map<string, string | null>();
+let localHeadshotMap: Record<string, string> | null = null;
+let localHeadshotPromise: Promise<Record<string, string>> | null = null;
+
+async function getLocalHeadshots(): Promise<Record<string, string>> {
+  if (localHeadshotMap) return localHeadshotMap;
+  if (!localHeadshotPromise) {
+    localHeadshotPromise = fetch("/data/soccer-headshots.json")
+      .then(r => r.ok ? r.json() : {})
+      .catch(() => ({}));
+  }
+  localHeadshotMap = await localHeadshotPromise;
+  return localHeadshotMap!;
+}
 
 // Normalize a name for comparison: strip accents, punctuation, lowercase
 function normName(s: string): string {
