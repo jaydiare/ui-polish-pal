@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-29T02:05:58.988Z",
+    "updatedAt": "2026-03-29T05:08:23.918Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. Taguchi winsorized mean + market stability CV. Ungraded condition policy (permissive for sold). Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 400,
-      "endIdx": 410,
+      "startIdx": 410,
+      "endIdx": 420,
       "totalAthletes": 569
     },
     "maxPages": 4,
@@ -28,7 +28,7 @@
     },
     "fx": {
       "source": "CBSA Exchange Rates API",
-      "asOf": "2026-03-29T00:00:00.000Z"
+      "asOf": "2026-03-30T00:00:00.000Z"
     }
   },
   "Adbert Alzolay": {
@@ -5685,7 +5685,7 @@
   },
   "Ricardo Pinto": {
     "keyword": "Ricardo Pinto Baseball",
-    "nScraped": 241,
+    "nScraped": 244,
     "nSoldUsed": 16,
     "avg": 1.0949999999999998,
     "taguchiSold": 1.0949999999999998,
@@ -5697,31 +5697,31 @@
   },
   "Ricardo Rodriguez": {
     "keyword": "Ricardo Rodriguez Baseball",
-    "nScraped": 358,
-    "nSoldUsed": 86,
-    "avg": 1.8383720930232557,
-    "taguchiSold": 1.8383720930232557,
-    "medianSold": 1.66,
-    "marketStabilityCV": 0.3172195337246177,
+    "nScraped": 372,
+    "nSoldUsed": 104,
+    "avg": 1.3265384615384603,
+    "taguchiSold": 1.3265384615384603,
+    "medianSold": 1.3199999999999998,
+    "marketStabilityCV": 0.23870894066604953,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
   },
   "Ricardo Sanchez": {
     "keyword": "Ricardo Sanchez Baseball",
-    "nScraped": 253,
-    "nSoldUsed": 48,
-    "avg": 1.624166666666668,
-    "taguchiSold": 1.624166666666668,
-    "medianSold": 1.495,
-    "marketStabilityCV": 0.17415485062788308,
+    "nScraped": 257,
+    "nSoldUsed": 52,
+    "avg": 1.6984615384615398,
+    "taguchiSold": 1.6984615384615398,
+    "medianSold": 1.5,
+    "marketStabilityCV": 0.13848331352312304,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
   },
   "Rich Garces": {
     "keyword": "Rich Garces Baseball",
-    "nScraped": 253,
+    "nScraped": 261,
     "nSoldUsed": 40,
     "avg": 1.59,
     "taguchiSold": 1.59,
@@ -5757,15 +5757,15 @@
   },
   "Robert Perez": {
     "keyword": "Robert Perez Blue Jays Cardenales Baseball",
-    "nScraped": 60,
-    "nSoldUsed": 14,
-    "avg": 1.5400000000000003,
-    "taguchiSold": 1.5400000000000003,
-    "medianSold": 1.6,
-    "marketStabilityCV": 0.30691694280770054,
+    "nScraped": 0,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
   },
   "Robert Suarez": {
     "keyword": "Robert Suarez Baseball",
@@ -7713,14 +7713,14 @@
   },
   "Robert Perez Jr.": {
     "keyword": "Robert Perez Jr. Prospects Baseball",
-    "nScraped": 225,
-    "nSoldUsed": 32,
-    "avg": 1.25,
-    "taguchiSold": 1.25,
-    "medianSold": 1.25,
-    "marketStabilityCV": 0,
+    "nScraped": 0,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
   }
 }
