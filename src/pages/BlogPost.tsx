@@ -13,6 +13,7 @@ import { useAthleteData } from "@/hooks/useAthleteData";
 import type { Athlete } from "@/data/athletes";
 
 const BlogDataTable = lazy(() => import("@/components/BlogDataTable"));
+const BlogShowRanking = lazy(() => import("@/components/BlogShowRanking"));
 
 /** Auto-link URLs in text */
 function renderLinkedText(text: string) {
@@ -124,6 +125,10 @@ const BlogPost = () => {
         {post.type === "data-table" ? (
           <Suspense fallback={<p className="text-muted-foreground text-center py-8">Loading table…</p>}>
             <BlogDataTable />
+          </Suspense>
+        ) : post.type === "the-show-ranking" && post.showRankingPlayers ? (
+          <Suspense fallback={<p className="text-muted-foreground text-center py-8">Loading ranking…</p>}>
+            <BlogShowRanking players={post.showRankingPlayers} />
           </Suspense>
         ) : post.type === "roster" && post.playerNames ? (
           <RosterSection playerNames={post.playerNames} excerpt={post.excerpt} />
