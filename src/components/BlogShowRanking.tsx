@@ -13,9 +13,12 @@ import { useAthleteImage } from "@/hooks/useAthleteImage";
 
 const CAMPAIGN_ID = "5339142305";
 
-function buildEbayCardSearchUrl(playerName: string): string {
-  const query = encodeURIComponent(`${playerName} baseball card`);
-  return `https://www.ebay.com/sch/i.html?_nkw=${query}&_sacat=212&mkcid=1&mkrid=711-53200-19255-0&campid=${CAMPAIGN_ID}&toolid=10001&customid=show26-ranking`;
+function buildEbayCardSearchUrl(playerName: string, sport?: "baseball" | "soccer"): string {
+  const sportLabel = sport === "soccer" ? "soccer card" : "baseball card";
+  const category = sport === "soccer" ? "212" : "212";
+  const customId = sport === "soccer" ? "fc26-ranking" : "show26-ranking";
+  const query = encodeURIComponent(`${playerName} ${sportLabel}`);
+  return `https://www.ebay.com/sch/i.html?_nkw=${query}&_sacat=${category}&mkcid=1&mkrid=711-53200-19255-0&campid=${CAMPAIGN_ID}&toolid=10001&customid=${customId}`;
 }
 
 function ovrColor(ovr: number): string {
