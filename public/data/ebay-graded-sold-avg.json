@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-29T20:54:28.168Z",
+    "updatedAt": "2026-03-29T22:55:16.299Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA/BGS/SGC grader title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 330,
-      "endIdx": 340,
+      "startIdx": 340,
+      "endIdx": 350,
       "totalAthletes": 458
     },
     "maxPages": 4,
@@ -4693,19 +4693,19 @@
   },
   "Pedro Pages": {
     "keyword": "Pedro Pages Baseball PSA",
-    "nScraped": 123,
-    "nSoldUsed": 4,
+    "nScraped": 248,
+    "nSoldUsed": 8,
     "avg": 17.189999999999998,
     "taguchiSold": 17.189999999999998,
     "medianSold": 17.189999999999998,
-    "marketStabilityCV": 0.5165588795890893,
+    "marketStabilityCV": 0.47824059343956804,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
   },
   "Pompeyo Davalillo": {
     "keyword": "Pompeyo Davalillo Baseball PSA",
-    "nScraped": 0,
+    "nScraped": 60,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -4717,7 +4717,7 @@
   },
   "Rafael Betancourt": {
     "keyword": "Rafael Betancourt Baseball PSA",
-    "nScraped": 0,
+    "nScraped": 60,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -4729,7 +4729,7 @@
   },
   "Rafael Marchan": {
     "keyword": "Rafael Marchan Baseball PSA",
-    "nScraped": 0,
+    "nScraped": 243,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -4777,7 +4777,7 @@
   },
   "Ramon Flores": {
     "keyword": "Ramon Flores Baseball PSA",
-    "nScraped": 60,
+    "nScraped": 0,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -4789,7 +4789,7 @@
   },
   "Ramon Garcia": {
     "keyword": "Ramon Garcia Baseball PSA",
-    "nScraped": 60,
+    "nScraped": 0,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
