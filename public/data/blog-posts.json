@@ -551,6 +551,26 @@
           { "rank": 70, "name": "Ezequiel Tovar", "team": "Rockies", "position": "Shortstop", "ovr": 77, "pot": "B" },
           { "rank": 79, "name": "Luisangel Acuña", "team": "White Sox", "position": "Second Base", "ovr": 76, "pot": "C" }
         ]
+      },
+      {
+        "title": "Best Catchers",
+        "sourceUrl": "https://www.theshowratings.com/lists/catchers",
+        "sourceLabel": "TheShowRatings.com – Catchers",
+        "players": [
+          { "rank": 3, "name": "William Contreras", "team": "Brewers", "position": "Catcher", "ovr": 87, "pot": "A" },
+          { "rank": 7, "name": "Gabriel Moreno", "team": "Diamondbacks", "position": "Catcher", "ovr": 84, "pot": "B" },
+          { "rank": 16, "name": "Francisco Alvarez", "team": "Mets", "position": "Catcher", "ovr": 79, "pot": "B" },
+          { "rank": 18, "name": "Salvador Perez", "team": "Royals", "position": "Catcher", "ovr": 79, "pot": "B" },
+          { "rank": 19, "name": "Carlos Narváez", "team": "Red Sox", "position": "Catcher", "ovr": 77, "pot": "C" },
+          { "rank": 21, "name": "Freddy Fermin", "team": "Padres", "position": "Catcher", "ovr": 76, "pot": "B" },
+          { "rank": 32, "name": "Luis Torrens", "team": "Mets", "position": "Catcher", "ovr": 73, "pot": "C" },
+          { "rank": 33, "name": "Keibert Ruiz", "team": "Nationals", "position": "Catcher", "ovr": 72, "pot": "B" },
+          { "rank": 35, "name": "Pedro Pagés", "team": "Cardinals", "position": "Catcher", "ovr": 72, "pot": "C" },
+          { "rank": 40, "name": "Rafael Marchán", "team": "Phillies", "position": "Catcher", "ovr": 70, "pot": "C" },
+          { "rank": 54, "name": "Yohel Pozo", "team": "Cardinals", "position": "Catcher", "ovr": 67, "pot": "C" },
+          { "rank": 62, "name": "Moisés Ballesteros", "team": "Cubs", "position": "Catcher", "ovr": 66, "pot": "B" },
+          { "rank": 69, "name": "Jeferson Quero", "team": "Brewers", "position": "Catcher", "ovr": 64, "pot": "B" }
+        ]
       }
     ]
   }
