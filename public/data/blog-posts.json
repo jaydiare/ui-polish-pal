@@ -571,6 +571,15 @@
           { "rank": 62, "name": "Moisés Ballesteros", "team": "Cubs", "position": "Catcher", "ovr": 66, "pot": "B" },
           { "rank": 69, "name": "Jeferson Quero", "team": "Brewers", "position": "Catcher", "ovr": 64, "pot": "B" }
         ]
+      },
+      {
+        "title": "Best Pitchers",
+        "sourceUrl": "https://www.theshowratings.com/lists/pitchers",
+        "sourceLabel": "TheShowRatings.com – Pitchers",
+        "players": [
+          { "rank": 30, "name": "Ranger Suarez", "team": "Red Sox", "position": "Pitcher", "ovr": 88, "pot": "A" },
+          { "rank": 65, "name": "Pablo López", "team": "Twins", "position": "Pitcher", "ovr": 82, "pot": "B" }
+        ]
       }
     ]
   }
