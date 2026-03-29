@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-29T19:06:45.910Z",
+    "updatedAt": "2026-03-29T20:54:28.168Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA/BGS/SGC grader title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 320,
-      "endIdx": 330,
+      "startIdx": 330,
+      "endIdx": 340,
       "totalAthletes": 458
     },
     "maxPages": 4,
@@ -4573,12 +4573,12 @@
   },
   "Oswaldo Cabrera": {
     "keyword": "Oswaldo Cabrera Baseball PSA",
-    "nScraped": 216,
-    "nSoldUsed": 102,
-    "avg": 39.37382352941177,
-    "taguchiSold": 39.37382352941177,
-    "medianSold": 39.995000000000005,
-    "marketStabilityCV": 0.10646440399141026,
+    "nScraped": 228,
+    "nSoldUsed": 110,
+    "avg": 42.35118181818173,
+    "taguchiSold": 42.35118181818173,
+    "medianSold": 40,
+    "marketStabilityCV": 0.1640795049223401,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
@@ -4597,7 +4597,7 @@
   },
   "Oswaldo Peraza": {
     "keyword": "Oswaldo Peraza Baseball PSA",
-    "nScraped": 0,
+    "nScraped": 150,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -4609,6 +4609,42 @@
   },
   "Ozzie Guillen": {
     "keyword": "Ozzie Guillen Baseball PSA",
+    "nScraped": 313,
+    "nSoldUsed": 68,
+    "avg": 23.97764705882352,
+    "taguchiSold": 23.97764705882352,
+    "medianSold": 22.72,
+    "marketStabilityCV": 0.10394598324584362,
+    "currency": "USD",
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
+  },
+  "Pablo Lopez": {
+    "keyword": "Pablo Lopez Baseball PSA",
+    "nScraped": 247,
+    "nSoldUsed": 8,
+    "avg": 10.489999999999998,
+    "taguchiSold": 10.489999999999998,
+    "medianSold": 10.489999999999998,
+    "marketStabilityCV": 0.9681532118848548,
+    "currency": "USD",
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
+  },
+  "Pablo Sandoval": {
+    "keyword": "Pablo Sandoval Baseball PSA",
+    "nScraped": 129,
+    "nSoldUsed": 17,
+    "avg": 32.04882352941177,
+    "taguchiSold": 32.04882352941177,
+    "medianSold": 29.99,
+    "marketStabilityCV": 0.07914481723959928,
+    "currency": "USD",
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
+  },
+  "Pablo Torrealba": {
+    "keyword": "Pablo Torrealba Baseball PSA",
     "nScraped": 0,
     "nSoldUsed": 0,
     "avg": null,
@@ -4619,45 +4655,9 @@
     "originalCurrencyExample": null,
     "fxRateUsed": null
   },
-  "Pablo Lopez": {
-    "keyword": "Pablo Lopez Baseball PSA",
-    "nScraped": 248,
-    "nSoldUsed": 12,
-    "avg": 19.990000000000002,
-    "taguchiSold": 19.990000000000002,
-    "medianSold": 19.99,
-    "marketStabilityCV": 1.8562723446343225e-16,
-    "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
-  },
-  "Pablo Sandoval": {
-    "keyword": "Pablo Sandoval Baseball PSA",
-    "nScraped": 258,
-    "nSoldUsed": 33,
-    "avg": 29.990000000000006,
-    "taguchiSold": 29.990000000000006,
-    "medianSold": 29.99,
-    "marketStabilityCV": 2.406000530781158e-16,
-    "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
-  },
-  "Pablo Torrealba": {
-    "keyword": "Pablo Torrealba Baseball PSA",
-    "nScraped": 240,
-    "nSoldUsed": 8,
-    "avg": 32.02,
-    "taguchiSold": 32.02,
-    "medianSold": 32.02,
-    "marketStabilityCV": 0.4697521141421376,
-    "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
-  },
   "Pedro Avila": {
     "keyword": "Pedro Avila Baseball PSA",
-    "nScraped": 60,
+    "nScraped": 0,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -4669,7 +4669,7 @@
   },
   "Pedro Castellano": {
     "keyword": "Pedro Castellano Baseball PSA",
-    "nScraped": 60,
+    "nScraped": 0,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
