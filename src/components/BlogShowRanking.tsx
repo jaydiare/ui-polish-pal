@@ -57,6 +57,9 @@ function PlayerHeadshot({ name }: { name: string }) {
 }
 
 function RankingTable({ section }: { section: ShowRankingSection }) {
+  const isSoccer = section.sport === "soccer";
+  const gameLabel = isSoccer ? "EA SPORTS FC™ 26" : "MLB The Show 26";
+
   return (
     <motion.div
       className="glass-panel rounded-xl overflow-hidden"
@@ -78,7 +81,7 @@ function RankingTable({ section }: { section: ShowRankingSection }) {
             <TableHead className="text-xs hidden sm:table-cell">Team</TableHead>
             <TableHead className="text-xs hidden sm:table-cell">Position</TableHead>
             <TableHead className="text-xs text-center">OVR</TableHead>
-            <TableHead className="text-xs text-center">POT</TableHead>
+            {!isSoccer && <TableHead className="text-xs text-center">POT</TableHead>}
           </TableRow>
         </TableHeader>
         <TableBody>
@@ -98,7 +101,7 @@ function RankingTable({ section }: { section: ShowRankingSection }) {
                   <PlayerHeadshot name={p.name} />
                   <div className="min-w-0">
                     <a
-                      href={buildEbayCardSearchUrl(p.name)}
+                      href={buildEbayCardSearchUrl(p.name, section.sport)}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-vzla-yellow hover:underline font-semibold text-sm"
@@ -114,17 +117,19 @@ function RankingTable({ section }: { section: ShowRankingSection }) {
               <TableCell className={`text-center font-display font-bold text-lg py-2 ${ovrColor(p.ovr)}`}>
                 {p.ovr}
               </TableCell>
-              <TableCell className="text-center py-2">
-                <span className={`text-[11px] px-2 py-0.5 rounded-full font-semibold ${potBadge(p.pot)}`}>
-                  {p.pot}
-                </span>
-              </TableCell>
+              {!isSoccer && (
+                <TableCell className="text-center py-2">
+                  <span className={`text-[11px] px-2 py-0.5 rounded-full font-semibold ${potBadge(p.pot)}`}>
+                    {p.pot}
+                  </span>
+                </TableCell>
+              )}
             </motion.tr>
           ))}
         </TableBody>
       </Table>
       <div className="px-4 py-2 border-t border-border text-xs text-muted-foreground">
-        Source: <a href={section.sourceUrl} target="_blank" rel="noopener noreferrer" className="text-vzla-yellow hover:underline">{section.sourceLabel}</a> · MLB The Show 26
+        Source: <a href={section.sourceUrl} target="_blank" rel="noopener noreferrer" className="text-vzla-yellow hover:underline">{section.sourceLabel}</a> · {gameLabel}
       </div>
     </motion.div>
   );
