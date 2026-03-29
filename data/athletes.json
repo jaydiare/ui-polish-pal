@@ -969,7 +969,7 @@
     "league": "MLB",
     "team": "Mariners",
     "provider": "balldontlie",
-    "gemrate": "no"
+    "gemrate": "yes"
   },
   {
     "name": "Eduardo Escobar",
@@ -1689,7 +1689,7 @@
     "league": "MLB",
     "team": "Rockies",
     "provider": "manual",
-    "gemrate": "no"
+    "gemrate": "yes"
   },
   {
     "name": "Humberto Arteaga",
@@ -2107,7 +2107,7 @@
     "league": "MLB",
     "team": "Rockies",
     "provider": "manual",
-    "gemrate": "no"
+    "gemrate": "yes"
   },
   {
     "name": "Jose Nieves",
@@ -2395,7 +2395,7 @@
     "league": "MLB",
     "team": "Mets",
     "provider": "manual",
-    "gemrate": "no"
+    "gemrate": "yes"
   },
   {
     "name": "Liu Rodriguez",
@@ -2811,7 +2811,7 @@
     "league": "MLB",
     "team": "Nationals",
     "provider": "manual",
-    "gemrate": "no"
+    "gemrate": "yes"
   },
   {
     "name": "Melvin Mora",
@@ -3350,10 +3350,10 @@
     "league": "MLB/LVBP",
     "team": "Blue Jays/ Cardenales/Yankees/ Brewers",
     "provider": "manual",
-     "searchKeyword": "Robert Perez Blue Jays Cardenales",
+    "searchKeyword": "Robert Perez Blue Jays Cardenales",
     "gemrate": "yes"
   },
-    {
+  {
     "name": "Robert Perez Jr.",
     "sport": "Baseball",
     "league": "MiLB/LVBP",
@@ -3744,7 +3744,7 @@
     "league": "MLB",
     "team": "Braves",
     "provider": "manual",
-    "gemrate": "no",
+    "gemrate": "yes",
     "searchKeyword": "Williams Perez Atlanta Braves"
   },
   {
