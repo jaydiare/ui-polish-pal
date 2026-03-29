@@ -120,8 +120,14 @@ async function fetchS3Headshot(name: string, sport?: string): Promise<string | n
   }
 }
 
-// ── Main hook: ESPN → TheSportsDB → S3 ──
+// ── Main hook: Local mapping → ESPN → TheSportsDB → S3 ──
 async function fetchAthleteImage(name: string, sport?: string): Promise<string | null> {
+  // Check local curated mapping first (instant, no API call)
+  if (sport === "Soccer") {
+    const local = await getLocalHeadshots();
+    if (local[name]) return local[name];
+  }
+
   if (sport === "Baseball") {
     const espn = await fetchEspnHeadshot(name);
     if (espn) return espn;
