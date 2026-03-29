@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-29T05:55:30.308Z",
+    "updatedAt": "2026-03-29T07:31:08.942Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA/BGS/SGC grader title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 250,
-      "endIdx": 260,
+      "startIdx": 260,
+      "endIdx": 270,
       "totalAthletes": 452
     },
     "maxPages": 4,
@@ -3721,12 +3721,12 @@
   },
   "Luis Garcia": {
     "keyword": "Luis Garcia Baseball PSA",
-    "nScraped": 365,
-    "nSoldUsed": 109,
-    "avg": 8.758440366972467,
-    "taguchiSold": 8.758440366972467,
-    "medianSold": 9.99,
-    "marketStabilityCV": 0.26321009981518095,
+    "nScraped": 204,
+    "nSoldUsed": 116,
+    "avg": 9.82379310344828,
+    "taguchiSold": 9.82379310344828,
+    "medianSold": 10,
+    "marketStabilityCV": 0.2102771510535194,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
