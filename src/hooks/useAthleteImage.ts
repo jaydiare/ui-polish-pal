@@ -1,6 +1,19 @@
 import { useState, useEffect, useRef } from "react";
 
 const cache = new Map<string, string | null>();
+let localHeadshotMap: Record<string, string> | null = null;
+let localHeadshotPromise: Promise<Record<string, string>> | null = null;
+
+async function getLocalHeadshots(): Promise<Record<string, string>> {
+  if (localHeadshotMap) return localHeadshotMap;
+  if (!localHeadshotPromise) {
+    localHeadshotPromise = fetch("/data/soccer-headshots.json")
+      .then(r => r.ok ? r.json() : {})
+      .catch(() => ({}));
+  }
+  localHeadshotMap = await localHeadshotPromise;
+  return localHeadshotMap!;
+}
 
 // Normalize a name for comparison: strip accents, punctuation, lowercase
 function normName(s: string): string {
@@ -107,8 +120,14 @@ async function fetchS3Headshot(name: string, sport?: string): Promise<string | n
   }
 }
 
-// ── Main hook: ESPN → TheSportsDB → S3 ──
+// ── Main hook: Local mapping → ESPN → TheSportsDB → S3 ──
 async function fetchAthleteImage(name: string, sport?: string): Promise<string | null> {
+  // Check local curated mapping first (instant, no API call)
+  if (sport === "Soccer") {
+    const local = await getLocalHeadshots();
+    if (local[name]) return local[name];
+  }
+
   if (sport === "Baseball") {
     const espn = await fetchEspnHeadshot(name);
     if (espn) return espn;
