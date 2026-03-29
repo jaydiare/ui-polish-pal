@@ -98,7 +98,7 @@ function RankingTable({ section }: { section: ShowRankingSection }) {
               </TableCell>
               <TableCell className="py-2">
                 <div className="flex items-center gap-3">
-                  <PlayerHeadshot name={p.name} />
+                  <PlayerHeadshot name={p.name} sport={isSoccer ? "Soccer" : "Baseball"} />
                   <div className="min-w-0">
                     <a
                       href={buildEbayCardSearchUrl(p.name, section.sport)}
