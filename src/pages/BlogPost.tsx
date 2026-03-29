@@ -126,9 +126,9 @@ const BlogPost = () => {
           <Suspense fallback={<p className="text-muted-foreground text-center py-8">Loading table…</p>}>
             <BlogDataTable />
           </Suspense>
-        ) : post.type === "the-show-ranking" && post.showRankingPlayers ? (
+        ) : post.type === "the-show-ranking" && (post.showRankingPlayers || post.showRankingSections) ? (
           <Suspense fallback={<p className="text-muted-foreground text-center py-8">Loading ranking…</p>}>
-            <BlogShowRanking players={post.showRankingPlayers} />
+            <BlogShowRanking players={post.showRankingPlayers} sections={post.showRankingSections} />
           </Suspense>
         ) : post.type === "roster" && post.playerNames ? (
           <RosterSection playerNames={post.playerNames} excerpt={post.excerpt} />
