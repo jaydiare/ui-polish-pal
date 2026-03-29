@@ -34,9 +34,9 @@ function potBadge(pot: string): string {
   return "bg-muted text-muted-foreground";
 }
 
-function PlayerHeadshot({ name }: { name: string }) {
+function PlayerHeadshot({ name, sport }: { name: string; sport?: string }) {
   const ref = useRef<HTMLDivElement>(null);
-  const imageUrl = useAthleteImage(name, "Baseball", ref as React.RefObject<HTMLElement>);
+  const imageUrl = useAthleteImage(name, sport ?? "Baseball", ref as React.RefObject<HTMLElement>);
 
   return (
     <div ref={ref} className="w-10 h-10 rounded-full overflow-hidden bg-secondary border border-border flex-shrink-0">
@@ -98,7 +98,7 @@ function RankingTable({ section }: { section: ShowRankingSection }) {
               </TableCell>
               <TableCell className="py-2">
                 <div className="flex items-center gap-3">
-                  <PlayerHeadshot name={p.name} />
+                  <PlayerHeadshot name={p.name} sport={isSoccer ? "Soccer" : "Baseball"} />
                   <div className="min-w-0">
                     <a
                       href={buildEbayCardSearchUrl(p.name, section.sport)}
