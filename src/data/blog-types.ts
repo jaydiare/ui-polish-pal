@@ -24,6 +24,15 @@ export interface EbayCard {
   price?: string;
 }
 
+export interface ShowRankingPlayer {
+  rank: number;
+  name: string;
+  team: string;
+  position: string;
+  ovr: number;
+  pot: string;
+}
+
 export interface BlogPost {
   slug: string;
   title: string;
@@ -33,7 +42,8 @@ export interface BlogPost {
   coverImage: string;
   sections: BlogSection[];
   textSections?: BlogTextSection[];
-  type?: "ranked" | "roster" | "data-table" | "ebay-cards";
+  type?: "ranked" | "roster" | "data-table" | "ebay-cards" | "the-show-ranking";
   playerNames?: string[];
   ebayCards?: EbayCard[];
+  showRankingPlayers?: ShowRankingPlayer[];
 }

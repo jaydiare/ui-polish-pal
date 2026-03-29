@@ -126,6 +126,10 @@ const BlogPost = () => {
           <Suspense fallback={<p className="text-muted-foreground text-center py-8">Loading table…</p>}>
             <BlogDataTable />
           </Suspense>
+        ) : post.type === "the-show-ranking" && post.showRankingPlayers ? (
+          <Suspense fallback={<p className="text-muted-foreground text-center py-8">Loading ranking…</p>}>
+            <BlogShowRanking players={post.showRankingPlayers} />
+          </Suspense>
         ) : post.type === "roster" && post.playerNames ? (
           <RosterSection playerNames={post.playerNames} excerpt={post.excerpt} />
         ) : post.type === "ebay-cards" && post.ebayCards ? (
