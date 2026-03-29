@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-28T22:52:38.844Z",
+    "updatedAt": "2026-03-29T03:42:22.753Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA/BGS/SGC grader title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 230,
-      "endIdx": 240,
+      "startIdx": 240,
+      "endIdx": 250,
       "totalAthletes": 452
     },
     "maxPages": 4,
@@ -3385,12 +3385,12 @@
   },
   "Juan Yepez": {
     "keyword": "Juan Yepez Baseball PSA",
-    "nScraped": 265,
-    "nSoldUsed": 14,
-    "avg": 16.23428571428571,
-    "taguchiSold": 16.23428571428571,
+    "nScraped": 256,
+    "nSoldUsed": 20,
+    "avg": 11.009999999999998,
+    "taguchiSold": 11.009999999999998,
     "medianSold": 11.01,
-    "marketStabilityCV": 0.385616355078735,
+    "marketStabilityCV": 1.6553166782952423e-16,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
@@ -3421,7 +3421,7 @@
   },
   "Junior Guerra": {
     "keyword": "Junior Guerra Baseball PSA",
-    "nScraped": 241,
+    "nScraped": 240,
     "nSoldUsed": 4,
     "avg": 1,
     "taguchiSold": 1,
@@ -3433,7 +3433,7 @@
   },
   "Keibert Ruiz": {
     "keyword": "Keibert Ruiz Baseball PSA",
-    "nScraped": 273,
+    "nScraped": 268,
     "nSoldUsed": 44,
     "avg": 6.99909090909091,
     "taguchiSold": 6.99909090909091,
@@ -3445,7 +3445,7 @@
   },
   "Keider Montero": {
     "keyword": "Keider Montero Baseball PSA",
-    "nScraped": 267,
+    "nScraped": 266,
     "nSoldUsed": 8,
     "avg": 13.5,
     "taguchiSold": 13.5,
