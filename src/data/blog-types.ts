@@ -38,6 +38,7 @@ export interface ShowRankingSection {
   sourceUrl: string;
   sourceLabel: string;
   players: ShowRankingPlayer[];
+  sport?: "baseball" | "soccer";
 }
 
 export interface BlogPost {
