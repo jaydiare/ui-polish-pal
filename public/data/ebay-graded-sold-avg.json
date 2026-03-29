@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-29T10:56:55.757Z",
+    "updatedAt": "2026-03-29T13:31:17.621Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA/BGS/SGC grader title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 280,
-      "endIdx": 290,
+      "startIdx": 290,
+      "endIdx": 300,
       "totalAthletes": 452
     },
     "maxPages": 4,
@@ -4081,7 +4081,7 @@
   },
   "Martin Perez": {
     "keyword": "Martin Perez Baseball PSA",
-    "nScraped": 242,
+    "nScraped": 241,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -4093,7 +4093,7 @@
   },
   "Martin Prado": {
     "keyword": "Martin Prado Baseball PSA",
-    "nScraped": 241,
+    "nScraped": 240,
     "nSoldUsed": 4,
     "avg": 22.5,
     "taguchiSold": 22.5,
@@ -4153,7 +4153,7 @@
   },
   "Max Castillo": {
     "keyword": "Max Castillo Baseball PSA",
-    "nScraped": 0,
+    "nScraped": 60,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
