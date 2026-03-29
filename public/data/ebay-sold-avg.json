@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-29T09:34:19.066Z",
+    "updatedAt": "2026-03-29T12:49:10.124Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. Taguchi winsorized mean + market stability CV. Ungraded condition policy (permissive for sold). Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 430,
-      "endIdx": 440,
+      "startIdx": 440,
+      "endIdx": 450,
       "totalAthletes": 569
     },
     "maxPages": 4,
@@ -6021,15 +6021,15 @@
   },
   "Thairo Estrada": {
     "keyword": "Thairo Estrada Baseball",
-    "nScraped": 0,
-    "nSoldUsed": 0,
-    "avg": null,
-    "taguchiSold": null,
-    "medianSold": null,
-    "marketStabilityCV": null,
+    "nScraped": 240,
+    "nSoldUsed": 73,
+    "avg": 2.0836986301369858,
+    "taguchiSold": 2.0836986301369858,
+    "medianSold": 2.25,
+    "marketStabilityCV": 0.19130449314763118,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
   },
   "Toby Hernandez": {
     "keyword": "Toby Hernandez Baseball",
@@ -6045,12 +6045,12 @@
   },
   "Tomas Perez": {
     "keyword": "Tomas Perez Baseball",
-    "nScraped": 337,
-    "nSoldUsed": 56,
-    "avg": 1.0907142857142846,
-    "taguchiSold": 1.0907142857142846,
-    "medianSold": 1.095,
-    "marketStabilityCV": 0.0918804803829908,
+    "nScraped": 332,
+    "nSoldUsed": 60,
+    "avg": 1.1013333333333324,
+    "taguchiSold": 1.1013333333333324,
+    "medianSold": 1.19,
+    "marketStabilityCV": 0.08679349778882692,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
@@ -6069,24 +6069,24 @@
   },
   "Tony Alvarez": {
     "keyword": "Tony Alvarez Baseball",
-    "nScraped": 336,
-    "nSoldUsed": 52,
-    "avg": 0.9900000000000003,
-    "taguchiSold": 0.9900000000000003,
+    "nScraped": 297,
+    "nSoldUsed": 44,
+    "avg": 0.9900000000000001,
+    "taguchiSold": 0.9900000000000001,
     "medianSold": 0.99,
-    "marketStabilityCV": 3.3971355311118626e-16,
+    "marketStabilityCV": 1.1344024235322013e-16,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
   },
   "Tony Armas": {
     "keyword": "Tony Armas Baseball",
-    "nScraped": 240,
-    "nSoldUsed": 34,
-    "avg": 2.0011764705882342,
-    "taguchiSold": 2.0011764705882342,
-    "medianSold": 1.94,
-    "marketStabilityCV": 0.2433689120352503,
+    "nScraped": 180,
+    "nSoldUsed": 29,
+    "avg": 1.518620689655173,
+    "taguchiSold": 1.518620689655173,
+    "medianSold": 0.99,
+    "marketStabilityCV": 0.8815363468991728,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
