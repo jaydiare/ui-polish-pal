@@ -86,7 +86,28 @@ async function fetchSportsDbHeadshot(name: string, sport?: string): Promise<stri
   }
 }
 
-// ── Main hook: ESPN → TheSportsDB (Wikipedia removed to avoid CORS errors on published site) ──
+// ── S3 bucket fallback (curated headshots) ──
+function slugify(name: string): string {
+  return name
+    .normalize("NFD").replace(/[\u0300-\u036f]/g, "")
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/(^-|-$)/g, "");
+}
+
+async function fetchS3Headshot(name: string, sport?: string): Promise<string | null> {
+  try {
+    const folder = (sport || "baseball").toLowerCase();
+    const slug = slugify(name);
+    const url = `https://vzla.s3.us-east-1.amazonaws.com/player-headshots/${folder}/${slug}.webp`;
+    const res = await fetch(url, { method: "HEAD" });
+    return res.ok ? url : null;
+  } catch {
+    return null;
+  }
+}
+
+// ── Main hook: ESPN → TheSportsDB → S3 ──
 async function fetchAthleteImage(name: string, sport?: string): Promise<string | null> {
   if (sport === "Baseball") {
     const espn = await fetchEspnHeadshot(name);
@@ -95,6 +116,9 @@ async function fetchAthleteImage(name: string, sport?: string): Promise<string |
 
   const tsdb = await fetchSportsDbHeadshot(name, sport);
   if (tsdb) return tsdb;
+
+  const s3 = await fetchS3Headshot(name, sport);
+  if (s3) return s3;
 
   return null;
 }
