@@ -13,6 +13,7 @@ import { useAthleteData } from "@/hooks/useAthleteData";
 import type { Athlete } from "@/data/athletes";
 
 const BlogDataTable = lazy(() => import("@/components/BlogDataTable"));
+const BlogShowRanking = lazy(() => import("@/components/BlogShowRanking"));
 
 /** Auto-link URLs in text */
 function renderLinkedText(text: string) {
