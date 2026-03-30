@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-30T06:12:38.972Z",
+    "updatedAt": "2026-03-30T08:06:00.164Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA/BGS/SGC grader title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 360,
-      "endIdx": 370,
+      "startIdx": 370,
+      "endIdx": 380,
       "totalAthletes": 458
     },
     "maxPages": 4,
@@ -5065,7 +5065,7 @@
   },
   "Roger Cedeno": {
     "keyword": "Roger Cedeno Baseball PSA",
-    "nScraped": 121,
+    "nScraped": 240,
     "nSoldUsed": 4,
     "avg": 6,
     "taguchiSold": 6,
@@ -5089,19 +5089,19 @@
   },
   "Ronald Acuna Jr.": {
     "keyword": "Ronald Acuna Jr. Baseball PSA",
-    "nScraped": 0,
-    "nSoldUsed": 0,
-    "avg": null,
-    "taguchiSold": null,
-    "medianSold": null,
-    "marketStabilityCV": null,
+    "nScraped": 240,
+    "nSoldUsed": 79,
+    "avg": 51.361392405063285,
+    "taguchiSold": 51.361392405063285,
+    "medianSold": 50,
+    "marketStabilityCV": 0.11798012638991852,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
   },
   "Ronald Belisario": {
     "keyword": "Ronald Belisario Baseball PSA",
-    "nScraped": 0,
+    "nScraped": 60,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -5125,7 +5125,7 @@
   },
   "Ronald Torreyes": {
     "keyword": "Ronald Torreyes Baseball PSA",
-    "nScraped": 60,
+    "nScraped": 0,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -5137,7 +5137,7 @@
   },
   "Ronny Cedeno": {
     "keyword": "Ronny Cedeno Baseball PSA",
-    "nScraped": 60,
+    "nScraped": 0,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -5149,7 +5149,7 @@
   },
   "Rosman Garcia": {
     "keyword": "Rosman Garcia Baseball PSA",
-    "nScraped": 60,
+    "nScraped": 0,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -5161,15 +5161,15 @@
   },
   "Rougned Odor": {
     "keyword": "Rougned Odor Baseball PSA",
-    "nScraped": 250,
-    "nSoldUsed": 42,
-    "avg": 24.342857142857145,
-    "taguchiSold": 24.342857142857145,
-    "medianSold": 23.1,
-    "marketStabilityCV": 0.3952910188371395,
+    "nScraped": 0,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
   },
   "Ruben Quevedo": {
     "keyword": "Ruben Quevedo Baseball PSA",
