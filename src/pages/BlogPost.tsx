@@ -1,4 +1,5 @@
 import { useEffect, useState, lazy, Suspense } from "react";
+import AdSenseInArticle from "@/components/AdSenseInArticle";
 import { useParams, Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import SEOHead from "@/components/SEOHead";
