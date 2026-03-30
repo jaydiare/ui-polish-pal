@@ -593,8 +593,28 @@ function OddsComparisonChart({ results }: { results: Array<ChecklistEntry & { di
   );
 }
 
+function buildEbaySearchUrl(card: ChecklistEntry, athlete: string): string {
+  const terms = [athlete, card.section].filter(Boolean).join(" ");
+  const params = new URLSearchParams({
+    _nkw: terms,
+    _sacat: "212",
+    LH_BIN: "1",
+    LH_ItemCondition: "3",
+    mkcid: "1",
+    mkrid: "711-53200-19255-0",
+    campid: "5339142305",
+    toolid: "10001",
+    customid: "checklist-intel",
+  });
+  return `https://www.ebay.com/sch/i.html?${params.toString()}`;
+}
+
 function CardResult({ card }: { card: ChecklistEntry & { displayOdds: string; robust?: RobustScore } }) {
   const r = card.robust;
+  // Extract athlete name from the analysis context — stored on the card's parent result
+  const athleteName = (card as any)._athleteName ?? "";
+  const ebayUrl = buildEbaySearchUrl(card, athleteName);
+
   return (
     <div className="bg-secondary/50 rounded-lg p-3 border border-border/50 space-y-2">
       <div className="flex items-start justify-between gap-2">
@@ -671,6 +691,17 @@ function CardResult({ card }: { card: ChecklistEntry & { displayOdds: string; ro
           Matched odds: {card.matchedOdds.name}
         </p>
       )}
+
+      {/* eBay Search Link */}
+      <a
+        href={ebayUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="inline-flex items-center gap-1.5 text-xs font-medium text-vzla-yellow hover:text-vzla-yellow/80 transition-colors no-underline pt-0.5"
+      >
+        🔎 Search on eBay
+        <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+      </a>
     </div>
   );
 }
