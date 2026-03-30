@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-30T07:22:49.561Z",
+    "updatedAt": "2026-03-30T10:14:17.877Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. Taguchi winsorized mean + market stability CV. Ungraded condition policy (permissive for sold). Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 500,
-      "endIdx": 510,
+      "startIdx": 510,
+      "endIdx": 520,
       "totalAthletes": 569
     },
     "maxPages": 4,
@@ -6873,7 +6873,7 @@
   },
   "Miku Fedor": {
     "keyword": "Miku Fedor Soccer",
-    "nScraped": 0,
+    "nScraped": 40,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -6945,39 +6945,39 @@
   },
   "Yangel Herrera": {
     "keyword": "Yangel Herrera Soccer",
-    "nScraped": 212,
-    "nSoldUsed": 100,
-    "avg": 3.6155999999999993,
-    "taguchiSold": 3.6155999999999993,
-    "medianSold": 3.29,
-    "marketStabilityCV": 0.16727593334945876,
+    "nScraped": 336,
+    "nSoldUsed": 92,
+    "avg": 3.612608695652174,
+    "taguchiSold": 3.612608695652174,
+    "medianSold": 3.25,
+    "marketStabilityCV": 0.16726147937667366,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
   },
   "Cristian Casseres Jr.": {
     "keyword": "Cristian Casseres Jr. Soccer",
-    "nScraped": 92,
-    "nSoldUsed": 8,
-    "avg": 2.995,
-    "taguchiSold": 2.995,
+    "nScraped": 66,
+    "nSoldUsed": 6,
+    "avg": 2.9949999999999997,
+    "taguchiSold": 2.9949999999999997,
     "medianSold": 2.995,
-    "marketStabilityCV": 0.7156711719992132,
+    "marketStabilityCV": 0.7333447264092543,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
   },
   "Fernando Aristeguieta": {
     "keyword": "Fernando Aristeguieta Soccer",
-    "nScraped": 120,
-    "nSoldUsed": 2,
+    "nScraped": 0,
+    "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
   },
   "Gabriel Cichero": {
     "keyword": "Gabriel Cichero Soccer",
