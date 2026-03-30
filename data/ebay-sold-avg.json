@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-30T05:21:40.169Z",
+    "updatedAt": "2026-03-30T07:22:49.561Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. Taguchi winsorized mean + market stability CV. Ungraded condition policy (permissive for sold). Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 490,
-      "endIdx": 500,
+      "startIdx": 500,
+      "endIdx": 510,
       "totalAthletes": 569
     },
     "maxPages": 4,
@@ -6753,15 +6753,15 @@
   },
   "Sergio Cordova": {
     "keyword": "Sergio Cordova Soccer",
-    "nScraped": 0,
-    "nSoldUsed": 0,
+    "nScraped": 61,
+    "nSoldUsed": 1,
     "avg": null,
     "taguchiSold": null,
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
   },
   "Tomas Rincon": {
     "keyword": "Tomas Rincon Soccer",
@@ -6777,7 +6777,7 @@
   },
   "Yohandry Orozco": {
     "keyword": "Yohandry Orozco Soccer",
-    "nScraped": 34,
+    "nScraped": 31,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -6825,12 +6825,12 @@
   },
   "Jeffren Suarez": {
     "keyword": "Jeffren Suarez Soccer",
-    "nScraped": 240,
-    "nSoldUsed": 16,
-    "avg": 1.7899999999999994,
-    "taguchiSold": 1.7899999999999994,
+    "nScraped": 120,
+    "nSoldUsed": 8,
+    "avg": 1.79,
+    "taguchiSold": 1.79,
     "medianSold": 1.79,
-    "marketStabilityCV": 0.11539615184230666,
+    "marketStabilityCV": 0.11944636510052484,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
