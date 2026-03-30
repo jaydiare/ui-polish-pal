@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-30T03:46:14.565Z",
+    "updatedAt": "2026-03-30T06:12:38.972Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA/BGS/SGC grader title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 350,
-      "endIdx": 360,
+      "startIdx": 360,
+      "endIdx": 370,
       "totalAthletes": 458
     },
     "maxPages": 4,
@@ -32,7 +32,7 @@
     },
     "fx": {
       "source": "CBSA Exchange Rates API",
-      "asOf": "2026-03-30T00:00:00.000Z"
+      "asOf": "2026-03-31T00:00:00.000Z"
     }
   },
   "Adbert Alzolay": {
@@ -4933,7 +4933,7 @@
   },
   "Ricardo Pinto": {
     "keyword": "Ricardo Pinto Baseball PSA",
-    "nScraped": 57,
+    "nScraped": 53,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -4981,12 +4981,12 @@
   },
   "Richard Hidalgo": {
     "keyword": "Richard Hidalgo Baseball PSA",
-    "nScraped": 60,
-    "nSoldUsed": 1,
-    "avg": null,
-    "taguchiSold": null,
-    "medianSold": null,
-    "marketStabilityCV": null,
+    "nScraped": 241,
+    "nSoldUsed": 4,
+    "avg": 7.73,
+    "taguchiSold": 7.73,
+    "medianSold": 7.73,
+    "marketStabilityCV": 0,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
@@ -5005,7 +5005,7 @@
   },
   "Robert Perez": {
     "keyword": "Robert Perez Blue Jays Cardenales Baseball PSA",
-    "nScraped": 57,
+    "nScraped": 56,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -5017,7 +5017,7 @@
   },
   "Robert Suarez": {
     "keyword": "Robert Suarez Baseball PSA",
-    "nScraped": 60,
+    "nScraped": 0,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -5029,7 +5029,7 @@
   },
   "Roberto Petagine": {
     "keyword": "Roberto Petagine Baseball PSA",
-    "nScraped": 60,
+    "nScraped": 0,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -6937,7 +6937,7 @@
   },
   "Robert Perez Jr.": {
     "keyword": "Robert Perez Jr. Prospects Baseball PSA",
-    "nScraped": 241,
+    "nScraped": 240,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
