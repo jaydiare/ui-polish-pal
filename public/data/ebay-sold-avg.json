@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-30T13:12:51.460Z",
+    "updatedAt": "2026-03-30T16:03:53.542Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. Taguchi winsorized mean + market stability CV. Ungraded condition policy (permissive for sold). Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 520,
-      "endIdx": 530,
+      "startIdx": 530,
+      "endIdx": 540,
       "totalAthletes": 569
     },
     "maxPages": 4,
@@ -7125,24 +7125,24 @@
   },
   "Dani Pereira": {
     "keyword": "Dani Pereira Soccer",
-    "nScraped": 207,
-    "nSoldUsed": 132,
-    "avg": 3.38545454545455,
-    "taguchiSold": 3.38545454545455,
-    "medianSold": 3.125,
-    "marketStabilityCV": 0.1609331544229328,
+    "nScraped": 280,
+    "nSoldUsed": 168,
+    "avg": 3.914523809523815,
+    "taguchiSold": 3.914523809523815,
+    "medianSold": 3.54,
+    "marketStabilityCV": 0.2420141157322003,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
   },
   "David Martinez": {
     "keyword": "David Martinez Soccer",
-    "nScraped": 216,
-    "nSoldUsed": 196,
-    "avg": 9.87653061224492,
-    "taguchiSold": 9.87653061224492,
-    "medianSold": 10,
-    "marketStabilityCV": 0.33135201692064137,
+    "nScraped": 188,
+    "nSoldUsed": 173,
+    "avg": 9.319884393063585,
+    "taguchiSold": 9.319884393063585,
+    "medianSold": 9.99,
+    "marketStabilityCV": 0.3350665428009136,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
@@ -7161,7 +7161,7 @@
   },
   "Emilio Renteria": {
     "keyword": "Emilio Renteria Soccer",
-    "nScraped": 180,
+    "nScraped": 192,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -7185,7 +7185,7 @@
   },
   "Erickson Gallardo": {
     "keyword": "Erickson Gallardo Soccer",
-    "nScraped": 41,
+    "nScraped": 44,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -7209,12 +7209,12 @@
   },
   "Gustavo Caraballo": {
     "keyword": "Gustavo Caraballo Soccer",
-    "nScraped": 216,
-    "nSoldUsed": 204,
-    "avg": 5.330882352941177,
-    "taguchiSold": 5.330882352941177,
+    "nScraped": 144,
+    "nSoldUsed": 134,
+    "avg": 5.034029850746268,
+    "taguchiSold": 5.034029850746268,
     "medianSold": 5,
-    "marketStabilityCV": 0.19776604531505676,
+    "marketStabilityCV": 0.2716447841705457,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
@@ -7233,15 +7233,15 @@
   },
   "Jefferson Savarino": {
     "keyword": "Jefferson Savarino Soccer",
-    "nScraped": 0,
-    "nSoldUsed": 0,
-    "avg": null,
-    "taguchiSold": null,
-    "medianSold": null,
-    "marketStabilityCV": null,
+    "nScraped": 93,
+    "nSoldUsed": 68,
+    "avg": 3.42926470588235,
+    "taguchiSold": 3.42926470588235,
+    "medianSold": 3.19,
+    "marketStabilityCV": 0.39103073238590863,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
   },
   "Jesus Bueno": {
     "keyword": "Jesus Bueno Soccer",
