@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-30T11:30:44.421Z",
+    "updatedAt": "2026-03-30T14:05:06.924Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA/BGS/SGC grader title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 390,
-      "endIdx": 400,
+      "startIdx": 400,
+      "endIdx": 410,
       "totalAthletes": 458
     },
     "maxPages": 4,
@@ -5473,7 +5473,7 @@
   },
   "Wil Ledezma": {
     "keyword": "Wil Ledezma Baseball PSA",
-    "nScraped": 56,
+    "nScraped": 220,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -5497,7 +5497,7 @@
   },
   "Wilfredo Rodriguez": {
     "keyword": "Wilfredo Rodriguez Baseball PSA",
-    "nScraped": 0,
+    "nScraped": 60,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -5509,7 +5509,7 @@
   },
   "Wilfredo Tovar": {
     "keyword": "Wilfredo Tovar Baseball PSA",
-    "nScraped": 0,
+    "nScraped": 60,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -5545,24 +5545,24 @@
   },
   "William Bergolla": {
     "keyword": "William Bergolla Baseball PSA",
-    "nScraped": 0,
-    "nSoldUsed": 0,
-    "avg": null,
-    "taguchiSold": null,
-    "medianSold": null,
-    "marketStabilityCV": null,
+    "nScraped": 265,
+    "nSoldUsed": 64,
+    "avg": 35.673125,
+    "taguchiSold": 35.673125,
+    "medianSold": 29.884999999999998,
+    "marketStabilityCV": 0.20763487581065368,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
   },
   "William Contreras": {
     "keyword": "William Contreras Baseball PSA",
-    "nScraped": 232,
-    "nSoldUsed": 80,
-    "avg": 35.294999999999945,
-    "taguchiSold": 35.294999999999945,
-    "medianSold": 33.495000000000005,
-    "marketStabilityCV": 0.12351723132332101,
+    "nScraped": 228,
+    "nSoldUsed": 76,
+    "avg": 35.04368421052627,
+    "taguchiSold": 35.04368421052627,
+    "medianSold": 32,
+    "marketStabilityCV": 0.12378192821879286,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
@@ -5580,13 +5580,13 @@
     "fxRateUsed": null
   },
   "Williams Perez": {
-    "keyword": "Williams Perez Baseball",
-    "nScraped": 283,
-    "nSoldUsed": 115,
-    "avg": 34.791391304347826,
-    "taguchiSold": 34.791391304347826,
-    "medianSold": 32.76,
-    "marketStabilityCV": 0.13714119711326425,
+    "keyword": "Williams Perez Atlanta Braves Baseball PSA",
+    "nScraped": 60,
+    "nSoldUsed": 3,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
@@ -5605,7 +5605,7 @@
   },
   "Willie Canate": {
     "keyword": "Willie Canate Baseball PSA",
-    "nScraped": 60,
+    "nScraped": 0,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
