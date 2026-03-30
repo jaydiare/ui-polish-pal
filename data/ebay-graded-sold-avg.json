@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-30T08:06:00.164Z",
+    "updatedAt": "2026-03-30T09:51:57.904Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA/BGS/SGC grader title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 370,
-      "endIdx": 380,
+      "startIdx": 380,
+      "endIdx": 390,
       "totalAthletes": 458
     },
     "maxPages": 4,
@@ -5186,11 +5186,11 @@
   "Salvador Perez": {
     "keyword": "Salvador Perez Baseball PSA",
     "nScraped": 240,
-    "nSoldUsed": 73,
-    "avg": 64.95643835616438,
-    "taguchiSold": 64.95643835616438,
-    "medianSold": 61,
-    "marketStabilityCV": 0.21748810156452184,
+    "nSoldUsed": 75,
+    "avg": 71.84359999999998,
+    "taguchiSold": 71.84359999999998,
+    "medianSold": 69.99,
+    "marketStabilityCV": 0.22015734532791958,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
@@ -5209,7 +5209,7 @@
   },
   "Sebastian Rivero": {
     "keyword": "Sebastian Rivero Baseball PSA",
-    "nScraped": 0,
+    "nScraped": 60,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -5221,7 +5221,7 @@
   },
   "Sergio Escalona": {
     "keyword": "Sergio Escalona Baseball PSA",
-    "nScraped": 0,
+    "nScraped": 20,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -5269,12 +5269,12 @@
   },
   "Thairo Estrada": {
     "keyword": "Thairo Estrada Baseball PSA",
-    "nScraped": 245,
-    "nSoldUsed": 20,
-    "avg": 10,
-    "taguchiSold": 10,
-    "medianSold": 10,
-    "marketStabilityCV": 0,
+    "nScraped": 182,
+    "nSoldUsed": 12,
+    "avg": 19.995,
+    "taguchiSold": 19.995,
+    "medianSold": 19.994999999999997,
+    "marketStabilityCV": 0.5221023769774042,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
@@ -5293,7 +5293,7 @@
   },
   "Tomas Perez": {
     "keyword": "Tomas Perez Baseball PSA",
-    "nScraped": 60,
+    "nScraped": 0,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -5317,7 +5317,7 @@
   },
   "Tony Alvarez": {
     "keyword": "Tony Alvarez Baseball PSA",
-    "nScraped": 60,
+    "nScraped": 0,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
