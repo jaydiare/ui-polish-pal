@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-30T10:14:17.877Z",
+    "updatedAt": "2026-03-30T13:12:51.460Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. Taguchi winsorized mean + market stability CV. Ungraded condition policy (permissive for sold). Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 510,
-      "endIdx": 520,
+      "startIdx": 520,
+      "endIdx": 530,
       "totalAthletes": 569
     },
     "maxPages": 4,
@@ -7005,7 +7005,7 @@
   },
   "Oswaldo Vizcarrondo": {
     "keyword": "Oswaldo Vizcarrondo Soccer",
-    "nScraped": 0,
+    "nScraped": 52,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -7053,19 +7053,19 @@
   },
   "Alejandro Moreno": {
     "keyword": "Alejandro Moreno Soccer",
-    "nScraped": 251,
-    "nSoldUsed": 8,
-    "avg": 5.495,
-    "taguchiSold": 5.495,
-    "medianSold": 5.495,
-    "marketStabilityCV": 0.8744962929181784,
+    "nScraped": 243,
+    "nSoldUsed": 4,
+    "avg": 1,
+    "taguchiSold": 1,
+    "medianSold": 1,
+    "marketStabilityCV": 0,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
   },
   "Bernardo Anor": {
     "keyword": "Bernardo Anor Soccer",
-    "nScraped": 240,
+    "nScraped": 180,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -7077,7 +7077,7 @@
   },
   "Brayan Martinez": {
     "keyword": "Brayan Martinez Soccer",
-    "nScraped": 60,
+    "nScraped": 0,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -7089,7 +7089,7 @@
   },
   "Carlos Cermeno": {
     "keyword": "Carlos Cermeno Soccer",
-    "nScraped": 60,
+    "nScraped": 0,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -7101,7 +7101,7 @@
   },
   "Carlos Varela": {
     "keyword": "Carlos Varela Soccer",
-    "nScraped": 60,
+    "nScraped": 0,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -7113,7 +7113,7 @@
   },
   "Christian Makoun": {
     "keyword": "Christian Makoun Soccer",
-    "nScraped": 246,
+    "nScraped": 0,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
