@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-30T19:31:26.967Z",
+    "updatedAt": "2026-03-30T21:05:26.870Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA/BGS/SGC grader title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 430,
-      "endIdx": 440,
+      "startIdx": 440,
+      "endIdx": 450,
       "totalAthletes": 458
     },
     "maxPages": 4,
@@ -6193,7 +6193,7 @@
   },
   "Yangel Herrera": {
     "keyword": "Yangel Herrera Soccer PSA",
-    "nScraped": 212,
+    "nScraped": 200,
     "nSoldUsed": 4,
     "avg": 15.5,
     "taguchiSold": 15.5,
@@ -6265,7 +6265,7 @@
   },
   "Wuilker Farinez": {
     "keyword": "Wuilker Farinez Soccer PSA",
-    "nScraped": 5,
+    "nScraped": 6,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -6373,27 +6373,27 @@
   },
   "Dani Pereira": {
     "keyword": "Dani Pereira Soccer PSA",
-    "nScraped": 0,
-    "nSoldUsed": 0,
+    "nScraped": 60,
+    "nSoldUsed": 1,
     "avg": null,
     "taguchiSold": null,
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
   },
   "David Martinez": {
     "keyword": "David Martinez Soccer PSA",
-    "nScraped": 0,
-    "nSoldUsed": 0,
-    "avg": null,
-    "taguchiSold": null,
-    "medianSold": null,
-    "marketStabilityCV": null,
+    "nScraped": 250,
+    "nSoldUsed": 8,
+    "avg": 177.5,
+    "taguchiSold": 177.5,
+    "medianSold": 177.5,
+    "marketStabilityCV": 0.647509997025459,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
   },
   "Eduardo Sosa": {
     "keyword": "Eduardo Sosa Soccer",
@@ -6541,7 +6541,7 @@
   },
   "Junior Moreno": {
     "keyword": "Junior Moreno Soccer PSA",
-    "nScraped": 60,
+    "nScraped": 0,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
