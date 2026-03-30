@@ -609,10 +609,8 @@ function buildEbaySearchUrl(card: ChecklistEntry, athlete: string): string {
   return `https://www.ebay.com/sch/i.html?${params.toString()}`;
 }
 
-function CardResult({ card }: { card: ChecklistEntry & { displayOdds: string; robust?: RobustScore } }) {
+function CardResult({ card, athleteName = "" }: { card: ChecklistEntry & { displayOdds: string; robust?: RobustScore }; athleteName?: string }) {
   const r = card.robust;
-  // Extract athlete name from the analysis context — stored on the card's parent result
-  const athleteName = (card as any)._athleteName ?? "";
   const ebayUrl = buildEbaySearchUrl(card, athleteName);
 
   return (
