@@ -50,7 +50,7 @@ export interface BlogPost {
   coverImage: string;
   sections: BlogSection[];
   textSections?: BlogTextSection[];
-  type?: "ranked" | "roster" | "data-table" | "ebay-cards" | "the-show-ranking";
+  type?: "ranked" | "roster" | "data-table" | "ebay-cards" | "the-show-ranking" | "article";
   playerNames?: string[];
   ebayCards?: EbayCard[];
   showRankingPlayers?: ShowRankingPlayer[];
