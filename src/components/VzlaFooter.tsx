@@ -57,6 +57,8 @@ const VzlaFooter = () => {
               <h4 className="font-display font-bold text-foreground text-sm mb-4">Resources</h4>
               <nav className="flex flex-col gap-2.5">
                 <a href="#top" className="text-sm text-muted-foreground no-underline hover:text-foreground transition-colors">Home</a>
+                <Link to="/methodology" className="text-sm text-muted-foreground no-underline hover:text-foreground transition-colors">Methodology & FAQ</Link>
+                <Link to="/how-it-works" className="text-sm text-muted-foreground no-underline hover:text-foreground transition-colors">How It Works</Link>
                 <a href={EBAY_STORE} target="_blank" rel="noopener noreferrer" className="text-sm text-muted-foreground no-underline hover:text-foreground transition-colors">eBay Store</a>
                 <a href={CARDHEDGE} target="_blank" rel="noopener noreferrer" className="text-sm text-muted-foreground no-underline hover:text-foreground transition-colors">Card Hedge AI</a>
                 <a href={BCW} target="_blank" rel="noopener noreferrer" className="text-sm text-muted-foreground no-underline hover:text-foreground transition-colors">BCW Supplies</a>
