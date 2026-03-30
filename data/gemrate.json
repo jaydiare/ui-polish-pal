@@ -1,13 +1,13 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-30T16:52:39.654486+00:00",
+    "updatedAt": "2026-03-30T20:41:32.808561+00:00",
     "athleteCount": 456,
     "graders": [
       "PSA"
     ],
     "batchInfo": {
-      "startIdx": 220,
-      "endIdx": 240,
+      "startIdx": 240,
+      "endIdx": 260,
       "totalAthletes": 569
     }
   },
@@ -3527,17 +3527,17 @@
       "sport": "Baseball",
       "graders": {
         "PSA": {
-          "cards": 131,
+          "cards": 133,
           "gems": 584,
-          "grades": 1052,
-          "gemRate": 56.0
+          "grades": 1054,
+          "gemRate": 55.0
         }
       },
       "totals": {
-        "cards": 131,
+        "cards": 133,
         "gems": 584,
-        "grades": 1052,
-        "gemRate": 56.0
+        "grades": 1054,
+        "gemRate": 55.0
       }
     },
     "Jorge Barrosa": {
@@ -3599,16 +3599,16 @@
       "sport": "Baseball",
       "graders": {
         "PSA": {
-          "cards": 4473,
-          "gems": 12956,
-          "grades": 25413,
+          "cards": 4479,
+          "gems": 12985,
+          "grades": 25458,
           "gemRate": 51.0
         }
       },
       "totals": {
-        "cards": 4473,
-        "gems": 12956,
-        "grades": 25413,
+        "cards": 4479,
+        "gems": 12985,
+        "grades": 25458,
         "gemRate": 51.0
       }
     },
