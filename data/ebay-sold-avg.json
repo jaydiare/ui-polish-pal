@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-30T18:56:10.560Z",
+    "updatedAt": "2026-03-30T21:39:01.825Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. Taguchi winsorized mean + market stability CV. Ungraded condition policy (permissive for sold). Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 540,
-      "endIdx": 550,
+      "startIdx": 550,
+      "endIdx": 560,
       "totalAthletes": 569
     },
     "maxPages": 4,
@@ -7365,19 +7365,19 @@
   },
   "Rafael Romo": {
     "keyword": "Rafael Romo Soccer",
-    "nScraped": 0,
-    "nSoldUsed": 0,
-    "avg": null,
-    "taguchiSold": null,
-    "medianSold": null,
-    "marketStabilityCV": null,
+    "nScraped": 248,
+    "nSoldUsed": 4,
+    "avg": 5.02,
+    "taguchiSold": 5.02,
+    "medianSold": 5.02,
+    "marketStabilityCV": 0,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
   },
   "Renzo Zambrano": {
     "keyword": "Renzo Zambrano Soccer",
-    "nScraped": 22,
+    "nScraped": 20,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -7401,7 +7401,7 @@
   },
   "Rolando Escobar": {
     "keyword": "Rolando Escobar Soccer",
-    "nScraped": 42,
+    "nScraped": 45,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -7413,7 +7413,7 @@
   },
   "Rolf Feltscher": {
     "keyword": "Rolf Feltscher Soccer",
-    "nScraped": 7,
+    "nScraped": 8,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -7426,18 +7426,18 @@
   "Ronald Hernandez": {
     "keyword": "Ronald Hernandez Soccer",
     "nScraped": 60,
-    "nSoldUsed": 9,
-    "avg": 3.6566666666666663,
-    "taguchiSold": 3.6566666666666663,
+    "nSoldUsed": 13,
+    "avg": 2.7561538461538473,
+    "taguchiSold": 2.7561538461538473,
     "medianSold": 2.95,
-    "marketStabilityCV": 0.35077656981287214,
+    "marketStabilityCV": 0.0931352110451404,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
   },
   "Ronaldo Pena": {
     "keyword": "Ronaldo Pena Soccer",
-    "nScraped": 247,
+    "nScraped": 248,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -7462,11 +7462,11 @@
   "Telasco Segovia": {
     "keyword": "Telasco Segovia Soccer",
     "nScraped": 240,
-    "nSoldUsed": 229,
-    "avg": 9.767336244541486,
-    "taguchiSold": 9.767336244541486,
-    "medianSold": 10,
-    "marketStabilityCV": 0.21336295213135303,
+    "nSoldUsed": 230,
+    "avg": 9.077173913043477,
+    "taguchiSold": 9.077173913043477,
+    "medianSold": 9.995000000000001,
+    "marketStabilityCV": 0.2570362069663472,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
