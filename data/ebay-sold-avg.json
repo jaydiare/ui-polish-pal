@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-30T02:08:35.532Z",
+    "updatedAt": "2026-03-30T05:21:40.169Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. Taguchi winsorized mean + market stability CV. Ungraded condition policy (permissive for sold). Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 480,
-      "endIdx": 490,
+      "startIdx": 490,
+      "endIdx": 500,
       "totalAthletes": 569
     },
     "maxPages": 4,
@@ -28,7 +28,7 @@
     },
     "fx": {
       "source": "CBSA Exchange Rates API",
-      "asOf": "2026-03-30T00:00:00.000Z"
+      "asOf": "2026-03-31T00:00:00.000Z"
     }
   },
   "Adbert Alzolay": {
@@ -6621,67 +6621,67 @@
   },
   "Yorvit Torrealba": {
     "keyword": "Yorvit Torrealba Baseball",
-    "nScraped": 0,
-    "nSoldUsed": 0,
-    "avg": null,
-    "taguchiSold": null,
-    "medianSold": null,
-    "marketStabilityCV": null,
+    "nScraped": 267,
+    "nSoldUsed": 68,
+    "avg": 0.9900000000000003,
+    "taguchiSold": 0.9900000000000003,
+    "medianSold": 0.99,
+    "marketStabilityCV": 3.3893260138141367e-16,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
   },
   "Yusmeiro Petit": {
     "keyword": "Yusmeiro Petit Baseball",
-    "nScraped": 201,
-    "nSoldUsed": 114,
-    "avg": 1.6760526315789472,
-    "taguchiSold": 1.6760526315789472,
-    "medianSold": 1.6749999999999998,
-    "marketStabilityCV": 0.18291880653147077,
+    "nScraped": 189,
+    "nSoldUsed": 121,
+    "avg": 1.7395867768595037,
+    "taguchiSold": 1.7395867768595037,
+    "medianSold": 1.69,
+    "marketStabilityCV": 0.13938244366461364,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
   },
   "Carl Herrera": {
     "keyword": "Carl Herrera Basketball",
-    "nScraped": 240,
-    "nSoldUsed": 99,
-    "avg": 1.7355555555555537,
-    "taguchiSold": 1.7355555555555537,
-    "medianSold": 1.79,
-    "marketStabilityCV": 0.12233305498129612,
+    "nScraped": 133,
+    "nSoldUsed": 49,
+    "avg": 1.7232653061224479,
+    "taguchiSold": 1.7232653061224479,
+    "medianSold": 1.75,
+    "marketStabilityCV": 0.07151779231738103,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
   },
   "Greivis Vasquez": {
     "keyword": "Greivis Vasquez Basketball",
-    "nScraped": 204,
-    "nSoldUsed": 176,
-    "avg": 5.7027272727272695,
-    "taguchiSold": 5.7027272727272695,
-    "medianSold": 5.68,
-    "marketStabilityCV": 0.14787090167165653,
+    "nScraped": 206,
+    "nSoldUsed": 181,
+    "avg": 5.299834254143645,
+    "taguchiSold": 5.299834254143645,
+    "medianSold": 5.03,
+    "marketStabilityCV": 0.12877528525634285,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
   },
   "Oscar Torres": {
     "keyword": "Oscar Torres Basketball",
-    "nScraped": 248,
-    "nSoldUsed": 24,
-    "avg": 2.82,
-    "taguchiSold": 2.82,
-    "medianSold": 2.82,
-    "marketStabilityCV": 0.300656561927558,
+    "nScraped": 251,
+    "nSoldUsed": 28,
+    "avg": 3.512857142857142,
+    "taguchiSold": 3.512857142857142,
+    "medianSold": 3.65,
+    "marketStabilityCV": 0.4029091896659018,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
   },
   "Pedro Chourio": {
     "keyword": "Pedro Chourio Basketball",
-    "nScraped": 60,
+    "nScraped": 0,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -6693,15 +6693,15 @@
   },
   "Amleto Monacelli": {
     "keyword": "Amleto Monacelli PBA Bowler Bowling Bowling",
-    "nScraped": 180,
-    "nSoldUsed": 9,
-    "avg": 4,
-    "taguchiSold": 4,
-    "medianSold": 4,
-    "marketStabilityCV": 0,
+    "nScraped": 0,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
   },
   "Andres Borregales": {
     "keyword": "Andres Borregales Football",
