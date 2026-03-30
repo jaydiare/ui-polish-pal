@@ -1,13 +1,13 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-29T20:27:08.759466+00:00",
+    "updatedAt": "2026-03-30T02:00:06.799883+00:00",
     "athleteCount": 456,
     "graders": [
       "PSA"
     ],
     "batchInfo": {
-      "startIdx": 120,
-      "endIdx": 140,
+      "startIdx": 140,
+      "endIdx": 160,
       "totalAthletes": 569
     }
   },
@@ -2071,14 +2071,14 @@
         "PSA": {
           "cards": 19,
           "gems": 75,
-          "grades": 1781,
+          "grades": 1782,
           "gemRate": 4.0
         }
       },
       "totals": {
         "cards": 19,
         "gems": 75,
-        "grades": 1781,
+        "grades": 1782,
         "gemRate": 4.0
       }
     },
@@ -2087,17 +2087,17 @@
       "sport": "Baseball",
       "graders": {
         "PSA": {
-          "cards": 1059,
-          "gems": 9267,
-          "grades": 15837,
-          "gemRate": 59.0
+          "cards": 1066,
+          "gems": 9273,
+          "grades": 15860,
+          "gemRate": 58.0
         }
       },
       "totals": {
-        "cards": 1059,
-        "gems": 9267,
-        "grades": 15837,
-        "gemRate": 59.0
+        "cards": 1066,
+        "gems": 9273,
+        "grades": 15860,
+        "gemRate": 58.0
       }
     },
     "Eugenio Suarez": {
@@ -2105,16 +2105,16 @@
       "sport": "Baseball",
       "graders": {
         "PSA": {
-          "cards": 278,
-          "gems": 599,
-          "grades": 981,
+          "cards": 281,
+          "gems": 600,
+          "grades": 985,
           "gemRate": 61.0
         }
       },
       "totals": {
-        "cards": 278,
-        "gems": 599,
-        "grades": 981,
+        "cards": 281,
+        "gems": 600,
+        "grades": 985,
         "gemRate": 61.0
       }
     },
