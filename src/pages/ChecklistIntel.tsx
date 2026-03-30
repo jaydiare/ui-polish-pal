@@ -499,7 +499,7 @@ const ChecklistIntel = () => {
                     <AccordionContent className="px-4 pb-4">
                       <div className="space-y-3">
                         {group.items.map((card, i) => (
-                          <CardResult key={`${card.rawText}-${i}`} card={card} />
+                          <CardResult key={`${card.rawText}-${i}`} card={card} athleteName={result.athlete} />
                         ))}
                       </div>
                     </AccordionContent>
