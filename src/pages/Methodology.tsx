@@ -120,6 +120,8 @@ export default function Methodology() {
           </div>
         </motion.section>
 
+        <AdSenseInArticle />
+
         {/* ── Data Quality ── */}
         <motion.section {...fadeUp(0.15)} className="glass-panel p-6 md:p-8 rounded-xl mb-8">
           <h2 className="text-lg font-display font-bold text-flag-gradient mb-3">Data Quality & Reliability</h2>
