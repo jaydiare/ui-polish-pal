@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-30T16:03:53.542Z",
+    "updatedAt": "2026-03-30T18:56:10.560Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. Taguchi winsorized mean + market stability CV. Ungraded condition policy (permissive for sold). Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 530,
-      "endIdx": 540,
+      "startIdx": 540,
+      "endIdx": 550,
       "totalAthletes": 569
     },
     "maxPages": 4,
@@ -7245,7 +7245,7 @@
   },
   "Jesus Bueno": {
     "keyword": "Jesus Bueno Soccer",
-    "nScraped": 0,
+    "nScraped": 60,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -7269,7 +7269,7 @@
   },
   "Jose Andres Martinez": {
     "keyword": "Jose Andres Martinez Soccer",
-    "nScraped": 49,
+    "nScraped": 52,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -7281,19 +7281,19 @@
   },
   "Josef Martinez": {
     "keyword": "Josef Martinez Soccer",
-    "nScraped": 170,
-    "nSoldUsed": 131,
-    "avg": 7.417251908396949,
-    "taguchiSold": 7.417251908396949,
-    "medianSold": 6.29,
-    "marketStabilityCV": 0.3213321623174127,
+    "nScraped": 206,
+    "nSoldUsed": 165,
+    "avg": 7.327151515151515,
+    "taguchiSold": 7.327151515151515,
+    "medianSold": 6.25,
+    "marketStabilityCV": 0.3312266703616345,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
   },
   "Junior Moreno": {
     "keyword": "Junior Moreno Soccer",
-    "nScraped": 256,
+    "nScraped": 254,
     "nSoldUsed": 8,
     "avg": 61,
     "taguchiSold": 61,
@@ -7305,12 +7305,12 @@
   },
   "Kevin Kelsy": {
     "keyword": "Kevin Kelsy Soccer",
-    "nScraped": 218,
-    "nSoldUsed": 146,
-    "avg": 3.094383561643837,
-    "taguchiSold": 3.094383561643837,
-    "medianSold": 2.99,
-    "marketStabilityCV": 0.36086751232919834,
+    "nScraped": 240,
+    "nSoldUsed": 176,
+    "avg": 3.374318181818181,
+    "taguchiSold": 3.374318181818181,
+    "medianSold": 3.49,
+    "marketStabilityCV": 0.44197035644871013,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
@@ -7318,18 +7318,18 @@
   "Luis Gonzalez": {
     "keyword": "Luis Gonzalez FC Dallas Soccer",
     "nScraped": 60,
-    "nSoldUsed": 44,
-    "avg": 0.9836363636363633,
-    "taguchiSold": 0.9836363636363633,
-    "medianSold": 0.99,
-    "marketStabilityCV": 0.5199267619304349,
+    "nSoldUsed": 39,
+    "avg": 2.2058974358974357,
+    "taguchiSold": 2.2058974358974357,
+    "medianSold": 1.99,
+    "marketStabilityCV": 0.31142503396161564,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
   },
   "Miguel Navarro": {
     "keyword": "Miguel Navarro Soccer",
-    "nScraped": 124,
+    "nScraped": 250,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
