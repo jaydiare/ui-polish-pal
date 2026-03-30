@@ -16,6 +16,11 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://vzlasportselite.com/methodology</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://vzlasportselite.com/blog/top-venezuelan-athlete-card-sales</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -29,6 +34,21 @@
     <loc>https://vzlasportselite.com/blog/venezuelan-sports-cards-market-cap</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://vzlasportselite.com/blog/how-we-ensure-data-quality-sports-cards</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://vzlasportselite.com/blog/building-resilient-data-pipelines-sports-cards</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://vzlasportselite.com/blog/data-architecture-sports-card-pricing</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://vzlasportselite.com/about</loc>

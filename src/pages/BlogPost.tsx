@@ -1,4 +1,5 @@
 import { useEffect, useState, lazy, Suspense } from "react";
+import AdSenseInArticle from "@/components/AdSenseInArticle";
 import { useParams, Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import SEOHead from "@/components/SEOHead";
@@ -122,7 +123,23 @@ const BlogPost = () => {
           </div>
         )}
 
-        {post.type === "data-table" ? (
+        {post.type === "article" ? (
+          <div className="max-w-3xl mb-12">
+            {post.textSections?.map((ts, i) => (
+              <section key={i}>
+                <div className="mb-10 glass-panel p-6 rounded-xl">
+                  <h2 className="text-lg font-display font-bold text-flag-gradient mb-4">{ts.heading}</h2>
+                  {ts.paragraphs.map((p, j) => (
+                    <p key={j} className="text-foreground/80 text-sm leading-7 text-justify mb-4 last:mb-0">
+                      {renderLinkedText(p)}
+                    </p>
+                  ))}
+                </div>
+                {i === 1 && <AdSenseInArticle />}
+              </section>
+            ))}
+          </div>
+        ) : post.type === "data-table" ? (
           <Suspense fallback={<p className="text-muted-foreground text-center py-8">Loading table…</p>}>
             <BlogDataTable />
           </Suspense>
