@@ -170,7 +170,7 @@ const VzlaNavbar = () => {
 
       {/* Mobile menu */}
       {mobileOpen && (
-        <div className="fixed inset-0 z-[10000] bg-background/95 backdrop-blur-xl p-5">
+        <div className="fixed inset-0 z-[10000] bg-background/95 backdrop-blur-xl p-5 overflow-y-auto">
           <div className="flex items-center justify-between">
             <Link to="/" className="flex items-center gap-3 no-underline" onClick={closeMobileInstant}>
               <div className="w-8 h-8 rounded-lg cta-flag flex items-center justify-center">
