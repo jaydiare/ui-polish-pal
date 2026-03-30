@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-30T21:05:26.870Z",
+    "updatedAt": "2026-03-30T23:00:29.327Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA/BGS/SGC grader title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 440,
-      "endIdx": 450,
+      "startIdx": 450,
+      "endIdx": 458,
       "totalAthletes": 458
     },
     "maxPages": 4,
@@ -6553,7 +6553,7 @@
   },
   "Kevin Kelsy": {
     "keyword": "Kevin Kelsy Soccer PSA",
-    "nScraped": 242,
+    "nScraped": 240,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -6709,7 +6709,7 @@
   },
   "Telasco Segovia": {
     "keyword": "Telasco Segovia Soccer PSA",
-    "nScraped": 244,
+    "nScraped": 241,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -6721,7 +6721,7 @@
   },
   "Wikelman Carmona": {
     "keyword": "Wikelman Carmona Soccer PSA",
-    "nScraped": 49,
+    "nScraped": 52,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -6745,7 +6745,7 @@
   },
   "Alejandro Marques": {
     "keyword": "Alejandro Marques Soccer PSA",
-    "nScraped": 0,
+    "nScraped": 244,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -6793,7 +6793,7 @@
   },
   "Yeferson Soteldo": {
     "keyword": "Yeferson Soteldo Soccer PSA",
-    "nScraped": 0,
+    "nScraped": 13,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -6805,7 +6805,7 @@
   },
   "Yordan Osorio": {
     "keyword": "Yordan Osorio Soccer PSA",
-    "nScraped": 88,
+    "nScraped": 80,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -6841,7 +6841,7 @@
   },
   "Garbine Muguruza": {
     "keyword": "Garbine Muguruza Tennis PSA",
-    "nScraped": 244,
+    "nScraped": 0,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
