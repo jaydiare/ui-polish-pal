@@ -4,6 +4,7 @@ import SEOHead from "@/components/SEOHead";
 import VzlaNavbar from "@/components/VzlaNavbar";
 import VzlaFooter from "@/components/VzlaFooter";
 import VzlaEbayFooter from "@/components/VzlaEbayFooter";
+import AdSenseInArticle from "@/components/AdSenseInArticle";
 
 const fadeUp = (delay = 0) => ({
   initial: { opacity: 0, y: 16 },
