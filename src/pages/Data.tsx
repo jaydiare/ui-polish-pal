@@ -1135,6 +1135,11 @@ const Data = () => {
           </>
         )}
 
+        {/* ── EPN Placement Performance ── */}
+        <Suspense fallback={null}>
+          <EpnPlacementSummary />
+        </Suspense>
+
         <VzlaFooter />
       </main>
       <VzlaEbayFooter />
