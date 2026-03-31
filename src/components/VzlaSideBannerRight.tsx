@@ -25,12 +25,6 @@ const BANNERS = [
 
 const AFFILIATES = [
   {
-    id: "sidebar-cardhedge-right",
-    href: CARDHEDGE,
-    img: "./assets/cardhedge.jpg",
-    alt: "Card Hedge Sports & Trading Card Analytics",
-  },
-  {
     id: "sidebar-bcw-right",
     href: BCW,
     img: "./assets/BCW.jpg",

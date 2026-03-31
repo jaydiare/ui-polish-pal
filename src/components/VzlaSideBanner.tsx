@@ -66,12 +66,6 @@ const AdSenseBlock = () => {
 
 const AFFILIATES = [
   {
-    id: "sidebar-cardhedge",
-    href: CARDHEDGE,
-    img: "./assets/cardhedge.jpg",
-    alt: "Card Hedge Sports & Trading Card Analytics",
-  },
-  {
     id: "sidebar-bcw",
     href: BCW,
     img: "./assets/BCW.jpg",
