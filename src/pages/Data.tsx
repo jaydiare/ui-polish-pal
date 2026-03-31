@@ -1,4 +1,4 @@
-import { useState, useEffect, useMemo, useRef, useCallback } from "react";
+import { useState, useEffect, useMemo, useRef, useCallback, lazy, Suspense } from "react";
 import { motion } from "framer-motion";
 import SEOHead from "@/components/SEOHead";
 import SocialShare from "@/components/SocialShare";
