@@ -1,13 +1,13 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-31T08:54:21.352975+00:00",
+    "updatedAt": "2026-03-31T13:06:47.496957+00:00",
     "athleteCount": 456,
     "graders": [
       "PSA"
     ],
     "batchInfo": {
-      "startIdx": 300,
-      "endIdx": 320,
+      "startIdx": 320,
+      "endIdx": 340,
       "totalAthletes": 569
     }
   },
@@ -4859,16 +4859,16 @@
       "sport": "Baseball",
       "graders": {
         "PSA": {
-          "cards": 13,
+          "cards": 14,
           "gems": 47,
-          "grades": 82,
+          "grades": 83,
           "gemRate": 57.0
         }
       },
       "totals": {
-        "cards": 13,
+        "cards": 14,
         "gems": 47,
-        "grades": 82,
+        "grades": 83,
         "gemRate": 57.0
       }
     },
@@ -4913,16 +4913,16 @@
       "sport": "Baseball",
       "graders": {
         "PSA": {
-          "cards": 1686,
-          "gems": 3669,
-          "grades": 7964,
+          "cards": 1699,
+          "gems": 3681,
+          "grades": 8012,
           "gemRate": 46.0
         }
       },
       "totals": {
-        "cards": 1686,
-        "gems": 3669,
-        "grades": 7964,
+        "cards": 1699,
+        "gems": 3681,
+        "grades": 8012,
         "gemRate": 46.0
       }
     },
@@ -4967,16 +4967,16 @@
       "sport": "Baseball",
       "graders": {
         "PSA": {
-          "cards": 174,
-          "gems": 501,
-          "grades": 1068,
+          "cards": 175,
+          "gems": 503,
+          "grades": 1074,
           "gemRate": 47.0
         }
       },
       "totals": {
-        "cards": 174,
-        "gems": 501,
-        "grades": 1068,
+        "cards": 175,
+        "gems": 503,
+        "grades": 1074,
         "gemRate": 47.0
       }
     },
@@ -5023,14 +5023,14 @@
         "PSA": {
           "cards": 154,
           "gems": 492,
-          "grades": 2041,
+          "grades": 2043,
           "gemRate": 24.0
         }
       },
       "totals": {
         "cards": 154,
         "gems": 492,
-        "grades": 2041,
+        "grades": 2043,
         "gemRate": 24.0
       }
     },
