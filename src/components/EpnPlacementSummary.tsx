@@ -77,17 +77,7 @@ export default function EpnPlacementSummary() {
 
   return (
     <section className="my-8" aria-label="EPN affiliate placement performance">
-      <div className="flex items-center justify-between mb-1">
-        <h2 className="font-display font-bold text-lg text-foreground flex items-center gap-2">
-          <span className="text-lg">📊</span>
-          Affiliate Placement Performance
-        </h2>
-        {updatedAt && (
-          <span className="text-[10px] text-muted-foreground">
-            Updated {updatedAt}
-          </span>
-        )}
-      </div>
+      
       <p className="text-[10px] text-muted-foreground mb-4">
         Click-through rates by placement tag
         {period ? ` · ${period.start} → ${period.end}` : ""}
