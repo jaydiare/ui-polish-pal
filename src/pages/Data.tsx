@@ -8,6 +8,7 @@ import VzlaEbayFooter from "@/components/VzlaEbayFooter";
 import VzlaSupplyDemand from "@/components/VzlaSupplyDemand";
 import Sparkline from "@/components/Sparkline";
 import { buildEbaySearchUrl, buildEbayGradedSearchUrl } from "@/lib/vzla-helpers";
+const EpnPlacementSummary = lazy(() => import("@/components/EpnPlacementSummary"));
 import {
   ScatterChart,
   Scatter,
