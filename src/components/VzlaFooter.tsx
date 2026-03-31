@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 
 const EBAY_STORE = "https://www.ebay.ca/str/localherossportscards?mkcid=1&mkrid=706-53473-19255-0&siteid=2&campid=5339142305&toolid=10001&mkevt=1";
-const CARDHEDGE = "https://www.cardhedger.com?via=vzlaelite";
+
 const BCW = "https://www.bcwsupplies.com/?acc=vzlaelite";
 
 const SOCIAL = {
@@ -60,7 +60,7 @@ const VzlaFooter = () => {
                 <Link to="/methodology" className="text-sm text-muted-foreground no-underline hover:text-foreground transition-colors">Methodology & FAQ</Link>
                 <Link to="/how-it-works" className="text-sm text-muted-foreground no-underline hover:text-foreground transition-colors">How It Works</Link>
                 <a href={EBAY_STORE} target="_blank" rel="noopener noreferrer" className="text-sm text-muted-foreground no-underline hover:text-foreground transition-colors">eBay Store</a>
-                <a href={CARDHEDGE} target="_blank" rel="noopener noreferrer" className="text-sm text-muted-foreground no-underline hover:text-foreground transition-colors">Card Hedge AI</a>
+                
                 <a href={BCW} target="_blank" rel="noopener noreferrer" className="text-sm text-muted-foreground no-underline hover:text-foreground transition-colors">BCW Supplies</a>
                 <a href="https://www.facebook.com/groups/1591729798708721" target="_blank" rel="noopener noreferrer" className="text-sm text-muted-foreground no-underline hover:text-foreground transition-colors">Facebook Community</a>
               </nav>
@@ -68,14 +68,6 @@ const VzlaFooter = () => {
 
             {/* Sponsor banners stacked on right */}
             <div className="flex flex-col gap-4 items-center">
-              <a href={CARDHEDGE} target="_blank" rel="noopener noreferrer" title="Card Hedge Sports & Trading Card Analytics">
-                <img
-                  src="/assets/cardhedge_806_318.jpg"
-                  alt="Card Hedge Sports & Trading Card Analytics"
-                  className="w-40 md:w-48 h-auto rounded-lg shadow-lg hover:scale-[1.03] transition-transform"
-                  loading="lazy"
-                />
-              </a>
               <a href={BCW} target="_blank" rel="noopener noreferrer" title="BCW - Protect, Store, Display">
                 <img
                   src="/assets/BCW.jpg"

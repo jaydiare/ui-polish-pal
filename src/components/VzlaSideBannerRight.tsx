@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 
 const EBAY_BASE = "https://www.ebay.ca/sch/i.html?_nkw=trading+cards&mkevt=1&mkcid=1&mkrid=706-53473-19255-0&toolid=10001";
-const CARDHEDGE = "https://www.cardhedger.com?via=vzlaelite";
+
 const BCW = "https://www.bcwsupplies.com/?acc=vzlaelite";
 
 const CAMPAIGN_ID = "5339142321";
@@ -24,12 +24,6 @@ const BANNERS = [
 ];
 
 const AFFILIATES = [
-  {
-    id: "sidebar-cardhedge-right",
-    href: CARDHEDGE,
-    img: "./assets/cardhedge.jpg",
-    alt: "Card Hedge Sports & Trading Card Analytics",
-  },
   {
     id: "sidebar-bcw-right",
     href: BCW,
