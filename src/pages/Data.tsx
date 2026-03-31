@@ -1,4 +1,4 @@
-import { useState, useEffect, useMemo, useRef, useCallback } from "react";
+import { useState, useEffect, useMemo, useRef, useCallback, lazy, Suspense } from "react";
 import { motion } from "framer-motion";
 import SEOHead from "@/components/SEOHead";
 import SocialShare from "@/components/SocialShare";
@@ -8,6 +8,7 @@ import VzlaEbayFooter from "@/components/VzlaEbayFooter";
 import VzlaSupplyDemand from "@/components/VzlaSupplyDemand";
 import Sparkline from "@/components/Sparkline";
 import { buildEbaySearchUrl, buildEbayGradedSearchUrl } from "@/lib/vzla-helpers";
+const EpnPlacementSummary = lazy(() => import("@/components/EpnPlacementSummary"));
 import {
   ScatterChart,
   Scatter,
@@ -1134,6 +1135,11 @@ const Data = () => {
             <PSAPopVsSoldChart gradedSoldData={filteredGradedSold} athleteSportMap={athleteSportMap} />
           </>
         )}
+
+        {/* ── EPN Placement Performance ── */}
+        <Suspense fallback={null}>
+          <EpnPlacementSummary />
+        </Suspense>
 
         <VzlaFooter />
       </main>
