@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-31T09:37:12.254Z",
+    "updatedAt": "2026-03-31T11:15:23.278Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA/BGS/SGC grader title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 20,
-      "endIdx": 30,
+      "startIdx": 30,
+      "endIdx": 40,
       "totalAthletes": 458
     },
     "maxPages": 4,
@@ -457,7 +457,7 @@
   },
   "Andruw Monasterio": {
     "keyword": "Andruw Monasterio Baseball PSA",
-    "nScraped": 240,
+    "nScraped": 241,
     "nSoldUsed": 4,
     "avg": 7.5,
     "taguchiSold": 7.5,
@@ -469,7 +469,7 @@
   },
   "Andry Lara": {
     "keyword": "Andry Lara Baseball PSA",
-    "nScraped": 241,
+    "nScraped": 240,
     "nSoldUsed": 4,
     "avg": 5.5,
     "taguchiSold": 5.5,
