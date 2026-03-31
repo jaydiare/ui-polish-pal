@@ -594,7 +594,8 @@ function OddsComparisonChart({ results }: { results: Array<ChecklistEntry & { di
 }
 
 function buildEbaySearchUrl(card: ChecklistEntry, athlete: string): string {
-  const terms = [athlete, card.section].filter(Boolean).join(" ");
+  const section = (card.section ?? "").replace(/\(implied\)/gi, "").trim();
+  const terms = [athlete, section].filter(Boolean).join(" ");
   const params = new URLSearchParams({
     _nkw: terms,
     _sacat: "212",
