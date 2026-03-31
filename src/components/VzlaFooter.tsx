@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 
 const EBAY_STORE = "https://www.ebay.ca/str/localherossportscards?mkcid=1&mkrid=706-53473-19255-0&siteid=2&campid=5339142305&toolid=10001&mkevt=1";
-const CARDHEDGE = "https://www.cardhedger.com?via=vzlaelite";
+
 const BCW = "https://www.bcwsupplies.com/?acc=vzlaelite";
 
 const SOCIAL = {
