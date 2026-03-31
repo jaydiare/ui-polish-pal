@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-31T11:15:23.278Z",
+    "updatedAt": "2026-03-31T14:05:35.642Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA/BGS/SGC grader title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 30,
-      "endIdx": 40,
+      "startIdx": 40,
+      "endIdx": 50,
       "totalAthletes": 458
     },
     "maxPages": 4,
@@ -601,19 +601,19 @@
   },
   "Anthony Santander": {
     "keyword": "Anthony Santander Baseball PSA",
-    "nScraped": 265,
-    "nSoldUsed": 20,
-    "avg": 30.149999999999988,
-    "taguchiSold": 30.149999999999988,
-    "medianSold": 30.15,
-    "marketStabilityCV": 3.626872960802114e-16,
+    "nScraped": 266,
+    "nSoldUsed": 24,
+    "avg": 27.07499999999999,
+    "taguchiSold": 27.07499999999999,
+    "medianSold": 27.075,
+    "marketStabilityCV": 0.11601612552169095,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
   },
   "Antonio Senzatela": {
     "keyword": "Antonio Senzatela Baseball PSA",
-    "nScraped": 242,
+    "nScraped": 241,
     "nSoldUsed": 8,
     "avg": 5.725,
     "taguchiSold": 5.725,
@@ -649,7 +649,7 @@
   },
   "Armando Galarraga": {
     "keyword": "Armando Galarraga Baseball PSA",
-    "nScraped": 244,
+    "nScraped": 240,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -661,7 +661,7 @@
   },
   "Asdrubal Cabrera": {
     "keyword": "Asdrubal Cabrera Baseball PSA",
-    "nScraped": 242,
+    "nScraped": 240,
     "nSoldUsed": 8,
     "avg": 36.995000000000005,
     "taguchiSold": 36.995000000000005,
@@ -673,15 +673,15 @@
   },
   "Avisail Garcia": {
     "keyword": "Avisail Garcia Baseball PSA",
-    "nScraped": 0,
-    "nSoldUsed": 0,
-    "avg": null,
-    "taguchiSold": null,
-    "medianSold": null,
-    "marketStabilityCV": null,
+    "nScraped": 120,
+    "nSoldUsed": 8,
+    "avg": 9.245000000000001,
+    "taguchiSold": 9.245000000000001,
+    "medianSold": 9.245000000000001,
+    "marketStabilityCV": 0.08614802605722278,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
   },
   "Beiker Graterol": {
     "keyword": "Beiker Graterol Baseball",
