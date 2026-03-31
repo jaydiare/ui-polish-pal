@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-31T05:57:56.454Z",
+    "updatedAt": "2026-03-31T07:47:59.371Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA/BGS/SGC grader title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 0,
-      "endIdx": 10,
+      "startIdx": 10,
+      "endIdx": 20,
       "totalAthletes": 458
     },
     "maxPages": 4,
@@ -241,12 +241,12 @@
   },
   "Alex Ramirez": {
     "keyword": "Alex Ramirez BBM NPB Baseball PSA",
-    "nScraped": 54,
-    "nSoldUsed": 6,
-    "avg": 21.5,
-    "taguchiSold": 21.5,
-    "medianSold": 21.5,
-    "marketStabilityCV": 0.2802301457003175,
+    "nScraped": 53,
+    "nSoldUsed": 4,
+    "avg": 28.494999999999997,
+    "taguchiSold": 28.494999999999997,
+    "medianSold": 28.494999999999997,
+    "marketStabilityCV": 0.0605817618837333,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
@@ -277,7 +277,7 @@
   },
   "Alex Torres": {
     "keyword": "Alex Torres Baseball PSA",
-    "nScraped": 0,
+    "nScraped": 60,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
