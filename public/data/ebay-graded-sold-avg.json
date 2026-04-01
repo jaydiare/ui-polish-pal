@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-04-01T17:15:24.669Z",
+    "updatedAt": "2026-04-01T19:34:45.495Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA/BGS/SGC grader title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 170,
-      "endIdx": 180,
+      "startIdx": 180,
+      "endIdx": 190,
       "totalAthletes": 458
     },
     "maxPages": 4,
@@ -2618,11 +2618,11 @@
   "Jackson Chourio": {
     "keyword": "Jackson Chourio Baseball PSA",
     "nScraped": 240,
-    "nSoldUsed": 92,
-    "avg": 59.85434782608686,
-    "taguchiSold": 59.85434782608686,
-    "medianSold": 50.5,
-    "marketStabilityCV": 0.30711472642223725,
+    "nSoldUsed": 84,
+    "avg": 58.766428571428484,
+    "taguchiSold": 58.766428571428484,
+    "medianSold": 50,
+    "marketStabilityCV": 0.33156714631709966,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
@@ -2641,7 +2641,7 @@
   },
   "Jairo Iriarte": {
     "keyword": "Jairo Iriarte Baseball PSA",
-    "nScraped": 248,
+    "nScraped": 257,
     "nSoldUsed": 8,
     "avg": 19.495,
     "taguchiSold": 19.495,
@@ -2653,12 +2653,12 @@
   },
   "Javier Sanoja": {
     "keyword": "Javier Sanoja Baseball PSA",
-    "nScraped": 138,
-    "nSoldUsed": 8,
-    "avg": 39.245000000000005,
-    "taguchiSold": 39.245000000000005,
-    "medianSold": 39.245000000000005,
-    "marketStabilityCV": 0.5650997032460944,
+    "nScraped": 66,
+    "nSoldUsed": 7,
+    "avg": 75.13428571428571,
+    "taguchiSold": 75.13428571428571,
+    "medianSold": 76,
+    "marketStabilityCV": 0.19970718680700134,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
