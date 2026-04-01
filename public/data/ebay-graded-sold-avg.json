@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-04-01T03:47:58.431Z",
+    "updatedAt": "2026-04-01T06:08:26.245Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA/BGS/SGC grader title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 100,
-      "endIdx": 110,
+      "startIdx": 110,
+      "endIdx": 120,
       "totalAthletes": 458
     },
     "maxPages": 4,
@@ -32,7 +32,7 @@
     },
     "fx": {
       "source": "CBSA Exchange Rates API",
-      "asOf": "2026-04-01T00:00:00.000Z"
+      "asOf": "2026-04-02T00:00:00.000Z"
     }
   },
   "Adbert Alzolay": {
@@ -1681,7 +1681,7 @@
   },
   "Eliezer Alfonzo": {
     "keyword": "Eliezer Alfonzo Baseball PSA",
-    "nScraped": 44,
+    "nScraped": 43,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -1693,24 +1693,24 @@
   },
   "Elio Chacon": {
     "keyword": "Elio Chacon Baseball PSA",
-    "nScraped": 252,
-    "nSoldUsed": 24,
-    "avg": 30.495000000000005,
-    "taguchiSold": 30.495000000000005,
-    "medianSold": 30.494999999999997,
-    "marketStabilityCV": 0.15090647008630254,
+    "nScraped": 248,
+    "nSoldUsed": 20,
+    "avg": 35,
+    "taguchiSold": 35,
+    "medianSold": 35,
+    "marketStabilityCV": 0,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
   },
   "Elvis Andrus": {
     "keyword": "Elvis Andrus Baseball PSA",
-    "nScraped": 203,
-    "nSoldUsed": 18,
-    "avg": 9.25,
-    "taguchiSold": 9.25,
-    "medianSold": 9.25,
-    "marketStabilityCV": 0.08343174412338268,
+    "nScraped": 272,
+    "nSoldUsed": 23,
+    "avg": 10.304347826086957,
+    "taguchiSold": 10.304347826086957,
+    "medianSold": 8.5,
+    "marketStabilityCV": 0.19339633376213997,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
@@ -1729,15 +1729,15 @@
   },
   "Ender Inciarte": {
     "keyword": "Ender Inciarte Baseball PSA",
-    "nScraped": 60,
-    "nSoldUsed": 1,
+    "nScraped": 0,
+    "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
   },
   "Enderson Franco": {
     "keyword": "Enderson Franco Baseball",
