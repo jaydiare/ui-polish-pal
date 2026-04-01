@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-04-01T05:21:29.720Z",
+    "updatedAt": "2026-04-01T07:16:10.417Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. Taguchi winsorized mean + market stability CV. Ungraded condition policy (permissive for sold). Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 70,
-      "endIdx": 80,
+      "startIdx": 80,
+      "endIdx": 90,
       "totalAthletes": 569
     },
     "maxPages": 4,
@@ -957,7 +957,7 @@
   },
   "Carlos Tocci": {
     "keyword": "Carlos Tocci Baseball",
-    "nScraped": 251,
+    "nScraped": 253,
     "nSoldUsed": 16,
     "avg": 0.9900000000000001,
     "taguchiSold": 0.9900000000000001,
@@ -969,18 +969,30 @@
   },
   "Carlos Valderrama": {
     "keyword": "Carlos Valderrama Baseball",
-    "nScraped": 308,
-    "nSoldUsed": 247,
-    "avg": 12.035344129554618,
-    "taguchiSold": 12.035344129554618,
-    "medianSold": 8.53,
-    "marketStabilityCV": 0.583771254784488,
+    "nScraped": 305,
+    "nSoldUsed": 249,
+    "avg": 8.274779116465865,
+    "taguchiSold": 8.274779116465865,
+    "medianSold": 7.99,
+    "marketStabilityCV": 0.5008311958188162,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
   },
   "Carlos Zambrano": {
     "keyword": "Carlos Zambrano Baseball",
+    "nScraped": 240,
+    "nSoldUsed": 116,
+    "avg": 2.7106896551724144,
+    "taguchiSold": 2.7106896551724144,
+    "medianSold": 2.755,
+    "marketStabilityCV": 0.2705314540296093,
+    "currency": "USD",
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
+  },
+  "Cesar Tovar": {
+    "keyword": "Cesar Tovar Baseball",
     "nScraped": 0,
     "nSoldUsed": 0,
     "avg": null,
@@ -991,29 +1003,17 @@
     "originalCurrencyExample": null,
     "fxRateUsed": null
   },
-  "Cesar Tovar": {
-    "keyword": "Cesar Tovar Baseball",
-    "nScraped": 240,
-    "nSoldUsed": 48,
-    "avg": 1.995,
-    "taguchiSold": 1.995,
-    "medianSold": 1.995,
-    "marketStabilityCV": 0.0025327877325308874,
-    "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
-  },
   "Chico Carrasquel": {
     "keyword": "Chico Carrasquel Baseball",
-    "nScraped": 240,
-    "nSoldUsed": 87,
-    "avg": 5.580804597701154,
-    "taguchiSold": 5.580804597701154,
-    "medianSold": 5,
-    "marketStabilityCV": 0.3112676990966469,
+    "nScraped": 0,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
   },
   "Chucho Ramos": {
     "keyword": "Chucho Ramos Ovenca Venezuelan League Baseball",
@@ -3129,27 +3129,27 @@
   },
   "Cesar Gutierrez": {
     "keyword": "Cesar Gutierrez Baseball",
-    "nScraped": 0,
-    "nSoldUsed": 0,
-    "avg": null,
-    "taguchiSold": null,
-    "medianSold": null,
-    "marketStabilityCV": null,
+    "nScraped": 201,
+    "nSoldUsed": 70,
+    "avg": 2.7967142857142853,
+    "taguchiSold": 2.7967142857142853,
+    "medianSold": 2.245,
+    "marketStabilityCV": 0.3753839170772666,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
   },
   "Cesar Hernandez": {
     "keyword": "Cesar Hernandez Baseball",
-    "nScraped": 0,
-    "nSoldUsed": 0,
-    "avg": null,
-    "taguchiSold": null,
-    "medianSold": null,
-    "marketStabilityCV": null,
+    "nScraped": 205,
+    "nSoldUsed": 72,
+    "avg": 1.7325,
+    "taguchiSold": 1.7325,
+    "medianSold": 1.495,
+    "marketStabilityCV": 0.40561418826733847,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
   },
   "Cesar Izturis": {
     "keyword": "Cesar Izturis Baseball",
