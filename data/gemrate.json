@@ -1,13 +1,13 @@
 {
   "_meta": {
-    "updatedAt": "2026-04-01T16:49:20.962262+00:00",
+    "updatedAt": "2026-04-01T20:41:03.196871+00:00",
     "athleteCount": 456,
     "graders": [
       "PSA"
     ],
     "batchInfo": {
-      "startIdx": 460,
-      "endIdx": 480,
+      "startIdx": 480,
+      "endIdx": 500,
       "totalAthletes": 569
     }
   },
@@ -7541,17 +7541,17 @@
       "sport": "Football",
       "graders": {
         "PSA": {
-          "cards": 5,
+          "cards": 6,
           "gems": 1,
-          "grades": 8,
-          "gemRate": 12.0
+          "grades": 9,
+          "gemRate": 11.0
         }
       },
       "totals": {
-        "cards": 5,
+        "cards": 6,
         "gems": 1,
-        "grades": 8,
-        "gemRate": 12.0
+        "grades": 9,
+        "gemRate": 11.0
       }
     },
     "Marlon Vera": {
