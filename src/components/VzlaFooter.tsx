@@ -16,7 +16,7 @@ const VzlaFooter = () => {
       <footer id="about" className="mt-16 border-t border-border bg-card">
 
         <div className="max-w-5xl mx-auto px-6 py-10">
-          {/* Top row — 3-column like CardHedge */}
+          {/* Top row — 3-column layout */}
           <div className="grid grid-cols-1 md:grid-cols-[1.5fr_1fr_auto] gap-10 mb-10">
             {/* Brand column */}
             <div>
