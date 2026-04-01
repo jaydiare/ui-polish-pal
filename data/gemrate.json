@@ -1,13 +1,13 @@
 {
   "_meta": {
-    "updatedAt": "2026-03-31T20:39:48.644806+00:00",
+    "updatedAt": "2026-04-01T02:04:30.194597+00:00",
     "athleteCount": 456,
     "graders": [
       "PSA"
     ],
     "batchInfo": {
-      "startIdx": 360,
-      "endIdx": 380,
+      "startIdx": 380,
+      "endIdx": 400,
       "totalAthletes": 569
     }
   },
@@ -5723,16 +5723,16 @@
       "sport": "Baseball",
       "graders": {
         "PSA": {
-          "cards": 205,
+          "cards": 206,
           "gems": 899,
-          "grades": 2351,
+          "grades": 2357,
           "gemRate": 38.0
         }
       },
       "totals": {
-        "cards": 205,
+        "cards": 206,
         "gems": 899,
-        "grades": 2351,
+        "grades": 2357,
         "gemRate": 38.0
       }
     },
@@ -5761,14 +5761,14 @@
         "PSA": {
           "cards": 276,
           "gems": 481,
-          "grades": 957,
+          "grades": 958,
           "gemRate": 50.0
         }
       },
       "totals": {
         "cards": 276,
         "gems": 481,
-        "grades": 957,
+        "grades": 958,
         "gemRate": 50.0
       }
     },
@@ -5778,16 +5778,16 @@
       "graders": {
         "PSA": {
           "cards": 5,
-          "gems": 46,
-          "grades": 263,
-          "gemRate": 17.0
+          "gems": 47,
+          "grades": 264,
+          "gemRate": 18.0
         }
       },
       "totals": {
         "cards": 5,
-        "gems": 46,
-        "grades": 263,
-        "gemRate": 17.0
+        "gems": 47,
+        "grades": 264,
+        "gemRate": 18.0
       }
     },
     "Pedro Avila": {
