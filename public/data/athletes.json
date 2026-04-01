@@ -8,23 +8,6 @@
     "gemrate": "yes"
   },
   {
-    "name": "J.J. D'Orazio",
-    "sport": "Baseball",
-    "league": "MLB/WBC",
-    "team": "Diamondbacks / Italy / Tigres / Hillsboro Hops",
-    "provider": "manual",
-    "searchKeyword": "JJ D'Orazio Baseball",
-    "gemrate": "no"
-  },
-  {
-    "name": "Carlos Guzman",
-    "sport": "Baseball",
-    "league": "MLB",
-    "team": "Mets / Binghamton Rumble",
-    "provider": "manual",
-    "gemrate": "yes"
-  },
-  {
     "name": "Adrian Sanchez",
     "sport": "Baseball",
     "league": "MLB",
@@ -97,15 +80,6 @@
     "gemrate": "yes"
   },
   {
-    "name": "Alex Cabrera",
-    "sport": "Baseball",
-    "league": "MLB/NPB",
-    "team": "Diamondbacks/Seibu Lions/Orix Buffaloes/Tiburones",
-    "provider": "manual",
-    "searchKeyword": "Alex Cabrera BBM NPB Diamondbacks",
-    "gemrate": "yes"
-  },
-  {
     "name": "Alex Carrasquel",
     "sport": "Baseball",
     "league": "MLB",
@@ -151,15 +125,6 @@
     "league": "MLB",
     "team": "Twins",
     "provider": "manual",
-    "gemrate": "yes"
-  },
-  {
-    "name": "Alex Ramirez",
-    "sport": "Baseball",
-    "league": "MLB/NPB",
-    "team": "Pirates/Cleveland/DeNA Baystars/Cardenales",
-    "provider": "manual",
-    "searchKeyword": "Alex Ramirez BBM NPB",
     "gemrate": "yes"
   },
   {
@@ -563,6 +528,14 @@
     "gemrate": "yes"
   },
   {
+    "name": "Carlos Guzman",
+    "sport": "Baseball",
+    "league": "MLB",
+    "team": "Mets / Binghamton Rumble",
+    "provider": "manual",
+    "gemrate": "yes"
+  },
+  {
     "name": "Carlos Hernandez",
     "sport": "Baseball",
     "league": "MLB",
@@ -736,6 +709,15 @@
     "league": "MLB",
     "team": "Orioles",
     "provider": "manual",
+    "gemrate": "yes"
+  },
+  {
+    "name": "Chucho Ramos",
+    "sport": "Baseball",
+    "league": "MLB",
+    "team": "Reds",
+    "provider": "manual",
+    "searchKeyword": "Chucho Ramos Ovenca Venezuelan League",
     "gemrate": "yes"
   },
   {
@@ -929,15 +911,6 @@
     "team": "Phillies",
     "provider": "manual",
     "gemrate": "no"
-  },
-  {
-    "name": "Chucho Ramos",
-    "sport": "Baseball",
-    "league": "MLB",
-    "team": "Reds",
-    "provider": "manual",
-    "searchKeyword": "Chucho Ramos Ovenca Venezuelan League",
-    "gemrate": "yes"
   },
   {
     "name": "Edgardo Alfonzo",
@@ -1716,6 +1689,15 @@
     "gemrate": "yes"
   },
   {
+    "name": "Isaias Chavez",
+    "sport": "Baseball",
+    "league": "MLB",
+    "team": "Giants/Magallanes",
+    "provider": "manual",
+    "searchKeyword": "Isaias Latigo Chavez",
+    "gemrate": "yes"
+  },
+  {
     "name": "Israel Pineda",
     "sport": "Baseball",
     "league": "MLB",
@@ -1985,15 +1967,6 @@
     "league": "MLB",
     "team": "Phillies",
     "provider": "balldontlie",
-    "gemrate": "yes"
-  },
-  {
-    "name": "Jose Alvarez",
-    "sport": "Baseball",
-    "league": "MLB/LVBP",
-    "team": "Giants/Phillies/Angels/Caribes",
-    "provider": "manual",
-    "searchKeyword": "José Álvarez Angels Phillies Giants",
     "gemrate": "yes"
   },
   {
@@ -2902,15 +2875,6 @@
     "gemrate": "yes"
   },
   {
-    "name": "Isaias Chavez",
-    "sport": "Baseball",
-    "league": "MLB",
-    "team": "Giants/Magallanes",
-    "provider": "manual",
-    "searchKeyword": "Isaias Latigo Chavez",
-    "gemrate": "yes"
-  },
-  {
     "name": "Niuman Romero",
     "sport": "Baseball",
     "league": "MLB",
@@ -3342,24 +3306,6 @@
     "team": "Brewers / White Sox ",
     "provider": "manual",
     "searchKeyword": "Robert Machado Brewers  White Sox  ",
-    "gemrate": "yes"
-  },
-  {
-    "name": "Robert Perez",
-    "sport": "Baseball",
-    "league": "MLB/LVBP",
-    "team": "Blue Jays/ Cardenales/Yankees/ Brewers",
-    "provider": "manual",
-    "searchKeyword": "Robert Perez Blue Jays Cardenales",
-    "gemrate": "yes"
-  },
-  {
-    "name": "Robert Perez Jr.",
-    "sport": "Baseball",
-    "league": "MiLB/LVBP",
-    "team": "Mariners / Padres / Cardenales",
-    "provider": "manual",
-    "searchKeyword": "Robert Perez Jr. Prospects ",
     "gemrate": "yes"
   },
   {
@@ -3948,6 +3894,60 @@
     "gemrate": "yes"
   },
   {
+    "name": "Jose Alvarez",
+    "sport": "Baseball",
+    "league": "MLB/LVBP",
+    "team": "Giants/Phillies/Angels/Caribes",
+    "provider": "manual",
+    "searchKeyword": "José Álvarez Angels Phillies Giants",
+    "gemrate": "yes"
+  },
+  {
+    "name": "Robert Perez",
+    "sport": "Baseball",
+    "league": "MLB/LVBP",
+    "team": "Blue Jays/ Cardenales/Yankees/ Brewers",
+    "provider": "manual",
+    "searchKeyword": "Robert Perez Blue Jays Cardenales",
+    "gemrate": "yes"
+  },
+  {
+    "name": "Alex Cabrera",
+    "sport": "Baseball",
+    "league": "MLB/NPB",
+    "team": "Diamondbacks/Seibu Lions/Orix Buffaloes/Tiburones",
+    "provider": "manual",
+    "searchKeyword": "Alex Cabrera BBM NPB Diamondbacks",
+    "gemrate": "yes"
+  },
+  {
+    "name": "Alex Ramirez",
+    "sport": "Baseball",
+    "league": "MLB/NPB",
+    "team": "Pirates/Cleveland/DeNA Baystars/Cardenales",
+    "provider": "manual",
+    "searchKeyword": "Alex Ramirez BBM NPB",
+    "gemrate": "yes"
+  },
+  {
+    "name": "J.J. D'Orazio",
+    "sport": "Baseball",
+    "league": "MLB/WBC",
+    "team": "Diamondbacks / Italy / Tigres / Hillsboro Hops",
+    "provider": "manual",
+    "searchKeyword": "JJ D'Orazio Baseball",
+    "gemrate": "no"
+  },
+  {
+    "name": "Robert Perez Jr.",
+    "sport": "Baseball",
+    "league": "MiLB/LVBP",
+    "team": "Mariners / Padres / Cardenales",
+    "provider": "manual",
+    "searchKeyword": "Robert Perez Jr. Prospects ",
+    "gemrate": "yes"
+  },
+  {
     "name": "Carl Herrera",
     "sport": "Basketball",
     "league": "NBA",
@@ -4012,22 +4012,6 @@
     "team": "Venezuela / Borussia / Mallorca / Pachuca",
     "provider": "balldontlie",
     "gemrate": "no"
-  },
-  {
-    "name": "Sergio Cordova",
-    "sport": "Soccer",
-    "league": "Swiss Super League",
-    "team": "Young Boys",
-    "provider": "balldontlie",
-    "gemrate": "no"
-  },
-  {
-    "name": "Tomas Rincon",
-    "sport": "Soccer",
-    "league": "Serie A",
-    "team": "Santos",
-    "provider": "balldontlie",
-    "gemrate": "yes"
   },
   {
     "name": "Yohandry Orozco",
@@ -4327,14 +4311,6 @@
     "gemrate": "no"
   },
   {
-    "name": "Jefferson Savarino",
-    "sport": "Soccer",
-    "league": "Serie A",
-    "team": "Fluminense / Real Salt Lake / Botafogo ",
-    "provider": "balldontlie",
-    "gemrate": "yes"
-  },
-  {
     "name": "Jesus Bueno",
     "sport": "Soccer",
     "league": "MLS",
@@ -4512,6 +4488,14 @@
     "gemrate": "yes"
   },
   {
+    "name": "Jefferson Savarino",
+    "sport": "Soccer",
+    "league": "Serie A",
+    "team": "Fluminense / Real Salt Lake / Botafogo ",
+    "provider": "balldontlie",
+    "gemrate": "yes"
+  },
+  {
     "name": "Luis Balbo",
     "sport": "Soccer",
     "league": "Serie A",
@@ -4526,6 +4510,22 @@
     "team": "Palermo",
     "provider": "balldontlie",
     "gemrate": "no"
+  },
+  {
+    "name": "Nahuel Ferraresi",
+    "sport": "Soccer",
+    "league": "Serie A",
+    "team": "Sao Paulo",
+    "provider": "manual",
+    "gemrate": "no"
+  },
+  {
+    "name": "Tomas Rincon",
+    "sport": "Soccer",
+    "league": "Serie A",
+    "team": "Santos",
+    "provider": "balldontlie",
+    "gemrate": "yes"
   },
   {
     "name": "Yeferson Soteldo",
@@ -4544,11 +4544,11 @@
     "gemrate": "yes"
   },
   {
-    "name": "Nahuel Ferraresi",
+    "name": "Sergio Cordova",
     "sport": "Soccer",
-    "league": "Serie A",
-    "team": "Sao Paulo",
-    "provider": "manual",
+    "league": "Swiss Super League",
+    "team": "Young Boys",
+    "provider": "balldontlie",
     "gemrate": "no"
   },
   {
