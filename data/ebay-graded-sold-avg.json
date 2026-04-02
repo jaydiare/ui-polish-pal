@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-04-02T09:32:37.919Z",
+    "updatedAt": "2026-04-02T11:13:45.667Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA/BGS/SGC grader title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 240,
-      "endIdx": 250,
+      "startIdx": 250,
+      "endIdx": 260,
       "totalAthletes": 458
     },
     "maxPages": 4,
@@ -3517,15 +3517,15 @@
   },
   "Leo Hernandez": {
     "keyword": "Leo Hernandez Baseball PSA",
-    "nScraped": 0,
-    "nSoldUsed": 0,
+    "nScraped": 249,
+    "nSoldUsed": 1,
     "avg": null,
     "taguchiSold": null,
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
   },
   "Leo Rivas": {
     "keyword": "Leo Rivas Baseball PSA",
@@ -3553,15 +3553,15 @@
   },
   "Les Straker": {
     "keyword": "Les Straker Baseball PSA",
-    "nScraped": 240,
-    "nSoldUsed": 4,
-    "avg": 50,
-    "taguchiSold": 50,
-    "medianSold": 50,
-    "marketStabilityCV": 0,
+    "nScraped": 60,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
   },
   "Lester Oliveros": {
     "keyword": "Lester Oliveros Baseball",
@@ -3576,8 +3576,8 @@
     "fxRateUsed": null
   },
   "Lino Urdaneta": {
-    "keyword": "Lino Urdaneta Baseball",
-    "nScraped": 0,
+    "keyword": "Lino Urdaneta Baseball PSA",
+    "nScraped": 8,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -3625,39 +3625,39 @@
   },
   "Luinder Avila": {
     "keyword": "Luinder Avila Baseball PSA",
-    "nScraped": 244,
-    "nSoldUsed": 12,
-    "avg": 49.970000000000006,
-    "taguchiSold": 49.970000000000006,
+    "nScraped": 122,
+    "nSoldUsed": 6,
+    "avg": 49.97,
+    "taguchiSold": 49.97,
     "medianSold": 49.97,
-    "marketStabilityCV": 1.485166466649594e-16,
+    "marketStabilityCV": 0,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
   },
   "Luis Alexander Basabe": {
     "keyword": "Luis Alexander Basabe Baseball PSA",
-    "nScraped": 240,
-    "nSoldUsed": 12,
-    "avg": 9,
-    "taguchiSold": 9,
-    "medianSold": 9,
-    "marketStabilityCV": 0,
+    "nScraped": 0,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
   },
   "Luis Aparicio": {
     "keyword": "Luis Aparicio Baseball PSA",
-    "nScraped": 240,
-    "nSoldUsed": 116,
-    "avg": 71.95965517241379,
-    "taguchiSold": 71.95965517241379,
-    "medianSold": 69.975,
-    "marketStabilityCV": 0.29202531912236585,
+    "nScraped": 0,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
   },
   "Luis Aponte": {
     "keyword": "Luis Aponte Baseball PSA",
