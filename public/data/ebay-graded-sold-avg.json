@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-04-02T19:28:03.678Z",
+    "updatedAt": "2026-04-02T20:59:05.794Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA/BGS/SGC grader title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 290,
-      "endIdx": 300,
+      "startIdx": 300,
+      "endIdx": 310,
       "totalAthletes": 458
     },
     "maxPages": 4,
@@ -4177,12 +4177,12 @@
   },
   "Maximo Acosta": {
     "keyword": "Maximo Acosta Baseball PSA",
-    "nScraped": 266,
-    "nSoldUsed": 48,
-    "avg": 13.244999999999996,
-    "taguchiSold": 13.244999999999996,
-    "medianSold": 14.445,
-    "marketStabilityCV": 0.1816180340534233,
+    "nScraped": 277,
+    "nSoldUsed": 51,
+    "avg": 14.554705882352936,
+    "taguchiSold": 14.554705882352936,
+    "medianSold": 15.39,
+    "marketStabilityCV": 0.06903398397310116,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
@@ -4201,7 +4201,7 @@
   },
   "Melvin Dorta": {
     "keyword": "Melvin Dorta Baseball PSA",
-    "nScraped": 20,
+    "nScraped": 21,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -4213,8 +4213,8 @@
   },
   "Melvin Mora": {
     "keyword": "Melvin Mora Baseball PSA",
-    "nScraped": 240,
-    "nSoldUsed": 11,
+    "nScraped": 244,
+    "nSoldUsed": 13,
     "avg": 18,
     "taguchiSold": 18,
     "medianSold": 18,
@@ -4227,17 +4227,17 @@
     "keyword": "Miguel Cabrera Baseball PSA",
     "nScraped": 240,
     "nSoldUsed": 107,
-    "avg": 85.19897196261681,
-    "taguchiSold": 85.19897196261681,
-    "medianSold": 80,
-    "marketStabilityCV": 0.3694400888105032,
+    "avg": 75.85878504672888,
+    "taguchiSold": 75.85878504672888,
+    "medianSold": 75,
+    "marketStabilityCV": 0.31238310512870593,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
   },
   "Miguel Cairo": {
     "keyword": "Miguel Cairo Baseball PSA",
-    "nScraped": 0,
+    "nScraped": 62,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -4249,7 +4249,7 @@
   },
   "Miguel Garcia": {
     "keyword": "Miguel Garcia Baseball PSA",
-    "nScraped": 0,
+    "nScraped": 60,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -4273,7 +4273,7 @@
   },
   "Miguel Montero": {
     "keyword": "Miguel Montero Baseball PSA",
-    "nScraped": 240,
+    "nScraped": 0,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -4285,7 +4285,7 @@
   },
   "Miguel Perez": {
     "keyword": "Miguel Perez Baseball PSA",
-    "nScraped": 60,
+    "nScraped": 0,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
