@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-04-02T05:53:53.666Z",
+    "updatedAt": "2026-04-02T07:45:20.097Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA/BGS/SGC grader title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 220,
-      "endIdx": 230,
+      "startIdx": 230,
+      "endIdx": 240,
       "totalAthletes": 458
     },
     "maxPages": 4,
@@ -3253,7 +3253,7 @@
   },
   "Jose Suarez": {
     "keyword": "Jose Suarez Baseball PSA",
-    "nScraped": 244,
+    "nScraped": 243,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -3265,12 +3265,12 @@
   },
   "Jose Tabata": {
     "keyword": "Jose Tabata Baseball PSA",
-    "nScraped": 245,
-    "nSoldUsed": 16,
-    "avg": 8.244999999999997,
-    "taguchiSold": 8.244999999999997,
-    "medianSold": 8.245000000000001,
-    "marketStabilityCV": 0.09332112691892547,
+    "nScraped": 244,
+    "nSoldUsed": 19,
+    "avg": 8.127368421052632,
+    "taguchiSold": 8.127368421052632,
+    "medianSold": 7.5,
+    "marketStabilityCV": 0.0929960718354852,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
@@ -3301,7 +3301,7 @@
   },
   "Josmil Pinto": {
     "keyword": "Josmil Pinto Baseball PSA",
-    "nScraped": 23,
+    "nScraped": 22,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -3313,7 +3313,7 @@
   },
   "Juan Castillo": {
     "keyword": "Juan Castillo Baseball PSA",
-    "nScraped": 122,
+    "nScraped": 0,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
