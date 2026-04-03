@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-04-03T03:31:10.100Z",
+    "updatedAt": "2026-04-03T05:53:54.282Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA/BGS/SGC grader title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 320,
-      "endIdx": 330,
+      "startIdx": 330,
+      "endIdx": 340,
       "totalAthletes": 458
     },
     "maxPages": 4,
@@ -32,7 +32,7 @@
     },
     "fx": {
       "source": "CBSA Exchange Rates API",
-      "asOf": "2026-04-03T00:00:00.000Z"
+      "asOf": "2026-04-04T00:00:00.000Z"
     }
   },
   "Adbert Alzolay": {
@@ -4597,7 +4597,7 @@
   },
   "Oswaldo Peraza": {
     "keyword": "Oswaldo Peraza Baseball PSA",
-    "nScraped": 150,
+    "nScraped": 165,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -4609,19 +4609,19 @@
   },
   "Ozzie Guillen": {
     "keyword": "Ozzie Guillen Baseball PSA",
-    "nScraped": 313,
+    "nScraped": 320,
     "nSoldUsed": 68,
-    "avg": 23.97764705882352,
-    "taguchiSold": 23.97764705882352,
-    "medianSold": 22.72,
-    "marketStabilityCV": 0.10394598324584362,
+    "avg": 22.631176470588237,
+    "taguchiSold": 22.631176470588237,
+    "medianSold": 22.01,
+    "marketStabilityCV": 0.09208522468138455,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
   },
   "Pablo Lopez": {
     "keyword": "Pablo Lopez Baseball PSA",
-    "nScraped": 247,
+    "nScraped": 248,
     "nSoldUsed": 8,
     "avg": 10.489999999999998,
     "taguchiSold": 10.489999999999998,
@@ -4633,27 +4633,27 @@
   },
   "Pablo Sandoval": {
     "keyword": "Pablo Sandoval Baseball PSA",
-    "nScraped": 129,
-    "nSoldUsed": 17,
-    "avg": 32.04882352941177,
-    "taguchiSold": 32.04882352941177,
+    "nScraped": 258,
+    "nSoldUsed": 25,
+    "avg": 29.990000000000006,
+    "taguchiSold": 29.990000000000006,
     "medianSold": 29.99,
-    "marketStabilityCV": 0.07914481723959928,
+    "marketStabilityCV": 2.4181215169688e-16,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
   },
   "Pablo Torrealba": {
     "keyword": "Pablo Torrealba Baseball PSA",
-    "nScraped": 0,
-    "nSoldUsed": 0,
-    "avg": null,
-    "taguchiSold": null,
-    "medianSold": null,
-    "marketStabilityCV": null,
+    "nScraped": 240,
+    "nSoldUsed": 8,
+    "avg": 32.02,
+    "taguchiSold": 32.02,
+    "medianSold": 32.02,
+    "marketStabilityCV": 0.4697521141421376,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
   },
   "Pedro Avila": {
     "keyword": "Pedro Avila Baseball PSA",
@@ -4681,7 +4681,7 @@
   },
   "Pedro Hernandez": {
     "keyword": "Pedro Hernandez Baseball PSA",
-    "nScraped": 60,
+    "nScraped": 0,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -4693,19 +4693,19 @@
   },
   "Pedro Pages": {
     "keyword": "Pedro Pages Baseball PSA",
-    "nScraped": 248,
-    "nSoldUsed": 8,
-    "avg": 17.189999999999998,
-    "taguchiSold": 17.189999999999998,
-    "medianSold": 17.189999999999998,
-    "marketStabilityCV": 0.47824059343956804,
+    "nScraped": 0,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
   },
   "Pompeyo Davalillo": {
     "keyword": "Pompeyo Davalillo Baseball PSA",
-    "nScraped": 60,
+    "nScraped": 0,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
