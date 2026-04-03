@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-04-03T09:12:57.094Z",
+    "updatedAt": "2026-04-03T11:06:39.269Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA/BGS/SGC grader title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 350,
-      "endIdx": 360,
+      "startIdx": 360,
+      "endIdx": 370,
       "totalAthletes": 458
     },
     "maxPages": 4,
@@ -4981,7 +4981,7 @@
   },
   "Richard Hidalgo": {
     "keyword": "Richard Hidalgo Baseball PSA",
-    "nScraped": 241,
+    "nScraped": 242,
     "nSoldUsed": 4,
     "avg": 7.73,
     "taguchiSold": 7.73,
@@ -5017,7 +5017,7 @@
   },
   "Robert Suarez": {
     "keyword": "Robert Suarez Baseball PSA",
-    "nScraped": 0,
+    "nScraped": 60,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -5029,7 +5029,7 @@
   },
   "Roberto Petagine": {
     "keyword": "Roberto Petagine Baseball PSA",
-    "nScraped": 0,
+    "nScraped": 60,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -5089,19 +5089,19 @@
   },
   "Ronald Acuna Jr.": {
     "keyword": "Ronald Acuna Jr. Baseball PSA",
-    "nScraped": 240,
-    "nSoldUsed": 79,
-    "avg": 51.361392405063285,
-    "taguchiSold": 51.361392405063285,
-    "medianSold": 50,
-    "marketStabilityCV": 0.11798012638991852,
+    "nScraped": 120,
+    "nSoldUsed": 52,
+    "avg": 36.43519230769231,
+    "taguchiSold": 36.43519230769231,
+    "medianSold": 35.495000000000005,
+    "marketStabilityCV": 0.11508717958585324,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
   },
   "Ronald Belisario": {
     "keyword": "Ronald Belisario Baseball PSA",
-    "nScraped": 60,
+    "nScraped": 0,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
