@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-04-03T15:05:57.848Z",
+    "updatedAt": "2026-04-03T17:00:52.260Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA/BGS/SGC grader title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 380,
-      "endIdx": 390,
+      "startIdx": 390,
+      "endIdx": 400,
       "totalAthletes": 458
     },
     "maxPages": 4,
@@ -5401,15 +5401,15 @@
   },
   "Vic Davalillo": {
     "keyword": "Vic Davalillo Baseball PSA",
-    "nScraped": 0,
-    "nSoldUsed": 0,
-    "avg": null,
-    "taguchiSold": null,
-    "medianSold": null,
-    "marketStabilityCV": null,
+    "nScraped": 309,
+    "nSoldUsed": 60,
+    "avg": 56.26200000000001,
+    "taguchiSold": 56.26200000000001,
+    "medianSold": 53,
+    "marketStabilityCV": 0.11372065386841997,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
   },
   "Victor Garate": {
     "keyword": "Victor Garate Baseball",
@@ -5425,19 +5425,19 @@
   },
   "Victor Martinez": {
     "keyword": "Victor Martinez Baseball PSA",
-    "nScraped": 0,
-    "nSoldUsed": 0,
-    "avg": null,
-    "taguchiSold": null,
-    "medianSold": null,
-    "marketStabilityCV": null,
+    "nScraped": 298,
+    "nSoldUsed": 24,
+    "avg": 54.5,
+    "taguchiSold": 54.5,
+    "medianSold": 54.5,
+    "marketStabilityCV": 0.5716695234086274,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
   },
   "Victor Reyes": {
     "keyword": "Victor Reyes Baseball PSA",
-    "nScraped": 0,
+    "nScraped": 60,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -5449,7 +5449,7 @@
   },
   "Victor Zambrano": {
     "keyword": "Victor Zambrano Baseball PSA",
-    "nScraped": 0,
+    "nScraped": 60,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -5473,7 +5473,7 @@
   },
   "Wil Ledezma": {
     "keyword": "Wil Ledezma Baseball PSA",
-    "nScraped": 220,
+    "nScraped": 180,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -5497,7 +5497,7 @@
   },
   "Wilfredo Rodriguez": {
     "keyword": "Wilfredo Rodriguez Baseball PSA",
-    "nScraped": 60,
+    "nScraped": 0,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -5509,7 +5509,7 @@
   },
   "Wilfredo Tovar": {
     "keyword": "Wilfredo Tovar Baseball PSA",
-    "nScraped": 60,
+    "nScraped": 0,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -5545,15 +5545,15 @@
   },
   "William Bergolla": {
     "keyword": "William Bergolla Baseball PSA",
-    "nScraped": 265,
-    "nSoldUsed": 64,
-    "avg": 35.673125,
-    "taguchiSold": 35.673125,
-    "medianSold": 29.884999999999998,
-    "marketStabilityCV": 0.20763487581065368,
+    "nScraped": 0,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
   },
   "William Contreras": {
     "keyword": "William Contreras Baseball PSA",
