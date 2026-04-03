@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-04-03T13:40:42.389Z",
+    "updatedAt": "2026-04-03T15:05:57.848Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA/BGS/SGC grader title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 370,
-      "endIdx": 380,
+      "startIdx": 380,
+      "endIdx": 390,
       "totalAthletes": 458
     },
     "maxPages": 4,
@@ -5269,12 +5269,12 @@
   },
   "Thairo Estrada": {
     "keyword": "Thairo Estrada Baseball PSA",
-    "nScraped": 182,
+    "nScraped": 243,
     "nSoldUsed": 12,
-    "avg": 19.995,
-    "taguchiSold": 19.995,
-    "medianSold": 19.994999999999997,
-    "marketStabilityCV": 0.5221023769774042,
+    "avg": 10,
+    "taguchiSold": 10,
+    "medianSold": 10,
+    "marketStabilityCV": 0,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
@@ -5293,7 +5293,7 @@
   },
   "Tomas Perez": {
     "keyword": "Tomas Perez Baseball PSA",
-    "nScraped": 0,
+    "nScraped": 60,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -5317,7 +5317,7 @@
   },
   "Tony Alvarez": {
     "keyword": "Tony Alvarez Baseball PSA",
-    "nScraped": 0,
+    "nScraped": 60,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -5329,19 +5329,19 @@
   },
   "Tony Armas": {
     "keyword": "Tony Armas Baseball PSA",
-    "nScraped": 326,
-    "nSoldUsed": 44,
-    "avg": 22.05909090909089,
-    "taguchiSold": 22.05909090909089,
-    "medianSold": 19.95,
-    "marketStabilityCV": 0.146635861493853,
+    "nScraped": 339,
+    "nSoldUsed": 48,
+    "avg": 25.037499999999998,
+    "taguchiSold": 25.037499999999998,
+    "medianSold": 22.75,
+    "marketStabilityCV": 0.24755141307656608,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
   },
   "Tony Castillo": {
     "keyword": "Tony Castillo Baseball PSA",
-    "nScraped": 241,
+    "nScraped": 120,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -5353,19 +5353,19 @@
   },
   "Tucupita Marcano": {
     "keyword": "Tucupita Marcano Baseball PSA",
-    "nScraped": 240,
-    "nSoldUsed": 12,
-    "avg": 13.49,
-    "taguchiSold": 13.49,
-    "medianSold": 13.49,
-    "marketStabilityCV": 0,
+    "nScraped": 0,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
   },
   "Ubaldo Heredia": {
     "keyword": "Ubaldo Heredia Baseball PSA",
-    "nScraped": 35,
+    "nScraped": 0,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -5377,7 +5377,7 @@
   },
   "Ugueth Urbina": {
     "keyword": "Ugueth Urbina Baseball PSA",
-    "nScraped": 240,
+    "nScraped": 0,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
