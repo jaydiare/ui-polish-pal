@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-04-03T05:53:54.282Z",
+    "updatedAt": "2026-04-03T07:41:29.415Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA/BGS/SGC grader title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 330,
-      "endIdx": 340,
+      "startIdx": 340,
+      "endIdx": 350,
       "totalAthletes": 458
     },
     "maxPages": 4,
@@ -4729,7 +4729,7 @@
   },
   "Rafael Marchan": {
     "keyword": "Rafael Marchan Baseball PSA",
-    "nScraped": 243,
+    "nScraped": 244,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -4777,7 +4777,7 @@
   },
   "Ramon Flores": {
     "keyword": "Ramon Flores Baseball PSA",
-    "nScraped": 0,
+    "nScraped": 60,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -4789,7 +4789,7 @@
   },
   "Ramon Garcia": {
     "keyword": "Ramon Garcia Baseball PSA",
-    "nScraped": 0,
+    "nScraped": 60,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -4802,18 +4802,18 @@
   "Ramon Hernandez": {
     "keyword": "Ramon Hernandez Baseball PSA",
     "nScraped": 274,
-    "nSoldUsed": 36,
-    "avg": 45.87111111111112,
-    "taguchiSold": 45.87111111111112,
-    "medianSold": 45,
-    "marketStabilityCV": 0.20856109759597302,
+    "nSoldUsed": 28,
+    "avg": 38.558571428571426,
+    "taguchiSold": 38.558571428571426,
+    "medianSold": 35.91,
+    "marketStabilityCV": 0.14946157976837626,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
   },
   "Ramon Ramirez": {
     "keyword": "Ramon Ramirez Baseball PSA",
-    "nScraped": 290,
+    "nScraped": 315,
     "nSoldUsed": 32,
     "avg": 44.24500000000001,
     "taguchiSold": 44.24500000000001,
@@ -4825,12 +4825,12 @@
   },
   "Ranger Suarez": {
     "keyword": "Ranger Suarez Baseball PSA",
-    "nScraped": 288,
-    "nSoldUsed": 44,
-    "avg": 78.15454545454548,
-    "taguchiSold": 78.15454545454548,
-    "medianSold": 89,
-    "marketStabilityCV": 0.2760758343674249,
+    "nScraped": 287,
+    "nSoldUsed": 42,
+    "avg": 80.64904761904756,
+    "taguchiSold": 80.64904761904756,
+    "medianSold": 94.075,
+    "marketStabilityCV": 0.26832325638562826,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
