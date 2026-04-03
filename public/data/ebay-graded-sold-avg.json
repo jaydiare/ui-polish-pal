@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-04-03T19:08:43.154Z",
+    "updatedAt": "2026-04-03T20:59:36.734Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA/BGS/SGC grader title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 400,
-      "endIdx": 410,
+      "startIdx": 410,
+      "endIdx": 420,
       "totalAthletes": 458
     },
     "maxPages": 4,
@@ -5689,12 +5689,12 @@
   },
   "Wilyer Abreu": {
     "keyword": "Wilyer Abreu Baseball PSA",
-    "nScraped": 216,
-    "nSoldUsed": 84,
-    "avg": 102.88011904761903,
-    "taguchiSold": 102.88011904761903,
-    "medianSold": 104.99,
-    "marketStabilityCV": 0.1138763538863243,
+    "nScraped": 185,
+    "nSoldUsed": 76,
+    "avg": 117.44394736842102,
+    "taguchiSold": 117.44394736842102,
+    "medianSold": 105,
+    "marketStabilityCV": 0.15698876659553831,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
@@ -5713,19 +5713,19 @@
   },
   "Yilber Diaz": {
     "keyword": "Yilber Diaz Baseball PSA",
-    "nScraped": 0,
-    "nSoldUsed": 0,
-    "avg": null,
-    "taguchiSold": null,
-    "medianSold": null,
-    "marketStabilityCV": null,
+    "nScraped": 249,
+    "nSoldUsed": 8,
+    "avg": 16.935000000000002,
+    "taguchiSold": 16.935000000000002,
+    "medianSold": 16.935000000000002,
+    "marketStabilityCV": 0.3430917861928613,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
   },
   "Yoel Hernandez": {
     "keyword": "Yoel Hernandez Baseball PSA",
-    "nScraped": 0,
+    "nScraped": 60,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -5761,7 +5761,7 @@
   },
   "Yohan Pino": {
     "keyword": "Yohan Pino Baseball PSA",
-    "nScraped": 3,
+    "nScraped": 0,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -5773,27 +5773,27 @@
   },
   "Yohander Mendez": {
     "keyword": "Yohander Mendez Baseball PSA",
-    "nScraped": 60,
-    "nSoldUsed": 4,
-    "avg": 6.68,
-    "taguchiSold": 6.68,
-    "medianSold": 6.68,
-    "marketStabilityCV": 0.11754436618231905,
+    "nScraped": 0,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
   },
   "Yohel Pozo": {
     "keyword": "Yohel Pozo Baseball PSA",
-    "nScraped": 257,
-    "nSoldUsed": 4,
-    "avg": 8.28,
-    "taguchiSold": 8.28,
-    "medianSold": 8.28,
-    "marketStabilityCV": 0,
+    "nScraped": 0,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
   },
   "Yolmer Sanchez": {
     "keyword": "Yolmer Sanchez Baseball PSA",
