@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-04-03T02:02:24.005Z",
+    "updatedAt": "2026-04-03T05:01:51.465Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. Taguchi winsorized mean + market stability CV. Ungraded condition policy (permissive for sold). Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 220,
-      "endIdx": 230,
+      "startIdx": 230,
+      "endIdx": 240,
       "totalAthletes": 569
     },
     "maxPages": 4,
@@ -28,7 +28,7 @@
     },
     "fx": {
       "source": "CBSA Exchange Rates API",
-      "asOf": "2026-04-03T00:00:00.000Z"
+      "asOf": "2026-04-04T00:00:00.000Z"
     }
   },
   "Adbert Alzolay": {
@@ -2745,39 +2745,39 @@
   },
   "Jesus Tinoco": {
     "keyword": "Jesus Tinoco Baseball",
-    "nScraped": 264,
-    "nSoldUsed": 90,
-    "avg": 1.528666666666666,
-    "taguchiSold": 1.528666666666666,
-    "medianSold": 1.49,
-    "marketStabilityCV": 0.09283041328146244,
+    "nScraped": 0,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
   },
   "Jhonathan Diaz": {
     "keyword": "Jhonathan Diaz Baseball",
-    "nScraped": 104,
-    "nSoldUsed": 52,
-    "avg": 1.3844230769230768,
-    "taguchiSold": 1.3844230769230768,
-    "medianSold": 1.35,
-    "marketStabilityCV": 0.06750897279145278,
+    "nScraped": 0,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
   },
   "Jhonny Pereda": {
     "keyword": "Jhonny Pereda Baseball",
-    "nScraped": 140,
-    "nSoldUsed": 58,
-    "avg": 2.101551724137931,
-    "taguchiSold": 2.101551724137931,
-    "medianSold": 1.99,
-    "marketStabilityCV": 0.06113756665058471,
+    "nScraped": 0,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
   },
   "Jhostynxon Garcia": {
     "keyword": "Jhostynxon Garcia Baseball",
@@ -3645,27 +3645,27 @@
   },
   "Jonathan Herrera": {
     "keyword": "Jonathan Herrera Baseball",
-    "nScraped": 306,
-    "nSoldUsed": 20,
-    "avg": 1.6499999999999992,
-    "taguchiSold": 1.6499999999999992,
-    "medianSold": 1.65,
-    "marketStabilityCV": 4.1420537790978694e-16,
+    "nScraped": 0,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
   },
   "Jorbit Vivas": {
     "keyword": "Jorbit Vivas Baseball",
-    "nScraped": 240,
-    "nSoldUsed": 108,
-    "avg": 2.543055555555556,
-    "taguchiSold": 2.543055555555556,
-    "medianSold": 2.645,
-    "marketStabilityCV": 0.26865354996229734,
+    "nScraped": 0,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
   },
   "Jorge Barrosa": {
     "keyword": "Jorge Barrosa Baseball",
