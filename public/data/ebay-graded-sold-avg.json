@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-04-03T20:59:36.734Z",
+    "updatedAt": "2026-04-03T22:57:32.965Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA/BGS/SGC grader title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 410,
-      "endIdx": 420,
+      "startIdx": 420,
+      "endIdx": 430,
       "totalAthletes": 458
     },
     "maxPages": 4,
@@ -5005,7 +5005,7 @@
   },
   "Robert Perez": {
     "keyword": "Robert Perez Blue Jays Cardenales Baseball PSA",
-    "nScraped": 56,
+    "nScraped": 0,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -5821,7 +5821,7 @@
   },
   "Yonny Chirinos": {
     "keyword": "Yonny Chirinos Baseball PSA",
-    "nScraped": 29,
+    "nScraped": 31,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -5833,19 +5833,19 @@
   },
   "Yonny Hernandez": {
     "keyword": "Yonny Hernandez Baseball PSA",
-    "nScraped": 183,
-    "nSoldUsed": 6,
+    "nScraped": 244,
+    "nSoldUsed": 8,
     "avg": 12.745,
     "taguchiSold": 12.745,
     "medianSold": 12.745000000000001,
-    "marketStabilityCV": 0.19295992806576664,
+    "marketStabilityCV": 0.18830960787552542,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
   },
   "Yorman Bazardo": {
     "keyword": "Yorman Bazardo Baseball PSA",
-    "nScraped": 0,
+    "nScraped": 36,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -5857,19 +5857,19 @@
   },
   "Yorman Rodriguez": {
     "keyword": "Yorman Rodriguez Baseball PSA",
-    "nScraped": 241,
-    "nSoldUsed": 4,
-    "avg": 7.06,
-    "taguchiSold": 7.06,
-    "medianSold": 7.06,
-    "marketStabilityCV": 0,
+    "nScraped": 60,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
   },
   "Yorvit Torrealba": {
     "keyword": "Yorvit Torrealba Baseball PSA",
-    "nScraped": 44,
+    "nScraped": 42,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
