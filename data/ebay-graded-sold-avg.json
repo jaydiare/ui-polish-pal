@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-04-04T16:59:29.627Z",
+    "updatedAt": "2026-04-04T19:06:09.703Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA/BGS/SGC grader title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 30,
-      "endIdx": 40,
+      "startIdx": 40,
+      "endIdx": 50,
       "totalAthletes": 458
     },
     "maxPages": 4,
@@ -673,12 +673,12 @@
   },
   "Avisail Garcia": {
     "keyword": "Avisail Garcia Baseball PSA",
-    "nScraped": 120,
-    "nSoldUsed": 8,
-    "avg": 9.245000000000001,
-    "taguchiSold": 9.245000000000001,
-    "medianSold": 9.245000000000001,
-    "marketStabilityCV": 0.08614802605722278,
+    "nScraped": 246,
+    "nSoldUsed": 20,
+    "avg": 8.5,
+    "taguchiSold": 8.5,
+    "medianSold": 8.5,
+    "marketStabilityCV": 0,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
@@ -697,15 +697,15 @@
   },
   "Bo Diaz": {
     "keyword": "Bo Diaz Baseball PSA",
-    "nScraped": 0,
-    "nSoldUsed": 0,
-    "avg": null,
-    "taguchiSold": null,
-    "medianSold": null,
-    "marketStabilityCV": null,
+    "nScraped": 369,
+    "nSoldUsed": 64,
+    "avg": 25.713750000000005,
+    "taguchiSold": 25.713750000000005,
+    "medianSold": 28.994999999999997,
+    "marketStabilityCV": 0.18116745770898396,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
   },
   "Bobby Abreu": {
     "keyword": "Bobby Abreu Baseball PSA",
@@ -745,7 +745,7 @@
   },
   "Brayan Villarreal": {
     "keyword": "Brayan Villarreal Baseball PSA",
-    "nScraped": 240,
+    "nScraped": 0,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -757,7 +757,7 @@
   },
   "Breyvic Valera": {
     "keyword": "Breyvic Valera Baseball PSA",
-    "nScraped": 60,
+    "nScraped": 0,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -769,7 +769,7 @@
   },
   "Bruce Rondon": {
     "keyword": "Bruce Rondon Baseball PSA",
-    "nScraped": 60,
+    "nScraped": 0,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -6925,15 +6925,15 @@
   },
   "Bob Abreu": {
     "keyword": "Bob Abreu Baseball PSA",
-    "nScraped": 0,
-    "nSoldUsed": 0,
-    "avg": null,
-    "taguchiSold": null,
-    "medianSold": null,
-    "marketStabilityCV": null,
+    "nScraped": 140,
+    "nSoldUsed": 12,
+    "avg": 6.0249999999999995,
+    "taguchiSold": 6.0249999999999995,
+    "medianSold": 6.025,
+    "marketStabilityCV": 0.08234378746452098,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
   },
   "Robert Perez Jr.": {
     "keyword": "Robert Perez Jr. Prospects Baseball PSA",
