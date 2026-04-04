@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-04-04T07:31:50.737Z",
+    "updatedAt": "2026-04-04T10:56:30.599Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA/BGS/SGC grader title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 450,
-      "endIdx": 458,
+      "startIdx": 0,
+      "endIdx": 10,
       "totalAthletes": 458
     },
     "maxPages": 4,
@@ -37,7 +37,7 @@
   },
   "Adbert Alzolay": {
     "keyword": "Adbert Alzolay Baseball PSA",
-    "nScraped": 268,
+    "nScraped": 271,
     "nSoldUsed": 24,
     "avg": 11.5,
     "taguchiSold": 11.5,
@@ -133,7 +133,7 @@
   },
   "Alejandro Freire": {
     "keyword": "Alejandro Freire Baseball PSA",
-    "nScraped": 0,
+    "nScraped": 60,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -169,15 +169,15 @@
   },
   "Alex Carrasquel": {
     "keyword": "Alex Carrasquel Baseball PSA",
-    "nScraped": 240,
-    "nSoldUsed": 4,
-    "avg": 275,
-    "taguchiSold": 275,
-    "medianSold": 275,
-    "marketStabilityCV": 0,
+    "nScraped": 0,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
   },
   "Alex Delgado": {
     "keyword": "Alex Delgado Baseball",
