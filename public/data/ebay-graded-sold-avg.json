@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-04-03T22:57:32.965Z",
+    "updatedAt": "2026-04-04T03:19:19.975Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA/BGS/SGC grader title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 420,
-      "endIdx": 430,
+      "startIdx": 430,
+      "endIdx": 440,
       "totalAthletes": 458
     },
     "maxPages": 4,
@@ -241,7 +241,7 @@
   },
   "Alex Ramirez": {
     "keyword": "Alex Ramirez BBM NPB Baseball PSA",
-    "nScraped": 53,
+    "nScraped": 60,
     "nSoldUsed": 4,
     "avg": 28.494999999999997,
     "taguchiSold": 28.494999999999997,
@@ -5905,7 +5905,7 @@
   },
   "Greivis Vasquez": {
     "keyword": "Greivis Vasquez Basketball PSA",
-    "nScraped": 242,
+    "nScraped": 244,
     "nSoldUsed": 4,
     "avg": 174.99,
     "taguchiSold": 174.99,
@@ -5941,7 +5941,7 @@
   },
   "Amleto Monacelli": {
     "keyword": "Amleto Monacelli PBA Bowler Bowling Bowling PSA",
-    "nScraped": 4,
+    "nScraped": 0,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -6193,15 +6193,15 @@
   },
   "Yangel Herrera": {
     "keyword": "Yangel Herrera Soccer PSA",
-    "nScraped": 200,
-    "nSoldUsed": 4,
-    "avg": 15.5,
-    "taguchiSold": 15.5,
-    "medianSold": 15.5,
-    "marketStabilityCV": 0,
+    "nScraped": 0,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
   },
   "Cristian Casseres Jr.": {
     "keyword": "Cristian Casseres Jr. Soccer PSA",
