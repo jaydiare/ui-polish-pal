@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-04-04T05:38:04.302Z",
+    "updatedAt": "2026-04-04T07:31:50.737Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA/BGS/SGC grader title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 440,
-      "endIdx": 450,
+      "startIdx": 450,
+      "endIdx": 458,
       "totalAthletes": 458
     },
     "maxPages": 4,
@@ -6013,7 +6013,7 @@
   },
   "Tomas Rincon": {
     "keyword": "Tomas Rincon Soccer PSA",
-    "nScraped": 0,
+    "nScraped": 19,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -6709,7 +6709,7 @@
   },
   "Telasco Segovia": {
     "keyword": "Telasco Segovia Soccer PSA",
-    "nScraped": 241,
+    "nScraped": 242,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -6745,7 +6745,7 @@
   },
   "Alejandro Marques": {
     "keyword": "Alejandro Marques Soccer PSA",
-    "nScraped": 244,
+    "nScraped": 240,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -6805,7 +6805,7 @@
   },
   "Yordan Osorio": {
     "keyword": "Yordan Osorio Soccer PSA",
-    "nScraped": 80,
+    "nScraped": 70,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
