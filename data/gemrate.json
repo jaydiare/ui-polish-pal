@@ -1,13 +1,13 @@
 {
   "_meta": {
-    "updatedAt": "2026-04-04T16:30:41.137470+00:00",
+    "updatedAt": "2026-04-04T20:27:09.331862+00:00",
     "athleteCount": 456,
     "graders": [
       "PSA"
     ],
     "batchInfo": {
-      "startIdx": 240,
-      "endIdx": 260,
+      "startIdx": 260,
+      "endIdx": 280,
       "totalAthletes": 569
     }
   },
@@ -3923,16 +3923,16 @@
       "sport": "Baseball",
       "graders": {
         "PSA": {
-          "cards": 85,
+          "cards": 86,
           "gems": 86,
-          "grades": 209,
+          "grades": 211,
           "gemRate": 41.0
         }
       },
       "totals": {
-        "cards": 85,
+        "cards": 86,
         "gems": 86,
-        "grades": 209,
+        "grades": 211,
         "gemRate": 41.0
       }
     },
@@ -4031,16 +4031,16 @@
       "sport": "Baseball",
       "graders": {
         "PSA": {
-          "cards": 33,
+          "cards": 34,
           "gems": 55,
-          "grades": 216,
+          "grades": 217,
           "gemRate": 25.0
         }
       },
       "totals": {
-        "cards": 33,
+        "cards": 34,
         "gems": 55,
-        "grades": 216,
+        "grades": 217,
         "gemRate": 25.0
       }
     },
@@ -4049,14 +4049,14 @@
       "sport": "Baseball",
       "graders": {
         "PSA": {
-          "cards": 16,
+          "cards": 15,
           "gems": 12,
           "grades": 18,
           "gemRate": 67.0
         }
       },
       "totals": {
-        "cards": 16,
+        "cards": 15,
         "gems": 12,
         "grades": 18,
         "gemRate": 67.0
@@ -4103,17 +4103,17 @@
       "sport": "Baseball",
       "graders": {
         "PSA": {
-          "cards": 2,
+          "cards": 3,
           "gems": 1,
-          "grades": 2,
-          "gemRate": 50.0
+          "grades": 3,
+          "gemRate": 33.0
         }
       },
       "totals": {
-        "cards": 2,
+        "cards": 3,
         "gems": 1,
-        "grades": 2,
-        "gemRate": 50.0
+        "grades": 3,
+        "gemRate": 33.0
       }
     },
     "Juan Rincon": {
