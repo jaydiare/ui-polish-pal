@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-04-04T03:19:19.975Z",
+    "updatedAt": "2026-04-04T05:38:04.302Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA/BGS/SGC grader title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 430,
-      "endIdx": 440,
+      "startIdx": 440,
+      "endIdx": 450,
       "totalAthletes": 458
     },
     "maxPages": 4,
@@ -32,7 +32,7 @@
     },
     "fx": {
       "source": "CBSA Exchange Rates API",
-      "asOf": "2026-04-04T00:00:00.000Z"
+      "asOf": "2026-04-05T00:00:00.000Z"
     }
   },
   "Adbert Alzolay": {
@@ -6385,7 +6385,7 @@
   },
   "David Martinez": {
     "keyword": "David Martinez Soccer PSA",
-    "nScraped": 250,
+    "nScraped": 260,
     "nSoldUsed": 8,
     "avg": 177.5,
     "taguchiSold": 177.5,
@@ -6409,7 +6409,7 @@
   },
   "Emilio Renteria": {
     "keyword": "Emilio Renteria Soccer PSA",
-    "nScraped": 4,
+    "nScraped": 3,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -6541,7 +6541,7 @@
   },
   "Junior Moreno": {
     "keyword": "Junior Moreno Soccer PSA",
-    "nScraped": 0,
+    "nScraped": 60,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -6553,7 +6553,7 @@
   },
   "Kevin Kelsy": {
     "keyword": "Kevin Kelsy Soccer PSA",
-    "nScraped": 240,
+    "nScraped": 120,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -6613,7 +6613,7 @@
   },
   "Rafael Romo": {
     "keyword": "Rafael Romo Soccer PSA",
-    "nScraped": 60,
+    "nScraped": 0,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
