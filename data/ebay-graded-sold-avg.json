@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-04-05T10:59:17.009Z",
+    "updatedAt": "2026-04-05T13:32:24.580Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA/BGS/SGC grader title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 110,
-      "endIdx": 120,
+      "startIdx": 120,
+      "endIdx": 130,
       "totalAthletes": 458
     },
     "maxPages": 4,
@@ -1753,7 +1753,7 @@
   },
   "Endy Chavez": {
     "keyword": "Endy Chavez Baseball PSA",
-    "nScraped": 242,
+    "nScraped": 243,
     "nSoldUsed": 4,
     "avg": 0.99,
     "taguchiSold": 0.99,
@@ -1801,12 +1801,12 @@
   },
   "Enzo Hernandez": {
     "keyword": "Enzo Hernandez Baseball PSA",
-    "nScraped": 266,
-    "nSoldUsed": 32,
-    "avg": 21,
-    "taguchiSold": 21,
-    "medianSold": 21,
-    "marketStabilityCV": 0.072571501142966,
+    "nScraped": 271,
+    "nSoldUsed": 36,
+    "avg": 16.295555555555556,
+    "taguchiSold": 16.295555555555556,
+    "medianSold": 19.5,
+    "marketStabilityCV": 0.23973936672369042,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
@@ -1826,18 +1826,18 @@
   "Ethan Salas": {
     "keyword": "Ethan Salas Baseball PSA",
     "nScraped": 240,
-    "nSoldUsed": 135,
-    "avg": 42.510222222222225,
-    "taguchiSold": 42.510222222222225,
-    "medianSold": 40,
-    "marketStabilityCV": 0.26580855307247714,
+    "nSoldUsed": 125,
+    "avg": 45.98671999999991,
+    "taguchiSold": 45.98671999999991,
+    "medianSold": 41.99,
+    "marketStabilityCV": 0.2753903890668779,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
   },
   "Eugenio Suarez": {
     "keyword": "Eugenio Suarez Baseball PSA",
-    "nScraped": 306,
+    "nScraped": 310,
     "nSoldUsed": 104,
     "avg": 71.07692307692308,
     "taguchiSold": 71.07692307692308,
