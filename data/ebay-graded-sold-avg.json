@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-04-05T20:55:26.639Z",
+    "updatedAt": "2026-04-05T22:55:48.184Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA/BGS/SGC grader title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 160,
-      "endIdx": 170,
+      "startIdx": 170,
+      "endIdx": 180,
       "totalAthletes": 458
     },
     "maxPages": 4,
@@ -2485,7 +2485,7 @@
   },
   "Henry Rodriguez": {
     "keyword": "Henry Rodriguez Baseball PSA",
-    "nScraped": 244,
+    "nScraped": 248,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -2521,7 +2521,7 @@
   },
   "Horacio Estrada": {
     "keyword": "Horacio Estrada Baseball PSA",
-    "nScraped": 60,
+    "nScraped": 0,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
