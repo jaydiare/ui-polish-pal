@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-04-05T13:32:24.580Z",
+    "updatedAt": "2026-04-05T14:58:14.220Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA/BGS/SGC grader title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 120,
-      "endIdx": 130,
+      "startIdx": 130,
+      "endIdx": 140,
       "totalAthletes": 458
     },
     "maxPages": 4,
@@ -1933,12 +1933,12 @@
   },
   "Felix Hernandez": {
     "keyword": "Felix Hernandez Baseball PSA",
-    "nScraped": 144,
-    "nSoldUsed": 85,
-    "avg": 100.37517647058819,
-    "taguchiSold": 100.37517647058819,
+    "nScraped": 132,
+    "nSoldUsed": 75,
+    "avg": 103.09266666666663,
+    "taguchiSold": 103.09266666666663,
     "medianSold": 99.99,
-    "marketStabilityCV": 0.23925348372816965,
+    "marketStabilityCV": 0.21015079993500432,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
@@ -1970,38 +1970,38 @@
   "Francisco Alvarez": {
     "keyword": "Francisco Alvarez Baseball PSA",
     "nScraped": 240,
-    "nSoldUsed": 105,
-    "avg": 49.15457142857145,
-    "taguchiSold": 49.15457142857145,
-    "medianSold": 47,
-    "marketStabilityCV": 0.2836346648911381,
+    "nSoldUsed": 103,
+    "avg": 54.05135922330096,
+    "taguchiSold": 54.05135922330096,
+    "medianSold": 49.99,
+    "marketStabilityCV": 0.3466170692326677,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
   },
   "Francisco Arcia": {
     "keyword": "Francisco Arcia Baseball PSA",
-    "nScraped": 181,
-    "nSoldUsed": 9,
-    "avg": 19.99,
-    "taguchiSold": 19.99,
+    "nScraped": 240,
+    "nSoldUsed": 12,
+    "avg": 19.990000000000002,
+    "taguchiSold": 19.990000000000002,
     "medianSold": 19.99,
-    "marketStabilityCV": 0,
+    "marketStabilityCV": 1.8562723446343225e-16,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
   },
   "Francisco Cervelli": {
     "keyword": "Francisco Cervelli Baseball PSA",
-    "nScraped": 0,
-    "nSoldUsed": 0,
+    "nScraped": 180,
+    "nSoldUsed": 3,
     "avg": null,
     "taguchiSold": null,
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
   },
   "Francisco Morales": {
     "keyword": "Francisco Morales Baseball PSA",
