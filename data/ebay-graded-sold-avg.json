@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-04-05T14:58:14.220Z",
+    "updatedAt": "2026-04-05T16:59:37.611Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA/BGS/SGC grader title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 130,
-      "endIdx": 140,
+      "startIdx": 140,
+      "endIdx": 150,
       "totalAthletes": 458
     },
     "maxPages": 4,
@@ -2041,7 +2041,7 @@
   },
   "Franklin Barreto": {
     "keyword": "Franklin Barreto Baseball PSA",
-    "nScraped": 242,
+    "nScraped": 243,
     "nSoldUsed": 12,
     "avg": 4.25,
     "taguchiSold": 4.25,
@@ -2089,7 +2089,7 @@
   },
   "Freddy Fermin": {
     "keyword": "Freddy Fermin Baseball PSA",
-    "nScraped": 248,
+    "nScraped": 264,
     "nSoldUsed": 8,
     "avg": 75.5,
     "taguchiSold": 75.5,
