@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-04-05T05:57:07.998Z",
+    "updatedAt": "2026-04-05T07:35:36.414Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA/BGS/SGC grader title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 80,
-      "endIdx": 90,
+      "startIdx": 90,
+      "endIdx": 100,
       "totalAthletes": 458
     },
     "maxPages": 4,
@@ -1309,7 +1309,7 @@
   },
   "Donaldo Mendez": {
     "keyword": "Donaldo Mendez Baseball PSA",
-    "nScraped": 212,
+    "nScraped": 204,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -1321,7 +1321,7 @@
   },
   "Eddie Perez": {
     "keyword": "Eddie Perez Baseball PSA",
-    "nScraped": 245,
+    "nScraped": 252,
     "nSoldUsed": 24,
     "avg": 40.645,
     "taguchiSold": 40.645,
@@ -1345,7 +1345,7 @@
   },
   "Eddy Diaz": {
     "keyword": "Eddy Diaz Baseball PSA",
-    "nScraped": 240,
+    "nScraped": 244,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -1405,15 +1405,15 @@
   },
   "Edgardo Alfonzo": {
     "keyword": "Edgardo Alfonzo Baseball PSA",
-    "nScraped": 0,
-    "nSoldUsed": 0,
-    "avg": null,
-    "taguchiSold": null,
-    "medianSold": null,
-    "marketStabilityCV": null,
+    "nScraped": 132,
+    "nSoldUsed": 10,
+    "avg": 20.5,
+    "taguchiSold": 20.5,
+    "medianSold": 20.5,
+    "marketStabilityCV": 0,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
   },
   "Edgardo Henriquez": {
     "keyword": "Edgardo Henriquez Baseball PSA",
@@ -1440,8 +1440,8 @@
     "fxRateUsed": null
   },
   "Eduard Bazardo": {
-    "keyword": "Eduard Bazardo Baseball",
-    "nScraped": 18,
+    "keyword": "Eduard Bazardo Baseball PSA",
+    "nScraped": 0,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -1453,7 +1453,7 @@
   },
   "Eduardo Escobar": {
     "keyword": "Eduardo Escobar Baseball PSA",
-    "nScraped": 60,
+    "nScraped": 0,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
