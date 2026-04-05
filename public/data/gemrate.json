@@ -1,13 +1,13 @@
 {
   "_meta": {
-    "updatedAt": "2026-04-05T01:59:18.814545+00:00",
+    "updatedAt": "2026-04-05T05:44:49.750668+00:00",
     "athleteCount": 456,
     "graders": [
       "PSA"
     ],
     "batchInfo": {
-      "startIdx": 280,
-      "endIdx": 300,
+      "startIdx": 300,
+      "endIdx": 320,
       "totalAthletes": 569
     }
   },
@@ -4446,15 +4446,15 @@
       "graders": {
         "PSA": {
           "cards": 1194,
-          "gems": 782,
-          "grades": 30213,
+          "gems": 783,
+          "grades": 30231,
           "gemRate": 3.0
         }
       },
       "totals": {
         "cards": 1194,
-        "gems": 782,
-        "grades": 30213,
+        "gems": 783,
+        "grades": 30231,
         "gemRate": 3.0
       }
     },
@@ -4481,16 +4481,16 @@
       "sport": "Baseball",
       "graders": {
         "PSA": {
-          "cards": 1110,
-          "gems": 5116,
-          "grades": 8722,
+          "cards": 1116,
+          "gems": 5122,
+          "grades": 8735,
           "gemRate": 59.0
         }
       },
       "totals": {
-        "cards": 1110,
-        "gems": 5116,
-        "grades": 8722,
+        "cards": 1116,
+        "gems": 5122,
+        "grades": 8735,
         "gemRate": 59.0
       }
     },
@@ -4554,15 +4554,15 @@
       "graders": {
         "PSA": {
           "cards": 887,
-          "gems": 2933,
-          "grades": 5544,
+          "gems": 2934,
+          "grades": 5545,
           "gemRate": 53.0
         }
       },
       "totals": {
         "cards": 887,
-        "gems": 2933,
-        "grades": 5544,
+        "gems": 2934,
+        "grades": 5545,
         "gemRate": 53.0
       }
     },
@@ -4627,14 +4627,14 @@
         "PSA": {
           "cards": 24,
           "gems": 144,
-          "grades": 276,
+          "grades": 277,
           "gemRate": 52.0
         }
       },
       "totals": {
         "cards": 24,
         "gems": 144,
-        "grades": 276,
+        "grades": 277,
         "gemRate": 52.0
       }
     },
@@ -4716,16 +4716,16 @@
       "graders": {
         "PSA": {
           "cards": 37,
-          "gems": 96,
-          "grades": 212,
-          "gemRate": 45.0
+          "gems": 97,
+          "grades": 223,
+          "gemRate": 43.0
         }
       },
       "totals": {
         "cards": 37,
-        "gems": 96,
-        "grades": 212,
-        "gemRate": 45.0
+        "gems": 97,
+        "grades": 223,
+        "gemRate": 43.0
       }
     },
     "Luis Rengifo": {
