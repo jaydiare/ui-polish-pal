@@ -1,12 +1,12 @@
 {
   "_meta": {
-    "updatedAt": "2026-04-05T22:55:48.184Z",
+    "updatedAt": "2026-04-06T03:44:43.674Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA/BGS/SGC grader title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 170,
-      "endIdx": 180,
-      "totalAthletes": 458
+      "startIdx": 180,
+      "endIdx": 190,
+      "totalAthletes": 459
     },
     "maxPages": 4,
     "minSampleSize": 4,
@@ -2545,7 +2545,7 @@
   },
   "Humberto Quintero": {
     "keyword": "Humberto Quintero Baseball PSA",
-    "nScraped": 0,
+    "nScraped": 60,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -2618,11 +2618,11 @@
   "Jackson Chourio": {
     "keyword": "Jackson Chourio Baseball PSA",
     "nScraped": 240,
-    "nSoldUsed": 84,
-    "avg": 58.766428571428484,
-    "taguchiSold": 58.766428571428484,
-    "medianSold": 50,
-    "marketStabilityCV": 0.33156714631709966,
+    "nSoldUsed": 98,
+    "avg": 62.282142857142944,
+    "taguchiSold": 62.282142857142944,
+    "medianSold": 56.144999999999996,
+    "marketStabilityCV": 0.24855912026024868,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
@@ -2641,27 +2641,27 @@
   },
   "Jairo Iriarte": {
     "keyword": "Jairo Iriarte Baseball PSA",
-    "nScraped": 257,
-    "nSoldUsed": 8,
+    "nScraped": 130,
+    "nSoldUsed": 4,
     "avg": 19.495,
     "taguchiSold": 19.495,
     "medianSold": 19.495,
-    "marketStabilityCV": 0.5760614201159309,
+    "marketStabilityCV": 0.622217448354657,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
   },
   "Javier Sanoja": {
     "keyword": "Javier Sanoja Baseball PSA",
-    "nScraped": 66,
-    "nSoldUsed": 7,
-    "avg": 75.13428571428571,
-    "taguchiSold": 75.13428571428571,
-    "medianSold": 76,
-    "marketStabilityCV": 0.19970718680700134,
+    "nScraped": 0,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
   },
   "Jean Machi": {
     "keyword": "Jean Machi Baseball PSA",
@@ -6901,7 +6901,7 @@
   },
   "Isaias Chavez": {
     "keyword": "Isaias Latigo Chavez Baseball PSA",
-    "nScraped": 27,
+    "nScraped": 25,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
