@@ -525,7 +525,8 @@
     "raw": "2026-03-16"
   },
   "Felipe Lira": {
-    "raw": "2026-03-08"
+    "raw": "2026-03-08",
+    "graded": "2026-04-06"
   },
   "Felipe Vazquez": {
     "raw": "2026-03-08",
@@ -818,7 +819,6 @@
     "graded": "2026-03-16"
   },
   "Jorbit Vivas": {
-    "graded": "2026-03-08",
     "raw": "2026-03-14"
   },
   "Jorge Barrosa": {
@@ -1541,7 +1541,8 @@
     "raw": "2026-03-14"
   },
   "Willie Martinez": {
-    "raw": "2026-03-13"
+    "raw": "2026-03-13",
+    "graded": "2026-04-06"
   },
   "Willson Contreras": {
     "graded": "2026-03-09",
@@ -2062,5 +2063,8 @@
   },
   "Jesus Bueno": {
     "raw": "2026-03-27"
+  },
+  "Jose Fernandez": {
+    "graded": "2026-04-06"
   }
 }
