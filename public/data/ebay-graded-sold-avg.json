@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-04-06T17:10:58.610Z",
+    "updatedAt": "2026-04-06T19:33:32.507Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA/BGS/SGC grader title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 250,
-      "endIdx": 260,
+      "startIdx": 260,
+      "endIdx": 270,
       "totalAthletes": 459
     },
     "maxPages": 4,
@@ -3649,19 +3649,19 @@
   },
   "Luis Aparicio": {
     "keyword": "Luis Aparicio Baseball PSA",
-    "nScraped": 0,
-    "nSoldUsed": 0,
-    "avg": null,
-    "taguchiSold": null,
-    "medianSold": null,
-    "marketStabilityCV": null,
+    "nScraped": 240,
+    "nSoldUsed": 108,
+    "avg": 75.86805555555554,
+    "taguchiSold": 75.86805555555554,
+    "medianSold": 69.975,
+    "marketStabilityCV": 0.27239799718667196,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
   },
   "Luis Aponte": {
     "keyword": "Luis Aponte Baseball PSA",
-    "nScraped": 249,
+    "nScraped": 252,
     "nSoldUsed": 8,
     "avg": 11.25,
     "taguchiSold": 11.25,
@@ -3673,12 +3673,12 @@
   },
   "Luis Arraez": {
     "keyword": "Luis Arraez Baseball PSA",
-    "nScraped": 224,
-    "nSoldUsed": 128,
-    "avg": 45.93515624999999,
-    "taguchiSold": 45.93515624999999,
-    "medianSold": 40,
-    "marketStabilityCV": 0.2839351997302924,
+    "nScraped": 225,
+    "nSoldUsed": 130,
+    "avg": 50.49476923076923,
+    "taguchiSold": 50.49476923076923,
+    "medianSold": 48.504999999999995,
+    "marketStabilityCV": 0.3003683223896255,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
@@ -3721,19 +3721,19 @@
   },
   "Luis Garcia": {
     "keyword": "Luis Garcia Baseball PSA",
-    "nScraped": 220,
-    "nSoldUsed": 120,
-    "avg": 10.892000000000005,
-    "taguchiSold": 10.892000000000005,
+    "nScraped": 224,
+    "nSoldUsed": 124,
+    "avg": 9.818709677419358,
+    "taguchiSold": 9.818709677419358,
     "medianSold": 10,
-    "marketStabilityCV": 0.09013440566382867,
+    "marketStabilityCV": 0.21163076511732207,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
   },
   "Luis Guillorme": {
     "keyword": "Luis Guillorme Baseball PSA",
-    "nScraped": 60,
+    "nScraped": 0,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
