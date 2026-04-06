@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-04-06T11:15:45.617Z",
+    "updatedAt": "2026-04-06T13:49:39.865Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA/BGS/SGC grader title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 220,
-      "endIdx": 230,
+      "startIdx": 230,
+      "endIdx": 240,
       "totalAthletes": 459
     },
     "maxPages": 4,
@@ -3217,15 +3217,15 @@
   },
   "Jose Rodriguez": {
     "keyword": "Jose Rodriguez Baseball PSA",
-    "nScraped": 0,
-    "nSoldUsed": 0,
-    "avg": null,
-    "taguchiSold": null,
-    "medianSold": null,
-    "marketStabilityCV": null,
+    "nScraped": 253,
+    "nSoldUsed": 12,
+    "avg": 17.5,
+    "taguchiSold": 17.5,
+    "medianSold": 17.5,
+    "marketStabilityCV": 0,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
   },
   "Jose Rondon": {
     "keyword": "Jose Rondon Baseball PSA",
@@ -3253,7 +3253,7 @@
   },
   "Jose Suarez": {
     "keyword": "Jose Suarez Baseball PSA",
-    "nScraped": 243,
+    "nScraped": 246,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -3266,11 +3266,11 @@
   "Jose Tabata": {
     "keyword": "Jose Tabata Baseball PSA",
     "nScraped": 244,
-    "nSoldUsed": 19,
-    "avg": 8.127368421052632,
-    "taguchiSold": 8.127368421052632,
+    "nSoldUsed": 20,
+    "avg": 7.5,
+    "taguchiSold": 7.5,
     "medianSold": 7.5,
-    "marketStabilityCV": 0.0929960718354852,
+    "marketStabilityCV": 0,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
@@ -3289,19 +3289,19 @@
   },
   "Josh Barfield": {
     "keyword": "Josh Barfield Baseball PSA",
-    "nScraped": 240,
-    "nSoldUsed": 4,
-    "avg": 4.25,
-    "taguchiSold": 4.25,
-    "medianSold": 4.25,
-    "marketStabilityCV": 0,
+    "nScraped": 120,
+    "nSoldUsed": 2,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
   },
   "Josmil Pinto": {
     "keyword": "Josmil Pinto Baseball PSA",
-    "nScraped": 22,
+    "nScraped": 0,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
