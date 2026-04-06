@@ -8,6 +8,15 @@
     "gemrate": "yes"
   },
   {
+    "name": "Jose Fernandez",
+    "sport": "Baseball",
+    "league": "MLB",
+    "team": "Diamondbacks",
+    "provider": "manual",
+    "searchKeyword": "Jose Fernandez Diamondbacks",
+    "gemrate": "yes"
+  },
+  {
     "name": "Adrian Sanchez",
     "sport": "Baseball",
     "league": "MLB",
