@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-04-06T03:44:43.674Z",
+    "updatedAt": "2026-04-06T06:13:34.621Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA/BGS/SGC grader title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 180,
-      "endIdx": 190,
+      "startIdx": 190,
+      "endIdx": 200,
       "totalAthletes": 459
     },
     "maxPages": 4,
@@ -32,7 +32,7 @@
     },
     "fx": {
       "source": "CBSA Exchange Rates API",
-      "asOf": "2026-04-06T00:00:00.000Z"
+      "asOf": "2026-04-07T00:00:00.000Z"
     }
   },
   "Adbert Alzolay": {
@@ -2677,7 +2677,7 @@
   },
   "Jeanmar Gomez": {
     "keyword": "Jeanmar Gomez Baseball PSA",
-    "nScraped": 0,
+    "nScraped": 60,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -2689,12 +2689,12 @@
   },
   "Jeferson Quero": {
     "keyword": "Jeferson Quero Baseball PSA",
-    "nScraped": 283,
-    "nSoldUsed": 52,
-    "avg": 65.0776923076923,
-    "taguchiSold": 65.0776923076923,
+    "nScraped": 296,
+    "nSoldUsed": 61,
+    "avg": 65.11540983606557,
+    "taguchiSold": 65.11540983606557,
     "medianSold": 66.01,
-    "marketStabilityCV": 0.07465414027144554,
+    "marketStabilityCV": 0.07323023522555368,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
@@ -2761,15 +2761,15 @@
   },
   "Jesus Montero": {
     "keyword": "Jesus Montero Baseball PSA",
-    "nScraped": 120,
-    "nSoldUsed": 11,
-    "avg": 49.08090909090909,
-    "taguchiSold": 49.08090909090909,
-    "medianSold": 39.99,
-    "marketStabilityCV": 0.21280492865354164,
+    "nScraped": 0,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
   },
   "Jesus Sucre": {
     "keyword": "Jesus Sucre Baseball",
