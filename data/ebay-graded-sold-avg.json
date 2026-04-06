@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-04-06T15:09:39.497Z",
+    "updatedAt": "2026-04-06T17:10:58.610Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA/BGS/SGC grader title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 240,
-      "endIdx": 250,
+      "startIdx": 250,
+      "endIdx": 260,
       "totalAthletes": 459
     },
     "maxPages": 4,
@@ -3505,7 +3505,19 @@
   },
   "Lenyn Sosa": {
     "keyword": "Lenyn Sosa Baseball PSA",
-    "nScraped": 0,
+    "nScraped": 266,
+    "nSoldUsed": 48,
+    "avg": 36.45666666666667,
+    "taguchiSold": 36.45666666666667,
+    "medianSold": 37.49,
+    "marketStabilityCV": 0.34932524389596875,
+    "currency": "USD",
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
+  },
+  "Leo Hernandez": {
+    "keyword": "Leo Hernandez Baseball PSA",
+    "nScraped": 246,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -3514,18 +3526,6 @@
     "currency": "USD",
     "originalCurrencyExample": null,
     "fxRateUsed": null
-  },
-  "Leo Hernandez": {
-    "keyword": "Leo Hernandez Baseball PSA",
-    "nScraped": 249,
-    "nSoldUsed": 1,
-    "avg": null,
-    "taguchiSold": null,
-    "medianSold": null,
-    "marketStabilityCV": null,
-    "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
   },
   "Leo Rivas": {
     "keyword": "Leo Rivas Baseball PSA",
@@ -3625,15 +3625,15 @@
   },
   "Luinder Avila": {
     "keyword": "Luinder Avila Baseball PSA",
-    "nScraped": 122,
-    "nSoldUsed": 6,
-    "avg": 49.97,
-    "taguchiSold": 49.97,
-    "medianSold": 49.97,
-    "marketStabilityCV": 0,
+    "nScraped": 0,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
   },
   "Luis Alexander Basabe": {
     "keyword": "Luis Alexander Basabe Baseball PSA",
