@@ -106,8 +106,15 @@
 
     <link rel="icon" href="/favicon.png" type="image/png" />
 
-    <!-- Google Funding Choices stub — prevents "__googlefc is not defined" console errors -->
-    <script>window.__googlefc = window.__googlefc || {};</script>
+    <!-- Google Funding Choices stub — prevents console errors from ad_blocking_detection -->
+    <script>
+      window.__googlefc = window.__googlefc || {};
+      window.__googlefc.callbackQueue = window.__googlefc.callbackQueue || [];
+      window.__googlefc.callbackQueue.push = window.__googlefc.callbackQueue.push || function(obj) {
+        if (obj && typeof obj.run === 'function') { try { obj.run(); } catch(e) {} }
+        return Array.prototype.push.call(this, obj);
+      };
+    </script>
     <!-- Google AdSense -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1118000382291516"
      crossorigin="anonymous"></script>
