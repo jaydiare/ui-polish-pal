@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-04-06T07:25:26.475Z",
+    "updatedAt": "2026-04-06T10:06:24.082Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. Taguchi winsorized mean + market stability CV. Ungraded condition policy (permissive for sold). Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 480,
-      "endIdx": 490,
+      "startIdx": 490,
+      "endIdx": 500,
       "totalAthletes": 570
     },
     "maxPages": 4,
@@ -2841,15 +2841,15 @@
   },
   "Alex Ramirez": {
     "keyword": "Alex Ramirez BBM NPB Baseball",
-    "nScraped": 0,
-    "nSoldUsed": 0,
-    "avg": null,
-    "taguchiSold": null,
-    "medianSold": null,
-    "marketStabilityCV": null,
+    "nScraped": 60,
+    "nSoldUsed": 18,
+    "avg": 10.466666666666667,
+    "taguchiSold": 10.466666666666667,
+    "medianSold": 6.2,
+    "marketStabilityCV": 0.8563810716058248,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
   },
   "Alfredo Gonzalez": {
     "keyword": "Alfredo Gonzalez Baseball",
@@ -6645,36 +6645,36 @@
   },
   "Carl Herrera": {
     "keyword": "Carl Herrera Basketball",
-    "nScraped": 133,
-    "nSoldUsed": 49,
-    "avg": 1.7232653061224479,
-    "taguchiSold": 1.7232653061224479,
-    "medianSold": 1.75,
-    "marketStabilityCV": 0.07151779231738103,
+    "nScraped": 185,
+    "nSoldUsed": 71,
+    "avg": 1.6549295774647876,
+    "taguchiSold": 1.6549295774647876,
+    "medianSold": 1.69,
+    "marketStabilityCV": 0.08758798386874665,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
   },
   "Greivis Vasquez": {
     "keyword": "Greivis Vasquez Basketball",
-    "nScraped": 206,
-    "nSoldUsed": 181,
-    "avg": 5.299834254143645,
-    "taguchiSold": 5.299834254143645,
+    "nScraped": 208,
+    "nSoldUsed": 182,
+    "avg": 5.067197802197803,
+    "taguchiSold": 5.067197802197803,
     "medianSold": 5.03,
-    "marketStabilityCV": 0.12877528525634285,
+    "marketStabilityCV": 0.1849538510612193,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
   },
   "Oscar Torres": {
     "keyword": "Oscar Torres Basketball",
-    "nScraped": 251,
-    "nSoldUsed": 28,
-    "avg": 3.512857142857142,
-    "taguchiSold": 3.512857142857142,
-    "medianSold": 3.65,
-    "marketStabilityCV": 0.4029091896659018,
+    "nScraped": 125,
+    "nSoldUsed": 12,
+    "avg": 4.320000000000001,
+    "taguchiSold": 4.320000000000001,
+    "medianSold": 4.32,
+    "marketStabilityCV": 0.16198892984766322,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
@@ -7713,14 +7713,14 @@
   },
   "Robert Perez Jr.": {
     "keyword": "Robert Perez Jr. Prospects Baseball",
-    "nScraped": 0,
-    "nSoldUsed": 0,
-    "avg": null,
-    "taguchiSold": null,
-    "medianSold": null,
-    "marketStabilityCV": null,
+    "nScraped": 70,
+    "nSoldUsed": 14,
+    "avg": 2.125,
+    "taguchiSold": 2.125,
+    "medianSold": 2.125,
+    "marketStabilityCV": 0.396282969154956,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
   }
 }
