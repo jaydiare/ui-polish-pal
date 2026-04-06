@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-04-06T15:42:47.238Z",
+    "updatedAt": "2026-04-06T18:56:46.650Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. Taguchi winsorized mean + market stability CV. Ungraded condition policy (permissive for sold). Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 510,
-      "endIdx": 520,
+      "startIdx": 520,
+      "endIdx": 530,
       "totalAthletes": 570
     },
     "maxPages": 4,
@@ -7017,7 +7017,7 @@
   },
   "Wuilker Farinez": {
     "keyword": "Wuilker Farinez Soccer",
-    "nScraped": 20,
+    "nScraped": 24,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -7029,7 +7029,7 @@
   },
   "Abel Caputo": {
     "keyword": "Abel Caputo Soccer",
-    "nScraped": 34,
+    "nScraped": 31,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -7053,7 +7053,7 @@
   },
   "Alejandro Moreno": {
     "keyword": "Alejandro Moreno Soccer",
-    "nScraped": 243,
+    "nScraped": 247,
     "nSoldUsed": 4,
     "avg": 1,
     "taguchiSold": 1,
@@ -7065,7 +7065,7 @@
   },
   "Bernardo Anor": {
     "keyword": "Bernardo Anor Soccer",
-    "nScraped": 180,
+    "nScraped": 240,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -7077,7 +7077,7 @@
   },
   "Brayan Martinez": {
     "keyword": "Brayan Martinez Soccer",
-    "nScraped": 0,
+    "nScraped": 60,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -7089,7 +7089,7 @@
   },
   "Carlos Cermeno": {
     "keyword": "Carlos Cermeno Soccer",
-    "nScraped": 0,
+    "nScraped": 60,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -7125,15 +7125,15 @@
   },
   "Dani Pereira": {
     "keyword": "Dani Pereira Soccer",
-    "nScraped": 280,
-    "nSoldUsed": 168,
-    "avg": 3.914523809523815,
-    "taguchiSold": 3.914523809523815,
-    "medianSold": 3.54,
-    "marketStabilityCV": 0.2420141157322003,
+    "nScraped": 0,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
   },
   "David Martinez": {
     "keyword": "David Martinez Soccer",
