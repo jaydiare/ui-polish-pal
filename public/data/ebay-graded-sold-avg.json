@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-04-07T14:04:37.369Z",
+    "updatedAt": "2026-04-07T15:50:52.021Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA/BGS/SGC grader title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 340,
-      "endIdx": 350,
+      "startIdx": 350,
+      "endIdx": 360,
       "totalAthletes": 459
     },
     "maxPages": 4,
@@ -4825,12 +4825,12 @@
   },
   "Ranger Suarez": {
     "keyword": "Ranger Suarez Baseball PSA",
-    "nScraped": 287,
-    "nSoldUsed": 42,
-    "avg": 80.64904761904756,
-    "taguchiSold": 80.64904761904756,
-    "medianSold": 94.075,
-    "marketStabilityCV": 0.26832325638562826,
+    "nScraped": 286,
+    "nSoldUsed": 45,
+    "avg": 95.0308888888888,
+    "taguchiSold": 95.0308888888888,
+    "medianSold": 99.15,
+    "marketStabilityCV": 0.05745585190062368,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
@@ -4849,12 +4849,12 @@
   },
   "Ray Monzant": {
     "keyword": "Ray Monzant Baseball PSA",
-    "nScraped": 252,
-    "nSoldUsed": 68,
-    "avg": 21.97941176470588,
-    "taguchiSold": 21.97941176470588,
-    "medianSold": 16,
-    "marketStabilityCV": 0.33207463004911436,
+    "nScraped": 262,
+    "nSoldUsed": 72,
+    "avg": 20.424999999999997,
+    "taguchiSold": 20.424999999999997,
+    "medianSold": 15.825,
+    "marketStabilityCV": 0.29021283673543413,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
@@ -4885,12 +4885,12 @@
   },
   "Renato Nunez": {
     "keyword": "Renato Nunez Baseball PSA",
-    "nScraped": 242,
-    "nSoldUsed": 16,
+    "nScraped": 243,
+    "nSoldUsed": 22,
     "avg": 9.5,
     "taguchiSold": 9.5,
     "medianSold": 9.5,
-    "marketStabilityCV": 0.38050362699581636,
+    "marketStabilityCV": 0.37709096947727505,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
@@ -4921,7 +4921,7 @@
   },
   "Renyel Pinto": {
     "keyword": "Renyel Pinto Baseball PSA",
-    "nScraped": 11,
+    "nScraped": 13,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -4933,7 +4933,7 @@
   },
   "Ricardo Pinto": {
     "keyword": "Ricardo Pinto Baseball PSA",
-    "nScraped": 57,
+    "nScraped": 0,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
