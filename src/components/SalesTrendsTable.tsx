@@ -189,9 +189,6 @@ const SalesTrendsTable = () => {
               <th className="text-left px-3 py-2.5 font-semibold text-muted-foreground cursor-pointer hover:text-foreground whitespace-nowrap" onClick={() => handleSort("name")}>
                 Player <SortIcon field="name" />
               </th>
-              <th className="text-center px-2 py-2.5 font-semibold text-muted-foreground cursor-pointer hover:text-foreground whitespace-nowrap" onClick={() => handleSort("firstGradedYear")}>
-                First Graded <SortIcon field="firstGradedYear" />
-              </th>
               {availableMonths.map(mk => {
                 const parts = mk.split("_");
                 const label = `${MONTH_LABELS[MONTH_KEYS.indexOf(parts[0])]} ${parts[1]}`;
@@ -221,9 +218,6 @@ const SalesTrendsTable = () => {
                 <td className="px-3 py-2 font-medium text-foreground whitespace-nowrap">
                   <span className="mr-1.5">{SPORT_ICONS[a.sport] || "🏅"}</span>
                   {a.name}
-                </td>
-                <td className="text-center px-2 py-2 text-muted-foreground">
-                  {a.firstGradedYear || "—"}
                 </td>
                 {availableMonths.map(mk => {
                   const val = a.monthlyVolumes?.[mk];
