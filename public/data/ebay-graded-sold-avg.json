@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-04-07T06:00:14.558Z",
+    "updatedAt": "2026-04-07T07:53:09.955Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA/BGS/SGC grader title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 300,
-      "endIdx": 310,
+      "startIdx": 310,
+      "endIdx": 320,
       "totalAthletes": 459
     },
     "maxPages": 4,
@@ -4285,7 +4285,7 @@
   },
   "Miguel Perez": {
     "keyword": "Miguel Perez Baseball PSA",
-    "nScraped": 0,
+    "nScraped": 60,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -4298,11 +4298,11 @@
   "Miguel Rojas": {
     "keyword": "Miguel Rojas Baseball PSA",
     "nScraped": 256,
-    "nSoldUsed": 8,
-    "avg": 212.435,
-    "taguchiSold": 212.435,
-    "medianSold": 212.435,
-    "marketStabilityCV": 0.5658613758908383,
+    "nSoldUsed": 4,
+    "avg": 324.88,
+    "taguchiSold": 324.88,
+    "medianSold": 324.88,
+    "marketStabilityCV": 0,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
@@ -4321,7 +4321,7 @@
   },
   "Miguel Yajure": {
     "keyword": "Miguel Yajure Baseball PSA",
-    "nScraped": 240,
+    "nScraped": 241,
     "nSoldUsed": 4,
     "avg": 1.99,
     "taguchiSold": 1.99,
@@ -4333,12 +4333,12 @@
   },
   "Moises Ballesteros": {
     "keyword": "Moises Ballesteros Baseball PSA",
-    "nScraped": 208,
-    "nSoldUsed": 111,
-    "avg": 138.85081081081074,
-    "taguchiSold": 138.85081081081074,
-    "medianSold": 134.99,
-    "marketStabilityCV": 0.103446701508993,
+    "nScraped": 202,
+    "nSoldUsed": 104,
+    "avg": 136.4140384615383,
+    "taguchiSold": 136.4140384615383,
+    "medianSold": 125,
+    "marketStabilityCV": 0.08822883206104162,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
@@ -4393,7 +4393,7 @@
   },
   "Omar Daal": {
     "keyword": "Omar Daal Baseball PSA",
-    "nScraped": 60,
+    "nScraped": 0,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
