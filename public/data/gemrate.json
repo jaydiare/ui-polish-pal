@@ -1,13 +1,13 @@
 {
   "_meta": {
-    "updatedAt": "2026-04-07T01:58:21.324966+00:00",
+    "updatedAt": "2026-04-07T05:47:54.652414+00:00",
     "athleteCount": 456,
     "graders": [
       "PSA"
     ],
     "batchInfo": {
-      "startIdx": 520,
-      "endIdx": 540,
+      "startIdx": 540,
+      "endIdx": 560,
       "totalAthletes": 570
     }
   },
@@ -7757,17 +7757,17 @@
       "sport": "Soccer",
       "graders": {
         "PSA": {
-          "cards": 95,
-          "gems": 85,
-          "grades": 165,
-          "gemRate": 52.0
+          "cards": 96,
+          "gems": 86,
+          "grades": 167,
+          "gemRate": 51.0
         }
       },
       "totals": {
-        "cards": 95,
-        "gems": 85,
-        "grades": 165,
-        "gemRate": 52.0
+        "cards": 96,
+        "gems": 86,
+        "grades": 167,
+        "gemRate": 51.0
       }
     },
     "Junior Moreno": {
