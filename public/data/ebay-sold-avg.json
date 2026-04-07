@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-04-07T07:11:38.774Z",
+    "updatedAt": "2026-04-07T13:12:55.594Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. Taguchi winsorized mean + market stability CV. Ungraded condition policy (permissive for sold). Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 560,
-      "endIdx": 570,
+      "startIdx": 0,
+      "endIdx": 10,
       "totalAthletes": 570
     },
     "maxPages": 4,
@@ -34,11 +34,11 @@
   "Adbert Alzolay": {
     "keyword": "Adbert Alzolay Baseball",
     "nScraped": 240,
-    "nSoldUsed": 100,
-    "avg": 1.6359000000000001,
-    "taguchiSold": 1.6359000000000001,
-    "medianSold": 1.505,
-    "marketStabilityCV": 0.1974796967800339,
+    "nSoldUsed": 106,
+    "avg": 1.6721698113207553,
+    "taguchiSold": 1.6721698113207553,
+    "medianSold": 1.55,
+    "marketStabilityCV": 0.18452696485546358,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
@@ -57,12 +57,12 @@
   },
   "Al Pedrique": {
     "keyword": "Al Pedrique Baseball",
-    "nScraped": 150,
-    "nSoldUsed": 66,
-    "avg": 1.3253030303030304,
-    "taguchiSold": 1.3253030303030304,
+    "nScraped": 151,
+    "nSoldUsed": 57,
+    "avg": 1.1826315789473687,
+    "taguchiSold": 1.1826315789473687,
     "medianSold": 1.25,
-    "marketStabilityCV": 0.11168370828760964,
+    "marketStabilityCV": 0.0614449283671732,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
@@ -129,15 +129,15 @@
   },
   "Alejandro Freire": {
     "keyword": "Alejandro Freire Baseball",
-    "nScraped": 244,
-    "nSoldUsed": 20,
-    "avg": 0.9899999999999999,
-    "taguchiSold": 0.9899999999999999,
-    "medianSold": 0.99,
-    "marketStabilityCV": 1.1505704941938521e-16,
+    "nScraped": 0,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
   },
   "Alejandro Machado": {
     "keyword": "Alejandro Machado Baseball",
@@ -2793,7 +2793,7 @@
   },
   "Adrian Sanchez": {
     "keyword": "Adrian Sanchez Baseball",
-    "nScraped": 249,
+    "nScraped": 248,
     "nSoldUsed": 36,
     "avg": 2.618888888888888,
     "taguchiSold": 2.618888888888888,
@@ -2805,12 +2805,12 @@
   },
   "Albert Suarez": {
     "keyword": "Albert Suarez Baseball",
-    "nScraped": 60,
-    "nSoldUsed": 27,
-    "avg": 1.9859259259259257,
-    "taguchiSold": 1.9859259259259257,
+    "nScraped": 168,
+    "nSoldUsed": 120,
+    "avg": 2.184583333333333,
+    "taguchiSold": 2.184583333333333,
     "medianSold": 1.99,
-    "marketStabilityCV": 0.007019005514346693,
+    "marketStabilityCV": 0.11170435272709248,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
@@ -7719,6 +7719,18 @@
     "taguchiSold": 2.125,
     "medianSold": 2.125,
     "marketStabilityCV": 0.396282969154956,
+    "currency": "USD",
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
+  },
+  "Jose Fernandez": {
+    "keyword": "Jose Fernandez Diamondbacks Baseball",
+    "nScraped": 240,
+    "nSoldUsed": 230,
+    "avg": 53.78630434782605,
+    "taguchiSold": 53.78630434782605,
+    "medianSold": 45.345,
+    "marketStabilityCV": 0.44107710516029563,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
