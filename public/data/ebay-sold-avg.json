@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-04-07T02:05:09.625Z",
+    "updatedAt": "2026-04-07T05:06:49.362Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. Taguchi winsorized mean + market stability CV. Ungraded condition policy (permissive for sold). Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 540,
-      "endIdx": 550,
+      "startIdx": 550,
+      "endIdx": 560,
       "totalAthletes": 570
     },
     "maxPages": 4,
@@ -28,7 +28,7 @@
     },
     "fx": {
       "source": "CBSA Exchange Rates API",
-      "asOf": "2026-04-07T00:00:00.000Z"
+      "asOf": "2026-04-08T00:00:00.000Z"
     }
   },
   "Adbert Alzolay": {
@@ -7401,7 +7401,7 @@
   },
   "Rolando Escobar": {
     "keyword": "Rolando Escobar Soccer",
-    "nScraped": 45,
+    "nScraped": 43,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -7413,7 +7413,7 @@
   },
   "Rolf Feltscher": {
     "keyword": "Rolf Feltscher Soccer",
-    "nScraped": 8,
+    "nScraped": 9,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -7426,18 +7426,18 @@
   "Ronald Hernandez": {
     "keyword": "Ronald Hernandez Soccer",
     "nScraped": 60,
-    "nSoldUsed": 13,
-    "avg": 2.7561538461538473,
-    "taguchiSold": 2.7561538461538473,
-    "medianSold": 2.95,
-    "marketStabilityCV": 0.0931352110451404,
+    "nSoldUsed": 20,
+    "avg": 2.7809999999999997,
+    "taguchiSold": 2.7809999999999997,
+    "medianSold": 2.97,
+    "marketStabilityCV": 0.08718562980836564,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
   },
   "Ronaldo Pena": {
     "keyword": "Ronaldo Pena Soccer",
-    "nScraped": 248,
+    "nScraped": 246,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -7463,16 +7463,28 @@
     "keyword": "Telasco Segovia Soccer",
     "nScraped": 240,
     "nSoldUsed": 230,
-    "avg": 9.077173913043477,
-    "taguchiSold": 9.077173913043477,
-    "medianSold": 9.995000000000001,
-    "marketStabilityCV": 0.2570362069663472,
+    "avg": 7.557043478260869,
+    "taguchiSold": 7.557043478260869,
+    "medianSold": 8,
+    "marketStabilityCV": 0.31574490951976053,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
   },
   "Wikelman Carmona": {
     "keyword": "Wikelman Carmona Soccer",
+    "nScraped": 126,
+    "nSoldUsed": 56,
+    "avg": 2.653571428571428,
+    "taguchiSold": 2.653571428571428,
+    "medianSold": 2.97,
+    "marketStabilityCV": 0.13736178225410714,
+    "currency": "USD",
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
+  },
+  "Deyna Castellanos": {
+    "keyword": "Deyna Castellanos Soccer",
     "nScraped": 0,
     "nSoldUsed": 0,
     "avg": null,
@@ -7483,29 +7495,17 @@
     "originalCurrencyExample": null,
     "fxRateUsed": null
   },
-  "Deyna Castellanos": {
-    "keyword": "Deyna Castellanos Soccer",
-    "nScraped": 117,
-    "nSoldUsed": 89,
-    "avg": 5.9922471910112405,
-    "taguchiSold": 5.9922471910112405,
-    "medianSold": 4.99,
-    "marketStabilityCV": 0.29138895680243687,
-    "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
-  },
   "Alejandro Marques": {
     "keyword": "Alejandro Marques Soccer",
-    "nScraped": 242,
-    "nSoldUsed": 31,
-    "avg": 3.869354838709679,
-    "taguchiSold": 3.869354838709679,
-    "medianSold": 4.45,
-    "marketStabilityCV": 0.15754580156422132,
+    "nScraped": 0,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
   },
   "Luis Balbo": {
     "keyword": "Luis Balbo Soccer",
