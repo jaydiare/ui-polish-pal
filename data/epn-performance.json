@@ -1,31 +1,14 @@
 {
   "_meta": {
-    "updatedAt": "2026-04-06T07:53:45.621Z",
+    "updatedAt": "2026-04-07T07:27:30.855Z",
     "period": {
-      "start": "2026-03-07",
-      "end": "2026-04-06"
+      "start": "2026-03-08",
+      "end": "2026-04-07"
     }
   },
-  "placements": {
-    "unknown": {
-      "clicks": 0,
-      "impressions": 0,
-      "ctr": 0,
-      "earnings": 0,
-      "conversions": 0
-    }
-  },
+  "placements": {},
   "bestBanner": null,
-  "hotSellers": [
-    {
-      "name": "Andres Galarraga",
-      "conversions": 2
-    },
-    {
-      "name": "Andres Gimenez",
-      "conversions": 1
-    }
-  ],
+  "hotSellers": [],
   "campaigns": [
     {}
   ]
