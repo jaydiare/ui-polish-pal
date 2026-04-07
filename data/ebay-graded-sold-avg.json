@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-04-07T07:53:09.955Z",
+    "updatedAt": "2026-04-07T09:40:25.558Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA/BGS/SGC grader title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 310,
-      "endIdx": 320,
+      "startIdx": 320,
+      "endIdx": 330,
       "totalAthletes": 459
     },
     "maxPages": 4,
@@ -4441,7 +4441,7 @@
   },
   "Orber Moreno": {
     "keyword": "Orber Moreno Baseball PSA",
-    "nScraped": 0,
+    "nScraped": 60,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -4453,12 +4453,12 @@
   },
   "Orlando Arcia": {
     "keyword": "Orlando Arcia Baseball PSA",
-    "nScraped": 255,
-    "nSoldUsed": 36,
-    "avg": 15.287777777777782,
-    "taguchiSold": 15.287777777777782,
-    "medianSold": 15.63,
-    "marketStabilityCV": 0.2968872895501705,
+    "nScraped": 254,
+    "nSoldUsed": 32,
+    "avg": 13.064999999999998,
+    "taguchiSold": 13.064999999999998,
+    "medianSold": 13.065000000000001,
+    "marketStabilityCV": 0.1994674784572453,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
@@ -4513,7 +4513,7 @@
   },
   "Osleivis Basabe": {
     "keyword": "Osleivis Basabe Baseball PSA",
-    "nScraped": 251,
+    "nScraped": 248,
     "nSoldUsed": 12,
     "avg": 15.5,
     "taguchiSold": 15.5,
@@ -4549,15 +4549,15 @@
   },
   "Oswald Peraza": {
     "keyword": "Oswald Peraza Baseball PSA",
-    "nScraped": 94,
-    "nSoldUsed": 39,
-    "avg": 29.67384615384616,
-    "taguchiSold": 29.67384615384616,
-    "medianSold": 25,
-    "marketStabilityCV": 0.32717621533611096,
+    "nScraped": 0,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
   },
   "Oswaldo Arcia": {
     "keyword": "Oswaldo Arcia Baseball PSA",
