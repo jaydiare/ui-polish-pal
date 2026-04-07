@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-04-07T21:06:45.369Z",
+    "updatedAt": "2026-04-07T23:03:21.456Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA/BGS/SGC grader title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 380,
-      "endIdx": 390,
+      "startIdx": 390,
+      "endIdx": 400,
       "totalAthletes": 459
     },
     "maxPages": 4,
@@ -5377,7 +5377,7 @@
   },
   "Ugueth Urbina": {
     "keyword": "Ugueth Urbina Baseball PSA",
-    "nScraped": 0,
+    "nScraped": 240,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -5401,12 +5401,12 @@
   },
   "Vic Davalillo": {
     "keyword": "Vic Davalillo Baseball PSA",
-    "nScraped": 309,
-    "nSoldUsed": 60,
-    "avg": 56.26200000000001,
-    "taguchiSold": 56.26200000000001,
-    "medianSold": 53,
-    "marketStabilityCV": 0.11372065386841997,
+    "nScraped": 307,
+    "nSoldUsed": 56,
+    "avg": 58.227142857142844,
+    "taguchiSold": 58.227142857142844,
+    "medianSold": 58,
+    "marketStabilityCV": 0.13675353097404236,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
@@ -5425,7 +5425,7 @@
   },
   "Victor Martinez": {
     "keyword": "Victor Martinez Baseball PSA",
-    "nScraped": 298,
+    "nScraped": 299,
     "nSoldUsed": 24,
     "avg": 54.5,
     "taguchiSold": 54.5,
@@ -5461,7 +5461,7 @@
   },
   "Wiki Gonzalez": {
     "keyword": "Wiki Gonzalez Baseball PSA",
-    "nScraped": 60,
+    "nScraped": 0,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -5473,7 +5473,7 @@
   },
   "Wil Ledezma": {
     "keyword": "Wil Ledezma Baseball PSA",
-    "nScraped": 180,
+    "nScraped": 0,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
