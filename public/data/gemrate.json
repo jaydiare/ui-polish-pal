@@ -1,13 +1,13 @@
 {
   "_meta": {
-    "updatedAt": "2026-04-07T08:56:50.401548+00:00",
-    "athleteCount": 456,
+    "updatedAt": "2026-04-07T13:09:33.459417+00:00",
+    "athleteCount": 457,
     "graders": [
       "PSA"
     ],
     "batchInfo": {
-      "startIdx": 560,
-      "endIdx": 570,
+      "startIdx": 0,
+      "endIdx": 20,
       "totalAthletes": 570
     }
   },
@@ -8218,6 +8218,24 @@
         "gems": 258,
         "grades": 480,
         "gemRate": 54.0
+      }
+    },
+    "Jose Fernandez": {
+      "name": "Jose Fernandez",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 566,
+          "gems": 1839,
+          "grades": 3448,
+          "gemRate": 53.0
+        }
+      },
+      "totals": {
+        "cards": 566,
+        "gems": 1839,
+        "grades": 3448,
+        "gemRate": 53.0
       }
     }
   }
