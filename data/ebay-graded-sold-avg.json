@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-04-07T03:35:06.400Z",
+    "updatedAt": "2026-04-07T06:00:14.558Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA/BGS/SGC grader title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 290,
-      "endIdx": 300,
+      "startIdx": 300,
+      "endIdx": 310,
       "totalAthletes": 459
     },
     "maxPages": 4,
@@ -32,7 +32,7 @@
     },
     "fx": {
       "source": "CBSA Exchange Rates API",
-      "asOf": "2026-04-07T00:00:00.000Z"
+      "asOf": "2026-04-08T00:00:00.000Z"
     }
   },
   "Adbert Alzolay": {
@@ -4153,7 +4153,7 @@
   },
   "Max Castillo": {
     "keyword": "Max Castillo Baseball PSA",
-    "nScraped": 0,
+    "nScraped": 60,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -4177,12 +4177,12 @@
   },
   "Maximo Acosta": {
     "keyword": "Maximo Acosta Baseball PSA",
-    "nScraped": 277,
-    "nSoldUsed": 51,
-    "avg": 14.554705882352936,
-    "taguchiSold": 14.554705882352936,
-    "medianSold": 15.39,
-    "marketStabilityCV": 0.06903398397310116,
+    "nScraped": 276,
+    "nSoldUsed": 60,
+    "avg": 15.911333333333333,
+    "taguchiSold": 15.911333333333333,
+    "medianSold": 15.51,
+    "marketStabilityCV": 0.03435557243676749,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
@@ -4201,7 +4201,7 @@
   },
   "Melvin Dorta": {
     "keyword": "Melvin Dorta Baseball PSA",
-    "nScraped": 21,
+    "nScraped": 23,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -4214,11 +4214,11 @@
   "Melvin Mora": {
     "keyword": "Melvin Mora Baseball PSA",
     "nScraped": 244,
-    "nSoldUsed": 13,
-    "avg": 18,
-    "taguchiSold": 18,
+    "nSoldUsed": 17,
+    "avg": 23.642352941176476,
+    "taguchiSold": 23.642352941176476,
     "medianSold": 18,
-    "marketStabilityCV": 0,
+    "marketStabilityCV": 0.2609217501711601,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
@@ -4226,11 +4226,11 @@
   "Miguel Cabrera": {
     "keyword": "Miguel Cabrera Baseball PSA",
     "nScraped": 240,
-    "nSoldUsed": 107,
-    "avg": 75.85878504672888,
-    "taguchiSold": 75.85878504672888,
-    "medianSold": 75,
-    "marketStabilityCV": 0.31238310512870593,
+    "nSoldUsed": 102,
+    "avg": 91.46872549019605,
+    "taguchiSold": 91.46872549019605,
+    "medianSold": 88.495,
+    "marketStabilityCV": 0.35938676057604835,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
@@ -4249,7 +4249,7 @@
   },
   "Miguel Garcia": {
     "keyword": "Miguel Garcia Baseball PSA",
-    "nScraped": 60,
+    "nScraped": 0,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
