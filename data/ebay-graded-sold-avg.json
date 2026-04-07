@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-04-07T17:30:10.221Z",
+    "updatedAt": "2026-04-07T19:35:22.068Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA/BGS/SGC grader title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 360,
-      "endIdx": 370,
+      "startIdx": 370,
+      "endIdx": 380,
       "totalAthletes": 459
     },
     "maxPages": 4,
@@ -5101,7 +5101,7 @@
   },
   "Ronald Belisario": {
     "keyword": "Ronald Belisario Baseball PSA",
-    "nScraped": 0,
+    "nScraped": 60,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -5161,12 +5161,12 @@
   },
   "Rougned Odor": {
     "keyword": "Rougned Odor Baseball PSA",
-    "nScraped": 251,
-    "nSoldUsed": 40,
-    "avg": 29.050000000000004,
-    "taguchiSold": 29.050000000000004,
-    "medianSold": 29.05,
-    "marketStabilityCV": 0.2074285450653292,
+    "nScraped": 252,
+    "nSoldUsed": 44,
+    "avg": 28.862727272727273,
+    "taguchiSold": 28.862727272727273,
+    "medianSold": 26.99,
+    "marketStabilityCV": 0.19990737961775912,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
@@ -5186,11 +5186,11 @@
   "Salvador Perez": {
     "keyword": "Salvador Perez Baseball PSA",
     "nScraped": 240,
-    "nSoldUsed": 77,
-    "avg": 73.06857142857143,
-    "taguchiSold": 73.06857142857143,
-    "medianSold": 75,
-    "marketStabilityCV": 0.21955260508839308,
+    "nSoldUsed": 79,
+    "avg": 70.40278481012658,
+    "taguchiSold": 70.40278481012658,
+    "medianSold": 69.99,
+    "marketStabilityCV": 0.21371328072570778,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
