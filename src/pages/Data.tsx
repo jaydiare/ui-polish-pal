@@ -9,6 +9,7 @@ import VzlaSupplyDemand from "@/components/VzlaSupplyDemand";
 import Sparkline from "@/components/Sparkline";
 import { buildEbaySearchUrl, buildEbayGradedSearchUrl } from "@/lib/vzla-helpers";
 const EpnPlacementSummary = lazy(() => import("@/components/EpnPlacementSummary"));
+const SalesTrendsTable = lazy(() => import("@/components/SalesTrendsTable"));
 import {
   ScatterChart,
   Scatter,
@@ -1133,6 +1134,11 @@ const Data = () => {
 
             {/* ── PSA Pop vs Sold ── */}
             <PSAPopVsSoldChart gradedSoldData={filteredGradedSold} athleteSportMap={athleteSportMap} />
+
+            {/* ── Sales Volume Trends (Gemrate) ── */}
+            <Suspense fallback={null}>
+              <SalesTrendsTable />
+            </Suspense>
           </>
         )}
 
