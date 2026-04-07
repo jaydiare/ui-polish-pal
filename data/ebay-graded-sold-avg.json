@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-04-07T15:50:52.021Z",
+    "updatedAt": "2026-04-07T17:30:10.221Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA/BGS/SGC grader title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 350,
-      "endIdx": 360,
+      "startIdx": 360,
+      "endIdx": 370,
       "totalAthletes": 459
     },
     "maxPages": 4,
@@ -4957,15 +4957,15 @@
   },
   "Ricardo Sanchez": {
     "keyword": "Ricardo Sanchez Baseball PSA",
-    "nScraped": 0,
-    "nSoldUsed": 0,
-    "avg": null,
-    "taguchiSold": null,
-    "medianSold": null,
-    "marketStabilityCV": null,
+    "nScraped": 240,
+    "nSoldUsed": 4,
+    "avg": 4.95,
+    "taguchiSold": 4.95,
+    "medianSold": 4.95,
+    "marketStabilityCV": 0,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
   },
   "Rich Garces": {
     "keyword": "Rich Garces Baseball PSA",
@@ -4982,11 +4982,11 @@
   "Richard Hidalgo": {
     "keyword": "Richard Hidalgo Baseball PSA",
     "nScraped": 242,
-    "nSoldUsed": 4,
-    "avg": 7.73,
-    "taguchiSold": 7.73,
-    "medianSold": 7.73,
-    "marketStabilityCV": 0,
+    "nSoldUsed": 8,
+    "avg": 7.110000000000001,
+    "taguchiSold": 7.110000000000001,
+    "medianSold": 7.11,
+    "marketStabilityCV": 0.09322192404258967,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
@@ -5042,38 +5042,38 @@
   "Roberto Rodriguez": {
     "keyword": "Roberto Rodriguez Baseball PSA",
     "nScraped": 248,
-    "nSoldUsed": 8,
-    "avg": 18.25,
-    "taguchiSold": 18.25,
-    "medianSold": 18.25,
-    "marketStabilityCV": 0.10192538321701218,
+    "nSoldUsed": 4,
+    "avg": 16.51,
+    "taguchiSold": 16.51,
+    "medianSold": 16.51,
+    "marketStabilityCV": 0,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
   },
   "Robinson Chirinos": {
     "keyword": "Robinson Chirinos Baseball PSA",
-    "nScraped": 240,
-    "nSoldUsed": 4,
-    "avg": 7.42,
-    "taguchiSold": 7.42,
-    "medianSold": 7.42,
-    "marketStabilityCV": 0,
+    "nScraped": 0,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
   },
   "Roger Cedeno": {
     "keyword": "Roger Cedeno Baseball PSA",
-    "nScraped": 240,
-    "nSoldUsed": 4,
-    "avg": 6,
-    "taguchiSold": 6,
-    "medianSold": 6,
-    "marketStabilityCV": 0,
+    "nScraped": 0,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
   },
   "Romulo Sanchez": {
     "keyword": "Romulo Sanchez Baseball",
@@ -5089,15 +5089,15 @@
   },
   "Ronald Acuna Jr.": {
     "keyword": "Ronald Acuna Jr. Baseball PSA",
-    "nScraped": 120,
-    "nSoldUsed": 52,
-    "avg": 36.43519230769231,
-    "taguchiSold": 36.43519230769231,
-    "medianSold": 35.495000000000005,
-    "marketStabilityCV": 0.11508717958585324,
+    "nScraped": 0,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
   },
   "Ronald Belisario": {
     "keyword": "Ronald Belisario Baseball PSA",
