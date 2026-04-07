@@ -29,9 +29,11 @@ function buildEbayListingsUrl(name: string, sport: string): string {
   return `https://www.ebay.com/sch/i.html?_nkw=${query}&_sacat=261328&LH_BIN=1&mkevt=1&mkcid=1&mkrid=706-53473-19255-0&campid=5339142305&toolid=10001&customid=sales-trends-listings`;
 }
 
-function buildEbayResearchUrl(name: string, sport: string): string {
-  const query = encodeURIComponent(`${name} ${sport} card`);
-  return `https://www.ebay.com/sch/i.html?_nkw=${query}&_sacat=261328&LH_Complete=1&LH_Sold=1&mkevt=1&mkcid=1&mkrid=706-53473-19255-0&campid=5339142305&toolid=10001&customid=sales-trends-research`;
+function buildEbayResearchUrl(name: string, _sport: string): string {
+  const keywords = encodeURIComponent(name);
+  const now = Date.now();
+  const thirtyDaysAgo = now - 30 * 24 * 60 * 60 * 1000;
+  return `https://www.ebay.com/sh/research?marketplace=EBAY-US&keywords=${keywords}&dayRange=CUSTOM&endDate=${now}&startDate=${thirtyDaysAgo}&categoryId=261328&offset=0&limit=50&sorting=-avgsalesprice&tabName=SOLD&tz=America%2FToronto&mkevt=1&mkcid=1&mkrid=706-53473-19255-0&campid=5339142305&toolid=10001&customid=sales-trends-research`;
 }
 
 function formatCurrency(val: number | null): string {
