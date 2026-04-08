@@ -34,7 +34,7 @@ const VzlaEbayFooter = () => {
         <a href={url} target="_blank" rel="noopener noreferrer">
           <img src={banner.img} alt={banner.alt} className="ebay-banner-img" loading="lazy" width="728" height="90" />
         </a>
-        <a href="https://www.marketmoversapp.com" target="_blank" rel="noopener noreferrer" title="Market Movers App">
+        <a href="https://marketmoversapp.com/vzlaelite" target="_blank" rel="noopener noreferrer" title="Market Movers App">
           <img src="/assets/MM Circle Logo White.png" alt="Market Movers App" className="h-[100px] w-auto p-1" loading="lazy" />
         </a>
       </div>

@@ -76,7 +76,7 @@ const VzlaFooter = () => {
                   loading="lazy"
                 />
               </a>
-              <a href="https://www.marketmoversapp.com" target="_blank" rel="noopener noreferrer" title="Market Movers App">
+              <a href="https://marketmoversapp.com/vzlaelite" target="_blank" rel="noopener noreferrer" title="Market Movers App">
                 <img
                   src="/assets/MM Full Logo White.svg"
                   alt="Market Movers App"
