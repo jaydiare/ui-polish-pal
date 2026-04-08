@@ -5,7 +5,7 @@ import SocialShare from "@/components/SocialShare";
 import VzlaNavbar from "@/components/VzlaNavbar";
 import VzlaFooter from "@/components/VzlaFooter";
 import VzlaEbayFooter from "@/components/VzlaEbayFooter";
-import VzlaSideBannerRight from "@/components/VzlaSideBannerRight";
+import VzlaSideBanner from "@/components/VzlaSideBanner";
 import VzlaSupplyDemand from "@/components/VzlaSupplyDemand";
 import Sparkline from "@/components/Sparkline";
 import { buildEbaySearchUrl, buildEbayGradedSearchUrl } from "@/lib/vzla-helpers";
@@ -542,7 +542,7 @@ const Data = () => {
         path="/data"
       />
       <VzlaNavbar />
-      <VzlaSideBannerRight />
+      <VzlaSideBanner />
       <main className="page-shell" role="main">
         {/* ── Hero ── */}
         <motion.div
