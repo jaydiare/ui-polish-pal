@@ -78,9 +78,9 @@ const VzlaFooter = () => {
               </a>
               <a href="https://www.marketmoversapp.com" target="_blank" rel="noopener noreferrer" title="Market Movers App">
                 <img
-                  src="/assets/MM Full Logo White.svg"
+                  src="/assets/MM Full Logo Black.svg"
                   alt="Market Movers App"
-                  className="w-40 md:w-48 h-auto rounded-lg shadow-lg hover:scale-[1.03] transition-transform"
+                  className="w-40 md:w-48 h-auto rounded-lg shadow-lg hover:scale-[1.03] transition-transform p-3"
                   loading="lazy"
                 />
               </a>

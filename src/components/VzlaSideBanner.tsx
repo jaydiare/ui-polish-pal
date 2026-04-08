@@ -76,6 +76,7 @@ const AFFILIATES = [
     href: "https://www.marketmoversapp.com",
     img: "/assets/MM Full Logo White.svg",
     alt: "Market Movers App",
+    className: "p-3",
   },
 ];
 
