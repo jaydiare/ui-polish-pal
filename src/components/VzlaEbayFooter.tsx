@@ -30,9 +30,14 @@ const VzlaEbayFooter = () => {
 
   return (
     <footer className="ebay-footer">
-      <a href={url} target="_blank" rel="noopener noreferrer">
-        <img src={banner.img} alt={banner.alt} className="ebay-banner-img" loading="lazy" width="728" height="90" />
-      </a>
+      <div className="flex items-center justify-center gap-4">
+        <a href={url} target="_blank" rel="noopener noreferrer">
+          <img src={banner.img} alt={banner.alt} className="ebay-banner-img" loading="lazy" width="728" height="90" />
+        </a>
+        <a href="https://www.marketmoversapp.com" target="_blank" rel="noopener noreferrer" title="Market Movers App">
+          <img src="/assets/MM Full Logo White.svg" alt="Market Movers App" className="h-12 w-auto p-1" loading="lazy" />
+        </a>
+      </div>
     </footer>
   );
 };
