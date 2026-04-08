@@ -35,6 +35,7 @@ const AFFILIATES = [
     href: "https://www.marketmoversapp.com",
     img: "/assets/MM Full Logo White.svg",
     alt: "Market Movers App",
+    className: "p-3",
   },
 ];
 
@@ -102,7 +103,7 @@ const VzlaSideBannerRight = () => {
       </a>
       {AFFILIATES.map((a) => (
         <a key={a.id} href={a.href} target="_blank" rel="noopener noreferrer" title={a.alt}>
-          <img src={a.img} alt={a.alt} />
+          <img src={a.img} alt={a.alt} className={(a as any).className || ""} />
         </a>
       ))}
       <AdSenseBlock />
