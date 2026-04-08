@@ -35,7 +35,7 @@ const VzlaEbayFooter = () => {
           <img src={banner.img} alt={banner.alt} className="ebay-banner-img" loading="lazy" width="728" height="90" />
         </a>
         <a href="https://www.marketmoversapp.com" target="_blank" rel="noopener noreferrer" title="Market Movers App">
-          <img src="/assets/MM Full Logo White.svg" alt="Market Movers App" className="h-12 w-auto p-1" loading="lazy" />
+          <img src="/assets/MM Full Logo White.svg" alt="Market Movers App" className="h-[70px] w-auto p-1" loading="lazy" />
         </a>
       </div>
     </footer>
