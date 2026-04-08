@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "updatedAt": "2026-04-07T23:03:21.456Z",
+    "updatedAt": "2026-04-08T01:35:42.470Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA/BGS/SGC grader title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
@@ -6946,5 +6946,17 @@
     "currency": "USD",
     "originalCurrencyExample": null,
     "fxRateUsed": null
+  },
+  "Jesus Luzardo": {
+    "keyword": "Jesus Luzardo Baseball PSA",
+    "nScraped": 171,
+    "nSoldUsed": 113,
+    "avg": 13.489911504424782,
+    "taguchiSold": 13.489911504424782,
+    "medianSold": 13,
+    "marketStabilityCV": 0.10490669467577397,
+    "currency": "USD",
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
   }
 }
