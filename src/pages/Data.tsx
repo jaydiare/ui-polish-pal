@@ -542,6 +542,7 @@ const Data = () => {
         path="/data"
       />
       <VzlaNavbar />
+      <VzlaSideBannerRight />
       <main className="page-shell" role="main">
         {/* ── Hero ── */}
         <motion.div
