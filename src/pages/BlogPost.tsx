@@ -106,6 +106,13 @@ const BlogPost = () => {
           />
         </div>
 
+        {/* Cover image */}
+        {post.coverImage && (
+          <div className="flex justify-center mb-8">
+            <img src={post.coverImage} alt={post.title} className="max-h-32 w-auto" loading="lazy" />
+          </div>
+        )}
+
         {/* Text sections (facts, predictions, etc.) */}
         {post.textSections && post.textSections.length > 0 && (
           <div className="max-w-3xl mb-12">
