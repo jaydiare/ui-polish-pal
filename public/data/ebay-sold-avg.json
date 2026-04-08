@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-04-08T02:06:05.238Z",
+    "updatedAt": "2026-04-08T05:08:29.849Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. Taguchi winsorized mean + market stability CV. Ungraded condition policy (permissive for sold). Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 40,
-      "endIdx": 50,
+      "startIdx": 50,
+      "endIdx": 60,
       "totalAthletes": 571
     },
     "maxPages": 4,
@@ -28,7 +28,7 @@
     },
     "fx": {
       "source": "CBSA Exchange Rates API",
-      "asOf": "2026-04-08T00:00:00.000Z"
+      "asOf": "2026-04-09T00:00:00.000Z"
     }
   },
   "Adbert Alzolay": {
@@ -585,12 +585,12 @@
   },
   "Armando Galarraga": {
     "keyword": "Armando Galarraga Baseball",
-    "nScraped": 132,
-    "nSoldUsed": 84,
-    "avg": 4.049166666666666,
-    "taguchiSold": 4.049166666666666,
-    "medianSold": 2.5300000000000002,
-    "marketStabilityCV": 0.530300250140002,
+    "nScraped": 142,
+    "nSoldUsed": 93,
+    "avg": 4.230215053763441,
+    "taguchiSold": 4.230215053763441,
+    "medianSold": 4.25,
+    "marketStabilityCV": 0.49029330719112446,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
@@ -621,7 +621,7 @@
   },
   "Beiker Graterol": {
     "keyword": "Beiker Graterol Baseball",
-    "nScraped": 0,
+    "nScraped": 60,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -669,27 +669,27 @@
   },
   "Brayan Rocchio": {
     "keyword": "Brayan Rocchio Baseball",
-    "nScraped": 240,
-    "nSoldUsed": 93,
-    "avg": 5.477204301075263,
-    "taguchiSold": 5.477204301075263,
-    "medianSold": 5.97,
-    "marketStabilityCV": 0.1996303899514483,
+    "nScraped": 0,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
   },
   "Brayan Villarreal": {
     "keyword": "Brayan Villarreal Baseball",
-    "nScraped": 240,
-    "nSoldUsed": 8,
-    "avg": 8.754999999999999,
-    "taguchiSold": 8.754999999999999,
-    "medianSold": 8.754999999999999,
-    "marketStabilityCV": 0.8248313828068198,
+    "nScraped": 0,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
   },
   "Breyvic Valera": {
     "keyword": "Breyvic Valera Baseball",
@@ -2985,7 +2985,7 @@
   },
   "Argenis Diaz": {
     "keyword": "Argenis Diaz Baseball",
-    "nScraped": 250,
+    "nScraped": 248,
     "nSoldUsed": 24,
     "avg": 2.1199999999999997,
     "taguchiSold": 2.1199999999999997,
@@ -2997,27 +2997,27 @@
   },
   "Asdrubal Cabrera": {
     "keyword": "Asdrubal Cabrera Baseball",
-    "nScraped": 120,
-    "nSoldUsed": 44,
-    "avg": 1.048863636363636,
-    "taguchiSold": 1.048863636363636,
+    "nScraped": 240,
+    "nSoldUsed": 106,
+    "avg": 1.4529245283018861,
+    "taguchiSold": 1.4529245283018861,
     "medianSold": 1.49,
-    "marketStabilityCV": 0.73826191087536,
+    "marketStabilityCV": 0.31216562857722135,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
   },
   "Avisail Garcia": {
     "keyword": "Avisail Garcia Baseball",
-    "nScraped": 0,
-    "nSoldUsed": 0,
-    "avg": null,
-    "taguchiSold": null,
-    "medianSold": null,
-    "marketStabilityCV": null,
+    "nScraped": 240,
+    "nSoldUsed": 64,
+    "avg": 2.316562499999999,
+    "taguchiSold": 2.316562499999999,
+    "medianSold": 1.99,
+    "marketStabilityCV": 0.2628891850971304,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
   },
   "Bruce Rondon": {
     "keyword": "Bruce Rondon Baseball",
