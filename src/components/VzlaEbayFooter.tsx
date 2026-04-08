@@ -30,7 +30,7 @@ const VzlaEbayFooter = () => {
 
   return (
     <footer className="ebay-footer">
-      <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4">
+      <div className="flex items-center justify-center gap-2 sm:gap-4">
         <a href={url} target="_blank" rel="noopener noreferrer">
           <img src={banner.img} alt={banner.alt} className="ebay-banner-img" loading="lazy" width="728" height="90" />
         </a>
