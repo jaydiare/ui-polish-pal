@@ -106,10 +106,10 @@ const BlogPost = () => {
           />
         </div>
 
-        {/* Cover image */}
-        {post.coverImage && (
+        {/* Cover / inline image */}
+        {(post.coverImage || (post as any).inlineImage) && (
           <div className="flex justify-center mb-8">
-            <img src={post.coverImage} alt={post.title} className="max-h-32 w-auto" loading="lazy" />
+            <img src={(post as any).inlineImage || post.coverImage} alt={post.title} className="max-h-32 w-auto" loading="lazy" />
           </div>
         )}
 
