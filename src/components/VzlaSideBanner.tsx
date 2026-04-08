@@ -104,7 +104,7 @@ const VzlaSideBanner = () => {
       </a>
       {AFFILIATES.map((a) => (
         <a key={a.id} href={a.href} target="_blank" rel="noopener noreferrer" title={a.alt}>
-          <img src={a.img} alt={a.alt} />
+          <img src={a.img} alt={a.alt} className={(a as any).className || ""} />
         </a>
       ))}
       {/* AdSense loads only when scrolled near — keeps ad density low above the fold */}
