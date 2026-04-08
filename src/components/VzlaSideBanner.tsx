@@ -73,7 +73,7 @@ const AFFILIATES = [
   },
   {
     id: "sidebar-mm",
-    href: "https://www.marketmoversapp.com",
+    href: "https://marketmoversapp.com/vzlaelite",
     img: "/assets/MM Full Logo White.svg",
     alt: "Market Movers App",
     className: "p-3",
