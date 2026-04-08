@@ -27,8 +27,14 @@ const AFFILIATES = [
   {
     id: "sidebar-bcw-right",
     href: BCW,
-    img: "./assets/BCW.jpg",
+    img: "/assets/BCW.jpg",
     alt: "BCW - Protect, Store, Display",
+  },
+  {
+    id: "sidebar-mm-right",
+    href: "https://www.marketmoversapp.com",
+    img: "/assets/MM Full Logo Black.svg",
+    alt: "Market Movers App",
   },
 ];
 
