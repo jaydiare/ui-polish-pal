@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-04-08T06:01:57.413Z",
+    "updatedAt": "2026-04-08T07:56:13.335Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA/BGS/SGC grader title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 410,
-      "endIdx": 420,
+      "startIdx": 420,
+      "endIdx": 430,
       "totalAthletes": 460
     },
     "maxPages": 4,
@@ -5773,19 +5773,19 @@
   },
   "Yohander Mendez": {
     "keyword": "Yohander Mendez Baseball PSA",
-    "nScraped": 0,
-    "nSoldUsed": 0,
-    "avg": null,
-    "taguchiSold": null,
-    "medianSold": null,
-    "marketStabilityCV": null,
+    "nScraped": 60,
+    "nSoldUsed": 4,
+    "avg": 6.68,
+    "taguchiSold": 6.68,
+    "medianSold": 6.68,
+    "marketStabilityCV": 0.11754436618231905,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
   },
   "Yohel Pozo": {
     "keyword": "Yohel Pozo Baseball PSA",
-    "nScraped": 0,
+    "nScraped": 260,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -5821,7 +5821,7 @@
   },
   "Yonny Chirinos": {
     "keyword": "Yonny Chirinos Baseball PSA",
-    "nScraped": 31,
+    "nScraped": 27,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -5869,7 +5869,7 @@
   },
   "Yorvit Torrealba": {
     "keyword": "Yorvit Torrealba Baseball PSA",
-    "nScraped": 42,
+    "nScraped": 0,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -5881,7 +5881,7 @@
   },
   "Yusmeiro Petit": {
     "keyword": "Yusmeiro Petit Baseball PSA",
-    "nScraped": 60,
+    "nScraped": 0,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
