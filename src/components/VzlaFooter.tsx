@@ -63,6 +63,7 @@ const VzlaFooter = () => {
                 
                 <a href={BCW} target="_blank" rel="noopener noreferrer" className="text-sm text-muted-foreground no-underline hover:text-foreground transition-colors">BCW Supplies</a>
                 <a href="https://www.facebook.com/groups/1591729798708721" target="_blank" rel="noopener noreferrer" className="text-sm text-muted-foreground no-underline hover:text-foreground transition-colors">Facebook Community</a>
+                <a href="https://marketmoversapp.com/vzlaelite" target="_blank" rel="noopener noreferrer" className="text-sm text-muted-foreground no-underline hover:text-foreground transition-colors">Market Movers</a>
               </nav>
             </div>
 
