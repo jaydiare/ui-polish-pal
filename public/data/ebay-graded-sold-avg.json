@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-04-08T09:40:35.241Z",
+    "updatedAt": "2026-04-08T11:28:00.467Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA/BGS/SGC grader title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 430,
-      "endIdx": 440,
+      "startIdx": 440,
+      "endIdx": 450,
       "totalAthletes": 460
     },
     "maxPages": 4,
@@ -6169,7 +6169,7 @@
   },
   "Salomon Rondon": {
     "keyword": "Salomon Rondon Pachuca Mallorca Venezuela Oviedo Soccer PSA",
-    "nScraped": 0,
+    "nScraped": 3,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -6193,15 +6193,15 @@
   },
   "Yangel Herrera": {
     "keyword": "Yangel Herrera Soccer PSA",
-    "nScraped": 0,
-    "nSoldUsed": 0,
-    "avg": null,
-    "taguchiSold": null,
-    "medianSold": null,
-    "marketStabilityCV": null,
+    "nScraped": 189,
+    "nSoldUsed": 4,
+    "avg": 15.5,
+    "taguchiSold": 15.5,
+    "medianSold": 15.5,
+    "marketStabilityCV": 0,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
   },
   "Cristian Casseres Jr.": {
     "keyword": "Cristian Casseres Jr. Soccer PSA",
@@ -6385,7 +6385,7 @@
   },
   "David Martinez": {
     "keyword": "David Martinez Soccer PSA",
-    "nScraped": 260,
+    "nScraped": 255,
     "nSoldUsed": 8,
     "avg": 177.5,
     "taguchiSold": 177.5,
@@ -6529,7 +6529,7 @@
   },
   "Josef Martinez": {
     "keyword": "Josef Martinez Soccer PSA",
-    "nScraped": 60,
+    "nScraped": 0,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -6541,7 +6541,7 @@
   },
   "Junior Moreno": {
     "keyword": "Junior Moreno Soccer PSA",
-    "nScraped": 60,
+    "nScraped": 0,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
