@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "updatedAt": "2026-04-07T21:39:16.849Z",
+    "updatedAt": "2026-04-08T01:37:43.043Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. Taguchi winsorized mean + market stability CV. Ungraded condition policy (permissive for sold). Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
@@ -7731,6 +7731,18 @@
     "taguchiSold": 53.78630434782605,
     "medianSold": 45.345,
     "marketStabilityCV": 0.44107710516029563,
+    "currency": "USD",
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
+  },
+  "Jesus Luzardo": {
+    "keyword": "Jesus Luzardo Baseball",
+    "nScraped": 240,
+    "nSoldUsed": 105,
+    "avg": 5.803904761904762,
+    "taguchiSold": 5.803904761904762,
+    "medianSold": 5.5,
+    "marketStabilityCV": 0.2988504860331089,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
