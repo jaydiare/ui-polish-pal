@@ -30,12 +30,12 @@ const VzlaEbayFooter = () => {
 
   return (
     <footer className="ebay-footer">
-      <div className="flex items-center justify-center gap-4">
+      <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4">
         <a href={url} target="_blank" rel="noopener noreferrer">
           <img src={banner.img} alt={banner.alt} className="ebay-banner-img" loading="lazy" width="728" height="90" />
         </a>
         <a href="https://marketmoversapp.com/vzlaelite" target="_blank" rel="noopener noreferrer" title="Market Movers App">
-          <img src="/assets/MM Circle Logo White.png" alt="Market Movers App" className="h-[100px] w-auto p-1" loading="lazy" />
+          <img src="/assets/MM Circle Logo White.png" alt="Market Movers App" className="h-16 sm:h-[100px] w-auto p-1" loading="eager" />
         </a>
       </div>
     </footer>
