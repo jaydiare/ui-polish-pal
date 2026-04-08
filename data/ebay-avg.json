@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "updatedAt": "2026-04-06T14:10:16.179Z",
+    "updatedAt": "2026-04-08T01:26:46.081Z",
     "minSampleSize": 4,
     "marketplaces": [
       "EBAY_US",
@@ -595,7 +595,8 @@
       "J.J. D'Orazio": 5.3887025967504165,
       "Bob Abreu": 2.078118798247106,
       "Robert Perez Jr.": 4.753673976194081,
-      "Jesus Bueno": 1.6737917542207086
+      "Jesus Bueno": 1.6737917542207086,
+      "Jesus Luzardo": 3.2723166828293713
     },
     "indexHistory": [
       {
@@ -747,6 +748,11 @@
         "Soccer": 194.5,
         "Basketball": 199.4,
         "All": 386.1
+      },
+      {
+        "date": "2026-04-08",
+        "Baseball": 100,
+        "All": 100
       }
     ]
   },
@@ -25502,5 +25508,50 @@
     "indexLevel": 100,
     "sport": "Baseball",
     "fallback": true
+  },
+  "Jesus Luzardo": {
+    "match": {
+      "mode": "player",
+      "value": "Jesus Luzardo",
+      "validatedOn": "EBAY_CA"
+    },
+    "marketplaces": {
+      "EBAY_US": {
+        "aspectMode": "player",
+        "aspectValue": "Jesus Luzardo",
+        "avgListing": 4.4774358974359005,
+        "taguchiListing": 4.4774358974359005,
+        "marketStabilityCV": 0.5252607436392832,
+        "avgDaysOnMarket": 95.27756296622742,
+        "nListing": 78,
+        "nDaysOnMarket": 78,
+        "currency": "USD",
+        "originalCurrency": "USD",
+        "fxRateUsed": 1
+      },
+      "EBAY_CA": {
+        "aspectMode": "player",
+        "aspectValue": "Jesus Luzardo",
+        "avgListing": 3.2723166828293713,
+        "taguchiListing": 3.2723166828293713,
+        "marketStabilityCV": 0.46540893933797967,
+        "avgDaysOnMarket": 244.38827330064439,
+        "nListing": 74,
+        "nDaysOnMarket": 74,
+        "currency": "USD",
+        "originalCurrency": "CAD",
+        "fxRateUsed": 0.7190623427051125
+      }
+    },
+    "avg": 3.2723166828293713,
+    "n": 74,
+    "avgListing": 3.2723166828293713,
+    "taguchiListing": 3.2723166828293713,
+    "marketStabilityCV": 0.46540893933797967,
+    "avgDaysOnMarket": 244.38827330064439,
+    "nListing": 74,
+    "currency": "USD",
+    "basePriceUSD": 3.2723166828293713,
+    "indexLevel": 100
   }
 }
