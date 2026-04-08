@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-04-08T07:56:13.335Z",
+    "updatedAt": "2026-04-08T09:40:35.241Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA/BGS/SGC grader title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 420,
-      "endIdx": 430,
+      "startIdx": 430,
+      "endIdx": 440,
       "totalAthletes": 460
     },
     "maxPages": 4,
@@ -2977,7 +2977,7 @@
   },
   "Jose Alvarez": {
     "keyword": "José Álvarez Angels Phillies Giants Baseball PSA",
-    "nScraped": 3,
+    "nScraped": 60,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -5005,7 +5005,7 @@
   },
   "Robert Perez": {
     "keyword": "Robert Perez Blue Jays Cardenales Baseball PSA",
-    "nScraped": 0,
+    "nScraped": 10,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -5893,7 +5893,7 @@
   },
   "Carl Herrera": {
     "keyword": "Carl Herrera Basketball PSA",
-    "nScraped": 264,
+    "nScraped": 265,
     "nSoldUsed": 8,
     "avg": 20.995,
     "taguchiSold": 20.995,
@@ -5905,7 +5905,7 @@
   },
   "Greivis Vasquez": {
     "keyword": "Greivis Vasquez Basketball PSA",
-    "nScraped": 244,
+    "nScraped": 241,
     "nSoldUsed": 4,
     "avg": 174.99,
     "taguchiSold": 174.99,
@@ -5917,15 +5917,15 @@
   },
   "Oscar Torres": {
     "keyword": "Oscar Torres Basketball PSA",
-    "nScraped": 240,
-    "nSoldUsed": 8,
-    "avg": 21.195,
-    "taguchiSold": 21.195,
-    "medianSold": 21.195,
-    "marketStabilityCV": 0.16165553768894933,
+    "nScraped": 0,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
   },
   "Pedro Chourio": {
     "keyword": "Pedro Chourio Basketball",
@@ -6937,7 +6937,7 @@
   },
   "Robert Perez Jr.": {
     "keyword": "Robert Perez Jr. Prospects Baseball PSA",
-    "nScraped": 240,
+    "nScraped": 241,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
