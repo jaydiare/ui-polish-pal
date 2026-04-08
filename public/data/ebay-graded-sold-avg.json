@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-04-08T03:36:58.576Z",
+    "updatedAt": "2026-04-08T06:01:57.413Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA/BGS/SGC grader title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 400,
-      "endIdx": 410,
+      "startIdx": 410,
+      "endIdx": 420,
       "totalAthletes": 460
     },
     "maxPages": 4,
@@ -32,7 +32,7 @@
     },
     "fx": {
       "source": "CBSA Exchange Rates API",
-      "asOf": "2026-04-08T00:00:00.000Z"
+      "asOf": "2026-04-09T00:00:00.000Z"
     }
   },
   "Adbert Alzolay": {
@@ -5653,7 +5653,7 @@
   },
   "Wilmer Font": {
     "keyword": "Wilmer Font Baseball PSA",
-    "nScraped": 0,
+    "nScraped": 60,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -5665,15 +5665,15 @@
   },
   "Wilson Alvarez": {
     "keyword": "Wilson Alvarez Baseball PSA",
-    "nScraped": 0,
-    "nSoldUsed": 0,
-    "avg": null,
-    "taguchiSold": null,
-    "medianSold": null,
-    "marketStabilityCV": null,
+    "nScraped": 248,
+    "nSoldUsed": 4,
+    "avg": 11.18,
+    "taguchiSold": 11.18,
+    "medianSold": 11.18,
+    "marketStabilityCV": 0,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
   },
   "Wilson Ramos": {
     "keyword": "Wilson Ramos Baseball PSA",
@@ -5689,27 +5689,27 @@
   },
   "Wilyer Abreu": {
     "keyword": "Wilyer Abreu Baseball PSA",
-    "nScraped": 185,
-    "nSoldUsed": 76,
-    "avg": 117.44394736842102,
-    "taguchiSold": 117.44394736842102,
-    "medianSold": 105,
-    "marketStabilityCV": 0.15698876659553831,
+    "nScraped": 205,
+    "nSoldUsed": 89,
+    "avg": 124.05786516853928,
+    "taguchiSold": 124.05786516853928,
+    "medianSold": 115,
+    "marketStabilityCV": 0.19324190593420532,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
   },
   "Yangervis Solarte": {
     "keyword": "Yangervis Solarte Baseball PSA",
-    "nScraped": 61,
-    "nSoldUsed": 1,
+    "nScraped": 60,
+    "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
   },
   "Yilber Diaz": {
     "keyword": "Yilber Diaz Baseball PSA",
@@ -5737,7 +5737,7 @@
   },
   "Yoendrys Gomez": {
     "keyword": "Yoendrys Gomez Baseball PSA",
-    "nScraped": 240,
+    "nScraped": 0,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -5749,7 +5749,7 @@
   },
   "Yoervis Medina": {
     "keyword": "Yoervis Medina Baseball PSA",
-    "nScraped": 60,
+    "nScraped": 0,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
