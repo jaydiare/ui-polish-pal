@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-04-08T17:36:45.734Z",
+    "updatedAt": "2026-04-08T19:44:51.158Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA/BGS/SGC grader title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 0,
-      "endIdx": 10,
+      "startIdx": 10,
+      "endIdx": 20,
       "totalAthletes": 460
     },
     "maxPages": 4,
@@ -145,7 +145,7 @@
   },
   "Alejandro Machado": {
     "keyword": "Alejandro Machado Baseball PSA",
-    "nScraped": 0,
+    "nScraped": 60,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -169,15 +169,15 @@
   },
   "Alex Carrasquel": {
     "keyword": "Alex Carrasquel Baseball PSA",
-    "nScraped": 0,
-    "nSoldUsed": 0,
-    "avg": null,
-    "taguchiSold": null,
-    "medianSold": null,
-    "marketStabilityCV": null,
+    "nScraped": 240,
+    "nSoldUsed": 4,
+    "avg": 275,
+    "taguchiSold": 275,
+    "medianSold": 275,
+    "marketStabilityCV": 0,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
   },
   "Alex Delgado": {
     "keyword": "Alex Delgado Baseball",
@@ -194,11 +194,11 @@
   "Alex Escobar": {
     "keyword": "Alex Escobar Baseball PSA",
     "nScraped": 243,
-    "nSoldUsed": 8,
-    "avg": 5.07,
-    "taguchiSold": 5.07,
-    "medianSold": 5.07,
-    "marketStabilityCV": 0.4364739808747285,
+    "nSoldUsed": 4,
+    "avg": 3,
+    "taguchiSold": 3,
+    "medianSold": 3,
+    "marketStabilityCV": 0,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
@@ -289,7 +289,7 @@
   },
   "Alexi Amarista": {
     "keyword": "Alexi Amarista Baseball PSA",
-    "nScraped": 44,
+    "nScraped": 0,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -301,7 +301,7 @@
   },
   "Alexis Infante": {
     "keyword": "Alexis Infante Baseball PSA",
-    "nScraped": 27,
+    "nScraped": 0,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
