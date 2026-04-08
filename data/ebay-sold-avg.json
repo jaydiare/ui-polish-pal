@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-04-08T16:13:44.386Z",
+    "updatedAt": "2026-04-08T19:12:08.524Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. Taguchi winsorized mean + market stability CV. Ungraded condition policy (permissive for sold). Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 90,
-      "endIdx": 100,
+      "startIdx": 100,
+      "endIdx": 110,
       "totalAthletes": 571
     },
     "maxPages": 4,
@@ -1185,6 +1185,54 @@
   },
   "David Peralta": {
     "keyword": "David Peralta Baseball",
+    "nScraped": 240,
+    "nSoldUsed": 88,
+    "avg": 1.7081818181818158,
+    "taguchiSold": 1.7081818181818158,
+    "medianSold": 1.99,
+    "marketStabilityCV": 0.2346687963604738,
+    "currency": "USD",
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
+  },
+  "Deolis Guerra": {
+    "keyword": "Deolis Guerra Baseball",
+    "nScraped": 265,
+    "nSoldUsed": 36,
+    "avg": 0.7055555555555555,
+    "taguchiSold": 0.7055555555555555,
+    "medianSold": 0.99,
+    "marketStabilityCV": 0.47000496846391876,
+    "currency": "USD",
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
+  },
+  "Diego Castillo": {
+    "keyword": "Diego Castillo Baseball",
+    "nScraped": 158,
+    "nSoldUsed": 86,
+    "avg": 2.255348837209302,
+    "taguchiSold": 2.255348837209302,
+    "medianSold": 2.25,
+    "marketStabilityCV": 0.3160355449976331,
+    "currency": "USD",
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
+  },
+  "Diego Moreno": {
+    "keyword": "Diego Moreno Baseball",
+    "nScraped": 252,
+    "nSoldUsed": 16,
+    "avg": 2.9850000000000003,
+    "taguchiSold": 2.9850000000000003,
+    "medianSold": 2.9850000000000003,
+    "marketStabilityCV": 0.448063734971623,
+    "currency": "USD",
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
+  },
+  "Dilson Torres": {
+    "keyword": "Dilson Torres Baseball",
     "nScraped": 0,
     "nSoldUsed": 0,
     "avg": null,
@@ -1195,77 +1243,29 @@
     "originalCurrencyExample": null,
     "fxRateUsed": null
   },
-  "Deolis Guerra": {
-    "keyword": "Deolis Guerra Baseball",
-    "nScraped": 252,
-    "nSoldUsed": 28,
-    "avg": 0.4771428571428572,
-    "taguchiSold": 0.4771428571428572,
-    "medianSold": 0.34,
-    "marketStabilityCV": 0.9755600052458909,
-    "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
-  },
-  "Diego Castillo": {
-    "keyword": "Diego Castillo Baseball",
-    "nScraped": 160,
-    "nSoldUsed": 84,
-    "avg": 2.248452380952381,
-    "taguchiSold": 2.248452380952381,
-    "medianSold": 2.25,
-    "marketStabilityCV": 0.31924942489612607,
-    "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
-  },
-  "Diego Moreno": {
-    "keyword": "Diego Moreno Baseball",
-    "nScraped": 240,
-    "nSoldUsed": 4,
-    "avg": 5.14,
-    "taguchiSold": 5.14,
-    "medianSold": 5.14,
-    "marketStabilityCV": 0,
-    "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
-  },
-  "Dilson Torres": {
-    "keyword": "Dilson Torres Baseball",
-    "nScraped": 249,
-    "nSoldUsed": 4,
-    "avg": 0.99,
-    "taguchiSold": 0.99,
-    "medianSold": 0.99,
-    "marketStabilityCV": 0,
-    "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
-  },
   "Dioner Navarro": {
     "keyword": "Dioner Navarro Baseball",
-    "nScraped": 166,
-    "nSoldUsed": 91,
-    "avg": 1.9319780219780245,
-    "taguchiSold": 1.9319780219780245,
-    "medianSold": 1.88,
-    "marketStabilityCV": 0.16795744634716733,
+    "nScraped": 0,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
   },
   "Dixon Machado": {
     "keyword": "Dixon Machado Baseball",
-    "nScraped": 64,
-    "nSoldUsed": 11,
-    "avg": 0.6945454545454547,
-    "taguchiSold": 0.6945454545454547,
-    "medianSold": 0.99,
-    "marketStabilityCV": 0.48873896861907296,
+    "nScraped": 0,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
   },
   "Donaldo Méndez": {
     "keyword": "Donaldo Méndez Baseball",
@@ -7653,15 +7653,15 @@
   },
   "Dave Concepcion": {
     "keyword": "Dave Concepcion Baseball",
-    "nScraped": 0,
-    "nSoldUsed": 0,
-    "avg": null,
-    "taguchiSold": null,
-    "medianSold": null,
-    "marketStabilityCV": null,
+    "nScraped": 240,
+    "nSoldUsed": 70,
+    "avg": 3.381142857142858,
+    "taguchiSold": 3.381142857142858,
+    "medianSold": 3.25,
+    "marketStabilityCV": 0.24993270230092743,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
   },
   "J.J D'Orazio": {
     "keyword": "J.J D'Orazio Baseball",
