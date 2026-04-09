@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-04-08T23:04:19.962Z",
+    "updatedAt": "2026-04-09T03:32:10.804Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA/BGS/SGC grader title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 30,
-      "endIdx": 40,
+      "startIdx": 40,
+      "endIdx": 50,
       "totalAthletes": 460
     },
     "maxPages": 4,
@@ -601,27 +601,27 @@
   },
   "Anthony Santander": {
     "keyword": "Anthony Santander Baseball PSA",
-    "nScraped": 0,
-    "nSoldUsed": 0,
-    "avg": null,
-    "taguchiSold": null,
-    "medianSold": null,
-    "marketStabilityCV": null,
+    "nScraped": 266,
+    "nSoldUsed": 16,
+    "avg": 27.074999999999992,
+    "taguchiSold": 27.074999999999992,
+    "medianSold": 27.075,
+    "marketStabilityCV": 0.11729811057765768,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
   },
   "Antonio Senzatela": {
     "keyword": "Antonio Senzatela Baseball PSA",
-    "nScraped": 0,
-    "nSoldUsed": 0,
-    "avg": null,
-    "taguchiSold": null,
-    "medianSold": null,
-    "marketStabilityCV": null,
+    "nScraped": 246,
+    "nSoldUsed": 8,
+    "avg": 5.725,
+    "taguchiSold": 5.725,
+    "medianSold": 5.725,
+    "marketStabilityCV": 0.14471787771677128,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
   },
   "Arcenio Leon": {
     "keyword": "Arcenio Leon Baseball",
@@ -661,7 +661,7 @@
   },
   "Asdrubal Cabrera": {
     "keyword": "Asdrubal Cabrera Baseball PSA",
-    "nScraped": 240,
+    "nScraped": 241,
     "nSoldUsed": 8,
     "avg": 36.995000000000005,
     "taguchiSold": 36.995000000000005,
@@ -673,7 +673,7 @@
   },
   "Avisail Garcia": {
     "keyword": "Avisail Garcia Baseball PSA",
-    "nScraped": 246,
+    "nScraped": 252,
     "nSoldUsed": 20,
     "avg": 8.5,
     "taguchiSold": 8.5,
@@ -697,15 +697,15 @@
   },
   "Bo Diaz": {
     "keyword": "Bo Diaz Baseball PSA",
-    "nScraped": 369,
-    "nSoldUsed": 64,
-    "avg": 25.713750000000005,
-    "taguchiSold": 25.713750000000005,
-    "medianSold": 28.994999999999997,
-    "marketStabilityCV": 0.18116745770898396,
+    "nScraped": 0,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
   },
   "Bobby Abreu": {
     "keyword": "Bobby Abreu Baseball PSA",
@@ -6925,15 +6925,15 @@
   },
   "Bob Abreu": {
     "keyword": "Bob Abreu Baseball PSA",
-    "nScraped": 140,
-    "nSoldUsed": 12,
-    "avg": 6.0249999999999995,
-    "taguchiSold": 6.0249999999999995,
-    "medianSold": 6.025,
-    "marketStabilityCV": 0.08234378746452098,
+    "nScraped": 0,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
   },
   "Robert Perez Jr.": {
     "keyword": "Robert Perez Jr. Prospects Baseball PSA",
