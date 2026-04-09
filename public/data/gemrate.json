@@ -1,13 +1,13 @@
 {
   "_meta": {
-    "updatedAt": "2026-04-09T01:49:59.479546+00:00",
+    "updatedAt": "2026-04-09T05:48:19.724572+00:00",
     "athleteCount": 457,
     "graders": [
       "PSA"
     ],
     "batchInfo": {
-      "startIdx": 200,
-      "endIdx": 220,
+      "startIdx": 220,
+      "endIdx": 240,
       "totalAthletes": 571
     }
   },
@@ -3167,17 +3167,17 @@
       "sport": "Baseball",
       "graders": {
         "PSA": {
-          "cards": 48,
+          "cards": 50,
           "gems": 16,
-          "grades": 59,
-          "gemRate": 27.0
+          "grades": 62,
+          "gemRate": 26.0
         }
       },
       "totals": {
-        "cards": 48,
+        "cards": 50,
         "gems": 16,
-        "grades": 59,
-        "gemRate": 27.0
+        "grades": 62,
+        "gemRate": 26.0
       }
     },
     "Javier Sanoja": {
@@ -3187,14 +3187,14 @@
         "PSA": {
           "cards": 87,
           "gems": 135,
-          "grades": 365,
+          "grades": 366,
           "gemRate": 37.0
         }
       },
       "totals": {
         "cards": 87,
         "gems": 135,
-        "grades": 365,
+        "grades": 366,
         "gemRate": 37.0
       }
     },
@@ -3240,15 +3240,15 @@
       "graders": {
         "PSA": {
           "cards": 154,
-          "gems": 879,
-          "grades": 1378,
+          "gems": 886,
+          "grades": 1388,
           "gemRate": 64.0
         }
       },
       "totals": {
         "cards": 154,
-        "gems": 879,
-        "grades": 1378,
+        "gems": 886,
+        "grades": 1388,
         "gemRate": 64.0
       }
     },
@@ -3420,15 +3420,15 @@
       "graders": {
         "PSA": {
           "cards": 134,
-          "gems": 593,
-          "grades": 1390,
+          "gems": 596,
+          "grades": 1398,
           "gemRate": 43.0
         }
       },
       "totals": {
         "cards": 134,
-        "gems": 593,
-        "grades": 1390,
+        "gems": 596,
+        "grades": 1398,
         "gemRate": 43.0
       }
     },
@@ -3473,16 +3473,16 @@
       "sport": "Baseball",
       "graders": {
         "PSA": {
-          "cards": 515,
+          "cards": 517,
           "gems": 737,
-          "grades": 1814,
+          "grades": 1818,
           "gemRate": 41.0
         }
       },
       "totals": {
-        "cards": 515,
+        "cards": 517,
         "gems": 737,
-        "grades": 1814,
+        "grades": 1818,
         "gemRate": 41.0
       }
     },
