@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-04-09T15:59:14.407Z",
+    "updatedAt": "2026-04-09T17:34:56.221Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA/BGS/SGC grader title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 100,
-      "endIdx": 110,
+      "startIdx": 110,
+      "endIdx": 120,
       "totalAthletes": 460
     },
     "maxPages": 4,
@@ -1597,7 +1597,7 @@
   },
   "Edwin Escobar": {
     "keyword": "Edwin Escobar Baseball PSA",
-    "nScraped": 0,
+    "nScraped": 60,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -1609,7 +1609,7 @@
   },
   "Edwin Hurtado": {
     "keyword": "Edwin Hurtado Baseball PSA",
-    "nScraped": 0,
+    "nScraped": 60,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -1681,7 +1681,7 @@
   },
   "Eliezer Alfonzo": {
     "keyword": "Eliezer Alfonzo Baseball PSA",
-    "nScraped": 44,
+    "nScraped": 45,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -1705,15 +1705,15 @@
   },
   "Elvis Andrus": {
     "keyword": "Elvis Andrus Baseball PSA",
-    "nScraped": 256,
-    "nSoldUsed": 24,
-    "avg": 10.5,
-    "taguchiSold": 10.5,
-    "medianSold": 10.5,
-    "marketStabilityCV": 0.1945729213162854,
+    "nScraped": 0,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
   },
   "Elvis Araujo": {
     "keyword": "Elvis Araujo Baseball PSA",
