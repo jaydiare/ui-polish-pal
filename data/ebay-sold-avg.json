@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-04-09T01:58:03.358Z",
+    "updatedAt": "2026-04-09T05:07:06.996Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. Taguchi winsorized mean + market stability CV. Ungraded condition policy (permissive for sold). Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 120,
-      "endIdx": 130,
+      "startIdx": 130,
+      "endIdx": 140,
       "totalAthletes": 571
     },
     "maxPages": 4,
@@ -28,7 +28,7 @@
     },
     "fx": {
       "source": "CBSA Exchange Rates API",
-      "asOf": "2026-04-09T00:00:00.000Z"
+      "asOf": "2026-04-10T00:00:00.000Z"
     }
   },
   "Adbert Alzolay": {
@@ -1533,43 +1533,43 @@
   },
   "Edward Olivares": {
     "keyword": "Edward Olivares Baseball",
-    "nScraped": 0,
-    "nSoldUsed": 0,
-    "avg": null,
-    "taguchiSold": null,
-    "medianSold": null,
-    "marketStabilityCV": null,
+    "nScraped": 219,
+    "nSoldUsed": 109,
+    "avg": 1.4808256880733945,
+    "taguchiSold": 1.4808256880733945,
+    "medianSold": 1.35,
+    "marketStabilityCV": 0.3122537593164715,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
   },
   "Edwin Bellorin": {
     "keyword": "Edwin Bellorin Baseball",
-    "nScraped": 0,
-    "nSoldUsed": 0,
-    "avg": null,
-    "taguchiSold": null,
-    "medianSold": null,
-    "marketStabilityCV": null,
+    "nScraped": 240,
+    "nSoldUsed": 8,
+    "avg": 0.995,
+    "taguchiSold": 0.995,
+    "medianSold": 0.995,
+    "marketStabilityCV": 0.005372085264571349,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
   },
   "Edwin Escobar": {
     "keyword": "Edwin Escobar Baseball",
-    "nScraped": 304,
-    "nSoldUsed": 108,
-    "avg": 2.176666666666669,
-    "taguchiSold": 2.176666666666669,
-    "medianSold": 1.99,
-    "marketStabilityCV": 0.3480668039223712,
+    "nScraped": 323,
+    "nSoldUsed": 104,
+    "avg": 2.2457692307692336,
+    "taguchiSold": 2.2457692307692336,
+    "medianSold": 2.26,
+    "marketStabilityCV": 0.31883309864512127,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
   },
   "Edwin Hurtado": {
     "keyword": "Edwin Hurtado Baseball",
-    "nScraped": 251,
+    "nScraped": 254,
     "nSoldUsed": 16,
     "avg": 1.4699999999999998,
     "taguchiSold": 1.4699999999999998,
@@ -1581,39 +1581,39 @@
   },
   "Edwin Moreno": {
     "keyword": "Edwin Moreno Baseball",
-    "nScraped": 257,
-    "nSoldUsed": 12,
-    "avg": 0.9900000000000001,
-    "taguchiSold": 0.9900000000000001,
-    "medianSold": 0.99,
-    "marketStabilityCV": 1.1713031619078315e-16,
+    "nScraped": 261,
+    "nSoldUsed": 20,
+    "avg": 1.1900000000000002,
+    "taguchiSold": 1.1900000000000002,
+    "medianSold": 1.19,
+    "marketStabilityCV": 1.9143946037847282e-16,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
   },
   "Ehire Adrianza": {
     "keyword": "Ehire Adrianza Baseball",
-    "nScraped": 197,
-    "nSoldUsed": 76,
-    "avg": 1.8534210526315773,
-    "taguchiSold": 1.8534210526315773,
-    "medianSold": 1.97,
-    "marketStabilityCV": 0.07899001371954027,
+    "nScraped": 0,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
   },
   "Eider Torres": {
     "keyword": "Eider Torres Baseball",
-    "nScraped": 243,
-    "nSoldUsed": 8,
-    "avg": 0.9900000000000001,
-    "taguchiSold": 0.9900000000000001,
-    "medianSold": 0.99,
-    "marketStabilityCV": 1.1988670075195453e-16,
+    "nScraped": 0,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
   },
   "Elias Díaz": {
     "keyword": "Elias Díaz Baseball",
