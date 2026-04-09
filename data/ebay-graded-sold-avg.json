@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-04-09T09:44:48.369Z",
+    "updatedAt": "2026-04-09T11:29:28.108Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA/BGS/SGC grader title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 70,
-      "endIdx": 80,
+      "startIdx": 80,
+      "endIdx": 90,
       "totalAthletes": 460
     },
     "maxPages": 4,
@@ -1153,7 +1153,7 @@
   },
   "Cris Colon": {
     "keyword": "Cris Colon Baseball PSA",
-    "nScraped": 0,
+    "nScraped": 242,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -1165,7 +1165,7 @@
   },
   "Damaso Blanco": {
     "keyword": "Damaso Blanco Baseball PSA",
-    "nScraped": 0,
+    "nScraped": 60,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -1189,7 +1189,7 @@
   },
   "Danny Leon": {
     "keyword": "Danny Leon Baseball PSA",
-    "nScraped": 240,
+    "nScraped": 241,
     "nSoldUsed": 4,
     "avg": 7.42,
     "taguchiSold": 7.42,
@@ -1213,7 +1213,7 @@
   },
   "Darwin Cubillan": {
     "keyword": "Darwin Cubillan Baseball PSA",
-    "nScraped": 36,
+    "nScraped": 35,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -6889,12 +6889,12 @@
   },
   "Dave Concepcion": {
     "keyword": "Dave Concepcion Baseball PSA",
-    "nScraped": 216,
-    "nSoldUsed": 89,
-    "avg": 37.43629213483146,
-    "taguchiSold": 37.43629213483146,
-    "medianSold": 36.99,
-    "marketStabilityCV": 0.1869924187468845,
+    "nScraped": 180,
+    "nSoldUsed": 72,
+    "avg": 44.3186111111111,
+    "taguchiSold": 44.3186111111111,
+    "medianSold": 40,
+    "marketStabilityCV": 0.21208916073786394,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
