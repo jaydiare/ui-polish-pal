@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-04-09T16:15:48.524Z",
+    "updatedAt": "2026-04-09T19:00:55.964Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. Taguchi winsorized mean + market stability CV. Ungraded condition policy (permissive for sold). Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 170,
-      "endIdx": 180,
+      "startIdx": 180,
+      "endIdx": 190,
       "totalAthletes": 571
     },
     "maxPages": 4,
@@ -2181,39 +2181,39 @@
   },
   "Giovanni Carrara": {
     "keyword": "Giovanni Carrara Baseball",
-    "nScraped": 139,
-    "nSoldUsed": 24,
-    "avg": 1.4949999999999994,
-    "taguchiSold": 1.4949999999999994,
-    "medianSold": 1.495,
-    "marketStabilityCV": 0.33822500285665347,
+    "nScraped": 140,
+    "nSoldUsed": 20,
+    "avg": 1,
+    "taguchiSold": 1,
+    "medianSold": 1,
+    "marketStabilityCV": 0,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
   },
   "Gleyber Torres": {
     "keyword": "Gleyber Torres Baseball",
-    "nScraped": 240,
-    "nSoldUsed": 103,
-    "avg": 1.4867961165048542,
-    "taguchiSold": 1.4867961165048542,
-    "medianSold": 1.39,
-    "marketStabilityCV": 0.32423759612225794,
+    "nScraped": 0,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
   },
   "Gonzalo Marquez": {
     "keyword": "Gonzalo Marquez Baseball",
-    "nScraped": 212,
-    "nSoldUsed": 92,
-    "avg": 4.342608695652175,
-    "taguchiSold": 4.342608695652175,
-    "medianSold": 4,
-    "marketStabilityCV": 0.08591014893404254,
+    "nScraped": 0,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
   },
   "Gorkys Hernández": {
     "keyword": "Gorkys Hernández Baseball",
@@ -3466,11 +3466,11 @@
   "German Marquez": {
     "keyword": "German Marquez Baseball",
     "nScraped": 240,
-    "nSoldUsed": 76,
-    "avg": 2.84657894736842,
-    "taguchiSold": 2.84657894736842,
-    "medianSold": 2.7350000000000003,
-    "marketStabilityCV": 0.3599370018310634,
+    "nSoldUsed": 89,
+    "avg": 2.645280898876407,
+    "taguchiSold": 2.645280898876407,
+    "medianSold": 2.24,
+    "marketStabilityCV": 0.2887413313679426,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
@@ -7605,7 +7605,7 @@
   },
   "Geremi Gonzalez": {
     "keyword": "Geremi Gonzalez Baseball",
-    "nScraped": 0,
+    "nScraped": 404,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -7617,15 +7617,15 @@
   },
   "German Gonzalez": {
     "keyword": "German Gonzalez Baseball",
-    "nScraped": 0,
-    "nSoldUsed": 0,
-    "avg": null,
-    "taguchiSold": null,
-    "medianSold": null,
-    "marketStabilityCV": null,
+    "nScraped": 278,
+    "nSoldUsed": 20,
+    "avg": 0.9899999999999999,
+    "taguchiSold": 0.9899999999999999,
+    "medianSold": 0.99,
+    "marketStabilityCV": 1.1505704941938521e-16,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
   },
   "Kennedy Corona": {
     "keyword": "Kennedy Corona Baseball",
