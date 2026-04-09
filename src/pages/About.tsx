@@ -1,11 +1,37 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
+import { useEffect } from "react";
 import SEOHead from "@/components/SEOHead";
 import VzlaNavbar from "@/components/VzlaNavbar";
 import VzlaFooter from "@/components/VzlaFooter";
 import VzlaEbayFooter from "@/components/VzlaEbayFooter";
 import VzlaStoreBanner from "@/components/VzlaStoreBanner";
 import VzlaSideBanner from "@/components/VzlaSideBanner";
+
+const TwitterFeed = () => {
+  useEffect(() => {
+    const script = document.createElement("script");
+    script.src = "https://platform.twitter.com/widgets.js";
+    script.async = true;
+    script.charset = "utf-8";
+    document.body.appendChild(script);
+    return () => { document.body.removeChild(script); };
+  }, []);
+
+  return (
+    <aside className="hidden xl:block fixed right-4 top-24 w-[350px] max-h-[calc(100vh-120px)] overflow-y-auto z-30 rounded-xl">
+      <a
+        className="twitter-timeline"
+        data-theme="dark"
+        data-height="600"
+        data-chrome="noheader nofooter noborders transparent"
+        href="https://twitter.com/jdiegorceli1"
+      >
+        Tweets by @jdiegorceli1
+      </a>
+    </aside>
+  );
+};
 
 const EBAY_STORE =
   "https://www.ebay.ca/str/localherossportscards?mkcid=1&mkrid=706-53473-19255-0&siteid=2&campid=5339142305&toolid=10001&mkevt=1";
@@ -34,7 +60,7 @@ const About = () => {
       />
       <VzlaNavbar />
       <VzlaSideBanner />
-
+      <TwitterFeed />
       <main className="page-shell">
         {/* ── Hero ── */}
         <motion.section
