@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-04-09T19:43:51.504Z",
+    "updatedAt": "2026-04-09T21:06:24.885Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA/BGS/SGC grader title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 120,
-      "endIdx": 130,
+      "startIdx": 130,
+      "endIdx": 140,
       "totalAthletes": 460
     },
     "maxPages": 4,
@@ -1873,19 +1873,19 @@
   },
   "Ezequiel Tovar": {
     "keyword": "Ezequiel Tovar Baseball PSA",
-    "nScraped": 0,
-    "nSoldUsed": 0,
-    "avg": null,
-    "taguchiSold": null,
-    "medianSold": null,
-    "marketStabilityCV": null,
+    "nScraped": 208,
+    "nSoldUsed": 104,
+    "avg": 51.54365384615384,
+    "taguchiSold": 51.54365384615384,
+    "medianSold": 51.510000000000005,
+    "marketStabilityCV": 0.15601335883467762,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
   },
   "Felipe Lira": {
     "keyword": "Felipe Lira Baseball PSA",
-    "nScraped": 0,
+    "nScraped": 60,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -1909,7 +1909,7 @@
   },
   "Felix Doubront": {
     "keyword": "Felix Doubront Baseball PSA",
-    "nScraped": 241,
+    "nScraped": 244,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -1933,12 +1933,12 @@
   },
   "Felix Hernandez": {
     "keyword": "Felix Hernandez Baseball PSA",
-    "nScraped": 132,
-    "nSoldUsed": 75,
-    "avg": 103.09266666666663,
-    "taguchiSold": 103.09266666666663,
+    "nScraped": 134,
+    "nSoldUsed": 70,
+    "avg": 98.54571428571418,
+    "taguchiSold": 98.54571428571418,
     "medianSold": 99.99,
-    "marketStabilityCV": 0.21015079993500432,
+    "marketStabilityCV": 0.2588907001920947,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
@@ -1957,7 +1957,7 @@
   },
   "Fernando Nieve": {
     "keyword": "Fernando Nieve Baseball PSA",
-    "nScraped": 60,
+    "nScraped": 0,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -1969,39 +1969,39 @@
   },
   "Francisco Alvarez": {
     "keyword": "Francisco Alvarez Baseball PSA",
-    "nScraped": 240,
-    "nSoldUsed": 103,
-    "avg": 54.05135922330096,
-    "taguchiSold": 54.05135922330096,
-    "medianSold": 49.99,
-    "marketStabilityCV": 0.3466170692326677,
-    "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
-  },
-  "Francisco Arcia": {
-    "keyword": "Francisco Arcia Baseball PSA",
-    "nScraped": 240,
-    "nSoldUsed": 12,
-    "avg": 19.990000000000002,
-    "taguchiSold": 19.990000000000002,
-    "medianSold": 19.99,
-    "marketStabilityCV": 1.8562723446343225e-16,
-    "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
-  },
-  "Francisco Cervelli": {
-    "keyword": "Francisco Cervelli Baseball PSA",
-    "nScraped": 180,
-    "nSoldUsed": 3,
+    "nScraped": 0,
+    "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
+  },
+  "Francisco Arcia": {
+    "keyword": "Francisco Arcia Baseball PSA",
+    "nScraped": 0,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
+    "currency": "USD",
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
+  },
+  "Francisco Cervelli": {
+    "keyword": "Francisco Cervelli Baseball PSA",
+    "nScraped": 0,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
+    "currency": "USD",
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
   },
   "Francisco Morales": {
     "keyword": "Francisco Morales Baseball PSA",
