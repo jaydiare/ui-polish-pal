@@ -60,7 +60,7 @@ const About = () => {
       />
       <VzlaNavbar />
       <VzlaSideBanner />
-
+      <TwitterFeed />
       <main className="page-shell">
         {/* ── Hero ── */}
         <motion.section
