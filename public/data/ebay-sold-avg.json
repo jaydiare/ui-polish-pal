@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-04-09T05:07:06.996Z",
+    "updatedAt": "2026-04-09T07:17:18.598Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. Taguchi winsorized mean + market stability CV. Ungraded condition policy (permissive for sold). Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 130,
-      "endIdx": 140,
+      "startIdx": 140,
+      "endIdx": 150,
       "totalAthletes": 571
     },
     "maxPages": 4,
@@ -1665,15 +1665,15 @@
   },
   "Elvis Andrus": {
     "keyword": "Elvis Andrus Baseball",
-    "nScraped": 0,
-    "nSoldUsed": 0,
-    "avg": null,
-    "taguchiSold": null,
-    "medianSold": null,
-    "marketStabilityCV": null,
+    "nScraped": 240,
+    "nSoldUsed": 85,
+    "avg": 2.0998823529411768,
+    "taguchiSold": 2.0998823529411768,
+    "medianSold": 1.99,
+    "marketStabilityCV": 0.38211118709571884,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
   },
   "Elvis Araújo": {
     "keyword": "Elvis Araújo Baseball",
@@ -1690,11 +1690,11 @@
   "Ender Inciarte": {
     "keyword": "Ender Inciarte Baseball",
     "nScraped": 234,
-    "nSoldUsed": 93,
-    "avg": 1.4013978494623678,
-    "taguchiSold": 1.4013978494623678,
-    "medianSold": 1.59,
-    "marketStabilityCV": 0.27538989731077695,
+    "nSoldUsed": 102,
+    "avg": 1.361372549019608,
+    "taguchiSold": 1.361372549019608,
+    "medianSold": 1.3199999999999998,
+    "marketStabilityCV": 0.2703310759355916,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
@@ -1702,26 +1702,26 @@
   "Enderson Franco": {
     "keyword": "Enderson Franco Baseball",
     "nScraped": 244,
-    "nSoldUsed": 24,
-    "avg": 1.67,
-    "taguchiSold": 1.67,
-    "medianSold": 1.67,
-    "marketStabilityCV": 0.048934507157389125,
+    "nSoldUsed": 20,
+    "avg": 1.59,
+    "taguchiSold": 1.59,
+    "medianSold": 1.59,
+    "marketStabilityCV": 0,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
   },
   "Endy Chavez": {
     "keyword": "Endy Chavez Baseball",
-    "nScraped": 206,
-    "nSoldUsed": 88,
-    "avg": 2.2609090909090934,
-    "taguchiSold": 2.2609090909090934,
-    "medianSold": 1.99,
-    "marketStabilityCV": 0.25891988815994693,
+    "nScraped": 0,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
   },
   "Engelb Vielma": {
     "keyword": "Engelb Vielma Baseball",
@@ -1737,15 +1737,15 @@
   },
   "Enmanuel De Jesus": {
     "keyword": "Enmanuel De Jesus Baseball",
-    "nScraped": 192,
-    "nSoldUsed": 21,
-    "avg": 4.484285714285714,
-    "taguchiSold": 4.484285714285714,
-    "medianSold": 4.45,
-    "marketStabilityCV": 0.10582698597212996,
+    "nScraped": 0,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
   },
   "Enrique González": {
     "keyword": "Enrique González Baseball",
@@ -3333,24 +3333,24 @@
   },
   "Elio Chacon": {
     "keyword": "Elio Chacon Baseball",
-    "nScraped": 0,
-    "nSoldUsed": 0,
-    "avg": null,
-    "taguchiSold": null,
-    "medianSold": null,
-    "marketStabilityCV": null,
+    "nScraped": 237,
+    "nSoldUsed": 73,
+    "avg": 4.66602739726027,
+    "taguchiSold": 4.66602739726027,
+    "medianSold": 4.5,
+    "marketStabilityCV": 0.14378056056373928,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
   },
   "Elvis Araujo": {
     "keyword": "Elvis Araujo Baseball",
-    "nScraped": 244,
-    "nSoldUsed": 8,
-    "avg": 1.295,
-    "taguchiSold": 1.295,
-    "medianSold": 1.295,
-    "marketStabilityCV": 0.2517827916086161,
+    "nScraped": 240,
+    "nSoldUsed": 4,
+    "avg": 0.99,
+    "taguchiSold": 0.99,
+    "medianSold": 0.99,
+    "marketStabilityCV": 0,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
