@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-04-10T11:15:03.545Z",
+    "updatedAt": "2026-04-10T13:53:05.187Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA/BGS/SGC grader title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 190,
-      "endIdx": 200,
+      "startIdx": 200,
+      "endIdx": 210,
       "totalAthletes": 460
     },
     "maxPages": 4,
@@ -2797,7 +2797,7 @@
   },
   "Jhonathan Diaz": {
     "keyword": "Jhonathan Diaz Baseball PSA",
-    "nScraped": 0,
+    "nScraped": 60,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -2821,7 +2821,7 @@
   },
   "Jhostynxon Garcia": {
     "keyword": "Jhostynxon Garcia Baseball PSA",
-    "nScraped": 140,
+    "nScraped": 146,
     "nSoldUsed": 32,
     "avg": 90.6825,
     "taguchiSold": 90.6825,
@@ -2857,12 +2857,12 @@
   },
   "Johan Santana": {
     "keyword": "Johan Santana Baseball PSA",
-    "nScraped": 281,
-    "nSoldUsed": 50,
-    "avg": 56.09479999999996,
-    "taguchiSold": 56.09479999999996,
+    "nScraped": 294,
+    "nSoldUsed": 54,
+    "avg": 56.01296296296291,
+    "taguchiSold": 56.01296296296291,
     "medianSold": 46.24,
-    "marketStabilityCV": 0.22187703448196236,
+    "marketStabilityCV": 0.2137153934596148,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
@@ -2893,15 +2893,15 @@
   },
   "Jorbit Vivas": {
     "keyword": "Jorbit Vivas Baseball PSA",
-    "nScraped": 138,
-    "nSoldUsed": 22,
-    "avg": 17.59090909090909,
-    "taguchiSold": 17.59090909090909,
-    "medianSold": 18.5,
-    "marketStabilityCV": 0.16727102712406963,
+    "nScraped": 0,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
   },
   "Jorge Barrosa": {
     "keyword": "Jorge Barrosa Baseball PSA",
