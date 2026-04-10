@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-04-10T03:45:09.638Z",
+    "updatedAt": "2026-04-10T06:13:01.003Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA/BGS/SGC grader title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 150,
-      "endIdx": 160,
+      "startIdx": 160,
+      "endIdx": 170,
       "totalAthletes": 460
     },
     "maxPages": 4,
@@ -32,7 +32,7 @@
     },
     "fx": {
       "source": "CBSA Exchange Rates API",
-      "asOf": "2026-04-10T00:00:00.000Z"
+      "asOf": "2026-04-11T00:00:00.000Z"
     }
   },
   "Adbert Alzolay": {
@@ -2269,19 +2269,19 @@
   },
   "Gregor Blanco": {
     "keyword": "Gregor Blanco Baseball PSA",
-    "nScraped": 0,
-    "nSoldUsed": 0,
+    "nScraped": 62,
+    "nSoldUsed": 1,
     "avg": null,
     "taguchiSold": null,
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
   },
   "Gregorio Petit": {
     "keyword": "Gregorio Petit Baseball PSA",
-    "nScraped": 0,
+    "nScraped": 23,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -2293,7 +2293,7 @@
   },
   "Gregory Infante": {
     "keyword": "Gregory Infante Baseball PSA",
-    "nScraped": 51,
+    "nScraped": 49,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -2305,7 +2305,7 @@
   },
   "Guilder Rodriguez": {
     "keyword": "Guilder Rodriguez Baseball PSA",
-    "nScraped": 348,
+    "nScraped": 369,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -2353,27 +2353,27 @@
   },
   "Gus Gil": {
     "keyword": "Gus Gil Baseball PSA",
-    "nScraped": 247,
-    "nSoldUsed": 12,
-    "avg": 57,
-    "taguchiSold": 57,
-    "medianSold": 57,
-    "marketStabilityCV": 0,
+    "nScraped": 246,
+    "nSoldUsed": 8,
+    "avg": 42.5,
+    "taguchiSold": 42.5,
+    "medianSold": 42.5,
+    "marketStabilityCV": 0.364732988962838,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
   },
   "Gus Polidor": {
     "keyword": "Gus Polidor Baseball PSA",
-    "nScraped": 240,
-    "nSoldUsed": 4,
-    "avg": 75,
-    "taguchiSold": 75,
-    "medianSold": 75,
-    "marketStabilityCV": 0,
+    "nScraped": 0,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
   },
   "Gustavo Chacin": {
     "keyword": "Gustavo Chacin Baseball PSA",
