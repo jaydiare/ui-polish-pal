@@ -1,13 +1,13 @@
 {
   "_meta": {
-    "updatedAt": "2026-04-10T02:02:36.617148+00:00",
+    "updatedAt": "2026-04-10T05:56:50.037403+00:00",
     "athleteCount": 457,
     "graders": [
       "PSA"
     ],
     "batchInfo": {
-      "startIdx": 320,
-      "endIdx": 340,
+      "startIdx": 340,
+      "endIdx": 360,
       "totalAthletes": 571
     }
   },
@@ -5203,14 +5203,14 @@
         "PSA": {
           "cards": 251,
           "gems": 713,
-          "grades": 1466,
+          "grades": 1467,
           "gemRate": 49.0
         }
       },
       "totals": {
         "cards": 251,
         "gems": 713,
-        "grades": 1466,
+        "grades": 1467,
         "gemRate": 49.0
       }
     },
@@ -5237,16 +5237,16 @@
       "sport": "Baseball",
       "graders": {
         "PSA": {
-          "cards": 7630,
-          "gems": 17493,
-          "grades": 40617,
+          "cards": 7636,
+          "gems": 17496,
+          "grades": 40644,
           "gemRate": 43.0
         }
       },
       "totals": {
-        "cards": 7630,
-        "gems": 17493,
-        "grades": 40617,
+        "cards": 7636,
+        "gems": 17496,
+        "grades": 40644,
         "gemRate": 43.0
       }
     },
@@ -5311,14 +5311,14 @@
         "PSA": {
           "cards": 64,
           "gems": 73,
-          "grades": 142,
+          "grades": 143,
           "gemRate": 51.0
         }
       },
       "totals": {
         "cards": 64,
         "gems": 73,
-        "grades": 142,
+        "grades": 143,
         "gemRate": 51.0
       }
     },
@@ -5346,16 +5346,16 @@
       "graders": {
         "PSA": {
           "cards": 57,
-          "gems": 113,
-          "grades": 156,
-          "gemRate": 72.0
+          "gems": 117,
+          "grades": 160,
+          "gemRate": 73.0
         }
       },
       "totals": {
         "cards": 57,
-        "gems": 113,
-        "grades": 156,
-        "gemRate": 72.0
+        "gems": 117,
+        "grades": 160,
+        "gemRate": 73.0
       }
     },
     "Miguel Yajure": {
