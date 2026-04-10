@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-04-10T13:53:05.187Z",
+    "updatedAt": "2026-04-10T15:11:14.035Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA/BGS/SGC grader title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 200,
-      "endIdx": 210,
+      "startIdx": 210,
+      "endIdx": 220,
       "totalAthletes": 460
     },
     "maxPages": 4,
@@ -2917,7 +2917,7 @@
   },
   "Jorge Julio": {
     "keyword": "Jorge Julio Baseball PSA",
-    "nScraped": 0,
+    "nScraped": 61,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -2955,10 +2955,10 @@
     "keyword": "Jose Altuve Baseball PSA",
     "nScraped": 240,
     "nSoldUsed": 107,
-    "avg": 67.30018691588783,
-    "taguchiSold": 67.30018691588783,
-    "medianSold": 64.54,
-    "marketStabilityCV": 0.2632361773165365,
+    "avg": 58.618504672897195,
+    "taguchiSold": 58.618504672897195,
+    "medianSold": 59,
+    "marketStabilityCV": 0.21358331811466372,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
@@ -2966,11 +2966,11 @@
   "Jose Alvarado": {
     "keyword": "Jose Alvarado Baseball PSA",
     "nScraped": 244,
-    "nSoldUsed": 75,
-    "avg": 71.362,
-    "taguchiSold": 71.362,
-    "medianSold": 70,
-    "marketStabilityCV": 0.05037161376818243,
+    "nSoldUsed": 72,
+    "avg": 72.49555555555554,
+    "taguchiSold": 72.49555555555554,
+    "medianSold": 72.5,
+    "marketStabilityCV": 0.0347886250721727,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
@@ -2989,12 +2989,12 @@
   },
   "Jose Azocar": {
     "keyword": "Jose Azocar Baseball PSA",
-    "nScraped": 240,
-    "nSoldUsed": 4,
-    "avg": 7,
-    "taguchiSold": 7,
-    "medianSold": 7,
-    "marketStabilityCV": 0,
+    "nScraped": 244,
+    "nSoldUsed": 8,
+    "avg": 8.5,
+    "taguchiSold": 8.5,
+    "medianSold": 8.5,
+    "marketStabilityCV": 0.1886549942911231,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
@@ -3025,7 +3025,7 @@
   },
   "Jose Campos": {
     "keyword": "Jose Campos Baseball PSA",
-    "nScraped": 60,
+    "nScraped": 0,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
