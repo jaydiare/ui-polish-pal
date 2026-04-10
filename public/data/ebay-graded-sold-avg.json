@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-04-09T23:04:15.664Z",
+    "updatedAt": "2026-04-10T03:45:09.638Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA/BGS/SGC grader title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 140,
-      "endIdx": 150,
+      "startIdx": 150,
+      "endIdx": 160,
       "totalAthletes": 460
     },
     "maxPages": 4,
@@ -2125,27 +2125,27 @@
   },
   "Gabriel Arias": {
     "keyword": "Gabriel Arias Baseball PSA",
-    "nScraped": 0,
-    "nSoldUsed": 0,
-    "avg": null,
-    "taguchiSold": null,
-    "medianSold": null,
-    "marketStabilityCV": null,
+    "nScraped": 300,
+    "nSoldUsed": 56,
+    "avg": 23.060714285714287,
+    "taguchiSold": 23.060714285714287,
+    "medianSold": 18.955,
+    "marketStabilityCV": 0.26388710657572223,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
   },
   "Gabriel Moreno": {
     "keyword": "Gabriel Moreno Baseball PSA",
-    "nScraped": 0,
-    "nSoldUsed": 0,
-    "avg": null,
-    "taguchiSold": null,
-    "medianSold": null,
-    "marketStabilityCV": null,
+    "nScraped": 152,
+    "nSoldUsed": 57,
+    "avg": 27.161929824561405,
+    "taguchiSold": 27.161929824561405,
+    "medianSold": 25,
+    "marketStabilityCV": 0.26208781006635046,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
   },
   "Gabriel Moya": {
     "keyword": "Gabriel Moya Baseball",
@@ -2197,7 +2197,7 @@
   },
   "German Marquez": {
     "keyword": "German Marquez Baseball PSA",
-    "nScraped": 246,
+    "nScraped": 245,
     "nSoldUsed": 8,
     "avg": 9.875,
     "taguchiSold": 9.875,
@@ -2233,19 +2233,19 @@
   },
   "Gleyber Torres": {
     "keyword": "Gleyber Torres Baseball PSA",
-    "nScraped": 240,
-    "nSoldUsed": 154,
-    "avg": 10.15805194805195,
-    "taguchiSold": 10.15805194805195,
-    "medianSold": 9.99,
-    "marketStabilityCV": 0.20706154228202464,
+    "nScraped": 60,
+    "nSoldUsed": 41,
+    "avg": 8.959756097560978,
+    "taguchiSold": 8.959756097560978,
+    "medianSold": 8.54,
+    "marketStabilityCV": 0.10536246055153521,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
   },
   "Gonzalo Marquez": {
     "keyword": "Gonzalo Marquez Baseball PSA",
-    "nScraped": 240,
+    "nScraped": 0,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
