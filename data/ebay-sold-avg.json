@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-04-10T02:10:55.680Z",
+    "updatedAt": "2026-04-10T05:22:39.213Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. Taguchi winsorized mean + market stability CV. Ungraded condition policy (permissive for sold). Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 200,
-      "endIdx": 210,
+      "startIdx": 210,
+      "endIdx": 220,
       "totalAthletes": 571
     },
     "maxPages": 4,
@@ -28,7 +28,7 @@
     },
     "fx": {
       "source": "CBSA Exchange Rates API",
-      "asOf": "2026-04-10T00:00:00.000Z"
+      "asOf": "2026-04-11T00:00:00.000Z"
     }
   },
   "Adbert Alzolay": {
@@ -2457,7 +2457,7 @@
   },
   "Humberto Arteaga": {
     "keyword": "Humberto Arteaga Baseball",
-    "nScraped": 0,
+    "nScraped": 240,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -2469,15 +2469,15 @@
   },
   "Humberto Quintero": {
     "keyword": "Humberto Quintero Baseball",
-    "nScraped": 0,
-    "nSoldUsed": 0,
-    "avg": null,
-    "taguchiSold": null,
-    "medianSold": null,
-    "marketStabilityCV": null,
+    "nScraped": 328,
+    "nSoldUsed": 44,
+    "avg": 1.971818181818181,
+    "taguchiSold": 1.971818181818181,
+    "medianSold": 1.99,
+    "marketStabilityCV": 0.010217700701894823,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
   },
   "Héctor Giménez": {
     "keyword": "Héctor Giménez Baseball",
@@ -2517,24 +2517,24 @@
   },
   "Ildemaro Vargas": {
     "keyword": "Ildemaro Vargas Baseball",
-    "nScraped": 124,
-    "nSoldUsed": 51,
-    "avg": 1.318039215686276,
-    "taguchiSold": 1.318039215686276,
-    "medianSold": 1.5,
-    "marketStabilityCV": 0.21589870545043938,
+    "nScraped": 120,
+    "nSoldUsed": 54,
+    "avg": 1.6379629629629644,
+    "taguchiSold": 1.6379629629629644,
+    "medianSold": 1.59,
+    "marketStabilityCV": 0.08856235400141081,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
   },
   "Israel Pineda": {
     "keyword": "Israel Pineda Baseball",
-    "nScraped": 187,
-    "nSoldUsed": 112,
-    "avg": 1.100714285714286,
-    "taguchiSold": 1.100714285714286,
+    "nScraped": 201,
+    "nSoldUsed": 126,
+    "avg": 1.0108730158730186,
+    "taguchiSold": 1.0108730158730186,
     "medianSold": 0.99,
-    "marketStabilityCV": 0.11608072805966933,
+    "marketStabilityCV": 0.0242965992668281,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
@@ -2553,7 +2553,7 @@
   },
   "J.C. Boscan": {
     "keyword": "J.C. Boscan Baseball",
-    "nScraped": 240,
+    "nScraped": 0,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -3585,12 +3585,12 @@
   },
   "Ivan Ochoa": {
     "keyword": "Ivan Ochoa Baseball",
-    "nScraped": 264,
-    "nSoldUsed": 52,
-    "avg": 1.4176923076923083,
-    "taguchiSold": 1.4176923076923083,
+    "nScraped": 66,
+    "nSoldUsed": 13,
+    "avg": 1.4176923076923076,
+    "taguchiSold": 1.4176923076923076,
     "medianSold": 1.45,
-    "marketStabilityCV": 0.1541132137065141,
+    "marketStabilityCV": 0.15885626460383634,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
