@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-04-10T15:11:14.035Z",
+    "updatedAt": "2026-04-10T17:11:24.593Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA/BGS/SGC grader title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 210,
-      "endIdx": 220,
+      "startIdx": 220,
+      "endIdx": 230,
       "totalAthletes": 460
     },
     "maxPages": 4,
@@ -3085,7 +3085,7 @@
   },
   "Jose Lobaton": {
     "keyword": "Jose Lobaton Baseball PSA",
-    "nScraped": 0,
+    "nScraped": 60,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -3122,11 +3122,11 @@
   "Jose Martinez": {
     "keyword": "Jose Martinez Cardinals Baseball PSA",
     "nScraped": 60,
-    "nSoldUsed": 5,
-    "avg": 39.85,
-    "taguchiSold": 39.85,
-    "medianSold": 39.85,
-    "marketStabilityCV": 0,
+    "nSoldUsed": 4,
+    "avg": 29.674999999999997,
+    "taguchiSold": 29.674999999999997,
+    "medianSold": 29.675,
+    "marketStabilityCV": 0.3959251214156322,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
