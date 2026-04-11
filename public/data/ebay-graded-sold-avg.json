@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-04-11T10:59:44.974Z",
+    "updatedAt": "2026-04-11T13:33:34.725Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA/BGS/SGC grader title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 300,
-      "endIdx": 310,
+      "startIdx": 310,
+      "endIdx": 320,
       "totalAthletes": 460
     },
     "maxPages": 4,
@@ -4273,7 +4273,7 @@
   },
   "Miguel Montero": {
     "keyword": "Miguel Montero Baseball PSA",
-    "nScraped": 0,
+    "nScraped": 60,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -4297,15 +4297,15 @@
   },
   "Miguel Rojas": {
     "keyword": "Miguel Rojas Baseball PSA",
-    "nScraped": 256,
-    "nSoldUsed": 4,
-    "avg": 324.88,
-    "taguchiSold": 324.88,
-    "medianSold": 324.88,
-    "marketStabilityCV": 0,
+    "nScraped": 268,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
   },
   "Miguel Socolovich": {
     "keyword": "Miguel Socolovich Baseball",
@@ -4333,12 +4333,12 @@
   },
   "Moises Ballesteros": {
     "keyword": "Moises Ballesteros Baseball PSA",
-    "nScraped": 202,
-    "nSoldUsed": 104,
-    "avg": 136.4140384615383,
-    "taguchiSold": 136.4140384615383,
+    "nScraped": 212,
+    "nSoldUsed": 110,
+    "avg": 130.1171818181818,
+    "taguchiSold": 130.1171818181818,
     "medianSold": 125,
-    "marketStabilityCV": 0.08822883206104162,
+    "marketStabilityCV": 0.07355806271703508,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
@@ -4381,12 +4381,12 @@
   },
   "Odubel Herrera": {
     "keyword": "Odubel Herrera Baseball PSA",
-    "nScraped": 240,
-    "nSoldUsed": 8,
+    "nScraped": 121,
+    "nSoldUsed": 4,
     "avg": 2.89,
     "taguchiSold": 2.89,
     "medianSold": 2.89,
-    "marketStabilityCV": 0.5030799847763281,
+    "marketStabilityCV": 0.5433884886490595,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
