@@ -1,13 +1,13 @@
 {
   "_meta": {
-    "updatedAt": "2026-04-11T12:48:16.576114+00:00",
-    "athleteCount": 457,
+    "updatedAt": "2026-04-11T16:33:44.580282+00:00",
+    "athleteCount": 458,
     "graders": [
       "PSA"
     ],
     "batchInfo": {
-      "startIdx": 500,
-      "endIdx": 520,
+      "startIdx": 520,
+      "endIdx": 540,
       "totalAthletes": 571
     }
   },
@@ -7703,16 +7703,16 @@
       "sport": "Soccer",
       "graders": {
         "PSA": {
-          "cards": 35,
-          "gems": 31,
-          "grades": 64,
+          "cards": 37,
+          "gems": 32,
+          "grades": 66,
           "gemRate": 48.0
         }
       },
       "totals": {
-        "cards": 35,
-        "gems": 31,
-        "grades": 64,
+        "cards": 37,
+        "gems": 32,
+        "grades": 66,
         "gemRate": 48.0
       }
     },
@@ -8236,6 +8236,24 @@
         "gems": 1839,
         "grades": 3448,
         "gemRate": 53.0
+      }
+    },
+    "Gustavo Caraballo": {
+      "name": "Gustavo Caraballo",
+      "sport": "Soccer",
+      "graders": {
+        "PSA": {
+          "cards": 1,
+          "gems": 1,
+          "grades": 1,
+          "gemRate": 100.0
+        }
+      },
+      "totals": {
+        "cards": 1,
+        "gems": 1,
+        "grades": 1,
+        "gemRate": 100.0
       }
     }
   }
