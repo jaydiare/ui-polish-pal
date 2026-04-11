@@ -1,13 +1,13 @@
 {
   "_meta": {
-    "updatedAt": "2026-04-10T20:31:40.875908+00:00",
+    "updatedAt": "2026-04-11T01:52:17.270346+00:00",
     "athleteCount": 457,
     "graders": [
       "PSA"
     ],
     "batchInfo": {
-      "startIdx": 420,
-      "endIdx": 440,
+      "startIdx": 440,
+      "endIdx": 460,
       "totalAthletes": 571
     }
   },
@@ -6732,16 +6732,16 @@
       "graders": {
         "PSA": {
           "cards": 12,
-          "gems": 43,
-          "grades": 122,
-          "gemRate": 35.0
+          "gems": 44,
+          "grades": 123,
+          "gemRate": 36.0
         }
       },
       "totals": {
         "cards": 12,
-        "gems": 43,
-        "grades": 122,
-        "gemRate": 35.0
+        "gems": 44,
+        "grades": 123,
+        "gemRate": 36.0
       }
     },
     "Tucupita Marcano": {
@@ -6823,14 +6823,14 @@
         "PSA": {
           "cards": 47,
           "gems": 91,
-          "grades": 3360,
+          "grades": 3361,
           "gemRate": 3.0
         }
       },
       "totals": {
         "cards": 47,
         "gems": 91,
-        "grades": 3360,
+        "grades": 3361,
         "gemRate": 3.0
       }
     },
@@ -6839,16 +6839,16 @@
       "sport": "Baseball",
       "graders": {
         "PSA": {
-          "cards": 343,
+          "cards": 344,
           "gems": 385,
-          "grades": 829,
+          "grades": 832,
           "gemRate": 46.0
         }
       },
       "totals": {
-        "cards": 343,
+        "cards": 344,
         "gems": 385,
-        "grades": 829,
+        "grades": 832,
         "gemRate": 46.0
       }
     },
@@ -6966,15 +6966,15 @@
       "graders": {
         "PSA": {
           "cards": 229,
-          "gems": 546,
-          "grades": 972,
+          "gems": 547,
+          "grades": 973,
           "gemRate": 56.0
         }
       },
       "totals": {
         "cards": 229,
-        "gems": 546,
-        "grades": 972,
+        "gems": 547,
+        "grades": 973,
         "gemRate": 56.0
       }
     },
