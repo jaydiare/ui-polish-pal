@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-04-11T07:31:45.450Z",
+    "updatedAt": "2026-04-11T09:05:29.824Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA/BGS/SGC grader title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 280,
-      "endIdx": 290,
+      "startIdx": 290,
+      "endIdx": 300,
       "totalAthletes": 460
     },
     "maxPages": 4,
@@ -3997,19 +3997,19 @@
   },
   "Maikel Garcia": {
     "keyword": "Maikel Garcia Baseball PSA",
-    "nScraped": 0,
-    "nSoldUsed": 0,
-    "avg": null,
-    "taguchiSold": null,
-    "medianSold": null,
-    "marketStabilityCV": null,
+    "nScraped": 105,
+    "nSoldUsed": 79,
+    "avg": 110.44303797468355,
+    "taguchiSold": 110.44303797468355,
+    "medianSold": 100,
+    "marketStabilityCV": 0.11235093812808786,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
   },
   "Manny Pina": {
     "keyword": "Manny Pina Baseball PSA",
-    "nScraped": 242,
+    "nScraped": 241,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -4021,24 +4021,24 @@
   },
   "Manny Sarmiento": {
     "keyword": "Manny Sarmiento Baseball PSA",
-    "nScraped": 244,
-    "nSoldUsed": 8,
-    "avg": 60.16,
-    "taguchiSold": 60.16,
-    "medianSold": 60.16,
-    "marketStabilityCV": 0.707957970597805,
+    "nScraped": 245,
+    "nSoldUsed": 12,
+    "avg": 26,
+    "taguchiSold": 26,
+    "medianSold": 26,
+    "marketStabilityCV": 0,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
   },
   "Manny Trillo": {
     "keyword": "Manny Trillo Baseball PSA",
-    "nScraped": 288,
-    "nSoldUsed": 24,
-    "avg": 18.29000000000001,
-    "taguchiSold": 18.29000000000001,
-    "medianSold": 18.29,
-    "marketStabilityCV": 0.2194929359791282,
+    "nScraped": 300,
+    "nSoldUsed": 28,
+    "avg": 21.32857142857143,
+    "taguchiSold": 21.32857142857143,
+    "medianSold": 22.22,
+    "marketStabilityCV": 0.30197188761937105,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
@@ -4057,7 +4057,7 @@
   },
   "Marcos Armas": {
     "keyword": "Marcos Armas Baseball PSA",
-    "nScraped": 60,
+    "nScraped": 0,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -4081,15 +4081,15 @@
   },
   "Martin Perez": {
     "keyword": "Martin Perez Baseball PSA",
-    "nScraped": 122,
-    "nSoldUsed": 2,
+    "nScraped": 0,
+    "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
   },
   "Martin Prado": {
     "keyword": "Martin Prado Baseball PSA",
