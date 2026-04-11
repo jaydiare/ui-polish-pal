@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-04-10T23:00:12.418Z",
+    "updatedAt": "2026-04-11T03:22:51.799Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA/BGS/SGC grader title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 250,
-      "endIdx": 260,
+      "startIdx": 260,
+      "endIdx": 270,
       "totalAthletes": 460
     },
     "maxPages": 4,
@@ -3637,24 +3637,24 @@
   },
   "Luis Alexander Basabe": {
     "keyword": "Luis Alexander Basabe Baseball PSA",
-    "nScraped": 0,
-    "nSoldUsed": 0,
-    "avg": null,
-    "taguchiSold": null,
-    "medianSold": null,
-    "marketStabilityCV": null,
+    "nScraped": 240,
+    "nSoldUsed": 12,
+    "avg": 9,
+    "taguchiSold": 9,
+    "medianSold": 9,
+    "marketStabilityCV": 0,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
   },
   "Luis Aparicio": {
     "keyword": "Luis Aparicio Baseball PSA",
     "nScraped": 240,
-    "nSoldUsed": 108,
-    "avg": 75.86805555555554,
-    "taguchiSold": 75.86805555555554,
-    "medianSold": 69.975,
-    "marketStabilityCV": 0.27239799718667196,
+    "nSoldUsed": 110,
+    "avg": 70.23118181818181,
+    "taguchiSold": 70.23118181818181,
+    "medianSold": 67.475,
+    "marketStabilityCV": 0.20921075502943426,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
@@ -3673,12 +3673,12 @@
   },
   "Luis Arraez": {
     "keyword": "Luis Arraez Baseball PSA",
-    "nScraped": 225,
-    "nSoldUsed": 130,
-    "avg": 50.49476923076923,
-    "taguchiSold": 50.49476923076923,
-    "medianSold": 48.504999999999995,
-    "marketStabilityCV": 0.3003683223896255,
+    "nScraped": 234,
+    "nSoldUsed": 138,
+    "avg": 47.15630434782608,
+    "taguchiSold": 47.15630434782608,
+    "medianSold": 44,
+    "marketStabilityCV": 0.25376443995764036,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
@@ -3709,7 +3709,7 @@
   },
   "Luis Curvelo": {
     "keyword": "Luis Curvelo Baseball PSA",
-    "nScraped": 60,
+    "nScraped": 0,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -3721,15 +3721,15 @@
   },
   "Luis Garcia": {
     "keyword": "Luis Garcia Baseball PSA",
-    "nScraped": 224,
-    "nSoldUsed": 124,
-    "avg": 9.818709677419358,
-    "taguchiSold": 9.818709677419358,
-    "medianSold": 10,
-    "marketStabilityCV": 0.21163076511732207,
+    "nScraped": 0,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
   },
   "Luis Guillorme": {
     "keyword": "Luis Guillorme Baseball PSA",
