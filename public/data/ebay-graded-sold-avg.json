@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-04-11T13:33:34.725Z",
+    "updatedAt": "2026-04-11T14:59:26.101Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA/BGS/SGC grader title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 310,
-      "endIdx": 320,
+      "startIdx": 320,
+      "endIdx": 330,
       "totalAthletes": 460
     },
     "maxPages": 4,
@@ -4429,15 +4429,15 @@
   },
   "Omar Vizquel": {
     "keyword": "Omar Vizquel Baseball PSA",
-    "nScraped": 0,
-    "nSoldUsed": 0,
-    "avg": null,
-    "taguchiSold": null,
-    "medianSold": null,
-    "marketStabilityCV": null,
+    "nScraped": 128,
+    "nSoldUsed": 63,
+    "avg": 21.95111111111111,
+    "taguchiSold": 21.95111111111111,
+    "medianSold": 21.5,
+    "marketStabilityCV": 0.09304772393652119,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
   },
   "Orber Moreno": {
     "keyword": "Orber Moreno Baseball PSA",
@@ -4453,7 +4453,7 @@
   },
   "Orlando Arcia": {
     "keyword": "Orlando Arcia Baseball PSA",
-    "nScraped": 254,
+    "nScraped": 257,
     "nSoldUsed": 32,
     "avg": 13.064999999999998,
     "taguchiSold": 13.064999999999998,
@@ -4513,15 +4513,15 @@
   },
   "Osleivis Basabe": {
     "keyword": "Osleivis Basabe Baseball PSA",
-    "nScraped": 248,
-    "nSoldUsed": 12,
-    "avg": 15.5,
-    "taguchiSold": 15.5,
-    "medianSold": 15.5,
-    "marketStabilityCV": 0,
+    "nScraped": 0,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
   },
   "Osmer Morales": {
     "keyword": "Osmer Morales Baseball",
