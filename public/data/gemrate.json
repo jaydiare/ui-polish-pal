@@ -1,13 +1,13 @@
 {
   "_meta": {
-    "updatedAt": "2026-04-11T01:52:17.270346+00:00",
+    "updatedAt": "2026-04-11T05:25:04.894794+00:00",
     "athleteCount": 457,
     "graders": [
       "PSA"
     ],
     "batchInfo": {
-      "startIdx": 440,
-      "endIdx": 460,
+      "startIdx": 460,
+      "endIdx": 480,
       "totalAthletes": 571
     }
   },
@@ -6983,16 +6983,16 @@
       "sport": "Baseball",
       "graders": {
         "PSA": {
-          "cards": 705,
+          "cards": 707,
           "gems": 1035,
-          "grades": 2317,
+          "grades": 2321,
           "gemRate": 45.0
         }
       },
       "totals": {
-        "cards": 705,
+        "cards": 707,
         "gems": 1035,
-        "grades": 2317,
+        "grades": 2321,
         "gemRate": 45.0
       }
     },
@@ -7073,17 +7073,17 @@
       "sport": "Baseball",
       "graders": {
         "PSA": {
-          "cards": 854,
+          "cards": 857,
           "gems": 1554,
-          "grades": 2698,
-          "gemRate": 58.0
+          "grades": 2703,
+          "gemRate": 57.0
         }
       },
       "totals": {
-        "cards": 854,
+        "cards": 857,
         "gems": 1554,
-        "grades": 2698,
-        "gemRate": 58.0
+        "grades": 2703,
+        "gemRate": 57.0
       }
     },
     "Wilmer Flores": {
@@ -7163,16 +7163,16 @@
       "sport": "Baseball",
       "graders": {
         "PSA": {
-          "cards": 345,
-          "gems": 1208,
-          "grades": 2262,
+          "cards": 347,
+          "gems": 1211,
+          "grades": 2267,
           "gemRate": 53.0
         }
       },
       "totals": {
-        "cards": 345,
-        "gems": 1208,
-        "grades": 2262,
+        "cards": 347,
+        "gems": 1211,
+        "grades": 2267,
         "gemRate": 53.0
       }
     },
@@ -7201,15 +7201,15 @@
         "PSA": {
           "cards": 62,
           "gems": 31,
-          "grades": 105,
-          "gemRate": 30.0
+          "grades": 106,
+          "gemRate": 29.0
         }
       },
       "totals": {
         "cards": 62,
         "gems": 31,
-        "grades": 105,
-        "gemRate": 30.0
+        "grades": 106,
+        "gemRate": 29.0
       }
     },
     "Yoel Hernandez": {
