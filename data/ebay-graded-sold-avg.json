@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-04-11T22:57:26.707Z",
+    "updatedAt": "2026-04-12T03:49:09.651Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA/BGS/SGC grader title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 360,
-      "endIdx": 370,
+      "startIdx": 370,
+      "endIdx": 380,
       "totalAthletes": 460
     },
     "maxPages": 4,
@@ -5089,15 +5089,15 @@
   },
   "Ronald Acuna Jr.": {
     "keyword": "Ronald Acuna Jr. Baseball PSA",
-    "nScraped": 0,
-    "nSoldUsed": 0,
-    "avg": null,
-    "taguchiSold": null,
-    "medianSold": null,
-    "marketStabilityCV": null,
+    "nScraped": 240,
+    "nSoldUsed": 65,
+    "avg": 48.1198461538461,
+    "taguchiSold": 48.1198461538461,
+    "medianSold": 45.95,
+    "marketStabilityCV": 0.167311747708149,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
   },
   "Ronald Belisario": {
     "keyword": "Ronald Belisario Baseball PSA",
@@ -5161,12 +5161,12 @@
   },
   "Rougned Odor": {
     "keyword": "Rougned Odor Baseball PSA",
-    "nScraped": 252,
-    "nSoldUsed": 44,
-    "avg": 28.862727272727273,
-    "taguchiSold": 28.862727272727273,
+    "nScraped": 253,
+    "nSoldUsed": 43,
+    "avg": 28.720000000000002,
+    "taguchiSold": 28.720000000000002,
     "medianSold": 26.99,
-    "marketStabilityCV": 0.19990737961775912,
+    "marketStabilityCV": 0.20052327724836402,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
@@ -5185,19 +5185,19 @@
   },
   "Salvador Perez": {
     "keyword": "Salvador Perez Baseball PSA",
-    "nScraped": 240,
-    "nSoldUsed": 79,
-    "avg": 70.40278481012658,
-    "taguchiSold": 70.40278481012658,
-    "medianSold": 69.99,
-    "marketStabilityCV": 0.21371328072570778,
+    "nScraped": 0,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
   },
   "Sandy Leon": {
     "keyword": "Sandy Leon Baseball PSA",
-    "nScraped": 60,
+    "nScraped": 0,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
