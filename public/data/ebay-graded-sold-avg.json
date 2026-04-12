@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-04-12T06:07:49.789Z",
+    "updatedAt": "2026-04-12T07:47:33.563Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA/BGS/SGC grader title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 380,
-      "endIdx": 390,
+      "startIdx": 390,
+      "endIdx": 400,
       "totalAthletes": 460
     },
     "maxPages": 4,
@@ -5365,7 +5365,7 @@
   },
   "Ubaldo Heredia": {
     "keyword": "Ubaldo Heredia Baseball PSA",
-    "nScraped": 0,
+    "nScraped": 34,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -5401,7 +5401,7 @@
   },
   "Vic Davalillo": {
     "keyword": "Vic Davalillo Baseball PSA",
-    "nScraped": 307,
+    "nScraped": 308,
     "nSoldUsed": 56,
     "avg": 58.227142857142844,
     "taguchiSold": 58.227142857142844,
@@ -5425,7 +5425,7 @@
   },
   "Victor Martinez": {
     "keyword": "Victor Martinez Baseball PSA",
-    "nScraped": 299,
+    "nScraped": 302,
     "nSoldUsed": 24,
     "avg": 54.5,
     "taguchiSold": 54.5,
@@ -5449,7 +5449,7 @@
   },
   "Victor Zambrano": {
     "keyword": "Victor Zambrano Baseball PSA",
-    "nScraped": 60,
+    "nScraped": 0,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
