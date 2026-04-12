@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-04-12T15:01:15.997Z",
+    "updatedAt": "2026-04-12T17:01:39.059Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA/BGS/SGC grader title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 430,
-      "endIdx": 440,
+      "startIdx": 440,
+      "endIdx": 450,
       "totalAthletes": 461
     },
     "maxPages": 4,
@@ -6193,7 +6193,7 @@
   },
   "Yangel Herrera": {
     "keyword": "Yangel Herrera Soccer PSA",
-    "nScraped": 189,
+    "nScraped": 168,
     "nSoldUsed": 4,
     "avg": 15.5,
     "taguchiSold": 15.5,
@@ -6265,7 +6265,7 @@
   },
   "Wuilker Farinez": {
     "keyword": "Wuilker Farinez Soccer PSA",
-    "nScraped": 6,
+    "nScraped": 3,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -6385,12 +6385,12 @@
   },
   "David Martinez": {
     "keyword": "David Martinez Soccer PSA",
-    "nScraped": 255,
-    "nSoldUsed": 8,
-    "avg": 177.5,
-    "taguchiSold": 177.5,
-    "medianSold": 177.5,
-    "marketStabilityCV": 0.647509997025459,
+    "nScraped": 264,
+    "nSoldUsed": 12,
+    "avg": 69.99,
+    "taguchiSold": 69.99,
+    "medianSold": 69.99,
+    "marketStabilityCV": 0,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
@@ -6409,7 +6409,7 @@
   },
   "Emilio Renteria": {
     "keyword": "Emilio Renteria Soccer PSA",
-    "nScraped": 3,
+    "nScraped": 2,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -6456,16 +6456,16 @@
     "fxRateUsed": null
   },
   "Gustavo Caraballo": {
-    "keyword": "Gustavo Caraballo Soccer",
-    "nScraped": 53,
-    "nSoldUsed": 2,
+    "keyword": "Gustavo Caraballo Soccer PSA",
+    "nScraped": 0,
+    "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
   },
   "Javier Otero": {
     "keyword": "Javier Otero Soccer",
