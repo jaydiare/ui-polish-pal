@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-04-12T03:49:09.651Z",
+    "updatedAt": "2026-04-12T06:07:49.789Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA/BGS/SGC grader title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 370,
-      "endIdx": 380,
+      "startIdx": 380,
+      "endIdx": 390,
       "totalAthletes": 460
     },
     "maxPages": 4,
@@ -32,7 +32,7 @@
     },
     "fx": {
       "source": "CBSA Exchange Rates API",
-      "asOf": "2026-04-12T00:00:00.000Z"
+      "asOf": "2026-04-13T00:00:00.000Z"
     }
   },
   "Adbert Alzolay": {
@@ -5209,7 +5209,7 @@
   },
   "Sebastian Rivero": {
     "keyword": "Sebastian Rivero Baseball PSA",
-    "nScraped": 0,
+    "nScraped": 60,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -5221,7 +5221,7 @@
   },
   "Sergio Escalona": {
     "keyword": "Sergio Escalona Baseball PSA",
-    "nScraped": 21,
+    "nScraped": 23,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -5269,12 +5269,12 @@
   },
   "Thairo Estrada": {
     "keyword": "Thairo Estrada Baseball PSA",
-    "nScraped": 242,
-    "nSoldUsed": 12,
-    "avg": 10,
-    "taguchiSold": 10,
-    "medianSold": 10,
-    "marketStabilityCV": 0,
+    "nScraped": 244,
+    "nSoldUsed": 8,
+    "avg": 26.625,
+    "taguchiSold": 26.625,
+    "medianSold": 26.625,
+    "marketStabilityCV": 0.9385512157300161,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
@@ -5329,19 +5329,19 @@
   },
   "Tony Armas": {
     "keyword": "Tony Armas Baseball PSA",
-    "nScraped": 330,
-    "nSoldUsed": 48,
-    "avg": 25.037499999999998,
-    "taguchiSold": 25.037499999999998,
-    "medianSold": 22.75,
-    "marketStabilityCV": 0.24755141307656608,
+    "nScraped": 165,
+    "nSoldUsed": 20,
+    "avg": 19.469999999999995,
+    "taguchiSold": 19.469999999999995,
+    "medianSold": 19.47,
+    "marketStabilityCV": 0.02529376522860167,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
   },
   "Tony Castillo": {
     "keyword": "Tony Castillo Baseball PSA",
-    "nScraped": 61,
+    "nScraped": 0,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
