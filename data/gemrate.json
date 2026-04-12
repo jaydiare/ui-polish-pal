@@ -1,13 +1,13 @@
 {
   "_meta": {
-    "updatedAt": "2026-04-12T02:03:03.713704+00:00",
-    "athleteCount": 458,
+    "updatedAt": "2026-04-12T05:53:22.844186+00:00",
+    "athleteCount": 459,
     "graders": [
       "PSA"
     ],
     "batchInfo": {
-      "startIdx": 560,
-      "endIdx": 571,
+      "startIdx": 0,
+      "endIdx": 20,
       "totalAthletes": 571
     }
   },
@@ -8225,16 +8225,16 @@
       "sport": "Baseball",
       "graders": {
         "PSA": {
-          "cards": 566,
-          "gems": 1839,
-          "grades": 3448,
+          "cards": 567,
+          "gems": 1841,
+          "grades": 3454,
           "gemRate": 53.0
         }
       },
       "totals": {
-        "cards": 566,
-        "gems": 1839,
-        "grades": 3448,
+        "cards": 567,
+        "gems": 1841,
+        "grades": 3454,
         "gemRate": 53.0
       }
     },
@@ -8254,6 +8254,24 @@
         "gems": 1,
         "grades": 1,
         "gemRate": 100.0
+      }
+    },
+    "Jesus Luzardo": {
+      "name": "Jesus Luzardo",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 982,
+          "gems": 4735,
+          "grades": 8016,
+          "gemRate": 59.0
+        }
+      },
+      "totals": {
+        "cards": 982,
+        "gems": 4735,
+        "grades": 8016,
+        "gemRate": 59.0
       }
     }
   }
