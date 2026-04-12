@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-04-12T07:09:52.315Z",
+    "updatedAt": "2026-04-12T09:42:28.224Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. Taguchi winsorized mean + market stability CV. Ungraded condition policy (permissive for sold). Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 380,
-      "endIdx": 390,
+      "startIdx": 390,
+      "endIdx": 400,
       "totalAthletes": 571
     },
     "maxPages": 4,
@@ -5457,7 +5457,7 @@
   },
   "Pompeyo Davalillo": {
     "keyword": "Pompeyo Davalillo Baseball",
-    "nScraped": 0,
+    "nScraped": 240,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -5469,6 +5469,54 @@
   },
   "Rafael Betancourt": {
     "keyword": "Rafael Betancourt Baseball",
+    "nScraped": 300,
+    "nSoldUsed": 32,
+    "avg": 1.8350000000000006,
+    "taguchiSold": 1.8350000000000006,
+    "medianSold": 1.835,
+    "marketStabilityCV": 0.08582024930803066,
+    "currency": "USD",
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
+  },
+  "Rafael Marchan": {
+    "keyword": "Rafael Marchan Baseball",
+    "nScraped": 240,
+    "nSoldUsed": 160,
+    "avg": 3.5814375000000034,
+    "taguchiSold": 3.5814375000000034,
+    "medianSold": 3.5549999999999997,
+    "marketStabilityCV": 0.17166705921892628,
+    "currency": "USD",
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
+  },
+  "Rafael Ortega": {
+    "keyword": "Rafael Ortega Baseball",
+    "nScraped": 210,
+    "nSoldUsed": 88,
+    "avg": 1.436477272727272,
+    "taguchiSold": 1.436477272727272,
+    "medianSold": 1.39,
+    "marketStabilityCV": 0.1553123605353396,
+    "currency": "USD",
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
+  },
+  "Ramon Cabrera": {
+    "keyword": "Ramon Cabrera Baseball",
+    "nScraped": 255,
+    "nSoldUsed": 36,
+    "avg": 2.261111111111111,
+    "taguchiSold": 2.261111111111111,
+    "medianSold": 1.99,
+    "marketStabilityCV": 0.29703082372382217,
+    "currency": "USD",
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
+  },
+  "Ramon Castro": {
+    "keyword": "Ramon Castro Baseball",
     "nScraped": 0,
     "nSoldUsed": 0,
     "avg": null,
@@ -5479,65 +5527,17 @@
     "originalCurrencyExample": null,
     "fxRateUsed": null
   },
-  "Rafael Marchan": {
-    "keyword": "Rafael Marchan Baseball",
-    "nScraped": 240,
-    "nSoldUsed": 160,
-    "avg": 3.143312500000004,
-    "taguchiSold": 3.143312500000004,
-    "medianSold": 3.17,
-    "marketStabilityCV": 0.2626716384271412,
-    "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
-  },
-  "Rafael Ortega": {
-    "keyword": "Rafael Ortega Baseball",
-    "nScraped": 222,
-    "nSoldUsed": 97,
-    "avg": 1.4442268041237107,
-    "taguchiSold": 1.4442268041237107,
-    "medianSold": 1.39,
-    "marketStabilityCV": 0.15516903903317936,
-    "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
-  },
-  "Ramon Cabrera": {
-    "keyword": "Ramon Cabrera Baseball",
-    "nScraped": 250,
-    "nSoldUsed": 36,
-    "avg": 1.8166666666666675,
-    "taguchiSold": 1.8166666666666675,
-    "medianSold": 1.99,
-    "marketStabilityCV": 0.10818799594392547,
-    "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
-  },
-  "Ramon Castro": {
-    "keyword": "Ramon Castro Baseball",
-    "nScraped": 81,
-    "nSoldUsed": 28,
-    "avg": 2.1371428571428575,
-    "taguchiSold": 2.1371428571428575,
-    "medianSold": 2.1,
-    "marketStabilityCV": 0.11455045769186631,
-    "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
-  },
   "Ramon Flores": {
     "keyword": "Ramon Flores Baseball",
-    "nScraped": 247,
-    "nSoldUsed": 4,
-    "avg": 85,
-    "taguchiSold": 85,
-    "medianSold": 85,
-    "marketStabilityCV": 0,
+    "nScraped": 0,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
   },
   "Ramon Garcia": {
     "keyword": "Ramon Garcia Baseball",
