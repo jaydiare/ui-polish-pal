@@ -1,13 +1,13 @@
 {
   "_meta": {
-    "updatedAt": "2026-04-12T12:57:31.869790+00:00",
+    "updatedAt": "2026-04-12T16:34:10.001982+00:00",
     "athleteCount": 459,
     "graders": [
       "PSA"
     ],
     "batchInfo": {
-      "startIdx": 40,
-      "endIdx": 60,
+      "startIdx": 60,
+      "endIdx": 80,
       "totalAthletes": 571
     }
   },
@@ -865,14 +865,14 @@
         "PSA": {
           "cards": 344,
           "gems": 487,
-          "grades": 968,
+          "grades": 969,
           "gemRate": 50.0
         }
       },
       "totals": {
         "cards": 344,
         "gems": 487,
-        "grades": 968,
+        "grades": 969,
         "gemRate": 50.0
       }
     },
@@ -972,16 +972,16 @@
       "graders": {
         "PSA": {
           "cards": 106,
-          "gems": 58,
-          "grades": 283,
-          "gemRate": 20.0
+          "gems": 59,
+          "grades": 285,
+          "gemRate": 21.0
         }
       },
       "totals": {
         "cards": 106,
-        "gems": 58,
-        "grades": 283,
-        "gemRate": 20.0
+        "gems": 59,
+        "grades": 285,
+        "gemRate": 21.0
       }
     },
     "Carlos Perez": {
