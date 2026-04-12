@@ -1,12 +1,12 @@
 {
   "_meta": {
-    "updatedAt": "2026-04-12T13:37:07.618Z",
+    "updatedAt": "2026-04-12T15:01:15.997Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA/BGS/SGC grader title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 420,
-      "endIdx": 430,
-      "totalAthletes": 460
+      "startIdx": 430,
+      "endIdx": 440,
+      "totalAthletes": 461
     },
     "maxPages": 4,
     "minSampleSize": 4,
@@ -157,7 +157,7 @@
   },
   "Alex Cabrera": {
     "keyword": "Alex Cabrera BBM NPB Diamondbacks Baseball PSA",
-    "nScraped": 60,
+    "nScraped": 1,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -242,11 +242,11 @@
   "Alex Ramirez": {
     "keyword": "Alex Ramirez BBM NPB Baseball PSA",
     "nScraped": 60,
-    "nSoldUsed": 4,
-    "avg": 28.494999999999997,
-    "taguchiSold": 28.494999999999997,
-    "medianSold": 28.494999999999997,
-    "marketStabilityCV": 0.0605817618837333,
+    "nSoldUsed": 5,
+    "avg": 29.99,
+    "taguchiSold": 29.99,
+    "medianSold": 29.99,
+    "marketStabilityCV": 0,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
@@ -2977,7 +2977,7 @@
   },
   "Jose Alvarez": {
     "keyword": "José Álvarez Angels Phillies Giants Baseball PSA",
-    "nScraped": 60,
+    "nScraped": 1,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -5005,7 +5005,7 @@
   },
   "Robert Perez": {
     "keyword": "Robert Perez Blue Jays Cardenales Baseball PSA",
-    "nScraped": 10,
+    "nScraped": 50,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -5893,7 +5893,7 @@
   },
   "Carl Herrera": {
     "keyword": "Carl Herrera Basketball PSA",
-    "nScraped": 265,
+    "nScraped": 264,
     "nSoldUsed": 8,
     "avg": 20.995,
     "taguchiSold": 20.995,
@@ -5905,7 +5905,7 @@
   },
   "Greivis Vasquez": {
     "keyword": "Greivis Vasquez Basketball PSA",
-    "nScraped": 241,
+    "nScraped": 242,
     "nSoldUsed": 4,
     "avg": 174.99,
     "taguchiSold": 174.99,
