@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-04-13T11:47:49.400Z",
+    "updatedAt": "2026-04-13T14:11:43.004Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA/BGS/SGC grader title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 40,
-      "endIdx": 50,
+      "startIdx": 50,
+      "endIdx": 60,
       "totalAthletes": 461
     },
     "maxPages": 4,
@@ -781,7 +781,7 @@
   },
   "Brusdar Graterol": {
     "keyword": "Brusdar Graterol Baseball PSA",
-    "nScraped": 270,
+    "nScraped": 271,
     "nSoldUsed": 16,
     "avg": 11.720000000000002,
     "taguchiSold": 11.720000000000002,
@@ -817,7 +817,7 @@
   },
   "Carlos Carrasco": {
     "keyword": "Carlos Carrasco Baseball PSA",
-    "nScraped": 245,
+    "nScraped": 248,
     "nSoldUsed": 12,
     "avg": 19.990000000000002,
     "taguchiSold": 19.990000000000002,
@@ -829,7 +829,7 @@
   },
   "Carlos Garcia": {
     "keyword": "Carlos Garcia Baseball PSA",
-    "nScraped": 250,
+    "nScraped": 252,
     "nSoldUsed": 16,
     "avg": 35.875,
     "taguchiSold": 35.875,
@@ -841,27 +841,27 @@
   },
   "Carlos Gonzalez": {
     "keyword": "Carlos Gonzalez Baseball PSA",
-    "nScraped": 189,
-    "nSoldUsed": 23,
-    "avg": 26.125652173913046,
-    "taguchiSold": 26.125652173913046,
-    "medianSold": 29,
-    "marketStabilityCV": 0.11749490613601342,
+    "nScraped": 253,
+    "nSoldUsed": 25,
+    "avg": 22.0348,
+    "taguchiSold": 22.0348,
+    "medianSold": 22.99,
+    "marketStabilityCV": 0.31803447518367783,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
   },
   "Carlos Guillen": {
     "keyword": "Carlos Guillen Baseball PSA",
-    "nScraped": 0,
-    "nSoldUsed": 0,
+    "nScraped": 124,
+    "nSoldUsed": 2,
     "avg": null,
     "taguchiSold": null,
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
   },
   "Carlos Hernandez": {
     "keyword": "Carlos Hernandez Baseball PSA",
