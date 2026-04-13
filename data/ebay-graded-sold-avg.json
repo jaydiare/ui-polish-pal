@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-04-13T17:35:50.864Z",
+    "updatedAt": "2026-04-13T19:45:13.961Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA/BGS/SGC grader title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 70,
-      "endIdx": 80,
+      "startIdx": 80,
+      "endIdx": 90,
       "totalAthletes": 461
     },
     "maxPages": 4,
@@ -1178,11 +1178,11 @@
   "Daniel Palencia": {
     "keyword": "Daniel Palencia Baseball PSA",
     "nScraped": 251,
-    "nSoldUsed": 12,
-    "avg": 129,
-    "taguchiSold": 129,
-    "medianSold": 129,
-    "marketStabilityCV": 0,
+    "nSoldUsed": 16,
+    "avg": 139.5,
+    "taguchiSold": 139.5,
+    "medianSold": 139.5,
+    "marketStabilityCV": 0.07773730013893024,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
@@ -1225,12 +1225,12 @@
   },
   "Darwinzon Hernandez": {
     "keyword": "Darwinzon Hernandez Baseball PSA",
-    "nScraped": 240,
-    "nSoldUsed": 4,
-    "avg": 8.88,
-    "taguchiSold": 8.88,
-    "medianSold": 8.88,
-    "marketStabilityCV": 0,
+    "nScraped": 180,
+    "nSoldUsed": 3,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
@@ -6889,15 +6889,15 @@
   },
   "Dave Concepcion": {
     "keyword": "Dave Concepcion Baseball PSA",
-    "nScraped": 180,
-    "nSoldUsed": 72,
-    "avg": 44.3186111111111,
-    "taguchiSold": 44.3186111111111,
-    "medianSold": 40,
-    "marketStabilityCV": 0.21208916073786394,
+    "nScraped": 0,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
   },
   "Isaias Chavez": {
     "keyword": "Isaias Latigo Chavez Baseball PSA",
