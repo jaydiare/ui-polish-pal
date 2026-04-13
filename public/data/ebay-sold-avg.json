@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-04-13T10:43:04.879Z",
+    "updatedAt": "2026-04-13T13:20:06.327Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. Taguchi winsorized mean + market stability CV. Ungraded condition policy (permissive for sold). Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 470,
-      "endIdx": 480,
+      "startIdx": 480,
+      "endIdx": 490,
       "totalAthletes": 571
     },
     "maxPages": 4,
@@ -6549,6 +6549,66 @@
   },
   "Yolmer Sanchez": {
     "keyword": "Yolmer Sanchez Baseball",
+    "nScraped": 86,
+    "nSoldUsed": 42,
+    "avg": 0.9980952380952379,
+    "taguchiSold": 0.9980952380952379,
+    "medianSold": 0.99,
+    "marketStabilityCV": 0.6562653449878134,
+    "currency": "USD",
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
+  },
+  "Yonathan Daza": {
+    "keyword": "Yonathan Daza Baseball",
+    "nScraped": 222,
+    "nSoldUsed": 135,
+    "avg": 1.4555555555555544,
+    "taguchiSold": 1.4555555555555544,
+    "medianSold": 1.49,
+    "marketStabilityCV": 0.14954642600483364,
+    "currency": "USD",
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
+  },
+  "Yonny Chirinos": {
+    "keyword": "Yonny Chirinos Baseball",
+    "nScraped": 256,
+    "nSoldUsed": 32,
+    "avg": 0.13500000000000006,
+    "taguchiSold": 0.13500000000000006,
+    "medianSold": 0.135,
+    "marketStabilityCV": 0.18814833629657846,
+    "currency": "USD",
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
+  },
+  "Yonny Hernandez": {
+    "keyword": "Yonny Hernandez Baseball",
+    "nScraped": 154,
+    "nSoldUsed": 90,
+    "avg": 1.6027777777777765,
+    "taguchiSold": 1.6027777777777765,
+    "medianSold": 1.53,
+    "marketStabilityCV": 0.19205606541579098,
+    "currency": "USD",
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
+  },
+  "Yorman Bazardo": {
+    "keyword": "Yorman Bazardo Baseball",
+    "nScraped": 240,
+    "nSoldUsed": 120,
+    "avg": 1.7906666666666629,
+    "taguchiSold": 1.7906666666666629,
+    "medianSold": 1.745,
+    "marketStabilityCV": 0.06433140018257534,
+    "currency": "USD",
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
+  },
+  "Yorman Rodriguez": {
+    "keyword": "Yorman Rodriguez Baseball",
     "nScraped": 0,
     "nSoldUsed": 0,
     "avg": null,
@@ -6558,66 +6618,6 @@
     "currency": "USD",
     "originalCurrencyExample": null,
     "fxRateUsed": null
-  },
-  "Yonathan Daza": {
-    "keyword": "Yonathan Daza Baseball",
-    "nScraped": 210,
-    "nSoldUsed": 122,
-    "avg": 1.3050819672131164,
-    "taguchiSold": 1.3050819672131164,
-    "medianSold": 1.47,
-    "marketStabilityCV": 0.2123093802641236,
-    "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
-  },
-  "Yonny Chirinos": {
-    "keyword": "Yonny Chirinos Baseball",
-    "nScraped": 260,
-    "nSoldUsed": 48,
-    "avg": 0.5899999999999996,
-    "taguchiSold": 0.5899999999999996,
-    "medianSold": 0.665,
-    "marketStabilityCV": 0.6899411223096339,
-    "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
-  },
-  "Yonny Hernandez": {
-    "keyword": "Yonny Hernandez Baseball",
-    "nScraped": 138,
-    "nSoldUsed": 78,
-    "avg": 1.5903846153846164,
-    "taguchiSold": 1.5903846153846164,
-    "medianSold": 1.53,
-    "marketStabilityCV": 0.2088435596061558,
-    "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
-  },
-  "Yorman Bazardo": {
-    "keyword": "Yorman Bazardo Baseball",
-    "nScraped": 240,
-    "nSoldUsed": 120,
-    "avg": 1.6930000000000003,
-    "taguchiSold": 1.6930000000000003,
-    "medianSold": 1.71,
-    "marketStabilityCV": 0.03418177585727139,
-    "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
-  },
-  "Yorman Rodriguez": {
-    "keyword": "Yorman Rodriguez Baseball",
-    "nScraped": 265,
-    "nSoldUsed": 64,
-    "avg": 1.737499999999998,
-    "taguchiSold": 1.737499999999998,
-    "medianSold": 1.65,
-    "marketStabilityCV": 0.13241579991740937,
-    "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
   },
   "Yorvit Torrealba": {
     "keyword": "Yorvit Torrealba Baseball",
