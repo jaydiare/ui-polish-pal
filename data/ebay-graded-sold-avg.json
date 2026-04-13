@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-04-13T06:29:06.790Z",
+    "updatedAt": "2026-04-13T08:27:56.774Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA/BGS/SGC grader title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 10,
-      "endIdx": 20,
+      "startIdx": 20,
+      "endIdx": 30,
       "totalAthletes": 461
     },
     "maxPages": 4,
@@ -326,18 +326,18 @@
   "Ali Sanchez": {
     "keyword": "Ali Sanchez Baseball PSA",
     "nScraped": 60,
-    "nSoldUsed": 0,
+    "nSoldUsed": 1,
     "avg": null,
     "taguchiSold": null,
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
   },
   "Alvaro Espinoza": {
     "keyword": "Alvaro Espinoza Baseball PSA",
-    "nScraped": 240,
+    "nScraped": 242,
     "nSoldUsed": 8,
     "avg": 6.495,
     "taguchiSold": 6.495,
@@ -374,11 +374,11 @@
   "Anderson Espinoza": {
     "keyword": "Anderson Espinoza Baseball PSA",
     "nScraped": 240,
-    "nSoldUsed": 24,
-    "avg": 8,
-    "taguchiSold": 8,
-    "medianSold": 8,
-    "marketStabilityCV": 0.06384423980690615,
+    "nSoldUsed": 17,
+    "avg": 6.789411764705883,
+    "taguchiSold": 6.789411764705883,
+    "medianSold": 7.5,
+    "marketStabilityCV": 0.11442649490404266,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
@@ -409,7 +409,7 @@
   },
   "Andres Chaparro": {
     "keyword": "Andres Chaparro Baseball PSA",
-    "nScraped": 244,
+    "nScraped": 240,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
