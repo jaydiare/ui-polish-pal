@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-04-13T19:45:13.961Z",
+    "updatedAt": "2026-04-13T21:11:29.784Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA/BGS/SGC grader title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 80,
-      "endIdx": 90,
+      "startIdx": 90,
+      "endIdx": 100,
       "totalAthletes": 461
     },
     "maxPages": 4,
@@ -1249,7 +1249,7 @@
   },
   "Diego Castillo": {
     "keyword": "Diego Castillo Baseball PSA",
-    "nScraped": 248,
+    "nScraped": 247,
     "nSoldUsed": 4,
     "avg": 13.5,
     "taguchiSold": 13.5,
@@ -1285,15 +1285,15 @@
   },
   "Dioner Navarro": {
     "keyword": "Dioner Navarro Baseball PSA",
-    "nScraped": 60,
-    "nSoldUsed": 0,
-    "avg": null,
-    "taguchiSold": null,
-    "medianSold": null,
-    "marketStabilityCV": null,
+    "nScraped": 241,
+    "nSoldUsed": 4,
+    "avg": 6,
+    "taguchiSold": 6,
+    "medianSold": 6,
+    "marketStabilityCV": 0,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
   },
   "Dixon Machado": {
     "keyword": "Dixon Machado Baseball PSA",
@@ -1309,7 +1309,7 @@
   },
   "Donaldo Mendez": {
     "keyword": "Donaldo Mendez Baseball PSA",
-    "nScraped": 200,
+    "nScraped": 208,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -1321,12 +1321,12 @@
   },
   "Eddie Perez": {
     "keyword": "Eddie Perez Baseball PSA",
-    "nScraped": 244,
-    "nSoldUsed": 20,
-    "avg": 44,
-    "taguchiSold": 44,
-    "medianSold": 44,
-    "marketStabilityCV": 0,
+    "nScraped": 242,
+    "nSoldUsed": 24,
+    "avg": 40.645,
+    "taguchiSold": 40.645,
+    "medianSold": 40.644999999999996,
+    "marketStabilityCV": 0.084319320773397,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
@@ -1345,7 +1345,7 @@
   },
   "Eddy Diaz": {
     "keyword": "Eddy Diaz Baseball PSA",
-    "nScraped": 120,
+    "nScraped": 0,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
