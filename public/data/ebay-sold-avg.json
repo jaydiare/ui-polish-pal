@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-04-13T02:25:40.398Z",
+    "updatedAt": "2026-04-13T05:38:06.245Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. Taguchi winsorized mean + market stability CV. Ungraded condition policy (permissive for sold). Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 440,
-      "endIdx": 450,
+      "startIdx": 450,
+      "endIdx": 460,
       "totalAthletes": 571
     },
     "maxPages": 4,
@@ -28,7 +28,7 @@
     },
     "fx": {
       "source": "CBSA Exchange Rates API",
-      "asOf": "2026-04-13T00:00:00.000Z"
+      "asOf": "2026-04-14T00:00:00.000Z"
     }
   },
   "Adbert Alzolay": {
@@ -6189,31 +6189,31 @@
   },
   "Victor Reyes": {
     "keyword": "Victor Reyes Baseball",
-    "nScraped": 0,
-    "nSoldUsed": 0,
-    "avg": null,
-    "taguchiSold": null,
-    "medianSold": null,
-    "marketStabilityCV": null,
+    "nScraped": 188,
+    "nSoldUsed": 94,
+    "avg": 1.7052127659574476,
+    "taguchiSold": 1.7052127659574476,
+    "medianSold": 1.67,
+    "marketStabilityCV": 0.14839984264347064,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
   },
   "Victor Zambrano": {
     "keyword": "Victor Zambrano Baseball",
-    "nScraped": 0,
-    "nSoldUsed": 0,
-    "avg": null,
-    "taguchiSold": null,
-    "medianSold": null,
-    "marketStabilityCV": null,
+    "nScraped": 102,
+    "nSoldUsed": 48,
+    "avg": 0.5135416666666665,
+    "taguchiSold": 0.5135416666666665,
+    "medianSold": 0.225,
+    "marketStabilityCV": 0.9016696127557757,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
   },
   "Wiki Gonzalez": {
     "keyword": "Wiki Gonzalez Baseball",
-    "nScraped": 250,
+    "nScraped": 261,
     "nSoldUsed": 32,
     "avg": 1.0450000000000006,
     "taguchiSold": 1.0450000000000006,
@@ -6226,11 +6226,11 @@
   "Wil Ledezma": {
     "keyword": "Wil Ledezma Baseball",
     "nScraped": 240,
-    "nSoldUsed": 84,
-    "avg": 1.3800000000000021,
-    "taguchiSold": 1.3800000000000021,
-    "medianSold": 1.26,
-    "marketStabilityCV": 0.27664136422251373,
+    "nSoldUsed": 90,
+    "avg": 1.2788888888888885,
+    "taguchiSold": 1.2788888888888885,
+    "medianSold": 1.22,
+    "marketStabilityCV": 0.2285516452838804,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
@@ -6249,27 +6249,27 @@
   },
   "Wilfredo Rodriguez": {
     "keyword": "Wilfredo Rodriguez Baseball",
-    "nScraped": 249,
-    "nSoldUsed": 48,
-    "avg": 1.5583333333333336,
-    "taguchiSold": 1.5583333333333336,
-    "medianSold": 1.5,
-    "marketStabilityCV": 0.10789435679972673,
+    "nScraped": 0,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
   },
   "Wilfredo Tovar": {
     "keyword": "Wilfredo Tovar Baseball",
-    "nScraped": 257,
-    "nSoldUsed": 20,
-    "avg": 1.5,
-    "taguchiSold": 1.5,
-    "medianSold": 1.5,
-    "marketStabilityCV": 0,
+    "nScraped": 0,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
   },
   "Wilkelman Gonzalez": {
     "keyword": "Wilkelman Gonzalez Baseball",
