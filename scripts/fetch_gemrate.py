@@ -15,7 +15,7 @@ GEMRATE_URL = "https://www.gemrate.com/player"
 BATCH_SIZE = 20  # athletes per run
 
 # --- cooldown config (added) ---
-COOLDOWN_DAYS = 30
+COOLDOWN_DAYS = 60
 COOLDOWN_FILE = "gemrate-cooldown.json"
 
 # Rotate realistic browser User-Agents to reduce Cloudflare blocks
