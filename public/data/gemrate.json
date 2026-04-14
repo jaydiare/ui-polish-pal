@@ -1,13 +1,13 @@
 {
   "_meta": {
-    "updatedAt": "2026-04-13T20:50:06.419008+00:00",
+    "updatedAt": "2026-04-14T02:03:04.219395+00:00",
     "athleteCount": 459,
     "graders": [
       "PSA"
     ],
     "batchInfo": {
-      "startIdx": 200,
-      "endIdx": 220,
+      "startIdx": 220,
+      "endIdx": 240,
       "totalAthletes": 571
     }
   },
@@ -3167,17 +3167,17 @@
       "sport": "Baseball",
       "graders": {
         "PSA": {
-          "cards": 50,
+          "cards": 51,
           "gems": 16,
-          "grades": 62,
-          "gemRate": 26.0
+          "grades": 63,
+          "gemRate": 25.0
         }
       },
       "totals": {
-        "cards": 50,
+        "cards": 51,
         "gems": 16,
-        "grades": 62,
-        "gemRate": 26.0
+        "grades": 63,
+        "gemRate": 25.0
       }
     },
     "Javier Sanoja": {
@@ -3185,16 +3185,16 @@
       "sport": "Baseball",
       "graders": {
         "PSA": {
-          "cards": 87,
-          "gems": 135,
-          "grades": 366,
+          "cards": 89,
+          "gems": 137,
+          "grades": 371,
           "gemRate": 37.0
         }
       },
       "totals": {
-        "cards": 87,
-        "gems": 135,
-        "grades": 366,
+        "cards": 89,
+        "gems": 137,
+        "grades": 371,
         "gemRate": 37.0
       }
     },
@@ -3419,16 +3419,16 @@
       "sport": "Baseball",
       "graders": {
         "PSA": {
-          "cards": 134,
-          "gems": 596,
-          "grades": 1398,
+          "cards": 135,
+          "gems": 601,
+          "grades": 1409,
           "gemRate": 43.0
         }
       },
       "totals": {
-        "cards": 134,
-        "gems": 596,
-        "grades": 1398,
+        "cards": 135,
+        "gems": 601,
+        "grades": 1409,
         "gemRate": 43.0
       }
     },
@@ -3473,16 +3473,16 @@
       "sport": "Baseball",
       "graders": {
         "PSA": {
-          "cards": 517,
-          "gems": 737,
-          "grades": 1818,
+          "cards": 518,
+          "gems": 740,
+          "grades": 1821,
           "gemRate": 41.0
         }
       },
       "totals": {
-        "cards": 517,
-        "gems": 737,
-        "grades": 1818,
+        "cards": 518,
+        "gems": 740,
+        "grades": 1821,
         "gemRate": 41.0
       }
     },
