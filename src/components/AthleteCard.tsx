@@ -102,8 +102,8 @@ const AthleteCard = forwardRef<HTMLElement, AthleteCardProps>(({ athlete, byName
   const gradedDom = (gradedApiDom != null && gradedApiDom > 0) ? gradedApiDom : gradedObsDays;
 
   const shopUrl = priceMode === "graded"
-    ? buildEbayGradedSearchUrl(athlete.name, athlete.sport)
-    : buildEbaySearchUrl(athlete.name, athlete.sport);
+    ? buildEbayGradedSearchUrl(athlete.name, athlete.sport, gradedDisplayPrice)
+    : buildEbaySearchUrl(athlete.name, athlete.sport, rawDisplayPrice);
   const initials = initialsFromName(athlete.name);
   const photo = useAthleteImage(athlete.name, athlete.sport, cardRef);
 
