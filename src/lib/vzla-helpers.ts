@@ -158,17 +158,25 @@ export function formatCurrency(amount: number, currency: string = "USD"): string
   return `USD $${n.toFixed(2)}`;
 }
 
-export function buildEbaySearchUrl(name: string, sport: string): string {
+export function buildEbaySearchUrl(name: string, sport: string, maxPrice?: number | null): string {
   const query = encodeURIComponent(`${name} ${sport}`);
   const sportParam = encodeURIComponent(sport);
   const condition = encodeURIComponent("Near Mint or Better") + "%7C" + encodeURIComponent("Excellent");
-  return `https://www.ebay.com/sch/i.html?_nkw=${query}&_sacat=261328&LH_BIN=1&LH_PrefLoc=2&mkevt=1&mkcid=1&mkrid=706-53473-19255-0&campid=5339142305&toolid=10001&Sport=${sportParam}&Card%2520Condition=${condition}&Condition%2520Type=Ungraded&_dcat=261328`;
+  let url = `https://www.ebay.com/sch/i.html?_nkw=${query}&_sacat=261328&LH_BIN=1&LH_PrefLoc=2&mkevt=1&mkcid=1&mkrid=706-53473-19255-0&campid=5339142305&toolid=10001&Sport=${sportParam}&Card%2520Condition=${condition}&Condition%2520Type=Ungraded&_dcat=261328`;
+  if (maxPrice != null && Number.isFinite(maxPrice) && maxPrice > 0) {
+    url += `&_udhi=${Math.ceil(maxPrice).toFixed(2)}&_sop=15`;
+  }
+  return url;
 }
 
-export function buildEbayGradedSearchUrl(name: string, sport: string): string {
+export function buildEbayGradedSearchUrl(name: string, sport: string, maxPrice?: number | null): string {
   const query = encodeURIComponent(`${name} ${sport}`);
   const sportParam = encodeURIComponent(sport);
-  return `https://www.ebay.com/sch/i.html?_nkw=${query}&_sacat=261328&LH_BIN=1&LH_PrefLoc=2&mkevt=1&mkcid=1&mkrid=706-53473-19255-0&campid=5339142305&toolid=10001&Sport=${sportParam}&Graded=Yes&_dcat=261328`;
+  let url = `https://www.ebay.com/sch/i.html?_nkw=${query}&_sacat=261328&LH_BIN=1&LH_PrefLoc=2&mkevt=1&mkcid=1&mkrid=706-53473-19255-0&campid=5339142305&toolid=10001&Sport=${sportParam}&Graded=Yes&_dcat=261328`;
+  if (maxPrice != null && Number.isFinite(maxPrice) && maxPrice > 0) {
+    url += `&_udhi=${Math.ceil(maxPrice).toFixed(2)}&_sop=15`;
+  }
+  return url;
 }
 
 export function initialsFromName(name: string): string {
