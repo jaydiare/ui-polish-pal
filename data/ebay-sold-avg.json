@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-04-14T13:19:05.521Z",
+    "updatedAt": "2026-04-14T16:09:01.708Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. Taguchi winsorized mean + market stability CV. Ungraded condition policy (permissive for sold). Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 560,
-      "endIdx": 570,
+      "startIdx": 570,
+      "endIdx": 571,
       "totalAthletes": 571
     },
     "maxPages": 4,
@@ -7593,15 +7593,15 @@
   },
   "Garbine Muguruza": {
     "keyword": "Garbine Muguruza Tennis",
-    "nScraped": 0,
-    "nSoldUsed": 0,
-    "avg": null,
-    "taguchiSold": null,
-    "medianSold": null,
-    "marketStabilityCV": null,
+    "nScraped": 153,
+    "nSoldUsed": 137,
+    "avg": 6.501897810218977,
+    "taguchiSold": 6.501897810218977,
+    "medianSold": 6.99,
+    "marketStabilityCV": 0.21659954176628535,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
   },
   "Geremi Gonzalez": {
     "keyword": "Geremi Gonzalez Baseball",
