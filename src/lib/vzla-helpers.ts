@@ -164,7 +164,7 @@ export function buildEbaySearchUrl(name: string, sport: string, maxPrice?: numbe
   const condition = encodeURIComponent("Near Mint or Better") + "%7C" + encodeURIComponent("Excellent");
   let url = `https://www.ebay.com/sch/i.html?_nkw=${query}&_sacat=261328&LH_BIN=1&LH_PrefLoc=2&mkevt=1&mkcid=1&mkrid=706-53473-19255-0&campid=5339142305&toolid=10001&Sport=${sportParam}&Card%2520Condition=${condition}&Condition%2520Type=Ungraded&_dcat=261328`;
   if (maxPrice != null && Number.isFinite(maxPrice) && maxPrice > 0) {
-    url += `&_udhi=${Math.ceil(maxPrice).toFixed(2)}&_sop=15`;
+    url += `&_udhi=${Math.ceil(maxPrice).toFixed(2)}&_sop=12`;
   }
   return url;
 }
@@ -174,7 +174,7 @@ export function buildEbayGradedSearchUrl(name: string, sport: string, maxPrice?:
   const sportParam = encodeURIComponent(sport);
   let url = `https://www.ebay.com/sch/i.html?_nkw=${query}&_sacat=261328&LH_BIN=1&LH_PrefLoc=2&mkevt=1&mkcid=1&mkrid=706-53473-19255-0&campid=5339142305&toolid=10001&Sport=${sportParam}&Graded=Yes&_dcat=261328`;
   if (maxPrice != null && Number.isFinite(maxPrice) && maxPrice > 0) {
-    url += `&_udhi=${Math.ceil(maxPrice).toFixed(2)}&_sop=15`;
+    url += `&_udhi=${Math.ceil(maxPrice).toFixed(2)}&_sop=12`;
   }
   return url;
 }
