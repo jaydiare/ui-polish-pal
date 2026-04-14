@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-04-13T21:44:21.864Z",
+    "updatedAt": "2026-04-14T02:11:32.879Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. Taguchi winsorized mean + market stability CV. Ungraded condition policy (permissive for sold). Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 510,
-      "endIdx": 520,
+      "startIdx": 520,
+      "endIdx": 530,
       "totalAthletes": 571
     },
     "maxPages": 4,
@@ -7005,7 +7005,7 @@
   },
   "Oswaldo Vizcarrondo": {
     "keyword": "Oswaldo Vizcarrondo Soccer",
-    "nScraped": 0,
+    "nScraped": 60,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -7017,7 +7017,7 @@
   },
   "Wuilker Farinez": {
     "keyword": "Wuilker Farinez Soccer",
-    "nScraped": 24,
+    "nScraped": 16,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -7029,7 +7029,7 @@
   },
   "Abel Caputo": {
     "keyword": "Abel Caputo Soccer",
-    "nScraped": 31,
+    "nScraped": 30,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -7042,30 +7042,30 @@
   "Alejandro Fuenmayor": {
     "keyword": "Alejandro Fuenmayor Soccer",
     "nScraped": 240,
-    "nSoldUsed": 0,
-    "avg": null,
-    "taguchiSold": null,
-    "medianSold": null,
-    "marketStabilityCV": null,
+    "nSoldUsed": 4,
+    "avg": 10.64,
+    "taguchiSold": 10.64,
+    "medianSold": 10.64,
+    "marketStabilityCV": 0,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
   },
   "Alejandro Moreno": {
     "keyword": "Alejandro Moreno Soccer",
-    "nScraped": 247,
-    "nSoldUsed": 4,
-    "avg": 1,
-    "taguchiSold": 1,
-    "medianSold": 1,
-    "marketStabilityCV": 0,
+    "nScraped": 242,
+    "nSoldUsed": 12,
+    "avg": 0.9900000000000001,
+    "taguchiSold": 0.9900000000000001,
+    "medianSold": 0.99,
+    "marketStabilityCV": 1.1713031619078315e-16,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
   },
   "Bernardo Anor": {
     "keyword": "Bernardo Anor Soccer",
-    "nScraped": 240,
+    "nScraped": 120,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -7077,7 +7077,7 @@
   },
   "Brayan Martinez": {
     "keyword": "Brayan Martinez Soccer",
-    "nScraped": 60,
+    "nScraped": 0,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -7089,7 +7089,7 @@
   },
   "Carlos Cermeno": {
     "keyword": "Carlos Cermeno Soccer",
-    "nScraped": 60,
+    "nScraped": 0,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
