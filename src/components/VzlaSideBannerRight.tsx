@@ -102,9 +102,16 @@ const VzlaSideBannerRight = () => {
         <img src={topBanner.img} alt={topBanner.alt} />
       </a>
       {AFFILIATES.map((a) => (
-        <a key={a.id} href={a.href} target="_blank" rel="noopener noreferrer" title={a.alt}>
-          <img src={a.img} alt={a.alt} className={(a as any).className || ""} />
-        </a>
+        <div key={a.id} className="flex flex-col items-center">
+          <a href={a.href} target="_blank" rel="noopener noreferrer" title={a.alt}>
+            <img src={a.img} alt={a.alt} className={(a as any).className || ""} />
+          </a>
+          {a.id === "sidebar-mm-right" && (
+            <a href={a.href} target="_blank" rel="noopener noreferrer" className="text-center text-xs text-cyan-400 font-semibold mt-1 hover:underline">
+              20% Off with <span className="font-bold text-white">VZLAELITE</span> coupon code
+            </a>
+          )}
+        </div>
       ))}
       <AdSenseBlock />
     </aside>
