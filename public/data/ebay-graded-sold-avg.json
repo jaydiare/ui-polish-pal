@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-04-15T19:47:11.472Z",
+    "updatedAt": "2026-04-15T21:11:00.726Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA/BGS/SGC grader title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 300,
-      "endIdx": 310,
+      "startIdx": 310,
+      "endIdx": 320,
       "totalAthletes": 461
     },
     "maxPages": 4,
@@ -4273,15 +4273,15 @@
   },
   "Miguel Montero": {
     "keyword": "Miguel Montero Baseball PSA",
-    "nScraped": 60,
-    "nSoldUsed": 0,
-    "avg": null,
-    "taguchiSold": null,
-    "medianSold": null,
-    "marketStabilityCV": null,
+    "nScraped": 240,
+    "nSoldUsed": 4,
+    "avg": 16.35,
+    "taguchiSold": 16.35,
+    "medianSold": 16.35,
+    "marketStabilityCV": 0,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
   },
   "Miguel Perez": {
     "keyword": "Miguel Perez Baseball PSA",
@@ -4297,7 +4297,7 @@
   },
   "Miguel Rojas": {
     "keyword": "Miguel Rojas Baseball PSA",
-    "nScraped": 268,
+    "nScraped": 272,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -4321,7 +4321,7 @@
   },
   "Miguel Yajure": {
     "keyword": "Miguel Yajure Baseball PSA",
-    "nScraped": 241,
+    "nScraped": 242,
     "nSoldUsed": 4,
     "avg": 1.99,
     "taguchiSold": 1.99,
@@ -4333,12 +4333,12 @@
   },
   "Moises Ballesteros": {
     "keyword": "Moises Ballesteros Baseball PSA",
-    "nScraped": 212,
-    "nSoldUsed": 110,
-    "avg": 130.1171818181818,
-    "taguchiSold": 130.1171818181818,
-    "medianSold": 125,
-    "marketStabilityCV": 0.07355806271703508,
+    "nScraped": 220,
+    "nSoldUsed": 108,
+    "avg": 141.6667592592591,
+    "taguchiSold": 141.6667592592591,
+    "medianSold": 139.99,
+    "marketStabilityCV": 0.1164418546296987,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
@@ -4381,15 +4381,15 @@
   },
   "Odubel Herrera": {
     "keyword": "Odubel Herrera Baseball PSA",
-    "nScraped": 121,
-    "nSoldUsed": 4,
-    "avg": 2.89,
-    "taguchiSold": 2.89,
-    "medianSold": 2.89,
-    "marketStabilityCV": 0.5433884886490595,
+    "nScraped": 0,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
   },
   "Omar Daal": {
     "keyword": "Omar Daal Baseball PSA",
