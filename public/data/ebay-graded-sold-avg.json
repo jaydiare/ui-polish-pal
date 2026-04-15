@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-04-15T11:31:31.227Z",
+    "updatedAt": "2026-04-15T14:08:42.485Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA/BGS/SGC grader title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 260,
-      "endIdx": 270,
+      "startIdx": 270,
+      "endIdx": 280,
       "totalAthletes": 461
     },
     "maxPages": 4,
@@ -3769,7 +3769,7 @@
   },
   "Luis Leal": {
     "keyword": "Luis Leal Baseball PSA",
-    "nScraped": 241,
+    "nScraped": 246,
     "nSoldUsed": 8,
     "avg": 13.5,
     "taguchiSold": 13.5,
@@ -3781,19 +3781,19 @@
   },
   "Luis Matos": {
     "keyword": "Luis Matos Baseball PSA",
-    "nScraped": 224,
-    "nSoldUsed": 112,
-    "avg": 28.875,
-    "taguchiSold": 28.875,
+    "nScraped": 72,
+    "nSoldUsed": 37,
+    "avg": 28.909189189189185,
+    "taguchiSold": 28.909189189189185,
     "medianSold": 29,
-    "marketStabilityCV": 0.1314395063996271,
+    "marketStabilityCV": 0.12745304471010804,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
   },
   "Luis Maza": {
     "keyword": "Luis Maza Baseball PSA",
-    "nScraped": 56,
+    "nScraped": 60,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -3805,7 +3805,7 @@
   },
   "Luis Ordaz": {
     "keyword": "Luis Ordaz Baseball PSA",
-    "nScraped": 241,
+    "nScraped": 242,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -3829,12 +3829,12 @@
   },
   "Luis Perales": {
     "keyword": "Luis Perales Baseball PSA",
-    "nScraped": 134,
-    "nSoldUsed": 14,
-    "avg": 63.714285714285715,
-    "taguchiSold": 63.714285714285715,
-    "medianSold": 80,
-    "marketStabilityCV": 0.6722696430453842,
+    "nScraped": 206,
+    "nSoldUsed": 24,
+    "avg": 48.5,
+    "taguchiSold": 48.5,
+    "medianSold": 48.5,
+    "marketStabilityCV": 0.6634535435604267,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
