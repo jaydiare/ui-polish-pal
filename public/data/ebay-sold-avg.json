@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-04-15T07:26:45.498Z",
+    "updatedAt": "2026-04-15T10:14:36.777Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. Taguchi winsorized mean + market stability CV. Ungraded condition policy (permissive for sold). Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 30,
-      "endIdx": 40,
+      "startIdx": 40,
+      "endIdx": 50,
       "totalAthletes": 571
     },
     "maxPages": 4,
@@ -465,12 +465,12 @@
   },
   "Angel Salazar": {
     "keyword": "Angel Salazar Baseball",
-    "nScraped": 234,
-    "nSoldUsed": 76,
-    "avg": 3.4657894736842123,
-    "taguchiSold": 3.4657894736842123,
+    "nScraped": 63,
+    "nSoldUsed": 23,
+    "avg": 3.555217391304347,
+    "taguchiSold": 3.555217391304347,
     "medianSold": 0.99,
-    "marketStabilityCV": 0.9994838153056135,
+    "marketStabilityCV": 0.9842387868195612,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
@@ -478,11 +478,11 @@
   "Angel Zerpa": {
     "keyword": "Angel Zerpa Baseball",
     "nScraped": 240,
-    "nSoldUsed": 192,
-    "avg": 3.936875000000004,
-    "taguchiSold": 3.936875000000004,
-    "medianSold": 3.84,
-    "marketStabilityCV": 0.2343930548870179,
+    "nSoldUsed": 193,
+    "avg": 3.9562176165803153,
+    "taguchiSold": 3.9562176165803153,
+    "medianSold": 3.99,
+    "marketStabilityCV": 0.2331042846050983,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
@@ -490,11 +490,11 @@
   "Anibal Sanchez": {
     "keyword": "Anibal Sanchez Baseball",
     "nScraped": 240,
-    "nSoldUsed": 108,
-    "avg": 2.417314814814813,
-    "taguchiSold": 2.417314814814813,
-    "medianSold": 2.005,
-    "marketStabilityCV": 0.2952822708067426,
+    "nSoldUsed": 105,
+    "avg": 2.3364761904761897,
+    "taguchiSold": 2.3364761904761897,
+    "medianSold": 1.99,
+    "marketStabilityCV": 0.26852270764038166,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
@@ -2961,12 +2961,12 @@
   },
   "Angel Nesbitt": {
     "keyword": "Angel Nesbitt Baseball",
-    "nScraped": 240,
-    "nSoldUsed": 16,
-    "avg": 2.37,
-    "taguchiSold": 2.37,
-    "medianSold": 2.37,
-    "marketStabilityCV": 0.25275165578625064,
+    "nScraped": 241,
+    "nSoldUsed": 20,
+    "avg": 1.7899999999999996,
+    "taguchiSold": 1.7899999999999996,
+    "medianSold": 1.79,
+    "marketStabilityCV": 2.5453961770992487e-16,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
