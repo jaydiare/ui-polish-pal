@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-04-15T06:15:10.588Z",
+    "updatedAt": "2026-04-15T08:10:23.435Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA/BGS/SGC grader title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 230,
-      "endIdx": 240,
+      "startIdx": 240,
+      "endIdx": 250,
       "totalAthletes": 461
     },
     "maxPages": 4,
@@ -3374,23 +3374,23 @@
   "Juan Rivera": {
     "keyword": "Juan Rivera Baseball PSA",
     "nScraped": 256,
-    "nSoldUsed": 32,
-    "avg": 4.99,
-    "taguchiSold": 4.99,
+    "nSoldUsed": 36,
+    "avg": 4.990000000000001,
+    "taguchiSold": 4.990000000000001,
     "medianSold": 4.99,
-    "marketStabilityCV": 0,
+    "marketStabilityCV": 1.8051649788399457e-16,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
   },
   "Juan Yepez": {
     "keyword": "Juan Yepez Baseball PSA",
-    "nScraped": 272,
+    "nScraped": 271,
     "nSoldUsed": 28,
-    "avg": 21.141428571428577,
-    "taguchiSold": 21.141428571428577,
-    "medianSold": 24.99,
-    "marketStabilityCV": 0.42992332677353506,
+    "avg": 26.141428571428577,
+    "taguchiSold": 26.141428571428577,
+    "medianSold": 29.99,
+    "marketStabilityCV": 0.5261640398817639,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
@@ -3433,12 +3433,12 @@
   },
   "Keibert Ruiz": {
     "keyword": "Keibert Ruiz Baseball PSA",
-    "nScraped": 298,
-    "nSoldUsed": 48,
-    "avg": 6.7450000000000045,
-    "taguchiSold": 6.7450000000000045,
-    "medianSold": 6.745,
-    "marketStabilityCV": 0.03670758558837011,
+    "nScraped": 156,
+    "nSoldUsed": 30,
+    "avg": 6.761333333333336,
+    "taguchiSold": 6.761333333333336,
+    "medianSold": 6.99,
+    "marketStabilityCV": 0.03677291989771445,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
