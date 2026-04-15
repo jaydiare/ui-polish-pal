@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-04-15T19:12:39.058Z",
+    "updatedAt": "2026-04-15T21:48:51.121Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. Taguchi winsorized mean + market stability CV. Ungraded condition policy (permissive for sold). Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 70,
-      "endIdx": 80,
+      "startIdx": 80,
+      "endIdx": 90,
       "totalAthletes": 571
     },
     "maxPages": 4,
@@ -946,18 +946,18 @@
   "Carlos Silva": {
     "keyword": "Carlos Silva Baseball",
     "nScraped": 203,
-    "nSoldUsed": 110,
-    "avg": 3.511181818181822,
-    "taguchiSold": 3.511181818181822,
-    "medianSold": 2.99,
-    "marketStabilityCV": 0.36649992956644717,
+    "nSoldUsed": 108,
+    "avg": 2.725000000000003,
+    "taguchiSold": 2.725000000000003,
+    "medianSold": 2.745,
+    "marketStabilityCV": 0.2558027872439097,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
   },
   "Carlos Tocci": {
     "keyword": "Carlos Tocci Baseball",
-    "nScraped": 253,
+    "nScraped": 255,
     "nSoldUsed": 12,
     "avg": 0.9900000000000001,
     "taguchiSold": 0.9900000000000001,
@@ -969,12 +969,12 @@
   },
   "Carlos Valderrama": {
     "keyword": "Carlos Valderrama Baseball",
-    "nScraped": 315,
-    "nSoldUsed": 257,
-    "avg": 7.536147859922182,
-    "taguchiSold": 7.536147859922182,
+    "nScraped": 305,
+    "nSoldUsed": 246,
+    "avg": 8.711341463414634,
+    "taguchiSold": 8.711341463414634,
     "medianSold": 7.99,
-    "marketStabilityCV": 0.3152162321560358,
+    "marketStabilityCV": 0.42994317882394945,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
@@ -982,11 +982,11 @@
   "Carlos Zambrano": {
     "keyword": "Carlos Zambrano Baseball",
     "nScraped": 240,
-    "nSoldUsed": 113,
-    "avg": 2.463982300884956,
-    "taguchiSold": 2.463982300884956,
-    "medianSold": 2.38,
-    "marketStabilityCV": 0.207391242790134,
+    "nSoldUsed": 121,
+    "avg": 2.3034710743801683,
+    "taguchiSold": 2.3034710743801683,
+    "medianSold": 1.99,
+    "marketStabilityCV": 0.26621412402083394,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
