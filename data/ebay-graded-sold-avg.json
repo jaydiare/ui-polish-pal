@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-04-15T03:44:54.927Z",
+    "updatedAt": "2026-04-15T06:15:10.588Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA/BGS/SGC grader title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 220,
-      "endIdx": 230,
+      "startIdx": 230,
+      "endIdx": 240,
       "totalAthletes": 461
     },
     "maxPages": 4,
@@ -32,7 +32,7 @@
     },
     "fx": {
       "source": "CBSA Exchange Rates API",
-      "asOf": "2026-04-15T00:00:00.000Z"
+      "asOf": "2026-04-16T00:00:00.000Z"
     }
   },
   "Adbert Alzolay": {
@@ -3205,24 +3205,24 @@
   },
   "Jose Pirela": {
     "keyword": "Jose Pirela Baseball PSA",
-    "nScraped": 254,
-    "nSoldUsed": 18,
-    "avg": 22.42555555555555,
-    "taguchiSold": 22.42555555555555,
-    "medianSold": 26.95,
-    "marketStabilityCV": 0.23210732556506658,
+    "nScraped": 256,
+    "nSoldUsed": 16,
+    "avg": 21.859999999999996,
+    "taguchiSold": 21.859999999999996,
+    "medianSold": 21.86,
+    "marketStabilityCV": 0.24048167407375123,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
   },
   "Jose Rodriguez": {
     "keyword": "Jose Rodriguez Baseball PSA",
-    "nScraped": 265,
-    "nSoldUsed": 12,
-    "avg": 17.5,
-    "taguchiSold": 17.5,
-    "medianSold": 17.5,
-    "marketStabilityCV": 0,
+    "nScraped": 267,
+    "nSoldUsed": 17,
+    "avg": 16.441176470588236,
+    "taguchiSold": 16.441176470588236,
+    "medianSold": 15.5,
+    "marketStabilityCV": 0.06258624574073668,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
@@ -3253,7 +3253,7 @@
   },
   "Jose Suarez": {
     "keyword": "Jose Suarez Baseball PSA",
-    "nScraped": 245,
+    "nScraped": 247,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -3266,18 +3266,18 @@
   "Jose Tabata": {
     "keyword": "Jose Tabata Baseball PSA",
     "nScraped": 244,
-    "nSoldUsed": 18,
-    "avg": 8.162222222222221,
-    "taguchiSold": 8.162222222222221,
+    "nSoldUsed": 20,
+    "avg": 7.5,
+    "taguchiSold": 7.5,
     "medianSold": 7.5,
-    "marketStabilityCV": 0.09333878301518506,
+    "marketStabilityCV": 0,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
   },
   "Jose Torres": {
     "keyword": "Jose Torres Baseball PSA",
-    "nScraped": 244,
+    "nScraped": 122,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
