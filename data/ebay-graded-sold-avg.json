@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-04-15T17:36:29.996Z",
+    "updatedAt": "2026-04-15T19:47:11.472Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA/BGS/SGC grader title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 290,
-      "endIdx": 300,
+      "startIdx": 300,
+      "endIdx": 310,
       "totalAthletes": 461
     },
     "maxPages": 4,
@@ -4177,12 +4177,12 @@
   },
   "Maximo Acosta": {
     "keyword": "Maximo Acosta Baseball PSA",
-    "nScraped": 278,
+    "nScraped": 279,
     "nSoldUsed": 60,
-    "avg": 15.911333333333333,
-    "taguchiSold": 15.911333333333333,
-    "medianSold": 15.51,
-    "marketStabilityCV": 0.03435557243676749,
+    "avg": 16.970666666666666,
+    "taguchiSold": 16.970666666666666,
+    "medianSold": 16.49,
+    "marketStabilityCV": 0.08616312199187308,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
@@ -4226,11 +4226,11 @@
   "Miguel Cabrera": {
     "keyword": "Miguel Cabrera Baseball PSA",
     "nScraped": 240,
-    "nSoldUsed": 97,
-    "avg": 75.13443298969072,
-    "taguchiSold": 75.13443298969072,
-    "medianSold": 74.99,
-    "marketStabilityCV": 0.3130046684582673,
+    "nSoldUsed": 102,
+    "avg": 74.2264705882352,
+    "taguchiSold": 74.2264705882352,
+    "medianSold": 70.5,
+    "marketStabilityCV": 0.31747777686027473,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
