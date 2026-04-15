@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-04-15T05:20:56.922Z",
+    "updatedAt": "2026-04-15T07:26:45.498Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. Taguchi winsorized mean + market stability CV. Ungraded condition policy (permissive for sold). Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 20,
-      "endIdx": 30,
+      "startIdx": 30,
+      "endIdx": 40,
       "totalAthletes": 571
     },
     "maxPages": 4,
@@ -381,6 +381,42 @@
   },
   "Andres Blanco": {
     "keyword": "Andres Blanco Baseball",
+    "nScraped": 293,
+    "nSoldUsed": 48,
+    "avg": 0.9900000000000002,
+    "taguchiSold": 0.9900000000000002,
+    "medianSold": 0.99,
+    "marketStabilityCV": 2.266609583031167e-16,
+    "currency": "USD",
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
+  },
+  "Andres Chaparro": {
+    "keyword": "Andres Chaparro Baseball",
+    "nScraped": 240,
+    "nSoldUsed": 192,
+    "avg": 2.4665625000000038,
+    "taguchiSold": 2.4665625000000038,
+    "medianSold": 2.26,
+    "marketStabilityCV": 0.1876172020602098,
+    "currency": "USD",
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
+  },
+  "Andres Gimenez": {
+    "keyword": "Andres Gimenez Baseball",
+    "nScraped": 240,
+    "nSoldUsed": 103,
+    "avg": 3.845339805825243,
+    "taguchiSold": 3.845339805825243,
+    "medianSold": 3.62,
+    "marketStabilityCV": 0.21445022423342971,
+    "currency": "USD",
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
+  },
+  "Andruw Monasterio": {
+    "keyword": "Andruw Monasterio Baseball",
     "nScraped": 0,
     "nSoldUsed": 0,
     "avg": null,
@@ -390,42 +426,6 @@
     "currency": "USD",
     "originalCurrencyExample": null,
     "fxRateUsed": null
-  },
-  "Andres Chaparro": {
-    "keyword": "Andres Chaparro Baseball",
-    "nScraped": 240,
-    "nSoldUsed": 189,
-    "avg": 2.602116402116402,
-    "taguchiSold": 2.602116402116402,
-    "medianSold": 2.44,
-    "marketStabilityCV": 0.13994538231844683,
-    "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
-  },
-  "Andres Gimenez": {
-    "keyword": "Andres Gimenez Baseball",
-    "nScraped": 240,
-    "nSoldUsed": 116,
-    "avg": 6.823362068965517,
-    "taguchiSold": 6.823362068965517,
-    "medianSold": 6.25,
-    "marketStabilityCV": 0.3579603919170451,
-    "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
-  },
-  "Andruw Monasterio": {
-    "keyword": "Andruw Monasterio Baseball",
-    "nScraped": 240,
-    "nSoldUsed": 143,
-    "avg": 4.800769230769231,
-    "taguchiSold": 4.800769230769231,
-    "medianSold": 3.82,
-    "marketStabilityCV": 0.4887176877900649,
-    "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
   },
   "Andry Lara": {
     "keyword": "Andry Lara Baseball",
@@ -2902,11 +2902,11 @@
   "Andres Galarraga": {
     "keyword": "Andres Galarraga Baseball",
     "nScraped": 240,
-    "nSoldUsed": 71,
-    "avg": 2.3332394366197167,
-    "taguchiSold": 2.3332394366197167,
-    "medianSold": 2.75,
-    "marketStabilityCV": 0.3394054114622697,
+    "nSoldUsed": 128,
+    "avg": 0.28453124999999974,
+    "taguchiSold": 0.28453124999999974,
+    "medianSold": 0.24,
+    "marketStabilityCV": 0.5727114911174126,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
