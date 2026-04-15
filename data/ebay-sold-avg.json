@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-04-15T10:14:36.777Z",
+    "updatedAt": "2026-04-15T13:18:34.585Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. Taguchi winsorized mean + market stability CV. Ungraded condition policy (permissive for sold). Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 40,
-      "endIdx": 50,
+      "startIdx": 50,
+      "endIdx": 60,
       "totalAthletes": 571
     },
     "maxPages": 4,
@@ -585,12 +585,12 @@
   },
   "Armando Galarraga": {
     "keyword": "Armando Galarraga Baseball",
-    "nScraped": 142,
-    "nSoldUsed": 93,
-    "avg": 4.230215053763441,
-    "taguchiSold": 4.230215053763441,
-    "medianSold": 4.25,
-    "marketStabilityCV": 0.49029330719112446,
+    "nScraped": 152,
+    "nSoldUsed": 103,
+    "avg": 4.7226213592233055,
+    "taguchiSold": 4.7226213592233055,
+    "medianSold": 4,
+    "marketStabilityCV": 0.5413191776934492,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
@@ -2985,12 +2985,12 @@
   },
   "Argenis Diaz": {
     "keyword": "Argenis Diaz Baseball",
-    "nScraped": 248,
-    "nSoldUsed": 24,
-    "avg": 2.1199999999999997,
-    "taguchiSold": 2.1199999999999997,
-    "medianSold": 2.12,
-    "marketStabilityCV": 0.06263963150866264,
+    "nScraped": 252,
+    "nSoldUsed": 20,
+    "avg": 2.25,
+    "taguchiSold": 2.25,
+    "medianSold": 2.25,
+    "marketStabilityCV": 0,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
@@ -2998,11 +2998,11 @@
   "Asdrubal Cabrera": {
     "keyword": "Asdrubal Cabrera Baseball",
     "nScraped": 240,
-    "nSoldUsed": 106,
-    "avg": 1.4529245283018861,
-    "taguchiSold": 1.4529245283018861,
-    "medianSold": 1.49,
-    "marketStabilityCV": 0.31216562857722135,
+    "nSoldUsed": 103,
+    "avg": 1.3428155339805825,
+    "taguchiSold": 1.3428155339805825,
+    "medianSold": 0.99,
+    "marketStabilityCV": 0.2802680867839829,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
@@ -3010,11 +3010,11 @@
   "Avisail Garcia": {
     "keyword": "Avisail Garcia Baseball",
     "nScraped": 240,
-    "nSoldUsed": 64,
-    "avg": 2.316562499999999,
-    "taguchiSold": 2.316562499999999,
-    "medianSold": 1.99,
-    "marketStabilityCV": 0.2628891850971304,
+    "nSoldUsed": 65,
+    "avg": 2.4732307692307693,
+    "taguchiSold": 2.4732307692307693,
+    "medianSold": 2.25,
+    "marketStabilityCV": 0.19830584841066956,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
