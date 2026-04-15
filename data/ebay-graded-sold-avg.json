@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-04-15T14:08:42.485Z",
+    "updatedAt": "2026-04-15T15:44:09.342Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA/BGS/SGC grader title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 270,
-      "endIdx": 280,
+      "startIdx": 280,
+      "endIdx": 290,
       "totalAthletes": 461
     },
     "maxPages": 4,
@@ -3877,7 +3877,7 @@
   },
   "Luis Salazar": {
     "keyword": "Luis Salazar Baseball PSA",
-    "nScraped": 263,
+    "nScraped": 269,
     "nSoldUsed": 24,
     "avg": 41.5,
     "taguchiSold": 41.5,
@@ -3889,12 +3889,12 @@
   },
   "Luis Sanchez": {
     "keyword": "Luis Sanchez Baseball PSA",
-    "nScraped": 268,
-    "nSoldUsed": 14,
-    "avg": 40.285714285714285,
-    "taguchiSold": 40.285714285714285,
+    "nScraped": 269,
+    "nSoldUsed": 19,
+    "avg": 23.526315789473685,
+    "taguchiSold": 23.526315789473685,
     "medianSold": 33,
-    "marketStabilityCV": 0.2167119089736112,
+    "marketStabilityCV": 0.4851286004966766,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
@@ -3925,12 +3925,12 @@
   },
   "Luis Torrens": {
     "keyword": "Luis Torrens Baseball PSA",
-    "nScraped": 244,
-    "nSoldUsed": 14,
-    "avg": 5.934285714285715,
-    "taguchiSold": 5.934285714285715,
+    "nScraped": 245,
+    "nSoldUsed": 12,
+    "avg": 6.259999999999999,
+    "taguchiSold": 6.259999999999999,
     "medianSold": 6.26,
-    "marketStabilityCV": 0.0657703366439496,
+    "marketStabilityCV": 1.481904319857832e-16,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
