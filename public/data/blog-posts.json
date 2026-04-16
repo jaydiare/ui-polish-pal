@@ -288,26 +288,6 @@
     "sections": []
   },
   {
-    "slug": "venezuelan-athlete-card-market-data",
-    "title": "Venezuelan Athlete Card Market Data",
-    "excerpt": "Full market dataset for 500+ Venezuelan athlete cards \u2014 raw & graded listing prices, sold prices, stability scores, days on market, and index levels. Sortable by any column.",
-    "date": "2026-03-08",
-    "author": "VZLA Sports Elite",
-    "coverImage": "",
-    "type": "data-table",
-    "textSections": [
-      {
-        "heading": "Complete Market Dataset",
-        "paragraphs": [
-          "This table contains the full dataset we track across 500+ Venezuelan athletes. It includes raw and graded listing averages, recent sold averages, market stability (CV%), average days on market, the price index level, and an ROI potential rating. Click any column header to sort and scroll down to explore the entire roster.",
-          "Raw prices reflect ungraded Near Mint / Excellent condition cards. Graded prices cover PSA authenticated cards only. The Stability column measures price consistency using the Coefficient of Variation (CV): Stable (CV < 10%) means tight, predictable pricing; Active (10\u201320%) indicates moderate movement; Volatile (20\u201335%) shows significant price swings; and Unstable (> 35%) signals highly erratic pricing. Days on Market shows average listing duration. The Index (base-100) tracks price movement over time.",
-          "The ROI column estimates return-on-investment potential using the formula: ROI \u2248 Signal S/N \u00d7 (Raw Sold + PSA Sold) \u00f7 (PSA Pop \u00d7 Stability CV). It combines pricing predictability (Signal S/N), actual market demand (sold prices), supply scarcity (PSA Pop), and price volatility (Stability). Results are categorized as High (\u22651.0), Medium (0.3\u20131.0), or Low (<0.3). Athletes with missing data for any component display '\u2014'."
-        ]
-      }
-    ],
-    "sections": []
-  },
-  {
     "slug": "acuna-torres-tracker",
     "title": "Acu\u00f1a & Torres RC Tracker",
     "excerpt": "Daily price tracking for 2018 Topps Update Ronald Acu\u00f1a Jr. #US250 and Gleyber Torres #US200 rookie cards \u2014 raw and PSA graded with Taguchi analysis.",
