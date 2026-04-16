@@ -1,18 +1,25 @@
 import { useState, useEffect, useRef } from "react";
 
 const cache = new Map<string, string | null>();
-let localHeadshotMap: Record<string, string> | null = null;
-let localHeadshotPromise: Promise<Record<string, string>> | null = null;
 
-async function getLocalHeadshots(): Promise<Record<string, string>> {
-  if (localHeadshotMap) return localHeadshotMap;
-  if (!localHeadshotPromise) {
-    localHeadshotPromise = fetch("/data/soccer-headshots.json")
+const LOCAL_SOURCES: Record<string, string> = {
+  Soccer: "/data/soccer-headshots.json",
+  Baseball: "/data/baseball-headshots.json",
+};
+const localMaps: Record<string, Record<string, string>> = {};
+const localPromises: Record<string, Promise<Record<string, string>>> = {};
+
+async function getLocalHeadshots(sport: string): Promise<Record<string, string>> {
+  const url = LOCAL_SOURCES[sport];
+  if (!url) return {};
+  if (localMaps[sport]) return localMaps[sport];
+  if (!localPromises[sport]) {
+    localPromises[sport] = fetch(url)
       .then(r => r.ok ? r.json() : {})
       .catch(() => ({}));
   }
-  localHeadshotMap = await localHeadshotPromise;
-  return localHeadshotMap!;
+  localMaps[sport] = await localPromises[sport];
+  return localMaps[sport];
 }
 
 // Normalize a name for comparison: strip accents, punctuation, lowercase
@@ -123,8 +130,8 @@ async function fetchS3Headshot(name: string, sport?: string): Promise<string | n
 // ── Main hook: Local mapping → ESPN → TheSportsDB → S3 ──
 async function fetchAthleteImage(name: string, sport?: string): Promise<string | null> {
   // Check local curated mapping first (instant, no API call)
-  if (sport === "Soccer") {
-    const local = await getLocalHeadshots();
+  if (sport && LOCAL_SOURCES[sport]) {
+    const local = await getLocalHeadshots(sport);
     if (local[name]) return local[name];
   }
 
