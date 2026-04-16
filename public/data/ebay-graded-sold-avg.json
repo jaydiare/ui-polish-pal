@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-04-16T08:10:32.609Z",
+    "updatedAt": "2026-04-16T09:52:58.047Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA/BGS/SGC grader title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 350,
-      "endIdx": 360,
+      "startIdx": 360,
+      "endIdx": 370,
       "totalAthletes": 461
     },
     "maxPages": 4,
@@ -4957,12 +4957,12 @@
   },
   "Ricardo Sanchez": {
     "keyword": "Ricardo Sanchez Baseball PSA",
-    "nScraped": 241,
-    "nSoldUsed": 6,
-    "avg": 4.95,
-    "taguchiSold": 4.95,
-    "medianSold": 4.95,
-    "marketStabilityCV": 0,
+    "nScraped": 60,
+    "nSoldUsed": 1,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
@@ -4981,7 +4981,7 @@
   },
   "Richard Hidalgo": {
     "keyword": "Richard Hidalgo Baseball PSA",
-    "nScraped": 243,
+    "nScraped": 240,
     "nSoldUsed": 8,
     "avg": 7.110000000000001,
     "taguchiSold": 7.110000000000001,
@@ -5041,12 +5041,12 @@
   },
   "Roberto Rodriguez": {
     "keyword": "Roberto Rodriguez Baseball PSA",
-    "nScraped": 247,
-    "nSoldUsed": 4,
-    "avg": 16.51,
-    "taguchiSold": 16.51,
-    "medianSold": 16.51,
-    "marketStabilityCV": 0,
+    "nScraped": 251,
+    "nSoldUsed": 8,
+    "avg": 14.755000000000003,
+    "taguchiSold": 14.755000000000003,
+    "medianSold": 14.755,
+    "marketStabilityCV": 0.127155128310757,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
