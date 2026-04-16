@@ -1,18 +1,25 @@
 import { useState, useEffect, useRef } from "react";
 
 const cache = new Map<string, string | null>();
-let localHeadshotMap: Record<string, string> | null = null;
-let localHeadshotPromise: Promise<Record<string, string>> | null = null;
 
-async function getLocalHeadshots(): Promise<Record<string, string>> {
-  if (localHeadshotMap) return localHeadshotMap;
-  if (!localHeadshotPromise) {
-    localHeadshotPromise = fetch("/data/soccer-headshots.json")
+const LOCAL_SOURCES: Record<string, string> = {
+  Soccer: "/data/soccer-headshots.json",
+  Baseball: "/data/baseball-headshots.json",
+};
+const localMaps: Record<string, Record<string, string>> = {};
+const localPromises: Record<string, Promise<Record<string, string>>> = {};
+
+async function getLocalHeadshots(sport: string): Promise<Record<string, string>> {
+  const url = LOCAL_SOURCES[sport];
+  if (!url) return {};
+  if (localMaps[sport]) return localMaps[sport];
+  if (!localPromises[sport]) {
+    localPromises[sport] = fetch(url)
       .then(r => r.ok ? r.json() : {})
       .catch(() => ({}));
   }
-  localHeadshotMap = await localHeadshotPromise;
-  return localHeadshotMap!;
+  localMaps[sport] = await localPromises[sport];
+  return localMaps[sport];
 }
 
 // Normalize a name for comparison: strip accents, punctuation, lowercase
