@@ -16,7 +16,7 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
-import { ArrowUp, ArrowDown, ArrowUpDown, Download, Filter } from "lucide-react";
+import { ArrowUp, ArrowDown, ArrowUpDown, Download, Filter, Search, X } from "lucide-react";
 
 interface RowData {
   name: string;
@@ -113,6 +113,7 @@ export default function BlogDataTable() {
   const [sortKey, setSortKey] = useState<SortKey>("name");
   const [sortDir, setSortDir] = useState<SortDir>("asc");
   const [hideEmptyFor, setHideEmptyFor] = useState<Set<SortKey>>(new Set());
+  const [searchQuery, setSearchQuery] = useState("");
   const [csvDownloads, setCsvDownloads] = useState<number>(() => {
     try { return Number(localStorage.getItem("vzla-csv-downloads") || 0); } catch { return 0; }
   });
@@ -220,16 +221,24 @@ export default function BlogDataTable() {
 
   // Apply empty-value filters
   const filtered = useMemo(() => {
-    if (hideEmptyFor.size === 0) return sorted;
-    return sorted.filter((row) => {
-      for (const key of hideEmptyFor) {
-        const v = row[key];
-        if (v == null) return false;
-        if (key === "daysOnMarket" && v === 0) return false;
-      }
-      return true;
-    });
-  }, [sorted, hideEmptyFor]);
+    const norm = (s: string) => s.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
+    const q = norm(searchQuery.trim());
+    let result = sorted;
+    if (hideEmptyFor.size > 0) {
+      result = result.filter((row) => {
+        for (const key of hideEmptyFor) {
+          const v = row[key];
+          if (v == null) return false;
+          if (key === "daysOnMarket" && v === 0) return false;
+        }
+        return true;
+      });
+    }
+    if (q) {
+      result = result.filter((row) => norm(row.name).includes(q));
+    }
+    return result;
+  }, [sorted, hideEmptyFor, searchQuery]);
 
   const toggleSort = (key: SortKey) => {
     if (sortKey === key) {
@@ -319,6 +328,28 @@ export default function BlogDataTable() {
 
   return (
     <div className="glass-panel rounded-xl overflow-hidden">
+      {/* Search bar */}
+      <div className="px-4 py-3 border-b border-border">
+        <div className="relative max-w-md">
+          <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
+          <input
+            type="text"
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
+            placeholder="Search athlete by name…"
+            className="w-full pl-9 pr-9 py-2 text-sm bg-secondary border border-border rounded-lg text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-vzla-yellow/50 transition-colors"
+          />
+          {searchQuery && (
+            <button
+              onClick={() => setSearchQuery("")}
+              aria-label="Clear search"
+              className="absolute right-2 top-1/2 -translate-y-1/2 p-1 text-muted-foreground hover:text-foreground transition-colors"
+            >
+              <X className="w-3.5 h-3.5" />
+            </button>
+          )}
+        </div>
+      </div>
       {/* Filter bar */}
       <div className="px-4 py-2.5 border-b border-border flex items-center gap-2 flex-wrap">
         <span className="text-xs text-muted-foreground flex items-center gap-1 mr-1">
