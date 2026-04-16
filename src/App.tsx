@@ -12,6 +12,7 @@ const EbayDenied = lazy(() => import("./pages/EbayDenied"));
 const Blog = lazy(() => import("./pages/Blog"));
 const BlogPost = lazy(() => import("./pages/BlogPost"));
 const Data = lazy(() => import("./pages/Data"));
+const MarketData = lazy(() => import("./pages/MarketData"));
 const MarketCapBlog = lazy(() => import("./pages/MarketCapBlog"));
 const HowItWorks = lazy(() => import("./pages/HowItWorks"));
 const ChecklistIntel = lazy(() => import("./pages/ChecklistIntel"));
@@ -43,6 +44,7 @@ const App = () => (
             <Route path="/blog/venezuelan-sports-cards-market-cap" element={<MarketCapBlog />} />
             <Route path="/blog/:slug" element={<BlogPost />} />
             <Route path="/data" element={<Data />} />
+            <Route path="/market-data" element={<MarketData />} />
             <Route path="/checklist-intel" element={<ChecklistIntel />} />
             <Route path="/how-it-works" element={<HowItWorks />} />
             <Route path="/methodology" element={<Methodology />} />

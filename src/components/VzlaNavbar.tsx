@@ -73,6 +73,7 @@ const VzlaNavbar = () => {
             { label: "About", to: "/about" },
             { label: "Blog", to: "/blog" },
             { label: "Market Intel", to: "/data" },
+            { label: "Market Data", to: "/market-data" },
             { label: "Checklist Intel", to: "/checklist-intel" },
           ].map((item) => (
             <li key={item.label} role="none">
@@ -194,6 +195,7 @@ const VzlaNavbar = () => {
               { label: "About", to: "/about" },
               { label: "Blog", to: "/blog" },
               { label: "Market Intel", to: "/data" },
+              { label: "Market Data", to: "/market-data" },
               { label: "Checklist Intel", to: "/checklist-intel" },
             ].map((item) => (
               <Link
