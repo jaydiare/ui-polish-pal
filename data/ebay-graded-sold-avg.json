@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-04-16T03:50:31.303Z",
+    "updatedAt": "2026-04-16T06:16:38.840Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA/BGS/SGC grader title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 330,
-      "endIdx": 340,
+      "startIdx": 340,
+      "endIdx": 350,
       "totalAthletes": 461
     },
     "maxPages": 4,
@@ -32,7 +32,7 @@
     },
     "fx": {
       "source": "CBSA Exchange Rates API",
-      "asOf": "2026-04-16T00:00:00.000Z"
+      "asOf": "2026-04-17T00:00:00.000Z"
     }
   },
   "Adbert Alzolay": {
@@ -4693,7 +4693,7 @@
   },
   "Pedro Pages": {
     "keyword": "Pedro Pages Baseball PSA",
-    "nScraped": 248,
+    "nScraped": 247,
     "nSoldUsed": 8,
     "avg": 17.189999999999998,
     "taguchiSold": 17.189999999999998,
@@ -4789,7 +4789,7 @@
   },
   "Ramon Garcia": {
     "keyword": "Ramon Garcia Baseball PSA",
-    "nScraped": 60,
+    "nScraped": 0,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -4801,15 +4801,15 @@
   },
   "Ramon Hernandez": {
     "keyword": "Ramon Hernandez Baseball PSA",
-    "nScraped": 282,
-    "nSoldUsed": 28,
-    "avg": 38.58857142857143,
-    "taguchiSold": 38.58857142857143,
-    "medianSold": 36.12,
-    "marketStabilityCV": 0.14898701880566173,
+    "nScraped": 0,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
   },
   "Ramon Ramirez": {
     "keyword": "Ramon Ramirez Baseball PSA",
