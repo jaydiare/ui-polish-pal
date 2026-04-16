@@ -1295,6 +1295,7 @@ const GemrateChart = () => {
   const [beckettData, setBeckettData] = useState<GemrateData | null>(null);
   const [sgcData, setSgcData] = useState<GemrateData | null>(null);
   const [graderFilter, setGraderFilter] = useState<GraderFilter>("all");
+  const [searchQuery, setSearchQuery] = useState("");
 
   useEffect(() => {
     (async () => {
