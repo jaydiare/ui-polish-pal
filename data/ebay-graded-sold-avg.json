@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-04-16T16:00:09.288Z",
+    "updatedAt": "2026-04-16T17:48:13.044Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA/BGS/SGC grader title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 390,
-      "endIdx": 400,
+      "startIdx": 400,
+      "endIdx": 410,
       "totalAthletes": 461
     },
     "maxPages": 4,
@@ -5545,24 +5545,24 @@
   },
   "William Bergolla": {
     "keyword": "William Bergolla Baseball PSA",
-    "nScraped": 283,
-    "nSoldUsed": 103,
-    "avg": 36.32893203883495,
-    "taguchiSold": 36.32893203883495,
-    "medianSold": 39.95,
-    "marketStabilityCV": 0.1991206118965186,
+    "nScraped": 204,
+    "nSoldUsed": 104,
+    "avg": 37.55846153846153,
+    "taguchiSold": 37.55846153846153,
+    "medianSold": 39.975,
+    "marketStabilityCV": 0.19527713136590386,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
   },
   "William Contreras": {
     "keyword": "William Contreras Baseball PSA",
-    "nScraped": 81,
-    "nSoldUsed": 36,
-    "avg": 42.916111111111114,
-    "taguchiSold": 42.916111111111114,
+    "nScraped": 87,
+    "nSoldUsed": 40,
+    "avg": 42.9245,
+    "taguchiSold": 42.9245,
     "medianSold": 42.49,
-    "marketStabilityCV": 0.26906280731810933,
+    "marketStabilityCV": 0.2701119345424397,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
@@ -5582,11 +5582,11 @@
   "Williams Perez": {
     "keyword": "Williams Perez Atlanta Braves Baseball PSA",
     "nScraped": 60,
-    "nSoldUsed": 6,
-    "avg": 181.25,
-    "taguchiSold": 181.25,
-    "medianSold": 181.25,
-    "marketStabilityCV": 0.18886984741557453,
+    "nSoldUsed": 5,
+    "avg": 321,
+    "taguchiSold": 321,
+    "medianSold": 321,
+    "marketStabilityCV": 0,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
