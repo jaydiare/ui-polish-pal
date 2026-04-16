@@ -1362,7 +1362,7 @@ const GemrateChart = () => {
     return [...top, ...extras].sort((a, b) => b[sortKey] - a[sortKey]);
   }, [gemrateData, beckettData, sgcData, graderFilter, searchQuery]);
 
-  const isEmpty = (!gemrateData && !beckettData && !sgcData) || top10.length === 0;
+  const isEmpty = !gemrateData && !beckettData && !sgcData;
 
   const updatedAt = gemrateData?._meta?.updatedAt
     ? new Date(gemrateData._meta.updatedAt).toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" })
