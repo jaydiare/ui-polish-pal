@@ -1415,12 +1415,43 @@ const GemrateChart = () => {
           </a>
         </span>
       </p>
+      <div className="mb-3 flex items-center gap-2 flex-wrap">
+        <div className="relative flex-1 min-w-[220px] max-w-md">
+          <input
+            type="text"
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
+            placeholder="Search any athlete (e.g. Salvador Perez)…"
+            className="w-full rounded-full border border-border/50 bg-card/80 backdrop-blur-sm px-4 py-2 pr-9 text-xs text-foreground placeholder:text-muted-foreground/60 focus:outline-none focus:border-primary/50 focus:ring-1 focus:ring-primary/30 transition-all"
+            aria-label="Search graded athletes"
+          />
+          {searchQuery && (
+            <button
+              onClick={() => setSearchQuery("")}
+              className="absolute right-2 top-1/2 -translate-y-1/2 text-muted-foreground hover:text-foreground text-sm w-6 h-6 flex items-center justify-center rounded-full hover:bg-secondary transition-colors"
+              aria-label="Clear search"
+            >
+              ×
+            </button>
+          )}
+        </div>
+        {searchQuery && (
+          <span className="text-[10px] text-muted-foreground">
+            Showing Top 10 + matches for "{searchQuery}"
+          </span>
+        )}
+      </div>
       <div className="glass-panel p-4 md:p-6">
         {isEmpty ? (
           <div className="py-12 text-center">
             <div className="text-3xl mb-3">📊</div>
             <p className="text-sm text-muted-foreground">Grading data will appear here once the quarterly update runs.</p>
             <a href="https://www.gemrate.com" target="_blank" rel="noopener noreferrer" className="text-xs text-primary underline mt-2 inline-block">Visit gemrate.com →</a>
+          </div>
+        ) : top10.length === 0 ? (
+          <div className="py-12 text-center">
+            <div className="text-3xl mb-3">🔍</div>
+            <p className="text-sm text-muted-foreground">No athletes match "{searchQuery}" with grading data.</p>
           </div>
         ) : (
           <>
