@@ -1349,11 +1349,18 @@ const GemrateChart = () => {
 
     // Sort by the relevant metric based on filter
     const sortKey = graderFilter === "psa" ? "PSA" : graderFilter === "beckett" ? "Beckett" : graderFilter === "sgc" ? "SGC" : "total";
-    return rows
-      .filter((r) => r[sortKey] > 0)
-      .sort((a, b) => b[sortKey] - a[sortKey])
-      .slice(0, 10);
-  }, [gemrateData, beckettData, sgcData, graderFilter]);
+    const filtered = rows.filter((r) => r[sortKey] > 0).sort((a, b) => b[sortKey] - a[sortKey]);
+    const top = filtered.slice(0, 10);
+
+    // If searching, pin any matching athletes (outside top 10) into the chart
+    const q = searchQuery.trim().toLowerCase();
+    if (!q) return top;
+    const norm = (s: string) => s.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
+    const matches = filtered.filter((r) => norm(r.name).includes(norm(q)));
+    const topNames = new Set(top.map((r) => r.name));
+    const extras = matches.filter((r) => !topNames.has(r.name)).slice(0, 5);
+    return [...top, ...extras].sort((a, b) => b[sortKey] - a[sortKey]);
+  }, [gemrateData, beckettData, sgcData, graderFilter, searchQuery]);
 
   const isEmpty = (!gemrateData && !beckettData && !sgcData) || top10.length === 0;
 
