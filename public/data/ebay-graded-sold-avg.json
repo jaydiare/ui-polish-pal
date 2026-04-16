@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-04-15T23:05:59.499Z",
+    "updatedAt": "2026-04-16T03:50:31.303Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA/BGS/SGC grader title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 320,
-      "endIdx": 330,
+      "startIdx": 330,
+      "endIdx": 340,
       "totalAthletes": 461
     },
     "maxPages": 4,
@@ -4573,12 +4573,12 @@
   },
   "Oswaldo Cabrera": {
     "keyword": "Oswaldo Cabrera Baseball PSA",
-    "nScraped": 213,
-    "nSoldUsed": 106,
-    "avg": 44.75499999999999,
-    "taguchiSold": 44.75499999999999,
-    "medianSold": 41.11,
-    "marketStabilityCV": 0.11015760671793905,
+    "nScraped": 210,
+    "nSoldUsed": 105,
+    "avg": 44.85209523809523,
+    "taguchiSold": 44.85209523809523,
+    "medianSold": 44,
+    "marketStabilityCV": 0.10935167136424391,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
@@ -4597,7 +4597,7 @@
   },
   "Oswaldo Peraza": {
     "keyword": "Oswaldo Peraza Baseball PSA",
-    "nScraped": 145,
+    "nScraped": 158,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -4609,12 +4609,12 @@
   },
   "Ozzie Guillen": {
     "keyword": "Ozzie Guillen Baseball PSA",
-    "nScraped": 232,
-    "nSoldUsed": 96,
-    "avg": 28.097499999999997,
-    "taguchiSold": 28.097499999999997,
-    "medianSold": 25.884999999999998,
-    "marketStabilityCV": 0.21787230022746543,
+    "nScraped": 236,
+    "nSoldUsed": 104,
+    "avg": 32.47730769230762,
+    "taguchiSold": 32.47730769230762,
+    "medianSold": 32.375,
+    "marketStabilityCV": 0.2198465138513569,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
@@ -4633,12 +4633,12 @@
   },
   "Pablo Sandoval": {
     "keyword": "Pablo Sandoval Baseball PSA",
-    "nScraped": 134,
-    "nSoldUsed": 10,
-    "avg": 29.990000000000002,
-    "taguchiSold": 29.990000000000002,
+    "nScraped": 193,
+    "nSoldUsed": 14,
+    "avg": 39.847142857142856,
+    "taguchiSold": 39.847142857142856,
     "medianSold": 29.99,
-    "marketStabilityCV": 1.2487125819101303e-16,
+    "marketStabilityCV": 0.29642550874093276,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
