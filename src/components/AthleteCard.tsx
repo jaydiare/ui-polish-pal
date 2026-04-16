@@ -152,7 +152,7 @@ const AthleteCard = forwardRef<HTMLElement, AthleteCardProps>(({ athlete, byName
           <img
             src={photo}
             alt={athlete.name}
-            className="w-14 h-14 rounded-xl object-cover object-top shrink-0 border border-border"
+            className="w-14 h-14 rounded-xl object-cover object-center shrink-0 border border-border bg-secondary"
             loading="lazy"
           />
         ) : (
