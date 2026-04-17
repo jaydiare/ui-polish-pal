@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-04-16T23:06:13.138Z",
+    "updatedAt": "2026-04-17T03:48:48.567Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA/BGS/SGC grader title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 430,
-      "endIdx": 440,
+      "startIdx": 440,
+      "endIdx": 450,
       "totalAthletes": 461
     },
     "maxPages": 4,
@@ -6169,7 +6169,7 @@
   },
   "Salomon Rondon": {
     "keyword": "Salomon Rondon Pachuca Mallorca Venezuela Oviedo Soccer PSA",
-    "nScraped": 3,
+    "nScraped": 4,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -6193,7 +6193,7 @@
   },
   "Yangel Herrera": {
     "keyword": "Yangel Herrera Soccer PSA",
-    "nScraped": 168,
+    "nScraped": 180,
     "nSoldUsed": 4,
     "avg": 15.5,
     "taguchiSold": 15.5,
