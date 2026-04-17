@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-04-17T03:48:48.567Z",
+    "updatedAt": "2026-04-17T06:17:08.646Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA/BGS/SGC grader title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 440,
-      "endIdx": 450,
+      "startIdx": 450,
+      "endIdx": 460,
       "totalAthletes": 461
     },
     "maxPages": 4,
@@ -32,7 +32,7 @@
     },
     "fx": {
       "source": "CBSA Exchange Rates API",
-      "asOf": "2026-04-17T00:00:00.000Z"
+      "asOf": "2026-04-18T00:00:00.000Z"
     }
   },
   "Adbert Alzolay": {
@@ -6553,7 +6553,7 @@
   },
   "Kevin Kelsy": {
     "keyword": "Kevin Kelsy Soccer PSA",
-    "nScraped": 241,
+    "nScraped": 240,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -6721,7 +6721,7 @@
   },
   "Wikelman Carmona": {
     "keyword": "Wikelman Carmona Soccer PSA",
-    "nScraped": 46,
+    "nScraped": 49,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -6746,14 +6746,14 @@
   "Alejandro Marques": {
     "keyword": "Alejandro Marques Soccer PSA",
     "nScraped": 240,
-    "nSoldUsed": 0,
-    "avg": null,
-    "taguchiSold": null,
-    "medianSold": null,
-    "marketStabilityCV": null,
+    "nSoldUsed": 4,
+    "avg": 7.99,
+    "taguchiSold": 7.99,
+    "medianSold": 7.99,
+    "marketStabilityCV": 0,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
   },
   "Luis Balbo": {
     "keyword": "Luis Balbo Soccer",
