@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-04-17T17:12:10.388Z",
+    "updatedAt": "2026-04-17T19:35:30.309Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA/BGS/SGC grader title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 30,
-      "endIdx": 40,
+      "startIdx": 40,
+      "endIdx": 50,
       "totalAthletes": 461
     },
     "maxPages": 4,
@@ -601,24 +601,24 @@
   },
   "Anthony Santander": {
     "keyword": "Anthony Santander Baseball PSA",
-    "nScraped": 273,
+    "nScraped": 272,
     "nSoldUsed": 16,
-    "avg": 27.074999999999992,
-    "taguchiSold": 27.074999999999992,
-    "medianSold": 27.075,
-    "marketStabilityCV": 0.11729811057765768,
+    "avg": 19.494999999999997,
+    "taguchiSold": 19.494999999999997,
+    "medianSold": 19.495,
+    "marketStabilityCV": 0.23866345182066392,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
   },
   "Antonio Senzatela": {
     "keyword": "Antonio Senzatela Baseball PSA",
-    "nScraped": 247,
-    "nSoldUsed": 8,
-    "avg": 5.725,
-    "taguchiSold": 5.725,
-    "medianSold": 5.725,
-    "marketStabilityCV": 0.14471787771677128,
+    "nScraped": 244,
+    "nSoldUsed": 4,
+    "avg": 6.5,
+    "taguchiSold": 6.5,
+    "medianSold": 6.5,
+    "marketStabilityCV": 0,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
@@ -662,18 +662,18 @@
   "Asdrubal Cabrera": {
     "keyword": "Asdrubal Cabrera Baseball PSA",
     "nScraped": 60,
-    "nSoldUsed": 1,
+    "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
   },
   "Avisail Garcia": {
     "keyword": "Avisail Garcia Baseball PSA",
-    "nScraped": 246,
+    "nScraped": 252,
     "nSoldUsed": 20,
     "avg": 8.5,
     "taguchiSold": 8.5,
