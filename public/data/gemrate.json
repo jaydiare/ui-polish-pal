@@ -1,13 +1,13 @@
 {
   "_meta": {
-    "updatedAt": "2026-04-17T13:08:35.592835+00:00",
+    "updatedAt": "2026-04-17T16:52:40.392564+00:00",
     "athleteCount": 459,
     "graders": [
       "PSA"
     ],
     "batchInfo": {
-      "startIdx": 60,
-      "endIdx": 80,
+      "startIdx": 80,
+      "endIdx": 100,
       "totalAthletes": 571
     }
   },
@@ -1207,14 +1207,14 @@
         "PSA": {
           "cards": 49,
           "gems": 137,
-          "grades": 3504,
+          "grades": 3506,
           "gemRate": 4.0
         }
       },
       "totals": {
         "cards": 49,
         "gems": 137,
-        "grades": 3504,
+        "grades": 3506,
         "gemRate": 4.0
       }
     },
@@ -1225,14 +1225,14 @@
         "PSA": {
           "cards": 44,
           "gems": 7,
-          "grades": 4247,
+          "grades": 4249,
           "gemRate": 0.0
         }
       },
       "totals": {
         "cards": 44,
         "gems": 7,
-        "grades": 4247,
+        "grades": 4249,
         "gemRate": 0.0
       }
     },
@@ -1315,15 +1315,15 @@
         "PSA": {
           "cards": 47,
           "gems": 48,
-          "grades": 107,
-          "gemRate": 45.0
+          "grades": 108,
+          "gemRate": 44.0
         }
       },
       "totals": {
         "cards": 47,
         "gems": 48,
-        "grades": 107,
-        "gemRate": 45.0
+        "grades": 108,
+        "gemRate": 44.0
       }
     },
     "Danny Leon": {
