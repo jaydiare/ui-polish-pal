@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-04-17T08:09:14.535Z",
+    "updatedAt": "2026-04-17T11:27:14.731Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA/BGS/SGC grader title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 460,
-      "endIdx": 461,
+      "startIdx": 0,
+      "endIdx": 10,
       "totalAthletes": 461
     },
     "maxPages": 4,
@@ -61,7 +61,7 @@
   },
   "Al Pedrique": {
     "keyword": "Al Pedrique Baseball PSA",
-    "nScraped": 239,
+    "nScraped": 240,
     "nSoldUsed": 4,
     "avg": 349.99,
     "taguchiSold": 349.99,
@@ -85,7 +85,7 @@
   },
   "Alberto Callaspo": {
     "keyword": "Alberto Callaspo Baseball PSA",
-    "nScraped": 0,
+    "nScraped": 43,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -97,7 +97,7 @@
   },
   "Alberto Gonzalez": {
     "keyword": "Alberto Gonzalez Baseball PSA",
-    "nScraped": 0,
+    "nScraped": 60,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -109,7 +109,7 @@
   },
   "Alcides Escobar": {
     "keyword": "Alcides Escobar Baseball PSA",
-    "nScraped": 0,
+    "nScraped": 240,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -6949,24 +6949,24 @@
   },
   "Jesus Luzardo": {
     "keyword": "Jesus Luzardo Baseball PSA",
-    "nScraped": 162,
-    "nSoldUsed": 100,
-    "avg": 14.260899999999994,
-    "taguchiSold": 14.260899999999994,
-    "medianSold": 14.24,
-    "marketStabilityCV": 0.11744660539450842,
+    "nScraped": 159,
+    "nSoldUsed": 98,
+    "avg": 15.845714285714292,
+    "taguchiSold": 15.845714285714292,
+    "medianSold": 14.99,
+    "marketStabilityCV": 0.17540105727750058,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
   },
   "Jose Fernandez": {
     "keyword": "Jose Fernandez Diamondbacks Baseball PSA",
-    "nScraped": 242,
+    "nScraped": 248,
     "nSoldUsed": 44,
-    "avg": 178.8356818181818,
-    "taguchiSold": 178.8356818181818,
+    "avg": 176.81272727272724,
+    "taguchiSold": 176.81272727272724,
     "medianSold": 199.99,
-    "marketStabilityCV": 0.24268937724561596,
+    "marketStabilityCV": 0.24636243789033557,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
