@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-04-17T11:27:14.731Z",
+    "updatedAt": "2026-04-17T14:01:15.654Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA/BGS/SGC grader title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 0,
-      "endIdx": 10,
+      "startIdx": 10,
+      "endIdx": 20,
       "totalAthletes": 461
     },
     "maxPages": 4,
@@ -193,7 +193,7 @@
   },
   "Alex Escobar": {
     "keyword": "Alex Escobar Baseball PSA",
-    "nScraped": 246,
+    "nScraped": 244,
     "nSoldUsed": 4,
     "avg": 3,
     "taguchiSold": 3,
@@ -289,7 +289,7 @@
   },
   "Alexi Amarista": {
     "keyword": "Alexi Amarista Baseball PSA",
-    "nScraped": 0,
+    "nScraped": 39,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
