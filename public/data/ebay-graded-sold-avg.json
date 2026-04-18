@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-04-18T09:08:41.885Z",
+    "updatedAt": "2026-04-18T11:04:36.135Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA/BGS/SGC grader title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 100,
-      "endIdx": 110,
+      "startIdx": 110,
+      "endIdx": 120,
       "totalAthletes": 461
     },
     "maxPages": 4,
@@ -1693,12 +1693,12 @@
   },
   "Elio Chacon": {
     "keyword": "Elio Chacon Baseball PSA",
-    "nScraped": 248,
-    "nSoldUsed": 20,
-    "avg": 35,
-    "taguchiSold": 35,
-    "medianSold": 35,
-    "marketStabilityCV": 0,
+    "nScraped": 252,
+    "nSoldUsed": 24,
+    "avg": 60,
+    "taguchiSold": 60,
+    "medianSold": 60,
+    "marketStabilityCV": 0.42562826537937426,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
