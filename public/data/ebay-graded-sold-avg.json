@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-04-18T15:02:51.717Z",
+    "updatedAt": "2026-04-18T17:01:58.356Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA/BGS/SGC grader title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 130,
-      "endIdx": 140,
+      "startIdx": 140,
+      "endIdx": 150,
       "totalAthletes": 461
     },
     "maxPages": 4,
@@ -2005,7 +2005,7 @@
   },
   "Francisco Morales": {
     "keyword": "Francisco Morales Baseball PSA",
-    "nScraped": 247,
+    "nScraped": 248,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -2017,12 +2017,12 @@
   },
   "Francisco Rodriguez": {
     "keyword": "Francisco Rodriguez Baseball PSA",
-    "nScraped": 248,
-    "nSoldUsed": 20,
-    "avg": 29.990000000000002,
-    "taguchiSold": 29.990000000000002,
-    "medianSold": 29.99,
-    "marketStabilityCV": 1.2154075777279501e-16,
+    "nScraped": 252,
+    "nSoldUsed": 16,
+    "avg": 40.620000000000005,
+    "taguchiSold": 40.620000000000005,
+    "medianSold": 40.62,
+    "marketStabilityCV": 0.27027613963686087,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
@@ -2041,7 +2041,7 @@
   },
   "Franklin Barreto": {
     "keyword": "Franklin Barreto Baseball PSA",
-    "nScraped": 251,
+    "nScraped": 252,
     "nSoldUsed": 16,
     "avg": 4.600000000000001,
     "taguchiSold": 4.600000000000001,
@@ -2077,12 +2077,12 @@
   },
   "Fred Manrique": {
     "keyword": "Fred Manrique Baseball PSA",
-    "nScraped": 122,
-    "nSoldUsed": 6,
+    "nScraped": 183,
+    "nSoldUsed": 9,
     "avg": 6.509999999999999,
     "taguchiSold": 6.509999999999999,
     "medianSold": 6.51,
-    "marketStabilityCV": 1.494547943345774e-16,
+    "marketStabilityCV": 1.4470898236716822e-16,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
