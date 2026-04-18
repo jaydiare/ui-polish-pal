@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-04-18T17:01:58.356Z",
+    "updatedAt": "2026-04-18T19:12:10.693Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA/BGS/SGC grader title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 140,
-      "endIdx": 150,
+      "startIdx": 150,
+      "endIdx": 160,
       "totalAthletes": 461
     },
     "maxPages": 4,
@@ -2125,7 +2125,7 @@
   },
   "Gabriel Arias": {
     "keyword": "Gabriel Arias Baseball PSA",
-    "nScraped": 307,
+    "nScraped": 316,
     "nSoldUsed": 56,
     "avg": 23.060714285714287,
     "taguchiSold": 23.060714285714287,
@@ -2137,12 +2137,12 @@
   },
   "Gabriel Moreno": {
     "keyword": "Gabriel Moreno Baseball PSA",
-    "nScraped": 148,
-    "nSoldUsed": 55,
-    "avg": 31.568181818181824,
-    "taguchiSold": 31.568181818181824,
-    "medianSold": 34.99,
-    "marketStabilityCV": 0.20335408042677036,
+    "nScraped": 168,
+    "nSoldUsed": 64,
+    "avg": 32.70859375000001,
+    "taguchiSold": 32.70859375000001,
+    "medianSold": 35,
+    "marketStabilityCV": 0.2181765639473056,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
@@ -2197,7 +2197,7 @@
   },
   "German Marquez": {
     "keyword": "German Marquez Baseball PSA",
-    "nScraped": 246,
+    "nScraped": 248,
     "nSoldUsed": 8,
     "avg": 9.875,
     "taguchiSold": 9.875,
@@ -2209,7 +2209,7 @@
   },
   "Giomar Guevara": {
     "keyword": "Giomar Guevara Baseball PSA",
-    "nScraped": 4,
+    "nScraped": 5,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -2221,7 +2221,7 @@
   },
   "Giovanni Carrara": {
     "keyword": "Giovanni Carrara Baseball PSA",
-    "nScraped": 20,
+    "nScraped": 23,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
