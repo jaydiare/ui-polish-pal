@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-04-18T13:38:21.155Z",
+    "updatedAt": "2026-04-18T15:02:51.717Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA/BGS/SGC grader title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 120,
-      "endIdx": 130,
+      "startIdx": 130,
+      "endIdx": 140,
       "totalAthletes": 461
     },
     "maxPages": 4,
@@ -1874,11 +1874,11 @@
   "Ezequiel Tovar": {
     "keyword": "Ezequiel Tovar Baseball PSA",
     "nScraped": 215,
-    "nSoldUsed": 108,
-    "avg": 50.15814814814806,
-    "taguchiSold": 50.15814814814806,
+    "nSoldUsed": 109,
+    "avg": 50.06486238532101,
+    "taguchiSold": 50.06486238532101,
     "medianSold": 50,
-    "marketStabilityCV": 0.186778109062067,
+    "marketStabilityCV": 0.1872709276239537,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
@@ -1933,12 +1933,12 @@
   },
   "Felix Hernandez": {
     "keyword": "Felix Hernandez Baseball PSA",
-    "nScraped": 134,
-    "nSoldUsed": 72,
-    "avg": 102.1361111111111,
-    "taguchiSold": 102.1361111111111,
-    "medianSold": 105.69,
-    "marketStabilityCV": 0.26282574392948177,
+    "nScraped": 130,
+    "nSoldUsed": 71,
+    "avg": 105.3805633802816,
+    "taguchiSold": 105.3805633802816,
+    "medianSold": 111.38,
+    "marketStabilityCV": 0.31511929354950846,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
