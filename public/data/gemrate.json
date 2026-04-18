@@ -1,13 +1,13 @@
 {
   "_meta": {
-    "updatedAt": "2026-04-18T16:34:31.503800+00:00",
+    "updatedAt": "2026-04-18T20:35:24.214562+00:00",
     "athleteCount": 459,
     "graders": [
       "PSA"
     ],
     "batchInfo": {
-      "startIdx": 200,
-      "endIdx": 220,
+      "startIdx": 220,
+      "endIdx": 240,
       "totalAthletes": 571
     }
   },
@@ -3185,16 +3185,16 @@
       "sport": "Baseball",
       "graders": {
         "PSA": {
-          "cards": 89,
+          "cards": 91,
           "gems": 137,
-          "grades": 371,
+          "grades": 373,
           "gemRate": 37.0
         }
       },
       "totals": {
-        "cards": 89,
+        "cards": 91,
         "gems": 137,
-        "grades": 371,
+        "grades": 373,
         "gemRate": 37.0
       }
     },
@@ -3241,14 +3241,14 @@
         "PSA": {
           "cards": 154,
           "gems": 886,
-          "grades": 1388,
+          "grades": 1390,
           "gemRate": 64.0
         }
       },
       "totals": {
         "cards": 154,
         "gems": 886,
-        "grades": 1388,
+        "grades": 1390,
         "gemRate": 64.0
       }
     },
@@ -3257,17 +3257,17 @@
       "sport": "Baseball",
       "graders": {
         "PSA": {
-          "cards": 58,
+          "cards": 59,
           "gems": 62,
-          "grades": 109,
-          "gemRate": 57.0
+          "grades": 110,
+          "gemRate": 56.0
         }
       },
       "totals": {
-        "cards": 58,
+        "cards": 59,
         "gems": 62,
-        "grades": 109,
-        "gemRate": 57.0
+        "grades": 110,
+        "gemRate": 56.0
       }
     },
     "Jesus Aguilar": {
@@ -3419,16 +3419,16 @@
       "sport": "Baseball",
       "graders": {
         "PSA": {
-          "cards": 135,
-          "gems": 601,
-          "grades": 1409,
+          "cards": 136,
+          "gems": 604,
+          "grades": 1415,
           "gemRate": 43.0
         }
       },
       "totals": {
-        "cards": 135,
-        "gems": 601,
-        "grades": 1409,
+        "cards": 136,
+        "gems": 604,
+        "grades": 1415,
         "gemRate": 43.0
       }
     },
@@ -3474,15 +3474,15 @@
       "graders": {
         "PSA": {
           "cards": 518,
-          "gems": 740,
-          "grades": 1821,
+          "gems": 742,
+          "grades": 1823,
           "gemRate": 41.0
         }
       },
       "totals": {
         "cards": 518,
-        "gems": 740,
-        "grades": 1821,
+        "gems": 742,
+        "grades": 1823,
         "gemRate": 41.0
       }
     },
