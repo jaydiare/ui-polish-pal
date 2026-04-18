@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-04-18T05:54:51.097Z",
+    "updatedAt": "2026-04-18T07:38:11.007Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA/BGS/SGC grader title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 80,
-      "endIdx": 90,
+      "startIdx": 90,
+      "endIdx": 100,
       "totalAthletes": 461
     },
     "maxPages": 4,
@@ -1249,7 +1249,7 @@
   },
   "Diego Castillo": {
     "keyword": "Diego Castillo Baseball PSA",
-    "nScraped": 247,
+    "nScraped": 248,
     "nSoldUsed": 4,
     "avg": 13.5,
     "taguchiSold": 13.5,
@@ -1285,7 +1285,7 @@
   },
   "Dioner Navarro": {
     "keyword": "Dioner Navarro Baseball PSA",
-    "nScraped": 241,
+    "nScraped": 240,
     "nSoldUsed": 4,
     "avg": 6,
     "taguchiSold": 6,
@@ -1321,12 +1321,12 @@
   },
   "Eddie Perez": {
     "keyword": "Eddie Perez Baseball PSA",
-    "nScraped": 242,
-    "nSoldUsed": 24,
-    "avg": 40.645,
-    "taguchiSold": 40.645,
-    "medianSold": 40.644999999999996,
-    "marketStabilityCV": 0.084319320773397,
+    "nScraped": 240,
+    "nSoldUsed": 20,
+    "avg": 44,
+    "taguchiSold": 44,
+    "medianSold": 44,
+    "marketStabilityCV": 0,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
