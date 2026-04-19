@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-04-19T17:01:47.793Z",
+    "updatedAt": "2026-04-19T19:12:06.834Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA/BGS/SGC grader title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 250,
-      "endIdx": 260,
+      "startIdx": 260,
+      "endIdx": 270,
       "totalAthletes": 461
     },
     "maxPages": 4,
@@ -3650,18 +3650,18 @@
   "Luis Aparicio": {
     "keyword": "Luis Aparicio Baseball PSA",
     "nScraped": 240,
-    "nSoldUsed": 103,
-    "avg": 73.36436893203883,
-    "taguchiSold": 73.36436893203883,
-    "medianSold": 66,
-    "marketStabilityCV": 0.3098056531939169,
+    "nSoldUsed": 86,
+    "avg": 73.34453488372093,
+    "taguchiSold": 73.34453488372093,
+    "medianSold": 65.5,
+    "marketStabilityCV": 0.31033635886470706,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
   },
   "Luis Aponte": {
     "keyword": "Luis Aponte Baseball PSA",
-    "nScraped": 251,
+    "nScraped": 248,
     "nSoldUsed": 8,
     "avg": 11.25,
     "taguchiSold": 11.25,
@@ -3673,12 +3673,12 @@
   },
   "Luis Arraez": {
     "keyword": "Luis Arraez Baseball PSA",
-    "nScraped": 240,
-    "nSoldUsed": 138,
-    "avg": 47.33739130434782,
-    "taguchiSold": 47.33739130434782,
-    "medianSold": 48,
-    "marketStabilityCV": 0.2528735711970455,
+    "nScraped": 180,
+    "nSoldUsed": 99,
+    "avg": 47.60959595959596,
+    "taguchiSold": 47.60959595959596,
+    "medianSold": 49.13,
+    "marketStabilityCV": 0.25088820411046037,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
