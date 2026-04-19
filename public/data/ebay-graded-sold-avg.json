@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-04-19T07:51:13.473Z",
+    "updatedAt": "2026-04-19T09:10:52.693Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA/BGS/SGC grader title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 200,
-      "endIdx": 210,
+      "startIdx": 210,
+      "endIdx": 220,
       "totalAthletes": 461
     },
     "maxPages": 4,
@@ -2954,11 +2954,11 @@
   "Jose Altuve": {
     "keyword": "Jose Altuve Baseball PSA",
     "nScraped": 240,
-    "nSoldUsed": 113,
-    "avg": 57.79840707964593,
-    "taguchiSold": 57.79840707964593,
+    "nSoldUsed": 117,
+    "avg": 58.33435897435899,
+    "taguchiSold": 58.33435897435899,
     "medianSold": 59,
-    "marketStabilityCV": 0.20114740931998587,
+    "marketStabilityCV": 0.2016865455561276,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
@@ -3025,7 +3025,7 @@
   },
   "Jose Campos": {
     "keyword": "Jose Campos Baseball PSA",
-    "nScraped": 60,
+    "nScraped": 0,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
