@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-04-19T11:03:31.498Z",
+    "updatedAt": "2026-04-19T13:37:10.097Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA/BGS/SGC grader title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 220,
-      "endIdx": 230,
+      "startIdx": 230,
+      "endIdx": 240,
       "totalAthletes": 461
     },
     "maxPages": 4,
@@ -3206,23 +3206,23 @@
   "Jose Pirela": {
     "keyword": "Jose Pirela Baseball PSA",
     "nScraped": 256,
-    "nSoldUsed": 16,
-    "avg": 21.859999999999996,
-    "taguchiSold": 21.859999999999996,
-    "medianSold": 21.86,
-    "marketStabilityCV": 0.24048167407375123,
+    "nSoldUsed": 12,
+    "avg": 16.770000000000003,
+    "taguchiSold": 16.770000000000003,
+    "medianSold": 16.77,
+    "marketStabilityCV": 2.212694345214079e-16,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
   },
   "Jose Rodriguez": {
     "keyword": "Jose Rodriguez Baseball PSA",
-    "nScraped": 267,
-    "nSoldUsed": 17,
-    "avg": 16.441176470588236,
-    "taguchiSold": 16.441176470588236,
+    "nScraped": 260,
+    "nSoldUsed": 20,
+    "avg": 15.5,
+    "taguchiSold": 15.5,
     "medianSold": 15.5,
-    "marketStabilityCV": 0.06258624574073668,
+    "marketStabilityCV": 0,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
@@ -3253,7 +3253,7 @@
   },
   "Jose Suarez": {
     "keyword": "Jose Suarez Baseball PSA",
-    "nScraped": 247,
+    "nScraped": 248,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -3277,7 +3277,7 @@
   },
   "Jose Torres": {
     "keyword": "Jose Torres Baseball PSA",
-    "nScraped": 122,
+    "nScraped": 244,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
