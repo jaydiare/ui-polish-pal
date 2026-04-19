@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-04-19T03:53:04.688Z",
+    "updatedAt": "2026-04-19T06:11:46.449Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA/BGS/SGC grader title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 180,
-      "endIdx": 190,
+      "startIdx": 190,
+      "endIdx": 200,
       "totalAthletes": 461
     },
     "maxPages": 4,
@@ -32,7 +32,7 @@
     },
     "fx": {
       "source": "CBSA Exchange Rates API",
-      "asOf": "2026-04-19T00:00:00.000Z"
+      "asOf": "2026-04-20T00:00:00.000Z"
     }
   },
   "Adbert Alzolay": {
@@ -2665,7 +2665,7 @@
   },
   "Jean Machi": {
     "keyword": "Jean Machi Baseball PSA",
-    "nScraped": 17,
+    "nScraped": 18,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -2689,12 +2689,12 @@
   },
   "Jeferson Quero": {
     "keyword": "Jeferson Quero Baseball PSA",
-    "nScraped": 315,
-    "nSoldUsed": 56,
-    "avg": 64.85785714285714,
-    "taguchiSold": 64.85785714285714,
-    "medianSold": 64.005,
-    "marketStabilityCV": 0.073178375484216,
+    "nScraped": 320,
+    "nSoldUsed": 64,
+    "avg": 58.375000000000085,
+    "taguchiSold": 58.375000000000085,
+    "medianSold": 61,
+    "marketStabilityCV": 0.130640708029819,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
@@ -2702,18 +2702,18 @@
   "Jermaine Palacios": {
     "keyword": "Jermaine Palacios Baseball PSA",
     "nScraped": 244,
-    "nSoldUsed": 13,
-    "avg": 14.050000000000002,
-    "taguchiSold": 14.050000000000002,
-    "medianSold": 14.05,
-    "marketStabilityCV": 1.3159365250884776e-16,
+    "nSoldUsed": 16,
+    "avg": 11.540000000000003,
+    "taguchiSold": 11.540000000000003,
+    "medianSold": 11.54,
+    "marketStabilityCV": 0.22463750893080567,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
   },
   "Jesus Aguilar": {
     "keyword": "Jesus Aguilar Baseball PSA",
-    "nScraped": 243,
+    "nScraped": 240,
     "nSoldUsed": 16,
     "avg": 9,
     "taguchiSold": 9,
