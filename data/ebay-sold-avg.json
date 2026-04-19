@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-04-19T18:43:17.461Z",
+    "updatedAt": "2026-04-19T21:32:23.272Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. Taguchi winsorized mean + market stability CV. Ungraded condition policy (permissive for sold). Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 390,
-      "endIdx": 400,
+      "startIdx": 400,
+      "endIdx": 410,
       "totalAthletes": 571
     },
     "maxPages": 4,
@@ -5578,18 +5578,18 @@
   "Ranger Suarez": {
     "keyword": "Ranger Suarez Baseball",
     "nScraped": 240,
-    "nSoldUsed": 103,
-    "avg": 3.762427184466024,
-    "taguchiSold": 3.762427184466024,
-    "medianSold": 3.74,
-    "marketStabilityCV": 0.45227881777745926,
+    "nSoldUsed": 102,
+    "avg": 3.717156862745102,
+    "taguchiSold": 3.717156862745102,
+    "medianSold": 3.125,
+    "marketStabilityCV": 0.4521460685218345,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
   },
   "Raul Chavez": {
     "keyword": "Raul Chavez Baseball",
-    "nScraped": 249,
+    "nScraped": 244,
     "nSoldUsed": 40,
     "avg": 1.7200000000000002,
     "taguchiSold": 1.7200000000000002,
@@ -5601,12 +5601,12 @@
   },
   "Ray Monzant": {
     "keyword": "Ray Monzant Baseball",
-    "nScraped": 198,
+    "nScraped": 201,
     "nSoldUsed": 65,
-    "avg": 2.4798461538461543,
-    "taguchiSold": 2.4798461538461543,
+    "avg": 2.4887692307692304,
+    "taguchiSold": 2.4887692307692304,
     "medianSold": 2.49,
-    "marketStabilityCV": 0.1929839222332239,
+    "marketStabilityCV": 0.19262233652744423,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
@@ -5614,11 +5614,11 @@
   "Ray Olmedo": {
     "keyword": "Ray Olmedo Baseball",
     "nScraped": 240,
-    "nSoldUsed": 4,
-    "avg": 0.99,
-    "taguchiSold": 0.99,
+    "nSoldUsed": 8,
+    "avg": 0.9900000000000001,
+    "taguchiSold": 0.9900000000000001,
     "medianSold": 0.99,
-    "marketStabilityCV": 0,
+    "marketStabilityCV": 1.1988670075195453e-16,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
