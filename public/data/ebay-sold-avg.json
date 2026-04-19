@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-04-19T02:25:13.183Z",
+    "updatedAt": "2026-04-19T05:25:49.833Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. Taguchi winsorized mean + market stability CV. Ungraded condition policy (permissive for sold). Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 330,
-      "endIdx": 340,
+      "startIdx": 340,
+      "endIdx": 350,
       "totalAthletes": 571
     },
     "maxPages": 4,
@@ -28,7 +28,7 @@
     },
     "fx": {
       "source": "CBSA Exchange Rates API",
-      "asOf": "2026-04-19T00:00:00.000Z"
+      "asOf": "2026-04-20T00:00:00.000Z"
     }
   },
   "Adbert Alzolay": {
@@ -4845,43 +4845,43 @@
   },
   "Martin Prado": {
     "keyword": "Martin Prado Baseball",
-    "nScraped": 210,
-    "nSoldUsed": 91,
-    "avg": 2.4681318681318705,
-    "taguchiSold": 2.4681318681318705,
-    "medianSold": 2.27,
-    "marketStabilityCV": 0.19586400042163282,
+    "nScraped": 216,
+    "nSoldUsed": 96,
+    "avg": 2.661770833333328,
+    "taguchiSold": 2.661770833333328,
+    "medianSold": 2.34,
+    "marketStabilityCV": 0.25430498873731505,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
   },
   "Marwin Gonzalez": {
     "keyword": "Marwin Gonzalez Baseball",
-    "nScraped": 203,
-    "nSoldUsed": 100,
-    "avg": 1.8714000000000015,
-    "taguchiSold": 1.8714000000000015,
+    "nScraped": 202,
+    "nSoldUsed": 98,
+    "avg": 1.9677551020408182,
+    "taguchiSold": 1.9677551020408182,
     "medianSold": 1.97,
-    "marketStabilityCV": 0.18490641391528098,
+    "marketStabilityCV": 0.23407570447979956,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
   },
   "Mauricio Llovera": {
     "keyword": "Mauricio Llovera Baseball",
-    "nScraped": 248,
-    "nSoldUsed": 16,
-    "avg": 8.495,
-    "taguchiSold": 8.495,
-    "medianSold": 8.495000000000001,
-    "marketStabilityCV": 0.7896418076081515,
+    "nScraped": 244,
+    "nSoldUsed": 20,
+    "avg": 12.990000000000004,
+    "taguchiSold": 12.990000000000004,
+    "medianSold": 12.99,
+    "marketStabilityCV": 2.806010258357292e-16,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
   },
   "Mauricio Robles": {
     "keyword": "Mauricio Robles Baseball",
-    "nScraped": 250,
+    "nScraped": 248,
     "nSoldUsed": 32,
     "avg": 2.2449999999999997,
     "taguchiSold": 2.2449999999999997,
@@ -4893,7 +4893,7 @@
   },
   "Mauro Zarate": {
     "keyword": "Mauro Zarate Baseball",
-    "nScraped": 165,
+    "nScraped": 166,
     "nSoldUsed": 8,
     "avg": 1.29,
     "taguchiSold": 1.29,
