@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-04-19T12:55:37.488Z",
+    "updatedAt": "2026-04-19T15:34:56.273Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. Taguchi winsorized mean + market stability CV. Ungraded condition policy (permissive for sold). Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 370,
-      "endIdx": 380,
+      "startIdx": 380,
+      "endIdx": 390,
       "totalAthletes": 571
     },
     "maxPages": 4,
@@ -5350,23 +5350,23 @@
   "Oswaldo Peraza": {
     "keyword": "Oswaldo Peraza Baseball",
     "nScraped": 240,
-    "nSoldUsed": 0,
+    "nSoldUsed": 3,
     "avg": null,
     "taguchiSold": null,
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
   },
   "Ozzie Guillen": {
     "keyword": "Ozzie Guillen Baseball",
     "nScraped": 240,
-    "nSoldUsed": 128,
-    "avg": 1.24109375,
-    "taguchiSold": 1.24109375,
-    "medianSold": 1.115,
-    "marketStabilityCV": 0.5709631086057211,
+    "nSoldUsed": 121,
+    "avg": 0.37090909090909074,
+    "taguchiSold": 0.37090909090909074,
+    "medianSold": 0.3,
+    "marketStabilityCV": 0.5736906056645954,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
@@ -5374,11 +5374,11 @@
   "Pablo Lopez": {
     "keyword": "Pablo Lopez Baseball",
     "nScraped": 240,
-    "nSoldUsed": 107,
-    "avg": 3.0207476635514023,
-    "taguchiSold": 3.0207476635514023,
-    "medianSold": 2.99,
-    "marketStabilityCV": 0.3162918815981829,
+    "nSoldUsed": 99,
+    "avg": 2.83060606060606,
+    "taguchiSold": 2.83060606060606,
+    "medianSold": 2.5,
+    "marketStabilityCV": 0.29645130047846635,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
@@ -5386,11 +5386,11 @@
   "Pablo Sandoval": {
     "keyword": "Pablo Sandoval Baseball",
     "nScraped": 240,
-    "nSoldUsed": 128,
-    "avg": 3.769765625,
-    "taguchiSold": 3.769765625,
-    "medianSold": 3.9800000000000004,
-    "marketStabilityCV": 0.31421420193359356,
+    "nSoldUsed": 123,
+    "avg": 4.154552845528459,
+    "taguchiSold": 4.154552845528459,
+    "medianSold": 3.99,
+    "marketStabilityCV": 0.2789761372380721,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
