@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-04-19T06:11:46.449Z",
+    "updatedAt": "2026-04-19T07:51:13.473Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA/BGS/SGC grader title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 190,
-      "endIdx": 200,
+      "startIdx": 200,
+      "endIdx": 210,
       "totalAthletes": 461
     },
     "maxPages": 4,
@@ -2822,11 +2822,11 @@
   "Jhostynxon Garcia": {
     "keyword": "Jhostynxon Garcia Baseball PSA",
     "nScraped": 144,
-    "nSoldUsed": 32,
-    "avg": 90.6825,
-    "taguchiSold": 90.6825,
-    "medianSold": 84.995,
-    "marketStabilityCV": 0.24215764934718065,
+    "nSoldUsed": 35,
+    "avg": 84.44828571428565,
+    "taguchiSold": 84.44828571428565,
+    "medianSold": 80,
+    "marketStabilityCV": 0.17104994253722958,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
@@ -2857,12 +2857,12 @@
   },
   "Johan Santana": {
     "keyword": "Johan Santana Baseball PSA",
-    "nScraped": 289,
-    "nSoldUsed": 54,
-    "avg": 49.16185185185181,
-    "taguchiSold": 49.16185185185181,
-    "medianSold": 45,
-    "marketStabilityCV": 0.09943112915097707,
+    "nScraped": 288,
+    "nSoldUsed": 68,
+    "avg": 69.77352941176463,
+    "taguchiSold": 69.77352941176463,
+    "medianSold": 54.99,
+    "marketStabilityCV": 0.3748778569319704,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
