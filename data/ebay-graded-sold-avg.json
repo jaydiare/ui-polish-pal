@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-04-19T20:59:49.203Z",
+    "updatedAt": "2026-04-19T23:00:08.376Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA/BGS/SGC grader title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 270,
-      "endIdx": 280,
+      "startIdx": 280,
+      "endIdx": 290,
       "totalAthletes": 461
     },
     "maxPages": 4,
@@ -3877,24 +3877,24 @@
   },
   "Luis Salazar": {
     "keyword": "Luis Salazar Baseball PSA",
-    "nScraped": 269,
-    "nSoldUsed": 24,
-    "avg": 41.5,
-    "taguchiSold": 41.5,
-    "medianSold": 41.5,
-    "marketStabilityCV": 0.2092244967166081,
+    "nScraped": 264,
+    "nSoldUsed": 20,
+    "avg": 33,
+    "taguchiSold": 33,
+    "medianSold": 33,
+    "marketStabilityCV": 0,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
   },
   "Luis Sanchez": {
     "keyword": "Luis Sanchez Baseball PSA",
-    "nScraped": 269,
-    "nSoldUsed": 19,
-    "avg": 23.526315789473685,
-    "taguchiSold": 23.526315789473685,
+    "nScraped": 272,
+    "nSoldUsed": 20,
+    "avg": 33,
+    "taguchiSold": 33,
     "medianSold": 33,
-    "marketStabilityCV": 0.4851286004966766,
+    "marketStabilityCV": 0,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
@@ -3914,18 +3914,18 @@
   "Luis Sojo": {
     "keyword": "Luis Sojo Baseball PSA",
     "nScraped": 240,
-    "nSoldUsed": 12,
-    "avg": 75,
-    "taguchiSold": 75,
-    "medianSold": 75,
-    "marketStabilityCV": 0,
+    "nSoldUsed": 8,
+    "avg": 487.495,
+    "taguchiSold": 487.495,
+    "medianSold": 487.495,
+    "marketStabilityCV": 0.9045748242149396,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
   },
   "Luis Torrens": {
     "keyword": "Luis Torrens Baseball PSA",
-    "nScraped": 245,
+    "nScraped": 244,
     "nSoldUsed": 12,
     "avg": 6.259999999999999,
     "taguchiSold": 6.259999999999999,
@@ -3985,15 +3985,15 @@
   },
   "Maicer Izturis": {
     "keyword": "Maicer Izturis Baseball PSA",
-    "nScraped": 0,
-    "nSoldUsed": 0,
+    "nScraped": 45,
+    "nSoldUsed": 1,
     "avg": null,
     "taguchiSold": null,
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
   },
   "Maikel Garcia": {
     "keyword": "Maikel Garcia Baseball PSA",
