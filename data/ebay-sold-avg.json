@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-04-20T16:05:41.145Z",
+    "updatedAt": "2026-04-20T19:00:20.461Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. Taguchi winsorized mean + market stability CV. Ungraded condition policy (permissive for sold). Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 460,
-      "endIdx": 470,
+      "startIdx": 470,
+      "endIdx": 480,
       "totalAthletes": 571
     },
     "maxPages": 4,
@@ -6430,11 +6430,11 @@
   "Wilson Ramos": {
     "keyword": "Wilson Ramos Baseball",
     "nScraped": 240,
-    "nSoldUsed": 130,
-    "avg": 1.2103846153846156,
-    "taguchiSold": 1.2103846153846156,
+    "nSoldUsed": 122,
+    "avg": 1.1927049180327862,
+    "taguchiSold": 1.1927049180327862,
     "medianSold": 0.99,
-    "marketStabilityCV": 0.20205204318891012,
+    "marketStabilityCV": 0.19264769086318448,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
@@ -6442,23 +6442,23 @@
   "Wilyer Abreu": {
     "keyword": "Wilyer Abreu Baseball",
     "nScraped": 240,
-    "nSoldUsed": 142,
-    "avg": 6.426901408450708,
-    "taguchiSold": 6.426901408450708,
-    "medianSold": 5.75,
-    "marketStabilityCV": 0.5060874497018661,
+    "nSoldUsed": 134,
+    "avg": 5.14544776119403,
+    "taguchiSold": 5.14544776119403,
+    "medianSold": 4.3149999999999995,
+    "marketStabilityCV": 0.5090985171289123,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
   },
   "Yangervis Solarte": {
     "keyword": "Yangervis Solarte Baseball",
-    "nScraped": 84,
-    "nSoldUsed": 55,
-    "avg": 1.6361818181818175,
-    "taguchiSold": 1.6361818181818175,
+    "nScraped": 75,
+    "nSoldUsed": 44,
+    "avg": 1.489318181818181,
+    "taguchiSold": 1.489318181818181,
     "medianSold": 1.49,
-    "marketStabilityCV": 0.20205398220482862,
+    "marketStabilityCV": 0.1211673621293984,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
@@ -6466,18 +6466,18 @@
   "Yilber Diaz": {
     "keyword": "Yilber Diaz Baseball",
     "nScraped": 240,
-    "nSoldUsed": 162,
-    "avg": 2.949567901234563,
-    "taguchiSold": 2.949567901234563,
-    "medianSold": 2.995,
-    "marketStabilityCV": 0.21887784256174672,
+    "nSoldUsed": 153,
+    "avg": 2.7364052287581706,
+    "taguchiSold": 2.7364052287581706,
+    "medianSold": 2.74,
+    "marketStabilityCV": 0.17430095114676386,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
   },
   "Yoel Hernandez": {
     "keyword": "Yoel Hernandez Baseball",
-    "nScraped": 285,
+    "nScraped": 264,
     "nSoldUsed": 20,
     "avg": 1.7199999999999995,
     "taguchiSold": 1.7199999999999995,
@@ -6489,15 +6489,15 @@
   },
   "Yoendrys Gomez": {
     "keyword": "Yoendrys Gomez Baseball",
-    "nScraped": 60,
-    "nSoldUsed": 31,
-    "avg": 2.828064516129032,
-    "taguchiSold": 2.828064516129032,
-    "medianSold": 2.5,
-    "marketStabilityCV": 0.21404539064590053,
+    "nScraped": 0,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
   },
   "Yoervis Medina": {
     "keyword": "Yoervis Medina Baseball",
