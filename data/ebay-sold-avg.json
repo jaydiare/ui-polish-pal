@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-04-20T05:37:33.101Z",
+    "updatedAt": "2026-04-20T08:01:32.430Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. Taguchi winsorized mean + market stability CV. Ungraded condition policy (permissive for sold). Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 420,
-      "endIdx": 430,
+      "startIdx": 430,
+      "endIdx": 440,
       "totalAthletes": 571
     },
     "maxPages": 4,
@@ -5949,19 +5949,19 @@
   },
   "Sandy Leon": {
     "keyword": "Sandy Leon Baseball",
-    "nScraped": 126,
-    "nSoldUsed": 66,
-    "avg": 1.329545454545455,
-    "taguchiSold": 1.329545454545455,
-    "medianSold": 1.495,
-    "marketStabilityCV": 0.24871980587226947,
+    "nScraped": 147,
+    "nSoldUsed": 78,
+    "avg": 1.4057692307692329,
+    "taguchiSold": 1.4057692307692329,
+    "medianSold": 1.49,
+    "marketStabilityCV": 0.2668733679036915,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
   },
   "Sebastian Rivero": {
     "keyword": "Sebastian Rivero Baseball",
-    "nScraped": 267,
+    "nScraped": 260,
     "nSoldUsed": 64,
     "avg": 1.1137499999999996,
     "taguchiSold": 1.1137499999999996,
@@ -5985,7 +5985,7 @@
   },
   "Silvino Bracho": {
     "keyword": "Silvino Bracho Baseball",
-    "nScraped": 124,
+    "nScraped": 128,
     "nSoldUsed": 20,
     "avg": 1.5500000000000005,
     "taguchiSold": 1.5500000000000005,
@@ -5997,12 +5997,12 @@
   },
   "Simon Muzziotti": {
     "keyword": "Simon Muzziotti Baseball",
-    "nScraped": 137,
-    "nSoldUsed": 55,
-    "avg": 1.0789090909090897,
-    "taguchiSold": 1.0789090909090897,
+    "nScraped": 168,
+    "nSoldUsed": 68,
+    "avg": 1.0777941176470576,
+    "taguchiSold": 1.0777941176470576,
     "medianSold": 1,
-    "marketStabilityCV": 0.0906149242068244,
+    "marketStabilityCV": 0.09121575439062798,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
