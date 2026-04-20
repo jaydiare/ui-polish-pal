@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-04-19T23:00:08.376Z",
+    "updatedAt": "2026-04-20T03:54:55.905Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA/BGS/SGC grader title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 280,
-      "endIdx": 290,
+      "startIdx": 290,
+      "endIdx": 300,
       "totalAthletes": 461
     },
     "maxPages": 4,
@@ -4009,7 +4009,7 @@
   },
   "Manny Pina": {
     "keyword": "Manny Pina Baseball PSA",
-    "nScraped": 242,
+    "nScraped": 244,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -4021,7 +4021,7 @@
   },
   "Manny Sarmiento": {
     "keyword": "Manny Sarmiento Baseball PSA",
-    "nScraped": 247,
+    "nScraped": 244,
     "nSoldUsed": 16,
     "avg": 38,
     "taguchiSold": 38,
@@ -4033,7 +4033,7 @@
   },
   "Manny Trillo": {
     "keyword": "Manny Trillo Baseball PSA",
-    "nScraped": 298,
+    "nScraped": 300,
     "nSoldUsed": 24,
     "avg": 25.11,
     "taguchiSold": 25.11,
@@ -4057,7 +4057,7 @@
   },
   "Marcos Armas": {
     "keyword": "Marcos Armas Baseball PSA",
-    "nScraped": 0,
+    "nScraped": 60,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
