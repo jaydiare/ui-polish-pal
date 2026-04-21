@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-04-21T17:31:33.641Z",
+    "updatedAt": "2026-04-21T21:08:31.137Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA/BGS/SGC grader title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 460,
-      "endIdx": 461,
+      "startIdx": 0,
+      "endIdx": 10,
       "totalAthletes": 461
     },
     "maxPages": 4,
@@ -37,7 +37,7 @@
   },
   "Adbert Alzolay": {
     "keyword": "Adbert Alzolay Baseball PSA",
-    "nScraped": 280,
+    "nScraped": 284,
     "nSoldUsed": 24,
     "avg": 11.5,
     "taguchiSold": 11.5,
@@ -85,7 +85,7 @@
   },
   "Alberto Callaspo": {
     "keyword": "Alberto Callaspo Baseball PSA",
-    "nScraped": 43,
+    "nScraped": 0,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -97,7 +97,7 @@
   },
   "Alberto Gonzalez": {
     "keyword": "Alberto Gonzalez Baseball PSA",
-    "nScraped": 60,
+    "nScraped": 0,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -109,7 +109,7 @@
   },
   "Alcides Escobar": {
     "keyword": "Alcides Escobar Baseball PSA",
-    "nScraped": 240,
+    "nScraped": 0,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -6949,24 +6949,24 @@
   },
   "Jesus Luzardo": {
     "keyword": "Jesus Luzardo Baseball PSA",
-    "nScraped": 159,
-    "nSoldUsed": 98,
-    "avg": 15.845714285714292,
-    "taguchiSold": 15.845714285714292,
+    "nScraped": 150,
+    "nSoldUsed": 91,
+    "avg": 15.797472527472534,
+    "taguchiSold": 15.797472527472534,
     "medianSold": 14.99,
-    "marketStabilityCV": 0.17540105727750058,
+    "marketStabilityCV": 0.17795179516666773,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
   },
   "Jose Fernandez": {
     "keyword": "Jose Fernandez Diamondbacks Baseball PSA",
-    "nScraped": 248,
-    "nSoldUsed": 44,
-    "avg": 176.81272727272724,
-    "taguchiSold": 176.81272727272724,
-    "medianSold": 199.99,
-    "marketStabilityCV": 0.24636243789033557,
+    "nScraped": 252,
+    "nSoldUsed": 50,
+    "avg": 166.19079999999988,
+    "taguchiSold": 166.19079999999988,
+    "medianSold": 180,
+    "marketStabilityCV": 0.20554818949790657,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
