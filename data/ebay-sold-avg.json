@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-04-21T07:44:18.648Z",
+    "updatedAt": "2026-04-21T10:16:52.118Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. Taguchi winsorized mean + market stability CV. Ungraded condition policy (permissive for sold). Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 510,
-      "endIdx": 520,
+      "startIdx": 520,
+      "endIdx": 530,
       "totalAthletes": 571
     },
     "maxPages": 4,
@@ -7017,19 +7017,19 @@
   },
   "Wuilker Farinez": {
     "keyword": "Wuilker Farinez Soccer",
-    "nScraped": 16,
-    "nSoldUsed": 0,
-    "avg": null,
-    "taguchiSold": null,
-    "medianSold": null,
-    "marketStabilityCV": null,
+    "nScraped": 20,
+    "nSoldUsed": 4,
+    "avg": 161.77,
+    "taguchiSold": 161.77,
+    "medianSold": 161.77,
+    "marketStabilityCV": 0,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
   },
   "Abel Caputo": {
     "keyword": "Abel Caputo Soccer",
-    "nScraped": 30,
+    "nScraped": 29,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -7053,19 +7053,19 @@
   },
   "Alejandro Moreno": {
     "keyword": "Alejandro Moreno Soccer",
-    "nScraped": 242,
-    "nSoldUsed": 12,
-    "avg": 0.9900000000000001,
-    "taguchiSold": 0.9900000000000001,
+    "nScraped": 240,
+    "nSoldUsed": 24,
+    "avg": 0.9899999999999997,
+    "taguchiSold": 0.9899999999999997,
     "medianSold": 0.99,
-    "marketStabilityCV": 1.1713031619078315e-16,
+    "marketStabilityCV": 3.4366712738578033e-16,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
   },
   "Bernardo Anor": {
     "keyword": "Bernardo Anor Soccer",
-    "nScraped": 120,
+    "nScraped": 240,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -7077,7 +7077,7 @@
   },
   "Brayan Martinez": {
     "keyword": "Brayan Martinez Soccer",
-    "nScraped": 0,
+    "nScraped": 60,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
