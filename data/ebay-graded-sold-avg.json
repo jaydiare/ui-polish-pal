@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-04-20T23:06:34.149Z",
+    "updatedAt": "2026-04-21T03:48:49.594Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA/BGS/SGC grader title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 380,
-      "endIdx": 390,
+      "startIdx": 390,
+      "endIdx": 400,
       "totalAthletes": 461
     },
     "maxPages": 4,
@@ -5365,7 +5365,7 @@
   },
   "Ubaldo Heredia": {
     "keyword": "Ubaldo Heredia Baseball PSA",
-    "nScraped": 35,
+    "nScraped": 38,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -5377,7 +5377,7 @@
   },
   "Ugueth Urbina": {
     "keyword": "Ugueth Urbina Baseball PSA",
-    "nScraped": 240,
+    "nScraped": 244,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -5389,7 +5389,7 @@
   },
   "Urbano Lugo": {
     "keyword": "Urbano Lugo Baseball PSA",
-    "nScraped": 239,
+    "nScraped": 240,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -5402,11 +5402,11 @@
   "Vic Davalillo": {
     "keyword": "Vic Davalillo Baseball PSA",
     "nScraped": 316,
-    "nSoldUsed": 60,
-    "avg": 56.26200000000001,
-    "taguchiSold": 56.26200000000001,
-    "medianSold": 53,
-    "marketStabilityCV": 0.11372065386841997,
+    "nSoldUsed": 72,
+    "avg": 45.595,
+    "taguchiSold": 45.595,
+    "medianSold": 46.394999999999996,
+    "marketStabilityCV": 0.1586250799866338,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
@@ -5425,7 +5425,7 @@
   },
   "Victor Martinez": {
     "keyword": "Victor Martinez Baseball PSA",
-    "nScraped": 303,
+    "nScraped": 302,
     "nSoldUsed": 24,
     "avg": 54.5,
     "taguchiSold": 54.5,
