@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-04-21T21:08:31.137Z",
+    "updatedAt": "2026-04-21T23:02:35.600Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA/BGS/SGC grader title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 0,
-      "endIdx": 10,
+      "startIdx": 10,
+      "endIdx": 20,
       "totalAthletes": 461
     },
     "maxPages": 4,
@@ -289,7 +289,7 @@
   },
   "Alexi Amarista": {
     "keyword": "Alexi Amarista Baseball PSA",
-    "nScraped": 39,
+    "nScraped": 0,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
