@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-04-21T19:07:10.261Z",
+    "updatedAt": "2026-04-21T21:41:46.472Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. Taguchi winsorized mean + market stability CV. Ungraded condition policy (permissive for sold). Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 550,
-      "endIdx": 560,
+      "startIdx": 560,
+      "endIdx": 570,
       "totalAthletes": 571
     },
     "maxPages": 4,
@@ -6765,12 +6765,12 @@
   },
   "Tomas Rincon": {
     "keyword": "Tomas Rincon Soccer",
-    "nScraped": 244,
-    "nSoldUsed": 40,
-    "avg": 4.990000000000002,
-    "taguchiSold": 4.990000000000002,
+    "nScraped": 248,
+    "nSoldUsed": 36,
+    "avg": 4.5455555555555565,
+    "taguchiSold": 4.5455555555555565,
     "medianSold": 4.99,
-    "marketStabilityCV": 3.6051833692363756e-16,
+    "marketStabilityCV": 0.11086711503570582,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
@@ -7233,12 +7233,12 @@
   },
   "Jefferson Savarino": {
     "keyword": "Jefferson Savarino Soccer",
-    "nScraped": 102,
-    "nSoldUsed": 79,
-    "avg": 3.612405063291142,
-    "taguchiSold": 3.612405063291142,
-    "medianSold": 3.25,
-    "marketStabilityCV": 0.43017471791893735,
+    "nScraped": 101,
+    "nSoldUsed": 78,
+    "avg": 3.5592307692307723,
+    "taguchiSold": 3.5592307692307723,
+    "medianSold": 2.75,
+    "marketStabilityCV": 0.43855411224877777,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
@@ -7497,12 +7497,12 @@
   },
   "Alejandro Marques": {
     "keyword": "Alejandro Marques Soccer",
-    "nScraped": 241,
-    "nSoldUsed": 37,
-    "avg": 4.385945945945945,
-    "taguchiSold": 4.385945945945945,
-    "medianSold": 4.45,
-    "marketStabilityCV": 0.23897811159141685,
+    "nScraped": 252,
+    "nSoldUsed": 54,
+    "avg": 4.017777777777778,
+    "taguchiSold": 4.017777777777778,
+    "medianSold": 3.25,
+    "marketStabilityCV": 0.31514715551343986,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
