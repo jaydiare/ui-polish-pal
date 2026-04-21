@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-04-21T09:56:11.521Z",
+    "updatedAt": "2026-04-21T11:35:41.881Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA/BGS/SGC grader title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 420,
-      "endIdx": 430,
+      "startIdx": 430,
+      "endIdx": 440,
       "totalAthletes": 461
     },
     "maxPages": 4,
@@ -157,7 +157,7 @@
   },
   "Alex Cabrera": {
     "keyword": "Alex Cabrera BBM NPB Diamondbacks Baseball PSA",
-    "nScraped": 1,
+    "nScraped": 2,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -242,11 +242,11 @@
   "Alex Ramirez": {
     "keyword": "Alex Ramirez BBM NPB Baseball PSA",
     "nScraped": 60,
-    "nSoldUsed": 6,
-    "avg": 28.495,
-    "taguchiSold": 28.495,
-    "medianSold": 28.494999999999997,
-    "marketStabilityCV": 0.057472905665571006,
+    "nSoldUsed": 7,
+    "avg": 24.424285714285713,
+    "taguchiSold": 24.424285714285713,
+    "medianSold": 27,
+    "marketStabilityCV": 0.24981862465524152,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
@@ -5005,7 +5005,7 @@
   },
   "Robert Perez": {
     "keyword": "Robert Perez Blue Jays Cardenales Baseball PSA",
-    "nScraped": 49,
+    "nScraped": 50,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -6938,14 +6938,14 @@
   "Robert Perez Jr.": {
     "keyword": "Robert Perez Jr. Prospects Baseball PSA",
     "nScraped": 240,
-    "nSoldUsed": 0,
-    "avg": null,
-    "taguchiSold": null,
-    "medianSold": null,
-    "marketStabilityCV": null,
+    "nSoldUsed": 8,
+    "avg": 8.75,
+    "taguchiSold": 8.75,
+    "medianSold": 8.75,
+    "marketStabilityCV": 0.1527207096642425,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
   },
   "Jesus Luzardo": {
     "keyword": "Jesus Luzardo Baseball PSA",
