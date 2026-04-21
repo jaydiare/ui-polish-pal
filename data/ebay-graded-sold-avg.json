@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-04-21T08:14:03.849Z",
+    "updatedAt": "2026-04-21T09:56:11.521Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA/BGS/SGC grader title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 410,
-      "endIdx": 420,
+      "startIdx": 420,
+      "endIdx": 430,
       "totalAthletes": 461
     },
     "maxPages": 4,
@@ -5821,7 +5821,7 @@
   },
   "Yonny Chirinos": {
     "keyword": "Yonny Chirinos Baseball PSA",
-    "nScraped": 23,
+    "nScraped": 24,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -5833,12 +5833,12 @@
   },
   "Yonny Hernandez": {
     "keyword": "Yonny Hernandez Baseball PSA",
-    "nScraped": 244,
+    "nScraped": 240,
     "nSoldUsed": 8,
-    "avg": 12.745,
-    "taguchiSold": 12.745,
-    "medianSold": 12.745000000000001,
-    "marketStabilityCV": 0.18830960787552542,
+    "avg": 10.99,
+    "taguchiSold": 10.99,
+    "medianSold": 10.99,
+    "marketStabilityCV": 0.38909734946303826,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
