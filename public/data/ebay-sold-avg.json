@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-04-21T02:13:17.676Z",
+    "updatedAt": "2026-04-21T05:24:16.215Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. Taguchi winsorized mean + market stability CV. Ungraded condition policy (permissive for sold). Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 490,
-      "endIdx": 500,
+      "startIdx": 500,
+      "endIdx": 510,
       "totalAthletes": 571
     },
     "maxPages": 4,
@@ -28,7 +28,7 @@
     },
     "fx": {
       "source": "CBSA Exchange Rates API",
-      "asOf": "2026-04-21T00:00:00.000Z"
+      "asOf": "2026-04-22T00:00:00.000Z"
     }
   },
   "Adbert Alzolay": {
@@ -6717,7 +6717,7 @@
   },
   "Jhonattan Vegas": {
     "keyword": "Jhonattan Vegas golf Golf",
-    "nScraped": 7,
+    "nScraped": 9,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -6742,11 +6742,11 @@
   "Juan Arango": {
     "keyword": "Juan Arango Soccer",
     "nScraped": 240,
-    "nSoldUsed": 24,
-    "avg": 7,
-    "taguchiSold": 7,
-    "medianSold": 7,
-    "marketStabilityCV": 0.14592969098721406,
+    "nSoldUsed": 12,
+    "avg": 8,
+    "taguchiSold": 8,
+    "medianSold": 8,
+    "marketStabilityCV": 0,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
@@ -6777,7 +6777,7 @@
   },
   "Yohandry Orozco": {
     "keyword": "Yohandry Orozco Soccer",
-    "nScraped": 25,
+    "nScraped": 29,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -6837,19 +6837,19 @@
   },
   "Jon Aramburu": {
     "keyword": "Jon Aramburu Soccer",
-    "nScraped": 240,
-    "nSoldUsed": 4,
-    "avg": 4.5,
-    "taguchiSold": 4.5,
-    "medianSold": 4.5,
-    "marketStabilityCV": 0,
+    "nScraped": 0,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
   },
   "Jorge Gomez": {
     "keyword": "Jorge Gomez Soccer",
-    "nScraped": 60,
+    "nScraped": 0,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -6861,7 +6861,7 @@
   },
   "Miguel Silva": {
     "keyword": "Miguel Silva Soccer",
-    "nScraped": 60,
+    "nScraped": 0,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
