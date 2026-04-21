@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-04-21T05:24:16.215Z",
+    "updatedAt": "2026-04-21T07:44:18.648Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. Taguchi winsorized mean + market stability CV. Ungraded condition policy (permissive for sold). Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 500,
-      "endIdx": 510,
+      "startIdx": 510,
+      "endIdx": 520,
       "totalAthletes": 571
     },
     "maxPages": 4,
@@ -6873,7 +6873,7 @@
   },
   "Miku Fedor": {
     "keyword": "Miku Fedor Soccer",
-    "nScraped": 40,
+    "nScraped": 36,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -6921,51 +6921,51 @@
   },
   "Salomon Rondon": {
     "keyword": "Salomon Rondon Pachuca Mallorca Venezuela Oviedo Soccer",
-    "nScraped": 0,
-    "nSoldUsed": 0,
+    "nScraped": 3,
+    "nSoldUsed": 3,
     "avg": null,
     "taguchiSold": null,
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
   },
   "Victor Garcia": {
     "keyword": "Victor Garcia Soccer",
-    "nScraped": 0,
-    "nSoldUsed": 0,
+    "nScraped": 60,
+    "nSoldUsed": 1,
     "avg": null,
     "taguchiSold": null,
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
   },
   "Yangel Herrera": {
     "keyword": "Yangel Herrera Soccer",
-    "nScraped": 0,
-    "nSoldUsed": 0,
-    "avg": null,
-    "taguchiSold": null,
-    "medianSold": null,
-    "marketStabilityCV": null,
+    "nScraped": 312,
+    "nSoldUsed": 96,
+    "avg": 2.7191666666666663,
+    "taguchiSold": 2.7191666666666663,
+    "medianSold": 3.125,
+    "marketStabilityCV": 0.4219356155151119,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
   },
   "Cristian Casseres Jr.": {
     "keyword": "Cristian Casseres Jr. Soccer",
-    "nScraped": 0,
-    "nSoldUsed": 0,
+    "nScraped": 34,
+    "nSoldUsed": 2,
     "avg": null,
     "taguchiSold": null,
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
   },
   "Fernando Aristeguieta": {
     "keyword": "Fernando Aristeguieta Soccer",
