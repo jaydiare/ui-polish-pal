@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-04-22T19:44:48.823Z",
+    "updatedAt": "2026-04-22T21:12:49.588Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA/BGS/SGC grader title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 100,
-      "endIdx": 110,
+      "startIdx": 110,
+      "endIdx": 120,
       "totalAthletes": 461
     },
     "maxPages": 4,
@@ -1681,7 +1681,7 @@
   },
   "Eliezer Alfonzo": {
     "keyword": "Eliezer Alfonzo Baseball PSA",
-    "nScraped": 47,
+    "nScraped": 48,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -1693,7 +1693,7 @@
   },
   "Elio Chacon": {
     "keyword": "Elio Chacon Baseball PSA",
-    "nScraped": 252,
+    "nScraped": 254,
     "nSoldUsed": 24,
     "avg": 60,
     "taguchiSold": 60,
