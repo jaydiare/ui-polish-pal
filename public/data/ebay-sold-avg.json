@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-04-21T21:41:46.472Z",
+    "updatedAt": "2026-04-22T02:11:37.880Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. Taguchi winsorized mean + market stability CV. Ungraded condition policy (permissive for sold). Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 560,
-      "endIdx": 570,
+      "startIdx": 570,
+      "endIdx": 571,
       "totalAthletes": 571
     },
     "maxPages": 4,
@@ -7593,12 +7593,12 @@
   },
   "Garbine Muguruza": {
     "keyword": "Garbine Muguruza Tennis",
-    "nScraped": 153,
-    "nSoldUsed": 137,
-    "avg": 6.501897810218977,
-    "taguchiSold": 6.501897810218977,
-    "medianSold": 6.99,
-    "marketStabilityCV": 0.21659954176628535,
+    "nScraped": 165,
+    "nSoldUsed": 148,
+    "avg": 5.898716216216215,
+    "taguchiSold": 5.898716216216215,
+    "medianSold": 6,
+    "marketStabilityCV": 0.26043180852449355,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
