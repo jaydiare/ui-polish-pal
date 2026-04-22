@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-04-22T09:57:17.240Z",
+    "updatedAt": "2026-04-22T11:35:19.469Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA/BGS/SGC grader title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 50,
-      "endIdx": 60,
+      "startIdx": 60,
+      "endIdx": 70,
       "totalAthletes": 461
     },
     "maxPages": 4,
@@ -889,7 +889,7 @@
   },
   "Carlos Martinez": {
     "keyword": "Carlos Martinez Baseball PSA",
-    "nScraped": 252,
+    "nScraped": 243,
     "nSoldUsed": 12,
     "avg": 5,
     "taguchiSold": 5,
@@ -937,7 +937,7 @@
   },
   "Carlos Narvaez": {
     "keyword": "Carlos Narvaez Baseball PSA",
-    "nScraped": 320,
+    "nScraped": 319,
     "nSoldUsed": 72,
     "avg": 38.55555555555556,
     "taguchiSold": 38.55555555555556,
@@ -949,7 +949,7 @@
   },
   "Carlos Perez": {
     "keyword": "Carlos Perez Baseball PSA",
-    "nScraped": 256,
+    "nScraped": 255,
     "nSoldUsed": 4,
     "avg": 8.5,
     "taguchiSold": 8.5,
