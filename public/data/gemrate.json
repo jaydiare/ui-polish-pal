@@ -1,13 +1,13 @@
 {
   "_meta": {
-    "updatedAt": "2026-04-22T05:58:47.552645+00:00",
+    "updatedAt": "2026-04-22T09:16:49.500785+00:00",
     "athleteCount": 459,
     "graders": [
       "PSA"
     ],
     "batchInfo": {
-      "startIdx": 40,
-      "endIdx": 60,
+      "startIdx": 60,
+      "endIdx": 80,
       "totalAthletes": 571
     }
   },
@@ -793,15 +793,15 @@
         "PSA": {
           "cards": 372,
           "gems": 1133,
-          "grades": 1904,
-          "gemRate": 60.0
+          "grades": 1905,
+          "gemRate": 59.0
         }
       },
       "totals": {
         "cards": 372,
         "gems": 1133,
-        "grades": 1904,
-        "gemRate": 60.0
+        "grades": 1905,
+        "gemRate": 59.0
       }
     },
     "Carlos Asuaje": {
@@ -971,16 +971,16 @@
       "sport": "Baseball",
       "graders": {
         "PSA": {
-          "cards": 106,
+          "cards": 107,
           "gems": 60,
-          "grades": 286,
+          "grades": 287,
           "gemRate": 21.0
         }
       },
       "totals": {
-        "cards": 106,
+        "cards": 107,
         "gems": 60,
-        "grades": 286,
+        "grades": 287,
         "gemRate": 21.0
       }
     },
