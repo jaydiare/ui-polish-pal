@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-04-22T15:46:55.223Z",
+    "updatedAt": "2026-04-22T17:29:40.269Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA/BGS/SGC grader title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 80,
-      "endIdx": 90,
+      "startIdx": 90,
+      "endIdx": 100,
       "totalAthletes": 461
     },
     "maxPages": 4,
@@ -1249,7 +1249,7 @@
   },
   "Diego Castillo": {
     "keyword": "Diego Castillo Baseball PSA",
-    "nScraped": 248,
+    "nScraped": 247,
     "nSoldUsed": 4,
     "avg": 13.5,
     "taguchiSold": 13.5,
@@ -1309,7 +1309,7 @@
   },
   "Donaldo Mendez": {
     "keyword": "Donaldo Mendez Baseball PSA",
-    "nScraped": 208,
+    "nScraped": 240,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -1321,7 +1321,7 @@
   },
   "Eddie Perez": {
     "keyword": "Eddie Perez Baseball PSA",
-    "nScraped": 240,
+    "nScraped": 243,
     "nSoldUsed": 20,
     "avg": 44,
     "taguchiSold": 44,
@@ -1345,15 +1345,15 @@
   },
   "Eddy Diaz": {
     "keyword": "Eddy Diaz Baseball PSA",
-    "nScraped": 0,
-    "nSoldUsed": 0,
+    "nScraped": 124,
+    "nSoldUsed": 2,
     "avg": null,
     "taguchiSold": null,
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
   },
   "Edgar Caceres": {
     "keyword": "Edgar Caceres Baseball",
