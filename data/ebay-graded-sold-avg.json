@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-04-22T17:29:40.269Z",
+    "updatedAt": "2026-04-22T19:44:48.823Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA/BGS/SGC grader title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 90,
-      "endIdx": 100,
+      "startIdx": 100,
+      "endIdx": 110,
       "totalAthletes": 461
     },
     "maxPages": 4,
@@ -1441,7 +1441,7 @@
   },
   "Eduard Bazardo": {
     "keyword": "Eduard Bazardo Baseball PSA",
-    "nScraped": 26,
+    "nScraped": 28,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -1490,11 +1490,11 @@
   "Eduardo Rodriguez": {
     "keyword": "Eduardo Rodriguez Baseball PSA",
     "nScraped": 280,
-    "nSoldUsed": 44,
-    "avg": 24.15909090909091,
-    "taguchiSold": 24.15909090909091,
+    "nSoldUsed": 45,
+    "avg": 24.177777777777777,
+    "taguchiSold": 24.177777777777777,
     "medianSold": 20.8,
-    "marketStabilityCV": 0.1852677423811972,
+    "marketStabilityCV": 0.18308219970994885,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
@@ -1549,7 +1549,7 @@
   },
   "Edwar Colina": {
     "keyword": "Edwar Colina Baseball PSA",
-    "nScraped": 16,
+    "nScraped": 15,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -1561,7 +1561,7 @@
   },
   "Edward Mujica": {
     "keyword": "Edward Mujica Baseball PSA",
-    "nScraped": 0,
+    "nScraped": 60,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
