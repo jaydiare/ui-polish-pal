@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-04-23T16:15:14.418Z",
+    "updatedAt": "2026-04-23T17:51:20.132Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA/BGS/SGC grader title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 190,
-      "endIdx": 200,
+      "startIdx": 200,
+      "endIdx": 210,
       "totalAthletes": 461
     },
     "maxPages": 4,
@@ -2821,12 +2821,12 @@
   },
   "Jhostynxon Garcia": {
     "keyword": "Jhostynxon Garcia Baseball PSA",
-    "nScraped": 144,
-    "nSoldUsed": 35,
-    "avg": 84.44828571428565,
-    "taguchiSold": 84.44828571428565,
-    "medianSold": 80,
-    "marketStabilityCV": 0.17104994253722958,
+    "nScraped": 240,
+    "nSoldUsed": 65,
+    "avg": 107.3916923076923,
+    "taguchiSold": 107.3916923076923,
+    "medianSold": 115,
+    "marketStabilityCV": 0.1599530435337491,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
@@ -2857,12 +2857,12 @@
   },
   "Johan Santana": {
     "keyword": "Johan Santana Baseball PSA",
-    "nScraped": 288,
-    "nSoldUsed": 68,
-    "avg": 69.77352941176463,
-    "taguchiSold": 69.77352941176463,
+    "nScraped": 285,
+    "nSoldUsed": 71,
+    "avg": 71.5392957746478,
+    "taguchiSold": 71.5392957746478,
     "medianSold": 54.99,
-    "marketStabilityCV": 0.3748778569319704,
+    "marketStabilityCV": 0.36096889286950223,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
@@ -2893,15 +2893,15 @@
   },
   "Jorbit Vivas": {
     "keyword": "Jorbit Vivas Baseball PSA",
-    "nScraped": 0,
-    "nSoldUsed": 0,
-    "avg": null,
-    "taguchiSold": null,
-    "medianSold": null,
-    "marketStabilityCV": null,
+    "nScraped": 71,
+    "nSoldUsed": 14,
+    "avg": 16.601428571428574,
+    "taguchiSold": 16.601428571428574,
+    "medianSold": 17,
+    "marketStabilityCV": 0.23240839822283416,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
   },
   "Jorge Barrosa": {
     "keyword": "Jorge Barrosa Baseball PSA",
