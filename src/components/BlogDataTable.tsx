@@ -526,7 +526,7 @@ export default function BlogDataTable() {
             </span>
           </div>
           <button
-            onClick={() => setCsvConfirmation(null)}
+            onClick={dismissConfirmation}
             aria-label="Dismiss confirmation"
             className="p-1 text-muted-foreground hover:text-foreground transition-colors"
           >
