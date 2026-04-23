@@ -120,6 +120,10 @@ export default function BlogDataTable() {
   const [csvDownloads, setCsvDownloads] = useState<number>(() => {
     try { return Number(localStorage.getItem("vzla-csv-downloads") || 0); } catch { return 0; }
   });
+  const [showCsvModal, setShowCsvModal] = useState(false);
+  const [csvName, setCsvName] = useState("");
+  const [csvEmail, setCsvEmail] = useState("");
+  const [csvSubmitting, setCsvSubmitting] = useState(false);
 
   const toggleHideEmpty = useCallback((key: SortKey) => {
     setHideEmptyFor((prev) => {
