@@ -17,6 +17,9 @@ import {
   TableRow,
 } from "@/components/ui/table";
 import { ArrowUp, ArrowDown, ArrowUpDown, Download, Filter, Search, X } from "lucide-react";
+import { toast } from "sonner";
+
+const FEEDBACK_API_URL = "https://script.google.com/macros/s/AKfycbyGuGb3lyDbupU1TUqDMCIWAKDszPWGmWmOvjaEYz-n_dc67VpaDqDTywpGCqYEvbQtrg/exec";
 
 interface RowData {
   name: string;
@@ -117,6 +120,10 @@ export default function BlogDataTable() {
   const [csvDownloads, setCsvDownloads] = useState<number>(() => {
     try { return Number(localStorage.getItem("vzla-csv-downloads") || 0); } catch { return 0; }
   });
+  const [showCsvModal, setShowCsvModal] = useState(false);
+  const [csvName, setCsvName] = useState("");
+  const [csvEmail, setCsvEmail] = useState("");
+  const [csvSubmitting, setCsvSubmitting] = useState(false);
 
   const toggleHideEmpty = useCallback((key: SortKey) => {
     setHideEmptyFor((prev) => {
@@ -303,7 +310,7 @@ export default function BlogDataTable() {
     }},
   ];
 
-  const exportCsv = () => {
+  const performCsvDownload = () => {
     const header = columns.map((c) => c.label).join(",");
     const csvRows = filtered.map((row) =>
       columns.map((col) => {
@@ -324,6 +331,43 @@ export default function BlogDataTable() {
     const newCount = csvDownloads + 1;
     setCsvDownloads(newCount);
     try { localStorage.setItem("vzla-csv-downloads", String(newCount)); } catch {}
+  };
+
+  const exportCsv = () => {
+    setShowCsvModal(true);
+  };
+
+  const handleCsvSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    const name = csvName.trim();
+    const email = csvEmail.trim();
+    if (!name || !email) {
+      toast.error("Please enter your name and email.");
+      return;
+    }
+    setCsvSubmitting(true);
+    try {
+      await fetch(FEEDBACK_API_URL, {
+        method: "POST",
+        mode: "no-cors",
+        headers: { "Content-Type": "text/plain" },
+        body: JSON.stringify({
+          name,
+          email,
+          category: "csv-download",
+          message: "Downloaded Venezuelan Athlete Card Market Data CSV",
+        }),
+      });
+      performCsvDownload();
+      toast.success("Thanks! Your download is starting.");
+      setShowCsvModal(false);
+      setCsvName("");
+      setCsvEmail("");
+    } catch {
+      toast.error("Something went wrong. Please try again.");
+    } finally {
+      setCsvSubmitting(false);
+    }
   };
 
   return (
@@ -434,6 +478,62 @@ export default function BlogDataTable() {
           </button>
         </div>
       </div>
+
+      {showCsvModal && (
+        <div
+          className="fixed inset-0 z-[10001] flex items-center justify-center bg-black/70 backdrop-blur-sm p-4"
+          onClick={() => !csvSubmitting && setShowCsvModal(false)}
+        >
+          <div
+            className="glass-panel rounded-xl w-full max-w-sm p-6 relative"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button
+              type="button"
+              aria-label="Close"
+              onClick={() => !csvSubmitting && setShowCsvModal(false)}
+              className="absolute top-3 right-3 p-1 text-muted-foreground hover:text-foreground transition-colors"
+            >
+              <X className="w-4 h-4" />
+            </button>
+            <h3 className="text-lg font-display font-bold text-foreground mb-1">
+              Download CSV
+            </h3>
+            <p className="text-xs text-muted-foreground mb-4">
+              Tell us who you are and we'll start your download.
+            </p>
+            <form onSubmit={handleCsvSubmit} className="flex flex-col gap-3">
+              <input
+                type="text"
+                placeholder="Your name"
+                value={csvName}
+                onChange={(e) => setCsvName(e.target.value)}
+                maxLength={100}
+                required
+                autoFocus
+                className="w-full rounded-lg border border-border bg-secondary px-3 py-2 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-1 focus:ring-vzla-yellow/40"
+              />
+              <input
+                type="email"
+                placeholder="Your email"
+                value={csvEmail}
+                onChange={(e) => setCsvEmail(e.target.value)}
+                maxLength={255}
+                required
+                className="w-full rounded-lg border border-border bg-secondary px-3 py-2 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-1 focus:ring-vzla-yellow/40"
+              />
+              <button
+                type="submit"
+                disabled={csvSubmitting || !csvName.trim() || !csvEmail.trim()}
+                className="w-full py-2 rounded-lg text-sm font-bold cta-flag text-white disabled:opacity-50 transition-opacity inline-flex items-center justify-center gap-2"
+              >
+                <Download className="w-4 h-4" />
+                {csvSubmitting ? "Preparing…" : "Download CSV"}
+              </button>
+            </form>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
