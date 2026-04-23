@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-04-23T17:51:20.132Z",
+    "updatedAt": "2026-04-23T19:46:29.101Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA/BGS/SGC grader title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 200,
-      "endIdx": 210,
+      "startIdx": 210,
+      "endIdx": 220,
       "totalAthletes": 461
     },
     "maxPages": 4,
@@ -2954,11 +2954,11 @@
   "Jose Altuve": {
     "keyword": "Jose Altuve Baseball PSA",
     "nScraped": 240,
-    "nSoldUsed": 117,
-    "avg": 58.33435897435899,
-    "taguchiSold": 58.33435897435899,
-    "medianSold": 59,
-    "marketStabilityCV": 0.2016865455561276,
+    "nSoldUsed": 119,
+    "avg": 55.933697478991604,
+    "taguchiSold": 55.933697478991604,
+    "medianSold": 52.05,
+    "marketStabilityCV": 0.1843990874609658,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
@@ -2966,11 +2966,11 @@
   "Jose Alvarado": {
     "keyword": "Jose Alvarado Baseball PSA",
     "nScraped": 240,
-    "nSoldUsed": 72,
-    "avg": 72.49555555555554,
-    "taguchiSold": 72.49555555555554,
-    "medianSold": 72.5,
-    "marketStabilityCV": 0.0347886250721727,
+    "nSoldUsed": 64,
+    "avg": 90.3125,
+    "taguchiSold": 90.3125,
+    "medianSold": 75,
+    "marketStabilityCV": 0.24360560613506962,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
