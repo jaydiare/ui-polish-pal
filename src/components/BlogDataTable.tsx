@@ -126,12 +126,20 @@ export default function BlogDataTable() {
   const [csvSubmitting, setCsvSubmitting] = useState(false);
   const [csvConfirmation, setCsvConfirmation] = useState<{ name: string; email: string } | null>(null);
   const confirmationRef = useRef<HTMLDivElement | null>(null);
+  const csvButtonRef = useRef<HTMLButtonElement | null>(null);
 
   useEffect(() => {
     if (csvConfirmation && confirmationRef.current) {
       confirmationRef.current.focus();
     }
   }, [csvConfirmation]);
+
+  const dismissConfirmation = useCallback(() => {
+    setCsvConfirmation(null);
+    requestAnimationFrame(() => {
+      csvButtonRef.current?.focus();
+    });
+  }, []);
 
   const toggleHideEmpty = useCallback((key: SortKey) => {
     setHideEmptyFor((prev) => {
@@ -482,6 +490,7 @@ export default function BlogDataTable() {
         <div className="flex items-center gap-3">
           <span>Last updated: {lastUpdated}</span>
           <button
+            ref={csvButtonRef}
             onClick={exportCsv}
             className="inline-flex items-center gap-1 px-2 py-1 rounded bg-vzla-yellow/10 text-vzla-yellow hover:bg-vzla-yellow/20 transition-colors font-medium"
           >
