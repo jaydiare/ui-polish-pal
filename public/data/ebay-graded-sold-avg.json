@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-04-23T11:35:19.602Z",
+    "updatedAt": "2026-04-23T14:16:45.311Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA/BGS/SGC grader title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 170,
-      "endIdx": 180,
+      "startIdx": 180,
+      "endIdx": 190,
       "totalAthletes": 461
     },
     "maxPages": 4,
@@ -2581,7 +2581,7 @@
   },
   "Ivan Ochoa": {
     "keyword": "Ivan Ochoa Baseball PSA",
-    "nScraped": 59,
+    "nScraped": 60,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -2618,11 +2618,11 @@
   "Jackson Chourio": {
     "keyword": "Jackson Chourio Baseball PSA",
     "nScraped": 240,
-    "nSoldUsed": 101,
-    "avg": 41.87841584158414,
-    "taguchiSold": 41.87841584158414,
-    "medianSold": 42.99,
-    "marketStabilityCV": 0.1528181675078704,
+    "nSoldUsed": 99,
+    "avg": 41.47979797979798,
+    "taguchiSold": 41.47979797979798,
+    "medianSold": 44,
+    "marketStabilityCV": 0.19604855270642899,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
@@ -2641,12 +2641,12 @@
   },
   "Jairo Iriarte": {
     "keyword": "Jairo Iriarte Baseball PSA",
-    "nScraped": 124,
-    "nSoldUsed": 4,
+    "nScraped": 244,
+    "nSoldUsed": 8,
     "avg": 19.495,
     "taguchiSold": 19.495,
     "medianSold": 19.495,
-    "marketStabilityCV": 0.622217448354657,
+    "marketStabilityCV": 0.5760614201159309,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
@@ -6901,7 +6901,7 @@
   },
   "Isaias Chavez": {
     "keyword": "Isaias Latigo Chavez Baseball PSA",
-    "nScraped": 29,
+    "nScraped": 27,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
