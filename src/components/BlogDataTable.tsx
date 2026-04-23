@@ -363,6 +363,7 @@ export default function BlogDataTable() {
         description: `Sending your CSV download to ${email}.`,
       });
       performCsvDownload();
+      setCsvConfirmation({ name, email });
       setShowCsvModal(false);
       setCsvName("");
       setCsvEmail("");
