@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-04-23T19:46:29.101Z",
+    "updatedAt": "2026-04-23T21:11:16.681Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA/BGS/SGC grader title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 210,
-      "endIdx": 220,
+      "startIdx": 220,
+      "endIdx": 230,
       "totalAthletes": 461
     },
     "maxPages": 4,
@@ -3098,7 +3098,7 @@
   "Jose Lopez": {
     "keyword": "Jose Lopez Baseball PSA",
     "nScraped": 60,
-    "nSoldUsed": 1,
+    "nSoldUsed": 2,
     "avg": null,
     "taguchiSold": null,
     "medianSold": null,
@@ -3122,11 +3122,11 @@
   "Jose Martinez": {
     "keyword": "Jose Martinez Cardinals Baseball PSA",
     "nScraped": 60,
-    "nSoldUsed": 6,
-    "avg": 49.925000000000004,
-    "taguchiSold": 49.925000000000004,
-    "medianSold": 49.925,
-    "marketStabilityCV": 0.22106378635411306,
+    "nSoldUsed": 5,
+    "avg": 39.85,
+    "taguchiSold": 39.85,
+    "medianSold": 39.85,
+    "marketStabilityCV": 0,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
@@ -3193,15 +3193,15 @@
   },
   "Jose Peraza": {
     "keyword": "Jose Peraza Baseball PSA",
-    "nScraped": 0,
-    "nSoldUsed": 0,
+    "nScraped": 60,
+    "nSoldUsed": 1,
     "avg": null,
     "taguchiSold": null,
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
   },
   "Jose Pirela": {
     "keyword": "Jose Pirela Baseball PSA",
