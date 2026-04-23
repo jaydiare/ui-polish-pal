@@ -124,6 +124,7 @@ export default function BlogDataTable() {
   const [csvName, setCsvName] = useState("");
   const [csvEmail, setCsvEmail] = useState("");
   const [csvSubmitting, setCsvSubmitting] = useState(false);
+  const [csvConfirmation, setCsvConfirmation] = useState<{ name: string; email: string } | null>(null);
 
   const toggleHideEmpty = useCallback((key: SortKey) => {
     setHideEmptyFor((prev) => {
@@ -362,6 +363,7 @@ export default function BlogDataTable() {
         description: `Sending your CSV download to ${email}.`,
       });
       performCsvDownload();
+      setCsvConfirmation({ name, email });
       setShowCsvModal(false);
       setCsvName("");
       setCsvEmail("");
@@ -480,6 +482,26 @@ export default function BlogDataTable() {
           </button>
         </div>
       </div>
+
+      {csvConfirmation && (
+        <div
+          role="status"
+          aria-live="polite"
+          className="px-4 py-2.5 border-t border-vzla-yellow/30 bg-vzla-yellow/5 text-xs text-foreground flex items-center justify-between gap-3"
+        >
+          <span>
+            ✅ CSV download queued for <strong className="text-vzla-yellow">{csvConfirmation.name}</strong>
+            {" "}(<span className="text-vzla-yellow">{csvConfirmation.email}</span>). Check your Downloads folder.
+          </span>
+          <button
+            onClick={() => setCsvConfirmation(null)}
+            aria-label="Dismiss confirmation"
+            className="p-1 text-muted-foreground hover:text-foreground transition-colors"
+          >
+            <X className="w-3.5 h-3.5" />
+          </button>
+        </div>
+      )}
 
       {showCsvModal && (
         <div
