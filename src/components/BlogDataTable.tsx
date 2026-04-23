@@ -141,6 +141,18 @@ export default function BlogDataTable() {
     });
   }, []);
 
+  useEffect(() => {
+    if (!csvConfirmation) return;
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") {
+        e.stopPropagation();
+        dismissConfirmation();
+      }
+    };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [csvConfirmation, dismissConfirmation]);
+
   const toggleHideEmpty = useCallback((key: SortKey) => {
     setHideEmptyFor((prev) => {
       const next = new Set(prev);
