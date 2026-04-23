@@ -124,6 +124,7 @@ export default function BlogDataTable() {
   const [csvName, setCsvName] = useState("");
   const [csvEmail, setCsvEmail] = useState("");
   const [csvSubmitting, setCsvSubmitting] = useState(false);
+  const [csvConfirmation, setCsvConfirmation] = useState<{ name: string; email: string } | null>(null);
 
   const toggleHideEmpty = useCallback((key: SortKey) => {
     setHideEmptyFor((prev) => {
