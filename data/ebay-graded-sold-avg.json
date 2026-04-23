@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-04-22T23:09:53.683Z",
+    "updatedAt": "2026-04-23T03:50:40.997Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA/BGS/SGC grader title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 120,
-      "endIdx": 130,
+      "startIdx": 130,
+      "endIdx": 140,
       "totalAthletes": 461
     },
     "maxPages": 4,
@@ -1873,12 +1873,12 @@
   },
   "Ezequiel Tovar": {
     "keyword": "Ezequiel Tovar Baseball PSA",
-    "nScraped": 215,
-    "nSoldUsed": 109,
-    "avg": 50.06486238532101,
-    "taguchiSold": 50.06486238532101,
-    "medianSold": 50,
-    "marketStabilityCV": 0.1872709276239537,
+    "nScraped": 240,
+    "nSoldUsed": 111,
+    "avg": 50.311081081080985,
+    "taguchiSold": 50.311081081080985,
+    "medianSold": 49.99,
+    "marketStabilityCV": 0.1787979048516158,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
@@ -1897,15 +1897,15 @@
   },
   "Felipe Vazquez": {
     "keyword": "Felipe Vazquez Baseball PSA",
-    "nScraped": 240,
-    "nSoldUsed": 4,
-    "avg": 31.29,
-    "taguchiSold": 31.29,
-    "medianSold": 31.29,
-    "marketStabilityCV": 0,
+    "nScraped": 60,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
   },
   "Felix Doubront": {
     "keyword": "Felix Doubront Baseball PSA",
@@ -1933,12 +1933,12 @@
   },
   "Felix Hernandez": {
     "keyword": "Felix Hernandez Baseball PSA",
-    "nScraped": 130,
-    "nSoldUsed": 71,
-    "avg": 105.3805633802816,
-    "taguchiSold": 105.3805633802816,
-    "medianSold": 111.38,
-    "marketStabilityCV": 0.31511929354950846,
+    "nScraped": 231,
+    "nSoldUsed": 127,
+    "avg": 110.04086614173225,
+    "taguchiSold": 110.04086614173225,
+    "medianSold": 119.98,
+    "marketStabilityCV": 0.332164407624366,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
@@ -1957,7 +1957,7 @@
   },
   "Fernando Nieve": {
     "keyword": "Fernando Nieve Baseball PSA",
-    "nScraped": 0,
+    "nScraped": 60,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
