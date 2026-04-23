@@ -17,6 +17,9 @@ import {
   TableRow,
 } from "@/components/ui/table";
 import { ArrowUp, ArrowDown, ArrowUpDown, Download, Filter, Search, X } from "lucide-react";
+import { toast } from "sonner";
+
+const FEEDBACK_API_URL = "https://script.google.com/macros/s/AKfycbyGuGb3lyDbupU1TUqDMCIWAKDszPWGmWmOvjaEYz-n_dc67VpaDqDTywpGCqYEvbQtrg/exec";
 
 interface RowData {
   name: string;
