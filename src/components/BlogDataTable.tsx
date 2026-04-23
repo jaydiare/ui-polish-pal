@@ -555,7 +555,7 @@ export default function BlogDataTable() {
           <button
             onClick={dismissConfirmation}
             aria-label="Dismiss confirmation"
-            className="p-1 text-muted-foreground hover:text-foreground transition-colors"
+            className="-m-2 p-2 min-w-[44px] min-h-[44px] inline-flex items-center justify-center rounded-md text-muted-foreground hover:text-foreground hover:bg-vzla-yellow/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-vzla-yellow/60 transition-colors"
           >
             <X className="w-3.5 h-3.5" />
           </button>
