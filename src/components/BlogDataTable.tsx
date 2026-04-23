@@ -310,7 +310,7 @@ export default function BlogDataTable() {
     }},
   ];
 
-  const exportCsv = () => {
+  const performCsvDownload = () => {
     const header = columns.map((c) => c.label).join(",");
     const csvRows = filtered.map((row) =>
       columns.map((col) => {
@@ -331,6 +331,43 @@ export default function BlogDataTable() {
     const newCount = csvDownloads + 1;
     setCsvDownloads(newCount);
     try { localStorage.setItem("vzla-csv-downloads", String(newCount)); } catch {}
+  };
+
+  const exportCsv = () => {
+    setShowCsvModal(true);
+  };
+
+  const handleCsvSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    const name = csvName.trim();
+    const email = csvEmail.trim();
+    if (!name || !email) {
+      toast.error("Please enter your name and email.");
+      return;
+    }
+    setCsvSubmitting(true);
+    try {
+      await fetch(FEEDBACK_API_URL, {
+        method: "POST",
+        mode: "no-cors",
+        headers: { "Content-Type": "text/plain" },
+        body: JSON.stringify({
+          name,
+          email,
+          category: "csv-download",
+          message: "Downloaded Venezuelan Athlete Card Market Data CSV",
+        }),
+      });
+      performCsvDownload();
+      toast.success("Thanks! Your download is starting.");
+      setShowCsvModal(false);
+      setCsvName("");
+      setCsvEmail("");
+    } catch {
+      toast.error("Something went wrong. Please try again.");
+    } finally {
+      setCsvSubmitting(false);
+    }
   };
 
   return (
