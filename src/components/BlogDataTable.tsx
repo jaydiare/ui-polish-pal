@@ -149,8 +149,21 @@ export default function BlogDataTable() {
         dismissConfirmation();
       }
     };
+    const onPointerDown = (e: MouseEvent | TouchEvent) => {
+      const target = e.target as Node | null;
+      if (!target) return;
+      if (confirmationRef.current?.contains(target)) return;
+      if (csvButtonRef.current?.contains(target)) return;
+      dismissConfirmation();
+    };
     window.addEventListener("keydown", onKey);
-    return () => window.removeEventListener("keydown", onKey);
+    document.addEventListener("mousedown", onPointerDown);
+    document.addEventListener("touchstart", onPointerDown);
+    return () => {
+      window.removeEventListener("keydown", onKey);
+      document.removeEventListener("mousedown", onPointerDown);
+      document.removeEventListener("touchstart", onPointerDown);
+    };
   }, [csvConfirmation, dismissConfirmation]);
 
   const toggleHideEmpty = useCallback((key: SortKey) => {
