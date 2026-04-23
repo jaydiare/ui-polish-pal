@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-04-23T06:20:08.783Z",
+    "updatedAt": "2026-04-23T08:15:08.128Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA/BGS/SGC grader title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 140,
-      "endIdx": 150,
+      "startIdx": 150,
+      "endIdx": 160,
       "totalAthletes": 461
     },
     "maxPages": 4,
@@ -2126,23 +2126,23 @@
   "Gabriel Arias": {
     "keyword": "Gabriel Arias Baseball PSA",
     "nScraped": 316,
-    "nSoldUsed": 56,
-    "avg": 23.060714285714287,
-    "taguchiSold": 23.060714285714287,
-    "medianSold": 18.955,
-    "marketStabilityCV": 0.26388710657572223,
+    "nSoldUsed": 60,
+    "avg": 18.66199999999999,
+    "taguchiSold": 18.66199999999999,
+    "medianSold": 17.99,
+    "marketStabilityCV": 0.06390890559409448,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
   },
   "Gabriel Moreno": {
     "keyword": "Gabriel Moreno Baseball PSA",
-    "nScraped": 168,
-    "nSoldUsed": 64,
-    "avg": 32.70859375000001,
-    "taguchiSold": 32.70859375000001,
-    "medianSold": 35,
-    "marketStabilityCV": 0.2181765639473056,
+    "nScraped": 152,
+    "nSoldUsed": 60,
+    "avg": 32.97333333333335,
+    "taguchiSold": 32.97333333333335,
+    "medianSold": 35.495000000000005,
+    "marketStabilityCV": 0.2152980146245005,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
@@ -2197,7 +2197,7 @@
   },
   "German Marquez": {
     "keyword": "German Marquez Baseball PSA",
-    "nScraped": 248,
+    "nScraped": 247,
     "nSoldUsed": 8,
     "avg": 9.875,
     "taguchiSold": 9.875,
@@ -2221,7 +2221,7 @@
   },
   "Giovanni Carrara": {
     "keyword": "Giovanni Carrara Baseball PSA",
-    "nScraped": 23,
+    "nScraped": 22,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
