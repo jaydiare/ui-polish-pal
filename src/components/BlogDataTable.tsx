@@ -532,9 +532,11 @@ export default function BlogDataTable() {
       {csvConfirmation && (
         <div
           ref={confirmationRef}
-          role="status"
-          aria-live="polite"
+          role="region"
+          aria-label="CSV download confirmation"
           aria-labelledby="csv-confirmation-heading"
+          aria-live="polite"
+          aria-atomic="true"
           tabIndex={-1}
           className="px-4 py-2.5 border-t border-vzla-yellow/30 bg-vzla-yellow/5 text-xs text-foreground flex items-start justify-between gap-3 focus:outline-none focus:ring-2 focus:ring-vzla-yellow/60"
         >
