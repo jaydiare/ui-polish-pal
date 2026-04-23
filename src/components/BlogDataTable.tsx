@@ -358,8 +358,10 @@ export default function BlogDataTable() {
           message: "Downloaded Venezuelan Athlete Card Market Data CSV",
         }),
       });
+      toast.success(`Thanks, ${name}!`, {
+        description: `Sending your CSV download to ${email}.`,
+      });
       performCsvDownload();
-      toast.success("Thanks! Your download is starting.");
       setShowCsvModal(false);
       setCsvName("");
       setCsvEmail("");
