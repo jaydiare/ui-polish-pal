@@ -1,4 +1,4 @@
-import { useMemo, useState, useCallback } from "react";
+import { useMemo, useState, useCallback, useEffect, useRef } from "react";
 import { useAthleteData } from "@/hooks/useAthleteData";
 import {
   getEbayAvgNumber,
@@ -125,6 +125,13 @@ export default function BlogDataTable() {
   const [csvEmail, setCsvEmail] = useState("");
   const [csvSubmitting, setCsvSubmitting] = useState(false);
   const [csvConfirmation, setCsvConfirmation] = useState<{ name: string; email: string } | null>(null);
+  const confirmationRef = useRef<HTMLDivElement | null>(null);
+
+  useEffect(() => {
+    if (csvConfirmation && confirmationRef.current) {
+      confirmationRef.current.focus();
+    }
+  }, [csvConfirmation]);
 
   const toggleHideEmpty = useCallback((key: SortKey) => {
     setHideEmptyFor((prev) => {
@@ -490,14 +497,25 @@ export default function BlogDataTable() {
 
       {csvConfirmation && (
         <div
+          ref={confirmationRef}
           role="status"
           aria-live="polite"
-          className="px-4 py-2.5 border-t border-vzla-yellow/30 bg-vzla-yellow/5 text-xs text-foreground flex items-center justify-between gap-3"
+          aria-labelledby="csv-confirmation-heading"
+          tabIndex={-1}
+          className="px-4 py-2.5 border-t border-vzla-yellow/30 bg-vzla-yellow/5 text-xs text-foreground flex items-start justify-between gap-3 focus:outline-none focus:ring-2 focus:ring-vzla-yellow/60"
         >
-          <span>
-            ✅ CSV download queued for <strong className="text-vzla-yellow">{csvConfirmation.name}</strong>
-            {" "}(<span className="text-vzla-yellow">{csvConfirmation.email}</span>). Check your Downloads folder.
-          </span>
+          <div className="flex flex-col gap-0.5">
+            <h3
+              id="csv-confirmation-heading"
+              className="text-sm font-semibold text-vzla-yellow"
+            >
+              ✅ CSV download queued
+            </h3>
+            <span>
+              Queued for <strong className="text-vzla-yellow">{csvConfirmation.name}</strong>
+              {" "}(<span className="text-vzla-yellow">{csvConfirmation.email}</span>). Check your Downloads folder.
+            </span>
+          </div>
           <button
             onClick={() => setCsvConfirmation(null)}
             aria-label="Dismiss confirmation"
