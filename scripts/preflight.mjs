@@ -68,13 +68,13 @@ try {
 const declared = { ...(pkg.dependencies ?? {}), ...(pkg.devDependencies ?? {}) };
 const missing = [];
 
-for (const name of CRITICAL) {
-  if (!declared[name]) {
+for (const { name, declared: mustDeclare } of CRITICAL) {
+  if (mustDeclare && !declared[name]) {
     missing.push(`${name} (not declared in package.json)`);
     continue;
   }
   if (!existsSync(join(nodeModules, name, "package.json"))) {
-    missing.push(`${name} (declared but not installed)`);
+    missing.push(`${name} (not installed in node_modules/)`);
   }
 }
 
