@@ -21,15 +21,17 @@ const BOLD = "\x1b[1m";
 const RESET = "\x1b[0m";
 
 // Critical packages required to boot the dev server. Add here as the stack evolves.
+// `declared: true` -> must appear in package.json AND be installed.
+// `declared: false` -> transitive dep; only verify it's present in node_modules.
 const CRITICAL = [
-  "vite",
-  "@vitejs/plugin-react-swc",
-  "react",
-  "react-dom",
-  "typescript",
-  "tailwindcss",
-  "postcss",
-  "autoprefixer",
+  { name: "vite", declared: false },
+  { name: "@vitejs/plugin-react-swc", declared: true },
+  { name: "react", declared: true },
+  { name: "react-dom", declared: true },
+  { name: "typescript", declared: true },
+  { name: "tailwindcss", declared: true },
+  { name: "postcss", declared: true },
+  { name: "autoprefixer", declared: true },
 ];
 
 function fail(reason, hint) {
