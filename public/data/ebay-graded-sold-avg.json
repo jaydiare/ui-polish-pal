@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-04-24T15:43:17.091Z",
+    "updatedAt": "2026-04-24T17:27:40.218Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA/BGS/SGC grader title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 300,
-      "endIdx": 310,
+      "startIdx": 310,
+      "endIdx": 320,
       "totalAthletes": 461
     },
     "maxPages": 4,
@@ -4297,7 +4297,7 @@
   },
   "Miguel Rojas": {
     "keyword": "Miguel Rojas Baseball PSA",
-    "nScraped": 276,
+    "nScraped": 274,
     "nSoldUsed": 8,
     "avg": 109.995,
     "taguchiSold": 109.995,
@@ -4321,7 +4321,7 @@
   },
   "Miguel Yajure": {
     "keyword": "Miguel Yajure Baseball PSA",
-    "nScraped": 244,
+    "nScraped": 241,
     "nSoldUsed": 4,
     "avg": 1.99,
     "taguchiSold": 1.99,
@@ -4333,12 +4333,12 @@
   },
   "Moises Ballesteros": {
     "keyword": "Moises Ballesteros Baseball PSA",
-    "nScraped": 210,
-    "nSoldUsed": 102,
-    "avg": 155.83725490196076,
-    "taguchiSold": 155.83725490196076,
-    "medianSold": 148.25,
-    "marketStabilityCV": 0.1920116702702347,
+    "nScraped": 237,
+    "nSoldUsed": 109,
+    "avg": 146.8064220183486,
+    "taguchiSold": 146.8064220183486,
+    "medianSold": 140,
+    "marketStabilityCV": 0.1742931352422948,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
@@ -4381,15 +4381,15 @@
   },
   "Odubel Herrera": {
     "keyword": "Odubel Herrera Baseball PSA",
-    "nScraped": 60,
-    "nSoldUsed": 2,
+    "nScraped": 0,
+    "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
   },
   "Omar Daal": {
     "keyword": "Omar Daal Baseball PSA",
