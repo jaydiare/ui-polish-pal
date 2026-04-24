@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-04-24T21:09:54.061Z",
+    "updatedAt": "2026-04-24T23:03:04.244Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA/BGS/SGC grader title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 330,
-      "endIdx": 340,
+      "startIdx": 340,
+      "endIdx": 350,
       "totalAthletes": 461
     },
     "maxPages": 4,
@@ -4693,7 +4693,7 @@
   },
   "Pedro Pages": {
     "keyword": "Pedro Pages Baseball PSA",
-    "nScraped": 244,
+    "nScraped": 246,
     "nSoldUsed": 8,
     "avg": 17.189999999999998,
     "taguchiSold": 17.189999999999998,
@@ -4729,7 +4729,7 @@
   },
   "Rafael Marchan": {
     "keyword": "Rafael Marchan Baseball PSA",
-    "nScraped": 244,
+    "nScraped": 243,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
