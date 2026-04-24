@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-04-24T17:27:40.218Z",
+    "updatedAt": "2026-04-24T19:25:35.476Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA/BGS/SGC grader title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 310,
-      "endIdx": 320,
+      "startIdx": 320,
+      "endIdx": 330,
       "totalAthletes": 461
     },
     "maxPages": 4,
@@ -4429,12 +4429,12 @@
   },
   "Omar Vizquel": {
     "keyword": "Omar Vizquel Baseball PSA",
-    "nScraped": 234,
-    "nSoldUsed": 119,
-    "avg": 23.95201680672265,
-    "taguchiSold": 23.95201680672265,
-    "medianSold": 23,
-    "marketStabilityCV": 0.10170593441307922,
+    "nScraped": 222,
+    "nSoldUsed": 106,
+    "avg": 22.45349056603771,
+    "taguchiSold": 22.45349056603771,
+    "medianSold": 22.25,
+    "marketStabilityCV": 0.10352770498382254,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
@@ -4453,7 +4453,7 @@
   },
   "Orlando Arcia": {
     "keyword": "Orlando Arcia Baseball PSA",
-    "nScraped": 256,
+    "nScraped": 255,
     "nSoldUsed": 36,
     "avg": 17.95888888888889,
     "taguchiSold": 17.95888888888889,
@@ -4489,7 +4489,7 @@
   },
   "Oscar Hernandez": {
     "keyword": "Oscar Hernandez Royals Diamondbacks Baseball PSA",
-    "nScraped": 11,
+    "nScraped": 12,
     "nSoldUsed": 1,
     "avg": null,
     "taguchiSold": null,
