@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-04-24T06:22:49.793Z",
+    "updatedAt": "2026-04-24T08:27:09.028Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA/BGS/SGC grader title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 250,
-      "endIdx": 260,
+      "startIdx": 260,
+      "endIdx": 270,
       "totalAthletes": 461
     },
     "maxPages": 4,
@@ -3637,8 +3637,8 @@
   },
   "Luis Alexander Basabe": {
     "keyword": "Luis Alexander Basabe Baseball PSA",
-    "nScraped": 240,
-    "nSoldUsed": 12,
+    "nScraped": 244,
+    "nSoldUsed": 16,
     "avg": 9,
     "taguchiSold": 9,
     "medianSold": 9,
@@ -3650,18 +3650,18 @@
   "Luis Aparicio": {
     "keyword": "Luis Aparicio Baseball PSA",
     "nScraped": 240,
-    "nSoldUsed": 86,
-    "avg": 73.34453488372093,
-    "taguchiSold": 73.34453488372093,
-    "medianSold": 65.5,
-    "marketStabilityCV": 0.31033635886470706,
+    "nSoldUsed": 82,
+    "avg": 66.03878048780487,
+    "taguchiSold": 66.03878048780487,
+    "medianSold": 67.975,
+    "marketStabilityCV": 0.29010769642614614,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
   },
   "Luis Aponte": {
     "keyword": "Luis Aponte Baseball PSA",
-    "nScraped": 248,
+    "nScraped": 250,
     "nSoldUsed": 8,
     "avg": 11.25,
     "taguchiSold": 11.25,
@@ -3673,12 +3673,12 @@
   },
   "Luis Arraez": {
     "keyword": "Luis Arraez Baseball PSA",
-    "nScraped": 180,
-    "nSoldUsed": 99,
-    "avg": 47.60959595959596,
-    "taguchiSold": 47.60959595959596,
+    "nScraped": 185,
+    "nSoldUsed": 101,
+    "avg": 47.558019801980194,
+    "taguchiSold": 47.558019801980194,
     "medianSold": 49.13,
-    "marketStabilityCV": 0.25088820411046037,
+    "marketStabilityCV": 0.252283072309203,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
