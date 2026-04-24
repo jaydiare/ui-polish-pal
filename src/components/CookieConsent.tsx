@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const GA_ID = "G-3SCYEVBB9B";
+const GTM_ID = "GTM-MMQ86CNB";
 const CONSENT_KEY = "vzla_cookie_consent";
 
 function loadGA() {
@@ -23,6 +24,27 @@ function loadGA() {
   document.head.appendChild(inline);
 }
 
+function loadGTM() {
+  if (document.getElementById("gtm-script")) return;
+
+  const inline = document.createElement("script");
+  inline.id = "gtm-script";
+  inline.textContent = `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','${GTM_ID}');`;
+  document.head.appendChild(inline);
+
+  // GTM noscript fallback (must be in <body>, not <head>)
+  if (!document.getElementById("gtm-noscript")) {
+    const ns = document.createElement("noscript");
+    ns.id = "gtm-noscript";
+    ns.innerHTML = `<iframe src="https://www.googletagmanager.com/ns.html?id=${GTM_ID}" height="0" width="0" style="display:none;visibility:hidden"></iframe>`;
+    document.body.insertBefore(ns, document.body.firstChild);
+  }
+}
+
 const CookieConsent = () => {
   const [visible, setVisible] = useState(false);
 
@@ -30,6 +52,7 @@ const CookieConsent = () => {
     const consent = localStorage.getItem(CONSENT_KEY);
     if (consent === "accepted") {
       loadGA();
+      loadGTM();
     } else if (!consent) {
       setVisible(true);
     }
@@ -38,6 +61,7 @@ const CookieConsent = () => {
   const handleAccept = () => {
     localStorage.setItem(CONSENT_KEY, "accepted");
     loadGA();
+    loadGTM();
     setVisible(false);
   };
 
