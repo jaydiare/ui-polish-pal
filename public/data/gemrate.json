@@ -1,13 +1,13 @@
 {
   "_meta": {
-    "updatedAt": "2026-04-24T06:06:32.339080+00:00",
+    "updatedAt": "2026-04-24T09:29:10.179187+00:00",
     "athleteCount": 459,
     "graders": [
       "PSA"
     ],
     "batchInfo": {
-      "startIdx": 280,
-      "endIdx": 300,
+      "startIdx": 300,
+      "endIdx": 320,
       "totalAthletes": 571
     }
   },
@@ -4410,16 +4410,16 @@
       "graders": {
         "PSA": {
           "cards": 13,
-          "gems": 25,
-          "grades": 57,
-          "gemRate": 44.0
+          "gems": 26,
+          "grades": 58,
+          "gemRate": 45.0
         }
       },
       "totals": {
         "cards": 13,
-        "gems": 25,
-        "grades": 57,
-        "gemRate": 44.0
+        "gems": 26,
+        "grades": 58,
+        "gemRate": 45.0
       }
     },
     "Luis Alexander Basabe": {
@@ -4447,14 +4447,14 @@
         "PSA": {
           "cards": 1196,
           "gems": 783,
-          "grades": 30286,
+          "grades": 30304,
           "gemRate": 3.0
         }
       },
       "totals": {
         "cards": 1196,
         "gems": 783,
-        "grades": 30286,
+        "grades": 30304,
         "gemRate": 3.0
       }
     },
@@ -4482,15 +4482,15 @@
       "graders": {
         "PSA": {
           "cards": 1122,
-          "gems": 5128,
-          "grades": 8757,
+          "gems": 5129,
+          "grades": 8759,
           "gemRate": 59.0
         }
       },
       "totals": {
         "cards": 1122,
-        "gems": 5128,
-        "grades": 8757,
+        "gems": 5129,
+        "grades": 8759,
         "gemRate": 59.0
       }
     },
@@ -4643,16 +4643,16 @@
       "sport": "Baseball",
       "graders": {
         "PSA": {
-          "cards": 662,
-          "gems": 1922,
-          "grades": 3621,
+          "cards": 663,
+          "gems": 1923,
+          "grades": 3623,
           "gemRate": 53.0
         }
       },
       "totals": {
-        "cards": 662,
-        "gems": 1922,
-        "grades": 3621,
+        "cards": 663,
+        "gems": 1923,
+        "grades": 3623,
         "gemRate": 53.0
       }
     },
