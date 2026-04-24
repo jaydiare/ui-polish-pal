@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-04-24T13:17:00.653Z",
+    "updatedAt": "2026-04-24T16:02:12.939Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. Taguchi winsorized mean + market stability CV. Ungraded condition policy (permissive for sold). Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 180,
-      "endIdx": 190,
+      "startIdx": 190,
+      "endIdx": 200,
       "totalAthletes": 571
     },
     "maxPages": 4,
@@ -2241,7 +2241,7 @@
   },
   "Gregory Infante": {
     "keyword": "Gregory Infante Baseball",
-    "nScraped": 244,
+    "nScraped": 245,
     "nSoldUsed": 16,
     "avg": 1.995,
     "taguchiSold": 1.995,
@@ -2278,23 +2278,23 @@
   "Guillermo Moscoso": {
     "keyword": "Guillermo Moscoso Baseball",
     "nScraped": 240,
-    "nSoldUsed": 16,
-    "avg": 1.3400000000000003,
-    "taguchiSold": 1.3400000000000003,
-    "medianSold": 1.3399999999999999,
-    "marketStabilityCV": 0.03853714772345682,
+    "nSoldUsed": 20,
+    "avg": 1.2899999999999996,
+    "taguchiSold": 1.2899999999999996,
+    "medianSold": 1.29,
+    "marketStabilityCV": 3.531983842641593e-16,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
   },
   "Guillermo Quiroz": {
     "keyword": "Guillermo Quiroz Baseball",
-    "nScraped": 72,
-    "nSoldUsed": 38,
-    "avg": 1.5239473684210532,
-    "taguchiSold": 1.5239473684210532,
-    "medianSold": 1.4449999999999998,
-    "marketStabilityCV": 0.08622799680048299,
+    "nScraped": 204,
+    "nSoldUsed": 68,
+    "avg": 1.3923529411764717,
+    "taguchiSold": 1.3923529411764717,
+    "medianSold": 1.59,
+    "marketStabilityCV": 0.24044224718275067,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
@@ -3489,7 +3489,7 @@
   },
   "Guilder Rodriguez": {
     "keyword": "Guilder Rodriguez Baseball",
-    "nScraped": 190,
+    "nScraped": 201,
     "nSoldUsed": 4,
     "avg": 1.49,
     "taguchiSold": 1.49,
@@ -3501,12 +3501,12 @@
   },
   "Guillermo Rodriguez": {
     "keyword": "Guillermo Rodriguez Baseball",
-    "nScraped": 240,
-    "nSoldUsed": 16,
-    "avg": 1.245,
-    "taguchiSold": 1.245,
-    "medianSold": 1.245,
-    "marketStabilityCV": 0.2115364397928548,
+    "nScraped": 245,
+    "nSoldUsed": 12,
+    "avg": 1.5,
+    "taguchiSold": 1.5,
+    "medianSold": 1.5,
+    "marketStabilityCV": 0,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
