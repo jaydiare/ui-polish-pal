@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-04-23T21:42:28.072Z",
+    "updatedAt": "2026-04-24T02:24:15.552Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. Taguchi winsorized mean + market stability CV. Ungraded condition policy (permissive for sold). Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 130,
-      "endIdx": 140,
+      "startIdx": 140,
+      "endIdx": 150,
       "totalAthletes": 571
     },
     "maxPages": 4,
@@ -1666,11 +1666,11 @@
   "Elvis Andrus": {
     "keyword": "Elvis Andrus Baseball",
     "nScraped": 240,
-    "nSoldUsed": 97,
-    "avg": 1.7694845360824736,
-    "taguchiSold": 1.7694845360824736,
+    "nSoldUsed": 100,
+    "avg": 1.9371999999999985,
+    "taguchiSold": 1.9371999999999985,
     "medianSold": 1.99,
-    "marketStabilityCV": 0.13797790120356612,
+    "marketStabilityCV": 0.1221442910985769,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
@@ -1689,12 +1689,12 @@
   },
   "Ender Inciarte": {
     "keyword": "Ender Inciarte Baseball",
-    "nScraped": 240,
-    "nSoldUsed": 100,
-    "avg": 1.3613,
-    "taguchiSold": 1.3613,
-    "medianSold": 1.3199999999999998,
-    "marketStabilityCV": 0.2700893270019394,
+    "nScraped": 235,
+    "nSoldUsed": 94,
+    "avg": 1.4884042553191477,
+    "taguchiSold": 1.4884042553191477,
+    "medianSold": 1.59,
+    "marketStabilityCV": 0.3138685334504071,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
@@ -1702,26 +1702,26 @@
   "Enderson Franco": {
     "keyword": "Enderson Franco Baseball",
     "nScraped": 244,
-    "nSoldUsed": 20,
-    "avg": 1.59,
-    "taguchiSold": 1.59,
-    "medianSold": 1.59,
-    "marketStabilityCV": 0,
+    "nSoldUsed": 16,
+    "avg": 1.29,
+    "taguchiSold": 1.29,
+    "medianSold": 1.29,
+    "marketStabilityCV": 0.2401850137182895,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
   },
   "Endy Chavez": {
     "keyword": "Endy Chavez Baseball",
-    "nScraped": 0,
-    "nSoldUsed": 0,
-    "avg": null,
-    "taguchiSold": null,
-    "medianSold": null,
-    "marketStabilityCV": null,
+    "nScraped": 180,
+    "nSoldUsed": 81,
+    "avg": 1.8666666666666663,
+    "taguchiSold": 1.8666666666666663,
+    "medianSold": 1.81,
+    "marketStabilityCV": 0.18342054492618975,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
   },
   "Engelb Vielma": {
     "keyword": "Engelb Vielma Baseball",
@@ -3333,12 +3333,12 @@
   },
   "Elio Chacon": {
     "keyword": "Elio Chacon Baseball",
-    "nScraped": 122,
+    "nScraped": 120,
     "nSoldUsed": 40,
-    "avg": 6.132500000000005,
-    "taguchiSold": 6.132500000000005,
-    "medianSold": 5.6899999999999995,
-    "marketStabilityCV": 0.12607763975252792,
+    "avg": 6.176500000000001,
+    "taguchiSold": 6.176500000000001,
+    "medianSold": 5.9350000000000005,
+    "marketStabilityCV": 0.1262875345457055,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
