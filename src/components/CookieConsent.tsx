@@ -52,6 +52,7 @@ const CookieConsent = () => {
     const consent = localStorage.getItem(CONSENT_KEY);
     if (consent === "accepted") {
       loadGA();
+      loadGTM();
     } else if (!consent) {
       setVisible(true);
     }
@@ -60,6 +61,7 @@ const CookieConsent = () => {
   const handleAccept = () => {
     localStorage.setItem(CONSENT_KEY, "accepted");
     loadGA();
+    loadGTM();
     setVisible(false);
   };
 
