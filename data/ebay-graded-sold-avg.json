@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-04-25T11:08:03.737Z",
+    "updatedAt": "2026-04-25T13:41:19.561Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA/BGS/SGC grader title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 390,
-      "endIdx": 400,
+      "startIdx": 400,
+      "endIdx": 410,
       "totalAthletes": 461
     },
     "maxPages": 4,
@@ -5545,7 +5545,7 @@
   },
   "William Bergolla": {
     "keyword": "William Bergolla Baseball PSA",
-    "nScraped": 204,
+    "nScraped": 208,
     "nSoldUsed": 104,
     "avg": 37.55846153846153,
     "taguchiSold": 37.55846153846153,
@@ -5557,12 +5557,12 @@
   },
   "William Contreras": {
     "keyword": "William Contreras Baseball PSA",
-    "nScraped": 90,
-    "nSoldUsed": 41,
-    "avg": 34.723658536585376,
-    "taguchiSold": 34.723658536585376,
-    "medianSold": 32,
-    "marketStabilityCV": 0.2699814802523378,
+    "nScraped": 95,
+    "nSoldUsed": 43,
+    "avg": 32.08906976744186,
+    "taguchiSold": 32.08906976744186,
+    "medianSold": 31,
+    "marketStabilityCV": 0.22870933732900486,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
@@ -5582,11 +5582,11 @@
   "Williams Perez": {
     "keyword": "Williams Perez Atlanta Braves Baseball PSA",
     "nScraped": 60,
-    "nSoldUsed": 5,
-    "avg": 224.99,
-    "taguchiSold": 224.99,
-    "medianSold": 224.99,
-    "marketStabilityCV": 0,
+    "nSoldUsed": 6,
+    "avg": 212.49,
+    "taguchiSold": 212.49,
+    "medianSold": 212.49,
+    "marketStabilityCV": 0.06444098045851171,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
@@ -5617,7 +5617,7 @@
   },
   "Willie Martinez": {
     "keyword": "Willie Martinez Baseball PSA",
-    "nScraped": 62,
+    "nScraped": 0,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -5629,15 +5629,15 @@
   },
   "Willson Contreras": {
     "keyword": "Willson Contreras Baseball PSA",
-    "nScraped": 95,
-    "nSoldUsed": 19,
-    "avg": 31.991578947368424,
-    "taguchiSold": 31.991578947368424,
-    "medianSold": 31,
-    "marketStabilityCV": 0.2454650195961496,
+    "nScraped": 0,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
   },
   "Wilmer Flores": {
     "keyword": "Wilmer Flores Baseball PSA",
