@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-04-25T17:05:05.851Z",
+    "updatedAt": "2026-04-25T19:14:01.087Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA/BGS/SGC grader title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 420,
-      "endIdx": 430,
+      "startIdx": 430,
+      "endIdx": 440,
       "totalAthletes": 461
     },
     "maxPages": 4,
@@ -242,11 +242,11 @@
   "Alex Ramirez": {
     "keyword": "Alex Ramirez BBM NPB Baseball PSA",
     "nScraped": 60,
-    "nSoldUsed": 7,
-    "avg": 24.424285714285713,
-    "taguchiSold": 24.424285714285713,
-    "medianSold": 27,
-    "marketStabilityCV": 0.24981862465524152,
+    "nSoldUsed": 8,
+    "avg": 28.495000000000005,
+    "taguchiSold": 28.495000000000005,
+    "medianSold": 28.494999999999997,
+    "marketStabilityCV": 0.056087812831594905,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
@@ -5005,7 +5005,7 @@
   },
   "Robert Perez": {
     "keyword": "Robert Perez Blue Jays Cardenales Baseball PSA",
-    "nScraped": 50,
+    "nScraped": 55,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -5893,12 +5893,12 @@
   },
   "Carl Herrera": {
     "keyword": "Carl Herrera Basketball PSA",
-    "nScraped": 264,
-    "nSoldUsed": 8,
-    "avg": 20.995,
-    "taguchiSold": 20.995,
-    "medianSold": 20.994999999999997,
-    "marketStabilityCV": 0.2288810254625096,
+    "nScraped": 252,
+    "nSoldUsed": 4,
+    "avg": 16.5,
+    "taguchiSold": 16.5,
+    "medianSold": 16.5,
+    "marketStabilityCV": 0,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
@@ -5917,15 +5917,15 @@
   },
   "Oscar Torres": {
     "keyword": "Oscar Torres Basketball PSA",
-    "nScraped": 0,
-    "nSoldUsed": 0,
+    "nScraped": 60,
+    "nSoldUsed": 2,
     "avg": null,
     "taguchiSold": null,
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
   },
   "Pedro Chourio": {
     "keyword": "Pedro Chourio Basketball",
@@ -6938,11 +6938,11 @@
   "Robert Perez Jr.": {
     "keyword": "Robert Perez Jr. Prospects Baseball PSA",
     "nScraped": 240,
-    "nSoldUsed": 8,
-    "avg": 8.75,
-    "taguchiSold": 8.75,
-    "medianSold": 8.75,
-    "marketStabilityCV": 0.1527207096642425,
+    "nSoldUsed": 11,
+    "avg": 10,
+    "taguchiSold": 10,
+    "medianSold": 10,
+    "marketStabilityCV": 0,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
