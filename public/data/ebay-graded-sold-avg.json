@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-04-25T06:01:42.764Z",
+    "updatedAt": "2026-04-25T07:49:14.550Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA/BGS/SGC grader title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 360,
-      "endIdx": 370,
+      "startIdx": 370,
+      "endIdx": 380,
       "totalAthletes": 461
     },
     "maxPages": 4,
@@ -5090,11 +5090,11 @@
   "Ronald Acuna Jr.": {
     "keyword": "Ronald Acuna Jr. Baseball PSA",
     "nScraped": 240,
-    "nSoldUsed": 73,
-    "avg": 52.71232876712329,
-    "taguchiSold": 52.71232876712329,
-    "medianSold": 52,
-    "marketStabilityCV": 0.2178705986612986,
+    "nSoldUsed": 84,
+    "avg": 48.47654761904759,
+    "taguchiSold": 48.47654761904759,
+    "medianSold": 47.769999999999996,
+    "marketStabilityCV": 0.16748411023593063,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
@@ -5161,12 +5161,12 @@
   },
   "Rougned Odor": {
     "keyword": "Rougned Odor Baseball PSA",
-    "nScraped": 252,
-    "nSoldUsed": 44,
-    "avg": 37.263636363636365,
-    "taguchiSold": 37.263636363636365,
-    "medianSold": 35,
-    "marketStabilityCV": 0.2724627626136243,
+    "nScraped": 254,
+    "nSoldUsed": 38,
+    "avg": 35.457894736842114,
+    "taguchiSold": 35.457894736842114,
+    "medianSold": 26.99,
+    "marketStabilityCV": 0.36240469153890065,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
