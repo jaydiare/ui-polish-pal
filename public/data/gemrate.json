@@ -1,13 +1,13 @@
 {
   "_meta": {
-    "updatedAt": "2026-04-25T01:57:35.723753+00:00",
+    "updatedAt": "2026-04-25T05:46:58.169495+00:00",
     "athleteCount": 459,
     "graders": [
       "PSA"
     ],
     "batchInfo": {
-      "startIdx": 380,
-      "endIdx": 400,
+      "startIdx": 400,
+      "endIdx": 420,
       "totalAthletes": 571
     }
   },
@@ -6049,14 +6049,14 @@
         "PSA": {
           "cards": 135,
           "gems": 227,
-          "grades": 463,
+          "grades": 466,
           "gemRate": 49.0
         }
       },
       "totals": {
         "cards": 135,
         "gems": 227,
-        "grades": 463,
+        "grades": 466,
         "gemRate": 49.0
       }
     },
@@ -6085,14 +6085,14 @@
         "PSA": {
           "cards": 5,
           "gems": 4,
-          "grades": 2116,
+          "grades": 2117,
           "gemRate": 0.0
         }
       },
       "totals": {
         "cards": 5,
         "gems": 4,
-        "grades": 2116,
+        "grades": 2117,
         "gemRate": 0.0
       }
     },
@@ -6317,17 +6317,17 @@
       "sport": "Baseball",
       "graders": {
         "PSA": {
-          "cards": 36,
+          "cards": 37,
           "gems": 9,
-          "grades": 39,
-          "gemRate": 23.0
+          "grades": 40,
+          "gemRate": 22.0
         }
       },
       "totals": {
-        "cards": 36,
+        "cards": 37,
         "gems": 9,
-        "grades": 39,
-        "gemRate": 23.0
+        "grades": 40,
+        "gemRate": 22.0
       }
     },
     "Roberto Petagine": {
