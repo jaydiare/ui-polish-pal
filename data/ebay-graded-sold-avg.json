@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-04-25T03:36:37.076Z",
+    "updatedAt": "2026-04-25T06:01:42.764Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA/BGS/SGC grader title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 350,
-      "endIdx": 360,
+      "startIdx": 360,
+      "endIdx": 370,
       "totalAthletes": 461
     },
     "maxPages": 4,
@@ -32,7 +32,7 @@
     },
     "fx": {
       "source": "CBSA Exchange Rates API",
-      "asOf": "2026-04-25T00:00:00.000Z"
+      "asOf": "2026-04-26T00:00:00.000Z"
     }
   },
   "Adbert Alzolay": {
@@ -4958,14 +4958,14 @@
   "Ricardo Sanchez": {
     "keyword": "Ricardo Sanchez Baseball PSA",
     "nScraped": 60,
-    "nSoldUsed": 1,
+    "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
   },
   "Rich Garces": {
     "keyword": "Rich Garces Baseball PSA",
@@ -4981,7 +4981,7 @@
   },
   "Richard Hidalgo": {
     "keyword": "Richard Hidalgo Baseball PSA",
-    "nScraped": 244,
+    "nScraped": 241,
     "nSoldUsed": 8,
     "avg": 7.110000000000001,
     "taguchiSold": 7.110000000000001,
@@ -5018,14 +5018,14 @@
   "Robert Suarez": {
     "keyword": "Robert Suarez Baseball PSA",
     "nScraped": 60,
-    "nSoldUsed": 0,
+    "nSoldUsed": 1,
     "avg": null,
     "taguchiSold": null,
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
   },
   "Roberto Petagine": {
     "keyword": "Roberto Petagine Baseball PSA",
