@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-04-25T18:45:11.668Z",
+    "updatedAt": "2026-04-25T21:33:37.614Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. Taguchi winsorized mean + market stability CV. Ungraded condition policy (permissive for sold). Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 280,
-      "endIdx": 290,
+      "startIdx": 290,
+      "endIdx": 300,
       "totalAthletes": 571
     },
     "maxPages": 4,
@@ -4245,12 +4245,12 @@
   },
   "Kervin Castro": {
     "keyword": "Kervin Castro Baseball",
-    "nScraped": 224,
-    "nSoldUsed": 146,
-    "avg": 1.6963013698630134,
-    "taguchiSold": 1.6963013698630134,
-    "medianSold": 1.83,
-    "marketStabilityCV": 0.18277744677570443,
+    "nScraped": 216,
+    "nSoldUsed": 134,
+    "avg": 1.765746268656716,
+    "taguchiSold": 1.765746268656716,
+    "medianSold": 1.935,
+    "marketStabilityCV": 0.13574655218133172,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
@@ -4258,23 +4258,23 @@
   "Lenyn Sosa": {
     "keyword": "Lenyn Sosa Baseball",
     "nScraped": 240,
-    "nSoldUsed": 110,
-    "avg": 3.6130909090909085,
-    "taguchiSold": 3.6130909090909085,
-    "medianSold": 3.99,
-    "marketStabilityCV": 0.37904682951851104,
+    "nSoldUsed": 114,
+    "avg": 3.4260526315789503,
+    "taguchiSold": 3.4260526315789503,
+    "medianSold": 2.9400000000000004,
+    "marketStabilityCV": 0.41801468512746603,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
   },
   "Leo Hernandez": {
     "keyword": "Leo Hernandez Baseball",
-    "nScraped": 264,
-    "nSoldUsed": 32,
-    "avg": 1.6899999999999993,
-    "taguchiSold": 1.6899999999999993,
+    "nScraped": 269,
+    "nSoldUsed": 36,
+    "avg": 1.7166666666666668,
+    "taguchiSold": 1.7166666666666668,
     "medianSold": 1.69,
-    "marketStabilityCV": 4.004690133754241e-16,
+    "marketStabilityCV": 0.017613878353828084,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
@@ -4282,11 +4282,11 @@
   "Leo Rivas": {
     "keyword": "Leo Rivas Baseball",
     "nScraped": 240,
-    "nSoldUsed": 120,
-    "avg": 2.473083333333336,
-    "taguchiSold": 2.473083333333336,
+    "nSoldUsed": 116,
+    "avg": 2.479741379310348,
+    "taguchiSold": 2.479741379310348,
     "medianSold": 2.37,
-    "marketStabilityCV": 0.1930141029113085,
+    "marketStabilityCV": 0.19399945933060128,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
@@ -4305,15 +4305,15 @@
   },
   "Les Straker": {
     "keyword": "Les Straker Baseball",
-    "nScraped": 0,
-    "nSoldUsed": 0,
-    "avg": null,
-    "taguchiSold": null,
-    "medianSold": null,
-    "marketStabilityCV": null,
+    "nScraped": 62,
+    "nSoldUsed": 11,
+    "avg": 5.395454545454546,
+    "taguchiSold": 5.395454545454546,
+    "medianSold": 1.65,
+    "marketStabilityCV": 0.8153227958197435,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
   },
   "Lester Oliveros": {
     "keyword": "Lester Oliveros Baseball",
