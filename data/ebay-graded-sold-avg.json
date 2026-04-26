@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-04-26T21:01:01.171Z",
+    "updatedAt": "2026-04-26T23:03:05.148Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA/BGS/SGC grader title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 70,
-      "endIdx": 80,
+      "startIdx": 80,
+      "endIdx": 90,
       "totalAthletes": 462
     },
     "maxPages": 4,
@@ -1141,7 +1141,7 @@
   },
   "Clemente Alvarez": {
     "keyword": "Clemente Alvarez Baseball PSA",
-    "nScraped": 0,
+    "nScraped": 60,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -1177,7 +1177,7 @@
   },
   "Daniel Palencia": {
     "keyword": "Daniel Palencia Baseball PSA",
-    "nScraped": 246,
+    "nScraped": 245,
     "nSoldUsed": 16,
     "avg": 139.5,
     "taguchiSold": 139.5,
@@ -1189,7 +1189,7 @@
   },
   "Danny Leon": {
     "keyword": "Danny Leon Baseball PSA",
-    "nScraped": 241,
+    "nScraped": 240,
     "nSoldUsed": 4,
     "avg": 7.42,
     "taguchiSold": 7.42,
@@ -1226,7 +1226,7 @@
   "Darwinzon Hernandez": {
     "keyword": "Darwinzon Hernandez Baseball PSA",
     "nScraped": 240,
-    "nSoldUsed": 4,
+    "nSoldUsed": 5,
     "avg": 8.88,
     "taguchiSold": 8.88,
     "medianSold": 8.88,
@@ -6865,12 +6865,12 @@
   },
   "David Peralta": {
     "keyword": "David Peralta Baseball PSA",
-    "nScraped": 180,
-    "nSoldUsed": 3,
-    "avg": null,
-    "taguchiSold": null,
-    "medianSold": null,
-    "marketStabilityCV": null,
+    "nScraped": 243,
+    "nSoldUsed": 4,
+    "avg": 75,
+    "taguchiSold": 75,
+    "medianSold": 75,
+    "marketStabilityCV": 0,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
@@ -6889,12 +6889,12 @@
   },
   "Dave Concepcion": {
     "keyword": "Dave Concepcion Baseball PSA",
-    "nScraped": 223,
-    "nSoldUsed": 93,
-    "avg": 41.92849462365591,
-    "taguchiSold": 41.92849462365591,
+    "nScraped": 225,
+    "nSoldUsed": 92,
+    "avg": 40.29423913043478,
+    "taguchiSold": 40.29423913043478,
     "medianSold": 39.99,
-    "marketStabilityCV": 0.17181134279036525,
+    "marketStabilityCV": 0.17236890059963433,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
