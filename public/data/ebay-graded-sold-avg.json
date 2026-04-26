@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-04-26T15:05:51.690Z",
+    "updatedAt": "2026-04-26T17:06:22.073Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA/BGS/SGC grader title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 40,
-      "endIdx": 50,
+      "startIdx": 50,
+      "endIdx": 60,
       "totalAthletes": 461
     },
     "maxPages": 4,
@@ -781,7 +781,7 @@
   },
   "Brusdar Graterol": {
     "keyword": "Brusdar Graterol Baseball PSA",
-    "nScraped": 270,
+    "nScraped": 271,
     "nSoldUsed": 13,
     "avg": 13.99,
     "taguchiSold": 13.99,
@@ -817,7 +817,7 @@
   },
   "Carlos Carrasco": {
     "keyword": "Carlos Carrasco Baseball PSA",
-    "nScraped": 246,
+    "nScraped": 249,
     "nSoldUsed": 16,
     "avg": 34.99,
     "taguchiSold": 34.99,
@@ -829,7 +829,7 @@
   },
   "Carlos Garcia": {
     "keyword": "Carlos Garcia Baseball PSA",
-    "nScraped": 252,
+    "nScraped": 250,
     "nSoldUsed": 16,
     "avg": 35.875,
     "taguchiSold": 35.875,
@@ -841,12 +841,12 @@
   },
   "Carlos Gonzalez": {
     "keyword": "Carlos Gonzalez Baseball PSA",
-    "nScraped": 189,
-    "nSoldUsed": 20,
-    "avg": 22.0945,
-    "taguchiSold": 22.0945,
-    "medianSold": 22.99,
-    "marketStabilityCV": 0.308902258408306,
+    "nScraped": 130,
+    "nSoldUsed": 12,
+    "avg": 21.995,
+    "taguchiSold": 21.995,
+    "medianSold": 21.995,
+    "marketStabilityCV": 0.3326430497757663,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
