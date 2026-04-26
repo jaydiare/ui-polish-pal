@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-04-26T11:07:48.597Z",
+    "updatedAt": "2026-04-26T13:44:14.296Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA/BGS/SGC grader title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 20,
-      "endIdx": 30,
+      "startIdx": 30,
+      "endIdx": 40,
       "totalAthletes": 461
     },
     "maxPages": 4,
@@ -458,14 +458,14 @@
   "Andruw Monasterio": {
     "keyword": "Andruw Monasterio Baseball PSA",
     "nScraped": 244,
-    "nSoldUsed": 4,
-    "avg": 7.5,
-    "taguchiSold": 7.5,
-    "medianSold": 7.5,
-    "marketStabilityCV": 0,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
   },
   "Andry Lara": {
     "keyword": "Andry Lara Baseball PSA",
@@ -482,11 +482,11 @@
   "Angel Bravo": {
     "keyword": "Angel Bravo Baseball PSA",
     "nScraped": 244,
-    "nSoldUsed": 24,
-    "avg": 24.855000000000004,
-    "taguchiSold": 24.855000000000004,
-    "medianSold": 24.854999999999997,
-    "marketStabilityCV": 0.005548322590340656,
+    "nSoldUsed": 20,
+    "avg": 24.990000000000006,
+    "taguchiSold": 24.990000000000006,
+    "medianSold": 24.99,
+    "marketStabilityCV": 2.917172729576728e-16,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
@@ -505,12 +505,12 @@
   },
   "Angel Guzman": {
     "keyword": "Angel Guzman Baseball PSA",
-    "nScraped": 247,
-    "nSoldUsed": 15,
-    "avg": 17.666666666666668,
-    "taguchiSold": 17.666666666666668,
+    "nScraped": 249,
+    "nSoldUsed": 11,
+    "avg": 20,
+    "taguchiSold": 20,
     "medianSold": 20,
-    "marketStabilityCV": 0.1461503149512233,
+    "marketStabilityCV": 0,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
