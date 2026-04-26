@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-04-26T03:59:07.633Z",
+    "updatedAt": "2026-04-26T07:57:03.022Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA/BGS/SGC grader title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 460,
-      "endIdx": 461,
+      "startIdx": 0,
+      "endIdx": 10,
       "totalAthletes": 461
     },
     "maxPages": 4,
@@ -32,17 +32,17 @@
     },
     "fx": {
       "source": "CBSA Exchange Rates API",
-      "asOf": "2026-04-26T00:00:00.000Z"
+      "asOf": "2026-04-27T00:00:00.000Z"
     }
   },
   "Adbert Alzolay": {
     "keyword": "Adbert Alzolay Baseball PSA",
-    "nScraped": 284,
-    "nSoldUsed": 24,
-    "avg": 11.5,
-    "taguchiSold": 11.5,
+    "nScraped": 288,
+    "nSoldUsed": 28,
+    "avg": 10.865714285714285,
+    "taguchiSold": 10.865714285714285,
     "medianSold": 11.5,
-    "marketStabilityCV": 0,
+    "marketStabilityCV": 0.06864250925366983,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
@@ -6949,12 +6949,12 @@
   },
   "Jesus Luzardo": {
     "keyword": "Jesus Luzardo Baseball PSA",
-    "nScraped": 150,
-    "nSoldUsed": 91,
-    "avg": 15.797472527472534,
-    "taguchiSold": 15.797472527472534,
+    "nScraped": 144,
+    "nSoldUsed": 94,
+    "avg": 16.23978723404256,
+    "taguchiSold": 16.23978723404256,
     "medianSold": 14.99,
-    "marketStabilityCV": 0.17795179516666773,
+    "marketStabilityCV": 0.20209691597343815,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
@@ -6962,11 +6962,11 @@
   "Jose Fernandez": {
     "keyword": "Jose Fernandez Diamondbacks Baseball PSA",
     "nScraped": 252,
-    "nSoldUsed": 50,
-    "avg": 166.19079999999988,
-    "taguchiSold": 166.19079999999988,
-    "medianSold": 180,
-    "marketStabilityCV": 0.20554818949790657,
+    "nSoldUsed": 61,
+    "avg": 157.44983606557363,
+    "taguchiSold": 157.44983606557363,
+    "medianSold": 129.99,
+    "marketStabilityCV": 0.2449306927009132,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
