@@ -125,10 +125,34 @@ const ChecklistIntel = () => {
     setResult(null);
     setTeamResult(null);
 
-    const athletes = athlete.split(",").map((a) => a.trim()).filter(Boolean);
     const ANALYSIS_TIMEOUT = 120_000;
 
     try {
+      // ── TEAM MODE ──────────────────────────────────────────────────
+      if (mode === "team") {
+        const teamPromise = analyzeTeamChecklist({
+          checklistFile,
+          oddsFile,
+          team,
+          formatName: formatName === "auto-detect" ? null : formatName,
+          packsPerBox: packsPerBox ? parseInt(packsPerBox) : null,
+          boxesPerCase: boxesPerCase ? parseInt(boxesPerCase) : null,
+          manualOddsLines: manualOdds.split("\n").filter(Boolean),
+          onProgress: (p) => setProgress({ ...p, label: `${team}: ${p.label}` }),
+        });
+        const timer = new Promise<never>((_, reject) =>
+          setTimeout(() => reject(new Error("Analysis timed out after 2 minutes. Try a smaller file or a different format (TXT/CSV).")), ANALYSIS_TIMEOUT),
+        );
+        const res = await Promise.race([teamPromise, timer]);
+        setTeamResult(res);
+        if (res.totalCards === 0) {
+          setError(`⚠️ No cards found for "${team}" in this checklist. The team name in the file may use a different abbreviation.`);
+        }
+        return;
+      }
+
+      // ── PLAYER MODE ────────────────────────────────────────────────
+      const athletes = athlete.split(",").map((a) => a.trim()).filter(Boolean);
       const allResults: AnalysisResult[] = [];
       const notFound: string[] = [];
 
@@ -189,13 +213,16 @@ const ChecklistIntel = () => {
       setLoading(false);
       setProgress(null);
     }
-  }, [checklistFile, oddsFile, athlete, formatName, packsPerBox, boxesPerCase, manualOdds]);
+  }, [mode, checklistFile, oddsFile, athlete, team, formatName, packsPerBox, boxesPerCase, manualOdds]);
 
   const handleClear = () => {
     setChecklistFile(null);
     setOddsFile(null);
     setAthlete("");
+    setTeam("");
+    setAvailableTeams([]);
     setResult(null);
+    setTeamResult(null);
     setError(null);
     setManualOdds("");
   };
