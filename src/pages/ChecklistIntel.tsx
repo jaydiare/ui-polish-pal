@@ -285,7 +285,7 @@ const ChecklistIntel = () => {
                   id="checklist"
                   type="file"
                   accept=".pdf,.txt,.csv"
-                  onChange={(e) => setChecklistFile(e.target.files?.[0] || null)}
+                  onChange={(e) => handleChecklistChange(e.target.files?.[0] || null)}
                   className="file:text-vzla-yellow file:font-semibold file:border-0 file:bg-secondary file:rounded-lg file:px-3 file:py-1 file:mr-3 cursor-pointer"
                 />
               </div>
@@ -303,20 +303,81 @@ const ChecklistIntel = () => {
               </div>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <div className="space-y-2">
-                <Label htmlFor="athlete" className="text-foreground font-semibold">
-                  Athlete Name <span className="text-destructive">*</span>
-                </Label>
-                <Input
-                  id="athlete"
-                  placeholder="e.g. Ronald Acuña Jr., Julio Rodriguez"
-                  value={athlete}
-                  onChange={(e) => setAthlete(e.target.value)}
-                  className="bg-secondary border-border"
-                />
-                <p className="text-[11px] text-muted-foreground">Separate multiple athletes with commas</p>
+            {/* Mode toggle: Player / Team */}
+            <div className="space-y-2">
+              <Label className="text-foreground font-semibold">Analyze by</Label>
+              <div className="inline-flex rounded-lg bg-secondary border border-border p-1">
+                <button
+                  type="button"
+                  onClick={() => setMode("player")}
+                  className={`px-4 py-1.5 text-sm font-medium rounded-md transition-colors ${
+                    mode === "player"
+                      ? "bg-vzla-yellow text-background"
+                      : "text-muted-foreground hover:text-foreground"
+                  }`}
+                >
+                  👤 Player
+                </button>
+                <button
+                  type="button"
+                  onClick={() => setMode("team")}
+                  className={`px-4 py-1.5 text-sm font-medium rounded-md transition-colors ${
+                    mode === "team"
+                      ? "bg-vzla-yellow text-background"
+                      : "text-muted-foreground hover:text-foreground"
+                  }`}
+                >
+                  🏟️ Team
+                </button>
               </div>
+            </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              {mode === "player" ? (
+                <div className="space-y-2">
+                  <Label htmlFor="athlete" className="text-foreground font-semibold">
+                    Athlete Name <span className="text-destructive">*</span>
+                  </Label>
+                  <Input
+                    id="athlete"
+                    placeholder="e.g. Ronald Acuña Jr., Julio Rodriguez"
+                    value={athlete}
+                    onChange={(e) => setAthlete(e.target.value)}
+                    className="bg-secondary border-border"
+                  />
+                  <p className="text-[11px] text-muted-foreground">Separate multiple athletes with commas</p>
+                </div>
+              ) : (
+                <div className="space-y-2">
+                  <Label htmlFor="team" className="text-foreground font-semibold">
+                    Team <span className="text-destructive">*</span>
+                  </Label>
+                  {availableTeams.length > 0 ? (
+                    <Select value={team} onValueChange={setTeam}>
+                      <SelectTrigger className="bg-secondary border-border">
+                        <SelectValue placeholder={`Select from ${availableTeams.length} teams`} />
+                      </SelectTrigger>
+                      <SelectContent className="max-h-72">
+                        {availableTeams.map((t) => (
+                          <SelectItem key={t} value={t}>{t}</SelectItem>
+                        ))}
+                      </SelectContent>
+                    </Select>
+                  ) : (
+                    <Input
+                      id="team"
+                      placeholder={teamsLoading ? "Reading checklist…" : checklistFile ? "No teams detected — type one" : "Upload a checklist first"}
+                      value={team}
+                      onChange={(e) => setTeam(e.target.value)}
+                      disabled={!checklistFile || teamsLoading}
+                      className="bg-secondary border-border"
+                    />
+                  )}
+                  <p className="text-[11px] text-muted-foreground">
+                    {teamsLoading ? "Extracting teams…" : availableTeams.length > 0 ? `${availableTeams.length} teams found in checklist` : "Teams auto-detected from your file"}
+                  </p>
+                </div>
+              )}
               <div className="space-y-2">
                 <Label className="text-foreground font-semibold">Format</Label>
                 <Select value={formatName} onValueChange={setFormatName}>
