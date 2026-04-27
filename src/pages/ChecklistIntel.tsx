@@ -71,9 +71,13 @@ const GRADE_LABELS: Record<string, string> = {
 };
 
 const ChecklistIntel = () => {
+  const [mode, setMode] = useState<"player" | "team">("player");
   const [checklistFile, setChecklistFile] = useState<File | null>(null);
   const [oddsFile, setOddsFile] = useState<File | null>(null);
   const [athlete, setAthlete] = useState("");
+  const [team, setTeam] = useState("");
+  const [availableTeams, setAvailableTeams] = useState<string[]>([]);
+  const [teamsLoading, setTeamsLoading] = useState(false);
   const [multiResults, setMultiResults] = useState<AnalysisResult[]>([]);
   const [formatName, setFormatName] = useState("auto-detect");
   const [packsPerBox, setPacksPerBox] = useState("");
@@ -83,17 +87,43 @@ const ChecklistIntel = () => {
   const [loading, setLoading] = useState(false);
   const [progress, setProgress] = useState<ProgressStep | null>(null);
   const [result, setResult] = useState<AnalysisResult | null>(null);
+  const [teamResult, setTeamResult] = useState<TeamAnalysisResult | null>(null);
   const [error, setError] = useState<string | null>(null);
 
+  // Auto-extract teams whenever a checklist file is uploaded
+  const handleChecklistChange = useCallback(async (file: File | null) => {
+    setChecklistFile(file);
+    setAvailableTeams([]);
+    setTeam("");
+    if (!file) return;
+    setTeamsLoading(true);
+    try {
+      const text = await extractTextFromFile(file);
+      const entries = parseChecklist(text);
+      const teams = extractTeams(entries);
+      setAvailableTeams(teams);
+    } catch (e) {
+      console.warn("[ChecklistIntel] Could not extract teams:", e);
+    } finally {
+      setTeamsLoading(false);
+    }
+  }, []);
+
   const handleAnalyze = useCallback(async () => {
-    if (!checklistFile || !athlete.trim()) {
-      setError("Please upload a checklist and enter an athlete name.");
+    const needsAthlete = mode === "player" && !athlete.trim();
+    const needsTeam = mode === "team" && !team.trim();
+    if (!checklistFile || needsAthlete || needsTeam) {
+      setError(mode === "player"
+        ? "Please upload a checklist and enter an athlete name."
+        : "Please upload a checklist and select a team.");
       return;
     }
     setError(null);
     setLoading(true);
     setProgress(null);
     setMultiResults([]);
+    setResult(null);
+    setTeamResult(null);
 
     const athletes = athlete.split(",").map((a) => a.trim()).filter(Boolean);
     const ANALYSIS_TIMEOUT = 120_000;
