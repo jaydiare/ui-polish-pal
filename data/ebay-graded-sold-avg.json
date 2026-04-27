@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-04-27T06:43:47.457Z",
+    "updatedAt": "2026-04-27T10:29:00.265Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA/BGS/SGC grader title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 100,
-      "endIdx": 110,
+      "startIdx": 110,
+      "endIdx": 120,
       "totalAthletes": 462
     },
     "maxPages": 4,
@@ -1573,15 +1573,15 @@
   },
   "Edward Olivares": {
     "keyword": "Edward Olivares Baseball PSA",
-    "nScraped": 0,
-    "nSoldUsed": 0,
-    "avg": null,
-    "taguchiSold": null,
-    "medianSold": null,
-    "marketStabilityCV": null,
+    "nScraped": 241,
+    "nSoldUsed": 8,
+    "avg": 3.25,
+    "taguchiSold": 3.25,
+    "medianSold": 3.25,
+    "marketStabilityCV": 0.3289369131229839,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
   },
   "Edwin Bellorin": {
     "keyword": "Edwin Bellorin Baseball",
@@ -1681,7 +1681,7 @@
   },
   "Eliezer Alfonzo": {
     "keyword": "Eliezer Alfonzo Baseball PSA",
-    "nScraped": 48,
+    "nScraped": 51,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -1693,15 +1693,15 @@
   },
   "Elio Chacon": {
     "keyword": "Elio Chacon Baseball PSA",
-    "nScraped": 254,
-    "nSoldUsed": 24,
-    "avg": 60,
-    "taguchiSold": 60,
-    "medianSold": 60,
-    "marketStabilityCV": 0.42562826537937426,
+    "nScraped": 0,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "originalCurrencyExample": null,
+    "fxRateUsed": null
   },
   "Elvis Andrus": {
     "keyword": "Elvis Andrus Baseball PSA",
