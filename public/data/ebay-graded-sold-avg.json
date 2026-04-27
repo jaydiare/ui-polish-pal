@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-04-27T19:52:08.735Z",
+    "updatedAt": "2026-04-27T21:31:44.111Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA/BGS/SGC grader title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 150,
-      "endIdx": 160,
+      "startIdx": 160,
+      "endIdx": 170,
       "totalAthletes": 462
     },
     "maxPages": 4,
@@ -2257,15 +2257,15 @@
   },
   "Gorkys Hernandez": {
     "keyword": "Gorkys Hernandez Baseball PSA",
-    "nScraped": 0,
-    "nSoldUsed": 0,
+    "nScraped": 60,
+    "nSoldUsed": 1,
     "avg": null,
     "taguchiSold": null,
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
   },
   "Gregor Blanco": {
     "keyword": "Gregor Blanco Baseball PSA",
@@ -2281,7 +2281,7 @@
   },
   "Gregorio Petit": {
     "keyword": "Gregorio Petit Baseball PSA",
-    "nScraped": 24,
+    "nScraped": 25,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -2293,7 +2293,7 @@
   },
   "Gregory Infante": {
     "keyword": "Gregory Infante Baseball PSA",
-    "nScraped": 53,
+    "nScraped": 52,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -2329,7 +2329,7 @@
   },
   "Guillermo Quiroz": {
     "keyword": "Guillermo Quiroz Baseball PSA",
-    "nScraped": 60,
+    "nScraped": 50,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -2353,7 +2353,7 @@
   },
   "Gus Gil": {
     "keyword": "Gus Gil Baseball PSA",
-    "nScraped": 246,
+    "nScraped": 245,
     "nSoldUsed": 8,
     "avg": 42.5,
     "taguchiSold": 42.5,
@@ -2365,12 +2365,12 @@
   },
   "Gus Polidor": {
     "keyword": "Gus Polidor Baseball PSA",
-    "nScraped": 240,
-    "nSoldUsed": 4,
-    "avg": 75,
-    "taguchiSold": 75,
-    "medianSold": 75,
-    "marketStabilityCV": 0,
+    "nScraped": 180,
+    "nSoldUsed": 3,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
