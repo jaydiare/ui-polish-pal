@@ -472,6 +472,7 @@ const ChecklistIntel = () => {
             {error && (
               <p className="text-destructive text-sm font-medium">{error}</p>
             )}
+          </div>
 
           {/* Team Results */}
           {teamResult && <TeamResultView data={teamResult} />}
