@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-04-27T17:46:27.729Z",
+    "updatedAt": "2026-04-27T19:52:08.735Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA/BGS/SGC grader title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 140,
-      "endIdx": 150,
+      "startIdx": 150,
+      "endIdx": 160,
       "totalAthletes": 462
     },
     "maxPages": 4,
@@ -2113,19 +2113,19 @@
   },
   "Freddy Garcia": {
     "keyword": "Freddy Garcia Baseball PSA",
-    "nScraped": 0,
-    "nSoldUsed": 0,
-    "avg": null,
-    "taguchiSold": null,
-    "medianSold": null,
-    "marketStabilityCV": null,
+    "nScraped": 255,
+    "nSoldUsed": 20,
+    "avg": 24.990000000000006,
+    "taguchiSold": 24.990000000000006,
+    "medianSold": 24.99,
+    "marketStabilityCV": 2.917172729576728e-16,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
   },
   "Gabriel Arias": {
     "keyword": "Gabriel Arias Baseball PSA",
-    "nScraped": 316,
+    "nScraped": 318,
     "nSoldUsed": 60,
     "avg": 18.66199999999999,
     "taguchiSold": 18.66199999999999,
@@ -2137,12 +2137,12 @@
   },
   "Gabriel Moreno": {
     "keyword": "Gabriel Moreno Baseball PSA",
-    "nScraped": 152,
-    "nSoldUsed": 60,
-    "avg": 32.97333333333335,
-    "taguchiSold": 32.97333333333335,
-    "medianSold": 35.495000000000005,
-    "marketStabilityCV": 0.2152980146245005,
+    "nScraped": 148,
+    "nSoldUsed": 55,
+    "avg": 32.06309090909092,
+    "taguchiSold": 32.06309090909092,
+    "medianSold": 30,
+    "marketStabilityCV": 0.21883510669962566,
     "currency": "USD",
     "originalCurrencyExample": "USD",
     "fxRateUsed": 1
@@ -2197,7 +2197,7 @@
   },
   "German Marquez": {
     "keyword": "German Marquez Baseball PSA",
-    "nScraped": 247,
+    "nScraped": 245,
     "nSoldUsed": 8,
     "avg": 9.875,
     "taguchiSold": 9.875,
@@ -2209,7 +2209,7 @@
   },
   "Giomar Guevara": {
     "keyword": "Giomar Guevara Baseball PSA",
-    "nScraped": 5,
+    "nScraped": 0,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
@@ -2221,7 +2221,7 @@
   },
   "Giovanni Carrara": {
     "keyword": "Giovanni Carrara Baseball PSA",
-    "nScraped": 22,
+    "nScraped": 0,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
