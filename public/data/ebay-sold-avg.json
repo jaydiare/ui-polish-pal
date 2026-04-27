@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-04-27T16:24:11.906Z",
+    "updatedAt": "2026-04-27T19:14:34.894Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. Taguchi winsorized mean + market stability CV. Ungraded condition policy (permissive for sold). Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 430,
-      "endIdx": 440,
+      "startIdx": 440,
+      "endIdx": 450,
       "totalAthletes": 572
     },
     "maxPages": 4,
@@ -6057,6 +6057,66 @@
   },
   "Tomas Telis": {
     "keyword": "Tomas Telis Baseball",
+    "nScraped": 240,
+    "nSoldUsed": 8,
+    "avg": 1.3399999999999999,
+    "taguchiSold": 1.3399999999999999,
+    "medianSold": 1.3399999999999999,
+    "marketStabilityCV": 0.2792281631920852,
+    "currency": "USD",
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
+  },
+  "Tony Alvarez": {
+    "keyword": "Tony Alvarez Baseball",
+    "nScraped": 343,
+    "nSoldUsed": 56,
+    "avg": 2.40642857142857,
+    "taguchiSold": 2.40642857142857,
+    "medianSold": 2.625,
+    "marketStabilityCV": 0.25035561727498123,
+    "currency": "USD",
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
+  },
+  "Tony Armas": {
+    "keyword": "Tony Armas Baseball",
+    "nScraped": 240,
+    "nSoldUsed": 73,
+    "avg": 1.3636986301369876,
+    "taguchiSold": 1.3636986301369876,
+    "medianSold": 1,
+    "marketStabilityCV": 0.28725462805074997,
+    "currency": "USD",
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
+  },
+  "Tony Castillo": {
+    "keyword": "Tony Castillo Baseball",
+    "nScraped": 228,
+    "nSoldUsed": 80,
+    "avg": 1.482500000000001,
+    "taguchiSold": 1.482500000000001,
+    "medianSold": 1.595,
+    "marketStabilityCV": 0.3132526017381343,
+    "currency": "USD",
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
+  },
+  "Tucupita Marcano": {
+    "keyword": "Tucupita Marcano Baseball",
+    "nScraped": 72,
+    "nSoldUsed": 58,
+    "avg": 3.1010344827586205,
+    "taguchiSold": 3.1010344827586205,
+    "medianSold": 2.99,
+    "marketStabilityCV": 0.18944150442803218,
+    "currency": "USD",
+    "originalCurrencyExample": "USD",
+    "fxRateUsed": 1
+  },
+  "Ubaldo Heredia": {
+    "keyword": "Ubaldo Heredia Baseball",
     "nScraped": 0,
     "nSoldUsed": 0,
     "avg": null,
@@ -6066,66 +6126,6 @@
     "currency": "USD",
     "originalCurrencyExample": null,
     "fxRateUsed": null
-  },
-  "Tony Alvarez": {
-    "keyword": "Tony Alvarez Baseball",
-    "nScraped": 280,
-    "nSoldUsed": 44,
-    "avg": 1.3081818181818172,
-    "taguchiSold": 1.3081818181818172,
-    "medianSold": 0.99,
-    "marketStabilityCV": 0.26951937066863974,
-    "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
-  },
-  "Tony Armas": {
-    "keyword": "Tony Armas Baseball",
-    "nScraped": 240,
-    "nSoldUsed": 51,
-    "avg": 1.2760784313725486,
-    "taguchiSold": 1.2760784313725486,
-    "medianSold": 1,
-    "marketStabilityCV": 0.2365643507241108,
-    "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
-  },
-  "Tony Castillo": {
-    "keyword": "Tony Castillo Baseball",
-    "nScraped": 220,
-    "nSoldUsed": 64,
-    "avg": 2.23625,
-    "taguchiSold": 2.23625,
-    "medianSold": 1.65,
-    "marketStabilityCV": 0.4053149852285958,
-    "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
-  },
-  "Tucupita Marcano": {
-    "keyword": "Tucupita Marcano Baseball",
-    "nScraped": 72,
-    "nSoldUsed": 57,
-    "avg": 3.0743859649122807,
-    "taguchiSold": 3.0743859649122807,
-    "medianSold": 2.8,
-    "marketStabilityCV": 0.19145387981430864,
-    "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
-  },
-  "Ubaldo Heredia": {
-    "keyword": "Ubaldo Heredia Baseball",
-    "nScraped": 244,
-    "nSoldUsed": 4,
-    "avg": 20,
-    "taguchiSold": 20,
-    "medianSold": 20,
-    "marketStabilityCV": 0,
-    "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
   },
   "Ugueth Urbina": {
     "keyword": "Ugueth Urbina Baseball",
