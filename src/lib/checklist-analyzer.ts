@@ -995,3 +995,227 @@ function hashCode(s: string): number {
   }
   return Math.abs(h);
 }
+
+// ── Team-Level Analysis ────────────────────────────────────────────────
+
+export interface TeamPlayerBreakdown {
+  athlete: string;
+  cardCount: number;
+  byTier: Record<string, number>;
+  bestCard: string | null;
+  bestTier: RarityTier;
+  /** Best (lowest) per-card pack odds across this player's cards */
+  bestOdds: number | null;
+}
+
+export interface TeamTierOdds {
+  tier: RarityTier;
+  /** Number of unique cards in this tier across all team players */
+  cardCount: number;
+  /** Combined per-pack chance of pulling ANY card in this tier from this team */
+  combinedPackOdds: number | null;
+  /** Display string e.g. "1 in 24 packs" */
+  displayOdds: string;
+}
+
+export interface TeamAnalysisResult {
+  team: string;
+  totalCards: number;
+  uniquePlayers: number;
+  summary: AnalysisSummary;
+  tierOdds: TeamTierOdds[];
+  players: TeamPlayerBreakdown[];
+  results: (ChecklistEntry & { displayOdds: string; robust?: RobustScore })[];
+}
+
+/** Normalize a team name for grouping — strips diacritics, lowercases, trims */
+function normalizeTeam(team: string): string {
+  return normalizeName(team);
+}
+
+/** Pretty team display: title-case the normalized form when source casing varies */
+function prettifyTeam(team: string): string {
+  return team
+    .split(/\s+/)
+    .map((w) => (w.length <= 2 ? w.toUpperCase() : w[0].toUpperCase() + w.slice(1).toLowerCase()))
+    .join(" ")
+    .trim();
+}
+
+/**
+ * Extract the unique list of teams found in a parsed checklist.
+ * Returns display names sorted alphabetically (deduped by normalized form).
+ */
+export function extractTeams(entries: ChecklistEntry[]): string[] {
+  const map = new Map<string, string>();
+  for (const e of entries) {
+    if (!e.team) continue;
+    const raw = e.team.trim();
+    if (raw.length < 3) continue;
+    // Skip team strings that look like card codes or numbers
+    if (/^\d/.test(raw)) continue;
+    const norm = normalizeTeam(raw);
+    if (!norm) continue;
+    if (!map.has(norm)) map.set(norm, prettifyTeam(raw));
+  }
+  return [...map.values()].sort((a, b) => a.localeCompare(b));
+}
+
+/** Find all entries whose team field matches the requested team (fuzzy). */
+export function findMatchesByTeam(entries: ChecklistEntry[], team: string): ChecklistEntry[] {
+  const target = normalizeTeam(team);
+  if (!target) return [];
+  return entries.filter((e) => {
+    if (!e.team) return false;
+    const t = normalizeTeam(e.team);
+    return t === target || t.includes(target) || target.includes(t) || similarity(t, target) >= 0.85;
+  });
+}
+
+/**
+ * Combine per-card pack odds (1:N each) into a single per-pack probability
+ * of pulling AT LEAST ONE of those cards from a single pack.
+ * P(any) = 1 - Π(1 - 1/N_i). Returns combined "1 in K packs" K value.
+ */
+function combineOdds(perCardOdds: number[]): number | null {
+  const valid = perCardOdds.filter((n) => n && isFinite(n) && n > 0);
+  if (!valid.length) return null;
+  let pNone = 1;
+  for (const n of valid) pNone *= 1 - 1 / n;
+  const pAny = 1 - pNone;
+  if (pAny <= 0) return null;
+  return Math.round(1 / pAny);
+}
+
+export async function analyzeTeamChecklist(opts: {
+  checklistFile: File;
+  oddsFile?: File | null;
+  team: string;
+  formatName?: string | null;
+  packsPerBox?: number | null;
+  boxesPerCase?: number | null;
+  manualOddsLines?: string[];
+  onProgress?: (p: ProgressStep) => void;
+}): Promise<TeamAnalysisResult> {
+  const report = opts.onProgress || (() => {});
+  const totalSteps = 6;
+
+  report({ step: 1, totalSteps, label: "Reading checklist", detail: opts.checklistFile.name });
+  const checklistText = await extractTextFromFile(opts.checklistFile);
+  await new Promise((r) => setTimeout(r, 0));
+
+  report({ step: 2, totalSteps, label: "Parsing card entries" });
+  const entries = parseChecklist(checklistText);
+  const teamMatches = findMatchesByTeam(entries, opts.team);
+
+  // Generate implied parallels for each team match
+  const impliedParallels = generateImpliedParallels(entries, teamMatches);
+  const matches = [...teamMatches, ...impliedParallels];
+
+  report({ step: 3, totalSteps, label: "Processing odds", detail: `${teamMatches.length} direct + ${impliedParallels.length} implied` });
+  await new Promise((r) => setTimeout(r, 0));
+
+  let oddsEntries: OddsEntry[] = [];
+  if (opts.oddsFile) {
+    try {
+      const oddsText = await extractTextFromFile(opts.oddsFile);
+      oddsEntries = parseOdds(oddsText);
+    } catch { /* skip */ }
+  }
+
+  const sectionCounts: Record<string, number> = {};
+  for (const m of matches) sectionCounts[m.section] = (sectionCounts[m.section] || 0) + 1;
+
+  const fmt = opts.formatName || null;
+  const ppb = opts.packsPerBox || null;
+  const bpc = opts.boxesPerCase || null;
+
+  for (const m of matches) {
+    const matched = matchOdds(m, oddsEntries, fmt, ppb, bpc);
+    if (matched) {
+      const [oe, packEquiv] = matched;
+      m.matchedOdds = { name: oe.name, rawText: oe.rawText, unit: oe.unit };
+      m.estimatedPackOdds = packEquiv * Math.max(1, sectionCounts[m.section]);
+    }
+  }
+
+  const manualLines = (opts.manualOddsLines || []).filter(Boolean);
+  const manual = parseManualOdds(manualLines);
+  if (Object.keys(manual).length) applyManualOdds(matches, manual);
+
+  report({ step: 4, totalSteps, label: "Ranking cards" });
+  await new Promise((r) => setTimeout(r, 0));
+
+  matches.sort((a, b) => {
+    if (b.score !== a.score) return b.score - a.score;
+    return (a.serialNumber ?? 999999) - (b.serialNumber ?? 999999);
+  });
+
+  report({ step: 5, totalSteps, label: "Running Pull Signal simulations", detail: `${matches.length} cards` });
+  await new Promise((r) => setTimeout(r, 0));
+
+  const resultsWithRobust = matches.map((m) => {
+    const robust = computeRobustScore(m, opts.team);
+    return { ...m, displayOdds: prettyOdds(m.estimatedPackOdds), robust };
+  });
+
+  report({ step: 6, totalSteps, label: "Aggregating team breakdown" });
+  await new Promise((r) => setTimeout(r, 0));
+
+  // Per-tier combined odds (team-wide, any card in tier)
+  const tiers: RarityTier[] = ["elite", "premium", "notable", "standard"];
+  const tierOdds: TeamTierOdds[] = tiers.map((tier) => {
+    const cards = resultsWithRobust.filter((r) => r.rarityTier === tier);
+    const combined = combineOdds(cards.map((c) => c.estimatedPackOdds ?? 0));
+    return {
+      tier,
+      cardCount: cards.length,
+      combinedPackOdds: combined,
+      displayOdds: combined ? `1 in ${combined.toLocaleString()} packs` : "unknown",
+    };
+  }).filter((t) => t.cardCount > 0);
+
+  // Per-player breakdown
+  const playerMap = new Map<string, TeamPlayerBreakdown>();
+  for (const r of resultsWithRobust) {
+    const key = normalizeName(r.athlete);
+    if (!key) continue;
+    let p = playerMap.get(key);
+    if (!p) {
+      p = {
+        athlete: r.athlete,
+        cardCount: 0,
+        byTier: {},
+        bestCard: null,
+        bestTier: "standard",
+        bestOdds: null,
+      };
+      playerMap.set(key, p);
+    }
+    p.cardCount += 1;
+    p.byTier[r.rarityTier] = (p.byTier[r.rarityTier] || 0) + 1;
+    if (TIER_ORDER[r.rarityTier] > TIER_ORDER[p.bestTier]) {
+      p.bestTier = r.rarityTier;
+      p.bestCard = `${r.section}`;
+    }
+    if (r.estimatedPackOdds && (p.bestOdds === null || r.estimatedPackOdds < p.bestOdds)) {
+      p.bestOdds = r.estimatedPackOdds;
+    }
+  }
+
+  const players = [...playerMap.values()].sort((a, b) => {
+    const t = TIER_ORDER[b.bestTier] - TIER_ORDER[a.bestTier];
+    if (t !== 0) return t;
+    return b.cardCount - a.cardCount;
+  });
+
+  return {
+    team: opts.team,
+    totalCards: matches.length,
+    uniquePlayers: players.length,
+    summary: summarize(matches),
+    tierOdds,
+    players,
+    results: resultsWithRobust,
+  };
+}

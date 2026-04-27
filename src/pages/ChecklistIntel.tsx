@@ -33,7 +33,12 @@ import {
   type ChecklistEntry,
   type RobustScore,
   type ProgressStep,
+  type TeamAnalysisResult,
   analyzeChecklist,
+  analyzeTeamChecklist,
+  extractTeams,
+  extractTextFromFile,
+  parseChecklist,
   prettyOdds,
 } from "@/lib/checklist-analyzer";
 
@@ -66,9 +71,13 @@ const GRADE_LABELS: Record<string, string> = {
 };
 
 const ChecklistIntel = () => {
+  const [mode, setMode] = useState<"player" | "team">("player");
   const [checklistFile, setChecklistFile] = useState<File | null>(null);
   const [oddsFile, setOddsFile] = useState<File | null>(null);
   const [athlete, setAthlete] = useState("");
+  const [team, setTeam] = useState("");
+  const [availableTeams, setAvailableTeams] = useState<string[]>([]);
+  const [teamsLoading, setTeamsLoading] = useState(false);
   const [multiResults, setMultiResults] = useState<AnalysisResult[]>([]);
   const [formatName, setFormatName] = useState("auto-detect");
   const [packsPerBox, setPacksPerBox] = useState("");
@@ -78,22 +87,72 @@ const ChecklistIntel = () => {
   const [loading, setLoading] = useState(false);
   const [progress, setProgress] = useState<ProgressStep | null>(null);
   const [result, setResult] = useState<AnalysisResult | null>(null);
+  const [teamResult, setTeamResult] = useState<TeamAnalysisResult | null>(null);
   const [error, setError] = useState<string | null>(null);
 
+  // Auto-extract teams whenever a checklist file is uploaded
+  const handleChecklistChange = useCallback(async (file: File | null) => {
+    setChecklistFile(file);
+    setAvailableTeams([]);
+    setTeam("");
+    if (!file) return;
+    setTeamsLoading(true);
+    try {
+      const text = await extractTextFromFile(file);
+      const entries = parseChecklist(text);
+      const teams = extractTeams(entries);
+      setAvailableTeams(teams);
+    } catch (e) {
+      console.warn("[ChecklistIntel] Could not extract teams:", e);
+    } finally {
+      setTeamsLoading(false);
+    }
+  }, []);
+
   const handleAnalyze = useCallback(async () => {
-    if (!checklistFile || !athlete.trim()) {
-      setError("Please upload a checklist and enter an athlete name.");
+    const needsAthlete = mode === "player" && !athlete.trim();
+    const needsTeam = mode === "team" && !team.trim();
+    if (!checklistFile || needsAthlete || needsTeam) {
+      setError(mode === "player"
+        ? "Please upload a checklist and enter an athlete name."
+        : "Please upload a checklist and select a team.");
       return;
     }
     setError(null);
     setLoading(true);
     setProgress(null);
     setMultiResults([]);
+    setResult(null);
+    setTeamResult(null);
 
-    const athletes = athlete.split(",").map((a) => a.trim()).filter(Boolean);
     const ANALYSIS_TIMEOUT = 120_000;
 
     try {
+      // ── TEAM MODE ──────────────────────────────────────────────────
+      if (mode === "team") {
+        const teamPromise = analyzeTeamChecklist({
+          checklistFile,
+          oddsFile,
+          team,
+          formatName: formatName === "auto-detect" ? null : formatName,
+          packsPerBox: packsPerBox ? parseInt(packsPerBox) : null,
+          boxesPerCase: boxesPerCase ? parseInt(boxesPerCase) : null,
+          manualOddsLines: manualOdds.split("\n").filter(Boolean),
+          onProgress: (p) => setProgress({ ...p, label: `${team}: ${p.label}` }),
+        });
+        const timer = new Promise<never>((_, reject) =>
+          setTimeout(() => reject(new Error("Analysis timed out after 2 minutes. Try a smaller file or a different format (TXT/CSV).")), ANALYSIS_TIMEOUT),
+        );
+        const res = await Promise.race([teamPromise, timer]);
+        setTeamResult(res);
+        if (res.totalCards === 0) {
+          setError(`⚠️ No cards found for "${team}" in this checklist. The team name in the file may use a different abbreviation.`);
+        }
+        return;
+      }
+
+      // ── PLAYER MODE ────────────────────────────────────────────────
+      const athletes = athlete.split(",").map((a) => a.trim()).filter(Boolean);
       const allResults: AnalysisResult[] = [];
       const notFound: string[] = [];
 
@@ -154,13 +213,16 @@ const ChecklistIntel = () => {
       setLoading(false);
       setProgress(null);
     }
-  }, [checklistFile, oddsFile, athlete, formatName, packsPerBox, boxesPerCase, manualOdds]);
+  }, [mode, checklistFile, oddsFile, athlete, team, formatName, packsPerBox, boxesPerCase, manualOdds]);
 
   const handleClear = () => {
     setChecklistFile(null);
     setOddsFile(null);
     setAthlete("");
+    setTeam("");
+    setAvailableTeams([]);
     setResult(null);
+    setTeamResult(null);
     setError(null);
     setManualOdds("");
   };
@@ -223,7 +285,7 @@ const ChecklistIntel = () => {
                   id="checklist"
                   type="file"
                   accept=".pdf,.txt,.csv"
-                  onChange={(e) => setChecklistFile(e.target.files?.[0] || null)}
+                  onChange={(e) => handleChecklistChange(e.target.files?.[0] || null)}
                   className="file:text-vzla-yellow file:font-semibold file:border-0 file:bg-secondary file:rounded-lg file:px-3 file:py-1 file:mr-3 cursor-pointer"
                 />
               </div>
@@ -241,20 +303,81 @@ const ChecklistIntel = () => {
               </div>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <div className="space-y-2">
-                <Label htmlFor="athlete" className="text-foreground font-semibold">
-                  Athlete Name <span className="text-destructive">*</span>
-                </Label>
-                <Input
-                  id="athlete"
-                  placeholder="e.g. Ronald Acuña Jr., Julio Rodriguez"
-                  value={athlete}
-                  onChange={(e) => setAthlete(e.target.value)}
-                  className="bg-secondary border-border"
-                />
-                <p className="text-[11px] text-muted-foreground">Separate multiple athletes with commas</p>
+            {/* Mode toggle: Player / Team */}
+            <div className="space-y-2">
+              <Label className="text-foreground font-semibold">Analyze by</Label>
+              <div className="inline-flex rounded-lg bg-secondary border border-border p-1">
+                <button
+                  type="button"
+                  onClick={() => setMode("player")}
+                  className={`px-4 py-1.5 text-sm font-medium rounded-md transition-colors ${
+                    mode === "player"
+                      ? "bg-vzla-yellow text-background"
+                      : "text-muted-foreground hover:text-foreground"
+                  }`}
+                >
+                  👤 Player
+                </button>
+                <button
+                  type="button"
+                  onClick={() => setMode("team")}
+                  className={`px-4 py-1.5 text-sm font-medium rounded-md transition-colors ${
+                    mode === "team"
+                      ? "bg-vzla-yellow text-background"
+                      : "text-muted-foreground hover:text-foreground"
+                  }`}
+                >
+                  🏟️ Team
+                </button>
               </div>
+            </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              {mode === "player" ? (
+                <div className="space-y-2">
+                  <Label htmlFor="athlete" className="text-foreground font-semibold">
+                    Athlete Name <span className="text-destructive">*</span>
+                  </Label>
+                  <Input
+                    id="athlete"
+                    placeholder="e.g. Ronald Acuña Jr., Julio Rodriguez"
+                    value={athlete}
+                    onChange={(e) => setAthlete(e.target.value)}
+                    className="bg-secondary border-border"
+                  />
+                  <p className="text-[11px] text-muted-foreground">Separate multiple athletes with commas</p>
+                </div>
+              ) : (
+                <div className="space-y-2">
+                  <Label htmlFor="team" className="text-foreground font-semibold">
+                    Team <span className="text-destructive">*</span>
+                  </Label>
+                  {availableTeams.length > 0 ? (
+                    <Select value={team} onValueChange={setTeam}>
+                      <SelectTrigger className="bg-secondary border-border">
+                        <SelectValue placeholder={`Select from ${availableTeams.length} teams`} />
+                      </SelectTrigger>
+                      <SelectContent className="max-h-72">
+                        {availableTeams.map((t) => (
+                          <SelectItem key={t} value={t}>{t}</SelectItem>
+                        ))}
+                      </SelectContent>
+                    </Select>
+                  ) : (
+                    <Input
+                      id="team"
+                      placeholder={teamsLoading ? "Reading checklist…" : checklistFile ? "No teams detected — type one" : "Upload a checklist first"}
+                      value={team}
+                      onChange={(e) => setTeam(e.target.value)}
+                      disabled={!checklistFile || teamsLoading}
+                      className="bg-secondary border-border"
+                    />
+                  )}
+                  <p className="text-[11px] text-muted-foreground">
+                    {teamsLoading ? "Extracting teams…" : availableTeams.length > 0 ? `${availableTeams.length} teams found in checklist` : "Teams auto-detected from your file"}
+                  </p>
+                </div>
+              )}
               <div className="space-y-2">
                 <Label className="text-foreground font-semibold">Format</Label>
                 <Select value={formatName} onValueChange={setFormatName}>
@@ -314,7 +437,7 @@ const ChecklistIntel = () => {
             <div className="flex gap-3 pt-2">
               <Button
                 onClick={handleAnalyze}
-                disabled={loading || !checklistFile || !athlete.trim()}
+                disabled={loading || !checklistFile || (mode === "player" ? !athlete.trim() : !team.trim())}
                 className="cta-flag text-foreground font-bold flex-1 sm:flex-none sm:min-w-[160px]"
               >
                 {loading ? "Analyzing…" : "🔍 Analyze"}
@@ -350,6 +473,9 @@ const ChecklistIntel = () => {
               <p className="text-destructive text-sm font-medium">{error}</p>
             )}
           </div>
+
+          {/* Team Results */}
+          {teamResult && <TeamResultView data={teamResult} />}
 
           {/* Results */}
           {result && (
@@ -701,6 +827,152 @@ function CardResult({ card, athleteName = "" }: { card: ChecklistEntry & { displ
         🔎 Search on eBay
         <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
       </a>
+    </div>
+  );
+}
+
+/** Team-level result view: aggregate stats + per-tier odds + per-player breakdown */
+function TeamResultView({ data }: { data: TeamAnalysisResult }) {
+  const tierColor: Record<string, string> = {
+    elite: "text-vzla-yellow",
+    premium: "text-vzla-purple",
+    notable: "text-vzla-mint",
+    standard: "text-muted-foreground",
+  };
+
+  const handleDownload = () => {
+    const blob = new Blob([JSON.stringify(data, null, 2)], { type: "application/json" });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = `${data.team.replace(/\s+/g, "_")}_team_analysis.json`;
+    a.click();
+    URL.revokeObjectURL(url);
+  };
+
+  if (data.totalCards === 0) {
+    return (
+      <div className="glass-panel rounded-xl p-8 text-center border border-destructive/30">
+        <p className="text-2xl mb-2">🏟️</p>
+        <p className="text-foreground text-lg font-semibold">No team cards found</p>
+        <p className="text-sm text-muted-foreground mt-2">
+          No cards matched <strong>"{data.team}"</strong>. The checklist may use a different team name format.
+        </p>
+      </div>
+    );
+  }
+
+  return (
+    <div className="space-y-6">
+      {/* Aggregate stats */}
+      <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
+        {[
+          { label: "Total Cards", value: data.totalCards, color: "text-foreground" },
+          { label: "Players", value: data.uniquePlayers, color: "text-foreground" },
+          { label: "Elite", value: data.summary.byTier.elite || 0, color: "text-vzla-yellow" },
+          { label: "Premium", value: data.summary.byTier.premium || 0, color: "text-vzla-purple" },
+        ].map((s) => (
+          <div key={s.label} className="glass-panel rounded-xl p-4 text-center">
+            <div className={`text-2xl font-bold font-display ${s.color}`}>{s.value}</div>
+            <div className="text-xs text-muted-foreground mt-1">{s.label}</div>
+          </div>
+        ))}
+      </div>
+
+      {/* Team header */}
+      <div className="flex items-center justify-between">
+        <h2 className="font-display text-xl font-bold text-foreground">
+          🏟️ {data.team}
+        </h2>
+        <Badge variant="outline" className="text-xs">{data.totalCards} cards · {data.uniquePlayers} players</Badge>
+      </div>
+
+      {/* Per-tier team-wide odds */}
+      <div className="glass-panel rounded-xl p-5">
+        <div className="flex items-center gap-2 mb-3">
+          <span className="text-lg">🎯</span>
+          <h3 className="font-display font-bold text-foreground">Team-wide Pull Odds by Tier</h3>
+        </div>
+        <p className="text-xs text-muted-foreground mb-4">
+          Chance of pulling <strong>any {data.team} card</strong> in each rarity tier from a single pack.
+        </p>
+        <div className="space-y-2.5">
+          {data.tierOdds.map((t) => (
+            <div key={t.tier} className="flex items-center justify-between gap-3 bg-secondary/50 rounded-lg p-3 border border-border/50">
+              <div className="flex items-center gap-2 min-w-0">
+                <span className={`font-semibold capitalize ${tierColor[t.tier]}`}>{t.tier}</span>
+                <Badge variant="outline" className="text-[10px]">{t.cardCount} cards</Badge>
+              </div>
+              <span className="text-sm font-mono text-foreground shrink-0">
+                {t.combinedPackOdds ? `~${t.displayOdds}` : "odds n/a"}
+              </span>
+            </div>
+          ))}
+        </div>
+        <p className="text-[10px] text-muted-foreground/60 mt-3 italic">
+          Combined probability across all {data.team} players in each tier. Odds estimated from set size and typical insertion rates.
+        </p>
+      </div>
+
+      {/* Per-player breakdown */}
+      <div className="glass-panel rounded-xl p-5">
+        <div className="flex items-center gap-2 mb-3">
+          <span className="text-lg">👥</span>
+          <h3 className="font-display font-bold text-foreground">Player Breakdown</h3>
+        </div>
+        <Accordion type="single" collapsible>
+          {data.players.map((p, i) => (
+            <AccordionItem key={`${p.athlete}-${i}`} value={`${p.athlete}-${i}`} className="border-border/40">
+              <AccordionTrigger className="hover:no-underline py-3">
+                <div className="flex items-center justify-between w-full gap-3 pr-3">
+                  <div className="flex items-center gap-2 min-w-0">
+                    <span className="font-semibold text-foreground truncate">{p.athlete}</span>
+                    <Badge variant="outline" className={`text-[10px] capitalize ${tierColor[p.bestTier]}`}>
+                      {p.bestTier}
+                    </Badge>
+                  </div>
+                  <div className="flex items-center gap-2 text-xs text-muted-foreground shrink-0">
+                    <span>{p.cardCount} cards</span>
+                    {p.bestOdds && <span className="text-vzla-yellow font-mono">~1:{p.bestOdds.toLocaleString()}</span>}
+                  </div>
+                </div>
+              </AccordionTrigger>
+              <AccordionContent className="pb-3">
+                <div className="space-y-2 pl-1">
+                  <div className="flex flex-wrap gap-1.5 text-[11px]">
+                    {Object.entries(p.byTier).map(([tier, count]) => (
+                      <Badge key={tier} variant="secondary" className={`text-[10px] capitalize ${tierColor[tier]}`}>
+                        {tier}: {count}
+                      </Badge>
+                    ))}
+                  </div>
+                  {p.bestCard && (
+                    <p className="text-xs text-muted-foreground">
+                      Best chase: <span className="text-foreground">{p.bestCard}</span>
+                    </p>
+                  )}
+                  <div className="space-y-1.5 pt-2 border-t border-border/30 mt-2">
+                    {data.results.filter((r) => r.athlete === p.athlete).slice(0, 8).map((c, j) => (
+                      <div key={j} className="flex items-center justify-between text-[11px] gap-2">
+                        <span className="text-foreground truncate">
+                          {TIER_ICONS[c.rarityTier]} {c.section}{c.serialNumber ? ` /${c.serialNumber}` : ""}
+                        </span>
+                        <span className="text-muted-foreground font-mono shrink-0">{c.displayOdds}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </AccordionContent>
+            </AccordionItem>
+          ))}
+        </Accordion>
+      </div>
+
+      <div className="flex gap-3">
+        <Button onClick={handleDownload} variant="outline" className="border-border">
+          📥 Download Team JSON
+        </Button>
+      </div>
     </div>
   );
 }
