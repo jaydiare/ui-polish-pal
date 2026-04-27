@@ -437,7 +437,7 @@ const ChecklistIntel = () => {
             <div className="flex gap-3 pt-2">
               <Button
                 onClick={handleAnalyze}
-                disabled={loading || !checklistFile || !athlete.trim()}
+                disabled={loading || !checklistFile || (mode === "player" ? !athlete.trim() : !team.trim())}
                 className="cta-flag text-foreground font-bold flex-1 sm:flex-none sm:min-w-[160px]"
               >
                 {loading ? "Analyzing…" : "🔍 Analyze"}
