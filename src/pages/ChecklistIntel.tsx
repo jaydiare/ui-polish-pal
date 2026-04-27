@@ -831,4 +831,150 @@ function CardResult({ card, athleteName = "" }: { card: ChecklistEntry & { displ
   );
 }
 
+/** Team-level result view: aggregate stats + per-tier odds + per-player breakdown */
+function TeamResultView({ data }: { data: TeamAnalysisResult }) {
+  const tierColor: Record<string, string> = {
+    elite: "text-vzla-yellow",
+    premium: "text-vzla-purple",
+    notable: "text-vzla-mint",
+    standard: "text-muted-foreground",
+  };
+
+  const handleDownload = () => {
+    const blob = new Blob([JSON.stringify(data, null, 2)], { type: "application/json" });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = `${data.team.replace(/\s+/g, "_")}_team_analysis.json`;
+    a.click();
+    URL.revokeObjectURL(url);
+  };
+
+  if (data.totalCards === 0) {
+    return (
+      <div className="glass-panel rounded-xl p-8 text-center border border-destructive/30">
+        <p className="text-2xl mb-2">🏟️</p>
+        <p className="text-foreground text-lg font-semibold">No team cards found</p>
+        <p className="text-sm text-muted-foreground mt-2">
+          No cards matched <strong>"{data.team}"</strong>. The checklist may use a different team name format.
+        </p>
+      </div>
+    );
+  }
+
+  return (
+    <div className="space-y-6">
+      {/* Aggregate stats */}
+      <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
+        {[
+          { label: "Total Cards", value: data.totalCards, color: "text-foreground" },
+          { label: "Players", value: data.uniquePlayers, color: "text-foreground" },
+          { label: "Elite", value: data.summary.byTier.elite || 0, color: "text-vzla-yellow" },
+          { label: "Premium", value: data.summary.byTier.premium || 0, color: "text-vzla-purple" },
+        ].map((s) => (
+          <div key={s.label} className="glass-panel rounded-xl p-4 text-center">
+            <div className={`text-2xl font-bold font-display ${s.color}`}>{s.value}</div>
+            <div className="text-xs text-muted-foreground mt-1">{s.label}</div>
+          </div>
+        ))}
+      </div>
+
+      {/* Team header */}
+      <div className="flex items-center justify-between">
+        <h2 className="font-display text-xl font-bold text-foreground">
+          🏟️ {data.team}
+        </h2>
+        <Badge variant="outline" className="text-xs">{data.totalCards} cards · {data.uniquePlayers} players</Badge>
+      </div>
+
+      {/* Per-tier team-wide odds */}
+      <div className="glass-panel rounded-xl p-5">
+        <div className="flex items-center gap-2 mb-3">
+          <span className="text-lg">🎯</span>
+          <h3 className="font-display font-bold text-foreground">Team-wide Pull Odds by Tier</h3>
+        </div>
+        <p className="text-xs text-muted-foreground mb-4">
+          Chance of pulling <strong>any {data.team} card</strong> in each rarity tier from a single pack.
+        </p>
+        <div className="space-y-2.5">
+          {data.tierOdds.map((t) => (
+            <div key={t.tier} className="flex items-center justify-between gap-3 bg-secondary/50 rounded-lg p-3 border border-border/50">
+              <div className="flex items-center gap-2 min-w-0">
+                <span className={`font-semibold capitalize ${tierColor[t.tier]}`}>{t.tier}</span>
+                <Badge variant="outline" className="text-[10px]">{t.cardCount} cards</Badge>
+              </div>
+              <span className="text-sm font-mono text-foreground shrink-0">
+                {t.combinedPackOdds ? `~${t.displayOdds}` : "odds n/a"}
+              </span>
+            </div>
+          ))}
+        </div>
+        <p className="text-[10px] text-muted-foreground/60 mt-3 italic">
+          Combined probability across all {data.team} players in each tier. Odds estimated from set size and typical insertion rates.
+        </p>
+      </div>
+
+      {/* Per-player breakdown */}
+      <div className="glass-panel rounded-xl p-5">
+        <div className="flex items-center gap-2 mb-3">
+          <span className="text-lg">👥</span>
+          <h3 className="font-display font-bold text-foreground">Player Breakdown</h3>
+        </div>
+        <Accordion type="single" collapsible>
+          {data.players.map((p, i) => (
+            <AccordionItem key={`${p.athlete}-${i}`} value={`${p.athlete}-${i}`} className="border-border/40">
+              <AccordionTrigger className="hover:no-underline py-3">
+                <div className="flex items-center justify-between w-full gap-3 pr-3">
+                  <div className="flex items-center gap-2 min-w-0">
+                    <span className="font-semibold text-foreground truncate">{p.athlete}</span>
+                    <Badge variant="outline" className={`text-[10px] capitalize ${tierColor[p.bestTier]}`}>
+                      {p.bestTier}
+                    </Badge>
+                  </div>
+                  <div className="flex items-center gap-2 text-xs text-muted-foreground shrink-0">
+                    <span>{p.cardCount} cards</span>
+                    {p.bestOdds && <span className="text-vzla-yellow font-mono">~1:{p.bestOdds.toLocaleString()}</span>}
+                  </div>
+                </div>
+              </AccordionTrigger>
+              <AccordionContent className="pb-3">
+                <div className="space-y-2 pl-1">
+                  <div className="flex flex-wrap gap-1.5 text-[11px]">
+                    {Object.entries(p.byTier).map(([tier, count]) => (
+                      <Badge key={tier} variant="secondary" className={`text-[10px] capitalize ${tierColor[tier]}`}>
+                        {tier}: {count}
+                      </Badge>
+                    ))}
+                  </div>
+                  {p.bestCard && (
+                    <p className="text-xs text-muted-foreground">
+                      Best chase: <span className="text-foreground">{p.bestCard}</span>
+                    </p>
+                  )}
+                  <div className="space-y-1.5 pt-2 border-t border-border/30 mt-2">
+                    {data.results.filter((r) => r.athlete === p.athlete).slice(0, 8).map((c, j) => (
+                      <div key={j} className="flex items-center justify-between text-[11px] gap-2">
+                        <span className="text-foreground truncate">
+                          {TIER_ICONS[c.rarityTier]} {c.section}{c.serialNumber ? ` /${c.serialNumber}` : ""}
+                        </span>
+                        <span className="text-muted-foreground font-mono shrink-0">{c.displayOdds}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </AccordionContent>
+            </AccordionItem>
+          ))}
+        </Accordion>
+      </div>
+
+      <div className="flex gap-3">
+        <Button onClick={handleDownload} variant="outline" className="border-border">
+          📥 Download Team JSON
+        </Button>
+      </div>
+    </div>
+  );
+}
+
 export default ChecklistIntel;
