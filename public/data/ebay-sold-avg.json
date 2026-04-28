@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-04-27T21:54:34.181Z",
+    "updatedAt": "2026-04-28T02:37:57.204Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. Taguchi winsorized mean + market stability CV. Ungraded condition policy (permissive for sold). Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 450,
-      "endIdx": 460,
+      "startIdx": 460,
+      "endIdx": 470,
       "totalAthletes": 572
     },
     "maxPages": 4,
@@ -6304,68 +6304,62 @@
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "error": "eBay page fetch failed (503) after 4 attempts"
   },
   "William Contreras": {
     "keyword": "William Contreras Baseball",
-    "nScraped": 239,
-    "nSoldUsed": 76,
-    "avg": 1.7803947368421054,
-    "taguchiSold": 1.7803947368421054,
-    "medianSold": 1.99,
-    "marketStabilityCV": 0.13938986326954572,
+    "nScraped": 0,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "error": "eBay page fetch failed (503) after 4 attempts"
   },
   "William Cuevas": {
     "keyword": "William Cuevas Baseball",
-    "nScraped": 240,
-    "nSoldUsed": 4,
-    "avg": 0.99,
-    "taguchiSold": 0.99,
-    "medianSold": 0.99,
-    "marketStabilityCV": 0,
+    "nScraped": 0,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "error": "eBay page fetch failed (503) after 4 attempts"
   },
   "Williams Perez": {
     "keyword": "Williams Perez Atlanta Braves Baseball",
-    "nScraped": 272,
-    "nSoldUsed": 23,
-    "avg": 1.233913043478261,
-    "taguchiSold": 1.233913043478261,
-    "medianSold": 0.99,
-    "marketStabilityCV": 0.2111044208414402,
+    "nScraped": 0,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "error": "eBay page fetch failed (503) after 4 attempts"
   },
   "Willians Astudillo": {
     "keyword": "Willians Astudillo Baseball",
-    "nScraped": 181,
-    "nSoldUsed": 102,
-    "avg": 2.1755882352941174,
-    "taguchiSold": 2.1755882352941174,
-    "medianSold": 1.99,
-    "marketStabilityCV": 0.35240627215559533,
+    "nScraped": 0,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "error": "eBay page fetch failed (503) after 4 attempts"
   },
   "Willie Canate": {
     "keyword": "Willie Canate Baseball",
-    "nScraped": 256,
-    "nSoldUsed": 44,
-    "avg": 1.5627272727272716,
-    "taguchiSold": 1.5627272727272716,
-    "medianSold": 1.49,
-    "marketStabilityCV": 0.07554310605405089,
+    "nScraped": 0,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "error": "eBay page fetch failed (503) after 4 attempts"
   },
   "Willie Martinez": {
     "keyword": "Willie Martinez Baseball",
@@ -6376,8 +6370,7 @@
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "error": "eBay page fetch failed (503) after 4 attempts"
   },
   "Willson Contreras": {
     "keyword": "Willson Contreras Baseball",
@@ -6388,8 +6381,7 @@
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "error": "eBay page fetch failed (503) after 4 attempts"
   },
   "Wilmer Flores": {
     "keyword": "Wilmer Flores Baseball",
@@ -6400,8 +6392,7 @@
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "error": "eBay page fetch failed (503) after 4 attempts"
   },
   "Wilmer Font": {
     "keyword": "Wilmer Font Baseball",
@@ -6412,8 +6403,7 @@
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "error": "eBay page fetch failed (503) after 4 attempts"
   },
   "Wilson Alvarez": {
     "keyword": "Wilson Alvarez Baseball",
