@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-04-28T05:56:35.198Z",
+    "updatedAt": "2026-04-28T08:25:20.483Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. Taguchi winsorized mean + market stability CV. Ungraded condition policy (permissive for sold). Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 470,
-      "endIdx": 480,
+      "startIdx": 480,
+      "endIdx": 490,
       "totalAthletes": 572
     },
     "maxPages": 4,
@@ -3748,8 +3748,7 @@
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "error": "eBay page fetch failed (503) after 4 attempts"
   },
   "Jose Azocar": {
     "keyword": "Jose Azocar Baseball",
@@ -6524,92 +6523,84 @@
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "error": "eBay page fetch failed (503) after 4 attempts"
   },
   "Yolmer Sanchez": {
     "keyword": "Yolmer Sanchez Baseball",
-    "nScraped": 78,
-    "nSoldUsed": 36,
-    "avg": 0.939722222222222,
-    "taguchiSold": 0.939722222222222,
-    "medianSold": 0.965,
-    "marketStabilityCV": 0.8056893709814229,
+    "nScraped": 0,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "error": "eBay page fetch failed (503) after 4 attempts"
   },
   "Yonathan Daza": {
     "keyword": "Yonathan Daza Baseball",
-    "nScraped": 127,
-    "nSoldUsed": 65,
-    "avg": 1.5632307692307703,
-    "taguchiSold": 1.5632307692307703,
-    "medianSold": 1.5,
-    "marketStabilityCV": 0.1657565441455635,
+    "nScraped": 0,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "error": "eBay page fetch failed (503) after 4 attempts"
   },
   "Yonny Chirinos": {
     "keyword": "Yonny Chirinos Baseball",
-    "nScraped": 248,
-    "nSoldUsed": 24,
-    "avg": 0.5750000000000001,
-    "taguchiSold": 0.5750000000000001,
-    "medianSold": 0.575,
-    "marketStabilityCV": 0.7372621779440988,
+    "nScraped": 0,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "error": "eBay page fetch failed (503) after 4 attempts"
   },
   "Yonny Hernandez": {
     "keyword": "Yonny Hernandez Baseball",
-    "nScraped": 173,
-    "nSoldUsed": 101,
-    "avg": 1.6036633663366322,
-    "taguchiSold": 1.6036633663366322,
-    "medianSold": 1.51,
-    "marketStabilityCV": 0.19411579857837574,
+    "nScraped": 0,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "error": "eBay page fetch failed (503) after 4 attempts"
   },
   "Yorman Bazardo": {
     "keyword": "Yorman Bazardo Baseball",
-    "nScraped": 240,
-    "nSoldUsed": 120,
-    "avg": 1.7906666666666629,
-    "taguchiSold": 1.7906666666666629,
-    "medianSold": 1.745,
-    "marketStabilityCV": 0.06433140018257534,
+    "nScraped": 0,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "error": "eBay page fetch failed (503) after 4 attempts"
   },
   "Yorman Rodriguez": {
     "keyword": "Yorman Rodriguez Baseball",
-    "nScraped": 256,
-    "nSoldUsed": 64,
-    "avg": 1.7418749999999998,
-    "taguchiSold": 1.7418749999999998,
-    "medianSold": 1.65,
-    "marketStabilityCV": 0.1348849451991289,
+    "nScraped": 0,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "error": "eBay page fetch failed (503) after 4 attempts"
   },
   "Yorvit Torrealba": {
     "keyword": "Yorvit Torrealba Baseball",
-    "nScraped": 268,
-    "nSoldUsed": 80,
-    "avg": 0.9899999999999995,
-    "taguchiSold": 0.9899999999999995,
-    "medianSold": 0.99,
-    "marketStabilityCV": 4.514051134471337e-16,
+    "nScraped": 0,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "error": "eBay page fetch failed (503) after 4 attempts"
   },
   "Yusmeiro Petit": {
     "keyword": "Yusmeiro Petit Baseball",
@@ -6620,8 +6611,7 @@
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "error": "eBay page fetch failed (503) after 4 attempts"
   },
   "Carl Herrera": {
     "keyword": "Carl Herrera Basketball",
