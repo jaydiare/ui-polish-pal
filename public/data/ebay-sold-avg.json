@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-04-29T13:48:36.870Z",
+    "updatedAt": "2026-04-29T19:20:23.542Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. Taguchi winsorized mean + market stability CV. Ungraded condition policy (permissive for sold). Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 570,
-      "endIdx": 572,
+      "startIdx": 0,
+      "endIdx": 10,
       "totalAthletes": 572
     },
     "maxPages": 4,
@@ -33,15 +33,14 @@
   },
   "Adbert Alzolay": {
     "keyword": "Adbert Alzolay Baseball",
-    "nScraped": 240,
-    "nSoldUsed": 99,
-    "avg": 2.857373737373736,
-    "taguchiSold": 2.857373737373736,
-    "medianSold": 2.99,
-    "marketStabilityCV": 0.2985045980810195,
+    "nScraped": 0,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "error": "eBay page fetch failed (403) after 4 attempts"
   },
   "Adrián Sánchez": {
     "keyword": "Adrián Sánchez Baseball",
@@ -57,15 +56,14 @@
   },
   "Al Pedrique": {
     "keyword": "Al Pedrique Baseball",
-    "nScraped": 162,
-    "nSoldUsed": 52,
-    "avg": 1.0884615384615375,
-    "taguchiSold": 1.0884615384615375,
-    "medianSold": 1.09,
-    "marketStabilityCV": 0.08969212756416742,
+    "nScraped": 0,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "error": "eBay page fetch failed (403) after 4 attempts"
   },
   "Albert Suárez": {
     "keyword": "Albert Suárez Baseball",
@@ -88,8 +86,7 @@
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "error": "eBay page fetch failed (403) after 4 attempts"
   },
   "Alberto González": {
     "keyword": "Alberto González Baseball",
@@ -112,8 +109,7 @@
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "error": "eBay page fetch failed (403) after 4 attempts"
   },
   "Alejandro Chacín": {
     "keyword": "Alejandro Chacín Baseball",
@@ -2792,15 +2788,14 @@
   },
   "Adrian Sanchez": {
     "keyword": "Adrian Sanchez Baseball",
-    "nScraped": 252,
-    "nSoldUsed": 36,
-    "avg": 2.618888888888888,
-    "taguchiSold": 2.618888888888888,
-    "medianSold": 2.49,
-    "marketStabilityCV": 0.13080990425252376,
+    "nScraped": 0,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "error": "eBay page fetch failed (403) after 4 attempts"
   },
   "Albert Suarez": {
     "keyword": "Albert Suarez Baseball",
@@ -2811,8 +2806,7 @@
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "error": "eBay page fetch failed (403) after 4 attempts"
   },
   "Alberto Gonzalez": {
     "keyword": "Alberto Gonzalez Baseball",
@@ -2823,8 +2817,7 @@
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "error": "eBay page fetch failed (403) after 4 attempts"
   },
   "Alejandro Chacin": {
     "keyword": "Alejandro Chacin Baseball",
@@ -7613,26 +7606,35 @@
   },
   "Jose Fernandez": {
     "keyword": "Jose Fernandez Diamondbacks Baseball",
-    "nScraped": 240,
-    "nSoldUsed": 232,
-    "avg": 87.09142241379325,
-    "taguchiSold": 87.09142241379325,
-    "medianSold": 84.495,
-    "marketStabilityCV": 0.1350726327191762,
+    "nScraped": 0,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "error": "eBay page fetch failed (403) after 4 attempts"
   },
   "Jesus Luzardo": {
     "keyword": "Jesus Luzardo Baseball",
-    "nScraped": 240,
-    "nSoldUsed": 84,
-    "avg": 3.4548809523809556,
-    "taguchiSold": 3.4548809523809556,
-    "medianSold": 3.24,
-    "marketStabilityCV": 0.40827008761874994,
+    "nScraped": 0,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "error": "eBay page fetch failed (403) after 4 attempts"
+  },
+  "Yohendrick Pinango": {
+    "keyword": "Yohendrick Pinango Baseball",
+    "nScraped": 0,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
+    "currency": "USD",
+    "error": "eBay page fetch failed (403) after 4 attempts"
   }
 }
