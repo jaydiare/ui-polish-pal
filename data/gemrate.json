@@ -1,13 +1,13 @@
 {
   "_meta": {
-    "updatedAt": "2026-04-28T21:05:12.135155+00:00",
+    "updatedAt": "2026-04-29T02:30:04.447164+00:00",
     "athleteCount": 459,
     "graders": [
       "PSA"
     ],
     "batchInfo": {
-      "startIdx": 240,
-      "endIdx": 260,
+      "startIdx": 260,
+      "endIdx": 280,
       "totalAthletes": 572
     }
   },
@@ -3924,16 +3924,16 @@
       "graders": {
         "PSA": {
           "cards": 86,
-          "gems": 89,
-          "grades": 215,
-          "gemRate": 41.0
+          "gems": 90,
+          "grades": 216,
+          "gemRate": 42.0
         }
       },
       "totals": {
         "cards": 86,
-        "gems": 89,
-        "grades": 215,
-        "gemRate": 41.0
+        "gems": 90,
+        "grades": 216,
+        "gemRate": 42.0
       }
     },
     "Jose Rodriguez": {
