@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-04-29T17:54:17.762Z",
+    "updatedAt": "2026-04-29T19:57:48.036Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA/BGS/SGC grader title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 310,
-      "endIdx": 320,
+      "startIdx": 320,
+      "endIdx": 330,
       "totalAthletes": 462
     },
     "maxPages": 4,
@@ -4275,104 +4275,95 @@
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "error": "eBay page fetch failed (403) after 4 attempts"
   },
   "Omar Vizquel": {
     "keyword": "Omar Vizquel Baseball PSA",
-    "nScraped": 222,
-    "nSoldUsed": 106,
-    "avg": 22.45349056603771,
-    "taguchiSold": 22.45349056603771,
-    "medianSold": 22.25,
-    "marketStabilityCV": 0.10352770498382254,
+    "nScraped": 0,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "error": "eBay page fetch failed (403) after 4 attempts"
   },
   "Orber Moreno": {
     "keyword": "Orber Moreno Baseball PSA",
-    "nScraped": 60,
+    "nScraped": 0,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "error": "eBay page fetch failed (403) after 4 attempts"
   },
   "Orlando Arcia": {
     "keyword": "Orlando Arcia Baseball PSA",
-    "nScraped": 255,
-    "nSoldUsed": 36,
-    "avg": 17.95888888888889,
-    "taguchiSold": 17.95888888888889,
-    "medianSold": 15.63,
-    "marketStabilityCV": 0.4152439522548895,
+    "nScraped": 0,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "error": "eBay page fetch failed (403) after 4 attempts"
   },
   "Oscar Azocar": {
     "keyword": "Oscar Azocar Baseball PSA",
-    "nScraped": 240,
-    "nSoldUsed": 4,
-    "avg": 52,
-    "taguchiSold": 52,
-    "medianSold": 52,
-    "marketStabilityCV": 0,
+    "nScraped": 0,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "error": "eBay page fetch failed (403) after 4 attempts"
   },
   "Oscar Henriquez": {
     "keyword": "Oscar Henriquez Baseball PSA",
-    "nScraped": 60,
+    "nScraped": 0,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "error": "eBay page fetch failed (403) after 4 attempts"
   },
   "Oscar Hernandez": {
     "keyword": "Oscar Hernandez Royals Diamondbacks Baseball PSA",
-    "nScraped": 12,
-    "nSoldUsed": 1,
-    "avg": null,
-    "taguchiSold": null,
-    "medianSold": null,
-    "marketStabilityCV": null,
-    "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
-  },
-  "Oscar Salazar": {
-    "keyword": "Oscar Salazar Baseball PSA",
-    "nScraped": 60,
+    "nScraped": 0,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "error": "eBay page fetch failed (403) after 4 attempts"
   },
-  "Osleivis Basabe": {
-    "keyword": "Osleivis Basabe Baseball PSA",
-    "nScraped": 63,
-    "nSoldUsed": 3,
+  "Oscar Salazar": {
+    "keyword": "Oscar Salazar Baseball PSA",
+    "nScraped": 0,
+    "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "error": "eBay page fetch failed (403) after 4 attempts"
+  },
+  "Osleivis Basabe": {
+    "keyword": "Osleivis Basabe Baseball PSA",
+    "nScraped": 0,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
+    "currency": "USD",
+    "error": "eBay page fetch failed (403) after 4 attempts"
   },
   "Osmer Morales": {
     "keyword": "Osmer Morales Baseball",
@@ -4407,8 +4398,7 @@
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "error": "eBay page fetch failed (403) after 4 attempts"
   },
   "Oswaldo Arcia": {
     "keyword": "Oswaldo Arcia Baseball PSA",
