@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-04-29T14:34:43.138Z",
+    "updatedAt": "2026-04-29T17:54:17.762Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA/BGS/SGC grader title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 300,
-      "endIdx": 310,
+      "startIdx": 310,
+      "endIdx": 320,
       "totalAthletes": 462
     },
     "maxPages": 4,
@@ -4129,44 +4129,40 @@
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "error": "eBay page fetch failed (403) after 4 attempts"
   },
   "Miguel Montero": {
     "keyword": "Miguel Montero Baseball PSA",
-    "nScraped": 240,
-    "nSoldUsed": 4,
-    "avg": 16.35,
-    "taguchiSold": 16.35,
-    "medianSold": 16.35,
-    "marketStabilityCV": 0,
-    "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
-  },
-  "Miguel Perez": {
-    "keyword": "Miguel Perez Baseball PSA",
-    "nScraped": 60,
+    "nScraped": 0,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "error": "eBay page fetch failed (403) after 4 attempts"
+  },
+  "Miguel Perez": {
+    "keyword": "Miguel Perez Baseball PSA",
+    "nScraped": 0,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
+    "currency": "USD",
+    "error": "eBay page fetch failed (403) after 4 attempts"
   },
   "Miguel Rojas": {
     "keyword": "Miguel Rojas Baseball PSA",
-    "nScraped": 274,
-    "nSoldUsed": 8,
-    "avg": 109.995,
-    "taguchiSold": 109.995,
-    "medianSold": 109.995,
-    "marketStabilityCV": 0.48590302429789206,
+    "nScraped": 0,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "error": "eBay page fetch failed (403) after 4 attempts"
   },
   "Miguel Socolovich": {
     "keyword": "Miguel Socolovich Baseball",
@@ -4182,27 +4178,25 @@
   },
   "Miguel Yajure": {
     "keyword": "Miguel Yajure Baseball PSA",
-    "nScraped": 241,
-    "nSoldUsed": 4,
-    "avg": 1.99,
-    "taguchiSold": 1.99,
-    "medianSold": 1.99,
-    "marketStabilityCV": 0,
+    "nScraped": 0,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "error": "eBay page fetch failed (403) after 4 attempts"
   },
   "Moises Ballesteros": {
     "keyword": "Moises Ballesteros Baseball PSA",
-    "nScraped": 237,
-    "nSoldUsed": 109,
-    "avg": 146.8064220183486,
-    "taguchiSold": 146.8064220183486,
-    "medianSold": 140,
-    "marketStabilityCV": 0.1742931352422948,
+    "nScraped": 0,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "error": "eBay page fetch failed (403) after 4 attempts"
   },
   "Nestor Chavez": {
     "keyword": "Nestor Chavez Baseball",
@@ -4230,15 +4224,14 @@
   },
   "Nivaldo Rodriguez": {
     "keyword": "Nivaldo Rodriguez Baseball PSA",
-    "nScraped": 60,
+    "nScraped": 0,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "error": "eBay page fetch failed (403) after 4 attempts"
   },
   "Odubel Herrera": {
     "keyword": "Odubel Herrera Baseball PSA",
@@ -4249,8 +4242,7 @@
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "error": "eBay page fetch failed (403) after 4 attempts"
   },
   "Omar Daal": {
     "keyword": "Omar Daal Baseball PSA",
@@ -4261,8 +4253,7 @@
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "error": "eBay page fetch failed (403) after 4 attempts"
   },
   "Omar Infante": {
     "keyword": "Omar Infante Baseball PSA",
@@ -4273,8 +4264,7 @@
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "error": "eBay page fetch failed (403) after 4 attempts"
   },
   "Omar Narvaez": {
     "keyword": "Omar Narvaez Baseball PSA",
