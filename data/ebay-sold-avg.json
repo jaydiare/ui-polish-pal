@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-04-29T08:11:12.043Z",
+    "updatedAt": "2026-04-29T10:53:20.500Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. Taguchi winsorized mean + market stability CV. Ungraded condition policy (permissive for sold). Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 550,
-      "endIdx": 560,
+      "startIdx": 560,
+      "endIdx": 570,
       "totalAthletes": 572
     },
     "maxPages": 4,
@@ -6719,20 +6719,18 @@
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "error": "eBay page fetch failed (403) after 4 attempts"
   },
   "Tomas Rincon": {
     "keyword": "Tomas Rincon Soccer",
-    "nScraped": 248,
-    "nSoldUsed": 36,
-    "avg": 4.5455555555555565,
-    "taguchiSold": 4.5455555555555565,
-    "medianSold": 4.99,
-    "marketStabilityCV": 0.11086711503570582,
+    "nScraped": 0,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "error": "eBay page fetch failed (403) after 4 attempts"
   },
   "Yohandry Orozco": {
     "keyword": "Yohandry Orozco Soccer",
@@ -7155,15 +7153,14 @@
   },
   "Jefferson Savarino": {
     "keyword": "Jefferson Savarino Soccer",
-    "nScraped": 101,
-    "nSoldUsed": 78,
-    "avg": 3.5592307692307723,
-    "taguchiSold": 3.5592307692307723,
-    "medianSold": 2.75,
-    "marketStabilityCV": 0.43855411224877777,
+    "nScraped": 0,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "error": "eBay page fetch failed (403) after 4 attempts"
   },
   "Jesus Bueno": {
     "keyword": "Jesus Bueno Soccer",
@@ -7394,32 +7391,29 @@
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "error": "eBay page fetch failed (403) after 4 attempts"
   },
   "Alejandro Marques": {
     "keyword": "Alejandro Marques Soccer",
-    "nScraped": 252,
-    "nSoldUsed": 54,
-    "avg": 4.017777777777778,
-    "taguchiSold": 4.017777777777778,
-    "medianSold": 3.25,
-    "marketStabilityCV": 0.31514715551343986,
-    "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
-  },
-  "Luis Balbo": {
-    "keyword": "Luis Balbo Soccer",
-    "nScraped": 60,
+    "nScraped": 0,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "error": "eBay page fetch failed (403) after 4 attempts"
+  },
+  "Luis Balbo": {
+    "keyword": "Luis Balbo Soccer",
+    "nScraped": 0,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
+    "currency": "USD",
+    "error": "eBay page fetch failed (403) after 4 attempts"
   },
   "Luis Morales": {
     "keyword": "Luis Morales Soccer",
@@ -7435,15 +7429,14 @@
   },
   "Manuel Arteaga": {
     "keyword": "Manuel Arteaga Soccer",
-    "nScraped": 60,
+    "nScraped": 0,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "error": "eBay page fetch failed (403) after 4 attempts"
   },
   "Yeferson Soteldo": {
     "keyword": "Yeferson Soteldo Soccer",
@@ -7454,8 +7447,7 @@
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "error": "eBay page fetch failed (403) after 4 attempts"
   },
   "Yordan Osorio": {
     "keyword": "Yordan Osorio Soccer",
@@ -7466,20 +7458,18 @@
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "error": "eBay page fetch failed (403) after 4 attempts"
   },
   "Nahuel Ferraresi": {
     "keyword": "Nahuel Ferraresi Soccer",
-    "nScraped": 240,
+    "nScraped": 0,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "error": "eBay page fetch failed (403) after 4 attempts"
   },
   "Daniele Quieto": {
     "keyword": "Daniele Quieto Soccer",
