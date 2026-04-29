@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-04-29T10:53:20.500Z",
+    "updatedAt": "2026-04-29T13:48:36.870Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. Taguchi winsorized mean + market stability CV. Ungraded condition policy (permissive for sold). Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 560,
-      "endIdx": 570,
+      "startIdx": 570,
+      "endIdx": 572,
       "totalAthletes": 572
     },
     "maxPages": 4,
@@ -7480,20 +7480,18 @@
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "error": "eBay page fetch failed (403) after 4 attempts"
   },
   "Garbine Muguruza": {
     "keyword": "Garbine Muguruza Tennis",
-    "nScraped": 165,
-    "nSoldUsed": 148,
-    "avg": 5.898716216216215,
-    "taguchiSold": 5.898716216216215,
-    "medianSold": 6,
-    "marketStabilityCV": 0.26043180852449355,
+    "nScraped": 0,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "error": "eBay page fetch failed (403) after 4 attempts"
   },
   "Geremi Gonzalez": {
     "keyword": "Geremi Gonzalez Baseball",
