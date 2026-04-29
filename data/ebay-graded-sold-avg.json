@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-04-29T06:41:30.098Z",
+    "updatedAt": "2026-04-29T10:21:15.632Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA/BGS/SGC grader title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 270,
-      "endIdx": 280,
+      "startIdx": 280,
+      "endIdx": 290,
       "totalAthletes": 462
     },
     "maxPages": 4,
@@ -3763,68 +3763,62 @@
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "error": "eBay page fetch failed (403) after 4 attempts"
   },
   "Luis Salazar": {
     "keyword": "Luis Salazar Baseball PSA",
-    "nScraped": 253,
-    "nSoldUsed": 20,
-    "avg": 33,
-    "taguchiSold": 33,
-    "medianSold": 33,
-    "marketStabilityCV": 0,
+    "nScraped": 0,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "error": "eBay page fetch failed (403) after 4 attempts"
   },
   "Luis Sanchez": {
     "keyword": "Luis Sanchez Baseball PSA",
-    "nScraped": 269,
-    "nSoldUsed": 20,
-    "avg": 33,
-    "taguchiSold": 33,
-    "medianSold": 33,
-    "marketStabilityCV": 0,
+    "nScraped": 0,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "error": "eBay page fetch failed (403) after 4 attempts"
   },
   "Luis Sardinas": {
     "keyword": "Luis Sardinas Baseball PSA",
-    "nScraped": 240,
-    "nSoldUsed": 6,
-    "avg": 7.420000000000001,
-    "taguchiSold": 7.420000000000001,
-    "medianSold": 7.42,
-    "marketStabilityCV": 1.311254327652424e-16,
+    "nScraped": 0,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "error": "eBay page fetch failed (403) after 4 attempts"
   },
   "Luis Sojo": {
     "keyword": "Luis Sojo Baseball PSA",
-    "nScraped": 240,
-    "nSoldUsed": 4,
-    "avg": 75,
-    "taguchiSold": 75,
-    "medianSold": 75,
-    "marketStabilityCV": 0,
+    "nScraped": 0,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "error": "eBay page fetch failed (403) after 4 attempts"
   },
   "Luis Torrens": {
     "keyword": "Luis Torrens Baseball PSA",
-    "nScraped": 244,
-    "nSoldUsed": 15,
-    "avg": 5.905333333333334,
-    "taguchiSold": 5.905333333333334,
-    "medianSold": 6.26,
-    "marketStabilityCV": 0.06645896010651696,
+    "nScraped": 0,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "error": "eBay page fetch failed (403) after 4 attempts"
   },
   "Luis Ugueto": {
     "keyword": "Luis Ugueto Baseball PSA",
@@ -3835,8 +3829,7 @@
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "error": "eBay page fetch failed (403) after 4 attempts"
   },
   "Luis Valbuena": {
     "keyword": "Luis Valbuena Baseball PSA",
@@ -3847,8 +3840,7 @@
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "error": "eBay page fetch failed (403) after 4 attempts"
   },
   "Luisangel Acuna": {
     "keyword": "Luisangel Acuna Baseball PSA",
@@ -3859,8 +3851,7 @@
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "error": "eBay page fetch failed (403) after 4 attempts"
   },
   "Magglio Ordonez": {
     "keyword": "Magglio Ordonez Baseball PSA",
@@ -3871,8 +3862,7 @@
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "error": "eBay page fetch failed (403) after 4 attempts"
   },
   "Maicer Izturis": {
     "keyword": "Maicer Izturis Baseball PSA",
