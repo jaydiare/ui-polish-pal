@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-04-29T02:37:54.012Z",
+    "updatedAt": "2026-04-29T05:51:40.266Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. Taguchi winsorized mean + market stability CV. Ungraded condition policy (permissive for sold). Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 530,
-      "endIdx": 540,
+      "startIdx": 540,
+      "endIdx": 550,
       "totalAthletes": 572
     },
     "maxPages": 4,
@@ -28,7 +28,7 @@
     },
     "fx": {
       "source": "CBSA Exchange Rates API",
-      "asOf": "2026-04-29T00:00:00.000Z"
+      "asOf": "2026-04-30T00:00:00.000Z"
     }
   },
   "Adbert Alzolay": {
@@ -7174,92 +7174,84 @@
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "error": "eBay page fetch failed (403) after 4 attempts"
   },
   "Jesus Castellano": {
     "keyword": "Jesus Castellano Soccer",
-    "nScraped": 60,
+    "nScraped": 0,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "error": "eBay page fetch failed (403) after 4 attempts"
   },
   "Jose Andres Martinez": {
     "keyword": "Jose Andres Martinez Soccer",
-    "nScraped": 56,
+    "nScraped": 0,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "error": "eBay page fetch failed (403) after 4 attempts"
   },
   "Josef Martinez": {
     "keyword": "Josef Martinez Soccer",
-    "nScraped": 198,
-    "nSoldUsed": 172,
-    "avg": 6.39343023255814,
-    "taguchiSold": 6.39343023255814,
-    "medianSold": 6.145,
-    "marketStabilityCV": 0.5349973200491727,
-    "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
-  },
-  "Junior Moreno": {
-    "keyword": "Junior Moreno Soccer",
-    "nScraped": 252,
-    "nSoldUsed": 8,
-    "avg": 61,
-    "taguchiSold": 61,
-    "medianSold": 61,
-    "marketStabilityCV": 1.0339943129726583,
-    "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
-  },
-  "Kevin Kelsy": {
-    "keyword": "Kevin Kelsy Soccer",
-    "nScraped": 87,
-    "nSoldUsed": 72,
-    "avg": 3.988333333333333,
-    "taguchiSold": 3.988333333333333,
-    "medianSold": 4,
-    "marketStabilityCV": 0.23663037981197016,
-    "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
-  },
-  "Luis Gonzalez": {
-    "keyword": "Luis Gonzalez FC Dallas Soccer",
-    "nScraped": 60,
-    "nSoldUsed": 42,
-    "avg": 6.424047619047619,
-    "taguchiSold": 6.424047619047619,
-    "medianSold": 2.4,
-    "marketStabilityCV": 0.8596293423505206,
-    "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
-  },
-  "Miguel Navarro": {
-    "keyword": "Miguel Navarro Soccer",
-    "nScraped": 120,
+    "nScraped": 0,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "error": "eBay page fetch failed (403) after 4 attempts"
+  },
+  "Junior Moreno": {
+    "keyword": "Junior Moreno Soccer",
+    "nScraped": 0,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
+    "currency": "USD",
+    "error": "eBay page fetch failed (403) after 4 attempts"
+  },
+  "Kevin Kelsy": {
+    "keyword": "Kevin Kelsy Soccer",
+    "nScraped": 0,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
+    "currency": "USD",
+    "error": "eBay page fetch failed (403) after 4 attempts"
+  },
+  "Luis Gonzalez": {
+    "keyword": "Luis Gonzalez FC Dallas Soccer",
+    "nScraped": 0,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
+    "currency": "USD",
+    "error": "eBay page fetch failed (403) after 4 attempts"
+  },
+  "Miguel Navarro": {
+    "keyword": "Miguel Navarro Soccer",
+    "nScraped": 0,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
+    "currency": "USD",
+    "error": "eBay page fetch failed (403) after 4 attempts"
   },
   "Moises Tablante": {
     "keyword": "Moises Tablante Soccer",
@@ -7270,8 +7262,7 @@
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "error": "eBay page fetch failed (403) after 4 attempts"
   },
   "Pablo Bonilla": {
     "keyword": "Pablo Bonilla Soccer",
@@ -7282,8 +7273,7 @@
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "error": "eBay page fetch failed (403) after 4 attempts"
   },
   "Rafael Romo": {
     "keyword": "Rafael Romo Soccer",
