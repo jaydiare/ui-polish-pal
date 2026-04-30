@@ -1,13 +1,13 @@
 {
   "_meta": {
-    "updatedAt": "2026-04-30T13:31:11.891755+00:00",
+    "updatedAt": "2026-04-30T17:15:56.549894+00:00",
     "athleteCount": 459,
     "graders": [
       "PSA"
     ],
     "batchInfo": {
-      "startIdx": 440,
-      "endIdx": 460,
+      "startIdx": 460,
+      "endIdx": 480,
       "totalAthletes": 572
     }
   },
@@ -6983,16 +6983,16 @@
       "sport": "Baseball",
       "graders": {
         "PSA": {
-          "cards": 712,
+          "cards": 713,
           "gems": 1041,
-          "grades": 2335,
+          "grades": 2338,
           "gemRate": 45.0
         }
       },
       "totals": {
-        "cards": 712,
+        "cards": 713,
         "gems": 1041,
-        "grades": 2335,
+        "grades": 2338,
         "gemRate": 45.0
       }
     },
@@ -7073,16 +7073,16 @@
       "sport": "Baseball",
       "graders": {
         "PSA": {
-          "cards": 859,
+          "cards": 860,
           "gems": 1554,
-          "grades": 2705,
+          "grades": 2706,
           "gemRate": 57.0
         }
       },
       "totals": {
-        "cards": 859,
+        "cards": 860,
         "gems": 1554,
-        "grades": 2705,
+        "grades": 2706,
         "gemRate": 57.0
       }
     },
@@ -7163,16 +7163,16 @@
       "sport": "Baseball",
       "graders": {
         "PSA": {
-          "cards": 349,
+          "cards": 352,
           "gems": 1215,
-          "grades": 2279,
+          "grades": 2282,
           "gemRate": 53.0
         }
       },
       "totals": {
-        "cards": 349,
+        "cards": 352,
         "gems": 1215,
-        "grades": 2279,
+        "grades": 2282,
         "gemRate": 53.0
       }
     },
@@ -7201,15 +7201,15 @@
         "PSA": {
           "cards": 63,
           "gems": 31,
-          "grades": 108,
-          "gemRate": 29.0
+          "grades": 110,
+          "gemRate": 28.0
         }
       },
       "totals": {
         "cards": 63,
         "gems": 31,
-        "grades": 108,
-        "gemRate": 29.0
+        "grades": 110,
+        "gemRate": 28.0
       }
     },
     "Yoel Hernandez": {
@@ -7237,14 +7237,14 @@
         "PSA": {
           "cards": 65,
           "gems": 104,
-          "grades": 236,
+          "grades": 237,
           "gemRate": 44.0
         }
       },
       "totals": {
         "cards": 65,
         "gems": 104,
-        "grades": 236,
+        "grades": 237,
         "gemRate": 44.0
       }
     },
