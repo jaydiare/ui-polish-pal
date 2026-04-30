@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-04-30T21:30:03.486Z",
+    "updatedAt": "2026-04-30T23:14:58.788Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA/BGS/SGC grader title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 430,
-      "endIdx": 440,
+      "startIdx": 440,
+      "endIdx": 450,
       "totalAthletes": 462
     },
     "maxPages": 4,
@@ -5692,8 +5692,7 @@
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "error": "eBay page fetch failed (403) after 4 attempts"
   },
   "Jhonattan Vegas": {
     "keyword": "Jhonattan Vegas Golf",
@@ -5901,15 +5900,14 @@
   },
   "Salomon Rondon": {
     "keyword": "Salomon Rondon Pachuca Mallorca Venezuela Oviedo Soccer PSA",
-    "nScraped": 4,
+    "nScraped": 0,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "error": "eBay page fetch failed (403) after 4 attempts"
   },
   "Victor Garcia": {
     "keyword": "Victor Garcia Soccer",
@@ -5925,27 +5923,25 @@
   },
   "Yangel Herrera": {
     "keyword": "Yangel Herrera Soccer PSA",
-    "nScraped": 192,
-    "nSoldUsed": 4,
-    "avg": 15.5,
-    "taguchiSold": 15.5,
-    "medianSold": 15.5,
-    "marketStabilityCV": 0,
-    "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
-  },
-  "Cristian Casseres Jr.": {
-    "keyword": "Cristian Casseres Jr. Soccer PSA",
-    "nScraped": 60,
+    "nScraped": 0,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "error": "eBay page fetch failed (403) after 4 attempts"
+  },
+  "Cristian Casseres Jr.": {
+    "keyword": "Cristian Casseres Jr. Soccer PSA",
+    "nScraped": 0,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
+    "currency": "USD",
+    "error": "eBay page fetch failed (403) after 4 attempts"
   },
   "Fernando Aristeguieta": {
     "keyword": "Fernando Aristeguieta Soccer",
@@ -5997,15 +5993,14 @@
   },
   "Wuilker Farinez": {
     "keyword": "Wuilker Farinez Soccer PSA",
-    "nScraped": 4,
+    "nScraped": 0,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "error": "eBay page fetch failed (403) after 4 attempts"
   },
   "Abel Caputo": {
     "keyword": "Abel Caputo Soccer",
@@ -6033,15 +6028,14 @@
   },
   "Alejandro Moreno": {
     "keyword": "Alejandro Moreno Soccer PSA",
-    "nScraped": 60,
+    "nScraped": 0,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "error": "eBay page fetch failed (403) after 4 attempts"
   },
   "Bernardo Anor": {
     "keyword": "Bernardo Anor Soccer",
@@ -6105,27 +6099,25 @@
   },
   "Dani Pereira": {
     "keyword": "Dani Pereira Soccer PSA",
-    "nScraped": 60,
-    "nSoldUsed": 2,
+    "nScraped": 0,
+    "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "error": "eBay page fetch failed (403) after 4 attempts"
   },
   "David Martinez": {
     "keyword": "David Martinez Soccer PSA",
-    "nScraped": 258,
-    "nSoldUsed": 12,
-    "avg": 69.99,
-    "taguchiSold": 69.99,
-    "medianSold": 69.99,
-    "marketStabilityCV": 0,
+    "nScraped": 0,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "error": "eBay page fetch failed (403) after 4 attempts"
   },
   "Eduardo Sosa": {
     "keyword": "Eduardo Sosa Soccer",
@@ -6141,15 +6133,14 @@
   },
   "Emilio Renteria": {
     "keyword": "Emilio Renteria Soccer PSA",
-    "nScraped": 2,
+    "nScraped": 0,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "error": "eBay page fetch failed (403) after 4 attempts"
   },
   "Ender Echenique": {
     "keyword": "Ender Echenique Soccer",
@@ -6196,8 +6187,7 @@
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "error": "eBay page fetch failed (403) after 4 attempts"
   },
   "Javier Otero": {
     "keyword": "Javier Otero Soccer",
