@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-04-30T19:15:24.766Z",
+    "updatedAt": "2026-04-30T21:54:10.962Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. Taguchi winsorized mean + market stability CV. Ungraded condition policy (permissive for sold). Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 80,
-      "endIdx": 90,
+      "startIdx": 90,
+      "endIdx": 100,
       "totalAthletes": 572
     },
     "maxPages": 4,
@@ -945,32 +945,29 @@
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "error": "eBay page fetch failed (403) after 4 attempts"
   },
   "Chico Carrasquel": {
     "keyword": "Chico Carrasquel Baseball",
-    "nScraped": 240,
-    "nSoldUsed": 72,
-    "avg": 6.080277777777782,
-    "taguchiSold": 6.080277777777782,
-    "medianSold": 4.995,
-    "marketStabilityCV": 0.272674676443438,
-    "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
-  },
-  "Chucho Ramos": {
-    "keyword": "Chucho Ramos Ovenca Venezuelan League Baseball",
-    "nScraped": 12,
+    "nScraped": 0,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "error": "eBay page fetch failed (403) after 4 attempts"
+  },
+  "Chucho Ramos": {
+    "keyword": "Chucho Ramos Ovenca Venezuelan League Baseball",
+    "nScraped": 0,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
+    "currency": "USD",
+    "error": "eBay page fetch failed (403) after 4 attempts"
   },
   "Clemente Álvarez": {
     "keyword": "Clemente Álvarez Baseball",
@@ -1046,39 +1043,36 @@
   },
   "Damaso Blanco": {
     "keyword": "Damaso Blanco Baseball",
-    "nScraped": 61,
-    "nSoldUsed": 1,
+    "nScraped": 0,
+    "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "error": "eBay page fetch failed (403) after 4 attempts"
   },
   "Daniel Palencia": {
     "keyword": "Daniel Palencia Baseball",
-    "nScraped": 240,
-    "nSoldUsed": 140,
-    "avg": 6.435428571428572,
-    "taguchiSold": 6.435428571428572,
-    "medianSold": 5,
-    "marketStabilityCV": 0.4930354978747087,
+    "nScraped": 0,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "error": "eBay page fetch failed (403) after 4 attempts"
   },
   "Danny Leon": {
     "keyword": "Danny Leon Baseball",
-    "nScraped": 63,
-    "nSoldUsed": 17,
-    "avg": 12.500588235294117,
-    "taguchiSold": 12.500588235294117,
-    "medianSold": 13.5,
-    "marketStabilityCV": 0.1968363559286745,
+    "nScraped": 0,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "error": "eBay page fetch failed (403) after 4 attempts"
   },
   "Danny Sandoval": {
     "keyword": "Danny Sandoval Baseball",
@@ -1089,8 +1083,7 @@
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "error": "eBay page fetch failed (403) after 4 attempts"
   },
   "Darwin Cubillán": {
     "keyword": "Darwin Cubillán Baseball",
@@ -3090,27 +3083,25 @@
   },
   "Clemente Alvarez": {
     "keyword": "Clemente Alvarez Baseball",
-    "nScraped": 268,
-    "nSoldUsed": 12,
-    "avg": 1.9499999999999995,
-    "taguchiSold": 1.9499999999999995,
-    "medianSold": 1.95,
-    "marketStabilityCV": 2.3786464211051357e-16,
+    "nScraped": 0,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "error": "eBay page fetch failed (403) after 4 attempts"
   },
   "Cris Colon": {
     "keyword": "Cris Colon Baseball",
-    "nScraped": 289,
-    "nSoldUsed": 8,
-    "avg": 2.495,
-    "taguchiSold": 2.495,
-    "medianSold": 2.495,
-    "marketStabilityCV": 0.6405700307159511,
+    "nScraped": 0,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "error": "eBay page fetch failed (403) after 4 attempts"
   },
   "Darwin Cubillan": {
     "keyword": "Darwin Cubillan Baseball",
@@ -3121,8 +3112,7 @@
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "error": "eBay page fetch failed (403) after 4 attempts"
   },
   "Darwinzon Hernandez": {
     "keyword": "Darwinzon Hernandez Baseball",
