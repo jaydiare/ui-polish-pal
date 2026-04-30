@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-04-30T14:29:09.565Z",
+    "updatedAt": "2026-04-30T16:00:18.439Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA/BGS/SGC grader title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 390,
-      "endIdx": 400,
+      "startIdx": 400,
+      "endIdx": 410,
       "totalAthletes": 462
     },
     "maxPages": 4,
@@ -5275,20 +5275,18 @@
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "error": "eBay page fetch failed (403) after 4 attempts"
   },
   "Wilfredo Tovar": {
     "keyword": "Wilfredo Tovar Baseball PSA",
-    "nScraped": 60,
+    "nScraped": 0,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "error": "eBay page fetch failed (403) after 4 attempts"
   },
   "Wilkelman Gonzalez": {
     "keyword": "Wilkelman Gonzalez Baseball",
@@ -5316,75 +5314,69 @@
   },
   "William Bergolla": {
     "keyword": "William Bergolla Baseball PSA",
-    "nScraped": 208,
-    "nSoldUsed": 104,
-    "avg": 37.55846153846153,
-    "taguchiSold": 37.55846153846153,
-    "medianSold": 39.975,
-    "marketStabilityCV": 0.19527713136590386,
+    "nScraped": 0,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "error": "eBay page fetch failed (403) after 4 attempts"
   },
   "William Contreras": {
     "keyword": "William Contreras Baseball PSA",
-    "nScraped": 95,
-    "nSoldUsed": 43,
-    "avg": 32.08906976744186,
-    "taguchiSold": 32.08906976744186,
-    "medianSold": 31,
-    "marketStabilityCV": 0.22870933732900486,
+    "nScraped": 0,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "error": "eBay page fetch failed (403) after 4 attempts"
   },
   "William Cuevas": {
     "keyword": "William Cuevas Baseball PSA",
-    "nScraped": 60,
+    "nScraped": 0,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "error": "eBay page fetch failed (403) after 4 attempts"
   },
   "Williams Perez": {
     "keyword": "Williams Perez Atlanta Braves Baseball PSA",
-    "nScraped": 60,
-    "nSoldUsed": 6,
-    "avg": 212.49,
-    "taguchiSold": 212.49,
-    "medianSold": 212.49,
-    "marketStabilityCV": 0.06444098045851171,
-    "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
-  },
-  "Willians Astudillo": {
-    "keyword": "Willians Astudillo Baseball PSA",
-    "nScraped": 240,
-    "nSoldUsed": 8,
-    "avg": 27.395000000000003,
-    "taguchiSold": 27.395000000000003,
-    "medianSold": 27.395000000000003,
-    "marketStabilityCV": 0.2963824248694817,
-    "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
-  },
-  "Willie Canate": {
-    "keyword": "Willie Canate Baseball PSA",
-    "nScraped": 60,
+    "nScraped": 0,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "error": "eBay page fetch failed (403) after 4 attempts"
+  },
+  "Willians Astudillo": {
+    "keyword": "Willians Astudillo Baseball PSA",
+    "nScraped": 0,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
+    "currency": "USD",
+    "error": "eBay page fetch failed (403) after 4 attempts"
+  },
+  "Willie Canate": {
+    "keyword": "Willie Canate Baseball PSA",
+    "nScraped": 0,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
+    "currency": "USD",
+    "error": "eBay page fetch failed (403) after 4 attempts"
   },
   "Willie Martinez": {
     "keyword": "Willie Martinez Baseball PSA",
@@ -5395,8 +5387,7 @@
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "error": "eBay page fetch failed (403) after 4 attempts"
   },
   "Willson Contreras": {
     "keyword": "Willson Contreras Baseball PSA",
@@ -5407,8 +5398,7 @@
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "error": "eBay page fetch failed (403) after 4 attempts"
   },
   "Wilmer Flores": {
     "keyword": "Wilmer Flores Baseball PSA",
