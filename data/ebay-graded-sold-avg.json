@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-04-30T19:53:56.545Z",
+    "updatedAt": "2026-04-30T21:30:03.486Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA/BGS/SGC grader title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 420,
-      "endIdx": 430,
+      "startIdx": 430,
+      "endIdx": 440,
       "totalAthletes": 462
     },
     "maxPages": 4,
@@ -157,15 +157,14 @@
   },
   "Alex Cabrera": {
     "keyword": "Alex Cabrera BBM NPB Diamondbacks Baseball PSA",
-    "nScraped": 2,
+    "nScraped": 0,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "error": "eBay page fetch failed (403) after 4 attempts"
   },
   "Alex Carrasquel": {
     "keyword": "Alex Carrasquel Baseball PSA",
@@ -241,15 +240,14 @@
   },
   "Alex Ramirez": {
     "keyword": "Alex Ramirez BBM NPB Baseball PSA",
-    "nScraped": 60,
-    "nSoldUsed": 8,
-    "avg": 28.495000000000005,
-    "taguchiSold": 28.495000000000005,
-    "medianSold": 28.494999999999997,
-    "marketStabilityCV": 0.056087812831594905,
+    "nScraped": 0,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "error": "eBay page fetch failed (403) after 4 attempts"
   },
   "Alex Romero": {
     "keyword": "Alex Romero Baseball PSA",
@@ -2933,15 +2931,14 @@
   },
   "Jose Alvarez": {
     "keyword": "José Álvarez Angels Phillies Giants Baseball PSA",
-    "nScraped": 60,
-    "nSoldUsed": 1,
+    "nScraped": 0,
+    "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "error": "eBay page fetch failed (403) after 4 attempts"
   },
   "Jose Azocar": {
     "keyword": "Jose Azocar Baseball PSA",
@@ -4810,15 +4807,14 @@
   },
   "Robert Perez": {
     "keyword": "Robert Perez Blue Jays Cardenales Baseball PSA",
-    "nScraped": 55,
+    "nScraped": 0,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "error": "eBay page fetch failed (403) after 4 attempts"
   },
   "Robert Suarez": {
     "keyword": "Robert Suarez Baseball PSA",
@@ -5629,44 +5625,40 @@
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "error": "eBay page fetch failed (403) after 4 attempts"
   },
   "Carl Herrera": {
     "keyword": "Carl Herrera Basketball PSA",
-    "nScraped": 252,
-    "nSoldUsed": 4,
-    "avg": 16.5,
-    "taguchiSold": 16.5,
-    "medianSold": 16.5,
-    "marketStabilityCV": 0,
-    "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
-  },
-  "Greivis Vasquez": {
-    "keyword": "Greivis Vasquez Basketball PSA",
-    "nScraped": 240,
-    "nSoldUsed": 4,
-    "avg": 174.99,
-    "taguchiSold": 174.99,
-    "medianSold": 174.99,
-    "marketStabilityCV": 0,
-    "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
-  },
-  "Oscar Torres": {
-    "keyword": "Oscar Torres Basketball PSA",
-    "nScraped": 60,
-    "nSoldUsed": 2,
+    "nScraped": 0,
+    "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "error": "eBay page fetch failed (403) after 4 attempts"
+  },
+  "Greivis Vasquez": {
+    "keyword": "Greivis Vasquez Basketball PSA",
+    "nScraped": 0,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
+    "currency": "USD",
+    "error": "eBay page fetch failed (403) after 4 attempts"
+  },
+  "Oscar Torres": {
+    "keyword": "Oscar Torres Basketball PSA",
+    "nScraped": 0,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
+    "currency": "USD",
+    "error": "eBay page fetch failed (403) after 4 attempts"
   },
   "Pedro Chourio": {
     "keyword": "Pedro Chourio Basketball",
@@ -5689,8 +5681,7 @@
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "error": "eBay page fetch failed (403) after 4 attempts"
   },
   "Andres Borregales": {
     "keyword": "Andres Borregales Football PSA",
@@ -6677,15 +6668,14 @@
   },
   "Robert Perez Jr.": {
     "keyword": "Robert Perez Jr. Prospects Baseball PSA",
-    "nScraped": 240,
-    "nSoldUsed": 11,
-    "avg": 10,
-    "taguchiSold": 10,
-    "medianSold": 10,
-    "marketStabilityCV": 0,
+    "nScraped": 0,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "error": "eBay page fetch failed (403) after 4 attempts"
   },
   "Jesus Luzardo": {
     "keyword": "Jesus Luzardo Baseball PSA",
