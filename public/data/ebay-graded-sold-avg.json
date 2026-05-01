@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-05-01T19:46:06.900Z",
+    "updatedAt": "2026-05-01T21:10:59.766Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA/BGS/SGC grader title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 40,
-      "endIdx": 50,
+      "startIdx": 50,
+      "endIdx": 60,
       "totalAthletes": 462
     },
     "maxPages": 4,
@@ -730,15 +730,14 @@
   },
   "Brusdar Graterol": {
     "keyword": "Brusdar Graterol Baseball PSA",
-    "nScraped": 271,
-    "nSoldUsed": 13,
-    "avg": 13.99,
-    "taguchiSold": 13.99,
-    "medianSold": 13.99,
-    "marketStabilityCV": 0,
+    "nScraped": 0,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "error": "eBay page fetch failed (403) after 4 attempts"
   },
   "Carlos Ascanio": {
     "keyword": "Carlos Ascanio Baseball",
@@ -754,51 +753,47 @@
   },
   "Carlos Asuaje": {
     "keyword": "Carlos Asuaje Baseball PSA",
-    "nScraped": 60,
+    "nScraped": 0,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "error": "eBay page fetch failed (403) after 4 attempts"
   },
   "Carlos Carrasco": {
     "keyword": "Carlos Carrasco Baseball PSA",
-    "nScraped": 249,
-    "nSoldUsed": 16,
-    "avg": 34.99,
-    "taguchiSold": 34.99,
-    "medianSold": 34.99,
-    "marketStabilityCV": 0.4427531690434315,
+    "nScraped": 0,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "error": "eBay page fetch failed (403) after 4 attempts"
   },
   "Carlos Garcia": {
     "keyword": "Carlos Garcia Baseball PSA",
-    "nScraped": 250,
-    "nSoldUsed": 16,
-    "avg": 35.875,
-    "taguchiSold": 35.875,
-    "medianSold": 35.875,
-    "marketStabilityCV": 0.38504921537207304,
+    "nScraped": 0,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "error": "eBay page fetch failed (403) after 4 attempts"
   },
   "Carlos Gonzalez": {
     "keyword": "Carlos Gonzalez Baseball PSA",
-    "nScraped": 130,
-    "nSoldUsed": 12,
-    "avg": 21.995,
-    "taguchiSold": 21.995,
-    "medianSold": 21.995,
-    "marketStabilityCV": 0.3326430497757663,
+    "nScraped": 0,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "error": "eBay page fetch failed (403) after 4 attempts"
   },
   "Carlos Guillen": {
     "keyword": "Carlos Guillen Baseball PSA",
@@ -809,44 +804,40 @@
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "error": "eBay page fetch failed (403) after 4 attempts"
   },
   "Carlos Hernandez": {
     "keyword": "Carlos Hernandez Baseball PSA",
-    "nScraped": 243,
+    "nScraped": 0,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "error": "eBay page fetch failed (403) after 4 attempts"
   },
   "Carlos Maldonado": {
     "keyword": "Carlos Maldonado Baseball PSA",
-    "nScraped": 60,
+    "nScraped": 0,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "error": "eBay page fetch failed (403) after 4 attempts"
   },
   "Carlos Martinez": {
     "keyword": "Carlos Martinez Baseball PSA",
-    "nScraped": 126,
-    "nSoldUsed": 6,
-    "avg": 5,
-    "taguchiSold": 5,
-    "medianSold": 5,
-    "marketStabilityCV": 0,
+    "nScraped": 0,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "error": "eBay page fetch failed (403) after 4 attempts"
   },
   "Carlos Mendez": {
     "keyword": "Carlos Mendez Baseball",
@@ -6545,8 +6536,7 @@
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "error": "eBay page fetch failed (403) after 4 attempts"
   },
   "Dave Concepcion": {
     "keyword": "Dave Concepcion Baseball PSA",
