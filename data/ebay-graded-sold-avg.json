@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-05-01T15:30:16.337Z",
+    "updatedAt": "2026-05-01T17:31:02.032Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA/BGS/SGC grader title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 20,
-      "endIdx": 30,
+      "startIdx": 30,
+      "endIdx": 40,
       "totalAthletes": 462
     },
     "maxPages": 4,
@@ -449,15 +449,14 @@
   },
   "Angel Bravo": {
     "keyword": "Angel Bravo Baseball PSA",
-    "nScraped": 244,
-    "nSoldUsed": 20,
-    "avg": 24.990000000000006,
-    "taguchiSold": 24.990000000000006,
-    "medianSold": 24.99,
-    "marketStabilityCV": 2.917172729576728e-16,
+    "nScraped": 0,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "error": "eBay page fetch failed (403) after 4 attempts"
   },
   "Angel Escobar": {
     "keyword": "Angel Escobar Baseball",
@@ -473,39 +472,36 @@
   },
   "Angel Guzman": {
     "keyword": "Angel Guzman Baseball PSA",
-    "nScraped": 249,
-    "nSoldUsed": 11,
-    "avg": 20,
-    "taguchiSold": 20,
-    "medianSold": 20,
-    "marketStabilityCV": 0,
-    "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
-  },
-  "Angel Nesbitt": {
-    "keyword": "Angel Nesbitt Baseball PSA",
-    "nScraped": 60,
+    "nScraped": 0,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "error": "eBay page fetch failed (403) after 4 attempts"
+  },
+  "Angel Nesbitt": {
+    "keyword": "Angel Nesbitt Baseball PSA",
+    "nScraped": 0,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
+    "currency": "USD",
+    "error": "eBay page fetch failed (403) after 4 attempts"
   },
   "Angel Salazar": {
     "keyword": "Angel Salazar Baseball PSA",
-    "nScraped": 120,
-    "nSoldUsed": 4,
-    "avg": 29.990000000000002,
-    "taguchiSold": 29.990000000000002,
-    "medianSold": 29.990000000000002,
-    "marketStabilityCV": 0.3850285223005174,
+    "nScraped": 0,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "error": "eBay page fetch failed (403) after 4 attempts"
   },
   "Angel Zerpa": {
     "keyword": "Angel Zerpa Baseball PSA",
@@ -516,8 +512,7 @@
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "error": "eBay page fetch failed (403) after 4 attempts"
   },
   "Anibal Sanchez": {
     "keyword": "Anibal Sanchez Baseball PSA",
@@ -528,8 +523,7 @@
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "error": "eBay page fetch failed (403) after 4 attempts"
   },
   "Anthony Castro": {
     "keyword": "Anthony Castro Baseball",
@@ -552,8 +546,7 @@
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "error": "eBay page fetch failed (403) after 4 attempts"
   },
   "Anthony Ortega": {
     "keyword": "Anthony Ortega Baseball PSA",
@@ -564,32 +557,29 @@
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "error": "eBay page fetch failed (403) after 4 attempts"
   },
   "Anthony Santander": {
     "keyword": "Anthony Santander Baseball PSA",
-    "nScraped": 280,
-    "nSoldUsed": 16,
-    "avg": 19.494999999999997,
-    "taguchiSold": 19.494999999999997,
-    "medianSold": 19.495,
-    "marketStabilityCV": 0.23866345182066392,
+    "nScraped": 0,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "error": "eBay page fetch failed (403) after 4 attempts"
   },
   "Antonio Senzatela": {
     "keyword": "Antonio Senzatela Baseball PSA",
-    "nScraped": 244,
-    "nSoldUsed": 4,
-    "avg": 6.5,
-    "taguchiSold": 6.5,
-    "medianSold": 6.5,
-    "marketStabilityCV": 0,
+    "nScraped": 0,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "error": "eBay page fetch failed (403) after 4 attempts"
   },
   "Arcenio Leon": {
     "keyword": "Arcenio Leon Baseball",
