@@ -8,31 +8,6 @@
     "gemrate": "yes"
   },
   {
-    "name": "Yohendrick Pinango",
-    "sport": "Baseball",
-    "league": "MLB",
-    "team": "Blue Jays",
-    "provider": "manual",
-    "gemrate": "yes"
-  },
-  {
-    "name": "Jesus Luzardo",
-    "sport": "Baseball",
-    "league": "MLB",
-    "team": "Phillies",
-    "provider": "manual",
-    "gemrate": "yes"
-  },
-  {
-    "name": "Jose Fernandez",
-    "sport": "Baseball",
-    "league": "MLB",
-    "team": "Diamondbacks",
-    "provider": "manual",
-    "searchKeyword": "Jose Fernandez Diamondbacks",
-    "gemrate": "yes"
-  },
-  {
     "name": "Adrian Sanchez",
     "sport": "Baseball",
     "league": "MLB",
@@ -1851,6 +1826,14 @@
     "gemrate": "yes"
   },
   {
+    "name": "Jesus Luzardo",
+    "sport": "Baseball",
+    "league": "MLB",
+    "team": "Phillies",
+    "provider": "manual",
+    "gemrate": "yes"
+  },
+  {
     "name": "Jesus Montero",
     "sport": "Baseball",
     "league": "MLB",
@@ -2041,6 +2024,15 @@
     "team": "Indians",
     "provider": "manual",
     "gemrate": "no"
+  },
+  {
+    "name": "Jose Fernandez",
+    "sport": "Baseball",
+    "league": "MLB",
+    "team": "Diamondbacks",
+    "provider": "manual",
+    "searchKeyword": "Jose Fernandez Diamondbacks",
+    "gemrate": "yes"
   },
   {
     "name": "Jose Godoy",
@@ -3852,6 +3844,14 @@
     "league": "MLB",
     "team": "Cardinals",
     "provider": "balldontlie",
+    "gemrate": "yes"
+  },
+  {
+    "name": "Yohendrick Pinango",
+    "sport": "Baseball",
+    "league": "MLB",
+    "team": "Blue Jays",
+    "provider": "manual",
     "gemrate": "yes"
   },
   {
