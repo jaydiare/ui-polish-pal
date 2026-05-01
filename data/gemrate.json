@@ -1,13 +1,13 @@
 {
   "_meta": {
-    "updatedAt": "2026-05-01T02:38:01.221947+00:00",
+    "updatedAt": "2026-05-01T06:35:52.733038+00:00",
     "athleteCount": 459,
     "graders": [
       "PSA"
     ],
     "batchInfo": {
-      "startIdx": 500,
-      "endIdx": 520,
+      "startIdx": 520,
+      "endIdx": 540,
       "totalAthletes": 572
     }
   },
@@ -7703,17 +7703,17 @@
       "sport": "Soccer",
       "graders": {
         "PSA": {
-          "cards": 37,
-          "gems": 32,
-          "grades": 66,
-          "gemRate": 48.0
+          "cards": 38,
+          "gems": 33,
+          "grades": 67,
+          "gemRate": 49.0
         }
       },
       "totals": {
-        "cards": 37,
-        "gems": 32,
-        "grades": 66,
-        "gemRate": 48.0
+        "cards": 38,
+        "gems": 33,
+        "grades": 67,
+        "gemRate": 49.0
       }
     },
     "Emilio Renteria": {
