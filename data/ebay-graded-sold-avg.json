@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-05-01T04:33:25.732Z",
+    "updatedAt": "2026-05-01T08:27:27.308Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA/BGS/SGC grader title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 450,
-      "endIdx": 460,
+      "startIdx": 460,
+      "endIdx": 462,
       "totalAthletes": 462
     },
     "maxPages": 4,
@@ -6524,8 +6524,7 @@
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "error": "eBay page fetch failed (403) after 4 attempts"
   },
   "Nahuel Ferraresi": {
     "keyword": "Nahuel Ferraresi Soccer",
@@ -6553,15 +6552,14 @@
   },
   "Garbine Muguruza": {
     "keyword": "Garbine Muguruza Tennis PSA",
-    "nScraped": 248,
-    "nSoldUsed": 12,
-    "avg": 150,
-    "taguchiSold": 150,
-    "medianSold": 150,
-    "marketStabilityCV": 0,
+    "nScraped": 0,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "error": "eBay page fetch failed (403) after 4 attempts"
   },
   "David Concepcion": {
     "keyword": "Concepcion David Dave Baseball Baseball PSA",
