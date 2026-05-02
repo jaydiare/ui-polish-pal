@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-05-02T13:03:32.076Z",
+    "updatedAt": "2026-05-02T15:42:19.570Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. Taguchi winsorized mean + market stability CV. Ungraded condition policy (permissive for sold). Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 210,
-      "endIdx": 220,
+      "startIdx": 220,
+      "endIdx": 230,
       "totalAthletes": 572
     },
     "maxPages": 4,
@@ -2477,51 +2477,47 @@
   },
   "Jean Machi": {
     "keyword": "Jean Machi Baseball",
-    "nScraped": 240,
-    "nSoldUsed": 4,
-    "avg": 0.99,
-    "taguchiSold": 0.99,
-    "medianSold": 0.99,
-    "marketStabilityCV": 0,
+    "nScraped": 0,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "error": "eBay page fetch failed (403) after 4 attempts"
   },
   "Jeanmar Gomez": {
     "keyword": "Jeanmar Gomez Baseball",
-    "nScraped": 286,
-    "nSoldUsed": 40,
-    "avg": 1.2400000000000002,
-    "taguchiSold": 1.2400000000000002,
-    "medianSold": 1.24,
-    "marketStabilityCV": 0.20418132400880382,
+    "nScraped": 0,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "error": "eBay page fetch failed (403) after 4 attempts"
   },
   "Jeferson Quero": {
     "keyword": "Jeferson Quero Baseball",
-    "nScraped": 240,
-    "nSoldUsed": 168,
-    "avg": 6.5417261904761945,
-    "taguchiSold": 6.5417261904761945,
-    "medianSold": 6.99,
-    "marketStabilityCV": 0.3593081330080894,
+    "nScraped": 0,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "error": "eBay page fetch failed (403) after 4 attempts"
   },
   "Jermaine Palacios": {
     "keyword": "Jermaine Palacios Baseball",
-    "nScraped": 60,
-    "nSoldUsed": 24,
-    "avg": 1.9887500000000002,
-    "taguchiSold": 1.9887500000000002,
-    "medianSold": 1.995,
-    "marketStabilityCV": 0.3563973955571521,
+    "nScraped": 0,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "error": "eBay page fetch failed (403) after 4 attempts"
   },
   "Jesus Aguilar": {
     "keyword": "Jesus Aguilar Baseball",
@@ -2532,8 +2528,7 @@
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "error": "eBay page fetch failed (403) after 4 attempts"
   },
   "Jesus Delgado": {
     "keyword": "Jesus Delgado Baseball",
@@ -2544,8 +2539,7 @@
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "error": "eBay page fetch failed (403) after 4 attempts"
   },
   "Jesus Flores": {
     "keyword": "Jesus Flores Baseball",
@@ -2556,8 +2550,7 @@
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "error": "eBay page fetch failed (403) after 4 attempts"
   },
   "Jesus Guzman": {
     "keyword": "Jesus Guzman Baseball",
@@ -2568,20 +2561,18 @@
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "error": "eBay page fetch failed (403) after 4 attempts"
   },
   "Jesus Montero": {
     "keyword": "Jesus Montero Baseball",
-    "nScraped": 182,
-    "nSoldUsed": 109,
-    "avg": 1.4892660550458716,
-    "taguchiSold": 1.4892660550458716,
-    "medianSold": 1.26,
-    "marketStabilityCV": 0.31944763025210166,
+    "nScraped": 0,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "error": "eBay page fetch failed (403) after 4 attempts"
   },
   "Jesus Sucre": {
     "keyword": "Jesus Sucre Baseball",
