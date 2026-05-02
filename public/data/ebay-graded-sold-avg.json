@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-05-02T06:22:26.112Z",
+    "updatedAt": "2026-05-02T08:02:23.962Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA/BGS/SGC grader title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 80,
-      "endIdx": 90,
+      "startIdx": 90,
+      "endIdx": 100,
       "totalAthletes": 462
     },
     "maxPages": 4,
@@ -1209,63 +1209,58 @@
   },
   "Dixon Machado": {
     "keyword": "Dixon Machado Baseball PSA",
-    "nScraped": 60,
+    "nScraped": 0,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "error": "eBay page fetch failed (403) after 4 attempts"
   },
   "Donaldo Mendez": {
     "keyword": "Donaldo Mendez Baseball PSA",
-    "nScraped": 240,
+    "nScraped": 0,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "error": "eBay page fetch failed (403) after 4 attempts"
   },
   "Eddie Perez": {
     "keyword": "Eddie Perez Baseball PSA",
-    "nScraped": 252,
-    "nSoldUsed": 20,
-    "avg": 44,
-    "taguchiSold": 44,
-    "medianSold": 44,
-    "marketStabilityCV": 0,
-    "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
-  },
-  "Eddie Zambrano": {
-    "keyword": "Eddie Zambrano Baseball PSA",
-    "nScraped": 60,
+    "nScraped": 0,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "error": "eBay page fetch failed (403) after 4 attempts"
+  },
+  "Eddie Zambrano": {
+    "keyword": "Eddie Zambrano Baseball PSA",
+    "nScraped": 0,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
+    "currency": "USD",
+    "error": "eBay page fetch failed (403) after 4 attempts"
   },
   "Eddy Diaz": {
     "keyword": "Eddy Diaz Baseball PSA",
-    "nScraped": 246,
-    "nSoldUsed": 4,
-    "avg": 2.99,
-    "taguchiSold": 2.99,
-    "medianSold": 2.99,
-    "marketStabilityCV": 0,
+    "nScraped": 0,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "error": "eBay page fetch failed (403) after 4 attempts"
   },
   "Edgar Caceres": {
     "keyword": "Edgar Caceres Baseball",
@@ -1293,15 +1288,14 @@
   },
   "Edgar Navarro": {
     "keyword": "Edgar Navarro Baseball PSA",
-    "nScraped": 60,
+    "nScraped": 0,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "error": "eBay page fetch failed (403) after 4 attempts"
   },
   "Edgar Ramos": {
     "keyword": "Edgar Ramos Baseball",
@@ -1317,27 +1311,25 @@
   },
   "Edgardo Alfonzo": {
     "keyword": "Edgardo Alfonzo Baseball PSA",
-    "nScraped": 257,
-    "nSoldUsed": 24,
-    "avg": 27.625,
-    "taguchiSold": 27.625,
-    "medianSold": 27.625,
-    "marketStabilityCV": 0.26346582218958553,
+    "nScraped": 0,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "error": "eBay page fetch failed (403) after 4 attempts"
   },
   "Edgardo Henriquez": {
     "keyword": "Edgardo Henriquez Baseball PSA",
-    "nScraped": 268,
-    "nSoldUsed": 4,
-    "avg": 89.88,
-    "taguchiSold": 89.88,
-    "medianSold": 89.88,
-    "marketStabilityCV": 0,
+    "nScraped": 0,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "error": "eBay page fetch failed (403) after 4 attempts"
   },
   "Edgmer Escalona": {
     "keyword": "Edgmer Escalona Baseball",
@@ -1353,27 +1345,25 @@
   },
   "Eduard Bazardo": {
     "keyword": "Eduard Bazardo Baseball PSA",
-    "nScraped": 29,
+    "nScraped": 0,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "error": "eBay page fetch failed (403) after 4 attempts"
   },
   "Eduardo Escobar": {
     "keyword": "Eduardo Escobar Baseball PSA",
-    "nScraped": 244,
-    "nSoldUsed": 8,
-    "avg": 12.495000000000001,
-    "taguchiSold": 12.495000000000001,
-    "medianSold": 12.495000000000001,
-    "marketStabilityCV": 0.2143223404531806,
+    "nScraped": 0,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "error": "eBay page fetch failed (403) after 4 attempts"
   },
   "Eduardo Jimenez": {
     "keyword": "Eduardo Jimenez Baseball PSA",
