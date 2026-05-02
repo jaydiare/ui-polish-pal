@@ -1,13 +1,13 @@
 {
   "_meta": {
-    "updatedAt": "2026-05-02T12:59:27.180358+00:00",
+    "updatedAt": "2026-05-02T16:41:49.274739+00:00",
     "athleteCount": 459,
     "graders": [
       "PSA"
     ],
     "batchInfo": {
-      "startIdx": 100,
-      "endIdx": 120,
+      "startIdx": 120,
+      "endIdx": 140,
       "totalAthletes": 572
     }
   },
@@ -1781,16 +1781,16 @@
       "sport": "Baseball",
       "graders": {
         "PSA": {
-          "cards": 75,
+          "cards": 76,
           "gems": 125,
-          "grades": 248,
+          "grades": 249,
           "gemRate": 50.0
         }
       },
       "totals": {
-        "cards": 75,
+        "cards": 76,
         "gems": 125,
-        "grades": 248,
+        "grades": 249,
         "gemRate": 50.0
       }
     },
@@ -1835,17 +1835,17 @@
       "sport": "Baseball",
       "graders": {
         "PSA": {
-          "cards": 4,
+          "cards": 5,
           "gems": 1,
-          "grades": 4,
-          "gemRate": 25.0
+          "grades": 5,
+          "gemRate": 20.0
         }
       },
       "totals": {
-        "cards": 4,
+        "cards": 5,
         "gems": 1,
-        "grades": 4,
-        "gemRate": 25.0
+        "grades": 5,
+        "gemRate": 20.0
       }
     },
     "Ehire Adrianza": {
@@ -1963,14 +1963,14 @@
         "PSA": {
           "cards": 263,
           "gems": 459,
-          "grades": 846,
+          "grades": 847,
           "gemRate": 54.0
         }
       },
       "totals": {
         "cards": 263,
         "gems": 459,
-        "grades": 846,
+        "grades": 847,
         "gemRate": 54.0
       }
     },
