@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-05-02T11:12:10.049Z",
+    "updatedAt": "2026-05-02T13:51:50.732Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA/BGS/SGC grader title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 110,
-      "endIdx": 120,
+      "startIdx": 120,
+      "endIdx": 130,
       "totalAthletes": 462
     },
     "maxPages": 4,
@@ -1635,15 +1635,14 @@
   },
   "Endy Chavez": {
     "keyword": "Endy Chavez Baseball PSA",
-    "nScraped": 60,
+    "nScraped": 0,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "error": "eBay page fetch failed (403) after 4 attempts"
   },
   "Engelb Vielma": {
     "keyword": "Engelb Vielma Baseball",
@@ -1659,39 +1658,36 @@
   },
   "Enmanuel De Jesus": {
     "keyword": "Enmanuel De Jesus Baseball PSA",
-    "nScraped": 60,
+    "nScraped": 0,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "error": "eBay page fetch failed (403) after 4 attempts"
   },
   "Enrique Gonzalez": {
     "keyword": "Enrique Gonzalez Baseball PSA",
-    "nScraped": 60,
+    "nScraped": 0,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "error": "eBay page fetch failed (403) after 4 attempts"
   },
   "Enzo Hernandez": {
     "keyword": "Enzo Hernandez Baseball PSA",
-    "nScraped": 268,
-    "nSoldUsed": 36,
-    "avg": 20.644444444444446,
-    "taguchiSold": 20.644444444444446,
-    "medianSold": 19.8,
-    "marketStabilityCV": 0.08237057660635307,
+    "nScraped": 0,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "error": "eBay page fetch failed (403) after 4 attempts"
   },
   "Erick Castillo": {
     "keyword": "Erick Castillo Baseball",
@@ -1714,8 +1710,7 @@
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "error": "eBay page fetch failed (403) after 4 attempts"
   },
   "Eugenio Suarez": {
     "keyword": "Eugenio Suarez Baseball PSA",
@@ -1726,8 +1721,7 @@
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "error": "eBay page fetch failed (403) after 4 attempts"
   },
   "Everson Pereira": {
     "keyword": "Everson Pereira Baseball PSA",
@@ -1738,44 +1732,40 @@
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "error": "eBay page fetch failed (403) after 4 attempts"
   },
   "Ezequiel Carrera": {
     "keyword": "Ezequiel Carrera Baseball PSA",
-    "nScraped": 240,
-    "nSoldUsed": 4,
-    "avg": 5,
-    "taguchiSold": 5,
-    "medianSold": 5,
-    "marketStabilityCV": 0,
-    "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
-  },
-  "Ezequiel Tovar": {
-    "keyword": "Ezequiel Tovar Baseball PSA",
-    "nScraped": 236,
-    "nSoldUsed": 110,
-    "avg": 50.22309090909082,
-    "taguchiSold": 50.22309090909082,
-    "medianSold": 49.495000000000005,
-    "marketStabilityCV": 0.17897287566411366,
-    "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
-  },
-  "Felipe Lira": {
-    "keyword": "Felipe Lira Baseball PSA",
-    "nScraped": 60,
+    "nScraped": 0,
     "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "error": "eBay page fetch failed (403) after 4 attempts"
+  },
+  "Ezequiel Tovar": {
+    "keyword": "Ezequiel Tovar Baseball PSA",
+    "nScraped": 0,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
+    "currency": "USD",
+    "error": "eBay page fetch failed (403) after 4 attempts"
+  },
+  "Felipe Lira": {
+    "keyword": "Felipe Lira Baseball PSA",
+    "nScraped": 0,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
+    "currency": "USD",
+    "error": "eBay page fetch failed (403) after 4 attempts"
   },
   "Felipe Vazquez": {
     "keyword": "Felipe Vazquez Baseball PSA",
