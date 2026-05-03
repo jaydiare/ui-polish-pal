@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-05-03T15:09:20.687Z",
+    "updatedAt": "2026-05-03T17:12:20.708Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA/BGS/SGC grader title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 230,
-      "endIdx": 240,
+      "startIdx": 240,
+      "endIdx": 250,
       "totalAthletes": 461
     },
     "maxPages": 4,
@@ -3120,7 +3120,7 @@
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "error": "eBay page fetch failed (503) after 4 attempts"
+    "error": "eBay page fetch failed (403) after 4 attempts"
   },
   "Juan Rincon": {
     "keyword": "Juan Rincon Baseball PSA",
@@ -3131,7 +3131,7 @@
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "error": "eBay page fetch failed (503) after 4 attempts"
+    "error": "eBay page fetch failed (403) after 4 attempts"
   },
   "Juan Rivera": {
     "keyword": "Juan Rivera Baseball PSA",
@@ -3142,7 +3142,7 @@
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "error": "eBay page fetch failed (503) after 4 attempts"
+    "error": "eBay page fetch failed (403) after 4 attempts"
   },
   "Juan Yepez": {
     "keyword": "Juan Yepez Baseball PSA",
@@ -3153,7 +3153,7 @@
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "error": "eBay page fetch failed (503) after 4 attempts"
+    "error": "eBay page fetch failed (403) after 4 attempts"
   },
   "Julio Machado": {
     "keyword": "Julio Machado Baseball PSA",
@@ -3164,7 +3164,7 @@
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "error": "eBay page fetch failed (503) after 4 attempts"
+    "error": "eBay page fetch failed (403) after 4 attempts"
   },
   "Juniel Querecuto": {
     "keyword": "Juniel Querecuto Baseball",
@@ -3187,7 +3187,7 @@
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "error": "eBay page fetch failed (503) after 4 attempts"
+    "error": "eBay page fetch failed (403) after 4 attempts"
   },
   "Keibert Ruiz": {
     "keyword": "Keibert Ruiz Baseball PSA",
@@ -3198,7 +3198,7 @@
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "error": "eBay page fetch failed (503) after 4 attempts"
+    "error": "eBay page fetch failed (403) after 4 attempts"
   },
   "Keider Montero": {
     "keyword": "Keider Montero Baseball PSA",
@@ -3209,7 +3209,7 @@
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "error": "eBay page fetch failed (503) after 4 attempts"
+    "error": "eBay page fetch failed (403) after 4 attempts"
   },
   "Kelvim Escobar": {
     "keyword": "Kelvim Escobar Baseball PSA",
@@ -3220,7 +3220,7 @@
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "error": "eBay page fetch failed (503) after 4 attempts"
+    "error": "eBay page fetch failed (403) after 4 attempts"
   },
   "Kenedy Corona": {
     "keyword": "Kenedy Corona Baseball PSA",
@@ -3231,7 +3231,7 @@
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "error": "eBay page fetch failed (503) after 4 attempts"
+    "error": "eBay page fetch failed (403) after 4 attempts"
   },
   "Kennedy Corona": {
     "keyword": "Kennedy Corona Baseball",
