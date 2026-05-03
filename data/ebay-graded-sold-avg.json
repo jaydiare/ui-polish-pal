@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-05-02T23:06:10.486Z",
+    "updatedAt": "2026-05-03T04:15:32.299Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA/BGS/SGC grader title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 170,
-      "endIdx": 180,
+      "startIdx": 180,
+      "endIdx": 190,
       "totalAthletes": 462
     },
     "maxPages": 4,
@@ -32,7 +32,7 @@
     },
     "fx": {
       "source": "CBSA Exchange Rates API",
-      "asOf": "2026-05-03T00:00:00.000Z"
+      "asOf": "2026-05-04T00:00:00.000Z"
     }
   },
   "Adbert Alzolay": {
@@ -2386,7 +2386,7 @@
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "error": "eBay page fetch failed (503) after 4 attempts"
+    "error": "eBay page fetch failed (403) after 4 attempts"
   },
   "Israel Pineda": {
     "keyword": "Israel Pineda Baseball PSA",
@@ -2397,7 +2397,7 @@
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "error": "eBay page fetch failed (503) after 4 attempts"
+    "error": "eBay page fetch failed (403) after 4 attempts"
   },
   "Ivan Ochoa": {
     "keyword": "Ivan Ochoa Baseball PSA",
@@ -2408,7 +2408,7 @@
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "error": "eBay page fetch failed (503) after 4 attempts"
+    "error": "eBay page fetch failed (403) after 4 attempts"
   },
   "J.C. Boscan": {
     "keyword": "J.C. Boscan Baseball",
@@ -2443,7 +2443,7 @@
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "error": "eBay page fetch failed (503) after 4 attempts"
+    "error": "eBay page fetch failed (403) after 4 attempts"
   },
   "Jairo Diaz": {
     "keyword": "Jairo Diaz Baseball PSA",
@@ -2454,7 +2454,7 @@
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "error": "eBay page fetch failed (503) after 4 attempts"
+    "error": "eBay page fetch failed (403) after 4 attempts"
   },
   "Jairo Iriarte": {
     "keyword": "Jairo Iriarte Baseball PSA",
@@ -2465,7 +2465,7 @@
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "error": "eBay page fetch failed (503) after 4 attempts"
+    "error": "eBay page fetch failed (403) after 4 attempts"
   },
   "Javier Sanoja": {
     "keyword": "Javier Sanoja Baseball PSA",
@@ -2476,7 +2476,7 @@
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "error": "eBay page fetch failed (503) after 4 attempts"
+    "error": "eBay page fetch failed (403) after 4 attempts"
   },
   "Jean Machi": {
     "keyword": "Jean Machi Baseball PSA",
@@ -2487,7 +2487,7 @@
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "error": "eBay page fetch failed (503) after 4 attempts"
+    "error": "eBay page fetch failed (403) after 4 attempts"
   },
   "Jeanmar Gomez": {
     "keyword": "Jeanmar Gomez Baseball PSA",
@@ -2498,7 +2498,7 @@
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "error": "eBay page fetch failed (503) after 4 attempts"
+    "error": "eBay page fetch failed (403) after 4 attempts"
   },
   "Jeferson Quero": {
     "keyword": "Jeferson Quero Baseball PSA",
@@ -6452,7 +6452,7 @@
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "error": "eBay page fetch failed (503) after 4 attempts"
+    "error": "eBay page fetch failed (403) after 4 attempts"
   },
   "J.J. D'Orazio": {
     "keyword": "JJ D'Orazio Baseball Baseball PSA",
