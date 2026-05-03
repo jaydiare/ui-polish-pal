@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-05-03T15:43:09.677Z",
+    "updatedAt": "2026-05-03T18:55:11.720Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. Taguchi winsorized mean + market stability CV. Ungraded condition policy (permissive for sold). Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 300,
-      "endIdx": 310,
+      "startIdx": 310,
+      "endIdx": 320,
       "totalAthletes": 572
     },
     "maxPages": 4,
@@ -4183,99 +4183,91 @@
   },
   "Luis Guillorme": {
     "keyword": "Luis Guillorme Baseball",
-    "nScraped": 216,
-    "nSoldUsed": 78,
-    "avg": 1.092692307692307,
-    "taguchiSold": 1.092692307692307,
-    "medianSold": 0.99,
-    "marketStabilityCV": 0.11317319926471293,
+    "nScraped": 0,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "error": "eBay page fetch failed (403) after 4 attempts"
   },
   "Luis Hernandez": {
     "keyword": "Luis Hernandez Baseball",
-    "nScraped": 296,
-    "nSoldUsed": 120,
-    "avg": 29.00916666666667,
-    "taguchiSold": 29.00916666666667,
-    "medianSold": 8.99,
-    "marketStabilityCV": 0.8483356822686917,
+    "nScraped": 0,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "error": "eBay page fetch failed (403) after 4 attempts"
   },
   "Luis Jimenez": {
     "keyword": "Luis Jimenez Baseball",
-    "nScraped": 361,
-    "nSoldUsed": 100,
-    "avg": 6.23,
-    "taguchiSold": 6.23,
-    "medianSold": 4.25,
-    "marketStabilityCV": 0.5431220754395537,
+    "nScraped": 0,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "error": "eBay page fetch failed (403) after 4 attempts"
   },
   "Luis Leal": {
     "keyword": "Luis Leal Baseball",
-    "nScraped": 171,
-    "nSoldUsed": 56,
-    "avg": 1.935,
-    "taguchiSold": 1.935,
-    "medianSold": 1.575,
-    "marketStabilityCV": 0.49101294133005996,
+    "nScraped": 0,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "error": "eBay page fetch failed (403) after 4 attempts"
   },
   "Luis Matos": {
     "keyword": "Luis Matos Baseball",
-    "nScraped": 240,
-    "nSoldUsed": 65,
-    "avg": 4.010307692307692,
-    "taguchiSold": 4.010307692307692,
-    "medianSold": 4.25,
-    "marketStabilityCV": 0.2381293926515394,
+    "nScraped": 0,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "error": "eBay page fetch failed (403) after 4 attempts"
   },
   "Luis Maza": {
     "keyword": "Luis Maza Baseball",
-    "nScraped": 240,
-    "nSoldUsed": 12,
-    "avg": 0.06000000000000002,
-    "taguchiSold": 0.06000000000000002,
-    "medianSold": 0.06,
-    "marketStabilityCV": 3.623719157152354e-16,
+    "nScraped": 0,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "error": "eBay page fetch failed (403) after 4 attempts"
   },
   "Luis Ordaz": {
     "keyword": "Luis Ordaz Baseball",
-    "nScraped": 246,
-    "nSoldUsed": 60,
-    "avg": 1.6119999999999999,
-    "taguchiSold": 1.6119999999999999,
-    "medianSold": 1.5,
-    "marketStabilityCV": 0.08076881245479603,
+    "nScraped": 0,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "error": "eBay page fetch failed (403) after 4 attempts"
   },
   "Luis Oviedo": {
     "keyword": "Luis Oviedo Baseball",
-    "nScraped": 187,
-    "nSoldUsed": 9,
-    "avg": 4,
-    "taguchiSold": 4,
-    "medianSold": 4,
-    "marketStabilityCV": 0,
+    "nScraped": 0,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "error": "eBay page fetch failed (403) after 4 attempts"
   },
   "Luis Perales": {
     "keyword": "Luis Perales Baseball",
@@ -4286,8 +4278,7 @@
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "error": "eBay page fetch failed (403) after 4 attempts"
   },
   "Luis Rengifo": {
     "keyword": "Luis Rengifo Baseball",
@@ -4298,8 +4289,7 @@
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "error": "eBay page fetch failed (403) after 4 attempts"
   },
   "Luis Rivas": {
     "keyword": "Luis Rivas Baseball",
