@@ -9,7 +9,7 @@ import BackToTop from "@/components/BackToTop";
 const VzlaMarketInsights = lazy(() => import("@/components/VzlaMarketInsights"));
 
 const VzlaHowToMoney = lazy(() => import("@/components/VzlaHowToMoney"));
-const VzlaTopDeals = lazy(() => import("@/components/VzlaTopDeals"));
+
 const VzlaBudgetBar = lazy(() => import("@/components/VzlaBudgetBar"));
 const VzlaSearchFilters = lazy(() => import("@/components/VzlaSearchFilters"));
 const VzlaAthleteGrid = lazy(() => import("@/components/VzlaAthleteGrid"));
@@ -70,7 +70,6 @@ const Index = () => {
         </Suspense>
         <Suspense fallback={<div className="min-h-[200px]" />}>
           <VzlaHowToMoney />
-          <VzlaTopDeals />
           <VzlaBudgetBar
             onSuggest={runBudget}
             onClear={clearBudget}
