@@ -721,10 +721,18 @@ async function main() {
         const medianSold = median(pricesUSD);
         const marketStabilityCV = taguchiCV(pricesUSD, TAGUCHI_TRIM_PCT);
         console.log(`  Scraped: ${totalScraped} | After filters: ${pricesUSD.length} | Taguchi: ${hasSample && taguchiSold != null ? `$${taguchiSold.toFixed(2)}` : "N/A"}`);
-        out[name] = { keyword, nScraped: totalScraped, nSoldUsed: pricesUSD.length, avg: hasSample ? taguchiSold : null, taguchiSold: hasSample ? taguchiSold : null, medianSold: hasSample ? medianSold : null, marketStabilityCV: hasSample ? marketStabilityCV : null, currency: "USD", originalCurrencyExample: firstCur, fxRateUsed: fxRateUsed || null };
+        const prev = out[name] || {};
+        const prevKnown = (prev.taguchiSold ?? prev.avg ?? prev.lastKnownSold) ?? null;
+        const prevKnownAt = prev.lastKnownSoldAt ?? (prev.taguchiSold != null || prev.avg != null ? new Date().toISOString() : null);
+        const lastKnownSold = hasSample && taguchiSold != null ? taguchiSold : prevKnown;
+        const lastKnownSoldAt = hasSample && taguchiSold != null ? new Date().toISOString() : prevKnownAt;
+        out[name] = { keyword, nScraped: totalScraped, nSoldUsed: pricesUSD.length, avg: hasSample ? taguchiSold : null, taguchiSold: hasSample ? taguchiSold : null, medianSold: hasSample ? medianSold : null, marketStabilityCV: hasSample ? marketStabilityCV : null, currency: "USD", originalCurrencyExample: firstCur, fxRateUsed: fxRateUsed || null, lastKnownSold, lastKnownSoldAt };
       } catch (e) {
         console.log(`  ${name}: ERROR ${e?.message || e}`);
-        out[name] = { keyword, nScraped: totalScraped, nSoldUsed: 0, avg: null, taguchiSold: null, medianSold: null, marketStabilityCV: null, currency: "USD", error: String(e?.message || e) };
+        const prev = out[name] || {};
+        const lastKnownSold = (prev.taguchiSold ?? prev.avg ?? prev.lastKnownSold) ?? null;
+        const lastKnownSoldAt = prev.lastKnownSoldAt ?? null;
+        out[name] = { keyword, nScraped: totalScraped, nSoldUsed: 0, avg: null, taguchiSold: null, medianSold: null, marketStabilityCV: null, currency: "USD", error: String(e?.message || e), lastKnownSold, lastKnownSoldAt };
       }
       fs.writeFileSync(OUT_PATH, JSON.stringify(out, null, 2));
       if (i < filtered.length - 1) await sleep(BASE_DELAY_MS + Math.random() * 4000);
