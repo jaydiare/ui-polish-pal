@@ -26,7 +26,7 @@ import {
 } from "recharts";
 
 /* ── Types ── */
-interface SoldRecord { avg?: number; taguchiSold?: number }
+interface SoldRecord { avg?: number; taguchiSold?: number; lastKnownSold?: number; lastKnownSoldAt?: string }
 interface ListedRecord {
   avgListing?: number; taguchiListing?: number; trimmedListing?: number;
   avg?: number; average?: number; sport?: string;
@@ -50,7 +50,7 @@ function getListedPrice(rec: ListedRecord | undefined): number | null {
 
 function getSoldPrice(rec: SoldRecord | undefined): number | null {
   if (!rec) return null;
-  const v = rec.taguchiSold ?? rec.avg ?? null;
+  const v = rec.taguchiSold ?? rec.avg ?? rec.lastKnownSold ?? null;
   return v != null && Number.isFinite(v) && v > 0 ? v : null;
 }
 
