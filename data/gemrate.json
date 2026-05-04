@@ -1,13 +1,13 @@
 {
   "_meta": {
-    "updatedAt": "2026-05-04T10:10:56.771123+00:00",
+    "updatedAt": "2026-05-04T13:47:49.895316+00:00",
     "athleteCount": 459,
     "graders": [
       "PSA"
     ],
     "batchInfo": {
-      "startIdx": 320,
-      "endIdx": 340,
+      "startIdx": 340,
+      "endIdx": 360,
       "totalAthletes": 572
     }
   },
@@ -5202,15 +5202,15 @@
       "graders": {
         "PSA": {
           "cards": 252,
-          "gems": 713,
-          "grades": 1468,
+          "gems": 714,
+          "grades": 1469,
           "gemRate": 49.0
         }
       },
       "totals": {
         "cards": 252,
-        "gems": 713,
-        "grades": 1468,
+        "gems": 714,
+        "grades": 1469,
         "gemRate": 49.0
       }
     },
@@ -5237,16 +5237,16 @@
       "sport": "Baseball",
       "graders": {
         "PSA": {
-          "cards": 7657,
-          "gems": 17534,
-          "grades": 40765,
+          "cards": 7664,
+          "gems": 17543,
+          "grades": 40793,
           "gemRate": 43.0
         }
       },
       "totals": {
-        "cards": 7657,
-        "gems": 17534,
-        "grades": 40765,
+        "cards": 7664,
+        "gems": 17543,
+        "grades": 40793,
         "gemRate": 43.0
       }
     },
@@ -5346,15 +5346,15 @@
       "graders": {
         "PSA": {
           "cards": 60,
-          "gems": 119,
-          "grades": 167,
+          "gems": 120,
+          "grades": 168,
           "gemRate": 71.0
         }
       },
       "totals": {
         "cards": 60,
-        "gems": 119,
-        "grades": 167,
+        "gems": 120,
+        "grades": 168,
         "gemRate": 71.0
       }
     },
@@ -5363,17 +5363,17 @@
       "sport": "Baseball",
       "graders": {
         "PSA": {
-          "cards": 29,
+          "cards": 30,
           "gems": 14,
-          "grades": 34,
-          "gemRate": 41.0
+          "grades": 35,
+          "gemRate": 40.0
         }
       },
       "totals": {
-        "cards": 29,
+        "cards": 30,
         "gems": 14,
-        "grades": 34,
-        "gemRate": 41.0
+        "grades": 35,
+        "gemRate": 40.0
       }
     },
     "Moises Ballesteros": {
