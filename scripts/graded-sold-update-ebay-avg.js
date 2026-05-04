@@ -853,6 +853,12 @@ async function main() {
         `Taguchi: ${hasSample && taguchiSold != null ? `$${taguchiSold.toFixed(2)}` : "N/A"}`
       );
 
+      const prev = out[name] || {};
+      const prevKnown = (prev.taguchiSold ?? prev.avg ?? prev.lastKnownSold) ?? null;
+      const prevKnownAt = prev.lastKnownSoldAt ?? (prev.taguchiSold != null || prev.avg != null ? new Date().toISOString() : null);
+      const lastKnownSold = hasSample && taguchiSold != null ? taguchiSold : prevKnown;
+      const lastKnownSoldAt = hasSample && taguchiSold != null ? new Date().toISOString() : prevKnownAt;
+
       out[name] = {
         keyword,
         nScraped: totalScraped,
@@ -864,9 +870,14 @@ async function main() {
         currency: "USD",
         originalCurrencyExample: firstCur,
         fxRateUsed: fxRateUsed || null,
+        lastKnownSold,
+        lastKnownSoldAt,
       };
     } catch (e) {
       console.log(`  ${name}: ERROR ${e?.message || e}`);
+      const prev = out[name] || {};
+      const lastKnownSold = (prev.taguchiSold ?? prev.avg ?? prev.lastKnownSold) ?? null;
+      const lastKnownSoldAt = prev.lastKnownSoldAt ?? null;
       out[name] = {
         keyword,
         nScraped: totalScraped,
@@ -877,6 +888,8 @@ async function main() {
         marketStabilityCV: null,
         currency: "USD",
         error: String(e?.message || e),
+        lastKnownSold,
+        lastKnownSoldAt,
       };
     }
 
