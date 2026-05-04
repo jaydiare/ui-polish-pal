@@ -50,7 +50,7 @@ function getListedPrice(rec: ListedRecord | undefined): number | null {
 
 function getSoldPrice(rec: SoldRecord | undefined): number | null {
   if (!rec) return null;
-  const v = rec.taguchiSold ?? rec.avg ?? null;
+  const v = rec.taguchiSold ?? rec.avg ?? rec.lastKnownSold ?? null;
   return v != null && Number.isFinite(v) && v > 0 ? v : null;
 }
 
