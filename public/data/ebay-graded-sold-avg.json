@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-05-04T21:34:50.102Z",
+    "updatedAt": "2026-05-04T23:14:38.657Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA/BGS/SGC grader title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 350,
-      "endIdx": 360,
+      "startIdx": 360,
+      "endIdx": 370,
       "totalAthletes": 461
     },
     "maxPages": 4,
@@ -4656,7 +4656,9 @@
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "error": "eBay page fetch failed (403) after 4 attempts"
+    "error": "eBay page fetch failed (403) after 4 attempts",
+    "lastKnownSold": null,
+    "lastKnownSoldAt": null
   },
   "Ricardo Sanchez": {
     "keyword": "Ricardo Sanchez Baseball PSA",
@@ -4667,7 +4669,9 @@
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "error": "eBay page fetch failed (403) after 4 attempts"
+    "error": "eBay page fetch failed (403) after 4 attempts",
+    "lastKnownSold": null,
+    "lastKnownSoldAt": null
   },
   "Rich Garces": {
     "keyword": "Rich Garces Baseball PSA",
@@ -4678,7 +4682,9 @@
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "error": "eBay page fetch failed (403) after 4 attempts"
+    "error": "eBay page fetch failed (403) after 4 attempts",
+    "lastKnownSold": null,
+    "lastKnownSoldAt": null
   },
   "Richard Hidalgo": {
     "keyword": "Richard Hidalgo Baseball PSA",
@@ -4689,7 +4695,9 @@
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "error": "eBay page fetch failed (403) after 4 attempts"
+    "error": "eBay page fetch failed (403) after 4 attempts",
+    "lastKnownSold": null,
+    "lastKnownSoldAt": null
   },
   "Robert Machado": {
     "keyword": "Robert Machado Brewers White Sox Baseball PSA",
@@ -4700,7 +4708,9 @@
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "error": "eBay page fetch failed (403) after 4 attempts"
+    "error": "eBay page fetch failed (403) after 4 attempts",
+    "lastKnownSold": null,
+    "lastKnownSoldAt": null
   },
   "Robert Perez": {
     "keyword": "Robert Perez Blue Jays Cardenales Baseball PSA",
@@ -4722,7 +4732,9 @@
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "error": "eBay page fetch failed (403) after 4 attempts"
+    "error": "eBay page fetch failed (403) after 4 attempts",
+    "lastKnownSold": null,
+    "lastKnownSoldAt": null
   },
   "Roberto Petagine": {
     "keyword": "Roberto Petagine Baseball PSA",
@@ -4733,7 +4745,9 @@
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "error": "eBay page fetch failed (403) after 4 attempts"
+    "error": "eBay page fetch failed (403) after 4 attempts",
+    "lastKnownSold": null,
+    "lastKnownSoldAt": null
   },
   "Roberto Rodriguez": {
     "keyword": "Roberto Rodriguez Baseball PSA",
@@ -4744,7 +4758,9 @@
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "error": "eBay page fetch failed (403) after 4 attempts"
+    "error": "eBay page fetch failed (403) after 4 attempts",
+    "lastKnownSold": null,
+    "lastKnownSoldAt": null
   },
   "Robinson Chirinos": {
     "keyword": "Robinson Chirinos Baseball PSA",
@@ -4755,7 +4771,9 @@
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "error": "eBay page fetch failed (403) after 4 attempts"
+    "error": "eBay page fetch failed (403) after 4 attempts",
+    "lastKnownSold": null,
+    "lastKnownSoldAt": null
   },
   "Roger Cedeno": {
     "keyword": "Roger Cedeno Baseball PSA",
@@ -4766,7 +4784,9 @@
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "error": "eBay page fetch failed (403) after 4 attempts"
+    "error": "eBay page fetch failed (403) after 4 attempts",
+    "lastKnownSold": null,
+    "lastKnownSoldAt": null
   },
   "Romulo Sanchez": {
     "keyword": "Romulo Sanchez Baseball",
