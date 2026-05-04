@@ -26,7 +26,7 @@ import {
 } from "recharts";
 
 /* ── Types ── */
-interface SoldRecord { avg?: number; taguchiSold?: number }
+interface SoldRecord { avg?: number; taguchiSold?: number; lastKnownSold?: number; lastKnownSoldAt?: string }
 interface ListedRecord {
   avgListing?: number; taguchiListing?: number; trimmedListing?: number;
   avg?: number; average?: number; sport?: string;
