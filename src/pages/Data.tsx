@@ -677,11 +677,17 @@ const Data = () => {
                       <CartesianGrid strokeDasharray="3 3" stroke="hsl(var(--border))" opacity={0.5} />
                       <XAxis
                         type="number" dataKey="sold" name="Raw Listed" unit="$"
+                        domain={[0, 300]}
+                        allowDataOverflow
+                        ticks={[0, 75, 150, 225, 300]}
                         label={{ value: "Avg Raw Listed ($)", position: "insideBottom", offset: -10, style: { fill: "hsl(var(--muted-foreground))", fontSize: 11 } }}
                         tick={{ fill: "hsl(var(--muted-foreground))", fontSize: 10 }}
                       />
                       <YAxis
                         type="number" dataKey="listed" name="Graded Listed" unit="$"
+                        domain={[0, 300]}
+                        allowDataOverflow
+                        ticks={[0, 75, 150, 225, 300]}
                         label={{ value: "Avg Graded Listed ($)", angle: -90, position: "insideLeft", offset: 10, style: { fill: "hsl(var(--muted-foreground))", fontSize: 11 } }}
                         tick={{ fill: "hsl(var(--muted-foreground))", fontSize: 10 }}
                       />
