@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-05-05T03:53:55.272Z",
+    "updatedAt": "2026-05-05T06:31:44.856Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA/BGS/SGC grader title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 370,
-      "endIdx": 380,
+      "startIdx": 380,
+      "endIdx": 390,
       "totalAthletes": 461
     },
     "maxPages": 4,
@@ -32,7 +32,7 @@
     },
     "fx": {
       "source": "CBSA Exchange Rates API",
-      "asOf": "2026-05-05T00:00:00.000Z"
+      "asOf": "2026-05-06T00:00:00.000Z"
     }
   },
   "Adbert Alzolay": {
@@ -4939,7 +4939,9 @@
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "error": "eBay page fetch failed (403) after 4 attempts"
+    "error": "eBay page fetch failed (403) after 4 attempts",
+    "lastKnownSold": null,
+    "lastKnownSoldAt": null
   },
   "Sergio Escalona": {
     "keyword": "Sergio Escalona Baseball PSA",
@@ -4950,7 +4952,9 @@
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "error": "eBay page fetch failed (403) after 4 attempts"
+    "error": "eBay page fetch failed (403) after 4 attempts",
+    "lastKnownSold": null,
+    "lastKnownSoldAt": null
   },
   "Silvino Bracho": {
     "keyword": "Silvino Bracho Baseball",
@@ -4973,7 +4977,9 @@
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "error": "eBay page fetch failed (403) after 4 attempts"
+    "error": "eBay page fetch failed (403) after 4 attempts",
+    "lastKnownSold": null,
+    "lastKnownSoldAt": null
   },
   "Steve Torrealba": {
     "keyword": "Steve Torrealba Baseball PSA",
@@ -4984,7 +4990,9 @@
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "error": "eBay page fetch failed (403) after 4 attempts"
+    "error": "eBay page fetch failed (403) after 4 attempts",
+    "lastKnownSold": null,
+    "lastKnownSoldAt": null
   },
   "Thairo Estrada": {
     "keyword": "Thairo Estrada Baseball PSA",
@@ -4995,7 +5003,9 @@
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "error": "eBay page fetch failed (403) after 4 attempts"
+    "error": "eBay page fetch failed (403) after 4 attempts",
+    "lastKnownSold": null,
+    "lastKnownSoldAt": null
   },
   "Toby Hernandez": {
     "keyword": "Toby Hernandez Baseball",
@@ -5018,7 +5028,9 @@
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "error": "eBay page fetch failed (403) after 4 attempts"
+    "error": "eBay page fetch failed (403) after 4 attempts",
+    "lastKnownSold": null,
+    "lastKnownSoldAt": null
   },
   "Tomas Telis": {
     "keyword": "Tomas Telis Baseball",
@@ -5041,7 +5053,9 @@
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "error": "eBay page fetch failed (403) after 4 attempts"
+    "error": "eBay page fetch failed (403) after 4 attempts",
+    "lastKnownSold": null,
+    "lastKnownSoldAt": null
   },
   "Tony Armas": {
     "keyword": "Tony Armas Baseball PSA",
@@ -5052,7 +5066,9 @@
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "error": "eBay page fetch failed (403) after 4 attempts"
+    "error": "eBay page fetch failed (403) after 4 attempts",
+    "lastKnownSold": null,
+    "lastKnownSoldAt": null
   },
   "Tony Castillo": {
     "keyword": "Tony Castillo Baseball PSA",
@@ -5063,7 +5079,9 @@
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "error": "eBay page fetch failed (403) after 4 attempts"
+    "error": "eBay page fetch failed (403) after 4 attempts",
+    "lastKnownSold": null,
+    "lastKnownSoldAt": null
   },
   "Tucupita Marcano": {
     "keyword": "Tucupita Marcano Baseball PSA",
@@ -5074,7 +5092,9 @@
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "error": "eBay page fetch failed (403) after 4 attempts"
+    "error": "eBay page fetch failed (403) after 4 attempts",
+    "lastKnownSold": null,
+    "lastKnownSoldAt": null
   },
   "Ubaldo Heredia": {
     "keyword": "Ubaldo Heredia Baseball PSA",
