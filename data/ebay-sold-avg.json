@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-05-05T16:21:55.098Z",
+    "updatedAt": "2026-05-05T19:14:28.226Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. Taguchi winsorized mean + market stability CV. Ungraded condition policy (permissive for sold). Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 440,
-      "endIdx": 450,
+      "startIdx": 450,
+      "endIdx": 460,
       "totalAthletes": 572
     },
     "maxPages": 4,
@@ -5746,63 +5746,58 @@
   },
   "Victor Reyes": {
     "keyword": "Victor Reyes Baseball",
-    "nScraped": 201,
-    "nSoldUsed": 87,
-    "avg": 1.7399999999999995,
-    "taguchiSold": 1.7399999999999995,
-    "medianSold": 1.67,
-    "marketStabilityCV": 0.1409225185263885,
-    "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
-  },
-  "Victor Zambrano": {
-    "keyword": "Victor Zambrano Baseball",
-    "nScraped": 105,
-    "nSoldUsed": 58,
-    "avg": 0.9900000000000005,
-    "taguchiSold": 0.9900000000000005,
-    "medianSold": 0.99,
-    "marketStabilityCV": 5.656158988304624e-16,
-    "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
-  },
-  "Wiki Gonzalez": {
-    "keyword": "Wiki Gonzalez Baseball",
-    "nScraped": 258,
-    "nSoldUsed": 32,
-    "avg": 1.0450000000000006,
-    "taguchiSold": 1.0450000000000006,
-    "medianSold": 1.045,
-    "marketStabilityCV": 0.05347373768429076,
-    "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
-  },
-  "Wil Ledezma": {
-    "keyword": "Wil Ledezma Baseball",
-    "nScraped": 248,
-    "nSoldUsed": 124,
-    "avg": 0.9945161290322583,
-    "taguchiSold": 0.9945161290322583,
-    "medianSold": 0.99,
-    "marketStabilityCV": 0.0050242731315680335,
-    "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
-  },
-  "Wilfredo Boscan": {
-    "keyword": "Wilfredo Boscan Baseball",
-    "nScraped": 60,
-    "nSoldUsed": 2,
+    "nScraped": 0,
+    "nSoldUsed": 0,
     "avg": null,
     "taguchiSold": null,
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": "USD",
-    "fxRateUsed": 1
+    "error": "eBay page fetch failed (403) after 4 attempts"
+  },
+  "Victor Zambrano": {
+    "keyword": "Victor Zambrano Baseball",
+    "nScraped": 0,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
+    "currency": "USD",
+    "error": "eBay page fetch failed (403) after 4 attempts"
+  },
+  "Wiki Gonzalez": {
+    "keyword": "Wiki Gonzalez Baseball",
+    "nScraped": 0,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
+    "currency": "USD",
+    "error": "eBay page fetch failed (403) after 4 attempts"
+  },
+  "Wil Ledezma": {
+    "keyword": "Wil Ledezma Baseball",
+    "nScraped": 0,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
+    "currency": "USD",
+    "error": "eBay page fetch failed (403) after 4 attempts"
+  },
+  "Wilfredo Boscan": {
+    "keyword": "Wilfredo Boscan Baseball",
+    "nScraped": 0,
+    "nSoldUsed": 0,
+    "avg": null,
+    "taguchiSold": null,
+    "medianSold": null,
+    "marketStabilityCV": null,
+    "currency": "USD",
+    "error": "eBay page fetch failed (403) after 4 attempts"
   },
   "Wilfredo Rodriguez": {
     "keyword": "Wilfredo Rodriguez Baseball",
@@ -5813,8 +5808,7 @@
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "error": "eBay page fetch failed (403) after 4 attempts"
   },
   "Wilfredo Tovar": {
     "keyword": "Wilfredo Tovar Baseball",
@@ -5825,8 +5819,7 @@
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "error": "eBay page fetch failed (403) after 4 attempts"
   },
   "Wilkelman Gonzalez": {
     "keyword": "Wilkelman Gonzalez Baseball",
@@ -5837,8 +5830,7 @@
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "error": "eBay page fetch failed (403) after 4 attempts"
   },
   "Wilking Rodriguez": {
     "keyword": "Wilking Rodriguez Baseball",
@@ -5849,8 +5841,7 @@
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "originalCurrencyExample": null,
-    "fxRateUsed": null
+    "error": "eBay page fetch failed (403) after 4 attempts"
   },
   "William Bergolla": {
     "keyword": "William Bergolla Baseball",
@@ -5861,7 +5852,7 @@
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "error": "eBay page fetch failed (503) after 4 attempts"
+    "error": "eBay page fetch failed (403) after 4 attempts"
   },
   "William Contreras": {
     "keyword": "William Contreras Baseball",
