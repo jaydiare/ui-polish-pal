@@ -48,9 +48,7 @@ const VISIBLE_ROWS = 30;
 
 const FILTERABLE_COLS: { key: SortKey; label: string }[] = [
   { key: "rawListedPrice", label: "Raw Listed" },
-  { key: "rawSoldPrice", label: "Raw Sold" },
   { key: "gradedListedPrice", label: "PSA Listed" },
-  { key: "gradedSoldPrice", label: "PSA Sold" },
   { key: "scpRawPrice", label: "SCP Raw" },
   { key: "psaPop", label: "PSA Pop" },
   { key: "bgsPop", label: "BGS Pop" },
@@ -320,9 +318,7 @@ export default function BlogDataTable() {
     { key: "sport", label: "Sport", fmt: (v) => v ?? "—" },
     
     { key: "rawListedPrice", label: "Raw Listed", fmt: fmtPrice },
-    { key: "rawSoldPrice", label: "Raw Sold", fmt: fmtPrice },
     { key: "gradedListedPrice", label: "PSA Listed", fmt: fmtPrice },
-    { key: "gradedSoldPrice", label: "PSA Sold", fmt: fmtPrice },
     { key: "scpRawPrice", label: "SCP Raw", fmt: fmtPrice },
     { key: "psaPop", label: "PSA Pop", fmt: (v) => v == null ? "—" : v.toLocaleString() },
     { key: "bgsPop", label: "BGS Pop", fmt: (v) => v == null ? "—" : v.toLocaleString() },
