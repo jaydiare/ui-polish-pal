@@ -244,6 +244,7 @@ const Data = () => {
   const [athleteHistory, setAthleteHistory] = useState<Record<string, any[]>>({});
   // Per-section toggles
   const [scatterSportFilter, setScatterSportFilter] = useState<string | null>(null);
+  const [scatterSearch, setScatterSearch] = useState<string>("");
   
   const [supplyMode, setSupplyMode] = useState<CardMode>("raw");
   const [signalMode, setSignalMode] = useState<CardMode>("raw");
