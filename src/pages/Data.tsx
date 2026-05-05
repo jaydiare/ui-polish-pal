@@ -820,16 +820,6 @@ const Data = () => {
               </div>
             </section>
 
-            {/* ── Raw vs Graded Supply Curves ── */}
-            <section className="my-8" aria-label="Raw versus graded supply curves">
-              <div className="flex items-center justify-between flex-wrap gap-2 mb-1">
-                <h2 className="font-display font-bold text-lg text-foreground flex items-center gap-2">
-                  <span className="w-1 h-5 rounded-full bg-primary inline-block" />
-                  Raw vs Graded Supply Curves
-                </h2>
-              </div>
-              <VzlaSupplyCurves rawData={rawListingOnly} gradedData={gradedListingOnly} hideTitle />
-            </section>
 
             {/* ── Investment Signal Score ── */}
             <section className="my-8" aria-label="Investment signal score">
