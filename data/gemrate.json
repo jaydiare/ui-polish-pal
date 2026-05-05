@@ -1,13 +1,13 @@
 {
   "_meta": {
-    "updatedAt": "2026-05-05T17:20:25.288049+00:00",
-    "athleteCount": 459,
+    "updatedAt": "2026-05-05T20:59:08.972315+00:00",
+    "athleteCount": 460,
     "graders": [
       "PSA"
     ],
     "batchInfo": {
-      "startIdx": 460,
-      "endIdx": 480,
+      "startIdx": 480,
+      "endIdx": 500,
       "totalAthletes": 572
     }
   },
@@ -7380,16 +7380,16 @@
       "graders": {
         "PSA": {
           "cards": 65,
-          "gems": 55,
-          "grades": 103,
-          "gemRate": 53.0
+          "gems": 56,
+          "grades": 104,
+          "gemRate": 54.0
         }
       },
       "totals": {
         "cards": 65,
-        "gems": 55,
-        "grades": 103,
-        "gemRate": 53.0
+        "gems": 56,
+        "grades": 104,
+        "gemRate": 54.0
       }
     },
     "Yorman Bazardo": {
@@ -8272,6 +8272,24 @@
         "gems": 4735,
         "grades": 8020,
         "gemRate": 59.0
+      }
+    },
+    "Yohendrick Pinango": {
+      "name": "Yohendrick Pinango",
+      "sport": "Baseball",
+      "graders": {
+        "PSA": {
+          "cards": 61,
+          "gems": 325,
+          "grades": 544,
+          "gemRate": 60.0
+        }
+      },
+      "totals": {
+        "cards": 61,
+        "gems": 325,
+        "grades": 544,
+        "gemRate": 60.0
       }
     }
   }
