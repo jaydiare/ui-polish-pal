@@ -1,9 +1,8 @@
 name: Update eBay graded sold averages (batched)
 
 on:
-  schedule:
-    # Every 3 hours starting at 01:30 UTC — staggered 90min from raw sold
-    - cron: "30 0,2,4,6,8,10,12,14,16,18,20,22 * * *"
+  # Scheduled runs paused — no longer using sold data on the site.
+  # Re-enable by restoring the `schedule:` block.
   workflow_dispatch:
     inputs:
       only:
