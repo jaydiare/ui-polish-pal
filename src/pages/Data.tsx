@@ -389,25 +389,10 @@ const Data = () => {
     ? listedRawVsGradedData.filter(d => d.sport === scatterSportFilter)
     : listedRawVsGradedData;
 
-  // For "both" mode in gaps: merge raw & graded, picking whichever has larger absolute spread per athlete
-  const gapsComparisonBoth = useMemo(() => {
-    if (gapsMode !== "both") return gapsComparison;
-    const map = new Map<string, typeof rawComparison[0]>();
-    for (const d of rawComparison) {
-      map.set(d.name, { ...d });
-    }
-    for (const d of gradedComparison) {
-      const existing = map.get(d.name);
-      if (!existing || Math.abs(d.spread) > Math.abs(existing.spread)) {
-        map.set(d.name, { ...d });
-      }
-    }
-    return [...map.values()];
-  }, [gapsMode, rawComparison, gradedComparison, gapsComparison]);
-
+  // Top 10 graded premiums (graded listed - raw listed), largest absolute first
   const topSpread = useMemo(() =>
-    [...gapsComparisonBoth].sort((a, b) => Math.abs(b.spread) - Math.abs(a.spread)).slice(0, 10),
-    [gapsComparisonBoth]);
+    [...listedRawVsGradedData].sort((a, b) => Math.abs(b.spread) - Math.abs(a.spread)).slice(0, 10),
+    [listedRawVsGradedData]);
 
   /* ── Investment Signal Score ── */
   type SignalCategory = "undervalued_stable" | "fast_mover" | "speculative" | "overpriced_slow";
