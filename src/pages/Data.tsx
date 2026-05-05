@@ -693,22 +693,30 @@ const Data = () => {
                 Axes use a logarithmic scale so cheaper athletes spread out instead of stacking near zero.
               </p>
               <div className="glass-panel p-4 md:p-6">
-                <div className="mb-4 flex items-center gap-2">
-                  <input
-                    type="text"
-                    value={scatterSearch}
-                    onChange={(e) => setScatterSearch(e.target.value)}
-                    placeholder="Search athlete by name..."
-                    className="flex-1 rounded-lg border border-border/50 bg-background/60 px-3 py-2 text-sm text-foreground placeholder:text-muted-foreground/70 outline-none focus:border-primary/50 focus:ring-1 focus:ring-primary/30 transition-colors"
-                    aria-label="Search athletes in scatter"
-                  />
+                <div className="mb-4 flex items-center gap-2 flex-wrap">
+                  <div className="relative flex-1 min-w-[220px] max-w-md">
+                    <input
+                      type="text"
+                      value={scatterSearch}
+                      onChange={(e) => setScatterSearch(e.target.value)}
+                      placeholder="Search any athlete (e.g. Salvador Perez)…"
+                      className="w-full rounded-full border border-border/50 bg-card/80 backdrop-blur-sm px-4 py-2 pr-9 text-xs text-foreground placeholder:text-muted-foreground/60 focus:outline-none focus:border-primary/50 focus:ring-1 focus:ring-primary/30 transition-all"
+                      aria-label="Search athletes in scatter"
+                    />
+                    {scatterSearch && (
+                      <button
+                        onClick={() => setScatterSearch("")}
+                        className="absolute right-2 top-1/2 -translate-y-1/2 text-muted-foreground hover:text-foreground text-sm w-6 h-6 flex items-center justify-center rounded-full hover:bg-secondary transition-colors"
+                        aria-label="Clear search"
+                      >
+                        ×
+                      </button>
+                    )}
+                  </div>
                   {scatterSearch && (
-                    <button
-                      onClick={() => setScatterSearch("")}
-                      className="text-xs text-muted-foreground hover:text-foreground rounded-md px-2 py-1 border border-border/50 hover:border-border transition-colors"
-                    >
-                      Clear
-                    </button>
+                    <span className="text-[10px] text-muted-foreground">
+                      Highlighting matches for "{scatterSearch}"
+                    </span>
                   )}
                 </div>
                 <div className="w-full h-[400px] md:h-[500px] relative" ref={scatterWrapRef}>
