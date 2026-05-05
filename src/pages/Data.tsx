@@ -394,15 +394,16 @@ const Data = () => {
     [...listedRawVsGradedData].sort((a, b) => Math.abs(b.spread) - Math.abs(a.spread)).slice(0, 10),
     [listedRawVsGradedData]);
 
-  /* ── Investment Signal Score ── */
-  type SignalCategory = "undervalued_stable" | "fast_mover" | "speculative" | "overpriced_slow";
+  /* ── Investment Signal Score (listing-only) ── */
+  type SignalCategory = "premium_listing" | "fast_mover" | "speculative" | "stale_inventory";
 
   interface SignalAthlete {
     name: string;
     sport: string;
-    listed: number;
-    sold: number;
-    spreadPct: number;
+    listed: number;        // active listed price for the current mode
+    rawListed: number | null;
+    gradedListed: number | null;
+    premiumPct: number | null; // graded premium over raw, %
     cv: number | null;
     days: number | null;
     sn: number | null;
@@ -410,33 +411,54 @@ const Data = () => {
   }
 
   const SIGNAL_META: Record<SignalCategory, { label: string; emoji: string; color: string; desc: string }> = {
-    undervalued_stable: { label: "Undervalued & Stable", emoji: "🟢", color: "hsl(142, 71%, 45%)", desc: "Sold > listed price with tight market consistency" },
-    fast_mover: { label: "Fast Mover", emoji: "⚡", color: "hsl(45, 93%, 47%)", desc: "Low days on market — high liquidity" },
-    speculative: { label: "Speculative", emoji: "🎲", color: "hsl(280, 70%, 55%)", desc: "High price volatility — potential flip opportunity" },
-    overpriced_slow: { label: "Overpriced & Slow", emoji: "🔴", color: "hsl(0, 72%, 50%)", desc: "Listed well above sold, slow to move" },
+    premium_listing: { label: "Premium Listing", emoji: "🟢", color: "hsl(142, 71%, 45%)", desc: "Graded asks far above raw with stable pricing" },
+    fast_mover: { label: "Fast Mover", emoji: "⚡", color: "hsl(45, 93%, 47%)", desc: "Low days on market, high liquidity" },
+    speculative: { label: "Speculative", emoji: "🎲", color: "hsl(280, 70%, 55%)", desc: "High listing volatility, potential flip opportunity" },
+    stale_inventory: { label: "Stale Inventory", emoji: "🔴", color: "hsl(0, 72%, 50%)", desc: "Sitting on the market, slow to clear" },
   };
 
   const signalAthletes = useMemo(() => {
-    let allComparison: typeof rawComparison;
+    // Build a unified roster of athletes that have a listing in the active mode
+    type Row = { name: string; sport: string; listed: number };
+    let rows: Row[] = [];
+    const pickSport = (key: string) => {
+      const normKey = key.normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/[.\-']/g, "").replace(/\s+/g, " ").toLowerCase().trim();
+      return athleteSportMap[key] || athleteSportMap[normKey] || null;
+    };
+
+    const collect = (src: Record<string, ListedRecord>) => {
+      for (const key of Object.keys(src)) {
+        if (key === "_meta") continue;
+        const lp = getListedPrice(src[key] as ListedRecord);
+        if (lp == null) continue;
+        const sport = pickSport(key);
+        if (!sport) continue;
+        rows.push({ name: key, sport, listed: Math.round(lp * 100) / 100 });
+      }
+    };
+
     if (signalMode === "raw") {
-      allComparison = rawComparison;
+      collect(listedData);
     } else if (signalMode === "graded") {
-      allComparison = gradedComparison;
+      collect(mergedGradedListed);
     } else {
-      // "both": merge, preferring raw when athlete exists in both
-      allComparison = [...rawComparison];
-      const seen = new Set(rawComparison.map(d => d.name));
-      for (const d of gradedComparison) {
-        if (!seen.has(d.name)) { allComparison.push(d); seen.add(d.name); }
+      collect(listedData);
+      const seen = new Set(rows.map(r => r.name));
+      for (const key of Object.keys(mergedGradedListed)) {
+        if (key === "_meta" || seen.has(key)) continue;
+        const lp = getListedPrice(mergedGradedListed[key] as ListedRecord);
+        if (lp == null) continue;
+        const sport = pickSport(key);
+        if (!sport) continue;
+        rows.push({ name: key, sport, listed: Math.round(lp * 100) / 100 });
       }
     }
 
     const results: SignalAthlete[] = [];
-    for (const d of allComparison) {
+    for (const d of rows) {
       const rec = (signalMode === "graded" ? mergedGradedListed[d.name] : listedData[d.name]) as any;
-      const cv: number | null = rec?.marketStabilityCV ?? rec?.marketplaces?.EBAY_US?.marketStabilityCV ?? null; // Market Stability Score
+      const cv: number | null = rec?.marketStabilityCV ?? rec?.marketplaces?.EBAY_US?.marketStabilityCV ?? null;
       const apiDays: number | null = rec?.avgDaysOnMarket ?? rec?.marketplaces?.EBAY_US?.avgDaysOnMarket ?? null;
-      // Fallback to snapshot-based observedDays when API days unavailable or zero
       let days: number | null = apiDays != null && apiDays > 0 ? apiDays : null;
       if (days == null) {
         const hist = athleteHistory[d.name];
@@ -447,9 +469,14 @@ const Data = () => {
           if (obsDays != null && Number.isFinite(obsDays) && obsDays > 0) days = obsDays;
         }
       }
-      const spreadPct = d.sold > 0 ? ((d.listed - d.sold) / d.sold) * 100 : 0;
 
-      // Classic Taguchi S/N = 10 * log10(mean² / variance) = 10 * log10(1 / cv²)
+      const rawListed = getListedPrice(listedData[d.name] as ListedRecord);
+      const gradedListed = getListedPrice(mergedGradedListed[d.name] as ListedRecord);
+      const premiumPct = (rawListed != null && rawListed > 0 && gradedListed != null)
+        ? ((gradedListed - rawListed) / rawListed) * 100
+        : null;
+
+      // Classic Taguchi S/N = 10 * log10(1 / cv²)
       const mean = rec?.taguchiListing ?? rec?.avgListing ?? rec?.trimmedListing ?? rec?.avg ?? rec?.average ?? null;
       const sn: number | null = (cv != null && cv > 0 && mean != null && mean > 0)
         ? Math.round(10 * Math.log10(1 / (cv * cv)) * 100) / 100
@@ -458,37 +485,41 @@ const Data = () => {
       let signal: SignalCategory;
       if (cv != null && cv >= 0.35) {
         signal = "speculative";
-      } else if (spreadPct < -5 && (cv == null || cv < 0.20)) {
-        signal = "undervalued_stable";
-      } else if (days != null && days < 180 && spreadPct <= 10) {
+      } else if (premiumPct != null && premiumPct >= 100 && (cv == null || cv < 0.25)) {
+        signal = "premium_listing";
+      } else if (days != null && days < 180) {
         signal = "fast_mover";
-      } else if (spreadPct > 15 && (days == null || days > 300)) {
-        signal = "overpriced_slow";
-      } else if (spreadPct < 0 && (cv == null || cv < 0.25)) {
-        signal = "undervalued_stable";
+      } else if (days != null && days > 365) {
+        signal = "stale_inventory";
       } else if (days != null && days < 250) {
         signal = "fast_mover";
-      } else if (spreadPct > 5) {
-        signal = "overpriced_slow";
+      } else if (premiumPct != null && premiumPct >= 50 && (cv == null || cv < 0.30)) {
+        signal = "premium_listing";
       } else {
-        signal = "fast_mover"; // default bucket
+        signal = "stale_inventory";
       }
 
-      results.push({ name: d.name, sport: d.sport, listed: d.listed, sold: d.sold, spreadPct, cv, days, sn, signal });
+      results.push({
+        name: d.name, sport: d.sport, listed: d.listed,
+        rawListed: rawListed != null ? Math.round(rawListed * 100) / 100 : null,
+        gradedListed: gradedListed != null ? Math.round(gradedListed * 100) / 100 : null,
+        premiumPct, cv, days, sn, signal,
+      });
     }
 
     return results;
-  }, [signalMode, rawComparison, gradedComparison, listedData, mergedGradedListed, athleteHistory]);
+  }, [signalMode, listedData, mergedGradedListed, athleteSportMap, athleteHistory]);
 
   const signalGroups = useMemo(() => {
     const groups: Record<SignalCategory, SignalAthlete[]> = {
-      undervalued_stable: [], fast_mover: [], speculative: [], overpriced_slow: [],
+      premium_listing: [], fast_mover: [], speculative: [], stale_inventory: [],
     };
     for (const a of signalAthletes) groups[a.signal].push(a);
-    // Sort each group by absolute spread
-    for (const key of Object.keys(groups) as SignalCategory[]) {
-      groups[key].sort((a, b) => Math.abs(b.spreadPct) - Math.abs(a.spreadPct));
-    }
+    // Sort: premium by premiumPct desc, fast by days asc, speculative by cv desc, stale by days desc
+    groups.premium_listing.sort((a, b) => (b.premiumPct ?? 0) - (a.premiumPct ?? 0));
+    groups.fast_mover.sort((a, b) => (a.days ?? Infinity) - (b.days ?? Infinity));
+    groups.speculative.sort((a, b) => (b.cv ?? 0) - (a.cv ?? 0));
+    groups.stale_inventory.sort((a, b) => (b.days ?? 0) - (a.days ?? 0));
     return groups;
   }, [signalAthletes]);
 
@@ -878,7 +909,7 @@ const Data = () => {
                 <ModeToggle value={signalMode} onChange={setSignalMode} />
               </div>
               <p className="text-xs text-muted-foreground mb-4 ml-3">
-                Athletes classified by price spread, Taguchi S/N ratio, Stability score, and days on market. S/N = 10 · log₁₀(mean² / variance).
+                Athletes classified by listing data only: graded premium over raw, Taguchi S/N ratio, Stability score, and days on market. S/N = 10 · log₁₀(mean² / variance).
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {(Object.keys(SIGNAL_META) as SignalCategory[]).map((cat) => {
@@ -930,13 +961,34 @@ const Data = () => {
                                 </div>
                               )}
                               <div className="text-right shrink-0">
-                                <div className={`text-xs font-mono font-bold ${a.spreadPct > 0 ? "text-red-400" : "text-green-400"}`}>
-                                  {a.spreadPct > 0 ? "+" : ""}{a.spreadPct.toFixed(0)}%
-                                </div>
+                                {(() => {
+                                  if (cat === "premium_listing") {
+                                    const pct = a.premiumPct;
+                                    return (
+                                      <div className={`text-xs font-mono font-bold ${pct != null && pct >= 0 ? "text-green-400" : "text-red-400"}`}>
+                                        {pct != null ? `${pct >= 0 ? "+" : ""}${pct.toFixed(0)}%` : "—"}
+                                      </div>
+                                    );
+                                  }
+                                  if (cat === "speculative") {
+                                    return (
+                                      <div className="text-xs font-mono font-bold text-purple-400">
+                                        {a.cv != null ? `CV ${(a.cv * 100).toFixed(0)}%` : "—"}
+                                      </div>
+                                    );
+                                  }
+                                  // fast_mover & stale_inventory: lead with days
+                                  return (
+                                    <div className={`text-xs font-mono font-bold ${cat === "fast_mover" ? "text-yellow-400" : "text-red-400"}`}>
+                                      {a.days != null ? `${Math.round(a.days)}d` : "—"}
+                                    </div>
+                                  );
+                                })()}
                                 <div className="text-[9px] text-muted-foreground">
-                                  {a.cv != null ? `Stability ${(a.cv * 100).toFixed(0)}%` : ""}
-                                  {a.cv != null && a.days != null ? " · " : ""}
-                                  {a.days != null ? `${Math.round(a.days)}d` : ""}
+                                  {a.cv != null && cat !== "speculative" ? `Stability ${(a.cv * 100).toFixed(0)}%` : ""}
+                                  {a.cv != null && a.days != null && cat !== "speculative" && cat !== "fast_mover" && cat !== "stale_inventory" ? " · " : ""}
+                                  {cat === "speculative" && a.days != null ? `${Math.round(a.days)}d` : ""}
+                                  {(cat === "fast_mover" || cat === "stale_inventory") && a.cv != null ? `Stability ${(a.cv * 100).toFixed(0)}%` : ""}
                                 </div>
                               </div>
                             </a>
