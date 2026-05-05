@@ -136,6 +136,7 @@ const PriceTooltip = ({ payload }: any) => {
 /* ── Pinned tooltip for scatter chart ── */
 interface PinnedData {
   name: string; sport: string; listed: number; sold: number; spread: number; cx: number; cy: number;
+  variant?: "raw-vs-graded";
 }
 
 const PinnedScatterTooltip = ({ data, onClose }: { data: PinnedData; onClose: () => void }) => {
@@ -161,11 +162,23 @@ const PinnedScatterTooltip = ({ data, onClose }: { data: PinnedData; onClose: ()
       </a>
       <div className="text-muted-foreground text-[10px] mb-1.5">{data.sport}</div>
       <div className="flex flex-col gap-0.5">
-        <span className="text-muted-foreground">Listed: <strong className="text-foreground">${data.listed.toFixed(2)}</strong></span>
-        <span className="text-muted-foreground">Sold: <strong className="text-foreground">${data.sold.toFixed(2)}</strong></span>
-        <span className="text-muted-foreground">Spread: <strong className={data.spread > 0 ? "text-red-400" : "text-green-400"}>
-          {data.spread > 0 ? "+" : ""}${data.spread.toFixed(2)}
-        </strong></span>
+        {data.variant === "raw-vs-graded" ? (
+          <>
+            <span className="text-muted-foreground">Raw Listed: <strong className="text-foreground">${data.sold.toFixed(2)}</strong></span>
+            <span className="text-muted-foreground">Graded Listed: <strong className="text-foreground">${data.listed.toFixed(2)}</strong></span>
+            <span className="text-muted-foreground">Premium: <strong className={data.spread > 0 ? "text-green-400" : "text-red-400"}>
+              {data.spread > 0 ? "+" : ""}${data.spread.toFixed(2)}
+            </strong></span>
+          </>
+        ) : (
+          <>
+            <span className="text-muted-foreground">Listed: <strong className="text-foreground">${data.listed.toFixed(2)}</strong></span>
+            <span className="text-muted-foreground">Sold: <strong className="text-foreground">${data.sold.toFixed(2)}</strong></span>
+            <span className="text-muted-foreground">Spread: <strong className={data.spread > 0 ? "text-red-400" : "text-green-400"}>
+              {data.spread > 0 ? "+" : ""}${data.spread.toFixed(2)}
+            </strong></span>
+          </>
+        )}
       </div>
       <div className="text-[9px] text-muted-foreground/60 mt-1.5">Tap name to search eBay</div>
     </div>
@@ -217,7 +230,6 @@ const Data = () => {
   const scatterWrapRef = useRef<HTMLDivElement>(null);
   const [athleteHistory, setAthleteHistory] = useState<Record<string, any[]>>({});
   // Per-section toggles
-  const [scatterMode, setScatterMode] = useState<CardMode>("raw");
   const [scatterSportFilter, setScatterSportFilter] = useState<string | null>(null);
   const [gapsMode, setGapsMode] = useState<CardMode>("raw");
   const [supplyMode, setSupplyMode] = useState<CardMode>("raw");
@@ -232,6 +244,7 @@ const Data = () => {
     setPinnedDot({
       name: d.name, sport: d.sport, listed: d.listed, sold: d.sold,
       spread: d.spread ?? d.listed - d.sold, cx, cy,
+      variant: "raw-vs-graded",
     });
   }, []);
 
@@ -330,13 +343,37 @@ const Data = () => {
   const gradedStats = useMemo(() => buildStats(gradedComparison), [gradedComparison]);
 
   /* ── Per-section active data ── */
-  const scatterDataAll = scatterMode === "graded" ? gradedComparison : rawComparison;
-  const scatterDataBoth = scatterMode === "both";
-  const scatterData = scatterSportFilter
-    ? scatterDataAll.filter(d => d.sport === scatterSportFilter)
-    : scatterDataAll;
   const gapsComparison = gapsMode === "graded" ? gradedComparison : rawComparison;
   const supplyComparison = supplyMode === "graded" ? gradedComparison : rawComparison;
+
+  // Listed Raw vs Listed Graded: athletes that have BOTH a raw listed and graded listed price
+  const listedRawVsGradedData = useMemo(() => {
+    const items: { name: string; sport: string; listed: number; sold: number; spread: number }[] = [];
+    const keys = new Set([...Object.keys(listedData), ...Object.keys(mergedGradedListed)]);
+    for (const key of keys) {
+      if (key === "_meta") continue;
+      const raw = getListedPrice(listedData[key] as ListedRecord);
+      const graded = getListedPrice(mergedGradedListed[key] as ListedRecord);
+      if (raw == null || graded == null) continue;
+      const ratio = Math.max(raw, graded) / Math.max(Math.min(raw, graded), 0.01);
+      if (ratio > 50) continue; // looser cap: graded can be much pricier than raw
+      const normKey = key.normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/[.\-']/g, "").replace(/\s+/g, " ").toLowerCase().trim();
+      const sport = athleteSportMap[key] || athleteSportMap[normKey];
+      if (!sport) continue;
+      // Reuse fields: listed=graded (Y axis), sold=raw (X axis), spread=graded premium over raw
+      items.push({
+        name: key, sport,
+        listed: Math.round(graded * 100) / 100,
+        sold: Math.round(raw * 100) / 100,
+        spread: Math.round((graded - raw) * 100) / 100,
+      });
+    }
+    return items;
+  }, [listedData, mergedGradedListed, athleteSportMap]);
+
+  const listedVsListedScatter = scatterSportFilter
+    ? listedRawVsGradedData.filter(d => d.sport === scatterSportFilter)
+    : listedRawVsGradedData;
 
   // For "both" mode in gaps: merge raw & graded, picking whichever has larger absolute spread per athlete
   const gapsComparisonBoth = useMemo(() => {
@@ -676,22 +713,21 @@ const Data = () => {
               </section>
             )}
 
-            {/* ── Scatter: Listed vs Sold ── */}
-            <section className="my-8" aria-label="Listed vs Sold scatter chart">
+            {/* ── Scatter: Listed Raw vs Listed Graded ── */}
+            <section className="my-8" aria-label="Listed Raw vs Listed Graded scatter chart">
               <div className="flex items-center justify-between flex-wrap gap-2 mb-1">
                 <h2 className="font-display font-bold text-lg text-foreground flex items-center gap-2">
                   <span className="w-1 h-5 rounded-full bg-primary inline-block" />
-                  Listed vs Sold
+                  Listed Raw vs Listed Graded
                 </h2>
-                <ModeToggle value={scatterMode} onChange={(v) => { setScatterMode(v); setPinnedDot(null); setScatterSportFilter(null); }} />
               </div>
               <p className="text-xs text-muted-foreground mb-1 ml-3">
-                Each dot is an athlete. Above the diagonal = listed higher than sold (overpriced).
+                Each dot is an athlete with both raw and graded listings. The further above the diagonal, the bigger the graded premium.
               </p>
               <p className="text-xs text-muted-foreground mb-4 ml-3">
-                <strong className="text-foreground">Dots above the line</strong> = sellers are asking more than buyers actually pay — potential overpricing.{" "}
-                <strong className="text-foreground">Dots below the line</strong> = cards are selling for more than the listed average — potential deals worth targeting.{" "}
-                The further a dot is from the diagonal, the bigger the price mismatch.
+                <strong className="text-foreground">Dots above the line</strong> = graded cards command a premium over raw — typical for stars and rookies.{" "}
+                <strong className="text-foreground">Dots below the line</strong> = raw is asking more than graded, an unusual signal worth a closer look.{" "}
+                Distance from the diagonal = size of the grading premium.
               </p>
               <div className="glass-panel p-4 md:p-6">
                 <div className="w-full h-[400px] md:h-[450px] relative" ref={scatterWrapRef}>
@@ -699,65 +735,39 @@ const Data = () => {
                     <ScatterChart margin={{ top: 10, right: 10, bottom: 40, left: 0 }} onClick={handleScatterClick}>
                       <CartesianGrid strokeDasharray="3 3" stroke="hsl(var(--border))" opacity={0.5} />
                       <XAxis
-                        type="number" dataKey="sold" name="Sold" unit="$"
-                        label={{ value: "Avg Sold ($)", position: "insideBottom", offset: -10, style: { fill: "hsl(var(--muted-foreground))", fontSize: 11 } }}
+                        type="number" dataKey="sold" name="Raw Listed" unit="$"
+                        label={{ value: "Avg Raw Listed ($)", position: "insideBottom", offset: -10, style: { fill: "hsl(var(--muted-foreground))", fontSize: 11 } }}
                         tick={{ fill: "hsl(var(--muted-foreground))", fontSize: 10 }}
                       />
                       <YAxis
-                        type="number" dataKey="listed" name="Listed" unit="$"
-                        label={{ value: "Avg Listed ($)", angle: -90, position: "insideLeft", offset: 10, style: { fill: "hsl(var(--muted-foreground))", fontSize: 11 } }}
+                        type="number" dataKey="listed" name="Graded Listed" unit="$"
+                        label={{ value: "Avg Graded Listed ($)", angle: -90, position: "insideLeft", offset: 10, style: { fill: "hsl(var(--muted-foreground))", fontSize: 11 } }}
                         tick={{ fill: "hsl(var(--muted-foreground))", fontSize: 10 }}
                       />
                       <Tooltip content={() => null} />
                       <Scatter
                         data={(() => {
-                          const allData = scatterDataBoth ? [...rawComparison, ...gradedComparison] : scatterData;
-                          const maxVal = allData.length ? Math.max(...allData.map(d => Math.max(d.listed, d.sold))) : 10;
+                          const maxVal = listedVsListedScatter.length
+                            ? Math.max(...listedVsListedScatter.map(d => Math.max(d.listed, d.sold)))
+                            : 10;
                           return [{ listed: 0, sold: 0 }, { listed: maxVal, sold: maxVal }];
                         })()}
                         line={{ stroke: "hsl(var(--muted-foreground))", strokeWidth: 1, strokeDasharray: "6 4" }}
                         shape={() => null} legendType="none" isAnimationActive={false}
                       />
-                      {scatterDataBoth ? (
-                        <>
-                          <Scatter data={rawComparison} isAnimationActive={false} cursor="pointer" name="Raw">
-                            {rawComparison.map((_entry, idx) => (
-                              <Cell key={idx} fill="hsl(45, 93%, 47%)" fillOpacity={0.7} r={typeof window !== 'undefined' && window.innerWidth < 768 ? 6 : 5} />
-                            ))}
-                          </Scatter>
-                          <Scatter data={gradedComparison} isAnimationActive={false} cursor="pointer" name="Graded">
-                            {gradedComparison.map((_entry, idx) => (
-                              <Cell key={idx} fill="hsl(280, 70%, 55%)" fillOpacity={0.7} r={typeof window !== 'undefined' && window.innerWidth < 768 ? 6 : 5} />
-                            ))}
-                          </Scatter>
-                        </>
-                      ) : (
-                        <Scatter data={scatterData} isAnimationActive={false} cursor="pointer">
-                          {scatterData.map((entry, idx) => (
-                            <Cell key={idx} fill={getSportColor(entry.sport)} fillOpacity={0.8} r={typeof window !== 'undefined' && window.innerWidth < 768 ? 6 : 5} />
-                          ))}
-                        </Scatter>
-                      )}
+                      <Scatter data={listedVsListedScatter} isAnimationActive={false} cursor="pointer">
+                        {listedVsListedScatter.map((entry, idx) => (
+                          <Cell key={idx} fill={getSportColor(entry.sport)} fillOpacity={0.8} r={typeof window !== 'undefined' && window.innerWidth < 768 ? 6 : 5} />
+                        ))}
+                      </Scatter>
                     </ScatterChart>
                   </ResponsiveContainer>
                   {pinnedDot && <PinnedScatterTooltip data={pinnedDot} onClose={closePinned} />}
                 </div>
                 <div className="flex flex-wrap gap-4 mt-3 justify-center">
-                  {scatterDataBoth ? (
-                    <>
-                      <div className="flex items-center gap-1.5 text-[10px] text-muted-foreground">
-                        <div className="w-2.5 h-2.5 rounded-full" style={{ backgroundColor: "hsl(45, 93%, 47%)" }} />
-                        Raw
-                      </div>
-                      <div className="flex items-center gap-1.5 text-[10px] text-muted-foreground">
-                        <div className="w-2.5 h-2.5 rounded-full" style={{ backgroundColor: "hsl(280, 70%, 55%)" }} />
-                        Graded
-                      </div>
-                    </>
-                  ) : (
-                    Object.entries(SPORT_COLORS)
-                      .filter(([sport]) => scatterDataAll.some(d => d.sport === sport))
-                      .map(([sport, color]) => (
+                  {Object.entries(SPORT_COLORS)
+                    .filter(([sport]) => listedRawVsGradedData.some(d => d.sport === sport))
+                    .map(([sport, color]) => (
                       <button
                         key={sport}
                         onClick={() => setScatterSportFilter(prev => prev === sport ? null : sport)}
@@ -775,8 +785,7 @@ const Data = () => {
                         />
                         {sport}
                       </button>
-                    ))
-                  )}
+                    ))}
                 </div>
               </div>
             </section>
