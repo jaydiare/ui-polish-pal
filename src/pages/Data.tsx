@@ -162,11 +162,23 @@ const PinnedScatterTooltip = ({ data, onClose }: { data: PinnedData; onClose: ()
       </a>
       <div className="text-muted-foreground text-[10px] mb-1.5">{data.sport}</div>
       <div className="flex flex-col gap-0.5">
-        <span className="text-muted-foreground">Listed: <strong className="text-foreground">${data.listed.toFixed(2)}</strong></span>
-        <span className="text-muted-foreground">Sold: <strong className="text-foreground">${data.sold.toFixed(2)}</strong></span>
-        <span className="text-muted-foreground">Spread: <strong className={data.spread > 0 ? "text-red-400" : "text-green-400"}>
-          {data.spread > 0 ? "+" : ""}${data.spread.toFixed(2)}
-        </strong></span>
+        {data.variant === "raw-vs-graded" ? (
+          <>
+            <span className="text-muted-foreground">Raw Listed: <strong className="text-foreground">${data.sold.toFixed(2)}</strong></span>
+            <span className="text-muted-foreground">Graded Listed: <strong className="text-foreground">${data.listed.toFixed(2)}</strong></span>
+            <span className="text-muted-foreground">Premium: <strong className={data.spread > 0 ? "text-green-400" : "text-red-400"}>
+              {data.spread > 0 ? "+" : ""}${data.spread.toFixed(2)}
+            </strong></span>
+          </>
+        ) : (
+          <>
+            <span className="text-muted-foreground">Listed: <strong className="text-foreground">${data.listed.toFixed(2)}</strong></span>
+            <span className="text-muted-foreground">Sold: <strong className="text-foreground">${data.sold.toFixed(2)}</strong></span>
+            <span className="text-muted-foreground">Spread: <strong className={data.spread > 0 ? "text-red-400" : "text-green-400"}>
+              {data.spread > 0 ? "+" : ""}${data.spread.toFixed(2)}
+            </strong></span>
+          </>
+        )}
       </div>
       <div className="text-[9px] text-muted-foreground/60 mt-1.5">Tap name to search eBay</div>
     </div>
