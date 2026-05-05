@@ -245,6 +245,7 @@ const Data = () => {
     setPinnedDot({
       name: d.name, sport: d.sport, listed: d.listed, sold: d.sold,
       spread: d.spread ?? d.listed - d.sold, cx, cy,
+      variant: "raw-vs-graded",
     });
   }, []);
 
