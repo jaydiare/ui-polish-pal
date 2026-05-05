@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-05-05T06:31:44.856Z",
+    "updatedAt": "2026-05-05T10:14:52.331Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA/BGS/SGC grader title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 380,
-      "endIdx": 390,
+      "startIdx": 390,
+      "endIdx": 400,
       "totalAthletes": 461
     },
     "maxPages": 4,
@@ -5105,7 +5105,9 @@
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "error": "eBay page fetch failed (403) after 4 attempts"
+    "error": "eBay page fetch failed (403) after 4 attempts",
+    "lastKnownSold": null,
+    "lastKnownSoldAt": null
   },
   "Ugueth Urbina": {
     "keyword": "Ugueth Urbina Baseball PSA",
@@ -5116,7 +5118,9 @@
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "error": "eBay page fetch failed (403) after 4 attempts"
+    "error": "eBay page fetch failed (403) after 4 attempts",
+    "lastKnownSold": null,
+    "lastKnownSoldAt": null
   },
   "Urbano Lugo": {
     "keyword": "Urbano Lugo Baseball PSA",
@@ -5127,7 +5131,9 @@
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "error": "eBay page fetch failed (403) after 4 attempts"
+    "error": "eBay page fetch failed (403) after 4 attempts",
+    "lastKnownSold": null,
+    "lastKnownSoldAt": null
   },
   "Vic Davalillo": {
     "keyword": "Vic Davalillo Baseball PSA",
@@ -5138,7 +5144,9 @@
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "error": "eBay page fetch failed (403) after 4 attempts"
+    "error": "eBay page fetch failed (403) after 4 attempts",
+    "lastKnownSold": null,
+    "lastKnownSoldAt": null
   },
   "Victor Garate": {
     "keyword": "Victor Garate Baseball",
@@ -5161,7 +5169,9 @@
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "error": "eBay page fetch failed (403) after 4 attempts"
+    "error": "eBay page fetch failed (403) after 4 attempts",
+    "lastKnownSold": null,
+    "lastKnownSoldAt": null
   },
   "Victor Reyes": {
     "keyword": "Victor Reyes Baseball PSA",
@@ -5172,7 +5182,9 @@
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "error": "eBay page fetch failed (403) after 4 attempts"
+    "error": "eBay page fetch failed (403) after 4 attempts",
+    "lastKnownSold": null,
+    "lastKnownSoldAt": null
   },
   "Victor Zambrano": {
     "keyword": "Victor Zambrano Baseball PSA",
@@ -5183,7 +5195,9 @@
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "error": "eBay page fetch failed (403) after 4 attempts"
+    "error": "eBay page fetch failed (403) after 4 attempts",
+    "lastKnownSold": null,
+    "lastKnownSoldAt": null
   },
   "Wiki Gonzalez": {
     "keyword": "Wiki Gonzalez Baseball PSA",
@@ -5194,7 +5208,9 @@
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "error": "eBay page fetch failed (403) after 4 attempts"
+    "error": "eBay page fetch failed (403) after 4 attempts",
+    "lastKnownSold": null,
+    "lastKnownSoldAt": null
   },
   "Wil Ledezma": {
     "keyword": "Wil Ledezma Baseball PSA",
@@ -5205,7 +5221,9 @@
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "error": "eBay page fetch failed (403) after 4 attempts"
+    "error": "eBay page fetch failed (403) after 4 attempts",
+    "lastKnownSold": null,
+    "lastKnownSoldAt": null
   },
   "Wilfredo Boscan": {
     "keyword": "Wilfredo Boscan Baseball",
@@ -5228,7 +5246,9 @@
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "error": "eBay page fetch failed (403) after 4 attempts"
+    "error": "eBay page fetch failed (403) after 4 attempts",
+    "lastKnownSold": null,
+    "lastKnownSoldAt": null
   },
   "Wilfredo Tovar": {
     "keyword": "Wilfredo Tovar Baseball PSA",
