@@ -355,6 +355,27 @@ const Data = () => {
   const rawStats = useMemo(() => buildStats(rawComparison), [rawComparison]);
   const gradedStats = useMemo(() => buildStats(gradedComparison), [gradedComparison]);
 
+  // Listing-only arrays (no sold required) for the Raw vs Graded Supply Curves
+  const rawListingOnly = useMemo(() => {
+    const out: { name: string; listed: number; sport?: string }[] = [];
+    for (const [key, rec] of Object.entries(listedData)) {
+      if (key === "_meta") continue;
+      const lp = getListedPrice(rec as ListedRecord);
+      if (lp != null && lp > 0) out.push({ name: key, listed: lp, sport: athleteSportMap[key] });
+    }
+    return out;
+  }, [listedData, athleteSportMap]);
+
+  const gradedListingOnly = useMemo(() => {
+    const out: { name: string; listed: number; sport?: string }[] = [];
+    for (const [key, rec] of Object.entries(mergedGradedListed)) {
+      if (key === "_meta") continue;
+      const lp = getListedPrice(rec as ListedRecord);
+      if (lp != null && lp > 0) out.push({ name: key, listed: lp, sport: athleteSportMap[key] });
+    }
+    return out;
+  }, [mergedGradedListed, athleteSportMap]);
+
   /* ── Per-section active data ── */
   
   const supplyComparison = supplyMode === "graded" ? gradedComparison : rawComparison;
@@ -807,7 +828,7 @@ const Data = () => {
                   Raw vs Graded Supply Curves
                 </h2>
               </div>
-              <VzlaSupplyCurves rawData={rawComparison} gradedData={gradedComparison} hideTitle />
+              <VzlaSupplyCurves rawData={rawListingOnly} gradedData={gradedListingOnly} hideTitle />
             </section>
 
             {/* ── Investment Signal Score ── */}
