@@ -45,13 +45,10 @@ const MarketData = () => {
               Complete Market Dataset
             </h2>
             <p className="text-muted-foreground text-sm leading-7 text-justify mb-4">
-              This table contains the full dataset we track across 500+ Venezuelan athletes. It includes raw and graded listing averages, recent sold averages, market stability (CV%), average days on market, the price index level, and an ROI potential rating. Click any column header to sort and scroll down to explore the entire roster.
-            </p>
-            <p className="text-muted-foreground text-sm leading-7 text-justify mb-4">
-              Raw prices reflect ungraded Near Mint / Excellent condition cards. Graded prices cover PSA authenticated cards only. The Stability column measures price consistency using the Coefficient of Variation (CV): Stable (CV &lt; 10%) means tight, predictable pricing; Active (10–20%) indicates moderate movement; Volatile (20–35%) shows significant price swings; and Unstable (&gt; 35%) signals highly erratic pricing. Days on Market shows average listing duration. The Index (base-100) tracks price movement over time.
+              This table contains the full dataset we track across 500+ Venezuelan athletes. It includes raw and graded listing averages, market stability (CV%), average days on market, and the price index level. Click any column header to sort and scroll down to explore the entire roster.
             </p>
             <p className="text-muted-foreground text-sm leading-7 text-justify">
-              The ROI column estimates return-on-investment potential using the formula: ROI ≈ Signal S/N × (Raw Sold + PSA Sold) ÷ (PSA Pop × Stability CV). It combines pricing predictability (Signal S/N), actual market demand (sold prices), supply scarcity (PSA Pop), and price volatility (Stability). Results are categorized as High (≥1.0), Medium (0.3–1.0), or Low (&lt;0.3). Athletes with missing data for any component display '—'.
+              Raw prices reflect ungraded Near Mint / Excellent condition cards. Graded prices cover PSA authenticated cards only. The Stability column measures price consistency using the Coefficient of Variation (CV): Stable (CV &lt; 10%) means tight, predictable pricing; Active (10–20%) indicates moderate movement; Volatile (20–35%) shows significant price swings; and Unstable (&gt; 35%) signals highly erratic pricing. Days on Market shows average listing duration. The Index (base-100) tracks price movement over time.
             </p>
           </section>
         </div>
