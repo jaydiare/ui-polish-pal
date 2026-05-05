@@ -961,13 +961,34 @@ const Data = () => {
                                 </div>
                               )}
                               <div className="text-right shrink-0">
-                                <div className={`text-xs font-mono font-bold ${a.spreadPct > 0 ? "text-red-400" : "text-green-400"}`}>
-                                  {a.spreadPct > 0 ? "+" : ""}{a.spreadPct.toFixed(0)}%
-                                </div>
+                                {(() => {
+                                  if (cat === "premium_listing") {
+                                    const pct = a.premiumPct;
+                                    return (
+                                      <div className={`text-xs font-mono font-bold ${pct != null && pct >= 0 ? "text-green-400" : "text-red-400"}`}>
+                                        {pct != null ? `${pct >= 0 ? "+" : ""}${pct.toFixed(0)}%` : "—"}
+                                      </div>
+                                    );
+                                  }
+                                  if (cat === "speculative") {
+                                    return (
+                                      <div className="text-xs font-mono font-bold text-purple-400">
+                                        {a.cv != null ? `CV ${(a.cv * 100).toFixed(0)}%` : "—"}
+                                      </div>
+                                    );
+                                  }
+                                  // fast_mover & stale_inventory: lead with days
+                                  return (
+                                    <div className={`text-xs font-mono font-bold ${cat === "fast_mover" ? "text-yellow-400" : "text-red-400"}`}>
+                                      {a.days != null ? `${Math.round(a.days)}d` : "—"}
+                                    </div>
+                                  );
+                                })()}
                                 <div className="text-[9px] text-muted-foreground">
-                                  {a.cv != null ? `Stability ${(a.cv * 100).toFixed(0)}%` : ""}
-                                  {a.cv != null && a.days != null ? " · " : ""}
-                                  {a.days != null ? `${Math.round(a.days)}d` : ""}
+                                  {a.cv != null && cat !== "speculative" ? `Stability ${(a.cv * 100).toFixed(0)}%` : ""}
+                                  {a.cv != null && a.days != null && cat !== "speculative" && cat !== "fast_mover" && cat !== "stale_inventory" ? " · " : ""}
+                                  {cat === "speculative" && a.days != null ? `${Math.round(a.days)}d` : ""}
+                                  {(cat === "fast_mover" || cat === "stale_inventory") && a.cv != null ? `Stability ${(a.cv * 100).toFixed(0)}%` : ""}
                                 </div>
                               </div>
                             </a>
