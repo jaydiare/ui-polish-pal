@@ -693,12 +693,7 @@ const Data = () => {
                       />
                       <Tooltip content={() => null} />
                       <Scatter
-                        data={(() => {
-                          const maxVal = listedVsListedScatter.length
-                            ? Math.max(...listedVsListedScatter.map(d => Math.max(d.listed, d.sold)))
-                            : 10;
-                          return [{ listed: 0, sold: 0 }, { listed: maxVal, sold: maxVal }];
-                        })()}
+                        data={[{ listed: 0, sold: 0 }, { listed: 300, sold: 300 }]}
                         line={{ stroke: "hsl(var(--muted-foreground))", strokeWidth: 1, strokeDasharray: "6 4" }}
                         shape={() => null} legendType="none" isAnimationActive={false}
                       />
