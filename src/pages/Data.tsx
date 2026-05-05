@@ -361,7 +361,7 @@ const Data = () => {
 
   // Listed Raw vs Listed Graded: athletes that have BOTH a raw listed and graded listed price
   const listedRawVsGradedData = useMemo(() => {
-    const items: { name: string; sport: string; listed: number; sold: number; spread: number }[] = [];
+    const items: { name: string; sport: string; listed: number; sold: number; spread: number; variant: "raw-vs-graded" }[] = [];
     const keys = new Set([...Object.keys(listedData), ...Object.keys(mergedGradedListed)]);
     for (const key of keys) {
       if (key === "_meta") continue;
@@ -379,6 +379,7 @@ const Data = () => {
         listed: Math.round(graded * 100) / 100,
         sold: Math.round(raw * 100) / 100,
         spread: Math.round((graded - raw) * 100) / 100,
+        variant: "raw-vs-graded",
       });
     }
     return items;
