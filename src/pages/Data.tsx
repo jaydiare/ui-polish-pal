@@ -1080,77 +1080,82 @@ const Data = () => {
   );
 };
 
-/* ── Most Sold on eBay ── */
-const SOLD_BAR_COLOR = "hsl(45, 93%, 47%)";
+/* ── Most Listings on eBay ── */
+const LISTINGS_BAR_COLOR = "hsl(45, 93%, 47%)";
 
-const MostSoldChart = ({ soldData, gradedSoldData, athleteSportMap }: {
-  soldData: Record<string, any>;
-  gradedSoldData: Record<string, any>;
+const MostListingsChart = ({ listedData, gradedListedData, athleteSportMap }: {
+  listedData: Record<string, any>;
+  gradedListedData: Record<string, any>;
   athleteSportMap: Record<string, string>;
 }) => {
-  const [soldMode, setSoldMode] = useState<CardMode>("raw");
+  const [listingsMode, setListingsMode] = useState<CardMode>("raw");
 
   const top10 = useMemo(() => {
     const buildEntries = (src: Record<string, any>) => {
-      const entries: { name: string; sport: string; soldCount: number; avgSold: number | null }[] = [];
+      const entries: { name: string; sport: string; listingCount: number; avgListed: number | null }[] = [];
       if (!src || typeof src !== "object") return entries;
       for (const [name, rec] of Object.entries(src)) {
         if (name === "_meta" || !rec) continue;
         const r = rec as any;
-        const n = r.nSoldUsed ?? r.nScraped ?? 0;
-        if (n <= 0) continue;
+        const n =
+          r.nListing ??
+          r.marketplaces?.EBAY_US?.nListing ??
+          r.marketplaces?.EBAY_CA?.nListing ??
+          r.n ??
+          0;
+        if (!n || n <= 0) continue;
         const normKey = name.normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/[.\-']/g, "").replace(/\s+/g, " ").toLowerCase().trim();
         const sport = athleteSportMap[name] || athleteSportMap[normKey];
-        if (!sport) continue; // skip athletes not in the roster
-        const avgSold = r.taguchiSold ?? r.avg ?? null;
-        entries.push({ name, sport, soldCount: n, avgSold });
+        if (!sport) continue;
+        const avgListed = r.taguchiListing ?? r.avgListing ?? r.trimmedListing ?? r.avg ?? null;
+        entries.push({ name, sport, listingCount: n, avgListed });
       }
       return entries;
     };
 
-    if (soldMode === "both") {
-      const mergedMap = new Map<string, { name: string; sport: string; soldCount: number; avgSold: number | null }>();
-      for (const src of [soldData, gradedSoldData]) {
+    if (listingsMode === "both") {
+      const mergedMap = new Map<string, { name: string; sport: string; listingCount: number; avgListed: number | null }>();
+      for (const src of [listedData, gradedListedData]) {
         for (const entry of buildEntries(src)) {
           const existing = mergedMap.get(entry.name);
           if (existing) {
-            existing.soldCount += entry.soldCount;
+            existing.listingCount += entry.listingCount;
           } else {
             mergedMap.set(entry.name, { ...entry });
           }
         }
       }
-      return [...mergedMap.values()].sort((a, b) => b.soldCount - a.soldCount).slice(0, 10);
+      return [...mergedMap.values()].sort((a, b) => b.listingCount - a.listingCount).slice(0, 10);
     }
 
-    const src = soldMode === "graded" ? gradedSoldData : soldData;
-    return buildEntries(src).sort((a, b) => b.soldCount - a.soldCount).slice(0, 10);
-  }, [soldData, gradedSoldData, athleteSportMap, soldMode]);
+    const src = listingsMode === "graded" ? gradedListedData : listedData;
+    return buildEntries(src).sort((a, b) => b.listingCount - a.listingCount).slice(0, 10);
+  }, [listedData, gradedListedData, athleteSportMap, listingsMode]);
 
   const isEmpty = top10.length === 0;
-  const updatedAt = (soldMode === "graded" ? gradedSoldData : soldData)?._meta?.updatedAt;
+  const updatedAt = (listingsMode === "graded" ? gradedListedData : listedData)?._meta?.updatedAt;
   const formattedDate = updatedAt
     ? new Date(updatedAt).toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" })
     : null;
 
   return (
-    <section className="my-8" aria-label="Most sold athletes on eBay">
+    <section className="my-8" aria-label="Most listed athletes on eBay">
       <div className="flex items-center justify-between mb-1">
         <h2 className="font-display font-bold text-lg text-foreground flex items-center gap-2">
           <span className="w-1 h-5 rounded-full bg-vzla-yellow inline-block" />
           🔥 Most Listings – Top 10
         </h2>
-        <ModeToggle value={soldMode} onChange={setSoldMode} />
+        <ModeToggle value={listingsMode} onChange={setListingsMode} />
       </div>
       <p className="text-xs text-muted-foreground mb-4 ml-3">
-        Athletes with the highest {soldMode === "graded" ? "graded" : soldMode === "both" ? "total" : "raw"} verified listed volume on eBay (after filters).
+        Athletes with the highest {listingsMode === "graded" ? "graded" : listingsMode === "both" ? "total" : "raw"} active listing volume on eBay (after filters).
         {formattedDate && <span className="ml-1 opacity-70">Updated {formattedDate}.</span>}
       </p>
       <div className="glass-panel p-4 md:p-6">
         {isEmpty ? (
           <div className="py-12 text-center">
             <div className="text-3xl mb-3">🔥</div>
-            <p className="text-sm text-muted-foreground">No listed data available yet.</p>
+            <p className="text-sm text-muted-foreground">No listing data available yet.</p>
           </div>
         ) : (
           <div className="w-full h-[450px] md:h-[550px]">
@@ -1160,7 +1165,7 @@ const MostSoldChart = ({ soldData, gradedSoldData, athleteSportMap }: {
                 <XAxis
                   type="number"
                   tick={{ fill: "hsl(var(--muted-foreground))", fontSize: 10 }}
-                  label={{ value: "Verified Sold", position: "insideBottom", offset: -5, style: { fill: "hsl(var(--muted-foreground))", fontSize: 11 } }}
+                  label={{ value: "Active Listings", position: "insideBottom", offset: -5, style: { fill: "hsl(var(--muted-foreground))", fontSize: 11 } }}
                 />
                 <YAxis type="category" dataKey="name" width={150} tick={{ fill: "hsl(var(--muted-foreground))", fontSize: 11 }} />
                 <Tooltip
@@ -1172,16 +1177,16 @@ const MostSoldChart = ({ soldData, gradedSoldData, athleteSportMap }: {
                       <div className="rounded-xl border border-border/50 bg-background/95 backdrop-blur-lg p-3 text-xs shadow-2xl">
                         <div className="font-display font-bold text-foreground mb-1">{d.name}</div>
                         <div className="text-muted-foreground text-[10px] mb-1.5">{d.sport}</div>
-                        <span className="text-muted-foreground">Verified Listing: <strong className="text-foreground">{d.soldCount.toLocaleString()}</strong></span>
-                        {d.avgSold != null && (
-                          <div className="text-muted-foreground mt-1">Avg Listing: <strong className="text-foreground">${d.avgSold.toFixed(2)}</strong></div>
+                        <span className="text-muted-foreground">Active Listings: <strong className="text-foreground">{d.listingCount.toLocaleString()}</strong></span>
+                        {d.avgListed != null && (
+                          <div className="text-muted-foreground mt-1">Avg Listed: <strong className="text-foreground">${d.avgListed.toFixed(2)}</strong></div>
                         )}
                         <div className="text-[9px] text-muted-foreground/60 mt-1.5">Click bar to search on eBay</div>
                       </div>
                     );
                   }}
                 />
-                <Bar dataKey="soldCount" name="Sold" fill={SOLD_BAR_COLOR} radius={[0, 4, 4, 0]} isAnimationActive={false} cursor="pointer"
+                <Bar dataKey="listingCount" name="Listings" fill={LISTINGS_BAR_COLOR} radius={[0, 4, 4, 0]} isAnimationActive={false} cursor="pointer"
                   onClick={(data: any) => {
                     if (data?.name) window.open(buildEbaySearchUrl(data.name, data.sport), "_blank", "noopener,noreferrer");
                   }}
@@ -1191,7 +1196,7 @@ const MostSoldChart = ({ soldData, gradedSoldData, athleteSportMap }: {
           </div>
         )}
         <p className="text-[9px] text-muted-foreground/60 text-center mt-3">
-          Based on eBay sold listings after name & junk filters. Updated in batches.
+          Based on eBay active listings after name & junk filters. Updated in batches.
         </p>
       </div>
     </section>
