@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-05-05T16:09:51.586Z",
+    "updatedAt": "2026-05-05T17:57:02.544Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA/BGS/SGC grader title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 420,
-      "endIdx": 430,
+      "startIdx": 430,
+      "endIdx": 440,
       "totalAthletes": 461
     },
     "maxPages": 4,
@@ -155,7 +155,9 @@
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "error": "eBay page fetch failed (403) after 4 attempts"
+    "error": "eBay page fetch failed (403) after 4 attempts",
+    "lastKnownSold": null,
+    "lastKnownSoldAt": null
   },
   "Alex Carrasquel": {
     "keyword": "Alex Carrasquel Baseball PSA",
@@ -234,7 +236,9 @@
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "error": "eBay page fetch failed (403) after 4 attempts"
+    "error": "eBay page fetch failed (403) after 4 attempts",
+    "lastKnownSold": null,
+    "lastKnownSoldAt": null
   },
   "Alex Romero": {
     "keyword": "Alex Romero Baseball PSA",
@@ -2775,7 +2779,9 @@
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "error": "eBay page fetch failed (403) after 4 attempts"
+    "error": "eBay page fetch failed (403) after 4 attempts",
+    "lastKnownSold": null,
+    "lastKnownSoldAt": null
   },
   "Jose Azocar": {
     "keyword": "Jose Azocar Baseball PSA",
@@ -4721,7 +4727,9 @@
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "error": "eBay page fetch failed (403) after 4 attempts"
+    "error": "eBay page fetch failed (403) after 4 attempts",
+    "lastKnownSold": null,
+    "lastKnownSoldAt": null
   },
   "Robert Suarez": {
     "keyword": "Robert Suarez Baseball PSA",
@@ -5673,7 +5681,9 @@
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "error": "eBay page fetch failed (403) after 4 attempts"
+    "error": "eBay page fetch failed (403) after 4 attempts",
+    "lastKnownSold": null,
+    "lastKnownSoldAt": null
   },
   "Greivis Vasquez": {
     "keyword": "Greivis Vasquez Basketball PSA",
@@ -5684,7 +5694,9 @@
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "error": "eBay page fetch failed (403) after 4 attempts"
+    "error": "eBay page fetch failed (403) after 4 attempts",
+    "lastKnownSold": null,
+    "lastKnownSoldAt": null
   },
   "Oscar Torres": {
     "keyword": "Oscar Torres Basketball PSA",
@@ -5695,7 +5707,9 @@
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "error": "eBay page fetch failed (403) after 4 attempts"
+    "error": "eBay page fetch failed (403) after 4 attempts",
+    "lastKnownSold": null,
+    "lastKnownSoldAt": null
   },
   "Pedro Chourio": {
     "keyword": "Pedro Chourio Basketball",
@@ -5718,7 +5732,9 @@
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "error": "eBay page fetch failed (403) after 4 attempts"
+    "error": "eBay page fetch failed (403) after 4 attempts",
+    "lastKnownSold": null,
+    "lastKnownSoldAt": null
   },
   "Andres Borregales": {
     "keyword": "Andres Borregales Football PSA",
@@ -5729,7 +5745,9 @@
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "error": "eBay page fetch failed (403) after 4 attempts"
+    "error": "eBay page fetch failed (403) after 4 attempts",
+    "lastKnownSold": null,
+    "lastKnownSoldAt": null
   },
   "Jhonattan Vegas": {
     "keyword": "Jhonattan Vegas Golf",
@@ -6686,7 +6704,9 @@
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "error": "eBay page fetch failed (403) after 4 attempts"
+    "error": "eBay page fetch failed (403) after 4 attempts",
+    "lastKnownSold": null,
+    "lastKnownSoldAt": null
   },
   "Jesus Luzardo": {
     "keyword": "Jesus Luzardo Baseball PSA",
