@@ -343,11 +343,6 @@ const Data = () => {
   const gradedStats = useMemo(() => buildStats(gradedComparison), [gradedComparison]);
 
   /* ── Per-section active data ── */
-  const scatterDataAll = scatterMode === "graded" ? gradedComparison : rawComparison;
-  const scatterDataBoth = scatterMode === "both";
-  const scatterData = scatterSportFilter
-    ? scatterDataAll.filter(d => d.sport === scatterSportFilter)
-    : scatterDataAll;
   const gapsComparison = gapsMode === "graded" ? gradedComparison : rawComparison;
   const supplyComparison = supplyMode === "graded" ? gradedComparison : rawComparison;
 
