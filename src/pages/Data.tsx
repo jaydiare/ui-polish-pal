@@ -351,6 +351,35 @@ const Data = () => {
   const gapsComparison = gapsMode === "graded" ? gradedComparison : rawComparison;
   const supplyComparison = supplyMode === "graded" ? gradedComparison : rawComparison;
 
+  // Listed Raw vs Listed Graded: athletes that have BOTH a raw listed and graded listed price
+  const listedRawVsGradedData = useMemo(() => {
+    const items: { name: string; sport: string; listed: number; sold: number; spread: number }[] = [];
+    const keys = new Set([...Object.keys(listedData), ...Object.keys(mergedGradedListed)]);
+    for (const key of keys) {
+      if (key === "_meta") continue;
+      const raw = getListedPrice(listedData[key] as ListedRecord);
+      const graded = getListedPrice(mergedGradedListed[key] as ListedRecord);
+      if (raw == null || graded == null) continue;
+      const ratio = Math.max(raw, graded) / Math.max(Math.min(raw, graded), 0.01);
+      if (ratio > 50) continue; // looser cap: graded can be much pricier than raw
+      const normKey = key.normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/[.\-']/g, "").replace(/\s+/g, " ").toLowerCase().trim();
+      const sport = athleteSportMap[key] || athleteSportMap[normKey];
+      if (!sport) continue;
+      // Reuse fields: listed=graded (Y axis), sold=raw (X axis), spread=graded premium over raw
+      items.push({
+        name: key, sport,
+        listed: Math.round(graded * 100) / 100,
+        sold: Math.round(raw * 100) / 100,
+        spread: Math.round((graded - raw) * 100) / 100,
+      });
+    }
+    return items;
+  }, [listedData, mergedGradedListed, athleteSportMap]);
+
+  const listedVsListedScatter = scatterSportFilter
+    ? listedRawVsGradedData.filter(d => d.sport === scatterSportFilter)
+    : listedRawVsGradedData;
+
   // For "both" mode in gaps: merge raw & graded, picking whichever has larger absolute spread per athlete
   const gapsComparisonBoth = useMemo(() => {
     if (gapsMode !== "both") return gapsComparison;
