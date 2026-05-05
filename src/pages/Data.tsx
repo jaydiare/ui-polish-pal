@@ -136,6 +136,7 @@ const PriceTooltip = ({ payload }: any) => {
 /* ── Pinned tooltip for scatter chart ── */
 interface PinnedData {
   name: string; sport: string; listed: number; sold: number; spread: number; cx: number; cy: number;
+  variant?: "raw-vs-graded";
 }
 
 const PinnedScatterTooltip = ({ data, onClose }: { data: PinnedData; onClose: () => void }) => {
