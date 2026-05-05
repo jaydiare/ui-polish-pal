@@ -1056,8 +1056,8 @@ const Data = () => {
             </section>
 
 
-            {/* ── Most Sold on eBay ── */}
-            <MostSoldChart soldData={soldData} gradedSoldData={filteredGradedSold} athleteSportMap={athleteSportMap} />
+            {/* ── Most Listings on eBay ── */}
+            <MostListingsChart listedData={listedData} gradedListedData={mergedGradedListed} athleteSportMap={athleteSportMap} />
 
             {/* ── Gemrate Grading Data ── */}
             <GemrateChart />
