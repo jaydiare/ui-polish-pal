@@ -909,7 +909,7 @@ const Data = () => {
                 <ModeToggle value={signalMode} onChange={setSignalMode} />
               </div>
               <p className="text-xs text-muted-foreground mb-4 ml-3">
-                Athletes classified by price spread, Taguchi S/N ratio, Stability score, and days on market. S/N = 10 · log₁₀(mean² / variance).
+                Athletes classified by listing data only: graded premium over raw, Taguchi S/N ratio, Stability score, and days on market. S/N = 10 · log₁₀(mean² / variance).
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {(Object.keys(SIGNAL_META) as SignalCategory[]).map((cat) => {
