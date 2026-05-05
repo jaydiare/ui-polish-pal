@@ -677,9 +677,9 @@ const Data = () => {
                       <CartesianGrid strokeDasharray="3 3" stroke="hsl(var(--border))" opacity={0.5} />
                       <XAxis
                         type="number" dataKey="sold" name="Raw Listed" unit="$"
-                        domain={[0, 300]}
+                        domain={[0, 100]}
                         allowDataOverflow
-                        ticks={[0, 75, 150, 225, 300]}
+                        ticks={[0, 25, 50, 75, 100]}
                         label={{ value: "Avg Raw Listed ($)", position: "insideBottom", offset: -10, style: { fill: "hsl(var(--muted-foreground))", fontSize: 11 } }}
                         tick={{ fill: "hsl(var(--muted-foreground))", fontSize: 10 }}
                       />
@@ -693,7 +693,7 @@ const Data = () => {
                       />
                       <Tooltip content={() => null} />
                       <Scatter
-                        data={[{ listed: 0, sold: 0 }, { listed: 300, sold: 300 }]}
+                        data={[{ listed: 0, sold: 0 }, { listed: 100, sold: 100 }]}
                         line={{ stroke: "hsl(var(--muted-foreground))", strokeWidth: 1, strokeDasharray: "6 4" }}
                         shape={() => null} legendType="none" isAnimationActive={false}
                       />
