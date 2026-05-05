@@ -411,6 +411,36 @@ const Data = () => {
     ? listedRawVsGradedData.filter(d => d.sport === scatterSportFilter)
     : listedRawVsGradedData;
 
+  // Dynamic log-scale axis bounds based on data percentiles (tight fit, drop outliers)
+  const scatterAxisBounds = useMemo(() => {
+    const niceFloor = (v: number) => {
+      const candidates = [0.5, 1, 2, 5, 10, 25, 50, 100];
+      for (let i = candidates.length - 1; i >= 0; i--) if (candidates[i] <= v) return candidates[i];
+      return 0.5;
+    };
+    const niceCeil = (v: number) => {
+      const candidates = [1, 2, 5, 10, 25, 50, 100, 200, 500, 1000, 2500, 5000];
+      for (const c of candidates) if (c >= v) return c;
+      return 5000;
+    };
+    const pct = (arr: number[], p: number) => {
+      if (!arr.length) return 0;
+      const s = [...arr].sort((a, b) => a - b);
+      const idx = Math.min(s.length - 1, Math.max(0, Math.floor(p * (s.length - 1))));
+      return s[idx];
+    };
+    const xs = listedVsListedScatter.map(d => d.sold).filter(v => v > 0);
+    const ys = listedVsListedScatter.map(d => d.listed).filter(v => v > 0);
+    const xMin = xs.length ? niceFloor(pct(xs, 0.01)) : 0.5;
+    const xMax = xs.length ? niceCeil(pct(xs, 0.98)) : 100;
+    const yMin = ys.length ? niceFloor(pct(ys, 0.01)) : 1;
+    const yMax = ys.length ? niceCeil(pct(ys, 0.98)) : 500;
+    const allTicks = [0.5, 1, 2, 5, 10, 25, 50, 100, 200, 500, 1000, 2500, 5000];
+    const xTicks = allTicks.filter(t => t >= xMin && t <= xMax);
+    const yTicks = allTicks.filter(t => t >= yMin && t <= yMax);
+    return { xMin, xMax, yMin, yMax, xTicks, yTicks };
+  }, [listedVsListedScatter]);
+
   // Top 10 graded premiums (graded listed - raw listed), largest absolute first
   const topSpread = useMemo(() =>
     [...listedRawVsGradedData].sort((a, b) => Math.abs(b.spread) - Math.abs(a.spread)).slice(0, 10),
