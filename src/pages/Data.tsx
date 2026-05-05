@@ -6,7 +6,7 @@ import VzlaNavbar from "@/components/VzlaNavbar";
 import VzlaFooter from "@/components/VzlaFooter";
 import VzlaEbayFooter from "@/components/VzlaEbayFooter";
 import VzlaSideBanner from "@/components/VzlaSideBanner";
-import VzlaSupplyDemand from "@/components/VzlaSupplyDemand";
+import VzlaListingDistribution from "@/components/VzlaListingDistribution";
 import Sparkline from "@/components/Sparkline";
 import { buildEbaySearchUrl, buildEbayGradedSearchUrl } from "@/lib/vzla-helpers";
 const EpnPlacementSummary = lazy(() => import("@/components/EpnPlacementSummary"));
@@ -799,16 +799,16 @@ const Data = () => {
               </div>
             </section>
 
-            {/* ── Supply & Demand ── */}
-            <section className="my-8" aria-label="Supply and demand">
+            {/* ── Listing Price Distribution ── */}
+            <section className="my-8" aria-label="Listing price distribution">
               <div className="flex items-center justify-between flex-wrap gap-2 mb-1">
                 <h2 className="font-display font-bold text-lg text-foreground flex items-center gap-2">
                   <span className="w-1 h-5 rounded-full bg-primary inline-block" />
-                  Supply & Demand
+                  Listing Price Distribution
                 </h2>
                 <ModeToggle value={supplyMode} onChange={setSupplyMode} />
               </div>
-              <VzlaSupplyDemand comparisonData={supplyMode === "both" ? [...rawComparison, ...gradedComparison] : supplyComparison} hideTitle />
+              <VzlaListingDistribution comparisonData={supplyMode === "both" ? [...rawComparison, ...gradedComparison] : supplyComparison} hideTitle />
             </section>
 
             {/* ── Investment Signal Score ── */}
