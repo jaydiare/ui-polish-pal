@@ -432,9 +432,9 @@ const Data = () => {
     const xs = listedVsListedScatter.map(d => d.sold).filter(v => v > 0);
     const ys = listedVsListedScatter.map(d => d.listed).filter(v => v > 0);
     const xMin = xs.length ? niceFloor(pct(xs, 0.01)) : 0.5;
-    const xMax = xs.length ? niceCeil(pct(xs, 0.98)) : 100;
+    const xMax = xs.length ? niceCeil(Math.max(...xs)) : 100;
     const yMin = ys.length ? niceFloor(pct(ys, 0.01)) : 1;
-    const yMax = ys.length ? niceCeil(pct(ys, 0.98)) : 500;
+    const yMax = ys.length ? niceCeil(Math.max(...ys)) : 500;
     const allTicks = [0.5, 1, 2, 5, 10, 25, 50, 100, 200, 500, 1000, 2500, 5000];
     const xTicks = allTicks.filter(t => t >= xMin && t <= xMax);
     const yTicks = allTicks.filter(t => t >= yMin && t <= yMax);
