@@ -110,6 +110,7 @@ const PriceTooltip = ({ payload }: any) => {
   if (!payload?.length) return null;
   const d = payload[0]?.payload;
   if (!d) return null;
+  const isRawVsGraded = d.variant === "raw-vs-graded";
   return (
     <div className="rounded-xl border border-border/50 bg-background/95 backdrop-blur-lg p-3 text-xs shadow-2xl">
       <a
@@ -122,11 +123,23 @@ const PriceTooltip = ({ payload }: any) => {
       </a>
       <div className="text-muted-foreground text-[10px] mb-1.5">{d.sport}</div>
       <div className="flex flex-col gap-0.5">
-        <span className="text-muted-foreground">Listed: <strong className="text-foreground">${d.listed.toFixed(2)}</strong></span>
-        <span className="text-muted-foreground">Sold: <strong className="text-foreground">${d.sold.toFixed(2)}</strong></span>
-        <span className="text-muted-foreground">Spread: <strong className={d.spread > 0 ? "text-red-400" : "text-green-400"}>
-          {d.spread > 0 ? "+" : ""}${d.spread.toFixed(2)}
-        </strong></span>
+        {isRawVsGraded ? (
+          <>
+            <span className="text-muted-foreground">Raw Listed: <strong className="text-foreground">${d.sold.toFixed(2)}</strong></span>
+            <span className="text-muted-foreground">Graded Listed: <strong className="text-foreground">${d.listed.toFixed(2)}</strong></span>
+            <span className="text-muted-foreground">Premium: <strong className={d.spread > 0 ? "text-green-400" : "text-red-400"}>
+              {d.spread > 0 ? "+" : ""}${d.spread.toFixed(2)}
+            </strong></span>
+          </>
+        ) : (
+          <>
+            <span className="text-muted-foreground">Listed: <strong className="text-foreground">${d.listed.toFixed(2)}</strong></span>
+            <span className="text-muted-foreground">Sold: <strong className="text-foreground">${d.sold.toFixed(2)}</strong></span>
+            <span className="text-muted-foreground">Spread: <strong className={d.spread > 0 ? "text-red-400" : "text-green-400"}>
+              {d.spread > 0 ? "+" : ""}${d.spread.toFixed(2)}
+            </strong></span>
+          </>
+        )}
       </div>
       <div className="text-[9px] text-muted-foreground/60 mt-1.5">Click name to search eBay</div>
     </div>
