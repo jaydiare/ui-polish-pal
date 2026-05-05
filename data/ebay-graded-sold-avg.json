@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "updatedAt": "2026-05-05T10:14:52.331Z",
+    "updatedAt": "2026-05-05T11:45:16.097Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "SOLD comps scraped in batches of 10. No brand filter. Junk titles removed. PSA/BGS/SGC grader title filter (grades 1–10 including half grades). Taguchi winsorized mean + market stability CV. Currency normalized to USD via CBSA. Prices include shipping when parseable.",
     "batchInfo": {
-      "startIdx": 390,
-      "endIdx": 400,
+      "startIdx": 400,
+      "endIdx": 410,
       "totalAthletes": 461
     },
     "maxPages": 4,
@@ -5259,7 +5259,9 @@
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "error": "eBay page fetch failed (403) after 4 attempts"
+    "error": "eBay page fetch failed (403) after 4 attempts",
+    "lastKnownSold": null,
+    "lastKnownSoldAt": null
   },
   "Wilkelman Gonzalez": {
     "keyword": "Wilkelman Gonzalez Baseball",
@@ -5294,7 +5296,9 @@
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "error": "eBay page fetch failed (403) after 4 attempts"
+    "error": "eBay page fetch failed (403) after 4 attempts",
+    "lastKnownSold": null,
+    "lastKnownSoldAt": null
   },
   "William Contreras": {
     "keyword": "William Contreras Baseball PSA",
@@ -5305,7 +5309,9 @@
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "error": "eBay page fetch failed (403) after 4 attempts"
+    "error": "eBay page fetch failed (403) after 4 attempts",
+    "lastKnownSold": null,
+    "lastKnownSoldAt": null
   },
   "William Cuevas": {
     "keyword": "William Cuevas Baseball PSA",
@@ -5316,7 +5322,9 @@
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "error": "eBay page fetch failed (403) after 4 attempts"
+    "error": "eBay page fetch failed (403) after 4 attempts",
+    "lastKnownSold": null,
+    "lastKnownSoldAt": null
   },
   "Williams Perez": {
     "keyword": "Williams Perez Atlanta Braves Baseball PSA",
@@ -5327,7 +5335,9 @@
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "error": "eBay page fetch failed (403) after 4 attempts"
+    "error": "eBay page fetch failed (403) after 4 attempts",
+    "lastKnownSold": null,
+    "lastKnownSoldAt": null
   },
   "Willians Astudillo": {
     "keyword": "Willians Astudillo Baseball PSA",
@@ -5338,7 +5348,9 @@
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "error": "eBay page fetch failed (403) after 4 attempts"
+    "error": "eBay page fetch failed (403) after 4 attempts",
+    "lastKnownSold": null,
+    "lastKnownSoldAt": null
   },
   "Willie Canate": {
     "keyword": "Willie Canate Baseball PSA",
@@ -5349,7 +5361,9 @@
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "error": "eBay page fetch failed (403) after 4 attempts"
+    "error": "eBay page fetch failed (403) after 4 attempts",
+    "lastKnownSold": null,
+    "lastKnownSoldAt": null
   },
   "Willie Martinez": {
     "keyword": "Willie Martinez Baseball PSA",
@@ -5360,7 +5374,9 @@
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "error": "eBay page fetch failed (403) after 4 attempts"
+    "error": "eBay page fetch failed (403) after 4 attempts",
+    "lastKnownSold": null,
+    "lastKnownSoldAt": null
   },
   "Willson Contreras": {
     "keyword": "Willson Contreras Baseball PSA",
@@ -5371,7 +5387,9 @@
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "error": "eBay page fetch failed (403) after 4 attempts"
+    "error": "eBay page fetch failed (403) after 4 attempts",
+    "lastKnownSold": null,
+    "lastKnownSoldAt": null
   },
   "Wilmer Flores": {
     "keyword": "Wilmer Flores Baseball PSA",
@@ -5382,7 +5400,9 @@
     "medianSold": null,
     "marketStabilityCV": null,
     "currency": "USD",
-    "error": "eBay page fetch failed (403) after 4 attempts"
+    "error": "eBay page fetch failed (403) after 4 attempts",
+    "lastKnownSold": null,
+    "lastKnownSoldAt": null
   },
   "Wilmer Font": {
     "keyword": "Wilmer Font Baseball PSA",
