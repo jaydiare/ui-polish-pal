@@ -789,22 +789,21 @@ const Data = () => {
               </div>
             </section>
 
-            {/* ── Top 10 Price Spreads ── */}
-            <section className="my-8" aria-label="Top price spreads">
+            {/* ── Top 10 Graded Premiums ── */}
+            <section className="my-8" aria-label="Top graded premiums">
               <div className="flex items-center justify-between flex-wrap gap-2 mb-1">
                 <h2 className="font-display font-bold text-lg text-foreground flex items-center gap-2">
                   <span className="w-1 h-5 rounded-full bg-primary inline-block" />
-                  Biggest Price Gaps
+                  Biggest Graded Premiums
                 </h2>
-                <ModeToggle value={gapsMode} onChange={setGapsMode} />
               </div>
               <p className="text-xs text-muted-foreground mb-1 ml-3">
-                Top 10 athletes with the largest listed-to-sold price spread.
+                Top 10 athletes with the largest gap between graded and raw listed prices.
               </p>
               <p className="text-xs text-muted-foreground mb-4 ml-3">
-                <span className="inline-flex items-center gap-1"><span className="inline-block w-3 h-0.5 rounded" style={{ backgroundColor: "hsl(0, 72%, 50%)" }} /> <strong className="text-foreground">Red bars</strong> = listed price is higher than sold (overpriced — sellers asking more than buyers pay).</span>{" "}
-                <span className="inline-flex items-center gap-1"><span className="inline-block w-3 h-0.5 rounded" style={{ backgroundColor: "hsl(142, 71%, 45%)" }} /> <strong className="text-foreground">Green bars</strong> = sold price is higher than listed (deals — cards selling above ask).</span>{" "}
-                Larger gaps signal bigger arbitrage opportunities or market inefficiencies.
+                <span className="inline-flex items-center gap-1"><span className="inline-block w-3 h-0.5 rounded" style={{ backgroundColor: "hsl(142, 71%, 45%)" }} /> <strong className="text-foreground">Green bars</strong> = graded listings ask more than raw, the typical grading premium.</span>{" "}
+                <span className="inline-flex items-center gap-1"><span className="inline-block w-3 h-0.5 rounded" style={{ backgroundColor: "hsl(0, 72%, 50%)" }} /> <strong className="text-foreground">Red bars</strong> = raw listings ask more than graded, an unusual signal worth a closer look.</span>{" "}
+                Larger bars signal where the grading premium is most pronounced.
               </p>
               <div className="glass-panel p-4 md:p-6">
                 <div className="w-full h-[360px] md:h-[400px]">
@@ -814,7 +813,7 @@ const Data = () => {
                       <XAxis
                         type="number"
                         tick={{ fill: "hsl(var(--muted-foreground))", fontSize: 10 }}
-                        label={{ value: "Spread ($)", position: "insideBottom", offset: -5, style: { fill: "hsl(var(--muted-foreground))", fontSize: 11 } }}
+                        label={{ value: "Premium ($)", position: "insideBottom", offset: -5, style: { fill: "hsl(var(--muted-foreground))", fontSize: 11 } }}
                       />
                       <YAxis
                         type="category"
@@ -838,7 +837,7 @@ const Data = () => {
                         }}
                       >
                         {topSpread.map((entry, idx) => (
-                          <Cell key={idx} fill={entry.spread > 0 ? "hsl(0, 72%, 50%)" : "hsl(142, 71%, 45%)"} fillOpacity={0.8} />
+                          <Cell key={idx} fill={entry.spread > 0 ? "hsl(142, 71%, 45%)" : "hsl(0, 72%, 50%)"} fillOpacity={0.8} />
                         ))}
                       </Bar>
                     </BarChart>
@@ -846,12 +845,12 @@ const Data = () => {
                 </div>
                 <div className="flex gap-6 justify-center mt-3">
                   <div className="flex items-center gap-1.5 text-[10px] text-muted-foreground">
-                    <div className="w-2.5 h-2.5 rounded-sm" style={{ backgroundColor: "hsl(0, 72%, 50%)" }} />
-                    Overpriced (listed &gt; sold)
+                    <div className="w-2.5 h-2.5 rounded-sm" style={{ backgroundColor: "hsl(142, 71%, 45%)" }} />
+                    Graded &gt; Raw (premium)
                   </div>
                   <div className="flex items-center gap-1.5 text-[10px] text-muted-foreground">
-                    <div className="w-2.5 h-2.5 rounded-sm" style={{ backgroundColor: "hsl(142, 71%, 45%)" }} />
-                    Deals (sold &gt; listed)
+                    <div className="w-2.5 h-2.5 rounded-sm" style={{ backgroundColor: "hsl(0, 72%, 50%)" }} />
+                    Raw &gt; Graded (anomaly)
                   </div>
                 </div>
               </div>
