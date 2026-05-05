@@ -356,7 +356,7 @@ const Data = () => {
   const gradedStats = useMemo(() => buildStats(gradedComparison), [gradedComparison]);
 
   /* ── Per-section active data ── */
-  const gapsComparison = gapsMode === "graded" ? gradedComparison : rawComparison;
+  
   const supplyComparison = supplyMode === "graded" ? gradedComparison : rawComparison;
 
   // Listed Raw vs Listed Graded: athletes that have BOTH a raw listed and graded listed price
