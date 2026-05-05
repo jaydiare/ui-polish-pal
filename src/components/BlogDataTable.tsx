@@ -57,7 +57,7 @@ const FILTERABLE_COLS: { key: SortKey; label: string }[] = [
   { key: "signalStrength", label: "S/N" },
   { key: "daysOnMarket", label: "Days on Mkt" },
   { key: "indexLevel", label: "Index" },
-  { key: "roi", label: "ROI" },
+  
 ];
 
 function fmtPrice(v: number | null) {
@@ -335,16 +335,6 @@ export default function BlogDataTable() {
     { key: "signalStrength", label: "Signal S/N", fmt: (v) => v == null ? "—" : v.toFixed(1) },
     { key: "daysOnMarket", label: "Days on Mkt", fmt: fmtDays },
     { key: "indexLevel", label: "Index", fmt: fmtIndex },
-    { key: "roi", label: "ROI", fmt: (v) => v == null ? "—" : v.toFixed(2), render: (_v, row) => {
-      if (row.roi == null) return <span className="text-muted-foreground">—</span>;
-      return (
-        <span className={`text-[11px] px-2 py-0.5 rounded-full font-semibold ${
-          row.roiTier === "High" ? "bg-green-400/15 text-green-400" :
-          row.roiTier === "Medium" ? "bg-vzla-yellow/15 text-vzla-yellow" :
-          "bg-red-400/15 text-red-400"
-        }`}>{row.roiTier}</span>
-      );
-    }},
   ];
 
   const performCsvDownload = () => {
