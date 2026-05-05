@@ -230,7 +230,6 @@ const Data = () => {
   const scatterWrapRef = useRef<HTMLDivElement>(null);
   const [athleteHistory, setAthleteHistory] = useState<Record<string, any[]>>({});
   // Per-section toggles
-  const [scatterMode, setScatterMode] = useState<CardMode>("raw");
   const [scatterSportFilter, setScatterSportFilter] = useState<string | null>(null);
   const [gapsMode, setGapsMode] = useState<CardMode>("raw");
   const [supplyMode, setSupplyMode] = useState<CardMode>("raw");
