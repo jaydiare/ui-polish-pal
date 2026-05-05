@@ -688,41 +688,74 @@ const Data = () => {
                 Each dot is an athlete with both raw and graded listings. The further above the diagonal, the bigger the graded premium.
               </p>
               <p className="text-xs text-muted-foreground mb-4 ml-3">
-                <strong className="text-foreground">Dots above the line</strong> = graded cards command a premium over raw — typical for stars and rookies.{" "}
+                <strong className="text-foreground">Dots above the line</strong> = graded cards command a premium over raw, typical for stars and rookies.{" "}
                 <strong className="text-foreground">Dots below the line</strong> = raw is asking more than graded, an unusual signal worth a closer look.{" "}
-                Distance from the diagonal = size of the grading premium.
+                Axes use a logarithmic scale so cheaper athletes spread out instead of stacking near zero.
               </p>
               <div className="glass-panel p-4 md:p-6">
-                <div className="w-full h-[400px] md:h-[450px] relative" ref={scatterWrapRef}>
+                <div className="mb-4 flex items-center gap-2">
+                  <input
+                    type="text"
+                    value={scatterSearch}
+                    onChange={(e) => setScatterSearch(e.target.value)}
+                    placeholder="Search athlete by name..."
+                    className="flex-1 rounded-lg border border-border/50 bg-background/60 px-3 py-2 text-sm text-foreground placeholder:text-muted-foreground/70 outline-none focus:border-primary/50 focus:ring-1 focus:ring-primary/30 transition-colors"
+                    aria-label="Search athletes in scatter"
+                  />
+                  {scatterSearch && (
+                    <button
+                      onClick={() => setScatterSearch("")}
+                      className="text-xs text-muted-foreground hover:text-foreground rounded-md px-2 py-1 border border-border/50 hover:border-border transition-colors"
+                    >
+                      Clear
+                    </button>
+                  )}
+                </div>
+                <div className="w-full h-[400px] md:h-[500px] relative" ref={scatterWrapRef}>
                   <ResponsiveContainer width="100%" height="100%">
                     <ScatterChart margin={{ top: 10, right: 10, bottom: 40, left: 0 }} onClick={handleScatterClick}>
                       <CartesianGrid strokeDasharray="3 3" stroke="hsl(var(--border))" opacity={0.5} />
                       <XAxis
                         type="number" dataKey="sold" name="Raw Listed" unit="$"
-                        domain={[0, 100]}
+                        scale="log"
+                        domain={[0.5, 200]}
                         allowDataOverflow
-                        ticks={[0, 25, 50, 75, 100]}
-                        label={{ value: "Avg Raw Listed ($)", position: "insideBottom", offset: -10, style: { fill: "hsl(var(--muted-foreground))", fontSize: 11 } }}
+                        ticks={[0.5, 1, 2, 5, 10, 25, 50, 100, 200]}
+                        tickFormatter={(v) => `$${v}`}
+                        label={{ value: "Avg Raw Listed ($, log scale)", position: "insideBottom", offset: -10, style: { fill: "hsl(var(--muted-foreground))", fontSize: 11 } }}
                         tick={{ fill: "hsl(var(--muted-foreground))", fontSize: 10 }}
                       />
                       <YAxis
                         type="number" dataKey="listed" name="Graded Listed" unit="$"
-                        domain={[0, 300]}
+                        scale="log"
+                        domain={[1, 4000]}
                         allowDataOverflow
-                        ticks={[0, 75, 150, 225, 300]}
-                        label={{ value: "Avg Graded Listed ($)", angle: -90, position: "insideLeft", offset: 10, style: { fill: "hsl(var(--muted-foreground))", fontSize: 11 } }}
+                        ticks={[1, 5, 10, 25, 50, 100, 250, 500, 1000, 2500]}
+                        tickFormatter={(v) => `$${v}`}
+                        label={{ value: "Avg Graded Listed ($, log scale)", angle: -90, position: "insideLeft", offset: 10, style: { fill: "hsl(var(--muted-foreground))", fontSize: 11 } }}
                         tick={{ fill: "hsl(var(--muted-foreground))", fontSize: 10 }}
                       />
                       <Tooltip content={() => null} />
                       <Scatter
-                        data={[{ listed: 0, sold: 0 }, { listed: 100, sold: 100 }]}
+                        data={[{ listed: 0.5, sold: 0.5 }, { listed: 200, sold: 200 }]}
                         line={{ stroke: "hsl(var(--muted-foreground))", strokeWidth: 1, strokeDasharray: "6 4" }}
                         shape={() => null} legendType="none" isAnimationActive={false}
                       />
                       <Scatter data={listedVsListedScatter} isAnimationActive={false} cursor="pointer">
-                        {listedVsListedScatter.map((entry, idx) => (
-                          <Cell key={idx} fill={getSportColor(entry.sport)} fillOpacity={0.8} r={typeof window !== 'undefined' && window.innerWidth < 768 ? 6 : 5} />
-                        ))}
+                        {listedVsListedScatter.map((entry, idx) => {
+                          const q = scatterSearch.trim().toLowerCase();
+                          const isMatch = !q || entry.name.toLowerCase().includes(q);
+                          return (
+                            <Cell
+                              key={idx}
+                              fill={getSportColor(entry.sport)}
+                              fillOpacity={q ? (isMatch ? 0.95 : 0.08) : 0.75}
+                              stroke={q && isMatch ? "hsl(var(--foreground))" : "none"}
+                              strokeWidth={q && isMatch ? 1.5 : 0}
+                              r={q && isMatch ? 8 : (typeof window !== 'undefined' && window.innerWidth < 768 ? 6 : 5)}
+                            />
+                          );
+                        })}
                       </Scatter>
                     </ScatterChart>
                   </ResponsiveContainer>
