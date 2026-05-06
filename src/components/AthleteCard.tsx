@@ -292,7 +292,7 @@ const AthleteCard = forwardRef<HTMLElement, AthleteCardProps>(({ athlete, byName
             )}
           </div>
           {/* Graded meta column — aligned to Graded price card */}
-          <div className="px-2.5 flex items-center gap-1 whitespace-nowrap overflow-hidden min-w-0">
+          <div className={`px-2.5 flex items-center gap-1 whitespace-nowrap overflow-hidden min-w-0 ${dbgGrd}`}>
             <span className="uppercase font-bold tracking-wider text-muted-foreground/80 shrink-0">Grd</span>
             <span className={`font-bold stability-${gradedStability.bucket} truncate`}>{gradedStability.label}</span>
             {gradedDom != null && (
