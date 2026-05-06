@@ -281,7 +281,7 @@ const AthleteCard = forwardRef<HTMLElement, AthleteCardProps>(({ athlete, byName
       {priceMode === "both" ? (
         <div className="mt-2 grid grid-cols-2 gap-2 text-[9px] leading-tight text-muted-foreground">
           {/* Raw meta column — aligned to Raw price card */}
-          <div className="px-2.5 flex items-center gap-1 whitespace-nowrap overflow-hidden min-w-0">
+          <div className={`px-2.5 flex items-center gap-1 whitespace-nowrap overflow-hidden min-w-0 ${dbgRaw}`}>
             <span className="uppercase font-bold tracking-wider text-muted-foreground/80 shrink-0">Raw</span>
             <span className={`font-bold stability-${rawStability.bucket} truncate`}>{rawStability.label}</span>
             {rawDom != null && (
