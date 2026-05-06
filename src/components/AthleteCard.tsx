@@ -64,11 +64,18 @@ const AthleteCard = forwardRef<HTMLElement, AthleteCardProps>(({ athlete, byName
         );
       }
     };
+    let cancelled = false;
+    // Wait for web fonts to finish loading before measuring (font swap shifts text widths)
+    const fontsReady = (typeof document !== "undefined" && (document as any).fonts?.ready)
+      ? (document as any).fonts.ready
+      : Promise.resolve();
+    fontsReady.then(() => { if (!cancelled) measure(); });
+    // Also do an initial measure (pre-font) so we have a baseline immediately
     measure();
     const ro = new ResizeObserver(measure);
     ro.observe(root);
     window.addEventListener("resize", measure);
-    return () => { ro.disconnect(); window.removeEventListener("resize", measure); };
+    return () => { cancelled = true; ro.disconnect(); window.removeEventListener("resize", measure); };
   }, [debugAlign, priceMode, athlete.name]);
   const rawMisalign = debugAlign && drift.raw > TOLERANCE_PX;
   const grdMisalign = debugAlign && drift.grd > TOLERANCE_PX;
