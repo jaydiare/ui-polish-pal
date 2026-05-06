@@ -32,6 +32,10 @@ interface AthleteCardProps {
 
 const AthleteCard = forwardRef<HTMLElement, AthleteCardProps>(({ athlete, byName, byKey, gradedByName, gradedByKey, ebaySoldRaw, ebayGradedSoldRaw, history, psaPop, isRecommended, isHotSeller, priceMode, snapshotFallback }, ref) => {
   const cardRef = useRef<HTMLElement>(null);
+  // DEBUG: Toggle alignment overlay with `?debug=align` in URL
+  const debugAlign = typeof window !== "undefined" && new URLSearchParams(window.location.search).get("debug") === "align";
+  const dbgRaw = debugAlign ? "outline outline-1 outline-red-500/80 outline-offset-[-1px]" : "";
+  const dbgGrd = debugAlign ? "outline outline-1 outline-blue-500/80 outline-offset-[-1px]" : "";
   const avgNum = getEbayAvgNumber(athlete, byName, byKey);
   const rawSnapPrice = snapshotFallback?.rawListedPrice ?? null;
   const rawFallback = avgNum == null && rawSnapPrice != null;
