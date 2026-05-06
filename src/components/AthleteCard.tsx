@@ -275,26 +275,26 @@ const AthleteCard = forwardRef<HTMLElement, AthleteCardProps>(({ athlete, byName
 
       {/* ── Meta row: stability + sold + days listed ── */}
       {priceMode === "both" ? (
-        <div className="mt-2 grid grid-cols-2 gap-2 text-[10px] text-muted-foreground">
-          {/* Raw meta column */}
-          <div className="flex items-center gap-1.5 flex-wrap min-w-0">
-            <span className="text-[9px] uppercase font-bold text-muted-foreground">Raw</span>
-            <span className={`font-bold stability-${rawStability.bucket}`}>{rawStability.label}</span>
+        <div className="mt-2 grid grid-cols-2 gap-2 text-[9px] leading-tight text-muted-foreground">
+          {/* Raw meta column — aligned to Raw price card */}
+          <div className="px-2.5 flex items-center gap-1 whitespace-nowrap overflow-hidden min-w-0">
+            <span className="uppercase font-bold tracking-wider text-muted-foreground/80 shrink-0">Raw</span>
+            <span className={`font-bold stability-${rawStability.bucket} truncate`}>{rawStability.label}</span>
             {rawDom != null && (
               <>
-                <span className="text-border">·</span>
-                <span>⏱ {Math.round(rawDom)}d</span>
+                <span className="text-border shrink-0">·</span>
+                <span className="shrink-0">⏱ {Math.round(rawDom)}d</span>
               </>
             )}
           </div>
-          {/* Graded meta column */}
-          <div className="flex items-center gap-1.5 flex-wrap min-w-0">
-            <span className="text-[9px] uppercase font-bold text-muted-foreground">Grd</span>
-            <span className={`font-bold stability-${gradedStability.bucket}`}>{gradedStability.label}</span>
+          {/* Graded meta column — aligned to Graded price card */}
+          <div className="px-2.5 flex items-center gap-1 whitespace-nowrap overflow-hidden min-w-0">
+            <span className="uppercase font-bold tracking-wider text-muted-foreground/80 shrink-0">Grd</span>
+            <span className={`font-bold stability-${gradedStability.bucket} truncate`}>{gradedStability.label}</span>
             {gradedDom != null && (
               <>
-                <span className="text-border">·</span>
-                <span>⏱ {Math.round(gradedDom)}d</span>
+                <span className="text-border shrink-0">·</span>
+                <span className="shrink-0">⏱ {Math.round(gradedDom)}d</span>
               </>
             )}
           </div>
