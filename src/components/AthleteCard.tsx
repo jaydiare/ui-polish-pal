@@ -32,6 +32,10 @@ interface AthleteCardProps {
 
 const AthleteCard = forwardRef<HTMLElement, AthleteCardProps>(({ athlete, byName, byKey, gradedByName, gradedByKey, ebaySoldRaw, ebayGradedSoldRaw, history, psaPop, isRecommended, isHotSeller, priceMode, snapshotFallback }, ref) => {
   const cardRef = useRef<HTMLElement>(null);
+  // DEBUG: Toggle alignment overlay with `?debug=align` in URL
+  const debugAlign = typeof window !== "undefined" && new URLSearchParams(window.location.search).get("debug") === "align";
+  const dbgRaw = debugAlign ? "outline outline-1 outline-red-500/80 outline-offset-[-1px]" : "";
+  const dbgGrd = debugAlign ? "outline outline-1 outline-blue-500/80 outline-offset-[-1px]" : "";
   const avgNum = getEbayAvgNumber(athlete, byName, byKey);
   const rawSnapPrice = snapshotFallback?.rawListedPrice ?? null;
   const rawFallback = avgNum == null && rawSnapPrice != null;
@@ -195,7 +199,7 @@ const AthleteCard = forwardRef<HTMLElement, AthleteCardProps>(({ athlete, byName
       <div className={`mt-3 grid gap-2 ${priceMode === "both" ? "grid-cols-2" : "grid-cols-1"}`}>
         {/* Raw */}
         {(priceMode === "raw" || priceMode === "both") && (
-          <div className="p-2.5 rounded-lg bg-secondary/50 border border-border/40">
+          <div className={`p-2.5 rounded-lg bg-secondary/50 border border-border/40 ${dbgRaw}`}>
             <div className="text-[9px] text-muted-foreground font-medium uppercase tracking-wider mb-1">Raw</div>
             <div className="text-base font-display font-bold text-foreground leading-none">{money}</div>
             {rawFallback && (
@@ -217,7 +221,7 @@ const AthleteCard = forwardRef<HTMLElement, AthleteCardProps>(({ athlete, byName
 
         {/* Graded */}
         {(priceMode === "graded" || priceMode === "both") && (
-          <div className="p-2.5 rounded-lg bg-secondary/50 border border-border/40">
+          <div className={`p-2.5 rounded-lg bg-secondary/50 border border-border/40 ${dbgGrd}`}>
             <div className="text-[9px] text-muted-foreground font-medium uppercase tracking-wider mb-1">Graded</div>
             {gradedMoney ? (
               <div className="flex items-start justify-between gap-2">
@@ -277,7 +281,7 @@ const AthleteCard = forwardRef<HTMLElement, AthleteCardProps>(({ athlete, byName
       {priceMode === "both" ? (
         <div className="mt-2 grid grid-cols-2 gap-2 text-[9px] leading-tight text-muted-foreground">
           {/* Raw meta column — aligned to Raw price card */}
-          <div className="px-2.5 flex items-center gap-1 whitespace-nowrap overflow-hidden min-w-0">
+          <div className={`px-2.5 flex items-center gap-1 whitespace-nowrap overflow-hidden min-w-0 ${dbgRaw}`}>
             <span className="uppercase font-bold tracking-wider text-muted-foreground/80 shrink-0">Raw</span>
             <span className={`font-bold stability-${rawStability.bucket} truncate`}>{rawStability.label}</span>
             {rawDom != null && (
@@ -288,7 +292,7 @@ const AthleteCard = forwardRef<HTMLElement, AthleteCardProps>(({ athlete, byName
             )}
           </div>
           {/* Graded meta column — aligned to Graded price card */}
-          <div className="px-2.5 flex items-center gap-1 whitespace-nowrap overflow-hidden min-w-0">
+          <div className={`px-2.5 flex items-center gap-1 whitespace-nowrap overflow-hidden min-w-0 ${dbgGrd}`}>
             <span className="uppercase font-bold tracking-wider text-muted-foreground/80 shrink-0">Grd</span>
             <span className={`font-bold stability-${gradedStability.bucket} truncate`}>{gradedStability.label}</span>
             {gradedDom != null && (
