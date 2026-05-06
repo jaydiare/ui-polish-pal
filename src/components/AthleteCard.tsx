@@ -36,6 +36,44 @@ const AthleteCard = forwardRef<HTMLElement, AthleteCardProps>(({ athlete, byName
   const debugAlign = typeof window !== "undefined" && new URLSearchParams(window.location.search).get("debug") === "align";
   const dbgRaw = debugAlign ? "outline outline-1 outline-red-500/80 outline-offset-[-1px]" : "";
   const dbgGrd = debugAlign ? "outline outline-1 outline-blue-500/80 outline-offset-[-1px]" : "";
+  // DEBUG: Track per-side alignment drift (px) when debugAlign is on
+  const [drift, setDrift] = useState<{ raw: number; grd: number }>({ raw: 0, grd: 0 });
+  const TOLERANCE_PX = 2;
+  useEffect(() => {
+    if (!debugAlign || priceMode !== "both") return;
+    const root = cardRef.current;
+    if (!root) return;
+    const measure = () => {
+      const priceRaw = root.querySelector('[data-align="price-raw"]') as HTMLElement | null;
+      const priceGrd = root.querySelector('[data-align="price-grd"]') as HTMLElement | null;
+      const metaRaw = root.querySelector('[data-align="meta-raw"]') as HTMLElement | null;
+      const metaGrd = root.querySelector('[data-align="meta-grd"]') as HTMLElement | null;
+      if (!priceRaw || !metaRaw || !priceGrd || !metaGrd) return;
+      const pr = priceRaw.getBoundingClientRect();
+      const mr = metaRaw.getBoundingClientRect();
+      const pg = priceGrd.getBoundingClientRect();
+      const mg = metaGrd.getBoundingClientRect();
+      const rawDrift = Math.max(Math.abs(pr.left - mr.left), Math.abs(pr.right - mr.right));
+      const grdDrift = Math.max(Math.abs(pg.left - mg.left), Math.abs(pg.right - mg.right));
+      setDrift({ raw: rawDrift, grd: grdDrift });
+      if (rawDrift > TOLERANCE_PX || grdDrift > TOLERANCE_PX) {
+        // eslint-disable-next-line no-console
+        console.warn(
+          `[AthleteCard align] ${athlete.name}: raw drift ${rawDrift.toFixed(1)}px, grd drift ${grdDrift.toFixed(1)}px (tolerance ${TOLERANCE_PX}px)`,
+          { priceRaw: pr, metaRaw: mr, priceGrd: pg, metaGrd: mg }
+        );
+      }
+    };
+    measure();
+    const ro = new ResizeObserver(measure);
+    ro.observe(root);
+    window.addEventListener("resize", measure);
+    return () => { ro.disconnect(); window.removeEventListener("resize", measure); };
+  }, [debugAlign, priceMode, athlete.name]);
+  const rawMisalign = debugAlign && drift.raw > TOLERANCE_PX;
+  const grdMisalign = debugAlign && drift.grd > TOLERANCE_PX;
+  const dbgRawMis = rawMisalign ? "ring-2 ring-red-500 ring-offset-2 ring-offset-background animate-pulse" : "";
+  const dbgGrdMis = grdMisalign ? "ring-2 ring-red-500 ring-offset-2 ring-offset-background animate-pulse" : "";
   const avgNum = getEbayAvgNumber(athlete, byName, byKey);
   const rawSnapPrice = snapshotFallback?.rawListedPrice ?? null;
   const rawFallback = avgNum == null && rawSnapPrice != null;
