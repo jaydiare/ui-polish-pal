@@ -259,7 +259,7 @@ const AthleteCard = forwardRef<HTMLElement, AthleteCardProps>(({ athlete, byName
 
         {/* Graded */}
         {(priceMode === "graded" || priceMode === "both") && (
-          <div className={`p-2.5 rounded-lg bg-secondary/50 border border-border/40 ${dbgGrd}`}>
+          <div data-align="price-grd" className={`p-2.5 rounded-lg bg-secondary/50 border border-border/40 ${dbgGrd} ${dbgGrdMis}`}>
             <div className="text-[9px] text-muted-foreground font-medium uppercase tracking-wider mb-1">Graded</div>
             {gradedMoney ? (
               <div className="flex items-start justify-between gap-2">
