@@ -1,4 +1,4 @@
-import { useMemo, forwardRef, useRef, useCallback } from "react";
+import { useMemo, forwardRef, useRef, useCallback, useEffect, useState } from "react";
 import { Athlete, EbayAvgRecord } from "@/data/athletes";
 import {
   getEbayAvgNumber,
