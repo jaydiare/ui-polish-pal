@@ -275,17 +275,11 @@ const AthleteCard = forwardRef<HTMLElement, AthleteCardProps>(({ athlete, byName
 
       {/* ── Meta row: stability + sold + days listed ── */}
       {priceMode === "both" ? (
-        <div className="mt-2 space-y-1 text-[10px] text-muted-foreground">
-          {/* Raw meta line */}
-          <div className="flex items-center gap-2 flex-wrap">
+        <div className="mt-2 grid grid-cols-2 gap-2 text-[10px] text-muted-foreground">
+          {/* Raw meta column */}
+          <div className="flex items-center gap-1.5 flex-wrap min-w-0">
             <span className="text-[9px] uppercase font-bold text-muted-foreground">Raw</span>
             <span className={`font-bold stability-${rawStability.bucket}`}>{rawStability.label}</span>
-            {rawSoldAvg != null && (
-              <>
-                <span className="text-border">·</span>
-                <span>Sold {formatCurrency(rawSoldAvg, "USD")}</span>
-              </>
-            )}
             {rawDom != null && (
               <>
                 <span className="text-border">·</span>
@@ -293,16 +287,10 @@ const AthleteCard = forwardRef<HTMLElement, AthleteCardProps>(({ athlete, byName
               </>
             )}
           </div>
-          {/* Graded meta line */}
-          <div className="flex items-center gap-2 flex-wrap">
+          {/* Graded meta column */}
+          <div className="flex items-center gap-1.5 flex-wrap min-w-0">
             <span className="text-[9px] uppercase font-bold text-muted-foreground">Grd</span>
             <span className={`font-bold stability-${gradedStability.bucket}`}>{gradedStability.label}</span>
-            {gradedSoldAvg != null && (
-              <>
-                <span className="text-border">·</span>
-                <span>Sold {formatCurrency(gradedSoldAvg, "USD")}</span>
-              </>
-            )}
             {gradedDom != null && (
               <>
                 <span className="text-border">·</span>
