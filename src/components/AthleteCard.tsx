@@ -1,4 +1,4 @@
-import { useMemo, forwardRef, useRef, useCallback } from "react";
+import { useMemo, forwardRef, useRef, useCallback, useEffect, useState } from "react";
 import { Athlete, EbayAvgRecord } from "@/data/athletes";
 import {
   getEbayAvgNumber,
@@ -36,6 +36,44 @@ const AthleteCard = forwardRef<HTMLElement, AthleteCardProps>(({ athlete, byName
   const debugAlign = typeof window !== "undefined" && new URLSearchParams(window.location.search).get("debug") === "align";
   const dbgRaw = debugAlign ? "outline outline-1 outline-red-500/80 outline-offset-[-1px]" : "";
   const dbgGrd = debugAlign ? "outline outline-1 outline-blue-500/80 outline-offset-[-1px]" : "";
+  // DEBUG: Track per-side alignment drift (px) when debugAlign is on
+  const [drift, setDrift] = useState<{ raw: number; grd: number }>({ raw: 0, grd: 0 });
+  const TOLERANCE_PX = 2;
+  useEffect(() => {
+    if (!debugAlign || priceMode !== "both") return;
+    const root = cardRef.current;
+    if (!root) return;
+    const measure = () => {
+      const priceRaw = root.querySelector('[data-align="price-raw"]') as HTMLElement | null;
+      const priceGrd = root.querySelector('[data-align="price-grd"]') as HTMLElement | null;
+      const metaRaw = root.querySelector('[data-align="meta-raw"]') as HTMLElement | null;
+      const metaGrd = root.querySelector('[data-align="meta-grd"]') as HTMLElement | null;
+      if (!priceRaw || !metaRaw || !priceGrd || !metaGrd) return;
+      const pr = priceRaw.getBoundingClientRect();
+      const mr = metaRaw.getBoundingClientRect();
+      const pg = priceGrd.getBoundingClientRect();
+      const mg = metaGrd.getBoundingClientRect();
+      const rawDrift = Math.max(Math.abs(pr.left - mr.left), Math.abs(pr.right - mr.right));
+      const grdDrift = Math.max(Math.abs(pg.left - mg.left), Math.abs(pg.right - mg.right));
+      setDrift({ raw: rawDrift, grd: grdDrift });
+      if (rawDrift > TOLERANCE_PX || grdDrift > TOLERANCE_PX) {
+        // eslint-disable-next-line no-console
+        console.warn(
+          `[AthleteCard align] ${athlete.name}: raw drift ${rawDrift.toFixed(1)}px, grd drift ${grdDrift.toFixed(1)}px (tolerance ${TOLERANCE_PX}px)`,
+          { priceRaw: pr, metaRaw: mr, priceGrd: pg, metaGrd: mg }
+        );
+      }
+    };
+    measure();
+    const ro = new ResizeObserver(measure);
+    ro.observe(root);
+    window.addEventListener("resize", measure);
+    return () => { ro.disconnect(); window.removeEventListener("resize", measure); };
+  }, [debugAlign, priceMode, athlete.name]);
+  const rawMisalign = debugAlign && drift.raw > TOLERANCE_PX;
+  const grdMisalign = debugAlign && drift.grd > TOLERANCE_PX;
+  const dbgRawMis = rawMisalign ? "ring-2 ring-red-500 ring-offset-2 ring-offset-background animate-pulse" : "";
+  const dbgGrdMis = grdMisalign ? "ring-2 ring-red-500 ring-offset-2 ring-offset-background animate-pulse" : "";
   const avgNum = getEbayAvgNumber(athlete, byName, byKey);
   const rawSnapPrice = snapshotFallback?.rawListedPrice ?? null;
   const rawFallback = avgNum == null && rawSnapPrice != null;
@@ -199,7 +237,7 @@ const AthleteCard = forwardRef<HTMLElement, AthleteCardProps>(({ athlete, byName
       <div className={`mt-3 grid gap-2 ${priceMode === "both" ? "grid-cols-2" : "grid-cols-1"}`}>
         {/* Raw */}
         {(priceMode === "raw" || priceMode === "both") && (
-          <div className={`p-2.5 rounded-lg bg-secondary/50 border border-border/40 ${dbgRaw}`}>
+          <div data-align="price-raw" className={`p-2.5 rounded-lg bg-secondary/50 border border-border/40 ${dbgRaw} ${dbgRawMis}`}>
             <div className="text-[9px] text-muted-foreground font-medium uppercase tracking-wider mb-1">Raw</div>
             <div className="text-base font-display font-bold text-foreground leading-none">{money}</div>
             {rawFallback && (
@@ -221,7 +259,7 @@ const AthleteCard = forwardRef<HTMLElement, AthleteCardProps>(({ athlete, byName
 
         {/* Graded */}
         {(priceMode === "graded" || priceMode === "both") && (
-          <div className={`p-2.5 rounded-lg bg-secondary/50 border border-border/40 ${dbgGrd}`}>
+          <div data-align="price-grd" className={`p-2.5 rounded-lg bg-secondary/50 border border-border/40 ${dbgGrd} ${dbgGrdMis}`}>
             <div className="text-[9px] text-muted-foreground font-medium uppercase tracking-wider mb-1">Graded</div>
             {gradedMoney ? (
               <div className="flex items-start justify-between gap-2">
@@ -281,7 +319,7 @@ const AthleteCard = forwardRef<HTMLElement, AthleteCardProps>(({ athlete, byName
       {priceMode === "both" ? (
         <div className="mt-2 grid grid-cols-2 gap-2 text-[9px] leading-tight text-muted-foreground">
           {/* Raw meta column — aligned to Raw price card */}
-          <div className={`px-2.5 flex items-center gap-1 whitespace-nowrap overflow-hidden min-w-0 ${dbgRaw}`}>
+          <div data-align="meta-raw" className={`px-2.5 flex items-center gap-1 whitespace-nowrap overflow-hidden min-w-0 ${dbgRaw} ${dbgRawMis}`}>
             <span className="uppercase font-bold tracking-wider text-muted-foreground/80 shrink-0">Raw</span>
             <span className={`font-bold stability-${rawStability.bucket} truncate`}>{rawStability.label}</span>
             {rawDom != null && (
@@ -292,7 +330,7 @@ const AthleteCard = forwardRef<HTMLElement, AthleteCardProps>(({ athlete, byName
             )}
           </div>
           {/* Graded meta column — aligned to Graded price card */}
-          <div className={`px-2.5 flex items-center gap-1 whitespace-nowrap overflow-hidden min-w-0 ${dbgGrd}`}>
+          <div data-align="meta-grd" className={`px-2.5 flex items-center gap-1 whitespace-nowrap overflow-hidden min-w-0 ${dbgGrd} ${dbgGrdMis}`}>
             <span className="uppercase font-bold tracking-wider text-muted-foreground/80 shrink-0">Grd</span>
             <span className={`font-bold stability-${gradedStability.bucket} truncate`}>{gradedStability.label}</span>
             {gradedDom != null && (
