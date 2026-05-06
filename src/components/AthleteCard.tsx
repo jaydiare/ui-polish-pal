@@ -237,7 +237,7 @@ const AthleteCard = forwardRef<HTMLElement, AthleteCardProps>(({ athlete, byName
       <div className={`mt-3 grid gap-2 ${priceMode === "both" ? "grid-cols-2" : "grid-cols-1"}`}>
         {/* Raw */}
         {(priceMode === "raw" || priceMode === "both") && (
-          <div className={`p-2.5 rounded-lg bg-secondary/50 border border-border/40 ${dbgRaw}`}>
+          <div data-align="price-raw" className={`p-2.5 rounded-lg bg-secondary/50 border border-border/40 ${dbgRaw} ${dbgRawMis}`}>
             <div className="text-[9px] text-muted-foreground font-medium uppercase tracking-wider mb-1">Raw</div>
             <div className="text-base font-display font-bold text-foreground leading-none">{money}</div>
             {rawFallback && (
