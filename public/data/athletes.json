@@ -8,6 +8,33 @@
     "gemrate": "yes"
   },
   {
+    "name": "Jose Franco",
+    "sport": "Baseball",
+    "league": "MLB",
+    "team": "Reds",
+    "provider": "manual",
+    "searchKeyword": "Jose Franco Cincinnati Reds",
+    "gemrate": "yes"
+  },
+  {
+    "name": "Jesus Rodriguez",
+    "sport": "Baseball",
+    "league": "MLB",
+    "team": "Giants",
+    "provider": "manual",
+    "searchKeyword": "Jesus Rodriguez San Francisco Giants",
+    "gemrate": "yes"
+  },
+  {
+    "name": "Jedixson Paez",
+    "sport": "Baseball",
+    "league": "MLB",
+    "team": "White Sox",
+    "provider": "manual",
+    "searchKeyword": "Jedixson Paez Chicago White Sox",
+    "gemrate": "yes"
+  },
+  {
     "name": "Adrian Sanchez",
     "sport": "Baseball",
     "league": "MLB",
