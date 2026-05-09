@@ -1,13 +1,13 @@
 {
   "_meta": {
-    "updatedAt": "2026-05-09T02:27:04.530722+00:00",
+    "updatedAt": "2026-05-09T06:13:25.083405+00:00",
     "athleteCount": 460,
     "graders": [
       "PSA"
     ],
     "batchInfo": {
-      "startIdx": 280,
-      "endIdx": 300,
+      "startIdx": 300,
+      "endIdx": 320,
       "totalAthletes": 575
     }
   },
@@ -4445,16 +4445,16 @@
       "sport": "Baseball",
       "graders": {
         "PSA": {
-          "cards": 1197,
-          "gems": 784,
-          "grades": 30346,
+          "cards": 1198,
+          "gems": 785,
+          "grades": 30370,
           "gemRate": 3.0
         }
       },
       "totals": {
-        "cards": 1197,
-        "gems": 784,
-        "grades": 30346,
+        "cards": 1198,
+        "gems": 785,
+        "grades": 30370,
         "gemRate": 3.0
       }
     },
@@ -4481,16 +4481,16 @@
       "sport": "Baseball",
       "graders": {
         "PSA": {
-          "cards": 1127,
-          "gems": 5134,
-          "grades": 8778,
+          "cards": 1129,
+          "gems": 5137,
+          "grades": 8783,
           "gemRate": 58.0
         }
       },
       "totals": {
-        "cards": 1127,
-        "gems": 5134,
-        "grades": 8778,
+        "cards": 1129,
+        "gems": 5137,
+        "grades": 8783,
         "gemRate": 58.0
       }
     },
@@ -4555,14 +4555,14 @@
         "PSA": {
           "cards": 890,
           "gems": 2935,
-          "grades": 5548,
+          "grades": 5549,
           "gemRate": 53.0
         }
       },
       "totals": {
         "cards": 890,
         "gems": 2935,
-        "grades": 5548,
+        "grades": 5549,
         "gemRate": 53.0
       }
     },
@@ -8135,16 +8135,16 @@
       "sport": "Baseball",
       "graders": {
         "PSA": {
-          "cards": 2,
+          "cards": 3,
           "gems": 0,
-          "grades": 2,
+          "grades": 3,
           "gemRate": 0.0
         }
       },
       "totals": {
-        "cards": 2,
+        "cards": 3,
         "gems": 0,
-        "grades": 2,
+        "grades": 3,
         "gemRate": 0.0
       }
     },
