@@ -1,13 +1,13 @@
 {
   "_meta": {
-    "updatedAt": "2026-05-09T06:13:25.083405+00:00",
+    "updatedAt": "2026-05-09T09:15:47.681892+00:00",
     "athleteCount": 460,
     "graders": [
       "PSA"
     ],
     "batchInfo": {
-      "startIdx": 300,
-      "endIdx": 320,
+      "startIdx": 320,
+      "endIdx": 340,
       "totalAthletes": 575
     }
   },
@@ -4715,17 +4715,17 @@
       "sport": "Baseball",
       "graders": {
         "PSA": {
-          "cards": 37,
-          "gems": 99,
-          "grades": 226,
-          "gemRate": 44.0
+          "cards": 38,
+          "gems": 102,
+          "grades": 236,
+          "gemRate": 43.0
         }
       },
       "totals": {
-        "cards": 37,
-        "gems": 99,
-        "grades": 226,
-        "gemRate": 44.0
+        "cards": 38,
+        "gems": 102,
+        "grades": 236,
+        "gemRate": 43.0
       }
     },
     "Luis Rengifo": {
@@ -4913,16 +4913,16 @@
       "sport": "Baseball",
       "graders": {
         "PSA": {
-          "cards": 1780,
-          "gems": 3820,
-          "grades": 8376,
+          "cards": 1788,
+          "gems": 3841,
+          "grades": 8419,
           "gemRate": 46.0
         }
       },
       "totals": {
-        "cards": 1780,
-        "gems": 3820,
-        "grades": 8376,
+        "cards": 1788,
+        "gems": 3841,
+        "grades": 8419,
         "gemRate": 46.0
       }
     },
@@ -4933,14 +4933,14 @@
         "PSA": {
           "cards": 642,
           "gems": 1198,
-          "grades": 4969,
+          "grades": 4971,
           "gemRate": 24.0
         }
       },
       "totals": {
         "cards": 642,
         "gems": 1198,
-        "grades": 4969,
+        "grades": 4971,
         "gemRate": 24.0
       }
     },
@@ -4968,15 +4968,15 @@
       "graders": {
         "PSA": {
           "cards": 181,
-          "gems": 508,
-          "grades": 1096,
+          "gems": 509,
+          "grades": 1097,
           "gemRate": 46.0
         }
       },
       "totals": {
         "cards": 181,
-        "gems": 508,
-        "grades": 1096,
+        "gems": 509,
+        "grades": 1097,
         "gemRate": 46.0
       }
     },
