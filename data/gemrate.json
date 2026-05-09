@@ -1,13 +1,13 @@
 {
   "_meta": {
-    "updatedAt": "2026-05-08T20:55:29.235965+00:00",
+    "updatedAt": "2026-05-09T02:27:04.530722+00:00",
     "athleteCount": 460,
     "graders": [
       "PSA"
     ],
     "batchInfo": {
-      "startIdx": 260,
-      "endIdx": 280,
+      "startIdx": 280,
+      "endIdx": 300,
       "totalAthletes": 575
     }
   },
@@ -4158,15 +4158,15 @@
       "graders": {
         "PSA": {
           "cards": 355,
-          "gems": 522,
-          "grades": 1058,
+          "gems": 523,
+          "grades": 1059,
           "gemRate": 49.0
         }
       },
       "totals": {
         "cards": 355,
-        "gems": 522,
-        "grades": 1058,
+        "gems": 523,
+        "grades": 1059,
         "gemRate": 49.0
       }
     },
@@ -4213,14 +4213,14 @@
         "PSA": {
           "cards": 601,
           "gems": 1653,
-          "grades": 2823,
+          "grades": 2824,
           "gemRate": 59.0
         }
       },
       "totals": {
         "cards": 601,
         "gems": 1653,
-        "grades": 2823,
+        "grades": 2824,
         "gemRate": 59.0
       }
     },
@@ -4229,17 +4229,17 @@
       "sport": "Baseball",
       "graders": {
         "PSA": {
-          "cards": 68,
+          "cards": 69,
           "gems": 33,
-          "grades": 100,
-          "gemRate": 33.0
+          "grades": 103,
+          "gemRate": 32.0
         }
       },
       "totals": {
-        "cards": 68,
+        "cards": 69,
         "gems": 33,
-        "grades": 100,
-        "gemRate": 33.0
+        "grades": 103,
+        "gemRate": 32.0
       }
     },
     "Kelvim Escobar": {
@@ -4302,14 +4302,14 @@
       "graders": {
         "PSA": {
           "cards": 229,
-          "gems": 814,
+          "gems": 815,
           "grades": 1525,
           "gemRate": 53.0
         }
       },
       "totals": {
         "cards": 229,
-        "gems": 814,
+        "gems": 815,
         "grades": 1525,
         "gemRate": 53.0
       }
