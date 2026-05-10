@@ -14,7 +14,7 @@
     "team": "Reds",
     "provider": "manual",
     "searchKeyword": "Jose Franco Cincinnati Reds",
-    "gemrate": "yes"
+    "gemrate": "no"
   },
   {
     "name": "Jesus Rodriguez",
@@ -23,7 +23,7 @@
     "team": "Giants",
     "provider": "manual",
     "searchKeyword": "Jesus Rodriguez San Francisco Giants",
-    "gemrate": "yes"
+    "gemrate": "no"
   },
   {
     "name": "Jedixson Paez",
@@ -32,7 +32,7 @@
     "team": "White Sox",
     "provider": "manual",
     "searchKeyword": "Jedixson Paez Chicago White Sox",
-    "gemrate": "yes"
+    "gemrate": "no"
   },
   {
     "name": "Adrian Sanchez",
@@ -3879,7 +3879,7 @@
     "league": "MLB",
     "team": "Blue Jays",
     "provider": "manual",
-    "gemrate": "no"
+    "gemrate": "yes"
   },
   {
     "name": "Yolmer Sanchez",
