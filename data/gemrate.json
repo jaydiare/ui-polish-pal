@@ -1,13 +1,13 @@
 {
   "_meta": {
-    "updatedAt": "2026-05-10T09:26:35.477852+00:00",
+    "updatedAt": "2026-05-10T13:07:20.853177+00:00",
     "athleteCount": 460,
     "graders": [
       "PSA"
     ],
     "batchInfo": {
-      "startIdx": 440,
-      "endIdx": 460,
+      "startIdx": 460,
+      "endIdx": 480,
       "totalAthletes": 575
     }
   },
@@ -6966,15 +6966,15 @@
       "graders": {
         "PSA": {
           "cards": 230,
-          "gems": 547,
-          "grades": 974,
+          "gems": 548,
+          "grades": 975,
           "gemRate": 56.0
         }
       },
       "totals": {
         "cards": 230,
-        "gems": 547,
-        "grades": 974,
+        "gems": 548,
+        "grades": 975,
         "gemRate": 56.0
       }
     },
@@ -6983,16 +6983,16 @@
       "sport": "Baseball",
       "graders": {
         "PSA": {
-          "cards": 715,
-          "gems": 1043,
-          "grades": 2341,
+          "cards": 718,
+          "gems": 1045,
+          "grades": 2346,
           "gemRate": 45.0
         }
       },
       "totals": {
-        "cards": 715,
-        "gems": 1043,
-        "grades": 2341,
+        "cards": 718,
+        "gems": 1045,
+        "grades": 2346,
         "gemRate": 45.0
       }
     },
@@ -7073,16 +7073,16 @@
       "sport": "Baseball",
       "graders": {
         "PSA": {
-          "cards": 861,
+          "cards": 862,
           "gems": 1555,
-          "grades": 2707,
+          "grades": 2709,
           "gemRate": 57.0
         }
       },
       "totals": {
-        "cards": 861,
+        "cards": 862,
         "gems": 1555,
-        "grades": 2707,
+        "grades": 2709,
         "gemRate": 57.0
       }
     },
@@ -7092,16 +7092,16 @@
       "graders": {
         "PSA": {
           "cards": 140,
-          "gems": 205,
-          "grades": 392,
-          "gemRate": 52.0
+          "gems": 207,
+          "grades": 394,
+          "gemRate": 53.0
         }
       },
       "totals": {
         "cards": 140,
-        "gems": 205,
-        "grades": 392,
-        "gemRate": 52.0
+        "gems": 207,
+        "grades": 394,
+        "gemRate": 53.0
       }
     },
     "Wilmer Font": {
@@ -7164,15 +7164,15 @@
       "graders": {
         "PSA": {
           "cards": 353,
-          "gems": 1218,
-          "grades": 2288,
+          "gems": 1221,
+          "grades": 2294,
           "gemRate": 53.0
         }
       },
       "totals": {
         "cards": 353,
-        "gems": 1218,
-        "grades": 2288,
+        "gems": 1221,
+        "grades": 2294,
         "gemRate": 53.0
       }
     },
@@ -7201,14 +7201,14 @@
         "PSA": {
           "cards": 63,
           "gems": 31,
-          "grades": 111,
+          "grades": 112,
           "gemRate": 28.0
         }
       },
       "totals": {
         "cards": 63,
         "gems": 31,
-        "grades": 111,
+        "grades": 112,
         "gemRate": 28.0
       }
     },
@@ -7237,14 +7237,14 @@
         "PSA": {
           "cards": 65,
           "gems": 104,
-          "grades": 237,
+          "grades": 238,
           "gemRate": 44.0
         }
       },
       "totals": {
         "cards": 65,
         "gems": 104,
-        "grades": 237,
+        "grades": 238,
         "gemRate": 44.0
       }
     },
