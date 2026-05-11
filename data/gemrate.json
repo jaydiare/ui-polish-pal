@@ -1,13 +1,13 @@
 {
   "_meta": {
-    "updatedAt": "2026-05-11T14:38:11.471061+00:00",
+    "updatedAt": "2026-05-11T17:53:09.811532+00:00",
     "athleteCount": 462,
     "graders": [
       "PSA"
     ],
     "batchInfo": {
-      "startIdx": 0,
-      "endIdx": 20,
+      "startIdx": 20,
+      "endIdx": 40,
       "totalAthletes": 575
     }
   },
@@ -324,16 +324,16 @@
       "graders": {
         "PSA": {
           "cards": 57,
-          "gems": 22,
-          "grades": 108,
-          "gemRate": 20.0
+          "gems": 23,
+          "grades": 109,
+          "gemRate": 21.0
         }
       },
       "totals": {
         "cards": 57,
-        "gems": 22,
-        "grades": 108,
-        "gemRate": 20.0
+        "gems": 23,
+        "grades": 109,
+        "gemRate": 21.0
       }
     },
     "Andres Galarraga": {
@@ -341,16 +341,16 @@
       "sport": "Baseball",
       "graders": {
         "PSA": {
-          "cards": 593,
+          "cards": 594,
           "gems": 1182,
-          "grades": 6487,
+          "grades": 6490,
           "gemRate": 18.0
         }
       },
       "totals": {
-        "cards": 593,
+        "cards": 594,
         "gems": 1182,
-        "grades": 6487,
+        "grades": 6490,
         "gemRate": 18.0
       }
     },
@@ -360,15 +360,15 @@
       "graders": {
         "PSA": {
           "cards": 1059,
-          "gems": 2316,
-          "grades": 4292,
+          "gems": 2317,
+          "grades": 4293,
           "gemRate": 54.0
         }
       },
       "totals": {
         "cards": 1059,
-        "gems": 2316,
-        "grades": 4292,
+        "gems": 2317,
+        "grades": 4293,
         "gemRate": 54.0
       }
     },
