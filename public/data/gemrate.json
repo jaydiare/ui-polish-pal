@@ -1,13 +1,13 @@
 {
   "_meta": {
-    "updatedAt": "2026-05-13T06:45:41.062927+00:00",
+    "updatedAt": "2026-05-13T10:20:59.491919+00:00",
     "athleteCount": 462,
     "graders": [
       "PSA"
     ],
     "batchInfo": {
-      "startIdx": 200,
-      "endIdx": 220,
+      "startIdx": 220,
+      "endIdx": 240,
       "totalAthletes": 575
     }
   },
@@ -3185,16 +3185,16 @@
       "sport": "Baseball",
       "graders": {
         "PSA": {
-          "cards": 92,
-          "gems": 138,
-          "grades": 376,
+          "cards": 93,
+          "gems": 139,
+          "grades": 377,
           "gemRate": 37.0
         }
       },
       "totals": {
-        "cards": 92,
-        "gems": 138,
-        "grades": 376,
+        "cards": 93,
+        "gems": 139,
+        "grades": 377,
         "gemRate": 37.0
       }
     },
@@ -3241,14 +3241,14 @@
         "PSA": {
           "cards": 154,
           "gems": 887,
-          "grades": 1393,
+          "grades": 1394,
           "gemRate": 64.0
         }
       },
       "totals": {
         "cards": 154,
         "gems": 887,
-        "grades": 1393,
+        "grades": 1394,
         "gemRate": 64.0
       }
     },
@@ -3420,15 +3420,15 @@
       "graders": {
         "PSA": {
           "cards": 141,
-          "gems": 614,
-          "grades": 1439,
+          "gems": 618,
+          "grades": 1446,
           "gemRate": 43.0
         }
       },
       "totals": {
         "cards": 141,
-        "gems": 614,
-        "grades": 1439,
+        "gems": 618,
+        "grades": 1446,
         "gemRate": 43.0
       }
     },
@@ -8261,16 +8261,16 @@
       "sport": "Baseball",
       "graders": {
         "PSA": {
-          "cards": 984,
+          "cards": 985,
           "gems": 4736,
-          "grades": 8021,
+          "grades": 8024,
           "gemRate": 59.0
         }
       },
       "totals": {
-        "cards": 984,
+        "cards": 985,
         "gems": 4736,
-        "grades": 8021,
+        "grades": 8024,
         "gemRate": 59.0
       }
     },
