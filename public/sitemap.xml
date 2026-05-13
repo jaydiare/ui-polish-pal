@@ -16,6 +16,21 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://vzlasportselite.com/market-data</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://vzlasportselite.com/checklist-intel</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://vzlasportselite.com/blog/acuna-torres-tracker</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://vzlasportselite.com/methodology</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
