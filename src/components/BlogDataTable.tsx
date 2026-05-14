@@ -234,17 +234,20 @@ export default function BlogDataTable() {
       const scpGraded = scpGradedPrices?.[a.name] ?? scpGradedPrices?.[normName] ?? null;
 
       // Combined PSA Sold: prefer SCP PSA 9/10 (active source), fall back to eBay PSA 7/8
+      let psaSoldSource: "scp" | "ebay" | null = null;
       const psaSoldPrice = (() => {
         const scpParts = [scpGraded?.psa9, scpGraded?.psa10].filter(
           (v): v is number => v != null && Number.isFinite(v) && v > 0
         );
         if (scpParts.length) {
+          psaSoldSource = "scp";
           return Math.round((scpParts.reduce((s, v) => s + v, 0) / scpParts.length) * 100) / 100;
         }
         const ebayParts = [psa78?.psa7, psa78?.psa8].filter(
           (v): v is number => v != null && Number.isFinite(v) && v > 0
         );
         if (ebayParts.length) {
+          psaSoldSource = "ebay";
           return Math.round((ebayParts.reduce((s, v) => s + v, 0) / ebayParts.length) * 100) / 100;
         }
         return null;
@@ -258,6 +261,7 @@ export default function BlogDataTable() {
         gradedListedPrice: isGemrateEligible ? getEbayAvgNumber(a, gradedByName, gradedByKey) : null,
         gradedSoldPrice,
         psaSoldPrice,
+        psaSoldSource,
         scpRawPrice: scp?.scpRawPrice ?? null,
         stabilityCV,
         signalStrength,
