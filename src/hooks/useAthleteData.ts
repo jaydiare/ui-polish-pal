@@ -480,6 +480,7 @@ export function useAthleteData() {
     beckettPopMap,
     sgcPopMap,
     scpPrices,
+    scpGradedPrices,
     psa78SoldMap,
     snapshotFallback,
     athleteHistory,
