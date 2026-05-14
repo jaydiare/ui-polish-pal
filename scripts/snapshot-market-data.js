@@ -26,6 +26,7 @@ const ebayAvg = loadJson(join(DATA_DIR, "ebay-avg.json")) || {};
 const ebayGradedAvg = loadJson(join(DATA_DIR, "ebay-graded-avg.json")) || {};
 const ebaySoldAvg = loadJson(join(DATA_DIR, "ebay-sold-avg.json")) || {};
 const ebayGradedSoldAvg = loadJson(join(DATA_DIR, "ebay-graded-sold-avg.json")) || {};
+const ebayPsa78SoldAvg = loadJson(join(DATA_DIR, "ebay-psa78-sold-avg.json")) || {};
 const athleteHistory = loadJson(join(DATA_DIR, "athlete-history.json")) || {};
 const gemrate = loadJson(join(DATA_DIR, "gemrate.json"));
 const gemrateBeckett = loadJson(join(DATA_DIR, "gemrate_beckett.json"));
@@ -143,6 +144,18 @@ for (const a of athletes) {
   const normName = a.name.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
   const psaPop = gemratePopMap[a.name] ?? gemratePopMap[normName] ?? null;
 
+  const psa78Rec = ebayPsa78SoldAvg[a.name] ?? ebayPsa78SoldAvg[normName] ?? null;
+  const psa7Sold = (() => {
+    const g = psa78Rec?.psa7;
+    const v = Number(g?.taguchiSold ?? g?.medianSold ?? g?.avg);
+    return Number.isFinite(v) && v > 0 ? Math.round(v * 100) / 100 : null;
+  })();
+  const psa8Sold = (() => {
+    const g = psa78Rec?.psa8;
+    const v = Number(g?.taguchiSold ?? g?.medianSold ?? g?.avg);
+    return Number.isFinite(v) && v > 0 ? Math.round(v * 100) / 100 : null;
+  })();
+
   rows.push({
     name: a.name,
     sport: a.sport,
@@ -150,6 +163,8 @@ for (const a of athletes) {
     rawSoldPrice: getSoldPrice(soldRec),
     gradedListedPrice: getPrice(gradedRec),
     gradedSoldPrice: getSoldPrice(gradedSoldRec),
+    psa7SoldPrice: psa7Sold,
+    psa8SoldPrice: psa8Sold,
     stabilityCV: cv,
     signalStrength: getSignalSN(cv),
     psaPop: psaPop > 0 ? psaPop : null,

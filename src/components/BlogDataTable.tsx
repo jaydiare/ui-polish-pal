@@ -29,6 +29,8 @@ interface RowData {
   rawSoldPrice: number | null;
   gradedListedPrice: number | null;
   gradedSoldPrice: number | null;
+  psa7SoldPrice: number | null;
+  psa8SoldPrice: number | null;
   scpRawPrice: number | null;
   stabilityCV: number | null;
   signalStrength: number | null;
@@ -49,6 +51,8 @@ const VISIBLE_ROWS = 30;
 const FILTERABLE_COLS: { key: SortKey; label: string }[] = [
   { key: "rawListedPrice", label: "Raw Listed" },
   { key: "gradedListedPrice", label: "PSA Listed" },
+  { key: "psa7SoldPrice", label: "PSA 7 Sold" },
+  { key: "psa8SoldPrice", label: "PSA 8 Sold" },
   { key: "scpRawPrice", label: "SCP Raw" },
   { key: "psaPop", label: "PSA Pop" },
   { key: "bgsPop", label: "BGS Pop" },
@@ -57,7 +61,6 @@ const FILTERABLE_COLS: { key: SortKey; label: string }[] = [
   { key: "signalStrength", label: "S/N" },
   { key: "daysOnMarket", label: "Days on Mkt" },
   { key: "indexLevel", label: "Index" },
-  
 ];
 
 function fmtPrice(v: number | null) {
@@ -108,6 +111,7 @@ export default function BlogDataTable() {
     beckettPopMap,
     sgcPopMap,
     scpPrices,
+    psa78SoldMap,
     lastUpdated,
   } = useAthleteData();
 
@@ -225,6 +229,8 @@ export default function BlogDataTable() {
       const roiVal = calcRoi(signalStrength, rawSoldPrice, gradedSoldPrice, psaPop, stabilityCV);
 
       const scp = scpPrices?.[a.name];
+      const normName = a.name.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+      const psa78 = psa78SoldMap?.[a.name] ?? psa78SoldMap?.[normName] ?? null;
 
       return {
         name: a.name,
@@ -233,6 +239,8 @@ export default function BlogDataTable() {
         rawSoldPrice,
         gradedListedPrice: isGemrateEligible ? getEbayAvgNumber(a, gradedByName, gradedByKey) : null,
         gradedSoldPrice,
+        psa7SoldPrice: psa78?.psa7 ?? null,
+        psa8SoldPrice: psa78?.psa8 ?? null,
         scpRawPrice: scp?.scpRawPrice ?? null,
         stabilityCV,
         signalStrength,
@@ -245,7 +253,7 @@ export default function BlogDataTable() {
         roiTier: roiTier(roiVal),
       };
     });
-  }, [athletes, byName, byKey, gradedByName, gradedByKey, ebaySoldRaw, ebayGradedSoldRaw, athleteHistory, gemratePopMap, beckettPopMap, sgcPopMap, scpPrices]);
+  }, [athletes, byName, byKey, gradedByName, gradedByKey, ebaySoldRaw, ebayGradedSoldRaw, athleteHistory, gemratePopMap, beckettPopMap, sgcPopMap, scpPrices, psa78SoldMap]);
 
   const sorted = useMemo(() => {
     const copy = [...rows];
@@ -319,6 +327,8 @@ export default function BlogDataTable() {
     
     { key: "rawListedPrice", label: "Raw Listed", fmt: fmtPrice },
     { key: "gradedListedPrice", label: "PSA Listed", fmt: fmtPrice },
+    { key: "psa7SoldPrice", label: "PSA 7 Sold", fmt: fmtPrice },
+    { key: "psa8SoldPrice", label: "PSA 8 Sold", fmt: fmtPrice },
     { key: "scpRawPrice", label: "SCP Raw", fmt: fmtPrice },
     { key: "psaPop", label: "PSA Pop", fmt: (v) => v == null ? "—" : v.toLocaleString() },
     { key: "bgsPop", label: "BGS Pop", fmt: (v) => v == null ? "—" : v.toLocaleString() },
