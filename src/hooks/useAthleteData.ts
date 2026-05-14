@@ -124,6 +124,7 @@ export function useAthleteData() {
   const [beckettPopMap, setBeckettPopMap] = useState<Record<string, number>>({});
   const [sgcPopMap, setSgcPopMap] = useState<Record<string, number>>({});
   const [scpPrices, setScpPrices] = useState<Record<string, { scpRawPrice: number | null }>>({});
+  const [psa78SoldMap, setPsa78SoldMap] = useState<Record<string, { psa7: number | null; psa8: number | null }>>({});
   const [snapshotFallback, setSnapshotFallback] = useState<Record<string, { rawListedPrice: number | null; gradedListedPrice: number | null }>>({});
   const [lastUpdated, setLastUpdated] = useState<string>("—");
   const [visibleCount, setVisibleCount] = useState(PAGE_SIZE);
