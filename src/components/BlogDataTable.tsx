@@ -51,6 +51,8 @@ const VISIBLE_ROWS = 30;
 const FILTERABLE_COLS: { key: SortKey; label: string }[] = [
   { key: "rawListedPrice", label: "Raw Listed" },
   { key: "gradedListedPrice", label: "PSA Listed" },
+  { key: "psa7SoldPrice", label: "PSA 7 Sold" },
+  { key: "psa8SoldPrice", label: "PSA 8 Sold" },
   { key: "scpRawPrice", label: "SCP Raw" },
   { key: "psaPop", label: "PSA Pop" },
   { key: "bgsPop", label: "BGS Pop" },
@@ -59,7 +61,6 @@ const FILTERABLE_COLS: { key: SortKey; label: string }[] = [
   { key: "signalStrength", label: "S/N" },
   { key: "daysOnMarket", label: "Days on Mkt" },
   { key: "indexLevel", label: "Index" },
-  
 ];
 
 function fmtPrice(v: number | null) {
