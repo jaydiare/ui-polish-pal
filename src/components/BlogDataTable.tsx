@@ -30,6 +30,7 @@ interface RowData {
   gradedListedPrice: number | null;
   gradedSoldPrice: number | null;
   psaSoldPrice: number | null;
+  psaSoldSource: "scp" | "ebay" | null;
   scpRawPrice: number | null;
   stabilityCV: number | null;
   signalStrength: number | null;
@@ -233,17 +234,20 @@ export default function BlogDataTable() {
       const scpGraded = scpGradedPrices?.[a.name] ?? scpGradedPrices?.[normName] ?? null;
 
       // Combined PSA Sold: prefer SCP PSA 9/10 (active source), fall back to eBay PSA 7/8
+      let psaSoldSource: "scp" | "ebay" | null = null;
       const psaSoldPrice = (() => {
         const scpParts = [scpGraded?.psa9, scpGraded?.psa10].filter(
           (v): v is number => v != null && Number.isFinite(v) && v > 0
         );
         if (scpParts.length) {
+          psaSoldSource = "scp";
           return Math.round((scpParts.reduce((s, v) => s + v, 0) / scpParts.length) * 100) / 100;
         }
         const ebayParts = [psa78?.psa7, psa78?.psa8].filter(
           (v): v is number => v != null && Number.isFinite(v) && v > 0
         );
         if (ebayParts.length) {
+          psaSoldSource = "ebay";
           return Math.round((ebayParts.reduce((s, v) => s + v, 0) / ebayParts.length) * 100) / 100;
         }
         return null;
@@ -257,6 +261,7 @@ export default function BlogDataTable() {
         gradedListedPrice: isGemrateEligible ? getEbayAvgNumber(a, gradedByName, gradedByKey) : null,
         gradedSoldPrice,
         psaSoldPrice,
+        psaSoldSource,
         scpRawPrice: scp?.scpRawPrice ?? null,
         stabilityCV,
         signalStrength,
@@ -343,7 +348,28 @@ export default function BlogDataTable() {
     
     { key: "rawListedPrice", label: "Raw Listed", fmt: fmtPrice },
     { key: "gradedListedPrice", label: "PSA Listed", fmt: fmtPrice },
-    { key: "psaSoldPrice", label: "PSA Sold", fmt: fmtPrice },
+    { key: "psaSoldPrice", label: "PSA Sold", fmt: fmtPrice, render: (_v, row) => {
+      if (row.psaSoldPrice == null) return <span className="text-muted-foreground">—</span>;
+      const isScp = row.psaSoldSource === "scp";
+      const badgeLabel = isScp ? "SCP 9/10" : "eBay 7/8";
+      const badgeTitle = isScp
+        ? "Source: SportsCardsPro — average of PSA 9 and PSA 10 sold prices"
+        : "Source: eBay — average of PSA 7 and PSA 8 sold prices (fallback)";
+      const badgeClass = isScp
+        ? "bg-green-500/15 text-green-300 border-green-500/30"
+        : "bg-blue-500/15 text-blue-300 border-blue-500/30";
+      return (
+        <span className="inline-flex items-center gap-1.5">
+          <span>{fmtPrice(row.psaSoldPrice)}</span>
+          <span
+            title={badgeTitle}
+            className={`text-[10px] px-1.5 py-0.5 rounded border ${badgeClass} font-medium`}
+          >
+            {badgeLabel}
+          </span>
+        </span>
+      );
+    } },
     { key: "scpRawPrice", label: "SCP Raw", fmt: fmtPrice },
     { key: "psaPop", label: "PSA Pop", fmt: (v) => v == null ? "—" : v.toLocaleString() },
     { key: "bgsPop", label: "BGS Pop", fmt: (v) => v == null ? "—" : v.toLocaleString() },
