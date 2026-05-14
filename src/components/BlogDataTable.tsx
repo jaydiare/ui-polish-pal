@@ -109,6 +109,7 @@ export default function BlogDataTable() {
     beckettPopMap,
     sgcPopMap,
     scpPrices,
+    scpGradedPrices,
     psa78SoldMap,
     lastUpdated,
   } = useAthleteData();
