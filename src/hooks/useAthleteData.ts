@@ -124,6 +124,7 @@ export function useAthleteData() {
   const [beckettPopMap, setBeckettPopMap] = useState<Record<string, number>>({});
   const [sgcPopMap, setSgcPopMap] = useState<Record<string, number>>({});
   const [scpPrices, setScpPrices] = useState<Record<string, { scpRawPrice: number | null }>>({});
+  const [scpGradedPrices, setScpGradedPrices] = useState<Record<string, { psa9: number | null; psa10: number | null }>>({});
   const [psa78SoldMap, setPsa78SoldMap] = useState<Record<string, { psa7: number | null; psa8: number | null }>>({});
   const [snapshotFallback, setSnapshotFallback] = useState<Record<string, { rawListedPrice: number | null; gradedListedPrice: number | null }>>({});
   const [lastUpdated, setLastUpdated] = useState<string>("—");
@@ -227,7 +228,7 @@ export function useAthleteData() {
   // Fetch data on mount
   useEffect(() => {
     (async () => {
-      const [fetchedAthletes, fetchedEbay, fetchedGraded, fetchedSold, fetchedGradedSold, fetchedProgress, fetchedHistory, fetchedIndexHistory, fetchedGemrate, fetchedScp, fetchedSnapshot, fetchedBeckett, fetchedSgc, fetchedPsa78] = await Promise.all([
+      const [fetchedAthletes, fetchedEbay, fetchedGraded, fetchedSold, fetchedGradedSold, fetchedProgress, fetchedHistory, fetchedIndexHistory, fetchedGemrate, fetchedScp, fetchedSnapshot, fetchedBeckett, fetchedSgc, fetchedPsa78, fetchedScpGraded] = await Promise.all([
         fetchJson("https://raw.githubusercontent.com/jaydiare/ui-polish-pal/main/data/athletes.json"),
         fetchJson("https://raw.githubusercontent.com/jaydiare/ui-polish-pal/main/data/ebay-avg.json"),
         fetchJson("https://raw.githubusercontent.com/jaydiare/ui-polish-pal/main/data/ebay-graded-avg.json"),
@@ -242,6 +243,7 @@ export function useAthleteData() {
         fetchJson("https://raw.githubusercontent.com/jaydiare/ui-polish-pal/main/data/gemrate_beckett.json"),
         fetchJson("https://raw.githubusercontent.com/jaydiare/ui-polish-pal/main/data/gemrate_sgc.json"),
         fetchJson("https://raw.githubusercontent.com/jaydiare/ui-polish-pal/main/data/ebay-psa78-sold-avg.json"),
+        fetchJson("https://raw.githubusercontent.com/jaydiare/ui-polish-pal/main/data/scp-graded.json"),
       ]);
 
       const patchedEbay = enrichWithBasePrices(fetchedEbay as EbayAvgData | null);
@@ -345,6 +347,21 @@ export function useAthleteData() {
           if (norm !== name) pMap[norm] = { psa7, psa8 };
         }
         setPsa78SoldMap(pMap);
+      }
+      // SCP graded prices (PSA 9 / PSA 10)
+      if (fetchedScpGraded?.athletes && Array.isArray(fetchedScpGraded.athletes)) {
+        const gMap: Record<string, { psa9: number | null; psa10: number | null }> = {};
+        for (const a of fetchedScpGraded.athletes) {
+          const psa9 = Number(a?.scpPsa9Price);
+          const psa10 = Number(a?.scpPsa10Price);
+          const v9 = Number.isFinite(psa9) && psa9 > 0 ? Math.round(psa9 * 100) / 100 : null;
+          const v10 = Number.isFinite(psa10) && psa10 > 0 ? Math.round(psa10 * 100) / 100 : null;
+          if (v9 == null && v10 == null) continue;
+          gMap[a.name] = { psa9: v9, psa10: v10 };
+          const norm = String(a.name).normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+          if (norm !== a.name) gMap[norm] = { psa9: v9, psa10: v10 };
+        }
+        setScpGradedPrices(gMap);
       }
     })();
   }, []);
@@ -463,6 +480,7 @@ export function useAthleteData() {
     beckettPopMap,
     sgcPopMap,
     scpPrices,
+    scpGradedPrices,
     psa78SoldMap,
     snapshotFallback,
     athleteHistory,
