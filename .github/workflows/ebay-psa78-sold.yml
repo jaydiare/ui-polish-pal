@@ -1,0 +1,66 @@
+name: Update eBay PSA 7 & PSA 8 sold averages (batched)
+
+on:
+  schedule:
+    # Every 6 hours, offset 30 min from main graded scraper to avoid overlap.
+    - cron: "30 */6 * * *"
+  workflow_dispatch:
+    inputs:
+      only:
+        description: "Single athlete name (comma-separated for multi) — leave empty for batch"
+        required: false
+        default: ""
+
+concurrency:
+  group: ebay-psa78-sold-avg-main
+  cancel-in-progress: true
+
+permissions:
+  contents: write
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Install deps
+        if: hashFiles('package-lock.json') != ''
+        run: npm install --no-audit --no-fund
+
+      - name: Update eBay PSA 7/8 sold averages (batch of 8)
+        run: node scripts/psa78-sold-update-ebay-avg.js
+        env:
+          EBAY_ONLY: ${{ github.event.inputs.only }}
+
+      - name: Copy to public
+        run: |
+          mkdir -p public/data
+          cp data/ebay-psa78-sold-avg.json public/data/ebay-psa78-sold-avg.json 2>/dev/null || true
+
+      - name: Commit & push (rebase-safe)
+        run: |
+          set -e
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/ebay-psa78-sold-avg.json data/ebay-psa78-sold-progress.json public/data/ebay-psa78-sold-avg.json
+
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+            exit 0
+          fi
+
+          git commit -m "Update eBay PSA 7/8 sold averages (batch)"
+          git fetch origin main
+          git rebase --autostash origin/main || (git rebase --abort && git pull --rebase origin main)
+          git push origin HEAD:main
