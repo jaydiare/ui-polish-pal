@@ -1,0 +1,65 @@
+{
+  "_meta": {
+    "updatedAt": "2026-05-14T09:17:04.830Z",
+    "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
+    "note": "PSA 7 + PSA 8 sold comps. Two queries per athlete. Strict per-grade title filter. Taguchi winsorized mean. USD via CBSA.",
+    "targetGrades": [
+      7,
+      8
+    ],
+    "batchInfo": {
+      "startIdx": 0,
+      "endIdx": 8,
+      "totalAthletes": 462
+    },
+    "maxPages": 3,
+    "minSampleSize": 3,
+    "categoryId": "261328",
+    "listingStat": {
+      "method": "taguchi_winsorized_mean",
+      "trimPercent": 0.4
+    },
+    "stabilityStat": {
+      "method": "cv",
+      "formula": "sd/mean",
+      "sample": "winsorized",
+      "trimPercent": 0.4
+    },
+    "fx": {
+      "source": "CBSA Exchange Rates API",
+      "asOf": "2026-05-15T00:00:00.000Z"
+    }
+  },
+  "Adbert Alzolay": {
+    "error": "eBay fetch failed (403)",
+    "erroredAt": "2026-05-14T09:17:20.316Z"
+  },
+  "Adrian Sanchez": {
+    "error": "eBay fetch failed (403)",
+    "erroredAt": "2026-05-14T09:17:41.529Z"
+  },
+  "Al Pedrique": {
+    "error": "eBay fetch failed (403)",
+    "erroredAt": "2026-05-14T09:18:02.765Z"
+  },
+  "Albert Suarez": {
+    "error": "eBay fetch failed (403)",
+    "erroredAt": "2026-05-14T09:18:23.120Z"
+  },
+  "Alberto Callaspo": {
+    "error": "eBay fetch failed (403)",
+    "erroredAt": "2026-05-14T09:18:43.902Z"
+  },
+  "Alberto Gonzalez": {
+    "error": "eBay fetch failed (403)",
+    "erroredAt": "2026-05-14T09:19:05.593Z"
+  },
+  "Alcides Escobar": {
+    "error": "eBay fetch failed (403)",
+    "erroredAt": "2026-05-14T09:19:29.082Z"
+  },
+  "Alejandro Freire": {
+    "error": "eBay fetch failed (403)",
+    "erroredAt": "2026-05-14T09:19:50.255Z"
+  }
+}
