@@ -348,6 +348,21 @@ export function useAthleteData() {
         }
         setPsa78SoldMap(pMap);
       }
+      // SCP graded prices (PSA 9 / PSA 10)
+      if (fetchedScpGraded?.athletes && Array.isArray(fetchedScpGraded.athletes)) {
+        const gMap: Record<string, { psa9: number | null; psa10: number | null }> = {};
+        for (const a of fetchedScpGraded.athletes) {
+          const psa9 = Number(a?.scpPsa9Price);
+          const psa10 = Number(a?.scpPsa10Price);
+          const v9 = Number.isFinite(psa9) && psa9 > 0 ? Math.round(psa9 * 100) / 100 : null;
+          const v10 = Number.isFinite(psa10) && psa10 > 0 ? Math.round(psa10 * 100) / 100 : null;
+          if (v9 == null && v10 == null) continue;
+          gMap[a.name] = { psa9: v9, psa10: v10 };
+          const norm = String(a.name).normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+          if (norm !== a.name) gMap[norm] = { psa9: v9, psa10: v10 };
+        }
+        setScpGradedPrices(gMap);
+      }
     })();
   }, []);
 
