@@ -237,8 +237,11 @@ export default function BlogDataTable() {
         rawSoldPrice,
         gradedListedPrice: isGemrateEligible ? getEbayAvgNumber(a, gradedByName, gradedByKey) : null,
         gradedSoldPrice,
-        psa7SoldPrice: psa78?.psa7 ?? null,
-        psa8SoldPrice: psa78?.psa8 ?? null,
+        psaSoldPrice: (() => {
+          const parts = [psa78?.psa7, psa78?.psa8].filter((v): v is number => v != null && Number.isFinite(v) && v > 0);
+          if (!parts.length) return null;
+          return Math.round((parts.reduce((s, v) => s + v, 0) / parts.length) * 100) / 100;
+        })(),
         scpRawPrice: scp?.scpRawPrice ?? null,
         stabilityCV,
         signalStrength,
