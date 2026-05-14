@@ -463,6 +463,7 @@ export function useAthleteData() {
     beckettPopMap,
     sgcPopMap,
     scpPrices,
+    psa78SoldMap,
     snapshotFallback,
     athleteHistory,
     indexHistory,
