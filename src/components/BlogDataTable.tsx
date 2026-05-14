@@ -29,8 +29,7 @@ interface RowData {
   rawSoldPrice: number | null;
   gradedListedPrice: number | null;
   gradedSoldPrice: number | null;
-  psa7SoldPrice: number | null;
-  psa8SoldPrice: number | null;
+  psaSoldPrice: number | null;
   scpRawPrice: number | null;
   stabilityCV: number | null;
   signalStrength: number | null;
@@ -51,8 +50,7 @@ const VISIBLE_ROWS = 30;
 const FILTERABLE_COLS: { key: SortKey; label: string }[] = [
   { key: "rawListedPrice", label: "Raw Listed" },
   { key: "gradedListedPrice", label: "PSA Listed" },
-  { key: "psa7SoldPrice", label: "PSA 7 Sold" },
-  { key: "psa8SoldPrice", label: "PSA 8 Sold" },
+  { key: "psaSoldPrice", label: "PSA Sold" },
   { key: "scpRawPrice", label: "SCP Raw" },
   { key: "psaPop", label: "PSA Pop" },
   { key: "bgsPop", label: "BGS Pop" },
@@ -239,8 +237,11 @@ export default function BlogDataTable() {
         rawSoldPrice,
         gradedListedPrice: isGemrateEligible ? getEbayAvgNumber(a, gradedByName, gradedByKey) : null,
         gradedSoldPrice,
-        psa7SoldPrice: psa78?.psa7 ?? null,
-        psa8SoldPrice: psa78?.psa8 ?? null,
+        psaSoldPrice: (() => {
+          const parts = [psa78?.psa7, psa78?.psa8].filter((v): v is number => v != null && Number.isFinite(v) && v > 0);
+          if (!parts.length) return null;
+          return Math.round((parts.reduce((s, v) => s + v, 0) / parts.length) * 100) / 100;
+        })(),
         scpRawPrice: scp?.scpRawPrice ?? null,
         stabilityCV,
         signalStrength,
@@ -327,8 +328,7 @@ export default function BlogDataTable() {
     
     { key: "rawListedPrice", label: "Raw Listed", fmt: fmtPrice },
     { key: "gradedListedPrice", label: "PSA Listed", fmt: fmtPrice },
-    { key: "psa7SoldPrice", label: "PSA 7 Sold", fmt: fmtPrice },
-    { key: "psa8SoldPrice", label: "PSA 8 Sold", fmt: fmtPrice },
+    { key: "psaSoldPrice", label: "PSA Sold", fmt: fmtPrice },
     { key: "scpRawPrice", label: "SCP Raw", fmt: fmtPrice },
     { key: "psaPop", label: "PSA Pop", fmt: (v) => v == null ? "—" : v.toLocaleString() },
     { key: "bgsPop", label: "BGS Pop", fmt: (v) => v == null ? "—" : v.toLocaleString() },
