@@ -229,6 +229,8 @@ export default function BlogDataTable() {
       const roiVal = calcRoi(signalStrength, rawSoldPrice, gradedSoldPrice, psaPop, stabilityCV);
 
       const scp = scpPrices?.[a.name];
+      const normName = a.name.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+      const psa78 = psa78SoldMap?.[a.name] ?? psa78SoldMap?.[normName] ?? null;
 
       return {
         name: a.name,
@@ -237,6 +239,8 @@ export default function BlogDataTable() {
         rawSoldPrice,
         gradedListedPrice: isGemrateEligible ? getEbayAvgNumber(a, gradedByName, gradedByKey) : null,
         gradedSoldPrice,
+        psa7SoldPrice: psa78?.psa7 ?? null,
+        psa8SoldPrice: psa78?.psa8 ?? null,
         scpRawPrice: scp?.scpRawPrice ?? null,
         stabilityCV,
         signalStrength,
@@ -249,7 +253,7 @@ export default function BlogDataTable() {
         roiTier: roiTier(roiVal),
       };
     });
-  }, [athletes, byName, byKey, gradedByName, gradedByKey, ebaySoldRaw, ebayGradedSoldRaw, athleteHistory, gemratePopMap, beckettPopMap, sgcPopMap, scpPrices]);
+  }, [athletes, byName, byKey, gradedByName, gradedByKey, ebaySoldRaw, ebayGradedSoldRaw, athleteHistory, gemratePopMap, beckettPopMap, sgcPopMap, scpPrices, psa78SoldMap]);
 
   const sorted = useMemo(() => {
     const copy = [...rows];
