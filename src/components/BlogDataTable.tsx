@@ -230,6 +230,24 @@ export default function BlogDataTable() {
       const scp = scpPrices?.[a.name];
       const normName = a.name.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
       const psa78 = psa78SoldMap?.[a.name] ?? psa78SoldMap?.[normName] ?? null;
+      const scpGraded = scpGradedPrices?.[a.name] ?? scpGradedPrices?.[normName] ?? null;
+
+      // Combined PSA Sold: prefer SCP PSA 9/10 (active source), fall back to eBay PSA 7/8
+      const psaSoldPrice = (() => {
+        const scpParts = [scpGraded?.psa9, scpGraded?.psa10].filter(
+          (v): v is number => v != null && Number.isFinite(v) && v > 0
+        );
+        if (scpParts.length) {
+          return Math.round((scpParts.reduce((s, v) => s + v, 0) / scpParts.length) * 100) / 100;
+        }
+        const ebayParts = [psa78?.psa7, psa78?.psa8].filter(
+          (v): v is number => v != null && Number.isFinite(v) && v > 0
+        );
+        if (ebayParts.length) {
+          return Math.round((ebayParts.reduce((s, v) => s + v, 0) / ebayParts.length) * 100) / 100;
+        }
+        return null;
+      })();
 
       return {
         name: a.name,
@@ -238,11 +256,7 @@ export default function BlogDataTable() {
         rawSoldPrice,
         gradedListedPrice: isGemrateEligible ? getEbayAvgNumber(a, gradedByName, gradedByKey) : null,
         gradedSoldPrice,
-        psaSoldPrice: (() => {
-          const parts = [psa78?.psa7, psa78?.psa8].filter((v): v is number => v != null && Number.isFinite(v) && v > 0);
-          if (!parts.length) return null;
-          return Math.round((parts.reduce((s, v) => s + v, 0) / parts.length) * 100) / 100;
-        })(),
+        psaSoldPrice,
         scpRawPrice: scp?.scpRawPrice ?? null,
         stabilityCV,
         signalStrength,
@@ -255,7 +269,7 @@ export default function BlogDataTable() {
         roiTier: roiTier(roiVal),
       };
     });
-  }, [athletes, byName, byKey, gradedByName, gradedByKey, ebaySoldRaw, ebayGradedSoldRaw, athleteHistory, gemratePopMap, beckettPopMap, sgcPopMap, scpPrices, psa78SoldMap]);
+  }, [athletes, byName, byKey, gradedByName, gradedByKey, ebaySoldRaw, ebayGradedSoldRaw, athleteHistory, gemratePopMap, beckettPopMap, sgcPopMap, scpPrices, scpGradedPrices, psa78SoldMap]);
 
   const sorted = useMemo(() => {
     const copy = [...rows];
