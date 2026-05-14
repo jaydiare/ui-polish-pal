@@ -7,7 +7,7 @@ import VzlaSideBanner from "@/components/VzlaSideBanner";
 import BackToTop from "@/components/BackToTop";
 
 const VzlaMarketInsights = lazy(() => import("@/components/VzlaMarketInsights"));
-const VzlaPsa78Panel = lazy(() => import("@/components/VzlaPsa78Panel"));
+
 
 const VzlaHowToMoney = lazy(() => import("@/components/VzlaHowToMoney"));
 
