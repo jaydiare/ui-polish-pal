@@ -327,6 +327,8 @@ export default function BlogDataTable() {
     
     { key: "rawListedPrice", label: "Raw Listed", fmt: fmtPrice },
     { key: "gradedListedPrice", label: "PSA Listed", fmt: fmtPrice },
+    { key: "psa7SoldPrice", label: "PSA 7 Sold", fmt: fmtPrice },
+    { key: "psa8SoldPrice", label: "PSA 8 Sold", fmt: fmtPrice },
     { key: "scpRawPrice", label: "SCP Raw", fmt: fmtPrice },
     { key: "psaPop", label: "PSA Pop", fmt: (v) => v == null ? "—" : v.toLocaleString() },
     { key: "bgsPop", label: "BGS Pop", fmt: (v) => v == null ? "—" : v.toLocaleString() },
