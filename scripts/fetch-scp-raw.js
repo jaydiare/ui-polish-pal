@@ -160,15 +160,29 @@ async function main() {
     }
   }
 
+  // Merge mode: when running in single-athlete mode (SCP_ONLY), preserve
+  // existing entries for everyone else instead of overwriting the file.
+  let merged = results;
+  let mergedHits = hits;
+  if (only) {
+    const existing = loadJson(join(DATA_DIR, "scp-raw.json"));
+    const existingAthletes = existing?.athletes || [];
+    const updatedNames = new Set(results.map((r) => r.name));
+    const kept = existingAthletes.filter((a) => !updatedNames.has(a.name));
+    merged = [...kept, ...results];
+    mergedHits = merged.filter((a) => a.scpRawPrice != null).length;
+    console.log(`🔀 Merge mode: kept ${kept.length} existing, updated ${results.length}`);
+  }
+
   const output = {
     _meta: {
       updatedAt: new Date().toISOString(),
-      athleteCount: results.length,
-      hits,
+      athleteCount: merged.length,
+      hits: mergedHits,
       type: "raw",
       description: "SportsCardsPro RAW price lookup (query: Name Sport Raw)",
     },
-    athletes: results,
+    athletes: merged,
   };
 
   mkdirSync(DATA_DIR, { recursive: true });
