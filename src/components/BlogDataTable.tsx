@@ -30,6 +30,7 @@ interface RowData {
   gradedListedPrice: number | null;
   gradedSoldPrice: number | null;
   psaSoldPrice: number | null;
+  psaSoldSource: "scp" | "ebay" | null;
   scpRawPrice: number | null;
   stabilityCV: number | null;
   signalStrength: number | null;
