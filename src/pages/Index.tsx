@@ -69,9 +69,6 @@ const Index = () => {
         <Suspense fallback={null}>
           <VzlaMarketInsights />
         </Suspense>
-        <Suspense fallback={null}>
-          <VzlaPsa78Panel />
-        </Suspense>
         <Suspense fallback={<div className="min-h-[200px]" />}>
           <VzlaHowToMoney />
           <VzlaBudgetBar
