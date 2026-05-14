@@ -7,7 +7,7 @@ import VzlaSideBanner from "@/components/VzlaSideBanner";
 import BackToTop from "@/components/BackToTop";
 
 const VzlaMarketInsights = lazy(() => import("@/components/VzlaMarketInsights"));
-const VzlaPsa78Panel = lazy(() => import("@/components/VzlaPsa78Panel"));
+
 
 const VzlaHowToMoney = lazy(() => import("@/components/VzlaHowToMoney"));
 
@@ -68,9 +68,6 @@ const Index = () => {
         <VzlaIndexCards athletes={athletes} byName={byName} byKey={byKey} indexHistory={indexHistory} />
         <Suspense fallback={null}>
           <VzlaMarketInsights />
-        </Suspense>
-        <Suspense fallback={null}>
-          <VzlaPsa78Panel />
         </Suspense>
         <Suspense fallback={<div className="min-h-[200px]" />}>
           <VzlaHowToMoney />
