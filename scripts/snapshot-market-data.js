@@ -26,6 +26,7 @@ const ebayAvg = loadJson(join(DATA_DIR, "ebay-avg.json")) || {};
 const ebayGradedAvg = loadJson(join(DATA_DIR, "ebay-graded-avg.json")) || {};
 const ebaySoldAvg = loadJson(join(DATA_DIR, "ebay-sold-avg.json")) || {};
 const ebayGradedSoldAvg = loadJson(join(DATA_DIR, "ebay-graded-sold-avg.json")) || {};
+const ebayPsa78SoldAvg = loadJson(join(DATA_DIR, "ebay-psa78-sold-avg.json")) || {};
 const athleteHistory = loadJson(join(DATA_DIR, "athlete-history.json")) || {};
 const gemrate = loadJson(join(DATA_DIR, "gemrate.json"));
 const gemrateBeckett = loadJson(join(DATA_DIR, "gemrate_beckett.json"));
