@@ -34,10 +34,17 @@ jobs:
           SCP_ONLY: ${{ github.event.inputs.only }}
         run: node scripts/fetch-scp-graded.js
 
-      - name: Commit & push
+      - name: Commit & push (rebase-safe)
         run: |
+          set -e
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add data/scp-graded.json public/data/scp-graded.json
-          git diff --cached --quiet || git commit -m "🏆 Bi-weekly SCP graded prices $(date -u +%Y-%m-%d)"
-          git push
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+            exit 0
+          fi
+          git commit -m "🏆 Bi-weekly SCP graded prices $(date -u +%Y-%m-%d)"
+          git fetch origin main
+          git rebase --autostash origin/main || (git rebase --abort && git pull --rebase origin main)
+          git push origin HEAD:main
