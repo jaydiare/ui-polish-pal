@@ -21,6 +21,7 @@ const NotFound = lazy(() => import("./pages/NotFound"));
 const Toaster = lazy(() => import("@/components/ui/toaster").then(m => ({ default: m.Toaster })));
 const Sonner = lazy(() => import("@/components/ui/sonner").then(m => ({ default: m.Toaster })));
 const CookieConsent = lazy(() => import("./components/CookieConsent"));
+const MarketMoversPopup = lazy(() => import("./components/MarketMoversPopup"));
 
 const queryClient = new QueryClient();
 
@@ -54,6 +55,7 @@ const App = () => (
         </Suspense>
         <Suspense fallback={null}>
           <CookieConsent />
+          <MarketMoversPopup />
         </Suspense>
       </BrowserRouter>
     </TooltipProvider>
