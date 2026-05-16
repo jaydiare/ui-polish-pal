@@ -4,7 +4,7 @@ import { X } from "lucide-react";
 
 const CONSENT_KEY = "vzla_cookie_consent";
 const PROMO_URL = "https://marketmoversapp.com/vzlaelite";
-const VIDEO_SRC = "/assets/market-movers-promo.mp4";
+const LOGO_SRC = "/assets/mm-full-logo-white.svg";
 
 const MarketMoversPopup = () => {
   const [visible, setVisible] = useState(false);
@@ -52,14 +52,9 @@ const MarketMoversPopup = () => {
               <X size={16} />
             </button>
             <a href={PROMO_URL} target="_blank" rel="noopener noreferrer" className="block">
-              <video
-                src={VIDEO_SRC}
-                autoPlay
-                muted
-                loop
-                playsInline
-                className="w-full h-auto bg-black"
-              />
+              <div className="w-full bg-background flex items-center justify-center p-8">
+                <img src={LOGO_SRC} alt="Market Movers App" className="w-full max-w-xs h-auto" />
+              </div>
               <div className="p-4 text-center">
                 <p className="text-sm text-foreground/85 mb-2">
                   Track the sports card market in real time.
