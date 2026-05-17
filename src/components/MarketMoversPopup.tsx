@@ -52,8 +52,12 @@ const MarketMoversPopup = () => {
               <X size={16} />
             </button>
             <a href={PROMO_URL} target="_blank" rel="noopener noreferrer" className="block">
-              <div className="w-full bg-background flex items-center justify-center p-8">
-                <img src={LOGO_SRC} alt="Market Movers App" className="w-full max-w-xs h-auto" />
+              <div className="w-full bg-background flex items-center justify-center px-6 py-10 sm:px-10 sm:py-14">
+                <img
+                  src={LOGO_SRC}
+                  alt="Market Movers App"
+                  className="w-[70%] max-w-[260px] sm:max-w-[300px] h-auto object-contain mx-auto"
+                />
               </div>
               <div className="p-4 text-center">
                 <p className="text-sm text-foreground/85 mb-2">
