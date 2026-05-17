@@ -51,6 +51,17 @@ const MarketMoversPopup = () => {
 
   const close = () => setVisible(false);
 
+  // Close only when the pointer-down AND pointer-up both happen on the overlay itself.
+  // Prevents accidental close when a drag/selection starts on the dialog and ends on the overlay.
+  const downOnOverlayRef = useRef(false);
+  const handleOverlayPointerDown = (e: React.PointerEvent<HTMLDivElement>) => {
+    downOnOverlayRef.current = e.target === e.currentTarget;
+  };
+  const handleOverlayClick = (e: React.MouseEvent<HTMLDivElement>) => {
+    if (e.target === e.currentTarget && downOnOverlayRef.current) close();
+    downOnOverlayRef.current = false;
+  };
+
   return (
     <AnimatePresence>
       {visible && (
@@ -59,11 +70,9 @@ const MarketMoversPopup = () => {
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           className="fixed inset-0 z-[10001] flex items-center justify-center bg-background/80 backdrop-blur-sm p-4"
-          onClick={close}
-          role="dialog"
-          aria-modal="true"
-          aria-labelledby="mm-popup-title"
-          aria-describedby="mm-popup-desc"
+          onPointerDown={handleOverlayPointerDown}
+          onClick={handleOverlayClick}
+          aria-hidden="true"
         >
           <motion.div
             initial={{ scale: 0.9, y: 20 }}
@@ -71,7 +80,10 @@ const MarketMoversPopup = () => {
             exit={{ scale: 0.9, y: 20 }}
             transition={{ duration: 0.25 }}
             className="relative w-full max-w-md glass-panel rounded-2xl overflow-hidden border border-border shadow-2xl"
-            onClick={(e) => e.stopPropagation()}
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="mm-popup-title"
+            aria-describedby="mm-popup-desc"
           >
             <button
               ref={closeBtnRef}
@@ -111,6 +123,7 @@ const MarketMoversPopup = () => {
       )}
     </AnimatePresence>
   );
+
 };
 
 export default MarketMoversPopup;
