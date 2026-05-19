@@ -75,6 +75,7 @@ const VzlaNavbar = () => {
             { label: "Market Intel", to: "/data" },
             { label: "Market Data", to: "/market-data" },
             { label: "Checklist Intel", to: "/checklist-intel" },
+            { label: "MLB Leaders", to: "/mlb-venezuelan-leaders" },
           ].map((item) => (
             <li key={item.label} role="none">
               <Link
