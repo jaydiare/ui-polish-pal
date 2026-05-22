@@ -277,6 +277,9 @@ export default function MlbVenezuelanLeaders() {
             ids.add(p.id);
           }
         }
+        // Honorary Venezuelans: born elsewhere but identify as Venezuelan.
+        // Jesus Luzardo (MLB ID 666200) — born in Peru to Venezuelan parents.
+        ids.add(666200);
 
         const hitSplits: StatSplit[] = hitJson?.stats?.[0]?.splits ?? [];
         const pitchSplits: StatSplit[] = pitchJson?.stats?.[0]?.splits ?? [];
