@@ -1,27 +1,14 @@
 {
   "_meta": {
-    "updatedAt": "2026-05-23T08:26:34.501Z",
+    "updatedAt": "2026-05-24T08:37:20.800Z",
     "period": {
-      "start": "2026-04-23",
-      "end": "2026-05-23"
+      "start": "2026-04-24",
+      "end": "2026-05-24"
     }
   },
-  "placements": {
-    "unknown": {
-      "clicks": 0,
-      "impressions": 0,
-      "ctr": 0,
-      "earnings": 0,
-      "conversions": 0
-    }
-  },
+  "placements": {},
   "bestBanner": null,
-  "hotSellers": [
-    {
-      "name": "Carl Herrera",
-      "conversions": 1
-    }
-  ],
+  "hotSellers": [],
   "campaigns": [
     {}
   ]
