@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "updatedAt": "2026-05-25T15:38:29.389Z",
+    "updatedAt": "2026-05-25T20:11:21.728Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "PSA 7 + PSA 8 sold comps. Two queries per athlete. Strict per-grade title filter. Taguchi winsorized mean. USD via CBSA.",
     "targetGrades": [
@@ -8,8 +8,8 @@
       8
     ],
     "batchInfo": {
-      "startIdx": 360,
-      "endIdx": 368,
+      "startIdx": 368,
+      "endIdx": 376,
       "totalAthletes": 464
     },
     "maxPages": 3,
@@ -1493,5 +1493,37 @@
   "Robert Suarez": {
     "error": "eBay fetch failed (403)",
     "erroredAt": "2026-05-25T15:41:19.786Z"
+  },
+  "Roberto Petagine": {
+    "error": "eBay fetch failed (403)",
+    "erroredAt": "2026-05-25T20:11:37.401Z"
+  },
+  "Roberto Rodriguez": {
+    "error": "eBay fetch failed (403)",
+    "erroredAt": "2026-05-25T20:11:59.293Z"
+  },
+  "Robinson Chirinos": {
+    "error": "eBay fetch failed (403)",
+    "erroredAt": "2026-05-25T20:12:20.631Z"
+  },
+  "Roger Cedeno": {
+    "error": "eBay fetch failed (403)",
+    "erroredAt": "2026-05-25T20:12:42.218Z"
+  },
+  "Ronald Acuna Jr.": {
+    "error": "eBay fetch failed (403)",
+    "erroredAt": "2026-05-25T20:13:02.090Z"
+  },
+  "Ronald Belisario": {
+    "error": "eBay fetch failed (403)",
+    "erroredAt": "2026-05-25T20:13:24.276Z"
+  },
+  "Ronald Herrera": {
+    "error": "eBay fetch failed (403)",
+    "erroredAt": "2026-05-25T20:13:46.605Z"
+  },
+  "Ronald Torreyes": {
+    "error": "eBay fetch failed (403)",
+    "erroredAt": "2026-05-25T20:14:10.666Z"
   }
 }
