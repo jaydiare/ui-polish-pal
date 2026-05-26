@@ -8,6 +8,32 @@
     "gemrate": "yes"
   },
   {
+    "name": "Victor Bericoto",
+    "sport": "Baseball",
+    "league": "MLB",
+    "team": "Giants",
+    "provider": "manual",
+    "gemrate": "yes"
+  },
+  {
+    "name": "Omar Martinez",
+    "sport": "Baseball",
+    "league": "MLB",
+    "team": "Angles",
+    "provider": "manual",
+    "searchKeyword": "Omar Martinez LA Angels",
+    "gemrate": "yes"
+  },
+  {
+    "name": "Gabriel Gonzalez",
+    "sport": "Baseball",
+    "league": "MLB",
+    "team": "Twins",
+    "provider": "manual",
+    "searchKeyword": "Victor Bericoto Twins",
+    "gemrate": "yes"
+  },
+  {
     "name": "Jose Franco",
     "sport": "Baseball",
     "league": "MLB",
