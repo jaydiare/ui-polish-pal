@@ -327,19 +327,28 @@ export default function MlbVenezuelanLeaders() {
       />
       <VzlaNavbar />
       <main className="max-w-6xl mx-auto px-4 sm:px-6 py-10">
-        <header className="mb-8">
-          <h1 className="text-3xl sm:text-4xl font-display font-bold text-flag-gradient">
-            Venezuelan MLB Leaders · {SEASON}
-          </h1>
-          <p className="text-sm text-muted-foreground mt-2 max-w-2xl text-pretty">
-            Current-season MLB statistical leaders among Venezuelan-born players, across
-            batting, pitching, and fielding. Tap any name to search their cards on eBay.
-          </p>
-          {updatedAt && (
-            <p className="text-[11px] text-muted-foreground mt-2">
-              Updated {updatedAt} · Source: MLB Stats API
+        <header className="mb-8 flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4">
+          <div>
+            <h1 className="text-3xl sm:text-4xl font-display font-bold text-flag-gradient">
+              Venezuelan MLB Leaders · {SEASON}
+            </h1>
+            <p className="text-sm text-muted-foreground mt-2 max-w-2xl text-pretty">
+              Current-season MLB statistical leaders among Venezuelan-born players, across
+              batting, pitching, and fielding. Tap any name to search their cards on eBay.
             </p>
-          )}
+            {updatedAt && (
+              <p className="text-[11px] text-muted-foreground mt-2">
+                Updated {updatedAt} · Source: MLB Stats API
+              </p>
+            )}
+          </div>
+          <div className="shrink-0">
+            <SocialShare
+              url={`https://vzlasportselite.com/mlb-venezuelan-leaders`}
+              title={`Venezuelan MLB Leaders ${SEASON} | VZLA Sports Elite`}
+              compact
+            />
+          </div>
         </header>
 
         {loading && (
