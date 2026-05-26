@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Share2, Facebook, Link as LinkIcon, Check } from "lucide-react";
+import { Share2, Facebook, Link as LinkIcon, Check, Linkedin } from "lucide-react";
 
 const XIcon = ({ className }: { className?: string }) => (
   <svg viewBox="0 0 24 24" fill="currentColor" className={className}>
@@ -42,6 +42,12 @@ const SocialShare = ({ url, title, compact = false }: SocialShareProps) => {
       icon: XIcon,
       href: `https://twitter.com/intent/tweet?url=${encodedUrl}&text=${encodedTitle}`,
       hoverClass: "hover:text-foreground hover:border-foreground/30",
+    },
+    {
+      label: "LinkedIn",
+      icon: Linkedin,
+      href: `https://www.linkedin.com/sharing/share-offsite/?url=${encodedUrl}`,
+      hoverClass: "hover:text-[#0A66C2] hover:border-[#0A66C2]/30",
     },
     {
       label: "WhatsApp",
