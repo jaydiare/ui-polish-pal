@@ -42,7 +42,7 @@ const SocialIcons = () => (
     <a className="icon-btn" href={SOCIAL_LINKS.instagram} target="_blank" rel="noopener noreferrer" aria-label="Instagram"><InstagramIcon /></a>
     <a className="icon-btn" href={SOCIAL_LINKS.twitter} target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)"><TwitterIcon /></a>
     <a className="icon-btn" href={SOCIAL_LINKS.facebook} target="_blank" rel="noopener noreferrer" aria-label="Facebook"><FacebookIcon /></a>
-    <a className="icon-btn" href="https://www.linkedin.com/in/juandrodriguez" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><LinkedInIcon /></a>
+    <a className="icon-btn" href="https://www.linkedin.com/in/juandrodriguez/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><LinkedInIcon /></a>
   </div>
 );
 

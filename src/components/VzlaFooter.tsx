@@ -8,7 +8,7 @@ const SOCIAL = {
   instagram: "https://www.instagram.com/localheros_sportscards/",
   twitter: "https://x.com/jdiegorceli1?s=21",
   facebook: "https://www.facebook.com/share/18NzEJirJZ/?mibextid=wwXIfr",
-  linkedin: "https://www.linkedin.com/in/juandrodriguez",
+  linkedin: "https://www.linkedin.com/in/juandrodriguez/",
 };
 
 const VzlaFooter = () => {
