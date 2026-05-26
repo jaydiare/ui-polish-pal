@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import VzlaNavbar from "@/components/VzlaNavbar";
 import VzlaFooter from "@/components/VzlaFooter";
 import SEOHead from "@/components/SEOHead";
+import SocialShare from "@/components/SocialShare";
 import {
   Table,
   TableBody,
