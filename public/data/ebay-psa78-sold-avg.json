@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "updatedAt": "2026-05-28T16:39:07.900Z",
+    "updatedAt": "2026-05-28T20:57:06.009Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "PSA 7 + PSA 8 sold comps. Two queries per athlete. Strict per-grade title filter. Taguchi winsorized mean. USD via CBSA.",
     "targetGrades": [
@@ -8,8 +8,8 @@
       8
     ],
     "batchInfo": {
-      "startIdx": 456,
-      "endIdx": 464,
+      "startIdx": 464,
+      "endIdx": 467,
       "totalAthletes": 467
     },
     "maxPages": 3,
@@ -1865,5 +1865,17 @@
   "Tomas Rincon": {
     "error": "eBay fetch failed (403)",
     "erroredAt": "2026-05-28T16:41:52.332Z"
+  },
+  "Yeferson Soteldo": {
+    "error": "eBay fetch failed (403)",
+    "erroredAt": "2026-05-28T20:57:21.305Z"
+  },
+  "Yordan Osorio": {
+    "error": "eBay fetch failed (403)",
+    "erroredAt": "2026-05-28T20:57:44.709Z"
+  },
+  "Garbine Muguruza": {
+    "error": "eBay fetch failed (403)",
+    "erroredAt": "2026-05-28T20:58:06.153Z"
   }
 }
