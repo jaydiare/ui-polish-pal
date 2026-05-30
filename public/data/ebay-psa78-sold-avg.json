@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "updatedAt": "2026-05-29T20:59:21.115Z",
+    "updatedAt": "2026-05-30T04:36:10.851Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "PSA 7 + PSA 8 sold comps. Two queries per athlete. Strict per-grade title filter. Taguchi winsorized mean. USD via CBSA.",
     "targetGrades": [
@@ -8,8 +8,8 @@
       8
     ],
     "batchInfo": {
-      "startIdx": 16,
-      "endIdx": 24,
+      "startIdx": 24,
+      "endIdx": 32,
       "totalAthletes": 467
     },
     "maxPages": 3,
@@ -27,7 +27,7 @@
     },
     "fx": {
       "source": "CBSA Exchange Rates API",
-      "asOf": "2026-05-30T00:00:00.000Z"
+      "asOf": "2026-05-31T00:00:00.000Z"
     }
   },
   "Adbert Alzolay": {
@@ -108,35 +108,35 @@
   },
   "Ali Sanchez": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-05-14T20:17:28.903Z"
+    "erroredAt": "2026-05-30T04:36:26.877Z"
   },
   "Alvaro Espinoza": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-05-14T20:17:52.263Z"
+    "erroredAt": "2026-05-30T04:36:49.094Z"
   },
   "Anderson Espinoza": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-05-14T20:18:12.986Z"
+    "erroredAt": "2026-05-30T04:37:13.287Z"
   },
   "Anderson Machado": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-05-14T20:18:34.011Z"
+    "erroredAt": "2026-05-30T04:37:37.546Z"
   },
   "Andres Blanco": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-05-14T20:18:53.688Z"
+    "erroredAt": "2026-05-30T04:37:58.941Z"
   },
   "Andres Chaparro": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-05-15T04:36:40.580Z"
+    "erroredAt": "2026-05-30T04:38:21.524Z"
   },
   "Andres Galarraga": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-05-15T04:37:00.522Z"
+    "erroredAt": "2026-05-30T04:38:42.036Z"
   },
   "Andres Gimenez": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-05-15T04:37:22.802Z"
+    "erroredAt": "2026-05-30T04:39:03.170Z"
   },
   "Andres Machado": {
     "error": "eBay fetch failed (403)",
