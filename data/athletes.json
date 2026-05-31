@@ -13,7 +13,7 @@
     "league": "MLB",
     "team": "Giants",
     "provider": "manual",
-    "gemrate": "yes"
+    "gemrate": "no"
   },
   {
     "name": "Omar Martinez",
@@ -22,7 +22,7 @@
     "team": "Angles",
     "provider": "manual",
     "searchKeyword": "Omar Martinez LA Angels",
-    "gemrate": "yes"
+    "gemrate": "no"
   },
   {
     "name": "Gabriel Gonzalez",
@@ -31,7 +31,7 @@
     "team": "Twins",
     "provider": "manual",
     "searchKeyword": "Victor Bericoto Twins",
-    "gemrate": "yes"
+    "gemrate": "no"
   },
   {
     "name": "Jose Franco",
