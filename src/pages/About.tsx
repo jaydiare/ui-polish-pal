@@ -22,8 +22,8 @@ const About = () => {
   return (
     <div id="top" className="min-h-screen">
       <SEOHead
-        title="About Us — Our Story, Mission & Methodology"
-        description="VZLA Sports Elite was born from a shared Venezuelan passion for sports cards. Learn how we track 550+ athletes daily with Taguchi statistical pricing, automated eBay data pipelines, and PSA population analytics to help collectors make smarter decisions."
+        title="About Us — Story, Mission & Methodology"
+        description="VZLA Sports Elite tracks 550+ Venezuelan athletes' sports cards daily. Learn about our Taguchi pricing, eBay data pipelines, and mission."
         path="/about"
         jsonLd={{
           "@context": "https://schema.org",

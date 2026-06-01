@@ -56,8 +56,8 @@ const Index = () => {
     <div id="top" className="min-h-screen">
       <VzlaSideBanner />
       <SEOHead
-        title="Venezuelan Athletes Sports Cards – Daily eBay Price Index | VZLA Sports Elite"
-        description="Track 550+ Venezuelan athletes' trading card prices updated daily. eBay market averages, stability scores, sold comps, and investment signals for baseball, soccer, and more."
+        title="Venezuelan Sports Cards – Daily Price Index"
+        description="Track 550+ Venezuelan athletes' card prices daily. eBay averages, stability scores, sold comps, and investment signals."
         path="/"
       />
       <a href="#main-content" className="skip-link">Skip to main content</a>
