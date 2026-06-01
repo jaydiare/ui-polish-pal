@@ -23,6 +23,33 @@ const Blog = () => {
         title="Blog"
         description="Market insights, top Venezuelan athlete card sales, and collecting guides. Stay informed on sports card trends and investment opportunities."
         path="/blog"
+        jsonLd={{
+          "@context": "https://schema.org",
+          "@type": "Blog",
+          name: "VZLA Sports Elite Blog",
+          description: "Market insights, top Venezuelan athlete card sales, and collecting guides for sports card collectors and investors.",
+          url: "https://vzlasportselite.com/blog",
+          publisher: {
+            "@type": "Organization",
+            name: "VZLA Sports Elite",
+            url: "https://vzlasportselite.com",
+          },
+          blogPosts: [
+            { "@type": "BlogPosting", headline: "Top 6 Venezuelan Athlete Card Sales", url: "https://vzlasportselite.com/blog/top-venezuelan-athlete-card-sales" },
+            { "@type": "BlogPosting", headline: "Top 10 Cards Printed in Venezuela", url: "https://vzlasportselite.com/blog/top-cards-printed-in-venezuela" },
+            { "@type": "BlogPosting", headline: "Venezuela in WBC 2026", url: "https://vzlasportselite.com/blog/venezuelan-wbc-2026-roster" },
+            { "@type": "BlogPosting", headline: "How to Use VZLA Sports Elite for Smarter Card Buying", url: "https://vzlasportselite.com/blog/how-to-use-vzla-sports-elite" },
+            { "@type": "BlogPosting", headline: "Acuña & Torres RC Tracker", url: "https://vzlasportselite.com/blog/acuna-torres-tracker" },
+            { "@type": "BlogPosting", headline: "Team Venezuela in WBC Cards on eBay", url: "https://vzlasportselite.com/blog/team-venezuela-wbc-cards-on-ebay" },
+            { "@type": "BlogPosting", headline: "The Case for Investing in Venezuelan Athletes Sports Cards", url: "https://vzlasportselite.com/blog/venezuelan-sports-cards-market-cap" },
+            { "@type": "BlogPosting", headline: "Venezuelan Players in MLB The Show 26 Rankings", url: "https://vzlasportselite.com/blog/venezuelan-players-mlb-the-show-26-top-100" },
+            { "@type": "BlogPosting", headline: "Venezuelan Players in EA SPORTS FC 26: Complete Ratings Guide", url: "https://vzlasportselite.com/blog/venezuelan-players-ea-fc-26-ratings" },
+            { "@type": "BlogPosting", headline: "How We Ensure Data Quality: Why Bad Data Is Worse Than No Data", url: "https://vzlasportselite.com/blog/how-we-ensure-data-quality-sports-cards" },
+            { "@type": "BlogPosting", headline: "Building Resilient Data Pipelines: How Our System Recovers From Failure", url: "https://vzlasportselite.com/blog/building-resilient-data-pipelines-sports-cards" },
+            { "@type": "BlogPosting", headline: "Inside Our Data Architecture: From eBay API to Your Screen", url: "https://vzlasportselite.com/blog/data-architecture-sports-card-pricing" },
+            { "@type": "BlogPosting", headline: "About Market Movers – The Premier Trading Card Data Platform", url: "https://vzlasportselite.com/blog/about-market-movers" },
+          ],
+        }}
       />
       <VzlaNavbar />
       <main className="page-shell pt-8">
