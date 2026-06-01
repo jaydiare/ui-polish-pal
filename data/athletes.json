@@ -8,59 +8,6 @@
     "gemrate": "yes"
   },
   {
-    "name": "Victor Bericoto",
-    "sport": "Baseball",
-    "league": "MLB",
-    "team": "Giants",
-    "provider": "manual",
-    "gemrate": "no"
-  },
-  {
-    "name": "Omar Martinez",
-    "sport": "Baseball",
-    "league": "MLB",
-    "team": "Angles",
-    "provider": "manual",
-    "searchKeyword": "Omar Martinez LA Angels",
-    "gemrate": "no"
-  },
-  {
-    "name": "Gabriel Gonzalez",
-    "sport": "Baseball",
-    "league": "MLB",
-    "team": "Twins",
-    "provider": "manual",
-    "searchKeyword": "Victor Bericoto Twins",
-    "gemrate": "no"
-  },
-  {
-    "name": "Jose Franco",
-    "sport": "Baseball",
-    "league": "MLB",
-    "team": "Reds",
-    "provider": "manual",
-    "searchKeyword": "Jose Franco Cincinnati Reds",
-    "gemrate": "no"
-  },
-  {
-    "name": "Jesus Rodriguez",
-    "sport": "Baseball",
-    "league": "MLB",
-    "team": "Giants",
-    "provider": "manual",
-    "searchKeyword": "Jesus Rodriguez San Francisco Giants",
-    "gemrate": "yes"
-  },
-  {
-    "name": "Jedixson Paez",
-    "sport": "Baseball",
-    "league": "MLB",
-    "team": "White Sox",
-    "provider": "manual",
-    "searchKeyword": "Jedixson Paez Chicago White Sox",
-    "gemrate": "yes"
-  },
-  {
     "name": "Adrian Sanchez",
     "sport": "Baseball",
     "league": "MLB",
@@ -1454,6 +1401,15 @@
     "gemrate": "yes"
   },
   {
+    "name": "Gabriel Gonzalez",
+    "sport": "Baseball",
+    "league": "MLB",
+    "team": "Twins",
+    "provider": "manual",
+    "searchKeyword": "Victor Bericoto Twins",
+    "gemrate": "no"
+  },
+  {
     "name": "Gabriel Moreno",
     "sport": "Baseball",
     "league": "MLB",
@@ -1831,6 +1787,15 @@
     "gemrate": "yes"
   },
   {
+    "name": "Jedixson Paez",
+    "sport": "Baseball",
+    "league": "MLB",
+    "team": "White Sox",
+    "provider": "manual",
+    "searchKeyword": "Jedixson Paez Chicago White Sox",
+    "gemrate": "yes"
+  },
+  {
     "name": "Jeferson Quero",
     "sport": "Baseball",
     "league": "MLB",
@@ -1892,6 +1857,15 @@
     "league": "MLB",
     "team": "Mariners",
     "provider": "manual",
+    "gemrate": "yes"
+  },
+  {
+    "name": "Jesus Rodriguez",
+    "sport": "Baseball",
+    "league": "MLB",
+    "team": "Giants",
+    "provider": "manual",
+    "searchKeyword": "Jesus Rodriguez San Francisco Giants",
     "gemrate": "yes"
   },
   {
@@ -2086,6 +2060,15 @@
     "provider": "manual",
     "searchKeyword": "Jose Fernandez Diamondbacks",
     "gemrate": "yes"
+  },
+  {
+    "name": "Jose Franco",
+    "sport": "Baseball",
+    "league": "MLB",
+    "team": "Reds",
+    "provider": "manual",
+    "searchKeyword": "Jose Franco Cincinnati Reds",
+    "gemrate": "no"
   },
   {
     "name": "Jose Godoy",
@@ -2985,6 +2968,15 @@
     "gemrate": "yes"
   },
   {
+    "name": "Omar Martinez",
+    "sport": "Baseball",
+    "league": "MLB",
+    "team": "Angles",
+    "provider": "manual",
+    "searchKeyword": "Omar Martinez LA Angels",
+    "gemrate": "no"
+  },
+  {
     "name": "Omar Narvaez",
     "sport": "Baseball",
     "league": "MLB",
@@ -3641,6 +3633,14 @@
     "team": "Dodgers",
     "provider": "balldontlie",
     "gemrate": "yes"
+  },
+  {
+    "name": "Victor Bericoto",
+    "sport": "Baseball",
+    "league": "MLB",
+    "team": "Giants",
+    "provider": "manual",
+    "gemrate": "no"
   },
   {
     "name": "Victor Garate",
