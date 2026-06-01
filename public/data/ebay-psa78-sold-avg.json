@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "updatedAt": "2026-05-31T19:50:21.209Z",
+    "updatedAt": "2026-06-01T05:27:00.716Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "PSA 7 + PSA 8 sold comps. Two queries per athlete. Strict per-grade title filter. Taguchi winsorized mean. USD via CBSA.",
     "targetGrades": [
@@ -8,8 +8,8 @@
       8
     ],
     "batchInfo": {
-      "startIdx": 80,
-      "endIdx": 88,
+      "startIdx": 88,
+      "endIdx": 96,
       "totalAthletes": 464
     },
     "maxPages": 3,
@@ -27,7 +27,7 @@
     },
     "fx": {
       "source": "CBSA Exchange Rates API",
-      "asOf": "2026-06-01T00:00:00.000Z"
+      "asOf": "2026-06-02T00:00:00.000Z"
     }
   },
   "Adbert Alzolay": {
@@ -384,35 +384,35 @@
   },
   "Diego Castillo": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-05-17T04:40:43.322Z"
+    "erroredAt": "2026-06-01T05:27:16.871Z"
   },
   "Dioner Navarro": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-05-17T04:41:05.795Z"
+    "erroredAt": "2026-06-01T05:27:36.361Z"
   },
   "Dixon Machado": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-05-17T04:41:25.804Z"
+    "erroredAt": "2026-06-01T05:27:56.900Z"
   },
   "Donaldo Mendez": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-05-17T04:41:48.052Z"
+    "erroredAt": "2026-06-01T05:28:20.811Z"
   },
   "Eddie Perez": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-05-17T04:42:08.770Z"
+    "erroredAt": "2026-06-01T05:28:44.952Z"
   },
   "Eddie Zambrano": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-05-17T04:42:31.819Z"
+    "erroredAt": "2026-06-01T05:29:06.746Z"
   },
   "Eddy Diaz": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-05-17T04:42:54.451Z"
+    "erroredAt": "2026-06-01T05:29:29.264Z"
   },
   "Edgar Navarro": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-05-17T04:43:15.481Z"
+    "erroredAt": "2026-06-01T05:29:49.807Z"
   },
   "Edgardo Alfonzo": {
     "error": "eBay fetch failed (403)",
