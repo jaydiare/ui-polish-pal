@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "updatedAt": "2026-06-01T12:18:57.850Z",
+    "updatedAt": "2026-06-01T18:25:02.821Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "PSA 7 + PSA 8 sold comps. Two queries per athlete. Strict per-grade title filter. Taguchi winsorized mean. USD via CBSA.",
     "targetGrades": [
@@ -8,8 +8,8 @@
       8
     ],
     "batchInfo": {
-      "startIdx": 96,
-      "endIdx": 104,
+      "startIdx": 104,
+      "endIdx": 112,
       "totalAthletes": 464
     },
     "maxPages": 3,
@@ -448,35 +448,35 @@
   },
   "Edubray Ramos": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-05-17T14:06:57.827Z"
+    "erroredAt": "2026-06-01T18:25:19.244Z"
   },
   "Edwar Colina": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-05-17T14:07:18.749Z"
+    "erroredAt": "2026-06-01T18:25:43.852Z"
   },
   "Edward Mujica": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-05-17T14:07:39.694Z"
+    "erroredAt": "2026-06-01T18:26:06.516Z"
   },
   "Edward Olivares": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-05-17T14:08:00.021Z"
+    "erroredAt": "2026-06-01T18:26:28.662Z"
   },
   "Edwin Escobar": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-05-17T14:08:21.397Z"
+    "erroredAt": "2026-06-01T18:26:50.819Z"
   },
   "Edwin Hurtado": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-05-17T14:08:41.883Z"
+    "erroredAt": "2026-06-01T18:27:13.806Z"
   },
   "Edwin Moreno": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-05-17T19:46:27.001Z"
+    "erroredAt": "2026-06-01T18:27:34.259Z"
   },
   "Ehire Adrianza": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-05-17T19:46:49.248Z"
+    "erroredAt": "2026-06-01T18:27:55.574Z"
   },
   "Eider Torres": {
     "error": "eBay fetch failed (403)",
