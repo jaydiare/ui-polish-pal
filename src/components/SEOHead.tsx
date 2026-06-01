@@ -6,7 +6,7 @@ interface SEOHeadProps {
   path?: string;
   image?: string;
   type?: string;
-  jsonLd?: Record<string, any>;
+  jsonLd?: Record<string, any> | Record<string, any>[];
 }
 
 const BASE_URL = "https://vzlasportselite.com";
@@ -22,6 +22,8 @@ const SEOHead = ({
 }: SEOHeadProps) => {
   const url = `${BASE_URL}${path}`;
   const fullTitle = path === "/" ? title : `${title} | VZLA Sports Elite`;
+
+  const schemas = jsonLd ? (Array.isArray(jsonLd) ? jsonLd : [jsonLd]) : [];
 
   return (
     <Helmet>
@@ -41,9 +43,9 @@ const SEOHead = ({
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={image} />
 
-      {jsonLd && (
-        <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
-      )}
+      {schemas.map((schema, i) => (
+        <script key={i} type="application/ld+json">{JSON.stringify(schema)}</script>
+      ))}
     </Helmet>
   );
 };
