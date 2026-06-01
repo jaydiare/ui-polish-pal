@@ -52,8 +52,8 @@ export default function Methodology() {
   return (
     <div className="min-h-screen">
       <SEOHead
-        title="Methodology & FAQ — How We Calculate Card Prices"
-        description="Learn how VZLA Sports Elite calculates trading card prices using the Taguchi Winsorized Mean, multi-layer eBay data filtering, and automated daily pipelines. Frequently asked questions about our data, stability scores, and methodology."
+        title="Methodology — How We Price Cards"
+        description="Learn how VZLA Sports Elite calculates card prices using the Taguchi Winsorized Mean, eBay filtering, and daily pipelines. FAQ included."
         path="/methodology"
         jsonLd={{
           "@context": "https://schema.org",

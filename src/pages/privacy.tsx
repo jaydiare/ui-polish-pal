@@ -8,7 +8,7 @@ export default function Privacy() {
     <div className="min-h-screen flex flex-col">
       <SEOHead
         title="Privacy Policy"
-        description="How VZLA Sports Elite collects, uses, and protects your data. Covers cookies, Google Analytics, eBay affiliate links, and our financial disclaimer for investment signals."
+        description="How VZLA Sports Elite collects and protects your data. Covers cookies, analytics, eBay affiliates, and financial disclaimers."
         path="/privacy"
       />
       <VzlaNavbar />
