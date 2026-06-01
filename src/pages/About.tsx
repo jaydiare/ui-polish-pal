@@ -25,13 +25,69 @@ const About = () => {
         title="About Us — Story, Mission & Methodology"
         description="VZLA Sports Elite tracks 550+ Venezuelan athletes' sports cards daily. Learn about our Taguchi pricing, eBay data pipelines, and mission."
         path="/about"
-        jsonLd={{
-          "@context": "https://schema.org",
-          "@type": "AboutPage",
-          name: "About VZLA Sports Elite",
-          description: "The story, mission, and methodology behind VZLA Sports Elite — the daily eBay price index for Venezuelan athletes' trading cards.",
-          mainEntityOfPage: "https://vzlasportselite.com/about",
-        }}
+        jsonLd={[
+          {
+            "@context": "https://schema.org",
+            "@type": "AboutPage",
+            name: "About VZLA Sports Elite",
+            description: "The story, mission, and methodology behind VZLA Sports Elite — the daily eBay price index for Venezuelan athletes' trading cards.",
+            mainEntityOfPage: "https://vzlasportselite.com/about",
+          },
+          {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: [
+              {
+                "@type": "Question",
+                name: "How often is the data updated?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Our automated pipelines run daily. eBay listing prices, sold averages, and athlete rosters are refreshed every 24 hours. PSA and Beckett population data is updated on a regular schedule, and the bi-weekly market analysis report runs on the 1st and 15th of each month.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "What sports do you cover?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "We track Venezuelan athletes across baseball (MLB, minor leagues, and LVBP), soccer (MLS and international), basketball (NBA and Superliga), MMA, tennis, and boxing. Baseball is our largest category with 490+ athletes tracked.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "What does 'Taguchi Winsorized Mean' mean?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "It's a statistical method that removes extreme outliers (the highest and lowest 10% of prices) before calculating an average. This gives you a much more realistic price than a simple average, which can be skewed by a single very expensive or very cheap listing.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "What are the investment signals (Buy Low, Flip Potential, etc.)?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "These are data-driven indicators calculated from our pricing models. 'Buy Low' means the sold price is below the listing price — a potential bargain. 'Flip Potential' flags volatile cards with wide price swings. 'Signal Strength' uses the Taguchi S/N ratio to measure how predictable pricing is. These are informational tools, not financial advice.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Can I suggest an athlete to add?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Absolutely! We're always expanding our roster. Reach out through our Facebook community or eBay store and let us know which Venezuelan athletes you'd like to see tracked.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Is this financial advice?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "No. All investment signals, price indexes, ROI calculations, and market analysis on this site are for informational purposes only and do not constitute financial or professional advice. Please read our full disclaimer on our Privacy Policy page.",
+                },
+              },
+            ],
+          },
+        ]}
       />
       <VzlaNavbar />
       <VzlaSideBanner />
