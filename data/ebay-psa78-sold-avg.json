@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "updatedAt": "2026-06-01T21:50:38.190Z",
+    "updatedAt": "2026-06-02T05:13:27.427Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "PSA 7 + PSA 8 sold comps. Two queries per athlete. Strict per-grade title filter. Taguchi winsorized mean. USD via CBSA.",
     "targetGrades": [
@@ -8,8 +8,8 @@
       8
     ],
     "batchInfo": {
-      "startIdx": 112,
-      "endIdx": 120,
+      "startIdx": 120,
+      "endIdx": 128,
       "totalAthletes": 464
     },
     "maxPages": 3,
@@ -27,7 +27,7 @@
     },
     "fx": {
       "source": "CBSA Exchange Rates API",
-      "asOf": "2026-06-02T00:00:00.000Z"
+      "asOf": "2026-06-03T00:00:00.000Z"
     }
   },
   "Adbert Alzolay": {
@@ -512,35 +512,35 @@
   },
   "Endy Chavez": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-05-18T04:52:48.492Z"
+    "erroredAt": "2026-06-02T05:13:42.438Z"
   },
   "Enmanuel De Jesus": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-05-18T04:53:11.336Z"
+    "erroredAt": "2026-06-02T05:14:05.659Z"
   },
   "Enrique Gonzalez": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-05-18T04:53:33.959Z"
+    "erroredAt": "2026-06-02T05:14:26.452Z"
   },
   "Enzo Hernandez": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-05-18T04:53:55.281Z"
+    "erroredAt": "2026-06-02T05:14:48.517Z"
   },
   "Ethan Salas": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-05-18T04:54:16.369Z"
+    "erroredAt": "2026-06-02T05:15:11.397Z"
   },
   "Eugenio Suarez": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-05-18T04:54:39.686Z"
+    "erroredAt": "2026-06-02T05:15:34.616Z"
   },
   "Everson Pereira": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-05-18T10:47:50.582Z"
+    "erroredAt": "2026-06-02T05:15:57.257Z"
   },
   "Ezequiel Carrera": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-05-18T10:48:10.126Z"
+    "erroredAt": "2026-06-02T05:16:17.620Z"
   },
   "Ezequiel Tovar": {
     "error": "eBay fetch failed (403)",
