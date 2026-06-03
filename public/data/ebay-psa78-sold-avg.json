@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "updatedAt": "2026-06-03T11:28:53.250Z",
+    "updatedAt": "2026-06-03T17:29:10.649Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "PSA 7 + PSA 8 sold comps. Two queries per athlete. Strict per-grade title filter. Taguchi winsorized mean. USD via CBSA.",
     "targetGrades": [
@@ -8,8 +8,8 @@
       8
     ],
     "batchInfo": {
-      "startIdx": 160,
-      "endIdx": 168,
+      "startIdx": 168,
+      "endIdx": 176,
       "totalAthletes": 464
     },
     "maxPages": 3,
@@ -704,35 +704,35 @@
   },
   "Gustavo Molina": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-05-19T16:00:34.021Z"
+    "erroredAt": "2026-06-03T17:29:26.795Z"
   },
   "Harold Castro": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-05-19T16:00:55.361Z"
+    "erroredAt": "2026-06-03T17:29:47.493Z"
   },
   "Harvey Garcia": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-05-19T16:01:18.515Z"
+    "erroredAt": "2026-06-03T17:30:10.066Z"
   },
   "Hector Gimenez": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-05-19T16:01:40.291Z"
+    "erroredAt": "2026-06-03T17:30:31.740Z"
   },
   "Hector Rondon": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-05-19T16:02:00.909Z"
+    "erroredAt": "2026-06-03T17:30:52.753Z"
   },
   "Hector Sanchez": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-05-19T16:02:20.297Z"
+    "erroredAt": "2026-06-03T17:31:13.501Z"
   },
   "Henry Blanco": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-05-19T20:16:06.944Z"
+    "erroredAt": "2026-06-03T17:31:34.621Z"
   },
   "Henry Rodriguez": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-05-19T20:16:27.431Z"
+    "erroredAt": "2026-06-03T17:31:57.870Z"
   },
   "Hernan Iribarren": {
     "error": "eBay fetch failed (403)",
