@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "updatedAt": "2026-06-03T21:36:19.942Z",
+    "updatedAt": "2026-06-04T05:24:17.015Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "PSA 7 + PSA 8 sold comps. Two queries per athlete. Strict per-grade title filter. Taguchi winsorized mean. USD via CBSA.",
     "targetGrades": [
@@ -8,8 +8,8 @@
       8
     ],
     "batchInfo": {
-      "startIdx": 176,
-      "endIdx": 184,
+      "startIdx": 184,
+      "endIdx": 192,
       "totalAthletes": 464
     },
     "maxPages": 3,
@@ -27,7 +27,7 @@
     },
     "fx": {
       "source": "CBSA Exchange Rates API",
-      "asOf": "2026-06-04T00:00:00.000Z"
+      "asOf": "2026-06-05T00:00:00.000Z"
     }
   },
   "Adbert Alzolay": {
@@ -768,31 +768,31 @@
   },
   "Jackson Chourio": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-05-20T04:49:30.673Z"
+    "erroredAt": "2026-06-04T05:24:32.067Z"
   },
   "Jairo Diaz": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-05-20T04:49:53.281Z"
+    "erroredAt": "2026-06-04T05:24:51.342Z"
   },
   "Jairo Iriarte": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-05-20T04:50:16.932Z"
+    "erroredAt": "2026-06-04T05:25:12.704Z"
   },
   "Javier Sanoja": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-05-20T04:50:37.019Z"
+    "erroredAt": "2026-06-04T05:25:35.848Z"
   },
   "Jean Machi": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-05-20T04:50:58.248Z"
+    "erroredAt": "2026-06-04T05:25:55.737Z"
   },
   "Jeanmar Gomez": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-05-20T04:51:19.285Z"
+    "erroredAt": "2026-06-04T05:26:17.912Z"
   },
   "Jeferson Quero": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-05-20T10:02:11.179Z"
+    "erroredAt": "2026-06-04T05:27:00.951Z"
   },
   "Jermaine Palacios": {
     "error": "eBay fetch failed (403)",
@@ -1896,6 +1896,6 @@
   },
   "Jedixson Paez": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-05-29T10:34:02.357Z"
+    "erroredAt": "2026-06-04T05:26:39.637Z"
   }
 }
