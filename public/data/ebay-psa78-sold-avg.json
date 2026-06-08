@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "updatedAt": "2026-06-07T19:56:23.803Z",
+    "updatedAt": "2026-06-08T05:15:42.638Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "PSA 7 + PSA 8 sold comps. Two queries per athlete. Strict per-grade title filter. Taguchi winsorized mean. USD via CBSA.",
     "targetGrades": [
@@ -8,8 +8,8 @@
       8
     ],
     "batchInfo": {
-      "startIdx": 304,
-      "endIdx": 312,
+      "startIdx": 312,
+      "endIdx": 320,
       "totalAthletes": 464
     },
     "maxPages": 3,
@@ -27,7 +27,7 @@
     },
     "fx": {
       "source": "CBSA Exchange Rates API",
-      "asOf": "2026-06-08T00:00:00.000Z"
+      "asOf": "2026-06-09T00:00:00.000Z"
     }
   },
   "Adbert Alzolay": {
@@ -1272,35 +1272,35 @@
   },
   "Miguel Montero": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-05-24T04:48:59.103Z"
+    "erroredAt": "2026-06-08T05:15:59.565Z"
   },
   "Miguel Perez": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-05-24T04:49:19.063Z"
+    "erroredAt": "2026-06-08T05:16:21.998Z"
   },
   "Miguel Rojas": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-05-24T04:49:40.150Z"
+    "erroredAt": "2026-06-08T05:16:42.243Z"
   },
   "Miguel Yajure": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-05-24T04:50:03.114Z"
+    "erroredAt": "2026-06-08T05:17:06.287Z"
   },
   "Moises Ballesteros": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-05-24T04:50:25.862Z"
+    "erroredAt": "2026-06-08T05:17:27.579Z"
   },
   "Nivaldo Rodriguez": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-05-24T04:50:48.901Z"
+    "erroredAt": "2026-06-08T05:17:48.324Z"
   },
   "Odubel Herrera": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-05-24T04:51:11.341Z"
+    "erroredAt": "2026-06-08T05:18:10.171Z"
   },
   "Omar Daal": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-05-24T04:51:31.520Z"
+    "erroredAt": "2026-06-08T05:18:30.936Z"
   },
   "Omar Infante": {
     "error": "eBay fetch failed (403)",
