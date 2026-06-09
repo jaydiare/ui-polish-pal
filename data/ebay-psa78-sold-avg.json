@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "updatedAt": "2026-06-09T10:10:22.980Z",
+    "updatedAt": "2026-06-09T15:41:08.241Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "PSA 7 + PSA 8 sold comps. Two queries per athlete. Strict per-grade title filter. Taguchi winsorized mean. USD via CBSA.",
     "targetGrades": [
@@ -8,8 +8,8 @@
       8
     ],
     "batchInfo": {
-      "startIdx": 352,
-      "endIdx": 360,
+      "startIdx": 360,
+      "endIdx": 368,
       "totalAthletes": 464
     },
     "maxPages": 3,
@@ -1464,35 +1464,35 @@
   },
   "Renyel Pinto": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-05-25T15:38:45.451Z"
+    "erroredAt": "2026-06-09T15:41:24.157Z"
   },
   "Ricardo Pinto": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-05-25T15:39:07.736Z"
+    "erroredAt": "2026-06-09T15:41:44.797Z"
   },
   "Ricardo Rodriguez": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-05-25T15:39:28.873Z"
+    "erroredAt": "2026-06-09T15:42:07.919Z"
   },
   "Ricardo Sanchez": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-05-25T15:39:51.630Z"
+    "erroredAt": "2026-06-09T15:42:28.811Z"
   },
   "Rich Garces": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-05-25T15:40:12.025Z"
+    "erroredAt": "2026-06-09T15:42:51.350Z"
   },
   "Richard Hidalgo": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-05-25T15:40:33.894Z"
+    "erroredAt": "2026-06-09T15:43:13.094Z"
   },
   "Robert Machado": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-05-25T15:40:55.033Z"
+    "erroredAt": "2026-06-09T15:43:33.607Z"
   },
   "Robert Suarez": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-05-25T15:41:19.786Z"
+    "erroredAt": "2026-06-09T15:43:54.042Z"
   },
   "Roberto Petagine": {
     "error": "eBay fetch failed (403)",
