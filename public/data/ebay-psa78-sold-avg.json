@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "updatedAt": "2026-06-08T20:40:53.745Z",
+    "updatedAt": "2026-06-09T04:47:47.740Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "PSA 7 + PSA 8 sold comps. Two queries per athlete. Strict per-grade title filter. Taguchi winsorized mean. USD via CBSA.",
     "targetGrades": [
@@ -8,8 +8,8 @@
       8
     ],
     "batchInfo": {
-      "startIdx": 336,
-      "endIdx": 344,
+      "startIdx": 344,
+      "endIdx": 352,
       "totalAthletes": 464
     },
     "maxPages": 3,
@@ -27,7 +27,7 @@
     },
     "fx": {
       "source": "CBSA Exchange Rates API",
-      "asOf": "2026-06-09T00:00:00.000Z"
+      "asOf": "2026-06-10T00:00:00.000Z"
     }
   },
   "Adbert Alzolay": {
@@ -1400,35 +1400,35 @@
   },
   "Rafael Betancourt": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-05-25T05:07:56.825Z"
+    "erroredAt": "2026-06-09T04:48:03.851Z"
   },
   "Rafael Marchan": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-05-25T05:08:18.054Z"
+    "erroredAt": "2026-06-09T04:48:26.579Z"
   },
   "Rafael Ortega": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-05-25T05:08:41.550Z"
+    "erroredAt": "2026-06-09T04:48:45.589Z"
   },
   "Ramon Cabrera": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-05-25T05:09:03.187Z"
+    "erroredAt": "2026-06-09T04:49:04.634Z"
   },
   "Ramon Castro": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-05-25T05:09:25.871Z"
+    "erroredAt": "2026-06-09T04:49:27.531Z"
   },
   "Ramon Flores": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-05-25T05:09:47.881Z"
+    "erroredAt": "2026-06-09T04:49:51.617Z"
   },
   "Ramon Garcia": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-05-25T05:10:11.670Z"
+    "erroredAt": "2026-06-09T04:50:14.161Z"
   },
   "Ramon Hernandez": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-05-25T05:10:34.591Z"
+    "erroredAt": "2026-06-09T04:50:35.742Z"
   },
   "Ramon Ramirez": {
     "error": "eBay fetch failed (403)",
