@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "updatedAt": "2026-06-09T20:30:35.899Z",
+    "updatedAt": "2026-06-10T05:02:20.066Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "PSA 7 + PSA 8 sold comps. Two queries per athlete. Strict per-grade title filter. Taguchi winsorized mean. USD via CBSA.",
     "targetGrades": [
@@ -8,8 +8,8 @@
       8
     ],
     "batchInfo": {
-      "startIdx": 368,
-      "endIdx": 376,
+      "startIdx": 376,
+      "endIdx": 384,
       "totalAthletes": 464
     },
     "maxPages": 3,
@@ -27,7 +27,7 @@
     },
     "fx": {
       "source": "CBSA Exchange Rates API",
-      "asOf": "2026-06-10T00:00:00.000Z"
+      "asOf": "2026-06-11T00:00:00.000Z"
     }
   },
   "Adbert Alzolay": {
@@ -1528,35 +1528,35 @@
   },
   "Ronny Cedeno": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-05-26T04:46:34.292Z"
+    "erroredAt": "2026-06-10T05:02:35.965Z"
   },
   "Rosman Garcia": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-05-26T04:46:54.536Z"
+    "erroredAt": "2026-06-10T05:02:58.344Z"
   },
   "Rougned Odor": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-05-26T04:47:16.266Z"
+    "erroredAt": "2026-06-10T05:03:19.646Z"
   },
   "Ruben Quevedo": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-05-26T04:47:38.005Z"
+    "erroredAt": "2026-06-10T05:03:43.420Z"
   },
   "Salvador Perez": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-05-26T04:48:00.916Z"
+    "erroredAt": "2026-06-10T05:04:04.283Z"
   },
   "Sandy Leon": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-05-26T04:48:21.912Z"
+    "erroredAt": "2026-06-10T05:04:24.139Z"
   },
   "Sebastian Rivero": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-05-26T04:48:44.616Z"
+    "erroredAt": "2026-06-10T05:04:45.520Z"
   },
   "Sergio Escalona": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-05-26T04:49:04.737Z"
+    "erroredAt": "2026-06-10T05:05:08.595Z"
   },
   "Simon Muzziotti": {
     "error": "eBay fetch failed (403)",
