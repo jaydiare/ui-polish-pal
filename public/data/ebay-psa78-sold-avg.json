@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "updatedAt": "2026-06-10T21:08:46.081Z",
+    "updatedAt": "2026-06-11T05:11:44.583Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "PSA 7 + PSA 8 sold comps. Two queries per athlete. Strict per-grade title filter. Taguchi winsorized mean. USD via CBSA.",
     "targetGrades": [
@@ -8,8 +8,8 @@
       8
     ],
     "batchInfo": {
-      "startIdx": 400,
-      "endIdx": 408,
+      "startIdx": 408,
+      "endIdx": 416,
       "totalAthletes": 464
     },
     "maxPages": 3,
@@ -27,7 +27,7 @@
     },
     "fx": {
       "source": "CBSA Exchange Rates API",
-      "asOf": "2026-06-11T00:00:00.000Z"
+      "asOf": "2026-06-12T00:00:00.000Z"
     }
   },
   "Adbert Alzolay": {
@@ -1656,35 +1656,35 @@
   },
   "Willie Canate": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-05-27T04:59:40.911Z"
+    "erroredAt": "2026-06-11T05:12:00.378Z"
   },
   "Willie Martinez": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-05-27T05:00:04.199Z"
+    "erroredAt": "2026-06-11T05:12:20.320Z"
   },
   "Willson Contreras": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-05-27T05:00:26.013Z"
+    "erroredAt": "2026-06-11T05:12:40.941Z"
   },
   "Wilmer Flores": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-05-27T05:00:47.903Z"
+    "erroredAt": "2026-06-11T05:13:00.550Z"
   },
   "Wilmer Font": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-05-27T05:01:08.791Z"
+    "erroredAt": "2026-06-11T05:13:20.488Z"
   },
   "Wilson Alvarez": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-05-27T10:39:56.473Z"
+    "erroredAt": "2026-06-11T05:13:42.313Z"
   },
   "Wilson Ramos": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-05-27T10:40:18.299Z"
+    "erroredAt": "2026-06-11T05:14:05.606Z"
   },
   "Wilyer Abreu": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-05-27T10:40:40.492Z"
+    "erroredAt": "2026-06-11T05:14:24.636Z"
   },
   "Yangervis Solarte": {
     "error": "eBay fetch failed (403)",
