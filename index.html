@@ -131,10 +131,18 @@
     <style>
       body{margin:0;background:#080c1a;color:#f7f7f7;font-family:'Inter','Space Grotesk',system-ui,sans-serif}
       #root{min-height:100vh}
-      .shell-loader{display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:100vh;gap:1rem}
-      .shell-loader h1{font-size:1.5rem;font-weight:700;color:#f0d000;margin:0}
-      .shell-loader p{font-size:.875rem;color:#8a8fa8;margin:0}
-      .shell-spinner{width:32px;height:32px;border:3px solid #1a1f36;border-top-color:#f0d000;border-radius:50%;animation:spin .7s linear infinite}
+      .shell{max-width:960px;margin:0 auto;padding:3rem 1.25rem 4rem}
+      .shell-brand{font-size:.8rem;letter-spacing:.18em;text-transform:uppercase;color:#f0d000;margin:0 0 1rem;font-weight:600}
+      .shell h1{font-size:clamp(1.75rem,4vw,2.5rem);font-weight:800;line-height:1.15;margin:0 0 1rem;color:#fff}
+      .shell .lede{font-size:1.05rem;line-height:1.55;color:#cfd3e3;margin:0 0 1.5rem;max-width:62ch}
+      .shell-nav{display:flex;flex-wrap:wrap;gap:.5rem .75rem;margin:0 0 2rem;padding:0;list-style:none}
+      .shell-nav a{color:#f7f7f7;background:#11162a;border:1px solid #1f2440;padding:.45rem .8rem;border-radius:8px;text-decoration:none;font-size:.9rem;font-weight:500}
+      .shell-nav a:hover{border-color:#f0d000;color:#f0d000}
+      .shell-features{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:.75rem;margin:0 0 2rem;padding:0;list-style:none}
+      .shell-features li{background:#0f1428;border:1px solid #1a1f36;border-radius:10px;padding:.85rem 1rem;color:#cfd3e3;font-size:.92rem}
+      .shell-features strong{display:block;color:#fff;font-weight:600;margin-bottom:.15rem}
+      .shell-loading{display:flex;align-items:center;gap:.65rem;color:#8a8fa8;font-size:.875rem;margin-top:1rem}
+      .shell-spinner{width:18px;height:18px;border:2px solid #1a1f36;border-top-color:#f0d000;border-radius:50%;animation:spin .7s linear infinite;flex-shrink:0}
       @keyframes spin{to{transform:rotate(360deg)}}
     </style>
 
@@ -154,7 +162,49 @@
     <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800;900&display=swap" /></noscript>
   </head>
   <body>
-    <div id="root"><div class="shell-loader"><div class="shell-spinner"></div><h1>VZLA Sports Elite</h1><p>Loading market data…</p></div></div>
+    <script>
+      // Canonicalize /index.html to / so Search Console does not treat it as a separate URL.
+      (function(){
+        try {
+          if (location.pathname === '/index.html') {
+            history.replaceState(null, '', '/' + location.search + location.hash);
+          }
+        } catch (e) {}
+      })();
+    </script>
+    <div id="root">
+      <main class="shell">
+        <p class="shell-brand">VZLA Sports Elite</p>
+        <h1>Venezuelan Sports Cards, Daily Price Index</h1>
+        <p class="lede">
+          Track 550+ Venezuelan athletes' trading cards with daily eBay market scans.
+          Raw and graded listing averages, sold comps, stability scores, and investment
+          signals across baseball, soccer, football, and more.
+        </p>
+        <nav aria-label="Primary">
+          <ul class="shell-nav">
+            <li><a href="/data">Athlete Data</a></li>
+            <li><a href="/market-data">Market Data</a></li>
+            <li><a href="/blog">Blog</a></li>
+            <li><a href="/methodology">Methodology</a></li>
+            <li><a href="/checklist-intel">Checklist Intel</a></li>
+            <li><a href="/how-it-works">How It Works</a></li>
+            <li><a href="/about">About</a></li>
+          </ul>
+        </nav>
+        <ul class="shell-features">
+          <li><strong>Raw averages</strong>Daily eBay listing prices for ungraded cards.</li>
+          <li><strong>Graded comps</strong>PSA, BGS, and SGC sold and listed values.</li>
+          <li><strong>Sold data</strong>Recent eBay sold comps with strict name matching.</li>
+          <li><strong>Stability</strong>Coefficient of variation across active listings.</li>
+          <li><strong>Investment signals</strong>Buy Low, Flip Potential, Fast Mover, and more.</li>
+        </ul>
+        <div class="shell-loading" role="status" aria-live="polite">
+          <div class="shell-spinner" aria-hidden="true"></div>
+          <span>Loading live market data…</span>
+        </div>
+      </main>
+    </div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
