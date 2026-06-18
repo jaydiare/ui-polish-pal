@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "updatedAt": "2026-06-18T10:55:25.120Z",
+    "updatedAt": "2026-06-18T16:00:40.412Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "PSA 7 + PSA 8 sold comps. Two queries per athlete. Strict per-grade title filter. Taguchi winsorized mean. USD via CBSA.",
     "targetGrades": [
@@ -8,8 +8,8 @@
       8
     ],
     "batchInfo": {
-      "startIdx": 144,
-      "endIdx": 152,
+      "startIdx": 152,
+      "endIdx": 160,
       "totalAthletes": 464
     },
     "maxPages": 3,
@@ -640,35 +640,35 @@
   },
   "German Marquez": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-06-03T05:29:20.078Z"
+    "erroredAt": "2026-06-18T16:00:55.924Z"
   },
   "Giomar Guevara": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-06-03T05:29:42.201Z"
+    "erroredAt": "2026-06-18T16:01:19.206Z"
   },
   "Giovanni Carrara": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-06-03T05:30:02.191Z"
+    "erroredAt": "2026-06-18T16:01:42.636Z"
   },
   "Gleyber Torres": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-06-03T05:30:25.957Z"
+    "erroredAt": "2026-06-18T16:02:05.743Z"
   },
   "Gonzalo Marquez": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-06-03T05:30:47.375Z"
+    "erroredAt": "2026-06-18T16:02:27.263Z"
   },
   "Gorkys Hernandez": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-06-03T05:31:08.697Z"
+    "erroredAt": "2026-06-18T16:02:49.057Z"
   },
   "Gregor Blanco": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-06-03T05:31:29.819Z"
+    "erroredAt": "2026-06-18T16:03:13.154Z"
   },
   "Gregorio Petit": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-06-03T05:31:52.408Z"
+    "erroredAt": "2026-06-18T16:03:32.576Z"
   },
   "Gregory Infante": {
     "error": "eBay fetch failed (403)",
