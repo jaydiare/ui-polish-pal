@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "updatedAt": "2026-06-17T20:35:22.637Z",
+    "updatedAt": "2026-06-18T05:20:27.138Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "PSA 7 + PSA 8 sold comps. Two queries per athlete. Strict per-grade title filter. Taguchi winsorized mean. USD via CBSA.",
     "targetGrades": [
@@ -8,8 +8,8 @@
       8
     ],
     "batchInfo": {
-      "startIdx": 128,
-      "endIdx": 136,
+      "startIdx": 136,
+      "endIdx": 144,
       "totalAthletes": 464
     },
     "maxPages": 3,
@@ -27,7 +27,7 @@
     },
     "fx": {
       "source": "CBSA Exchange Rates API",
-      "asOf": "2026-06-18T00:00:00.000Z"
+      "asOf": "2026-06-19T00:00:00.000Z"
     }
   },
   "Adbert Alzolay": {
@@ -576,35 +576,35 @@
   },
   "Francisco Arcia": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-06-02T17:05:07.675Z"
+    "erroredAt": "2026-06-18T05:20:42.769Z"
   },
   "Francisco Cervelli": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-06-02T17:05:30.009Z"
+    "erroredAt": "2026-06-18T05:21:05.455Z"
   },
   "Francisco Morales": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-06-02T17:05:50.469Z"
+    "erroredAt": "2026-06-18T05:21:28.764Z"
   },
   "Francisco Rodriguez": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-06-02T17:06:12.110Z"
+    "erroredAt": "2026-06-18T05:21:49.292Z"
   },
   "Frank Mata": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-06-02T17:06:33.418Z"
+    "erroredAt": "2026-06-18T05:22:08.234Z"
   },
   "Franklin Barreto": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-06-02T17:06:54.822Z"
+    "erroredAt": "2026-06-18T05:22:31.186Z"
   },
   "Franklin Gutierrez": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-06-02T17:07:17.767Z"
+    "erroredAt": "2026-06-18T05:22:52.103Z"
   },
   "Franklin Morales": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-06-02T17:07:41.111Z"
+    "erroredAt": "2026-06-18T05:23:13.647Z"
   },
   "Fred Manrique": {
     "error": "eBay fetch failed (403)",
