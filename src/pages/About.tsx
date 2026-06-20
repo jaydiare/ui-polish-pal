@@ -30,7 +30,7 @@ const About = () => {
             "@context": "https://schema.org",
             "@type": "AboutPage",
             name: "About VZLA Sports Elite",
-            description: "The story, mission, and methodology behind VZLA Sports Elite — the daily eBay price index for Venezuelan athletes' trading cards.",
+            description: "The story, mission, and methodology behind VZLA Sports Elite — the eBay price index for Venezuelan athletes' trading cards.",
             mainEntityOfPage: "https://vzlasportselite.com/about",
           },
           {
@@ -42,7 +42,7 @@ const About = () => {
                 name: "How often is the data updated?",
                 acceptedAnswer: {
                   "@type": "Answer",
-                  text: "Our automated pipelines run daily. eBay listing prices, sold averages, and athlete rosters are refreshed every 24 hours. PSA and Beckett population data is updated on a regular schedule, and the bi-weekly market analysis report runs on the 1st and 15th of each month.",
+                  text: "Our automated pipelines run on schedule. eBay listing prices, sold averages, and athlete rosters are refreshed on the last scan. PSA and Beckett population data is updated on a regular schedule, and the bi-weekly market analysis report runs on the 1st and 15th of each month.",
                 },
               },
               {
@@ -272,7 +272,7 @@ const About = () => {
             {[
               {
                 q: "How often is the data updated?",
-                a: "Our automated pipelines run daily. eBay listing prices, sold averages, and athlete rosters are refreshed every 24 hours. PSA and Beckett population data is updated on a regular schedule, and the bi-weekly market analysis report runs on the 1st and 15th of each month.",
+                a: "Our automated pipelines run on schedule. eBay listing prices, sold averages, and athlete rosters are refreshed on the last scan. PSA and Beckett population data is updated on a regular schedule, and the bi-weekly market analysis report runs on the 1st and 15th of each month.",
               },
               {
                 q: "What sports do you cover?",
