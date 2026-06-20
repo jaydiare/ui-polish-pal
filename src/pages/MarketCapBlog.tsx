@@ -197,7 +197,7 @@ const MarketCapBlog = () => {
             ))}
           </div>
           <p className="text-xs text-muted-foreground mt-4 italic">
-            These signals are available for every athlete on our <Link to="/data" className="text-vzla-yellow hover:underline">Market Intel dashboard</Link>, updated daily with live eBay data.
+            These signals are available for every athlete on our <Link to="/data" className="text-vzla-yellow hover:underline">Market Intel dashboard</Link>, updated on the last scan with live eBay data.
           </p>
         </section>
 

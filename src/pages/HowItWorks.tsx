@@ -164,7 +164,7 @@ export default function HowItWorks() {
               ))}
             </div>
             <p className="text-xs text-muted-foreground italic mt-2">
-              These signals are calculated automatically and updated daily. They are informational tools — not financial advice. See our <Link to="/privacy" className="text-vzla-yellow hover:underline">Privacy Policy</Link> for the full disclaimer.
+              These signals are calculated automatically and updated on the last scan. They are informational tools — not financial advice. See our <Link to="/privacy" className="text-vzla-yellow hover:underline">Privacy Policy</Link> for the full disclaimer.
             </p>
           </div>
         </motion.section>
