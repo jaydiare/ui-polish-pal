@@ -657,7 +657,7 @@ const Data = () => {
     <div className="min-h-screen">
       <SEOHead
         title="Market Intel – Listed vs Sold Price Analytics"
-        description="Compare listed vs sold prices for 550+ Venezuelan athletes' trading cards. Scatter plots, price gaps, supply & demand charts, and investment signal scores updated daily."
+        description="Compare listed vs sold prices for 550+ Venezuelan athletes' trading cards. Scatter plots, price gaps, supply & demand charts, and investment signal scores with last update timestamps."
         path="/data"
       />
       <VzlaNavbar />
@@ -678,7 +678,7 @@ const Data = () => {
           </p>
           <div className="text-muted-foreground text-xs max-w-2xl leading-relaxed space-y-2 mb-2">
             <p>
-              This dashboard compares what cards are <strong className="text-foreground">listed for</strong> against what they actually <strong className="text-foreground">sell for</strong> on eBay — revealing where the market is overpricing, underpricing, or fairly valuing each athlete's cards. Prices are calculated using the <strong className="text-foreground">Taguchi Winsorized Mean</strong>, which removes extreme outliers for accuracy, and updated daily from live eBay market scans across 550+ Venezuelan athletes.
+              This dashboard compares what cards are <strong className="text-foreground">listed for</strong> against what they actually <strong className="text-foreground">sell for</strong> on eBay — revealing where the market is overpricing, underpricing, or fairly valuing each athlete's cards. Prices are calculated using the <strong className="text-foreground">Taguchi Winsorized Mean</strong>, which removes extreme outliers for accuracy, from live eBay market scans across 550+ Venezuelan athletes.
             </p>
             <p>
               Use the scatter plots to spot arbitrage opportunities, the price gap charts to find the biggest spreads, and the investment signal grid to identify undervalued, volatile, or overpriced cards at a glance.
@@ -687,7 +687,7 @@ const Data = () => {
           <div className="mt-3 flex items-center gap-3 flex-wrap">
             <div className="inline-flex items-center gap-2 rounded-full border border-border/50 bg-card/80 backdrop-blur-sm px-4 py-1.5">
               <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
-              <span className="text-xs text-muted-foreground font-medium">Updated Daily</span>
+              <span className="text-xs text-muted-foreground font-medium">Last update</span>
             </div>
             <div className="ml-auto">
               <SocialShare
