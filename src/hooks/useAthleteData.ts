@@ -265,7 +265,7 @@ export function useAthleteData() {
         setEbayGradedSoldRaw(fetchedGradedSold);
       }
       // Prefer active-listings timestamp (ebay-avg.json) since sold pipeline is retired
-      const listingsUpdatedAt = (fetchedAvg as any)?._meta?.updatedAt;
+      const listingsUpdatedAt = (fetchedEbay as any)?._meta?.updatedAt;
       if (listingsUpdatedAt) {
         setLastUpdated(timeAgo(listingsUpdatedAt));
       } else if (fetchedProgress?.lastBatchAt) {
