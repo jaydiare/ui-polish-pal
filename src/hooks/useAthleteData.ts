@@ -264,7 +264,11 @@ export function useAthleteData() {
       if (fetchedGradedSold && typeof fetchedGradedSold === "object") {
         setEbayGradedSoldRaw(fetchedGradedSold);
       }
-      if (fetchedProgress?.lastBatchAt) {
+      // Prefer active-listings timestamp (ebay-avg.json) since sold pipeline is retired
+      const listingsUpdatedAt = (fetchedAvg as any)?._meta?.updatedAt;
+      if (listingsUpdatedAt) {
+        setLastUpdated(timeAgo(listingsUpdatedAt));
+      } else if (fetchedProgress?.lastBatchAt) {
         setLastUpdated(timeAgo(fetchedProgress.lastBatchAt));
       }
       if (fetchedHistory && typeof fetchedHistory === "object") {
