@@ -16,7 +16,7 @@ const fadeUp = (delay = 0) => ({
 const FAQ_ITEMS = [
   {
     q: "How often are prices updated?",
-    a: "eBay listing averages refresh every 24 hours through automated pipelines. Sold price comps update every 3 hours in rolling batches. PSA and BGS population data refreshes on a weekly schedule. The bi-weekly market analysis report runs on the 1st and 15th of each month.",
+    a: "eBay listing averages refresh on the last scan through automated pipelines. Sold price comps update in rolling batches. PSA and BGS population data refreshes on a weekly schedule. The bi-weekly market analysis report runs on the 1st and 15th of each month.",
   },
   {
     q: "What is the Taguchi Winsorized Mean?",
@@ -149,7 +149,7 @@ export default function Methodology() {
               The platform runs on <strong className="text-foreground">15+ GitHub Actions workflows</strong> that operate like a team of research assistants who never sleep. Each workflow is responsible for a specific data domain — eBay raw listings, eBay sold prices, eBay graded listings, PSA population data, Beckett grading data, SGC population reports, and market analysis.
             </p>
             <p>
-              Workflows run on staggered cron schedules to avoid API rate limits and Git merge conflicts. A daily eBay scan starts at midnight UTC, grading data refreshes at 6 AM, and historical snapshots consolidate at noon. Each workflow includes progress tracking — if interrupted, it resumes from where it left off rather than restarting from scratch.
+              Workflows run on staggered cron schedules to avoid API rate limits and Git merge conflicts. An eBay scan starts at midnight UTC, grading data refreshes at 6 AM, and historical snapshots consolidate at noon. Each workflow includes progress tracking — if interrupted, it resumes from where it left off rather than restarting from scratch.
             </p>
             <p>
               All data flows through Git version control, which means every price change is historically tracked, every data point is auditable, and the system can recover from any failure by rolling back to a known good state. Weekly snapshots consolidate all six data sources into a single unified file that powers the analytics dashboard.
