@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "updatedAt": "2026-06-22T06:07:01.396Z",
+    "updatedAt": "2026-06-22T12:35:26.604Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "PSA 7 + PSA 8 sold comps. Two queries per athlete. Strict per-grade title filter. Taguchi winsorized mean. USD via CBSA.",
     "targetGrades": [
@@ -8,8 +8,8 @@
       8
     ],
     "batchInfo": {
-      "startIdx": 264,
-      "endIdx": 272,
+      "startIdx": 272,
+      "endIdx": 280,
       "totalAthletes": 464
     },
     "maxPages": 3,
@@ -1112,35 +1112,35 @@
   },
   "Luis Jimenez": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-06-06T19:55:17.668Z"
+    "erroredAt": "2026-06-22T12:35:42.449Z"
   },
   "Luis Leal": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-06-06T19:55:37.346Z"
+    "erroredAt": "2026-06-22T12:36:05.971Z"
   },
   "Luis Matos": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-06-06T19:55:58.067Z"
+    "erroredAt": "2026-06-22T12:36:25.472Z"
   },
   "Luis Maza": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-06-06T19:56:19.137Z"
+    "erroredAt": "2026-06-22T12:36:46.578Z"
   },
   "Luis Ordaz": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-06-06T19:56:43.140Z"
+    "erroredAt": "2026-06-22T12:37:07.730Z"
   },
   "Luis Oviedo": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-06-06T19:57:04.300Z"
+    "erroredAt": "2026-06-22T12:37:27.335Z"
   },
   "Luis Perales": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-06-06T19:57:24.704Z"
+    "erroredAt": "2026-06-22T12:37:48.867Z"
   },
   "Luis Rengifo": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-06-06T19:57:48.578Z"
+    "erroredAt": "2026-06-22T12:38:10.796Z"
   },
   "Luis Rivas": {
     "error": "eBay fetch failed (403)",
