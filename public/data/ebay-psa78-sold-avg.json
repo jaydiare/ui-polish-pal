@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "updatedAt": "2026-06-24T15:19:35.466Z",
+    "updatedAt": "2026-06-24T20:19:38.967Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "PSA 7 + PSA 8 sold comps. Two queries per athlete. Strict per-grade title filter. Taguchi winsorized mean. USD via CBSA.",
     "targetGrades": [
@@ -8,8 +8,8 @@
       8
     ],
     "batchInfo": {
-      "startIdx": 336,
-      "endIdx": 344,
+      "startIdx": 344,
+      "endIdx": 352,
       "totalAthletes": 464
     },
     "maxPages": 3,
@@ -1400,35 +1400,35 @@
   },
   "Rafael Betancourt": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-06-09T04:48:03.851Z"
+    "erroredAt": "2026-06-24T20:19:53.805Z"
   },
   "Rafael Marchan": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-06-09T04:48:26.579Z"
+    "erroredAt": "2026-06-24T20:20:16.544Z"
   },
   "Rafael Ortega": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-06-09T04:48:45.589Z"
+    "erroredAt": "2026-06-24T20:20:39.358Z"
   },
   "Ramon Cabrera": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-06-09T04:49:04.634Z"
+    "erroredAt": "2026-06-24T20:20:58.861Z"
   },
   "Ramon Castro": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-06-09T04:49:27.531Z"
+    "erroredAt": "2026-06-24T20:21:20.630Z"
   },
   "Ramon Flores": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-06-09T04:49:51.617Z"
+    "erroredAt": "2026-06-24T20:21:41.023Z"
   },
   "Ramon Garcia": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-06-09T04:50:14.161Z"
+    "erroredAt": "2026-06-24T20:22:03.653Z"
   },
   "Ramon Hernandez": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-06-09T04:50:35.742Z"
+    "erroredAt": "2026-06-24T20:22:23.674Z"
   },
   "Ramon Ramirez": {
     "error": "eBay fetch failed (403)",
