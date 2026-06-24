@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "updatedAt": "2026-06-24T09:58:51.947Z",
+    "updatedAt": "2026-06-24T15:19:35.466Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "PSA 7 + PSA 8 sold comps. Two queries per athlete. Strict per-grade title filter. Taguchi winsorized mean. USD via CBSA.",
     "targetGrades": [
@@ -8,8 +8,8 @@
       8
     ],
     "batchInfo": {
-      "startIdx": 328,
-      "endIdx": 336,
+      "startIdx": 336,
+      "endIdx": 344,
       "totalAthletes": 464
     },
     "maxPages": 3,
@@ -1368,35 +1368,35 @@
   },
   "Pablo Lopez": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-06-08T20:41:11.430Z"
+    "erroredAt": "2026-06-24T15:19:50.966Z"
   },
   "Pablo Sandoval": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-06-08T20:41:32.674Z"
+    "erroredAt": "2026-06-24T15:20:10.736Z"
   },
   "Pablo Torrealba": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-06-08T20:41:55.423Z"
+    "erroredAt": "2026-06-24T15:20:33.627Z"
   },
   "Pedro Avila": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-06-08T20:42:15.676Z"
+    "erroredAt": "2026-06-24T15:20:56.535Z"
   },
   "Pedro Castellano": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-06-08T20:42:35.655Z"
+    "erroredAt": "2026-06-24T15:21:17.070Z"
   },
   "Pedro Hernandez": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-06-08T20:42:54.942Z"
+    "erroredAt": "2026-06-24T15:21:41.872Z"
   },
   "Pedro Pages": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-06-08T20:43:16.998Z"
+    "erroredAt": "2026-06-24T15:22:04.920Z"
   },
   "Pompeyo Davalillo": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-06-08T20:43:38.618Z"
+    "erroredAt": "2026-06-24T15:22:27.179Z"
   },
   "Rafael Betancourt": {
     "error": "eBay fetch failed (403)",
