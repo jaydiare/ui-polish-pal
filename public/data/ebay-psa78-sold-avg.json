@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "updatedAt": "2026-06-24T20:19:38.967Z",
+    "updatedAt": "2026-06-25T04:47:30.778Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "PSA 7 + PSA 8 sold comps. Two queries per athlete. Strict per-grade title filter. Taguchi winsorized mean. USD via CBSA.",
     "targetGrades": [
@@ -8,8 +8,8 @@
       8
     ],
     "batchInfo": {
-      "startIdx": 344,
-      "endIdx": 352,
+      "startIdx": 352,
+      "endIdx": 360,
       "totalAthletes": 464
     },
     "maxPages": 3,
@@ -27,7 +27,7 @@
     },
     "fx": {
       "source": "CBSA Exchange Rates API",
-      "asOf": "2026-06-25T00:00:00.000Z"
+      "asOf": "2026-06-26T00:00:00.000Z"
     }
   },
   "Adbert Alzolay": {
@@ -1432,35 +1432,35 @@
   },
   "Ramon Ramirez": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-06-09T10:10:41.491Z"
+    "erroredAt": "2026-06-25T04:47:45.521Z"
   },
   "Ranger Suarez": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-06-09T10:11:03.642Z"
+    "erroredAt": "2026-06-25T04:48:06.863Z"
   },
   "Raul Chavez": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-06-09T10:11:23.416Z"
+    "erroredAt": "2026-06-25T04:48:27.816Z"
   },
   "Ray Monzant": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-06-09T10:11:44.686Z"
+    "erroredAt": "2026-06-25T04:48:47.538Z"
   },
   "Ray Olmedo": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-06-09T10:12:05.048Z"
+    "erroredAt": "2026-06-25T04:49:09.348Z"
   },
   "Renato Nunez": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-06-09T10:12:28.358Z"
+    "erroredAt": "2026-06-25T04:49:29.647Z"
   },
   "Rene Pinto": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-06-09T10:12:51.566Z"
+    "erroredAt": "2026-06-25T04:49:52.123Z"
   },
   "Rene Reyes": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-06-09T10:13:11.397Z"
+    "erroredAt": "2026-06-25T04:50:15.245Z"
   },
   "Renyel Pinto": {
     "error": "eBay fetch failed (403)",
