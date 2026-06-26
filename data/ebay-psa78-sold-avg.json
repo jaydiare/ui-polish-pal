@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "updatedAt": "2026-06-26T15:13:12.390Z",
+    "updatedAt": "2026-06-26T20:19:32.948Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "PSA 7 + PSA 8 sold comps. Two queries per athlete. Strict per-grade title filter. Taguchi winsorized mean. USD via CBSA.",
     "targetGrades": [
@@ -8,8 +8,8 @@
       8
     ],
     "batchInfo": {
-      "startIdx": 400,
-      "endIdx": 408,
+      "startIdx": 408,
+      "endIdx": 416,
       "totalAthletes": 464
     },
     "maxPages": 3,
@@ -1656,35 +1656,35 @@
   },
   "Willie Canate": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-06-11T05:12:00.378Z"
+    "erroredAt": "2026-06-26T20:19:48.861Z"
   },
   "Willie Martinez": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-06-11T05:12:20.320Z"
+    "erroredAt": "2026-06-26T20:20:10.016Z"
   },
   "Willson Contreras": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-06-11T05:12:40.941Z"
+    "erroredAt": "2026-06-26T20:20:33.326Z"
   },
   "Wilmer Flores": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-06-11T05:13:00.550Z"
+    "erroredAt": "2026-06-26T20:20:56.449Z"
   },
   "Wilmer Font": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-06-11T05:13:20.488Z"
+    "erroredAt": "2026-06-26T20:21:17.848Z"
   },
   "Wilson Alvarez": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-06-11T05:13:42.313Z"
+    "erroredAt": "2026-06-26T20:21:40.523Z"
   },
   "Wilson Ramos": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-06-11T05:14:05.606Z"
+    "erroredAt": "2026-06-26T20:22:01.302Z"
   },
   "Wilyer Abreu": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-06-11T05:14:24.636Z"
+    "erroredAt": "2026-06-26T20:22:22.469Z"
   },
   "Yangervis Solarte": {
     "error": "eBay fetch failed (403)",
