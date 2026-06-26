@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "updatedAt": "2026-06-25T20:33:09.308Z",
+    "updatedAt": "2026-06-26T04:52:04.767Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "PSA 7 + PSA 8 sold comps. Two queries per athlete. Strict per-grade title filter. Taguchi winsorized mean. USD via CBSA.",
     "targetGrades": [
@@ -8,8 +8,8 @@
       8
     ],
     "batchInfo": {
-      "startIdx": 376,
-      "endIdx": 384,
+      "startIdx": 384,
+      "endIdx": 392,
       "totalAthletes": 464
     },
     "maxPages": 3,
@@ -27,7 +27,7 @@
     },
     "fx": {
       "source": "CBSA Exchange Rates API",
-      "asOf": "2026-06-26T00:00:00.000Z"
+      "asOf": "2026-06-27T00:00:00.000Z"
     }
   },
   "Adbert Alzolay": {
@@ -1560,35 +1560,35 @@
   },
   "Simon Muzziotti": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-06-10T10:42:22.958Z"
+    "erroredAt": "2026-06-26T04:52:21.074Z"
   },
   "Steve Torrealba": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-06-10T10:42:44.664Z"
+    "erroredAt": "2026-06-26T04:52:44.478Z"
   },
   "Thairo Estrada": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-06-10T10:43:04.335Z"
+    "erroredAt": "2026-06-26T04:53:06.229Z"
   },
   "Tomas Perez": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-06-10T10:43:24.131Z"
+    "erroredAt": "2026-06-26T04:53:27.991Z"
   },
   "Tony Alvarez": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-06-10T10:43:45.116Z"
+    "erroredAt": "2026-06-26T04:53:48.644Z"
   },
   "Tony Armas": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-06-10T10:44:06.150Z"
+    "erroredAt": "2026-06-26T04:54:08.769Z"
   },
   "Tony Castillo": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-06-10T10:44:25.696Z"
+    "erroredAt": "2026-06-26T04:54:31.120Z"
   },
   "Tucupita Marcano": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-06-10T10:44:47.097Z"
+    "erroredAt": "2026-06-26T04:54:52.719Z"
   },
   "Ubaldo Heredia": {
     "error": "eBay fetch failed (403)",
