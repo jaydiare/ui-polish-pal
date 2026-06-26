@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "updatedAt": "2026-06-26T04:52:04.767Z",
+    "updatedAt": "2026-06-26T09:59:01.163Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "PSA 7 + PSA 8 sold comps. Two queries per athlete. Strict per-grade title filter. Taguchi winsorized mean. USD via CBSA.",
     "targetGrades": [
@@ -8,8 +8,8 @@
       8
     ],
     "batchInfo": {
-      "startIdx": 384,
-      "endIdx": 392,
+      "startIdx": 392,
+      "endIdx": 400,
       "totalAthletes": 464
     },
     "maxPages": 3,
@@ -1592,35 +1592,35 @@
   },
   "Ubaldo Heredia": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-06-10T16:23:25.021Z"
+    "erroredAt": "2026-06-26T09:59:17.045Z"
   },
   "Ugueth Urbina": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-06-10T16:23:47.822Z"
+    "erroredAt": "2026-06-26T09:59:41.085Z"
   },
   "Urbano Lugo": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-06-10T16:24:09.572Z"
+    "erroredAt": "2026-06-26T10:00:02.315Z"
   },
   "Vic Davalillo": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-06-10T16:24:30.965Z"
+    "erroredAt": "2026-06-26T10:00:23.270Z"
   },
   "Victor Martinez": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-06-10T16:24:51.865Z"
+    "erroredAt": "2026-06-26T10:00:44.519Z"
   },
   "Victor Reyes": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-06-10T16:25:14.116Z"
+    "erroredAt": "2026-06-26T10:01:06.131Z"
   },
   "Victor Zambrano": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-06-10T16:25:35.197Z"
+    "erroredAt": "2026-06-26T10:01:25.599Z"
   },
   "Wiki Gonzalez": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-06-10T16:25:55.932Z"
+    "erroredAt": "2026-06-26T10:01:47.481Z"
   },
   "Wil Ledezma": {
     "error": "eBay fetch failed (403)",
