@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "updatedAt": "2026-06-27T04:36:25.203Z",
+    "updatedAt": "2026-06-27T09:13:18.699Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "PSA 7 + PSA 8 sold comps. Two queries per athlete. Strict per-grade title filter. Taguchi winsorized mean. USD via CBSA.",
     "targetGrades": [
@@ -8,8 +8,8 @@
       8
     ],
     "batchInfo": {
-      "startIdx": 416,
-      "endIdx": 424,
+      "startIdx": 424,
+      "endIdx": 432,
       "totalAthletes": 464
     },
     "maxPages": 3,
@@ -1720,35 +1720,35 @@
   },
   "Yohendrick Pinango": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-06-11T16:38:09.726Z"
+    "erroredAt": "2026-06-27T09:13:35.027Z"
   },
   "Yolmer Sanchez": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-06-11T16:38:31.597Z"
+    "erroredAt": "2026-06-27T09:13:58.075Z"
   },
   "Yonathan Daza": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-06-11T16:38:52.785Z"
+    "erroredAt": "2026-06-27T09:14:19.180Z"
   },
   "Yonny Chirinos": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-06-11T16:39:12.500Z"
+    "erroredAt": "2026-06-27T09:14:42.201Z"
   },
   "Yonny Hernandez": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-06-11T16:39:35.801Z"
+    "erroredAt": "2026-06-27T09:15:02.220Z"
   },
   "Yorman Bazardo": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-06-11T16:39:58.993Z"
+    "erroredAt": "2026-06-27T09:15:25.974Z"
   },
   "Yorman Rodriguez": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-06-11T16:40:22.399Z"
+    "erroredAt": "2026-06-27T09:15:47.132Z"
   },
   "Yorvit Torrealba": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-06-11T16:40:42.512Z"
+    "erroredAt": "2026-06-27T09:16:10.661Z"
   },
   "Yusmeiro Petit": {
     "error": "eBay fetch failed (403)",
