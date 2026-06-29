@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "updatedAt": "2026-06-29T11:33:07.660Z",
+    "updatedAt": "2026-06-29T16:25:04.572Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "PSA 7 + PSA 8 sold comps. Two queries per athlete. Strict per-grade title filter. Taguchi winsorized mean. USD via CBSA.",
     "targetGrades": [
@@ -8,8 +8,8 @@
       8
     ],
     "batchInfo": {
-      "startIdx": 16,
-      "endIdx": 24,
+      "startIdx": 24,
+      "endIdx": 32,
       "totalAthletes": 464
     },
     "maxPages": 3,
@@ -128,35 +128,35 @@
   },
   "Andres Chaparro": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-06-13T20:04:27.980Z"
+    "erroredAt": "2026-06-29T16:25:20.815Z"
   },
   "Andres Galarraga": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-06-13T20:04:50.071Z"
+    "erroredAt": "2026-06-29T16:25:41.613Z"
   },
   "Andres Gimenez": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-06-13T20:05:14.661Z"
+    "erroredAt": "2026-06-29T16:26:02.772Z"
   },
   "Andres Machado": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-06-13T20:05:35.943Z"
+    "erroredAt": "2026-06-29T16:26:25.687Z"
   },
   "Andruw Monasterio": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-06-13T20:05:57.655Z"
+    "erroredAt": "2026-06-29T16:26:45.746Z"
   },
   "Andry Lara": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-06-13T20:06:19.455Z"
+    "erroredAt": "2026-06-29T16:27:06.018Z"
   },
   "Angel Bravo": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-06-13T20:06:39.904Z"
+    "erroredAt": "2026-06-29T16:27:26.627Z"
   },
   "Angel Guzman": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-06-13T20:07:04.517Z"
+    "erroredAt": "2026-06-29T16:27:49.535Z"
   },
   "Angel Nesbitt": {
     "error": "eBay fetch failed (403)",
