@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "updatedAt": "2026-06-29T20:26:53.608Z",
+    "updatedAt": "2026-06-30T04:47:16.963Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "PSA 7 + PSA 8 sold comps. Two queries per athlete. Strict per-grade title filter. Taguchi winsorized mean. USD via CBSA.",
     "targetGrades": [
@@ -8,8 +8,8 @@
       8
     ],
     "batchInfo": {
-      "startIdx": 32,
-      "endIdx": 40,
+      "startIdx": 40,
+      "endIdx": 48,
       "totalAthletes": 464
     },
     "maxPages": 3,
@@ -27,7 +27,7 @@
     },
     "fx": {
       "source": "CBSA Exchange Rates API",
-      "asOf": "2026-06-30T00:00:00.000Z"
+      "asOf": "2026-07-01T00:00:00.000Z"
     }
   },
   "Adbert Alzolay": {
@@ -192,35 +192,35 @@
   },
   "Argenis Diaz": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-06-14T10:05:38.421Z"
+    "erroredAt": "2026-06-30T04:47:32.319Z"
   },
   "Armando Galarraga": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-06-14T10:06:06.439Z"
+    "erroredAt": "2026-06-30T04:47:51.723Z"
   },
   "Asdrubal Cabrera": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-06-14T10:06:30.168Z"
+    "erroredAt": "2026-06-30T04:48:13.226Z"
   },
   "Avisail Garcia": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-06-14T10:06:53.822Z"
+    "erroredAt": "2026-06-30T04:48:32.737Z"
   },
   "Bo Diaz": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-06-14T10:07:14.778Z"
+    "erroredAt": "2026-06-30T04:48:55.552Z"
   },
   "Bob Abreu": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-06-14T10:07:36.431Z"
+    "erroredAt": "2026-06-30T04:49:19.454Z"
   },
   "Brayan Rocchio": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-06-14T10:07:57.591Z"
+    "erroredAt": "2026-06-30T04:49:39.054Z"
   },
   "Brayan Villarreal": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-06-14T10:08:20.269Z"
+    "erroredAt": "2026-06-30T04:50:00.953Z"
   },
   "Breyvic Valera": {
     "error": "eBay fetch failed (403)",
