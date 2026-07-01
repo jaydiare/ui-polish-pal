@@ -11,7 +11,6 @@
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
-import puppeteer from "puppeteer";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -24,6 +23,34 @@ const ATHLETES_PATH = path.join(DATA_DIR, "athletes.json");
 
 const URL = "https://www.gemrate.com/sales-trends";
 const UA = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36";
+const ENABLE_LEGACY_SCRAPE = process.env.ENABLE_LEGACY_GEMRATE_SALES_TRENDS === "1";
+
+function exitWithExistingSnapshot(reason) {
+  console.log(`ℹ️ ${reason}`);
+  console.log("ℹ️ Gemrate sales trends are legacy sold-volume data and are no longer used by the site.");
+
+  if (fs.existsSync(DATA_PATH) && fs.existsSync(PUBLIC_PATH)) {
+    console.log("✅ Keeping existing gemrate-sales-trends snapshots unchanged.");
+    return;
+  }
+
+  const output = {
+    _meta: {
+      updatedAt: new Date().toISOString(),
+      athleteCount: 0,
+      source: "gemrate.com/sales-trends",
+      status: "legacy-disabled",
+      description: "Legacy Gemrate sales volume trends are disabled because the site now uses listings data.",
+    },
+    athletes: [],
+  };
+
+  fs.mkdirSync(path.dirname(DATA_PATH), { recursive: true });
+  fs.mkdirSync(path.dirname(PUBLIC_PATH), { recursive: true });
+  fs.writeFileSync(DATA_PATH, JSON.stringify(output, null, 2));
+  fs.writeFileSync(PUBLIC_PATH, JSON.stringify(output, null, 2));
+  console.log("✅ Wrote empty legacy placeholder snapshots.");
+}
 
 // Normalize name for fuzzy matching
 function normName(s) {
@@ -37,6 +64,13 @@ function normName(s) {
 }
 
 async function main() {
+  if (!ENABLE_LEGACY_SCRAPE) {
+    exitWithExistingSnapshot("Skipping legacy Gemrate sales-trends scrape. Set ENABLE_LEGACY_GEMRATE_SALES_TRENDS=1 to run it manually.");
+    return;
+  }
+
+  const { default: puppeteer } = await import("puppeteer");
+
   // Load Venezuelan athlete roster
   const athletesRaw = JSON.parse(fs.readFileSync(ATHLETES_PATH, "utf-8"));
   const rosterSet = new Set();
@@ -64,7 +98,16 @@ async function main() {
 
     // Wait for AG Grid to render
     console.log("⏳ Waiting for AG Grid...");
-    await page.waitForSelector(".ag-root-wrapper", { timeout: 30000 });
+    const gridFound = await page
+      .waitForSelector(".ag-root-wrapper", { timeout: 30000 })
+      .then(() => true)
+      .catch(() => false);
+
+    if (!gridFound) {
+      exitWithExistingSnapshot("Gemrate sales-trends grid was not found, likely due to a site change or bot challenge.");
+      return;
+    }
+
     // Give AG Grid extra time to populate rows
     await new Promise((r) => setTimeout(r, 5000));
 
