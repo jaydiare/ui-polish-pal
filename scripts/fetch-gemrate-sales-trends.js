@@ -11,7 +11,6 @@
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
-import puppeteer from "puppeteer";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -69,6 +68,8 @@ async function main() {
     exitWithExistingSnapshot("Skipping legacy Gemrate sales-trends scrape. Set ENABLE_LEGACY_GEMRATE_SALES_TRENDS=1 to run it manually.");
     return;
   }
+
+  const { default: puppeteer } = await import("puppeteer");
 
   // Load Venezuelan athlete roster
   const athletesRaw = JSON.parse(fs.readFileSync(ATHLETES_PATH, "utf-8"));
