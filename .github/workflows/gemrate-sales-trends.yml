@@ -1,9 +1,9 @@
 name: Gemrate Sales Trends (Monthly)
 
 on:
-  schedule:
-    # 1st of every month at 10:00 UTC
-    - cron: "0 10 1 * *"
+  # Disabled monthly schedule: this pipeline scrapes Gemrate sales/sold-volume
+  # trends, and the site now uses listings data instead of sold data.
+  # Keep manual dispatch only in case the legacy snapshot is ever needed.
   workflow_dispatch:
 
 permissions:
