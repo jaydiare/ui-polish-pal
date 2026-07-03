@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "updatedAt": "2026-07-02T20:04:12.410Z",
+    "updatedAt": "2026-07-03T04:27:46.919Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "PSA 7 + PSA 8 sold comps. Two queries per athlete. Strict per-grade title filter. Taguchi winsorized mean. USD via CBSA.",
     "targetGrades": [
@@ -8,8 +8,8 @@
       8
     ],
     "batchInfo": {
-      "startIdx": 120,
-      "endIdx": 128,
+      "startIdx": 128,
+      "endIdx": 136,
       "totalAthletes": 464
     },
     "maxPages": 3,
@@ -27,7 +27,7 @@
     },
     "fx": {
       "source": "CBSA Exchange Rates API",
-      "asOf": "2026-07-03T00:00:00.000Z"
+      "asOf": "2026-07-04T00:00:00.000Z"
     }
   },
   "Adbert Alzolay": {
@@ -544,35 +544,35 @@
   },
   "Ezequiel Tovar": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-06-17T20:35:37.370Z"
+    "erroredAt": "2026-07-03T04:28:03.533Z"
   },
   "Felipe Lira": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-06-17T20:35:58.771Z"
+    "erroredAt": "2026-07-03T04:28:25.030Z"
   },
   "Felipe Vazquez": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-06-17T20:36:20.738Z"
+    "erroredAt": "2026-07-03T04:28:44.629Z"
   },
   "Felix Doubront": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-06-17T20:36:39.490Z"
+    "erroredAt": "2026-07-03T04:29:05.396Z"
   },
   "Felix Escalona": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-06-17T20:37:01.565Z"
+    "erroredAt": "2026-07-03T04:29:25.821Z"
   },
   "Felix Hernandez": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-06-17T20:37:25.206Z"
+    "erroredAt": "2026-07-03T04:29:49.337Z"
   },
   "Fernando Nieve": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-06-17T20:37:47.638Z"
+    "erroredAt": "2026-07-03T04:30:11.669Z"
   },
   "Francisco Alvarez": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-06-17T20:38:09.194Z"
+    "erroredAt": "2026-07-03T04:30:34.049Z"
   },
   "Francisco Arcia": {
     "error": "eBay fetch failed (403)",
