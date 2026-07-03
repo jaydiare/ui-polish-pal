@@ -2,7 +2,7 @@
   "_meta": {
     "description": "Historical price data from SportsCardsPro for 2018 Topps Update RC cards",
     "source": "sportscardspro.com",
-    "fetchedAt": "2026-03-09T20:20:54.217Z",
+    "fetchedAt": "2026-07-03T01:35:35.635Z",
     "grades": {
       "7": "Grade 7",
       "8": "Grade 8",
@@ -17,7 +17,7 @@
     "cardTitle": "2018 Topps Update Series #US250 Ronald Acuna Jr. RC",
     "productId": "1559264",
     "currentPrices": {
-      "ungraded": 8.93,
+      "ungraded": 7.71,
       "grade_9": 0,
       "psa_10": 0
     },
@@ -25,21 +25,9 @@
       "7": {
         "label": "Grade 7",
         "dataPoints": 61,
-        "firstDate": "2021-03-01",
-        "lastDate": "2026-03-01",
+        "firstDate": "2021-06-01",
+        "lastDate": "2026-07-01",
         "data": [
-          {
-            "date": "2021-03-01",
-            "price": 0
-          },
-          {
-            "date": "2021-04-01",
-            "price": 0
-          },
-          {
-            "date": "2021-05-01",
-            "price": 0
-          },
           {
             "date": "2021-06-01",
             "price": 0
@@ -270,28 +258,28 @@
           },
           {
             "date": "2026-03-01",
-            "price": 9
+            "price": 8
+          },
+          {
+            "date": "2026-04-01",
+            "price": 8
+          },
+          {
+            "date": "2026-05-01",
+            "price": 12
+          },
+          {
+            "date": "2026-07-01",
+            "price": 15.5
           }
         ]
       },
       "8": {
         "label": "Grade 8",
         "dataPoints": 61,
-        "firstDate": "2021-03-01",
-        "lastDate": "2026-03-01",
+        "firstDate": "2021-06-01",
+        "lastDate": "2026-07-01",
         "data": [
-          {
-            "date": "2021-03-01",
-            "price": 0
-          },
-          {
-            "date": "2021-04-01",
-            "price": 55.51
-          },
-          {
-            "date": "2021-05-01",
-            "price": 46.01
-          },
           {
             "date": "2021-06-01",
             "price": 46.01
@@ -522,28 +510,28 @@
           },
           {
             "date": "2026-03-01",
-            "price": 11.55
+            "price": 9.99
+          },
+          {
+            "date": "2026-04-01",
+            "price": 10.42
+          },
+          {
+            "date": "2026-05-01",
+            "price": 14.99
+          },
+          {
+            "date": "2026-07-01",
+            "price": 15.5
           }
         ]
       },
       "9": {
         "label": "Grade 9",
         "dataPoints": 61,
-        "firstDate": "2021-03-01",
-        "lastDate": "2026-03-01",
+        "firstDate": "2021-06-01",
+        "lastDate": "2026-07-01",
         "data": [
-          {
-            "date": "2021-03-01",
-            "price": 80.09
-          },
-          {
-            "date": "2021-04-01",
-            "price": 85.88
-          },
-          {
-            "date": "2021-05-01",
-            "price": 62
-          },
           {
             "date": "2021-06-01",
             "price": 58.5
@@ -774,28 +762,28 @@
           },
           {
             "date": "2026-03-01",
-            "price": 19.99
+            "price": 19.41
+          },
+          {
+            "date": "2026-04-01",
+            "price": 20
+          },
+          {
+            "date": "2026-05-01",
+            "price": 19.32
+          },
+          {
+            "date": "2026-07-01",
+            "price": 19.45
           }
         ]
       },
       "10": {
         "label": "PSA 10",
         "dataPoints": 61,
-        "firstDate": "2021-03-01",
-        "lastDate": "2026-03-01",
+        "firstDate": "2021-06-01",
+        "lastDate": "2026-07-01",
         "data": [
-          {
-            "date": "2021-03-01",
-            "price": 214.53
-          },
-          {
-            "date": "2021-04-01",
-            "price": 250
-          },
-          {
-            "date": "2021-05-01",
-            "price": 197.75
-          },
           {
             "date": "2021-06-01",
             "price": 174
@@ -1026,28 +1014,28 @@
           },
           {
             "date": "2026-03-01",
-            "price": 43
+            "price": 47.34
+          },
+          {
+            "date": "2026-04-01",
+            "price": 41
+          },
+          {
+            "date": "2026-05-01",
+            "price": 38.78
+          },
+          {
+            "date": "2026-07-01",
+            "price": 38.64
           }
         ]
       },
       "ungraded": {
         "label": "Ungraded",
         "dataPoints": 61,
-        "firstDate": "2021-03-01",
-        "lastDate": "2026-03-01",
+        "firstDate": "2021-06-01",
+        "lastDate": "2026-07-01",
         "data": [
-          {
-            "date": "2021-03-01",
-            "price": 72
-          },
-          {
-            "date": "2021-04-01",
-            "price": 85
-          },
-          {
-            "date": "2021-05-01",
-            "price": 155
-          },
           {
             "date": "2021-06-01",
             "price": 155
@@ -1278,28 +1266,28 @@
           },
           {
             "date": "2026-03-01",
-            "price": 8.93
+            "price": 9.33
+          },
+          {
+            "date": "2026-04-01",
+            "price": 9.74
+          },
+          {
+            "date": "2026-05-01",
+            "price": 9.99
+          },
+          {
+            "date": "2026-07-01",
+            "price": 7.71
           }
         ]
       },
       "9.5": {
         "label": "Grade 9.5",
         "dataPoints": 61,
-        "firstDate": "2021-03-01",
-        "lastDate": "2026-03-01",
+        "firstDate": "2021-06-01",
+        "lastDate": "2026-07-01",
         "data": [
-          {
-            "date": "2021-03-01",
-            "price": 0
-          },
-          {
-            "date": "2021-04-01",
-            "price": 194.58
-          },
-          {
-            "date": "2021-05-01",
-            "price": 186.78
-          },
           {
             "date": "2021-06-01",
             "price": 133.46
@@ -1530,7 +1518,19 @@
           },
           {
             "date": "2026-03-01",
-            "price": 23.25
+            "price": 25
+          },
+          {
+            "date": "2026-04-01",
+            "price": 23.29
+          },
+          {
+            "date": "2026-05-01",
+            "price": 28.69
+          },
+          {
+            "date": "2026-07-01",
+            "price": 24.99
           }
         ]
       },
@@ -1647,7 +1647,7 @@
     "cardTitle": "2018 Topps Update #US200 Gleyber Torres RC",
     "productId": "1559160",
     "currentPrices": {
-      "ungraded": 1.37,
+      "ungraded": 2.05,
       "grade_9": 0,
       "psa_10": 0
     },
@@ -1655,21 +1655,9 @@
       "7": {
         "label": "Grade 7",
         "dataPoints": 61,
-        "firstDate": "2021-03-01",
-        "lastDate": "2026-03-01",
+        "firstDate": "2021-06-01",
+        "lastDate": "2026-07-01",
         "data": [
-          {
-            "date": "2021-03-01",
-            "price": 0
-          },
-          {
-            "date": "2021-04-01",
-            "price": 0
-          },
-          {
-            "date": "2021-05-01",
-            "price": 2.25
-          },
           {
             "date": "2021-06-01",
             "price": 2.25
@@ -1900,28 +1888,28 @@
           },
           {
             "date": "2026-03-01",
-            "price": 1.16
+            "price": 1.17
+          },
+          {
+            "date": "2026-04-01",
+            "price": 1.17
+          },
+          {
+            "date": "2026-05-01",
+            "price": 1.19
+          },
+          {
+            "date": "2026-07-01",
+            "price": 1.19
           }
         ]
       },
       "8": {
         "label": "Grade 8",
         "dataPoints": 61,
-        "firstDate": "2021-03-01",
-        "lastDate": "2026-03-01",
+        "firstDate": "2021-06-01",
+        "lastDate": "2026-07-01",
         "data": [
-          {
-            "date": "2021-03-01",
-            "price": 0
-          },
-          {
-            "date": "2021-04-01",
-            "price": 6.51
-          },
-          {
-            "date": "2021-05-01",
-            "price": 6.5
-          },
           {
             "date": "2021-06-01",
             "price": 6.5
@@ -2153,27 +2141,27 @@
           {
             "date": "2026-03-01",
             "price": 6
+          },
+          {
+            "date": "2026-04-01",
+            "price": 6
+          },
+          {
+            "date": "2026-05-01",
+            "price": 6
+          },
+          {
+            "date": "2026-07-01",
+            "price": 6
           }
         ]
       },
       "9": {
         "label": "Grade 9",
         "dataPoints": 61,
-        "firstDate": "2021-03-01",
-        "lastDate": "2026-03-01",
+        "firstDate": "2021-06-01",
+        "lastDate": "2026-07-01",
         "data": [
-          {
-            "date": "2021-03-01",
-            "price": 22.64
-          },
-          {
-            "date": "2021-04-01",
-            "price": 17.86
-          },
-          {
-            "date": "2021-05-01",
-            "price": 16.47
-          },
           {
             "date": "2021-06-01",
             "price": 15.21
@@ -2404,28 +2392,28 @@
           },
           {
             "date": "2026-03-01",
-            "price": 6.65
+            "price": 6.7
+          },
+          {
+            "date": "2026-04-01",
+            "price": 7
+          },
+          {
+            "date": "2026-05-01",
+            "price": 7
+          },
+          {
+            "date": "2026-07-01",
+            "price": 7
           }
         ]
       },
       "10": {
         "label": "PSA 10",
         "dataPoints": 61,
-        "firstDate": "2021-03-01",
-        "lastDate": "2026-03-01",
+        "firstDate": "2021-06-01",
+        "lastDate": "2026-07-01",
         "data": [
-          {
-            "date": "2021-03-01",
-            "price": 76
-          },
-          {
-            "date": "2021-04-01",
-            "price": 50.92
-          },
-          {
-            "date": "2021-05-01",
-            "price": 55.35
-          },
           {
             "date": "2021-06-01",
             "price": 39.14
@@ -2656,28 +2644,28 @@
           },
           {
             "date": "2026-03-01",
-            "price": 12.37
+            "price": 9.91
+          },
+          {
+            "date": "2026-04-01",
+            "price": 7.5
+          },
+          {
+            "date": "2026-05-01",
+            "price": 7.01
+          },
+          {
+            "date": "2026-07-01",
+            "price": 8
           }
         ]
       },
       "ungraded": {
         "label": "Ungraded",
         "dataPoints": 61,
-        "firstDate": "2021-03-01",
-        "lastDate": "2026-03-01",
+        "firstDate": "2021-06-01",
+        "lastDate": "2026-07-01",
         "data": [
-          {
-            "date": "2021-03-01",
-            "price": 81.08
-          },
-          {
-            "date": "2021-04-01",
-            "price": 81.08
-          },
-          {
-            "date": "2021-05-01",
-            "price": 81.08
-          },
           {
             "date": "2021-06-01",
             "price": 81.08
@@ -2908,28 +2896,28 @@
           },
           {
             "date": "2026-03-01",
-            "price": 1.37
+            "price": 1.58
+          },
+          {
+            "date": "2026-04-01",
+            "price": 2.42
+          },
+          {
+            "date": "2026-05-01",
+            "price": 1.73
+          },
+          {
+            "date": "2026-07-01",
+            "price": 2.05
           }
         ]
       },
       "9.5": {
         "label": "Grade 9.5",
         "dataPoints": 61,
-        "firstDate": "2021-03-01",
-        "lastDate": "2026-03-01",
+        "firstDate": "2021-06-01",
+        "lastDate": "2026-07-01",
         "data": [
-          {
-            "date": "2021-03-01",
-            "price": 37.69
-          },
-          {
-            "date": "2021-04-01",
-            "price": 37.69
-          },
-          {
-            "date": "2021-05-01",
-            "price": 36.19
-          },
           {
             "date": "2021-06-01",
             "price": 35
@@ -3160,7 +3148,19 @@
           },
           {
             "date": "2026-03-01",
-            "price": 12
+            "price": 10
+          },
+          {
+            "date": "2026-04-01",
+            "price": 7
+          },
+          {
+            "date": "2026-05-01",
+            "price": 7
+          },
+          {
+            "date": "2026-07-01",
+            "price": 8
           }
         ]
       },
@@ -3184,31 +3184,31 @@
           },
           {
             "date": "1970-01-01",
-            "price": 0
+            "price": 7
           },
           {
             "date": "1970-01-01",
-            "price": 0
+            "price": 29
           },
           {
             "date": "1970-01-01",
-            "price": 0
+            "price": 88
           },
           {
             "date": "1970-01-01",
-            "price": 0
+            "price": 136
           },
           {
             "date": "1970-01-01",
-            "price": 0
+            "price": 848
           },
           {
             "date": "1970-01-01",
-            "price": 0
+            "price": 6128
           },
           {
             "date": "1970-01-01",
-            "price": 0
+            "price": 104.88
           }
         ]
       },
