@@ -45,7 +45,6 @@ const Blog = () => {
             { "@type": "BlogPosting", headline: "Venezuelan Players in MLB The Show 26 Rankings", url: "https://vzlasportselite.com/blog/venezuelan-players-mlb-the-show-26-top-100" },
             { "@type": "BlogPosting", headline: "Venezuelan Players in EA SPORTS FC 26: Complete Ratings Guide", url: "https://vzlasportselite.com/blog/venezuelan-players-ea-fc-26-ratings" },
             { "@type": "BlogPosting", headline: "How We Ensure Data Quality: Why Bad Data Is Worse Than No Data", url: "https://vzlasportselite.com/blog/how-we-ensure-data-quality-sports-cards" },
-            { "@type": "BlogPosting", headline: "Building Resilient Data Pipelines: How Our System Recovers From Failure", url: "https://vzlasportselite.com/blog/building-resilient-data-pipelines-sports-cards" },
             { "@type": "BlogPosting", headline: "Inside Our Data Architecture: From eBay API to Your Screen", url: "https://vzlasportselite.com/blog/data-architecture-sports-card-pricing" },
             { "@type": "BlogPosting", headline: "About Market Movers – The Premier Trading Card Data Platform", url: "https://vzlasportselite.com/blog/about-market-movers" },
           ],
