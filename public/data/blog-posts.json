@@ -2157,59 +2157,7 @@
         ]
       }
     ]
-  },
-  {
-    "slug": "building-resilient-data-pipelines-sports-cards",
-    "title": "Building Resilient Data Pipelines: How Our System Recovers From Failure",
-    "excerpt": "External APIs throttle you. Network connections drop. Bot detectors block scrapers. Here is how VZLA Sports Elite designs data pipelines that recover automatically, preserve progress, and leave clear evidence of what happened.",
-    "date": "2026-03-25",
-    "author": "VZLA Sports Elite",
-    "coverImage": "",
-    "type": "article",
-    "sections": [],
-    "textSections": [
-      {
-        "heading": "Why Resilience Matters More Than Speed",
-        "paragraphs": [
-          "Pipelines will fail. External APIs will throttle you. Concurrent workflows will collide on shared files. Network connections will drop mid-write. Bot detectors will block scrapers.",
-          "The goal is not to prevent failure \u2014 it is to design systems that recover automatically, preserve progress, and leave clear evidence of what happened. At VZLA Sports Elite, we run 15+ automated workflows daily. Every resilience pattern we use was born from a real production incident."
-        ]
-      },
-      {
-        "heading": "Rebase-Safe Commits: Handling Concurrent Pipelines",
-        "paragraphs": [
-          "Multiple workflows commit to the same repository branch. On a typical day, the eBay sold price pipeline and the grading population pipeline might both finish within minutes of each other. Without handling this, the second workflow fails because another workflow already modified the branch.",
-          "Our solution: every workflow fetches the latest branch state and rebases its changes before pushing. If the rebase encounters a conflict, it falls back to a pull-rebase strategy with up to three retries.",
-          "This pattern means that even when 5 workflows finish simultaneously, their data all makes it into the repository without manual intervention."
-        ]
-      },
-      {
-        "heading": "Progress Tracking: Never Restart From Scratch",
-        "paragraphs": [
-          "Processing 550+ athletes takes time. If a workflow fails after processing 400 athletes, restarting from athlete #1 wastes hours of API calls and risks hitting rate limits again.",
-          "Every batch pipeline maintains a progress file \u2014 a simple JSON object tracking which athletes have been processed in the current cycle. When a workflow resumes after failure, it reads the progress file and picks up where it left off.",
-          "This pattern is critical for eBay API workflows, which are rate-limited. Without progress tracking, a single failure would burn through the daily quota on re-processing athletes that were already done."
-        ]
-      },
-      {
-        "heading": "The Three-Layer Fallback Chain",
-        "paragraphs": [
-          "Every number on the platform passes through a chain of data sources before reaching your screen. Layer 1 is GitHub Raw URLs \u2014 the frontend fetches the latest committed data directly. No redeploy needed.",
-          "Layer 2 is local copies bundled with the frontend build. If GitHub is unavailable, these serve as a fallback. They may be slightly stale, but stale data is better than no data.",
-          "Layer 3 is a PostgreSQL database that receives weekly snapshots. This exists purely for disaster recovery. Even if the entire Git repository is corrupted, we can restore every data point from the database.",
-          "This architecture means a complete GitHub outage or accidental data deletion cannot permanently destroy our data. Recovery is always possible."
-        ]
-      },
-      {
-        "heading": "Cooldown Management: Respecting API Limits",
-        "paragraphs": [
-          "External APIs impose rate limits. Exceeding these limits results in temporary bans that can last hours or days.",
-          "Our cooldown system tracks when each API was last called and enforces minimum intervals between requests. If a workflow hits a rate limit, it records the timestamp and skips that data source until the cooldown expires.",
-          "This prevents the cascading failure pattern where a rate-limited API causes aggressive retries, burning through the remaining quota and extending the ban. Instead, our system backs off gracefully and picks up in the next cycle."
-        ]
-      }
-    ]
-  },
+  }
   {
     "slug": "data-architecture-sports-card-pricing",
     "title": "Inside Our Data Architecture: From eBay API to Your Screen",
