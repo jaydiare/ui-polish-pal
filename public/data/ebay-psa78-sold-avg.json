@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "updatedAt": "2026-07-03T19:59:20.887Z",
+    "updatedAt": "2026-07-04T04:21:35.502Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "PSA 7 + PSA 8 sold comps. Two queries per athlete. Strict per-grade title filter. Taguchi winsorized mean. USD via CBSA.",
     "targetGrades": [
@@ -8,8 +8,8 @@
       8
     ],
     "batchInfo": {
-      "startIdx": 152,
-      "endIdx": 160,
+      "startIdx": 160,
+      "endIdx": 168,
       "totalAthletes": 464
     },
     "maxPages": 3,
@@ -27,7 +27,7 @@
     },
     "fx": {
       "source": "CBSA Exchange Rates API",
-      "asOf": "2026-07-04T00:00:00.000Z"
+      "asOf": "2026-07-05T00:00:00.000Z"
     }
   },
   "Adbert Alzolay": {
@@ -672,35 +672,35 @@
   },
   "Gregory Infante": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-06-18T21:04:19.861Z"
+    "erroredAt": "2026-07-04T04:21:51.428Z"
   },
   "Guilder Rodriguez": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-06-18T21:04:43.336Z"
+    "erroredAt": "2026-07-04T04:22:11.095Z"
   },
   "Guillermo Moscoso": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-06-18T21:05:06.042Z"
+    "erroredAt": "2026-07-04T04:22:34.487Z"
   },
   "Guillermo Quiroz": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-06-18T21:05:28.469Z"
+    "erroredAt": "2026-07-04T04:22:55.591Z"
   },
   "Guillermo Rodriguez": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-06-18T21:05:48.955Z"
+    "erroredAt": "2026-07-04T04:23:16.076Z"
   },
   "Gus Gil": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-06-18T21:06:10.973Z"
+    "erroredAt": "2026-07-04T04:23:37.597Z"
   },
   "Gus Polidor": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-06-18T21:06:34.774Z"
+    "erroredAt": "2026-07-04T04:24:02.222Z"
   },
   "Gustavo Chacin": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-06-18T21:06:57.127Z"
+    "erroredAt": "2026-07-04T04:24:25.323Z"
   },
   "Gustavo Molina": {
     "error": "eBay fetch failed (403)",
