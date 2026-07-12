@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "updatedAt": "2026-07-12T14:06:34.980Z",
+    "updatedAt": "2026-07-12T19:41:30.421Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "PSA 7 + PSA 8 sold comps. Two queries per athlete. Strict per-grade title filter. Taguchi winsorized mean. USD via CBSA.",
     "targetGrades": [
@@ -8,8 +8,8 @@
       8
     ],
     "batchInfo": {
-      "startIdx": 432,
-      "endIdx": 440,
+      "startIdx": 440,
+      "endIdx": 448,
       "totalAthletes": 464
     },
     "maxPages": 3,
@@ -1784,35 +1784,35 @@
   },
   "Oscar Torres": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-06-27T19:54:26.516Z"
+    "erroredAt": "2026-07-12T19:41:46.387Z"
   },
   "Amleto Monacelli": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-06-27T19:54:48.373Z"
+    "erroredAt": "2026-07-12T19:42:08.488Z"
   },
   "Andres Borregales": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-06-27T19:55:12.245Z"
+    "erroredAt": "2026-07-12T19:42:28.803Z"
   },
   "Salomon Rondon": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-06-27T19:55:33.659Z"
+    "erroredAt": "2026-07-12T19:42:51.093Z"
   },
   "Yangel Herrera": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-06-27T19:55:55.851Z"
+    "erroredAt": "2026-07-12T19:43:13.581Z"
   },
   "Cristian Casseres Jr.": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-06-27T19:56:16.037Z"
+    "erroredAt": "2026-07-12T19:43:36.069Z"
   },
   "Wuilker Farinez": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-06-27T19:56:39.758Z"
+    "erroredAt": "2026-07-12T19:43:57.243Z"
   },
   "Alejandro Moreno": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-06-27T19:57:02.362Z"
+    "erroredAt": "2026-07-12T19:44:17.329Z"
   },
   "Dani Pereira": {
     "error": "eBay fetch failed (403)",
