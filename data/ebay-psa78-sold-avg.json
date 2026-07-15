@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "updatedAt": "2026-07-15T08:56:13.483Z",
+    "updatedAt": "2026-07-15T14:21:54.229Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "PSA 7 + PSA 8 sold comps. Two queries per athlete. Strict per-grade title filter. Taguchi winsorized mean. USD via CBSA.",
     "targetGrades": [
@@ -8,8 +8,8 @@
       8
     ],
     "batchInfo": {
-      "startIdx": 48,
-      "endIdx": 56,
+      "startIdx": 56,
+      "endIdx": 64,
       "totalAthletes": 464
     },
     "maxPages": 3,
@@ -256,35 +256,35 @@
   },
   "Carlos Guzman": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-06-30T15:14:30.372Z"
+    "erroredAt": "2026-07-15T14:22:13.291Z"
   },
   "Carlos Hernandez": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-06-30T15:14:50.857Z"
+    "erroredAt": "2026-07-15T14:22:42.163Z"
   },
   "Carlos Maldonado": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-06-30T15:15:14.693Z"
+    "erroredAt": "2026-07-15T14:23:12.051Z"
   },
   "Carlos Martinez": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-06-30T15:15:37.164Z"
+    "erroredAt": "2026-07-15T14:23:36.756Z"
   },
   "Carlos Monasterios": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-06-30T15:15:58.935Z"
+    "erroredAt": "2026-07-15T14:24:00.322Z"
   },
   "Carlos Narvaez": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-06-30T15:16:21.080Z"
+    "erroredAt": "2026-07-15T14:24:22.906Z"
   },
   "Carlos Perez": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-06-30T15:16:44.184Z"
+    "erroredAt": "2026-07-15T14:24:42.865Z"
   },
   "Carlos Pulido": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-06-30T15:17:05.997Z"
+    "erroredAt": "2026-07-15T14:25:05.008Z"
   },
   "Carlos Quintana": {
     "error": "eBay fetch failed (403)",
