@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "updatedAt": "2026-07-14T19:52:06.852Z",
+    "updatedAt": "2026-07-15T03:45:45.105Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "PSA 7 + PSA 8 sold comps. Two queries per athlete. Strict per-grade title filter. Taguchi winsorized mean. USD via CBSA.",
     "targetGrades": [
@@ -8,8 +8,8 @@
       8
     ],
     "batchInfo": {
-      "startIdx": 32,
-      "endIdx": 40,
+      "startIdx": 40,
+      "endIdx": 48,
       "totalAthletes": 464
     },
     "maxPages": 3,
@@ -192,35 +192,35 @@
   },
   "Argenis Diaz": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-06-30T04:47:32.319Z"
+    "erroredAt": "2026-07-15T03:46:01.283Z"
   },
   "Armando Galarraga": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-06-30T04:47:51.723Z"
+    "erroredAt": "2026-07-15T03:46:24.553Z"
   },
   "Asdrubal Cabrera": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-06-30T04:48:13.226Z"
+    "erroredAt": "2026-07-15T03:46:48.023Z"
   },
   "Avisail Garcia": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-06-30T04:48:32.737Z"
+    "erroredAt": "2026-07-15T03:47:08.466Z"
   },
   "Bo Diaz": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-06-30T04:48:55.552Z"
+    "erroredAt": "2026-07-15T03:47:32.055Z"
   },
   "Bob Abreu": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-06-30T04:49:19.454Z"
+    "erroredAt": "2026-07-15T03:47:55.008Z"
   },
   "Brayan Rocchio": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-06-30T04:49:39.054Z"
+    "erroredAt": "2026-07-15T03:48:14.921Z"
   },
   "Brayan Villarreal": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-06-30T04:50:00.953Z"
+    "erroredAt": "2026-07-15T03:48:35.760Z"
   },
   "Breyvic Valera": {
     "error": "eBay fetch failed (403)",
