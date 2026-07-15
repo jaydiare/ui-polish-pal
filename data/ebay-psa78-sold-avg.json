@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "updatedAt": "2026-07-15T03:45:45.105Z",
+    "updatedAt": "2026-07-15T08:56:13.483Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "PSA 7 + PSA 8 sold comps. Two queries per athlete. Strict per-grade title filter. Taguchi winsorized mean. USD via CBSA.",
     "targetGrades": [
@@ -8,8 +8,8 @@
       8
     ],
     "batchInfo": {
-      "startIdx": 40,
-      "endIdx": 48,
+      "startIdx": 48,
+      "endIdx": 56,
       "totalAthletes": 464
     },
     "maxPages": 3,
@@ -27,7 +27,7 @@
     },
     "fx": {
       "source": "CBSA Exchange Rates API",
-      "asOf": "2026-07-15T00:00:00.000Z"
+      "asOf": "2026-07-16T00:00:00.000Z"
     }
   },
   "Adbert Alzolay": {
@@ -224,35 +224,35 @@
   },
   "Breyvic Valera": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-06-30T10:09:07.251Z"
+    "erroredAt": "2026-07-15T08:56:29.455Z"
   },
   "Bruce Rondon": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-06-30T10:09:27.306Z"
+    "erroredAt": "2026-07-15T08:56:51.261Z"
   },
   "Brusdar Graterol": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-06-30T10:09:48.514Z"
+    "erroredAt": "2026-07-15T08:57:11.372Z"
   },
   "Carlos Asuaje": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-06-30T10:10:11.045Z"
+    "erroredAt": "2026-07-15T08:57:34.020Z"
   },
   "Carlos Carrasco": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-06-30T10:10:34.397Z"
+    "erroredAt": "2026-07-15T08:57:56.962Z"
   },
   "Carlos Garcia": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-06-30T10:10:56.520Z"
+    "erroredAt": "2026-07-15T08:58:18.598Z"
   },
   "Carlos Gonzalez": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-06-30T10:11:18.585Z"
+    "erroredAt": "2026-07-15T08:58:40.270Z"
   },
   "Carlos Guillen": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-06-30T10:11:40.861Z"
+    "erroredAt": "2026-07-15T08:59:01.886Z"
   },
   "Carlos Guzman": {
     "error": "eBay fetch failed (403)",
