@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "updatedAt": "2026-07-16T03:48:35.995Z",
+    "updatedAt": "2026-07-16T08:41:57.743Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "PSA 7 + PSA 8 sold comps. Two queries per athlete. Strict per-grade title filter. Taguchi winsorized mean. USD via CBSA.",
     "targetGrades": [
@@ -8,8 +8,8 @@
       8
     ],
     "batchInfo": {
-      "startIdx": 72,
-      "endIdx": 80,
+      "startIdx": 80,
+      "endIdx": 88,
       "totalAthletes": 464
     },
     "maxPages": 3,
@@ -27,7 +27,7 @@
     },
     "fx": {
       "source": "CBSA Exchange Rates API",
-      "asOf": "2026-07-16T00:00:00.000Z"
+      "asOf": "2026-07-17T00:00:00.000Z"
     }
   },
   "Adbert Alzolay": {
@@ -352,35 +352,35 @@
   },
   "Daniel Palencia": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-07-01T15:21:46.825Z"
+    "erroredAt": "2026-07-16T08:42:13.263Z"
   },
   "Danny Leon": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-07-01T15:22:07.431Z"
+    "erroredAt": "2026-07-16T08:42:36.857Z"
   },
   "Danny Sandoval": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-07-01T15:22:26.317Z"
+    "erroredAt": "2026-07-16T08:42:59.665Z"
   },
   "Darwin Cubillan": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-07-01T15:22:48.252Z"
+    "erroredAt": "2026-07-16T08:43:23.306Z"
   },
   "Darwinzon Hernandez": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-07-01T15:23:12.137Z"
+    "erroredAt": "2026-07-16T08:43:47.301Z"
   },
   "Dave Concepcion": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-07-01T15:23:32.032Z"
+    "erroredAt": "2026-07-16T08:44:10.194Z"
   },
   "David Peralta": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-07-01T15:23:53.500Z"
+    "erroredAt": "2026-07-16T08:44:30.563Z"
   },
   "Deolis Guerra": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-07-01T15:24:14.882Z"
+    "erroredAt": "2026-07-16T08:44:51.766Z"
   },
   "Diego Castillo": {
     "error": "eBay fetch failed (403)",
