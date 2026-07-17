@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "updatedAt": "2026-07-17T03:48:24.461Z",
+    "updatedAt": "2026-07-17T08:36:36.566Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "PSA 7 + PSA 8 sold comps. Two queries per athlete. Strict per-grade title filter. Taguchi winsorized mean. USD via CBSA.",
     "targetGrades": [
@@ -8,8 +8,8 @@
       8
     ],
     "batchInfo": {
-      "startIdx": 104,
-      "endIdx": 112,
+      "startIdx": 112,
+      "endIdx": 120,
       "totalAthletes": 464
     },
     "maxPages": 3,
@@ -27,7 +27,7 @@
     },
     "fx": {
       "source": "CBSA Exchange Rates API",
-      "asOf": "2026-07-17T00:00:00.000Z"
+      "asOf": "2026-07-18T00:00:00.000Z"
     }
   },
   "Adbert Alzolay": {
@@ -480,35 +480,35 @@
   },
   "Eider Torres": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-07-02T14:41:38.527Z"
+    "erroredAt": "2026-07-17T08:36:51.597Z"
   },
   "Elias Diaz": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-07-02T14:41:58.424Z"
+    "erroredAt": "2026-07-17T08:37:14.002Z"
   },
   "Elieser Hernandez": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-07-02T14:42:21.248Z"
+    "erroredAt": "2026-07-17T08:37:35.491Z"
   },
   "Eliezer Alfonzo": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-07-02T14:42:44.587Z"
+    "erroredAt": "2026-07-17T08:37:56.857Z"
   },
   "Elio Chacon": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-07-02T14:43:04.296Z"
+    "erroredAt": "2026-07-17T08:38:17.700Z"
   },
   "Elvis Andrus": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-07-02T14:43:25.244Z"
+    "erroredAt": "2026-07-17T08:38:37.796Z"
   },
   "Elvis Araujo": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-07-02T14:43:46.782Z"
+    "erroredAt": "2026-07-17T08:38:57.552Z"
   },
   "Ender Inciarte": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-07-02T14:44:07.348Z"
+    "erroredAt": "2026-07-17T08:39:20.846Z"
   },
   "Endy Chavez": {
     "error": "eBay fetch failed (403)",
