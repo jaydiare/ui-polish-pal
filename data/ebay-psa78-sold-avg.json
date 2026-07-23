@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "updatedAt": "2026-07-23T14:42:03.848Z",
+    "updatedAt": "2026-07-23T19:56:32.420Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "PSA 7 + PSA 8 sold comps. Two queries per athlete. Strict per-grade title filter. Taguchi winsorized mean. USD via CBSA.",
     "targetGrades": [
@@ -8,8 +8,8 @@
       8
     ],
     "batchInfo": {
-      "startIdx": 312,
-      "endIdx": 320,
+      "startIdx": 320,
+      "endIdx": 328,
       "totalAthletes": 464
     },
     "maxPages": 3,
@@ -1304,35 +1304,35 @@
   },
   "Omar Infante": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-07-09T04:33:59.381Z"
+    "erroredAt": "2026-07-23T19:56:49.492Z"
   },
   "Omar Narvaez": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-07-09T04:34:22.140Z"
+    "erroredAt": "2026-07-23T19:57:12.370Z"
   },
   "Omar Vizquel": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-07-09T04:34:41.758Z"
+    "erroredAt": "2026-07-23T19:57:33.601Z"
   },
   "Orber Moreno": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-07-09T04:35:04.590Z"
+    "erroredAt": "2026-07-23T19:57:54.887Z"
   },
   "Orlando Arcia": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-07-09T04:35:26.127Z"
+    "erroredAt": "2026-07-23T19:58:14.234Z"
   },
   "Oscar Azocar": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-07-09T04:35:46.546Z"
+    "erroredAt": "2026-07-23T19:58:34.719Z"
   },
   "Oscar Henriquez": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-07-09T04:36:07.129Z"
+    "erroredAt": "2026-07-23T19:58:55.203Z"
   },
   "Oscar Hernandez": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-07-09T04:36:30.361Z"
+    "erroredAt": "2026-07-23T19:59:16.909Z"
   },
   "Oscar Salazar": {
     "error": "eBay fetch failed (403)",
