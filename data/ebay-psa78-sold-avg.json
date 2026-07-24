@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "updatedAt": "2026-07-24T03:55:01.699Z",
+    "updatedAt": "2026-07-24T09:04:37.877Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "PSA 7 + PSA 8 sold comps. Two queries per athlete. Strict per-grade title filter. Taguchi winsorized mean. USD via CBSA.",
     "targetGrades": [
@@ -8,8 +8,8 @@
       8
     ],
     "batchInfo": {
-      "startIdx": 328,
-      "endIdx": 336,
+      "startIdx": 336,
+      "endIdx": 344,
       "totalAthletes": 464
     },
     "maxPages": 3,
@@ -27,7 +27,7 @@
     },
     "fx": {
       "source": "CBSA Exchange Rates API",
-      "asOf": "2026-07-24T00:00:00.000Z"
+      "asOf": "2026-07-25T00:00:00.000Z"
     }
   },
   "Adbert Alzolay": {
@@ -1368,35 +1368,35 @@
   },
   "Pablo Lopez": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-07-09T15:42:51.474Z"
+    "erroredAt": "2026-07-24T09:04:54.595Z"
   },
   "Pablo Sandoval": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-07-09T15:43:12.928Z"
+    "erroredAt": "2026-07-24T09:05:15.746Z"
   },
   "Pablo Torrealba": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-07-09T15:43:33.792Z"
+    "erroredAt": "2026-07-24T09:05:36.889Z"
   },
   "Pedro Avila": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-07-09T15:43:54.892Z"
+    "erroredAt": "2026-07-24T09:05:59.532Z"
   },
   "Pedro Castellano": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-07-09T15:44:15.133Z"
+    "erroredAt": "2026-07-24T09:06:20.313Z"
   },
   "Pedro Hernandez": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-07-09T15:44:38.624Z"
+    "erroredAt": "2026-07-24T09:06:41.955Z"
   },
   "Pedro Pages": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-07-09T15:45:02.170Z"
+    "erroredAt": "2026-07-24T09:07:02.999Z"
   },
   "Pompeyo Davalillo": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-07-09T15:45:24.590Z"
+    "erroredAt": "2026-07-24T09:07:26.881Z"
   },
   "Rafael Betancourt": {
     "error": "eBay fetch failed (403)",
