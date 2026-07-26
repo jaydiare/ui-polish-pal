@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "updatedAt": "2026-07-25T19:45:25.655Z",
+    "updatedAt": "2026-07-26T04:07:43.636Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "PSA 7 + PSA 8 sold comps. Two queries per athlete. Strict per-grade title filter. Taguchi winsorized mean. USD via CBSA.",
     "targetGrades": [
@@ -8,8 +8,8 @@
       8
     ],
     "batchInfo": {
-      "startIdx": 384,
-      "endIdx": 392,
+      "startIdx": 392,
+      "endIdx": 400,
       "totalAthletes": 464
     },
     "maxPages": 3,
@@ -27,7 +27,7 @@
     },
     "fx": {
       "source": "CBSA Exchange Rates API",
-      "asOf": "2026-07-26T00:00:00.000Z"
+      "asOf": "2026-07-27T00:00:00.000Z"
     }
   },
   "Adbert Alzolay": {
@@ -1592,35 +1592,35 @@
   },
   "Ubaldo Heredia": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-07-11T08:21:58.713Z"
+    "erroredAt": "2026-07-26T04:07:59.397Z"
   },
   "Ugueth Urbina": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-07-11T08:22:18.805Z"
+    "erroredAt": "2026-07-26T04:08:20.827Z"
   },
   "Urbano Lugo": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-07-11T08:22:40.268Z"
+    "erroredAt": "2026-07-26T04:08:41.247Z"
   },
   "Vic Davalillo": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-07-11T08:23:01.897Z"
+    "erroredAt": "2026-07-26T04:09:01.588Z"
   },
   "Victor Martinez": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-07-11T08:23:22.204Z"
+    "erroredAt": "2026-07-26T04:09:24.083Z"
   },
   "Victor Reyes": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-07-11T08:23:42.711Z"
+    "erroredAt": "2026-07-26T04:09:47.050Z"
   },
   "Victor Zambrano": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-07-11T08:24:02.481Z"
+    "erroredAt": "2026-07-26T04:10:13.579Z"
   },
   "Wiki Gonzalez": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-07-11T08:24:24.294Z"
+    "erroredAt": "2026-07-26T04:10:34.204Z"
   },
   "Wil Ledezma": {
     "error": "eBay fetch failed (403)",
