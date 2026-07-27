@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "updatedAt": "2026-07-26T19:45:14.097Z",
+    "updatedAt": "2026-07-27T04:23:54.635Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "PSA 7 + PSA 8 sold comps. Two queries per athlete. Strict per-grade title filter. Taguchi winsorized mean. USD via CBSA.",
     "targetGrades": [
@@ -8,8 +8,8 @@
       8
     ],
     "batchInfo": {
-      "startIdx": 416,
-      "endIdx": 424,
+      "startIdx": 424,
+      "endIdx": 432,
       "totalAthletes": 464
     },
     "maxPages": 3,
@@ -27,7 +27,7 @@
     },
     "fx": {
       "source": "CBSA Exchange Rates API",
-      "asOf": "2026-07-27T00:00:00.000Z"
+      "asOf": "2026-07-28T00:00:00.000Z"
     }
   },
   "Adbert Alzolay": {
@@ -1720,35 +1720,35 @@
   },
   "Yohendrick Pinango": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-07-12T08:40:00.284Z"
+    "erroredAt": "2026-07-27T04:24:09.950Z"
   },
   "Yolmer Sanchez": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-07-12T08:40:23.785Z"
+    "erroredAt": "2026-07-27T04:24:33.470Z"
   },
   "Yonathan Daza": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-07-12T08:40:47.302Z"
+    "erroredAt": "2026-07-27T04:24:53.230Z"
   },
   "Yonny Chirinos": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-07-12T08:41:09.905Z"
+    "erroredAt": "2026-07-27T04:25:15.333Z"
   },
   "Yonny Hernandez": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-07-12T08:41:32.593Z"
+    "erroredAt": "2026-07-27T04:25:37.230Z"
   },
   "Yorman Bazardo": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-07-12T08:41:54.065Z"
+    "erroredAt": "2026-07-27T04:25:58.858Z"
   },
   "Yorman Rodriguez": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-07-12T08:42:15.300Z"
+    "erroredAt": "2026-07-27T04:26:19.695Z"
   },
   "Yorvit Torrealba": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-07-12T08:42:36.177Z"
+    "erroredAt": "2026-07-27T04:26:42.931Z"
   },
   "Yusmeiro Petit": {
     "error": "eBay fetch failed (403)",
