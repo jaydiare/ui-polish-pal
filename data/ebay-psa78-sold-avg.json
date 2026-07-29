@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "updatedAt": "2026-07-29T03:51:44.946Z",
+    "updatedAt": "2026-07-29T09:23:18.312Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "PSA 7 + PSA 8 sold comps. Two queries per athlete. Strict per-grade title filter. Taguchi winsorized mean. USD via CBSA.",
     "targetGrades": [
@@ -8,8 +8,8 @@
       8
     ],
     "batchInfo": {
-      "startIdx": 16,
-      "endIdx": 24,
+      "startIdx": 24,
+      "endIdx": 32,
       "totalAthletes": 464
     },
     "maxPages": 3,
@@ -27,7 +27,7 @@
     },
     "fx": {
       "source": "CBSA Exchange Rates API",
-      "asOf": "2026-07-29T00:00:00.000Z"
+      "asOf": "2026-07-30T00:00:00.000Z"
     }
   },
   "Adbert Alzolay": {
@@ -128,35 +128,35 @@
   },
   "Andres Chaparro": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-07-14T14:26:12.117Z"
+    "erroredAt": "2026-07-29T09:23:33.917Z"
   },
   "Andres Galarraga": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-07-14T14:26:35.278Z"
+    "erroredAt": "2026-07-29T09:23:53.796Z"
   },
   "Andres Gimenez": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-07-14T14:26:57.723Z"
+    "erroredAt": "2026-07-29T09:24:16.987Z"
   },
   "Andres Machado": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-07-14T14:27:19.261Z"
+    "erroredAt": "2026-07-29T09:24:36.296Z"
   },
   "Andruw Monasterio": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-07-14T14:27:40.694Z"
+    "erroredAt": "2026-07-29T09:24:59.760Z"
   },
   "Andry Lara": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-07-14T14:28:02.774Z"
+    "erroredAt": "2026-07-29T09:25:19.413Z"
   },
   "Angel Bravo": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-07-14T14:28:23.998Z"
+    "erroredAt": "2026-07-29T09:25:38.831Z"
   },
   "Angel Guzman": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-07-14T14:28:46.525Z"
+    "erroredAt": "2026-07-29T09:26:01.641Z"
   },
   "Angel Nesbitt": {
     "error": "eBay fetch failed (403)",
