@@ -1,8 +1,8 @@
 {
   "_meta": {
-    "updatedAt": "2026-07-03T02:43:22.014Z",
+    "updatedAt": "2026-08-01T12:03:04.486Z",
     "athleteCount": 578,
-    "hits": 557,
+    "hits": 542,
     "type": "raw",
     "description": "SportsCardsPro RAW price lookup (query: Name Sport Raw)"
   },
@@ -10,7 +10,7 @@
     {
       "name": "Adbert Alzolay",
       "sport": "Baseball",
-      "scpRawPrice": 2.25,
+      "scpRawPrice": 2.21,
       "scpRawProduct": "Adbert Alzolay [X] #181",
       "scpRawId": "4548706",
       "scpRawMatchCount": 100
@@ -18,7 +18,7 @@
     {
       "name": "Adrian Sanchez",
       "sport": "Baseball",
-      "scpRawPrice": 1.65,
+      "scpRawPrice": 1.8,
       "scpRawProduct": "Adrian Sanchez [Refractor] #RA-ASA",
       "scpRawId": "1537273",
       "scpRawMatchCount": 100
@@ -26,7 +26,7 @@
     {
       "name": "Al Pedrique",
       "sport": "Baseball",
-      "scpRawPrice": 1.51,
+      "scpRawPrice": 1.58,
       "scpRawProduct": "Al Pedrique [Gold] #268",
       "scpRawId": "9140180",
       "scpRawMatchCount": 100
@@ -34,15 +34,15 @@
     {
       "name": "Albert Suarez",
       "sport": "Baseball",
-      "scpRawPrice": 1.91,
-      "scpRawProduct": "Albert Suarez [Burgundy Sparkle] #414",
-      "scpRawId": "9223940",
+      "scpRawPrice": 2.04,
+      "scpRawProduct": "Albert #32",
+      "scpRawId": "3893804",
       "scpRawMatchCount": 100
     },
     {
       "name": "Alberto Callaspo",
       "sport": "Baseball",
-      "scpRawPrice": 1.73,
+      "scpRawPrice": 1.76,
       "scpRawProduct": "Alberto Callaspo [Silver] #176",
       "scpRawId": "2061342",
       "scpRawMatchCount": 100
@@ -50,15 +50,15 @@
     {
       "name": "Alberto Gonzalez",
       "sport": "Baseball",
-      "scpRawPrice": 3.5,
+      "scpRawPrice": 2.57,
       "scpRawProduct": "Alberto Gonzalez [Gold] #UH207",
       "scpRawId": "2090114",
-      "scpRawMatchCount": 100
+      "scpRawMatchCount": 71
     },
     {
       "name": "Alcides Escobar",
       "sport": "Baseball",
-      "scpRawPrice": 2.34,
+      "scpRawPrice": 2.44,
       "scpRawProduct": "Alcides Escobar [Silver] #157",
       "scpRawId": "1529400",
       "scpRawMatchCount": 100
@@ -66,7 +66,7 @@
     {
       "name": "Alejandro Chacin",
       "sport": "Baseball",
-      "scpRawPrice": 1.98,
+      "scpRawPrice": 1.96,
       "scpRawProduct": "Alejandro Chacin / Joe Jimenez / Matt Carasiti [Blank Back] #196",
       "scpRawId": "10153260",
       "scpRawMatchCount": 100
@@ -74,7 +74,7 @@
     {
       "name": "Alejandro Freire",
       "sport": "Baseball",
-      "scpRawPrice": 13.75,
+      "scpRawPrice": 13.84,
       "scpRawProduct": "Alejandro Freire [Silver] #242",
       "scpRawId": "8954245",
       "scpRawMatchCount": 100
@@ -82,7 +82,7 @@
     {
       "name": "Alejandro Machado",
       "sport": "Baseball",
-      "scpRawPrice": 1.52,
+      "scpRawPrice": 1.64,
       "scpRawProduct": "Alejandro Machado [Silver] #297",
       "scpRawId": "8954445",
       "scpRawMatchCount": 100
@@ -90,7 +90,7 @@
     {
       "name": "Alex Carrasquel",
       "sport": "Baseball",
-      "scpRawPrice": 11.08,
+      "scpRawPrice": 11.72,
       "scpRawProduct": "Alex Carrasquel #176",
       "scpRawId": "1853226",
       "scpRawMatchCount": 100
@@ -98,7 +98,7 @@
     {
       "name": "Alex Delgado",
       "sport": "Baseball",
-      "scpRawPrice": 4.64,
+      "scpRawPrice": 4.53,
       "scpRawProduct": "Carlos Delgado / Alex Rodriguez / Bret Boone [Black] #340",
       "scpRawId": "9077530",
       "scpRawMatchCount": 100
@@ -106,7 +106,7 @@
     {
       "name": "Alex Escobar",
       "sport": "Baseball",
-      "scpRawPrice": 1.49,
+      "scpRawPrice": 1.54,
       "scpRawProduct": "Alex Escobar [1 Star] #33",
       "scpRawId": "2028621",
       "scpRawMatchCount": 100
@@ -114,7 +114,7 @@
     {
       "name": "Alex Herrera",
       "sport": "Baseball",
-      "scpRawPrice": 9.54,
+      "scpRawPrice": 10.07,
       "scpRawProduct": "Alex Herrera #439",
       "scpRawId": "2414310",
       "scpRawMatchCount": 100
@@ -122,7 +122,7 @@
     {
       "name": "Alex Pacheco",
       "sport": "Baseball",
-      "scpRawPrice": 8.28,
+      "scpRawPrice": 8.24,
       "scpRawProduct": "Alexa Bliss #2",
       "scpRawId": "3769525",
       "scpRawMatchCount": 100
@@ -130,7 +130,7 @@
     {
       "name": "Alex Prieto",
       "sport": "Baseball",
-      "scpRawPrice": 7.14,
+      "scpRawPrice": 5.9,
       "scpRawProduct": "Alex Prieto [Gold] #140",
       "scpRawId": "12513033",
       "scpRawMatchCount": 100
@@ -138,7 +138,7 @@
     {
       "name": "Alex Romero",
       "sport": "Baseball",
-      "scpRawPrice": 8.64,
+      "scpRawPrice": 8.58,
       "scpRawProduct": "Alex Romero [Refractor] #T188",
       "scpRawId": "2062953",
       "scpRawMatchCount": 100
@@ -146,7 +146,7 @@
     {
       "name": "Alex Serrano",
       "sport": "Baseball",
-      "scpRawPrice": 9.1,
+      "scpRawPrice": 9.12,
       "scpRawProduct": "Alex Serrano #229",
       "scpRawId": "3783957",
       "scpRawMatchCount": 100
@@ -154,7 +154,7 @@
     {
       "name": "Alex Torres",
       "sport": "Baseball",
-      "scpRawPrice": 6.94,
+      "scpRawPrice": 6.91,
       "scpRawProduct": "Alex Torres #TP62 #TP62",
       "scpRawId": "3152285",
       "scpRawMatchCount": 100
@@ -162,31 +162,31 @@
     {
       "name": "Alexi Amarista",
       "sport": "Baseball",
-      "scpRawPrice": 1.53,
+      "scpRawPrice": 1.62,
       "scpRawProduct": "Alexi Amarista [Red] #557",
       "scpRawId": "1388118",
-      "scpRawMatchCount": 100
+      "scpRawMatchCount": 78
     },
     {
       "name": "Alexis Infante",
       "sport": "Baseball",
-      "scpRawPrice": 3.63,
-      "scpRawProduct": "Alexis Infante, Bo Jackson [Panel]",
-      "scpRawId": "1942232",
-      "scpRawMatchCount": 100
+      "scpRawPrice": null,
+      "scpRawProduct": null,
+      "scpRawId": null,
+      "scpRawMatchCount": 0
     },
     {
       "name": "Alfredo Gonzalez",
       "sport": "Baseball",
-      "scpRawPrice": 2.51,
-      "scpRawProduct": "Alfredo Gonzalez [Silver] #19",
-      "scpRawId": "11665388",
-      "scpRawMatchCount": 100
+      "scpRawPrice": null,
+      "scpRawProduct": null,
+      "scpRawId": null,
+      "scpRawMatchCount": 0
     },
     {
       "name": "Ali Sanchez",
       "sport": "Baseball",
-      "scpRawPrice": 3.83,
+      "scpRawPrice": 3.64,
       "scpRawProduct": "Ali Sanchez [Refractor] #BCP-218",
       "scpRawId": "1344034",
       "scpRawMatchCount": 100
@@ -194,7 +194,7 @@
     {
       "name": "Alvaro Espinoza",
       "sport": "Baseball",
-      "scpRawPrice": 1.22,
+      "scpRawPrice": 1.2,
       "scpRawProduct": "Alvaro Espinoza [Press Proof] #303",
       "scpRawId": "3277186",
       "scpRawMatchCount": 100
@@ -210,15 +210,15 @@
     {
       "name": "Amalio Carreno",
       "sport": "Baseball",
-      "scpRawPrice": 3.93,
+      "scpRawPrice": 4.29,
       "scpRawProduct": "Amalio Carreno #867",
       "scpRawId": "3279070",
-      "scpRawMatchCount": 100
+      "scpRawMatchCount": 86
     },
     {
       "name": "Anderson Espinoza",
       "sport": "Baseball",
-      "scpRawPrice": 2.5,
+      "scpRawPrice": 2.54,
       "scpRawProduct": "Anderson Espinoza [Silver] #BP40",
       "scpRawId": "1353909",
       "scpRawMatchCount": 100
@@ -226,7 +226,7 @@
     {
       "name": "Anderson Machado",
       "sport": "Baseball",
-      "scpRawPrice": 1.62,
+      "scpRawPrice": 1.77,
       "scpRawProduct": "Anderson Machado [Gold] #238",
       "scpRawId": "4133737",
       "scpRawMatchCount": 100
@@ -234,7 +234,7 @@
     {
       "name": "Andres Blanco",
       "sport": "Baseball",
-      "scpRawPrice": 2.52,
+      "scpRawPrice": 2.36,
       "scpRawProduct": "Andres Blanco [Red] #383",
       "scpRawId": "1387944",
       "scpRawMatchCount": 100
@@ -242,7 +242,7 @@
     {
       "name": "Andres Chaparro",
       "sport": "Baseball",
-      "scpRawPrice": 3.86,
+      "scpRawPrice": 3.46,
       "scpRawProduct": "Andres Chaparro [Gold] #187",
       "scpRawId": "10008842",
       "scpRawMatchCount": 100
@@ -258,7 +258,7 @@
     {
       "name": "Andres Gimenez",
       "sport": "Baseball",
-      "scpRawPrice": 4,
+      "scpRawPrice": 4.1,
       "scpRawProduct": "Andres Gimenez [X] #BCP-186",
       "scpRawId": "1680514",
       "scpRawMatchCount": 100
@@ -266,7 +266,7 @@
     {
       "name": "Andres Machado",
       "sport": "Baseball",
-      "scpRawPrice": 1.62,
+      "scpRawPrice": 1.8,
       "scpRawProduct": "Andres Machado [Refractor] #55",
       "scpRawId": "12127667",
       "scpRawMatchCount": 100
@@ -274,7 +274,7 @@
     {
       "name": "Andruw Monasterio",
       "sport": "Baseball",
-      "scpRawPrice": 7.88,
+      "scpRawPrice": 7.91,
       "scpRawProduct": "Andruw Monasterio [Eggs] #240",
       "scpRawId": "6367893",
       "scpRawMatchCount": 100
@@ -282,7 +282,7 @@
     {
       "name": "Andry Lara",
       "sport": "Baseball",
-      "scpRawPrice": 3.03,
+      "scpRawPrice": 3.16,
       "scpRawProduct": "Andry Lara [75 Years] #36",
       "scpRawId": "11872658",
       "scpRawMatchCount": 100
@@ -290,7 +290,7 @@
     {
       "name": "Angel Bravo",
       "sport": "Baseball",
-      "scpRawPrice": 3.49,
+      "scpRawPrice": 3.54,
       "scpRawProduct": "Angel Bravo, Luis Aparicio #391",
       "scpRawId": "1875195",
       "scpRawMatchCount": 100
@@ -298,7 +298,7 @@
     {
       "name": "Angel Escobar",
       "sport": "Baseball",
-      "scpRawPrice": 2.24,
+      "scpRawPrice": 2.36,
       "scpRawProduct": "Angel Garza Makes His Raw Debut [Citrine] #15",
       "scpRawId": "3746521",
       "scpRawMatchCount": 100
@@ -306,7 +306,7 @@
     {
       "name": "Angel Guzman",
       "sport": "Baseball",
-      "scpRawPrice": 2.38,
+      "scpRawPrice": 2.66,
       "scpRawProduct": "Angel Guzman [Refractor] #T248",
       "scpRawId": "2052525",
       "scpRawMatchCount": 100
@@ -314,7 +314,7 @@
     {
       "name": "Angel Nesbitt",
       "sport": "Baseball",
-      "scpRawPrice": 5.69,
+      "scpRawPrice": 5.67,
       "scpRawProduct": "Angel Nesbitt [Black & White] #508",
       "scpRawId": "1518018",
       "scpRawMatchCount": 100
@@ -322,7 +322,7 @@
     {
       "name": "Angel Salazar",
       "sport": "Baseball",
-      "scpRawPrice": 1.87,
+      "scpRawPrice": 1.9,
       "scpRawProduct": "Angel Salazar #330",
       "scpRawId": "2782651",
       "scpRawMatchCount": 100
@@ -330,7 +330,7 @@
     {
       "name": "Angel Zerpa",
       "sport": "Baseball",
-      "scpRawPrice": 2.75,
+      "scpRawPrice": 2.76,
       "scpRawProduct": "Angel Zerpa [Spirit of 76] #88",
       "scpRawId": "4471967",
       "scpRawMatchCount": 100
@@ -346,7 +346,7 @@
     {
       "name": "Anthony Castro",
       "sport": "Baseball",
-      "scpRawPrice": 1.56,
+      "scpRawPrice": 1.68,
       "scpRawProduct": "Roman Anthony #RP-RA",
       "scpRawId": "12319230",
       "scpRawMatchCount": 100
@@ -354,7 +354,7 @@
     {
       "name": "Anthony Molina",
       "sport": "Baseball",
-      "scpRawPrice": 3.65,
+      "scpRawPrice": 3.73,
       "scpRawProduct": "Roman Anthony #RP-RA",
       "scpRawId": "12319230",
       "scpRawMatchCount": 100
@@ -362,15 +362,15 @@
     {
       "name": "Anthony Ortega",
       "sport": "Baseball",
-      "scpRawPrice": 3.47,
+      "scpRawPrice": 3.46,
       "scpRawProduct": "Anthony Ortega [Gold Refractor] #BSPAO",
       "scpRawId": "2093422",
-      "scpRawMatchCount": 100
+      "scpRawMatchCount": 96
     },
     {
       "name": "Anthony Santander",
       "sport": "Baseball",
-      "scpRawPrice": 4.08,
+      "scpRawPrice": 3.98,
       "scpRawProduct": "Anthony Santander [Spirit of 76] #199",
       "scpRawId": "2792371",
       "scpRawMatchCount": 100
@@ -378,15 +378,15 @@
     {
       "name": "Antonio Senzatela",
       "sport": "Baseball",
-      "scpRawPrice": null,
-      "scpRawProduct": null,
-      "scpRawId": null,
-      "scpRawMatchCount": 0
+      "scpRawPrice": 2.61,
+      "scpRawProduct": "Antonio Senzatela [Canvas] #35",
+      "scpRawId": "1457128",
+      "scpRawMatchCount": 100
     },
     {
       "name": "Arcenio Leon",
       "sport": "Baseball",
-      "scpRawPrice": 1.56,
+      "scpRawPrice": 1.69,
       "scpRawProduct": "X-Pac",
       "scpRawId": "11240295",
       "scpRawMatchCount": 100
@@ -394,7 +394,7 @@
     {
       "name": "Argenis Diaz",
       "sport": "Baseball",
-      "scpRawPrice": 3.6,
+      "scpRawPrice": 2.89,
       "scpRawProduct": "Argenis Diaz [Autograph] #BCP104",
       "scpRawId": "2092971",
       "scpRawMatchCount": 100
@@ -402,7 +402,7 @@
     {
       "name": "Armando Galarraga",
       "sport": "Baseball",
-      "scpRawPrice": 5.16,
+      "scpRawPrice": 5.31,
       "scpRawProduct": "Armando Galarraga [Refractor] #204",
       "scpRawId": "2086696",
       "scpRawMatchCount": 99
@@ -410,10 +410,10 @@
     {
       "name": "Asdrubal Cabrera",
       "sport": "Baseball",
-      "scpRawPrice": 1.85,
-      "scpRawProduct": "Asdrubal Cabrera  [Silver] #16",
-      "scpRawId": "7533147",
-      "scpRawMatchCount": 80
+      "scpRawPrice": null,
+      "scpRawProduct": null,
+      "scpRawId": null,
+      "scpRawMatchCount": 0
     },
     {
       "name": "Avisail Garcia",
@@ -426,15 +426,15 @@
     {
       "name": "Beiker Graterol",
       "sport": "Baseball",
-      "scpRawPrice": 3.51,
+      "scpRawPrice": 3.6,
       "scpRawProduct": "Dave Borkowski, Beiker Graterol #276",
       "scpRawId": "6883702",
-      "scpRawMatchCount": 74
+      "scpRawMatchCount": 100
     },
     {
       "name": "Bo Diaz",
       "sport": "Baseball",
-      "scpRawPrice": 1.29,
+      "scpRawPrice": 1.27,
       "scpRawProduct": "Bo Dallas #8",
       "scpRawId": "3769531",
       "scpRawMatchCount": 100
@@ -442,7 +442,7 @@
     {
       "name": "Bob Abreu",
       "sport": "Baseball",
-      "scpRawPrice": 4.99,
+      "scpRawPrice": 5.14,
       "scpRawProduct": "Bob Abreu [Class 1] #81",
       "scpRawId": "2035245",
       "scpRawMatchCount": 100
@@ -450,7 +450,7 @@
     {
       "name": "Bradgley Rodriguez",
       "sport": "Baseball",
-      "scpRawPrice": 5.53,
+      "scpRawPrice": 6.93,
       "scpRawProduct": "Bradgley Rodriguez [75 Years] #42",
       "scpRawId": "11872983",
       "scpRawMatchCount": 100
@@ -458,7 +458,7 @@
     {
       "name": "Brayan Rocchio",
       "sport": "Baseball",
-      "scpRawPrice": 4.69,
+      "scpRawPrice": 5.93,
       "scpRawProduct": "Brayan Rocchio [Bats] #US214",
       "scpRawId": "5909824",
       "scpRawMatchCount": 100
@@ -466,15 +466,15 @@
     {
       "name": "Brayan Villarreal",
       "sport": "Baseball",
-      "scpRawPrice": 2.05,
+      "scpRawPrice": 1.91,
       "scpRawProduct": "Brayan Villarreal [Red] #488",
       "scpRawId": "12412916",
-      "scpRawMatchCount": 100
+      "scpRawMatchCount": 78
     },
     {
       "name": "Breyvic Valera",
       "sport": "Baseball",
-      "scpRawPrice": 4.01,
+      "scpRawPrice": 3.98,
       "scpRawProduct": "Breyvic Valera [Clear] #459",
       "scpRawId": "10546714",
       "scpRawMatchCount": 100
@@ -482,7 +482,7 @@
     {
       "name": "Bruce Rondon",
       "sport": "Baseball",
-      "scpRawPrice": 2.23,
+      "scpRawPrice": 2.16,
       "scpRawProduct": "Bruce Rondon [Refractor] #41",
       "scpRawId": "2135120",
       "scpRawMatchCount": 100
@@ -490,7 +490,7 @@
     {
       "name": "Brusdar Graterol",
       "sport": "Baseball",
-      "scpRawPrice": 4.01,
+      "scpRawPrice": 3.85,
       "scpRawProduct": "Brusdar Graterol [30 Years] #237",
       "scpRawId": "2287035",
       "scpRawMatchCount": 100
@@ -498,7 +498,7 @@
     {
       "name": "Carlos Asuaje",
       "sport": "Baseball",
-      "scpRawPrice": 2.97,
+      "scpRawPrice": 2.98,
       "scpRawProduct": "Carlos Asuaje [Clear] #312",
       "scpRawId": "10546557",
       "scpRawMatchCount": 100
@@ -506,15 +506,15 @@
     {
       "name": "Carlos Carrasco",
       "sport": "Baseball",
-      "scpRawPrice": 2.41,
-      "scpRawProduct": "Carlos Carrasco [Red] #CCA",
-      "scpRawId": "1523406",
-      "scpRawMatchCount": 100
+      "scpRawPrice": null,
+      "scpRawProduct": null,
+      "scpRawId": null,
+      "scpRawMatchCount": 0
     },
     {
       "name": "Carlos Garcia",
       "sport": "Baseball",
-      "scpRawPrice": 0.95,
+      "scpRawPrice": 1.05,
       "scpRawProduct": "Carlos Garcia [1993 Donruss] #598",
       "scpRawId": "4118138",
       "scpRawMatchCount": 100
@@ -522,15 +522,15 @@
     {
       "name": "Carlos Gonzalez",
       "sport": "Baseball",
-      "scpRawPrice": 2.03,
+      "scpRawPrice": 2.57,
       "scpRawProduct": "Carlos Gonzalez [Silver] #104",
       "scpRawId": "1351542",
-      "scpRawMatchCount": 100
+      "scpRawMatchCount": 65
     },
     {
       "name": "Carlos Guillen",
       "sport": "Baseball",
-      "scpRawPrice": 2.86,
+      "scpRawPrice": 2.94,
       "scpRawProduct": "Carlos Guillen [Silver] #345",
       "scpRawId": "8954568",
       "scpRawMatchCount": 100
@@ -538,7 +538,7 @@
     {
       "name": "Carlos Guzman",
       "sport": "Baseball",
-      "scpRawPrice": 2.65,
+      "scpRawPrice": 2.42,
       "scpRawProduct": "Carlos Guzman [Refractor] #226",
       "scpRawId": "12515108",
       "scpRawMatchCount": 100
@@ -546,31 +546,31 @@
     {
       "name": "Carlos Hernandez",
       "sport": "Baseball",
-      "scpRawPrice": 3.42,
+      "scpRawPrice": 3.78,
       "scpRawProduct": "Carlos Hernandez [Gold] #429",
       "scpRawId": "4998373",
-      "scpRawMatchCount": 96
+      "scpRawMatchCount": 92
     },
     {
       "name": "Carlos Maldonado",
       "sport": "Baseball",
-      "scpRawPrice": 3.99,
+      "scpRawPrice": 4.07,
       "scpRawProduct": "Carlos Maldonado [Gold] #34",
       "scpRawId": "10177565",
-      "scpRawMatchCount": 100
+      "scpRawMatchCount": 94
     },
     {
       "name": "Carlos Martinez",
       "sport": "Baseball",
-      "scpRawPrice": null,
-      "scpRawProduct": null,
-      "scpRawId": null,
-      "scpRawMatchCount": 0
+      "scpRawPrice": 2.49,
+      "scpRawProduct": "Carlos Martinez [Blue] #12",
+      "scpRawId": "1522255",
+      "scpRawMatchCount": 100
     },
     {
       "name": "Carlos Mendez",
       "sport": "Baseball",
-      "scpRawPrice": 4.66,
+      "scpRawPrice": 5.77,
       "scpRawProduct": "Carlos Mendez #213",
       "scpRawId": "13365427",
       "scpRawMatchCount": 100
@@ -578,7 +578,7 @@
     {
       "name": "Carlos Mendoza",
       "sport": "Baseball",
-      "scpRawPrice": 2.28,
+      "scpRawPrice": 2.48,
       "scpRawProduct": "Carlos Mendoza [Silver Press Proof] #338",
       "scpRawId": "11995733",
       "scpRawMatchCount": 100
@@ -586,15 +586,15 @@
     {
       "name": "Carlos Monasterios",
       "sport": "Baseball",
-      "scpRawPrice": 1.55,
-      "scpRawProduct": "Carlos Monasterios [Red] #392",
-      "scpRawId": "12397795",
+      "scpRawPrice": 1.7,
+      "scpRawProduct": "Carlos Monasterios [Gold] #392",
+      "scpRawId": "9380675",
       "scpRawMatchCount": 100
     },
     {
       "name": "Carlos Narvaez",
       "sport": "Baseball",
-      "scpRawPrice": 7.43,
+      "scpRawPrice": 7.61,
       "scpRawProduct": "Carlos Narvaez [75 Years] #344",
       "scpRawId": "11888987",
       "scpRawMatchCount": 100
@@ -602,7 +602,7 @@
     {
       "name": "Carlos Perez",
       "sport": "Baseball",
-      "scpRawPrice": 2.63,
+      "scpRawPrice": 2.61,
       "scpRawProduct": "Carlos Perez [Silver] #311",
       "scpRawId": "13382150",
       "scpRawMatchCount": 100
@@ -610,7 +610,7 @@
     {
       "name": "Carlos Pulido",
       "sport": "Baseball",
-      "scpRawPrice": 2.81,
+      "scpRawPrice": 3.35,
       "scpRawProduct": "Carlos Pulido [Silver Signature] #611",
       "scpRawId": "7599142",
       "scpRawMatchCount": 100
@@ -618,7 +618,7 @@
     {
       "name": "Carlos Quintana",
       "sport": "Baseball",
-      "scpRawPrice": 1.02,
+      "scpRawPrice": 0.97,
       "scpRawProduct": "Carlos Quintana [Silver] #704",
       "scpRawId": "8879337",
       "scpRawMatchCount": 100
@@ -626,23 +626,23 @@
     {
       "name": "Carlos Rivero",
       "sport": "Baseball",
-      "scpRawPrice": 2.68,
+      "scpRawPrice": 3.19,
       "scpRawProduct": "Carlos Rivero [Refractor] #BCP203",
       "scpRawId": "2086183",
-      "scpRawMatchCount": 98
+      "scpRawMatchCount": 100
     },
     {
       "name": "Carlos Sanabria",
       "sport": "Baseball",
-      "scpRawPrice": 7.97,
+      "scpRawPrice": 9.13,
       "scpRawProduct": "Romeo Sanabria [Peanuts] #BCP-3",
       "scpRawId": "9184062",
-      "scpRawMatchCount": 100
+      "scpRawMatchCount": 87
     },
     {
       "name": "Carlos Silva",
       "sport": "Baseball",
-      "scpRawPrice": 3.92,
+      "scpRawPrice": 3.91,
       "scpRawProduct": "Carlos Silva [Silver] #358",
       "scpRawId": "8954603",
       "scpRawMatchCount": 100
@@ -650,7 +650,7 @@
     {
       "name": "Carlos Tocci",
       "sport": "Baseball",
-      "scpRawPrice": 2.1,
+      "scpRawPrice": 2.15,
       "scpRawProduct": "Carlos Tocci [Gold] #649",
       "scpRawId": "1619369",
       "scpRawMatchCount": 100
@@ -658,7 +658,7 @@
     {
       "name": "Carlos Valderrama",
       "sport": "Baseball",
-      "scpRawPrice": 25.28,
+      "scpRawPrice": 25.5,
       "scpRawProduct": "Carlos Valderrama  [Proof] #189",
       "scpRawId": "8433015",
       "scpRawMatchCount": 100
@@ -666,15 +666,15 @@
     {
       "name": "Carlos Zambrano",
       "sport": "Baseball",
-      "scpRawPrice": 2.68,
+      "scpRawPrice": 2.34,
       "scpRawProduct": "Carlos Zambrano [Silver] #97",
       "scpRawId": "8953910",
-      "scpRawMatchCount": 100
+      "scpRawMatchCount": 70
     },
     {
       "name": "Cesar Gutierrez",
       "sport": "Baseball",
-      "scpRawPrice": 3.23,
+      "scpRawPrice": 4.13,
       "scpRawProduct": "Giants 1969 Rookie Stars: Cesar Gutierrez / Rich Robertson #16",
       "scpRawId": "1856956",
       "scpRawMatchCount": 100
@@ -690,7 +690,7 @@
     {
       "name": "Cesar Izturis",
       "sport": "Baseball",
-      "scpRawPrice": 1.02,
+      "scpRawPrice": 1.06,
       "scpRawProduct": "Cesar Izturis [Silver] #138",
       "scpRawId": "8953966",
       "scpRawMatchCount": 100
@@ -698,7 +698,7 @@
     {
       "name": "Cesar Jimenez",
       "sport": "Baseball",
-      "scpRawPrice": 1.27,
+      "scpRawPrice": 1.5,
       "scpRawProduct": "Cesar Jimenez [Gold] #638",
       "scpRawId": "12387562",
       "scpRawMatchCount": 100
@@ -714,7 +714,7 @@
     {
       "name": "Chico Carrasquel",
       "sport": "Baseball",
-      "scpRawPrice": 5.72,
+      "scpRawPrice": 5.82,
       "scpRawProduct": "Chico Carrasquel [Red Tint] #4",
       "scpRawId": "1822410",
       "scpRawMatchCount": 100
@@ -722,7 +722,7 @@
     {
       "name": "Chucho Ramos",
       "sport": "Baseball",
-      "scpRawPrice": 1.55,
+      "scpRawPrice": 1.68,
       "scpRawProduct": "Logan Webb / Heliot Ramos [Platinum] #ASSD-RAW",
       "scpRawId": "7587937",
       "scpRawMatchCount": 100
@@ -730,7 +730,7 @@
     {
       "name": "Clemente Alvarez",
       "sport": "Baseball",
-      "scpRawPrice": 2.29,
+      "scpRawPrice": 2.36,
       "scpRawProduct": "Clemente Alvarez #188",
       "scpRawId": "2380843",
       "scpRawMatchCount": 100
@@ -754,7 +754,7 @@
     {
       "name": "Daniel Palencia",
       "sport": "Baseball",
-      "scpRawPrice": 6.87,
+      "scpRawPrice": 8.09,
       "scpRawProduct": "Daniel Palencia [75 Years] #158",
       "scpRawId": "11878818",
       "scpRawMatchCount": 100
@@ -762,15 +762,15 @@
     {
       "name": "Danny Leon",
       "sport": "Baseball",
-      "scpRawPrice": 1.53,
-      "scpRawProduct": "Danny Leon [Gold] #64T",
-      "scpRawId": "1956843",
+      "scpRawPrice": 1.68,
+      "scpRawProduct": "Danny Burch [Blue] #DMR-DN",
+      "scpRawId": "3770251",
       "scpRawMatchCount": 100
     },
     {
       "name": "Danny Sandoval",
       "sport": "Baseball",
-      "scpRawPrice": 3.27,
+      "scpRawPrice": 3.8,
       "scpRawProduct": "Danny Sandoval [Silver] #264",
       "scpRawId": "8954360",
       "scpRawMatchCount": 100
@@ -778,7 +778,7 @@
     {
       "name": "Darwin Cubillan",
       "sport": "Baseball",
-      "scpRawPrice": 1.71,
+      "scpRawPrice": 1.77,
       "scpRawProduct": "Darwin Cubillan [Refractor] #178",
       "scpRawId": "2038755",
       "scpRawMatchCount": 100
@@ -786,47 +786,47 @@
     {
       "name": "Darwinzon Hernandez",
       "sport": "Baseball",
-      "scpRawPrice": 2.49,
-      "scpRawProduct": "Darwinzon Hernandez [Red] #DH",
-      "scpRawId": "1672907",
-      "scpRawMatchCount": 82
+      "scpRawPrice": null,
+      "scpRawProduct": null,
+      "scpRawId": null,
+      "scpRawMatchCount": 0
     },
     {
       "name": "Dave Concepcion",
       "sport": "Baseball",
-      "scpRawPrice": 3.46,
-      "scpRawProduct": "Dave Concepcion [1988] #176",
-      "scpRawId": "2042651",
+      "scpRawPrice": 2.91,
+      "scpRawProduct": "Dave Concepcion [1971] #64",
+      "scpRawId": "2042539",
       "scpRawMatchCount": 100
     },
     {
       "name": "David Peralta",
       "sport": "Baseball",
-      "scpRawPrice": 2.93,
+      "scpRawPrice": 2.92,
       "scpRawProduct": "David Peralta [42 Tribute] #54",
       "scpRawId": "4543839",
-      "scpRawMatchCount": 100
+      "scpRawMatchCount": 76
     },
     {
       "name": "Deolis Guerra",
       "sport": "Baseball",
-      "scpRawPrice": 2.37,
+      "scpRawPrice": 2.5,
       "scpRawProduct": "Deolis Guerra [Red] #634",
       "scpRawId": "1786144",
-      "scpRawMatchCount": 100
+      "scpRawMatchCount": 85
     },
     {
       "name": "Diego Castillo",
       "sport": "Baseball",
-      "scpRawPrice": 3.28,
+      "scpRawPrice": 3.36,
       "scpRawProduct": "Diego Castillo [X Black] #257",
       "scpRawId": "4405661",
-      "scpRawMatchCount": 100
+      "scpRawMatchCount": 96
     },
     {
       "name": "Diego Moreno",
       "sport": "Baseball",
-      "scpRawPrice": 1.55,
+      "scpRawPrice": 1.67,
       "scpRawProduct": "X-Pac",
       "scpRawId": "11240295",
       "scpRawMatchCount": 100
@@ -834,15 +834,15 @@
     {
       "name": "Dilson Torres",
       "sport": "Baseball",
-      "scpRawPrice": 2.08,
-      "scpRawProduct": "Dilson Torres #267",
-      "scpRawId": "7806867",
-      "scpRawMatchCount": 100
+      "scpRawPrice": 2.57,
+      "scpRawProduct": "Dilson Torres [Electric Diamond] #259",
+      "scpRawId": "13800574",
+      "scpRawMatchCount": 78
     },
     {
       "name": "Dioner Navarro",
       "sport": "Baseball",
-      "scpRawPrice": 1.97,
+      "scpRawPrice": 1.98,
       "scpRawProduct": "Dioner Navarro [Refractor] #214",
       "scpRawId": "2063065",
       "scpRawMatchCount": 100
@@ -850,7 +850,7 @@
     {
       "name": "Dixon Machado",
       "sport": "Baseball",
-      "scpRawPrice": 1.97,
+      "scpRawPrice": 1.99,
       "scpRawProduct": "Dixon Machado [Silver Ice] #BP5",
       "scpRawId": "1452901",
       "scpRawMatchCount": 100
@@ -858,7 +858,7 @@
     {
       "name": "Donaldo Mendez",
       "sport": "Baseball",
-      "scpRawPrice": 4.61,
+      "scpRawPrice": 4.73,
       "scpRawProduct": "Donaldo Mendez  [Proof] #192",
       "scpRawId": "8433019",
       "scpRawMatchCount": 100
@@ -866,7 +866,7 @@
     {
       "name": "Eddie Perez",
       "sport": "Baseball",
-      "scpRawPrice": 1.8,
+      "scpRawPrice": 1.97,
       "scpRawProduct": "Eddie Guererro #40",
       "scpRawId": "3894172",
       "scpRawMatchCount": 100
@@ -874,7 +874,7 @@
     {
       "name": "Eddie Zambrano",
       "sport": "Baseball",
-      "scpRawPrice": 1.71,
+      "scpRawPrice": 1.64,
       "scpRawProduct": "Eddie Zambrano [Foil] #337",
       "scpRawId": "1966493",
       "scpRawMatchCount": 100
@@ -882,15 +882,15 @@
     {
       "name": "Eddy Diaz",
       "sport": "Baseball",
-      "scpRawPrice": 3.25,
+      "scpRawPrice": 3,
       "scpRawProduct": "Eddy Diaz [Refractor] #BCP-33",
       "scpRawId": "2168449",
-      "scpRawMatchCount": 76
+      "scpRawMatchCount": 100
     },
     {
       "name": "Edgar Caceres",
       "sport": "Baseball",
-      "scpRawPrice": 9.09,
+      "scpRawPrice": 9.29,
       "scpRawProduct": "Edgar Caceres #206",
       "scpRawId": "8655326",
       "scpRawMatchCount": 100
@@ -898,7 +898,7 @@
     {
       "name": "Edgar Ibarra",
       "sport": "Baseball",
-      "scpRawPrice": 3.32,
+      "scpRawPrice": 3.44,
       "scpRawProduct": "Ruben Ibarra [Gold] #189",
       "scpRawId": "3071563",
       "scpRawMatchCount": 99
@@ -906,7 +906,7 @@
     {
       "name": "Edgar Navarro",
       "sport": "Baseball",
-      "scpRawPrice": 3.41,
+      "scpRawPrice": 3.47,
       "scpRawProduct": "Edgar Navarro [Red] #362",
       "scpRawId": "6621095",
       "scpRawMatchCount": 100
@@ -914,7 +914,7 @@
     {
       "name": "Edgar Ramos",
       "sport": "Baseball",
-      "scpRawPrice": 1.53,
+      "scpRawPrice": 1.68,
       "scpRawProduct": "Edgar Ramos #649",
       "scpRawId": "7978599",
       "scpRawMatchCount": 100
@@ -922,15 +922,15 @@
     {
       "name": "Edgardo Alfonzo",
       "sport": "Baseball",
-      "scpRawPrice": null,
-      "scpRawProduct": null,
-      "scpRawId": null,
-      "scpRawMatchCount": 0
+      "scpRawPrice": 4.03,
+      "scpRawProduct": "Edgardo Alfonzo [Class 3] #73",
+      "scpRawId": "2037154",
+      "scpRawMatchCount": 100
     },
     {
       "name": "Edgardo Henriquez",
       "sport": "Baseball",
-      "scpRawPrice": 8.93,
+      "scpRawPrice": 10.14,
       "scpRawProduct": "Edgardo Henriquez [Waves] #513",
       "scpRawId": "9593045",
       "scpRawMatchCount": 100
@@ -938,7 +938,7 @@
     {
       "name": "Edgmer Escalona",
       "sport": "Baseball",
-      "scpRawPrice": 1.58,
+      "scpRawPrice": 1.76,
       "scpRawProduct": "Felix Escalona [Refractor] #381",
       "scpRawId": "2049440",
       "scpRawMatchCount": 100
@@ -946,7 +946,7 @@
     {
       "name": "Eduard Bazardo",
       "sport": "Baseball",
-      "scpRawPrice": 1.87,
+      "scpRawPrice": 2.03,
       "scpRawProduct": "Eduard Bazardo [Autograph] #187",
       "scpRawId": "3084714",
       "scpRawMatchCount": 100
@@ -954,7 +954,7 @@
     {
       "name": "Eduardo Escobar",
       "sport": "Baseball",
-      "scpRawPrice": 3.82,
+      "scpRawPrice": 3.81,
       "scpRawProduct": "Eduardo Escobar [X] #268",
       "scpRawId": "4548793",
       "scpRawMatchCount": 100
@@ -962,7 +962,7 @@
     {
       "name": "Eduardo Jimenez",
       "sport": "Baseball",
-      "scpRawPrice": 1.53,
+      "scpRawPrice": 1.67,
       "scpRawProduct": "Eduardo Jimenez [Blue] #PA-EJ",
       "scpRawId": "1566143",
       "scpRawMatchCount": 100
@@ -970,7 +970,7 @@
     {
       "name": "Eduardo Paredes",
       "sport": "Baseball",
-      "scpRawPrice": 2.8,
+      "scpRawPrice": 2.21,
       "scpRawProduct": "X-Pac",
       "scpRawId": "11240295",
       "scpRawMatchCount": 100
@@ -978,7 +978,7 @@
     {
       "name": "Eduardo Rodriguez",
       "sport": "Baseball",
-      "scpRawPrice": 2.64,
+      "scpRawPrice": 2.88,
       "scpRawProduct": "Eduardo Rodriguez [30 Years] #295",
       "scpRawId": "2287093",
       "scpRawMatchCount": 100
@@ -986,7 +986,7 @@
     {
       "name": "Eduardo Salazar",
       "sport": "Baseball",
-      "scpRawPrice": 1.37,
+      "scpRawPrice": 1.33,
       "scpRawProduct": "Eduardo Salazar [Red Border] #707",
       "scpRawId": "6140063",
       "scpRawMatchCount": 100
@@ -994,7 +994,7 @@
     {
       "name": "Eduardo Sanchez",
       "sport": "Baseball",
-      "scpRawPrice": 1.54,
+      "scpRawPrice": 1.68,
       "scpRawProduct": "Eduardo Sanchez [Gold] #76",
       "scpRawId": "10267246",
       "scpRawMatchCount": 100
@@ -1002,7 +1002,7 @@
     {
       "name": "Eduardo Villacis",
       "sport": "Baseball",
-      "scpRawPrice": 1.54,
+      "scpRawPrice": 1.66,
       "scpRawProduct": "Eduardo Villacis [Xfractor] #25",
       "scpRawId": "2060307",
       "scpRawMatchCount": 100
@@ -1010,7 +1010,7 @@
     {
       "name": "Edubray Ramos",
       "sport": "Baseball",
-      "scpRawPrice": 1.54,
+      "scpRawPrice": 1.68,
       "scpRawProduct": "Edubray Ramos [Red] #211A",
       "scpRawId": "1666799",
       "scpRawMatchCount": 100
@@ -1026,7 +1026,7 @@
     {
       "name": "Edward Mujica",
       "sport": "Baseball",
-      "scpRawPrice": 2.1,
+      "scpRawPrice": 2.12,
       "scpRawProduct": "Edward Mujica [Red] #96",
       "scpRawId": "9371690",
       "scpRawMatchCount": 100
@@ -1034,15 +1034,15 @@
     {
       "name": "Edward Olivares",
       "sport": "Baseball",
-      "scpRawPrice": 3.03,
+      "scpRawPrice": 2.66,
       "scpRawProduct": "Edward Olivares [Spirit of 76] #97",
       "scpRawId": "2790909",
-      "scpRawMatchCount": 77
+      "scpRawMatchCount": 100
     },
     {
       "name": "Edwin Bellorin",
       "sport": "Baseball",
-      "scpRawPrice": 1.71,
+      "scpRawPrice": 1.79,
       "scpRawProduct": "Edwin Bellorin [Gold] #B12",
       "scpRawId": "2435312",
       "scpRawMatchCount": 100
@@ -1050,7 +1050,7 @@
     {
       "name": "Edwin Escobar",
       "sport": "Baseball",
-      "scpRawPrice": 2.78,
+      "scpRawPrice": 2.73,
       "scpRawProduct": "Edwin Escobar [Silver] #187",
       "scpRawId": "11813513",
       "scpRawMatchCount": 100
@@ -1058,23 +1058,23 @@
     {
       "name": "Edwin Hurtado",
       "sport": "Baseball",
-      "scpRawPrice": 8.03,
-      "scpRawProduct": "Edwin Hurtado [Rookie Class] #16",
-      "scpRawId": "4247229",
-      "scpRawMatchCount": 100
+      "scpRawPrice": null,
+      "scpRawProduct": null,
+      "scpRawId": null,
+      "scpRawMatchCount": 0
     },
     {
       "name": "Edwin Moreno",
       "sport": "Baseball",
-      "scpRawPrice": 1.62,
-      "scpRawProduct": "Edwin Moreno [All Black] #499",
-      "scpRawId": "9073171",
+      "scpRawPrice": 1.76,
+      "scpRawProduct": "Edwin Moreno [Gold] #499",
+      "scpRawId": "9073172",
       "scpRawMatchCount": 100
     },
     {
       "name": "Ehire Adrianza",
       "sport": "Baseball",
-      "scpRawPrice": 3.17,
+      "scpRawPrice": 3.18,
       "scpRawProduct": "Ehire Adrianza [Gold Stars] #690",
       "scpRawId": "1767642",
       "scpRawMatchCount": 100
@@ -1082,7 +1082,7 @@
     {
       "name": "Eider Torres",
       "sport": "Baseball",
-      "scpRawPrice": 1.47,
+      "scpRawPrice": 1.6,
       "scpRawProduct": "Eider Torres [Gold] #169",
       "scpRawId": "6179925",
       "scpRawMatchCount": 100
@@ -1090,7 +1090,7 @@
     {
       "name": "Elias Diaz",
       "sport": "Baseball",
-      "scpRawPrice": 5.35,
+      "scpRawPrice": 5.38,
       "scpRawProduct": "Elias [Silver] #28",
       "scpRawId": "3769818",
       "scpRawMatchCount": 100
@@ -1098,7 +1098,7 @@
     {
       "name": "Elieser Hernandez",
       "sport": "Baseball",
-      "scpRawPrice": 2.43,
+      "scpRawPrice": 2.48,
       "scpRawProduct": "Elieser Hernandez [Red] #599",
       "scpRawId": "1786109",
       "scpRawMatchCount": 100
@@ -1106,7 +1106,7 @@
     {
       "name": "Eliezer Alfonzo",
       "sport": "Baseball",
-      "scpRawPrice": 2.21,
+      "scpRawPrice": 3.05,
       "scpRawProduct": "Eliezer Alfonzo [Gold] #14",
       "scpRawId": "12387081",
       "scpRawMatchCount": 100
@@ -1114,23 +1114,23 @@
     {
       "name": "Elio Chacon",
       "sport": "Baseball",
-      "scpRawPrice": 4.8,
+      "scpRawPrice": 4.77,
       "scpRawProduct": "Elio Chacon #543",
       "scpRawId": "1828962",
-      "scpRawMatchCount": 100
+      "scpRawMatchCount": 94
     },
     {
       "name": "Elvis Andrus",
       "sport": "Baseball",
-      "scpRawPrice": 2.56,
+      "scpRawPrice": 2.52,
       "scpRawProduct": "Elvis Andrus [X] #267",
       "scpRawId": "4548792",
-      "scpRawMatchCount": 100
+      "scpRawMatchCount": 96
     },
     {
       "name": "Elvis Araujo",
       "sport": "Baseball",
-      "scpRawPrice": 1.76,
+      "scpRawPrice": 1.81,
       "scpRawProduct": "Elvis Araujo [Refractor] #BCP83",
       "scpRawId": "11860400",
       "scpRawMatchCount": 100
@@ -1138,15 +1138,15 @@
     {
       "name": "Ender Inciarte",
       "sport": "Baseball",
-      "scpRawPrice": 2.24,
+      "scpRawPrice": 2.27,
       "scpRawProduct": "Ender Inciarte [Silver] #197",
       "scpRawId": "1529440",
-      "scpRawMatchCount": 100
+      "scpRawMatchCount": 98
     },
     {
       "name": "Enderson Franco",
       "sport": "Baseball",
-      "scpRawPrice": 1.55,
+      "scpRawPrice": 1.67,
       "scpRawProduct": "Dave Henderson, Dion James, Julio Franco",
       "scpRawId": "1935957",
       "scpRawMatchCount": 100
@@ -1154,7 +1154,7 @@
     {
       "name": "Endy Chavez",
       "sport": "Baseball",
-      "scpRawPrice": 2.06,
+      "scpRawPrice": 2.12,
       "scpRawProduct": "Endy Chavez [Red] #309",
       "scpRawId": "9373952",
       "scpRawMatchCount": 100
@@ -1162,7 +1162,7 @@
     {
       "name": "Engelb Vielma",
       "sport": "Baseball",
-      "scpRawPrice": 1.55,
+      "scpRawPrice": 1.68,
       "scpRawProduct": "Leonel Vielma [Made In Brazil] #28",
       "scpRawId": "9739775",
       "scpRawMatchCount": 100
@@ -1170,15 +1170,15 @@
     {
       "name": "Enmanuel De Jesus",
       "sport": "Baseball",
-      "scpRawPrice": 4.84,
+      "scpRawPrice": 4.23,
       "scpRawProduct": "Enmanuel De Jesus #RDPA-ED",
       "scpRawId": "7842988",
-      "scpRawMatchCount": 100
+      "scpRawMatchCount": 98
     },
     {
       "name": "Enrique Gonzalez",
       "sport": "Baseball",
-      "scpRawPrice": 1.53,
+      "scpRawPrice": 1.67,
       "scpRawProduct": "Enrique Gonzalez [Timeless Tributes Silver] #211",
       "scpRawId": "10158799",
       "scpRawMatchCount": 100
@@ -1186,7 +1186,7 @@
     {
       "name": "Enzo Hernandez",
       "sport": "Baseball",
-      "scpRawPrice": 1.76,
+      "scpRawPrice": 1.79,
       "scpRawProduct": "Enzo Hernandez #125",
       "scpRawId": "1869335",
       "scpRawMatchCount": 100
@@ -1194,7 +1194,7 @@
     {
       "name": "Erick Castillo",
       "sport": "Baseball",
-      "scpRawPrice": 1.58,
+      "scpRawPrice": 1.77,
       "scpRawProduct": "X-Pac",
       "scpRawId": "11240295",
       "scpRawMatchCount": 100
@@ -1202,7 +1202,7 @@
     {
       "name": "Ethan Salas",
       "sport": "Baseball",
-      "scpRawPrice": 8.76,
+      "scpRawPrice": 8.95,
       "scpRawProduct": "Ethan Salas [Silver] #1",
       "scpRawId": "7818331",
       "scpRawMatchCount": 100
@@ -1210,7 +1210,7 @@
     {
       "name": "Eugenio Suarez",
       "sport": "Baseball",
-      "scpRawPrice": 3.76,
+      "scpRawPrice": 3.49,
       "scpRawProduct": "Eugenio Suarez [Eggs] #231",
       "scpRawId": "6367884",
       "scpRawMatchCount": 100
@@ -1218,15 +1218,15 @@
     {
       "name": "Everson Pereira",
       "sport": "Baseball",
-      "scpRawPrice": 3.45,
-      "scpRawProduct": "Everson Pereira [Waves] #461",
-      "scpRawId": "6800074",
-      "scpRawMatchCount": 100
+      "scpRawPrice": null,
+      "scpRawProduct": null,
+      "scpRawId": null,
+      "scpRawMatchCount": 0
     },
     {
       "name": "Ezequiel Carrera",
       "sport": "Baseball",
-      "scpRawPrice": 1.71,
+      "scpRawPrice": 1.7,
       "scpRawProduct": "Ezequiel Carrera [Pink] #US179",
       "scpRawId": "1392373",
       "scpRawMatchCount": 100
@@ -1234,7 +1234,7 @@
     {
       "name": "Ezequiel Tovar",
       "sport": "Baseball",
-      "scpRawPrice": 7.87,
+      "scpRawPrice": 9.05,
       "scpRawProduct": "Ezequiel Tovar [75 Years] #136",
       "scpRawId": "11877883",
       "scpRawMatchCount": 100
@@ -1242,7 +1242,7 @@
     {
       "name": "Felipe Lira",
       "sport": "Baseball",
-      "scpRawPrice": 1.58,
+      "scpRawPrice": 4.78,
       "scpRawProduct": "Felipe Lira [Silver] #84",
       "scpRawId": "13382060",
       "scpRawMatchCount": 100
@@ -1250,10 +1250,10 @@
     {
       "name": "Felipe Vazquez",
       "sport": "Baseball",
-      "scpRawPrice": null,
-      "scpRawProduct": null,
-      "scpRawId": null,
-      "scpRawMatchCount": 0
+      "scpRawPrice": 3.37,
+      "scpRawProduct": "Felipe Vazquez [Red] #FV",
+      "scpRawId": "1623729",
+      "scpRawMatchCount": 72
     },
     {
       "name": "Felix Doubront",
@@ -1266,7 +1266,7 @@
     {
       "name": "Felix Escalona",
       "sport": "Baseball",
-      "scpRawPrice": 1.58,
+      "scpRawPrice": 1.76,
       "scpRawProduct": "Felix Escalona [Refractor] #381",
       "scpRawId": "2049440",
       "scpRawMatchCount": 100
@@ -1274,7 +1274,7 @@
     {
       "name": "Felix Hernandez",
       "sport": "Baseball",
-      "scpRawPrice": 3.28,
+      "scpRawPrice": 3.23,
       "scpRawProduct": "Felix Hernandez [42 Prizm] #40",
       "scpRawId": "2148362",
       "scpRawMatchCount": 100
@@ -1282,7 +1282,7 @@
     {
       "name": "Fernando Lunar",
       "sport": "Baseball",
-      "scpRawPrice": 1.54,
+      "scpRawPrice": 1.69,
       "scpRawProduct": "Fernando Tatis Jr. [Lunar Eclipse Refractor] #21",
       "scpRawId": "12092022",
       "scpRawMatchCount": 100
@@ -1290,7 +1290,7 @@
     {
       "name": "Fernando Nieve",
       "sport": "Baseball",
-      "scpRawPrice": 0.91,
+      "scpRawPrice": 0.93,
       "scpRawProduct": "Fernando Nieve [Silver] #56",
       "scpRawId": "7533545",
       "scpRawMatchCount": 100
@@ -1298,7 +1298,7 @@
     {
       "name": "Francisco Alvarez",
       "sport": "Baseball",
-      "scpRawPrice": 12.13,
+      "scpRawPrice": 12.12,
       "scpRawProduct": "Francisco Alvarez [75 Years] #337",
       "scpRawId": "11889330",
       "scpRawMatchCount": 100
@@ -1306,23 +1306,23 @@
     {
       "name": "Francisco Arcia",
       "sport": "Baseball",
-      "scpRawPrice": 2.81,
-      "scpRawProduct": "Francisco Arcia [Silver] #117",
-      "scpRawId": "1628532",
-      "scpRawMatchCount": 100
+      "scpRawPrice": null,
+      "scpRawProduct": null,
+      "scpRawId": null,
+      "scpRawMatchCount": 0
     },
     {
       "name": "Francisco Cervelli",
       "sport": "Baseball",
-      "scpRawPrice": 3.14,
-      "scpRawProduct": "Francisco Cervelli [Blue] #552",
-      "scpRawId": "9376817",
+      "scpRawPrice": 3.37,
+      "scpRawProduct": "Francisco Cervelli [Red] #552",
+      "scpRawId": "9376815",
       "scpRawMatchCount": 100
     },
     {
       "name": "Francisco Morales",
       "sport": "Baseball",
-      "scpRawPrice": 3.05,
+      "scpRawPrice": 3.03,
       "scpRawProduct": "Francisco Morales [Red] #HW154",
       "scpRawId": "4443610",
       "scpRawMatchCount": 100
@@ -1330,15 +1330,15 @@
     {
       "name": "Francisco Rodriguez",
       "sport": "Baseball",
-      "scpRawPrice": 4.01,
+      "scpRawPrice": 4.31,
       "scpRawProduct": "Francisco Rodriguez [Silver] #7",
       "scpRawId": "8953674",
-      "scpRawMatchCount": 91
+      "scpRawMatchCount": 100
     },
     {
       "name": "Frank Mata",
       "sport": "Baseball",
-      "scpRawPrice": 1.52,
+      "scpRawPrice": 1.64,
       "scpRawProduct": "Frank Mata [Refractor] #315",
       "scpRawId": "2065733",
       "scpRawMatchCount": 100
@@ -1354,15 +1354,15 @@
     {
       "name": "Franklin Gutierrez",
       "sport": "Baseball",
-      "scpRawPrice": 2.93,
+      "scpRawPrice": 2.84,
       "scpRawProduct": "Franklin Gutierrez [Silver] #23",
       "scpRawId": "11665432",
-      "scpRawMatchCount": 96
+      "scpRawMatchCount": 100
     },
     {
       "name": "Franklin Morales",
       "sport": "Baseball",
-      "scpRawPrice": 1.51,
+      "scpRawPrice": 1.62,
       "scpRawProduct": "Franklin Morales [Refractor] #303",
       "scpRawId": "2065711",
       "scpRawMatchCount": 100
@@ -1370,7 +1370,7 @@
     {
       "name": "Fred Manrique",
       "sport": "Baseball",
-      "scpRawPrice": 1.09,
+      "scpRawPrice": 1.11,
       "scpRawProduct": "Fred Manrique [Grey Backs] #66T",
       "scpRawId": "8892220",
       "scpRawMatchCount": 100
@@ -1378,15 +1378,15 @@
     {
       "name": "Freddy Fermin",
       "sport": "Baseball",
-      "scpRawPrice": 10.19,
+      "scpRawPrice": 9.52,
       "scpRawProduct": "Freddy Fermin [Birds] #346",
       "scpRawId": "8595523",
-      "scpRawMatchCount": 95
+      "scpRawMatchCount": 100
     },
     {
       "name": "Freddy Galvis",
       "sport": "Baseball",
-      "scpRawPrice": 1.87,
+      "scpRawPrice": 1.91,
       "scpRawProduct": "Freddy Galvis [Wave 3]",
       "scpRawId": "11790548",
       "scpRawMatchCount": 100
@@ -1394,15 +1394,15 @@
     {
       "name": "Freddy Garcia",
       "sport": "Baseball",
-      "scpRawPrice": null,
-      "scpRawProduct": null,
-      "scpRawId": null,
-      "scpRawMatchCount": 0
+      "scpRawPrice": 4.87,
+      "scpRawProduct": "Freddy Garcia [Silver] #376",
+      "scpRawId": "8954651",
+      "scpRawMatchCount": 100
     },
     {
       "name": "Gabriel Arias",
       "sport": "Baseball",
-      "scpRawPrice": 5.51,
+      "scpRawPrice": 5.48,
       "scpRawProduct": "Gabriel Arias [X] #7",
       "scpRawId": "4456703",
       "scpRawMatchCount": 100
@@ -1410,7 +1410,7 @@
     {
       "name": "Gabriel Gonzalez",
       "sport": "Baseball",
-      "scpRawPrice": 3.78,
+      "scpRawPrice": 3.73,
       "scpRawProduct": "Gabriel Gonzalez [Silver] #23",
       "scpRawId": "5524090",
       "scpRawMatchCount": 100
@@ -1418,7 +1418,7 @@
     {
       "name": "Gabriel Moreno",
       "sport": "Baseball",
-      "scpRawPrice": 5.85,
+      "scpRawPrice": 4.88,
       "scpRawProduct": "Gabriel Moreno [75 Years] #71",
       "scpRawId": "11874332",
       "scpRawMatchCount": 100
@@ -1426,23 +1426,23 @@
     {
       "name": "Gabriel Moya",
       "sport": "Baseball",
-      "scpRawPrice": 4.41,
-      "scpRawProduct": "Steven Moya [Gold] #270",
-      "scpRawId": "8200950",
-      "scpRawMatchCount": 100
+      "scpRawPrice": null,
+      "scpRawProduct": null,
+      "scpRawId": null,
+      "scpRawMatchCount": 0
     },
     {
       "name": "Gerardo Parra",
       "sport": "Baseball",
-      "scpRawPrice": 1.87,
-      "scpRawProduct": "Gerardo Parra [Red] #72",
-      "scpRawId": "9371546",
-      "scpRawMatchCount": 100
+      "scpRawPrice": 1.79,
+      "scpRawProduct": "Gerardo Parra [Red] #379",
+      "scpRawId": "12509113",
+      "scpRawMatchCount": 87
     },
     {
       "name": "Geremi Gonzalez",
       "sport": "Baseball",
-      "scpRawPrice": 5.25,
+      "scpRawPrice": 6.45,
       "scpRawProduct": "Geremi [Silver] #S-GER",
       "scpRawId": "4521769",
       "scpRawMatchCount": 100
@@ -1450,7 +1450,7 @@
     {
       "name": "German Gonzalez",
       "sport": "Baseball",
-      "scpRawPrice": 1.52,
+      "scpRawPrice": 1.61,
       "scpRawProduct": "German Gonzalez #746",
       "scpRawId": "1937696",
       "scpRawMatchCount": 100
@@ -1458,10 +1458,10 @@
     {
       "name": "German Marquez",
       "sport": "Baseball",
-      "scpRawPrice": 2.36,
+      "scpRawPrice": 2.65,
       "scpRawProduct": "German Marquez [42 Tribute] #195",
       "scpRawId": "4543973",
-      "scpRawMatchCount": 100
+      "scpRawMatchCount": 89
     },
     {
       "name": "Giomar Guevara",
@@ -1474,23 +1474,23 @@
     {
       "name": "Giovanni Carrara",
       "sport": "Baseball",
-      "scpRawPrice": 1.67,
-      "scpRawProduct": "Giovanni Carrara #426",
-      "scpRawId": "6245683",
+      "scpRawPrice": 1.79,
+      "scpRawProduct": "Giovanni Carrara #3387",
+      "scpRawId": "13763446",
       "scpRawMatchCount": 100
     },
     {
       "name": "Gleyber Torres",
       "sport": "Baseball",
-      "scpRawPrice": 2.11,
+      "scpRawPrice": 2.06,
       "scpRawProduct": "Gleyber Torres #GT-22",
       "scpRawId": "5252956",
-      "scpRawMatchCount": 100
+      "scpRawMatchCount": 84
     },
     {
       "name": "Gonzalo Marquez",
       "sport": "Baseball",
-      "scpRawPrice": 1.99,
+      "scpRawPrice": 1.94,
       "scpRawProduct": "Gonzalo Marquez #422",
       "scpRawId": "1867852",
       "scpRawMatchCount": 100
@@ -1498,7 +1498,7 @@
     {
       "name": "Gorkys Hernandez",
       "sport": "Baseball",
-      "scpRawPrice": 2.19,
+      "scpRawPrice": 2.23,
       "scpRawProduct": "Gorkys Hernandez [Gold] #592",
       "scpRawId": "7868223",
       "scpRawMatchCount": 100
@@ -1506,7 +1506,7 @@
     {
       "name": "Gregor Blanco",
       "sport": "Baseball",
-      "scpRawPrice": 3.97,
+      "scpRawPrice": 4.2,
       "scpRawProduct": "Gregor Blanco [Silver] #10",
       "scpRawId": "7534487",
       "scpRawMatchCount": 100
@@ -1514,23 +1514,23 @@
     {
       "name": "Gregorio Petit",
       "sport": "Baseball",
-      "scpRawPrice": 3.44,
+      "scpRawPrice": 2.62,
       "scpRawProduct": "Gregorio Petit [Refractor] #BCP9",
       "scpRawId": "9734113",
-      "scpRawMatchCount": 100
+      "scpRawMatchCount": 83
     },
     {
       "name": "Gregory Infante",
       "sport": "Baseball",
-      "scpRawPrice": 3.74,
-      "scpRawProduct": "Gregory Infante [Gold] #223",
-      "scpRawId": "12409998",
+      "scpRawPrice": 3.98,
+      "scpRawProduct": "Gregory Infante [Red] #223",
+      "scpRawId": "12412527",
       "scpRawMatchCount": 100
     },
     {
       "name": "Guilder Rodriguez",
       "sport": "Baseball",
-      "scpRawPrice": 1.76,
+      "scpRawPrice": 1.81,
       "scpRawProduct": "Guilder Rodriguez [Pink] #103",
       "scpRawId": "8199367",
       "scpRawMatchCount": 100
@@ -1538,7 +1538,7 @@
     {
       "name": "Guillermo Moscoso",
       "sport": "Baseball",
-      "scpRawPrice": 3,
+      "scpRawPrice": 3.02,
       "scpRawProduct": "Guillermo Moscoso [Platinum] #431",
       "scpRawId": "12654118",
       "scpRawMatchCount": 100
@@ -1546,7 +1546,7 @@
     {
       "name": "Guillermo Quiroz",
       "sport": "Baseball",
-      "scpRawPrice": 3.15,
+      "scpRawPrice": 3.16,
       "scpRawProduct": "Gabe Gross, Guillermo Quiroz #329",
       "scpRawId": "5509919",
       "scpRawMatchCount": 100
@@ -1554,7 +1554,7 @@
     {
       "name": "Guillermo Rodriguez",
       "sport": "Baseball",
-      "scpRawPrice": 2.87,
+      "scpRawPrice": 2.93,
       "scpRawProduct": "Guillermo Rodriguez [Refractor] #77",
       "scpRawId": "10515005",
       "scpRawMatchCount": 100
@@ -1562,7 +1562,7 @@
     {
       "name": "Gus Gil",
       "sport": "Baseball",
-      "scpRawPrice": 2.86,
+      "scpRawPrice": 2.75,
       "scpRawProduct": "Gus Gil #651",
       "scpRawId": "1857624",
       "scpRawMatchCount": 100
@@ -1570,7 +1570,7 @@
     {
       "name": "Gus Polidor",
       "sport": "Baseball",
-      "scpRawPrice": 2.62,
+      "scpRawPrice": 1.76,
       "scpRawProduct": "Gus Polidor #341",
       "scpRawId": "2782656",
       "scpRawMatchCount": 100
@@ -1578,7 +1578,7 @@
     {
       "name": "Gustavo Chacin",
       "sport": "Baseball",
-      "scpRawPrice": 1.6,
+      "scpRawPrice": 1.63,
       "scpRawProduct": "Gustavo Chacin [Silver] #47",
       "scpRawId": "8953785",
       "scpRawMatchCount": 100
@@ -1594,15 +1594,15 @@
     {
       "name": "Harold Castro",
       "sport": "Baseball",
-      "scpRawPrice": null,
-      "scpRawProduct": null,
-      "scpRawId": null,
-      "scpRawMatchCount": 0
+      "scpRawPrice": 4.06,
+      "scpRawProduct": "Harold Castro [Gold] #126",
+      "scpRawId": "4770386",
+      "scpRawMatchCount": 86
     },
     {
       "name": "Harvey Garcia",
       "sport": "Baseball",
-      "scpRawPrice": 1.54,
+      "scpRawPrice": 1.69,
       "scpRawProduct": "Harvey Garcia [Refractor] #232",
       "scpRawId": "2060884",
       "scpRawMatchCount": 100
@@ -1610,7 +1610,7 @@
     {
       "name": "Hector Gimenez",
       "sport": "Baseball",
-      "scpRawPrice": 1.24,
+      "scpRawPrice": 1.25,
       "scpRawProduct": "Hector Gimenez [Status] #151",
       "scpRawId": "12575511",
       "scpRawMatchCount": 100
@@ -1618,7 +1618,7 @@
     {
       "name": "Hector Rondon",
       "sport": "Baseball",
-      "scpRawPrice": 3.83,
+      "scpRawPrice": 3.89,
       "scpRawProduct": "Hector Rondon [Red] #481",
       "scpRawId": "1388042",
       "scpRawMatchCount": 100
@@ -1626,7 +1626,7 @@
     {
       "name": "Hector Sanchez",
       "sport": "Baseball",
-      "scpRawPrice": 3.16,
+      "scpRawPrice": 3.13,
       "scpRawProduct": "Hector Sanchez [Blue] #405",
       "scpRawId": "9375083",
       "scpRawMatchCount": 100
@@ -1634,15 +1634,15 @@
     {
       "name": "Henderson Alvarez III",
       "sport": "Baseball",
-      "scpRawPrice": 1.93,
+      "scpRawPrice": 2.04,
       "scpRawProduct": "Henderson Alvarez [Red] #358",
       "scpRawId": "9374623",
-      "scpRawMatchCount": 100
+      "scpRawMatchCount": 70
     },
     {
       "name": "Henry Blanco",
       "sport": "Baseball",
-      "scpRawPrice": 1.9,
+      "scpRawPrice": 2.15,
       "scpRawProduct": "Henry Blanco [Exclusives Silver] #417",
       "scpRawId": "12359785",
       "scpRawMatchCount": 100
@@ -1650,7 +1650,7 @@
     {
       "name": "Henry Rodriguez",
       "sport": "Baseball",
-      "scpRawPrice": 1.51,
+      "scpRawPrice": 1.33,
       "scpRawProduct": "Mark Henry #RAW-39",
       "scpRawId": "3835509",
       "scpRawMatchCount": 100
@@ -1658,7 +1658,7 @@
     {
       "name": "Hernan Iribarren",
       "sport": "Baseball",
-      "scpRawPrice": 2.6,
+      "scpRawPrice": 2.65,
       "scpRawProduct": "Hernan Iribarren [Silver] #40",
       "scpRawId": "7533432",
       "scpRawMatchCount": 100
@@ -1666,7 +1666,7 @@
     {
       "name": "Hernan Perez",
       "sport": "Baseball",
-      "scpRawPrice": 2.27,
+      "scpRawPrice": 2.26,
       "scpRawProduct": "Hernan Perez [Clear] #455",
       "scpRawId": "10546709",
       "scpRawMatchCount": 100
@@ -1674,7 +1674,7 @@
     {
       "name": "Horacio Estrada",
       "sport": "Baseball",
-      "scpRawPrice": 1.74,
+      "scpRawPrice": 1.75,
       "scpRawProduct": "Horacio Estrada [Gold] #146",
       "scpRawId": "8430944",
       "scpRawMatchCount": 100
@@ -1682,10 +1682,10 @@
     {
       "name": "Humberto Arteaga",
       "sport": "Baseball",
-      "scpRawPrice": 3.64,
+      "scpRawPrice": 3.99,
       "scpRawProduct": "Humberto Cruz [Peanuts] #BCP-96",
       "scpRawId": "9188623",
-      "scpRawMatchCount": 100
+      "scpRawMatchCount": 99
     },
     {
       "name": "Humberto Quintero",
@@ -1698,7 +1698,7 @@
     {
       "name": "Ildemaro Vargas",
       "sport": "Baseball",
-      "scpRawPrice": 5.54,
+      "scpRawPrice": 6.41,
       "scpRawProduct": "Ildemaro Vargas [Wood] #81",
       "scpRawId": "1546953",
       "scpRawMatchCount": 100
@@ -1706,7 +1706,7 @@
     {
       "name": "Isaias Chavez",
       "sport": "Baseball",
-      "scpRawPrice": 2.25,
+      "scpRawPrice": 2.28,
       "scpRawProduct": "Isaias Chavez #32",
       "scpRawId": "1853078",
       "scpRawMatchCount": 100
@@ -1714,15 +1714,15 @@
     {
       "name": "Israel Pineda",
       "sport": "Baseball",
-      "scpRawPrice": 2.36,
-      "scpRawProduct": "Israel Pineda [Gold] #447",
-      "scpRawId": "5292381",
-      "scpRawMatchCount": 100
+      "scpRawPrice": null,
+      "scpRawProduct": null,
+      "scpRawId": null,
+      "scpRawMatchCount": 0
     },
     {
       "name": "Ivan Ochoa",
       "sport": "Baseball",
-      "scpRawPrice": 2.48,
+      "scpRawPrice": 2.9,
       "scpRawProduct": "Ivan Ochoa [Status] #165",
       "scpRawId": "12575524",
       "scpRawMatchCount": 100
@@ -1730,7 +1730,7 @@
     {
       "name": "J.C. Boscan",
       "sport": "Baseball",
-      "scpRawPrice": 1.56,
+      "scpRawPrice": 1.69,
       "scpRawProduct": "Jac Caglianone #RP-JC",
       "scpRawId": "12319223",
       "scpRawMatchCount": 100
@@ -1738,7 +1738,7 @@
     {
       "name": "J.C. Gutierrez",
       "sport": "Baseball",
-      "scpRawPrice": 2.72,
+      "scpRawPrice": 2.25,
       "scpRawProduct": "Jac Caglianone #RP-JC",
       "scpRawId": "12319223",
       "scpRawMatchCount": 100
@@ -1746,7 +1746,7 @@
     {
       "name": "Jackson Chourio",
       "sport": "Baseball",
-      "scpRawPrice": 7.18,
+      "scpRawPrice": 6.74,
       "scpRawProduct": "Jackson Chourio [Bases Loaded] #47",
       "scpRawId": "5364874",
       "scpRawMatchCount": 100
@@ -1754,15 +1754,15 @@
     {
       "name": "Jairo Diaz",
       "sport": "Baseball",
-      "scpRawPrice": 3.55,
+      "scpRawPrice": 2.89,
       "scpRawProduct": "Jairo Diaz [Black] #668",
       "scpRawId": "8204757",
-      "scpRawMatchCount": 100
+      "scpRawMatchCount": 64
     },
     {
       "name": "Jairo Iriarte",
       "sport": "Baseball",
-      "scpRawPrice": 2.68,
+      "scpRawPrice": 2.63,
       "scpRawProduct": "Jairo Iriarte [Stars] #22",
       "scpRawId": "9683794",
       "scpRawMatchCount": 100
@@ -1770,15 +1770,15 @@
     {
       "name": "Javier Sanoja",
       "sport": "Baseball",
-      "scpRawPrice": null,
-      "scpRawProduct": null,
-      "scpRawId": null,
-      "scpRawMatchCount": 0
+      "scpRawPrice": 7.48,
+      "scpRawProduct": "Javier Sanoja [75 Years of Topps] #399",
+      "scpRawId": "13301584",
+      "scpRawMatchCount": 100
     },
     {
       "name": "Jean Machi",
       "sport": "Baseball",
-      "scpRawPrice": 1.57,
+      "scpRawPrice": 1.68,
       "scpRawProduct": "Jean Machi [Gold] #US4",
       "scpRawId": "5943594",
       "scpRawMatchCount": 100
@@ -1786,7 +1786,7 @@
     {
       "name": "Jeanmar Gomez",
       "sport": "Baseball",
-      "scpRawPrice": 2.02,
+      "scpRawPrice": 2.04,
       "scpRawProduct": "Jeanmar Gomez [Red] #526A",
       "scpRawId": "1667107",
       "scpRawMatchCount": 100
@@ -1794,7 +1794,7 @@
     {
       "name": "Jedixson Paez",
       "sport": "Baseball",
-      "scpRawPrice": 2.47,
+      "scpRawPrice": 2.97,
       "scpRawProduct": "Jedixson Paez [Silver] #197",
       "scpRawId": "10646532",
       "scpRawMatchCount": 100
@@ -1802,15 +1802,15 @@
     {
       "name": "Jeferson Quero",
       "sport": "Baseball",
-      "scpRawPrice": 8.95,
+      "scpRawPrice": 7.87,
       "scpRawProduct": "Jeferson Quero [Sparkles Silver] #MB-35",
       "scpRawId": "12140998",
-      "scpRawMatchCount": 100
+      "scpRawMatchCount": 88
     },
     {
       "name": "Jermaine Palacios",
       "sport": "Baseball",
-      "scpRawPrice": 3.11,
+      "scpRawPrice": 3.13,
       "scpRawProduct": "Jermaine Palacios [Refractor] #83",
       "scpRawId": "5771274",
       "scpRawMatchCount": 100
@@ -1818,7 +1818,7 @@
     {
       "name": "Jesus Aguilar",
       "sport": "Baseball",
-      "scpRawPrice": 2.56,
+      "scpRawPrice": 2.68,
       "scpRawProduct": "Jesus Aguilar [ Wave 10]",
       "scpRawId": "11811142",
       "scpRawMatchCount": 100
@@ -1826,7 +1826,7 @@
     {
       "name": "Jesus Delgado",
       "sport": "Baseball",
-      "scpRawPrice": 3.77,
+      "scpRawPrice": 3.76,
       "scpRawProduct": "Jesus Delgado [Red] #BDPP68",
       "scpRawId": "12770991",
       "scpRawMatchCount": 100
@@ -1834,7 +1834,7 @@
     {
       "name": "Jesus Flores",
       "sport": "Baseball",
-      "scpRawPrice": 1.51,
+      "scpRawPrice": 1.32,
       "scpRawProduct": "Jesus Flores [1993 Design] #201",
       "scpRawId": "2080122",
       "scpRawMatchCount": 100
@@ -1842,7 +1842,7 @@
     {
       "name": "Jesus Guzman",
       "sport": "Baseball",
-      "scpRawPrice": 2.3,
+      "scpRawPrice": 2.28,
       "scpRawProduct": "Jesus Guzman [Pink] #174",
       "scpRawId": "8200027",
       "scpRawMatchCount": 100
@@ -1850,23 +1850,23 @@
     {
       "name": "Jesus Luzardo",
       "sport": "Baseball",
-      "scpRawPrice": 3.93,
+      "scpRawPrice": 3.83,
       "scpRawProduct": "Jesus Luzardo [999] #448",
       "scpRawId": "6880734",
-      "scpRawMatchCount": 100
+      "scpRawMatchCount": 97
     },
     {
       "name": "Jesus Montero",
       "sport": "Baseball",
-      "scpRawPrice": 2.13,
-      "scpRawProduct": "Jesus Montero [Red] #459",
-      "scpRawId": "9375734",
-      "scpRawMatchCount": 100
+      "scpRawPrice": null,
+      "scpRawProduct": null,
+      "scpRawId": null,
+      "scpRawMatchCount": 0
     },
     {
       "name": "Jesus Rodriguez",
       "sport": "Baseball",
-      "scpRawPrice": 36.04,
+      "scpRawPrice": 28.68,
       "scpRawProduct": "Jesus Rodriguez [Refractor] #CPA-JR",
       "scpRawId": "6747788",
       "scpRawMatchCount": 100
@@ -1874,7 +1874,7 @@
     {
       "name": "Jesus Sucre",
       "sport": "Baseball",
-      "scpRawPrice": 1.82,
+      "scpRawPrice": 1.86,
       "scpRawProduct": "Jesus Sucre [Red] #US119",
       "scpRawId": "1660429",
       "scpRawMatchCount": 100
@@ -1882,7 +1882,7 @@
     {
       "name": "Jesus Tinoco",
       "sport": "Baseball",
-      "scpRawPrice": 2.66,
+      "scpRawPrice": 2.69,
       "scpRawProduct": "Jesus Tinoco [Refractor] #U-31",
       "scpRawId": "3180426",
       "scpRawMatchCount": 100
@@ -1890,7 +1890,7 @@
     {
       "name": "Jhonathan Diaz",
       "sport": "Baseball",
-      "scpRawPrice": 2.98,
+      "scpRawPrice": 3,
       "scpRawProduct": "Jhonathan Diaz [Red] #332",
       "scpRawId": "3603873",
       "scpRawMatchCount": 100
@@ -1898,7 +1898,7 @@
     {
       "name": "Jhonny Pereda",
       "sport": "Baseball",
-      "scpRawPrice": 3.28,
+      "scpRawPrice": 3.36,
       "scpRawProduct": "Jhonny Pereda [Aqua] #719",
       "scpRawId": "8911404",
       "scpRawMatchCount": 100
@@ -1906,7 +1906,7 @@
     {
       "name": "Jhostynxon Garcia",
       "sport": "Baseball",
-      "scpRawPrice": 12.35,
+      "scpRawPrice": 7.96,
       "scpRawProduct": "Jhostynxon Garcia [75 Years] #316",
       "scpRawId": "11887415",
       "scpRawMatchCount": 100
@@ -1914,7 +1914,7 @@
     {
       "name": "Jhoulys Chacin",
       "sport": "Baseball",
-      "scpRawPrice": 1.96,
+      "scpRawPrice": 1.97,
       "scpRawProduct": "Jhoulys  Chacin #UH66",
       "scpRawId": "4286048",
       "scpRawMatchCount": 100
@@ -1922,15 +1922,15 @@
     {
       "name": "Joe Ortiz",
       "sport": "Baseball",
-      "scpRawPrice": 4.84,
+      "scpRawPrice": 5.05,
       "scpRawProduct": "Samoa Joe Debuts on Raw [Silver] #13",
       "scpRawId": "3837540",
-      "scpRawMatchCount": 100
+      "scpRawMatchCount": 89
     },
     {
       "name": "Johan Santana",
       "sport": "Baseball",
-      "scpRawPrice": 4.2,
+      "scpRawPrice": 5.2,
       "scpRawProduct": "Johan Santana [Mets] #201",
       "scpRawId": "2088961",
       "scpRawMatchCount": 100
@@ -1938,15 +1938,15 @@
     {
       "name": "Johnny Paredes",
       "sport": "Baseball",
-      "scpRawPrice": 2.25,
-      "scpRawProduct": "Johnny Paredes #367",
-      "scpRawId": "1937323",
+      "scpRawPrice": 2.23,
+      "scpRawProduct": "Johnny Paredes #516",
+      "scpRawId": "13568956",
       "scpRawMatchCount": 100
     },
     {
       "name": "Jonathan Herrera",
       "sport": "Baseball",
-      "scpRawPrice": 2.08,
+      "scpRawPrice": 2.24,
       "scpRawProduct": "Jonathan Herrera [Blue] #152",
       "scpRawId": "12494104",
       "scpRawMatchCount": 100
@@ -1954,7 +1954,7 @@
     {
       "name": "Jorbit Vivas",
       "sport": "Baseball",
-      "scpRawPrice": 4.79,
+      "scpRawPrice": 4.74,
       "scpRawProduct": "Jorbit Vivas [Refractor] #114",
       "scpRawId": "11963072",
       "scpRawMatchCount": 100
@@ -1962,7 +1962,7 @@
     {
       "name": "Jorge Barrosa",
       "sport": "Baseball",
-      "scpRawPrice": 4.59,
+      "scpRawPrice": 4.9,
       "scpRawProduct": "Jorge Barrosa [Bats] #US22",
       "scpRawId": "7572729",
       "scpRawMatchCount": 100
@@ -1970,7 +1970,7 @@
     {
       "name": "Jorge Julio",
       "sport": "Baseball",
-      "scpRawPrice": 0.85,
+      "scpRawPrice": 0.84,
       "scpRawProduct": "Jorge Julio [Silver] #648",
       "scpRawId": "7372841",
       "scpRawMatchCount": 100
@@ -1978,7 +1978,7 @@
     {
       "name": "Jorge Rondon",
       "sport": "Baseball",
-      "scpRawPrice": 3.12,
+      "scpRawPrice": 3.13,
       "scpRawProduct": "Bruce Rondon [Refractor] #41",
       "scpRawId": "2135120",
       "scpRawMatchCount": 100
@@ -1986,7 +1986,7 @@
     {
       "name": "Jorge Velandia",
       "sport": "Baseball",
-      "scpRawPrice": 1.56,
+      "scpRawPrice": 1.69,
       "scpRawProduct": "Jorge Velandia #203",
       "scpRawId": "2418087",
       "scpRawMatchCount": 100
@@ -1994,7 +1994,7 @@
     {
       "name": "Jose Altuve",
       "sport": "Baseball",
-      "scpRawPrice": 4.51,
+      "scpRawPrice": 4.83,
       "scpRawProduct": "Jose Altuve [1983 Topps Baseball] #83-31",
       "scpRawId": "1555044",
       "scpRawMatchCount": 100
@@ -2002,15 +2002,15 @@
     {
       "name": "Jose Alvarado",
       "sport": "Baseball",
-      "scpRawPrice": 4.4,
+      "scpRawPrice": 4.49,
       "scpRawProduct": "Jose Alvarado [Waves] #356",
       "scpRawId": "6796883",
-      "scpRawMatchCount": 94
+      "scpRawMatchCount": 100
     },
     {
       "name": "Jose Azocar",
       "sport": "Baseball",
-      "scpRawPrice": 2.65,
+      "scpRawPrice": 2.63,
       "scpRawProduct": "Jose Azocar [Waves] #423",
       "scpRawId": "6798919",
       "scpRawMatchCount": 100
@@ -2018,26 +2018,26 @@
     {
       "name": "Jose Briceno",
       "sport": "Baseball",
-      "scpRawPrice": 11.82,
-      "scpRawProduct": "Jose Briceno [Clear] #689",
-      "scpRawId": "10650010",
-      "scpRawMatchCount": 100
+      "scpRawPrice": null,
+      "scpRawProduct": null,
+      "scpRawId": null,
+      "scpRawMatchCount": 0
     },
     {
       "name": "Jose Butto",
       "sport": "Baseball",
-      "scpRawPrice": 5.28,
+      "scpRawPrice": 4.99,
       "scpRawProduct": "Jose Butto [Bats] #US56",
       "scpRawId": "7573793",
-      "scpRawMatchCount": 95
+      "scpRawMatchCount": 91
     },
     {
       "name": "Jose Campos",
       "sport": "Baseball",
-      "scpRawPrice": 3.54,
-      "scpRawProduct": "Jose Campos [Refractor] #BCP15",
-      "scpRawId": "8925213",
-      "scpRawMatchCount": 100
+      "scpRawPrice": null,
+      "scpRawProduct": null,
+      "scpRawId": null,
+      "scpRawMatchCount": 0
     },
     {
       "name": "Jose Castillo",
@@ -2050,7 +2050,7 @@
     {
       "name": "Jose Escobar",
       "sport": "Baseball",
-      "scpRawPrice": 2.23,
+      "scpRawPrice": 2.16,
       "scpRawProduct": "No Way Jose [Blue] #55",
       "scpRawId": "3769757",
       "scpRawMatchCount": 100
@@ -2058,15 +2058,15 @@
     {
       "name": "Jose Fernandez",
       "sport": "Baseball",
-      "scpRawPrice": 4.68,
+      "scpRawPrice": 4.31,
       "scpRawProduct": "Jose Fernandez [Class 1] #25",
       "scpRawId": "1382532",
-      "scpRawMatchCount": 100
+      "scpRawMatchCount": 87
     },
     {
       "name": "Jose Franco",
       "sport": "Baseball",
-      "scpRawPrice": 2.19,
+      "scpRawPrice": 2.26,
       "scpRawProduct": "No Way Jose [Blue] #55",
       "scpRawId": "3769757",
       "scpRawMatchCount": 100
@@ -2074,15 +2074,15 @@
     {
       "name": "Jose Godoy",
       "sport": "Baseball",
-      "scpRawPrice": 5.05,
-      "scpRawProduct": "Jose Godoy / Wyatt Mills [Gold] #US80",
-      "scpRawId": "2814006",
-      "scpRawMatchCount": 100
+      "scpRawPrice": null,
+      "scpRawProduct": null,
+      "scpRawId": null,
+      "scpRawMatchCount": 0
     },
     {
       "name": "Jose Herrera",
       "sport": "Baseball",
-      "scpRawPrice": 2.31,
+      "scpRawPrice": 2.37,
       "scpRawProduct": "Jose Herrera [Bats] #US272",
       "scpRawId": "10888229",
       "scpRawMatchCount": 100
@@ -2090,7 +2090,7 @@
     {
       "name": "Jose Lobaton",
       "sport": "Baseball",
-      "scpRawPrice": 1.86,
+      "scpRawPrice": 1.9,
       "scpRawProduct": "Jose Lobaton [Pink] #US26",
       "scpRawId": "1392239",
       "scpRawMatchCount": 100
@@ -2098,7 +2098,7 @@
     {
       "name": "Jose Lopez",
       "sport": "Baseball",
-      "scpRawPrice": 2.02,
+      "scpRawPrice": 2.06,
       "scpRawProduct": "No Way Jose [Blue] #55",
       "scpRawId": "3769757",
       "scpRawMatchCount": 100
@@ -2106,7 +2106,7 @@
     {
       "name": "Jose Malave",
       "sport": "Baseball",
-      "scpRawPrice": 1.47,
+      "scpRawPrice": 1.5,
       "scpRawProduct": "Jose Malave [Silver] #21",
       "scpRawId": "13381914",
       "scpRawMatchCount": 100
@@ -2114,7 +2114,7 @@
     {
       "name": "Jose Martinez",
       "sport": "Baseball",
-      "scpRawPrice": 2.68,
+      "scpRawPrice": 2.69,
       "scpRawProduct": "No Way Jose [Blue] #55",
       "scpRawId": "3769757",
       "scpRawMatchCount": 100
@@ -2122,7 +2122,7 @@
     {
       "name": "Jose Mijares",
       "sport": "Baseball",
-      "scpRawPrice": 3.83,
+      "scpRawPrice": 3.72,
       "scpRawProduct": "Jose Mijares [Blue] #US174",
       "scpRawId": "12093545",
       "scpRawMatchCount": 100
@@ -2130,7 +2130,7 @@
     {
       "name": "Jose Mujica",
       "sport": "Baseball",
-      "scpRawPrice": 1.94,
+      "scpRawPrice": 1.95,
       "scpRawProduct": "Jose Mujica [Autograph] #135",
       "scpRawId": "1514110",
       "scpRawMatchCount": 100
@@ -2138,15 +2138,15 @@
     {
       "name": "Jose Nieves",
       "sport": "Baseball",
-      "scpRawPrice": 2.89,
+      "scpRawPrice": 2.96,
       "scpRawProduct": "Jose Nieves [Exclusives Silver] #344",
       "scpRawId": "12359317",
-      "scpRawMatchCount": 96
+      "scpRawMatchCount": 100
     },
     {
       "name": "Jose Ortega",
       "sport": "Baseball",
-      "scpRawPrice": 3.09,
+      "scpRawPrice": 3.1,
       "scpRawProduct": "Jose Ortega #158",
       "scpRawId": "13426358",
       "scpRawMatchCount": 100
@@ -2154,7 +2154,7 @@
     {
       "name": "Jose Osuna",
       "sport": "Baseball",
-      "scpRawPrice": 2.04,
+      "scpRawPrice": 2.03,
       "scpRawProduct": "Jose Osuna [Refractor] #115",
       "scpRawId": "12124614",
       "scpRawMatchCount": 100
@@ -2162,23 +2162,23 @@
     {
       "name": "Jose Peraza",
       "sport": "Baseball",
-      "scpRawPrice": 2.2,
+      "scpRawPrice": 2.09,
       "scpRawProduct": "Jose Peraza [Silver] #128",
       "scpRawId": "1351565",
-      "scpRawMatchCount": 74
+      "scpRawMatchCount": 100
     },
     {
       "name": "Jose Pirela",
       "sport": "Baseball",
-      "scpRawPrice": 4.62,
-      "scpRawProduct": "Jose Pirela [Peanuts] #BCP-111",
-      "scpRawId": "9191097",
-      "scpRawMatchCount": 95
+      "scpRawPrice": null,
+      "scpRawProduct": null,
+      "scpRawId": null,
+      "scpRawMatchCount": 0
     },
     {
       "name": "Jose Rodriguez",
       "sport": "Baseball",
-      "scpRawPrice": 3.06,
+      "scpRawPrice": 3.22,
       "scpRawProduct": "No Way Jose [Blue] #55",
       "scpRawId": "3769757",
       "scpRawMatchCount": 100
@@ -2194,7 +2194,7 @@
     {
       "name": "Jose Ruiz",
       "sport": "Baseball",
-      "scpRawPrice": 1.76,
+      "scpRawPrice": 1.83,
       "scpRawProduct": "Jose Ruiz [Red] #720",
       "scpRawId": "1786230",
       "scpRawMatchCount": 100
@@ -2202,15 +2202,15 @@
     {
       "name": "Jose Suarez",
       "sport": "Baseball",
-      "scpRawPrice": 2.79,
+      "scpRawPrice": 2.96,
       "scpRawProduct": "Jose Suarez [Gold] #609",
       "scpRawId": "5292544",
-      "scpRawMatchCount": 100
+      "scpRawMatchCount": 76
     },
     {
       "name": "Jose Tabata",
       "sport": "Baseball",
-      "scpRawPrice": 1.64,
+      "scpRawPrice": 1.6,
       "scpRawProduct": "Jose Tabata [silver] #545",
       "scpRawId": "4957588",
       "scpRawMatchCount": 100
@@ -2218,7 +2218,7 @@
     {
       "name": "Jose Torres",
       "sport": "Baseball",
-      "scpRawPrice": 3.29,
+      "scpRawPrice": 3.26,
       "scpRawProduct": "Jose Torres [Red] #125",
       "scpRawId": "3071698",
       "scpRawMatchCount": 100
@@ -2234,15 +2234,15 @@
     {
       "name": "Josmil Pinto",
       "sport": "Baseball",
-      "scpRawPrice": 3.79,
+      "scpRawPrice": 2.86,
       "scpRawProduct": "Josmil Pinto [Silver] #43",
       "scpRawId": "12578414",
-      "scpRawMatchCount": 100
+      "scpRawMatchCount": 77
     },
     {
       "name": "Juan Castillo",
       "sport": "Baseball",
-      "scpRawPrice": 1.39,
+      "scpRawPrice": 1.45,
       "scpRawProduct": "Juan Castillo [Autograph] #12",
       "scpRawId": "11665021",
       "scpRawMatchCount": 100
@@ -2250,7 +2250,7 @@
     {
       "name": "Juan Graterol",
       "sport": "Baseball",
-      "scpRawPrice": 3.94,
+      "scpRawPrice": 3.84,
       "scpRawProduct": "Juan Graterol [Red] #881A",
       "scpRawId": "1667459",
       "scpRawMatchCount": 100
@@ -2258,7 +2258,7 @@
     {
       "name": "Juan Moreno",
       "sport": "Baseball",
-      "scpRawPrice": 1.56,
+      "scpRawPrice": 1.71,
       "scpRawProduct": "Juan Moreno [2002 Chicago Sun Times] #163",
       "scpRawId": "2041440",
       "scpRawMatchCount": 100
@@ -2266,7 +2266,7 @@
     {
       "name": "Juan Morillo",
       "sport": "Baseball",
-      "scpRawPrice": 4.52,
+      "scpRawPrice": 5.39,
       "scpRawProduct": "Juan Morillo [Bats] #US232",
       "scpRawId": "10887996",
       "scpRawMatchCount": 100
@@ -2274,7 +2274,7 @@
     {
       "name": "Juan Rincon",
       "sport": "Baseball",
-      "scpRawPrice": 6.95,
+      "scpRawPrice": 8.33,
       "scpRawProduct": "Juan Rincon [Gold] #539",
       "scpRawId": "9037735",
       "scpRawMatchCount": 100
@@ -2282,15 +2282,15 @@
     {
       "name": "Juan Rivera",
       "sport": "Baseball",
-      "scpRawPrice": 1.42,
-      "scpRawProduct": "Juan Rivera [Minis] #59",
-      "scpRawId": "6973297",
-      "scpRawMatchCount": 83
+      "scpRawPrice": null,
+      "scpRawProduct": null,
+      "scpRawId": null,
+      "scpRawMatchCount": 0
     },
     {
       "name": "Juan Yepez",
       "sport": "Baseball",
-      "scpRawPrice": 3.57,
+      "scpRawPrice": 3.46,
       "scpRawProduct": "Juan Yepez– 1,929 #541",
       "scpRawId": "6507788",
       "scpRawMatchCount": 100
@@ -2298,7 +2298,7 @@
     {
       "name": "Julio Machado",
       "sport": "Baseball",
-      "scpRawPrice": 1.18,
+      "scpRawPrice": 1.21,
       "scpRawProduct": "Julio Machado [Winner] #208",
       "scpRawId": "6302908",
       "scpRawMatchCount": 100
@@ -2306,7 +2306,7 @@
     {
       "name": "Juniel Querecuto",
       "sport": "Baseball",
-      "scpRawPrice": 1.88,
+      "scpRawPrice": 1.92,
       "scpRawProduct": "Rays 2017 Rookie Stars: Eddie Gamboa / Juniel Querecuto #127",
       "scpRawId": "1462924",
       "scpRawMatchCount": 100
@@ -2314,7 +2314,7 @@
     {
       "name": "Junior Guerra",
       "sport": "Baseball",
-      "scpRawPrice": 2.4,
+      "scpRawPrice": 2.42,
       "scpRawProduct": "Junior Guerra [Red] #755",
       "scpRawId": "1786265",
       "scpRawMatchCount": 100
@@ -2322,7 +2322,7 @@
     {
       "name": "Keibert Ruiz",
       "sport": "Baseball",
-      "scpRawPrice": 5.07,
+      "scpRawPrice": 5.13,
       "scpRawProduct": "Keibert Ruiz [75 Years] #245",
       "scpRawId": "11883469",
       "scpRawMatchCount": 100
@@ -2330,7 +2330,7 @@
     {
       "name": "Keider Montero",
       "sport": "Baseball",
-      "scpRawPrice": 6.82,
+      "scpRawPrice": 7.23,
       "scpRawProduct": "Keider Montero [Waves] #665",
       "scpRawId": "9599447",
       "scpRawMatchCount": 100
@@ -2338,23 +2338,23 @@
     {
       "name": "Kelvim Escobar",
       "sport": "Baseball",
-      "scpRawPrice": 1.27,
+      "scpRawPrice": 1.09,
       "scpRawProduct": "Kelvim Escobar [Refractor] #336",
       "scpRawId": "8353901",
-      "scpRawMatchCount": 85
+      "scpRawMatchCount": 100
     },
     {
       "name": "Kenedy Corona",
       "sport": "Baseball",
-      "scpRawPrice": 4.9,
+      "scpRawPrice": 4.8,
       "scpRawProduct": "Kenedy Corona [75 Years] #145",
       "scpRawId": "11878193",
-      "scpRawMatchCount": 96
+      "scpRawMatchCount": 100
     },
     {
       "name": "Kennedy Corona",
       "sport": "Baseball",
-      "scpRawPrice": 4.79,
+      "scpRawPrice": 4.74,
       "scpRawProduct": "Kenedy Corona [75 Years] #145",
       "scpRawId": "11878193",
       "scpRawMatchCount": 100
@@ -2362,15 +2362,15 @@
     {
       "name": "Kervin Castro",
       "sport": "Baseball",
-      "scpRawPrice": null,
-      "scpRawProduct": null,
-      "scpRawId": null,
-      "scpRawMatchCount": 0
+      "scpRawPrice": 3.39,
+      "scpRawProduct": "Kervin Castro [Red] #413",
+      "scpRawId": "3603955",
+      "scpRawMatchCount": 100
     },
     {
       "name": "Lenyn Sosa",
       "sport": "Baseball",
-      "scpRawPrice": 3.34,
+      "scpRawPrice": 3.36,
       "scpRawProduct": "Lenyn Sosa [75 Years] #56",
       "scpRawId": "11874126",
       "scpRawMatchCount": 100
@@ -2378,7 +2378,7 @@
     {
       "name": "Leo Hernandez",
       "sport": "Baseball",
-      "scpRawPrice": 1.54,
+      "scpRawPrice": 1.67,
       "scpRawProduct": "Leo Hernandez #71",
       "scpRawId": "1897351",
       "scpRawMatchCount": 100
@@ -2386,7 +2386,7 @@
     {
       "name": "Leo Rivas",
       "sport": "Baseball",
-      "scpRawPrice": 7.64,
+      "scpRawPrice": 7.56,
       "scpRawProduct": "Leo Rivas [Refractor] #USC76",
       "scpRawId": "7835467",
       "scpRawMatchCount": 100
@@ -2394,7 +2394,7 @@
     {
       "name": "Leonel Campos",
       "sport": "Baseball",
-      "scpRawPrice": 3.01,
+      "scpRawPrice": 3,
       "scpRawProduct": "Leonel Valera [Red] #BSPA-LV",
       "scpRawId": "1680394",
       "scpRawMatchCount": 100
@@ -2402,7 +2402,7 @@
     {
       "name": "Les Straker",
       "sport": "Baseball",
-      "scpRawPrice": 1.42,
+      "scpRawPrice": 1.58,
       "scpRawProduct": "Les Straker #24",
       "scpRawId": "3783930",
       "scpRawMatchCount": 100
@@ -2410,7 +2410,7 @@
     {
       "name": "Lester Oliveros",
       "sport": "Baseball",
-      "scpRawPrice": 2.46,
+      "scpRawPrice": 2.31,
       "scpRawProduct": "Francisco Oliveros #9",
       "scpRawId": "2513866",
       "scpRawMatchCount": 100
@@ -2418,7 +2418,7 @@
     {
       "name": "Lino Urdaneta",
       "sport": "Baseball",
-      "scpRawPrice": 6.5,
+      "scpRawPrice": 6.88,
       "scpRawProduct": "Lino Urdaneta #356",
       "scpRawId": "6311040",
       "scpRawMatchCount": 100
@@ -2426,7 +2426,7 @@
     {
       "name": "Liu Rodriguez",
       "sport": "Baseball",
-      "scpRawPrice": 9.66,
+      "scpRawPrice": 9.79,
       "scpRawProduct": "Liu Rodriguez #U88",
       "scpRawId": "2371264",
       "scpRawMatchCount": 100
@@ -2434,47 +2434,47 @@
     {
       "name": "Livan Soto",
       "sport": "Baseball",
+      "scpRawPrice": 4.56,
+      "scpRawProduct": "Livan Soto [Red] #46",
+      "scpRawId": "5090575",
+      "scpRawMatchCount": 100
+    },
+    {
+      "name": "Luarbert Arias",
+      "sport": "Baseball",
+      "scpRawPrice": 2.84,
+      "scpRawProduct": "Luarbert Arias [Bats] #US53",
+      "scpRawId": "10887004",
+      "scpRawMatchCount": 71
+    },
+    {
+      "name": "Luinder Avila",
+      "sport": "Baseball",
       "scpRawPrice": null,
       "scpRawProduct": null,
       "scpRawId": null,
       "scpRawMatchCount": 0
     },
     {
-      "name": "Luarbert Arias",
-      "sport": "Baseball",
-      "scpRawPrice": 2.82,
-      "scpRawProduct": "Luarbert Arias [Bats] #US53",
-      "scpRawId": "10887004",
-      "scpRawMatchCount": 100
-    },
-    {
-      "name": "Luinder Avila",
-      "sport": "Baseball",
-      "scpRawPrice": 8.57,
-      "scpRawProduct": "Luinder Avila [75 Years] #120",
-      "scpRawId": "11877287",
-      "scpRawMatchCount": 100
-    },
-    {
       "name": "Luis Alexander Basabe",
       "sport": "Baseball",
-      "scpRawPrice": 2.5,
+      "scpRawPrice": 2.6,
       "scpRawProduct": "Luis Alexander Basabe [Red] #548",
       "scpRawId": "2258856",
-      "scpRawMatchCount": 100
+      "scpRawMatchCount": 77
     },
     {
       "name": "Luis Aparicio",
       "sport": "Baseball",
-      "scpRawPrice": 5.88,
-      "scpRawProduct": "Luis Aparicio [1974] #168",
-      "scpRawId": "2042644",
+      "scpRawPrice": 5.51,
+      "scpRawProduct": "Luis Aparicio [1956] #50",
+      "scpRawId": "2042526",
       "scpRawMatchCount": 100
     },
     {
       "name": "Luis Aponte",
       "sport": "Baseball",
-      "scpRawPrice": 6.81,
+      "scpRawPrice": 6.72,
       "scpRawProduct": "Luis Aponte #371",
       "scpRawId": "1895456",
       "scpRawMatchCount": 100
@@ -2482,7 +2482,7 @@
     {
       "name": "Luis Arraez",
       "sport": "Baseball",
-      "scpRawPrice": 4.89,
+      "scpRawPrice": 4.2,
       "scpRawProduct": "Luis Arraez [999] #341",
       "scpRawId": "6880704",
       "scpRawMatchCount": 100
@@ -2490,7 +2490,7 @@
     {
       "name": "Luis Avilan",
       "sport": "Baseball",
-      "scpRawPrice": 1.58,
+      "scpRawPrice": 1.69,
       "scpRawProduct": "Luis Avilan [Red] #494",
       "scpRawId": "1388055",
       "scpRawMatchCount": 100
@@ -2498,15 +2498,15 @@
     {
       "name": "Luis Contreras",
       "sport": "Baseball",
-      "scpRawPrice": 4.53,
+      "scpRawPrice": 4.29,
       "scpRawProduct": "Luis Contreras [Bats] #US323",
       "scpRawId": "10888509",
-      "scpRawMatchCount": 90
+      "scpRawMatchCount": 100
     },
     {
       "name": "Luis Curvelo",
       "sport": "Baseball",
-      "scpRawPrice": 3.38,
+      "scpRawPrice": 2.63,
       "scpRawProduct": "Luis Curvelo [75 Years of Topps] #386",
       "scpRawId": "13300910",
       "scpRawMatchCount": 100
@@ -2514,7 +2514,7 @@
     {
       "name": "Luis Garcia",
       "sport": "Baseball",
-      "scpRawPrice": 3.34,
+      "scpRawPrice": 3.23,
       "scpRawProduct": "Luis V. Garcia #157",
       "scpRawId": "3085464",
       "scpRawMatchCount": 100
@@ -2522,39 +2522,39 @@
     {
       "name": "Luis Guillorme",
       "sport": "Baseball",
-      "scpRawPrice": 3.9,
+      "scpRawPrice": 3.57,
       "scpRawProduct": "Luis Guillorme [Blue] #39",
       "scpRawId": "1563944",
-      "scpRawMatchCount": 100
+      "scpRawMatchCount": 83
     },
     {
       "name": "Luis Hernandez",
       "sport": "Baseball",
-      "scpRawPrice": 9.32,
+      "scpRawPrice": 10.73,
       "scpRawProduct": "Luis Hernandez [Refractor] #3",
       "scpRawId": "10514944",
-      "scpRawMatchCount": 90
+      "scpRawMatchCount": 100
     },
     {
       "name": "Luis Jimenez",
       "sport": "Baseball",
-      "scpRawPrice": 5.97,
+      "scpRawPrice": 4.3,
       "scpRawProduct": "Luis D. Jimenez #215",
       "scpRawId": "12463780",
-      "scpRawMatchCount": 100
+      "scpRawMatchCount": 76
     },
     {
       "name": "Luis Leal",
       "sport": "Baseball",
-      "scpRawPrice": null,
-      "scpRawProduct": null,
-      "scpRawId": null,
-      "scpRawMatchCount": 0
+      "scpRawPrice": 1.28,
+      "scpRawProduct": "Luis Leal [Blackless] #412",
+      "scpRawId": "1888646",
+      "scpRawMatchCount": 100
     },
     {
       "name": "Luis Matos",
       "sport": "Baseball",
-      "scpRawPrice": 5.73,
+      "scpRawPrice": 5.58,
       "scpRawProduct": "Luis Matos [999] #101",
       "scpRawId": "6880659",
       "scpRawMatchCount": 100
@@ -2562,23 +2562,23 @@
     {
       "name": "Luis Maza",
       "sport": "Baseball",
-      "scpRawPrice": 7.37,
+      "scpRawPrice": 10.39,
       "scpRawProduct": "Luis Maza [Class 1 Gold] #126",
       "scpRawId": "2053128",
-      "scpRawMatchCount": 100
+      "scpRawMatchCount": 87
     },
     {
       "name": "Luis Ordaz",
       "sport": "Baseball",
-      "scpRawPrice": 6.6,
+      "scpRawPrice": 7.57,
       "scpRawProduct": "Luis Ordaz [Prized] #PC392",
       "scpRawId": "6328281",
-      "scpRawMatchCount": 100
+      "scpRawMatchCount": 86
     },
     {
       "name": "Luis Oviedo",
       "sport": "Baseball",
-      "scpRawPrice": 3.96,
+      "scpRawPrice": 4.12,
       "scpRawProduct": "Luis Oviedo [Autograph] #155",
       "scpRawId": "1514129",
       "scpRawMatchCount": 100
@@ -2594,15 +2594,15 @@
     {
       "name": "Luis Rengifo",
       "sport": "Baseball",
-      "scpRawPrice": null,
-      "scpRawProduct": null,
-      "scpRawId": null,
-      "scpRawMatchCount": 0
+      "scpRawPrice": 5.35,
+      "scpRawProduct": "Luis Rengifo [Silver] #159",
+      "scpRawId": "8511425",
+      "scpRawMatchCount": 100
     },
     {
       "name": "Luis Rivas",
       "sport": "Baseball",
-      "scpRawPrice": 1.68,
+      "scpRawPrice": 1.63,
       "scpRawProduct": "Luis Rivas [Gold] #234",
       "scpRawId": "9037137",
       "scpRawMatchCount": 100
@@ -2610,7 +2610,7 @@
     {
       "name": "Luis Rodriguez",
       "sport": "Baseball",
-      "scpRawPrice": 7.93,
+      "scpRawPrice": 6.6,
       "scpRawProduct": "Luis Rodriguez [X] #CPA-LR",
       "scpRawId": "3036298",
       "scpRawMatchCount": 100
@@ -2618,7 +2618,7 @@
     {
       "name": "Luis Salazar",
       "sport": "Baseball",
-      "scpRawPrice": 0.93,
+      "scpRawPrice": 0.95,
       "scpRawProduct": "Luis Salazar [Glossy] #13T",
       "scpRawId": "1928805",
       "scpRawMatchCount": 100
@@ -2626,7 +2626,7 @@
     {
       "name": "Luis Sanchez",
       "sport": "Baseball",
-      "scpRawPrice": 1.55,
+      "scpRawPrice": 1.68,
       "scpRawProduct": "Lee Lacy/Luis Sanchez #138/233",
       "scpRawId": "5660325",
       "scpRawMatchCount": 100
@@ -2634,7 +2634,7 @@
     {
       "name": "Luis Sardinas",
       "sport": "Baseball",
-      "scpRawPrice": 1.72,
+      "scpRawPrice": 1.77,
       "scpRawProduct": "Luis Sardinas [Silver] #37",
       "scpRawId": "11812795",
       "scpRawMatchCount": 100
@@ -2642,7 +2642,7 @@
     {
       "name": "Luis Sojo",
       "sport": "Baseball",
-      "scpRawPrice": 1.29,
+      "scpRawPrice": 1.32,
       "scpRawProduct": "Luis Sojo [Silver] #197",
       "scpRawId": "5403522",
       "scpRawMatchCount": 100
@@ -2658,7 +2658,7 @@
     {
       "name": "Luis Ugueto",
       "sport": "Baseball",
-      "scpRawPrice": 1.53,
+      "scpRawPrice": 1.69,
       "scpRawProduct": "Luis Ugueto [Autograph] #28",
       "scpRawId": "10257080",
       "scpRawMatchCount": 100
@@ -2666,15 +2666,15 @@
     {
       "name": "Luis Valbuena",
       "sport": "Baseball",
-      "scpRawPrice": 1.58,
+      "scpRawPrice": 1.96,
       "scpRawProduct": "Luis Valbuena [Red] #318",
       "scpRawId": "12509015",
-      "scpRawMatchCount": 100
+      "scpRawMatchCount": 85
     },
     {
       "name": "Luisangel Acuna",
       "sport": "Baseball",
-      "scpRawPrice": 6.06,
+      "scpRawPrice": 6.55,
       "scpRawProduct": "Luisangel Acuna [75 Years] #275",
       "scpRawId": "11885105",
       "scpRawMatchCount": 100
@@ -2682,23 +2682,23 @@
     {
       "name": "Magglio Ordonez",
       "sport": "Baseball",
-      "scpRawPrice": 3.95,
+      "scpRawPrice": 3.93,
       "scpRawProduct": "Magglio Ordonez [X] #340",
       "scpRawId": "4548865",
-      "scpRawMatchCount": 82
+      "scpRawMatchCount": 100
     },
     {
       "name": "Maicer Izturis",
       "sport": "Baseball",
-      "scpRawPrice": 1.19,
+      "scpRawPrice": 1.72,
       "scpRawProduct": "Maicer Izturis [Pink] #443",
       "scpRawId": "8202598",
-      "scpRawMatchCount": 100
+      "scpRawMatchCount": 70
     },
     {
       "name": "Maikel Garcia",
       "sport": "Baseball",
-      "scpRawPrice": 8.84,
+      "scpRawPrice": 9.1,
       "scpRawProduct": "Maikel Garcia [Eggs] #342",
       "scpRawId": "6367994",
       "scpRawMatchCount": 100
@@ -2706,23 +2706,23 @@
     {
       "name": "Manny Pina",
       "sport": "Baseball",
-      "scpRawPrice": 3.58,
+      "scpRawPrice": 3.01,
       "scpRawProduct": "Manny Pina [Bats] #US127",
       "scpRawId": "5909735",
-      "scpRawMatchCount": 56
+      "scpRawMatchCount": 100
     },
     {
       "name": "Manny Sarmiento",
       "sport": "Baseball",
-      "scpRawPrice": 3.58,
+      "scpRawPrice": 2.91,
       "scpRawProduct": "Manny Sarmiento [Robin Yount]",
       "scpRawId": "1889738",
-      "scpRawMatchCount": 82
+      "scpRawMatchCount": 100
     },
     {
       "name": "Manny Trillo",
       "sport": "Baseball",
-      "scpRawPrice": 1.4,
+      "scpRawPrice": 1.38,
       "scpRawProduct": "Manny Trillo [Blackless] #220",
       "scpRawId": "1888359",
       "scpRawMatchCount": 100
@@ -2730,23 +2730,23 @@
     {
       "name": "Marco Scutaro",
       "sport": "Baseball",
-      "scpRawPrice": null,
-      "scpRawProduct": null,
-      "scpRawId": null,
-      "scpRawMatchCount": 0
+      "scpRawPrice": 4.63,
+      "scpRawProduct": "Marco Scutaro [Silver] #54",
+      "scpRawId": "12578433",
+      "scpRawMatchCount": 100
     },
     {
       "name": "Marcos Armas",
       "sport": "Baseball",
-      "scpRawPrice": 2.35,
+      "scpRawPrice": 1.5,
       "scpRawProduct": "Marco'S Armas #398",
       "scpRawId": "6403171",
-      "scpRawMatchCount": 100
+      "scpRawMatchCount": 97
     },
     {
       "name": "Marcos Carvajal",
       "sport": "Baseball",
-      "scpRawPrice": 21.43,
+      "scpRawPrice": 21.3,
       "scpRawProduct": "Marcos Carvajal [Star Rookies] #429",
       "scpRawId": "4675964",
       "scpRawMatchCount": 100
@@ -2754,18 +2754,18 @@
     {
       "name": "Martin Perez",
       "sport": "Baseball",
-      "scpRawPrice": 2.89,
-      "scpRawProduct": "Martin Perez [Bats] #US75",
-      "scpRawId": "7574392",
-      "scpRawMatchCount": 100
+      "scpRawPrice": null,
+      "scpRawProduct": null,
+      "scpRawId": null,
+      "scpRawMatchCount": 0
     },
     {
       "name": "Martin Prado",
       "sport": "Baseball",
-      "scpRawPrice": 2.17,
-      "scpRawProduct": "Martin Prado [Refractor] #237",
-      "scpRawId": "2065603",
-      "scpRawMatchCount": 71
+      "scpRawPrice": null,
+      "scpRawProduct": null,
+      "scpRawId": null,
+      "scpRawMatchCount": 0
     },
     {
       "name": "Marwin Gonzalez",
@@ -2778,7 +2778,7 @@
     {
       "name": "Mauricio Llovera",
       "sport": "Baseball",
-      "scpRawPrice": 1.94,
+      "scpRawPrice": 1.96,
       "scpRawProduct": "Mauricio Llovera [Refractor] #109",
       "scpRawId": "3674102",
       "scpRawMatchCount": 100
@@ -2786,18 +2786,18 @@
     {
       "name": "Mauricio Robles",
       "sport": "Baseball",
-      "scpRawPrice": 2.66,
+      "scpRawPrice": 2.68,
       "scpRawProduct": "Mauricio Robles [Red Refractor] #BCP150",
       "scpRawId": "2093078",
-      "scpRawMatchCount": 94
+      "scpRawMatchCount": 100
     },
     {
       "name": "Mauro Zarate",
       "sport": "Baseball",
-      "scpRawPrice": 4.07,
+      "scpRawPrice": 5.02,
       "scpRawProduct": "Mauro Zarate #175",
       "scpRawId": "10514886",
-      "scpRawMatchCount": 66
+      "scpRawMatchCount": 100
     },
     {
       "name": "Max Castillo",
@@ -2810,7 +2810,7 @@
     {
       "name": "Max Ramirez",
       "sport": "Baseball",
-      "scpRawPrice": 1.73,
+      "scpRawPrice": 1.81,
       "scpRawProduct": "Manny Ramirez [Raw Power] #599",
       "scpRawId": "5780594",
       "scpRawMatchCount": 100
@@ -2818,7 +2818,7 @@
     {
       "name": "Maximo Acosta",
       "sport": "Baseball",
-      "scpRawPrice": 4.2,
+      "scpRawPrice": 3.77,
       "scpRawProduct": "Maximo Acosta [75 Years] #172",
       "scpRawId": "11880070",
       "scpRawMatchCount": 100
@@ -2826,7 +2826,7 @@
     {
       "name": "Mayckol Guaipe",
       "sport": "Baseball",
-      "scpRawPrice": 1.56,
+      "scpRawPrice": 1.69,
       "scpRawProduct": "X-Pac",
       "scpRawId": "11240295",
       "scpRawMatchCount": 100
@@ -2834,7 +2834,7 @@
     {
       "name": "Melvin Dorta",
       "sport": "Baseball",
-      "scpRawPrice": 1.53,
+      "scpRawPrice": 1.67,
       "scpRawProduct": "Diego Dorta #210",
       "scpRawId": "9087384",
       "scpRawMatchCount": 100
@@ -2842,15 +2842,15 @@
     {
       "name": "Melvin Mora",
       "sport": "Baseball",
-      "scpRawPrice": 2.4,
+      "scpRawPrice": 2.43,
       "scpRawProduct": "Melvin Mora [Silver] #239",
       "scpRawId": "8954234",
-      "scpRawMatchCount": 100
+      "scpRawMatchCount": 70
     },
     {
       "name": "Miguel Cabrera",
       "sport": "Baseball",
-      "scpRawPrice": 2.21,
+      "scpRawPrice": 2.25,
       "scpRawProduct": "Carlos Gonzalez/Miguel Cabrera/Jose Altuve [Gold] #WBC-GCA",
       "scpRawId": "8597634",
       "scpRawMatchCount": 100
@@ -2858,7 +2858,7 @@
     {
       "name": "Miguel Cairo",
       "sport": "Baseball",
-      "scpRawPrice": 1.22,
+      "scpRawPrice": 1.12,
       "scpRawProduct": "Miguel Cairo [Silver] #211",
       "scpRawId": "8954221",
       "scpRawMatchCount": 100
@@ -2866,7 +2866,7 @@
     {
       "name": "Miguel Garcia",
       "sport": "Baseball",
-      "scpRawPrice": 1.51,
+      "scpRawPrice": 1.62,
       "scpRawProduct": "Edward Miguel The Big Bear Garcia #26",
       "scpRawId": "5230984",
       "scpRawMatchCount": 100
@@ -2874,15 +2874,15 @@
     {
       "name": "Miguel Gonzalez",
       "sport": "Baseball",
-      "scpRawPrice": 3.93,
+      "scpRawPrice": 3.63,
       "scpRawProduct": "Carlos Gonzalez/Miguel Cabrera/Jose Altuve [Gold] #WBC-GCA",
       "scpRawId": "8597634",
-      "scpRawMatchCount": 89
+      "scpRawMatchCount": 100
     },
     {
       "name": "Miguel Montero",
       "sport": "Baseball",
-      "scpRawPrice": 2.2,
+      "scpRawPrice": 2.26,
       "scpRawProduct": "Brian McCann/Miguel Montero/Josh Thole #SU3-NL-C",
       "scpRawId": "13279627",
       "scpRawMatchCount": 100
@@ -2890,15 +2890,15 @@
     {
       "name": "Miguel Perez",
       "sport": "Baseball",
-      "scpRawPrice": 14.6,
+      "scpRawPrice": 14.72,
       "scpRawProduct": "Miguel Perez [Silver] #315",
       "scpRawId": "8954489",
-      "scpRawMatchCount": 94
+      "scpRawMatchCount": 100
     },
     {
       "name": "Miguel Rojas",
       "sport": "Baseball",
-      "scpRawPrice": 3.51,
+      "scpRawPrice": 3.81,
       "scpRawProduct": "Miguel Rojas [Silver] #389",
       "scpRawId": "8511653",
       "scpRawMatchCount": 100
@@ -2906,7 +2906,7 @@
     {
       "name": "Miguel Socolovich",
       "sport": "Baseball",
-      "scpRawPrice": 1.56,
+      "scpRawPrice": 1.69,
       "scpRawProduct": "X-Pac",
       "scpRawId": "11240295",
       "scpRawMatchCount": 100
@@ -2922,7 +2922,7 @@
     {
       "name": "Moises Ballesteros",
       "sport": "Baseball",
-      "scpRawPrice": 6.79,
+      "scpRawPrice": 6.93,
       "scpRawProduct": "Moises Ballesteros [Silver] #51",
       "scpRawId": "7329068",
       "scpRawMatchCount": 100
@@ -2930,7 +2930,7 @@
     {
       "name": "Niuman Romero",
       "sport": "Baseball",
-      "scpRawPrice": 1.59,
+      "scpRawPrice": 1.7,
       "scpRawProduct": "X-Pac",
       "scpRawId": "11240295",
       "scpRawMatchCount": 100
@@ -2938,7 +2938,7 @@
     {
       "name": "Nivaldo Rodriguez",
       "sport": "Baseball",
-      "scpRawPrice": 3.78,
+      "scpRawPrice": 3.77,
       "scpRawProduct": "Nivaldo Rodriguez [Prime Numbers C] #170",
       "scpRawId": "10720638",
       "scpRawMatchCount": 100
@@ -2946,7 +2946,7 @@
     {
       "name": "Odubel Herrera",
       "sport": "Baseball",
-      "scpRawPrice": 1.62,
+      "scpRawPrice": 1.63,
       "scpRawProduct": "Odubel Herrera [42 Tribute] #79",
       "scpRawId": "4543863",
       "scpRawMatchCount": 100
@@ -2954,7 +2954,7 @@
     {
       "name": "Omar Daal",
       "sport": "Baseball",
-      "scpRawPrice": 1.06,
+      "scpRawPrice": 1.07,
       "scpRawProduct": "Omar Daal [Refractor] #32",
       "scpRawId": "8353449",
       "scpRawMatchCount": 100
@@ -2962,7 +2962,7 @@
     {
       "name": "Omar Infante",
       "sport": "Baseball",
-      "scpRawPrice": 3.48,
+      "scpRawPrice": 3.47,
       "scpRawProduct": "Omar Infante [Silver] #354",
       "scpRawId": "8954590",
       "scpRawMatchCount": 100
@@ -2970,7 +2970,7 @@
     {
       "name": "Omar Martinez",
       "sport": "Baseball",
-      "scpRawPrice": 1.56,
+      "scpRawPrice": 1.72,
       "scpRawProduct": "Ken Griffey Jr. / Ichiro / Edgar Martinez / Jay Buhner / Omar Vizquel / John Olerud [Silver] #TLC-11",
       "scpRawId": "7462488",
       "scpRawMatchCount": 100
@@ -2978,7 +2978,7 @@
     {
       "name": "Omar Narvaez",
       "sport": "Baseball",
-      "scpRawPrice": 2.44,
+      "scpRawPrice": 2.46,
       "scpRawProduct": "Omar Narvaez [Bats] #US152",
       "scpRawId": "5909761",
       "scpRawMatchCount": 100
@@ -2986,7 +2986,7 @@
     {
       "name": "Omar Vizquel",
       "sport": "Baseball",
-      "scpRawPrice": 2.74,
+      "scpRawPrice": 3.11,
       "scpRawProduct": "Omar Vizquel [Silver] #111",
       "scpRawId": "5893449",
       "scpRawMatchCount": 100
@@ -2994,7 +2994,7 @@
     {
       "name": "Orber Moreno",
       "sport": "Baseball",
-      "scpRawPrice": 1.65,
+      "scpRawPrice": 1.79,
       "scpRawProduct": "Orber Moreno [Refractor] #348",
       "scpRawId": "2022826",
       "scpRawMatchCount": 100
@@ -3002,15 +3002,15 @@
     {
       "name": "Orlando Arcia",
       "sport": "Baseball",
-      "scpRawPrice": 2.56,
-      "scpRawProduct": "Orlando Arcia [X] #285",
-      "scpRawId": "4548810",
-      "scpRawMatchCount": 100
+      "scpRawPrice": null,
+      "scpRawProduct": null,
+      "scpRawId": null,
+      "scpRawMatchCount": 0
     },
     {
       "name": "Oscar Azocar",
       "sport": "Baseball",
-      "scpRawPrice": 2.16,
+      "scpRawPrice": 2.14,
       "scpRawProduct": "Oscar Azocar [Winner] #112",
       "scpRawId": "6266226",
       "scpRawMatchCount": 100
@@ -3018,7 +3018,7 @@
     {
       "name": "Oscar Henriquez",
       "sport": "Baseball",
-      "scpRawPrice": 3.63,
+      "scpRawPrice": 3.65,
       "scpRawProduct": "Oscar Henriquez #385",
       "scpRawId": "2418215",
       "scpRawMatchCount": 100
@@ -3026,7 +3026,7 @@
     {
       "name": "Oscar Hernandez",
       "sport": "Baseball",
-      "scpRawPrice": 1.56,
+      "scpRawPrice": 1.7,
       "scpRawProduct": "Enrique Burgos, Oscar Hernandez [Gold] #US359",
       "scpRawId": "1519468",
       "scpRawMatchCount": 100
@@ -3034,7 +3034,7 @@
     {
       "name": "Oscar Salazar",
       "sport": "Baseball",
-      "scpRawPrice": 1.27,
+      "scpRawPrice": 1.28,
       "scpRawProduct": "Oscar Salazar [Gold] #533",
       "scpRawId": "9424861",
       "scpRawMatchCount": 100
@@ -3042,7 +3042,7 @@
     {
       "name": "Osleivis Basabe",
       "sport": "Baseball",
-      "scpRawPrice": 3.06,
+      "scpRawPrice": 3,
       "scpRawProduct": "Osleivis Basabe [Silver] #440",
       "scpRawId": "8511704",
       "scpRawMatchCount": 100
@@ -3050,7 +3050,7 @@
     {
       "name": "Osmer Morales",
       "sport": "Baseball",
-      "scpRawPrice": 1.54,
+      "scpRawPrice": 1.67,
       "scpRawProduct": "X-Pac",
       "scpRawId": "11240295",
       "scpRawMatchCount": 100
@@ -3058,7 +3058,7 @@
     {
       "name": "Ossie Blanco",
       "sport": "Baseball",
-      "scpRawPrice": 4.2,
+      "scpRawPrice": 3.61,
       "scpRawProduct": "Ossie Vitt",
       "scpRawId": "1810608",
       "scpRawMatchCount": 100
@@ -3066,7 +3066,7 @@
     {
       "name": "Oswald Peraza",
       "sport": "Baseball",
-      "scpRawPrice": 5.09,
+      "scpRawPrice": 5.18,
       "scpRawProduct": "Oswald Peraza [Waves] #459",
       "scpRawId": "6800013",
       "scpRawMatchCount": 100
@@ -3074,15 +3074,15 @@
     {
       "name": "Oswaldo Arcia",
       "sport": "Baseball",
-      "scpRawPrice": 2.31,
-      "scpRawProduct": "Oswaldo Arcia [Silver] #33",
-      "scpRawId": "1462625",
-      "scpRawMatchCount": 100
+      "scpRawPrice": null,
+      "scpRawProduct": null,
+      "scpRawId": null,
+      "scpRawMatchCount": 0
     },
     {
       "name": "Oswaldo Cabrera",
       "sport": "Baseball",
-      "scpRawPrice": 6.4,
+      "scpRawPrice": 6.31,
       "scpRawProduct": "Oswaldo Cabrera [Waves] #479",
       "scpRawId": "6800628",
       "scpRawMatchCount": 100
@@ -3090,7 +3090,7 @@
     {
       "name": "Oswaldo Navarro",
       "sport": "Baseball",
-      "scpRawPrice": 1.67,
+      "scpRawPrice": 1.71,
       "scpRawProduct": "Oswaldo Navarro [Gold] #282",
       "scpRawId": "8354100",
       "scpRawMatchCount": 100
@@ -3098,7 +3098,7 @@
     {
       "name": "Oswaldo Peraza",
       "sport": "Baseball",
-      "scpRawPrice": 4.09,
+      "scpRawPrice": 4.04,
       "scpRawProduct": "Oswald Peraza, Oswaldo Cabrera #DRC-CP",
       "scpRawId": "6223899",
       "scpRawMatchCount": 100
@@ -3106,7 +3106,7 @@
     {
       "name": "Ozzie Guillen",
       "sport": "Baseball",
-      "scpRawPrice": 6.04,
+      "scpRawPrice": 7.78,
       "scpRawProduct": "Ozzie Guillen [Silver] #57",
       "scpRawId": "4991165",
       "scpRawMatchCount": 100
@@ -3114,7 +3114,7 @@
     {
       "name": "Pablo Lopez",
       "sport": "Baseball",
-      "scpRawPrice": 2.58,
+      "scpRawPrice": 3.07,
       "scpRawProduct": "Pablo Lopez [Waves] #651",
       "scpRawId": "6805866",
       "scpRawMatchCount": 100
@@ -3122,7 +3122,7 @@
     {
       "name": "Pablo Sandoval",
       "sport": "Baseball",
-      "scpRawPrice": 4.57,
+      "scpRawPrice": 4.9,
       "scpRawProduct": "Pablo Sandoval [Rockets] #95",
       "scpRawId": "9685938",
       "scpRawMatchCount": 100
@@ -3138,15 +3138,15 @@
     {
       "name": "Pedro Avila",
       "sport": "Baseball",
-      "scpRawPrice": 2.56,
-      "scpRawProduct": "Pedro Avila [Red] #PAV",
-      "scpRawId": "1672931",
-      "scpRawMatchCount": 100
+      "scpRawPrice": null,
+      "scpRawProduct": null,
+      "scpRawId": null,
+      "scpRawMatchCount": 0
     },
     {
       "name": "Pedro Castellano",
       "sport": "Baseball",
-      "scpRawPrice": 1.67,
+      "scpRawPrice": 1.72,
       "scpRawProduct": "Pedro Castellano #232",
       "scpRawId": "2380898",
       "scpRawMatchCount": 100
@@ -3154,7 +3154,7 @@
     {
       "name": "Pedro Hernandez",
       "sport": "Baseball",
-      "scpRawPrice": 1.56,
+      "scpRawPrice": 1.68,
       "scpRawProduct": "Pedro Hernandez #H571",
       "scpRawId": "2140294",
       "scpRawMatchCount": 100
@@ -3162,7 +3162,7 @@
     {
       "name": "Pedro Pages",
       "sport": "Baseball",
-      "scpRawPrice": 5.93,
+      "scpRawPrice": 5.97,
       "scpRawProduct": "Pedro Pages [75 Years] #280",
       "scpRawId": "11885854",
       "scpRawMatchCount": 100
@@ -3170,7 +3170,7 @@
     {
       "name": "Pompeyo Davalillo",
       "sport": "Baseball",
-      "scpRawPrice": 12.33,
+      "scpRawPrice": 11.15,
       "scpRawProduct": "Pompeyo Davalillo #3",
       "scpRawId": "1853049",
       "scpRawMatchCount": 100
@@ -3178,23 +3178,23 @@
     {
       "name": "Rafael Betancourt",
       "sport": "Baseball",
-      "scpRawPrice": 1.65,
-      "scpRawProduct": "Rafael Betancourt [Red] #604",
-      "scpRawId": "9377301",
-      "scpRawMatchCount": 100
-    },
-    {
-      "name": "Rafael Marchan",
-      "sport": "Baseball",
       "scpRawPrice": null,
       "scpRawProduct": null,
       "scpRawId": null,
       "scpRawMatchCount": 0
     },
     {
+      "name": "Rafael Marchan",
+      "sport": "Baseball",
+      "scpRawPrice": 4.34,
+      "scpRawProduct": "Rafael Marchan [30 Years] #52",
+      "scpRawId": "2286852",
+      "scpRawMatchCount": 100
+    },
+    {
       "name": "Rafael Ortega",
       "sport": "Baseball",
-      "scpRawPrice": 2.97,
+      "scpRawPrice": 2.98,
       "scpRawProduct": "Rafael Ortega [Gold] #607",
       "scpRawId": "5292542",
       "scpRawMatchCount": 100
@@ -3202,7 +3202,7 @@
     {
       "name": "Ramon Cabrera",
       "sport": "Baseball",
-      "scpRawPrice": 1.74,
+      "scpRawPrice": 1.85,
       "scpRawProduct": "Ramon Cabrera [Red] #632",
       "scpRawId": "1388193",
       "scpRawMatchCount": 100
@@ -3210,7 +3210,7 @@
     {
       "name": "Ramon Castro",
       "sport": "Baseball",
-      "scpRawPrice": 1.03,
+      "scpRawPrice": 1.1,
       "scpRawProduct": "J.R.House/Ramon Castro/Ben Davis [Prospects] #369",
       "scpRawId": "6791332",
       "scpRawMatchCount": 100
@@ -3218,7 +3218,7 @@
     {
       "name": "Ramon Flores",
       "sport": "Baseball",
-      "scpRawPrice": 2.14,
+      "scpRawPrice": 2.15,
       "scpRawProduct": "Ramon Flores [Blue Refractor] #BCP166",
       "scpRawId": "2114787",
       "scpRawMatchCount": 100
@@ -3226,7 +3226,7 @@
     {
       "name": "Ramon Garcia",
       "sport": "Baseball",
-      "scpRawPrice": 1.45,
+      "scpRawPrice": 1.58,
       "scpRawProduct": "Ramon Garcia [Gold] #316",
       "scpRawId": "4998309",
       "scpRawMatchCount": 100
@@ -3234,7 +3234,7 @@
     {
       "name": "Ramon Hernandez",
       "sport": "Baseball",
-      "scpRawPrice": 2.13,
+      "scpRawPrice": 2.39,
       "scpRawProduct": "Ramon Hernandez [Silver] #251",
       "scpRawId": "8954283",
       "scpRawMatchCount": 100
@@ -3242,15 +3242,15 @@
     {
       "name": "Ramon Ramirez",
       "sport": "Baseball",
-      "scpRawPrice": 23.02,
+      "scpRawPrice": 23.94,
       "scpRawProduct": "Manny Ramirez [Raw Power] #599",
       "scpRawId": "5780594",
-      "scpRawMatchCount": 100
+      "scpRawMatchCount": 74
     },
     {
       "name": "Ranger Suarez",
       "sport": "Baseball",
-      "scpRawPrice": 8.34,
+      "scpRawPrice": 9.36,
       "scpRawProduct": "Ranger Suarez [Eggs] #229",
       "scpRawId": "6367882",
       "scpRawMatchCount": 100
@@ -3258,7 +3258,7 @@
     {
       "name": "Raul Chavez",
       "sport": "Baseball",
-      "scpRawPrice": 1.93,
+      "scpRawPrice": 2.19,
       "scpRawProduct": "Raul Chavez [Refractor] #230",
       "scpRawId": "2049032",
       "scpRawMatchCount": 100
@@ -3266,7 +3266,7 @@
     {
       "name": "Ray Monzant",
       "sport": "Baseball",
-      "scpRawPrice": 1.67,
+      "scpRawPrice": 1.81,
       "scpRawProduct": "Ray Monzant #447",
       "scpRawId": "1826666",
       "scpRawMatchCount": 100
@@ -3274,7 +3274,7 @@
     {
       "name": "Ray Olmedo",
       "sport": "Baseball",
-      "scpRawPrice": 1.7,
+      "scpRawPrice": 1.79,
       "scpRawProduct": "Ray Olmedo, Edwin Encarnacion #707",
       "scpRawId": "12515615",
       "scpRawMatchCount": 100
@@ -3282,7 +3282,7 @@
     {
       "name": "Remy Hermoso",
       "sport": "Baseball",
-      "scpRawPrice": 2.13,
+      "scpRawPrice": 2.37,
       "scpRawProduct": "Remy Kremer [9 of Clubs]",
       "scpRawId": "1814665",
       "scpRawMatchCount": 100
@@ -3290,7 +3290,7 @@
     {
       "name": "Renato Nunez",
       "sport": "Baseball",
-      "scpRawPrice": 1.99,
+      "scpRawPrice": 1.98,
       "scpRawProduct": "Renato Nunez [Silver] #110",
       "scpRawId": "11813145",
       "scpRawMatchCount": 100
@@ -3298,7 +3298,7 @@
     {
       "name": "Rene Pinto",
       "sport": "Baseball",
-      "scpRawPrice": 2.56,
+      "scpRawPrice": 2.55,
       "scpRawProduct": "Rene Pinto [Bats] #US107",
       "scpRawId": "7575468",
       "scpRawMatchCount": 100
@@ -3306,7 +3306,7 @@
     {
       "name": "Rene Reyes",
       "sport": "Baseball",
-      "scpRawPrice": 2.63,
+      "scpRawPrice": 2.41,
       "scpRawProduct": "Rene Reyes [Refractor] #369",
       "scpRawId": "2049408",
       "scpRawMatchCount": 100
@@ -3314,7 +3314,7 @@
     {
       "name": "Renyel Pinto",
       "sport": "Baseball",
-      "scpRawPrice": 4.07,
+      "scpRawPrice": 4.13,
       "scpRawProduct": "Renyel Pinto [Gold] #653",
       "scpRawId": "9425132",
       "scpRawMatchCount": 100
@@ -3330,7 +3330,7 @@
     {
       "name": "Ricardo Rodriguez",
       "sport": "Baseball",
-      "scpRawPrice": 2.28,
+      "scpRawPrice": 2.22,
       "scpRawProduct": "Ricardo Rodriguez [Baseball's Best Silver] #R79",
       "scpRawId": "2039733",
       "scpRawMatchCount": 100
@@ -3338,7 +3338,7 @@
     {
       "name": "Ricardo Sanchez",
       "sport": "Baseball",
-      "scpRawPrice": 1.64,
+      "scpRawPrice": 1.73,
       "scpRawProduct": "Ricardo Sanchez [Refractor] #BCP147",
       "scpRawId": "11543985",
       "scpRawMatchCount": 100
@@ -3346,7 +3346,7 @@
     {
       "name": "Rich Garces",
       "sport": "Baseball",
-      "scpRawPrice": 1.44,
+      "scpRawPrice": 1.52,
       "scpRawProduct": "Rich Garces [Jersey] #56",
       "scpRawId": "12357560",
       "scpRawMatchCount": 99
@@ -3362,7 +3362,7 @@
     {
       "name": "Robert Machado",
       "sport": "Baseball",
-      "scpRawPrice": 1.54,
+      "scpRawPrice": 1.7,
       "scpRawProduct": "Robert Machado [Extra Edition] #149",
       "scpRawId": "2018053",
       "scpRawMatchCount": 100
@@ -3370,7 +3370,7 @@
     {
       "name": "Robert Suarez",
       "sport": "Baseball",
-      "scpRawPrice": 3.94,
+      "scpRawPrice": 4.34,
       "scpRawProduct": "Robert Suarez [Bats] #US298",
       "scpRawId": "7581471",
       "scpRawMatchCount": 100
@@ -3378,15 +3378,15 @@
     {
       "name": "Roberto Petagine",
       "sport": "Baseball",
-      "scpRawPrice": 1.09,
-      "scpRawProduct": "Roberto Petagine [Foil] #342",
-      "scpRawId": "1968219",
+      "scpRawPrice": 1.04,
+      "scpRawProduct": "Roberto Petagine [Refractor] #226",
+      "scpRawId": "13795277",
       "scpRawMatchCount": 100
     },
     {
       "name": "Roberto Rodriguez",
       "sport": "Baseball",
-      "scpRawPrice": 1.56,
+      "scpRawPrice": 1.66,
       "scpRawProduct": "Athletics 1969 Rookie Stars: George Lauzerique / Roberto Rodriguez #358",
       "scpRawId": "1857308",
       "scpRawMatchCount": 100
@@ -3394,23 +3394,23 @@
     {
       "name": "Robinson Chirinos",
       "sport": "Baseball",
-      "scpRawPrice": 2.83,
+      "scpRawPrice": 2.79,
       "scpRawProduct": "Robinson Chirinos [Red] #464",
       "scpRawId": "1388025",
-      "scpRawMatchCount": 95
+      "scpRawMatchCount": 100
     },
     {
       "name": "Roger Cedeno",
       "sport": "Baseball",
-      "scpRawPrice": 1.53,
+      "scpRawPrice": 1.52,
       "scpRawProduct": "Roger Cedeno [Silver] #67",
       "scpRawId": "9994292",
-      "scpRawMatchCount": 86
+      "scpRawMatchCount": 100
     },
     {
       "name": "Romulo Sanchez",
       "sport": "Baseball",
-      "scpRawPrice": 6.96,
+      "scpRawPrice": 6.74,
       "scpRawProduct": "Romulo Sanchez #195",
       "scpRawId": "10514910",
       "scpRawMatchCount": 100
@@ -3418,7 +3418,7 @@
     {
       "name": "Ronald Acuna Jr.",
       "sport": "Baseball",
-      "scpRawPrice": 2.85,
+      "scpRawPrice": 2.83,
       "scpRawProduct": "Ronald Acuna Jr. #RA-6",
       "scpRawId": "4558967",
       "scpRawMatchCount": 100
@@ -3426,15 +3426,15 @@
     {
       "name": "Ronald Belisario",
       "sport": "Baseball",
-      "scpRawPrice": 1.56,
-      "scpRawProduct": "Ronald Belisario [Silver] #5",
-      "scpRawId": "11665315",
+      "scpRawPrice": 1.7,
+      "scpRawProduct": "Ronald Belisario [Status] #167",
+      "scpRawId": "12575532",
       "scpRawMatchCount": 100
     },
     {
       "name": "Ronald Herrera",
       "sport": "Baseball",
-      "scpRawPrice": 4.39,
+      "scpRawPrice": 4.04,
       "scpRawProduct": "Ronald Herrera [Refractor] #RA-RHE",
       "scpRawId": "1537314",
       "scpRawMatchCount": 100
@@ -3442,31 +3442,31 @@
     {
       "name": "Ronald Torreyes",
       "sport": "Baseball",
-      "scpRawPrice": 2.52,
+      "scpRawPrice": 3.03,
       "scpRawProduct": "Ronald Torreyes [5x7] #354",
       "scpRawId": "4025083",
-      "scpRawMatchCount": 100
+      "scpRawMatchCount": 75
     },
     {
       "name": "Ronny Cedeno",
       "sport": "Baseball",
-      "scpRawPrice": 1.4,
-      "scpRawProduct": "Ronny Cedeno [Red] #252",
-      "scpRawId": "12397607",
+      "scpRawPrice": 1.49,
+      "scpRawProduct": "Ronny Cedeno [Red] #162",
+      "scpRawId": "12412508",
       "scpRawMatchCount": 100
     },
     {
       "name": "Rosman Garcia",
       "sport": "Baseball",
-      "scpRawPrice": null,
-      "scpRawProduct": null,
-      "scpRawId": null,
-      "scpRawMatchCount": 0
+      "scpRawPrice": 3.7,
+      "scpRawProduct": "Rosman Garcia [Silver] #658",
+      "scpRawId": "10042761",
+      "scpRawMatchCount": 100
     },
     {
       "name": "Rougned Odor",
       "sport": "Baseball",
-      "scpRawPrice": 2.08,
+      "scpRawPrice": 2.02,
       "scpRawProduct": "Rougned Odor [Bats] #US229",
       "scpRawId": "5909839",
       "scpRawMatchCount": 100
@@ -3474,7 +3474,7 @@
     {
       "name": "Ruben Quevedo",
       "sport": "Baseball",
-      "scpRawPrice": 1.07,
+      "scpRawPrice": 1.1,
       "scpRawProduct": "Ruben Quevedo [Gold] #111",
       "scpRawId": "10283505",
       "scpRawMatchCount": 100
@@ -3482,7 +3482,7 @@
     {
       "name": "Salvador Perez",
       "sport": "Baseball",
-      "scpRawPrice": 3.93,
+      "scpRawPrice": 4.35,
       "scpRawProduct": "Salvador Perez [30 Years] #10",
       "scpRawId": "2286811",
       "scpRawMatchCount": 100
@@ -3490,7 +3490,7 @@
     {
       "name": "Sandy Leon",
       "sport": "Baseball",
-      "scpRawPrice": 3.22,
+      "scpRawPrice": 3.21,
       "scpRawProduct": "Sandy Leon [5x7] #353",
       "scpRawId": "4025082",
       "scpRawMatchCount": 100
@@ -3498,7 +3498,7 @@
     {
       "name": "Sebastian Rivero",
       "sport": "Baseball",
-      "scpRawPrice": 2.78,
+      "scpRawPrice": 2.98,
       "scpRawProduct": "Sebastian Rivero [Silver Prizm] #108",
       "scpRawId": "4153407",
       "scpRawMatchCount": 100
@@ -3506,7 +3506,7 @@
     {
       "name": "Sergio Escalona",
       "sport": "Baseball",
-      "scpRawPrice": 1.58,
+      "scpRawPrice": 1.76,
       "scpRawProduct": "Sergio Escalona [Gold Refractor] #130",
       "scpRawId": "2099316",
       "scpRawMatchCount": 100
@@ -3522,7 +3522,7 @@
     {
       "name": "Simon Muzziotti",
       "sport": "Baseball",
-      "scpRawPrice": 3.61,
+      "scpRawPrice": 3.53,
       "scpRawProduct": "Simon Muzziotti [Red] #HW32",
       "scpRawId": "4443488",
       "scpRawMatchCount": 100
@@ -3530,7 +3530,7 @@
     {
       "name": "Steve Torrealba",
       "sport": "Baseball",
-      "scpRawPrice": 1.51,
+      "scpRawPrice": 1.5,
       "scpRawProduct": "Steve Torrealba [Platinum Edition] #590",
       "scpRawId": "2041082",
       "scpRawMatchCount": 100
@@ -3538,7 +3538,7 @@
     {
       "name": "Thairo Estrada",
       "sport": "Baseball",
-      "scpRawPrice": 4.48,
+      "scpRawPrice": 4.56,
       "scpRawProduct": "Thairo Estrada [Eggs] #290",
       "scpRawId": "6367943",
       "scpRawMatchCount": 100
@@ -3546,7 +3546,7 @@
     {
       "name": "Toby Hernandez",
       "sport": "Baseball",
-      "scpRawPrice": 2.1,
+      "scpRawPrice": 2.13,
       "scpRawProduct": "Toby Hall [Silver] #121",
       "scpRawId": "8954009",
       "scpRawMatchCount": 100
@@ -3554,7 +3554,7 @@
     {
       "name": "Tomas Perez",
       "sport": "Baseball",
-      "scpRawPrice": 1.52,
+      "scpRawPrice": 1.56,
       "scpRawProduct": "Tomas Perez [Refractor] #354",
       "scpRawId": "8130624",
       "scpRawMatchCount": 100
@@ -3562,7 +3562,7 @@
     {
       "name": "Tomas Telis",
       "sport": "Baseball",
-      "scpRawPrice": 1.74,
+      "scpRawPrice": 1.76,
       "scpRawProduct": "Tellis Frank #147",
       "scpRawId": "3152056",
       "scpRawMatchCount": 100
@@ -3570,7 +3570,7 @@
     {
       "name": "Tony Alvarez",
       "sport": "Baseball",
-      "scpRawPrice": 1.5,
+      "scpRawPrice": 1.62,
       "scpRawProduct": "Tony Nese [Gold] #89",
       "scpRawId": "3769970",
       "scpRawMatchCount": 100
@@ -3578,7 +3578,7 @@
     {
       "name": "Tony Armas",
       "sport": "Baseball",
-      "scpRawPrice": 1.09,
+      "scpRawPrice": 1.08,
       "scpRawProduct": "Tony Armas Jr. #68",
       "scpRawId": "2039987",
       "scpRawMatchCount": 100
@@ -3586,7 +3586,7 @@
     {
       "name": "Tony Castillo",
       "sport": "Baseball",
-      "scpRawPrice": 0.96,
+      "scpRawPrice": 0.98,
       "scpRawProduct": "Tony Castillo [Red] #53",
       "scpRawId": "4990499",
       "scpRawMatchCount": 100
@@ -3602,15 +3602,15 @@
     {
       "name": "Ubaldo Heredia",
       "sport": "Baseball",
-      "scpRawPrice": 2.73,
+      "scpRawPrice": 3.07,
       "scpRawProduct": "Luis Heredia [Silver] #33",
       "scpRawId": "11812762",
-      "scpRawMatchCount": 96
+      "scpRawMatchCount": 100
     },
     {
       "name": "Ugueth Urbina",
       "sport": "Baseball",
-      "scpRawPrice": 1.43,
+      "scpRawPrice": 1.84,
       "scpRawProduct": "Ugueth Urbina [Silver] #9",
       "scpRawId": "1978084",
       "scpRawMatchCount": 100
@@ -3618,7 +3618,7 @@
     {
       "name": "Urbano Lugo",
       "sport": "Baseball",
-      "scpRawPrice": 2.06,
+      "scpRawPrice": 2.2,
       "scpRawProduct": "Urbano Lugo [Error] #92",
       "scpRawId": "1925098",
       "scpRawMatchCount": 100
@@ -3626,7 +3626,7 @@
     {
       "name": "Vic Davalillo",
       "sport": "Baseball",
-      "scpRawPrice": 9.37,
+      "scpRawPrice": 9.66,
       "scpRawProduct": "Vic Davalillo #132",
       "scpRawId": "1882747",
       "scpRawMatchCount": 100
@@ -3634,7 +3634,7 @@
     {
       "name": "Victor Bericoto",
       "sport": "Baseball",
-      "scpRawPrice": 1.56,
+      "scpRawPrice": 2.02,
       "scpRawProduct": "Victor Bericoto [Red] #PAPR-VB",
       "scpRawId": "2168118",
       "scpRawMatchCount": 100
@@ -3642,7 +3642,7 @@
     {
       "name": "Victor Garate",
       "sport": "Baseball",
-      "scpRawPrice": 1.56,
+      "scpRawPrice": 1.69,
       "scpRawProduct": "X-Pac",
       "scpRawId": "11240295",
       "scpRawMatchCount": 100
@@ -3650,7 +3650,7 @@
     {
       "name": "Victor Martinez",
       "sport": "Baseball",
-      "scpRawPrice": 3.38,
+      "scpRawPrice": 3.53,
       "scpRawProduct": "Victor Martinez [Silver] #25",
       "scpRawId": "7534214",
       "scpRawMatchCount": 100
@@ -3658,15 +3658,15 @@
     {
       "name": "Victor Reyes",
       "sport": "Baseball",
-      "scpRawPrice": 3.54,
-      "scpRawProduct": "Victor Reyes [Silver] #191",
-      "scpRawId": "1770375",
-      "scpRawMatchCount": 100
+      "scpRawPrice": null,
+      "scpRawProduct": null,
+      "scpRawId": null,
+      "scpRawMatchCount": 0
     },
     {
       "name": "Victor Zambrano",
       "sport": "Baseball",
-      "scpRawPrice": 1.67,
+      "scpRawPrice": 1.64,
       "scpRawProduct": "Victor Zambrano [High Gloss] #564",
       "scpRawId": "10020914",
       "scpRawMatchCount": 100
@@ -3674,15 +3674,15 @@
     {
       "name": "Wiki Gonzalez",
       "sport": "Baseball",
-      "scpRawPrice": 1.56,
-      "scpRawProduct": "Domingo Guzman/Wiki Gonzalez #30",
-      "scpRawId": "5964641",
+      "scpRawPrice": 1.66,
+      "scpRawProduct": "Wiki Gonzalez [Exclusives] #231",
+      "scpRawId": "13767631",
       "scpRawMatchCount": 100
     },
     {
       "name": "Wil Ledezma",
       "sport": "Baseball",
-      "scpRawPrice": 2.18,
+      "scpRawPrice": 2.36,
       "scpRawProduct": "Wil Ledezma [Refractor] #131",
       "scpRawId": "2059361",
       "scpRawMatchCount": 100
@@ -3690,7 +3690,7 @@
     {
       "name": "Wilfredo Boscan",
       "sport": "Baseball",
-      "scpRawPrice": 2.82,
+      "scpRawPrice": 2.78,
       "scpRawProduct": "Wilfredo Tovar [Refractor] #BCP216",
       "scpRawId": "11806344",
       "scpRawMatchCount": 100
@@ -3698,7 +3698,7 @@
     {
       "name": "Wilfredo Rodriguez",
       "sport": "Baseball",
-      "scpRawPrice": 2.82,
+      "scpRawPrice": 2.78,
       "scpRawProduct": "Wilfredo Rodriguez [Refractor] #428",
       "scpRawId": "2032355",
       "scpRawMatchCount": 100
@@ -3706,7 +3706,7 @@
     {
       "name": "Wilfredo Tovar",
       "sport": "Baseball",
-      "scpRawPrice": 3.23,
+      "scpRawPrice": 2.93,
       "scpRawProduct": "Wilfredo Tovar [Refractor] #BCP216",
       "scpRawId": "11806344",
       "scpRawMatchCount": 100
@@ -3714,7 +3714,7 @@
     {
       "name": "Wilkelman Gonzalez",
       "sport": "Baseball",
-      "scpRawPrice": 1.56,
+      "scpRawPrice": 1.69,
       "scpRawProduct": "X-Pac",
       "scpRawId": "11240295",
       "scpRawMatchCount": 100
@@ -3722,7 +3722,7 @@
     {
       "name": "Wilking Rodriguez",
       "sport": "Baseball",
-      "scpRawPrice": 1.56,
+      "scpRawPrice": 1.69,
       "scpRawProduct": "X-Pac",
       "scpRawId": "11240295",
       "scpRawMatchCount": 100
@@ -3730,7 +3730,7 @@
     {
       "name": "William Bergolla",
       "sport": "Baseball",
-      "scpRawPrice": 5.69,
+      "scpRawPrice": 5.62,
       "scpRawProduct": "William Bergolla [X] #BCP-159",
       "scpRawId": "4456830",
       "scpRawMatchCount": 100
@@ -3738,7 +3738,7 @@
     {
       "name": "William Contreras",
       "sport": "Baseball",
-      "scpRawPrice": 4.11,
+      "scpRawPrice": 4.3,
       "scpRawProduct": "William Regal",
       "scpRawId": "11240294",
       "scpRawMatchCount": 100
@@ -3746,7 +3746,7 @@
     {
       "name": "William Cuevas",
       "sport": "Baseball",
-      "scpRawPrice": 4.44,
+      "scpRawPrice": 4.7,
       "scpRawProduct": "William Cuevas [Chrome] #BCP59",
       "scpRawId": "7557514",
       "scpRawMatchCount": 100
@@ -3754,7 +3754,7 @@
     {
       "name": "Williams Perez",
       "sport": "Baseball",
-      "scpRawPrice": 1.82,
+      "scpRawPrice": 1.92,
       "scpRawProduct": "Williams Perez [Refractor] #BCP22",
       "scpRawId": "11543617",
       "scpRawMatchCount": 100
@@ -3762,15 +3762,15 @@
     {
       "name": "Willians Astudillo",
       "sport": "Baseball",
-      "scpRawPrice": 2.8,
+      "scpRawPrice": 2.77,
       "scpRawProduct": "Willians Astudillo [42 Tribute] #241",
       "scpRawId": "4544018",
-      "scpRawMatchCount": 100
+      "scpRawMatchCount": 74
     },
     {
       "name": "Willie Canate",
       "sport": "Baseball",
-      "scpRawPrice": 1.51,
+      "scpRawPrice": 1.63,
       "scpRawProduct": "Willie Canate #124",
       "scpRawId": "2988171",
       "scpRawMatchCount": 100
@@ -3778,7 +3778,7 @@
     {
       "name": "Willie Martinez",
       "sport": "Baseball",
-      "scpRawPrice": 1.55,
+      "scpRawPrice": 1.7,
       "scpRawProduct": "Willie Martinez [Silver] #325",
       "scpRawId": "3112725",
       "scpRawMatchCount": 100
@@ -3786,7 +3786,7 @@
     {
       "name": "Willson Contreras",
       "sport": "Baseball",
-      "scpRawPrice": 2.43,
+      "scpRawPrice": 2.47,
       "scpRawProduct": "Willson Contreras [X] #168",
       "scpRawId": "4548693",
       "scpRawMatchCount": 100
@@ -3794,7 +3794,7 @@
     {
       "name": "Wilmer Flores",
       "sport": "Baseball",
-      "scpRawPrice": 4.48,
+      "scpRawPrice": 4.44,
       "scpRawProduct": "Wilmer Flores [Silver] #234",
       "scpRawId": "8511498",
       "scpRawMatchCount": 100
@@ -3802,7 +3802,7 @@
     {
       "name": "Wilmer Font",
       "sport": "Baseball",
-      "scpRawPrice": 2.81,
+      "scpRawPrice": 3.49,
       "scpRawProduct": "Wilmer Font [Refractor] #BCP87",
       "scpRawId": "2097111",
       "scpRawMatchCount": 100
@@ -3810,23 +3810,23 @@
     {
       "name": "Wilson Alvarez",
       "sport": "Baseball",
-      "scpRawPrice": 1.12,
-      "scpRawProduct": "Torrie Wilson #40",
-      "scpRawId": "3893812",
-      "scpRawMatchCount": 100
+      "scpRawPrice": null,
+      "scpRawProduct": null,
+      "scpRawId": null,
+      "scpRawMatchCount": 0
     },
     {
       "name": "Wilson Ramos",
       "sport": "Baseball",
-      "scpRawPrice": 2.69,
+      "scpRawPrice": 2.6,
       "scpRawProduct": "Wilson Ramos [42 Tribute] #158",
       "scpRawId": "4543937",
-      "scpRawMatchCount": 100
+      "scpRawMatchCount": 84
     },
     {
       "name": "Wilyer Abreu",
       "sport": "Baseball",
-      "scpRawPrice": 14.73,
+      "scpRawPrice": 13.7,
       "scpRawProduct": "Wilyer Abreu [Waves] #672",
       "scpRawId": "6806509",
       "scpRawMatchCount": 100
@@ -3834,7 +3834,7 @@
     {
       "name": "Yangervis Solarte",
       "sport": "Baseball",
-      "scpRawPrice": 2.17,
+      "scpRawPrice": 2.16,
       "scpRawProduct": "Yangervis Solarte [Silver] #273",
       "scpRawId": "1529513",
       "scpRawMatchCount": 100
@@ -3842,7 +3842,7 @@
     {
       "name": "Yilber Diaz",
       "sport": "Baseball",
-      "scpRawPrice": 3.22,
+      "scpRawPrice": 3.36,
       "scpRawProduct": "Yilber Diaz [Birds] #104",
       "scpRawId": "8582400",
       "scpRawMatchCount": 100
@@ -3850,39 +3850,39 @@
     {
       "name": "Yoel Hernandez",
       "sport": "Baseball",
-      "scpRawPrice": 8.3,
+      "scpRawPrice": 8.39,
       "scpRawProduct": "Yoel Hernandez [Refractor] #83",
       "scpRawId": "10515041",
-      "scpRawMatchCount": 100
+      "scpRawMatchCount": 91
     },
     {
       "name": "Yoendrys Gomez",
       "sport": "Baseball",
-      "scpRawPrice": 4.04,
+      "scpRawPrice": 3.88,
       "scpRawProduct": "Yoendrys Gomez [Silver] #615",
       "scpRawId": "8511877",
-      "scpRawMatchCount": 100
+      "scpRawMatchCount": 77
     },
     {
       "name": "Yoervis Medina",
       "sport": "Baseball",
-      "scpRawPrice": 3.44,
-      "scpRawProduct": "Yoervis Medina [Gold] #US137",
-      "scpRawId": "11667659",
-      "scpRawMatchCount": 100
+      "scpRawPrice": null,
+      "scpRawProduct": null,
+      "scpRawId": null,
+      "scpRawMatchCount": 0
     },
     {
       "name": "Yohan Pino",
       "sport": "Baseball",
-      "scpRawPrice": 2.71,
+      "scpRawPrice": 2.55,
       "scpRawProduct": "Yohan Pino [Gold] #BP24",
       "scpRawId": "2424935",
-      "scpRawMatchCount": 100
+      "scpRawMatchCount": 73
     },
     {
       "name": "Yohander Mendez",
       "sport": "Baseball",
-      "scpRawPrice": 2.79,
+      "scpRawPrice": 2.81,
       "scpRawProduct": "Yohander Mendez [Refractor] #BCP-199",
       "scpRawId": "1344015",
       "scpRawMatchCount": 100
@@ -3890,15 +3890,15 @@
     {
       "name": "Yohel Pozo",
       "sport": "Baseball",
-      "scpRawPrice": 5.21,
-      "scpRawProduct": "Yohel Pozo [Bats] #US120",
-      "scpRawId": "10887357",
-      "scpRawMatchCount": 100
+      "scpRawPrice": null,
+      "scpRawProduct": null,
+      "scpRawId": null,
+      "scpRawMatchCount": 0
     },
     {
       "name": "Yohendrick Pinango",
       "sport": "Baseball",
-      "scpRawPrice": 5.12,
+      "scpRawPrice": 6.68,
       "scpRawProduct": "Yohendrick Pinango [Refractor] #BDC-25",
       "scpRawId": "3072025",
       "scpRawMatchCount": 100
@@ -3922,23 +3922,23 @@
     {
       "name": "Yonny Chirinos",
       "sport": "Baseball",
-      "scpRawPrice": null,
-      "scpRawProduct": null,
-      "scpRawId": null,
-      "scpRawMatchCount": 0
+      "scpRawPrice": 3.28,
+      "scpRawProduct": "Yonny Chirinos [Gold] #592",
+      "scpRawId": "2257572",
+      "scpRawMatchCount": 100
     },
     {
       "name": "Yonny Hernandez",
       "sport": "Baseball",
-      "scpRawPrice": 3.81,
+      "scpRawPrice": 3.76,
       "scpRawProduct": "Yonny Hernandez [Red] #BSA-YHE",
       "scpRawId": "4020800",
-      "scpRawMatchCount": 100
+      "scpRawMatchCount": 92
     },
     {
       "name": "Yorman Bazardo",
       "sport": "Baseball",
-      "scpRawPrice": 3.83,
+      "scpRawPrice": 4,
       "scpRawProduct": "Yorman Bazardo [Refractor] #470",
       "scpRawId": "8131265",
       "scpRawMatchCount": 100
@@ -3946,7 +3946,7 @@
     {
       "name": "Yorman Rodriguez",
       "sport": "Baseball",
-      "scpRawPrice": 1.84,
+      "scpRawPrice": 1.89,
       "scpRawProduct": "Yorman Rodriguez [Refractor] #29",
       "scpRawId": "12999903",
       "scpRawMatchCount": 100
@@ -3962,15 +3962,15 @@
     {
       "name": "Yusmeiro Petit",
       "sport": "Baseball",
-      "scpRawPrice": 2.98,
+      "scpRawPrice": 3.89,
       "scpRawProduct": "Yusmeiro Petit [Blue] #127",
       "scpRawId": "12269344",
-      "scpRawMatchCount": 100
+      "scpRawMatchCount": 81
     },
     {
       "name": "Jose Alvarez",
       "sport": "Baseball",
-      "scpRawPrice": 13.38,
+      "scpRawPrice": 13.26,
       "scpRawProduct": "No Way Jose [Blue] #55",
       "scpRawId": "3769757",
       "scpRawMatchCount": 100
@@ -3978,15 +3978,15 @@
     {
       "name": "Robert Perez",
       "sport": "Baseball",
-      "scpRawPrice": 5.49,
+      "scpRawPrice": 4,
       "scpRawProduct": "Robert Perez [Silver]",
       "scpRawId": "11586471",
-      "scpRawMatchCount": 100
+      "scpRawMatchCount": 77
     },
     {
       "name": "Alex Cabrera",
       "sport": "Baseball",
-      "scpRawPrice": 7.11,
+      "scpRawPrice": 7.07,
       "scpRawProduct": "Alex Cabrera [Parallel 25] #91",
       "scpRawId": "2037345",
       "scpRawMatchCount": 100
@@ -3994,7 +3994,7 @@
     {
       "name": "Alex Ramirez",
       "sport": "Baseball",
-      "scpRawPrice": 3.1,
+      "scpRawPrice": 3.31,
       "scpRawProduct": "Manny Ramirez [Raw Power] #599",
       "scpRawId": "5780594",
       "scpRawMatchCount": 100
@@ -4002,7 +4002,7 @@
     {
       "name": "J.J. D'Orazio",
       "sport": "Baseball",
-      "scpRawPrice": 1.56,
+      "scpRawPrice": 1.69,
       "scpRawProduct": "X-Pac",
       "scpRawId": "11240295",
       "scpRawMatchCount": 100
@@ -4010,15 +4010,15 @@
     {
       "name": "Robert Perez Jr.",
       "sport": "Baseball",
-      "scpRawPrice": 5.78,
-      "scpRawProduct": "Robert Perez Jr. #BSPA-RP",
-      "scpRawId": "5233603",
+      "scpRawPrice": 5.79,
+      "scpRawProduct": "Robert Perez Jr. #BP-124",
+      "scpRawId": "5103302",
       "scpRawMatchCount": 100
     },
     {
       "name": "Carl Herrera",
       "sport": "Basketball",
-      "scpRawPrice": 1.52,
+      "scpRawPrice": 1.53,
       "scpRawProduct": "Carl Herrera [3D] #290",
       "scpRawId": "12032136",
       "scpRawMatchCount": 100
@@ -4026,15 +4026,15 @@
     {
       "name": "Greivis Vasquez",
       "sport": "Basketball",
-      "scpRawPrice": 3.69,
+      "scpRawPrice": 4,
       "scpRawProduct": "Greivis Vasquez [Silver] #121",
       "scpRawId": "3644958",
-      "scpRawMatchCount": 94
+      "scpRawMatchCount": 95
     },
     {
       "name": "Oscar Torres",
       "sport": "Basketball",
-      "scpRawPrice": 1.64,
+      "scpRawPrice": 1.8,
       "scpRawProduct": "Oscar Torres #229",
       "scpRawId": "8877361",
       "scpRawMatchCount": 100
@@ -4042,7 +4042,7 @@
     {
       "name": "Pedro Chourio",
       "sport": "Basketball",
-      "scpRawPrice": 1.56,
+      "scpRawPrice": 1.71,
       "scpRawProduct": "X-Pac",
       "scpRawId": "11240295",
       "scpRawMatchCount": 100
@@ -4050,7 +4050,7 @@
     {
       "name": "Amleto Monacelli",
       "sport": "Bowling",
-      "scpRawPrice": 1.56,
+      "scpRawPrice": 1.71,
       "scpRawProduct": "A Bowling Pin Can Stand [About 10,000 Smashes] #83",
       "scpRawId": "1846168",
       "scpRawMatchCount": 100
@@ -4058,15 +4058,15 @@
     {
       "name": "Andres Borregales",
       "sport": "Football",
-      "scpRawPrice": 3.67,
+      "scpRawPrice": 3.37,
       "scpRawProduct": "Andres Borregales [Silver] #214",
       "scpRawId": "11150504",
-      "scpRawMatchCount": 100
+      "scpRawMatchCount": 92
     },
     {
       "name": "Jhonattan Vegas",
       "sport": "Golf",
-      "scpRawPrice": 5.38,
+      "scpRawPrice": 5.27,
       "scpRawProduct": "Formula 1 Las Vegas #67",
       "scpRawId": "6779840",
       "scpRawMatchCount": 100
@@ -4074,15 +4074,15 @@
     {
       "name": "Juan Arango",
       "sport": "Soccer",
-      "scpRawPrice": 6.79,
-      "scpRawProduct": "Juan Arango [Silver] #31",
-      "scpRawId": "12862323",
-      "scpRawMatchCount": 100
+      "scpRawPrice": null,
+      "scpRawProduct": null,
+      "scpRawId": null,
+      "scpRawMatchCount": 0
     },
     {
       "name": "Yohandry Orozco",
       "sport": "Soccer",
-      "scpRawPrice": 6.29,
+      "scpRawPrice": 6.2,
       "scpRawProduct": "Yohandry Orozco [Made In Brazil] #289",
       "scpRawId": "9740966",
       "scpRawMatchCount": 100
@@ -4090,7 +4090,7 @@
     {
       "name": "Andres Tunez",
       "sport": "Soccer",
-      "scpRawPrice": 1.58,
+      "scpRawPrice": 1.75,
       "scpRawProduct": "Mark Andrews #83",
       "scpRawId": "3769606",
       "scpRawMatchCount": 100
@@ -4098,7 +4098,7 @@
     {
       "name": "Christian Santos",
       "sport": "Soccer",
-      "scpRawPrice": 1.79,
+      "scpRawPrice": 1.93,
       "scpRawProduct": "Edge, Christian #55",
       "scpRawId": "3894187",
       "scpRawMatchCount": 100
@@ -4106,7 +4106,7 @@
     {
       "name": "Fernando Amorebieta",
       "sport": "Soccer",
-      "scpRawPrice": 1.56,
+      "scpRawPrice": 1.71,
       "scpRawProduct": "Fernando Amorebieta [Made In Brazil] #282",
       "scpRawId": "9740954",
       "scpRawMatchCount": 100
@@ -4114,7 +4114,7 @@
     {
       "name": "Jeffren Suarez",
       "sport": "Soccer",
-      "scpRawPrice": 1.89,
+      "scpRawPrice": 1.79,
       "scpRawProduct": "Jeffren Suarez [Made In Brazil] #299",
       "scpRawId": "9741415",
       "scpRawMatchCount": 100
@@ -4122,7 +4122,7 @@
     {
       "name": "Jon Aramburu",
       "sport": "Soccer",
-      "scpRawPrice": 1.59,
+      "scpRawPrice": 1.83,
       "scpRawProduct": "Jon Aramburu [Holo Silver] #85",
       "scpRawId": "12979083",
       "scpRawMatchCount": 100
@@ -4130,15 +4130,15 @@
     {
       "name": "Jorge Gomez",
       "sport": "Soccer",
-      "scpRawPrice": 3.42,
+      "scpRawPrice": 3.19,
       "scpRawProduct": "Unai Gomez [XI] #145",
       "scpRawId": "9660004",
-      "scpRawMatchCount": 96
+      "scpRawMatchCount": 80
     },
     {
       "name": "Miguel Silva",
       "sport": "Soccer",
-      "scpRawPrice": 1.6,
+      "scpRawPrice": 1.72,
       "scpRawProduct": "Jeremy Doku #RTLE1",
       "scpRawId": "9750979",
       "scpRawMatchCount": 100
@@ -4146,15 +4146,15 @@
     {
       "name": "Miku Fedor",
       "sport": "Soccer",
-      "scpRawPrice": 3.86,
+      "scpRawPrice": 4.96,
       "scpRawProduct": "Nicolas \"Miku\" Fedor #294",
       "scpRawId": "9224704",
-      "scpRawMatchCount": 100
+      "scpRawMatchCount": 88
     },
     {
       "name": "Roberto Rosales",
       "sport": "Soccer",
-      "scpRawPrice": 8.29,
+      "scpRawPrice": 8.42,
       "scpRawProduct": "Roberto Rosales [Made In Brazil] #191",
       "scpRawId": "9740668",
       "scpRawMatchCount": 100
@@ -4162,7 +4162,7 @@
     {
       "name": "Ruben Suarez Estrada",
       "sport": "Soccer",
-      "scpRawPrice": 3.42,
+      "scpRawPrice": 2.64,
       "scpRawProduct": "Angel Estrada [Soccer Ball] #204",
       "scpRawId": "12855159",
       "scpRawMatchCount": 100
@@ -4170,15 +4170,15 @@
     {
       "name": "Salomon Rondon",
       "sport": "Soccer",
-      "scpRawPrice": 6.12,
+      "scpRawPrice": 5.52,
       "scpRawProduct": "Salomon Rondon [Genesis] #94",
       "scpRawId": "4352917",
-      "scpRawMatchCount": 80
+      "scpRawMatchCount": 100
     },
     {
       "name": "Victor Garcia",
       "sport": "Soccer",
-      "scpRawPrice": 1.33,
+      "scpRawPrice": 1.66,
       "scpRawProduct": "Victor Garcia [Fireworks] #U18-VGN",
       "scpRawId": "12464952",
       "scpRawMatchCount": 100
@@ -4186,7 +4186,7 @@
     {
       "name": "Yangel Herrera",
       "sport": "Soccer",
-      "scpRawPrice": 3.53,
+      "scpRawPrice": 3.52,
       "scpRawProduct": "Yangel Herrera [Silver] #188",
       "scpRawId": "9450675",
       "scpRawMatchCount": 100
@@ -4194,7 +4194,7 @@
     {
       "name": "Cristian Casseres Jr.",
       "sport": "Soccer",
-      "scpRawPrice": 2.88,
+      "scpRawPrice": 2.94,
       "scpRawProduct": "Cristian Casseres Jr. #VEN15",
       "scpRawId": "9088342",
       "scpRawMatchCount": 100
@@ -4202,7 +4202,7 @@
     {
       "name": "Fernando Aristeguieta",
       "sport": "Soccer",
-      "scpRawPrice": 1.56,
+      "scpRawPrice": 1.71,
       "scpRawProduct": "Fernando Aristeguieta [Red] #31",
       "scpRawId": "2760276",
       "scpRawMatchCount": 100
@@ -4210,7 +4210,7 @@
     {
       "name": "Gabriel Cichero",
       "sport": "Soccer",
-      "scpRawPrice": 1.37,
+      "scpRawPrice": 1.66,
       "scpRawProduct": "Gabriel Cichero [Made In Brazil] #280",
       "scpRawId": "9740950",
       "scpRawMatchCount": 100
@@ -4218,7 +4218,7 @@
     {
       "name": "Juan Falcon",
       "sport": "Soccer",
-      "scpRawPrice": 1.86,
+      "scpRawPrice": 2.06,
       "scpRawProduct": "Juan Falcon [Made In Brazil] #291",
       "scpRawId": "9740970",
       "scpRawMatchCount": 100
@@ -4226,7 +4226,7 @@
     {
       "name": "Oswaldo Vizcarrondo",
       "sport": "Soccer",
-      "scpRawPrice": 2.19,
+      "scpRawPrice": 2.25,
       "scpRawProduct": "Oswaldo Vizcarrondo [Made In Brazil] #279",
       "scpRawId": "9740947",
       "scpRawMatchCount": 100
@@ -4234,7 +4234,7 @@
     {
       "name": "Wuilker Farinez",
       "sport": "Soccer",
-      "scpRawPrice": 1.9,
+      "scpRawPrice": 1.99,
       "scpRawProduct": "Wuilker Farinez [Genesis] #96",
       "scpRawId": "4352919",
       "scpRawMatchCount": 100
@@ -4242,15 +4242,15 @@
     {
       "name": "Abel Caputo",
       "sport": "Soccer",
-      "scpRawPrice": 4.92,
+      "scpRawPrice": 5.2,
       "scpRawProduct": "Francesco Caputo [Silver] #129",
       "scpRawId": "6773026",
-      "scpRawMatchCount": 100
+      "scpRawMatchCount": 65
     },
     {
       "name": "Alejandro Fuenmayor",
       "sport": "Soccer",
-      "scpRawPrice": 1.38,
+      "scpRawPrice": 1.7,
       "scpRawProduct": "Alejandro Fuenmayor [Gold] #105",
       "scpRawId": "2673619",
       "scpRawMatchCount": 100
@@ -4258,7 +4258,7 @@
     {
       "name": "Alejandro Moreno",
       "sport": "Soccer",
-      "scpRawPrice": 2.07,
+      "scpRawPrice": 1.67,
       "scpRawProduct": "Alejandro Moreno [Made In Brazil] #202",
       "scpRawId": "9740415",
       "scpRawMatchCount": 100
@@ -4266,15 +4266,15 @@
     {
       "name": "Bernardo Anor",
       "sport": "Soccer",
-      "scpRawPrice": 2.69,
+      "scpRawPrice": 2.68,
       "scpRawProduct": "Bernardo Anor [Gold] #168",
       "scpRawId": "2757991",
-      "scpRawMatchCount": 97
+      "scpRawMatchCount": 100
     },
     {
       "name": "Brayan Martinez",
       "sport": "Soccer",
-      "scpRawPrice": 5.75,
+      "scpRawPrice": 5.74,
       "scpRawProduct": "Brayan Cortes [Red] #CHI3",
       "scpRawId": "9226184",
       "scpRawMatchCount": 100
@@ -4282,7 +4282,7 @@
     {
       "name": "Carlos Cermeno",
       "sport": "Soccer",
-      "scpRawPrice": 1.6,
+      "scpRawPrice": 1.72,
       "scpRawProduct": "Jeremy Doku #RTLE1",
       "scpRawId": "9750979",
       "scpRawMatchCount": 100
@@ -4290,7 +4290,7 @@
     {
       "name": "Carlos Varela",
       "sport": "Soccer",
-      "scpRawPrice": 4.65,
+      "scpRawPrice": 4.28,
       "scpRawProduct": "Varela » #SW-V",
       "scpRawId": "9584321",
       "scpRawMatchCount": 100
@@ -4298,7 +4298,7 @@
     {
       "name": "Christian Makoun",
       "sport": "Soccer",
-      "scpRawPrice": 1.84,
+      "scpRawPrice": 1.97,
       "scpRawProduct": "Christian Makoun [Red] #VEN9",
       "scpRawId": "9226093",
       "scpRawMatchCount": 100
@@ -4306,15 +4306,15 @@
     {
       "name": "Dani Pereira",
       "sport": "Soccer",
-      "scpRawPrice": 5.03,
+      "scpRawPrice": 4.73,
       "scpRawProduct": "Dani Pereira [Sunset] #189",
       "scpRawId": "7811129",
-      "scpRawMatchCount": 100
+      "scpRawMatchCount": 98
     },
     {
       "name": "David Martinez",
       "sport": "Soccer",
-      "scpRawPrice": 17.28,
+      "scpRawPrice": 17.08,
       "scpRawProduct": "David Otunga [Blue] #23",
       "scpRawId": "3769725",
       "scpRawMatchCount": 100
@@ -4322,7 +4322,7 @@
     {
       "name": "Eduardo Sosa",
       "sport": "Soccer",
-      "scpRawPrice": 1.78,
+      "scpRawPrice": 1.83,
       "scpRawProduct": "Jeremy Doku #RTLE1",
       "scpRawId": "9750979",
       "scpRawMatchCount": 100
@@ -4330,7 +4330,7 @@
     {
       "name": "Emilio Renteria",
       "sport": "Soccer",
-      "scpRawPrice": 2.09,
+      "scpRawPrice": 1.31,
       "scpRawProduct": "Emilio Renteria #MA-ER",
       "scpRawId": "2731595",
       "scpRawMatchCount": 100
@@ -4338,7 +4338,7 @@
     {
       "name": "Ender Echenique",
       "sport": "Soccer",
-      "scpRawPrice": 1.61,
+      "scpRawPrice": 1.74,
       "scpRawProduct": "Jeremy Doku #RTLE1",
       "scpRawId": "9750979",
       "scpRawMatchCount": 100
@@ -4346,15 +4346,15 @@
     {
       "name": "Erickson Gallardo",
       "sport": "Soccer",
-      "scpRawPrice": null,
-      "scpRawProduct": null,
-      "scpRawId": null,
-      "scpRawMatchCount": 0
+      "scpRawPrice": 6.96,
+      "scpRawProduct": "Jesus Gallardo [Blue] #MEX5",
+      "scpRawId": "9225717",
+      "scpRawMatchCount": 86
     },
     {
       "name": "Giovanny Sequera",
       "sport": "Soccer",
-      "scpRawPrice": 3.61,
+      "scpRawPrice": 3.23,
       "scpRawProduct": "Manuel Sequera [Gold] #AU-MS",
       "scpRawId": "5691519",
       "scpRawMatchCount": 100
@@ -4362,7 +4362,7 @@
     {
       "name": "Gustavo Caraballo",
       "sport": "Soccer",
-      "scpRawPrice": 7.66,
+      "scpRawPrice": 8.75,
       "scpRawProduct": "Gustavo Caraballo [Refractor] #181",
       "scpRawId": "12048652",
       "scpRawMatchCount": 100
@@ -4378,15 +4378,15 @@
     {
       "name": "Jesus Bueno",
       "sport": "Soccer",
-      "scpRawPrice": 4.84,
+      "scpRawPrice": 4.81,
       "scpRawProduct": "Manu Bueno [XI] #122",
       "scpRawId": "6849624",
-      "scpRawMatchCount": 100
+      "scpRawMatchCount": 75
     },
     {
       "name": "Jesus Castellano",
       "sport": "Soccer",
-      "scpRawPrice": 1.59,
+      "scpRawPrice": 1.71,
       "scpRawProduct": "Jeremy Doku #RTLE1",
       "scpRawId": "9750979",
       "scpRawMatchCount": 100
@@ -4394,7 +4394,7 @@
     {
       "name": "Jose Andres Martinez",
       "sport": "Soccer",
-      "scpRawPrice": 2.67,
+      "scpRawPrice": 2.73,
       "scpRawProduct": "No Way Jose [Blue] #55",
       "scpRawId": "3769757",
       "scpRawMatchCount": 100
@@ -4402,7 +4402,7 @@
     {
       "name": "Josef Martinez",
       "sport": "Soccer",
-      "scpRawPrice": 6.62,
+      "scpRawPrice": 6.67,
       "scpRawProduct": "Josef Martinez [Soccer Tile] #19",
       "scpRawId": "6149863",
       "scpRawMatchCount": 100
@@ -4410,7 +4410,7 @@
     {
       "name": "Junior Moreno",
       "sport": "Soccer",
-      "scpRawPrice": 2.07,
+      "scpRawPrice": 1.68,
       "scpRawProduct": "Junior Moreno [Genesis] #98",
       "scpRawId": "4352921",
       "scpRawMatchCount": 100
@@ -4429,20 +4429,20 @@
       "scpRawPrice": 2.89,
       "scpRawProduct": "Luis Gonzalez [X] #113",
       "scpRawId": "4548639",
-      "scpRawMatchCount": 100
+      "scpRawMatchCount": 87
     },
     {
       "name": "Miguel Navarro",
       "sport": "Soccer",
-      "scpRawPrice": 4.32,
+      "scpRawPrice": 2.65,
       "scpRawProduct": "Miguel Navarro [Red] #VEN8",
       "scpRawId": "9226092",
-      "scpRawMatchCount": 100
+      "scpRawMatchCount": 78
     },
     {
       "name": "Moises Tablante",
       "sport": "Soccer",
-      "scpRawPrice": 2.21,
+      "scpRawPrice": 2.18,
       "scpRawProduct": "Jeremy Doku #RTLE1",
       "scpRawId": "9750979",
       "scpRawMatchCount": 100
@@ -4450,7 +4450,7 @@
     {
       "name": "Pablo Bonilla",
       "sport": "Soccer",
-      "scpRawPrice": 3.47,
+      "scpRawPrice": 3.28,
       "scpRawProduct": "Victor Bonilla #91",
       "scpRawId": "9087620",
       "scpRawMatchCount": 100
@@ -4466,7 +4466,7 @@
     {
       "name": "Renzo Zambrano",
       "sport": "Soccer",
-      "scpRawPrice": 2.33,
+      "scpRawPrice": 2.57,
       "scpRawProduct": "Renzo Saravia [Made in Brazil] #131",
       "scpRawId": "9741563",
       "scpRawMatchCount": 100
@@ -4474,23 +4474,23 @@
     {
       "name": "Rodrigo Neri",
       "sport": "Soccer",
-      "scpRawPrice": 2.13,
-      "scpRawProduct": "Rodrigo Mora [Soccer Ball] #259",
-      "scpRawId": "12857215",
+      "scpRawPrice": 1.96,
+      "scpRawProduct": "Hector Neris #247",
+      "scpRawId": "2358066",
       "scpRawMatchCount": 100
     },
     {
       "name": "Rolando Escobar",
       "sport": "Soccer",
-      "scpRawPrice": 1.73,
-      "scpRawProduct": "Escobar/Valent/Wilkerson [Prospects] #603",
-      "scpRawId": "5528101",
+      "scpRawPrice": 2,
+      "scpRawProduct": "Fidel Escobar [Silver] #269",
+      "scpRawId": "13799062",
       "scpRawMatchCount": 100
     },
     {
       "name": "Rolf Feltscher",
       "sport": "Soccer",
-      "scpRawPrice": 1.43,
+      "scpRawPrice": 1.66,
       "scpRawProduct": "Rolf Feltscher [Made in Brazil] #72",
       "scpRawId": "9741700",
       "scpRawMatchCount": 100
@@ -4498,15 +4498,15 @@
     {
       "name": "Ronald Hernandez",
       "sport": "Soccer",
-      "scpRawPrice": 4.17,
-      "scpRawProduct": "Teoscar Hernandez/Ronald Acuna Jr. [All Star] #ASG2",
-      "scpRawId": "3464807",
-      "scpRawMatchCount": 100
+      "scpRawPrice": null,
+      "scpRawProduct": null,
+      "scpRawId": null,
+      "scpRawMatchCount": 0
     },
     {
       "name": "Ronaldo Pena",
       "sport": "Soccer",
-      "scpRawPrice": 51.64,
+      "scpRawPrice": 5.8,
       "scpRawProduct": "Ronaldo Pena [Red] #46",
       "scpRawId": "2712019",
       "scpRawMatchCount": 100
@@ -4514,7 +4514,7 @@
     {
       "name": "Santiago Pita",
       "sport": "Soccer",
-      "scpRawPrice": 1.88,
+      "scpRawPrice": 2,
       "scpRawProduct": "Pita Taumoepenu [Exclusives] #32",
       "scpRawId": "9778036",
       "scpRawMatchCount": 100
@@ -4522,7 +4522,7 @@
     {
       "name": "Telasco Segovia",
       "sport": "Soccer",
-      "scpRawPrice": 15.15,
+      "scpRawPrice": 14.29,
       "scpRawProduct": "Telasco Segovia [Refractor] #107",
       "scpRawId": "12046269",
       "scpRawMatchCount": 100
@@ -4530,7 +4530,7 @@
     {
       "name": "Wikelman Carmona",
       "sport": "Soccer",
-      "scpRawPrice": 4.16,
+      "scpRawPrice": 4.13,
       "scpRawProduct": "Wikelman Carmona [Refractor] #78",
       "scpRawId": "8978701",
       "scpRawMatchCount": 100
@@ -4538,7 +4538,7 @@
     {
       "name": "Deyna Castellanos",
       "sport": "Soccer",
-      "scpRawPrice": 5.18,
+      "scpRawPrice": 5.23,
       "scpRawProduct": "Deyna Castellanos [Silver] #145",
       "scpRawId": "12587704",
       "scpRawMatchCount": 100
@@ -4546,7 +4546,7 @@
     {
       "name": "Alejandro Marques",
       "sport": "Soccer",
-      "scpRawPrice": 2.27,
+      "scpRawPrice": 2.2,
       "scpRawProduct": "Alejandro Marques [Pink] #83",
       "scpRawId": "2703580",
       "scpRawMatchCount": 100
@@ -4554,7 +4554,7 @@
     {
       "name": "Jefferson Savarino",
       "sport": "Soccer",
-      "scpRawPrice": 3.41,
+      "scpRawPrice": 3.65,
       "scpRawProduct": "Jefferson Savarino [Soccer Ball] #73",
       "scpRawId": "12848148",
       "scpRawMatchCount": 100
@@ -4562,7 +4562,7 @@
     {
       "name": "Luis Balbo",
       "sport": "Soccer",
-      "scpRawPrice": 1.58,
+      "scpRawPrice": 1.74,
       "scpRawProduct": "Abel Balbo #233",
       "scpRawId": "11668343",
       "scpRawMatchCount": 100
@@ -4570,7 +4570,7 @@
     {
       "name": "Manuel Arteaga",
       "sport": "Soccer",
-      "scpRawPrice": 6.55,
+      "scpRawPrice": 5.43,
       "scpRawProduct": "Gerardo Arteaga [Soccer Ball] #134",
       "scpRawId": "12859999",
       "scpRawMatchCount": 100
@@ -4578,7 +4578,7 @@
     {
       "name": "Nahuel Ferraresi",
       "sport": "Soccer",
-      "scpRawPrice": 2.66,
+      "scpRawPrice": 2.7,
       "scpRawProduct": "Nahuel Ferraresi [Red] #VEN11",
       "scpRawId": "9226097",
       "scpRawMatchCount": 100
@@ -4586,7 +4586,7 @@
     {
       "name": "Tomas Rincon",
       "sport": "Soccer",
-      "scpRawPrice": 3.72,
+      "scpRawPrice": 3.78,
       "scpRawProduct": "Tomas Rincon [Silver] #4",
       "scpRawId": "3711227",
       "scpRawMatchCount": 100
@@ -4594,7 +4594,7 @@
     {
       "name": "Yeferson Soteldo",
       "sport": "Soccer",
-      "scpRawPrice": 3.55,
+      "scpRawPrice": 3.67,
       "scpRawProduct": "Yeferson Soteldo [Silver] #114",
       "scpRawId": "7040979",
       "scpRawMatchCount": 100
@@ -4602,23 +4602,23 @@
     {
       "name": "Yordan Osorio",
       "sport": "Soccer",
-      "scpRawPrice": 5.11,
-      "scpRawProduct": "Yordan Osorio [Silver] #110",
-      "scpRawId": "7040853",
-      "scpRawMatchCount": 100
+      "scpRawPrice": null,
+      "scpRawProduct": null,
+      "scpRawId": null,
+      "scpRawMatchCount": 0
     },
     {
       "name": "Sergio Cordova",
       "sport": "Soccer",
-      "scpRawPrice": 3.23,
-      "scpRawProduct": "Sergio Cordova [Made in Brazil] #80",
-      "scpRawId": "9741727",
-      "scpRawMatchCount": 100
+      "scpRawPrice": null,
+      "scpRawProduct": null,
+      "scpRawId": null,
+      "scpRawMatchCount": 0
     },
     {
       "name": "Daniele Quieto",
       "sport": "Soccer",
-      "scpRawPrice": 7.4,
+      "scpRawPrice": 8.05,
       "scpRawProduct": "Daniele Verde [Silver] #164",
       "scpRawId": "5203363",
       "scpRawMatchCount": 100
@@ -4626,10 +4626,10 @@
     {
       "name": "Garbine Muguruza",
       "sport": "Tennis",
-      "scpRawPrice": 9.11,
-      "scpRawProduct": "Garbine Muguruza [Refractor] #164",
-      "scpRawId": "11776123",
-      "scpRawMatchCount": 100
+      "scpRawPrice": 10.02,
+      "scpRawProduct": "Garbine Muguruza [Refractor] #39",
+      "scpRawId": "9403453",
+      "scpRawMatchCount": 91
     }
   ]
 }
