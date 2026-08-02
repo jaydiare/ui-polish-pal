@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "updatedAt": "2026-08-02T08:56:04.863Z",
+    "updatedAt": "2026-08-02T14:10:00.306Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "PSA 7 + PSA 8 sold comps. Two queries per athlete. Strict per-grade title filter. Taguchi winsorized mean. USD via CBSA.",
     "targetGrades": [
@@ -8,8 +8,8 @@
       8
     ],
     "batchInfo": {
-      "startIdx": 152,
-      "endIdx": 160,
+      "startIdx": 160,
+      "endIdx": 168,
       "totalAthletes": 464
     },
     "maxPages": 3,
@@ -672,35 +672,35 @@
   },
   "Gregory Infante": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-07-18T19:44:09.374Z"
+    "erroredAt": "2026-08-02T14:10:16.575Z"
   },
   "Guilder Rodriguez": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-07-18T19:44:32.018Z"
+    "erroredAt": "2026-08-02T14:10:38.946Z"
   },
   "Guillermo Moscoso": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-07-18T19:44:55.287Z"
+    "erroredAt": "2026-08-02T14:11:01.818Z"
   },
   "Guillermo Quiroz": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-07-18T19:45:16.224Z"
+    "erroredAt": "2026-08-02T14:11:25.559Z"
   },
   "Guillermo Rodriguez": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-07-18T19:45:37.379Z"
+    "erroredAt": "2026-08-02T14:11:49.082Z"
   },
   "Gus Gil": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-07-18T19:45:57.650Z"
+    "erroredAt": "2026-08-02T14:12:08.796Z"
   },
   "Gus Polidor": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-07-18T19:46:20.676Z"
+    "erroredAt": "2026-08-02T14:12:32.385Z"
   },
   "Gustavo Chacin": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-07-18T19:46:41.541Z"
+    "erroredAt": "2026-08-02T14:12:52.787Z"
   },
   "Gustavo Molina": {
     "error": "eBay fetch failed (403)",
