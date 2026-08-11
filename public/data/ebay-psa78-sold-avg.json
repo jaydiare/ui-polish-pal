@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "updatedAt": "2026-08-11T02:35:52.893Z",
+    "updatedAt": "2026-08-11T07:46:41.304Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "PSA 7 + PSA 8 sold comps. Two queries per athlete. Strict per-grade title filter. Taguchi winsorized mean. USD via CBSA.",
     "targetGrades": [
@@ -8,8 +8,8 @@
       8
     ],
     "batchInfo": {
-      "startIdx": 432,
-      "endIdx": 440,
+      "startIdx": 440,
+      "endIdx": 448,
       "totalAthletes": 464
     },
     "maxPages": 3,
@@ -27,7 +27,7 @@
     },
     "fx": {
       "source": "CBSA Exchange Rates API",
-      "asOf": "2026-08-11T00:00:00.000Z"
+      "asOf": "2026-08-12T00:00:00.000Z"
     }
   },
   "Adbert Alzolay": {
@@ -1784,35 +1784,35 @@
   },
   "Oscar Torres": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-07-27T15:25:18.066Z"
+    "erroredAt": "2026-08-11T07:46:57.807Z"
   },
   "Amleto Monacelli": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-07-27T15:25:37.826Z"
+    "erroredAt": "2026-08-11T07:47:20.612Z"
   },
   "Andres Borregales": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-07-27T15:25:58.929Z"
+    "erroredAt": "2026-08-11T07:47:40.831Z"
   },
   "Salomon Rondon": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-07-27T15:26:22.323Z"
+    "erroredAt": "2026-08-11T07:48:02.487Z"
   },
   "Yangel Herrera": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-07-27T15:26:43.769Z"
+    "erroredAt": "2026-08-11T07:48:23.592Z"
   },
   "Cristian Casseres Jr.": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-07-27T15:27:05.677Z"
+    "erroredAt": "2026-08-11T07:48:45.838Z"
   },
   "Wuilker Farinez": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-07-27T15:27:29.147Z"
+    "erroredAt": "2026-08-11T07:49:08.369Z"
   },
   "Alejandro Moreno": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-07-27T15:27:51.162Z"
+    "erroredAt": "2026-08-11T07:49:29.507Z"
   },
   "Dani Pereira": {
     "error": "eBay fetch failed (403)",
