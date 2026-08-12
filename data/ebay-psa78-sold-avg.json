@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "updatedAt": "2026-08-11T19:36:23.677Z",
+    "updatedAt": "2026-08-12T08:00:30.460Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "PSA 7 + PSA 8 sold comps. Two queries per athlete. Strict per-grade title filter. Taguchi winsorized mean. USD via CBSA.",
     "targetGrades": [
@@ -8,8 +8,8 @@
       8
     ],
     "batchInfo": {
-      "startIdx": 456,
-      "endIdx": 464,
+      "startIdx": 0,
+      "endIdx": 8,
       "totalAthletes": 464
     },
     "maxPages": 3,
@@ -27,40 +27,40 @@
     },
     "fx": {
       "source": "CBSA Exchange Rates API",
-      "asOf": "2026-08-12T00:00:00.000Z"
+      "asOf": "2026-08-13T00:00:00.000Z"
     }
   },
   "Adbert Alzolay": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-07-28T15:01:50.344Z"
+    "erroredAt": "2026-08-12T08:00:46.191Z"
   },
   "Adrian Sanchez": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-07-28T15:02:11.289Z"
+    "erroredAt": "2026-08-12T08:01:08.129Z"
   },
   "Al Pedrique": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-07-28T15:02:34.028Z"
+    "erroredAt": "2026-08-12T08:01:28.366Z"
   },
   "Albert Suarez": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-07-28T15:02:56.475Z"
+    "erroredAt": "2026-08-12T08:01:51.865Z"
   },
   "Alberto Callaspo": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-07-28T15:03:20.639Z"
+    "erroredAt": "2026-08-12T08:02:11.675Z"
   },
   "Alberto Gonzalez": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-07-28T15:03:41.319Z"
+    "erroredAt": "2026-08-12T08:02:34.895Z"
   },
   "Alcides Escobar": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-07-28T15:04:01.264Z"
+    "erroredAt": "2026-08-12T08:02:55.548Z"
   },
   "Alejandro Freire": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-07-28T15:04:22.937Z"
+    "erroredAt": "2026-08-12T08:03:16.995Z"
   },
   "Alejandro Machado": {
     "error": "eBay fetch failed (403)",
