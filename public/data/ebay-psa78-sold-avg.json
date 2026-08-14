@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "updatedAt": "2026-08-14T03:08:13.942Z",
+    "updatedAt": "2026-08-14T07:57:45.729Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "PSA 7 + PSA 8 sold comps. Two queries per athlete. Strict per-grade title filter. Taguchi winsorized mean. USD via CBSA.",
     "targetGrades": [
@@ -8,8 +8,8 @@
       8
     ],
     "batchInfo": {
-      "startIdx": 56,
-      "endIdx": 64,
+      "startIdx": 64,
+      "endIdx": 72,
       "totalAthletes": 464
     },
     "maxPages": 3,
@@ -27,7 +27,7 @@
     },
     "fx": {
       "source": "CBSA Exchange Rates API",
-      "asOf": "2026-08-14T00:00:00.000Z"
+      "asOf": "2026-08-15T00:00:00.000Z"
     }
   },
   "Adbert Alzolay": {
@@ -288,35 +288,35 @@
   },
   "Carlos Quintana": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-07-30T14:51:31.063Z"
+    "erroredAt": "2026-08-14T07:58:01.250Z"
   },
   "Carlos Rivero": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-07-30T14:51:52.615Z"
+    "erroredAt": "2026-08-14T07:58:21.511Z"
   },
   "Carlos Silva": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-07-30T14:52:13.860Z"
+    "erroredAt": "2026-08-14T07:58:44.304Z"
   },
   "Carlos Tocci": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-07-30T14:52:36.691Z"
+    "erroredAt": "2026-08-14T07:59:06.598Z"
   },
   "Carlos Valderrama": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-07-30T14:52:59.730Z"
+    "erroredAt": "2026-08-14T07:59:27.080Z"
   },
   "Carlos Zambrano": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-07-30T14:53:20.488Z"
+    "erroredAt": "2026-08-14T07:59:49.431Z"
   },
   "Cesar Gutierrez": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-07-30T14:53:44.122Z"
+    "erroredAt": "2026-08-14T08:00:13.059Z"
   },
   "Cesar Hernandez": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-07-30T14:54:06.340Z"
+    "erroredAt": "2026-08-14T08:00:36.634Z"
   },
   "Cesar Izturis": {
     "error": "eBay fetch failed (403)",
