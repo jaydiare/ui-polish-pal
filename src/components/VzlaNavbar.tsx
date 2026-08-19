@@ -2,6 +2,19 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Link, useLocation } from "react-router-dom";
 import FeedbackForm from "./FeedbackForm";
+import LanguageToggle from "./LanguageToggle";
+import { useLanguage } from "@/i18n/LanguageProvider";
+import type { TranslationKey } from "@/i18n/translations";
+
+const NAV_ITEMS: { key: TranslationKey; to: string }[] = [
+  { key: "nav.home", to: "/" },
+  { key: "nav.about", to: "/about" },
+  { key: "nav.blog", to: "/blog" },
+  { key: "nav.marketIntel", to: "/data" },
+  { key: "nav.marketData", to: "/market-data" },
+  { key: "nav.checklistIntel", to: "/checklist-intel" },
+  { key: "nav.mlbLeaders", to: "/mlb-venezuelan-leaders" },
+];
 
 const SOCIAL_LINKS = {
   instagram: "https://www.instagram.com/localheros_sportscards/",
