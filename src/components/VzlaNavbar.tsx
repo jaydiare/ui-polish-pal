@@ -64,6 +64,7 @@ const VzlaNavbar = () => {
   const [shopOpen, setShopOpen] = useState(false);
   const [contactOpen, setContactOpen] = useState(false);
   const location = useLocation();
+  const { t } = useLanguage();
 
   const closeMobileInstant = () => {
     setMobileOpen(false);
