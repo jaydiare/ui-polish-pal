@@ -1,11 +1,18 @@
 import { forwardRef } from "react";
 import { motion } from "framer-motion";
+import { useLanguage } from "@/i18n/LanguageProvider";
 
 interface VzlaHeroProps {
   lastUpdated: string;
 }
 
 const VzlaHero = forwardRef<HTMLElement, VzlaHeroProps>(({ lastUpdated }, ref) => {
+  const { t } = useLanguage();
+
+  const intro = t("hero.intro");
+  const strong = t("hero.introStrong");
+  const [introBefore, introAfter] = intro.split(strong);
+
   return (
     <motion.section
       ref={ref}
@@ -21,32 +28,33 @@ const VzlaHero = forwardRef<HTMLElement, VzlaHeroProps>(({ lastUpdated }, ref) =
         className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-secondary border border-border text-xs font-semibold text-muted-foreground mb-6"
       >
         <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-        Last update · {lastUpdated}
+        {t("hero.lastUpdate")} · {lastUpdated}
       </motion.div>
 
       <h1 className="text-4xl md:text-6xl font-display font-bold mb-4 leading-[1.05] text-glow">
-        VZLA <span className="text-flag-gradient">Sports Cards</span> Index
+        {t("hero.titleA")} <span className="text-flag-gradient">{t("hero.titleB")}</span> {t("hero.titleC")}
       </h1>
 
       <p className="text-muted-foreground text-sm md:text-base max-w-2xl mx-auto leading-relaxed mb-3">
-        eBay market data for Venezuelan athletes' sports cards.
-        Track prices, stability scores, and market trends.
+        {t("hero.subtitle")}
       </p>
 
       <p className="text-muted-foreground text-xs max-w-2xl mx-auto leading-relaxed mb-6">
-        Every card below is backed by live eBay data, processed through our <strong className="text-foreground">statistical pricing model</strong> — which removes extreme outliers to give you the most accurate average price. Stability scores measure how tightly listing prices agree with each other, helping you identify reliable investments vs speculative opportunities. Data updates on the last scan across 550+ athletes.
+        {introBefore}
+        <strong className="text-foreground">{strong}</strong>
+        {introAfter}
       </p>
 
       <div className="hero-sub text-sm leading-relaxed text-left md:text-center">
         <p className="mb-2">
-          The <strong className="text-foreground">Stability Score</strong> measures how tightly listing prices cluster around a common level.
+          <strong className="text-foreground">{t("hero.stabilityScore")}</strong> {t("hero.stabilityLead")}
         </p>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mt-4">
           {[
-            { label: "Stable", range: "0–10%", color: "text-emerald-400", desc: "Strong agreement" },
-            { label: "Active", range: "10–20%", color: "text-sky-400", desc: "Normal activity" },
-            { label: "Volatile", range: "20–35%", color: "text-amber-400", desc: "Price dispersion" },
-            { label: "Unstable", range: "35%+", color: "text-red-400", desc: "High speculation" },
+            { label: t("hero.stable"), range: "0–10%", color: "text-emerald-400", desc: t("hero.stableDesc") },
+            { label: t("hero.active"), range: "10–20%", color: "text-sky-400", desc: t("hero.activeDesc") },
+            { label: t("hero.volatile"), range: "20–35%", color: "text-amber-400", desc: t("hero.volatileDesc") },
+            { label: t("hero.unstable"), range: "35%+", color: "text-red-400", desc: t("hero.unstableDesc") },
           ].map((item) => (
             <div key={item.label} className="text-center p-2 rounded-lg bg-background/50">
               <div className={`text-xs font-bold ${item.color}`}>{item.label}</div>
@@ -57,16 +65,17 @@ const VzlaHero = forwardRef<HTMLElement, VzlaHeroProps>(({ lastUpdated }, ref) =
         <div className="mt-4 flex items-center justify-center gap-2 px-3 py-2 rounded-lg bg-vzla-yellow/5 border border-vzla-yellow/15 w-fit mx-auto">
           <span className="text-[13px]">🔄</span>
           <span className="text-xs text-muted-foreground">
-            <strong className="text-vzla-yellow">Flip Potential</strong> — Cards marked Volatile or Unstable may offer buy-low, sell-high opportunities due to wide price swings.
+            <strong className="text-vzla-yellow">{t("hero.flipPotential")}</strong> — {t("hero.flipDesc")}
           </span>
         </div>
         <div className="mt-2 flex items-center justify-center gap-2 px-3 py-2 rounded-lg bg-emerald-500/5 border border-emerald-500/15 w-fit mx-auto">
           <span className="text-[13px]">🔻</span>
           <span className="text-xs text-muted-foreground">
-            <strong className="text-emerald-400">Buy Low</strong> — Cards where the average sold price is below the current listing price, signaling potential bargains.
+            <strong className="text-emerald-400">{t("hero.buyLow")}</strong> — {t("hero.buyLowDesc")}
           </span>
         </div>
       </div>
+
 
     </motion.section>
   );
