@@ -198,33 +198,29 @@ const VzlaNavbar = () => {
               </div>
               <span className="font-display font-bold text-sm text-foreground">VZLA SPORTS</span>
             </Link>
-            <button
-              className="w-10 h-10 rounded-lg border border-border bg-secondary text-foreground flex items-center justify-center cursor-pointer"
-              onClick={() => setMobileOpen(false)}
-            >
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                <path d="M18 6L6 18M6 6l12 12" />
-              </svg>
-            </button>
+            <div className="flex items-center gap-2">
+              <LanguageToggle />
+              <button
+                className="w-10 h-10 rounded-lg border border-border bg-secondary text-foreground flex items-center justify-center cursor-pointer"
+                onClick={() => setMobileOpen(false)}
+                aria-label={t("nav.closeMenu")}
+              >
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <path d="M18 6L6 18M6 6l12 12" />
+                </svg>
+              </button>
+            </div>
           </div>
 
           <div className="mt-8 flex flex-col gap-3 max-w-md mx-auto">
-            {[
-              { label: "Home", to: "/" },
-              { label: "About", to: "/about" },
-              { label: "Blog", to: "/blog" },
-              { label: "Market Intel", to: "/data" },
-              { label: "Market Data", to: "/market-data" },
-              { label: "Checklist Intel", to: "/checklist-intel" },
-              { label: "MLB Leaders", to: "/mlb-venezuelan-leaders" },
-            ].map((item) => (
+            {NAV_ITEMS.map((item) => (
               <Link
-                key={item.label}
+                key={item.key}
                 to={item.to}
                 onClick={closeMobileInstant}
                 className="flex items-center justify-center w-full py-4 rounded-xl border border-border bg-secondary text-foreground no-underline font-display font-bold text-lg hover:bg-vzla-yellow/10 hover:border-vzla-yellow/20 transition-colors"
               >
-                {item.label}
+                {t(item.key)}
               </Link>
             ))}
             <a
@@ -233,7 +229,7 @@ const VzlaNavbar = () => {
               rel="noopener noreferrer"
               className="flex items-center justify-center w-full py-4 rounded-xl border border-border bg-secondary text-foreground no-underline font-display font-bold text-lg"
             >
-              🛒 Shop
+              🛒 {t("nav.shop")}
             </a>
             <div className="mt-4 p-4 rounded-xl border border-border bg-secondary/50 flex justify-center">
               <SocialIcons />
