@@ -2,6 +2,19 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Link, useLocation } from "react-router-dom";
 import FeedbackForm from "./FeedbackForm";
+import LanguageToggle from "./LanguageToggle";
+import { useLanguage } from "@/i18n/LanguageProvider";
+import type { TranslationKey } from "@/i18n/translations";
+
+const NAV_ITEMS: { key: TranslationKey; to: string }[] = [
+  { key: "nav.home", to: "/" },
+  { key: "nav.about", to: "/about" },
+  { key: "nav.blog", to: "/blog" },
+  { key: "nav.marketIntel", to: "/data" },
+  { key: "nav.marketData", to: "/market-data" },
+  { key: "nav.checklistIntel", to: "/checklist-intel" },
+  { key: "nav.mlbLeaders", to: "/mlb-venezuelan-leaders" },
+];
 
 const SOCIAL_LINKS = {
   instagram: "https://www.instagram.com/localheros_sportscards/",
@@ -51,6 +64,7 @@ const VzlaNavbar = () => {
   const [shopOpen, setShopOpen] = useState(false);
   const [contactOpen, setContactOpen] = useState(false);
   const location = useLocation();
+  const { t } = useLanguage();
 
   const closeMobileInstant = () => {
     setMobileOpen(false);
@@ -75,16 +89,8 @@ const VzlaNavbar = () => {
 
         {/* Desktop nav */}
         <ul className="hidden md:flex gap-1 items-center m-0 p-0 list-none absolute left-1/2 -translate-x-1/2" role="menubar">
-          {[
-            { label: "Home", to: "/" },
-            { label: "About", to: "/about" },
-            { label: "Blog", to: "/blog" },
-            { label: "Market Intel", to: "/data" },
-            { label: "Market Data", to: "/market-data" },
-            { label: "Checklist Intel", to: "/checklist-intel" },
-            { label: "MLB Leaders", to: "/mlb-venezuelan-leaders" },
-          ].map((item) => (
-            <li key={item.label} role="none">
+          {NAV_ITEMS.map((item) => (
+            <li key={item.key} role="none">
               <Link
                 to={item.to}
                 role="menuitem"
@@ -94,10 +100,11 @@ const VzlaNavbar = () => {
                     : "text-foreground/70 hover:text-foreground hover:bg-secondary"
                 }`}
               >
-                {item.label}
+                {t(item.key)}
               </Link>
             </li>
           ))}
+
 
           <li className="relative" role="none">
             <button
@@ -107,7 +114,7 @@ const VzlaNavbar = () => {
               role="menuitem"
               className="px-4 py-2 rounded-lg text-sm font-semibold bg-transparent border-none cursor-pointer text-foreground/70 hover:text-foreground hover:bg-secondary transition-colors inline-flex items-center gap-1.5"
             >
-              Shop
+              {t("nav.shop")}
               <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" className={`transition-transform ${shopOpen ? "rotate-180" : ""}`}>
                 <path d="M6 9l6 6 6-6" />
               </svg>
@@ -127,7 +134,7 @@ const VzlaNavbar = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    🛒 Visit my eBay Store
+                    🛒 {t("nav.visitStore")}
                   </a>
                 </motion.div>
               )}
@@ -142,7 +149,7 @@ const VzlaNavbar = () => {
               role="menuitem"
               className="px-4 py-2 rounded-lg text-sm font-semibold bg-transparent border-none cursor-pointer text-foreground/70 hover:text-foreground hover:bg-secondary transition-colors inline-flex items-center gap-1.5"
             >
-              Contact
+              {t("nav.contact")}
               <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" className={`transition-transform ${contactOpen ? "rotate-180" : ""}`}>
                 <path d="M6 9l6 6 6-6" />
               </svg>
@@ -165,16 +172,20 @@ const VzlaNavbar = () => {
           </li>
         </ul>
 
-        {/* Hamburger */}
-        <button
-          className="flex md:hidden w-10 h-10 rounded-lg border border-border bg-secondary items-center justify-center cursor-pointer hover:border-vzla-yellow/25 transition-all"
-          onClick={() => setMobileOpen(true)}
-          aria-label="Open menu"
-        >
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-            <path d="M4 6h16M4 12h16M4 18h16" />
-          </svg>
-        </button>
+        <div className="flex items-center gap-2">
+          <LanguageToggle className="hidden md:inline-flex" />
+
+          {/* Hamburger */}
+          <button
+            className="flex md:hidden w-10 h-10 rounded-lg border border-border bg-secondary items-center justify-center cursor-pointer hover:border-vzla-yellow/25 transition-all"
+            onClick={() => setMobileOpen(true)}
+            aria-label={t("nav.openMenu")}
+          >
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <path d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+        </div>
       </nav>
 
       {/* Mobile menu */}
@@ -187,33 +198,29 @@ const VzlaNavbar = () => {
               </div>
               <span className="font-display font-bold text-sm text-foreground">VZLA SPORTS</span>
             </Link>
-            <button
-              className="w-10 h-10 rounded-lg border border-border bg-secondary text-foreground flex items-center justify-center cursor-pointer"
-              onClick={() => setMobileOpen(false)}
-            >
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                <path d="M18 6L6 18M6 6l12 12" />
-              </svg>
-            </button>
+            <div className="flex items-center gap-2">
+              <LanguageToggle />
+              <button
+                className="w-10 h-10 rounded-lg border border-border bg-secondary text-foreground flex items-center justify-center cursor-pointer"
+                onClick={() => setMobileOpen(false)}
+                aria-label={t("nav.closeMenu")}
+              >
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <path d="M18 6L6 18M6 6l12 12" />
+                </svg>
+              </button>
+            </div>
           </div>
 
           <div className="mt-8 flex flex-col gap-3 max-w-md mx-auto">
-            {[
-              { label: "Home", to: "/" },
-              { label: "About", to: "/about" },
-              { label: "Blog", to: "/blog" },
-              { label: "Market Intel", to: "/data" },
-              { label: "Market Data", to: "/market-data" },
-              { label: "Checklist Intel", to: "/checklist-intel" },
-              { label: "MLB Leaders", to: "/mlb-venezuelan-leaders" },
-            ].map((item) => (
+            {NAV_ITEMS.map((item) => (
               <Link
-                key={item.label}
+                key={item.key}
                 to={item.to}
                 onClick={closeMobileInstant}
                 className="flex items-center justify-center w-full py-4 rounded-xl border border-border bg-secondary text-foreground no-underline font-display font-bold text-lg hover:bg-vzla-yellow/10 hover:border-vzla-yellow/20 transition-colors"
               >
-                {item.label}
+                {t(item.key)}
               </Link>
             ))}
             <a
@@ -222,7 +229,7 @@ const VzlaNavbar = () => {
               rel="noopener noreferrer"
               className="flex items-center justify-center w-full py-4 rounded-xl border border-border bg-secondary text-foreground no-underline font-display font-bold text-lg"
             >
-              🛒 Shop
+              🛒 {t("nav.shop")}
             </a>
             <div className="mt-4 p-4 rounded-xl border border-border bg-secondary/50 flex justify-center">
               <SocialIcons />
