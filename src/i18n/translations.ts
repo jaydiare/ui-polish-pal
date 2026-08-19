@@ -66,7 +66,9 @@ export const translations = {
     "footer.privacy": "Privacy Policy",
   },
   es: {
+    ...pageTranslations.es,
     // Navigation
+
     "nav.home": "Inicio",
     "nav.about": "Nosotros",
     "nav.blog": "Blog",
