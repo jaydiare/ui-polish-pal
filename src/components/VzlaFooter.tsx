@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { useLanguage } from "@/i18n/LanguageProvider";
 
 const EBAY_STORE = "https://www.ebay.ca/str/localherossportscards?mkcid=1&mkrid=706-53473-19255-0&siteid=2&campid=5339142305&toolid=10001&mkevt=1";
 
@@ -12,6 +13,8 @@ const SOCIAL = {
 };
 
 const VzlaFooter = () => {
+  const { t } = useLanguage();
+
   return (
     <>
       <footer id="about" className="mt-16 border-t border-border bg-card">
@@ -30,7 +33,7 @@ const VzlaFooter = () => {
                 </div>
               </div>
               <p className="text-sm text-muted-foreground leading-relaxed mb-5 max-w-sm">
-                Your Venezuelan athletes trading card index. Get real-time prices, stability insights, and smart budget tools for sports card collecting.
+                {t("footer.tagline")}
               </p>
               <div className="flex gap-2">
                 <a className="icon-btn" href={SOCIAL.instagram} target="_blank" rel="noopener noreferrer" aria-label="Instagram">
@@ -60,15 +63,15 @@ const VzlaFooter = () => {
 
             {/* Resources column */}
             <div>
-              <h4 className="font-display font-bold text-foreground text-sm mb-4">Resources</h4>
+              <h4 className="font-display font-bold text-foreground text-sm mb-4">{t("footer.resources")}</h4>
               <nav className="flex flex-col gap-2.5">
-                <a href="#top" className="text-sm text-muted-foreground no-underline hover:text-foreground transition-colors">Home</a>
-                <Link to="/methodology" className="text-sm text-muted-foreground no-underline hover:text-foreground transition-colors">Methodology & FAQ</Link>
-                <Link to="/how-it-works" className="text-sm text-muted-foreground no-underline hover:text-foreground transition-colors">How It Works</Link>
-                <a href={EBAY_STORE} target="_blank" rel="noopener noreferrer" className="text-sm text-muted-foreground no-underline hover:text-foreground transition-colors">eBay Store</a>
+                <a href="#top" className="text-sm text-muted-foreground no-underline hover:text-foreground transition-colors">{t("nav.home")}</a>
+                <Link to="/methodology" className="text-sm text-muted-foreground no-underline hover:text-foreground transition-colors">{t("footer.methodology")}</Link>
+                <Link to="/how-it-works" className="text-sm text-muted-foreground no-underline hover:text-foreground transition-colors">{t("footer.howItWorks")}</Link>
+                <a href={EBAY_STORE} target="_blank" rel="noopener noreferrer" className="text-sm text-muted-foreground no-underline hover:text-foreground transition-colors">{t("footer.ebayStore")}</a>
                 
-                <a href={BCW} target="_blank" rel="noopener noreferrer" className="text-sm text-muted-foreground no-underline hover:text-foreground transition-colors">BCW Supplies</a>
-                <a href="https://www.facebook.com/groups/1591729798708721" target="_blank" rel="noopener noreferrer" className="text-sm text-muted-foreground no-underline hover:text-foreground transition-colors">Facebook Community</a>
+                <a href={BCW} target="_blank" rel="noopener noreferrer" className="text-sm text-muted-foreground no-underline hover:text-foreground transition-colors">{t("footer.bcw")}</a>
+                <a href="https://www.facebook.com/groups/1591729798708721" target="_blank" rel="noopener noreferrer" className="text-sm text-muted-foreground no-underline hover:text-foreground transition-colors">{t("footer.facebookCommunity")}</a>
                 <a href="https://marketmoversapp.com/vzlaelite" target="_blank" rel="noopener noreferrer" className="text-sm text-muted-foreground no-underline hover:text-foreground transition-colors">Market Movers</a>
               </nav>
             </div>
@@ -96,9 +99,9 @@ const VzlaFooter = () => {
 
           {/* Bottom bar */}
           <div className="pt-6 border-t border-border flex items-center justify-between text-xs text-muted-foreground">
-            <span>© {new Date().getFullYear()} VZLA Sports Elite. All rights reserved.</span>
+            <span>© {new Date().getFullYear()} VZLA Sports Elite. {t("footer.rights")}</span>
             <Link to="/privacy" className="text-muted-foreground no-underline hover:text-foreground transition-colors">
-              Privacy Policy
+              {t("footer.privacy")}
             </Link>
           </div>
         </div>
