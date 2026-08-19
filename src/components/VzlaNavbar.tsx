@@ -89,16 +89,8 @@ const VzlaNavbar = () => {
 
         {/* Desktop nav */}
         <ul className="hidden md:flex gap-1 items-center m-0 p-0 list-none absolute left-1/2 -translate-x-1/2" role="menubar">
-          {[
-            { label: "Home", to: "/" },
-            { label: "About", to: "/about" },
-            { label: "Blog", to: "/blog" },
-            { label: "Market Intel", to: "/data" },
-            { label: "Market Data", to: "/market-data" },
-            { label: "Checklist Intel", to: "/checklist-intel" },
-            { label: "MLB Leaders", to: "/mlb-venezuelan-leaders" },
-          ].map((item) => (
-            <li key={item.label} role="none">
+          {NAV_ITEMS.map((item) => (
+            <li key={item.key} role="none">
               <Link
                 to={item.to}
                 role="menuitem"
@@ -108,10 +100,11 @@ const VzlaNavbar = () => {
                     : "text-foreground/70 hover:text-foreground hover:bg-secondary"
                 }`}
               >
-                {item.label}
+                {t(item.key)}
               </Link>
             </li>
           ))}
+
 
           <li className="relative" role="none">
             <button
