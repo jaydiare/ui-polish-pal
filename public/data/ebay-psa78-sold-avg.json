@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "updatedAt": "2026-08-19T13:26:13.895Z",
+    "updatedAt": "2026-08-19T19:03:48.969Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "PSA 7 + PSA 8 sold comps. Two queries per athlete. Strict per-grade title filter. Taguchi winsorized mean. USD via CBSA.",
     "targetGrades": [
@@ -8,8 +8,8 @@
       8
     ],
     "batchInfo": {
-      "startIdx": 232,
-      "endIdx": 240,
+      "startIdx": 240,
+      "endIdx": 248,
       "totalAthletes": 464
     },
     "maxPages": 3,
@@ -984,35 +984,35 @@
   },
   "Juan Castillo": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-08-05T03:46:21.347Z"
+    "erroredAt": "2026-08-19T19:04:05.793Z"
   },
   "Juan Moreno": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-08-05T03:46:41.438Z"
+    "erroredAt": "2026-08-19T19:04:26.135Z"
   },
   "Juan Morillo": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-08-05T03:47:03.274Z"
+    "erroredAt": "2026-08-19T19:04:55.618Z"
   },
   "Juan Rincon": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-08-05T03:47:26.437Z"
+    "erroredAt": "2026-08-19T19:05:25.259Z"
   },
   "Juan Rivera": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-08-05T03:47:50.052Z"
+    "erroredAt": "2026-08-19T19:05:45.063Z"
   },
   "Juan Yepez": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-08-05T03:48:10.802Z"
+    "erroredAt": "2026-08-19T19:06:07.670Z"
   },
   "Julio Machado": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-08-05T03:48:32.244Z"
+    "erroredAt": "2026-08-19T19:06:27.678Z"
   },
   "Junior Guerra": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-08-05T03:48:52.572Z"
+    "erroredAt": "2026-08-19T19:06:47.973Z"
   },
   "Keibert Ruiz": {
     "error": "eBay fetch failed (403)",
