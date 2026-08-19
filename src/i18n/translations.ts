@@ -1,8 +1,12 @@
+import { pageTranslations } from "./pageTranslations";
+
 export type Lang = "en" | "es";
 
 export const translations = {
   en: {
+    ...pageTranslations.en,
     // Navigation
+
     "nav.home": "Home",
     "nav.about": "About",
     "nav.blog": "Blog",
