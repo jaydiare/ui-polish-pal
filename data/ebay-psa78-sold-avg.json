@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "updatedAt": "2026-08-19T02:03:43.795Z",
+    "updatedAt": "2026-08-19T07:21:30.739Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "PSA 7 + PSA 8 sold comps. Two queries per athlete. Strict per-grade title filter. Taguchi winsorized mean. USD via CBSA.",
     "targetGrades": [
@@ -8,8 +8,8 @@
       8
     ],
     "batchInfo": {
-      "startIdx": 216,
-      "endIdx": 224,
+      "startIdx": 224,
+      "endIdx": 232,
       "totalAthletes": 464
     },
     "maxPages": 3,
@@ -27,7 +27,7 @@
     },
     "fx": {
       "source": "CBSA Exchange Rates API",
-      "asOf": "2026-08-19T00:00:00.000Z"
+      "asOf": "2026-08-20T00:00:00.000Z"
     }
   },
   "Adbert Alzolay": {
@@ -920,35 +920,35 @@
   },
   "Jose Malave": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-08-04T15:04:33.420Z"
+    "erroredAt": "2026-08-19T07:21:46.351Z"
   },
   "Jose Martinez": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-08-04T15:04:54.280Z"
+    "erroredAt": "2026-08-19T07:22:05.613Z"
   },
   "Jose Mijares": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-08-04T15:05:15.527Z"
+    "erroredAt": "2026-08-19T07:22:28.733Z"
   },
   "Jose Mujica": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-08-04T15:05:37.872Z"
+    "erroredAt": "2026-08-19T07:22:48.894Z"
   },
   "Jose Nieves": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-08-04T15:06:01.775Z"
+    "erroredAt": "2026-08-19T07:23:12.457Z"
   },
   "Jose Ortega": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-08-04T15:06:24.343Z"
+    "erroredAt": "2026-08-19T07:23:33.255Z"
   },
   "Jose Osuna": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-08-04T15:06:46.782Z"
+    "erroredAt": "2026-08-19T07:23:53.476Z"
   },
   "Jose Peraza": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-08-04T15:07:10.196Z"
+    "erroredAt": "2026-08-19T07:24:13.608Z"
   },
   "Jose Pirela": {
     "error": "eBay fetch failed (403)",
