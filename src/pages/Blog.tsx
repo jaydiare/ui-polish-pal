@@ -6,8 +6,10 @@ import VzlaNavbar from "@/components/VzlaNavbar";
 import VzlaFooter from "@/components/VzlaFooter";
 import VzlaEbayFooter from "@/components/VzlaEbayFooter";
 import type { BlogPost } from "@/data/blog-types";
+import { useLanguage } from "@/i18n/LanguageProvider";
 
 const Blog = () => {
+  const { t, lang } = useLanguage();
   const [posts, setPosts] = useState<BlogPost[]>([]);
 
   useEffect(() => {
@@ -52,9 +54,14 @@ const Blog = () => {
       />
       <VzlaNavbar />
       <main className="page-shell pt-8">
-        <h1 className="text-3xl md:text-4xl font-display font-bold text-flag-gradient mb-2">Blog</h1>
+        <h1 className="text-3xl md:text-4xl font-display font-bold text-flag-gradient mb-2">{t("blog.title")}</h1>
         <div className="flex items-center justify-between mb-8">
-          <p className="text-muted-foreground">Market insights, top sales, and more.</p>
+          <p className="text-muted-foreground">
+            {t("blog.subtitle")}
+            {lang === "es" && (
+              <span className="block text-xs mt-1">{t("blog.articlesInEnglish")}</span>
+            )}
+          </p>
           <SocialShare url="https://vzlasportselite.com/blog" title="VZLA Sports Elite Blog – Market Insights & Top Sales" compact />
         </div>
 
@@ -76,7 +83,7 @@ const Blog = () => {
         </div>
 
         {posts.length === 0 && (
-          <p className="text-muted-foreground text-center py-12">No posts yet.</p>
+          <p className="text-muted-foreground text-center py-12">{t("blog.empty")}</p>
         )}
 
         <VzlaFooter />
