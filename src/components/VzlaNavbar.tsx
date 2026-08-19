@@ -114,7 +114,7 @@ const VzlaNavbar = () => {
               role="menuitem"
               className="px-4 py-2 rounded-lg text-sm font-semibold bg-transparent border-none cursor-pointer text-foreground/70 hover:text-foreground hover:bg-secondary transition-colors inline-flex items-center gap-1.5"
             >
-              Shop
+              {t("nav.shop")}
               <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" className={`transition-transform ${shopOpen ? "rotate-180" : ""}`}>
                 <path d="M6 9l6 6 6-6" />
               </svg>
@@ -134,7 +134,7 @@ const VzlaNavbar = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    🛒 Visit my eBay Store
+                    🛒 {t("nav.visitStore")}
                   </a>
                 </motion.div>
               )}
@@ -149,7 +149,7 @@ const VzlaNavbar = () => {
               role="menuitem"
               className="px-4 py-2 rounded-lg text-sm font-semibold bg-transparent border-none cursor-pointer text-foreground/70 hover:text-foreground hover:bg-secondary transition-colors inline-flex items-center gap-1.5"
             >
-              Contact
+              {t("nav.contact")}
               <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" className={`transition-transform ${contactOpen ? "rotate-180" : ""}`}>
                 <path d="M6 9l6 6 6-6" />
               </svg>
@@ -172,16 +172,20 @@ const VzlaNavbar = () => {
           </li>
         </ul>
 
-        {/* Hamburger */}
-        <button
-          className="flex md:hidden w-10 h-10 rounded-lg border border-border bg-secondary items-center justify-center cursor-pointer hover:border-vzla-yellow/25 transition-all"
-          onClick={() => setMobileOpen(true)}
-          aria-label="Open menu"
-        >
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-            <path d="M4 6h16M4 12h16M4 18h16" />
-          </svg>
-        </button>
+        <div className="flex items-center gap-2">
+          <LanguageToggle className="hidden md:inline-flex" />
+
+          {/* Hamburger */}
+          <button
+            className="flex md:hidden w-10 h-10 rounded-lg border border-border bg-secondary items-center justify-center cursor-pointer hover:border-vzla-yellow/25 transition-all"
+            onClick={() => setMobileOpen(true)}
+            aria-label={t("nav.openMenu")}
+          >
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <path d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+        </div>
       </nav>
 
       {/* Mobile menu */}
