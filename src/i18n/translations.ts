@@ -1,8 +1,12 @@
+import { pageTranslations } from "./pageTranslations";
+
 export type Lang = "en" | "es";
 
 export const translations = {
   en: {
+    ...pageTranslations.en,
     // Navigation
+
     "nav.home": "Home",
     "nav.about": "About",
     "nav.blog": "Blog",
@@ -62,7 +66,9 @@ export const translations = {
     "footer.privacy": "Privacy Policy",
   },
   es: {
+    ...pageTranslations.es,
     // Navigation
+
     "nav.home": "Inicio",
     "nav.about": "Nosotros",
     "nav.blog": "Blog",
