@@ -7,7 +7,10 @@ interface SEOHeadProps {
   image?: string;
   type?: string;
   jsonLd?: Record<string, any> | Record<string, any>[];
+  /** Extra keywords appended to the Spanish/Venezuela base set */
+  keywords?: string;
 }
+
 
 const BASE_URL = "https://vzlasportselite.com";
 const DEFAULT_IMAGE = `${BASE_URL}/assets/feature_image.jpg`;
