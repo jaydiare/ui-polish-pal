@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "updatedAt": "2026-08-22T01:59:45.114Z",
+    "updatedAt": "2026-08-22T07:10:19.605Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "PSA 7 + PSA 8 sold comps. Two queries per athlete. Strict per-grade title filter. Taguchi winsorized mean. USD via CBSA.",
     "targetGrades": [
@@ -8,8 +8,8 @@
       8
     ],
     "batchInfo": {
-      "startIdx": 312,
-      "endIdx": 320,
+      "startIdx": 320,
+      "endIdx": 328,
       "totalAthletes": 464
     },
     "maxPages": 3,
@@ -27,7 +27,7 @@
     },
     "fx": {
       "source": "CBSA Exchange Rates API",
-      "asOf": "2026-08-22T00:00:00.000Z"
+      "asOf": "2026-08-23T00:00:00.000Z"
     }
   },
   "Adbert Alzolay": {
@@ -1304,35 +1304,35 @@
   },
   "Omar Infante": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-08-07T13:51:33.708Z"
+    "erroredAt": "2026-08-22T07:10:34.882Z"
   },
   "Omar Narvaez": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-08-07T13:51:54.771Z"
+    "erroredAt": "2026-08-22T07:10:55.906Z"
   },
   "Omar Vizquel": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-08-07T13:52:15.341Z"
+    "erroredAt": "2026-08-22T07:11:18.745Z"
   },
   "Orber Moreno": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-08-07T13:52:34.764Z"
+    "erroredAt": "2026-08-22T07:11:41.883Z"
   },
   "Orlando Arcia": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-08-07T13:52:55.848Z"
+    "erroredAt": "2026-08-22T07:12:04.472Z"
   },
   "Oscar Azocar": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-08-07T13:53:16.745Z"
+    "erroredAt": "2026-08-22T07:12:24.649Z"
   },
   "Oscar Henriquez": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-08-07T13:53:38.131Z"
+    "erroredAt": "2026-08-22T07:12:46.577Z"
   },
   "Oscar Hernandez": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-08-07T13:53:58.404Z"
+    "erroredAt": "2026-08-22T07:13:07.338Z"
   },
   "Oscar Salazar": {
     "error": "eBay fetch failed (403)",
