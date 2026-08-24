@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "updatedAt": "2026-08-24T13:31:41.393Z",
+    "updatedAt": "2026-08-24T19:10:55.484Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "PSA 7 + PSA 8 sold comps. Two queries per athlete. Strict per-grade title filter. Taguchi winsorized mean. USD via CBSA.",
     "targetGrades": [
@@ -8,8 +8,8 @@
       8
     ],
     "batchInfo": {
-      "startIdx": 392,
-      "endIdx": 400,
+      "startIdx": 400,
+      "endIdx": 408,
       "totalAthletes": 464
     },
     "maxPages": 3,
@@ -1624,35 +1624,35 @@
   },
   "Wil Ledezma": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-08-10T02:42:13.123Z"
+    "erroredAt": "2026-08-24T19:11:10.846Z"
   },
   "Wilfredo Rodriguez": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-08-10T02:42:36.894Z"
+    "erroredAt": "2026-08-24T19:11:32.157Z"
   },
   "Wilfredo Tovar": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-08-10T02:43:00.675Z"
+    "erroredAt": "2026-08-24T19:11:51.789Z"
   },
   "William Bergolla": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-08-10T02:43:24.379Z"
+    "erroredAt": "2026-08-24T19:12:14.987Z"
   },
   "William Contreras": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-08-10T02:43:44.089Z"
+    "erroredAt": "2026-08-24T19:12:37.135Z"
   },
   "William Cuevas": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-08-10T02:44:05.063Z"
+    "erroredAt": "2026-08-24T19:12:58.795Z"
   },
   "Williams Perez": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-08-10T02:44:28.172Z"
+    "erroredAt": "2026-08-24T19:13:19.128Z"
   },
   "Willians Astudillo": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-08-10T02:44:51.516Z"
+    "erroredAt": "2026-08-24T19:13:43.050Z"
   },
   "Willie Canate": {
     "error": "eBay fetch failed (403)",
