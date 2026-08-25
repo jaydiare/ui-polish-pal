@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "updatedAt": "2026-08-25T02:04:17.852Z",
+    "updatedAt": "2026-08-25T07:26:22.643Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "PSA 7 + PSA 8 sold comps. Two queries per athlete. Strict per-grade title filter. Taguchi winsorized mean. USD via CBSA.",
     "targetGrades": [
@@ -8,8 +8,8 @@
       8
     ],
     "batchInfo": {
-      "startIdx": 408,
-      "endIdx": 416,
+      "startIdx": 416,
+      "endIdx": 424,
       "totalAthletes": 464
     },
     "maxPages": 3,
@@ -27,7 +27,7 @@
     },
     "fx": {
       "source": "CBSA Exchange Rates API",
-      "asOf": "2026-08-25T00:00:00.000Z"
+      "asOf": "2026-08-26T00:00:00.000Z"
     }
   },
   "Adbert Alzolay": {
@@ -1688,35 +1688,35 @@
   },
   "Yangervis Solarte": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-08-10T13:58:00.015Z"
+    "erroredAt": "2026-08-25T07:26:37.763Z"
   },
   "Yilber Diaz": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-08-10T13:58:23.328Z"
+    "erroredAt": "2026-08-25T07:26:56.936Z"
   },
   "Yoel Hernandez": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-08-10T13:58:46.948Z"
+    "erroredAt": "2026-08-25T07:27:16.987Z"
   },
   "Yoendrys Gomez": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-08-10T13:59:06.689Z"
+    "erroredAt": "2026-08-25T07:27:37.678Z"
   },
   "Yoervis Medina": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-08-10T13:59:27.623Z"
+    "erroredAt": "2026-08-25T07:28:00.745Z"
   },
   "Yohan Pino": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-08-10T13:59:50.850Z"
+    "erroredAt": "2026-08-25T07:28:23.654Z"
   },
   "Yohander Mendez": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-08-10T14:00:11.657Z"
+    "erroredAt": "2026-08-25T07:28:45.453Z"
   },
   "Yohel Pozo": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-08-10T14:00:31.254Z"
+    "erroredAt": "2026-08-25T07:29:09.232Z"
   },
   "Yohendrick Pinango": {
     "error": "eBay fetch failed (403)",
