@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "updatedAt": "2026-08-26T02:10:09.877Z",
+    "updatedAt": "2026-08-26T07:27:40.261Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "PSA 7 + PSA 8 sold comps. Two queries per athlete. Strict per-grade title filter. Taguchi winsorized mean. USD via CBSA.",
     "targetGrades": [
@@ -8,8 +8,8 @@
       8
     ],
     "batchInfo": {
-      "startIdx": 440,
-      "endIdx": 448,
+      "startIdx": 448,
+      "endIdx": 456,
       "totalAthletes": 464
     },
     "maxPages": 3,
@@ -27,7 +27,7 @@
     },
     "fx": {
       "source": "CBSA Exchange Rates API",
-      "asOf": "2026-08-26T00:00:00.000Z"
+      "asOf": "2026-08-27T00:00:00.000Z"
     }
   },
   "Adbert Alzolay": {
@@ -1816,35 +1816,35 @@
   },
   "Dani Pereira": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-08-11T13:57:40.132Z"
+    "erroredAt": "2026-08-26T07:27:56.318Z"
   },
   "David Martinez": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-08-11T13:58:01.192Z"
+    "erroredAt": "2026-08-26T07:28:20.392Z"
   },
   "Emilio Renteria": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-08-11T13:58:21.826Z"
+    "erroredAt": "2026-08-26T07:28:43.200Z"
   },
   "Gustavo Caraballo": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-08-11T13:58:42.484Z"
+    "erroredAt": "2026-08-26T07:29:06.083Z"
   },
   "Josef Martinez": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-08-11T13:59:04.400Z"
+    "erroredAt": "2026-08-26T07:29:27.864Z"
   },
   "Junior Moreno": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-08-11T13:59:26.820Z"
+    "erroredAt": "2026-08-26T07:29:48.082Z"
   },
   "Kevin Kelsy": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-08-11T13:59:46.825Z"
+    "erroredAt": "2026-08-26T07:30:09.983Z"
   },
   "Rafael Romo": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-08-11T14:00:06.938Z"
+    "erroredAt": "2026-08-26T07:30:30.240Z"
   },
   "Telasco Segovia": {
     "error": "eBay fetch failed (403)",
