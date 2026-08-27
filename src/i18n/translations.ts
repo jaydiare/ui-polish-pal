@@ -126,6 +126,16 @@ export const translations = {
     "footer.marketMovers": "Market Movers",
     "footer.rights": "Todos los derechos reservados.",
     "footer.privacy": "Política de Privacidad",
+    // Price history
+    "history.title": "Historial de precios",
+    "history.raw": "Sin gradar",
+    "history.graded": "Gradada",
+    "history.current": "Actual",
+    "history.high": "Máximo",
+    "history.low": "Mínimo",
+    "history.change": "Cambio",
+    "history.note": "Precios promedio de anuncios activos según nuestras capturas diarias.",
+
   },
 } as const;
 
