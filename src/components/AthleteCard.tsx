@@ -13,6 +13,8 @@ import {
 } from "@/lib/vzla-helpers";
 import { useAthleteImage } from "@/hooks/useAthleteImage";
 import Sparkline from "./Sparkline";
+import PriceHistoryDialog from "./PriceHistoryDialog";
+
 
 interface AthleteCardProps {
   athlete: Athlete;
