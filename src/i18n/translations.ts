@@ -64,6 +64,16 @@ export const translations = {
     "footer.marketMovers": "Market Movers",
     "footer.rights": "All rights reserved.",
     "footer.privacy": "Privacy Policy",
+    // Price history
+    "history.title": "Price history",
+    "history.raw": "Raw",
+    "history.graded": "Graded",
+    "history.current": "Current",
+    "history.high": "Period high",
+    "history.low": "Period low",
+    "history.change": "Change",
+    "history.note": "Average active listing prices from our daily snapshots.",
+
   },
   es: {
     ...pageTranslations.es,
@@ -126,6 +136,16 @@ export const translations = {
     "footer.marketMovers": "Market Movers",
     "footer.rights": "Todos los derechos reservados.",
     "footer.privacy": "Política de Privacidad",
+    // Price history
+    "history.title": "Historial de precios",
+    "history.raw": "Sin gradar",
+    "history.graded": "Gradada",
+    "history.current": "Actual",
+    "history.high": "Máximo",
+    "history.low": "Mínimo",
+    "history.change": "Cambio",
+    "history.note": "Precios promedio de anuncios activos según nuestras capturas diarias.",
+
   },
 } as const;
 
