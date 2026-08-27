@@ -74,6 +74,28 @@ export const translations = {
     "history.change": "Change",
     "history.note": "Average active listing prices from our daily snapshots.",
 
+    // Career stats (MLB)
+    "career.title": "Career stats",
+    "career.hitting": "Hitting",
+    "career.pitching": "Pitching",
+    "career.source": "Source: MLB Stats API",
+    "career.games": "G",
+    "career.hits": "H",
+    "career.homeRuns": "HR",
+    "career.rbi": "RBI",
+    "career.avg": "AVG",
+    "career.ops": "OPS",
+    "career.stolenBases": "SB",
+    "career.wins": "W",
+    "career.losses": "L",
+    "career.era": "ERA",
+    "career.strikeOuts": "K",
+    "career.whip": "WHIP",
+    "career.saves": "SV",
+    "career.inningsPitched": "IP",
+
+
+
   },
   es: {
     ...pageTranslations.es,
@@ -145,6 +167,28 @@ export const translations = {
     "history.low": "Mínimo",
     "history.change": "Cambio",
     "history.note": "Precios promedio de anuncios activos según nuestras capturas diarias.",
+
+    // Career stats (MLB)
+    "career.title": "Estadísticas de carrera",
+    "career.hitting": "Bateo",
+    "career.pitching": "Pitcheo",
+    "career.source": "Fuente: MLB Stats API",
+    "career.games": "J",
+    "career.hits": "H",
+    "career.homeRuns": "HR",
+    "career.rbi": "CI",
+    "career.avg": "PROM",
+    "career.ops": "OPS",
+    "career.stolenBases": "BR",
+    "career.wins": "G",
+    "career.losses": "P",
+    "career.era": "EFE",
+    "career.strikeOuts": "P",
+    "career.whip": "WHIP",
+    "career.saves": "SLV",
+    "career.inningsPitched": "IL",
+
+
 
   },
 } as const;

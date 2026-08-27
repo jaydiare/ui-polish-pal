@@ -10,7 +10,9 @@ import {
 } from "recharts";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 import { useLanguage } from "@/i18n/LanguageProvider";
+import CareerStatsStrip from "./CareerStatsStrip";
 import { Athlete } from "@/data/athletes";
+
 
 export interface SeriesData {
   values: number[];
@@ -102,6 +104,10 @@ const PriceHistoryDialog = ({ open, onOpenChange, athlete, raw, graded, priceMod
             {athlete.team ? ` · ${athlete.team}` : ""}
           </DialogDescription>
         </DialogHeader>
+
+        <CareerStatsStrip name={athlete.name} sport={athlete.sport} enabled={open} />
+
+
 
         {/* Series toggles */}
         <div className="flex items-center gap-2">
