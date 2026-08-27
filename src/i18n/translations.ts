@@ -64,6 +64,16 @@ export const translations = {
     "footer.marketMovers": "Market Movers",
     "footer.rights": "All rights reserved.",
     "footer.privacy": "Privacy Policy",
+    // Price history
+    "history.title": "Price history",
+    "history.raw": "Raw",
+    "history.graded": "Graded",
+    "history.current": "Current",
+    "history.high": "Period high",
+    "history.low": "Period low",
+    "history.change": "Change",
+    "history.note": "Average active listing prices from our daily snapshots.",
+
   },
   es: {
     ...pageTranslations.es,
