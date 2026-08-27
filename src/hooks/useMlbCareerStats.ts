@@ -87,47 +87,65 @@ async function loadCareerStats(name: string): Promise<CareerStats | null> {
 export function useMlbCareerStats(name: string, sport: string, enabled: boolean) {
   const active = enabled && sport === "Baseball" && !!name;
   const key = normalize(name);
+  const [retryTick, setRetryTick] = useState(0);
 
-  const [state, setState] = useState<{ loading: boolean; data: CareerStats | null }>(() =>
+  const [state, setState] = useState<{
+    loading: boolean;
+    data: CareerStats | null;
+    error: boolean;
+  }>(() =>
     active && cache.has(key)
-      ? { loading: false, data: cache.get(key) ?? null }
-      : { loading: active, data: null },
+      ? { loading: false, data: cache.get(key) ?? null, error: false }
+      : { loading: active, data: null, error: false },
   );
 
   useEffect(() => {
     if (!active) {
-      setState({ loading: false, data: null });
+      setState({ loading: false, data: null, error: false });
       return;
     }
 
     if (cache.has(key)) {
-      setState({ loading: false, data: cache.get(key) ?? null });
+      setState({ loading: false, data: cache.get(key) ?? null, error: false });
       return;
     }
 
     let cancelled = false;
-    setState({ loading: true, data: null });
+    setState({ loading: true, data: null, error: false });
 
     let promise = inflight.get(key);
     if (!promise) {
       promise = loadCareerStats(name)
-        .catch(() => null)
         .then((result) => {
-          cache.set(key, result);
-          inflight.delete(key);
+          cache.set(key, result); // only cache successful lookups (incl. known misses)
           return result;
+        })
+        .finally(() => {
+          inflight.delete(key);
         });
       inflight.set(key, promise);
     }
 
-    promise.then((result) => {
-      if (!cancelled) setState({ loading: false, data: result });
-    });
+    promise
+      .then((result) => {
+        if (!cancelled) setState({ loading: false, data: result, error: false });
+      })
+      .catch(() => {
+        // Network failure: surface an error and leave the cache untouched
+        // so a retry re-issues the request.
+        if (!cancelled) setState({ loading: false, data: null, error: true });
+      });
 
     return () => {
       cancelled = true;
     };
-  }, [active, key, name]);
+  }, [active, key, name, retryTick]);
 
-  return state;
+  const retry = () => {
+    cache.delete(key);
+    inflight.delete(key);
+    setRetryTick((n) => n + 1);
+  };
+
+  return { ...state, retry };
 }
