@@ -181,6 +181,9 @@ const AthleteCard = forwardRef<HTMLElement, AthleteCardProps>(({ athlete, byName
   const showGradedSparkline = (priceMode === "graded" || priceMode === "both") && gradedSparkData != null;
   const showSparkline = showRawSparkline || showGradedSparkline;
 
+  const [historyOpen, setHistoryOpen] = useState(false);
+
+
   return (
     <article ref={(node) => {
       cardRef.current = node;
