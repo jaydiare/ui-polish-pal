@@ -74,6 +74,28 @@ export const translations = {
     "history.change": "Change",
     "history.note": "Average active listing prices from our daily snapshots.",
 
+    // Career stats (MLB)
+    "career.title": "Career stats",
+    "career.hitting": "Hitting",
+    "career.pitching": "Pitching",
+    "career.source": "Source: MLB Stats API",
+    "career.games": "G",
+    "career.hits": "H",
+    "career.homeRuns": "HR",
+    "career.rbi": "RBI",
+    "career.avg": "AVG",
+    "career.ops": "OPS",
+    "career.stolenBases": "SB",
+    "career.wins": "W",
+    "career.losses": "L",
+    "career.era": "ERA",
+    "career.strikeOuts": "K",
+    "career.whip": "WHIP",
+    "career.saves": "SV",
+    "career.inningsPitched": "IP",
+
+
+
   },
   es: {
     ...pageTranslations.es,
