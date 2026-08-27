@@ -1,4 +1,5 @@
-import { lazy, Suspense } from "react";
+import { Suspense } from "react";
+import { lazyRetry } from "@/lib/lazy-retry";
 import SEOHead from "@/components/SEOHead";
 import VzlaNavbar from "@/components/VzlaNavbar";
 import VzlaHero from "@/components/VzlaHero";
@@ -6,16 +7,16 @@ import VzlaIndexCards from "@/components/VzlaIndexCards";
 import VzlaSideBanner from "@/components/VzlaSideBanner";
 import BackToTop from "@/components/BackToTop";
 
-const VzlaMarketInsights = lazy(() => import("@/components/VzlaMarketInsights"));
+const VzlaMarketInsights = lazyRetry(() => import("@/components/VzlaMarketInsights"));
 
 
-const VzlaHowToMoney = lazy(() => import("@/components/VzlaHowToMoney"));
+const VzlaHowToMoney = lazyRetry(() => import("@/components/VzlaHowToMoney"));
 
-const VzlaBudgetBar = lazy(() => import("@/components/VzlaBudgetBar"));
-const VzlaSearchFilters = lazy(() => import("@/components/VzlaSearchFilters"));
-const VzlaAthleteGrid = lazy(() => import("@/components/VzlaAthleteGrid"));
-const VzlaFooter = lazy(() => import("@/components/VzlaFooter"));
-const VzlaEbayFooter = lazy(() => import("@/components/VzlaEbayFooter"));
+const VzlaBudgetBar = lazyRetry(() => import("@/components/VzlaBudgetBar"));
+const VzlaSearchFilters = lazyRetry(() => import("@/components/VzlaSearchFilters"));
+const VzlaAthleteGrid = lazyRetry(() => import("@/components/VzlaAthleteGrid"));
+const VzlaFooter = lazyRetry(() => import("@/components/VzlaFooter"));
+const VzlaEbayFooter = lazyRetry(() => import("@/components/VzlaEbayFooter"));
 import { useAthleteData } from "@/hooks/useAthleteData";
 
 const Index = () => {
