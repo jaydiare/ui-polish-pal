@@ -126,7 +126,7 @@ const PriceHistoryDialog = ({ open, onOpenChange, athlete, raw, graded, priceMod
               aria-pressed={showGraded}
               className={`px-3 py-1 rounded-lg text-xs font-semibold border transition-colors ${
                 showGraded
-                  ? "bg-vzla-yellow/15 border-vzla-yellow/30 text-vzla-yellow"
+                  ? "bg-vzla-mint/15 border-vzla-mint/30 text-vzla-mint"
                   : "bg-secondary border-border text-muted-foreground"
               }`}
             >
@@ -168,7 +168,7 @@ const PriceHistoryDialog = ({ open, onOpenChange, athlete, raw, graded, priceMod
                 <Line
                   type="monotone"
                   dataKey="graded"
-                  stroke="hsl(var(--vzla-yellow))"
+                  stroke="hsl(var(--vzla-mint))"
                   strokeWidth={2}
                   dot={false}
                   connectNulls
