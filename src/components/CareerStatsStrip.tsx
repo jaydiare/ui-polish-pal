@@ -36,13 +36,17 @@ const formatValue = (v: string | number | undefined) => {
 
 const CareerStatsStrip = ({ name, sport, enabled }: CareerStatsStripProps) => {
   const { t } = useLanguage();
-  const { loading, data } = useMlbCareerStats(name, sport, enabled);
+  const { loading, data, error, retry } = useMlbCareerStats(name, sport, enabled);
 
   if (sport !== "Baseball") return null;
 
   if (loading) {
     return (
-      <div className="rounded-xl border border-border/40 bg-secondary/30 p-3">
+      <div
+        className="rounded-xl border border-border/40 bg-secondary/30 p-3 animate-pulse"
+        role="status"
+        aria-label={t("career.loading")}
+      >
         <div className="h-3 w-24 rounded bg-muted-foreground/15 mb-2.5" />
         <div className="grid grid-cols-4 sm:grid-cols-7 gap-3">
           {Array.from({ length: 7 }).map((_, i) => (
@@ -52,11 +56,39 @@ const CareerStatsStrip = ({ name, sport, enabled }: CareerStatsStripProps) => {
             </div>
           ))}
         </div>
+        <span className="sr-only">{t("career.loading")}</span>
       </div>
     );
   }
 
-  if (!data) return null;
+  if (error) {
+    return (
+      <div
+        className="rounded-xl border border-destructive/30 bg-destructive/10 p-3 flex items-center gap-2.5"
+        role="alert"
+      >
+        <AlertTriangle className="w-4 h-4 text-destructive shrink-0" aria-hidden="true" />
+        <p className="text-xs text-muted-foreground flex-1">{t("career.error")}</p>
+        <button
+          type="button"
+          onClick={retry}
+          className="inline-flex items-center gap-1 text-xs font-semibold text-primary hover:text-primary/80 transition-colors"
+        >
+          <RefreshCw className="w-3 h-3" aria-hidden="true" />
+          {t("career.retry")}
+        </button>
+      </div>
+    );
+  }
+
+  if (!data) {
+    return (
+      <div className="rounded-xl border border-border/40 bg-secondary/30 p-3 flex items-center gap-2.5">
+        <Info className="w-4 h-4 text-muted-foreground shrink-0" aria-hidden="true" />
+        <p className="text-xs text-muted-foreground">{t("career.unavailable")}</p>
+      </div>
+    );
+  }
 
   const fields = data.group === "pitching" ? PITCHING_FIELDS : HITTING_FIELDS;
 

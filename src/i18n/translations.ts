@@ -93,6 +93,10 @@ export const translations = {
     "career.whip": "WHIP",
     "career.saves": "SV",
     "career.inningsPitched": "IP",
+    "career.loading": "Loading career stats…",
+    "career.error": "Couldn't load career stats. Check your connection and try again.",
+    "career.retry": "Retry",
+    "career.unavailable": "MLB career stats aren't available for this player yet.",
 
 
 
