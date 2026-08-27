@@ -96,9 +96,9 @@ const PriceHistoryDialog = ({ open, onOpenChange, athlete, raw, graded, priceMod
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent className="max-w-2xl">
-        <DialogHeader>
-          <DialogTitle className="font-display">{athlete.name}</DialogTitle>
+      <DialogContent className="max-w-2xl w-[calc(100vw-1.5rem)] max-h-[calc(100dvh-2rem)] overflow-y-auto p-4 sm:p-6">
+        <DialogHeader className="sticky top-0 z-10 bg-background pb-2 border-b border-border/40">
+          <DialogTitle className="font-display pr-6">{athlete.name}</DialogTitle>
           <DialogDescription>
             {t("history.title")} · {athlete.sport}
             {athlete.team ? ` · ${athlete.team}` : ""}
@@ -141,7 +141,7 @@ const PriceHistoryDialog = ({ open, onOpenChange, athlete, raw, graded, priceMod
           )}
         </div>
 
-        <div className="h-[260px] w-full">
+        <div className="h-[220px] sm:h-[260px] w-full">
           <ResponsiveContainer width="100%" height="100%">
             <LineChart data={data} margin={{ top: 8, right: 12, bottom: 4, left: -8 }}>
               <CartesianGrid strokeDasharray="3 3" stroke="hsl(var(--border))" opacity={0.4} />
