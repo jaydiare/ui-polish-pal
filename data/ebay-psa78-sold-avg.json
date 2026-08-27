@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "updatedAt": "2026-08-27T10:11:03.616Z",
+    "updatedAt": "2026-08-27T22:31:00.960Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "PSA 7 + PSA 8 sold comps. Two queries per athlete. Strict per-grade title filter. Taguchi winsorized mean. USD via CBSA.",
     "targetGrades": [
@@ -8,8 +8,8 @@
       8
     ],
     "batchInfo": {
-      "startIdx": 0,
-      "endIdx": 8,
+      "startIdx": 8,
+      "endIdx": 16,
       "totalAthletes": 464
     },
     "maxPages": 3,
@@ -255,36 +255,180 @@
     }
   },
   "Alejandro Machado": {
-    "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-08-12T13:59:21.688Z"
+    "psa7": {
+      "keyword": "Alejandro Machado Baseball PSA 7",
+      "nScraped": 0,
+      "nSoldUsed": 0,
+      "taguchiSold": null,
+      "medianSold": null,
+      "marketStabilityCV": null,
+      "currency": "USD",
+      "originalCurrencyExample": null,
+      "fxRateUsed": null,
+      "lastKnownSold": null,
+      "lastKnownSoldAt": null
+    },
+    "psa8": {
+      "keyword": "Alejandro Machado Baseball PSA 8",
+      "nScraped": 0,
+      "nSoldUsed": 0,
+      "taguchiSold": null,
+      "medianSold": null,
+      "marketStabilityCV": null,
+      "currency": "USD",
+      "originalCurrencyExample": null,
+      "fxRateUsed": null,
+      "lastKnownSold": null,
+      "lastKnownSoldAt": null
+    }
   },
   "Alex Carrasquel": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-08-12T13:59:41.084Z"
+    "erroredAt": "2026-08-27T22:32:14.284Z"
   },
   "Alex Escobar": {
-    "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-08-12T14:00:01.101Z"
+    "psa7": {
+      "keyword": "Alex Escobar Baseball PSA 7",
+      "nScraped": 0,
+      "nSoldUsed": 0,
+      "taguchiSold": null,
+      "medianSold": null,
+      "marketStabilityCV": null,
+      "currency": "USD",
+      "originalCurrencyExample": null,
+      "fxRateUsed": null,
+      "lastKnownSold": null,
+      "lastKnownSoldAt": null
+    },
+    "psa8": {
+      "keyword": "Alex Escobar Baseball PSA 8",
+      "nScraped": 0,
+      "nSoldUsed": 0,
+      "taguchiSold": null,
+      "medianSold": null,
+      "marketStabilityCV": null,
+      "currency": "USD",
+      "originalCurrencyExample": null,
+      "fxRateUsed": null,
+      "lastKnownSold": null,
+      "lastKnownSoldAt": null
+    }
   },
   "Alex Herrera": {
-    "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-08-12T14:00:22.828Z"
+    "psa7": {
+      "keyword": "Alex Herrera Baseball PSA 7",
+      "nScraped": 0,
+      "nSoldUsed": 0,
+      "taguchiSold": null,
+      "medianSold": null,
+      "marketStabilityCV": null,
+      "currency": "USD",
+      "originalCurrencyExample": null,
+      "fxRateUsed": null,
+      "lastKnownSold": null,
+      "lastKnownSoldAt": null
+    },
+    "psa8": {
+      "keyword": "Alex Herrera Baseball PSA 8",
+      "nScraped": 0,
+      "nSoldUsed": 0,
+      "taguchiSold": null,
+      "medianSold": null,
+      "marketStabilityCV": null,
+      "currency": "USD",
+      "originalCurrencyExample": null,
+      "fxRateUsed": null,
+      "lastKnownSold": null,
+      "lastKnownSoldAt": null
+    }
   },
   "Alex Prieto": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-08-12T14:00:46.853Z"
+    "erroredAt": "2026-08-27T22:33:42.309Z"
   },
   "Alex Romero": {
-    "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-08-12T14:01:08.753Z"
+    "psa7": {
+      "keyword": "Alex Romero Baseball PSA 7",
+      "nScraped": 0,
+      "nSoldUsed": 0,
+      "taguchiSold": null,
+      "medianSold": null,
+      "marketStabilityCV": null,
+      "currency": "USD",
+      "originalCurrencyExample": null,
+      "fxRateUsed": null,
+      "lastKnownSold": null,
+      "lastKnownSoldAt": null
+    },
+    "psa8": {
+      "keyword": "Alex Romero Baseball PSA 8",
+      "nScraped": 0,
+      "nSoldUsed": 0,
+      "taguchiSold": null,
+      "medianSold": null,
+      "marketStabilityCV": null,
+      "currency": "USD",
+      "originalCurrencyExample": null,
+      "fxRateUsed": null,
+      "lastKnownSold": null,
+      "lastKnownSoldAt": null
+    }
   },
   "Alex Serrano": {
-    "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-08-12T14:01:29.186Z"
+    "psa7": {
+      "keyword": "Alex Serrano Baseball PSA 7",
+      "nScraped": 0,
+      "nSoldUsed": 0,
+      "taguchiSold": null,
+      "medianSold": null,
+      "marketStabilityCV": null,
+      "currency": "USD",
+      "originalCurrencyExample": null,
+      "fxRateUsed": null,
+      "lastKnownSold": null,
+      "lastKnownSoldAt": null
+    },
+    "psa8": {
+      "keyword": "Alex Serrano Baseball PSA 8",
+      "nScraped": 0,
+      "nSoldUsed": 0,
+      "taguchiSold": null,
+      "medianSold": null,
+      "marketStabilityCV": null,
+      "currency": "USD",
+      "originalCurrencyExample": null,
+      "fxRateUsed": null,
+      "lastKnownSold": null,
+      "lastKnownSoldAt": null
+    }
   },
   "Alex Torres": {
-    "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-08-12T14:01:51.941Z"
+    "psa7": {
+      "keyword": "Alex Torres Baseball PSA 7",
+      "nScraped": 0,
+      "nSoldUsed": 0,
+      "taguchiSold": null,
+      "medianSold": null,
+      "marketStabilityCV": null,
+      "currency": "USD",
+      "originalCurrencyExample": null,
+      "fxRateUsed": null,
+      "lastKnownSold": null,
+      "lastKnownSoldAt": null
+    },
+    "psa8": {
+      "keyword": "Alex Torres Baseball PSA 8",
+      "nScraped": 0,
+      "nSoldUsed": 0,
+      "taguchiSold": null,
+      "medianSold": null,
+      "marketStabilityCV": null,
+      "currency": "USD",
+      "originalCurrencyExample": null,
+      "fxRateUsed": null,
+      "lastKnownSold": null,
+      "lastKnownSoldAt": null
+    }
   },
   "Alexi Amarista": {
     "error": "eBay fetch failed (403)",
