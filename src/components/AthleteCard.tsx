@@ -302,9 +302,14 @@ const AthleteCard = forwardRef<HTMLElement, AthleteCardProps>(({ athlete, byName
         )}
       </div>
 
-      {/* ── Sparkline ── */}
+      {/* ── Sparkline (opens full price history) ── */}
       {showSparkline && (
-        <div className={`mt-2 flex items-center gap-2 ${priceMode === "both" && showRawSparkline && showGradedSparkline ? "grid grid-cols-2" : ""}`}>
+        <button
+          type="button"
+          onClick={() => setHistoryOpen(true)}
+          aria-label={`View price history for ${athlete.name}`}
+          className={`mt-2 w-full flex items-center gap-2 rounded-lg px-1 py-0.5 cursor-pointer transition-colors hover:bg-foreground/5 ${priceMode === "both" && showRawSparkline && showGradedSparkline ? "grid grid-cols-2" : ""}`}
+        >
           {showRawSparkline && rawSparkData && (
             <div className="flex items-center gap-1.5">
               {priceMode === "both" && <span className="text-[8px] text-muted-foreground uppercase">Raw</span>}
@@ -319,8 +324,20 @@ const AthleteCard = forwardRef<HTMLElement, AthleteCardProps>(({ athlete, byName
               <span className="text-[9px] text-muted-foreground">{gradedSparkData.values.length}d</span>
             </div>
           )}
-        </div>
+        </button>
       )}
+
+      {historyOpen && (
+        <PriceHistoryDialog
+          open={historyOpen}
+          onOpenChange={setHistoryOpen}
+          athlete={athlete}
+          raw={showRawSparkline ? rawSparkData : null}
+          graded={showGradedSparkline ? gradedSparkData : null}
+          priceMode={priceMode}
+        />
+      )}
+
 
       {/* ── Meta row: stability + sold + days listed ── */}
       {priceMode === "both" ? (
