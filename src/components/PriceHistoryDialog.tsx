@@ -96,7 +96,7 @@ const PriceHistoryDialog = ({ open, onOpenChange, athlete, raw, graded, priceMod
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent className="max-w-2xl w-[calc(100vw-1.5rem)] max-h-[calc(100dvh-2rem)] overflow-y-auto p-4 sm:p-6">
+      <DialogContent className="max-w-2xl w-[calc(100vw-1.5rem)] max-h-[calc(100dvh-2rem)] overflow-y-auto p-4 sm:p-6 z-[1100]">
         <DialogHeader className="sticky top-0 z-10 bg-background pb-2 border-b border-border/40 pointer-events-none">
           <DialogTitle className="font-display pr-6">{athlete.name}</DialogTitle>
           <DialogDescription>
