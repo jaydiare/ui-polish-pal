@@ -191,6 +191,10 @@ export const translations = {
     "career.whip": "WHIP",
     "career.saves": "SLV",
     "career.inningsPitched": "IL",
+    "career.loading": "Cargando estadísticas de carrera…",
+    "career.error": "No se pudieron cargar las estadísticas. Revisa tu conexión e inténtalo de nuevo.",
+    "career.retry": "Reintentar",
+    "career.unavailable": "Las estadísticas de carrera de MLB aún no están disponibles para este jugador.",
 
 
 
