@@ -1,5 +1,6 @@
 import { useLanguage } from "@/i18n/LanguageProvider";
 import { useMlbCareerStats } from "@/hooks/useMlbCareerStats";
+import { AlertTriangle, RefreshCw, Info } from "lucide-react";
 
 interface CareerStatsStripProps {
   name: string;
