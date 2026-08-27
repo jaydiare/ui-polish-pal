@@ -23,13 +23,11 @@ const inflight = new Map<string, Promise<CareerStats | null>>();
 const PITCHER_POSITIONS = new Set(["P", "SP", "RP", "TWP"]);
 
 async function fetchJson(url: string): Promise<any | null> {
-  try {
-    const res = await fetch(url);
-    if (!res.ok) return null;
-    return await res.json();
-  } catch {
-    return null;
-  }
+  // Throws on network failure so callers can show an error state;
+  // returns null for non-OK responses (treated as "no data").
+  const res = await fetch(url);
+  if (!res.ok) return null;
+  return await res.json();
 }
 
 async function loadCareerStats(name: string): Promise<CareerStats | null> {
