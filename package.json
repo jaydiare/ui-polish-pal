@@ -10,7 +10,9 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "test": "vitest run",
-    "test:watch": "vitest"
+    "test:watch": "vitest",
+    "verify:chunks": "node scripts/verify-chunks.mjs",
+    "verify:chunks:remote": "node scripts/verify-chunks.mjs https://vzlasportselite.com"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",
