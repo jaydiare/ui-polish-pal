@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "updatedAt": "2026-08-29T07:18:19.920Z",
+    "updatedAt": "2026-08-29T16:51:06.666Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "PSA 7 + PSA 8 sold comps. Two queries per athlete. Strict per-grade title filter. Taguchi winsorized mean. USD via CBSA.",
     "targetGrades": [
@@ -8,8 +8,8 @@
       8
     ],
     "batchInfo": {
-      "startIdx": 32,
-      "endIdx": 40,
+      "startIdx": 40,
+      "endIdx": 48,
       "totalAthletes": 464
     },
     "maxPages": 3,
@@ -1032,35 +1032,155 @@
   },
   "Argenis Diaz": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-08-13T14:00:05.456Z"
+    "erroredAt": "2026-08-29T16:51:46.153Z"
   },
   "Armando Galarraga": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-08-13T14:00:25.079Z"
+    "erroredAt": "2026-08-29T16:52:45.591Z"
   },
   "Asdrubal Cabrera": {
-    "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-08-13T14:00:47.289Z"
+    "psa7": {
+      "keyword": "Asdrubal Cabrera Baseball PSA 7",
+      "nScraped": 0,
+      "nSoldUsed": 0,
+      "taguchiSold": null,
+      "medianSold": null,
+      "marketStabilityCV": null,
+      "currency": "USD",
+      "originalCurrencyExample": null,
+      "fxRateUsed": null,
+      "lastKnownSold": null,
+      "lastKnownSoldAt": null
+    },
+    "psa8": {
+      "keyword": "Asdrubal Cabrera Baseball PSA 8",
+      "nScraped": 0,
+      "nSoldUsed": 0,
+      "taguchiSold": null,
+      "medianSold": null,
+      "marketStabilityCV": null,
+      "currency": "USD",
+      "originalCurrencyExample": null,
+      "fxRateUsed": null,
+      "lastKnownSold": null,
+      "lastKnownSoldAt": null
+    }
   },
   "Avisail Garcia": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-08-13T14:01:09.292Z"
+    "erroredAt": "2026-08-29T16:54:10.035Z"
   },
   "Bo Diaz": {
-    "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-08-13T14:01:33.140Z"
+    "psa7": {
+      "keyword": "Bo Diaz Baseball PSA 7",
+      "nScraped": 0,
+      "nSoldUsed": 0,
+      "taguchiSold": null,
+      "medianSold": null,
+      "marketStabilityCV": null,
+      "currency": "USD",
+      "originalCurrencyExample": null,
+      "fxRateUsed": null,
+      "lastKnownSold": null,
+      "lastKnownSoldAt": null
+    },
+    "psa8": {
+      "keyword": "Bo Diaz Baseball PSA 8",
+      "nScraped": 0,
+      "nSoldUsed": 0,
+      "taguchiSold": null,
+      "medianSold": null,
+      "marketStabilityCV": null,
+      "currency": "USD",
+      "originalCurrencyExample": null,
+      "fxRateUsed": null,
+      "lastKnownSold": null,
+      "lastKnownSoldAt": null
+    }
   },
   "Bob Abreu": {
-    "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-08-13T14:01:54.945Z"
+    "psa7": {
+      "keyword": "Bob Abreu Baseball PSA 7",
+      "nScraped": 0,
+      "nSoldUsed": 0,
+      "taguchiSold": null,
+      "medianSold": null,
+      "marketStabilityCV": null,
+      "currency": "USD",
+      "originalCurrencyExample": null,
+      "fxRateUsed": null,
+      "lastKnownSold": null,
+      "lastKnownSoldAt": null
+    },
+    "psa8": {
+      "keyword": "Bob Abreu Baseball PSA 8",
+      "nScraped": 0,
+      "nSoldUsed": 0,
+      "taguchiSold": null,
+      "medianSold": null,
+      "marketStabilityCV": null,
+      "currency": "USD",
+      "originalCurrencyExample": null,
+      "fxRateUsed": null,
+      "lastKnownSold": null,
+      "lastKnownSoldAt": null
+    }
   },
   "Brayan Rocchio": {
-    "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-08-13T14:02:15.939Z"
+    "psa7": {
+      "keyword": "Brayan Rocchio Baseball PSA 7",
+      "nScraped": 0,
+      "nSoldUsed": 0,
+      "taguchiSold": null,
+      "medianSold": null,
+      "marketStabilityCV": null,
+      "currency": "USD",
+      "originalCurrencyExample": null,
+      "fxRateUsed": null,
+      "lastKnownSold": null,
+      "lastKnownSoldAt": null
+    },
+    "psa8": {
+      "keyword": "Brayan Rocchio Baseball PSA 8",
+      "nScraped": 0,
+      "nSoldUsed": 0,
+      "taguchiSold": null,
+      "medianSold": null,
+      "marketStabilityCV": null,
+      "currency": "USD",
+      "originalCurrencyExample": null,
+      "fxRateUsed": null,
+      "lastKnownSold": null,
+      "lastKnownSoldAt": null
+    }
   },
   "Brayan Villarreal": {
-    "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-08-13T14:02:35.718Z"
+    "psa7": {
+      "keyword": "Brayan Villarreal Baseball PSA 7",
+      "nScraped": 0,
+      "nSoldUsed": 0,
+      "taguchiSold": null,
+      "medianSold": null,
+      "marketStabilityCV": null,
+      "currency": "USD",
+      "originalCurrencyExample": null,
+      "fxRateUsed": null,
+      "lastKnownSold": null,
+      "lastKnownSoldAt": null
+    },
+    "psa8": {
+      "keyword": "Brayan Villarreal Baseball PSA 8",
+      "nScraped": 0,
+      "nSoldUsed": 0,
+      "taguchiSold": null,
+      "medianSold": null,
+      "marketStabilityCV": null,
+      "currency": "USD",
+      "originalCurrencyExample": null,
+      "fxRateUsed": null,
+      "lastKnownSold": null,
+      "lastKnownSoldAt": null
+    }
   },
   "Breyvic Valera": {
     "error": "eBay fetch failed (403)",
