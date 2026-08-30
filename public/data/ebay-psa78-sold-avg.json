@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "updatedAt": "2026-08-30T16:55:32.756Z",
+    "updatedAt": "2026-08-30T21:26:46.353Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "PSA 7 + PSA 8 sold comps. Two queries per athlete. Strict per-grade title filter. Taguchi winsorized mean. USD via CBSA.",
     "targetGrades": [
@@ -8,8 +8,8 @@
       8
     ],
     "batchInfo": {
-      "startIdx": 72,
-      "endIdx": 80,
+      "startIdx": 80,
+      "endIdx": 88,
       "totalAthletes": 464
     },
     "maxPages": 3,
@@ -1696,35 +1696,83 @@
   },
   "Daniel Palencia": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-08-14T19:30:14.650Z"
+    "erroredAt": "2026-08-30T21:27:03.211Z"
   },
   "Danny Leon": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-08-14T19:30:38.398Z"
+    "erroredAt": "2026-08-30T21:27:24.641Z"
   },
   "Danny Sandoval": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-08-14T19:30:57.858Z"
+    "erroredAt": "2026-08-30T21:27:48.078Z"
   },
   "Darwin Cubillan": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-08-14T19:31:21.053Z"
+    "erroredAt": "2026-08-30T21:28:10.294Z"
   },
   "Darwinzon Hernandez": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-08-14T19:31:44.772Z"
+    "erroredAt": "2026-08-30T21:28:33.670Z"
   },
   "Dave Concepcion": {
-    "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-08-14T19:32:08.433Z"
+    "psa7": {
+      "keyword": "Dave Concepcion Baseball PSA 7",
+      "nScraped": 0,
+      "nSoldUsed": 0,
+      "taguchiSold": null,
+      "medianSold": null,
+      "marketStabilityCV": null,
+      "currency": "USD",
+      "originalCurrencyExample": null,
+      "fxRateUsed": null,
+      "lastKnownSold": null,
+      "lastKnownSoldAt": null
+    },
+    "psa8": {
+      "keyword": "Dave Concepcion Baseball PSA 8",
+      "nScraped": 0,
+      "nSoldUsed": 0,
+      "taguchiSold": null,
+      "medianSold": null,
+      "marketStabilityCV": null,
+      "currency": "USD",
+      "originalCurrencyExample": null,
+      "fxRateUsed": null,
+      "lastKnownSold": null,
+      "lastKnownSoldAt": null
+    }
   },
   "David Peralta": {
-    "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-08-14T19:32:30.182Z"
+    "psa7": {
+      "keyword": "David Peralta Baseball PSA 7",
+      "nScraped": 0,
+      "nSoldUsed": 0,
+      "taguchiSold": null,
+      "medianSold": null,
+      "marketStabilityCV": null,
+      "currency": "USD",
+      "originalCurrencyExample": null,
+      "fxRateUsed": null,
+      "lastKnownSold": null,
+      "lastKnownSoldAt": null
+    },
+    "psa8": {
+      "keyword": "David Peralta Baseball PSA 8",
+      "nScraped": 0,
+      "nSoldUsed": 0,
+      "taguchiSold": null,
+      "medianSold": null,
+      "marketStabilityCV": null,
+      "currency": "USD",
+      "originalCurrencyExample": null,
+      "fxRateUsed": null,
+      "lastKnownSold": null,
+      "lastKnownSoldAt": null
+    }
   },
   "Deolis Guerra": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-08-14T19:32:51.074Z"
+    "erroredAt": "2026-08-30T21:29:47.395Z"
   },
   "Diego Castillo": {
     "error": "eBay fetch failed (403)",
