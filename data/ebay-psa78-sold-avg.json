@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "updatedAt": "2026-08-30T05:42:32.886Z",
+    "updatedAt": "2026-08-30T12:09:29.895Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "PSA 7 + PSA 8 sold comps. Two queries per athlete. Strict per-grade title filter. Taguchi winsorized mean. USD via CBSA.",
     "targetGrades": [
@@ -8,8 +8,8 @@
       8
     ],
     "batchInfo": {
-      "startIdx": 56,
-      "endIdx": 64,
+      "startIdx": 64,
+      "endIdx": 72,
       "totalAthletes": 464
     },
     "maxPages": 3,
@@ -1584,35 +1584,83 @@
   },
   "Carlos Quintana": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-08-14T07:58:01.250Z"
+    "erroredAt": "2026-08-30T12:09:45.924Z"
   },
   "Carlos Rivero": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-08-14T07:58:21.511Z"
+    "erroredAt": "2026-08-30T12:10:08.292Z"
   },
   "Carlos Silva": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-08-14T07:58:44.304Z"
+    "erroredAt": "2026-08-30T12:10:29.087Z"
   },
   "Carlos Tocci": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-08-14T07:59:06.598Z"
+    "erroredAt": "2026-08-30T12:10:49.745Z"
   },
   "Carlos Valderrama": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-08-14T07:59:27.080Z"
+    "erroredAt": "2026-08-30T12:11:13.361Z"
   },
   "Carlos Zambrano": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-08-14T07:59:49.431Z"
+    "erroredAt": "2026-08-30T12:11:35.645Z"
   },
   "Cesar Gutierrez": {
-    "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-08-14T08:00:13.059Z"
+    "psa7": {
+      "keyword": "Cesar Gutierrez Baseball PSA 7",
+      "nScraped": 0,
+      "nSoldUsed": 0,
+      "taguchiSold": null,
+      "medianSold": null,
+      "marketStabilityCV": null,
+      "currency": "USD",
+      "originalCurrencyExample": null,
+      "fxRateUsed": null,
+      "lastKnownSold": null,
+      "lastKnownSoldAt": null
+    },
+    "psa8": {
+      "keyword": "Cesar Gutierrez Baseball PSA 8",
+      "nScraped": 0,
+      "nSoldUsed": 0,
+      "taguchiSold": null,
+      "medianSold": null,
+      "marketStabilityCV": null,
+      "currency": "USD",
+      "originalCurrencyExample": null,
+      "fxRateUsed": null,
+      "lastKnownSold": null,
+      "lastKnownSoldAt": null
+    }
   },
   "Cesar Hernandez": {
-    "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-08-14T08:00:36.634Z"
+    "psa7": {
+      "keyword": "Cesar Hernandez Baseball PSA 7",
+      "nScraped": 0,
+      "nSoldUsed": 0,
+      "taguchiSold": null,
+      "medianSold": null,
+      "marketStabilityCV": null,
+      "currency": "USD",
+      "originalCurrencyExample": null,
+      "fxRateUsed": null,
+      "lastKnownSold": null,
+      "lastKnownSoldAt": null
+    },
+    "psa8": {
+      "keyword": "Cesar Hernandez Baseball PSA 8",
+      "nScraped": 0,
+      "nSoldUsed": 0,
+      "taguchiSold": null,
+      "medianSold": null,
+      "marketStabilityCV": null,
+      "currency": "USD",
+      "originalCurrencyExample": null,
+      "fxRateUsed": null,
+      "lastKnownSold": null,
+      "lastKnownSoldAt": null
+    }
   },
   "Cesar Izturis": {
     "error": "eBay fetch failed (403)",
