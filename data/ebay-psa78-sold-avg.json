@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "updatedAt": "2026-08-31T05:59:13.282Z",
+    "updatedAt": "2026-08-31T14:20:11.460Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "PSA 7 + PSA 8 sold comps. Two queries per athlete. Strict per-grade title filter. Taguchi winsorized mean. USD via CBSA.",
     "targetGrades": [
@@ -8,8 +8,8 @@
       8
     ],
     "batchInfo": {
-      "startIdx": 88,
-      "endIdx": 96,
+      "startIdx": 96,
+      "endIdx": 104,
       "totalAthletes": 464
     },
     "maxPages": 3,
@@ -1904,35 +1904,107 @@
   },
   "Edgardo Alfonzo": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-08-15T07:07:55.297Z"
+    "erroredAt": "2026-08-31T14:20:26.639Z"
   },
   "Edgardo Henriquez": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-08-15T07:08:16.818Z"
+    "erroredAt": "2026-08-31T14:20:48.670Z"
   },
   "Eduard Bazardo": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-08-15T07:08:39.633Z"
+    "erroredAt": "2026-08-31T14:21:12.636Z"
   },
   "Eduardo Escobar": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-08-15T07:09:02.530Z"
+    "erroredAt": "2026-08-31T14:21:36.671Z"
   },
   "Eduardo Jimenez": {
-    "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-08-15T07:09:24.057Z"
+    "psa7": {
+      "keyword": "Eduardo Jimenez Baseball PSA 7",
+      "nScraped": 0,
+      "nSoldUsed": 0,
+      "taguchiSold": null,
+      "medianSold": null,
+      "marketStabilityCV": null,
+      "currency": "USD",
+      "originalCurrencyExample": null,
+      "fxRateUsed": null,
+      "lastKnownSold": null,
+      "lastKnownSoldAt": null
+    },
+    "psa8": {
+      "keyword": "Eduardo Jimenez Baseball PSA 8",
+      "nScraped": 0,
+      "nSoldUsed": 0,
+      "taguchiSold": null,
+      "medianSold": null,
+      "marketStabilityCV": null,
+      "currency": "USD",
+      "originalCurrencyExample": null,
+      "fxRateUsed": null,
+      "lastKnownSold": null,
+      "lastKnownSoldAt": null
+    }
   },
   "Eduardo Rodriguez": {
-    "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-08-15T07:09:46.301Z"
+    "psa7": {
+      "keyword": "Eduardo Rodriguez Baseball PSA 7",
+      "nScraped": 0,
+      "nSoldUsed": 0,
+      "taguchiSold": null,
+      "medianSold": null,
+      "marketStabilityCV": null,
+      "currency": "USD",
+      "originalCurrencyExample": null,
+      "fxRateUsed": null,
+      "lastKnownSold": null,
+      "lastKnownSoldAt": null
+    },
+    "psa8": {
+      "keyword": "Eduardo Rodriguez Baseball PSA 8",
+      "nScraped": 0,
+      "nSoldUsed": 0,
+      "taguchiSold": null,
+      "medianSold": null,
+      "marketStabilityCV": null,
+      "currency": "USD",
+      "originalCurrencyExample": null,
+      "fxRateUsed": null,
+      "lastKnownSold": null,
+      "lastKnownSoldAt": null
+    }
   },
   "Eduardo Sanchez": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-08-15T07:10:09.519Z"
+    "erroredAt": "2026-08-31T14:23:03.577Z"
   },
   "Eduardo Villacis": {
-    "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-08-15T07:10:29.815Z"
+    "psa7": {
+      "keyword": "Eduardo Villacis Baseball PSA 7",
+      "nScraped": 0,
+      "nSoldUsed": 0,
+      "taguchiSold": null,
+      "medianSold": null,
+      "marketStabilityCV": null,
+      "currency": "USD",
+      "originalCurrencyExample": null,
+      "fxRateUsed": null,
+      "lastKnownSold": null,
+      "lastKnownSoldAt": null
+    },
+    "psa8": {
+      "keyword": "Eduardo Villacis Baseball PSA 8",
+      "nScraped": 0,
+      "nSoldUsed": 0,
+      "taguchiSold": null,
+      "medianSold": null,
+      "marketStabilityCV": null,
+      "currency": "USD",
+      "originalCurrencyExample": null,
+      "fxRateUsed": null,
+      "lastKnownSold": null,
+      "lastKnownSoldAt": null
+    }
   },
   "Edubray Ramos": {
     "error": "eBay fetch failed (403)",
