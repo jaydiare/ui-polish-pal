@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "updatedAt": "2026-09-01T16:51:12.189Z",
+    "updatedAt": "2026-09-01T21:14:50.156Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "PSA 7 + PSA 8 sold comps. Two queries per athlete. Strict per-grade title filter. Taguchi winsorized mean. USD via CBSA.",
     "targetGrades": [
@@ -8,8 +8,8 @@
       8
     ],
     "batchInfo": {
-      "startIdx": 128,
-      "endIdx": 136,
+      "startIdx": 136,
+      "endIdx": 144,
       "totalAthletes": 464
     },
     "maxPages": 3,
@@ -2280,35 +2280,107 @@
   },
   "Francisco Arcia": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-08-16T13:11:00.263Z"
+    "erroredAt": "2026-09-01T21:15:06.050Z"
   },
   "Francisco Cervelli": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-08-16T13:11:21.570Z"
+    "erroredAt": "2026-09-01T21:15:29.395Z"
   },
   "Francisco Morales": {
-    "error": "fetch failed",
-    "erroredAt": "2026-08-16T13:11:53.196Z"
+    "error": "eBay fetch failed (403)",
+    "erroredAt": "2026-09-01T21:15:52.536Z"
   },
   "Francisco Rodriguez": {
-    "error": "fetch failed",
-    "erroredAt": "2026-08-16T13:12:08.561Z"
+    "error": "eBay fetch failed (403)",
+    "erroredAt": "2026-09-01T21:16:13.681Z"
   },
   "Frank Mata": {
-    "error": "fetch failed",
-    "erroredAt": "2026-08-16T13:12:24.262Z"
+    "error": "eBay fetch failed (403)",
+    "erroredAt": "2026-09-01T21:16:39.772Z"
   },
   "Franklin Barreto": {
-    "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-08-16T13:12:47.579Z"
+    "psa7": {
+      "keyword": "Franklin Barreto Baseball PSA 7",
+      "nScraped": 0,
+      "nSoldUsed": 0,
+      "taguchiSold": null,
+      "medianSold": null,
+      "marketStabilityCV": null,
+      "currency": "USD",
+      "originalCurrencyExample": null,
+      "fxRateUsed": null,
+      "lastKnownSold": null,
+      "lastKnownSoldAt": null
+    },
+    "psa8": {
+      "keyword": "Franklin Barreto Baseball PSA 8",
+      "nScraped": 0,
+      "nSoldUsed": 0,
+      "taguchiSold": null,
+      "medianSold": null,
+      "marketStabilityCV": null,
+      "currency": "USD",
+      "originalCurrencyExample": null,
+      "fxRateUsed": null,
+      "lastKnownSold": null,
+      "lastKnownSoldAt": null
+    }
   },
   "Franklin Gutierrez": {
-    "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-08-16T13:13:10.075Z"
+    "psa7": {
+      "keyword": "Franklin Gutierrez Baseball PSA 7",
+      "nScraped": 0,
+      "nSoldUsed": 0,
+      "taguchiSold": null,
+      "medianSold": null,
+      "marketStabilityCV": null,
+      "currency": "USD",
+      "originalCurrencyExample": null,
+      "fxRateUsed": null,
+      "lastKnownSold": null,
+      "lastKnownSoldAt": null
+    },
+    "psa8": {
+      "keyword": "Franklin Gutierrez Baseball PSA 8",
+      "nScraped": 0,
+      "nSoldUsed": 0,
+      "taguchiSold": null,
+      "medianSold": null,
+      "marketStabilityCV": null,
+      "currency": "USD",
+      "originalCurrencyExample": null,
+      "fxRateUsed": null,
+      "lastKnownSold": null,
+      "lastKnownSoldAt": null
+    }
   },
   "Franklin Morales": {
-    "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-08-16T13:13:31.709Z"
+    "psa7": {
+      "keyword": "Franklin Morales Baseball PSA 7",
+      "nScraped": 0,
+      "nSoldUsed": 0,
+      "taguchiSold": null,
+      "medianSold": null,
+      "marketStabilityCV": null,
+      "currency": "USD",
+      "originalCurrencyExample": null,
+      "fxRateUsed": null,
+      "lastKnownSold": null,
+      "lastKnownSoldAt": null
+    },
+    "psa8": {
+      "keyword": "Franklin Morales Baseball PSA 8",
+      "nScraped": 0,
+      "nSoldUsed": 0,
+      "taguchiSold": null,
+      "medianSold": null,
+      "marketStabilityCV": null,
+      "currency": "USD",
+      "originalCurrencyExample": null,
+      "fxRateUsed": null,
+      "lastKnownSold": null,
+      "lastKnownSoldAt": null
+    }
   },
   "Fred Manrique": {
     "error": "eBay fetch failed (403)",
