@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "updatedAt": "2026-09-01T05:31:44.526Z",
+    "updatedAt": "2026-09-01T11:57:12.799Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "PSA 7 + PSA 8 sold comps. Two queries per athlete. Strict per-grade title filter. Taguchi winsorized mean. USD via CBSA.",
     "targetGrades": [
@@ -8,8 +8,8 @@
       8
     ],
     "batchInfo": {
-      "startIdx": 112,
-      "endIdx": 120,
+      "startIdx": 120,
+      "endIdx": 128,
       "totalAthletes": 464
     },
     "maxPages": 3,
@@ -2168,35 +2168,59 @@
   },
   "Endy Chavez": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-08-16T02:07:47.300Z"
+    "erroredAt": "2026-09-01T11:57:29.160Z"
   },
   "Enmanuel De Jesus": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-08-16T02:08:10.526Z"
+    "erroredAt": "2026-09-01T11:57:52.032Z"
   },
   "Enrique Gonzalez": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-08-16T02:08:32.940Z"
+    "erroredAt": "2026-09-01T11:58:11.834Z"
   },
   "Enzo Hernandez": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-08-16T02:08:53.928Z"
+    "erroredAt": "2026-09-01T11:58:34.417Z"
   },
   "Ethan Salas": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-08-16T02:09:15.154Z"
+    "erroredAt": "2026-09-01T11:58:56.684Z"
   },
   "Eugenio Suarez": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-08-16T02:09:35.659Z"
+    "erroredAt": "2026-09-01T11:59:18.726Z"
   },
   "Everson Pereira": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-08-16T02:09:58.191Z"
+    "erroredAt": "2026-09-01T11:59:39.800Z"
   },
   "Ezequiel Carrera": {
-    "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-08-16T02:10:20.942Z"
+    "psa7": {
+      "keyword": "Ezequiel Carrera Baseball PSA 7",
+      "nScraped": 0,
+      "nSoldUsed": 0,
+      "taguchiSold": null,
+      "medianSold": null,
+      "marketStabilityCV": null,
+      "currency": "USD",
+      "originalCurrencyExample": null,
+      "fxRateUsed": null,
+      "lastKnownSold": null,
+      "lastKnownSoldAt": null
+    },
+    "psa8": {
+      "keyword": "Ezequiel Carrera Baseball PSA 8",
+      "nScraped": 0,
+      "nSoldUsed": 0,
+      "taguchiSold": null,
+      "medianSold": null,
+      "marketStabilityCV": null,
+      "currency": "USD",
+      "originalCurrencyExample": null,
+      "fxRateUsed": null,
+      "lastKnownSold": null,
+      "lastKnownSoldAt": null
+    }
   },
   "Ezequiel Tovar": {
     "error": "eBay fetch failed (403)",
