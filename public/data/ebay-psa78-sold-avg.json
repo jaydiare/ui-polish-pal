@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "updatedAt": "2026-08-31T22:59:34.004Z",
+    "updatedAt": "2026-09-01T05:31:44.526Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "PSA 7 + PSA 8 sold comps. Two queries per athlete. Strict per-grade title filter. Taguchi winsorized mean. USD via CBSA.",
     "targetGrades": [
@@ -8,8 +8,8 @@
       8
     ],
     "batchInfo": {
-      "startIdx": 104,
-      "endIdx": 112,
+      "startIdx": 112,
+      "endIdx": 120,
       "totalAthletes": 464
     },
     "maxPages": 3,
@@ -27,7 +27,7 @@
     },
     "fx": {
       "source": "CBSA Exchange Rates API",
-      "asOf": "2026-09-01T00:00:00.000Z"
+      "asOf": "2026-09-02T00:00:00.000Z"
     }
   },
   "Adbert Alzolay": {
@@ -2112,35 +2112,59 @@
   },
   "Eider Torres": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-08-15T18:58:25.108Z"
+    "erroredAt": "2026-09-01T05:32:02.807Z"
   },
   "Elias Diaz": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-08-15T18:58:46.552Z"
+    "erroredAt": "2026-09-01T05:32:24.792Z"
   },
   "Elieser Hernandez": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-08-15T18:59:06.965Z"
+    "erroredAt": "2026-09-01T05:32:47.031Z"
   },
   "Eliezer Alfonzo": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-08-15T18:59:28.924Z"
+    "erroredAt": "2026-09-01T05:33:07.953Z"
   },
   "Elio Chacon": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-08-15T18:59:51.628Z"
+    "erroredAt": "2026-09-01T05:33:31.834Z"
   },
   "Elvis Andrus": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-08-15T19:00:14.451Z"
+    "erroredAt": "2026-09-01T05:33:56.754Z"
   },
   "Elvis Araujo": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-08-15T19:00:37.473Z"
+    "erroredAt": "2026-09-01T05:34:20.689Z"
   },
   "Ender Inciarte": {
-    "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-08-15T19:00:58.237Z"
+    "psa7": {
+      "keyword": "Ender Inciarte Baseball PSA 7",
+      "nScraped": 0,
+      "nSoldUsed": 0,
+      "taguchiSold": null,
+      "medianSold": null,
+      "marketStabilityCV": null,
+      "currency": "USD",
+      "originalCurrencyExample": null,
+      "fxRateUsed": null,
+      "lastKnownSold": null,
+      "lastKnownSoldAt": null
+    },
+    "psa8": {
+      "keyword": "Ender Inciarte Baseball PSA 8",
+      "nScraped": 0,
+      "nSoldUsed": 0,
+      "taguchiSold": null,
+      "medianSold": null,
+      "marketStabilityCV": null,
+      "currency": "USD",
+      "originalCurrencyExample": null,
+      "fxRateUsed": null,
+      "lastKnownSold": null,
+      "lastKnownSoldAt": null
+    }
   },
   "Endy Chavez": {
     "error": "eBay fetch failed (403)",
