@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "updatedAt": "2026-08-01T12:27:03.602Z",
+    "updatedAt": "2026-09-01T15:47:54.933Z",
     "athleteCount": 464,
     "psa9Hits": 0,
     "psa10Hits": 0,
@@ -17,7 +17,7 @@
       "scpPsa10SampleCount": 0,
       "scpProduct": "Adbert Alzolay [Gold] #129",
       "scpId": "6366030",
-      "scpMatchCount": 50
+      "scpMatchCount": 100
     },
     {
       "name": "Adrian Sanchez",
@@ -28,7 +28,7 @@
       "scpPsa10SampleCount": 0,
       "scpProduct": "Adrian Sanchez #PS-12",
       "scpId": "1472416",
-      "scpMatchCount": 14
+      "scpMatchCount": 15
     },
     {
       "name": "Al Pedrique",
@@ -39,7 +39,7 @@
       "scpPsa10SampleCount": 0,
       "scpProduct": "Al Pedrique #294",
       "scpId": "1931517",
-      "scpMatchCount": 30
+      "scpMatchCount": 34
     },
     {
       "name": "Albert Suarez",
@@ -70,9 +70,9 @@
       "scpPsa10Price": null,
       "scpPsa9SampleCount": 0,
       "scpPsa10SampleCount": 0,
-      "scpProduct": "Alberto Gonzalez #266",
-      "scpId": "10182819",
-      "scpMatchCount": 13
+      "scpProduct": "Alberto Gonzalez [Gold] #UH207",
+      "scpId": "2090114",
+      "scpMatchCount": 18
     },
     {
       "name": "Alcides Escobar",
@@ -94,7 +94,7 @@
       "scpPsa10SampleCount": 0,
       "scpProduct": "Alejandro Freire #58",
       "scpId": "10033366",
-      "scpMatchCount": 6
+      "scpMatchCount": 8
     },
     {
       "name": "Alejandro Machado",
@@ -105,7 +105,7 @@
       "scpPsa10SampleCount": 0,
       "scpProduct": "Alejandro Machado #158",
       "scpId": "6179645",
-      "scpMatchCount": 11
+      "scpMatchCount": 13
     },
     {
       "name": "Alex Carrasquel",
@@ -158,9 +158,9 @@
       "scpPsa10Price": null,
       "scpPsa9SampleCount": 0,
       "scpPsa10SampleCount": 0,
-      "scpProduct": "Alex Romero #320",
-      "scpId": "2061009",
-      "scpMatchCount": 19
+      "scpProduct": "Alex Romero [Gold] #T188",
+      "scpId": "14225176",
+      "scpMatchCount": 26
     },
     {
       "name": "Alex Serrano",
@@ -246,9 +246,9 @@
       "scpPsa10Price": null,
       "scpPsa9SampleCount": 0,
       "scpPsa10SampleCount": 0,
-      "scpProduct": "Jared Koenig, Anderson Espinoza [Gold] #US265",
-      "scpId": "5904558",
-      "scpMatchCount": 100
+      "scpProduct": null,
+      "scpId": null,
+      "scpMatchCount": 0
     },
     {
       "name": "Anderson Machado",
@@ -270,7 +270,7 @@
       "scpPsa10SampleCount": 0,
       "scpProduct": "Andres Blanco [Gold] #383",
       "scpId": "7757928",
-      "scpMatchCount": 45
+      "scpMatchCount": 52
     },
     {
       "name": "Andres Chaparro",
@@ -358,7 +358,7 @@
       "scpPsa10SampleCount": 0,
       "scpProduct": "Angel Guzman [Black Refractor] #T248",
       "scpId": "2052524",
-      "scpMatchCount": 45
+      "scpMatchCount": 51
     },
     {
       "name": "Angel Nesbitt",
@@ -468,7 +468,7 @@
       "scpPsa10SampleCount": 0,
       "scpProduct": "Armando Galarraga [Gold] #179",
       "scpId": "12409896",
-      "scpMatchCount": 48
+      "scpMatchCount": 67
     },
     {
       "name": "Asdrubal Cabrera",
@@ -589,7 +589,7 @@
       "scpPsa10SampleCount": 0,
       "scpProduct": "Carlos Carrasco #161",
       "scpId": "4769103",
-      "scpMatchCount": 88
+      "scpMatchCount": 100
     },
     {
       "name": "Carlos Garcia",
@@ -798,7 +798,7 @@
       "scpPsa10SampleCount": 0,
       "scpProduct": "Cesar Hernandez #244",
       "scpId": "4769186",
-      "scpMatchCount": 96
+      "scpMatchCount": 100
     },
     {
       "name": "Cesar Izturis",
@@ -919,7 +919,7 @@
       "scpPsa10SampleCount": 0,
       "scpProduct": "Danny Sandoval [Gold] #306",
       "scpId": "9037274",
-      "scpMatchCount": 12
+      "scpMatchCount": 14
     },
     {
       "name": "Darwin Cubillan",
@@ -963,7 +963,7 @@
       "scpPsa10SampleCount": 0,
       "scpProduct": "David Peralta [Green Refractor] #45",
       "scpId": "1516103",
-      "scpMatchCount": 100
+      "scpMatchCount": 78
     },
     {
       "name": "Deolis Guerra",
@@ -1040,7 +1040,7 @@
       "scpPsa10SampleCount": 0,
       "scpProduct": "Eddie Zambrano / Glenn Murray / Chad Mottola / Jermaine Allensworth #616",
       "scpId": "1971367",
-      "scpMatchCount": 29
+      "scpMatchCount": 28
     },
     {
       "name": "Eddy Diaz",
@@ -1071,8 +1071,8 @@
       "scpPsa10Price": null,
       "scpPsa9SampleCount": 0,
       "scpPsa10SampleCount": 0,
-      "scpProduct": "Edgardo Alfonzo  [Bronze] #77",
-      "scpId": "8452602",
+      "scpProduct": "Edgardo Alfonzo #102",
+      "scpId": "11806700",
       "scpMatchCount": 100
     },
     {
@@ -1084,7 +1084,7 @@
       "scpPsa10SampleCount": 0,
       "scpProduct": "Edgardo Henriquez [Chrome Variation] #180",
       "scpId": "9133074",
-      "scpMatchCount": 86
+      "scpMatchCount": 100
     },
     {
       "name": "Eduard Bazardo",
@@ -1095,7 +1095,7 @@
       "scpPsa10SampleCount": 0,
       "scpProduct": "Eduard Bazardo #HG-EB",
       "scpId": "6135575",
-      "scpMatchCount": 11
+      "scpMatchCount": 12
     },
     {
       "name": "Eduardo Escobar",
@@ -1106,7 +1106,7 @@
       "scpPsa10SampleCount": 0,
       "scpProduct": "Eduardo Escobar #118",
       "scpId": "4769060",
-      "scpMatchCount": 100
+      "scpMatchCount": 83
     },
     {
       "name": "Eduardo Jimenez",
@@ -1148,9 +1148,9 @@
       "scpPsa10Price": null,
       "scpPsa9SampleCount": 0,
       "scpPsa10SampleCount": 0,
-      "scpProduct": "Eduardo Villacis [Xfractor] #25",
-      "scpId": "2060307",
-      "scpMatchCount": 3
+      "scpProduct": "Eduardo Villacis [Gold] #T115",
+      "scpId": "14225177",
+      "scpMatchCount": 7
     },
     {
       "name": "Edubray Ramos",
@@ -1183,7 +1183,7 @@
       "scpPsa10SampleCount": 0,
       "scpProduct": "Edward Mujica [Gold] #330",
       "scpId": "7757355",
-      "scpMatchCount": 63
+      "scpMatchCount": 65
     },
     {
       "name": "Edward Olivares",
@@ -1249,7 +1249,7 @@
       "scpPsa10SampleCount": 0,
       "scpProduct": "Eider Torres #169",
       "scpId": "2511522",
-      "scpMatchCount": 8
+      "scpMatchCount": 10
     },
     {
       "name": "Elias Diaz",
@@ -1282,7 +1282,7 @@
       "scpPsa10SampleCount": 0,
       "scpProduct": "Eliezer Alfonzo [Gold] #14",
       "scpId": "12387081",
-      "scpMatchCount": 21
+      "scpMatchCount": 22
     },
     {
       "name": "Elio Chacon",
@@ -1302,9 +1302,9 @@
       "scpPsa10Price": null,
       "scpPsa9SampleCount": 0,
       "scpPsa10SampleCount": 0,
-      "scpProduct": null,
-      "scpId": null,
-      "scpMatchCount": 0
+      "scpProduct": "Elvis Andrus [Gold] #284",
+      "scpId": "6979780",
+      "scpMatchCount": 100
     },
     {
       "name": "Elvis Araujo",
@@ -1324,9 +1324,9 @@
       "scpPsa10Price": null,
       "scpPsa9SampleCount": 0,
       "scpPsa10SampleCount": 0,
-      "scpProduct": "Ender Inciarte #33",
-      "scpId": "1773955",
-      "scpMatchCount": 87
+      "scpProduct": null,
+      "scpId": null,
+      "scpMatchCount": 0
     },
     {
       "name": "Endy Chavez",
@@ -1346,9 +1346,9 @@
       "scpPsa10Price": null,
       "scpPsa9SampleCount": 0,
       "scpPsa10SampleCount": 0,
-      "scpProduct": "Enmanuel De Jesus / Emmanuel Ramirez / Anthony Maldonado / Eli Villalobos #618",
-      "scpId": "8910590",
-      "scpMatchCount": 15
+      "scpProduct": null,
+      "scpId": null,
+      "scpMatchCount": 0
     },
     {
       "name": "Enrique Gonzalez",
@@ -1357,9 +1357,9 @@
       "scpPsa10Price": null,
       "scpPsa9SampleCount": 0,
       "scpPsa10SampleCount": 0,
-      "scpProduct": "Enrique Gonzalez #RD-31",
-      "scpId": "10457192",
-      "scpMatchCount": 8
+      "scpProduct": "Enrique Gonzalez #119",
+      "scpId": "9569073",
+      "scpMatchCount": 10
     },
     {
       "name": "Enzo Hernandez",
@@ -1425,7 +1425,7 @@
       "scpPsa10SampleCount": 0,
       "scpProduct": "Ezequiel Tovar #FS-19",
       "scpId": "6882965",
-      "scpMatchCount": 100
+      "scpMatchCount": 81
     },
     {
       "name": "Felipe Lira",
@@ -1491,7 +1491,7 @@
       "scpPsa10SampleCount": 0,
       "scpProduct": "Fernando Nieve [Extra Edition Autograph] #263",
       "scpId": "2061728",
-      "scpMatchCount": 37
+      "scpMatchCount": 43
     },
     {
       "name": "Francisco Alvarez",
@@ -1577,9 +1577,9 @@
       "scpPsa10Price": null,
       "scpPsa9SampleCount": 0,
       "scpPsa10SampleCount": 0,
-      "scpProduct": "Franklin Gutierrez [Gold] #293",
-      "scpId": "10284113",
-      "scpMatchCount": 100
+      "scpProduct": null,
+      "scpId": null,
+      "scpMatchCount": 0
     },
     {
       "name": "Franklin Morales",
@@ -1590,7 +1590,7 @@
       "scpPsa10SampleCount": 0,
       "scpProduct": "Franklin Morales [Gold] #565",
       "scpId": "9381380",
-      "scpMatchCount": 20
+      "scpMatchCount": 21
     },
     {
       "name": "Fred Manrique",
@@ -1621,9 +1621,9 @@
       "scpPsa10Price": null,
       "scpPsa9SampleCount": 0,
       "scpPsa10SampleCount": 0,
-      "scpProduct": "Freddy Galvis [Gold] #481",
-      "scpId": "8202967",
-      "scpMatchCount": 94
+      "scpProduct": "Freddy Galvis [Gold] #636",
+      "scpId": "7868685",
+      "scpMatchCount": 100
     },
     {
       "name": "Freddy Garcia",
@@ -1645,7 +1645,7 @@
       "scpPsa10SampleCount": 0,
       "scpProduct": "Gabriel Arias #US321",
       "scpId": "4215231",
-      "scpMatchCount": 93
+      "scpMatchCount": 100
     },
     {
       "name": "Gabriel Moreno",
@@ -1711,7 +1711,7 @@
       "scpPsa10SampleCount": 0,
       "scpProduct": "Giovanni Carrara #426",
       "scpId": "6245683",
-      "scpMatchCount": 5
+      "scpMatchCount": 6
     },
     {
       "name": "Gleyber Torres",
@@ -1766,7 +1766,7 @@
       "scpPsa10SampleCount": 0,
       "scpProduct": "Gregorio Petit [Gold] #UH225",
       "scpId": "13088690",
-      "scpMatchCount": 31
+      "scpMatchCount": 51
     },
     {
       "name": "Gregory Infante",
@@ -1775,9 +1775,9 @@
       "scpPsa10Price": null,
       "scpPsa9SampleCount": 0,
       "scpPsa10SampleCount": 0,
-      "scpProduct": "Gregory Infante [Gold] #223",
-      "scpId": "12409998",
-      "scpMatchCount": 15
+      "scpProduct": null,
+      "scpId": null,
+      "scpMatchCount": 0
     },
     {
       "name": "Guilder Rodriguez",
@@ -1810,7 +1810,7 @@
       "scpPsa10SampleCount": 0,
       "scpProduct": "Guillermo Quiroz [Gold] #UH183",
       "scpId": "13088365",
-      "scpMatchCount": 34
+      "scpMatchCount": 47
     },
     {
       "name": "Guillermo Rodriguez",
@@ -1854,7 +1854,7 @@
       "scpPsa10SampleCount": 0,
       "scpProduct": "Gustavo Chacin [Gold] #540",
       "scpId": "9037739",
-      "scpMatchCount": 56
+      "scpMatchCount": 61
     },
     {
       "name": "Gustavo Molina",
@@ -1885,9 +1885,9 @@
       "scpPsa10Price": null,
       "scpPsa9SampleCount": 0,
       "scpPsa10SampleCount": 0,
-      "scpProduct": "Harvey Garcia #492",
-      "scpId": "5527939",
-      "scpMatchCount": 17
+      "scpProduct": null,
+      "scpId": null,
+      "scpMatchCount": 0
     },
     {
       "name": "Hector Gimenez",
@@ -1898,7 +1898,7 @@
       "scpPsa10SampleCount": 0,
       "scpProduct": "Hector Gimenez #120",
       "scpId": "4953462",
-      "scpMatchCount": 59
+      "scpMatchCount": 65
     },
     {
       "name": "Hector Rondon",
@@ -1931,7 +1931,7 @@
       "scpPsa10SampleCount": 0,
       "scpProduct": "Henry Blanco [Gold] #US-223",
       "scpId": "12404657",
-      "scpMatchCount": 49
+      "scpMatchCount": 52
     },
     {
       "name": "Henry Rodriguez",
@@ -1951,9 +1951,9 @@
       "scpPsa10Price": null,
       "scpPsa9SampleCount": 0,
       "scpPsa10SampleCount": 0,
-      "scpProduct": "Hernan Iribarren [Autograph] #40",
-      "scpId": "7533711",
-      "scpMatchCount": 24
+      "scpProduct": "Hernan Iribarren [Gold] #UH327",
+      "scpId": "14011350",
+      "scpMatchCount": 43
     },
     {
       "name": "Hernan Perez",
@@ -1964,7 +1964,7 @@
       "scpPsa10SampleCount": 0,
       "scpProduct": "Hernan Perez [Limited] #455",
       "scpId": "10559178",
-      "scpMatchCount": 93
+      "scpMatchCount": 97
     },
     {
       "name": "Horacio Estrada",
@@ -1986,7 +1986,7 @@
       "scpPsa10SampleCount": 0,
       "scpProduct": "Humberto Quintero [Gold] #223",
       "scpId": "9037153",
-      "scpMatchCount": 33
+      "scpMatchCount": 34
     },
     {
       "name": "Ildemaro Vargas",
@@ -2028,9 +2028,9 @@
       "scpPsa10Price": null,
       "scpPsa9SampleCount": 0,
       "scpPsa10SampleCount": 0,
-      "scpProduct": "Ivan Ochoa #94",
-      "scpId": "8678081",
-      "scpMatchCount": 20
+      "scpProduct": "Ivan Ochoa [Gold] #T198",
+      "scpId": "14225107",
+      "scpMatchCount": 26
     },
     {
       "name": "Jackson Chourio",
@@ -2107,7 +2107,7 @@
       "scpPsa10SampleCount": 0,
       "scpProduct": "Jedixson Paez [Red Ice Prizm] #269",
       "scpId": "10569270",
-      "scpMatchCount": 95
+      "scpMatchCount": 96
     },
     {
       "name": "Jeferson Quero",
@@ -2272,7 +2272,7 @@
       "scpPsa10SampleCount": 0,
       "scpProduct": "Joey Ortiz #542",
       "scpId": "13316457",
-      "scpMatchCount": 92
+      "scpMatchCount": 100
     },
     {
       "name": "Johan Santana",
@@ -2305,7 +2305,7 @@
       "scpPsa10SampleCount": 0,
       "scpProduct": "Jonathan Herrera [Gold] #152",
       "scpId": "12500964",
-      "scpMatchCount": 23
+      "scpMatchCount": 42
     },
     {
       "name": "Jorbit Vivas",
@@ -2325,9 +2325,9 @@
       "scpPsa10Price": null,
       "scpPsa9SampleCount": 0,
       "scpPsa10SampleCount": 0,
-      "scpProduct": "Jorge Barrosa #690",
-      "scpId": "8911405",
-      "scpMatchCount": 100
+      "scpProduct": null,
+      "scpId": null,
+      "scpMatchCount": 0
     },
     {
       "name": "Jorge Julio",
@@ -2338,7 +2338,7 @@
       "scpPsa10SampleCount": 0,
       "scpProduct": "Jorge Julio [Gold] #538",
       "scpId": "10283933",
-      "scpMatchCount": 73
+      "scpMatchCount": 80
     },
     {
       "name": "Jorge Velandia",
@@ -2347,9 +2347,9 @@
       "scpPsa10Price": null,
       "scpPsa9SampleCount": 0,
       "scpPsa10SampleCount": 0,
-      "scpProduct": "Jorge Velandia #203",
-      "scpId": "2418087",
-      "scpMatchCount": 3
+      "scpProduct": "Jorge Velandia [Gold] #UH323",
+      "scpId": "14011345",
+      "scpMatchCount": 9
     },
     {
       "name": "Jose Altuve",
@@ -2424,9 +2424,9 @@
       "scpPsa10Price": null,
       "scpPsa9SampleCount": 0,
       "scpPsa10SampleCount": 0,
-      "scpProduct": "Jose Castillo / Walker Lockett [Gold] #US169",
-      "scpId": "10598257",
-      "scpMatchCount": 90
+      "scpProduct": "Jose Castillo [Gold] #589",
+      "scpId": "9141175",
+      "scpMatchCount": 100
     },
     {
       "name": "Jose Fernandez",
@@ -2558,7 +2558,7 @@
       "scpPsa10SampleCount": 0,
       "scpProduct": "Jose Peraza [Gold] #179",
       "scpId": "7755755",
-      "scpMatchCount": 80
+      "scpMatchCount": 100
     },
     {
       "name": "Jose Pirela",
@@ -2591,7 +2591,7 @@
       "scpPsa10SampleCount": 0,
       "scpProduct": "Jose Rondon [Autograph] #175",
       "scpId": "1420200",
-      "scpMatchCount": 45
+      "scpMatchCount": 53
     },
     {
       "name": "Jose Suarez",
@@ -2633,8 +2633,8 @@
       "scpPsa10Price": null,
       "scpPsa9SampleCount": 0,
       "scpPsa10SampleCount": 0,
-      "scpProduct": "Josh Barfield [Gold] #79",
-      "scpId": "12387124",
+      "scpProduct": "Josh Barfield [Gold] #633",
+      "scpId": "9037851",
       "scpMatchCount": 100
     },
     {
@@ -2690,7 +2690,7 @@
       "scpPsa10SampleCount": 0,
       "scpProduct": "Juan Rincon [Gold] #539",
       "scpId": "9037735",
-      "scpMatchCount": 20
+      "scpMatchCount": 31
     },
     {
       "name": "Juan Rivera",
@@ -2732,9 +2732,9 @@
       "scpPsa10Price": null,
       "scpPsa9SampleCount": 0,
       "scpPsa10SampleCount": 0,
-      "scpProduct": "Junior Guerra [Gold] #US124",
-      "scpId": "1392027",
-      "scpMatchCount": 96
+      "scpProduct": null,
+      "scpId": null,
+      "scpMatchCount": 0
     },
     {
       "name": "Keibert Ruiz",
@@ -2745,7 +2745,7 @@
       "scpPsa10SampleCount": 0,
       "scpProduct": "Keibert Ruiz #245",
       "scpId": "11883819",
-      "scpMatchCount": 91
+      "scpMatchCount": 100
     },
     {
       "name": "Keider Montero",
@@ -2919,9 +2919,9 @@
       "scpPsa10Price": null,
       "scpPsa9SampleCount": 0,
       "scpPsa10SampleCount": 0,
-      "scpProduct": "Luis Aponte #U-2",
-      "scpId": "1893731",
-      "scpMatchCount": 11
+      "scpProduct": null,
+      "scpId": null,
+      "scpMatchCount": 0
     },
     {
       "name": "Luis Arraez",
@@ -2974,9 +2974,9 @@
       "scpPsa10Price": null,
       "scpPsa9SampleCount": 0,
       "scpPsa10SampleCount": 0,
-      "scpProduct": "Luis Garcia #121",
-      "scpId": "4769063",
-      "scpMatchCount": 100
+      "scpProduct": null,
+      "scpId": null,
+      "scpMatchCount": 0
     },
     {
       "name": "Luis Guillorme",
@@ -3007,9 +3007,9 @@
       "scpPsa10Price": null,
       "scpPsa9SampleCount": 0,
       "scpPsa10SampleCount": 0,
-      "scpProduct": "Luis Jimenez [Gold] #464",
-      "scpId": "9375840",
-      "scpMatchCount": 81
+      "scpProduct": null,
+      "scpId": null,
+      "scpMatchCount": 0
     },
     {
       "name": "Luis Leal",
@@ -3051,9 +3051,9 @@
       "scpPsa10Price": null,
       "scpPsa9SampleCount": 0,
       "scpPsa10SampleCount": 0,
-      "scpProduct": "Luis Ordaz #719",
-      "scpId": "5419952",
-      "scpMatchCount": 17
+      "scpProduct": null,
+      "scpId": null,
+      "scpMatchCount": 0
     },
     {
       "name": "Luis Oviedo",
@@ -3108,7 +3108,7 @@
       "scpPsa10SampleCount": 0,
       "scpProduct": "Luis Rodriguez #105",
       "scpId": "1853153",
-      "scpMatchCount": 100
+      "scpMatchCount": 67
     },
     {
       "name": "Luis Salazar",
@@ -3119,7 +3119,7 @@
       "scpPsa10SampleCount": 0,
       "scpProduct": "Luis Salazar #92",
       "scpId": "1941675",
-      "scpMatchCount": 97
+      "scpMatchCount": 98
     },
     {
       "name": "Luis Sanchez",
@@ -3130,7 +3130,7 @@
       "scpPsa10SampleCount": 0,
       "scpProduct": "Angels Future Stars: Tom Brunansky / Luis Sanchez / Daryl Sconiers #653",
       "scpId": "1888991",
-      "scpMatchCount": 18
+      "scpMatchCount": 19
     },
     {
       "name": "Luis Sardinas",
@@ -3216,9 +3216,9 @@
       "scpPsa10Price": null,
       "scpPsa9SampleCount": 0,
       "scpPsa10SampleCount": 0,
-      "scpProduct": "Maicer Izturis [Gold] #443",
-      "scpId": "8202599",
-      "scpMatchCount": 92
+      "scpProduct": "Maicer Izturis [Gold] #US288",
+      "scpId": "6905847",
+      "scpMatchCount": 99
     },
     {
       "name": "Maikel Garcia",
@@ -3381,9 +3381,9 @@
       "scpPsa10Price": null,
       "scpPsa9SampleCount": 0,
       "scpPsa10SampleCount": 0,
-      "scpProduct": "Diego Dorta #210",
-      "scpId": "9087384",
-      "scpMatchCount": 98
+      "scpProduct": "Melvin Dorta [Gold] #1220",
+      "scpId": "14059609",
+      "scpMatchCount": 2
     },
     {
       "name": "Melvin Mora",
@@ -3458,9 +3458,9 @@
       "scpPsa10Price": null,
       "scpPsa9SampleCount": 0,
       "scpPsa10SampleCount": 0,
-      "scpProduct": "Miguel Perez [Refractor] #235",
-      "scpId": "2060890",
-      "scpMatchCount": 17
+      "scpProduct": "Miguel Perez [Gold] #T150",
+      "scpId": "14225040",
+      "scpMatchCount": 22
     },
     {
       "name": "Miguel Rojas",
@@ -3513,9 +3513,9 @@
       "scpPsa10Price": null,
       "scpPsa9SampleCount": 0,
       "scpPsa10SampleCount": 0,
-      "scpProduct": null,
-      "scpId": null,
-      "scpMatchCount": 0
+      "scpProduct": "Odubel Herrera [Gold] #US133",
+      "scpId": "1392035",
+      "scpMatchCount": 100
     },
     {
       "name": "Omar Daal",
@@ -3581,7 +3581,7 @@
       "scpPsa10SampleCount": 0,
       "scpProduct": "Orlando Arcia #117",
       "scpId": "9129296",
-      "scpMatchCount": 98
+      "scpMatchCount": 100
     },
     {
       "name": "Oscar Azocar",
@@ -3614,7 +3614,7 @@
       "scpPsa10SampleCount": 0,
       "scpProduct": "Enrique Burgos, Oscar Hernandez [Snow Camo] #US359",
       "scpId": "1519470",
-      "scpMatchCount": 2
+      "scpMatchCount": 3
     },
     {
       "name": "Oscar Salazar",
@@ -3623,9 +3623,9 @@
       "scpPsa10Price": null,
       "scpPsa9SampleCount": 0,
       "scpPsa10SampleCount": 0,
-      "scpProduct": "Oscar Salazar #533",
-      "scpId": "9424859",
-      "scpMatchCount": 8
+      "scpProduct": "Oscar Salazar [Gold] #UH311",
+      "scpId": "14011323",
+      "scpMatchCount": 13
     },
     {
       "name": "Osleivis Basabe",
@@ -3801,7 +3801,7 @@
       "scpPsa10SampleCount": 0,
       "scpProduct": "Rafael Betancourt [Gold] #568",
       "scpId": "9141095",
-      "scpMatchCount": 68
+      "scpMatchCount": 72
     },
     {
       "name": "Rafael Marchan",
@@ -3845,7 +3845,7 @@
       "scpPsa10SampleCount": 0,
       "scpProduct": "Ramon Castro [Autograph] #17",
       "scpId": "11560141",
-      "scpMatchCount": 58
+      "scpMatchCount": 70
     },
     {
       "name": "Ramon Flores",
@@ -3867,7 +3867,7 @@
       "scpPsa10SampleCount": 0,
       "scpProduct": "Ramon Garcia #13",
       "scpId": "1946483",
-      "scpMatchCount": 21
+      "scpMatchCount": 26
     },
     {
       "name": "Ramon Hernandez",
@@ -3898,9 +3898,9 @@
       "scpPsa10Price": null,
       "scpPsa9SampleCount": 0,
       "scpPsa10SampleCount": 0,
-      "scpProduct": "Ranger Suarez [Foilfractor] #56",
-      "scpId": "8579833",
-      "scpMatchCount": 100
+      "scpProduct": null,
+      "scpId": null,
+      "scpMatchCount": 0
     },
     {
       "name": "Raul Chavez",
@@ -3909,9 +3909,9 @@
       "scpPsa10Price": null,
       "scpPsa9SampleCount": 0,
       "scpPsa10SampleCount": 0,
-      "scpProduct": "Raul Chavez #247",
-      "scpId": "2411256",
-      "scpMatchCount": 19
+      "scpProduct": "Raul Chavez [Gold] #UH242",
+      "scpId": "14011172",
+      "scpMatchCount": 27
     },
     {
       "name": "Ray Monzant",
@@ -3977,7 +3977,7 @@
       "scpPsa10SampleCount": 0,
       "scpProduct": "Renyel Pinto #497",
       "scpId": "10020411",
-      "scpMatchCount": 13
+      "scpMatchCount": 19
     },
     {
       "name": "Ricardo Pinto",
@@ -4043,7 +4043,7 @@
       "scpPsa10SampleCount": 0,
       "scpProduct": "Robert Machado #394",
       "scpId": "8801975",
-      "scpMatchCount": 9
+      "scpMatchCount": 12
     },
     {
       "name": "Robert Suarez",
@@ -4065,7 +4065,7 @@
       "scpPsa10SampleCount": 0,
       "scpProduct": "Roberto Petagine #132",
       "scpId": "1977864",
-      "scpMatchCount": 58
+      "scpMatchCount": 60
     },
     {
       "name": "Roberto Rodriguez",
@@ -4107,8 +4107,8 @@
       "scpPsa10Price": null,
       "scpPsa9SampleCount": 0,
       "scpPsa10SampleCount": 0,
-      "scpProduct": "Ronald Acuna Jr. #HA-2",
-      "scpId": "8565456",
+      "scpProduct": "Ronald Acuna Jr. #P-6",
+      "scpId": "13757002",
       "scpMatchCount": 100
     },
     {
@@ -4153,7 +4153,7 @@
       "scpPsa10SampleCount": 0,
       "scpProduct": "Ronny Cedeno [Gold] #252",
       "scpId": "9380115",
-      "scpMatchCount": 63
+      "scpMatchCount": 64
     },
     {
       "name": "Rosman Garcia",
@@ -4274,7 +4274,7 @@
       "scpPsa10SampleCount": 0,
       "scpProduct": "Tomas Perez [Gold] #485",
       "scpId": "10283882",
-      "scpMatchCount": 45
+      "scpMatchCount": 49
     },
     {
       "name": "Tony Alvarez",
@@ -4307,7 +4307,7 @@
       "scpPsa10SampleCount": 0,
       "scpProduct": "Tony Castillo #592",
       "scpId": "2762735",
-      "scpMatchCount": 50
+      "scpMatchCount": 53
     },
     {
       "name": "Tucupita Marcano",
@@ -4373,7 +4373,7 @@
       "scpPsa10SampleCount": 0,
       "scpProduct": "81 Victory Leaders: Tom Seaver / Denny Martinez / Steve McCatty / Jack Morris / Pete Vuckovich #165",
       "scpId": "1888281",
-      "scpMatchCount": 100
+      "scpMatchCount": 99
     },
     {
       "name": "Victor Reyes",
@@ -4395,7 +4395,7 @@
       "scpPsa10SampleCount": 0,
       "scpProduct": "Victor Zambrano [Gold] #473",
       "scpId": "9077838",
-      "scpMatchCount": 36
+      "scpMatchCount": 43
     },
     {
       "name": "Wiki Gonzalez",
@@ -4481,9 +4481,9 @@
       "scpPsa10Price": null,
       "scpPsa9SampleCount": 0,
       "scpPsa10SampleCount": 0,
-      "scpProduct": "Williams Perez #BP22",
-      "scpId": "8844274",
-      "scpMatchCount": 30
+      "scpProduct": null,
+      "scpId": null,
+      "scpMatchCount": 0
     },
     {
       "name": "Willians Astudillo",
@@ -4494,7 +4494,7 @@
       "scpPsa10SampleCount": 0,
       "scpProduct": "Willians Astudillo [Gold] #US204",
       "scpId": "2814129",
-      "scpMatchCount": 100
+      "scpMatchCount": 92
     },
     {
       "name": "Willie Canate",
@@ -4591,8 +4591,8 @@
       "scpPsa10Price": null,
       "scpPsa9SampleCount": 0,
       "scpPsa10SampleCount": 0,
-      "scpProduct": "Yangervis Solarte [Gold] #685",
-      "scpId": "8204917",
+      "scpProduct": "Yangervis Solarte [Gold] #148",
+      "scpId": "7755419",
       "scpMatchCount": 100
     },
     {
@@ -4734,9 +4734,9 @@
       "scpPsa10Price": null,
       "scpPsa9SampleCount": 0,
       "scpPsa10SampleCount": 0,
-      "scpProduct": "Yorman Bazardo [Gold] #685",
-      "scpId": "9141846",
-      "scpMatchCount": 20
+      "scpProduct": null,
+      "scpId": null,
+      "scpMatchCount": 0
     },
     {
       "name": "Yorman Rodriguez",
@@ -4745,9 +4745,9 @@
       "scpPsa10Price": null,
       "scpPsa9SampleCount": 0,
       "scpPsa10SampleCount": 0,
-      "scpProduct": "Yorman Rodriguez #AR-YR",
-      "scpId": "1517065",
-      "scpMatchCount": 42
+      "scpProduct": null,
+      "scpId": null,
+      "scpMatchCount": 0
     },
     {
       "name": "Yorvit Torrealba",
@@ -4758,7 +4758,7 @@
       "scpPsa10SampleCount": 0,
       "scpProduct": "Yorvit Torrealba [Gold] #470",
       "scpId": "9077784",
-      "scpMatchCount": 54
+      "scpMatchCount": 57
     },
     {
       "name": "Yusmeiro Petit",
@@ -4778,9 +4778,9 @@
       "scpPsa10Price": null,
       "scpPsa9SampleCount": 0,
       "scpPsa10SampleCount": 0,
-      "scpProduct": "Jose Alvarez #253",
-      "scpId": "1937212",
-      "scpMatchCount": 100
+      "scpProduct": null,
+      "scpId": null,
+      "scpMatchCount": 0
     },
     {
       "name": "Robert Perez",
@@ -4802,7 +4802,7 @@
       "scpPsa10SampleCount": 0,
       "scpProduct": "Alex Cabrera #91",
       "scpId": "2037344",
-      "scpMatchCount": 42
+      "scpMatchCount": 46
     },
     {
       "name": "Alex Ramirez",
@@ -4899,9 +4899,9 @@
       "scpPsa10Price": null,
       "scpPsa9SampleCount": 0,
       "scpPsa10SampleCount": 0,
-      "scpProduct": "Yangel Herrera [Cracked Ice] #55",
-      "scpId": "3686041",
-      "scpMatchCount": 100
+      "scpProduct": null,
+      "scpId": null,
+      "scpMatchCount": 0
     },
     {
       "name": "Cristian Casseres Jr.",
@@ -4910,9 +4910,9 @@
       "scpPsa10Price": null,
       "scpPsa9SampleCount": 0,
       "scpPsa10SampleCount": 0,
-      "scpProduct": "Cristian Casseres Jr. [Orange] #116",
-      "scpId": "2723303",
-      "scpMatchCount": 68
+      "scpProduct": null,
+      "scpId": null,
+      "scpMatchCount": 0
     },
     {
       "name": "Wuilker Farinez",
@@ -4934,7 +4934,7 @@
       "scpPsa10SampleCount": 0,
       "scpProduct": "Alejandro Moreno #56",
       "scpId": "2730763",
-      "scpMatchCount": 3
+      "scpMatchCount": 4
     },
     {
       "name": "Dani Pereira",
@@ -4945,7 +4945,7 @@
       "scpPsa10SampleCount": 0,
       "scpProduct": "Dani Pereira [Neon Green Refractor] #BA-DP",
       "scpId": "8981364",
-      "scpMatchCount": 36
+      "scpMatchCount": 43
     },
     {
       "name": "David Martinez",
@@ -4965,9 +4965,9 @@
       "scpPsa10Price": null,
       "scpPsa9SampleCount": 0,
       "scpPsa10SampleCount": 0,
-      "scpProduct": "Emilio Renteria #MA-ER",
-      "scpId": "2731595",
-      "scpMatchCount": 1
+      "scpProduct": "Emilio Renteria #17",
+      "scpId": "13943197",
+      "scpMatchCount": 2
     },
     {
       "name": "Gustavo Caraballo",
@@ -4987,9 +4987,9 @@
       "scpPsa10Price": null,
       "scpPsa9SampleCount": 0,
       "scpPsa10SampleCount": 0,
-      "scpProduct": "Josef Martinez #BM-4",
-      "scpId": "7811746",
-      "scpMatchCount": 100
+      "scpProduct": null,
+      "scpId": null,
+      "scpMatchCount": 0
     },
     {
       "name": "Junior Moreno",
@@ -5044,7 +5044,7 @@
       "scpPsa10SampleCount": 0,
       "scpProduct": "Wikelman Carmona [Red Refractor] #BA-WC",
       "scpId": "8981987",
-      "scpMatchCount": 84
+      "scpMatchCount": 91
     },
     {
       "name": "Alejandro Marques",
