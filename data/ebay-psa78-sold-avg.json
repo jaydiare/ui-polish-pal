@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "updatedAt": "2026-09-01T11:57:12.799Z",
+    "updatedAt": "2026-09-01T16:51:12.189Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "PSA 7 + PSA 8 sold comps. Two queries per athlete. Strict per-grade title filter. Taguchi winsorized mean. USD via CBSA.",
     "targetGrades": [
@@ -8,8 +8,8 @@
       8
     ],
     "batchInfo": {
-      "startIdx": 120,
-      "endIdx": 128,
+      "startIdx": 128,
+      "endIdx": 136,
       "totalAthletes": 464
     },
     "maxPages": 3,
@@ -2224,35 +2224,59 @@
   },
   "Ezequiel Tovar": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-08-16T07:09:44.157Z"
+    "erroredAt": "2026-09-01T16:51:29.831Z"
   },
   "Felipe Lira": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-08-16T07:10:05.584Z"
+    "erroredAt": "2026-09-01T16:51:51.853Z"
   },
   "Felipe Vazquez": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-08-16T07:10:26.855Z"
+    "erroredAt": "2026-09-01T16:52:14.541Z"
   },
   "Felix Doubront": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-08-16T07:10:49.933Z"
+    "erroredAt": "2026-09-01T16:52:36.763Z"
   },
   "Felix Escalona": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-08-16T07:11:12.501Z"
+    "erroredAt": "2026-09-01T16:53:00.933Z"
   },
   "Felix Hernandez": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-08-16T07:11:34.327Z"
+    "erroredAt": "2026-09-01T16:53:21.595Z"
   },
   "Fernando Nieve": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-08-16T07:11:57.879Z"
+    "erroredAt": "2026-09-01T16:54:05.914Z"
   },
   "Francisco Alvarez": {
-    "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-08-16T07:12:20.318Z"
+    "psa7": {
+      "keyword": "Francisco Alvarez Baseball PSA 7",
+      "nScraped": 0,
+      "nSoldUsed": 0,
+      "taguchiSold": null,
+      "medianSold": null,
+      "marketStabilityCV": null,
+      "currency": "USD",
+      "originalCurrencyExample": null,
+      "fxRateUsed": null,
+      "lastKnownSold": null,
+      "lastKnownSoldAt": null
+    },
+    "psa8": {
+      "keyword": "Francisco Alvarez Baseball PSA 8",
+      "nScraped": 0,
+      "nSoldUsed": 0,
+      "taguchiSold": null,
+      "medianSold": null,
+      "marketStabilityCV": null,
+      "currency": "USD",
+      "originalCurrencyExample": null,
+      "fxRateUsed": null,
+      "lastKnownSold": null,
+      "lastKnownSoldAt": null
+    }
   },
   "Francisco Arcia": {
     "error": "eBay fetch failed (403)",
