@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "updatedAt": "2026-09-02T21:12:46.832Z",
+    "updatedAt": "2026-09-03T04:54:46.652Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "PSA 7 + PSA 8 sold comps. Two queries per athlete. Strict per-grade title filter. Taguchi winsorized mean. USD via CBSA.",
     "targetGrades": [
@@ -8,8 +8,8 @@
       8
     ],
     "batchInfo": {
-      "startIdx": 168,
-      "endIdx": 176,
+      "startIdx": 176,
+      "endIdx": 184,
       "totalAthletes": 464
     },
     "maxPages": 3,
@@ -27,7 +27,7 @@
     },
     "fx": {
       "source": "CBSA Exchange Rates API",
-      "asOf": "2026-09-03T00:00:00.000Z"
+      "asOf": "2026-09-04T00:00:00.000Z"
     }
   },
   "Adbert Alzolay": {
@@ -2512,35 +2512,35 @@
   },
   "Hernan Iribarren": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-08-17T19:08:44.329Z"
+    "erroredAt": "2026-09-03T04:55:03.022Z"
   },
   "Hernan Perez": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-08-17T19:09:04.696Z"
+    "erroredAt": "2026-09-03T04:55:23.773Z"
   },
   "Horacio Estrada": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-08-17T19:09:27.910Z"
+    "erroredAt": "2026-09-03T04:55:45.104Z"
   },
   "Humberto Quintero": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-08-17T19:09:49.222Z"
+    "erroredAt": "2026-09-03T04:56:07.869Z"
   },
   "Ildemaro Vargas": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-08-17T19:10:11.442Z"
+    "erroredAt": "2026-09-03T04:56:32.671Z"
   },
   "Isaias Chavez": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-08-17T19:10:33.179Z"
+    "erroredAt": "2026-09-03T04:56:55.608Z"
   },
   "Israel Pineda": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-08-17T19:10:53.009Z"
+    "erroredAt": "2026-09-03T04:57:18.356Z"
   },
   "Ivan Ochoa": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-08-17T19:11:15.604Z"
+    "erroredAt": "2026-09-03T04:57:41.959Z"
   },
   "Jackson Chourio": {
     "error": "eBay fetch failed (403)",
