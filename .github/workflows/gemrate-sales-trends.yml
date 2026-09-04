@@ -1,9 +1,9 @@
 name: Gemrate Sales Trends (Monthly)
 
 on:
-  schedule:
-    # 2nd of each month at 06:00 UTC
-    - cron: "0 6 2 * *"
+  # Disabled: the Sales Volume Trends section was removed from the site.
+  # Gemrate is behind a Cloudflare bot challenge that blocks datacenter
+  # scraping, so this pipeline is kept manual-only for reference.
   workflow_dispatch:
 
 permissions:
@@ -11,7 +11,6 @@ permissions:
 
 env:
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
-  ENABLE_LEGACY_GEMRATE_SALES_TRENDS: "1"
 
 jobs:
   scrape:
