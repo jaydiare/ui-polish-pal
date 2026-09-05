@@ -45,6 +45,8 @@ Empty cell = missing/unavailable. No imputation is applied.
 - **Sparse graded data:** many athletes have few or no graded listings; `graded_*` columns are often empty or based on n=1-3.
 - **Static features are snapshot-joined:** `psa_pop`, `*_pop`, and `scp_*` columns hold each athlete's *latest* value on every row — they are not historical. Avoid using them as if they were known on `date` in strict point-in-time training.
 - **Survivorship:** athletes appear only while they have (or had) tracked listings.
+- **`scp_psa9_price` / `scp_psa10_price` may be entirely empty** until the bi-weekly graded pricing job populates them (gemrate-flagged athletes only).
+- **Names:** history keys may lack diacritics (e.g. `Ronald Acuna Jr.`); joins are accent-insensitive, but filter on `name` exactly as it appears in the CSV.
 
 ## Loading example
 
