@@ -75,6 +75,12 @@ export const translations = {
     "history.note": "Average active listing prices from our daily snapshots.",
 
     // Career stats (MLB)
+    "ml.predictedUp": "{v}% Up",
+    "ml.dealScore": "Deal Score",
+    "ml.volatilityStable": "Stable",
+    "ml.volatilityMomentum": "Momentum",
+    "ml.volatilityVolatile": "Volatile",
+    "ml.tooltipExplainer": "Model estimate from daily price history. Not investment advice.",
     "career.title": "Career stats",
     "career.hitting": "Hitting",
     "career.pitching": "Pitching",
@@ -173,6 +179,12 @@ export const translations = {
     "history.note": "Precios promedio de anuncios activos según nuestras capturas diarias.",
 
     // Career stats (MLB)
+    "ml.predictedUp": "{v}% Sube",
+    "ml.dealScore": "Puntaje de Oportunidad",
+    "ml.volatilityStable": "Estable",
+    "ml.volatilityMomentum": "Impulso",
+    "ml.volatilityVolatile": "Volátil",
+    "ml.tooltipExplainer": "Estimación del modelo basada en el historial diario de precios. No es asesoría de inversión.",
     "career.title": "Estadísticas de carrera",
     "career.hitting": "Bateo",
     "career.pitching": "Pitcheo",
