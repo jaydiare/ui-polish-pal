@@ -62,3 +62,34 @@ df = df.sort_values(["name", "date"])
 # Example: per-athlete feature frame for a price-direction classifier
 baseball = df[df["sport"] == "Baseball"].dropna(subset=["raw_price"])
 ```
+
+## Getting started with modeling
+
+A starter notebook and feature pipeline are included in the repo:
+
+- **`notebooks/ml-starter.ipynb`** — ready-to-run Jupyter/Colab notebook with:
+  - Data loading and missing-value exploration
+  - Volatility clustering baseline (K-Means, standardized per sport)
+  - 7-day price-direction classifier (logistic regression + random forest)
+  - Group-aware time-series validation
+  - Sample prediction export
+- **`scripts/ml-features.py`** — command-line feature engineering pipeline:
+
+```bash
+python scripts/ml-features.py --input data/ml-dataset.csv --output data/ml-features.parquet
+```
+
+This produces a model-ready Parquet file with rolling windows, lagged prices, momentum ratios, and the forward 7-day direction target. All features are point-in-time only — no future leakage.
+
+### Suggested next models
+
+1. **Deal-score ranking** — combine predicted upside, current price, and listing volume to surface underpriced cards.
+2. **Graded-price gap predictor** — predict the ratio between graded and raw prices for athletes with enough graded data.
+3. **Volatility regime switch detector** — flag athletes moving from stable to high-volatility regimes.
+
+### Modeling caveats
+
+- **Point-in-time only.** `psa_pop`, `bgs_pop`, `sgc_pop`, and `scp_*` are static snapshots joined to every row. Use them as athlete descriptors, not as values known on `date`.
+- **Short history.** Daily history begins 2026-06-06. Long-horizon forecasting improves as the dataset grows.
+- **Sparse graded data.** Most athletes have few graded listings; raw-price models are more reliable today.
+- **Survivorship.** Athletes appear only while tracked listings exist.
