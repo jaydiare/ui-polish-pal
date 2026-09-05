@@ -74,7 +74,7 @@ const HEADERS = [
   "graded_price", "graded_cv", "graded_n_listings", "graded_index",
   "days_on_market",
   "psa_pop", "bgs_pop", "sgc_pop",
-  "scp_raw_price", "scp_graded_price",
+  "scp_raw_price", "scp_psa9_price", "scp_psa10_price",
   "days_since_first_seen",
   "raw_price_chg_7d_pct", "raw_price_chg_30d_pct", "raw_return_vol_7d",
 ];
