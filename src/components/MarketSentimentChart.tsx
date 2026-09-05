@@ -149,7 +149,17 @@ const MarketSentimentChart = ({ history }: Props) => {
 
   const rows = useMemo(() => {
     const sliced = range === 0 ? allRows : allRows.slice(-range);
-    return downsample(sliced);
+    // Rebase both series to 100 at the first day of the visible window so the
+    // raw and graded lines are directly comparable on one axis.
+    const baseRaw = sliced.find((r) => r.rawIdx != null)?.rawIdx ?? null;
+    const baseGraded = sliced.find((r) => r.gradedIdx != null)?.gradedIdx ?? null;
+    const rebased = sliced.map((r) => ({
+      ...r,
+      rawIdx: r.rawIdx != null && baseRaw ? Number(((r.rawIdx / baseRaw) * 100).toFixed(1)) : null,
+      gradedIdx:
+        r.gradedIdx != null && baseGraded ? Number(((r.gradedIdx / baseGraded) * 100).toFixed(1)) : null,
+    }));
+    return downsample(rebased);
   }, [allRows, range]);
 
   const withSentiment = allRows.filter((r) => r.sentiment != null);
@@ -245,7 +255,7 @@ const MarketSentimentChart = ({ history }: Props) => {
                 stroke="hsl(var(--muted-foreground))"
                 tick={{ fontSize: 10 }}
                 width={44}
-                label={undefined}
+                domain={["auto", "auto"]}
               />
               <YAxis
                 yAxisId="sent"
