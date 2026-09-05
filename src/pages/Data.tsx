@@ -9,6 +9,7 @@ import VzlaSideBanner from "@/components/VzlaSideBanner";
 import VzlaSupplyCurves from "@/components/VzlaSupplyCurves";
 import Sparkline from "@/components/Sparkline";
 import MlDealTracker from "@/components/MlDealTracker";
+import MarketSentimentChart from "@/components/MarketSentimentChart";
 import { buildEbaySearchUrl, buildEbayGradedSearchUrl } from "@/lib/vzla-helpers";
 const EpnPlacementSummary = lazy(() => import("@/components/EpnPlacementSummary"));
 
@@ -708,6 +709,8 @@ const Data = () => {
         ) : (
           <>
             <MlDealTracker />
+
+            <MarketSentimentChart history={athleteHistory} />
 
             {/* ── Scatter: Listed Raw vs Listed Graded ── */}
             <section className="my-8" aria-label="Listed Raw vs Listed Graded scatter chart">

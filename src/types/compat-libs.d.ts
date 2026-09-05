@@ -42,6 +42,7 @@ declare module "recharts" {
 
   export const Area: React.ComponentType<any>;
   export const AreaChart: React.ComponentType<any>;
+  export const ComposedChart: React.ComponentType<any>;
 
   const _default: any;
   export default _default;
