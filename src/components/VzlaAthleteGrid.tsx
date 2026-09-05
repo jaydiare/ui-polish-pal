@@ -51,7 +51,7 @@ const VzlaAthleteGrid = ({ athletes, byName, byKey, gradedByName, gradedByKey, e
     <>
       {/* Sort bar */}
       <div className="flex items-center gap-2 mt-8 mb-4" role="toolbar" aria-label="Sort controls">
-        <span className="text-[10px] tracking-widest uppercase font-bold text-muted-foreground">Sort by</span>
+        <span className="text-[10px] tracking-widest uppercase font-bold text-muted-foreground">{t("sort.by")}</span>
         {SORT_OPTIONS.map((opt) => (
           <button
             key={opt.value}
