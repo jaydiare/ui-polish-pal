@@ -30,6 +30,8 @@ ROOT = Path(__file__).resolve().parent.parent
 DATA_DIR = ROOT / "data"
 INPUT_CSV = DATA_DIR / "ml-dataset.csv"
 OUTPUT_JSON = DATA_DIR / "athlete-ml-scores.json"
+HISTORY_JSON = DATA_DIR / "athlete-ml-scores-history.json"
+HISTORY_MAX_SNAPSHOTS = 52
 
 
 def load_data(path: Path) -> pd.DataFrame:
@@ -239,6 +241,47 @@ def top_features(clf: LogisticRegression, feature_cols: list[str], row_values: n
     return [{"feature": feature_cols[i], "impact": float(contributions[i])} for i in order]
 
 
+def append_history(records: dict) -> None:
+    """Upsert today's scores into the dated history file (bi-weekly snapshots)."""
+    history = {}
+    if HISTORY_JSON.exists():
+        try:
+            with open(HISTORY_JSON) as f:
+                loaded = json.load(f)
+            history = loaded.get("history", {}) or {}
+        except (json.JSONDecodeError, OSError):
+            history = {}
+
+    dates = {r.get("scored_at") for r in records.values() if r.get("scored_at")}
+    snapshot_date = max(dates) if dates else pd.Timestamp.utcnow().strftime("%Y-%m-%d")
+
+    history[snapshot_date] = {
+        name: {
+            "deal_score": rec["deal_score"],
+            "prob": rec["predicted_up_7d_prob"],
+            "cluster": rec["volatility_cluster"],
+        }
+        for name, rec in records.items()
+    }
+
+    kept = sorted(history.keys())[-HISTORY_MAX_SNAPSHOTS:]
+    history = {d: history[d] for d in kept}
+
+    payload = {
+        "_meta": {
+            "updated_at": pd.Timestamp.utcnow().strftime("%Y-%m-%dT%H:%M:%SZ"),
+            "dates": kept,
+            "snapshots": len(kept),
+        },
+        "history": history,
+    }
+
+    with open(HISTORY_JSON, "w") as f:
+        json.dump(payload, f, indent=2)
+
+    print(f"History now holds {len(kept)} snapshot(s) -> {HISTORY_JSON}")
+
+
 def main() -> None:
     print(f"Loading {INPUT_CSV}...")
     df = load_data(INPUT_CSV)
@@ -293,6 +336,8 @@ def main() -> None:
         json.dump(output, f, indent=2)
 
     print(f"Wrote {len(records)} athlete scores to {OUTPUT_JSON}")
+
+    append_history(records)
 
 
 if __name__ == "__main__":

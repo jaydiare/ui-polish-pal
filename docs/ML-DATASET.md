@@ -121,3 +121,18 @@ It writes `data/athlete-ml-scores.json` (copied to `public/data/` for the app) w
 - `Deal Score` bar — the 0–100 composite under the card header.
 
 Scores refresh with the bi-weekly analysis workflow (`.github/workflows/bi-weekly-analysis.yml`); they are model estimates from historical prices, not investment advice.
+
+### Score history (`athlete-ml-scores-history.json`)
+
+Every scorer run also upserts a dated snapshot into `data/athlete-ml-scores-history.json` (copied to `public/data/`):
+
+```json
+{
+  "_meta": { "updated_at": "...", "dates": ["2026-09-05"], "snapshots": 1 },
+  "history": {
+    "2026-09-05": { "Ronald Acuna Jr.": { "deal_score": 38.5, "prob": 0.4058, "cluster": "momentum" } }
+  }
+}
+```
+
+Only the fields the chart needs are stored, and the file keeps the most recent 52 snapshots (about two years of bi-weekly runs); older dates are dropped. The Market Intel page reads it to draw the **ML Deal Tracker**, which plots the 30 highest current Deal Scores over time, one dot per player per run, colored by volatility group.

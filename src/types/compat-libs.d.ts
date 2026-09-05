@@ -38,6 +38,7 @@ declare module "recharts" {
 
   export const Scatter: React.ComponentType<any>;
   export const ScatterChart: React.ComponentType<any>;
+  export const LabelList: React.ComponentType<any>;
 
   export const Area: React.ComponentType<any>;
   export const AreaChart: React.ComponentType<any>;
