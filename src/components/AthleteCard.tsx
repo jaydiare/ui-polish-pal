@@ -12,6 +12,8 @@ import {
   initialsFromName,
 } from "@/lib/vzla-helpers";
 import { useAthleteImage } from "@/hooks/useAthleteImage";
+import { useLanguage } from "@/i18n/LanguageProvider";
+import type { AthleteMlScore } from "@/hooks/useAthleteMlScores";
 import Sparkline from "./Sparkline";
 import PriceHistoryDialog from "./PriceHistoryDialog";
 
