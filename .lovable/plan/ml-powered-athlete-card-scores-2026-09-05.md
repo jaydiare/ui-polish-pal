@@ -26,15 +26,15 @@ Validation:
 - Uses the same grouped time-series split from the starter notebook.
 - Logs accuracy and cluster sizes to stdout so the workflow run is observable.
 
-### 2. Daily automation
-Add one step to `.github/workflows/snapshot-history.yml` after the export-ml step:
+### 2. Bi-weekly automation
+Add one step to `.github/workflows/bi-weekly-analysis.yml` after the bi-weekly analysis step:
 
 ```text
 Run ML athlete scorer
   -> python scripts/ml-score-athletes.py
 ```
 
-Commit `data/athlete-ml-scores.json` alongside the daily snapshot so card scores stay current.
+Commit `data/athlete-ml-scores.json` alongside the bi-weekly analysis so card scores stay current (scores do not need to run daily).
 
 ### 3. React integration
 
