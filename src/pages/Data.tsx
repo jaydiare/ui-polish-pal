@@ -8,6 +8,7 @@ import VzlaEbayFooter from "@/components/VzlaEbayFooter";
 import VzlaSideBanner from "@/components/VzlaSideBanner";
 import VzlaSupplyCurves from "@/components/VzlaSupplyCurves";
 import Sparkline from "@/components/Sparkline";
+import MlDealTracker from "@/components/MlDealTracker";
 import { buildEbaySearchUrl, buildEbayGradedSearchUrl } from "@/lib/vzla-helpers";
 const EpnPlacementSummary = lazy(() => import("@/components/EpnPlacementSummary"));
 
