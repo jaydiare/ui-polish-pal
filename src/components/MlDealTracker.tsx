@@ -190,33 +190,59 @@ const MlDealTracker = () => {
               ))}
             </div>
 
-            <div className="w-full h-[360px] md:h-[440px] relative">
+            <div className={`w-full relative ${singleDate ? "h-[620px]" : "h-[360px] md:h-[440px]"}`}>
               <ResponsiveContainer width="100%" height="100%">
-                <ScatterChart margin={{ top: 10, right: 90, bottom: 30, left: 0 }} onClick={handleClick}>
+                <ScatterChart
+                  margin={{ top: 10, right: singleDate ? 20 : 90, bottom: 30, left: singleDate ? 10 : 0 }}
+                  onClick={handleClick}
+                >
                   <CartesianGrid strokeDasharray="3 3" stroke="hsl(var(--border))" opacity={0.5} />
-                  <XAxis
-                    type="number"
-                    dataKey="t"
-                    domain={xDomain}
-                    tickFormatter={formatDate}
-                    tick={{ fill: "hsl(var(--muted-foreground))", fontSize: 10 }}
-                    stroke="hsl(var(--border))"
-                    name={t("mlTracker.xAxis")}
-                  />
-                  <YAxis
-                    type="number"
-                    dataKey="deal"
-                    domain={[0, 100]}
-                    tick={{ fill: "hsl(var(--muted-foreground))", fontSize: 10 }}
-                    stroke="hsl(var(--border))"
-                    label={{
-                      value: t("ml.dealScore"),
-                      angle: -90,
-                      position: "insideLeft",
-                      fill: "hsl(var(--muted-foreground))",
-                      fontSize: 10,
-                    }}
-                  />
+                  {singleDate ? (
+                    <XAxis
+                      type="number"
+                      dataKey="deal"
+                      domain={[0, 100]}
+                      tick={{ fill: "hsl(var(--muted-foreground))", fontSize: 10 }}
+                      stroke="hsl(var(--border))"
+                      name={t("ml.dealScore")}
+                    />
+                  ) : (
+                    <XAxis
+                      type="number"
+                      dataKey="t"
+                      domain={xDomain}
+                      tickFormatter={formatDate}
+                      tick={{ fill: "hsl(var(--muted-foreground))", fontSize: 10 }}
+                      stroke="hsl(var(--border))"
+                      name={t("mlTracker.xAxis")}
+                    />
+                  )}
+                  {singleDate ? (
+                    <YAxis
+                      type="category"
+                      dataKey="name"
+                      width={130}
+                      interval={0}
+                      tick={{ fill: "hsl(var(--muted-foreground))", fontSize: 9 }}
+                      stroke="hsl(var(--border))"
+                    />
+                  ) : (
+                    <YAxis
+                      type="number"
+                      dataKey="deal"
+                      domain={[0, 100]}
+                      tick={{ fill: "hsl(var(--muted-foreground))", fontSize: 10 }}
+                      stroke="hsl(var(--border))"
+                      label={{
+                        value: t("ml.dealScore"),
+                        angle: -90,
+                        position: "insideLeft",
+                        fill: "hsl(var(--muted-foreground))",
+                        fontSize: 10,
+                      }}
+                    />
+                  )}
+
                   <Scatter data={olderPoints} isAnimationActive={false} cursor="pointer">
                     {olderPoints.map((p, i) => (
                       <Cell key={`o-${i}`} fill={CLUSTER_COLOR[p.cluster] || CLUSTER_COLOR.stable} fillOpacity={0.55} />
