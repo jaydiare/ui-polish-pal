@@ -6,6 +6,7 @@ import AthleteCard from "./AthleteCard";
 import { useHotSellers } from "@/hooks/useEpnPerformance";
 import { useAthleteMlScores } from "@/hooks/useAthleteMlScores";
 import { useLanguage } from "@/i18n/LanguageProvider";
+import type { TranslationKey } from "@/i18n/translations";
 
 interface VzlaAthleteGridProps {
   athletes: Athlete[];
@@ -27,7 +28,7 @@ interface VzlaAthleteGridProps {
   priceMode: "raw" | "graded" | "both";
 }
 
-const SORT_OPTIONS: { value: SortOption; labelKey: string }[] = [
+const SORT_OPTIONS: { value: SortOption; labelKey: TranslationKey }[] = [
   { value: "default", labelKey: "sort.default" },
   { value: "price_desc", labelKey: "sort.priceDesc" },
   { value: "stability_best", labelKey: "sort.mostStable" },
