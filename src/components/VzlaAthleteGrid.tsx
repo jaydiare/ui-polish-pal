@@ -1,4 +1,6 @@
 import { motion } from "framer-motion";
+import { useState } from "react";
+import { ChevronDown } from "lucide-react";
 import { Athlete, EbayAvgRecord } from "@/data/athletes";
 import { buildBudgetAthleteId } from "@/lib/budget-knapsack";
 import { SortOption } from "@/lib/vzla-helpers";
@@ -6,6 +8,7 @@ import AthleteCard from "./AthleteCard";
 import { useHotSellers } from "@/hooks/useEpnPerformance";
 import { useAthleteMlScores } from "@/hooks/useAthleteMlScores";
 import { useLanguage } from "@/i18n/LanguageProvider";
+import { useIsMobile } from "@/hooks/use-mobile";
 import type { TranslationKey } from "@/i18n/translations";
 
 interface VzlaAthleteGridProps {
