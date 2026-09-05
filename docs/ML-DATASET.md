@@ -93,3 +93,31 @@ This produces a model-ready Parquet file with rolling windows, lagged prices, mo
 - **Short history.** Daily history begins 2026-06-06. Long-horizon forecasting improves as the dataset grows.
 - **Sparse graded data.** Most athletes have few graded listings; raw-price models are more reliable today.
 - **Survivorship.** Athletes appear only while tracked listings exist.
+
+## Athlete card scores (`athlete-ml-scores.json`)
+
+`scripts/ml-score-athletes.py` turns the dataset into per-athlete scores displayed as badges on the athlete cards.
+
+Run it with:
+
+```bash
+python scripts/ml-score-athletes.py
+```
+
+It writes `data/athlete-ml-scores.json` (copied to `public/data/` for the app) with one entry per athlete, using the most recent day available:
+
+| Field | Meaning |
+|---|---|
+| `predicted_up_7d_prob` | Logistic-regression probability the raw price is higher in 7 days (0–1) |
+| `volatility_cluster` | `stable`, `momentum`, or `volatile` (K-Means, k=3, per sport) |
+| `deal_score` | 0–100 composite of predicted upside, momentum, liquidity and stability |
+| `feature_importance` | Top 3 drivers (`coef x value`), shown in the badge tooltip |
+| `scored_at` | Date of the snapshot the score was computed from |
+
+### How the badges read
+
+- `🔮 X% Up` — only shown when the predicted probability is at least 55%.
+- `🛡️ Stable` / `⚡ Momentum` / `🌊 Volatile` — volatility cluster.
+- `Deal Score` bar — the 0–100 composite under the card header.
+
+Scores refresh with the bi-weekly analysis workflow (`.github/workflows/bi-weekly-analysis.yml`); they are model estimates from historical prices, not investment advice.
