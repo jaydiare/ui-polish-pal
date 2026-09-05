@@ -4,6 +4,7 @@ import { buildBudgetAthleteId } from "@/lib/budget-knapsack";
 import { SortOption } from "@/lib/vzla-helpers";
 import AthleteCard from "./AthleteCard";
 import { useHotSellers } from "@/hooks/useEpnPerformance";
+import { useAthleteMlScores } from "@/hooks/useAthleteMlScores";
 
 interface VzlaAthleteGridProps {
   athletes: Athlete[];
@@ -33,6 +34,7 @@ const SORT_OPTIONS: { value: SortOption; label: string }[] = [
 
 const VzlaAthleteGrid = ({ athletes, byName, byKey, gradedByName, gradedByKey, ebaySoldRaw, ebayGradedSoldRaw, athleteHistory, gemratePopMap, snapshotFallback, hasMore, remainingCount, onLoadMore, highlightedIds, sort, onSortChange, priceMode }: VzlaAthleteGridProps) => {
   const hotSellers = useHotSellers();
+  const { getScore } = useAthleteMlScores();
 
   // If budget is active, filter to only highlighted cards
   const displayAthletes = highlightedIds && highlightedIds.size > 0
@@ -92,6 +94,7 @@ const VzlaAthleteGrid = ({ athletes, byName, byKey, gradedByName, gradedByKey, e
                 isHotSeller={hotSellers.has(a.name)}
                 priceMode={effectivePriceMode}
                 snapshotFallback={snapshotFallback?.[a.name]}
+                mlScore={getScore(a.name)}
               />
             </motion.div>
           );

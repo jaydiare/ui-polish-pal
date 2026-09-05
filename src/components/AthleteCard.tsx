@@ -12,6 +12,8 @@ import {
   initialsFromName,
 } from "@/lib/vzla-helpers";
 import { useAthleteImage } from "@/hooks/useAthleteImage";
+import { useLanguage } from "@/i18n/LanguageProvider";
+import type { AthleteMlScore } from "@/hooks/useAthleteMlScores";
 import Sparkline from "./Sparkline";
 import PriceHistoryDialog from "./PriceHistoryDialog";
 
@@ -30,9 +32,18 @@ interface AthleteCardProps {
   isHotSeller?: boolean;
   priceMode: "raw" | "graded" | "both";
   snapshotFallback?: { rawListedPrice: number | null; gradedListedPrice: number | null };
+  mlScore?: AthleteMlScore;
 }
 
-const AthleteCard = forwardRef<HTMLElement, AthleteCardProps>(({ athlete, byName, byKey, gradedByName, gradedByKey, ebaySoldRaw, ebayGradedSoldRaw, history, psaPop, isRecommended, isHotSeller, priceMode, snapshotFallback }, ref) => {
+const CLUSTER_META = {
+  stable: { icon: "🛡️", key: "ml.volatilityStable", cls: "bg-emerald-500/10 border-emerald-400/20 text-emerald-400" },
+  momentum: { icon: "⚡", key: "ml.volatilityMomentum", cls: "bg-sky-500/10 border-sky-400/20 text-sky-400" },
+  volatile: { icon: "🌊", key: "ml.volatilityVolatile", cls: "bg-rose-500/10 border-rose-400/20 text-rose-400" },
+} as const;
+
+const AthleteCard = forwardRef<HTMLElement, AthleteCardProps>(({ athlete, byName, byKey, gradedByName, gradedByKey, ebaySoldRaw, ebayGradedSoldRaw, history, psaPop, isRecommended, isHotSeller, priceMode, snapshotFallback, mlScore }, ref) => {
+  const { t } = useLanguage();
+
   const cardRef = useRef<HTMLElement>(null);
   // DEBUG: Toggle alignment overlay with `?debug=align` in URL
   const debugAlign = typeof window !== "undefined" && new URLSearchParams(window.location.search).get("debug") === "align";
@@ -185,6 +196,11 @@ const AthleteCard = forwardRef<HTMLElement, AthleteCardProps>(({ athlete, byName
 
   const [historyOpen, setHistoryOpen] = useState(false);
 
+  const mlCluster = mlScore ? CLUSTER_META[mlScore.volatility_cluster as keyof typeof CLUSTER_META] : undefined;
+  const mlDrivers = mlScore?.feature_importance?.length
+    ? mlScore.feature_importance.slice(0, 3).map((f) => f.feature.replace(/_/g, " ")).join(", ")
+    : "";
+
 
   return (
     <article ref={(node) => {
@@ -241,9 +257,50 @@ const AthleteCard = forwardRef<HTMLElement, AthleteCardProps>(({ athlete, byName
                 🔥 Hot Seller
               </span>
             )}
+            {mlScore && mlScore.predicted_up_7d_prob >= 0.55 && (
+              <span
+                title={`${t("ml.tooltipExplainer")}${mlDrivers ? ` — ${mlDrivers}` : ""}`}
+                className="inline-flex px-1.5 py-0.5 rounded text-[9px] font-bold bg-primary/10 border border-primary/20 text-primary"
+              >
+                🔮 {t("ml.predictedUp").replace("{v}", String(Math.round(mlScore.predicted_up_7d_prob * 100)))}
+              </span>
+            )}
+            {mlCluster && (
+              <span
+                title={t("ml.tooltipExplainer")}
+                className={`inline-flex px-1.5 py-0.5 rounded text-[9px] font-bold border ${mlCluster.cls}`}
+              >
+                {mlCluster.icon} {t(mlCluster.key)}
+              </span>
+            )}
           </div>
         </div>
       </div>
+
+      {/* ── ML deal score ── */}
+      {mlScore && Number.isFinite(mlScore.deal_score) && (
+        <div className="mt-3" title={`${t("ml.tooltipExplainer")}${mlDrivers ? ` — ${mlDrivers}` : ""}`}>
+          <div className="flex items-center justify-between mb-1">
+            <span className="text-[9px] font-semibold uppercase tracking-wider text-muted-foreground">
+              {t("ml.dealScore")}
+            </span>
+            <span className="text-[10px] font-display font-bold text-foreground">
+              {Math.round(mlScore.deal_score)}
+            </span>
+          </div>
+          <div
+            className="h-1.5 rounded-full bg-secondary overflow-hidden"
+            role="img"
+            aria-label={`${t("ml.dealScore")}: ${Math.round(mlScore.deal_score)} / 100`}
+          >
+            <div
+              className="h-full rounded-full bg-vzla-yellow"
+              style={{ width: `${Math.max(0, Math.min(100, mlScore.deal_score))}%` }}
+            />
+          </div>
+        </div>
+      )}
+
 
       {/* ── Price grid ── */}
       <div className={`mt-3 grid gap-2 ${priceMode === "both" ? "grid-cols-2" : "grid-cols-1"}`}>
