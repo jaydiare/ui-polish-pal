@@ -30,9 +30,18 @@ interface AthleteCardProps {
   isHotSeller?: boolean;
   priceMode: "raw" | "graded" | "both";
   snapshotFallback?: { rawListedPrice: number | null; gradedListedPrice: number | null };
+  mlScore?: AthleteMlScore;
 }
 
-const AthleteCard = forwardRef<HTMLElement, AthleteCardProps>(({ athlete, byName, byKey, gradedByName, gradedByKey, ebaySoldRaw, ebayGradedSoldRaw, history, psaPop, isRecommended, isHotSeller, priceMode, snapshotFallback }, ref) => {
+const CLUSTER_META: Record<string, { icon: string; key: string; cls: string }> = {
+  stable: { icon: "🛡️", key: "ml.volatilityStable", cls: "bg-emerald-500/10 border-emerald-400/20 text-emerald-400" },
+  momentum: { icon: "⚡", key: "ml.volatilityMomentum", cls: "bg-sky-500/10 border-sky-400/20 text-sky-400" },
+  volatile: { icon: "🌊", key: "ml.volatilityVolatile", cls: "bg-rose-500/10 border-rose-400/20 text-rose-400" },
+};
+
+const AthleteCard = forwardRef<HTMLElement, AthleteCardProps>(({ athlete, byName, byKey, gradedByName, gradedByKey, ebaySoldRaw, ebayGradedSoldRaw, history, psaPop, isRecommended, isHotSeller, priceMode, snapshotFallback, mlScore }, ref) => {
+  const { t } = useLanguage();
+
   const cardRef = useRef<HTMLElement>(null);
   // DEBUG: Toggle alignment overlay with `?debug=align` in URL
   const debugAlign = typeof window !== "undefined" && new URLSearchParams(window.location.search).get("debug") === "align";
