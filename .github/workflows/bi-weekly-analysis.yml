@@ -49,7 +49,7 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
-          git add data/analysis/ data/analysis-latest.json
+          git add data/analysis/ data/analysis-latest.json data/athlete-ml-scores.json
 
           if git diff --cached --quiet; then
             echo "No changes to commit"
