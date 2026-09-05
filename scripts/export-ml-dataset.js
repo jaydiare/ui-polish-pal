@@ -22,6 +22,7 @@ const normKey = (s) =>
   String(s || "").normalize("NFD").replace(/[̀-ͯ]/g, "")
     .replace(/[.\-']/g, "").replace(/\s+/g, " ").toLowerCase().trim();
 
+
 // ---------- Load sources ----------
 const athletes = loadJson("athletes.json") || [];
 const history = loadJson("athlete-history.json") || {};
