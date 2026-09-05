@@ -1,14 +1,7 @@
 import { useEffect, useState } from "react";
+import type { AthleteMlScore, MlScoreMap } from "@/lib/vzla-helpers";
 
-export interface AthleteMlScore {
-  predicted_up_7d_prob: number;
-  volatility_cluster: "stable" | "momentum" | "volatile";
-  deal_score: number;
-  feature_importance?: { feature: string; impact: number }[];
-  scored_at?: string;
-}
-
-export type MlScoreMap = Record<string, AthleteMlScore>;
+export type { AthleteMlScore, MlScoreMap };
 
 const REMOTE_URL =
   "https://raw.githubusercontent.com/jaydiare/ui-polish-pal/main/data/athlete-ml-scores.json";

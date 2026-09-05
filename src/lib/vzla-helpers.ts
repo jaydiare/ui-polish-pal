@@ -372,17 +372,63 @@ export function filterAthletes(
 }
 
 // Sorting
-export type SortOption = "default" | "price_desc" | "stability_best";
+export type SortOption =
+  | "default"
+  | "price_desc"
+  | "stability_best"
+  | "deal_score_desc"
+  | "upside_prob_desc"
+  | "volatility_high"
+  | "volatility_low";
+
+export interface AthleteMlScore {
+  predicted_up_7d_prob: number;
+  volatility_cluster: "stable" | "momentum" | "volatile";
+  deal_score: number;
+  feature_importance?: { feature: string; impact: number }[];
+  scored_at?: string;
+}
+
+export type MlScoreMap = Record<string, AthleteMlScore>;
+
+const VOLATILITY_RANK: Record<string, number> = { volatile: 2, momentum: 1, stable: 0 };
+
+function compareMlScores(
+  a: Athlete,
+  b: Athlete,
+  mlScores: MlScoreMap,
+  getValue: (s: AthleteMlScore) => number
+): number {
+  const sa = mlScores[normalizeName(a.name)];
+  const sb = mlScores[normalizeName(b.name)];
+  if (!sa && !sb) return 0;
+  if (!sa) return 1;
+  if (!sb) return -1;
+  return getValue(sb) - getValue(sa);
+}
 
 export function sortAthletes(
   list: Athlete[],
   sort: SortOption,
   byName: Record<string, EbayAvgRecord>,
-  byKey: Record<string, EbayAvgRecord>
+  byKey: Record<string, EbayAvgRecord>,
+  mlScores?: MlScoreMap
 ): Athlete[] {
   if (sort === "default") return list;
 
   return list.slice().sort((a, b) => {
+    if (sort === "deal_score_desc" && mlScores) {
+      return compareMlScores(a, b, mlScores, (s) => s.deal_score);
+    }
+    if (sort === "upside_prob_desc" && mlScores) {
+      return compareMlScores(a, b, mlScores, (s) => s.predicted_up_7d_prob);
+    }
+    if (sort === "volatility_high" && mlScores) {
+      return compareMlScores(a, b, mlScores, (s) => VOLATILITY_RANK[s.volatility_cluster] ?? -1);
+    }
+    if (sort === "volatility_low" && mlScores) {
+      return compareMlScores(a, b, mlScores, (s) => -(VOLATILITY_RANK[s.volatility_cluster] ?? -1));
+    }
     if (sort === "price_desc") {
       const pa = getEbayAvgNumber(a, byName, byKey);
       const pb = getEbayAvgNumber(b, byName, byKey);
