@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "updatedAt": "2026-09-04T20:57:42.943Z",
+    "updatedAt": "2026-09-05T04:52:00.709Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "PSA 7 + PSA 8 sold comps. Two queries per athlete. Strict per-grade title filter. Taguchi winsorized mean. USD via CBSA.",
     "targetGrades": [
@@ -8,8 +8,8 @@
       8
     ],
     "batchInfo": {
-      "startIdx": 232,
-      "endIdx": 240,
+      "startIdx": 240,
+      "endIdx": 248,
       "totalAthletes": 464
     },
     "maxPages": 3,
@@ -27,7 +27,7 @@
     },
     "fx": {
       "source": "CBSA Exchange Rates API",
-      "asOf": "2026-09-05T00:00:00.000Z"
+      "asOf": "2026-09-06T00:00:00.000Z"
     }
   },
   "Adbert Alzolay": {
@@ -2760,35 +2760,35 @@
   },
   "Juan Castillo": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-08-19T19:04:05.793Z"
+    "erroredAt": "2026-09-05T04:52:17.329Z"
   },
   "Juan Moreno": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-08-19T19:04:26.135Z"
+    "erroredAt": "2026-09-05T04:52:39.125Z"
   },
   "Juan Morillo": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-08-19T19:04:55.618Z"
+    "erroredAt": "2026-09-05T04:52:59.419Z"
   },
   "Juan Rincon": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-08-19T19:05:25.259Z"
+    "erroredAt": "2026-09-05T04:53:22.087Z"
   },
   "Juan Rivera": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-08-19T19:05:45.063Z"
+    "erroredAt": "2026-09-05T04:53:44.171Z"
   },
   "Juan Yepez": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-08-19T19:06:07.670Z"
+    "erroredAt": "2026-09-05T04:54:04.506Z"
   },
   "Julio Machado": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-08-19T19:06:27.678Z"
+    "erroredAt": "2026-09-05T04:54:24.309Z"
   },
   "Junior Guerra": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-08-19T19:06:47.973Z"
+    "erroredAt": "2026-09-05T04:54:47.761Z"
   },
   "Keibert Ruiz": {
     "error": "eBay fetch failed (403)",
