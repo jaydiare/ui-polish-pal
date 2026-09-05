@@ -84,3 +84,68 @@ export function useAthleteMlScores() {
 
   return { scores, getScore, loading, error };
 }
+
+export interface MlHistoryPoint {
+  deal_score: number;
+  prob: number;
+  cluster: "stable" | "momentum" | "volatile";
+}
+
+export type MlHistory = Record<string, Record<string, MlHistoryPoint>>;
+
+const HISTORY_REMOTE =
+  "https://raw.githubusercontent.com/jaydiare/ui-polish-pal/main/data/athlete-ml-scores-history.json";
+const HISTORY_LOCAL = "/data/athlete-ml-scores-history.json";
+
+let historyCache: { history: MlHistory; dates: string[] } | null = null;
+let historyInflight: Promise<{ history: MlHistory; dates: string[] }> | null = null;
+
+async function fetchHistory() {
+  if (historyCache) return historyCache;
+  if (historyInflight) return historyInflight;
+  historyInflight = (async () => {
+    for (const url of [HISTORY_REMOTE, HISTORY_LOCAL]) {
+      try {
+        const res = await fetch(url, { cache: "no-store" });
+        if (!res.ok) continue;
+        const raw = await res.json();
+        const history = (raw?.history ?? {}) as MlHistory;
+        const dates = Object.keys(history).sort();
+        if (dates.length > 0) {
+          historyCache = { history, dates };
+          return historyCache;
+        }
+      } catch {
+        /* try next source */
+      }
+    }
+    historyCache = { history: {}, dates: [] };
+    return historyCache;
+  })();
+  return historyInflight;
+}
+
+export function useAthleteMlScoreHistory() {
+  const [state, setState] = useState<{ history: MlHistory; dates: string[] }>(
+    historyCache || { history: {}, dates: [] }
+  );
+  const [loading, setLoading] = useState(!historyCache);
+  const [error, setError] = useState(false);
+
+  useEffect(() => {
+    let active = true;
+    fetchHistory()
+      .then((data) => {
+        if (!active) return;
+        setState(data);
+        setError(data.dates.length === 0);
+      })
+      .catch(() => active && setError(true))
+      .finally(() => active && setLoading(false));
+    return () => {
+      active = false;
+    };
+  }, []);
+
+  return { history: state.history, dates: state.dates, loading, error };
+}
