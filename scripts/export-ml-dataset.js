@@ -28,7 +28,8 @@ const history = loadJson("athlete-history.json") || {};
 const gemrate = loadJson("gemrate.json");
 const gemrateBeckett = loadJson("gemrate_beckett.json");
 const gemrateSgc = loadJson("gemrate_sgc.json");
-const scpPrices = loadJson("scp-prices.json");
+const scpRaw = loadJson("scp-raw.json");
+const scpGraded = loadJson("scp-graded.json");
 
 // ---------- Static feature maps (accent-insensitive) ----------
 const metaMap = {}; // normKey -> { sport, league }
