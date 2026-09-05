@@ -196,6 +196,11 @@ const AthleteCard = forwardRef<HTMLElement, AthleteCardProps>(({ athlete, byName
 
   const [historyOpen, setHistoryOpen] = useState(false);
 
+  const mlCluster = mlScore ? CLUSTER_META[mlScore.volatility_cluster] : undefined;
+  const mlDrivers = mlScore?.feature_importance?.length
+    ? mlScore.feature_importance.slice(0, 3).map((f) => f.feature.replace(/_/g, " ")).join(", ")
+    : "";
+
 
   return (
     <article ref={(node) => {
