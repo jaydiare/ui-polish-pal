@@ -27,12 +27,15 @@ jobs:
       - name: Run snapshot script
         run: node scripts/snapshot-athlete-history.js
 
+      - name: Export ML dataset
+        run: node scripts/export-ml-dataset.js
+
       - name: Commit & push (rebase-safe)
         run: |
           set -e
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add data/athlete-history.json data/athlete-first-seen.json
+          git add data/athlete-history.json data/athlete-first-seen.json data/ml-dataset.csv data/ml-dataset.csv.gz
           if git diff --cached --quiet; then
             echo "No changes to commit"
             exit 0
