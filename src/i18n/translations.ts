@@ -75,6 +75,14 @@ export const translations = {
     "history.note": "Average active listing prices from our daily snapshots.",
 
     // Career stats (MLB)
+    "mlTracker.title": "ML Deal Tracker",
+    "mlTracker.subtitle": "Each dot is one of the 30 highest Deal Scores from our model, plotted on the day it was scored. Tap a dot for details.",
+    "mlTracker.xAxis": "Scoring date",
+    "mlTracker.upside": "7-day upside",
+    "mlTracker.group": "Group",
+    "mlTracker.tapName": "Tap name to search eBay",
+    "mlTracker.empty": "No scoring history yet. The first snapshot appears after the next scoring run.",
+    "mlTracker.note": "Deal Scores are model estimates from historical prices, refreshed every two weeks. Not investment advice.",
     "ml.predictedUp": "{v}% Up",
     "ml.dealScore": "Deal Score",
     "ml.volatilityStable": "Stable",
@@ -179,6 +187,14 @@ export const translations = {
     "history.note": "Precios promedio de anuncios activos según nuestras capturas diarias.",
 
     // Career stats (MLB)
+    "mlTracker.title": "Rastreador de Oportunidades ML",
+    "mlTracker.subtitle": "Cada punto es uno de los 30 Puntajes de Oportunidad más altos del modelo, en el día en que se calculó. Toca un punto para ver detalles.",
+    "mlTracker.xAxis": "Fecha de cálculo",
+    "mlTracker.upside": "Alza a 7 días",
+    "mlTracker.group": "Grupo",
+    "mlTracker.tapName": "Toca el nombre para buscar en eBay",
+    "mlTracker.empty": "Aún no hay historial. La primera captura aparecerá tras el próximo cálculo.",
+    "mlTracker.note": "Los Puntajes de Oportunidad son estimaciones del modelo basadas en precios históricos, actualizadas cada dos semanas. No es asesoría de inversión.",
     "ml.predictedUp": "{v}% Sube",
     "ml.dealScore": "Puntaje de Oportunidad",
     "ml.volatilityStable": "Estable",

@@ -706,6 +706,8 @@ const Data = () => {
           </div>
         ) : (
           <>
+            <MlDealTracker />
+
             {/* ── Scatter: Listed Raw vs Listed Graded ── */}
             <section className="my-8" aria-label="Listed Raw vs Listed Graded scatter chart">
               <div className="flex items-center justify-between flex-wrap gap-2 mb-1">
