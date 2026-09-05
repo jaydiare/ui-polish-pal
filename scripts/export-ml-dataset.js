@@ -19,7 +19,7 @@ function loadJson(file) {
 }
 
 const normKey = (s) =>
-  String(s || "").normalize("NFD").replace(/[̀-ͯ]/g, "")
+  String(s || "").normalize("NFD").replace(/[\u0300-\u036f]/g, "")
     .replace(/[.\-']/g, "").replace(/\s+/g, " ").toLowerCase().trim();
 
 
