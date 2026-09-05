@@ -135,7 +135,11 @@ const MlDealTracker = () => {
     return out;
   }, [history, dates, sportByName]);
 
-  const latestPoints = useMemo(() => points.filter((p) => p.isLatest), [points]);
+  const singleDate = dates.length < 2;
+  const latestPoints = useMemo(
+    () => points.filter((p) => p.isLatest).sort((a, b) => a.deal - b.deal),
+    [points]
+  );
   const olderPoints = useMemo(() => points.filter((p) => !p.isLatest), [points]);
 
   const xDomain = useMemo<[number, number]>(() => {
@@ -168,7 +172,9 @@ const MlDealTracker = () => {
           {t("mlTracker.title")}
         </h2>
       </div>
-      <p className="text-xs text-muted-foreground mb-4 ml-3">{t("mlTracker.subtitle")}</p>
+      <p className="text-xs text-muted-foreground mb-4 ml-3">
+        {singleDate ? t("mlTracker.subtitleFirstRun") : t("mlTracker.subtitle")}
+      </p>
 
       <div className="glass-panel p-4 md:p-6">
         {loading ? (
@@ -252,13 +258,15 @@ const MlDealTracker = () => {
                     {latestPoints.map((p, i) => (
                       <Cell key={`l-${i}`} fill={CLUSTER_COLOR[p.cluster] || CLUSTER_COLOR.stable} />
                     ))}
-                    <LabelList
-                      dataKey="name"
-                      position="right"
-                      offset={8}
-                      className="hidden sm:block"
-                      style={{ fontSize: 9, fill: "hsl(var(--muted-foreground))" }}
-                    />
+                    {!singleDate && (
+                      <LabelList
+                        dataKey="name"
+                        position="right"
+                        offset={8}
+                        className="hidden sm:block"
+                        style={{ fontSize: 9, fill: "hsl(var(--muted-foreground))" }}
+                      />
+                    )}
                   </Scatter>
                 </ScatterChart>
               </ResponsiveContainer>

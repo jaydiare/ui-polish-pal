@@ -77,6 +77,7 @@ export const translations = {
     // Career stats (MLB)
     "mlTracker.title": "ML Deal Tracker",
     "mlTracker.subtitle": "Each dot is one of the 30 highest Deal Scores from our model, plotted on the day it was scored. Tap a dot for details.",
+    "mlTracker.subtitleFirstRun": "The 30 highest Deal Scores from our model right now. Once the next run is saved, this becomes a chart of how each score moves over time. Tap a dot for details.",
     "mlTracker.xAxis": "Scoring date",
     "mlTracker.upside": "7-day upside",
     "mlTracker.group": "Group",
@@ -189,6 +190,7 @@ export const translations = {
     // Career stats (MLB)
     "mlTracker.title": "Rastreador de Oportunidades ML",
     "mlTracker.subtitle": "Cada punto es uno de los 30 Puntajes de Oportunidad más altos del modelo, en el día en que se calculó. Toca un punto para ver detalles.",
+    "mlTracker.subtitleFirstRun": "Los 30 Puntajes de Oportunidad más altos del modelo ahora mismo. Cuando se guarde el próximo cálculo, esto pasa a mostrar cómo cambia cada puntaje con el tiempo. Toca un punto para ver detalles.",
     "mlTracker.xAxis": "Fecha de cálculo",
     "mlTracker.upside": "Alza a 7 días",
     "mlTracker.group": "Grupo",
