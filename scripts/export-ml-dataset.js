@@ -145,7 +145,7 @@ for (const [name, entries] of Object.entries(history)) {
       num(graded.price), numOrZero(graded.cv), numOrZero(graded.n), num(graded.idx),
       dom,
       psaPop, bgsPop, sgcPop,
-      num(scp.scpRaw), num(scp.scpGraded),
+      num(scp.scpRaw), num(scp.scpPsa9), num(scp.scpPsa10),
       daysSinceFirst,
       chg7, chg30, vol7,
     ].map(csvCell).join(","));
