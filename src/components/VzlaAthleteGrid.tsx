@@ -5,6 +5,7 @@ import { SortOption } from "@/lib/vzla-helpers";
 import AthleteCard from "./AthleteCard";
 import { useHotSellers } from "@/hooks/useEpnPerformance";
 import { useAthleteMlScores } from "@/hooks/useAthleteMlScores";
+import { useLanguage } from "@/i18n/LanguageProvider";
 
 interface VzlaAthleteGridProps {
   athletes: Athlete[];
@@ -26,15 +27,20 @@ interface VzlaAthleteGridProps {
   priceMode: "raw" | "graded" | "both";
 }
 
-const SORT_OPTIONS: { value: SortOption; label: string }[] = [
-  { value: "default", label: "Default" },
-  { value: "price_desc", label: "Price ↓" },
-  { value: "stability_best", label: "Most Stable" },
+const SORT_OPTIONS: { value: SortOption; labelKey: string }[] = [
+  { value: "default", labelKey: "sort.default" },
+  { value: "price_desc", labelKey: "sort.priceDesc" },
+  { value: "stability_best", labelKey: "sort.mostStable" },
+  { value: "deal_score_desc", labelKey: "sort.dealScore" },
+  { value: "upside_prob_desc", labelKey: "sort.upside" },
+  { value: "volatility_high", labelKey: "sort.volatileFirst" },
+  { value: "volatility_low", labelKey: "sort.stableFirst" },
 ];
 
 const VzlaAthleteGrid = ({ athletes, byName, byKey, gradedByName, gradedByKey, ebaySoldRaw, ebayGradedSoldRaw, athleteHistory, gemratePopMap, snapshotFallback, hasMore, remainingCount, onLoadMore, highlightedIds, sort, onSortChange, priceMode }: VzlaAthleteGridProps) => {
   const hotSellers = useHotSellers();
   const { getScore } = useAthleteMlScores();
+  const { t } = useLanguage();
 
   // If budget is active, filter to only highlighted cards
   const displayAthletes = highlightedIds && highlightedIds.size > 0
