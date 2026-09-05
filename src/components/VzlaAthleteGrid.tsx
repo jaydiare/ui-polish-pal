@@ -62,7 +62,7 @@ const VzlaAthleteGrid = ({ athletes, byName, byKey, gradedByName, gradedByKey, e
                 : "bg-secondary border-border text-muted-foreground hover:text-foreground hover:border-foreground/20"
             }`}
           >
-            {opt.label}
+            {t(opt.labelKey)}
           </button>
         ))}
       </div>
