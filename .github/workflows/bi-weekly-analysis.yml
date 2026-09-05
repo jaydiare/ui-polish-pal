@@ -30,12 +30,17 @@ jobs:
           python-version: "3.11"
 
       - name: Install dependencies
-        run: pip install requests
+        run: |
+          pip install requests
+          pip install pandas numpy scikit-learn
 
       - name: Run bi-weekly analysis
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: python scripts/bi-weekly-analysis.py
+
+      - name: Run ML athlete scorer
+        run: python scripts/ml-score-athletes.py
 
       - name: Commit & push
         run: |
