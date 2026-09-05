@@ -35,11 +35,11 @@ interface AthleteCardProps {
   mlScore?: AthleteMlScore;
 }
 
-const CLUSTER_META: Record<string, { icon: string; key: string; cls: string }> = {
+const CLUSTER_META = {
   stable: { icon: "🛡️", key: "ml.volatilityStable", cls: "bg-emerald-500/10 border-emerald-400/20 text-emerald-400" },
   momentum: { icon: "⚡", key: "ml.volatilityMomentum", cls: "bg-sky-500/10 border-sky-400/20 text-sky-400" },
   volatile: { icon: "🌊", key: "ml.volatilityVolatile", cls: "bg-rose-500/10 border-rose-400/20 text-rose-400" },
-};
+} as const;
 
 const AthleteCard = forwardRef<HTMLElement, AthleteCardProps>(({ athlete, byName, byKey, gradedByName, gradedByKey, ebaySoldRaw, ebayGradedSoldRaw, history, psaPop, isRecommended, isHotSeller, priceMode, snapshotFallback, mlScore }, ref) => {
   const { t } = useLanguage();
@@ -196,7 +196,7 @@ const AthleteCard = forwardRef<HTMLElement, AthleteCardProps>(({ athlete, byName
 
   const [historyOpen, setHistoryOpen] = useState(false);
 
-  const mlCluster = mlScore ? CLUSTER_META[mlScore.volatility_cluster] : undefined;
+  const mlCluster = mlScore ? CLUSTER_META[mlScore.volatility_cluster as keyof typeof CLUSTER_META] : undefined;
   const mlDrivers = mlScore?.feature_importance?.length
     ? mlScore.feature_importance.slice(0, 3).map((f) => f.feature.replace(/_/g, " ")).join(", ")
     : "";
