@@ -52,11 +52,17 @@ const bgsPopMap = buildPopMap(gemrateBeckett, "beckett");
 const sgcPopMap = buildPopMap(gemrateSgc, "SGC");
 
 const scpMap = {};
-if (scpPrices?.athletes) {
-  for (const a of scpPrices.athletes) {
+if (scpRaw?.athletes) {
+  for (const a of scpRaw.athletes) {
+    scpMap[normKey(a.name)] = { ...(scpMap[normKey(a.name)] || {}), scpRaw: a.scpRawPrice ?? null };
+  }
+}
+if (scpGraded?.athletes) {
+  for (const a of scpGraded.athletes) {
     scpMap[normKey(a.name)] = {
-      scpRaw: a.scpRawPrice ?? null,
-      scpGraded: a.scpGradedPrice ?? null,
+      ...(scpMap[normKey(a.name)] || {}),
+      scpPsa9: a.scpPsa9Price ?? null,
+      scpPsa10: a.scpPsa10Price ?? null,
     };
   }
 }
