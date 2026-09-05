@@ -14,7 +14,7 @@ import { athleteDataRaw } from "@/data/athletes";
 import { buildEbaySearchUrl } from "@/lib/vzla-helpers";
 import { useLanguage } from "@/i18n/LanguageProvider";
 
-const TOP_N = 30;
+const TOP_N = 10;
 
 const CLUSTER_COLOR: Record<string, string> = {
   stable: "hsl(160 84% 45%)",
