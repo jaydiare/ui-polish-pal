@@ -14,6 +14,7 @@ import {
   getSignalToNoise,
 } from "@/lib/vzla-helpers";
 import { runKnapsack, BudgetCandidate, KnapsackResult } from "@/lib/budget-knapsack";
+import { useAthleteMlScores } from "@/hooks/useAthleteMlScores";
 
 const PAGE_SIZE = 48;
 
@@ -393,9 +394,10 @@ export function useAthleteData() {
   );
 
   // Sorted
+  const { scores: mlScores } = useAthleteMlScores();
   const sortedAthletes = useMemo(
-    () => sortAthletes(filteredAthletes, sort, activeByName, activeByKey),
-    [filteredAthletes, sort, activeByName, activeByKey]
+    () => sortAthletes(filteredAthletes, sort, activeByName, activeByKey, mlScores),
+    [filteredAthletes, sort, activeByName, activeByKey, mlScores]
   );
 
   // Paginated
