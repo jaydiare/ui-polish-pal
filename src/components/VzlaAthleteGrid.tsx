@@ -45,30 +45,67 @@ const VzlaAthleteGrid = ({ athletes, byName, byKey, gradedByName, gradedByKey, e
   const hotSellers = useHotSellers();
   const { getScore } = useAthleteMlScores();
   const { t } = useLanguage();
+  const isMobile = useIsMobile();
+  const [sortExpanded, setSortExpanded] = useState(false);
 
   // If budget is active, filter to only highlighted cards
   const displayAthletes = highlightedIds && highlightedIds.size > 0
     ? athletes.filter((a) => highlightedIds.has(buildBudgetAthleteId(a.name, a.sport)))
     : athletes;
 
+  const activeSortLabel = SORT_OPTIONS.find((o) => o.value === sort)?.labelKey ?? "sort.default";
+
+  const SortButton = ({ opt, onClick }: { opt: typeof SORT_OPTIONS[number]; onClick?: () => void }) => (
+    <button
+      key={opt.value}
+      onClick={() => {
+        onSortChange(opt.value);
+        onClick?.();
+      }}
+      className={`px-3 py-1.5 rounded-lg text-xs font-semibold cursor-pointer transition-all border text-left ${
+        sort === opt.value
+          ? "bg-vzla-yellow/15 border-vzla-yellow/30 text-vzla-yellow"
+          : "bg-secondary border-border text-muted-foreground hover:text-foreground hover:border-foreground/20"
+      }`}
+    >
+      {t(opt.labelKey)}
+    </button>
+  );
+
   return (
     <>
       {/* Sort bar */}
-      <div className="flex items-center gap-2 mt-8 mb-4" role="toolbar" aria-label="Sort controls">
-        <span className="text-[10px] tracking-widest uppercase font-bold text-muted-foreground">{t("sort.by")}</span>
-        {SORT_OPTIONS.map((opt) => (
-          <button
-            key={opt.value}
-            onClick={() => onSortChange(opt.value)}
-            className={`px-3 py-1.5 rounded-lg text-xs font-semibold cursor-pointer transition-all border ${
-              sort === opt.value
-                ? "bg-vzla-yellow/15 border-vzla-yellow/30 text-vzla-yellow"
-                : "bg-secondary border-border text-muted-foreground hover:text-foreground hover:border-foreground/20"
-            }`}
-          >
-            {t(opt.labelKey)}
-          </button>
-        ))}
+      <div className="mt-8 mb-4" role="toolbar" aria-label="Sort controls">
+        {isMobile ? (
+          <div className="space-y-2">
+            <button
+              onClick={() => setSortExpanded((v) => !v)}
+              aria-expanded={sortExpanded}
+              aria-controls="sort-panel"
+              className="w-full flex items-center justify-between gap-2 px-3.5 py-2.5 rounded-xl bg-secondary border border-border text-foreground cursor-pointer transition-all hover:border-foreground/20"
+            >
+              <div className="flex items-center gap-2">
+                <span className="text-[10px] tracking-widest uppercase font-bold text-muted-foreground">{t("sort.by")}</span>
+                <span className="text-xs font-semibold">{t(activeSortLabel)}</span>
+              </div>
+              <ChevronDown className={`w-4 h-4 text-muted-foreground transition-transform ${sortExpanded ? "rotate-180" : ""}`} />
+            </button>
+            {sortExpanded && (
+              <div id="sort-panel" className="grid grid-cols-2 gap-2">
+                {SORT_OPTIONS.map((opt) => (
+                  <SortButton key={opt.value} opt={opt} onClick={() => setSortExpanded(false)} />
+                ))}
+              </div>
+            )}
+          </div>
+        ) : (
+          <div className="flex items-center gap-2">
+            <span className="text-[10px] tracking-widest uppercase font-bold text-muted-foreground">{t("sort.by")}</span>
+            {SORT_OPTIONS.map((opt) => (
+              <SortButton key={opt.value} opt={opt} />
+            ))}
+          </div>
+        )}
       </div>
 
       {displayAthletes.length === 0 ? (
