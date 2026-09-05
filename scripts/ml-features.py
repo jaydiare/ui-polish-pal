@@ -46,7 +46,8 @@ def build_features(df: pd.DataFrame) -> pd.DataFrame:
 
         return group
 
-    df = df.groupby("name", group_keys=False).apply(per_athlete)
+    frames = [per_athlete(group) for _, group in df.groupby("name")]
+    df = pd.concat(frames, ignore_index=True)
     return df
 
 
