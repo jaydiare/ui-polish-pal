@@ -252,9 +252,50 @@ const AthleteCard = forwardRef<HTMLElement, AthleteCardProps>(({ athlete, byName
                 🔥 Hot Seller
               </span>
             )}
+            {mlScore && mlScore.predicted_up_7d_prob >= 0.55 && (
+              <span
+                title={`${t("ml.tooltipExplainer")}${mlDrivers ? ` — ${mlDrivers}` : ""}`}
+                className="inline-flex px-1.5 py-0.5 rounded text-[9px] font-bold bg-primary/10 border border-primary/20 text-primary"
+              >
+                🔮 {t("ml.predictedUp").replace("{v}", String(Math.round(mlScore.predicted_up_7d_prob * 100)))}
+              </span>
+            )}
+            {mlCluster && (
+              <span
+                title={t("ml.tooltipExplainer")}
+                className={`inline-flex px-1.5 py-0.5 rounded text-[9px] font-bold border ${mlCluster.cls}`}
+              >
+                {mlCluster.icon} {t(mlCluster.key)}
+              </span>
+            )}
           </div>
         </div>
       </div>
+
+      {/* ── ML deal score ── */}
+      {mlScore && Number.isFinite(mlScore.deal_score) && (
+        <div className="mt-3" title={`${t("ml.tooltipExplainer")}${mlDrivers ? ` — ${mlDrivers}` : ""}`}>
+          <div className="flex items-center justify-between mb-1">
+            <span className="text-[9px] font-semibold uppercase tracking-wider text-muted-foreground">
+              {t("ml.dealScore")}
+            </span>
+            <span className="text-[10px] font-display font-bold text-foreground">
+              {Math.round(mlScore.deal_score)}
+            </span>
+          </div>
+          <div
+            className="h-1.5 rounded-full bg-secondary overflow-hidden"
+            role="img"
+            aria-label={`${t("ml.dealScore")}: ${Math.round(mlScore.deal_score)} / 100`}
+          >
+            <div
+              className="h-full rounded-full bg-vzla-yellow"
+              style={{ width: `${Math.max(0, Math.min(100, mlScore.deal_score))}%` }}
+            />
+          </div>
+        </div>
+      )}
+
 
       {/* ── Price grid ── */}
       <div className={`mt-3 grid gap-2 ${priceMode === "both" ? "grid-cols-2" : "grid-cols-1"}`}>
