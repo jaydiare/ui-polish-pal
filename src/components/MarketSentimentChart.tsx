@@ -40,7 +40,7 @@ const RANGES: { value: Range; label: string }[] = [
 ];
 
 const RAW_COLOR = "hsl(199 89% 55%)";
-const GRADED_COLOR = "hsl(160 84% 45%)";
+const GRADED_COLOR = "hsl(45 93% 58%)";
 const BULL_COLOR = "hsl(160 84% 45%)";
 const BEAR_COLOR = "hsl(350 84% 60%)";
 
