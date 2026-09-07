@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "updatedAt": "2026-09-06T20:43:34.178Z",
+    "updatedAt": "2026-09-07T05:06:59.259Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "PSA 7 + PSA 8 sold comps. Two queries per athlete. Strict per-grade title filter. Taguchi winsorized mean. USD via CBSA.",
     "targetGrades": [
@@ -8,8 +8,8 @@
       8
     ],
     "batchInfo": {
-      "startIdx": 296,
-      "endIdx": 304,
+      "startIdx": 304,
+      "endIdx": 312,
       "totalAthletes": 464
     },
     "maxPages": 3,
@@ -27,7 +27,7 @@
     },
     "fx": {
       "source": "CBSA Exchange Rates API",
-      "asOf": "2026-09-07T00:00:00.000Z"
+      "asOf": "2026-09-08T00:00:00.000Z"
     }
   },
   "Adbert Alzolay": {
@@ -3016,35 +3016,35 @@
   },
   "Max Ramirez": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-08-21T19:07:39.005Z"
+    "erroredAt": "2026-09-07T05:07:14.567Z"
   },
   "Maximo Acosta": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-08-21T19:07:58.795Z"
+    "erroredAt": "2026-09-07T05:07:37.091Z"
   },
   "Melvin Dorta": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-08-21T19:08:21.507Z"
+    "erroredAt": "2026-09-07T05:07:59.439Z"
   },
   "Melvin Mora": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-08-21T19:08:41.275Z"
+    "erroredAt": "2026-09-07T05:08:19.481Z"
   },
   "Miguel Cabrera": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-08-21T19:09:01.621Z"
+    "erroredAt": "2026-09-07T05:08:41.548Z"
   },
   "Miguel Cairo": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-08-21T19:09:25.205Z"
+    "erroredAt": "2026-09-07T05:09:05.363Z"
   },
   "Miguel Garcia": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-08-21T19:09:49.190Z"
+    "erroredAt": "2026-09-07T05:09:28.515Z"
   },
   "Miguel Gonzalez": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-08-21T19:10:10.471Z"
+    "erroredAt": "2026-09-07T05:09:51.453Z"
   },
   "Miguel Montero": {
     "error": "eBay fetch failed (403)",
