@@ -1,5 +1,7 @@
 import { useMemo, useState, useCallback, useEffect, useRef } from "react";
 import { useAthleteData } from "@/hooks/useAthleteData";
+import { useAthleteMlScores } from "@/hooks/useAthleteMlScores";
+
 import {
   getEbayAvgNumber,
   getMarketStabilityCV,
@@ -41,7 +43,12 @@ interface RowData {
   indexLevel: number | null;
   roi: number | null;
   roiTier: string | null;
+  forecastMid: number | null;
+  forecastLow: number | null;
+  forecastHigh: number | null;
+  forecastConfidence: string | null;
 }
+
 
 type SortKey = keyof RowData;
 type SortDir = "asc" | "desc";
@@ -60,7 +67,10 @@ const FILTERABLE_COLS: { key: SortKey; label: string }[] = [
   { key: "signalStrength", label: "S/N" },
   { key: "daysOnMarket", label: "Days on Mkt" },
   { key: "indexLevel", label: "Index" },
+  { key: "forecastMid", label: "Forecast 30d" },
+  { key: "forecastConfidence", label: "Confidence" },
 ];
+
 
 function fmtPrice(v: number | null) {
   if (v == null) return "—";
@@ -114,6 +124,9 @@ export default function BlogDataTable() {
     psa78SoldMap,
     lastUpdated,
   } = useAthleteData();
+
+  const { getScore: getMlScore } = useAthleteMlScores();
+
 
   const [sortKey, setSortKey] = useState<SortKey>("name");
   const [sortDir, setSortDir] = useState<SortDir>("asc");
@@ -179,7 +192,9 @@ export default function BlogDataTable() {
 
   const rows = useMemo<RowData[]>(() => {
     return athletes.map((a) => {
+      const ml = getMlScore(a.name);
       const soldRec = ebaySoldRaw?.[a.name];
+
       const gradedSoldRec = ebayGradedSoldRaw?.[a.name];
 
       const rawSold = soldRec?.taguchiSold ?? soldRec?.avg ?? null;
@@ -272,9 +287,14 @@ export default function BlogDataTable() {
         indexLevel: rec?.indexLevel ?? null,
         roi: roiVal,
         roiTier: roiTier(roiVal),
+        forecastMid: ml?.forecast_30d_mid ?? null,
+        forecastLow: ml?.forecast_30d_low ?? null,
+        forecastHigh: ml?.forecast_30d_high ?? null,
+        forecastConfidence: ml?.forecast_confidence ?? null,
       };
     });
-  }, [athletes, byName, byKey, gradedByName, gradedByKey, ebaySoldRaw, ebayGradedSoldRaw, athleteHistory, gemratePopMap, beckettPopMap, sgcPopMap, scpPrices, scpGradedPrices, psa78SoldMap]);
+  }, [athletes, byName, byKey, gradedByName, gradedByKey, ebaySoldRaw, ebayGradedSoldRaw, athleteHistory, gemratePopMap, beckettPopMap, sgcPopMap, scpPrices, scpGradedPrices, psa78SoldMap, getMlScore]);
+
 
   const sorted = useMemo(() => {
     const copy = [...rows];
@@ -284,9 +304,16 @@ export default function BlogDataTable() {
       if (av == null && bv == null) return 0;
       if (av == null) return 1;
       if (bv == null) return -1;
+      if (sortKey === "forecastConfidence") {
+        const rank: Record<string, number> = { low: 1, medium: 2, high: 3 };
+        const ar = rank[String(av)] ?? 0;
+        const br = rank[String(bv)] ?? 0;
+        return sortDir === "asc" ? ar - br : br - ar;
+      }
       if (typeof av === "string" && typeof bv === "string") {
         return sortDir === "asc" ? av.localeCompare(bv) : bv.localeCompare(av);
       }
+
       const an = Number(av);
       const bn = Number(bv);
       return sortDir === "asc" ? an - bn : bn - an;
@@ -386,6 +413,43 @@ export default function BlogDataTable() {
     { key: "signalStrength", label: "Signal S/N", fmt: (v) => v == null ? "—" : v.toFixed(1) },
     { key: "daysOnMarket", label: "Days on Mkt", fmt: fmtDays },
     { key: "indexLevel", label: "Index", fmt: fmtIndex },
+    { key: "forecastMid", label: "Forecast 30d", fmt: fmtPrice, render: (_v, row) => {
+      if (row.forecastMid == null) return <span className="text-muted-foreground">—</span>;
+      const basis = row.rawListedPrice;
+      const dir = basis == null ? 0 : row.forecastMid - basis;
+      const color = dir > 0.01 ? "text-green-400" : dir < -0.01 ? "text-red-400" : "text-foreground";
+      const bandTitle = [
+        basis != null ? `Current raw listed: ${fmtPrice(basis)}` : null,
+        `Model range: ${fmtPrice(row.forecastLow)} – ${fmtPrice(row.forecastHigh)} (10th–90th percentile)`,
+        "30-day estimate from the same features as the Deal Score. Model estimate, not investment advice.",
+      ].filter(Boolean).join("\n");
+      return (
+        <span title={bandTitle} className="inline-flex flex-col leading-tight">
+          <span className={`font-medium ${color}`}>{fmtPrice(row.forecastMid)}</span>
+          <span className="text-[10px] text-muted-foreground">
+            {fmtPrice(row.forecastLow)} – {fmtPrice(row.forecastHigh)}
+          </span>
+        </span>
+      );
+    }},
+    { key: "forecastConfidence", label: "Confidence", fmt: (v) => v == null ? "—" : String(v).charAt(0).toUpperCase() + String(v).slice(1), render: (_v, row) => {
+      if (!row.forecastConfidence) return <span className="text-muted-foreground">—</span>;
+      const label = row.forecastConfidence.charAt(0).toUpperCase() + row.forecastConfidence.slice(1);
+      const cls = row.forecastConfidence === "high"
+        ? "bg-green-500/15 text-green-300 border-green-500/30"
+        : row.forecastConfidence === "medium"
+        ? "bg-vzla-yellow/15 text-vzla-yellow border-vzla-yellow/30"
+        : "bg-red-500/15 text-red-300 border-red-500/30";
+      return (
+        <span
+          title="Confidence reflects how tight the forecast range is, plus how much price history and listing volume back it."
+          className={`text-[10px] px-1.5 py-0.5 rounded border font-medium ${cls}`}
+        >
+          {label}
+        </span>
+      );
+    }},
+
   ];
 
   const performCsvDownload = () => {

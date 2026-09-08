@@ -20,9 +20,11 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 from sklearn.cluster import KMeans
+from sklearn.ensemble import GradientBoostingRegressor
 from sklearn.linear_model import LogisticRegression
 from sklearn.model_selection import GroupShuffleSplit
 from sklearn.preprocessing import StandardScaler
+
 
 warnings.filterwarnings("ignore")
 
@@ -66,6 +68,13 @@ def build_features(df: pd.DataFrame) -> pd.DataFrame:
 
         # Target: price higher 7 days from now?
         g["target_up_7d"] = (g["raw_price"].shift(-7) > g["raw_price"]).astype("Int8")
+
+        # Target: actual raw price 30 days from now (regression / quantiles)
+        g["target_price_30d"] = g["raw_price"].shift(-30)
+
+        # Depth of usable history at each point in time
+        g["history_days"] = np.arange(1, len(g) + 1)
+
 
         frames.append(g)
 
@@ -147,6 +156,85 @@ def train_classifier(df: pd.DataFrame) -> tuple[LogisticRegression, list[str]]:
         print("Could not form a grouped time-series test split (too little data).")
 
     return clf, feature_cols, scaler
+
+
+QUANTILES = {"low": 0.1, "mid": 0.5, "high": 0.9}
+
+
+def train_quantile_models(df: pd.DataFrame, feature_cols: list[str]) -> dict:
+    """
+    Fit three gradient-boosted quantile regressors on log(price 30 days ahead).
+    Log target keeps the band proportional to the price level.
+    """
+    model_df = df.dropna(subset=["target_price_30d"] + feature_cols).copy()
+    model_df = model_df[(model_df["target_price_30d"] > 0) & (model_df["raw_price"] > 0)]
+    if len(model_df) < 300:
+        print(f"Not enough rows for the 30-day forecast ({len(model_df)}); skipping.")
+        return {}
+
+    X = model_df[feature_cols].values
+    y = np.log(model_df["target_price_30d"].values.astype(float))
+
+    # Hold out later dates for observability
+    cutoff = model_df["date"].quantile(0.85)
+    train_mask = (model_df["date"] <= cutoff).values
+    test_mask = ~train_mask
+
+    models = {}
+    for key, alpha in QUANTILES.items():
+        m = GradientBoostingRegressor(
+            loss="quantile",
+            alpha=alpha,
+            n_estimators=200,
+            max_depth=3,
+            learning_rate=0.05,
+            random_state=42,
+        )
+        m.fit(X, y)
+        models[key] = m
+
+    print(f"Quantile forecaster trained on {len(model_df):,} rows / {model_df['name'].nunique()} athletes")
+
+    if test_mask.sum() >= 50:
+        eval_models = {}
+        for key, alpha in QUANTILES.items():
+            m = GradientBoostingRegressor(
+                loss="quantile",
+                alpha=alpha,
+                n_estimators=200,
+                max_depth=3,
+                learning_rate=0.05,
+                random_state=42,
+            )
+            m.fit(X[train_mask], y[train_mask])
+            eval_models[key] = m
+
+        y_true = np.exp(y[test_mask])
+        pred_mid = np.exp(eval_models["mid"].predict(X[test_mask]))
+        pred_low = np.exp(eval_models["low"].predict(X[test_mask]))
+        pred_high = np.exp(eval_models["high"].predict(X[test_mask]))
+
+        mdape = float(np.median(np.abs(pred_mid - y_true) / np.maximum(y_true, 1e-6)) * 100)
+        coverage = float(np.mean((y_true >= pred_low) & (y_true <= pred_high)) * 100)
+        print(f"Holdout median abs pct error: {mdape:.1f}%")
+        print(f"Holdout 10-90 band coverage: {coverage:.1f}% (target ~80%)")
+    else:
+        print("Holdout too small to evaluate the forecast band.")
+
+    return models
+
+
+def confidence_tier(band_pct: float, history_days: float, n_listings: float) -> str:
+    if band_pct is None or not np.isfinite(band_pct):
+        return "low"
+    if band_pct < 0.25 and history_days >= 60 and n_listings >= 3:
+        return "high"
+    if band_pct < 0.50 and history_days >= 30:
+        return "medium"
+    return "low"
+
+
+
 
 
 def train_volatility_clusters(df: pd.DataFrame) -> tuple[KMeans, StandardScaler]:
@@ -296,6 +384,9 @@ def main() -> None:
     print("Training volatility clusters...")
     kmeans, cluster_cols = train_volatility_clusters(df)
 
+    print("Training 30-day quantile forecaster...")
+    quantile_models = train_quantile_models(df, feature_cols)
+
     print("Scoring latest day per athlete...")
     latest = df.loc[df.groupby("name")["date"].idxmax()].copy()
     latest = latest.dropna(subset=feature_cols)
@@ -303,6 +394,17 @@ def main() -> None:
     X_latest = latest[feature_cols].values
     X_latest_scaled = scaler.transform(X_latest)
     probs = clf.predict_proba(X_latest_scaled)[:, 1]
+
+    if quantile_models:
+        q_low = np.exp(quantile_models["low"].predict(X_latest))
+        q_mid = np.exp(quantile_models["mid"].predict(X_latest))
+        q_high = np.exp(quantile_models["high"].predict(X_latest))
+        # Keep the band monotonic even if quantile models cross
+        q_low, q_high = np.minimum(q_low, q_high), np.maximum(q_low, q_high)
+        q_mid = np.clip(q_mid, q_low, q_high)
+    else:
+        q_low = q_mid = q_high = np.full(len(latest), np.nan)
+
 
     records = {}
     for i, (_, row) in enumerate(latest.iterrows()):
@@ -312,13 +414,42 @@ def main() -> None:
         deal = compute_deal_score(row, prob, cluster)
         drivers = top_features(clf, feature_cols, X_latest_scaled[i])
 
+        lo, mid, hi = float(q_low[i]), float(q_mid[i]), float(q_high[i])
+        basis = float(row.get("raw_price") or 0) or None
+        if np.isfinite(mid) and mid > 0:
+            band_pct = (hi - lo) / mid
+            tier = confidence_tier(
+                band_pct,
+                float(row.get("history_days") or 0),
+                float(row.get("raw_n_listings") or 0),
+            )
+            forecast = {
+                "forecast_30d_low": round(lo, 2),
+                "forecast_30d_mid": round(mid, 2),
+                "forecast_30d_high": round(hi, 2),
+                "forecast_band_pct": round(float(band_pct), 4),
+                "forecast_confidence": tier,
+                "forecast_basis_price": round(basis, 2) if basis else None,
+            }
+        else:
+            forecast = {
+                "forecast_30d_low": None,
+                "forecast_30d_mid": None,
+                "forecast_30d_high": None,
+                "forecast_band_pct": None,
+                "forecast_confidence": None,
+                "forecast_basis_price": round(basis, 2) if basis else None,
+            }
+
         records[name] = {
             "predicted_up_7d_prob": round(prob, 4),
             "volatility_cluster": cluster,
             "deal_score": round(deal, 1),
             "feature_importance": drivers,
             "scored_at": row["date"].strftime("%Y-%m-%d"),
+            **forecast,
         }
+
 
     output = {
         "_meta": {

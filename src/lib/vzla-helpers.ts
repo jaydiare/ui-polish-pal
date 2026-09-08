@@ -387,7 +387,14 @@ export interface AthleteMlScore {
   deal_score: number;
   feature_importance?: { feature: string; impact: number }[];
   scored_at?: string;
+  forecast_30d_low?: number | null;
+  forecast_30d_mid?: number | null;
+  forecast_30d_high?: number | null;
+  forecast_confidence?: "high" | "medium" | "low" | null;
+  forecast_band_pct?: number | null;
+  forecast_basis_price?: number | null;
 }
+
 
 export type MlScoreMap = Record<string, AthleteMlScore>;
 
