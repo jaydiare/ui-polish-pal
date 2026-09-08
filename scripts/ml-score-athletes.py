@@ -20,9 +20,11 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 from sklearn.cluster import KMeans
+from sklearn.ensemble import GradientBoostingRegressor
 from sklearn.linear_model import LogisticRegression
 from sklearn.model_selection import GroupShuffleSplit
 from sklearn.preprocessing import StandardScaler
+
 
 warnings.filterwarnings("ignore")
 
@@ -66,6 +68,13 @@ def build_features(df: pd.DataFrame) -> pd.DataFrame:
 
         # Target: price higher 7 days from now?
         g["target_up_7d"] = (g["raw_price"].shift(-7) > g["raw_price"]).astype("Int8")
+
+        # Target: actual raw price 30 days from now (regression / quantiles)
+        g["target_price_30d"] = g["raw_price"].shift(-30)
+
+        # Depth of usable history at each point in time
+        g["history_days"] = np.arange(1, len(g) + 1)
+
 
         frames.append(g)
 
