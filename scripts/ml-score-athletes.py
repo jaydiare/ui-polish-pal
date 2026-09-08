@@ -384,6 +384,9 @@ def main() -> None:
     print("Training volatility clusters...")
     kmeans, cluster_cols = train_volatility_clusters(df)
 
+    print("Training 30-day quantile forecaster...")
+    quantile_models = train_quantile_models(df, feature_cols)
+
     print("Scoring latest day per athlete...")
     latest = df.loc[df.groupby("name")["date"].idxmax()].copy()
     latest = latest.dropna(subset=feature_cols)
@@ -391,6 +394,17 @@ def main() -> None:
     X_latest = latest[feature_cols].values
     X_latest_scaled = scaler.transform(X_latest)
     probs = clf.predict_proba(X_latest_scaled)[:, 1]
+
+    if quantile_models:
+        q_low = np.exp(quantile_models["low"].predict(X_latest))
+        q_mid = np.exp(quantile_models["mid"].predict(X_latest))
+        q_high = np.exp(quantile_models["high"].predict(X_latest))
+        # Keep the band monotonic even if quantile models cross
+        q_low, q_high = np.minimum(q_low, q_high), np.maximum(q_low, q_high)
+        q_mid = np.clip(q_mid, q_low, q_high)
+    else:
+        q_low = q_mid = q_high = np.full(len(latest), np.nan)
+
 
     records = {}
     for i, (_, row) in enumerate(latest.iterrows()):
