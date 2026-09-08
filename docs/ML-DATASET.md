@@ -136,3 +136,22 @@ Every scorer run also upserts a dated snapshot into `data/athlete-ml-scores-hist
 ```
 
 Only the fields the chart needs are stored, and the file keeps the most recent 52 snapshots (about two years of bi-weekly runs); older dates are dropped. The Market Intel page reads it to draw the **ML Deal Tracker**, which plots the 30 highest current Deal Scores over time, one dot per player per run, colored by volatility group.
+
+### 30-day price forecast (`forecast_*` fields)
+
+The same scorer also fits three `GradientBoostingRegressor` models with `loss="quantile"` (alpha 0.1 / 0.5 / 0.9) on `log(raw price 30 days ahead)`, using the identical feature list as the Deal Score classifier. The log target keeps the band proportional to the price level.
+
+| Field | Meaning |
+|---|---|
+| `forecast_30d_mid` | Median (p50) predicted raw price 30 days out |
+| `forecast_30d_low` | 10th-percentile prediction |
+| `forecast_30d_high` | 90th-percentile prediction |
+| `forecast_band_pct` | `(high - low) / mid`, the relative band width |
+| `forecast_confidence` | `high`, `medium` or `low` |
+| `forecast_basis_price` | Raw price on the scoring date, for comparison |
+
+Confidence tiers: **high** = band under 25% with at least 60 days of history and 3+ listings; **medium** = band under 50% with at least 30 days of history; **low** otherwise.
+
+Each run logs holdout median absolute percentage error and empirical coverage of the 10–90 band (target ~80%) so the quality of the forecast is visible in the workflow output.
+
+The Market Data table (`/market-data`) renders these as two sortable columns, **Forecast 30d** (central estimate with the range underneath, green above / red below today's raw price) and **Confidence**. Both are included in the CSV export and the hide-empty filters. Model estimates, not investment advice.
