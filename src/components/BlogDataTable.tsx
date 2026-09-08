@@ -1,5 +1,7 @@
 import { useMemo, useState, useCallback, useEffect, useRef } from "react";
 import { useAthleteData } from "@/hooks/useAthleteData";
+import { useAthleteMlScores } from "@/hooks/useAthleteMlScores";
+
 import {
   getEbayAvgNumber,
   getMarketStabilityCV,
@@ -41,7 +43,12 @@ interface RowData {
   indexLevel: number | null;
   roi: number | null;
   roiTier: string | null;
+  forecastMid: number | null;
+  forecastLow: number | null;
+  forecastHigh: number | null;
+  forecastConfidence: string | null;
 }
+
 
 type SortKey = keyof RowData;
 type SortDir = "asc" | "desc";
@@ -60,7 +67,10 @@ const FILTERABLE_COLS: { key: SortKey; label: string }[] = [
   { key: "signalStrength", label: "S/N" },
   { key: "daysOnMarket", label: "Days on Mkt" },
   { key: "indexLevel", label: "Index" },
+  { key: "forecastMid", label: "Forecast 30d" },
+  { key: "forecastConfidence", label: "Confidence" },
 ];
+
 
 function fmtPrice(v: number | null) {
   if (v == null) return "—";
