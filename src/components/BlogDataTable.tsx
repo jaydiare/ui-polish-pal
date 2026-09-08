@@ -125,6 +125,9 @@ export default function BlogDataTable() {
     lastUpdated,
   } = useAthleteData();
 
+  const { getScore: getMlScore } = useAthleteMlScores();
+
+
   const [sortKey, setSortKey] = useState<SortKey>("name");
   const [sortDir, setSortDir] = useState<SortDir>("asc");
   const [hideEmptyFor, setHideEmptyFor] = useState<Set<SortKey>>(new Set());
@@ -282,9 +285,14 @@ export default function BlogDataTable() {
         indexLevel: rec?.indexLevel ?? null,
         roi: roiVal,
         roiTier: roiTier(roiVal),
+        forecastMid: ml?.forecast_30d_mid ?? null,
+        forecastLow: ml?.forecast_30d_low ?? null,
+        forecastHigh: ml?.forecast_30d_high ?? null,
+        forecastConfidence: ml?.forecast_confidence ?? null,
       };
     });
-  }, [athletes, byName, byKey, gradedByName, gradedByKey, ebaySoldRaw, ebayGradedSoldRaw, athleteHistory, gemratePopMap, beckettPopMap, sgcPopMap, scpPrices, scpGradedPrices, psa78SoldMap]);
+  }, [athletes, byName, byKey, gradedByName, gradedByKey, ebaySoldRaw, ebayGradedSoldRaw, athleteHistory, gemratePopMap, beckettPopMap, sgcPopMap, scpPrices, scpGradedPrices, psa78SoldMap, getMlScore]);
+
 
   const sorted = useMemo(() => {
     const copy = [...rows];
