@@ -304,9 +304,16 @@ export default function BlogDataTable() {
       if (av == null && bv == null) return 0;
       if (av == null) return 1;
       if (bv == null) return -1;
+      if (sortKey === "forecastConfidence") {
+        const rank: Record<string, number> = { low: 1, medium: 2, high: 3 };
+        const ar = rank[String(av)] ?? 0;
+        const br = rank[String(bv)] ?? 0;
+        return sortDir === "asc" ? ar - br : br - ar;
+      }
       if (typeof av === "string" && typeof bv === "string") {
         return sortDir === "asc" ? av.localeCompare(bv) : bv.localeCompare(av);
       }
+
       const an = Number(av);
       const bn = Number(bv);
       return sortDir === "asc" ? an - bn : bn - an;
