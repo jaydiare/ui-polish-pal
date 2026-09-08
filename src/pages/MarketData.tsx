@@ -50,7 +50,10 @@ const MarketData = () => {
             <p className="text-muted-foreground text-sm leading-7 text-justify">
               Raw prices reflect ungraded Near Mint / Excellent condition cards. Graded prices cover PSA authenticated cards only. The Stability column measures price consistency using the Coefficient of Variation (CV): Stable (CV &lt; 10%) means tight, predictable pricing; Active (10–20%) indicates moderate movement; Volatile (20–35%) shows significant price swings; and Unstable (&gt; 35%) signals highly erratic pricing. Days on Market shows average listing duration. The Index (base-100) tracks price movement over time.
             </p>
-          </section>
+            <p className="text-muted-foreground text-sm leading-7 text-justify mt-4">
+              Forecast 30d shows where our model expects the raw price to sit 30 days out, with a low-to-high range underneath (10th to 90th percentile). It is produced by quantile gradient boosting on the same features that drive the Deal Score: price lags, moving averages, momentum, stability and listing volume. Confidence is High when the range is tight (under 25% of the estimate) and backed by at least 60 days of history, Medium for ranges under 50%, and Low otherwise. These are model estimates, not investment advice.
+            </p>
+
         </div>
 
         <Suspense fallback={<p className="text-muted-foreground text-center py-8">Loading table…</p>}>
