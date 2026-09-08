@@ -192,7 +192,9 @@ export default function BlogDataTable() {
 
   const rows = useMemo<RowData[]>(() => {
     return athletes.map((a) => {
+      const ml = getMlScore(a.name);
       const soldRec = ebaySoldRaw?.[a.name];
+
       const gradedSoldRec = ebayGradedSoldRaw?.[a.name];
 
       const rawSold = soldRec?.taguchiSold ?? soldRec?.avg ?? null;
