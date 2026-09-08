@@ -158,6 +158,85 @@ def train_classifier(df: pd.DataFrame) -> tuple[LogisticRegression, list[str]]:
     return clf, feature_cols, scaler
 
 
+QUANTILES = {"low": 0.1, "mid": 0.5, "high": 0.9}
+
+
+def train_quantile_models(df: pd.DataFrame, feature_cols: list[str]) -> dict:
+    """
+    Fit three gradient-boosted quantile regressors on log(price 30 days ahead).
+    Log target keeps the band proportional to the price level.
+    """
+    model_df = df.dropna(subset=["target_price_30d"] + feature_cols).copy()
+    model_df = model_df[(model_df["target_price_30d"] > 0) & (model_df["raw_price"] > 0)]
+    if len(model_df) < 300:
+        print(f"Not enough rows for the 30-day forecast ({len(model_df)}); skipping.")
+        return {}
+
+    X = model_df[feature_cols].values
+    y = np.log(model_df["target_price_30d"].values.astype(float))
+
+    # Hold out later dates for observability
+    cutoff = model_df["date"].quantile(0.85)
+    train_mask = (model_df["date"] <= cutoff).values
+    test_mask = ~train_mask
+
+    models = {}
+    for key, alpha in QUANTILES.items():
+        m = GradientBoostingRegressor(
+            loss="quantile",
+            alpha=alpha,
+            n_estimators=200,
+            max_depth=3,
+            learning_rate=0.05,
+            random_state=42,
+        )
+        m.fit(X, y)
+        models[key] = m
+
+    print(f"Quantile forecaster trained on {len(model_df):,} rows / {model_df['name'].nunique()} athletes")
+
+    if test_mask.sum() >= 50:
+        eval_models = {}
+        for key, alpha in QUANTILES.items():
+            m = GradientBoostingRegressor(
+                loss="quantile",
+                alpha=alpha,
+                n_estimators=200,
+                max_depth=3,
+                learning_rate=0.05,
+                random_state=42,
+            )
+            m.fit(X[train_mask], y[train_mask])
+            eval_models[key] = m
+
+        y_true = np.exp(y[test_mask])
+        pred_mid = np.exp(eval_models["mid"].predict(X[test_mask]))
+        pred_low = np.exp(eval_models["low"].predict(X[test_mask]))
+        pred_high = np.exp(eval_models["high"].predict(X[test_mask]))
+
+        mdape = float(np.median(np.abs(pred_mid - y_true) / np.maximum(y_true, 1e-6)) * 100)
+        coverage = float(np.mean((y_true >= pred_low) & (y_true <= pred_high)) * 100)
+        print(f"Holdout median abs pct error: {mdape:.1f}%")
+        print(f"Holdout 10-90 band coverage: {coverage:.1f}% (target ~80%)")
+    else:
+        print("Holdout too small to evaluate the forecast band.")
+
+    return models
+
+
+def confidence_tier(band_pct: float, history_days: float, n_listings: float) -> str:
+    if band_pct is None or not np.isfinite(band_pct):
+        return "low"
+    if band_pct < 0.25 and history_days >= 60 and n_listings >= 3:
+        return "high"
+    if band_pct < 0.50 and history_days >= 30:
+        return "medium"
+    return "low"
+
+
+
+
+
 def train_volatility_clusters(df: pd.DataFrame) -> tuple[KMeans, StandardScaler]:
     cluster_cols = ["raw_cv", "raw_return_vol_7d", "raw_price_chg_7d_pct"]
     cluster_df = df.dropna(subset=cluster_cols).copy()
