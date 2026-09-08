@@ -414,13 +414,42 @@ def main() -> None:
         deal = compute_deal_score(row, prob, cluster)
         drivers = top_features(clf, feature_cols, X_latest_scaled[i])
 
+        lo, mid, hi = float(q_low[i]), float(q_mid[i]), float(q_high[i])
+        basis = float(row.get("raw_price") or 0) or None
+        if np.isfinite(mid) and mid > 0:
+            band_pct = (hi - lo) / mid
+            tier = confidence_tier(
+                band_pct,
+                float(row.get("history_days") or 0),
+                float(row.get("raw_n_listings") or 0),
+            )
+            forecast = {
+                "forecast_30d_low": round(lo, 2),
+                "forecast_30d_mid": round(mid, 2),
+                "forecast_30d_high": round(hi, 2),
+                "forecast_band_pct": round(float(band_pct), 4),
+                "forecast_confidence": tier,
+                "forecast_basis_price": round(basis, 2) if basis else None,
+            }
+        else:
+            forecast = {
+                "forecast_30d_low": None,
+                "forecast_30d_mid": None,
+                "forecast_30d_high": None,
+                "forecast_band_pct": None,
+                "forecast_confidence": None,
+                "forecast_basis_price": round(basis, 2) if basis else None,
+            }
+
         records[name] = {
             "predicted_up_7d_prob": round(prob, 4),
             "volatility_cluster": cluster,
             "deal_score": round(deal, 1),
             "feature_importance": drivers,
             "scored_at": row["date"].strftime("%Y-%m-%d"),
+            **forecast,
         }
+
 
     output = {
         "_meta": {
