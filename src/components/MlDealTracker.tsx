@@ -7,7 +7,6 @@ import {
   YAxis,
   CartesianGrid,
   Cell,
-  LabelList,
 } from "recharts";
 import { useAthleteMlScoreHistory } from "@/hooks/useAthleteMlScores";
 import { athleteDataRaw } from "@/data/athletes";
@@ -31,12 +30,10 @@ const CLUSTER_LABEL_KEY = {
 interface Point {
   name: string;
   sport: string;
-  t: number;
   date: string;
   deal: number;
   prob: number;
   cluster: string;
-  isLatest: boolean;
 }
 
 interface Pinned extends Point {
@@ -105,51 +102,26 @@ const MlDealTracker = () => {
     return map;
   }, []);
 
+  // Latest run only: top N players by Deal Score, ranked low to high for display
+  const latestDate = dates.length > 0 ? dates[dates.length - 1] : null;
+
   const points = useMemo<Point[]>(() => {
-    if (dates.length === 0) return [];
-    const latestDate = dates[dates.length - 1];
+    if (!latestDate) return [];
     const latest = history[latestDate] || {};
-    const topNames = Object.entries(latest)
+    return Object.entries(latest)
+      .filter(([, rec]) => !!rec)
       .sort((a, b) => (b[1]?.deal_score ?? 0) - (a[1]?.deal_score ?? 0))
       .slice(0, TOP_N)
-      .map(([name]) => name);
-    const topSet = new Set(topNames);
-
-    const out: Point[] = [];
-    for (const date of dates) {
-      const snapshot = history[date] || {};
-      for (const [name, rec] of Object.entries(snapshot)) {
-        if (!topSet.has(name) || !rec) continue;
-        out.push({
-          name,
-          sport: sportByName[name] || "Baseball",
-          t: new Date(`${date}T00:00:00Z`).getTime(),
-          date,
-          deal: Number(rec.deal_score) || 0,
-          prob: Number(rec.prob) || 0,
-          cluster: rec.cluster || "stable",
-          isLatest: date === latestDate,
-        });
-      }
-    }
-    return out;
-  }, [history, dates, sportByName]);
-
-  const singleDate = dates.length < 2;
-  const latestPoints = useMemo(
-    () => points.filter((p) => p.isLatest).sort((a, b) => a.deal - b.deal),
-    [points]
-  );
-  const olderPoints = useMemo(() => points.filter((p) => !p.isLatest), [points]);
-
-  const xDomain = useMemo<[number, number]>(() => {
-    if (points.length === 0) return [0, 1];
-    const ts = points.map((p) => p.t);
-    const min = Math.min(...ts);
-    const max = Math.max(...ts);
-    const pad = Math.max((max - min) * 0.12, 12 * 3600 * 1000);
-    return [min - pad, max + pad];
-  }, [points]);
+      .map(([name, rec]) => ({
+        name,
+        sport: sportByName[name] || "Baseball",
+        date: latestDate,
+        deal: Number(rec.deal_score) || 0,
+        prob: Number(rec.prob) || 0,
+        cluster: rec.cluster || "stable",
+      }))
+      .sort((a, b) => a.deal - b.deal);
+  }, [history, latestDate, sportByName]);
 
   const handleClick = useCallback((state: any) => {
     const active = state?.activePayload?.[0]?.payload as Point | undefined;
@@ -161,9 +133,6 @@ const MlDealTracker = () => {
     });
   }, []);
 
-  const formatDate = (v: number) =>
-    new Date(v).toLocaleDateString(undefined, { month: "short", day: "numeric" });
-
   return (
     <section className="my-8" aria-label={t("mlTracker.title")}>
       <div className="flex items-center justify-between flex-wrap gap-2 mb-1">
@@ -173,7 +142,7 @@ const MlDealTracker = () => {
         </h2>
       </div>
       <p className="text-xs text-muted-foreground mb-4 ml-3">
-        {singleDate ? t("mlTracker.subtitleFirstRun") : t("mlTracker.subtitle")}
+        {t("mlTracker.subtitleFirstRun")}
       </p>
 
       <div className="glass-panel p-4 md:p-6">
@@ -196,77 +165,40 @@ const MlDealTracker = () => {
               ))}
             </div>
 
-            <div className={`w-full relative ${singleDate ? "h-[620px]" : "h-[360px] md:h-[440px]"}`}>
+            <div className="w-full relative h-[420px] md:h-[440px]">
               <ResponsiveContainer width="100%" height="100%">
                 <ScatterChart
-                  margin={{ top: 10, right: singleDate ? 20 : 90, bottom: 30, left: singleDate ? 10 : 0 }}
+                  margin={{ top: 10, right: 20, bottom: 30, left: 10 }}
                   onClick={handleClick}
                 >
                   <CartesianGrid strokeDasharray="3 3" stroke="hsl(var(--border))" opacity={0.5} />
-                  {singleDate ? (
-                    <XAxis
-                      type="number"
-                      dataKey="deal"
-                      domain={[0, 100]}
-                      tick={{ fill: "hsl(var(--muted-foreground))", fontSize: 10 }}
-                      stroke="hsl(var(--border))"
-                      name={t("ml.dealScore")}
-                    />
-                  ) : (
-                    <XAxis
-                      type="number"
-                      dataKey="t"
-                      domain={xDomain}
-                      tickFormatter={formatDate}
-                      tick={{ fill: "hsl(var(--muted-foreground))", fontSize: 10 }}
-                      stroke="hsl(var(--border))"
-                      name={t("mlTracker.xAxis")}
-                    />
-                  )}
-                  {singleDate ? (
-                    <YAxis
-                      type="category"
-                      dataKey="name"
-                      width={130}
-                      interval={0}
-                      tick={{ fill: "hsl(var(--muted-foreground))", fontSize: 9 }}
-                      stroke="hsl(var(--border))"
-                    />
-                  ) : (
-                    <YAxis
-                      type="number"
-                      dataKey="deal"
-                      domain={[0, 100]}
-                      tick={{ fill: "hsl(var(--muted-foreground))", fontSize: 10 }}
-                      stroke="hsl(var(--border))"
-                      label={{
-                        value: t("ml.dealScore"),
-                        angle: -90,
-                        position: "insideLeft",
-                        fill: "hsl(var(--muted-foreground))",
-                        fontSize: 10,
-                      }}
-                    />
-                  )}
-
-                  <Scatter data={olderPoints} isAnimationActive={false} cursor="pointer">
-                    {olderPoints.map((p, i) => (
-                      <Cell key={`o-${i}`} fill={CLUSTER_COLOR[p.cluster] || CLUSTER_COLOR.stable} fillOpacity={0.55} />
+                  <XAxis
+                    type="number"
+                    dataKey="deal"
+                    domain={[0, 100]}
+                    tick={{ fill: "hsl(var(--muted-foreground))", fontSize: 10 }}
+                    stroke="hsl(var(--border))"
+                    name={t("ml.dealScore")}
+                    label={{
+                      value: t("ml.dealScore"),
+                      position: "insideBottom",
+                      offset: -20,
+                      fill: "hsl(var(--muted-foreground))",
+                      fontSize: 10,
+                    }}
+                  />
+                  <YAxis
+                    type="category"
+                    dataKey="name"
+                    width={130}
+                    interval={0}
+                    tick={{ fill: "hsl(var(--muted-foreground))", fontSize: 9 }}
+                    stroke="hsl(var(--border))"
+                  />
+                  <Scatter data={points} isAnimationActive={false} cursor="pointer">
+                    {points.map((p, i) => (
+                      <Cell key={`p-${i}`} fill={CLUSTER_COLOR[p.cluster] || CLUSTER_COLOR.stable} />
                     ))}
-                  </Scatter>
-                  <Scatter data={latestPoints} isAnimationActive={false} cursor="pointer">
-                    {latestPoints.map((p, i) => (
-                      <Cell key={`l-${i}`} fill={CLUSTER_COLOR[p.cluster] || CLUSTER_COLOR.stable} />
-                    ))}
-                    {!singleDate && (
-                      <LabelList
-                        dataKey="name"
-                        position="right"
-                        offset={8}
-                        className="hidden sm:block"
-                        style={{ fontSize: 9, fill: "hsl(var(--muted-foreground))" }}
-                      />
-                    )}
                   </Scatter>
                 </ScatterChart>
               </ResponsiveContainer>
