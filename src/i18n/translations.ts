@@ -76,9 +76,7 @@ export const translations = {
 
     // Career stats (MLB)
     "mlTracker.title": "Vzla Sports Elite Hot Players to Invest In",
-    "mlTracker.subtitle": "Each dot is one of the 10 highest Deal Scores from our model, plotted on the day it was scored. Tap a dot for details.",
-    "mlTracker.subtitleFirstRun": "The 10 highest Deal Scores from our model right now. Once the next run is saved, this becomes a chart of how each score moves over time. Tap a dot for details.",
-    "mlTracker.xAxis": "Scoring date",
+    "mlTracker.subtitleFirstRun": "The 10 highest Deal Scores from our model's latest run. Tap a dot for details.",
     "mlTracker.upside": "7-day upside",
     "mlTracker.group": "Group",
     "mlTracker.tapName": "Tap name to search eBay",
@@ -210,9 +208,7 @@ export const translations = {
 
     // Career stats (MLB)
     "mlTracker.title": "Jugadores Hot de Vzla Sports Elite para Invertir",
-    "mlTracker.subtitle": "Cada punto es uno de los 10 Puntajes de Oportunidad más altos del modelo, en el día en que se calculó. Toca un punto para ver detalles.",
-    "mlTracker.subtitleFirstRun": "Los 10 Puntajes de Oportunidad más altos del modelo ahora mismo. Cuando se guarde el próximo cálculo, esto pasa a mostrar cómo cambia cada puntaje con el tiempo. Toca un punto para ver detalles.",
-    "mlTracker.xAxis": "Fecha de cálculo",
+    "mlTracker.subtitleFirstRun": "Los 10 Puntajes de Oportunidad más altos del último cálculo del modelo. Toca un punto para ver detalles.",
     "mlTracker.upside": "Alza a 7 días",
     "mlTracker.group": "Grupo",
     "mlTracker.tapName": "Toca el nombre para buscar en eBay",
