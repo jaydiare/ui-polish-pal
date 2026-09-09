@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "updatedAt": "2026-09-08T21:20:49.212Z",
+    "updatedAt": "2026-09-09T05:03:47.308Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "PSA 7 + PSA 8 sold comps. Two queries per athlete. Strict per-grade title filter. Taguchi winsorized mean. USD via CBSA.",
     "targetGrades": [
@@ -8,8 +8,8 @@
       8
     ],
     "batchInfo": {
-      "startIdx": 352,
-      "endIdx": 360,
+      "startIdx": 360,
+      "endIdx": 368,
       "totalAthletes": 464
     },
     "maxPages": 3,
@@ -27,7 +27,7 @@
     },
     "fx": {
       "source": "CBSA Exchange Rates API",
-      "asOf": "2026-09-09T00:00:00.000Z"
+      "asOf": "2026-09-10T00:00:00.000Z"
     }
   },
   "Adbert Alzolay": {
@@ -3240,35 +3240,59 @@
   },
   "Renyel Pinto": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-08-23T13:11:44.465Z"
+    "erroredAt": "2026-09-09T05:04:06.881Z"
   },
   "Ricardo Pinto": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-08-23T13:12:05.600Z"
+    "erroredAt": "2026-09-09T05:04:33.479Z"
   },
   "Ricardo Rodriguez": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-08-23T13:12:25.838Z"
+    "erroredAt": "2026-09-09T05:04:58.514Z"
   },
   "Ricardo Sanchez": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-08-23T13:12:49.092Z"
+    "erroredAt": "2026-09-09T05:05:21.250Z"
   },
   "Rich Garces": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-08-23T13:13:11.533Z"
+    "erroredAt": "2026-09-09T05:05:44.357Z"
   },
   "Richard Hidalgo": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-08-23T13:13:33.185Z"
+    "erroredAt": "2026-09-09T05:06:05.822Z"
   },
   "Robert Machado": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-08-23T13:13:53.648Z"
+    "erroredAt": "2026-09-09T05:06:28.957Z"
   },
   "Robert Suarez": {
-    "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-08-23T13:14:13.641Z"
+    "psa7": {
+      "keyword": "Robert Suarez Baseball PSA 7",
+      "nScraped": 0,
+      "nSoldUsed": 0,
+      "taguchiSold": null,
+      "medianSold": null,
+      "marketStabilityCV": null,
+      "currency": "USD",
+      "originalCurrencyExample": null,
+      "fxRateUsed": null,
+      "lastKnownSold": null,
+      "lastKnownSoldAt": null
+    },
+    "psa8": {
+      "keyword": "Robert Suarez Baseball PSA 8",
+      "nScraped": 0,
+      "nSoldUsed": 0,
+      "taguchiSold": null,
+      "medianSold": null,
+      "marketStabilityCV": null,
+      "currency": "USD",
+      "originalCurrencyExample": null,
+      "fxRateUsed": null,
+      "lastKnownSold": null,
+      "lastKnownSoldAt": null
+    }
   },
   "Roberto Petagine": {
     "error": "eBay fetch failed (403)",
