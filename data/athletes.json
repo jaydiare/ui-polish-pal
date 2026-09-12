@@ -7,6 +7,55 @@
     "provider": "manual",
     "gemrate": "yes"
   },
+   {
+    "name": "Eiberson Castellano",
+    "sport": "Baseball",
+    "league": "MLB",
+    "team": "Rockies",
+    "provider": "manual",
+    "gemrate": "yes"
+  },
+  {
+    "name": "Jedixson Paez",
+    "sport": "Baseball",
+    "league": "MLB",
+    "team": "Red Sox",
+    "provider": "manual",
+    "gemrate": "yes"
+  },
+  {
+    "name": "Omar Martinez",
+    "sport": "Baseball",
+    "league": "MLB",
+    "team": "Angels",
+    "provider": "manual",
+    "gemrate": "yes"
+  },
+  {
+    "name": "Luis Lara",
+    "sport": "Baseball",
+    "league": "MLB",
+    "team": "Brewers",
+    "provider": "manual",
+    "gemrate": "yes"
+   },
+   {
+    "name": "Gabriel Gonzalez",
+    "sport": "Baseball",
+    "league": "MLB",
+    "team": "Twins",
+    "provider": "manual",
+    "gemrate": "yes"
+  },
+    {
+    "name": "Eliezer Alfonzo",
+    "sport": "Baseball",
+    "league": "MLB",
+    "team": "Dodgers",
+    "provider": "manual",
+    "searchKeyword": "Eliezer Alfonzo Jr Dodgers",
+    "gemrate": "yes"
+  },
   {
     "name": "Adrian Sanchez",
     "sport": "Baseball",
@@ -1401,12 +1450,12 @@
     "gemrate": "yes"
   },
   {
-    "name": "Gabriel Gonzalez",
+    "name": "Victor Bericoto",
     "sport": "Baseball",
     "league": "MLB",
-    "team": "Twins",
+    "team": "Giants",
     "provider": "manual",
-    "searchKeyword": "Victor Bericoto Twins",
+    "searchKeyword": "Victor Bericoto Giants",
     "gemrate": "no"
   },
   {
@@ -2580,6 +2629,14 @@
     "sport": "Baseball",
     "league": "MLB",
     "team": "Pirates",
+    "provider": "manual",
+    "gemrate": "yes"
+  },
+  {
+    "name": "Cesar Perdomo",
+    "sport": "Baseball",
+    "league": "MLB",
+    "team": "Giants",
     "provider": "manual",
     "gemrate": "yes"
   },
