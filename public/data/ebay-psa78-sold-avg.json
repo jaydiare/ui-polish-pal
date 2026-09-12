@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "updatedAt": "2026-09-11T21:11:22.695Z",
+    "updatedAt": "2026-09-12T04:54:56.036Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "PSA 7 + PSA 8 sold comps. Two queries per athlete. Strict per-grade title filter. Taguchi winsorized mean. USD via CBSA.",
     "targetGrades": [
@@ -8,9 +8,9 @@
       8
     ],
     "batchInfo": {
-      "startIdx": 448,
-      "endIdx": 456,
-      "totalAthletes": 464
+      "startIdx": 456,
+      "endIdx": 464,
+      "totalAthletes": 471
     },
     "maxPages": 3,
     "minSampleSize": 3,
@@ -27,7 +27,7 @@
     },
     "fx": {
       "source": "CBSA Exchange Rates API",
-      "asOf": "2026-09-12T00:00:00.000Z"
+      "asOf": "2026-09-13T00:00:00.000Z"
     }
   },
   "Adbert Alzolay": {
@@ -3620,35 +3620,35 @@
   },
   "David Martinez": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-09-11T21:11:59.820Z"
+    "erroredAt": "2026-09-12T04:55:12.921Z"
   },
   "Emilio Renteria": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-09-11T21:12:23.464Z"
+    "erroredAt": "2026-09-12T04:55:34.851Z"
   },
   "Gustavo Caraballo": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-09-11T21:12:45.768Z"
+    "erroredAt": "2026-09-12T04:55:55.062Z"
   },
   "Josef Martinez": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-09-11T21:13:06.871Z"
+    "erroredAt": "2026-09-12T04:56:15.636Z"
   },
   "Junior Moreno": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-09-11T21:13:26.867Z"
+    "erroredAt": "2026-09-12T04:56:39.782Z"
   },
   "Kevin Kelsy": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-09-11T21:13:47.556Z"
+    "erroredAt": "2026-09-12T04:57:01.322Z"
   },
   "Rafael Romo": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-09-11T21:14:08.906Z"
+    "erroredAt": "2026-09-12T04:57:22.898Z"
   },
   "Telasco Segovia": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-08-26T13:35:36.050Z"
+    "erroredAt": "2026-09-12T04:57:45.445Z"
   },
   "Wikelman Carmona": {
     "error": "eBay fetch failed (403)",
