@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "updatedAt": "2026-09-12T11:10:36.853Z",
+    "updatedAt": "2026-09-12T20:51:22.337Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "PSA 7 + PSA 8 sold comps. Two queries per athlete. Strict per-grade title filter. Taguchi winsorized mean. USD via CBSA.",
     "targetGrades": [
@@ -8,8 +8,8 @@
       8
     ],
     "batchInfo": {
-      "startIdx": 464,
-      "endIdx": 471,
+      "startIdx": 0,
+      "endIdx": 8,
       "totalAthletes": 471
     },
     "maxPages": 3,
@@ -56,7 +56,9 @@
       "fxRateUsed": null,
       "lastKnownSold": null,
       "lastKnownSoldAt": null
-    }
+    },
+    "error": "eBay fetch failed (403)",
+    "erroredAt": "2026-09-12T20:51:37.909Z"
   },
   "Adrian Sanchez": {
     "psa7": {
@@ -84,7 +86,9 @@
       "fxRateUsed": null,
       "lastKnownSold": null,
       "lastKnownSoldAt": null
-    }
+    },
+    "error": "eBay fetch failed (403)",
+    "erroredAt": "2026-09-12T20:54:21.284Z"
   },
   "Al Pedrique": {
     "psa7": {
@@ -2124,7 +2128,7 @@
   },
   "Eliezer Alfonzo": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-09-01T05:33:07.953Z"
+    "erroredAt": "2026-09-12T20:54:00.311Z"
   },
   "Elio Chacon": {
     "error": "eBay fetch failed (403)",
@@ -3684,11 +3688,11 @@
   },
   "Omar Martinez": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-05-29T10:32:58.747Z"
+    "erroredAt": "2026-09-12T20:52:47.445Z"
   },
   "Gabriel Gonzalez": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-05-29T10:33:17.833Z"
+    "erroredAt": "2026-09-12T20:53:35.768Z"
   },
   "Jesus Rodriguez": {
     "error": "eBay fetch failed (403)",
@@ -3696,6 +3700,14 @@
   },
   "Jedixson Paez": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-09-03T11:39:06.316Z"
+    "erroredAt": "2026-09-12T20:52:23.399Z"
+  },
+  "Eiberson Castellano": {
+    "error": "eBay fetch failed (403)",
+    "erroredAt": "2026-09-12T20:52:00.649Z"
+  },
+  "Luis Lara": {
+    "error": "eBay fetch failed (403)",
+    "erroredAt": "2026-09-12T20:53:10.597Z"
   }
 }
