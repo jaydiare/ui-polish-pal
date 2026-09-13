@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "updatedAt": "2026-09-13T12:13:43.207Z",
+    "updatedAt": "2026-09-13T16:34:50.658Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "PSA 7 + PSA 8 sold comps. Two queries per athlete. Strict per-grade title filter. Taguchi winsorized mean. USD via CBSA.",
     "targetGrades": [
@@ -8,8 +8,8 @@
       8
     ],
     "batchInfo": {
-      "startIdx": 16,
-      "endIdx": 24,
+      "startIdx": 24,
+      "endIdx": 32,
       "totalAthletes": 471
     },
     "maxPages": 3,
@@ -544,7 +544,9 @@
       "fxRateUsed": null,
       "lastKnownSold": null,
       "lastKnownSoldAt": null
-    }
+    },
+    "error": "eBay fetch failed (403)",
+    "erroredAt": "2026-09-13T16:35:09.303Z"
   },
   "Ali Sanchez": {
     "psa7": {
@@ -572,7 +574,9 @@
       "fxRateUsed": null,
       "lastKnownSold": null,
       "lastKnownSoldAt": null
-    }
+    },
+    "error": "eBay fetch failed (403)",
+    "erroredAt": "2026-09-13T16:35:35.583Z"
   },
   "Alvaro Espinoza": {
     "psa7": {
@@ -600,7 +604,9 @@
       "fxRateUsed": null,
       "lastKnownSold": null,
       "lastKnownSoldAt": null
-    }
+    },
+    "error": "eBay fetch failed (403)",
+    "erroredAt": "2026-09-13T16:36:03.082Z"
   },
   "Anderson Espinoza": {
     "psa7": {
@@ -628,7 +634,9 @@
       "fxRateUsed": null,
       "lastKnownSold": null,
       "lastKnownSoldAt": null
-    }
+    },
+    "error": "eBay fetch failed (403)",
+    "erroredAt": "2026-09-13T16:36:24.066Z"
   },
   "Anderson Machado": {
     "psa7": {
@@ -656,19 +664,21 @@
       "fxRateUsed": null,
       "lastKnownSold": null,
       "lastKnownSoldAt": null
-    }
+    },
+    "error": "eBay fetch failed (403)",
+    "erroredAt": "2026-09-13T16:36:44.349Z"
   },
   "Andres Blanco": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-08-28T12:07:03.269Z"
+    "erroredAt": "2026-09-13T16:37:04.005Z"
   },
   "Andres Chaparro": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-08-28T22:34:14.234Z"
+    "erroredAt": "2026-09-13T16:37:27.679Z"
   },
   "Andres Galarraga": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-08-28T22:34:41.424Z"
+    "erroredAt": "2026-09-13T16:37:50.760Z"
   },
   "Andres Gimenez": {
     "psa7": {
