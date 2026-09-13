@@ -7,13 +7,13 @@
     "provider": "manual",
     "gemrate": "yes"
   },
-   {
+  {
     "name": "Eiberson Castellano",
     "sport": "Baseball",
     "league": "MLB",
     "team": "Rockies",
     "provider": "manual",
-    "gemrate": "yes"
+    "gemrate": "no"
   },
   {
     "name": "Jedixson Paez",
@@ -29,7 +29,7 @@
     "league": "MLB",
     "team": "Angels",
     "provider": "manual",
-    "gemrate": "yes"
+    "gemrate": "no"
   },
   {
     "name": "Luis Lara",
@@ -37,17 +37,17 @@
     "league": "MLB",
     "team": "Brewers",
     "provider": "manual",
-    "gemrate": "yes"
-   },
-   {
+    "gemrate": "no"
+  },
+  {
     "name": "Gabriel Gonzalez",
     "sport": "Baseball",
     "league": "MLB",
     "team": "Twins",
     "provider": "manual",
-    "gemrate": "yes"
+    "gemrate": "no"
   },
-    {
+  {
     "name": "Eliezer Alfonzo",
     "sport": "Baseball",
     "league": "MLB",
@@ -2638,7 +2638,7 @@
     "league": "MLB",
     "team": "Giants",
     "provider": "manual",
-    "gemrate": "yes"
+    "gemrate": "no"
   },
   {
     "name": "Luis Perales",
