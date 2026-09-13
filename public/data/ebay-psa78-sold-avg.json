@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "updatedAt": "2026-09-12T20:51:22.337Z",
+    "updatedAt": "2026-09-13T05:16:13.913Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "PSA 7 + PSA 8 sold comps. Two queries per athlete. Strict per-grade title filter. Taguchi winsorized mean. USD via CBSA.",
     "targetGrades": [
@@ -8,8 +8,8 @@
       8
     ],
     "batchInfo": {
-      "startIdx": 0,
-      "endIdx": 8,
+      "startIdx": 8,
+      "endIdx": 16,
       "totalAthletes": 471
     },
     "maxPages": 3,
@@ -27,7 +27,7 @@
     },
     "fx": {
       "source": "CBSA Exchange Rates API",
-      "asOf": "2026-09-13T00:00:00.000Z"
+      "asOf": "2026-09-14T00:00:00.000Z"
     }
   },
   "Adbert Alzolay": {
@@ -116,7 +116,9 @@
       "fxRateUsed": null,
       "lastKnownSold": null,
       "lastKnownSoldAt": null
-    }
+    },
+    "error": "eBay fetch failed (403)",
+    "erroredAt": "2026-09-13T05:16:30.325Z"
   },
   "Albert Suarez": {
     "psa7": {
@@ -144,7 +146,9 @@
       "fxRateUsed": null,
       "lastKnownSold": null,
       "lastKnownSoldAt": null
-    }
+    },
+    "error": "eBay fetch failed (403)",
+    "erroredAt": "2026-09-13T05:16:53.450Z"
   },
   "Alberto Callaspo": {
     "psa7": {
@@ -172,7 +176,9 @@
       "fxRateUsed": null,
       "lastKnownSold": null,
       "lastKnownSoldAt": null
-    }
+    },
+    "error": "eBay fetch failed (403)",
+    "erroredAt": "2026-09-13T05:17:14.447Z"
   },
   "Alberto Gonzalez": {
     "psa7": {
@@ -200,7 +206,9 @@
       "fxRateUsed": null,
       "lastKnownSold": null,
       "lastKnownSoldAt": null
-    }
+    },
+    "error": "eBay fetch failed (403)",
+    "erroredAt": "2026-09-13T05:17:36.318Z"
   },
   "Alcides Escobar": {
     "psa7": {
@@ -228,7 +236,9 @@
       "fxRateUsed": null,
       "lastKnownSold": null,
       "lastKnownSoldAt": null
-    }
+    },
+    "error": "eBay fetch failed (403)",
+    "erroredAt": "2026-09-13T05:17:57.037Z"
   },
   "Alejandro Freire": {
     "psa7": {
@@ -256,7 +266,9 @@
       "fxRateUsed": null,
       "lastKnownSold": null,
       "lastKnownSoldAt": null
-    }
+    },
+    "error": "eBay fetch failed (403)",
+    "erroredAt": "2026-09-13T05:18:17.706Z"
   },
   "Alejandro Machado": {
     "psa7": {
@@ -284,11 +296,13 @@
       "fxRateUsed": null,
       "lastKnownSold": null,
       "lastKnownSoldAt": null
-    }
+    },
+    "error": "eBay fetch failed (403)",
+    "erroredAt": "2026-09-13T05:18:40.610Z"
   },
   "Alex Carrasquel": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-08-27T22:32:14.284Z"
+    "erroredAt": "2026-09-13T05:19:03.584Z"
   },
   "Alex Escobar": {
     "psa7": {
