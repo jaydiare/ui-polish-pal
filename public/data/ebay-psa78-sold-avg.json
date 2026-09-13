@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "updatedAt": "2026-09-13T16:34:50.658Z",
+    "updatedAt": "2026-09-13T21:04:22.967Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "PSA 7 + PSA 8 sold comps. Two queries per athlete. Strict per-grade title filter. Taguchi winsorized mean. USD via CBSA.",
     "targetGrades": [
@@ -8,9 +8,9 @@
       8
     ],
     "batchInfo": {
-      "startIdx": 24,
-      "endIdx": 32,
-      "totalAthletes": 471
+      "startIdx": 32,
+      "endIdx": 40,
+      "totalAthletes": 466
     },
     "maxPages": 3,
     "minSampleSize": 3,
@@ -818,7 +818,9 @@
       "fxRateUsed": null,
       "lastKnownSold": null,
       "lastKnownSoldAt": null
-    }
+    },
+    "error": "eBay fetch failed (403)",
+    "erroredAt": "2026-09-13T21:04:42.650Z"
   },
   "Angel Guzman": {
     "psa7": {
@@ -846,7 +848,9 @@
       "fxRateUsed": null,
       "lastKnownSold": null,
       "lastKnownSoldAt": null
-    }
+    },
+    "error": "eBay fetch failed (403)",
+    "erroredAt": "2026-09-13T21:05:02.912Z"
   },
   "Angel Nesbitt": {
     "psa7": {
@@ -874,7 +878,9 @@
       "fxRateUsed": null,
       "lastKnownSold": null,
       "lastKnownSoldAt": null
-    }
+    },
+    "error": "eBay fetch failed (403)",
+    "erroredAt": "2026-09-13T21:05:27.474Z"
   },
   "Angel Salazar": {
     "psa7": {
@@ -902,7 +908,9 @@
       "fxRateUsed": null,
       "lastKnownSold": null,
       "lastKnownSoldAt": null
-    }
+    },
+    "error": "eBay fetch failed (403)",
+    "erroredAt": "2026-09-13T21:05:54.803Z"
   },
   "Angel Zerpa": {
     "psa7": {
@@ -930,7 +938,9 @@
       "fxRateUsed": null,
       "lastKnownSold": null,
       "lastKnownSoldAt": null
-    }
+    },
+    "error": "eBay fetch failed (403)",
+    "erroredAt": "2026-09-13T21:06:16.616Z"
   },
   "Anibal Sanchez": {
     "psa7": {
@@ -958,7 +968,9 @@
       "fxRateUsed": null,
       "lastKnownSold": null,
       "lastKnownSoldAt": null
-    }
+    },
+    "error": "eBay fetch failed (403)",
+    "erroredAt": "2026-09-13T21:06:38.830Z"
   },
   "Anthony Molina": {
     "psa7": {
@@ -986,7 +998,9 @@
       "fxRateUsed": null,
       "lastKnownSold": null,
       "lastKnownSoldAt": null
-    }
+    },
+    "error": "eBay fetch failed (403)",
+    "erroredAt": "2026-09-13T21:07:00.563Z"
   },
   "Anthony Ortega": {
     "psa7": {
@@ -1014,7 +1028,9 @@
       "fxRateUsed": null,
       "lastKnownSold": null,
       "lastKnownSoldAt": null
-    }
+    },
+    "error": "eBay fetch failed (403)",
+    "erroredAt": "2026-09-13T21:07:22.862Z"
   },
   "Anthony Santander": {
     "psa7": {
