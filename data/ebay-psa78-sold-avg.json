@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "updatedAt": "2026-09-14T13:14:37.857Z",
+    "updatedAt": "2026-09-14T21:58:20.580Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "PSA 7 + PSA 8 sold comps. Two queries per athlete. Strict per-grade title filter. Taguchi winsorized mean. USD via CBSA.",
     "targetGrades": [
@@ -8,8 +8,8 @@
       8
     ],
     "batchInfo": {
-      "startIdx": 48,
-      "endIdx": 56,
+      "startIdx": 56,
+      "endIdx": 64,
       "totalAthletes": 466
     },
     "maxPages": 3,
@@ -1410,7 +1410,7 @@
   },
   "Carlos Gonzalez": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-08-29T21:07:45.149Z"
+    "erroredAt": "2026-09-14T21:58:36.662Z"
   },
   "Carlos Guillen": {
     "psa7": {
@@ -1438,7 +1438,9 @@
       "fxRateUsed": null,
       "lastKnownSold": null,
       "lastKnownSoldAt": null
-    }
+    },
+    "error": "eBay fetch failed (403)",
+    "erroredAt": "2026-09-14T21:58:58.574Z"
   },
   "Carlos Guzman": {
     "psa7": {
@@ -1466,7 +1468,9 @@
       "fxRateUsed": null,
       "lastKnownSold": null,
       "lastKnownSoldAt": null
-    }
+    },
+    "error": "eBay fetch failed (403)",
+    "erroredAt": "2026-09-14T21:59:20.550Z"
   },
   "Carlos Hernandez": {
     "psa7": {
@@ -1494,7 +1498,9 @@
       "fxRateUsed": null,
       "lastKnownSold": null,
       "lastKnownSoldAt": null
-    }
+    },
+    "error": "eBay fetch failed (403)",
+    "erroredAt": "2026-09-14T21:59:43.595Z"
   },
   "Carlos Maldonado": {
     "psa7": {
@@ -1522,7 +1528,9 @@
       "fxRateUsed": null,
       "lastKnownSold": null,
       "lastKnownSoldAt": null
-    }
+    },
+    "error": "eBay fetch failed (403)",
+    "erroredAt": "2026-09-14T22:00:07.498Z"
   },
   "Carlos Martinez": {
     "psa7": {
@@ -1550,7 +1558,9 @@
       "fxRateUsed": null,
       "lastKnownSold": null,
       "lastKnownSoldAt": null
-    }
+    },
+    "error": "eBay fetch failed (403)",
+    "erroredAt": "2026-09-14T22:00:29.315Z"
   },
   "Carlos Monasterios": {
     "psa7": {
@@ -1578,7 +1588,9 @@
       "fxRateUsed": null,
       "lastKnownSold": null,
       "lastKnownSoldAt": null
-    }
+    },
+    "error": "eBay fetch failed (403)",
+    "erroredAt": "2026-09-14T22:00:50.344Z"
   },
   "Carlos Narvaez": {
     "psa7": {
@@ -1606,7 +1618,9 @@
       "fxRateUsed": null,
       "lastKnownSold": null,
       "lastKnownSoldAt": null
-    }
+    },
+    "error": "eBay fetch failed (403)",
+    "erroredAt": "2026-09-14T22:01:12.746Z"
   },
   "Carlos Perez": {
     "psa7": {
