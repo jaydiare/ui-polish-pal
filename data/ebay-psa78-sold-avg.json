@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "updatedAt": "2026-09-14T05:20:45.696Z",
+    "updatedAt": "2026-09-14T13:14:37.857Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "PSA 7 + PSA 8 sold comps. Two queries per athlete. Strict per-grade title filter. Taguchi winsorized mean. USD via CBSA.",
     "targetGrades": [
@@ -8,8 +8,8 @@
       8
     ],
     "batchInfo": {
-      "startIdx": 40,
-      "endIdx": 48,
+      "startIdx": 48,
+      "endIdx": 56,
       "totalAthletes": 466
     },
     "maxPages": 3,
@@ -1220,7 +1220,9 @@
       "fxRateUsed": null,
       "lastKnownSold": null,
       "lastKnownSoldAt": null
-    }
+    },
+    "error": "eBay fetch failed (403)",
+    "erroredAt": "2026-09-14T13:14:54.716Z"
   },
   "Brayan Villarreal": {
     "psa7": {
@@ -1248,11 +1250,13 @@
       "fxRateUsed": null,
       "lastKnownSold": null,
       "lastKnownSoldAt": null
-    }
+    },
+    "error": "eBay fetch failed (403)",
+    "erroredAt": "2026-09-14T13:15:16.056Z"
   },
   "Breyvic Valera": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-08-29T21:06:07.934Z"
+    "erroredAt": "2026-09-14T13:15:38.204Z"
   },
   "Bruce Rondon": {
     "psa7": {
@@ -1280,7 +1284,9 @@
       "fxRateUsed": null,
       "lastKnownSold": null,
       "lastKnownSoldAt": null
-    }
+    },
+    "error": "eBay fetch failed (403)",
+    "erroredAt": "2026-09-14T13:16:00.070Z"
   },
   "Brusdar Graterol": {
     "psa7": {
@@ -1308,7 +1314,9 @@
       "fxRateUsed": null,
       "lastKnownSold": null,
       "lastKnownSoldAt": null
-    }
+    },
+    "error": "eBay fetch failed (403)",
+    "erroredAt": "2026-09-14T13:16:21.769Z"
   },
   "Carlos Asuaje": {
     "psa7": {
@@ -1336,7 +1344,9 @@
       "fxRateUsed": null,
       "lastKnownSold": null,
       "lastKnownSoldAt": null
-    }
+    },
+    "error": "eBay fetch failed (403)",
+    "erroredAt": "2026-09-14T13:16:43.513Z"
   },
   "Carlos Carrasco": {
     "psa7": {
@@ -1364,7 +1374,9 @@
       "fxRateUsed": null,
       "lastKnownSold": null,
       "lastKnownSoldAt": null
-    }
+    },
+    "error": "eBay fetch failed (403)",
+    "erroredAt": "2026-09-14T13:17:06.486Z"
   },
   "Carlos Garcia": {
     "psa7": {
@@ -1392,7 +1404,9 @@
       "fxRateUsed": null,
       "lastKnownSold": null,
       "lastKnownSoldAt": null
-    }
+    },
+    "error": "eBay fetch failed (403)",
+    "erroredAt": "2026-09-14T13:17:29.210Z"
   },
   "Carlos Gonzalez": {
     "error": "eBay fetch failed (403)",
