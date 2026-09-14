@@ -1,13 +1,13 @@
 {
   "_meta": {
-    "updatedAt": "2026-09-14T09:44:29.361302+00:00",
+    "updatedAt": "2026-09-14T17:42:02.044748+00:00",
     "athleteCount": 462,
     "graders": [
       "PSA"
     ],
     "batchInfo": {
-      "startIdx": 0,
-      "endIdx": 20,
+      "startIdx": 20,
+      "endIdx": 40,
       "totalAthletes": 581
     }
   },
