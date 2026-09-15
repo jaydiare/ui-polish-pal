@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "updatedAt": "2026-09-15T12:01:07.308Z",
+    "updatedAt": "2026-09-15T17:13:36.905Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "PSA 7 + PSA 8 sold comps. Two queries per athlete. Strict per-grade title filter. Taguchi winsorized mean. USD via CBSA.",
     "targetGrades": [
@@ -8,8 +8,8 @@
       8
     ],
     "batchInfo": {
-      "startIdx": 72,
-      "endIdx": 80,
+      "startIdx": 80,
+      "endIdx": 88,
       "totalAthletes": 466
     },
     "maxPages": 3,
@@ -1792,31 +1792,31 @@
   },
   "Cris Colon": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-08-30T16:57:58.701Z"
+    "erroredAt": "2026-09-15T17:13:51.863Z"
   },
   "Damaso Blanco": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-08-30T16:58:19.938Z"
+    "erroredAt": "2026-09-15T17:14:13.318Z"
   },
   "Daniel Palencia": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-08-30T21:27:03.211Z"
+    "erroredAt": "2026-09-15T17:14:33.769Z"
   },
   "Danny Leon": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-08-30T21:27:24.641Z"
+    "erroredAt": "2026-09-15T17:14:57.521Z"
   },
   "Danny Sandoval": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-08-30T21:27:48.078Z"
+    "erroredAt": "2026-09-15T17:15:19.983Z"
   },
   "Darwin Cubillan": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-08-30T21:28:10.294Z"
+    "erroredAt": "2026-09-15T17:15:43.786Z"
   },
   "Darwinzon Hernandez": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-08-30T21:28:33.670Z"
+    "erroredAt": "2026-09-15T17:16:05.278Z"
   },
   "Dave Concepcion": {
     "psa7": {
@@ -1844,7 +1844,9 @@
       "fxRateUsed": null,
       "lastKnownSold": null,
       "lastKnownSoldAt": null
-    }
+    },
+    "error": "eBay fetch failed (403)",
+    "erroredAt": "2026-09-15T17:16:28.992Z"
   },
   "David Peralta": {
     "psa7": {
