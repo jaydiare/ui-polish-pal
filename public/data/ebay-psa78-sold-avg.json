@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "updatedAt": "2026-09-15T05:11:57.049Z",
+    "updatedAt": "2026-09-15T12:01:07.308Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "PSA 7 + PSA 8 sold comps. Two queries per athlete. Strict per-grade title filter. Taguchi winsorized mean. USD via CBSA.",
     "targetGrades": [
@@ -8,8 +8,8 @@
       8
     ],
     "batchInfo": {
-      "startIdx": 64,
-      "endIdx": 72,
+      "startIdx": 72,
+      "endIdx": 80,
       "totalAthletes": 466
     },
     "maxPages": 3,
@@ -1732,7 +1732,9 @@
       "fxRateUsed": null,
       "lastKnownSold": null,
       "lastKnownSoldAt": null
-    }
+    },
+    "error": "eBay fetch failed (403)",
+    "erroredAt": "2026-09-15T12:01:23.066Z"
   },
   "Cesar Hernandez": {
     "psa7": {
@@ -1760,31 +1762,33 @@
       "fxRateUsed": null,
       "lastKnownSold": null,
       "lastKnownSoldAt": null
-    }
+    },
+    "error": "eBay fetch failed (403)",
+    "erroredAt": "2026-09-15T12:01:46.139Z"
   },
   "Cesar Izturis": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-08-30T16:55:48.907Z"
+    "erroredAt": "2026-09-15T12:02:09.721Z"
   },
   "Cesar Jimenez": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-08-30T16:56:10.481Z"
+    "erroredAt": "2026-09-15T12:02:31.514Z"
   },
   "Cesar Tovar": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-08-30T16:56:32.273Z"
+    "erroredAt": "2026-09-15T12:02:53.841Z"
   },
   "Chico Carrasquel": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-08-30T16:56:52.092Z"
+    "erroredAt": "2026-09-15T12:03:17.233Z"
   },
   "Chucho Ramos": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-08-30T16:57:13.000Z"
+    "erroredAt": "2026-09-15T12:03:37.235Z"
   },
   "Clemente Alvarez": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-08-30T16:57:35.705Z"
+    "erroredAt": "2026-09-15T12:03:58.193Z"
   },
   "Cris Colon": {
     "error": "eBay fetch failed (403)",
