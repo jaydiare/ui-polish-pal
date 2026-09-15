@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "updatedAt": "2026-09-15T17:13:36.905Z",
+    "updatedAt": "2026-09-15T21:40:49.266Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "PSA 7 + PSA 8 sold comps. Two queries per athlete. Strict per-grade title filter. Taguchi winsorized mean. USD via CBSA.",
     "targetGrades": [
@@ -8,8 +8,8 @@
       8
     ],
     "batchInfo": {
-      "startIdx": 80,
-      "endIdx": 88,
+      "startIdx": 88,
+      "endIdx": 96,
       "totalAthletes": 466
     },
     "maxPages": 3,
@@ -1874,27 +1874,29 @@
       "fxRateUsed": null,
       "lastKnownSold": null,
       "lastKnownSoldAt": null
-    }
+    },
+    "error": "eBay fetch failed (403)",
+    "erroredAt": "2026-09-15T21:41:05.584Z"
   },
   "Deolis Guerra": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-08-30T21:29:47.395Z"
+    "erroredAt": "2026-09-15T21:41:28.646Z"
   },
   "Diego Castillo": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-08-31T05:59:30.377Z"
+    "erroredAt": "2026-09-15T21:41:50.539Z"
   },
   "Dioner Navarro": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-08-31T05:59:51.685Z"
+    "erroredAt": "2026-09-15T21:42:10.340Z"
   },
   "Dixon Machado": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-08-31T06:00:13.342Z"
+    "erroredAt": "2026-09-15T21:42:33.840Z"
   },
   "Donaldo Mendez": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-08-31T06:00:36.719Z"
+    "erroredAt": "2026-09-15T21:42:56.896Z"
   },
   "Eddie Perez": {
     "psa7": {
@@ -1922,7 +1924,9 @@
       "fxRateUsed": null,
       "lastKnownSold": null,
       "lastKnownSoldAt": null
-    }
+    },
+    "error": "eBay fetch failed (403)",
+    "erroredAt": "2026-09-15T21:43:17.673Z"
   },
   "Eddie Zambrano": {
     "psa7": {
@@ -1950,7 +1954,9 @@
       "fxRateUsed": null,
       "lastKnownSold": null,
       "lastKnownSoldAt": null
-    }
+    },
+    "error": "eBay fetch failed (403)",
+    "erroredAt": "2026-09-15T21:43:39.749Z"
   },
   "Eddy Diaz": {
     "psa7": {
