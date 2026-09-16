@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "updatedAt": "2026-09-15T21:40:49.266Z",
+    "updatedAt": "2026-09-16T05:07:26.198Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "PSA 7 + PSA 8 sold comps. Two queries per athlete. Strict per-grade title filter. Taguchi winsorized mean. USD via CBSA.",
     "targetGrades": [
@@ -8,8 +8,8 @@
       8
     ],
     "batchInfo": {
-      "startIdx": 88,
-      "endIdx": 96,
+      "startIdx": 96,
+      "endIdx": 104,
       "totalAthletes": 466
     },
     "maxPages": 3,
@@ -27,7 +27,7 @@
     },
     "fx": {
       "source": "CBSA Exchange Rates API",
-      "asOf": "2026-09-16T00:00:00.000Z"
+      "asOf": "2026-09-17T00:00:00.000Z"
     }
   },
   "Adbert Alzolay": {
@@ -1984,7 +1984,9 @@
       "fxRateUsed": null,
       "lastKnownSold": null,
       "lastKnownSoldAt": null
-    }
+    },
+    "error": "eBay fetch failed (403)",
+    "erroredAt": "2026-09-16T05:07:42.855Z"
   },
   "Edgar Navarro": {
     "psa7": {
@@ -2012,23 +2014,25 @@
       "fxRateUsed": null,
       "lastKnownSold": null,
       "lastKnownSoldAt": null
-    }
+    },
+    "error": "eBay fetch failed (403)",
+    "erroredAt": "2026-09-16T05:08:06.731Z"
   },
   "Edgardo Alfonzo": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-08-31T14:20:26.639Z"
+    "erroredAt": "2026-09-16T05:08:28.549Z"
   },
   "Edgardo Henriquez": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-08-31T14:20:48.670Z"
+    "erroredAt": "2026-09-16T05:08:51.544Z"
   },
   "Eduard Bazardo": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-08-31T14:21:12.636Z"
+    "erroredAt": "2026-09-16T05:09:12.867Z"
   },
   "Eduardo Escobar": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-08-31T14:21:36.671Z"
+    "erroredAt": "2026-09-16T05:09:35.608Z"
   },
   "Eduardo Jimenez": {
     "psa7": {
@@ -2056,7 +2060,9 @@
       "fxRateUsed": null,
       "lastKnownSold": null,
       "lastKnownSoldAt": null
-    }
+    },
+    "error": "eBay fetch failed (403)",
+    "erroredAt": "2026-09-16T05:09:57.623Z"
   },
   "Eduardo Rodriguez": {
     "psa7": {
@@ -2084,7 +2090,9 @@
       "fxRateUsed": null,
       "lastKnownSold": null,
       "lastKnownSoldAt": null
-    }
+    },
+    "error": "eBay fetch failed (403)",
+    "erroredAt": "2026-09-16T05:10:18.059Z"
   },
   "Eduardo Sanchez": {
     "error": "eBay fetch failed (403)",
