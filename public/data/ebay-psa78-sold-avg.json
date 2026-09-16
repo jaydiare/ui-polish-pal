@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "updatedAt": "2026-09-16T05:07:26.198Z",
+    "updatedAt": "2026-09-16T11:57:54.256Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "PSA 7 + PSA 8 sold comps. Two queries per athlete. Strict per-grade title filter. Taguchi winsorized mean. USD via CBSA.",
     "targetGrades": [
@@ -8,8 +8,8 @@
       8
     ],
     "batchInfo": {
-      "startIdx": 96,
-      "endIdx": 104,
+      "startIdx": 104,
+      "endIdx": 112,
       "totalAthletes": 466
     },
     "maxPages": 3,
@@ -2096,7 +2096,7 @@
   },
   "Eduardo Sanchez": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-08-31T14:23:03.577Z"
+    "erroredAt": "2026-09-16T11:58:10.981Z"
   },
   "Eduardo Villacis": {
     "psa7": {
@@ -2124,27 +2124,29 @@
       "fxRateUsed": null,
       "lastKnownSold": null,
       "lastKnownSoldAt": null
-    }
+    },
+    "error": "eBay fetch failed (403)",
+    "erroredAt": "2026-09-16T11:58:33.925Z"
   },
   "Edubray Ramos": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-08-31T22:59:50.059Z"
+    "erroredAt": "2026-09-16T11:58:55.691Z"
   },
   "Edwar Colina": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-08-31T23:00:12.777Z"
+    "erroredAt": "2026-09-16T11:59:19.160Z"
   },
   "Edward Mujica": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-08-31T23:00:34.514Z"
+    "erroredAt": "2026-09-16T11:59:41.649Z"
   },
   "Edward Olivares": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-08-31T23:00:56.249Z"
+    "erroredAt": "2026-09-16T12:00:03.800Z"
   },
   "Edwin Escobar": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-08-31T23:01:16.737Z"
+    "erroredAt": "2026-09-16T12:00:26.025Z"
   },
   "Edwin Hurtado": {
     "psa7": {
@@ -2172,7 +2174,9 @@
       "fxRateUsed": null,
       "lastKnownSold": null,
       "lastKnownSoldAt": null
-    }
+    },
+    "error": "eBay fetch failed (403)",
+    "erroredAt": "2026-09-16T12:00:47.713Z"
   },
   "Edwin Moreno": {
     "psa7": {
