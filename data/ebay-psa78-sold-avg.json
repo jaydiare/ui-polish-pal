@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "updatedAt": "2026-09-17T05:12:27.825Z",
+    "updatedAt": "2026-09-17T11:59:27.370Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "PSA 7 + PSA 8 sold comps. Two queries per athlete. Strict per-grade title filter. Taguchi winsorized mean. USD via CBSA.",
     "targetGrades": [
@@ -8,8 +8,8 @@
       8
     ],
     "batchInfo": {
-      "startIdx": 128,
-      "endIdx": 136,
+      "startIdx": 136,
+      "endIdx": 144,
       "totalAthletes": 466
     },
     "maxPages": 3,
@@ -2380,7 +2380,7 @@
   },
   "Fernando Nieve": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-09-01T16:54:05.914Z"
+    "erroredAt": "2026-09-17T11:59:42.836Z"
   },
   "Francisco Alvarez": {
     "psa7": {
@@ -2408,27 +2408,29 @@
       "fxRateUsed": null,
       "lastKnownSold": null,
       "lastKnownSoldAt": null
-    }
+    },
+    "error": "eBay fetch failed (403)",
+    "erroredAt": "2026-09-17T12:00:05.969Z"
   },
   "Francisco Arcia": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-09-01T21:15:06.050Z"
+    "erroredAt": "2026-09-17T12:00:27.860Z"
   },
   "Francisco Cervelli": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-09-01T21:15:29.395Z"
+    "erroredAt": "2026-09-17T12:00:47.297Z"
   },
   "Francisco Morales": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-09-01T21:15:52.536Z"
+    "erroredAt": "2026-09-17T12:01:08.961Z"
   },
   "Francisco Rodriguez": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-09-01T21:16:13.681Z"
+    "erroredAt": "2026-09-17T12:01:30.344Z"
   },
   "Frank Mata": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-09-01T21:16:39.772Z"
+    "erroredAt": "2026-09-17T12:01:52.272Z"
   },
   "Franklin Barreto": {
     "psa7": {
@@ -2456,7 +2458,9 @@
       "fxRateUsed": null,
       "lastKnownSold": null,
       "lastKnownSoldAt": null
-    }
+    },
+    "error": "eBay fetch failed (403)",
+    "erroredAt": "2026-09-17T12:02:13.434Z"
   },
   "Franklin Gutierrez": {
     "psa7": {
