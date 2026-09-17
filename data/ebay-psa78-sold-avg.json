@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "updatedAt": "2026-09-17T11:59:27.370Z",
+    "updatedAt": "2026-09-17T17:13:15.509Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "PSA 7 + PSA 8 sold comps. Two queries per athlete. Strict per-grade title filter. Taguchi winsorized mean. USD via CBSA.",
     "targetGrades": [
@@ -8,8 +8,8 @@
       8
     ],
     "batchInfo": {
-      "startIdx": 136,
-      "endIdx": 144,
+      "startIdx": 144,
+      "endIdx": 152,
       "totalAthletes": 466
     },
     "maxPages": 3,
@@ -2488,7 +2488,9 @@
       "fxRateUsed": null,
       "lastKnownSold": null,
       "lastKnownSoldAt": null
-    }
+    },
+    "error": "eBay fetch failed (403)",
+    "erroredAt": "2026-09-17T17:13:31.008Z"
   },
   "Franklin Morales": {
     "psa7": {
@@ -2516,31 +2518,33 @@
       "fxRateUsed": null,
       "lastKnownSold": null,
       "lastKnownSoldAt": null
-    }
+    },
+    "error": "eBay fetch failed (403)",
+    "erroredAt": "2026-09-17T17:13:52.205Z"
   },
   "Fred Manrique": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-09-02T04:57:42.866Z"
+    "erroredAt": "2026-09-17T17:14:14.839Z"
   },
   "Freddy Fermin": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-09-02T04:58:05.076Z"
+    "erroredAt": "2026-09-17T17:14:35.560Z"
   },
   "Freddy Galvis": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-09-02T04:58:27.520Z"
+    "erroredAt": "2026-09-17T17:14:57.081Z"
   },
   "Freddy Garcia": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-09-02T04:58:49.742Z"
+    "erroredAt": "2026-09-17T17:15:19.717Z"
   },
   "Gabriel Arias": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-09-02T04:59:10.959Z"
+    "erroredAt": "2026-09-17T17:15:41.267Z"
   },
   "Gabriel Moreno": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-09-02T04:59:33.289Z"
+    "erroredAt": "2026-09-17T17:16:04.768Z"
   },
   "Gerardo Parra": {
     "error": "eBay fetch failed (403)",
