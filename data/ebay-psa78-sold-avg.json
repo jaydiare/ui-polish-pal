@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "updatedAt": "2026-09-17T21:39:03.631Z",
+    "updatedAt": "2026-09-18T05:04:57.126Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "PSA 7 + PSA 8 sold comps. Two queries per athlete. Strict per-grade title filter. Taguchi winsorized mean. USD via CBSA.",
     "targetGrades": [
@@ -8,8 +8,8 @@
       8
     ],
     "batchInfo": {
-      "startIdx": 152,
-      "endIdx": 160,
+      "startIdx": 160,
+      "endIdx": 168,
       "totalAthletes": 466
     },
     "maxPages": 3,
@@ -27,7 +27,7 @@
     },
     "fx": {
       "source": "CBSA Exchange Rates API",
-      "asOf": "2026-09-18T00:00:00.000Z"
+      "asOf": "2026-09-19T00:00:00.000Z"
     }
   },
   "Adbert Alzolay": {
@@ -2580,35 +2580,35 @@
   },
   "Gregor Blanco": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-09-02T11:40:56.341Z"
+    "erroredAt": "2026-09-18T05:05:12.906Z"
   },
   "Gregorio Petit": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-09-02T11:41:18.450Z"
+    "erroredAt": "2026-09-18T05:05:35.817Z"
   },
   "Gregory Infante": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-09-02T16:48:44.112Z"
+    "erroredAt": "2026-09-18T05:05:56.372Z"
   },
   "Guilder Rodriguez": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-09-02T16:49:07.619Z"
+    "erroredAt": "2026-09-18T05:06:19.100Z"
   },
   "Guillermo Moscoso": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-09-02T16:49:30.858Z"
+    "erroredAt": "2026-09-18T05:06:41.018Z"
   },
   "Guillermo Quiroz": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-09-02T16:49:55.531Z"
+    "erroredAt": "2026-09-18T05:07:03.088Z"
   },
   "Guillermo Rodriguez": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-09-02T16:50:17.250Z"
+    "erroredAt": "2026-09-18T05:07:24.784Z"
   },
   "Gus Gil": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-09-02T16:50:39.626Z"
+    "erroredAt": "2026-09-18T05:07:46.776Z"
   },
   "Gus Polidor": {
     "error": "eBay fetch failed (403)",
