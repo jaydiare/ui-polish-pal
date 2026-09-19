@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "updatedAt": "2026-09-18T21:10:01.183Z",
+    "updatedAt": "2026-09-19T04:55:22.392Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "PSA 7 + PSA 8 sold comps. Two queries per athlete. Strict per-grade title filter. Taguchi winsorized mean. USD via CBSA.",
     "targetGrades": [
@@ -8,8 +8,8 @@
       8
     ],
     "batchInfo": {
-      "startIdx": 184,
-      "endIdx": 192,
+      "startIdx": 192,
+      "endIdx": 200,
       "totalAthletes": 466
     },
     "maxPages": 3,
@@ -27,7 +27,7 @@
     },
     "fx": {
       "source": "CBSA Exchange Rates API",
-      "asOf": "2026-09-19T00:00:00.000Z"
+      "asOf": "2026-09-20T00:00:00.000Z"
     }
   },
   "Adbert Alzolay": {
@@ -2708,31 +2708,31 @@
   },
   "Jeferson Quero": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-09-03T11:39:28.009Z"
+    "erroredAt": "2026-09-19T04:56:00.125Z"
   },
   "Jermaine Palacios": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-09-03T16:38:23.653Z"
+    "erroredAt": "2026-09-19T04:56:24.075Z"
   },
   "Jesus Aguilar": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-09-03T16:38:46.767Z"
+    "erroredAt": "2026-09-19T04:56:45.496Z"
   },
   "Jesus Delgado": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-09-03T16:39:07.671Z"
+    "erroredAt": "2026-09-19T04:57:08.738Z"
   },
   "Jesus Flores": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-09-03T16:39:28.603Z"
+    "erroredAt": "2026-09-19T04:57:32.875Z"
   },
   "Jesus Guzman": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-09-03T16:39:51.717Z"
+    "erroredAt": "2026-09-19T04:57:55.989Z"
   },
   "Jesus Luzardo": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-09-03T16:40:12.756Z"
+    "erroredAt": "2026-09-19T04:58:18.576Z"
   },
   "Jesus Montero": {
     "error": "eBay fetch failed (403)",
@@ -3836,7 +3836,7 @@
   },
   "Jedixson Paez": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-09-12T20:52:23.399Z"
+    "erroredAt": "2026-09-19T04:55:39.681Z"
   },
   "Eiberson Castellano": {
     "error": "eBay fetch failed (403)",
