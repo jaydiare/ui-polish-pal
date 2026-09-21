@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "updatedAt": "2026-09-20T21:00:25.997Z",
+    "updatedAt": "2026-09-21T05:19:59.221Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "PSA 7 + PSA 8 sold comps. Two queries per athlete. Strict per-grade title filter. Taguchi winsorized mean. USD via CBSA.",
     "targetGrades": [
@@ -8,8 +8,8 @@
       8
     ],
     "batchInfo": {
-      "startIdx": 248,
-      "endIdx": 256,
+      "startIdx": 256,
+      "endIdx": 264,
       "totalAthletes": 466
     },
     "maxPages": 3,
@@ -27,7 +27,7 @@
     },
     "fx": {
       "source": "CBSA Exchange Rates API",
-      "asOf": "2026-09-21T00:00:00.000Z"
+      "asOf": "2026-09-22T00:00:00.000Z"
     }
   },
   "Adbert Alzolay": {
@@ -2956,35 +2956,35 @@
   },
   "Leo Hernandez": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-09-05T10:54:43.959Z"
+    "erroredAt": "2026-09-21T05:20:15.626Z"
   },
   "Leo Rivas": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-09-05T10:55:08.926Z"
+    "erroredAt": "2026-09-21T05:20:36.778Z"
   },
   "Les Straker": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-09-05T15:28:52.184Z"
+    "erroredAt": "2026-09-21T05:20:59.690Z"
   },
   "Lino Urdaneta": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-09-05T15:29:13.159Z"
+    "erroredAt": "2026-09-21T05:21:23.764Z"
   },
   "Liu Rodriguez": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-09-05T15:29:36.534Z"
+    "erroredAt": "2026-09-21T05:21:45.604Z"
   },
   "Livan Soto": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-09-05T15:29:58.875Z"
+    "erroredAt": "2026-09-21T05:22:09.179Z"
   },
   "Luarbert Arias": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-09-05T15:30:21.208Z"
+    "erroredAt": "2026-09-21T05:22:31.611Z"
   },
   "Luinder Avila": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-09-05T15:30:42.044Z"
+    "erroredAt": "2026-09-21T05:22:55.496Z"
   },
   "Luis Alexander Basabe": {
     "error": "eBay fetch failed (403)",
