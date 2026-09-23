@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "updatedAt": "2026-09-22T21:36:10.124Z",
+    "updatedAt": "2026-09-23T05:03:15.726Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "PSA 7 + PSA 8 sold comps. Two queries per athlete. Strict per-grade title filter. Taguchi winsorized mean. USD via CBSA.",
     "targetGrades": [
@@ -8,8 +8,8 @@
       8
     ],
     "batchInfo": {
-      "startIdx": 304,
-      "endIdx": 312,
+      "startIdx": 312,
+      "endIdx": 320,
       "totalAthletes": 466
     },
     "maxPages": 3,
@@ -27,7 +27,7 @@
     },
     "fx": {
       "source": "CBSA Exchange Rates API",
-      "asOf": "2026-09-23T00:00:00.000Z"
+      "asOf": "2026-09-24T00:00:00.000Z"
     }
   },
   "Adbert Alzolay": {
@@ -3180,35 +3180,35 @@
   },
   "Miguel Garcia": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-09-07T05:09:28.515Z"
+    "erroredAt": "2026-09-23T05:03:31.996Z"
   },
   "Miguel Gonzalez": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-09-07T05:09:51.453Z"
+    "erroredAt": "2026-09-23T05:03:54.996Z"
   },
   "Miguel Montero": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-09-07T12:57:47.441Z"
+    "erroredAt": "2026-09-23T05:04:16.461Z"
   },
   "Miguel Perez": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-09-07T12:58:10.986Z"
+    "erroredAt": "2026-09-23T05:04:38.361Z"
   },
   "Miguel Rojas": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-09-07T12:58:35.960Z"
+    "erroredAt": "2026-09-23T05:05:00.986Z"
   },
   "Miguel Yajure": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-09-07T12:58:56.175Z"
+    "erroredAt": "2026-09-23T05:05:22.959Z"
   },
   "Moises Ballesteros": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-09-07T12:59:18.930Z"
+    "erroredAt": "2026-09-23T05:05:44.376Z"
   },
   "Nivaldo Rodriguez": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-09-07T12:59:40.588Z"
+    "erroredAt": "2026-09-23T05:06:06.563Z"
   },
   "Odubel Herrera": {
     "error": "eBay fetch failed (403)",
