@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "updatedAt": "2026-09-23T21:41:59.175Z",
+    "updatedAt": "2026-09-24T05:14:29.625Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "PSA 7 + PSA 8 sold comps. Two queries per athlete. Strict per-grade title filter. Taguchi winsorized mean. USD via CBSA.",
     "targetGrades": [
@@ -8,8 +8,8 @@
       8
     ],
     "batchInfo": {
-      "startIdx": 336,
-      "endIdx": 344,
+      "startIdx": 344,
+      "endIdx": 352,
       "totalAthletes": 466
     },
     "maxPages": 3,
@@ -27,7 +27,7 @@
     },
     "fx": {
       "source": "CBSA Exchange Rates API",
-      "asOf": "2026-09-24T00:00:00.000Z"
+      "asOf": "2026-09-25T00:00:00.000Z"
     }
   },
   "Adbert Alzolay": {
@@ -3308,35 +3308,35 @@
   },
   "Pedro Pages": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-09-08T11:41:50.383Z"
+    "erroredAt": "2026-09-24T05:14:45.823Z"
   },
   "Pompeyo Davalillo": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-09-08T11:42:13.440Z"
+    "erroredAt": "2026-09-24T05:15:09.786Z"
   },
   "Rafael Betancourt": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-09-08T16:48:41.531Z"
+    "erroredAt": "2026-09-24T05:15:33.038Z"
   },
   "Rafael Marchan": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-09-08T16:49:04.895Z"
+    "erroredAt": "2026-09-24T05:15:54.543Z"
   },
   "Rafael Ortega": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-09-08T16:49:28.189Z"
+    "erroredAt": "2026-09-24T05:16:16.853Z"
   },
   "Ramon Cabrera": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-09-08T16:49:50.297Z"
+    "erroredAt": "2026-09-24T05:16:37.333Z"
   },
   "Ramon Castro": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-09-08T16:50:12.786Z"
+    "erroredAt": "2026-09-24T05:17:01.491Z"
   },
   "Ramon Flores": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-09-08T16:50:34.634Z"
+    "erroredAt": "2026-09-24T05:17:24.334Z"
   },
   "Ramon Garcia": {
     "error": "eBay fetch failed (403)",
