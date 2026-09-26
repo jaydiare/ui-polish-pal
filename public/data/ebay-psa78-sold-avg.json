@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "updatedAt": "2026-09-26T16:39:23.567Z",
+    "updatedAt": "2026-09-26T21:25:01.774Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "PSA 7 + PSA 8 sold comps. Two queries per athlete. Strict per-grade title filter. Taguchi winsorized mean. USD via CBSA.",
     "targetGrades": [
@@ -8,8 +8,8 @@
       8
     ],
     "batchInfo": {
-      "startIdx": 424,
-      "endIdx": 432,
+      "startIdx": 432,
+      "endIdx": 440,
       "totalAthletes": 466
     },
     "maxPages": 3,
@@ -3710,35 +3710,35 @@
   },
   "Yorman Rodriguez": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-09-11T05:07:00.310Z"
+    "erroredAt": "2026-09-26T21:25:19.071Z"
   },
   "Yorvit Torrealba": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-09-11T05:07:21.912Z"
+    "erroredAt": "2026-09-26T21:25:42.885Z"
   },
   "Yusmeiro Petit": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-09-11T11:43:52.344Z"
+    "erroredAt": "2026-09-26T21:26:06.418Z"
   },
   "Jose Alvarez": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-09-11T11:44:12.539Z"
+    "erroredAt": "2026-09-26T21:26:27.355Z"
   },
   "Robert Perez": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-09-11T11:44:35.655Z"
+    "erroredAt": "2026-09-26T21:26:48.105Z"
   },
   "Alex Cabrera": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-09-11T11:44:59.482Z"
+    "erroredAt": "2026-09-26T21:27:10.508Z"
   },
   "Alex Ramirez": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-09-11T11:45:20.405Z"
+    "erroredAt": "2026-09-26T21:27:34.049Z"
   },
   "Robert Perez Jr.": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-09-11T11:45:41.572Z"
+    "erroredAt": "2026-09-26T21:27:57.539Z"
   },
   "Carl Herrera": {
     "error": "eBay fetch failed (403)",
