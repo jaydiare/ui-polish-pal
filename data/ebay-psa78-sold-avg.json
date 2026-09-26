@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "updatedAt": "2026-09-25T21:46:06.520Z",
+    "updatedAt": "2026-09-26T05:21:20.409Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "PSA 7 + PSA 8 sold comps. Two queries per athlete. Strict per-grade title filter. Taguchi winsorized mean. USD via CBSA.",
     "targetGrades": [
@@ -8,8 +8,8 @@
       8
     ],
     "batchInfo": {
-      "startIdx": 400,
-      "endIdx": 408,
+      "startIdx": 408,
+      "endIdx": 416,
       "totalAthletes": 466
     },
     "maxPages": 3,
@@ -27,7 +27,7 @@
     },
     "fx": {
       "source": "CBSA Exchange Rates API",
-      "asOf": "2026-09-26T00:00:00.000Z"
+      "asOf": "2026-09-27T00:00:00.000Z"
     }
   },
   "Adbert Alzolay": {
@@ -3614,35 +3614,35 @@
   },
   "Williams Perez": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-09-10T11:46:05.796Z"
+    "erroredAt": "2026-09-26T05:21:37.101Z"
   },
   "Willians Astudillo": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-09-10T11:46:28.470Z"
+    "erroredAt": "2026-09-26T05:22:00.167Z"
   },
   "Willie Canate": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-09-10T16:39:18.754Z"
+    "erroredAt": "2026-09-26T05:22:22.247Z"
   },
   "Willie Martinez": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-09-10T16:39:40.460Z"
+    "erroredAt": "2026-09-26T05:22:45.903Z"
   },
   "Willson Contreras": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-09-10T16:40:01.690Z"
+    "erroredAt": "2026-09-26T05:23:07.760Z"
   },
   "Wilmer Flores": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-09-10T16:40:21.902Z"
+    "erroredAt": "2026-09-26T05:23:29.449Z"
   },
   "Wilmer Font": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-09-10T16:40:41.878Z"
+    "erroredAt": "2026-09-26T05:23:50.644Z"
   },
   "Wilson Alvarez": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-09-10T16:41:02.672Z"
+    "erroredAt": "2026-09-26T05:24:12.477Z"
   },
   "Wilson Ramos": {
     "error": "eBay fetch failed (403)",
