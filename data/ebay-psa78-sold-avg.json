@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "updatedAt": "2026-09-26T21:25:01.774Z",
+    "updatedAt": "2026-09-27T05:37:28.547Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "PSA 7 + PSA 8 sold comps. Two queries per athlete. Strict per-grade title filter. Taguchi winsorized mean. USD via CBSA.",
     "targetGrades": [
@@ -8,8 +8,8 @@
       8
     ],
     "batchInfo": {
-      "startIdx": 432,
-      "endIdx": 440,
+      "startIdx": 440,
+      "endIdx": 448,
       "totalAthletes": 466
     },
     "maxPages": 3,
@@ -27,7 +27,7 @@
     },
     "fx": {
       "source": "CBSA Exchange Rates API",
-      "asOf": "2026-09-27T00:00:00.000Z"
+      "asOf": "2026-09-28T00:00:00.000Z"
     }
   },
   "Adbert Alzolay": {
@@ -3742,35 +3742,35 @@
   },
   "Carl Herrera": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-09-11T11:46:04.379Z"
+    "erroredAt": "2026-09-27T05:37:45.297Z"
   },
   "Greivis Vasquez": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-09-11T11:46:23.867Z"
+    "erroredAt": "2026-09-27T05:38:07.325Z"
   },
   "Oscar Torres": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-09-11T16:42:27.878Z"
+    "erroredAt": "2026-09-27T05:38:29.024Z"
   },
   "Amleto Monacelli": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-09-11T16:42:53.034Z"
+    "erroredAt": "2026-09-27T05:38:53.677Z"
   },
   "Andres Borregales": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-09-11T16:43:14.261Z"
+    "erroredAt": "2026-09-27T05:39:16.490Z"
   },
   "Salomon Rondon": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-09-11T16:43:35.587Z"
+    "erroredAt": "2026-09-27T05:39:39.592Z"
   },
   "Yangel Herrera": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-09-11T16:43:57.331Z"
+    "erroredAt": "2026-09-27T05:40:02.289Z"
   },
   "Cristian Casseres Jr.": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-09-11T16:44:19.727Z"
+    "erroredAt": "2026-09-27T05:40:24.464Z"
   },
   "Wuilker Farinez": {
     "error": "eBay fetch failed (403)",
