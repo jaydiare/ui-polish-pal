@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "updatedAt": "2026-09-29T06:03:12.256Z",
+    "updatedAt": "2026-09-29T13:14:42.354Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "PSA 7 + PSA 8 sold comps. Two queries per athlete. Strict per-grade title filter. Taguchi winsorized mean. USD via CBSA.",
     "targetGrades": [
@@ -8,8 +8,8 @@
       8
     ],
     "batchInfo": {
-      "startIdx": 16,
-      "endIdx": 24,
+      "startIdx": 24,
+      "endIdx": 32,
       "totalAthletes": 466
     },
     "maxPages": 3,
@@ -660,19 +660,19 @@
       "lastKnownSoldAt": null
     },
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-09-13T16:36:44.349Z"
+    "erroredAt": "2026-09-29T13:14:58.094Z"
   },
   "Andres Blanco": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-09-13T16:37:04.005Z"
+    "erroredAt": "2026-09-29T13:15:21.731Z"
   },
   "Andres Chaparro": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-09-13T16:37:27.679Z"
+    "erroredAt": "2026-09-29T13:15:45.876Z"
   },
   "Andres Galarraga": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-09-13T16:37:50.760Z"
+    "erroredAt": "2026-09-29T13:16:05.754Z"
   },
   "Andres Gimenez": {
     "psa7": {
@@ -700,7 +700,9 @@
       "fxRateUsed": null,
       "lastKnownSold": null,
       "lastKnownSoldAt": null
-    }
+    },
+    "error": "eBay fetch failed (403)",
+    "erroredAt": "2026-09-29T13:16:28.227Z"
   },
   "Andres Machado": {
     "psa7": {
@@ -728,7 +730,9 @@
       "fxRateUsed": null,
       "lastKnownSold": null,
       "lastKnownSoldAt": null
-    }
+    },
+    "error": "eBay fetch failed (403)",
+    "erroredAt": "2026-09-29T13:16:48.395Z"
   },
   "Andruw Monasterio": {
     "psa7": {
@@ -756,7 +760,9 @@
       "fxRateUsed": null,
       "lastKnownSold": null,
       "lastKnownSoldAt": null
-    }
+    },
+    "error": "eBay fetch failed (403)",
+    "erroredAt": "2026-09-29T13:17:08.885Z"
   },
   "Andry Lara": {
     "psa7": {
@@ -784,7 +790,9 @@
       "fxRateUsed": null,
       "lastKnownSold": null,
       "lastKnownSoldAt": null
-    }
+    },
+    "error": "eBay fetch failed (403)",
+    "erroredAt": "2026-09-29T13:17:31.079Z"
   },
   "Angel Bravo": {
     "psa7": {
