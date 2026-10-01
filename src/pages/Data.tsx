@@ -1449,6 +1449,13 @@ const GemrateChart = () => {
                                 {d.sgcGemRate != null && <span className="opacity-60">({d.sgcGemRate}% gem)</span>}
                               </span>
                             )}
+                            {showCgc && d.CGC > 0 && (
+                              <span className="text-muted-foreground flex items-center gap-1">
+                                <span className="w-2 h-2 rounded-sm inline-block" style={{ background: CGC_COLOR }} />
+                                CGC: <strong className="text-foreground">{d.CGC.toLocaleString()}</strong>
+                                {d.cgcGemRate != null && <span className="opacity-60">({d.cgcGemRate}% gem)</span>}
+                              </span>
+                            )}
                             <span className="text-muted-foreground border-t border-border/30 pt-0.5 mt-0.5">
                               {totalLabel}: <strong className="text-foreground">{totalVal.toLocaleString()}</strong>
                             </span>
