@@ -1216,13 +1216,15 @@ interface GemrateData {
 const PSA_COLOR = "hsl(200, 80%, 50%)";
 const BECKETT_COLOR = "hsl(340, 75%, 55%)";
 const SGC_COLOR = "hsl(45, 85%, 50%)";
+const CGC_COLOR = "hsl(160, 70%, 42%)";
 
-type GraderFilter = "all" | "psa" | "beckett" | "sgc";
+type GraderFilter = "all" | "psa" | "beckett" | "sgc" | "cgc";
 
 const GemrateChart = () => {
   const [gemrateData, setGemrateData] = useState<GemrateData | null>(null);
   const [beckettData, setBeckettData] = useState<GemrateData | null>(null);
   const [sgcData, setSgcData] = useState<GemrateData | null>(null);
+  const [cgcData, setCgcData] = useState<GemrateData | null>(null);
   const [graderFilter, setGraderFilter] = useState<GraderFilter>("all");
   const [searchQuery, setSearchQuery] = useState("");
 
@@ -1239,6 +1241,10 @@ const GemrateChart = () => {
       let s = await fetchJson("https://raw.githubusercontent.com/jaydiare/ui-polish-pal/main/data/gemrate_sgc.json");
       if (!s || !s.athletes) s = await fetchJson("data/gemrate_sgc.json");
       if (s && s.athletes) setSgcData(s);
+
+      let c = await fetchJson("https://raw.githubusercontent.com/jaydiare/ui-polish-pal/main/data/gemrate_cgc.json");
+      if (!c || !c.athletes) c = await fetchJson("data/gemrate_cgc.json");
+      if (c && c.athletes) setCgcData(c);
     })();
   }, []);
 
@@ -1246,12 +1252,14 @@ const GemrateChart = () => {
     const psaAthletes = gemrateData?.athletes || {};
     const beckettAthletes = beckettData?.athletes || {};
     const sgcAthletes = sgcData?.athletes || {};
+    const cgcAthletes = cgcData?.athletes || {};
 
     // Build a unified list of all athletes from all sources
     const allNames = new Set<string>();
     for (const a of Object.values(psaAthletes)) if (a.name) allNames.add(a.name);
     for (const a of Object.values(beckettAthletes)) if (a.name) allNames.add(a.name);
     for (const a of Object.values(sgcAthletes)) if (a.name) allNames.add(a.name);
+    for (const a of Object.values(cgcAthletes)) if (a.name) allNames.add(a.name);
 
     if (allNames.size === 0) return [];
 
@@ -1259,25 +1267,29 @@ const GemrateChart = () => {
       const psaRec = Object.values(psaAthletes).find((a) => a.name === name);
       const beckettRec = beckettAthletes[name];
       const sgcRec = sgcAthletes[name];
+      const cgcRec = cgcAthletes[name];
       const psaGrades = psaRec?.graders?.PSA?.grades ?? psaRec?.totals?.grades ?? 0;
       const beckettGrades = beckettRec?.totals?.grades ?? 0;
       const sgcGrades = sgcRec?.graders?.SGC?.grades ?? sgcRec?.totals?.grades ?? 0;
+      const cgcGrades = cgcRec?.graders?.CGC?.grades ?? cgcRec?.totals?.grades ?? 0;
 
       return {
         name,
-        sport: psaRec?.sport ?? beckettRec?.sport ?? sgcRec?.sport ?? "",
+        sport: psaRec?.sport ?? beckettRec?.sport ?? sgcRec?.sport ?? cgcRec?.sport ?? "",
         PSA: psaGrades,
         Beckett: beckettGrades,
         SGC: sgcGrades,
-        total: psaGrades + beckettGrades + sgcGrades,
+        CGC: cgcGrades,
+        total: psaGrades + beckettGrades + sgcGrades + cgcGrades,
         gemRate: psaRec?.totals?.gemRate ?? null,
         beckettGemRate: beckettRec?.totals?.gemRate ?? null,
         sgcGemRate: sgcRec?.totals?.gemRate ?? null,
+        cgcGemRate: cgcRec?.totals?.gemRate ?? null,
       };
     });
 
     // Sort by the relevant metric based on filter
-    const sortKey = graderFilter === "psa" ? "PSA" : graderFilter === "beckett" ? "Beckett" : graderFilter === "sgc" ? "SGC" : "total";
+    const sortKey = graderFilter === "psa" ? "PSA" : graderFilter === "beckett" ? "Beckett" : graderFilter === "sgc" ? "SGC" : graderFilter === "cgc" ? "CGC" : "total";
     const filtered = rows.filter((r) => r[sortKey] > 0).sort((a, b) => b[sortKey] - a[sortKey]);
     const top = filtered.slice(0, 10);
 
@@ -1289,9 +1301,9 @@ const GemrateChart = () => {
     const topNames = new Set(top.map((r) => r.name));
     const extras = matches.filter((r) => !topNames.has(r.name)).slice(0, 5);
     return [...top, ...extras].sort((a, b) => b[sortKey] - a[sortKey]);
-  }, [gemrateData, beckettData, sgcData, graderFilter, searchQuery]);
+  }, [gemrateData, beckettData, sgcData, cgcData, graderFilter, searchQuery]);
 
-  const isEmpty = !gemrateData && !beckettData && !sgcData;
+  const isEmpty = !gemrateData && !beckettData && !sgcData && !cgcData;
 
   const updatedAt = gemrateData?._meta?.updatedAt
     ? new Date(gemrateData._meta.updatedAt).toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" })
@@ -1324,6 +1336,12 @@ const GemrateChart = () => {
             🟡 SGC
           </button>
           <button
+            onClick={() => setGraderFilter("cgc")}
+            className={`px-3 py-1 rounded-full text-[10px] font-bold tracking-wide transition-all ${graderFilter === "cgc" ? "bg-primary/20 text-primary" : "text-muted-foreground hover:text-foreground"}`}
+          >
+            🟢 CGC
+          </button>
+          <button
             onClick={() => setGraderFilter("all")}
             className={`px-3 py-1 rounded-full text-[10px] font-bold tracking-wide transition-all ${graderFilter === "all" ? "bg-primary/20 text-primary" : "text-muted-foreground hover:text-foreground"}`}
           >
@@ -1332,10 +1350,11 @@ const GemrateChart = () => {
         </div>
       </div>
       <p className="text-xs text-muted-foreground mb-4 ml-3">
-        {graderFilter === "all" && "Total graded cards by PSA, Beckett & SGC for Venezuelan athletes."}
+        {graderFilter === "all" && "Total graded cards by PSA, Beckett, SGC & CGC for Venezuelan athletes."}
         {graderFilter === "psa" && "Top 10 athletes by PSA graded card count."}
         {graderFilter === "beckett" && "Top 10 athletes by Beckett graded card count."}
         {graderFilter === "sgc" && "Top 10 athletes by SGC graded card count."}
+        {graderFilter === "cgc" && "Top 10 athletes by CGC graded card count."}
         {updatedAt && <span className="ml-1 opacity-70">Updated {updatedAt}.</span>}
         <span className="ml-1 opacity-60">
           Data via{" "}
@@ -1380,7 +1399,13 @@ const GemrateChart = () => {
         ) : top10.length === 0 ? (
           <div className="py-12 text-center">
             <div className="text-3xl mb-3">🔍</div>
-            <p className="text-sm text-muted-foreground">No athletes match "{searchQuery}" with grading data.</p>
+            {searchQuery ? (
+              <p className="text-sm text-muted-foreground">No athletes match "{searchQuery}" with grading data.</p>
+            ) : graderFilter === "cgc" ? (
+              <p className="text-sm text-muted-foreground">CGC grading data will appear here once the first collection run completes.</p>
+            ) : (
+              <p className="text-sm text-muted-foreground">No grading data available for this grader yet.</p>
+            )}
           </div>
         ) : (
           <>
@@ -1401,8 +1426,9 @@ const GemrateChart = () => {
                       const showPsa = graderFilter === "all" || graderFilter === "psa";
                       const showBeckett = graderFilter === "all" || graderFilter === "beckett";
                       const showSgc = graderFilter === "all" || graderFilter === "sgc";
-                      const totalLabel = graderFilter === "psa" ? "PSA Total" : graderFilter === "beckett" ? "BGS Total" : graderFilter === "sgc" ? "SGC Total" : "Total";
-                      const totalVal = graderFilter === "psa" ? d.PSA : graderFilter === "beckett" ? d.Beckett : graderFilter === "sgc" ? d.SGC : d.total;
+                      const showCgc = graderFilter === "all" || graderFilter === "cgc";
+                      const totalLabel = graderFilter === "psa" ? "PSA Total" : graderFilter === "beckett" ? "BGS Total" : graderFilter === "sgc" ? "SGC Total" : graderFilter === "cgc" ? "CGC Total" : "Total";
+                      const totalVal = graderFilter === "psa" ? d.PSA : graderFilter === "beckett" ? d.Beckett : graderFilter === "sgc" ? d.SGC : graderFilter === "cgc" ? d.CGC : d.total;
                       return (
                         <div className="rounded-xl border border-border/50 bg-background/95 backdrop-blur-lg p-3 text-xs shadow-2xl">
                           <div className="font-display font-bold text-foreground mb-1">{d.name}</div>
@@ -1429,6 +1455,13 @@ const GemrateChart = () => {
                                 {d.sgcGemRate != null && <span className="opacity-60">({d.sgcGemRate}% gem)</span>}
                               </span>
                             )}
+                            {showCgc && d.CGC > 0 && (
+                              <span className="text-muted-foreground flex items-center gap-1">
+                                <span className="w-2 h-2 rounded-sm inline-block" style={{ background: CGC_COLOR }} />
+                                CGC: <strong className="text-foreground">{d.CGC.toLocaleString()}</strong>
+                                {d.cgcGemRate != null && <span className="opacity-60">({d.cgcGemRate}% gem)</span>}
+                              </span>
+                            )}
                             <span className="text-muted-foreground border-t border-border/30 pt-0.5 mt-0.5">
                               {totalLabel}: <strong className="text-foreground">{totalVal.toLocaleString()}</strong>
                             </span>
@@ -1453,6 +1486,10 @@ const GemrateChart = () => {
                   )}
                   {(graderFilter === "all" || graderFilter === "sgc") && (
                     <Bar dataKey="SGC" name="SGC Grades" stackId="graders" fill={SGC_COLOR} radius={graderFilter === "sgc" || graderFilter === "all" ? [0, 4, 4, 0] : [0, 0, 0, 0]} isAnimationActive={false} cursor="pointer"
+                      onClick={(data: any) => { if (data?.name) window.open(buildEbayGradedSearchUrl(data.name, data.sport), "_blank", "noopener,noreferrer"); }} />
+                  )}
+                  {(graderFilter === "all" || graderFilter === "cgc") && (
+                    <Bar dataKey="CGC" name="CGC Grades" stackId="graders" fill={CGC_COLOR} radius={graderFilter === "cgc" ? [0, 4, 4, 0] : [0, 0, 0, 0]} isAnimationActive={false} cursor="pointer"
                       onClick={(data: any) => { if (data?.name) window.open(buildEbayGradedSearchUrl(data.name, data.sport), "_blank", "noopener,noreferrer"); }} />
                   )}
                 </BarChart>
