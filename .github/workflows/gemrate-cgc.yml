@@ -60,7 +60,7 @@ jobs:
           git config --global user.name "GitHub Actions"
           git config --global user.email "actions@github.com"
 
-          git add data/gemrate_cgc.json public/data/gemrate_cgc.json data/gemrate-progress_sgc.json data/gemrate-cooldown_sgc.json || true
+          git add data/gemrate_cgc.json public/data/gemrate_cgc.json data/gemrate-progress_cgc.json data/gemrate-cooldown_cgc.json || true
 
           if git diff --cached --quiet; then
             echo "No changes to commit"
