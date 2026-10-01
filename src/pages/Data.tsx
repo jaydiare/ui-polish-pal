@@ -1224,6 +1224,7 @@ const GemrateChart = () => {
   const [gemrateData, setGemrateData] = useState<GemrateData | null>(null);
   const [beckettData, setBeckettData] = useState<GemrateData | null>(null);
   const [sgcData, setSgcData] = useState<GemrateData | null>(null);
+  const [cgcData, setCgcData] = useState<GemrateData | null>(null);
   const [graderFilter, setGraderFilter] = useState<GraderFilter>("all");
   const [searchQuery, setSearchQuery] = useState("");
 
@@ -1240,6 +1241,10 @@ const GemrateChart = () => {
       let s = await fetchJson("https://raw.githubusercontent.com/jaydiare/ui-polish-pal/main/data/gemrate_sgc.json");
       if (!s || !s.athletes) s = await fetchJson("data/gemrate_sgc.json");
       if (s && s.athletes) setSgcData(s);
+
+      let c = await fetchJson("https://raw.githubusercontent.com/jaydiare/ui-polish-pal/main/data/gemrate_cgc.json");
+      if (!c || !c.athletes) c = await fetchJson("data/gemrate_cgc.json");
+      if (c && c.athletes) setCgcData(c);
     })();
   }, []);
 
