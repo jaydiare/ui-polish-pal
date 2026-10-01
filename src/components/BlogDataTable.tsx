@@ -39,6 +39,7 @@ interface RowData {
   psaPop: number | null;
   bgsPop: number | null;
   sgcPop: number | null;
+  cgcPop: number | null;
   daysOnMarket: number | null;
   indexLevel: number | null;
   roi: number | null;
@@ -63,6 +64,7 @@ const FILTERABLE_COLS: { key: SortKey; label: string }[] = [
   { key: "psaPop", label: "PSA Pop" },
   { key: "bgsPop", label: "BGS Pop" },
   { key: "sgcPop", label: "SGC Pop" },
+  { key: "cgcPop", label: "CGC Pop" },
   { key: "stabilityCV", label: "Stability" },
   { key: "signalStrength", label: "S/N" },
   { key: "daysOnMarket", label: "Days on Mkt" },
@@ -119,6 +121,7 @@ export default function BlogDataTable() {
     gemratePopMap,
     beckettPopMap,
     sgcPopMap,
+    cgcPopMap,
     scpPrices,
     scpGradedPrices,
     psa78SoldMap,
@@ -238,6 +241,12 @@ export default function BlogDataTable() {
         return pop != null && pop > 0 ? pop : null;
       })();
 
+      const cgcPop = (() => {
+        const normName = a.name.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+        const pop = cgcPopMap[a.name] ?? cgcPopMap[normName] ?? null;
+        return pop != null && pop > 0 ? pop : null;
+      })();
+
       const stabilityCV = getMarketStabilityCV(a, byName, byKey);
       const rawSoldPrice = rawSold != null && Number.isFinite(Number(rawSold)) && Number(rawSold) > 0 ? Number(rawSold) : null;
       const gradedSoldPrice = isGemrateEligible && gradedSold != null && Number.isFinite(Number(gradedSold)) && Number(gradedSold) > 0 ? Number(gradedSold) : null;
@@ -283,6 +292,7 @@ export default function BlogDataTable() {
         psaPop,
         bgsPop,
         sgcPop,
+        cgcPop,
         daysOnMarket: dom,
         indexLevel: rec?.indexLevel ?? null,
         roi: roiVal,
@@ -293,7 +303,7 @@ export default function BlogDataTable() {
         forecastConfidence: ml?.forecast_confidence ?? null,
       };
     });
-  }, [athletes, byName, byKey, gradedByName, gradedByKey, ebaySoldRaw, ebayGradedSoldRaw, athleteHistory, gemratePopMap, beckettPopMap, sgcPopMap, scpPrices, scpGradedPrices, psa78SoldMap, getMlScore]);
+  }, [athletes, byName, byKey, gradedByName, gradedByKey, ebaySoldRaw, ebayGradedSoldRaw, athleteHistory, gemratePopMap, beckettPopMap, sgcPopMap, cgcPopMap, scpPrices, scpGradedPrices, psa78SoldMap, getMlScore]);
 
 
   const sorted = useMemo(() => {
@@ -401,6 +411,7 @@ export default function BlogDataTable() {
     { key: "psaPop", label: "PSA Pop", fmt: (v) => v == null ? "—" : v.toLocaleString() },
     { key: "bgsPop", label: "BGS Pop", fmt: (v) => v == null ? "—" : v.toLocaleString() },
     { key: "sgcPop", label: "SGC Pop", fmt: (v) => v == null ? "—" : v.toLocaleString() },
+    { key: "cgcPop", label: "CGC Pop", fmt: (v) => v == null ? "—" : v.toLocaleString() },
     { key: "stabilityCV", label: "Stability", fmt: (v) => v == null ? "—" : marketStabilityScoreFromCV(v).label, render: (_v, row) => {
       if (row.stabilityCV == null) return <span className="text-muted-foreground">—</span>;
       const s = marketStabilityScoreFromCV(row.stabilityCV);
