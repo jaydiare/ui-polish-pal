@@ -1252,12 +1252,14 @@ const GemrateChart = () => {
     const psaAthletes = gemrateData?.athletes || {};
     const beckettAthletes = beckettData?.athletes || {};
     const sgcAthletes = sgcData?.athletes || {};
+    const cgcAthletes = cgcData?.athletes || {};
 
     // Build a unified list of all athletes from all sources
     const allNames = new Set<string>();
     for (const a of Object.values(psaAthletes)) if (a.name) allNames.add(a.name);
     for (const a of Object.values(beckettAthletes)) if (a.name) allNames.add(a.name);
     for (const a of Object.values(sgcAthletes)) if (a.name) allNames.add(a.name);
+    for (const a of Object.values(cgcAthletes)) if (a.name) allNames.add(a.name);
 
     if (allNames.size === 0) return [];
 
@@ -1265,25 +1267,29 @@ const GemrateChart = () => {
       const psaRec = Object.values(psaAthletes).find((a) => a.name === name);
       const beckettRec = beckettAthletes[name];
       const sgcRec = sgcAthletes[name];
+      const cgcRec = cgcAthletes[name];
       const psaGrades = psaRec?.graders?.PSA?.grades ?? psaRec?.totals?.grades ?? 0;
       const beckettGrades = beckettRec?.totals?.grades ?? 0;
       const sgcGrades = sgcRec?.graders?.SGC?.grades ?? sgcRec?.totals?.grades ?? 0;
+      const cgcGrades = cgcRec?.graders?.CGC?.grades ?? cgcRec?.totals?.grades ?? 0;
 
       return {
         name,
-        sport: psaRec?.sport ?? beckettRec?.sport ?? sgcRec?.sport ?? "",
+        sport: psaRec?.sport ?? beckettRec?.sport ?? sgcRec?.sport ?? cgcRec?.sport ?? "",
         PSA: psaGrades,
         Beckett: beckettGrades,
         SGC: sgcGrades,
-        total: psaGrades + beckettGrades + sgcGrades,
+        CGC: cgcGrades,
+        total: psaGrades + beckettGrades + sgcGrades + cgcGrades,
         gemRate: psaRec?.totals?.gemRate ?? null,
         beckettGemRate: beckettRec?.totals?.gemRate ?? null,
         sgcGemRate: sgcRec?.totals?.gemRate ?? null,
+        cgcGemRate: cgcRec?.totals?.gemRate ?? null,
       };
     });
 
     // Sort by the relevant metric based on filter
-    const sortKey = graderFilter === "psa" ? "PSA" : graderFilter === "beckett" ? "Beckett" : graderFilter === "sgc" ? "SGC" : "total";
+    const sortKey = graderFilter === "psa" ? "PSA" : graderFilter === "beckett" ? "Beckett" : graderFilter === "sgc" ? "SGC" : graderFilter === "cgc" ? "CGC" : "total";
     const filtered = rows.filter((r) => r[sortKey] > 0).sort((a, b) => b[sortKey] - a[sortKey]);
     const top = filtered.slice(0, 10);
 
@@ -1295,9 +1301,9 @@ const GemrateChart = () => {
     const topNames = new Set(top.map((r) => r.name));
     const extras = matches.filter((r) => !topNames.has(r.name)).slice(0, 5);
     return [...top, ...extras].sort((a, b) => b[sortKey] - a[sortKey]);
-  }, [gemrateData, beckettData, sgcData, graderFilter, searchQuery]);
+  }, [gemrateData, beckettData, sgcData, cgcData, graderFilter, searchQuery]);
 
-  const isEmpty = !gemrateData && !beckettData && !sgcData;
+  const isEmpty = !gemrateData && !beckettData && !sgcData && !cgcData;
 
   const updatedAt = gemrateData?._meta?.updatedAt
     ? new Date(gemrateData._meta.updatedAt).toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" })
