@@ -1399,7 +1399,13 @@ const GemrateChart = () => {
         ) : top10.length === 0 ? (
           <div className="py-12 text-center">
             <div className="text-3xl mb-3">🔍</div>
-            <p className="text-sm text-muted-foreground">No athletes match "{searchQuery}" with grading data.</p>
+            {searchQuery ? (
+              <p className="text-sm text-muted-foreground">No athletes match "{searchQuery}" with grading data.</p>
+            ) : graderFilter === "cgc" ? (
+              <p className="text-sm text-muted-foreground">CGC grading data will appear here once the first collection run completes.</p>
+            ) : (
+              <p className="text-sm text-muted-foreground">No grading data available for this grader yet.</p>
+            )}
           </div>
         ) : (
           <>
