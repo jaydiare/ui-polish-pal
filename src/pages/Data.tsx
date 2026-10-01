@@ -1482,6 +1482,10 @@ const GemrateChart = () => {
                     <Bar dataKey="SGC" name="SGC Grades" stackId="graders" fill={SGC_COLOR} radius={graderFilter === "sgc" || graderFilter === "all" ? [0, 4, 4, 0] : [0, 0, 0, 0]} isAnimationActive={false} cursor="pointer"
                       onClick={(data: any) => { if (data?.name) window.open(buildEbayGradedSearchUrl(data.name, data.sport), "_blank", "noopener,noreferrer"); }} />
                   )}
+                  {(graderFilter === "all" || graderFilter === "cgc") && (
+                    <Bar dataKey="CGC" name="CGC Grades" stackId="graders" fill={CGC_COLOR} radius={graderFilter === "cgc" ? [0, 4, 4, 0] : [0, 0, 0, 0]} isAnimationActive={false} cursor="pointer"
+                      onClick={(data: any) => { if (data?.name) window.open(buildEbayGradedSearchUrl(data.name, data.sport), "_blank", "noopener,noreferrer"); }} />
+                  )}
                 </BarChart>
               </ResponsiveContainer>
             </div>
