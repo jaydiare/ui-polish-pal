@@ -1336,6 +1336,12 @@ const GemrateChart = () => {
             🟡 SGC
           </button>
           <button
+            onClick={() => setGraderFilter("cgc")}
+            className={`px-3 py-1 rounded-full text-[10px] font-bold tracking-wide transition-all ${graderFilter === "cgc" ? "bg-primary/20 text-primary" : "text-muted-foreground hover:text-foreground"}`}
+          >
+            🟢 CGC
+          </button>
+          <button
             onClick={() => setGraderFilter("all")}
             className={`px-3 py-1 rounded-full text-[10px] font-bold tracking-wide transition-all ${graderFilter === "all" ? "bg-primary/20 text-primary" : "text-muted-foreground hover:text-foreground"}`}
           >
@@ -1344,10 +1350,11 @@ const GemrateChart = () => {
         </div>
       </div>
       <p className="text-xs text-muted-foreground mb-4 ml-3">
-        {graderFilter === "all" && "Total graded cards by PSA, Beckett & SGC for Venezuelan athletes."}
+        {graderFilter === "all" && "Total graded cards by PSA, Beckett, SGC & CGC for Venezuelan athletes."}
         {graderFilter === "psa" && "Top 10 athletes by PSA graded card count."}
         {graderFilter === "beckett" && "Top 10 athletes by Beckett graded card count."}
         {graderFilter === "sgc" && "Top 10 athletes by SGC graded card count."}
+        {graderFilter === "cgc" && "Top 10 athletes by CGC graded card count."}
         {updatedAt && <span className="ml-1 opacity-70">Updated {updatedAt}.</span>}
         <span className="ml-1 opacity-60">
           Data via{" "}
@@ -1413,8 +1420,9 @@ const GemrateChart = () => {
                       const showPsa = graderFilter === "all" || graderFilter === "psa";
                       const showBeckett = graderFilter === "all" || graderFilter === "beckett";
                       const showSgc = graderFilter === "all" || graderFilter === "sgc";
-                      const totalLabel = graderFilter === "psa" ? "PSA Total" : graderFilter === "beckett" ? "BGS Total" : graderFilter === "sgc" ? "SGC Total" : "Total";
-                      const totalVal = graderFilter === "psa" ? d.PSA : graderFilter === "beckett" ? d.Beckett : graderFilter === "sgc" ? d.SGC : d.total;
+                      const showCgc = graderFilter === "all" || graderFilter === "cgc";
+                      const totalLabel = graderFilter === "psa" ? "PSA Total" : graderFilter === "beckett" ? "BGS Total" : graderFilter === "sgc" ? "SGC Total" : graderFilter === "cgc" ? "CGC Total" : "Total";
+                      const totalVal = graderFilter === "psa" ? d.PSA : graderFilter === "beckett" ? d.Beckett : graderFilter === "sgc" ? d.SGC : graderFilter === "cgc" ? d.CGC : d.total;
                       return (
                         <div className="rounded-xl border border-border/50 bg-background/95 backdrop-blur-lg p-3 text-xs shadow-2xl">
                           <div className="font-display font-bold text-foreground mb-1">{d.name}</div>
