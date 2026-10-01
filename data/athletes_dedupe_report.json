@@ -1,8 +1,37 @@
 {
   "input": "data/athletes.json",
   "output": "data/athletes.json",
-  "total_before": 578,
-  "total_after": 578,
-  "removed_count": 0,
-  "removed": []
+  "total_before": 585,
+  "total_after": 581,
+  "removed_count": 4,
+  "removed": [
+    {
+      "normalized": "eliezer alfonzo",
+      "kept_original_index": 139,
+      "removed_original_index": 140,
+      "kept_name": "Eliezer Alfonzo",
+      "removed_name": "Eliezer Alfonzo"
+    },
+    {
+      "normalized": "jedixson paez",
+      "kept_original_index": 226,
+      "removed_original_index": 227,
+      "kept_name": "Jedixson Paez",
+      "removed_name": "Jedixson Paez"
+    },
+    {
+      "normalized": "omar martinez",
+      "kept_original_index": 375,
+      "removed_original_index": 376,
+      "kept_name": "Omar Martinez",
+      "removed_name": "Omar Martinez"
+    },
+    {
+      "normalized": "victor bericoto",
+      "kept_original_index": 459,
+      "removed_original_index": 460,
+      "kept_name": "Victor Bericoto",
+      "removed_name": "Victor Bericoto"
+    }
+  ]
 }
