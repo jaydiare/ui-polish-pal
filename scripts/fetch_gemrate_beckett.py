@@ -298,8 +298,8 @@ def main():
 
         # If too many consecutive blocks, pause longer
         if blocked_count > 3:
-            print("  ⏸ Multiple blocks, pausing 60s...", file=sys.stderr)
-            time.sleep(60)
+            print("  ⏸ Multiple blocks, pausing 90s...", file=sys.stderr)
+            time.sleep(90)
             blocked_count = 0
 
     # Compute next batch start
