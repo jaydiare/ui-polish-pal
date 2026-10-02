@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "updatedAt": "2026-10-01T22:51:21.039Z",
+    "updatedAt": "2026-10-02T06:04:01.949Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "PSA 7 + PSA 8 sold comps. Two queries per athlete. Strict per-grade title filter. Taguchi winsorized mean. USD via CBSA.",
     "targetGrades": [
@@ -8,8 +8,8 @@
       8
     ],
     "batchInfo": {
-      "startIdx": 80,
-      "endIdx": 88,
+      "startIdx": 88,
+      "endIdx": 96,
       "totalAthletes": 464
     },
     "maxPages": 3,
@@ -27,7 +27,7 @@
     },
     "fx": {
       "source": "CBSA Exchange Rates API",
-      "asOf": "2026-10-02T00:00:00.000Z"
+      "asOf": "2026-10-03T00:00:00.000Z"
     }
   },
   "Adbert Alzolay": {
@@ -1886,19 +1886,19 @@
   },
   "Diego Castillo": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-09-15T21:41:50.539Z"
+    "erroredAt": "2026-10-02T06:04:17.063Z"
   },
   "Dioner Navarro": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-09-15T21:42:10.340Z"
+    "erroredAt": "2026-10-02T06:04:39.548Z"
   },
   "Dixon Machado": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-09-15T21:42:33.840Z"
+    "erroredAt": "2026-10-02T06:05:01.543Z"
   },
   "Donaldo Mendez": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-09-15T21:42:56.896Z"
+    "erroredAt": "2026-10-02T06:05:24.438Z"
   },
   "Eddie Perez": {
     "psa7": {
@@ -1928,7 +1928,7 @@
       "lastKnownSoldAt": null
     },
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-09-15T21:43:17.673Z"
+    "erroredAt": "2026-10-02T06:05:47.088Z"
   },
   "Eddie Zambrano": {
     "psa7": {
@@ -1958,7 +1958,7 @@
       "lastKnownSoldAt": null
     },
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-09-15T21:43:39.749Z"
+    "erroredAt": "2026-10-02T06:06:09.256Z"
   },
   "Eddy Diaz": {
     "psa7": {
@@ -1988,7 +1988,7 @@
       "lastKnownSoldAt": null
     },
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-09-16T05:07:42.855Z"
+    "erroredAt": "2026-10-02T06:06:29.317Z"
   },
   "Edgar Navarro": {
     "psa7": {
@@ -2018,7 +2018,7 @@
       "lastKnownSoldAt": null
     },
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-09-16T05:08:06.731Z"
+    "erroredAt": "2026-10-02T06:06:51.533Z"
   },
   "Edgardo Alfonzo": {
     "error": "eBay fetch failed (403)",
