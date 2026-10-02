@@ -29,8 +29,8 @@ USER_AGENTS = [
 ]
 
 # Polite delay range (seconds) between requests
-DELAY_MIN = 3
-DELAY_MAX = 6
+DELAY_MIN = 8
+DELAY_MAX = 15
 
 # Max retries per request
 MAX_RETRIES = 2
