@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "updatedAt": "2026-10-02T13:03:44.132Z",
+    "updatedAt": "2026-10-02T22:28:26.161Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "PSA 7 + PSA 8 sold comps. Two queries per athlete. Strict per-grade title filter. Taguchi winsorized mean. USD via CBSA.",
     "targetGrades": [
@@ -8,8 +8,8 @@
       8
     ],
     "batchInfo": {
-      "startIdx": 96,
-      "endIdx": 104,
+      "startIdx": 104,
+      "endIdx": 112,
       "totalAthletes": 464
     },
     "maxPages": 3,
@@ -2132,23 +2132,23 @@
   },
   "Edubray Ramos": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-09-16T11:58:55.691Z"
+    "erroredAt": "2026-10-02T22:28:42.801Z"
   },
   "Edwar Colina": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-09-16T11:59:19.160Z"
+    "erroredAt": "2026-10-02T22:29:06.663Z"
   },
   "Edward Mujica": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-09-16T11:59:41.649Z"
+    "erroredAt": "2026-10-02T22:29:30.069Z"
   },
   "Edward Olivares": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-09-16T12:00:03.800Z"
+    "erroredAt": "2026-10-02T22:29:53.355Z"
   },
   "Edwin Escobar": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-09-16T12:00:26.025Z"
+    "erroredAt": "2026-10-02T22:30:14.412Z"
   },
   "Edwin Hurtado": {
     "psa7": {
@@ -2178,7 +2178,7 @@
       "lastKnownSoldAt": null
     },
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-09-16T12:00:47.713Z"
+    "erroredAt": "2026-10-02T22:30:36.295Z"
   },
   "Edwin Moreno": {
     "psa7": {
@@ -2208,7 +2208,7 @@
       "lastKnownSoldAt": null
     },
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-09-16T17:14:37.209Z"
+    "erroredAt": "2026-10-02T22:30:57.402Z"
   },
   "Ehire Adrianza": {
     "psa7": {
@@ -2238,7 +2238,7 @@
       "lastKnownSoldAt": null
     },
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-09-16T17:15:00.524Z"
+    "erroredAt": "2026-10-02T22:31:18.001Z"
   },
   "Eider Torres": {
     "error": "eBay fetch failed (403)",
