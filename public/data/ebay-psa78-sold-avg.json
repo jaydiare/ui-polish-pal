@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "updatedAt": "2026-10-03T21:41:15.915Z",
+    "updatedAt": "2026-10-04T06:13:30.143Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "PSA 7 + PSA 8 sold comps. Two queries per athlete. Strict per-grade title filter. Taguchi winsorized mean. USD via CBSA.",
     "targetGrades": [
@@ -8,8 +8,8 @@
       8
     ],
     "batchInfo": {
-      "startIdx": 136,
-      "endIdx": 144,
+      "startIdx": 144,
+      "endIdx": 152,
       "totalAthletes": 464
     },
     "maxPages": 3,
@@ -27,7 +27,7 @@
     },
     "fx": {
       "source": "CBSA Exchange Rates API",
-      "asOf": "2026-10-04T00:00:00.000Z"
+      "asOf": "2026-10-05T00:00:00.000Z"
     }
   },
   "Adbert Alzolay": {
@@ -2526,35 +2526,35 @@
   },
   "Fred Manrique": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-09-17T17:14:14.839Z"
+    "erroredAt": "2026-10-04T06:13:45.846Z"
   },
   "Freddy Fermin": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-09-17T17:14:35.560Z"
+    "erroredAt": "2026-10-04T06:14:08.985Z"
   },
   "Freddy Galvis": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-09-17T17:14:57.081Z"
+    "erroredAt": "2026-10-04T06:14:29.211Z"
   },
   "Freddy Garcia": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-09-17T17:15:19.717Z"
+    "erroredAt": "2026-10-04T06:14:50.806Z"
   },
   "Gabriel Arias": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-09-17T17:15:41.267Z"
+    "erroredAt": "2026-10-04T06:15:11.191Z"
   },
   "Gabriel Moreno": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-09-17T17:16:04.768Z"
+    "erroredAt": "2026-10-04T06:15:35.271Z"
   },
   "Gerardo Parra": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-09-17T21:39:19.317Z"
+    "erroredAt": "2026-10-04T06:15:55.791Z"
   },
   "German Gonzalez": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-09-17T21:39:39.612Z"
+    "erroredAt": "2026-10-04T06:16:15.770Z"
   },
   "German Marquez": {
     "error": "eBay fetch failed (403)",
