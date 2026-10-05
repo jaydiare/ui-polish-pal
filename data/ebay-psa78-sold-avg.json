@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "updatedAt": "2026-10-04T21:50:35.445Z",
+    "updatedAt": "2026-10-05T06:06:14.479Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "PSA 7 + PSA 8 sold comps. Two queries per athlete. Strict per-grade title filter. Taguchi winsorized mean. USD via CBSA.",
     "targetGrades": [
@@ -8,8 +8,8 @@
       8
     ],
     "batchInfo": {
-      "startIdx": 160,
-      "endIdx": 168,
+      "startIdx": 168,
+      "endIdx": 176,
       "totalAthletes": 464
     },
     "maxPages": 3,
@@ -27,7 +27,7 @@
     },
     "fx": {
       "source": "CBSA Exchange Rates API",
-      "asOf": "2026-10-05T00:00:00.000Z"
+      "asOf": "2026-10-06T00:00:00.000Z"
     }
   },
   "Adbert Alzolay": {
@@ -2622,35 +2622,35 @@
   },
   "Gustavo Molina": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-09-18T11:41:56.915Z"
+    "erroredAt": "2026-10-05T06:06:30.725Z"
   },
   "Harold Castro": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-09-18T11:42:18.624Z"
+    "erroredAt": "2026-10-05T06:06:53.325Z"
   },
   "Harvey Garcia": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-09-18T11:42:42.680Z"
+    "erroredAt": "2026-10-05T06:07:12.656Z"
   },
   "Hector Gimenez": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-09-18T11:43:02.325Z"
+    "erroredAt": "2026-10-05T06:07:32.905Z"
   },
   "Hector Rondon": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-09-18T11:43:26.397Z"
+    "erroredAt": "2026-10-05T06:07:53.620Z"
   },
   "Hector Sanchez": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-09-18T11:43:45.793Z"
+    "erroredAt": "2026-10-05T06:08:16.219Z"
   },
   "Henry Blanco": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-09-18T16:40:01.640Z"
+    "erroredAt": "2026-10-05T06:08:36.134Z"
   },
   "Henry Rodriguez": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-09-18T16:40:22.493Z"
+    "erroredAt": "2026-10-05T06:08:58.609Z"
   },
   "Hernan Iribarren": {
     "error": "eBay fetch failed (403)",
