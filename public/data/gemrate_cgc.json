@@ -1,1 +1,15 @@
-{"_meta":{"updatedAt":"1970-01-01T00:00:00.000Z","athleteCount":0,"graders":["CGC"]},"athletes":{}}
+{
+  "_meta": {
+    "updatedAt": "2026-10-08T05:47:55.791161+00:00",
+    "athleteCount": 0,
+    "graders": [
+      "CGC"
+    ],
+    "batchInfo": {
+      "startIdx": 0,
+      "endIdx": 20,
+      "totalAthletes": 581
+    }
+  },
+  "athletes": {}
+}
