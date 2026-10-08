@@ -1,8 +1,7 @@
 name: Sync Gemrate Flags
 
 on:
-  schedule:
-    - cron: "0 14 * * 0" # Every Sunday at 14:00 UTC
+  # schedule:  # PAUSED - Gemrate blocking GitHub IPs (Oct 2026). Uncomment to re-enable.
   workflow_dispatch:
 
 env:
