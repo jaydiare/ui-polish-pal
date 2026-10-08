@@ -1,26 +1,20 @@
-# Simplify "Hot Players to Invest In" to Latest Run Only
+# Fix the CGC Gemrate collector
 
-## Problem
+## What is going wrong
+1. **Results are never saved.** The save step adds four files at once, but two of them (`gemrate-progress_cgc.json` and `gemrate-cooldown_cgc.json`) don't exist yet. When one file is missing, git refuses to add any of them, so even a successful run ends with "No changes to commit" and the CGC data is thrown away. SGC works only because its files already exist.
+2. **"No CGC cards" is treated as a block.** Most Venezuelan athletes have few or no CGC-graded cards. The script counts every empty answer the same as a Cloudflare block, so it keeps hitting the 90-second pause and the run drags on (or gets cancelled by the next scheduled run).
+3. **Wrong progress file shown in the log** (it prints the SGC file), which hides what CGC actually did.
 
-The ML Deal Tracker chart on Market Intel was designed for a single scoring run. Now that the history file has multiple runs (2026-09-05 and 2026-09-07, 545 athletes each), it switches to a timeline scatter: faded dots from past runs plus current dots with name labels. With only 2 days between runs the dots overlap, names collide, and the chart is hard to read.
+## Changes
+- `.github/workflows/gemrate-cgc.yml`
+  - Add each file only if it exists, so a missing file can't block the save.
+  - Show `gemrate-progress_cgc.json` in the progress step.
+  - Add a job time limit so a slow run stops cleanly before the next one starts.
+- Seed `data/gemrate-progress_cgc.json` (start at 0) and `data/gemrate-cooldown_cgc.json` (`{}`).
+- `scripts/fetch_gemrate_cgc.py`
+  - Separate "page loaded, no CGC cards" (skip, no pause) from real blocks (HTTP 403 / Cloudflare page), which still trigger the pause.
+  - Print a short end-of-run summary: found, no CGC data, blocked.
+- Apply the same safe "add only existing files" fix to the PSA, Beckett and SGC workflows so they can't hit the same problem.
 
-## What changes
-
-- `src/components/MlDealTracker.tsx`: always render the latest run only, using the existing ranked layout (players listed top to bottom by Deal Score, dot colored by volatility group). Remove the multi-date timeline mode and the `singleDate` branching.
-- Keep everything else: top 10 players, volatility colors and legend, tap-a-player card with Deal Score, upside %, group, and eBay search link, methodology note, EN/ES text.
-- The history file keeps accumulating runs untouched, so a timeline or "risers/fallers" view can be added later without re-collecting data.
-
-## Newsletter idea (future)
-
-A paid/newsletter subscription with the full analysis would need user accounts and email delivery. That is a separate, larger feature — when you are ready, we would enable Lovable Cloud (logins, database, email). Not included in this plan.
-
-## Out of scope
-
-- No changes to the scoring script, workflow schedule, or history file format.
-- No newsletter/subscription functionality yet.
-
-## Technical details
-
-- Delete the timeline branch: `olderPoints`, `xDomain`, time-based `XAxis`, `LabelList`, and the `singleDate` conditionals; always use the category Y-axis (player names) + Deal Score X-axis layout.
-- `points` memo simplifies to: take `history[latestDate]`, sort by deal_score, take top 10.
-- No i18n changes needed: existing `mlTracker.*` keys already cover the ranked layout; optionally drop the now-unused timeline subtitle key.
+## After it ships
+Run "Gemrate CGC Grading Sync" manually once from GitHub Actions; the summary line will confirm data is being saved. If almost everything shows as "blocked", the problem is Gemrate blocking GitHub's servers, and we'd discuss a different collection path.
