@@ -22,6 +22,7 @@ env:
 jobs:
   scrape:
     runs-on: ubuntu-latest
+    timeout-minutes: 200
     permissions:
       contents: write
 
@@ -51,7 +52,7 @@ jobs:
       - name: Show progress after scrape
         run: |
           echo "Progress file after scraper:"
-          cat data/gemrate-progress_sgc.json || true
+          cat data/gemrate-progress_cgc.json || true
 
       - name: Commit and Push changes
         run: |
@@ -60,7 +61,7 @@ jobs:
           git config --global user.name "GitHub Actions"
           git config --global user.email "actions@github.com"
 
-          git add data/gemrate_cgc.json public/data/gemrate_cgc.json data/gemrate-progress_cgc.json data/gemrate-cooldown_cgc.json || true
+          for f in data/gemrate_cgc.json public/data/gemrate_cgc.json data/gemrate-progress_cgc.json data/gemrate-cooldown_cgc.json; do [ -f "$f" ] && git add "$f"; done; true
 
           if git diff --cached --quiet; then
             echo "No changes to commit"
