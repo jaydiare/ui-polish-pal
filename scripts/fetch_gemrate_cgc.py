@@ -168,7 +168,7 @@ def fetch_gemrate(session, player: str, category: str = ""):
                 if attempt < MAX_RETRIES:
                     time.sleep(10 * (attempt + 1))
                     continue
-                return None
+                return "blocked"
 
             result = parse_summary(resp.text)
 
@@ -177,18 +177,19 @@ def fetch_gemrate(session, player: str, category: str = ""):
                 if attempt < MAX_RETRIES:
                     time.sleep(15 * (attempt + 1))
                     continue
-                return None
+                return "blocked"
 
-            return result
+            # None here means the page loaded but has no CGC summary
+            return result if result is not None else "empty"
 
         except Exception as e:
             print(f"  ⚠ Error: {e}", file=sys.stderr)
             if attempt < MAX_RETRIES:
                 time.sleep(10)
                 continue
-            return None
+            return "blocked"
 
-    return None
+    return "blocked"
 
 
 def parse_with_recovery(content):
@@ -268,6 +269,7 @@ def main():
     results = existing_data.get("athletes", {})
     session = requests.Session()
     blocked_count = 0
+    found_n = empty_n = blocked_n = 0
 
     for i, a in enumerate(batch):
         name = a["name"]
@@ -288,10 +290,15 @@ def main():
             }
             print(f"✅ {stats['grades']} grades, {stats['gemRate']}% gem rate")
             blocked_count = 0
+            found_n += 1
+        elif stats == "blocked":
+            blocked_count += 1
+            blocked_n += 1
+            print("🚫 blocked")
         else:
-            if stats is None:
-                blocked_count += 1
-            print("—")
+            blocked_count = 0
+            empty_n += 1
+            print("— no CGC data")
 
         # Random polite delay
         delay = random.uniform(DELAY_MIN, DELAY_MAX)
@@ -352,6 +359,7 @@ def main():
     with open(public_path, "w", encoding="utf-8") as f:
         json.dump(output, f, indent=2, ensure_ascii=False)
 
+    print(f"\n📋 Summary: found={found_n}, no CGC data={empty_n}, blocked={blocked_n}")
     print(f"\n✅ Batch done! {len(results)} total athletes with CGC data. Next batch starts at index {next_start}.")
 
 
