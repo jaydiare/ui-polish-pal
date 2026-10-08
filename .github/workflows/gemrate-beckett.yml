@@ -1,9 +1,7 @@
 name: Gemrate Beckett Grading Sync
 
 on:
-  schedule:
-    # Run every 4 hours, offset by 2 hours from PSA workflow
-    - cron: '0 2/4 * * *'
+  # schedule:  # PAUSED - Gemrate blocking GitHub IPs (Oct 2026). Uncomment to re-enable.
   workflow_dispatch:
     inputs:
       only:
