@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "updatedAt": "2026-10-08T18:58:49.050Z",
+    "updatedAt": "2026-10-09T06:33:51.798Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "PSA 7 + PSA 8 sold comps. Two queries per athlete. Strict per-grade title filter. Taguchi winsorized mean. USD via CBSA.",
     "targetGrades": [
@@ -8,8 +8,8 @@
       8
     ],
     "batchInfo": {
-      "startIdx": 240,
-      "endIdx": 248,
+      "startIdx": 248,
+      "endIdx": 256,
       "totalAthletes": 464
     },
     "maxPages": 3,
@@ -27,7 +27,7 @@
     },
     "fx": {
       "source": "CBSA Exchange Rates API",
-      "asOf": "2026-10-09T00:00:00.000Z"
+      "asOf": "2026-10-10T00:00:00.000Z"
     }
   },
   "Adbert Alzolay": {
@@ -2934,35 +2934,35 @@
   },
   "Keibert Ruiz": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-09-20T21:01:27.900Z"
+    "erroredAt": "2026-10-09T06:34:06.873Z"
   },
   "Keider Montero": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-09-20T21:01:51.574Z"
+    "erroredAt": "2026-10-09T06:34:27.988Z"
   },
   "Kelvim Escobar": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-09-20T21:02:11.988Z"
+    "erroredAt": "2026-10-09T06:34:50.514Z"
   },
   "Kenedy Corona": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-09-20T21:02:32.103Z"
+    "erroredAt": "2026-10-09T06:35:11.540Z"
   },
   "Kervin Castro": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-09-20T21:02:55.902Z"
+    "erroredAt": "2026-10-09T06:35:33.042Z"
   },
   "Lenyn Sosa": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-09-20T21:03:18.807Z"
+    "erroredAt": "2026-10-09T06:35:52.623Z"
   },
   "Leo Hernandez": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-09-21T05:20:15.626Z"
+    "erroredAt": "2026-10-09T06:36:15.197Z"
   },
   "Leo Rivas": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-09-21T05:20:36.778Z"
+    "erroredAt": "2026-10-09T06:36:36.266Z"
   },
   "Les Straker": {
     "error": "eBay fetch failed (403)",
