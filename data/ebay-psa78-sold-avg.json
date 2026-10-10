@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "updatedAt": "2026-10-09T22:51:10.374Z",
+    "updatedAt": "2026-10-10T06:17:14.833Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "PSA 7 + PSA 8 sold comps. Two queries per athlete. Strict per-grade title filter. Taguchi winsorized mean. USD via CBSA.",
     "targetGrades": [
@@ -8,8 +8,8 @@
       8
     ],
     "batchInfo": {
-      "startIdx": 264,
-      "endIdx": 272,
+      "startIdx": 272,
+      "endIdx": 280,
       "totalAthletes": 464
     },
     "maxPages": 3,
@@ -27,7 +27,7 @@
     },
     "fx": {
       "source": "CBSA Exchange Rates API",
-      "asOf": "2026-10-10T00:00:00.000Z"
+      "asOf": "2026-10-11T00:00:00.000Z"
     }
   },
   "Adbert Alzolay": {
@@ -3030,35 +3030,35 @@
   },
   "Luis Jimenez": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-09-21T22:09:26.726Z"
+    "erroredAt": "2026-10-10T06:17:30.306Z"
   },
   "Luis Leal": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-09-21T22:09:47.522Z"
+    "erroredAt": "2026-10-10T06:17:50.290Z"
   },
   "Luis Matos": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-09-21T22:10:10.834Z"
+    "erroredAt": "2026-10-10T06:18:11.924Z"
   },
   "Luis Maza": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-09-21T22:10:32.743Z"
+    "erroredAt": "2026-10-10T06:18:35.882Z"
   },
   "Luis Ordaz": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-09-21T22:10:55.400Z"
+    "erroredAt": "2026-10-10T06:18:57.779Z"
   },
   "Luis Oviedo": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-09-21T22:11:18.614Z"
+    "erroredAt": "2026-10-10T06:19:20.042Z"
   },
   "Luis Perales": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-09-22T05:17:50.368Z"
+    "erroredAt": "2026-10-10T06:19:43.686Z"
   },
   "Luis Rengifo": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-09-22T05:18:11.579Z"
+    "erroredAt": "2026-10-10T06:20:05.271Z"
   },
   "Luis Rivas": {
     "error": "eBay fetch failed (403)",
