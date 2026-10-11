@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "updatedAt": "2026-10-10T21:56:54.309Z",
+    "updatedAt": "2026-10-11T06:17:30.961Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "PSA 7 + PSA 8 sold comps. Two queries per athlete. Strict per-grade title filter. Taguchi winsorized mean. USD via CBSA.",
     "targetGrades": [
@@ -8,8 +8,8 @@
       8
     ],
     "batchInfo": {
-      "startIdx": 288,
-      "endIdx": 296,
+      "startIdx": 296,
+      "endIdx": 304,
       "totalAthletes": 464
     },
     "maxPages": 3,
@@ -27,7 +27,7 @@
     },
     "fx": {
       "source": "CBSA Exchange Rates API",
-      "asOf": "2026-10-11T00:00:00.000Z"
+      "asOf": "2026-10-12T00:00:00.000Z"
     }
   },
   "Adbert Alzolay": {
@@ -3126,35 +3126,35 @@
   },
   "Marco Scutaro": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-09-22T17:12:43.407Z"
+    "erroredAt": "2026-10-11T06:17:46.571Z"
   },
   "Marcos Armas": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-09-22T17:13:05.585Z"
+    "erroredAt": "2026-10-11T06:18:07.279Z"
   },
   "Martin Perez": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-09-22T17:13:26.416Z"
+    "erroredAt": "2026-10-11T06:18:28.722Z"
   },
   "Martin Prado": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-09-22T17:13:47.588Z"
+    "erroredAt": "2026-10-11T06:18:50.649Z"
   },
   "Marwin Gonzalez": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-09-22T17:14:08.528Z"
+    "erroredAt": "2026-10-11T06:19:12.445Z"
   },
   "Mauricio Llovera": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-09-22T17:14:29.393Z"
+    "erroredAt": "2026-10-11T06:19:34.206Z"
   },
   "Mauricio Robles": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-09-22T21:36:28.185Z"
+    "erroredAt": "2026-10-11T06:19:57.080Z"
   },
   "Max Castillo": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-09-22T21:36:51.720Z"
+    "erroredAt": "2026-10-11T06:20:17.980Z"
   },
   "Max Ramirez": {
     "error": "eBay fetch failed (403)",
