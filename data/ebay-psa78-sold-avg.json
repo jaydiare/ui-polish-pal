@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "updatedAt": "2026-10-18T11:36:03.774Z",
+    "updatedAt": "2026-10-18T16:05:18.343Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "PSA 7 + PSA 8 sold comps. Two queries per athlete. Strict per-grade title filter. Taguchi winsorized mean. USD via CBSA.",
     "targetGrades": [
@@ -8,8 +8,8 @@
       8
     ],
     "batchInfo": {
-      "startIdx": 24,
-      "endIdx": 32,
+      "startIdx": 32,
+      "endIdx": 40,
       "totalAthletes": 464
     },
     "maxPages": 3,
@@ -888,7 +888,7 @@
       "lastKnownSoldAt": null
     },
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-09-29T22:33:38.926Z"
+    "erroredAt": "2026-10-18T16:05:34.095Z"
   },
   "Angel Salazar": {
     "psa7": {
@@ -918,7 +918,7 @@
       "lastKnownSoldAt": null
     },
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-09-29T22:34:01.865Z"
+    "erroredAt": "2026-10-18T16:05:57.052Z"
   },
   "Angel Zerpa": {
     "psa7": {
@@ -948,7 +948,7 @@
       "lastKnownSoldAt": null
     },
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-09-29T22:34:23.424Z"
+    "erroredAt": "2026-10-18T16:06:21.252Z"
   },
   "Anibal Sanchez": {
     "psa7": {
@@ -978,7 +978,7 @@
       "lastKnownSoldAt": null
     },
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-09-29T22:34:43.014Z"
+    "erroredAt": "2026-10-18T16:06:41.334Z"
   },
   "Anthony Molina": {
     "psa7": {
@@ -1008,7 +1008,7 @@
       "lastKnownSoldAt": null
     },
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-09-29T22:35:04.210Z"
+    "erroredAt": "2026-10-18T16:07:03.059Z"
   },
   "Anthony Ortega": {
     "psa7": {
@@ -1038,7 +1038,7 @@
       "lastKnownSoldAt": null
     },
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-09-29T22:35:23.642Z"
+    "erroredAt": "2026-10-18T16:07:23.635Z"
   },
   "Anthony Santander": {
     "psa7": {
@@ -1068,7 +1068,7 @@
       "lastKnownSoldAt": null
     },
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-09-30T05:52:23.898Z"
+    "erroredAt": "2026-10-18T16:07:44.537Z"
   },
   "Antonio Senzatela": {
     "psa7": {
@@ -1098,7 +1098,7 @@
       "lastKnownSoldAt": null
     },
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-09-30T05:52:47.031Z"
+    "erroredAt": "2026-10-18T16:08:07.656Z"
   },
   "Argenis Diaz": {
     "error": "eBay fetch failed (403)",
