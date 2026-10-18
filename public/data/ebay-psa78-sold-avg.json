@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "updatedAt": "2026-10-18T16:05:18.343Z",
+    "updatedAt": "2026-10-18T20:58:27.600Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "PSA 7 + PSA 8 sold comps. Two queries per athlete. Strict per-grade title filter. Taguchi winsorized mean. USD via CBSA.",
     "targetGrades": [
@@ -8,8 +8,8 @@
       8
     ],
     "batchInfo": {
-      "startIdx": 32,
-      "endIdx": 40,
+      "startIdx": 40,
+      "endIdx": 48,
       "totalAthletes": 464
     },
     "maxPages": 3,
@@ -1102,11 +1102,11 @@
   },
   "Argenis Diaz": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-09-30T05:53:09.766Z"
+    "erroredAt": "2026-10-18T20:58:42.900Z"
   },
   "Armando Galarraga": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-09-30T05:53:29.465Z"
+    "erroredAt": "2026-10-18T20:59:04.234Z"
   },
   "Asdrubal Cabrera": {
     "psa7": {
@@ -1136,11 +1136,11 @@
       "lastKnownSoldAt": null
     },
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-09-30T05:53:48.449Z"
+    "erroredAt": "2026-10-18T20:59:25.416Z"
   },
   "Avisail Garcia": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-09-30T05:54:10.162Z"
+    "erroredAt": "2026-10-18T20:59:47.785Z"
   },
   "Bo Diaz": {
     "psa7": {
@@ -1170,7 +1170,7 @@
       "lastKnownSoldAt": null
     },
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-09-30T05:54:31.796Z"
+    "erroredAt": "2026-10-18T21:00:11.914Z"
   },
   "Bob Abreu": {
     "psa7": {
@@ -1200,7 +1200,7 @@
       "lastKnownSoldAt": null
     },
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-09-30T05:54:54.686Z"
+    "erroredAt": "2026-10-18T21:00:34.254Z"
   },
   "Brayan Rocchio": {
     "psa7": {
@@ -1230,7 +1230,7 @@
       "lastKnownSoldAt": null
     },
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-09-30T12:55:58.110Z"
+    "erroredAt": "2026-10-18T21:00:54.488Z"
   },
   "Brayan Villarreal": {
     "psa7": {
@@ -1260,7 +1260,7 @@
       "lastKnownSoldAt": null
     },
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-09-30T12:56:21.598Z"
+    "erroredAt": "2026-10-18T21:01:15.961Z"
   },
   "Breyvic Valera": {
     "error": "eBay fetch failed (403)",
