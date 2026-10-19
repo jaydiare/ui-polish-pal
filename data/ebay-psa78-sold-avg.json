@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "updatedAt": "2026-10-18T20:58:27.600Z",
+    "updatedAt": "2026-10-19T05:09:45.108Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "PSA 7 + PSA 8 sold comps. Two queries per athlete. Strict per-grade title filter. Taguchi winsorized mean. USD via CBSA.",
     "targetGrades": [
@@ -8,8 +8,8 @@
       8
     ],
     "batchInfo": {
-      "startIdx": 40,
-      "endIdx": 48,
+      "startIdx": 48,
+      "endIdx": 56,
       "totalAthletes": 464
     },
     "maxPages": 3,
@@ -27,7 +27,7 @@
     },
     "fx": {
       "source": "CBSA Exchange Rates API",
-      "asOf": "2026-10-19T00:00:00.000Z"
+      "asOf": "2026-10-20T00:00:00.000Z"
     }
   },
   "Adbert Alzolay": {
@@ -1264,7 +1264,7 @@
   },
   "Breyvic Valera": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-09-30T12:56:42.301Z"
+    "erroredAt": "2026-10-19T05:10:00.852Z"
   },
   "Bruce Rondon": {
     "psa7": {
@@ -1294,7 +1294,7 @@
       "lastKnownSoldAt": null
     },
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-09-30T12:57:04.524Z"
+    "erroredAt": "2026-10-19T05:10:23.046Z"
   },
   "Brusdar Graterol": {
     "psa7": {
@@ -1324,7 +1324,7 @@
       "lastKnownSoldAt": null
     },
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-09-30T12:57:27.576Z"
+    "erroredAt": "2026-10-19T05:10:45.955Z"
   },
   "Carlos Asuaje": {
     "psa7": {
@@ -1354,7 +1354,7 @@
       "lastKnownSoldAt": null
     },
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-09-30T12:57:51.909Z"
+    "erroredAt": "2026-10-19T05:11:06.283Z"
   },
   "Carlos Carrasco": {
     "psa7": {
@@ -1384,7 +1384,7 @@
       "lastKnownSoldAt": null
     },
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-09-30T12:58:12.589Z"
+    "erroredAt": "2026-10-19T05:11:28.257Z"
   },
   "Carlos Garcia": {
     "psa7": {
@@ -1414,11 +1414,11 @@
       "lastKnownSoldAt": null
     },
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-09-30T12:58:32.920Z"
+    "erroredAt": "2026-10-19T05:11:50.262Z"
   },
   "Carlos Gonzalez": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-09-30T22:31:33.602Z"
+    "erroredAt": "2026-10-19T05:12:11.531Z"
   },
   "Carlos Guillen": {
     "psa7": {
@@ -1448,7 +1448,7 @@
       "lastKnownSoldAt": null
     },
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-09-30T22:31:53.637Z"
+    "erroredAt": "2026-10-19T05:12:34.928Z"
   },
   "Carlos Guzman": {
     "psa7": {
