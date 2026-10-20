@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "updatedAt": "2026-10-19T22:34:42.139Z",
+    "updatedAt": "2026-10-20T05:10:03.100Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "PSA 7 + PSA 8 sold comps. Two queries per athlete. Strict per-grade title filter. Taguchi winsorized mean. USD via CBSA.",
     "targetGrades": [
@@ -8,8 +8,8 @@
       8
     ],
     "batchInfo": {
-      "startIdx": 64,
-      "endIdx": 72,
+      "startIdx": 72,
+      "endIdx": 80,
       "totalAthletes": 464
     },
     "maxPages": 3,
@@ -27,7 +27,7 @@
     },
     "fx": {
       "source": "CBSA Exchange Rates API",
-      "asOf": "2026-10-20T00:00:00.000Z"
+      "asOf": "2026-10-21T00:00:00.000Z"
     }
   },
   "Adbert Alzolay": {
@@ -1776,35 +1776,35 @@
   },
   "Cesar Izturis": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-10-01T13:47:53.127Z"
+    "erroredAt": "2026-10-20T05:10:18.981Z"
   },
   "Cesar Jimenez": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-10-01T13:48:13.231Z"
+    "erroredAt": "2026-10-20T05:10:39.381Z"
   },
   "Cesar Tovar": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-10-01T13:48:34.865Z"
+    "erroredAt": "2026-10-20T05:11:00.566Z"
   },
   "Chico Carrasquel": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-10-01T13:48:56.249Z"
+    "erroredAt": "2026-10-20T05:11:21.484Z"
   },
   "Chucho Ramos": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-10-01T13:49:16.957Z"
+    "erroredAt": "2026-10-20T05:11:45.400Z"
   },
   "Clemente Alvarez": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-10-01T13:49:40.640Z"
+    "erroredAt": "2026-10-20T05:12:08.118Z"
   },
   "Cris Colon": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-10-01T13:50:01.977Z"
+    "erroredAt": "2026-10-20T05:12:30.495Z"
   },
   "Damaso Blanco": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-10-01T13:50:25.035Z"
+    "erroredAt": "2026-10-20T05:12:51.795Z"
   },
   "Daniel Palencia": {
     "error": "eBay fetch failed (403)",
