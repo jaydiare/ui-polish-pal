@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "updatedAt": "2026-10-20T11:58:48.009Z",
+    "updatedAt": "2026-10-20T17:27:09.981Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "PSA 7 + PSA 8 sold comps. Two queries per athlete. Strict per-grade title filter. Taguchi winsorized mean. USD via CBSA.",
     "targetGrades": [
@@ -8,8 +8,8 @@
       8
     ],
     "batchInfo": {
-      "startIdx": 80,
-      "endIdx": 88,
+      "startIdx": 88,
+      "endIdx": 96,
       "totalAthletes": 464
     },
     "maxPages": 3,
@@ -1892,19 +1892,19 @@
   },
   "Diego Castillo": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-10-02T06:04:17.063Z"
+    "erroredAt": "2026-10-20T17:27:25.860Z"
   },
   "Dioner Navarro": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-10-02T06:04:39.548Z"
+    "erroredAt": "2026-10-20T17:27:47.554Z"
   },
   "Dixon Machado": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-10-02T06:05:01.543Z"
+    "erroredAt": "2026-10-20T17:28:10.834Z"
   },
   "Donaldo Mendez": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-10-02T06:05:24.438Z"
+    "erroredAt": "2026-10-20T17:28:33.788Z"
   },
   "Eddie Perez": {
     "psa7": {
@@ -1934,7 +1934,7 @@
       "lastKnownSoldAt": null
     },
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-10-02T06:05:47.088Z"
+    "erroredAt": "2026-10-20T17:28:56.192Z"
   },
   "Eddie Zambrano": {
     "psa7": {
@@ -1964,7 +1964,7 @@
       "lastKnownSoldAt": null
     },
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-10-02T06:06:09.256Z"
+    "erroredAt": "2026-10-20T17:29:22.857Z"
   },
   "Eddy Diaz": {
     "psa7": {
@@ -1994,7 +1994,7 @@
       "lastKnownSoldAt": null
     },
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-10-02T06:06:29.317Z"
+    "erroredAt": "2026-10-20T17:29:42.603Z"
   },
   "Edgar Navarro": {
     "psa7": {
@@ -2024,7 +2024,7 @@
       "lastKnownSoldAt": null
     },
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-10-02T06:06:51.533Z"
+    "erroredAt": "2026-10-20T17:30:05.273Z"
   },
   "Edgardo Alfonzo": {
     "error": "eBay fetch failed (403)",
