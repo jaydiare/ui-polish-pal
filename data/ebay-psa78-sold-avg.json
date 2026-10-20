@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "updatedAt": "2026-10-20T05:10:03.100Z",
+    "updatedAt": "2026-10-20T11:58:48.009Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "PSA 7 + PSA 8 sold comps. Two queries per athlete. Strict per-grade title filter. Taguchi winsorized mean. USD via CBSA.",
     "targetGrades": [
@@ -8,8 +8,8 @@
       8
     ],
     "batchInfo": {
-      "startIdx": 72,
-      "endIdx": 80,
+      "startIdx": 80,
+      "endIdx": 88,
       "totalAthletes": 464
     },
     "maxPages": 3,
@@ -1808,23 +1808,23 @@
   },
   "Daniel Palencia": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-10-01T22:51:36.686Z"
+    "erroredAt": "2026-10-20T11:59:03.573Z"
   },
   "Danny Leon": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-10-01T22:52:00.568Z"
+    "erroredAt": "2026-10-20T11:59:23.815Z"
   },
   "Danny Sandoval": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-10-01T22:52:20.578Z"
+    "erroredAt": "2026-10-20T11:59:44.214Z"
   },
   "Darwin Cubillan": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-10-01T22:52:45.059Z"
+    "erroredAt": "2026-10-20T12:00:05.348Z"
   },
   "Darwinzon Hernandez": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-10-01T22:53:08.010Z"
+    "erroredAt": "2026-10-20T12:00:26.986Z"
   },
   "Dave Concepcion": {
     "psa7": {
@@ -1854,7 +1854,7 @@
       "lastKnownSoldAt": null
     },
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-10-01T22:53:30.432Z"
+    "erroredAt": "2026-10-20T12:00:47.390Z"
   },
   "David Peralta": {
     "psa7": {
@@ -1884,11 +1884,11 @@
       "lastKnownSoldAt": null
     },
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-10-01T22:53:50.774Z"
+    "erroredAt": "2026-10-20T12:01:08.487Z"
   },
   "Deolis Guerra": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-10-01T22:54:11.804Z"
+    "erroredAt": "2026-10-20T12:01:28.782Z"
   },
   "Diego Castillo": {
     "error": "eBay fetch failed (403)",
