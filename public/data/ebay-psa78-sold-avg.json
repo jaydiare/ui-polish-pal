@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "updatedAt": "2026-10-21T05:11:46.288Z",
+    "updatedAt": "2026-10-21T12:14:23.667Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "PSA 7 + PSA 8 sold comps. Two queries per athlete. Strict per-grade title filter. Taguchi winsorized mean. USD via CBSA.",
     "targetGrades": [
@@ -8,8 +8,8 @@
       8
     ],
     "batchInfo": {
-      "startIdx": 104,
-      "endIdx": 112,
+      "startIdx": 112,
+      "endIdx": 120,
       "totalAthletes": 464
     },
     "maxPages": 3,
@@ -2248,31 +2248,31 @@
   },
   "Eider Torres": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-10-03T05:38:32.844Z"
+    "erroredAt": "2026-10-21T12:14:39.536Z"
   },
   "Elias Diaz": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-10-03T05:38:52.911Z"
+    "erroredAt": "2026-10-21T12:15:00.495Z"
   },
   "Elieser Hernandez": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-10-03T05:39:14.024Z"
+    "erroredAt": "2026-10-21T12:15:22.789Z"
   },
   "Eliezer Alfonzo": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-10-03T05:39:36.568Z"
+    "erroredAt": "2026-10-21T12:15:46.296Z"
   },
   "Elio Chacon": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-10-03T05:39:55.580Z"
+    "erroredAt": "2026-10-21T12:16:07.382Z"
   },
   "Elvis Andrus": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-10-03T05:40:18.142Z"
+    "erroredAt": "2026-10-21T12:16:26.286Z"
   },
   "Elvis Araujo": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-10-03T05:40:40.052Z"
+    "erroredAt": "2026-10-21T12:16:49.600Z"
   },
   "Ender Inciarte": {
     "psa7": {
@@ -2302,7 +2302,7 @@
       "lastKnownSoldAt": null
     },
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-10-03T05:41:02.126Z"
+    "erroredAt": "2026-10-21T12:17:11.729Z"
   },
   "Endy Chavez": {
     "error": "eBay fetch failed (403)",
