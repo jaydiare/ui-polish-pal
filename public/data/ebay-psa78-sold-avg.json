@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "updatedAt": "2026-10-23T21:35:33.782Z",
+    "updatedAt": "2026-10-24T04:56:13.469Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "PSA 7 + PSA 8 sold comps. Two queries per athlete. Strict per-grade title filter. Taguchi winsorized mean. USD via CBSA.",
     "targetGrades": [
@@ -8,8 +8,8 @@
       8
     ],
     "batchInfo": {
-      "startIdx": 192,
-      "endIdx": 200,
+      "startIdx": 200,
+      "endIdx": 208,
       "totalAthletes": 464
     },
     "maxPages": 3,
@@ -27,7 +27,7 @@
     },
     "fx": {
       "source": "CBSA Exchange Rates API",
-      "asOf": "2026-10-24T00:00:00.000Z"
+      "asOf": "2026-10-25T00:00:00.000Z"
     }
   },
   "Adbert Alzolay": {
@@ -2748,35 +2748,35 @@
   },
   "Jesus Tinoco": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-10-06T18:33:59.012Z"
+    "erroredAt": "2026-10-24T04:56:29.341Z"
   },
   "Jhonathan Diaz": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-10-06T18:34:22.019Z"
+    "erroredAt": "2026-10-24T04:56:50.702Z"
   },
   "Jhonny Pereda": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-10-06T18:34:43.359Z"
+    "erroredAt": "2026-10-24T04:57:14.705Z"
   },
   "Jhostynxon Garcia": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-10-06T18:35:03.419Z"
+    "erroredAt": "2026-10-24T04:57:36.140Z"
   },
   "Jhoulys Chacin": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-10-06T18:35:23.728Z"
+    "erroredAt": "2026-10-24T04:57:56.484Z"
   },
   "Joe Ortiz": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-10-06T18:35:45.496Z"
+    "erroredAt": "2026-10-24T04:58:19.283Z"
   },
   "Johan Santana": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-10-06T18:36:06.418Z"
+    "erroredAt": "2026-10-24T04:58:38.646Z"
   },
   "Johnny Paredes": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-10-06T18:36:29.747Z"
+    "erroredAt": "2026-10-24T04:59:00.917Z"
   },
   "Jonathan Herrera": {
     "error": "eBay fetch failed (403)",
