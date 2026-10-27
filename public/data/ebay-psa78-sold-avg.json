@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "updatedAt": "2026-10-26T22:50:25.407Z",
+    "updatedAt": "2026-10-27T05:27:59.809Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "PSA 7 + PSA 8 sold comps. Two queries per athlete. Strict per-grade title filter. Taguchi winsorized mean. USD via CBSA.",
     "targetGrades": [
@@ -8,8 +8,8 @@
       8
     ],
     "batchInfo": {
-      "startIdx": 280,
-      "endIdx": 288,
+      "startIdx": 288,
+      "endIdx": 296,
       "totalAthletes": 464
     },
     "maxPages": 3,
@@ -27,7 +27,7 @@
     },
     "fx": {
       "source": "CBSA Exchange Rates API",
-      "asOf": "2026-10-27T00:00:00.000Z"
+      "asOf": "2026-10-28T00:00:00.000Z"
     }
   },
   "Adbert Alzolay": {
@@ -3100,35 +3100,35 @@
   },
   "Luis Valbuena": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-10-10T21:57:10.334Z"
+    "erroredAt": "2026-10-27T05:28:16.231Z"
   },
   "Luisangel Acuna": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-10-10T21:57:32.901Z"
+    "erroredAt": "2026-10-27T05:28:38.632Z"
   },
   "Magglio Ordonez": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-10-10T21:57:55.939Z"
+    "erroredAt": "2026-10-27T05:28:59.402Z"
   },
   "Maicer Izturis": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-10-10T21:58:17.068Z"
+    "erroredAt": "2026-10-27T05:29:22.268Z"
   },
   "Maikel Garcia": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-10-10T21:58:36.018Z"
+    "erroredAt": "2026-10-27T05:29:46.271Z"
   },
   "Manny Pina": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-10-10T21:58:56.310Z"
+    "erroredAt": "2026-10-27T05:30:08.180Z"
   },
   "Manny Sarmiento": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-10-10T21:59:17.941Z"
+    "erroredAt": "2026-10-27T05:30:30.664Z"
   },
   "Manny Trillo": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-10-10T21:59:41.111Z"
+    "erroredAt": "2026-10-27T05:30:53.115Z"
   },
   "Marco Scutaro": {
     "error": "eBay fetch failed (403)",
