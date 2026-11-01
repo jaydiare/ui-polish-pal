@@ -1,14 +1,15 @@
 {
   "_meta": {
-    "updated_at": "2026-10-15T17:58:45Z",
+    "updated_at": "2026-11-01T18:43:58Z",
     "dates": [
       "2026-09-05",
       "2026-09-07",
       "2026-09-15",
       "2026-10-01",
-      "2026-10-15"
+      "2026-10-15",
+      "2026-11-01"
     ],
-    "snapshots": 5
+    "snapshots": 6
   },
   "history": {
     "2026-09-05": {
@@ -13668,6 +13669,2763 @@
       "Yusmeiro Petit": {
         "deal_score": 34.8,
         "prob": 0.0923,
+        "cluster": "stable"
+      }
+    },
+    "2026-11-01": {
+      "Adbert Alzolay": {
+        "deal_score": 33.8,
+        "prob": 0.1715,
+        "cluster": "momentum"
+      },
+      "Adrian Sanchez": {
+        "deal_score": 42.1,
+        "prob": 0.4481,
+        "cluster": "stable"
+      },
+      "Al Pedrique": {
+        "deal_score": 41.5,
+        "prob": 0.4401,
+        "cluster": "stable"
+      },
+      "Albert Suarez": {
+        "deal_score": 40.9,
+        "prob": 0.4373,
+        "cluster": "stable"
+      },
+      "Alberto Callaspo": {
+        "deal_score": 48.7,
+        "prob": 0.6014,
+        "cluster": "stable"
+      },
+      "Alberto Gonzalez": {
+        "deal_score": 46.7,
+        "prob": 0.5673,
+        "cluster": "stable"
+      },
+      "Alcides Escobar": {
+        "deal_score": 46.1,
+        "prob": 0.4831,
+        "cluster": "stable"
+      },
+      "Alejandro Chacin": {
+        "deal_score": 33.7,
+        "prob": 0.3877,
+        "cluster": "stable"
+      },
+      "Alejandro Freire": {
+        "deal_score": 40.9,
+        "prob": 0.3725,
+        "cluster": "stable"
+      },
+      "Alejandro Fuenmayor": {
+        "deal_score": 34.8,
+        "prob": 0.3748,
+        "cluster": "stable"
+      },
+      "Alejandro Machado": {
+        "deal_score": 41.1,
+        "prob": 0.442,
+        "cluster": "stable"
+      },
+      "Alejandro Marques": {
+        "deal_score": 49.8,
+        "prob": 0.7068,
+        "cluster": "stable"
+      },
+      "Alejandro Moreno": {
+        "deal_score": 42.0,
+        "prob": 0.4677,
+        "cluster": "stable"
+      },
+      "Alex Carrasquel": {
+        "deal_score": 48.2,
+        "prob": 0.5541,
+        "cluster": "stable"
+      },
+      "Alex Delgado": {
+        "deal_score": 42.2,
+        "prob": 0.4544,
+        "cluster": "stable"
+      },
+      "Alex Escobar": {
+        "deal_score": 44.1,
+        "prob": 0.4822,
+        "cluster": "stable"
+      },
+      "Alex Herrera": {
+        "deal_score": 45.9,
+        "prob": 0.5684,
+        "cluster": "stable"
+      },
+      "Alex Pacheco": {
+        "deal_score": 32.5,
+        "prob": 0.2955,
+        "cluster": "stable"
+      },
+      "Alex Prieto": {
+        "deal_score": 37.4,
+        "prob": 0.3968,
+        "cluster": "stable"
+      },
+      "Alex Romero": {
+        "deal_score": 46.5,
+        "prob": 0.5844,
+        "cluster": "stable"
+      },
+      "Alex Serrano": {
+        "deal_score": 33.3,
+        "prob": 0.3404,
+        "cluster": "stable"
+      },
+      "Alex Torres": {
+        "deal_score": 39.4,
+        "prob": 0.3632,
+        "cluster": "stable"
+      },
+      "Alexi Amarista": {
+        "deal_score": 43.6,
+        "prob": 0.527,
+        "cluster": "stable"
+      },
+      "Alexis Infante": {
+        "deal_score": 42.3,
+        "prob": 0.4554,
+        "cluster": "stable"
+      },
+      "Alfredo Gonzalez": {
+        "deal_score": 35.6,
+        "prob": 0.4017,
+        "cluster": "momentum"
+      },
+      "Ali Sanchez": {
+        "deal_score": 44.9,
+        "prob": 0.4409,
+        "cluster": "stable"
+      },
+      "Alvaro Espinoza": {
+        "deal_score": 40.4,
+        "prob": 0.4084,
+        "cluster": "stable"
+      },
+      "Alvin Colina": {
+        "deal_score": 43.2,
+        "prob": 0.4635,
+        "cluster": "stable"
+      },
+      "Amalio Carreno": {
+        "deal_score": 41.5,
+        "prob": 0.4409,
+        "cluster": "stable"
+      },
+      "Amleto Monacelli": {
+        "deal_score": 28.6,
+        "prob": 0.3776,
+        "cluster": "stable"
+      },
+      "Anderson Espinoza": {
+        "deal_score": 43.3,
+        "prob": 0.4847,
+        "cluster": "stable"
+      },
+      "Anderson Machado": {
+        "deal_score": 36.7,
+        "prob": 0.4169,
+        "cluster": "momentum"
+      },
+      "Andres Blanco": {
+        "deal_score": 44.9,
+        "prob": 0.5682,
+        "cluster": "stable"
+      },
+      "Andres Borregales": {
+        "deal_score": 41.1,
+        "prob": 0.747,
+        "cluster": "momentum"
+      },
+      "Andres Chaparro": {
+        "deal_score": 36.7,
+        "prob": 0.377,
+        "cluster": "momentum"
+      },
+      "Andres Galarraga": {
+        "deal_score": 36.0,
+        "prob": 0.1754,
+        "cluster": "momentum"
+      },
+      "Andres Gimenez": {
+        "deal_score": 36.3,
+        "prob": 0.4356,
+        "cluster": "momentum"
+      },
+      "Andres Machado": {
+        "deal_score": 41.3,
+        "prob": 0.4586,
+        "cluster": "stable"
+      },
+      "Andruw Monasterio": {
+        "deal_score": 51.2,
+        "prob": 0.6357,
+        "cluster": "momentum"
+      },
+      "Andry Lara": {
+        "deal_score": 51.6,
+        "prob": 0.7101,
+        "cluster": "momentum"
+      },
+      "Angel Bravo": {
+        "deal_score": 47.7,
+        "prob": 0.5494,
+        "cluster": "stable"
+      },
+      "Angel Escobar": {
+        "deal_score": 44.9,
+        "prob": 0.4656,
+        "cluster": "stable"
+      },
+      "Angel Guzman": {
+        "deal_score": 29.1,
+        "prob": 0.3371,
+        "cluster": "momentum"
+      },
+      "Angel Nesbitt": {
+        "deal_score": 42.0,
+        "prob": 0.4399,
+        "cluster": "stable"
+      },
+      "Angel Salazar": {
+        "deal_score": 44.0,
+        "prob": 0.5271,
+        "cluster": "stable"
+      },
+      "Angel Zerpa": {
+        "deal_score": 40.2,
+        "prob": 0.4041,
+        "cluster": "stable"
+      },
+      "Anibal Sanchez": {
+        "deal_score": 51.9,
+        "prob": 0.6422,
+        "cluster": "stable"
+      },
+      "Anthony Castro": {
+        "deal_score": 45.2,
+        "prob": 0.5284,
+        "cluster": "stable"
+      },
+      "Anthony Molina": {
+        "deal_score": 36.0,
+        "prob": 0.4264,
+        "cluster": "momentum"
+      },
+      "Anthony Ortega": {
+        "deal_score": 41.6,
+        "prob": 0.439,
+        "cluster": "stable"
+      },
+      "Anthony Santander": {
+        "deal_score": 40.3,
+        "prob": 0.4204,
+        "cluster": "stable"
+      },
+      "Antonio Senzatela": {
+        "deal_score": 41.5,
+        "prob": 0.3323,
+        "cluster": "stable"
+      },
+      "Arcenio Leon": {
+        "deal_score": 30.1,
+        "prob": 0.3954,
+        "cluster": "stable"
+      },
+      "Argenis Diaz": {
+        "deal_score": 40.2,
+        "prob": 0.4122,
+        "cluster": "stable"
+      },
+      "Armando Galarraga": {
+        "deal_score": 43.8,
+        "prob": 0.4942,
+        "cluster": "stable"
+      },
+      "Asdrubal Cabrera": {
+        "deal_score": 46.3,
+        "prob": 0.6273,
+        "cluster": "momentum"
+      },
+      "Avisail Garcia": {
+        "deal_score": 43.3,
+        "prob": 0.4543,
+        "cluster": "stable"
+      },
+      "Beiker Graterol": {
+        "deal_score": 22.3,
+        "prob": 0.285,
+        "cluster": "momentum"
+      },
+      "Bernardo Anor": {
+        "deal_score": 25.5,
+        "prob": 0.3197,
+        "cluster": "stable"
+      },
+      "Bo Diaz": {
+        "deal_score": 42.9,
+        "prob": 0.417,
+        "cluster": "stable"
+      },
+      "Bob Abreu": {
+        "deal_score": 39.1,
+        "prob": 0.4286,
+        "cluster": "stable"
+      },
+      "Bradgley Rodriguez": {
+        "deal_score": 40.5,
+        "prob": 0.5968,
+        "cluster": "momentum"
+      },
+      "Brayan Martinez": {
+        "deal_score": 25.6,
+        "prob": 0.3338,
+        "cluster": "stable"
+      },
+      "Brayan Rocchio": {
+        "deal_score": 39.3,
+        "prob": 0.5423,
+        "cluster": "momentum"
+      },
+      "Brayan Villarreal": {
+        "deal_score": 42.2,
+        "prob": 0.4461,
+        "cluster": "stable"
+      },
+      "Breyvic Valera": {
+        "deal_score": 43.9,
+        "prob": 0.4742,
+        "cluster": "stable"
+      },
+      "Bruce Rondon": {
+        "deal_score": 42.5,
+        "prob": 0.4482,
+        "cluster": "stable"
+      },
+      "Brusdar Graterol": {
+        "deal_score": 33.0,
+        "prob": 0.1512,
+        "cluster": "momentum"
+      },
+      "Carl Herrera": {
+        "deal_score": 40.5,
+        "prob": 0.4205,
+        "cluster": "stable"
+      },
+      "Carlos Asuaje": {
+        "deal_score": 44.4,
+        "prob": 0.4747,
+        "cluster": "stable"
+      },
+      "Carlos Carrasco": {
+        "deal_score": 47.7,
+        "prob": 0.465,
+        "cluster": "stable"
+      },
+      "Carlos Garcia": {
+        "deal_score": 38.1,
+        "prob": 0.353,
+        "cluster": "stable"
+      },
+      "Carlos Gonzalez": {
+        "deal_score": 41.1,
+        "prob": 0.4302,
+        "cluster": "momentum"
+      },
+      "Carlos Guillen": {
+        "deal_score": 42.5,
+        "prob": 0.3709,
+        "cluster": "stable"
+      },
+      "Carlos Guzman": {
+        "deal_score": 43.2,
+        "prob": 0.4417,
+        "cluster": "stable"
+      },
+      "Carlos Hernandez": {
+        "deal_score": 44.8,
+        "prob": 0.4143,
+        "cluster": "stable"
+      },
+      "Carlos Maldonado": {
+        "deal_score": 45.1,
+        "prob": 0.5027,
+        "cluster": "stable"
+      },
+      "Carlos Martinez": {
+        "deal_score": 41.1,
+        "prob": 0.2436,
+        "cluster": "stable"
+      },
+      "Carlos Mendez": {
+        "deal_score": 40.4,
+        "prob": 0.4243,
+        "cluster": "stable"
+      },
+      "Carlos Mendoza": {
+        "deal_score": 32.5,
+        "prob": 0.3551,
+        "cluster": "momentum"
+      },
+      "Carlos Monasterios": {
+        "deal_score": 43.9,
+        "prob": 0.4728,
+        "cluster": "stable"
+      },
+      "Carlos Narvaez": {
+        "deal_score": 40.6,
+        "prob": 0.3949,
+        "cluster": "momentum"
+      },
+      "Carlos Perez": {
+        "deal_score": 42.6,
+        "prob": 0.4797,
+        "cluster": "stable"
+      },
+      "Carlos Pulido": {
+        "deal_score": 40.6,
+        "prob": 0.4195,
+        "cluster": "stable"
+      },
+      "Carlos Quintana": {
+        "deal_score": 41.0,
+        "prob": 0.4831,
+        "cluster": "stable"
+      },
+      "Carlos Rivero": {
+        "deal_score": 40.4,
+        "prob": 0.4408,
+        "cluster": "stable"
+      },
+      "Carlos Silva": {
+        "deal_score": 50.6,
+        "prob": 0.5712,
+        "cluster": "stable"
+      },
+      "Carlos Tocci": {
+        "deal_score": 42.4,
+        "prob": 0.44,
+        "cluster": "stable"
+      },
+      "Carlos Valderrama": {
+        "deal_score": 39.4,
+        "prob": 0.4489,
+        "cluster": "stable"
+      },
+      "Carlos Varela": {
+        "deal_score": 16.4,
+        "prob": 0.2862,
+        "cluster": "momentum"
+      },
+      "Carlos Zambrano": {
+        "deal_score": 48.3,
+        "prob": 0.6101,
+        "cluster": "momentum"
+      },
+      "Cesar Gutierrez": {
+        "deal_score": 32.5,
+        "prob": 0.2177,
+        "cluster": "momentum"
+      },
+      "Cesar Hernandez": {
+        "deal_score": 49.7,
+        "prob": 0.5632,
+        "cluster": "stable"
+      },
+      "Cesar Izturis": {
+        "deal_score": 54.1,
+        "prob": 0.4869,
+        "cluster": "momentum"
+      },
+      "Cesar Jimenez": {
+        "deal_score": 46.0,
+        "prob": 0.5877,
+        "cluster": "stable"
+      },
+      "Cesar Perdomo": {
+        "deal_score": 30.9,
+        "prob": 0.403,
+        "cluster": "stable"
+      },
+      "Cesar Tovar": {
+        "deal_score": 41.0,
+        "prob": 0.4613,
+        "cluster": "stable"
+      },
+      "Chico Carrasquel": {
+        "deal_score": 40.2,
+        "prob": 0.3764,
+        "cluster": "stable"
+      },
+      "Christian Makoun": {
+        "deal_score": 52.5,
+        "prob": 0.8139,
+        "cluster": "momentum"
+      },
+      "Christian Santos": {
+        "deal_score": 41.2,
+        "prob": 0.3435,
+        "cluster": "stable"
+      },
+      "Clemente Alvarez": {
+        "deal_score": 39.9,
+        "prob": 0.4188,
+        "cluster": "stable"
+      },
+      "Cris Colon": {
+        "deal_score": 42.0,
+        "prob": 0.4769,
+        "cluster": "stable"
+      },
+      "Cristian Casseres Jr.": {
+        "deal_score": 35.4,
+        "prob": 0.4094,
+        "cluster": "momentum"
+      },
+      "Damaso Blanco": {
+        "deal_score": 28.6,
+        "prob": 0.384,
+        "cluster": "stable"
+      },
+      "Dani Pereira": {
+        "deal_score": 35.1,
+        "prob": 0.4686,
+        "cluster": "momentum"
+      },
+      "Daniel Palencia": {
+        "deal_score": 32.2,
+        "prob": 0.3386,
+        "cluster": "momentum"
+      },
+      "Danny Leon": {
+        "deal_score": 41.1,
+        "prob": 0.4217,
+        "cluster": "stable"
+      },
+      "Danny Sandoval": {
+        "deal_score": 42.4,
+        "prob": 0.4516,
+        "cluster": "stable"
+      },
+      "Darwin Cubillan": {
+        "deal_score": 41.9,
+        "prob": 0.4423,
+        "cluster": "stable"
+      },
+      "Darwinzon Hernandez": {
+        "deal_score": 41.5,
+        "prob": 0.4021,
+        "cluster": "momentum"
+      },
+      "Dave Concepcion": {
+        "deal_score": 38.8,
+        "prob": 0.2875,
+        "cluster": "momentum"
+      },
+      "David Martinez": {
+        "deal_score": 41.3,
+        "prob": 0.7156,
+        "cluster": "momentum"
+      },
+      "David Peralta": {
+        "deal_score": 39.7,
+        "prob": 0.1618,
+        "cluster": "momentum"
+      },
+      "Deolis Guerra": {
+        "deal_score": 46.3,
+        "prob": 0.639,
+        "cluster": "stable"
+      },
+      "Deyna Castellanos": {
+        "deal_score": 45.9,
+        "prob": 0.5585,
+        "cluster": "momentum"
+      },
+      "Diego Castillo": {
+        "deal_score": 47.3,
+        "prob": 0.5484,
+        "cluster": "stable"
+      },
+      "Diego Moreno": {
+        "deal_score": 44.8,
+        "prob": 0.5237,
+        "cluster": "stable"
+      },
+      "Dilson Torres": {
+        "deal_score": 41.9,
+        "prob": 0.4549,
+        "cluster": "stable"
+      },
+      "Dioner Navarro": {
+        "deal_score": 48.7,
+        "prob": 0.5226,
+        "cluster": "stable"
+      },
+      "Dixon Machado": {
+        "deal_score": 40.1,
+        "prob": 0.3377,
+        "cluster": "stable"
+      },
+      "Donaldo Mendez": {
+        "deal_score": 49.1,
+        "prob": 0.5659,
+        "cluster": "stable"
+      },
+      "Eddie Perez": {
+        "deal_score": 33.3,
+        "prob": 0.3195,
+        "cluster": "momentum"
+      },
+      "Eddie Zambrano": {
+        "deal_score": 48.5,
+        "prob": 0.5957,
+        "cluster": "stable"
+      },
+      "Eddy Diaz": {
+        "deal_score": 43.3,
+        "prob": 0.4776,
+        "cluster": "stable"
+      },
+      "Edgar Caceres": {
+        "deal_score": 31.0,
+        "prob": 0.3252,
+        "cluster": "stable"
+      },
+      "Edgar Ibarra": {
+        "deal_score": 32.3,
+        "prob": 0.4388,
+        "cluster": "stable"
+      },
+      "Edgar Navarro": {
+        "deal_score": 41.1,
+        "prob": 0.3806,
+        "cluster": "stable"
+      },
+      "Edgar Ramos": {
+        "deal_score": 34.3,
+        "prob": 0.353,
+        "cluster": "stable"
+      },
+      "Edgardo Alfonzo": {
+        "deal_score": 41.0,
+        "prob": 0.412,
+        "cluster": "momentum"
+      },
+      "Edgardo Henriquez": {
+        "deal_score": 43.0,
+        "prob": 0.4091,
+        "cluster": "stable"
+      },
+      "Eduard Bazardo": {
+        "deal_score": 29.0,
+        "prob": 0.3583,
+        "cluster": "stable"
+      },
+      "Eduardo Escobar": {
+        "deal_score": 45.3,
+        "prob": 0.4526,
+        "cluster": "stable"
+      },
+      "Eduardo Jimenez": {
+        "deal_score": 41.4,
+        "prob": 0.4801,
+        "cluster": "stable"
+      },
+      "Eduardo Paredes": {
+        "deal_score": 30.5,
+        "prob": 0.3558,
+        "cluster": "stable"
+      },
+      "Eduardo Rodriguez": {
+        "deal_score": 36.7,
+        "prob": 0.2759,
+        "cluster": "momentum"
+      },
+      "Eduardo Salazar": {
+        "deal_score": 41.3,
+        "prob": 0.4454,
+        "cluster": "stable"
+      },
+      "Eduardo Sanchez": {
+        "deal_score": 46.2,
+        "prob": 0.5947,
+        "cluster": "stable"
+      },
+      "Eduardo Sosa": {
+        "deal_score": 29.3,
+        "prob": 0.3916,
+        "cluster": "stable"
+      },
+      "Eduardo Villacis": {
+        "deal_score": 40.2,
+        "prob": 0.4155,
+        "cluster": "stable"
+      },
+      "Edubray Ramos": {
+        "deal_score": 31.3,
+        "prob": 0.4912,
+        "cluster": "stable"
+      },
+      "Edwar Colina": {
+        "deal_score": 39.4,
+        "prob": 0.3713,
+        "cluster": "stable"
+      },
+      "Edward Mujica": {
+        "deal_score": 46.7,
+        "prob": 0.5806,
+        "cluster": "stable"
+      },
+      "Edward Olivares": {
+        "deal_score": 33.9,
+        "prob": 0.3178,
+        "cluster": "momentum"
+      },
+      "Edwin Bellorin": {
+        "deal_score": 41.5,
+        "prob": 0.4319,
+        "cluster": "stable"
+      },
+      "Edwin Escobar": {
+        "deal_score": 41.7,
+        "prob": 0.4504,
+        "cluster": "stable"
+      },
+      "Edwin Hurtado": {
+        "deal_score": 43.1,
+        "prob": 0.4659,
+        "cluster": "stable"
+      },
+      "Edwin Moreno": {
+        "deal_score": 41.0,
+        "prob": 0.3544,
+        "cluster": "stable"
+      },
+      "Ehire Adrianza": {
+        "deal_score": 42.9,
+        "prob": 0.5339,
+        "cluster": "momentum"
+      },
+      "Eiberson Castellano": {
+        "deal_score": 38.7,
+        "prob": 0.4913,
+        "cluster": "stable"
+      },
+      "Eider Torres": {
+        "deal_score": 42.7,
+        "prob": 0.4672,
+        "cluster": "stable"
+      },
+      "Elias Diaz": {
+        "deal_score": 40.1,
+        "prob": 0.3165,
+        "cluster": "momentum"
+      },
+      "Elieser Hernandez": {
+        "deal_score": 46.4,
+        "prob": 0.5956,
+        "cluster": "stable"
+      },
+      "Eliezer Alfonzo": {
+        "deal_score": 23.6,
+        "prob": 0.2974,
+        "cluster": "stable"
+      },
+      "Elio Chacon": {
+        "deal_score": 40.8,
+        "prob": 0.4731,
+        "cluster": "stable"
+      },
+      "Elvis Andrus": {
+        "deal_score": 43.3,
+        "prob": 0.425,
+        "cluster": "stable"
+      },
+      "Elvis Araujo": {
+        "deal_score": 42.6,
+        "prob": 0.4871,
+        "cluster": "stable"
+      },
+      "Emilio Renteria": {
+        "deal_score": 30.5,
+        "prob": 0.3432,
+        "cluster": "stable"
+      },
+      "Ender Echenique": {
+        "deal_score": 35.4,
+        "prob": 0.3601,
+        "cluster": "momentum"
+      },
+      "Ender Inciarte": {
+        "deal_score": 51.2,
+        "prob": 0.5427,
+        "cluster": "stable"
+      },
+      "Enderson Franco": {
+        "deal_score": 40.6,
+        "prob": 0.4213,
+        "cluster": "stable"
+      },
+      "Endy Chavez": {
+        "deal_score": 37.1,
+        "prob": 0.4234,
+        "cluster": "momentum"
+      },
+      "Enmanuel De Jesus": {
+        "deal_score": 42.5,
+        "prob": 0.4813,
+        "cluster": "stable"
+      },
+      "Enrique Gonzalez": {
+        "deal_score": 43.1,
+        "prob": 0.4385,
+        "cluster": "stable"
+      },
+      "Enzo Hernandez": {
+        "deal_score": 43.4,
+        "prob": 0.4678,
+        "cluster": "stable"
+      },
+      "Erick Castillo": {
+        "deal_score": 30.2,
+        "prob": 0.3591,
+        "cluster": "momentum"
+      },
+      "Ethan Salas": {
+        "deal_score": 44.0,
+        "prob": 0.3209,
+        "cluster": "stable"
+      },
+      "Eugenio Suarez": {
+        "deal_score": 38.1,
+        "prob": 0.3534,
+        "cluster": "stable"
+      },
+      "Everson Pereira": {
+        "deal_score": 50.8,
+        "prob": 0.4538,
+        "cluster": "momentum"
+      },
+      "Ezequiel Carrera": {
+        "deal_score": 43.4,
+        "prob": 0.4946,
+        "cluster": "stable"
+      },
+      "Ezequiel Tovar": {
+        "deal_score": 39.7,
+        "prob": 0.4886,
+        "cluster": "momentum"
+      },
+      "Felipe Lira": {
+        "deal_score": 44.9,
+        "prob": 0.5465,
+        "cluster": "stable"
+      },
+      "Felipe Vazquez": {
+        "deal_score": 48.2,
+        "prob": 0.5038,
+        "cluster": "momentum"
+      },
+      "Felix Doubront": {
+        "deal_score": 36.5,
+        "prob": 0.544,
+        "cluster": "momentum"
+      },
+      "Felix Escalona": {
+        "deal_score": 44.2,
+        "prob": 0.5634,
+        "cluster": "stable"
+      },
+      "Felix Hernandez": {
+        "deal_score": 34.0,
+        "prob": 0.5078,
+        "cluster": "momentum"
+      },
+      "Fernando Amorebieta": {
+        "deal_score": 22.5,
+        "prob": 0.3527,
+        "cluster": "momentum"
+      },
+      "Fernando Aristeguieta": {
+        "deal_score": 34.5,
+        "prob": 0.4361,
+        "cluster": "stable"
+      },
+      "Fernando Lunar": {
+        "deal_score": 42.7,
+        "prob": 0.4426,
+        "cluster": "stable"
+      },
+      "Fernando Nieve": {
+        "deal_score": 41.9,
+        "prob": 0.4455,
+        "cluster": "stable"
+      },
+      "Francisco Alvarez": {
+        "deal_score": 36.6,
+        "prob": 0.4089,
+        "cluster": "momentum"
+      },
+      "Francisco Arcia": {
+        "deal_score": 41.8,
+        "prob": 0.4137,
+        "cluster": "stable"
+      },
+      "Francisco Cervelli": {
+        "deal_score": 41.8,
+        "prob": 0.4379,
+        "cluster": "stable"
+      },
+      "Francisco Morales": {
+        "deal_score": 43.8,
+        "prob": 0.4368,
+        "cluster": "stable"
+      },
+      "Francisco Rodriguez": {
+        "deal_score": 32.9,
+        "prob": 0.4476,
+        "cluster": "momentum"
+      },
+      "Frank Mata": {
+        "deal_score": 43.1,
+        "prob": 0.4684,
+        "cluster": "stable"
+      },
+      "Franklin Barreto": {
+        "deal_score": 37.1,
+        "prob": 0.3546,
+        "cluster": "momentum"
+      },
+      "Franklin Gutierrez": {
+        "deal_score": 49.0,
+        "prob": 0.5916,
+        "cluster": "stable"
+      },
+      "Franklin Morales": {
+        "deal_score": 37.0,
+        "prob": 0.4967,
+        "cluster": "momentum"
+      },
+      "Fred Manrique": {
+        "deal_score": 40.4,
+        "prob": 0.4061,
+        "cluster": "stable"
+      },
+      "Freddy Fermin": {
+        "deal_score": 48.9,
+        "prob": 0.7852,
+        "cluster": "momentum"
+      },
+      "Freddy Galvis": {
+        "deal_score": 45.7,
+        "prob": 0.493,
+        "cluster": "stable"
+      },
+      "Freddy Garcia": {
+        "deal_score": 35.8,
+        "prob": 0.4751,
+        "cluster": "momentum"
+      },
+      "Gabriel Arias": {
+        "deal_score": 46.3,
+        "prob": 0.7115,
+        "cluster": "momentum"
+      },
+      "Gabriel Cichero": {
+        "deal_score": 15.5,
+        "prob": 0.2805,
+        "cluster": "momentum"
+      },
+      "Gabriel Gonzalez": {
+        "deal_score": 39.1,
+        "prob": 0.3033,
+        "cluster": "stable"
+      },
+      "Gabriel Moreno": {
+        "deal_score": 49.8,
+        "prob": 0.8403,
+        "cluster": "stable"
+      },
+      "Garbine Muguruza": {
+        "deal_score": 37.5,
+        "prob": 0.3464,
+        "cluster": "stable"
+      },
+      "Gerardo Parra": {
+        "deal_score": 46.8,
+        "prob": 0.6226,
+        "cluster": "momentum"
+      },
+      "Geremi Gonzalez": {
+        "deal_score": 43.6,
+        "prob": 0.4995,
+        "cluster": "stable"
+      },
+      "German Gonzalez": {
+        "deal_score": 40.0,
+        "prob": 0.4205,
+        "cluster": "stable"
+      },
+      "German Marquez": {
+        "deal_score": 41.6,
+        "prob": 0.4069,
+        "cluster": "stable"
+      },
+      "Giomar Guevara": {
+        "deal_score": 44.8,
+        "prob": 0.5634,
+        "cluster": "stable"
+      },
+      "Giovanni Carrara": {
+        "deal_score": 35.0,
+        "prob": 0.4324,
+        "cluster": "momentum"
+      },
+      "Gleyber Torres": {
+        "deal_score": 43.9,
+        "prob": 0.4816,
+        "cluster": "stable"
+      },
+      "Gonzalo Marquez": {
+        "deal_score": 40.4,
+        "prob": 0.3768,
+        "cluster": "stable"
+      },
+      "Gorkys Hernandez": {
+        "deal_score": 42.8,
+        "prob": 0.4507,
+        "cluster": "stable"
+      },
+      "Gregor Blanco": {
+        "deal_score": 53.4,
+        "prob": 0.7648,
+        "cluster": "stable"
+      },
+      "Gregorio Petit": {
+        "deal_score": 41.8,
+        "prob": 0.4128,
+        "cluster": "stable"
+      },
+      "Gregory Infante": {
+        "deal_score": 46.3,
+        "prob": 0.5603,
+        "cluster": "stable"
+      },
+      "Greivis Vasquez": {
+        "deal_score": 38.2,
+        "prob": 0.5335,
+        "cluster": "momentum"
+      },
+      "Guilder Rodriguez": {
+        "deal_score": 42.3,
+        "prob": 0.4413,
+        "cluster": "stable"
+      },
+      "Guillermo Moscoso": {
+        "deal_score": 42.0,
+        "prob": 0.4476,
+        "cluster": "stable"
+      },
+      "Guillermo Quiroz": {
+        "deal_score": 48.1,
+        "prob": 0.5148,
+        "cluster": "stable"
+      },
+      "Guillermo Rodriguez": {
+        "deal_score": 47.9,
+        "prob": 0.6205,
+        "cluster": "stable"
+      },
+      "Gus Gil": {
+        "deal_score": 40.1,
+        "prob": 0.403,
+        "cluster": "stable"
+      },
+      "Gus Polidor": {
+        "deal_score": 43.3,
+        "prob": 0.5013,
+        "cluster": "stable"
+      },
+      "Gustavo Caraballo": {
+        "deal_score": 43.2,
+        "prob": 0.4925,
+        "cluster": "stable"
+      },
+      "Gustavo Chacin": {
+        "deal_score": 40.6,
+        "prob": 0.5675,
+        "cluster": "momentum"
+      },
+      "Gustavo Molina": {
+        "deal_score": 42.9,
+        "prob": 0.4951,
+        "cluster": "stable"
+      },
+      "Harold Castro": {
+        "deal_score": 37.3,
+        "prob": 0.4915,
+        "cluster": "momentum"
+      },
+      "Harvey Garcia": {
+        "deal_score": 45.8,
+        "prob": 0.5723,
+        "cluster": "stable"
+      },
+      "Hector Gimenez": {
+        "deal_score": 42.9,
+        "prob": 0.4902,
+        "cluster": "stable"
+      },
+      "Hector Rondon": {
+        "deal_score": 46.8,
+        "prob": 0.5274,
+        "cluster": "stable"
+      },
+      "Hector Sanchez": {
+        "deal_score": 50.0,
+        "prob": 0.6771,
+        "cluster": "stable"
+      },
+      "Henderson Alvarez III": {
+        "deal_score": 43.5,
+        "prob": 0.4755,
+        "cluster": "stable"
+      },
+      "Henry Blanco": {
+        "deal_score": 28.8,
+        "prob": 0.2416,
+        "cluster": "momentum"
+      },
+      "Henry Rodriguez": {
+        "deal_score": 47.4,
+        "prob": 0.6068,
+        "cluster": "stable"
+      },
+      "Hernan Iribarren": {
+        "deal_score": 43.3,
+        "prob": 0.4806,
+        "cluster": "stable"
+      },
+      "Hernan Perez": {
+        "deal_score": 44.6,
+        "prob": 0.501,
+        "cluster": "stable"
+      },
+      "Horacio Estrada": {
+        "deal_score": 43.7,
+        "prob": 0.5059,
+        "cluster": "stable"
+      },
+      "Humberto Arteaga": {
+        "deal_score": 27.3,
+        "prob": 0.4363,
+        "cluster": "momentum"
+      },
+      "Humberto Quintero": {
+        "deal_score": 45.6,
+        "prob": 0.5443,
+        "cluster": "stable"
+      },
+      "Ildemaro Vargas": {
+        "deal_score": 34.1,
+        "prob": 0.1771,
+        "cluster": "momentum"
+      },
+      "Israel Pineda": {
+        "deal_score": 46.9,
+        "prob": 0.517,
+        "cluster": "stable"
+      },
+      "Ivan Ochoa": {
+        "deal_score": 42.6,
+        "prob": 0.492,
+        "cluster": "stable"
+      },
+      "J.C. Boscan": {
+        "deal_score": 29.0,
+        "prob": 0.3198,
+        "cluster": "stable"
+      },
+      "J.J. D'Orazio": {
+        "deal_score": 31.2,
+        "prob": 0.4558,
+        "cluster": "stable"
+      },
+      "Jackson Chourio": {
+        "deal_score": 39.9,
+        "prob": 0.4661,
+        "cluster": "momentum"
+      },
+      "Jairo Diaz": {
+        "deal_score": 46.7,
+        "prob": 0.5953,
+        "cluster": "stable"
+      },
+      "Jairo Iriarte": {
+        "deal_score": 38.6,
+        "prob": 0.3708,
+        "cluster": "momentum"
+      },
+      "Javier Sanoja": {
+        "deal_score": 35.5,
+        "prob": 0.5893,
+        "cluster": "momentum"
+      },
+      "Jean Machi": {
+        "deal_score": 42.4,
+        "prob": 0.4664,
+        "cluster": "stable"
+      },
+      "Jeanmar Gomez": {
+        "deal_score": 36.6,
+        "prob": 0.4019,
+        "cluster": "momentum"
+      },
+      "Jedixson Paez": {
+        "deal_score": 34.1,
+        "prob": 0.0718,
+        "cluster": "momentum"
+      },
+      "Jeferson Quero": {
+        "deal_score": 35.6,
+        "prob": 0.3646,
+        "cluster": "momentum"
+      },
+      "Jefferson Savarino": {
+        "deal_score": 35.9,
+        "prob": 0.3082,
+        "cluster": "momentum"
+      },
+      "Jeffren Suarez": {
+        "deal_score": 25.3,
+        "prob": 0.3221,
+        "cluster": "stable"
+      },
+      "Jermaine Palacios": {
+        "deal_score": 41.3,
+        "prob": 0.4312,
+        "cluster": "stable"
+      },
+      "Jesus Aguilar": {
+        "deal_score": 36.0,
+        "prob": 0.3107,
+        "cluster": "momentum"
+      },
+      "Jesus Bueno": {
+        "deal_score": 25.2,
+        "prob": 0.28,
+        "cluster": "stable"
+      },
+      "Jesus Castellano": {
+        "deal_score": 23.2,
+        "prob": 0.207,
+        "cluster": "momentum"
+      },
+      "Jesus Delgado": {
+        "deal_score": 41.3,
+        "prob": 0.4526,
+        "cluster": "stable"
+      },
+      "Jesus Flores": {
+        "deal_score": 41.8,
+        "prob": 0.433,
+        "cluster": "stable"
+      },
+      "Jesus Guzman": {
+        "deal_score": 45.6,
+        "prob": 0.5627,
+        "cluster": "stable"
+      },
+      "Jesus Luzardo": {
+        "deal_score": 37.5,
+        "prob": 0.6201,
+        "cluster": "momentum"
+      },
+      "Jesus Montero": {
+        "deal_score": 32.9,
+        "prob": 0.3164,
+        "cluster": "momentum"
+      },
+      "Jesus Rodriguez": {
+        "deal_score": 48.6,
+        "prob": 0.6529,
+        "cluster": "momentum"
+      },
+      "Jesus Sucre": {
+        "deal_score": 47.3,
+        "prob": 0.6069,
+        "cluster": "stable"
+      },
+      "Jesus Tinoco": {
+        "deal_score": 41.6,
+        "prob": 0.426,
+        "cluster": "stable"
+      },
+      "Jhonathan Diaz": {
+        "deal_score": 43.5,
+        "prob": 0.4957,
+        "cluster": "stable"
+      },
+      "Jhonny Pereda": {
+        "deal_score": 45.7,
+        "prob": 0.6252,
+        "cluster": "stable"
+      },
+      "Jhostynxon Garcia": {
+        "deal_score": 37.6,
+        "prob": 0.1266,
+        "cluster": "momentum"
+      },
+      "Jhoulys Chacin": {
+        "deal_score": 47.8,
+        "prob": 0.5171,
+        "cluster": "stable"
+      },
+      "Joe Ortiz": {
+        "deal_score": 44.2,
+        "prob": 0.6601,
+        "cluster": "momentum"
+      },
+      "Johan Santana": {
+        "deal_score": 48.7,
+        "prob": 0.602,
+        "cluster": "momentum"
+      },
+      "Johnny Paredes": {
+        "deal_score": 39.4,
+        "prob": 0.3883,
+        "cluster": "stable"
+      },
+      "Jon Aramburu": {
+        "deal_score": 31.5,
+        "prob": 0.5295,
+        "cluster": "momentum"
+      },
+      "Jonathan Herrera": {
+        "deal_score": 47.5,
+        "prob": 0.5545,
+        "cluster": "stable"
+      },
+      "Jorbit Vivas": {
+        "deal_score": 50.8,
+        "prob": 0.5482,
+        "cluster": "stable"
+      },
+      "Jorge Barrosa": {
+        "deal_score": 37.9,
+        "prob": 0.5108,
+        "cluster": "momentum"
+      },
+      "Jorge Gomez": {
+        "deal_score": 25.7,
+        "prob": 0.3358,
+        "cluster": "stable"
+      },
+      "Jorge Julio": {
+        "deal_score": 52.3,
+        "prob": 0.7456,
+        "cluster": "stable"
+      },
+      "Jorge Rondon": {
+        "deal_score": 29.6,
+        "prob": 0.3931,
+        "cluster": "stable"
+      },
+      "Jorge Velandia": {
+        "deal_score": 43.9,
+        "prob": 0.487,
+        "cluster": "stable"
+      },
+      "Jose Altuve": {
+        "deal_score": 40.9,
+        "prob": 0.4383,
+        "cluster": "stable"
+      },
+      "Jose Alvarado": {
+        "deal_score": 41.9,
+        "prob": 0.2747,
+        "cluster": "momentum"
+      },
+      "Jose Alvarez": {
+        "deal_score": 26.9,
+        "prob": 0.348,
+        "cluster": "stable"
+      },
+      "Jose Andres Martinez": {
+        "deal_score": 30.6,
+        "prob": 0.2605,
+        "cluster": "momentum"
+      },
+      "Jose Azocar": {
+        "deal_score": 43.9,
+        "prob": 0.4097,
+        "cluster": "stable"
+      },
+      "Jose Briceno": {
+        "deal_score": 42.8,
+        "prob": 0.5676,
+        "cluster": "momentum"
+      },
+      "Jose Butto": {
+        "deal_score": 42.5,
+        "prob": 0.651,
+        "cluster": "momentum"
+      },
+      "Jose Campos": {
+        "deal_score": 49.3,
+        "prob": 0.6991,
+        "cluster": "stable"
+      },
+      "Jose Castillo": {
+        "deal_score": 42.9,
+        "prob": 0.4628,
+        "cluster": "momentum"
+      },
+      "Jose Escobar": {
+        "deal_score": 41.5,
+        "prob": 0.4419,
+        "cluster": "stable"
+      },
+      "Jose Fernandez": {
+        "deal_score": 43.2,
+        "prob": 0.4494,
+        "cluster": "stable"
+      },
+      "Jose Franco": {
+        "deal_score": 25.8,
+        "prob": 0.0129,
+        "cluster": "volatile"
+      },
+      "Jose Godoy": {
+        "deal_score": 42.1,
+        "prob": 0.4473,
+        "cluster": "stable"
+      },
+      "Jose Herrera": {
+        "deal_score": 40.1,
+        "prob": 0.4185,
+        "cluster": "stable"
+      },
+      "Jose Lobaton": {
+        "deal_score": 43.7,
+        "prob": 0.5085,
+        "cluster": "stable"
+      },
+      "Jose Lopez": {
+        "deal_score": 35.1,
+        "prob": 0.3114,
+        "cluster": "momentum"
+      },
+      "Jose Malave": {
+        "deal_score": 40.2,
+        "prob": 0.3946,
+        "cluster": "stable"
+      },
+      "Jose Martinez": {
+        "deal_score": 43.6,
+        "prob": 0.4939,
+        "cluster": "stable"
+      },
+      "Jose Mijares": {
+        "deal_score": 42.4,
+        "prob": 0.4499,
+        "cluster": "stable"
+      },
+      "Jose Mujica": {
+        "deal_score": 40.9,
+        "prob": 0.4504,
+        "cluster": "stable"
+      },
+      "Jose Nieves": {
+        "deal_score": 45.8,
+        "prob": 0.522,
+        "cluster": "stable"
+      },
+      "Jose Ortega": {
+        "deal_score": 38.3,
+        "prob": 0.4174,
+        "cluster": "stable"
+      },
+      "Jose Osuna": {
+        "deal_score": 41.0,
+        "prob": 0.5787,
+        "cluster": "momentum"
+      },
+      "Jose Peraza": {
+        "deal_score": 43.0,
+        "prob": 0.3674,
+        "cluster": "stable"
+      },
+      "Jose Pirela": {
+        "deal_score": 40.0,
+        "prob": 0.4541,
+        "cluster": "momentum"
+      },
+      "Jose Rodriguez": {
+        "deal_score": 39.1,
+        "prob": 0.4844,
+        "cluster": "momentum"
+      },
+      "Jose Rondon": {
+        "deal_score": 45.8,
+        "prob": 0.5528,
+        "cluster": "stable"
+      },
+      "Jose Ruiz": {
+        "deal_score": 44.2,
+        "prob": 0.5203,
+        "cluster": "stable"
+      },
+      "Jose Suarez": {
+        "deal_score": 43.5,
+        "prob": 0.4569,
+        "cluster": "stable"
+      },
+      "Jose Tabata": {
+        "deal_score": 37.7,
+        "prob": 0.5243,
+        "cluster": "momentum"
+      },
+      "Jose Torres": {
+        "deal_score": 42.0,
+        "prob": 0.4499,
+        "cluster": "stable"
+      },
+      "Josef Martinez": {
+        "deal_score": 34.4,
+        "prob": 0.3271,
+        "cluster": "momentum"
+      },
+      "Josh Barfield": {
+        "deal_score": 41.2,
+        "prob": 0.3813,
+        "cluster": "stable"
+      },
+      "Josmil Pinto": {
+        "deal_score": 42.2,
+        "prob": 0.4573,
+        "cluster": "stable"
+      },
+      "Juan Arango": {
+        "deal_score": 31.3,
+        "prob": 0.3089,
+        "cluster": "stable"
+      },
+      "Juan Castillo": {
+        "deal_score": 44.5,
+        "prob": 0.498,
+        "cluster": "stable"
+      },
+      "Juan Graterol": {
+        "deal_score": 40.3,
+        "prob": 0.4168,
+        "cluster": "stable"
+      },
+      "Juan Moreno": {
+        "deal_score": 42.1,
+        "prob": 0.46,
+        "cluster": "stable"
+      },
+      "Juan Morillo": {
+        "deal_score": 31.2,
+        "prob": 0.2686,
+        "cluster": "momentum"
+      },
+      "Juan Rincon": {
+        "deal_score": 44.0,
+        "prob": 0.4561,
+        "cluster": "stable"
+      },
+      "Juan Rivera": {
+        "deal_score": 41.8,
+        "prob": 0.361,
+        "cluster": "stable"
+      },
+      "Juan Yepez": {
+        "deal_score": 39.9,
+        "prob": 0.3244,
+        "cluster": "stable"
+      },
+      "Julio Machado": {
+        "deal_score": 41.2,
+        "prob": 0.3985,
+        "cluster": "stable"
+      },
+      "Juniel Querecuto": {
+        "deal_score": 39.6,
+        "prob": 0.4147,
+        "cluster": "stable"
+      },
+      "Junior Guerra": {
+        "deal_score": 47.4,
+        "prob": 0.5232,
+        "cluster": "stable"
+      },
+      "Junior Moreno": {
+        "deal_score": 43.3,
+        "prob": 0.4465,
+        "cluster": "stable"
+      },
+      "Keibert Ruiz": {
+        "deal_score": 36.8,
+        "prob": 0.1929,
+        "cluster": "momentum"
+      },
+      "Keider Montero": {
+        "deal_score": 37.1,
+        "prob": 0.3966,
+        "cluster": "momentum"
+      },
+      "Kelvim Escobar": {
+        "deal_score": 47.5,
+        "prob": 0.5756,
+        "cluster": "stable"
+      },
+      "Kenedy Corona": {
+        "deal_score": 41.0,
+        "prob": 0.5603,
+        "cluster": "momentum"
+      },
+      "Kennedy Corona": {
+        "deal_score": 42.1,
+        "prob": 0.4115,
+        "cluster": "momentum"
+      },
+      "Kervin Castro": {
+        "deal_score": 43.0,
+        "prob": 0.4754,
+        "cluster": "stable"
+      },
+      "Kevin Kelsy": {
+        "deal_score": 37.3,
+        "prob": 0.261,
+        "cluster": "momentum"
+      },
+      "Lenyn Sosa": {
+        "deal_score": 64.2,
+        "prob": 0.767,
+        "cluster": "momentum"
+      },
+      "Leo Hernandez": {
+        "deal_score": 41.3,
+        "prob": 0.4181,
+        "cluster": "stable"
+      },
+      "Leo Rivas": {
+        "deal_score": 34.2,
+        "prob": 0.476,
+        "cluster": "momentum"
+      },
+      "Leonel Campos": {
+        "deal_score": 42.7,
+        "prob": 0.4226,
+        "cluster": "stable"
+      },
+      "Les Straker": {
+        "deal_score": 40.7,
+        "prob": 0.385,
+        "cluster": "stable"
+      },
+      "Lester Oliveros": {
+        "deal_score": 33.0,
+        "prob": 0.4572,
+        "cluster": "stable"
+      },
+      "Lino Urdaneta": {
+        "deal_score": 30.1,
+        "prob": 0.3689,
+        "cluster": "stable"
+      },
+      "Liu Rodriguez": {
+        "deal_score": 40.8,
+        "prob": 0.4463,
+        "cluster": "stable"
+      },
+      "Livan Soto": {
+        "deal_score": 34.2,
+        "prob": 0.4403,
+        "cluster": "momentum"
+      },
+      "Luarbert Arias": {
+        "deal_score": 33.8,
+        "prob": 0.379,
+        "cluster": "momentum"
+      },
+      "Luinder Avila": {
+        "deal_score": 39.9,
+        "prob": 0.5712,
+        "cluster": "momentum"
+      },
+      "Luis Alexander Basabe": {
+        "deal_score": 39.5,
+        "prob": 0.3038,
+        "cluster": "stable"
+      },
+      "Luis Aparicio": {
+        "deal_score": 45.0,
+        "prob": 0.6345,
+        "cluster": "stable"
+      },
+      "Luis Aponte": {
+        "deal_score": 41.4,
+        "prob": 0.4036,
+        "cluster": "stable"
+      },
+      "Luis Arraez": {
+        "deal_score": 33.5,
+        "prob": 0.3677,
+        "cluster": "momentum"
+      },
+      "Luis Avilan": {
+        "deal_score": 41.5,
+        "prob": 0.5397,
+        "cluster": "momentum"
+      },
+      "Luis Balbo": {
+        "deal_score": 27.7,
+        "prob": 0.3215,
+        "cluster": "stable"
+      },
+      "Luis Contreras": {
+        "deal_score": 39.6,
+        "prob": 0.5875,
+        "cluster": "momentum"
+      },
+      "Luis Curvelo": {
+        "deal_score": 33.0,
+        "prob": 0.2915,
+        "cluster": "momentum"
+      },
+      "Luis Garcia": {
+        "deal_score": 39.5,
+        "prob": 0.7318,
+        "cluster": "momentum"
+      },
+      "Luis Guillorme": {
+        "deal_score": 45.5,
+        "prob": 0.5474,
+        "cluster": "momentum"
+      },
+      "Luis Hernandez": {
+        "deal_score": 49.1,
+        "prob": 0.5179,
+        "cluster": "momentum"
+      },
+      "Luis Jimenez": {
+        "deal_score": 42.3,
+        "prob": 0.4134,
+        "cluster": "stable"
+      },
+      "Luis Lara": {
+        "deal_score": 43.3,
+        "prob": 0.6349,
+        "cluster": "momentum"
+      },
+      "Luis Leal": {
+        "deal_score": 42.6,
+        "prob": 0.4611,
+        "cluster": "stable"
+      },
+      "Luis Matos": {
+        "deal_score": 50.8,
+        "prob": 0.6108,
+        "cluster": "momentum"
+      },
+      "Luis Maza": {
+        "deal_score": 44.1,
+        "prob": 0.458,
+        "cluster": "stable"
+      },
+      "Luis Ordaz": {
+        "deal_score": 42.4,
+        "prob": 0.4284,
+        "cluster": "stable"
+      },
+      "Luis Oviedo": {
+        "deal_score": 41.4,
+        "prob": 0.4508,
+        "cluster": "stable"
+      },
+      "Luis Perales": {
+        "deal_score": 44.6,
+        "prob": 0.3732,
+        "cluster": "stable"
+      },
+      "Luis Rengifo": {
+        "deal_score": 38.0,
+        "prob": 0.2068,
+        "cluster": "momentum"
+      },
+      "Luis Rivas": {
+        "deal_score": 50.2,
+        "prob": 0.8064,
+        "cluster": "momentum"
+      },
+      "Luis Rodriguez": {
+        "deal_score": 41.3,
+        "prob": 0.3848,
+        "cluster": "stable"
+      },
+      "Luis Salazar": {
+        "deal_score": 38.5,
+        "prob": 0.3169,
+        "cluster": "stable"
+      },
+      "Luis Sanchez": {
+        "deal_score": 41.4,
+        "prob": 0.4594,
+        "cluster": "stable"
+      },
+      "Luis Sardinas": {
+        "deal_score": 52.0,
+        "prob": 0.7325,
+        "cluster": "stable"
+      },
+      "Luis Sojo": {
+        "deal_score": 38.9,
+        "prob": 0.3574,
+        "cluster": "stable"
+      },
+      "Luis Torrens": {
+        "deal_score": 42.6,
+        "prob": 0.3799,
+        "cluster": "stable"
+      },
+      "Luis Ugueto": {
+        "deal_score": 45.5,
+        "prob": 0.5456,
+        "cluster": "stable"
+      },
+      "Luis Valbuena": {
+        "deal_score": 49.0,
+        "prob": 0.6278,
+        "cluster": "stable"
+      },
+      "Luisangel Acuna": {
+        "deal_score": 33.5,
+        "prob": 0.3267,
+        "cluster": "momentum"
+      },
+      "Magglio Ordonez": {
+        "deal_score": 41.0,
+        "prob": 0.5499,
+        "cluster": "momentum"
+      },
+      "Maicer Izturis": {
+        "deal_score": 47.5,
+        "prob": 0.5883,
+        "cluster": "stable"
+      },
+      "Maikel Garcia": {
+        "deal_score": 45.8,
+        "prob": 0.6427,
+        "cluster": "stable"
+      },
+      "Manny Pina": {
+        "deal_score": 44.8,
+        "prob": 0.5223,
+        "cluster": "stable"
+      },
+      "Manny Sarmiento": {
+        "deal_score": 41.5,
+        "prob": 0.4272,
+        "cluster": "stable"
+      },
+      "Manny Trillo": {
+        "deal_score": 46.0,
+        "prob": 0.4378,
+        "cluster": "stable"
+      },
+      "Manuel Arteaga": {
+        "deal_score": 36.1,
+        "prob": 0.3852,
+        "cluster": "stable"
+      },
+      "Marco Scutaro": {
+        "deal_score": 44.8,
+        "prob": 0.5009,
+        "cluster": "momentum"
+      },
+      "Marcos Armas": {
+        "deal_score": 42.1,
+        "prob": 0.4431,
+        "cluster": "stable"
+      },
+      "Marcos Carvajal": {
+        "deal_score": 41.4,
+        "prob": 0.4413,
+        "cluster": "stable"
+      },
+      "Martin Perez": {
+        "deal_score": 47.9,
+        "prob": 0.5873,
+        "cluster": "stable"
+      },
+      "Martin Prado": {
+        "deal_score": 43.1,
+        "prob": 0.4454,
+        "cluster": "stable"
+      },
+      "Marwin Gonzalez": {
+        "deal_score": 48.0,
+        "prob": 0.701,
+        "cluster": "momentum"
+      },
+      "Mauricio Llovera": {
+        "deal_score": 44.5,
+        "prob": 0.4862,
+        "cluster": "stable"
+      },
+      "Mauricio Robles": {
+        "deal_score": 39.5,
+        "prob": 0.3966,
+        "cluster": "stable"
+      },
+      "Mauro Zarate": {
+        "deal_score": 30.1,
+        "prob": 0.3696,
+        "cluster": "stable"
+      },
+      "Max Castillo": {
+        "deal_score": 39.5,
+        "prob": 0.3849,
+        "cluster": "stable"
+      },
+      "Max Ramirez": {
+        "deal_score": 36.7,
+        "prob": 0.3369,
+        "cluster": "momentum"
+      },
+      "Maximo Acosta": {
+        "deal_score": 47.8,
+        "prob": 0.6151,
+        "cluster": "momentum"
+      },
+      "Mayckol Guaipe": {
+        "deal_score": 43.7,
+        "prob": 0.9058,
+        "cluster": "stable"
+      },
+      "Melvin Dorta": {
+        "deal_score": 32.7,
+        "prob": 0.3576,
+        "cluster": "momentum"
+      },
+      "Melvin Mora": {
+        "deal_score": 36.2,
+        "prob": 0.4468,
+        "cluster": "momentum"
+      },
+      "Miguel Cabrera": {
+        "deal_score": 42.5,
+        "prob": 0.6857,
+        "cluster": "momentum"
+      },
+      "Miguel Cairo": {
+        "deal_score": 43.2,
+        "prob": 0.4284,
+        "cluster": "stable"
+      },
+      "Miguel Garcia": {
+        "deal_score": 41.9,
+        "prob": 0.4242,
+        "cluster": "stable"
+      },
+      "Miguel Gonzalez": {
+        "deal_score": 34.3,
+        "prob": 0.3611,
+        "cluster": "momentum"
+      },
+      "Miguel Montero": {
+        "deal_score": 57.0,
+        "prob": 0.8078,
+        "cluster": "stable"
+      },
+      "Miguel Navarro": {
+        "deal_score": 29.1,
+        "prob": 0.464,
+        "cluster": "momentum"
+      },
+      "Miguel Perez": {
+        "deal_score": 41.1,
+        "prob": 0.424,
+        "cluster": "stable"
+      },
+      "Miguel Rojas": {
+        "deal_score": 46.1,
+        "prob": 0.6958,
+        "cluster": "stable"
+      },
+      "Miguel Silva": {
+        "deal_score": 35.5,
+        "prob": 0.4259,
+        "cluster": "stable"
+      },
+      "Miguel Socolovich": {
+        "deal_score": 31.3,
+        "prob": 0.4243,
+        "cluster": "stable"
+      },
+      "Miguel Yajure": {
+        "deal_score": 39.7,
+        "prob": 0.5657,
+        "cluster": "momentum"
+      },
+      "Miku Fedor": {
+        "deal_score": 29.0,
+        "prob": 0.3835,
+        "cluster": "stable"
+      },
+      "Moises Ballesteros": {
+        "deal_score": 38.0,
+        "prob": 0.4823,
+        "cluster": "momentum"
+      },
+      "Nahuel Ferraresi": {
+        "deal_score": 33.9,
+        "prob": 0.3578,
+        "cluster": "stable"
+      },
+      "Niuman Romero": {
+        "deal_score": 33.7,
+        "prob": 0.458,
+        "cluster": "stable"
+      },
+      "Nivaldo Rodriguez": {
+        "deal_score": 42.3,
+        "prob": 0.468,
+        "cluster": "stable"
+      },
+      "Odubel Herrera": {
+        "deal_score": 51.2,
+        "prob": 0.6101,
+        "cluster": "stable"
+      },
+      "Omar Daal": {
+        "deal_score": 38.3,
+        "prob": 0.4258,
+        "cluster": "momentum"
+      },
+      "Omar Infante": {
+        "deal_score": 54.9,
+        "prob": 0.7305,
+        "cluster": "stable"
+      },
+      "Omar Martinez": {
+        "deal_score": 41.3,
+        "prob": 0.4072,
+        "cluster": "stable"
+      },
+      "Omar Narvaez": {
+        "deal_score": 43.0,
+        "prob": 0.4626,
+        "cluster": "stable"
+      },
+      "Omar Vizquel": {
+        "deal_score": 37.7,
+        "prob": 0.2316,
+        "cluster": "momentum"
+      },
+      "Orber Moreno": {
+        "deal_score": 44.9,
+        "prob": 0.5462,
+        "cluster": "stable"
+      },
+      "Orlando Arcia": {
+        "deal_score": 39.0,
+        "prob": 0.2355,
+        "cluster": "momentum"
+      },
+      "Oscar Azocar": {
+        "deal_score": 40.6,
+        "prob": 0.3906,
+        "cluster": "stable"
+      },
+      "Oscar Henriquez": {
+        "deal_score": 48.4,
+        "prob": 0.5974,
+        "cluster": "stable"
+      },
+      "Oscar Hernandez": {
+        "deal_score": 32.1,
+        "prob": 0.3791,
+        "cluster": "stable"
+      },
+      "Oscar Salazar": {
+        "deal_score": 44.8,
+        "prob": 0.5046,
+        "cluster": "stable"
+      },
+      "Osleivis Basabe": {
+        "deal_score": 36.3,
+        "prob": 0.3426,
+        "cluster": "momentum"
+      },
+      "Osmer Morales": {
+        "deal_score": 30.5,
+        "prob": 0.4147,
+        "cluster": "stable"
+      },
+      "Ossie Blanco": {
+        "deal_score": 25.8,
+        "prob": 0.3373,
+        "cluster": "stable"
+      },
+      "Oswald Peraza": {
+        "deal_score": 50.7,
+        "prob": 0.8245,
+        "cluster": "momentum"
+      },
+      "Oswaldo Arcia": {
+        "deal_score": 48.2,
+        "prob": 0.6861,
+        "cluster": "stable"
+      },
+      "Oswaldo Cabrera": {
+        "deal_score": 32.3,
+        "prob": 0.067,
+        "cluster": "momentum"
+      },
+      "Oswaldo Navarro": {
+        "deal_score": 42.6,
+        "prob": 0.4598,
+        "cluster": "stable"
+      },
+      "Oswaldo Peraza": {
+        "deal_score": 43.7,
+        "prob": 0.5091,
+        "cluster": "stable"
+      },
+      "Oswaldo Vizcarrondo": {
+        "deal_score": 26.2,
+        "prob": 0.3473,
+        "cluster": "stable"
+      },
+      "Ozzie Guillen": {
+        "deal_score": 42.5,
+        "prob": 0.6364,
+        "cluster": "momentum"
+      },
+      "Pablo Lopez": {
+        "deal_score": 33.5,
+        "prob": 0.3791,
+        "cluster": "momentum"
+      },
+      "Pablo Sandoval": {
+        "deal_score": 38.3,
+        "prob": 0.2714,
+        "cluster": "stable"
+      },
+      "Pablo Torrealba": {
+        "deal_score": 40.2,
+        "prob": 0.4058,
+        "cluster": "stable"
+      },
+      "Pedro Avila": {
+        "deal_score": 38.5,
+        "prob": 0.6031,
+        "cluster": "momentum"
+      },
+      "Pedro Castellano": {
+        "deal_score": 40.8,
+        "prob": 0.4252,
+        "cluster": "stable"
+      },
+      "Pedro Hernandez": {
+        "deal_score": 43.1,
+        "prob": 0.4667,
+        "cluster": "stable"
+      },
+      "Pedro Pages": {
+        "deal_score": 33.6,
+        "prob": 0.3677,
+        "cluster": "momentum"
+      },
+      "Pompeyo Davalillo": {
+        "deal_score": 26.0,
+        "prob": 0.2834,
+        "cluster": "stable"
+      },
+      "Rafael Betancourt": {
+        "deal_score": 46.9,
+        "prob": 0.5339,
+        "cluster": "stable"
+      },
+      "Rafael Marchan": {
+        "deal_score": 42.4,
+        "prob": 0.5136,
+        "cluster": "momentum"
+      },
+      "Rafael Ortega": {
+        "deal_score": 46.5,
+        "prob": 0.6198,
+        "cluster": "stable"
+      },
+      "Rafael Romo": {
+        "deal_score": 42.2,
+        "prob": 0.4326,
+        "cluster": "stable"
+      },
+      "Ramon Cabrera": {
+        "deal_score": 43.2,
+        "prob": 0.4612,
+        "cluster": "stable"
+      },
+      "Ramon Castro": {
+        "deal_score": 50.8,
+        "prob": 0.7538,
+        "cluster": "stable"
+      },
+      "Ramon Flores": {
+        "deal_score": 40.0,
+        "prob": 0.4187,
+        "cluster": "stable"
+      },
+      "Ramon Garcia": {
+        "deal_score": 45.5,
+        "prob": 0.5407,
+        "cluster": "stable"
+      },
+      "Ramon Hernandez": {
+        "deal_score": 39.4,
+        "prob": 0.3153,
+        "cluster": "stable"
+      },
+      "Ramon Ramirez": {
+        "deal_score": 35.7,
+        "prob": 0.4643,
+        "cluster": "momentum"
+      },
+      "Ranger Suarez": {
+        "deal_score": 45.2,
+        "prob": 0.2941,
+        "cluster": "momentum"
+      },
+      "Raul Chavez": {
+        "deal_score": 40.4,
+        "prob": 0.4107,
+        "cluster": "stable"
+      },
+      "Ray Monzant": {
+        "deal_score": 40.4,
+        "prob": 0.4268,
+        "cluster": "stable"
+      },
+      "Ray Olmedo": {
+        "deal_score": 36.6,
+        "prob": 0.394,
+        "cluster": "stable"
+      },
+      "Remy Hermoso": {
+        "deal_score": 28.9,
+        "prob": 0.3682,
+        "cluster": "stable"
+      },
+      "Renato Nunez": {
+        "deal_score": 42.9,
+        "prob": 0.4751,
+        "cluster": "stable"
+      },
+      "Rene Pinto": {
+        "deal_score": 43.6,
+        "prob": 0.4684,
+        "cluster": "stable"
+      },
+      "Rene Reyes": {
+        "deal_score": 45.7,
+        "prob": 0.5614,
+        "cluster": "stable"
+      },
+      "Renyel Pinto": {
+        "deal_score": 44.7,
+        "prob": 0.524,
+        "cluster": "stable"
+      },
+      "Ricardo Pinto": {
+        "deal_score": 45.2,
+        "prob": 0.5366,
+        "cluster": "stable"
+      },
+      "Ricardo Rodriguez": {
+        "deal_score": 47.7,
+        "prob": 0.4761,
+        "cluster": "stable"
+      },
+      "Ricardo Sanchez": {
+        "deal_score": 43.1,
+        "prob": 0.4995,
+        "cluster": "stable"
+      },
+      "Rich Garces": {
+        "deal_score": 39.6,
+        "prob": 0.4472,
+        "cluster": "stable"
+      },
+      "Richard Hidalgo": {
+        "deal_score": 38.3,
+        "prob": 0.3966,
+        "cluster": "stable"
+      },
+      "Robert Machado": {
+        "deal_score": 42.4,
+        "prob": 0.4101,
+        "cluster": "stable"
+      },
+      "Robert Perez Jr.": {
+        "deal_score": 30.5,
+        "prob": 0.2607,
+        "cluster": "momentum"
+      },
+      "Robert Suarez": {
+        "deal_score": 35.9,
+        "prob": 0.3371,
+        "cluster": "momentum"
+      },
+      "Roberto Petagine": {
+        "deal_score": 48.7,
+        "prob": 0.6665,
+        "cluster": "stable"
+      },
+      "Roberto Rodriguez": {
+        "deal_score": 39.9,
+        "prob": 0.4005,
+        "cluster": "stable"
+      },
+      "Roberto Rosales": {
+        "deal_score": 31.1,
+        "prob": 0.3416,
+        "cluster": "stable"
+      },
+      "Robinson Chirinos": {
+        "deal_score": 47.0,
+        "prob": 0.5953,
+        "cluster": "stable"
+      },
+      "Roger Cedeno": {
+        "deal_score": 41.4,
+        "prob": 0.4559,
+        "cluster": "stable"
+      },
+      "Rolf Feltscher": {
+        "deal_score": 29.3,
+        "prob": 0.3889,
+        "cluster": "stable"
+      },
+      "Romulo Sanchez": {
+        "deal_score": 18.5,
+        "prob": 0.2661,
+        "cluster": "momentum"
+      },
+      "Ronald Acuna Jr.": {
+        "deal_score": 37.3,
+        "prob": 0.5007,
+        "cluster": "momentum"
+      },
+      "Ronald Belisario": {
+        "deal_score": 45.8,
+        "prob": 0.5582,
+        "cluster": "stable"
+      },
+      "Ronald Hernandez": {
+        "deal_score": 32.2,
+        "prob": 0.3714,
+        "cluster": "stable"
+      },
+      "Ronald Herrera": {
+        "deal_score": 45.7,
+        "prob": 0.5145,
+        "cluster": "stable"
+      },
+      "Ronald Torreyes": {
+        "deal_score": 42.5,
+        "prob": 0.4404,
+        "cluster": "stable"
+      },
+      "Ronaldo Pena": {
+        "deal_score": 35.7,
+        "prob": 0.4112,
+        "cluster": "stable"
+      },
+      "Ronny Cedeno": {
+        "deal_score": 45.4,
+        "prob": 0.4613,
+        "cluster": "stable"
+      },
+      "Rosman Garcia": {
+        "deal_score": 45.6,
+        "prob": 0.5243,
+        "cluster": "stable"
+      },
+      "Rougned Odor": {
+        "deal_score": 52.5,
+        "prob": 0.6259,
+        "cluster": "stable"
+      },
+      "Ruben Quevedo": {
+        "deal_score": 45.3,
+        "prob": 0.5493,
+        "cluster": "stable"
+      },
+      "Salvador Perez": {
+        "deal_score": 48.8,
+        "prob": 0.6695,
+        "cluster": "momentum"
+      },
+      "Sandy Leon": {
+        "deal_score": 41.6,
+        "prob": 0.3179,
+        "cluster": "stable"
+      },
+      "Sebastian Rivero": {
+        "deal_score": 39.4,
+        "prob": 0.4292,
+        "cluster": "momentum"
+      },
+      "Sergio Cordova": {
+        "deal_score": 15.5,
+        "prob": 0.245,
+        "cluster": "momentum"
+      },
+      "Sergio Escalona": {
+        "deal_score": 42.1,
+        "prob": 0.4992,
+        "cluster": "stable"
+      },
+      "Silvino Bracho": {
+        "deal_score": 40.2,
+        "prob": 0.419,
+        "cluster": "stable"
+      },
+      "Simon Muzziotti": {
+        "deal_score": 43.2,
+        "prob": 0.5787,
+        "cluster": "momentum"
+      },
+      "Steve Torrealba": {
+        "deal_score": 37.5,
+        "prob": 0.4132,
+        "cluster": "stable"
+      },
+      "Telasco Segovia": {
+        "deal_score": 40.1,
+        "prob": 0.4319,
+        "cluster": "stable"
+      },
+      "Thairo Estrada": {
+        "deal_score": 36.7,
+        "prob": 0.124,
+        "cluster": "momentum"
+      },
+      "Toby Hernandez": {
+        "deal_score": 34.3,
+        "prob": 0.3615,
+        "cluster": "stable"
+      },
+      "Tomas Perez": {
+        "deal_score": 40.8,
+        "prob": 0.414,
+        "cluster": "stable"
+      },
+      "Tomas Rincon": {
+        "deal_score": 41.3,
+        "prob": 0.4064,
+        "cluster": "stable"
+      },
+      "Tomas Telis": {
+        "deal_score": 40.7,
+        "prob": 0.4628,
+        "cluster": "stable"
+      },
+      "Tony Alvarez": {
+        "deal_score": 40.8,
+        "prob": 0.4328,
+        "cluster": "stable"
+      },
+      "Tony Armas": {
+        "deal_score": 39.1,
+        "prob": 0.3447,
+        "cluster": "stable"
+      },
+      "Tony Castillo": {
+        "deal_score": 43.1,
+        "prob": 0.42,
+        "cluster": "stable"
+      },
+      "Tucupita Marcano": {
+        "deal_score": 31.9,
+        "prob": 0.3571,
+        "cluster": "momentum"
+      },
+      "Ubaldo Heredia": {
+        "deal_score": 15.7,
+        "prob": 0.2485,
+        "cluster": "momentum"
+      },
+      "Ugueth Urbina": {
+        "deal_score": 47.2,
+        "prob": 0.5256,
+        "cluster": "stable"
+      },
+      "Urbano Lugo": {
+        "deal_score": 40.8,
+        "prob": 0.4432,
+        "cluster": "stable"
+      },
+      "Vic Davalillo": {
+        "deal_score": 30.7,
+        "prob": 0.3062,
+        "cluster": "momentum"
+      },
+      "Victor Bericoto": {
+        "deal_score": 37.9,
+        "prob": 0.4223,
+        "cluster": "stable"
+      },
+      "Victor Garate": {
+        "deal_score": 32.0,
+        "prob": 0.4339,
+        "cluster": "stable"
+      },
+      "Victor Garcia": {
+        "deal_score": 29.3,
+        "prob": 0.3818,
+        "cluster": "stable"
+      },
+      "Victor Martinez": {
+        "deal_score": 39.8,
+        "prob": 0.3558,
+        "cluster": "stable"
+      },
+      "Victor Reyes": {
+        "deal_score": 44.3,
+        "prob": 0.6304,
+        "cluster": "momentum"
+      },
+      "Victor Zambrano": {
+        "deal_score": 46.8,
+        "prob": 0.4874,
+        "cluster": "stable"
+      },
+      "Wikelman Carmona": {
+        "deal_score": 39.3,
+        "prob": 0.3447,
+        "cluster": "stable"
+      },
+      "Wiki Gonzalez": {
+        "deal_score": 44.3,
+        "prob": 0.5183,
+        "cluster": "stable"
+      },
+      "Wil Ledezma": {
+        "deal_score": 43.0,
+        "prob": 0.4913,
+        "cluster": "stable"
+      },
+      "Wilfredo Boscan": {
+        "deal_score": 28.8,
+        "prob": 0.317,
+        "cluster": "stable"
+      },
+      "Wilfredo Rodriguez": {
+        "deal_score": 45.1,
+        "prob": 0.5283,
+        "cluster": "stable"
+      },
+      "Wilfredo Tovar": {
+        "deal_score": 41.0,
+        "prob": 0.4163,
+        "cluster": "stable"
+      },
+      "Wilkelman Gonzalez": {
+        "deal_score": 17.4,
+        "prob": 0.2752,
+        "cluster": "momentum"
+      },
+      "Wilking Rodriguez": {
+        "deal_score": 24.8,
+        "prob": 0.3104,
+        "cluster": "stable"
+      },
+      "William Bergolla": {
+        "deal_score": 49.0,
+        "prob": 0.6134,
+        "cluster": "stable"
+      },
+      "William Contreras": {
+        "deal_score": 40.0,
+        "prob": 0.182,
+        "cluster": "momentum"
+      },
+      "William Cuevas": {
+        "deal_score": 42.0,
+        "prob": 0.4574,
+        "cluster": "stable"
+      },
+      "Williams Perez": {
+        "deal_score": 44.1,
+        "prob": 0.4789,
+        "cluster": "stable"
+      },
+      "Willians Astudillo": {
+        "deal_score": 41.1,
+        "prob": 0.4473,
+        "cluster": "momentum"
+      },
+      "Willie Canate": {
+        "deal_score": 40.1,
+        "prob": 0.4072,
+        "cluster": "stable"
+      },
+      "Willie Martinez": {
+        "deal_score": 50.5,
+        "prob": 0.5724,
+        "cluster": "stable"
+      },
+      "Willson Contreras": {
+        "deal_score": 45.5,
+        "prob": 0.7174,
+        "cluster": "momentum"
+      },
+      "Wilmer Flores": {
+        "deal_score": 41.5,
+        "prob": 0.5213,
+        "cluster": "momentum"
+      },
+      "Wilmer Font": {
+        "deal_score": 42.5,
+        "prob": 0.4721,
+        "cluster": "stable"
+      },
+      "Wilson Alvarez": {
+        "deal_score": 35.7,
+        "prob": 0.3565,
+        "cluster": "momentum"
+      },
+      "Wilson Ramos": {
+        "deal_score": 56.8,
+        "prob": 0.7287,
+        "cluster": "stable"
+      },
+      "Wilyer Abreu": {
+        "deal_score": 39.6,
+        "prob": 0.251,
+        "cluster": "momentum"
+      },
+      "Wuilker Farinez": {
+        "deal_score": 43.1,
+        "prob": 0.4884,
+        "cluster": "stable"
+      },
+      "Yangel Herrera": {
+        "deal_score": 41.4,
+        "prob": 0.4666,
+        "cluster": "stable"
+      },
+      "Yangervis Solarte": {
+        "deal_score": 37.3,
+        "prob": 0.3684,
+        "cluster": "momentum"
+      },
+      "Yeferson Soteldo": {
+        "deal_score": 41.7,
+        "prob": 0.4208,
+        "cluster": "stable"
+      },
+      "Yilber Diaz": {
+        "deal_score": 36.9,
+        "prob": 0.4271,
+        "cluster": "momentum"
+      },
+      "Yoel Hernandez": {
+        "deal_score": 45.3,
+        "prob": 0.5974,
+        "cluster": "stable"
+      },
+      "Yoendrys Gomez": {
+        "deal_score": 41.3,
+        "prob": 0.5831,
+        "cluster": "momentum"
+      },
+      "Yoervis Medina": {
+        "deal_score": 42.3,
+        "prob": 0.452,
+        "cluster": "stable"
+      },
+      "Yohan Pino": {
+        "deal_score": 41.8,
+        "prob": 0.4799,
+        "cluster": "stable"
+      },
+      "Yohander Mendez": {
+        "deal_score": 36.1,
+        "prob": 0.439,
+        "cluster": "momentum"
+      },
+      "Yohandry Orozco": {
+        "deal_score": 27.8,
+        "prob": 0.3697,
+        "cluster": "stable"
+      },
+      "Yohel Pozo": {
+        "deal_score": 40.1,
+        "prob": 0.2833,
+        "cluster": "stable"
+      },
+      "Yohendrick Pinango": {
+        "deal_score": 42.8,
+        "prob": 0.5452,
+        "cluster": "stable"
+      },
+      "Yolmer Sanchez": {
+        "deal_score": 44.3,
+        "prob": 0.5163,
+        "cluster": "stable"
+      },
+      "Yonathan Daza": {
+        "deal_score": 34.2,
+        "prob": 0.3227,
+        "cluster": "momentum"
+      },
+      "Yonny Chirinos": {
+        "deal_score": 42.7,
+        "prob": 0.4591,
+        "cluster": "stable"
+      },
+      "Yonny Hernandez": {
+        "deal_score": 40.5,
+        "prob": 0.4063,
+        "cluster": "stable"
+      },
+      "Yordan Osorio": {
+        "deal_score": 39.6,
+        "prob": 0.3996,
+        "cluster": "stable"
+      },
+      "Yorman Bazardo": {
+        "deal_score": 41.8,
+        "prob": 0.4493,
+        "cluster": "stable"
+      },
+      "Yorman Rodriguez": {
+        "deal_score": 50.4,
+        "prob": 0.7031,
+        "cluster": "stable"
+      },
+      "Yorvit Torrealba": {
+        "deal_score": 44.0,
+        "prob": 0.4977,
+        "cluster": "stable"
+      },
+      "Yusmeiro Petit": {
+        "deal_score": 47.0,
+        "prob": 0.5989,
         "cluster": "stable"
       }
     }
