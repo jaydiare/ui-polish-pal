@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "updatedAt": "2026-11-01T22:16:24.876Z",
+    "updatedAt": "2026-11-02T06:40:08.053Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "PSA 7 + PSA 8 sold comps. Two queries per athlete. Strict per-grade title filter. Taguchi winsorized mean. USD via CBSA.",
     "targetGrades": [
@@ -8,8 +8,8 @@
       8
     ],
     "batchInfo": {
-      "startIdx": 424,
-      "endIdx": 432,
+      "startIdx": 432,
+      "endIdx": 440,
       "totalAthletes": 464
     },
     "maxPages": 3,
@@ -27,7 +27,7 @@
     },
     "fx": {
       "source": "CBSA Exchange Rates API",
-      "asOf": "2026-11-02T00:00:00.000Z"
+      "asOf": "2026-11-03T00:00:00.000Z"
     }
   },
   "Adbert Alzolay": {
@@ -3728,35 +3728,35 @@
   },
   "Yusmeiro Petit": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-10-16T11:48:57.786Z"
+    "erroredAt": "2026-11-02T06:40:25.129Z"
   },
   "Jose Alvarez": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-10-16T11:49:18.210Z"
+    "erroredAt": "2026-11-02T06:40:47.012Z"
   },
   "Robert Perez": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-10-16T11:49:40.981Z"
+    "erroredAt": "2026-11-02T06:41:10.460Z"
   },
   "Alex Cabrera": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-10-16T11:50:02.487Z"
+    "erroredAt": "2026-11-02T06:41:30.117Z"
   },
   "Alex Ramirez": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-10-16T11:50:26.639Z"
+    "erroredAt": "2026-11-02T06:41:52.459Z"
   },
   "Robert Perez Jr.": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-10-16T11:50:46.227Z"
+    "erroredAt": "2026-11-02T06:42:15.235Z"
   },
   "Carl Herrera": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-10-16T11:51:06.443Z"
+    "erroredAt": "2026-11-02T06:42:35.710Z"
   },
   "Greivis Vasquez": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-10-16T11:51:28.515Z"
+    "erroredAt": "2026-11-02T06:42:57.431Z"
   },
   "Oscar Torres": {
     "error": "eBay fetch failed (403)",
