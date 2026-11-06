@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "updatedAt": "2026-11-05T20:13:09.194Z",
+    "updatedAt": "2026-11-06T07:15:23.097Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "PSA 7 + PSA 8 sold comps. Two queries per athlete. Strict per-grade title filter. Taguchi winsorized mean. USD via CBSA.",
     "targetGrades": [
@@ -8,8 +8,8 @@
       8
     ],
     "batchInfo": {
-      "startIdx": 16,
-      "endIdx": 24,
+      "startIdx": 24,
+      "endIdx": 32,
       "totalAthletes": 464
     },
     "maxPages": 3,
@@ -27,7 +27,7 @@
     },
     "fx": {
       "source": "CBSA Exchange Rates API",
-      "asOf": "2026-11-06T00:00:00.000Z"
+      "asOf": "2026-11-07T00:00:00.000Z"
     }
   },
   "Adbert Alzolay": {
@@ -674,11 +674,11 @@
   },
   "Andres Chaparro": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-10-18T11:36:20.077Z"
+    "erroredAt": "2026-11-06T07:15:38.582Z"
   },
   "Andres Galarraga": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-10-18T11:36:43.615Z"
+    "erroredAt": "2026-11-06T07:16:01.749Z"
   },
   "Andres Gimenez": {
     "psa7": {
@@ -708,7 +708,7 @@
       "lastKnownSoldAt": null
     },
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-10-18T11:37:05.621Z"
+    "erroredAt": "2026-11-06T07:16:23.270Z"
   },
   "Andres Machado": {
     "psa7": {
@@ -738,7 +738,7 @@
       "lastKnownSoldAt": null
     },
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-10-18T11:37:27.972Z"
+    "erroredAt": "2026-11-06T07:16:44.502Z"
   },
   "Andruw Monasterio": {
     "psa7": {
@@ -768,7 +768,7 @@
       "lastKnownSoldAt": null
     },
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-10-18T11:37:47.891Z"
+    "erroredAt": "2026-11-06T07:17:07.783Z"
   },
   "Andry Lara": {
     "psa7": {
@@ -798,7 +798,7 @@
       "lastKnownSoldAt": null
     },
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-10-18T11:38:09.415Z"
+    "erroredAt": "2026-11-06T07:17:27.724Z"
   },
   "Angel Bravo": {
     "psa7": {
@@ -828,7 +828,7 @@
       "lastKnownSoldAt": null
     },
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-10-18T11:38:29.568Z"
+    "erroredAt": "2026-11-06T07:17:48.147Z"
   },
   "Angel Guzman": {
     "psa7": {
@@ -858,7 +858,7 @@
       "lastKnownSoldAt": null
     },
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-10-18T11:38:51.609Z"
+    "erroredAt": "2026-11-06T07:18:11.947Z"
   },
   "Angel Nesbitt": {
     "psa7": {
