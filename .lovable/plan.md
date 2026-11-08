@@ -8,7 +8,10 @@ Audit against Google Publisher Policies. Content policies look fine (sports card
 3. **Ads load before the visitor chooses.** The AdSense script loads right away, even before the cookie choice.
 4. **Privacy policy is thin on Google wording.** It needs Google's required disclosure (Google uses cookies to serve ads based on prior visits, with an opt-out link to Ads Settings). This changes existing wording rather than adding a new section.
 
+5. **Why Google gets no data (your screenshot).** Google Tag Manager and Analytics only load after a visitor taps "Accept" on the cookie banner. Most visitors never tap it, and some browsers block or clear that saved choice. So Google sees almost nothing, and Tag Manager says "Tag stopped sending data".
+
 ## Changes
+- Load Tag Manager and Analytics on every visit. Consent defaults are set by region: "denied" only for Europe, the UK and Switzerland, and "granted" everywhere else (Venezuela, US, Canada, LatAm). The existing banner Accept/Decline updates them. Google then gets data again, and Europe stays compliant.
 - Set Google Consent Mode defaults to "denied" in the page header. Your existing cookie banner's Accept/Decline buttons then update them to "granted" or keep "denied" (non-personalized ads). The banner looks the same.
 - Keep ads on the same pages and spots as today. Each spot gets the format that matches its unit. Spots with no matching unit stay hidden instead of showing a broken box.
 - Rewrite the existing advertising paragraph in the Privacy Policy to include Google's required wording and opt-out link (EN and ES), with about the same length.
