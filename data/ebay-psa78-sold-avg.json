@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "updatedAt": "2026-11-07T22:13:51.823Z",
+    "updatedAt": "2026-11-08T06:34:22.902Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "PSA 7 + PSA 8 sold comps. Two queries per athlete. Strict per-grade title filter. Taguchi winsorized mean. USD via CBSA.",
     "targetGrades": [
@@ -8,8 +8,8 @@
       8
     ],
     "batchInfo": {
-      "startIdx": 56,
-      "endIdx": 64,
+      "startIdx": 64,
+      "endIdx": 72,
       "totalAthletes": 464
     },
     "maxPages": 3,
@@ -27,7 +27,7 @@
     },
     "fx": {
       "source": "CBSA Exchange Rates API",
-      "asOf": "2026-11-08T00:00:00.000Z"
+      "asOf": "2026-11-09T00:00:00.000Z"
     }
   },
   "Adbert Alzolay": {
@@ -1692,27 +1692,27 @@
   },
   "Carlos Quintana": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-10-19T22:34:57.766Z"
+    "erroredAt": "2026-11-08T06:34:39.146Z"
   },
   "Carlos Rivero": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-10-19T22:35:20.444Z"
+    "erroredAt": "2026-11-08T06:35:02.770Z"
   },
   "Carlos Silva": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-10-19T22:35:41.066Z"
+    "erroredAt": "2026-11-08T06:35:22.306Z"
   },
   "Carlos Tocci": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-10-19T22:36:02.666Z"
+    "erroredAt": "2026-11-08T06:35:45.834Z"
   },
   "Carlos Valderrama": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-10-19T22:36:23.027Z"
+    "erroredAt": "2026-11-08T06:36:06.028Z"
   },
   "Carlos Zambrano": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-10-19T22:36:43.486Z"
+    "erroredAt": "2026-11-08T06:36:28.048Z"
   },
   "Cesar Gutierrez": {
     "psa7": {
@@ -1742,7 +1742,7 @@
       "lastKnownSoldAt": null
     },
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-10-19T22:37:05.395Z"
+    "erroredAt": "2026-11-08T06:36:47.248Z"
   },
   "Cesar Hernandez": {
     "psa7": {
@@ -1772,7 +1772,7 @@
       "lastKnownSoldAt": null
     },
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-10-19T22:37:27.764Z"
+    "erroredAt": "2026-11-08T06:37:08.123Z"
   },
   "Cesar Izturis": {
     "error": "eBay fetch failed (403)",
