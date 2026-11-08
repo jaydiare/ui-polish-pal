@@ -45,28 +45,32 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   }
 }
 
+function updateConsent(v: "granted" | "denied") {
+  const w = window as any;
+  w.dataLayer = w.dataLayer || [];
+  const gtag = w.gtag || function () { w.dataLayer.push(arguments); };
+  gtag("consent", "update", { ad_storage: v, ad_user_data: v, ad_personalization: v, analytics_storage: v });
+}
+
 const CookieConsent = () => {
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
-    const consent = localStorage.getItem(CONSENT_KEY);
-    if (consent === "accepted") {
-      loadGA();
-      loadGTM();
-    } else if (!consent) {
-      setVisible(true);
-    }
+    // Consent Mode defaults are set in index.html; tags always load and respect them.
+    loadGA();
+    loadGTM();
+    if (!localStorage.getItem(CONSENT_KEY)) setVisible(true);
   }, []);
 
   const handleAccept = () => {
     localStorage.setItem(CONSENT_KEY, "accepted");
-    loadGA();
-    loadGTM();
+    updateConsent("granted");
     setVisible(false);
   };
 
   const handleReject = () => {
     localStorage.setItem(CONSENT_KEY, "rejected");
+    updateConsent("denied");
     setVisible(false);
   };
 
