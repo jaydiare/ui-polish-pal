@@ -46,8 +46,7 @@ export default function Privacy() {
                   pages visited and interaction patterns to improve our service.
                 </li>
                 <li>
-                  <strong>Cookies:</strong> We use essential cookies for session management
-                  and optional analytics cookies (with your consent).
+                  <strong>Cookies:</strong> We use essential, analytics and advertising cookies. Third-party vendors, including Google, use cookies to serve ads based on your prior visits to this and other websites. You can opt out of personalized ads in <a href="https://www.google.com/settings/ads" target="_blank" rel="noopener noreferrer" className="underline">Google Ads Settings</a> or at <a href="https://www.aboutads.info" target="_blank" rel="noopener noreferrer" className="underline">aboutads.info</a>.
                 </li>
               </ul>
             </section>

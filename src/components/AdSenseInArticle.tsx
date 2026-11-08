@@ -43,8 +43,7 @@ const AdSenseInArticle = () => {
           style={{ display: "block", textAlign: "center" }}
           data-ad-client="ca-pub-1118000382291516"
           data-ad-slot="3005539188"
-          data-ad-format="fluid"
-          data-ad-layout="in-article"
+          data-ad-format="autorelaxed"
         />
       )}
     </div>
