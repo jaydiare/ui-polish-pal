@@ -87,7 +87,13 @@ export default function AdminAdsense() {
           <Input type="email" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} required />
           <Input type="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} required />
           {err && <p className="text-sm text-destructive">{err}</p>}
-          <Button type="submit">Sign in</Button>
+          <div className="flex gap-2">
+            <Button type="submit">Sign in</Button>
+            <Button type="button" variant="outline" onClick={async () => {
+              const { error } = await supabase.auth.signUp({ email, password, options: { emailRedirectTo: window.location.href } });
+              setErr(error ? error.message : "Check your email to confirm, then sign in.");
+            }}>Create account</Button>
+          </div>
         </form>
       ) : isAdmin === false ? (
         <p className="text-muted-foreground">This account is not an admin.</p>
