@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "updatedAt": "2026-11-12T20:19:22.303Z",
+    "updatedAt": "2026-11-13T07:07:11.665Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "PSA 7 + PSA 8 sold comps. Two queries per athlete. Strict per-grade title filter. Taguchi winsorized mean. USD via CBSA.",
     "targetGrades": [
@@ -8,8 +8,8 @@
       8
     ],
     "batchInfo": {
-      "startIdx": 144,
-      "endIdx": 152,
+      "startIdx": 152,
+      "endIdx": 160,
       "totalAthletes": 464
     },
     "maxPages": 3,
@@ -27,7 +27,7 @@
     },
     "fx": {
       "source": "CBSA Exchange Rates API",
-      "asOf": "2026-11-13T00:00:00.000Z"
+      "asOf": "2026-11-14T00:00:00.000Z"
     }
   },
   "Adbert Alzolay": {
@@ -2564,35 +2564,35 @@
   },
   "German Marquez": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-10-22T17:32:12.012Z"
+    "erroredAt": "2026-11-13T07:07:27.812Z"
   },
   "Giomar Guevara": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-10-22T17:32:35.565Z"
+    "erroredAt": "2026-11-13T07:07:51.422Z"
   },
   "Giovanni Carrara": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-10-22T17:32:55.354Z"
+    "erroredAt": "2026-11-13T07:08:15.261Z"
   },
   "Gleyber Torres": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-10-22T17:33:15.754Z"
+    "erroredAt": "2026-11-13T07:08:36.350Z"
   },
   "Gonzalo Marquez": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-10-22T17:33:37.261Z"
+    "erroredAt": "2026-11-13T07:08:59.034Z"
   },
   "Gorkys Hernandez": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-10-22T17:33:56.739Z"
+    "erroredAt": "2026-11-13T07:09:19.006Z"
   },
   "Gregor Blanco": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-10-22T17:34:19.725Z"
+    "erroredAt": "2026-11-13T07:09:40.407Z"
   },
   "Gregorio Petit": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-10-22T17:34:42.470Z"
+    "erroredAt": "2026-11-13T07:10:01.409Z"
   },
   "Gregory Infante": {
     "error": "eBay fetch failed (403)",
