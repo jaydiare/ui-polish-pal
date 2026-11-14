@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "updatedAt": "2026-11-14T18:26:20.513Z",
+    "updatedAt": "2026-11-14T22:41:42.287Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "PSA 7 + PSA 8 sold comps. Two queries per athlete. Strict per-grade title filter. Taguchi winsorized mean. USD via CBSA.",
     "targetGrades": [
@@ -8,8 +8,8 @@
       8
     ],
     "batchInfo": {
-      "startIdx": 176,
-      "endIdx": 184,
+      "startIdx": 184,
+      "endIdx": 192,
       "totalAthletes": 464
     },
     "maxPages": 3,
@@ -2692,31 +2692,31 @@
   },
   "Jackson Chourio": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-10-23T17:22:59.633Z"
+    "erroredAt": "2026-11-14T22:41:57.898Z"
   },
   "Jairo Diaz": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-10-23T17:23:22.516Z"
+    "erroredAt": "2026-11-14T22:42:21.912Z"
   },
   "Jairo Iriarte": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-10-23T17:23:46.008Z"
+    "erroredAt": "2026-11-14T22:42:43.154Z"
   },
   "Javier Sanoja": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-10-23T17:24:07.730Z"
+    "erroredAt": "2026-11-14T22:43:03.995Z"
   },
   "Jean Machi": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-10-23T17:24:29.408Z"
+    "erroredAt": "2026-11-14T22:43:27.002Z"
   },
   "Jeanmar Gomez": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-10-23T17:24:50.730Z"
+    "erroredAt": "2026-11-14T22:43:49.399Z"
   },
   "Jeferson Quero": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-10-23T17:25:32.945Z"
+    "erroredAt": "2026-11-14T22:44:33.911Z"
   },
   "Jermaine Palacios": {
     "error": "eBay fetch failed (403)",
@@ -3872,7 +3872,7 @@
   },
   "Jedixson Paez": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-10-23T17:25:10.663Z"
+    "erroredAt": "2026-11-14T22:44:12.166Z"
   },
   "Eiberson Castellano": {
     "error": "eBay fetch failed (403)",
