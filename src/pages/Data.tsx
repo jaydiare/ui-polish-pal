@@ -9,6 +9,7 @@ import VzlaSideBanner from "@/components/VzlaSideBanner";
 import VzlaSupplyCurves from "@/components/VzlaSupplyCurves";
 import Sparkline from "@/components/Sparkline";
 import MlDealTracker from "@/components/MlDealTracker";
+import { useLanguage } from "@/i18n/LanguageProvider";
 import MarketSentimentChart from "@/components/MarketSentimentChart";
 import { buildEbaySearchUrl, buildEbayGradedSearchUrl } from "@/lib/vzla-helpers";
 const EpnPlacementSummary = lazy(() => import("@/components/EpnPlacementSummary"));
@@ -654,6 +655,14 @@ const Data = () => {
   }, [gradedSportAgg]);
 
   const hasData = rawComparison.length > 0;
+  const { lang } = useLanguage();
+  const heroUpdatedRaw =
+    (listedData as any)?._meta?.updatedAt ?? (soldData as any)?._meta?.updatedAt;
+  const heroUpdated = heroUpdatedRaw
+    ? new Date(heroUpdatedRaw).toLocaleString(lang === "es" ? "es-VE" : "en-US", {
+        month: "short", day: "numeric", year: "numeric", hour: "numeric", minute: "2-digit",
+      })
+    : "—";
 
   return (
     <div className="min-h-screen">
@@ -686,7 +695,7 @@ const Data = () => {
           <div className="mt-3 flex items-center gap-3 flex-wrap">
             <div className="inline-flex items-center gap-2 rounded-full border border-border/50 bg-card/80 backdrop-blur-sm px-4 py-1.5">
               <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
-              <span className="text-xs text-muted-foreground font-medium">Last update</span>
+              <span className="text-xs text-muted-foreground font-medium">{lang === "es" ? "Última actualización" : "Last update"} · {heroUpdated}</span>
             </div>
             <div className="ml-auto">
               <SocialShare
