@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from "react";
+import cardDealerPro from "@/assets/card-dealer-pro.jpg.asset.json";
 
 const EBAY_BASE = "https://www.ebay.ca/sch/i.html?_nkw=trading+cards&mkevt=1&mkcid=1&mkrid=706-53473-19255-0&toolid=10001";
 
@@ -78,6 +79,12 @@ const AFFILIATES = [
     alt: "Market Movers App",
     className: "p-3",
   },
+  {
+    id: "sidebar-cdp",
+    href: "https://v2-carddealerpro.cello.so/kDZf6Amyrrs",
+    img: cardDealerPro.url,
+    alt: "Card Dealer Pro",
+  },
 ];
 
 const VzlaSideBanner = () => {
@@ -104,7 +111,7 @@ const VzlaSideBanner = () => {
       </a>
       {AFFILIATES.map((a) => (
         <div key={a.id} className="flex flex-col items-center">
-          <a href={a.href} target="_blank" rel="noopener noreferrer" title={a.alt}>
+          <a href={a.href} target="_blank" rel="noopener noreferrer sponsored" title={a.alt}>
             <img src={a.img} alt={a.alt} className={(a as any).className || ""} />
           </a>
           {a.id === "sidebar-mm" && (
