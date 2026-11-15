@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { useLanguage } from "@/i18n/LanguageProvider";
+import cardDealerPro from "@/assets/card-dealer-pro.jpg.asset.json";
 
 const EBAY_STORE = "https://www.ebay.ca/str/localherossportscards?mkcid=1&mkrid=706-53473-19255-0&siteid=2&campid=5339142305&toolid=10001&mkevt=1";
 
@@ -91,6 +92,14 @@ const VzlaFooter = () => {
                   src="/assets/mm-full-logo-white.svg"
                   alt="Market Movers App"
                   className="w-40 md:w-48 h-auto rounded-lg shadow-lg hover:scale-[1.03] transition-transform p-3"
+                  loading="lazy"
+                />
+              </a>
+              <a href="https://v2-carddealerpro.cello.so/kDZf6Amyrrs" target="_blank" rel="noopener noreferrer sponsored" title="Card Dealer Pro">
+                <img
+                  src={cardDealerPro.url}
+                  alt="Card Dealer Pro"
+                  className="w-40 md:w-48 h-auto rounded-lg shadow-lg hover:scale-[1.03] transition-transform"
                   loading="lazy"
                 />
               </a>
