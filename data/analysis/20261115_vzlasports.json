@@ -1,0 +1,785 @@
+{
+  "_meta": {
+    "generatedAt": "2026-11-15T19:31:08.316370Z",
+    "period": {
+      "start": "2026-11-01",
+      "end": "2026-11-15"
+    },
+    "focusSport": "Baseball",
+    "version": "1.1",
+    "llmUsed": false
+  },
+  "stats": {
+    "period": {
+      "start": "2026-11-01",
+      "end": "2026-11-15"
+    },
+    "focusSport": "Baseball",
+    "totalAthletes": 573,
+    "baseballAthletesAnalyzed": 503,
+    "sportSummary": {
+      "Baseball": {
+        "athleteCount": 503,
+        "avgPrice": 4.79,
+        "medianPrice": 2.44,
+        "avgChange": -9.01
+      }
+    },
+    "indexTrend": [
+      {
+        "date": "2026-10-16",
+        "all": 468.6,
+        "baseball": 499.1,
+        "soccer": 215.5,
+        "basketball": 132
+      },
+      {
+        "date": "2026-10-21",
+        "all": 433.1,
+        "baseball": 458.8,
+        "soccer": 212,
+        "basketball": 233.5
+      },
+      {
+        "date": "2026-10-26",
+        "all": 468.6,
+        "baseball": 497.8,
+        "soccer": 226,
+        "basketball": 149.3
+      },
+      {
+        "date": "2026-10-31",
+        "all": 459.3,
+        "baseball": 487,
+        "soccer": 221.6,
+        "basketball": 260.9
+      },
+      {
+        "date": "2026-11-01",
+        "all": 457.1,
+        "baseball": 484.6,
+        "soccer": 221.5,
+        "basketball": 260.7
+      },
+      {
+        "date": "2026-11-06",
+        "all": 457.2,
+        "baseball": 484.6,
+        "soccer": 222.7,
+        "basketball": 263.5
+      },
+      {
+        "date": "2026-11-11",
+        "all": 433.2,
+        "baseball": 457.9,
+        "soccer": 220.2,
+        "basketball": 263.6
+      }
+    ],
+    "topMovers": {
+      "gainers": [
+        {
+          "name": "Edgmer Escalona",
+          "sport": "Baseball",
+          "listedPrice": 23,
+          "soldPrice": null,
+          "listedPriceChange": 283.33,
+          "soldPriceChange": null,
+          "cv": null,
+          "daysOnMarket": 233,
+          "listings": 2,
+          "dataPoints": 15
+        },
+        {
+          "name": "Gabriel Moreno",
+          "sport": "Baseball",
+          "listedPrice": 8.85,
+          "soldPrice": null,
+          "listedPriceChange": 155.04,
+          "soldPriceChange": null,
+          "cv": 0.6211,
+          "daysOnMarket": 159,
+          "listings": 66,
+          "dataPoints": 15
+        }
+      ],
+      "losers": [
+        {
+          "name": "Carlos Sanabria",
+          "sport": "Baseball",
+          "listedPrice": 2.95,
+          "soldPrice": null,
+          "listedPriceChange": -67.15,
+          "soldPriceChange": null,
+          "cv": 0,
+          "daysOnMarket": 698,
+          "listings": 3,
+          "dataPoints": 15
+        },
+        {
+          "name": "Carlos Zambrano",
+          "sport": "Baseball",
+          "listedPrice": 1.36,
+          "soldPrice": null,
+          "listedPriceChange": -62.64,
+          "soldPriceChange": null,
+          "cv": 0.4934,
+          "daysOnMarket": 923,
+          "listings": 73,
+          "dataPoints": 15
+        },
+        {
+          "name": "Oswaldo Cabrera",
+          "sport": "Baseball",
+          "listedPrice": 2.22,
+          "soldPrice": null,
+          "listedPriceChange": -61.53,
+          "soldPriceChange": null,
+          "cv": 0.3719,
+          "daysOnMarket": 265,
+          "listings": 77,
+          "dataPoints": 15
+        },
+        {
+          "name": "Johan Santana",
+          "sport": "Baseball",
+          "listedPrice": 10.31,
+          "soldPrice": null,
+          "listedPriceChange": -61.31,
+          "soldPriceChange": null,
+          "cv": 0.8642,
+          "daysOnMarket": 369,
+          "listings": 77,
+          "dataPoints": 15
+        },
+        {
+          "name": "Jhostynxon Garcia",
+          "sport": "Baseball",
+          "listedPrice": 3.48,
+          "soldPrice": null,
+          "listedPriceChange": -60.18,
+          "soldPriceChange": null,
+          "cv": 0.3832,
+          "daysOnMarket": 70,
+          "listings": 75,
+          "dataPoints": 15
+        },
+        {
+          "name": "Angel Guzman",
+          "sport": "Baseball",
+          "listedPrice": 4.04,
+          "soldPrice": null,
+          "listedPriceChange": -54.71,
+          "soldPriceChange": null,
+          "cv": 0.4543,
+          "daysOnMarket": 208,
+          "listings": 78,
+          "dataPoints": 15
+        },
+        {
+          "name": "Everson Pereira",
+          "sport": "Baseball",
+          "listedPrice": 2.64,
+          "soldPrice": null,
+          "listedPriceChange": -53.93,
+          "soldPriceChange": null,
+          "cv": 0.3357,
+          "daysOnMarket": 222,
+          "listings": 65,
+          "dataPoints": 15
+        },
+        {
+          "name": "Ildemaro Vargas",
+          "sport": "Baseball",
+          "listedPrice": 4.71,
+          "soldPrice": null,
+          "listedPriceChange": -53.04,
+          "soldPriceChange": null,
+          "cv": 0.4685,
+          "daysOnMarket": 361,
+          "listings": 78,
+          "dataPoints": 15
+        }
+      ]
+    },
+    "mostVolatile": [
+      {
+        "name": "Johan Santana",
+        "sport": "Baseball",
+        "listedPrice": 10.31,
+        "soldPrice": null,
+        "listedPriceChange": -61.31,
+        "soldPriceChange": null,
+        "cv": 0.8642,
+        "daysOnMarket": 369,
+        "listings": 77,
+        "dataPoints": 15
+      },
+      {
+        "name": "Omar Vizquel",
+        "sport": "Baseball",
+        "listedPrice": 9.73,
+        "soldPrice": null,
+        "listedPriceChange": -32.34,
+        "soldPriceChange": null,
+        "cv": 0.8604,
+        "daysOnMarket": 340,
+        "listings": 71,
+        "dataPoints": 15
+      },
+      {
+        "name": "Wilyer Abreu",
+        "sport": "Baseball",
+        "listedPrice": 14.24,
+        "soldPrice": null,
+        "listedPriceChange": -42.42,
+        "soldPriceChange": null,
+        "cv": 0.7476,
+        "daysOnMarket": 110,
+        "listings": 69,
+        "dataPoints": 15
+      },
+      {
+        "name": "Brayan Rocchio",
+        "sport": "Baseball",
+        "listedPrice": 7.91,
+        "soldPrice": null,
+        "listedPriceChange": -38.78,
+        "soldPriceChange": null,
+        "cv": 0.7195,
+        "daysOnMarket": 203,
+        "listings": 71,
+        "dataPoints": 15
+      },
+      {
+        "name": "Luis Arraez",
+        "sport": "Baseball",
+        "listedPrice": 14.45,
+        "soldPrice": null,
+        "listedPriceChange": -39.21,
+        "soldPriceChange": null,
+        "cv": 0.6919,
+        "daysOnMarket": 120,
+        "listings": 63,
+        "dataPoints": 15
+      },
+      {
+        "name": "Ranger Suarez",
+        "sport": "Baseball",
+        "listedPrice": 13.35,
+        "soldPrice": null,
+        "listedPriceChange": -34.17,
+        "soldPriceChange": null,
+        "cv": 0.6892,
+        "daysOnMarket": 121,
+        "listings": 72,
+        "dataPoints": 15
+      },
+      {
+        "name": "Ozzie Guillen",
+        "sport": "Baseball",
+        "listedPrice": 2.18,
+        "soldPrice": null,
+        "listedPriceChange": -19.85,
+        "soldPriceChange": null,
+        "cv": 0.6648,
+        "daysOnMarket": 713,
+        "listings": 69,
+        "dataPoints": 15
+      },
+      {
+        "name": "Humberto Arteaga",
+        "sport": "Baseball",
+        "listedPrice": 7.71,
+        "soldPrice": null,
+        "listedPriceChange": -1.28,
+        "soldPriceChange": null,
+        "cv": 0.647,
+        "daysOnMarket": 1338,
+        "listings": 20,
+        "dataPoints": 15
+      },
+      {
+        "name": "Javier Sanoja",
+        "sport": "Baseball",
+        "listedPrice": 7.2,
+        "soldPrice": null,
+        "listedPriceChange": -42.72,
+        "soldPriceChange": null,
+        "cv": 0.6421,
+        "daysOnMarket": 131,
+        "listings": 77,
+        "dataPoints": 15
+      },
+      {
+        "name": "Andres Chaparro",
+        "sport": "Baseball",
+        "listedPrice": 5.54,
+        "soldPrice": null,
+        "listedPriceChange": -24.01,
+        "soldPriceChange": null,
+        "cv": 0.6347,
+        "daysOnMarket": 106,
+        "listings": 77,
+        "dataPoints": 15
+      }
+    ],
+    "cheapestListed": [
+      {
+        "name": "Wilson Alvarez",
+        "sport": "Baseball",
+        "listedPrice": 0.78,
+        "soldPrice": null,
+        "listedPriceChange": -36.07,
+        "soldPriceChange": null,
+        "cv": 0.1125,
+        "daysOnMarket": 900,
+        "listings": 78,
+        "dataPoints": 15
+      },
+      {
+        "name": "Fred Manrique",
+        "sport": "Baseball",
+        "listedPrice": 0.79,
+        "soldPrice": null,
+        "listedPriceChange": -11.24,
+        "soldPriceChange": null,
+        "cv": 0.1196,
+        "daysOnMarket": 702,
+        "listings": 77,
+        "dataPoints": 15
+      },
+      {
+        "name": "Alvaro Espinoza",
+        "sport": "Baseball",
+        "listedPrice": 0.83,
+        "soldPrice": null,
+        "listedPriceChange": -1.19,
+        "soldPriceChange": null,
+        "cv": 0.1648,
+        "daysOnMarket": 688,
+        "listings": 80,
+        "dataPoints": 15
+      },
+      {
+        "name": "Tony Castillo",
+        "sport": "Baseball",
+        "listedPrice": 0.84,
+        "soldPrice": null,
+        "listedPriceChange": -14.29,
+        "soldPriceChange": null,
+        "cv": 0.1619,
+        "daysOnMarket": 644,
+        "listings": 80,
+        "dataPoints": 15
+      },
+      {
+        "name": "Luis Salazar",
+        "sport": "Baseball",
+        "listedPrice": 0.86,
+        "soldPrice": null,
+        "listedPriceChange": -23.89,
+        "soldPriceChange": null,
+        "cv": 0.1878,
+        "daysOnMarket": 746,
+        "listings": 77,
+        "dataPoints": 15
+      },
+      {
+        "name": "Carlos Quintana",
+        "sport": "Baseball",
+        "listedPrice": 0.87,
+        "soldPrice": null,
+        "listedPriceChange": 1.16,
+        "soldPriceChange": null,
+        "cv": 0.1887,
+        "daysOnMarket": 658,
+        "listings": 79,
+        "dataPoints": 15
+      },
+      {
+        "name": "Luis Sojo",
+        "sport": "Baseball",
+        "listedPrice": 0.88,
+        "soldPrice": null,
+        "listedPriceChange": -10.2,
+        "soldPriceChange": null,
+        "cv": 0.1892,
+        "daysOnMarket": 520,
+        "listings": 80,
+        "dataPoints": 15
+      },
+      {
+        "name": "Juan Castillo",
+        "sport": "Baseball",
+        "listedPrice": 0.89,
+        "soldPrice": null,
+        "listedPriceChange": -10.1,
+        "soldPriceChange": null,
+        "cv": 0.1824,
+        "daysOnMarket": 572,
+        "listings": 80,
+        "dataPoints": 15
+      },
+      {
+        "name": "Carlos Carrasco",
+        "sport": "Baseball",
+        "listedPrice": 0.92,
+        "soldPrice": null,
+        "listedPriceChange": -28.68,
+        "soldPriceChange": null,
+        "cv": 0.1402,
+        "daysOnMarket": 1017,
+        "listings": 80,
+        "dataPoints": 15
+      },
+      {
+        "name": "Carlos Garcia",
+        "sport": "Baseball",
+        "listedPrice": 0.97,
+        "soldPrice": null,
+        "listedPriceChange": -27.61,
+        "soldPriceChange": null,
+        "cv": 0.2514,
+        "daysOnMarket": 494,
+        "listings": 78,
+        "dataPoints": 15
+      }
+    ],
+    "mostLiquid": [
+      {
+        "name": "Jose Franco",
+        "sport": "Baseball",
+        "listedPrice": 6.35,
+        "soldPrice": null,
+        "listedPriceChange": -30.83,
+        "soldPriceChange": null,
+        "cv": 0.5426,
+        "daysOnMarket": 20,
+        "listings": 80,
+        "dataPoints": 15
+      },
+      {
+        "name": "Luis Hernandez",
+        "sport": "Baseball",
+        "listedPrice": 55.4,
+        "soldPrice": null,
+        "listedPriceChange": -25.01,
+        "soldPriceChange": null,
+        "cv": 0.2651,
+        "daysOnMarket": 23,
+        "listings": 80,
+        "dataPoints": 15
+      },
+      {
+        "name": "Jesus Rodriguez",
+        "sport": "Baseball",
+        "listedPrice": 3.42,
+        "soldPrice": null,
+        "listedPriceChange": 0.0,
+        "soldPriceChange": null,
+        "cv": 0.4152,
+        "daysOnMarket": 24,
+        "listings": 80,
+        "dataPoints": 15
+      },
+      {
+        "name": "Jose Fernandez",
+        "sport": "Baseball",
+        "listedPrice": 17.37,
+        "soldPrice": null,
+        "listedPriceChange": 12.94,
+        "soldPriceChange": null,
+        "cv": 0.407,
+        "daysOnMarket": 27,
+        "listings": 78,
+        "dataPoints": 15
+      },
+      {
+        "name": "William Contreras",
+        "sport": "Baseball",
+        "listedPrice": 24.89,
+        "soldPrice": null,
+        "listedPriceChange": -29.33,
+        "soldPriceChange": null,
+        "cv": 0.5577,
+        "daysOnMarket": 33,
+        "listings": 70,
+        "dataPoints": 15
+      },
+      {
+        "name": "Luis Lara",
+        "sport": "Baseball",
+        "listedPrice": 30.88,
+        "soldPrice": null,
+        "listedPriceChange": 7.52,
+        "soldPriceChange": null,
+        "cv": 0.3354,
+        "daysOnMarket": 35,
+        "listings": 75,
+        "dataPoints": 15
+      },
+      {
+        "name": "Jedixson Paez",
+        "sport": "Baseball",
+        "listedPrice": 5.4,
+        "soldPrice": null,
+        "listedPriceChange": -20.35,
+        "soldPriceChange": null,
+        "cv": 0.2603,
+        "daysOnMarket": 36,
+        "listings": 80,
+        "dataPoints": 15
+      },
+      {
+        "name": "Eliezer Alfonzo",
+        "sport": "Baseball",
+        "listedPrice": 20,
+        "soldPrice": null,
+        "listedPriceChange": -0.05,
+        "soldPriceChange": null,
+        "cv": 0,
+        "daysOnMarket": 58,
+        "listings": 4,
+        "dataPoints": 15
+      },
+      {
+        "name": "Jackson Chourio",
+        "sport": "Baseball",
+        "listedPrice": 19.92,
+        "soldPrice": null,
+        "listedPriceChange": 6.07,
+        "soldPriceChange": null,
+        "cv": 0.479,
+        "daysOnMarket": 63,
+        "listings": 63,
+        "dataPoints": 15
+      },
+      {
+        "name": "Jeferson Quero",
+        "sport": "Baseball",
+        "listedPrice": 14.76,
+        "soldPrice": null,
+        "listedPriceChange": -20.43,
+        "soldPriceChange": null,
+        "cv": 0.327,
+        "daysOnMarket": 70,
+        "listings": 68,
+        "dataPoints": 15
+      }
+    ],
+    "anomalies": [
+      {
+        "name": "Endy Chavez",
+        "sport": "Baseball",
+        "listedPrice": 4.91,
+        "soldPrice": null,
+        "listedPriceChange": -52.51,
+        "soldPriceChange": null,
+        "cv": 0.5977,
+        "daysOnMarket": 996,
+        "listings": 75,
+        "dataPoints": 15,
+        "reason": [
+          "Price moved -52.5%"
+        ]
+      },
+      {
+        "name": "Angel Guzman",
+        "sport": "Baseball",
+        "listedPrice": 4.04,
+        "soldPrice": null,
+        "listedPriceChange": -54.71,
+        "soldPriceChange": null,
+        "cv": 0.4543,
+        "daysOnMarket": 208,
+        "listings": 78,
+        "dataPoints": 15,
+        "reason": [
+          "Price moved -54.7%"
+        ]
+      },
+      {
+        "name": "Carlos Sanabria",
+        "sport": "Baseball",
+        "listedPrice": 2.95,
+        "soldPrice": null,
+        "listedPriceChange": -67.15,
+        "soldPriceChange": null,
+        "cv": 0,
+        "daysOnMarket": 698,
+        "listings": 3,
+        "dataPoints": 15,
+        "reason": [
+          "Price moved -67.2%"
+        ]
+      },
+      {
+        "name": "Carlos Zambrano",
+        "sport": "Baseball",
+        "listedPrice": 1.36,
+        "soldPrice": null,
+        "listedPriceChange": -62.64,
+        "soldPriceChange": null,
+        "cv": 0.4934,
+        "daysOnMarket": 923,
+        "listings": 73,
+        "dataPoints": 15,
+        "reason": [
+          "Price moved -62.6%"
+        ]
+      },
+      {
+        "name": "David Peralta",
+        "sport": "Baseball",
+        "listedPrice": 1.33,
+        "soldPrice": 1.65,
+        "listedPriceChange": -53.0,
+        "soldPriceChange": 0.0,
+        "cv": 0.3042,
+        "daysOnMarket": 890,
+        "listings": 79,
+        "dataPoints": 15,
+        "reason": [
+          "Price moved -53.0%"
+        ]
+      },
+      {
+        "name": "Edgmer Escalona",
+        "sport": "Baseball",
+        "listedPrice": 23,
+        "soldPrice": null,
+        "listedPriceChange": 283.33,
+        "soldPriceChange": null,
+        "cv": null,
+        "daysOnMarket": 233,
+        "listings": 2,
+        "dataPoints": 15,
+        "reason": [
+          "Price moved +283.3%"
+        ]
+      },
+      {
+        "name": "Everson Pereira",
+        "sport": "Baseball",
+        "listedPrice": 2.64,
+        "soldPrice": null,
+        "listedPriceChange": -53.93,
+        "soldPriceChange": null,
+        "cv": 0.3357,
+        "daysOnMarket": 222,
+        "listings": 65,
+        "dataPoints": 15,
+        "reason": [
+          "Price moved -53.9%"
+        ]
+      },
+      {
+        "name": "Francisco Alvarez",
+        "sport": "Baseball",
+        "listedPrice": 4.51,
+        "soldPrice": null,
+        "listedPriceChange": -51.71,
+        "soldPriceChange": null,
+        "cv": 0.4708,
+        "daysOnMarket": 146,
+        "listings": 66,
+        "dataPoints": 15,
+        "reason": [
+          "Price moved -51.7%"
+        ]
+      },
+      {
+        "name": "Gabriel Moreno",
+        "sport": "Baseball",
+        "listedPrice": 8.85,
+        "soldPrice": null,
+        "listedPriceChange": 155.04,
+        "soldPriceChange": null,
+        "cv": 0.6211,
+        "daysOnMarket": 159,
+        "listings": 66,
+        "dataPoints": 15,
+        "reason": [
+          "Price moved +155.0%"
+        ]
+      },
+      {
+        "name": "Ildemaro Vargas",
+        "sport": "Baseball",
+        "listedPrice": 4.71,
+        "soldPrice": null,
+        "listedPriceChange": -53.04,
+        "soldPriceChange": null,
+        "cv": 0.4685,
+        "daysOnMarket": 361,
+        "listings": 78,
+        "dataPoints": 15,
+        "reason": [
+          "Price moved -53.0%"
+        ]
+      },
+      {
+        "name": "Jhostynxon Garcia",
+        "sport": "Baseball",
+        "listedPrice": 3.48,
+        "soldPrice": null,
+        "listedPriceChange": -60.18,
+        "soldPriceChange": null,
+        "cv": 0.3832,
+        "daysOnMarket": 70,
+        "listings": 75,
+        "dataPoints": 15,
+        "reason": [
+          "Price moved -60.2%"
+        ]
+      },
+      {
+        "name": "Johan Santana",
+        "sport": "Baseball",
+        "listedPrice": 10.31,
+        "soldPrice": null,
+        "listedPriceChange": -61.31,
+        "soldPriceChange": null,
+        "cv": 0.8642,
+        "daysOnMarket": 369,
+        "listings": 77,
+        "dataPoints": 15,
+        "reason": [
+          "Price moved -61.3%"
+        ]
+      },
+      {
+        "name": "Jose Pirela",
+        "sport": "Baseball",
+        "listedPrice": 5.44,
+        "soldPrice": null,
+        "listedPriceChange": -52.24,
+        "soldPriceChange": null,
+        "cv": 0.5443,
+        "daysOnMarket": 450,
+        "listings": 71,
+        "dataPoints": 15,
+        "reason": [
+          "Price moved -52.2%"
+        ]
+      },
+      {
+        "name": "Oswaldo Cabrera",
+        "sport": "Baseball",
+        "listedPrice": 2.22,
+        "soldPrice": null,
+        "listedPriceChange": -61.53,
+        "soldPriceChange": null,
+        "cv": 0.3719,
+        "daysOnMarket": 265,
+        "listings": 77,
+        "dataPoints": 15,
+        "reason": [
+          "Price moved -61.5%"
+        ]
+      }
+    ]
+  },
+  "textSummary": "=== VZLA Sports Baseball Market Report ===\nPeriod: 2026-11-01 → 2026-11-15\nBaseball athletes analyzed: 503\n\nAvg listed price: $4.79  |  Median: $2.44  |  Avg change: -9.0%\n\nTOP GAINERS:\n  ▲ Edgmer Escalona: +283.3% ($23.00)\n  ▲ Gabriel Moreno: +155.0% ($8.85)\n\nTOP LOSERS:\n  ▼ Carlos Sanabria: -67.2% ($2.95)\n  ▼ Carlos Zambrano: -62.6% ($1.36)\n  ▼ Oswaldo Cabrera: -61.5% ($2.22)\n  ▼ Johan Santana: -61.3% ($10.31)\n  ▼ Jhostynxon Garcia: -60.2% ($3.48)\n\nANOMALIES (14):\n  ⚠ Endy Chavez: Price moved -52.5%\n  ⚠ Angel Guzman: Price moved -54.7%\n  ⚠ Carlos Sanabria: Price moved -67.2%\n  ⚠ Carlos Zambrano: Price moved -62.6%\n  ⚠ David Peralta: Price moved -53.0%\n\nVALUE PICKS (cheapest listed):\n  💰 Wilson Alvarez: $0.78\n  💰 Fred Manrique: $0.79\n  💰 Alvaro Espinoza: $0.83\n  💰 Tony Castillo: $0.84\n  💰 Luis Salazar: $0.86\n"
+}
