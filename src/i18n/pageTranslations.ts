@@ -46,7 +46,7 @@ export const pageTranslations = {
       "GitHub Actions workflows run on schedule to scan eBay listings, track prices, update PSA/BGS population data, and snapshot historical trends. No manual data entry, every number is programmatically sourced and verified.",
     "about.data.2.title": "Taguchi Statistical Pricing",
     "about.data.2.desc":
-      "We don't use simple averages. Our Taguchi Winsorized Mean removes extreme outliers (top and bottom 10%) before calculating prices, giving you a more accurate picture of what cards actually cost, not what one outlier listing says.",
+      "We don't use simple averages. Our Taguchi Winsorized Mean caps the lowest 40% and highest 40% of prices at the nearest middle value (winsorization) before averaging, giving you a more accurate picture of what cards actually cost, not what one outlier listing says.",
     "about.data.3.title": "Stability & Signal Scores",
     "about.data.3.desc":
       "Every athlete gets a Coefficient of Variation (CV) stability score and a Signal-to-Noise ratio measured in decibels. These tell you how predictable an athlete's pricing is, essential for identifying reliable investments vs speculative flips.",
@@ -83,7 +83,7 @@ export const pageTranslations = {
       "We track Venezuelan athletes across baseball (MLB, minor leagues, and LVBP), soccer (MLS and international), basketball (NBA and Superliga), tennis, and boxing. Baseball is our largest category with 490+ athletes tracked.",
     "about.faq.3.q": "What does 'Taguchi Winsorized Mean' mean?",
     "about.faq.3.a":
-      "It's a statistical method that removes extreme outliers (the highest and lowest 10% of prices) before calculating an average. This gives you a much more realistic price than a simple average, which can be skewed by a single very expensive or very cheap listing.",
+      "It's a statistical method that sorts all prices, caps the lowest 40% and highest 40% at the nearest middle value (winsorization), then averages. This gives you a much more realistic price than a simple average, which can be skewed by a single very expensive or very cheap listing.",
     "about.faq.4.q": "What are the investment signals (Buy Low, Flip Potential, etc.)?",
     "about.faq.4.a":
       "These are data-driven indicators calculated from our pricing models. 'Buy Low' flags cards priced below their reference level, a potential bargain. 'Flip Potential' flags volatile cards with wide price swings. 'Signal Strength' uses the Taguchi S/N ratio to measure how predictable pricing is. These are informational tools, not financial advice.",
@@ -105,12 +105,12 @@ export const pageTranslations = {
     "methodology.approach.p2":
       "The raw data passes through a rigorous cleaning process. First, we match listing titles against our database of 550+ athlete names, handling accent marks, alternate spellings, and nickname variations. Then, four independent filter layers remove junk listings: bulk lots, reprints, digital cards, stickers, and damaged items. Only legitimate, properly identified single-card listings survive this gauntlet.",
     "methodology.approach.p3":
-      "Once filtered, prices are processed using the **Taguchi Winsorized Mean**, a statistical method that trims the top and bottom 20% of extreme prices before averaging. This produces market prices that reflect what collectors actually pay, not what outlier listings distort the picture to look like.",
+      "Once filtered, prices are processed using the **Taguchi Winsorized Mean**, a statistical method that caps the lowest 40% and highest 40% of prices at the nearest middle value (winsorization) before averaging. This produces market prices that reflect what collectors actually pay, not what outlier listings distort the picture to look like.",
     "methodology.stats.title": "Statistical Methods",
     "methodology.stats.p1":
       "Traditional price averages are misleading for sports cards. A simple mean of eBay listings would include $0.99 bulk lots alongside $500 graded gems, producing a number that represents neither category. Our approach addresses this with three complementary techniques:",
     "methodology.stats.p2":
-      "**1. Taguchi Winsorized Mean:** We sort all prices, trim the most extreme 20% from each end, replace trimmed values with the nearest surviving value (winsorization), and compute the mean. Borrowed from industrial quality engineering, this method is specifically designed for datasets with heavy-tailed distributions, exactly what eBay price data looks like.",
+      "**1. Taguchi Winsorized Mean:** We sort all prices, cap the lowest 40% and highest 40%, replacing those values with the nearest surviving value (winsorization), and compute the mean. Borrowed from industrial quality engineering, this method is specifically designed for datasets with heavy-tailed distributions, exactly what eBay price data looks like.",
     "methodology.stats.p3":
       "**2. Coefficient of Variation (CV):** Standard deviation divided by mean, expressed as a percentage. This single number tells you how much price agreement exists in the market. A CV of 10% means listings are tightly clustered, strong consensus on value. A CV of 50% means prices are all over the map, the \"average\" is less meaningful.",
     "methodology.stats.p4":
@@ -137,7 +137,7 @@ export const pageTranslations = {
       "eBay listing averages refresh on the last scan through automated pipelines. PSA and BGS population data refreshes on a weekly schedule. The bi-weekly market analysis report runs on the 1st and 15th of each month.",
     "methodology.faq.2.q": "What is the Taguchi Winsorized Mean?",
     "methodology.faq.2.a":
-      "It's a statistical method borrowed from manufacturing quality control. We sort all listing prices, remove the top and bottom 20% (extreme outliers like $0.99 bulk lots or $10,000 rare finds), replace trimmed values with the nearest surviving value, and compute the mean. This gives you a price that represents what a typical card actually costs, not skewed by fire-sale listings or speculative moonshots.",
+      "It's a statistical method borrowed from manufacturing quality control. We sort all listing prices, cap the lowest 40% and highest 40% (extreme outliers like $0.99 bulk lots or $10,000 rare finds) at the nearest surviving value, and compute the mean. This gives you a price that represents what a typical card actually costs, not skewed by fire-sale listings or speculative moonshots.",
     "methodology.faq.3.q": "What does the Stability Score mean?",
     "methodology.faq.3.a":
       "The Stability Score is based on the Coefficient of Variation (CV), standard deviation divided by mean, expressed as a percentage. 'Stable' (0-10%) means strong price agreement among listings. 'Active' (10-20%) indicates normal market activity. 'Volatile' (20-35%) shows meaningful price dispersion. 'Unstable' (35%+) signals high speculation or data noise, treat these averages with caution.",
@@ -213,7 +213,7 @@ export const pageTranslations = {
       "Los flujos de trabajo de GitHub Actions se ejecutan según un calendario para revisar publicaciones de eBay, seguir precios, actualizar datos de población PSA/BGS y guardar tendencias históricas. Sin carga manual de datos, cada número se obtiene y verifica de forma programada.",
     "about.data.2.title": "Precios Estadísticos Taguchi",
     "about.data.2.desc":
-      "No usamos promedios simples. Nuestra Media Winsorizada de Taguchi elimina los valores extremos (el 10% superior e inferior) antes de calcular los precios, dándote una imagen más precisa de lo que realmente cuestan las cartas, no lo que dice una sola publicación atípica.",
+      "No usamos promedios simples. Nuestra Media Winsorizada de Taguchi limita el 40% más bajo y el 40% más alto de los precios al valor central más cercano (winsorización) antes de promediar, dándote una imagen más precisa de lo que realmente cuestan las cartas, no lo que dice una sola publicación atípica.",
     "about.data.3.title": "Puntajes de Estabilidad y Señal",
     "about.data.3.desc":
       "Cada atleta recibe un puntaje de estabilidad basado en el Coeficiente de Variación (CV) y una relación señal-ruido medida en decibeles. Esto te dice qué tan predecible es el precio de un atleta, clave para identificar inversiones confiables frente a reventas especulativas.",
@@ -250,7 +250,7 @@ export const pageTranslations = {
       "Seguimos atletas venezolanos en béisbol (MLB, ligas menores y LVBP), fútbol (MLS e internacional), baloncesto (NBA y Superliga), tenis y boxeo. El béisbol es nuestra categoría más grande, con más de 490 atletas monitoreados.",
     "about.faq.3.q": "¿Qué significa la \"Media Winsorizada de Taguchi\"?",
     "about.faq.3.a":
-      "Es un método estadístico que elimina los valores extremos (el 10% más alto y el 10% más bajo de los precios) antes de calcular el promedio. Esto da un precio mucho más realista que un promedio simple, que puede distorsionarse con una sola publicación muy cara o muy barata.",
+      "Es un método estadístico que ordena todos los precios, limita el 40% más bajo y el 40% más alto al valor central más cercano (winsorización) y luego promedia. Esto da un precio mucho más realista que un promedio simple, que puede distorsionarse con una sola publicación muy cara o muy barata.",
     "about.faq.4.q": "¿Qué son las señales de inversión (Compra Baja, Potencial de Reventa, etc.)?",
     "about.faq.4.a":
       "Son indicadores basados en datos, calculados con nuestros modelos de precios. \"Compra Baja\" marca cartas con precio por debajo de su nivel de referencia, una posible ganga. \"Potencial de Reventa\" señala cartas volátiles con amplias variaciones de precio. \"Fuerza de Señal\" usa la relación S/R de Taguchi para medir qué tan predecible es el precio. Son herramientas informativas, no asesoría financiera.",
@@ -272,12 +272,12 @@ export const pageTranslations = {
     "methodology.approach.p2":
       "Los datos crudos pasan por un proceso riguroso de limpieza. Primero, comparamos los títulos de las publicaciones con nuestra base de más de 550 nombres de atletas, manejando acentos, grafías alternativas y apodos. Luego, cuatro capas de filtros independientes eliminan publicaciones basura: lotes al mayor, reimpresiones, cartas digitales, calcomanías y artículos dañados. Solo sobreviven las publicaciones legítimas de cartas individuales bien identificadas.",
     "methodology.approach.p3":
-      "Ya filtrados, los precios se procesan con la **Media Winsorizada de Taguchi**, un método estadístico que recorta el 20% superior e inferior de precios extremos antes de promediar. Esto produce precios que reflejan lo que los coleccionistas pagan realmente, sin la distorsión de las publicaciones atípicas.",
+      "Ya filtrados, los precios se procesan con la **Media Winsorizada de Taguchi**, un método estadístico que limita el 40% más bajo y el 40% más alto de los precios al valor central más cercano (winsorización) antes de promediar. Esto produce precios que reflejan lo que los coleccionistas pagan realmente, sin la distorsión de las publicaciones atípicas.",
     "methodology.stats.title": "Métodos Estadísticos",
     "methodology.stats.p1":
       "Los promedios tradicionales son engañosos para las cartas deportivas. Un promedio simple de publicaciones de eBay incluiría lotes de $0.99 junto a joyas graduadas de $500, produciendo un número que no representa ninguna de las dos categorías. Nuestro enfoque lo resuelve con tres técnicas complementarias:",
     "methodology.stats.p2":
-      "**1. Media Winsorizada de Taguchi:** Ordenamos todos los precios, recortamos el 20% más extremo de cada extremo, reemplazamos los valores recortados por el valor sobreviviente más cercano (winsorización) y calculamos la media. Tomado de la ingeniería industrial de calidad, este método está diseñado para conjuntos de datos con colas pesadas, exactamente como los precios de eBay.",
+      "**1. Media Winsorizada de Taguchi:** Ordenamos todos los precios, limitamos el 40% más bajo y el 40% más alto, reemplazando esos valores por el valor sobreviviente más cercano (winsorización) y calculamos la media. Tomado de la ingeniería industrial de calidad, este método está diseñado para conjuntos de datos con colas pesadas, exactamente como los precios de eBay.",
     "methodology.stats.p3":
       "**2. Coeficiente de Variación (CV):** Desviación estándar dividida entre la media, expresada como porcentaje. Este único número te dice cuánto acuerdo de precios existe en el mercado. Un CV de 10% significa publicaciones muy agrupadas, un consenso fuerte de valor. Un CV de 50% significa precios muy dispersos, y el \"promedio\" pierde significado.",
     "methodology.stats.p4":
@@ -304,7 +304,7 @@ export const pageTranslations = {
       "Los promedios de publicaciones de eBay se actualizan con el último escaneo mediante procesos automatizados. Los datos de población de PSA y BGS se actualizan semanalmente. El informe quincenal de análisis de mercado se genera el 1 y el 15 de cada mes.",
     "methodology.faq.2.q": "¿Qué es la Media Winsorizada de Taguchi?",
     "methodology.faq.2.a":
-      "Es un método estadístico tomado del control de calidad industrial. Ordenamos todos los precios de las publicaciones, quitamos el 20% superior e inferior (valores extremos como lotes de $0.99 o rarezas de $10,000), reemplazamos los valores recortados por el valor sobreviviente más cercano y calculamos la media. Así obtienes un precio que representa lo que realmente cuesta una carta típica, sin distorsiones por remates ni apuestas especulativas.",
+      "Es un método estadístico tomado del control de calidad industrial. Ordenamos todos los precios de las publicaciones, limitamos el 40% más bajo y el 40% más alto (valores extremos como lotes de $0.99 o rarezas de $10,000) al valor sobreviviente más cercano y calculamos la media. Así obtienes un precio que representa lo que realmente cuesta una carta típica, sin distorsiones por remates ni apuestas especulativas.",
     "methodology.faq.3.q": "¿Qué significa el Puntaje de Estabilidad?",
     "methodology.faq.3.a":
       "El Puntaje de Estabilidad se basa en el Coeficiente de Variación (CV), la desviación estándar dividida entre la media, expresada como porcentaje. \"Estable\" (0-10%) significa fuerte acuerdo de precios entre publicaciones. \"Activo\" (10-20%) indica actividad normal del mercado. \"Volátil\" (20-35%) muestra dispersión significativa de precios. \"Inestable\" (35%+) señala alta especulación o ruido en los datos, toma esos promedios con cautela.",

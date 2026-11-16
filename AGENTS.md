@@ -1,0 +1,1 @@
+- Methodology copy (all pages, EN/ES, JSON-LD) must state the trim % that matches TAGUCHI_TRIM_PCT in scripts/*update-ebay-avg.js; why: pages drifted out of sync.

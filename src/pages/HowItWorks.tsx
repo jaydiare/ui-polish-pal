@@ -31,7 +31,7 @@ export default function HowItWorks() {
             {
               "@type": "Question",
               name: "What is the Taguchi Winsorized Mean?",
-              acceptedAnswer: { "@type": "Answer", text: "A statistical method that removes the top and bottom 10% of extreme prices before averaging. This produces more reliable price estimates that aren't skewed by outlier listings." },
+              acceptedAnswer: { "@type": "Answer", text: "A statistical method that caps the lowest 40% and highest 40% of prices at the nearest middle value (winsorization) before averaging. This produces more reliable price estimates that aren't skewed by outlier listings." },
             },
             {
               "@type": "Question",
@@ -101,7 +101,7 @@ export default function HowItWorks() {
               Raw eBay data is messy. A simple average of listings for "Ronald Acuña Jr. cards" might include a $0.99 damaged common alongside a $5,000 PSA 10 rookie. That average would be meaningless. This is why we use the <strong className="text-foreground">Taguchi Winsorized Mean</strong>.
             </p>
             <p>
-              Named after quality engineering pioneer Genichi Taguchi, our Winsorized Mean works by sorting all prices, removing the top and bottom 10% of extreme values, and then averaging the remaining 80%. The result is a price that genuinely reflects what a "typical" card for that athlete sells for — not what one outlier listing says.
+              Named after quality engineering pioneer Genichi Taguchi, our Winsorized Mean works by sorting all prices, capping the lowest 40% and highest 40% at the nearest middle value, and then averaging everything. The result is a price that genuinely reflects what a "typical" card for that athlete sells for — not what one outlier listing says.
             </p>
             <p>
               Beyond the average price, we calculate two additional metrics for every athlete:
@@ -207,7 +207,7 @@ export default function HowItWorks() {
               </li>
               <li className="flex items-start gap-2">
                 <span className="text-vzla-yellow mt-0.5">•</span>
-                <span><strong className="text-foreground">Outlier removal</strong> — the Taguchi method removes the top/bottom 10% before any average is calculated.</span>
+                <span><strong className="text-foreground">Outlier removal</strong> — the Taguchi method caps the lowest and highest 40% of prices before any average is calculated.</span>
               </li>
               <li className="flex items-start gap-2">
                 <span className="text-vzla-yellow mt-0.5">•</span>

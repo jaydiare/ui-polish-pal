@@ -62,7 +62,7 @@ const About = () => {
                 name: "What does 'Taguchi Winsorized Mean' mean?",
                 acceptedAnswer: {
                   "@type": "Answer",
-                  text: "It's a statistical method that removes extreme outliers (the highest and lowest 10% of prices) before calculating an average. This gives you a much more realistic price than a simple average, which can be skewed by a single very expensive or very cheap listing.",
+                  text: "It's a statistical method that sorts all prices, caps the lowest 40% and highest 40% at the nearest middle value (winsorization), then averages. This gives you a much more realistic price than a simple average, which can be skewed by a single very expensive or very cheap listing.",
                 },
               },
               {

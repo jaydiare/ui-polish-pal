@@ -370,7 +370,7 @@ const MarketCapBlog = () => {
             <div className="border border-border/50 rounded-lg p-4 bg-secondary/20">
               <h3 className="font-display font-bold text-foreground text-sm mb-2">3. Pricing Methodology</h3>
               <p className="text-xs">
-                All prices use the <strong className="text-foreground">Taguchi Winsorized Mean</strong> — a robust statistical average that removes extreme outliers (top/bottom 10%) before calculating the mean. This produces more reliable price estimates than simple averages. The <strong className="text-foreground">Coefficient of Variation (CV)</strong> measures price stability, and the <strong className="text-foreground">Signal-to-Noise ratio</strong> (10 × log₁₀(1 / CV²)) quantifies pricing predictability on a decibel scale.
+                All prices use the <strong className="text-foreground">Taguchi Winsorized Mean</strong> — a robust statistical average that caps the lowest 40% and highest 40% of prices at the nearest middle value before calculating the mean. This produces more reliable price estimates than simple averages. The <strong className="text-foreground">Coefficient of Variation (CV)</strong> measures price stability, and the <strong className="text-foreground">Signal-to-Noise ratio</strong> (10 × log₁₀(1 / CV²)) quantifies pricing predictability on a decibel scale.
               </p>
             </div>
 
