@@ -23,7 +23,7 @@ const FAQ_ITEMS = [
   },
   {
     q: "What is the Taguchi Winsorized Mean?",
-    a: "It's a statistical method borrowed from manufacturing quality control. We sort all listing prices, remove the top and bottom 20% (extreme outliers like $0.99 bulk lots or $10,000 rare finds), replace trimmed values with the nearest surviving value, and compute the mean. This gives you a price that represents what a typical card actually costs — not skewed by fire-sale listings or speculative moonshots.",
+    a: "It's a statistical method borrowed from manufacturing quality control. We sort all listing prices, cap the lowest 40% and highest 40% (extreme outliers like $0.99 bulk lots or $10,000 rare finds) at the nearest surviving value, and compute the mean. This gives you a price that represents what a typical card actually costs, not skewed by fire-sale listings or speculative moonshots.",
   },
   {
     q: "What does the Stability Score mean?",
