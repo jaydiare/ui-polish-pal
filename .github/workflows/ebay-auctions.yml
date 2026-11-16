@@ -1,0 +1,51 @@
+name: eBay auctions tracker
+
+on:
+  schedule:
+    - cron: "15 */3 * * *"
+  workflow_dispatch:
+
+concurrency:
+  group: ebay-auctions
+  cancel-in-progress: true
+
+permissions:
+  contents: write
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+      - name: Fetch auctions
+        run: node scripts/fetch-ebay-auctions.js
+        env:
+          EBAY_CLIENT_ID: ${{ secrets.EBAY_CLIENT_ID }}
+          EBAY_CLIENT_SECRET: ${{ secrets.EBAY_CLIENT_SECRET }}
+      - name: Copy to public
+        run: |
+          mkdir -p public/data
+          [ -f data/ebay-auctions.json ] && cp data/ebay-auctions.json public/data/ebay-auctions.json || true
+      - name: Commit & push (rebase-safe)
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          for f in data/ebay-auctions.json public/data/ebay-auctions.json; do [ -f "$f" ] && git add "$f"; done
+          if git diff --cached --quiet; then echo "No changes"; exit 0; fi
+          git commit -m "Update eBay auctions"
+          for i in 1 2 3; do
+            git fetch origin main
+            if git rebase --autostash origin/main && git push origin HEAD:main; then exit 0; fi
+            git rebase --abort || true
+            sleep $((i * 5))
+          done
+          exit 1
