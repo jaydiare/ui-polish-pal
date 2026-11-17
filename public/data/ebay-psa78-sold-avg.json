@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "updatedAt": "2026-11-17T08:22:19.685Z",
+    "updatedAt": "2026-11-17T21:15:42.287Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "PSA 7 + PSA 8 sold comps. Two queries per athlete. Strict per-grade title filter. Taguchi winsorized mean. USD via CBSA.",
     "targetGrades": [
@@ -8,8 +8,8 @@
       8
     ],
     "batchInfo": {
-      "startIdx": 224,
-      "endIdx": 232,
+      "startIdx": 232,
+      "endIdx": 240,
       "totalAthletes": 464
     },
     "maxPages": 3,
@@ -2876,35 +2876,35 @@
   },
   "Jose Pirela": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-10-25T05:09:18.389Z"
+    "erroredAt": "2026-11-17T21:15:58.474Z"
   },
   "Jose Rodriguez": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-10-25T05:09:40.742Z"
+    "erroredAt": "2026-11-17T21:16:21.065Z"
   },
   "Jose Rondon": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-10-25T05:10:02.918Z"
+    "erroredAt": "2026-11-17T21:16:42.868Z"
   },
   "Jose Suarez": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-10-25T05:10:26.838Z"
+    "erroredAt": "2026-11-17T21:17:03.359Z"
   },
   "Jose Tabata": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-10-25T05:10:49.149Z"
+    "erroredAt": "2026-11-17T21:17:23.303Z"
   },
   "Jose Torres": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-10-25T05:11:09.770Z"
+    "erroredAt": "2026-11-17T21:17:42.875Z"
   },
   "Josh Barfield": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-10-25T05:11:31.168Z"
+    "erroredAt": "2026-11-17T21:18:06.257Z"
   },
   "Josmil Pinto": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-10-25T05:11:55.031Z"
+    "erroredAt": "2026-11-17T21:18:27.433Z"
   },
   "Juan Castillo": {
     "error": "eBay fetch failed (403)",
