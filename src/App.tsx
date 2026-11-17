@@ -19,6 +19,7 @@ const HowItWorks = lazyRetry(() => import("./pages/HowItWorks"));
 const ChecklistIntel = lazyRetry(() => import("./pages/ChecklistIntel"));
 const Methodology = lazyRetry(() => import("./pages/Methodology"));
 const MlbVenezuelanLeaders = lazyRetry(() => import("./pages/MlbVenezuelanLeaders"));
+const Auctions = lazyRetry(() => import("./pages/Auctions"));
 const AdminAdsense = lazyRetry(() => import("./pages/AdminAdsense"));
 const NotFound = lazyRetry(() => import("./pages/NotFound"));
 const Toaster = lazyRetry(() => import("@/components/ui/toaster").then(m => ({ default: m.Toaster })));
@@ -53,6 +54,7 @@ const App = () => (
             <Route path="/how-it-works" element={<HowItWorks />} />
             <Route path="/methodology" element={<Methodology />} />
             <Route path="/mlb-venezuelan-leaders" element={<MlbVenezuelanLeaders />} />
+            <Route path="/auctions" element={<Auctions />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="/admin/adsense" element={<AdminAdsense />} />
             <Route path="*" element={<NotFound />} />

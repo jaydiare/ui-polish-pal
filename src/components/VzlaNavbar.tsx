@@ -13,6 +13,7 @@ const NAV_ITEMS: { key: TranslationKey; to: string }[] = [
   { key: "nav.marketData", to: "/market-data" },
   { key: "nav.checklistIntel", to: "/checklist-intel" },
   { key: "nav.mlbLeaders", to: "/mlb-venezuelan-leaders" },
+  { key: "nav.auctions", to: "/auctions" },
 ];
 
 const SOCIAL_LINKS = {
