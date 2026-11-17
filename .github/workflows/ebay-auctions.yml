@@ -27,7 +27,7 @@ jobs:
         with:
           node-version: 24
       - name: Fetch auctions
-        run: node scripts/fetch-ebay-auctions.js
+        run: node scripts/fetch-ebay-auctions.cjs
         env:
           EBAY_CLIENT_ID: ${{ secrets.EBAY_CLIENT_ID }}
           EBAY_CLIENT_SECRET: ${{ secrets.EBAY_CLIENT_SECRET }}
