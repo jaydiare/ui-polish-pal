@@ -73,7 +73,7 @@ export default function Auctions() {
         {!data && !error && <p className="text-muted-foreground">{t("auctions.loading")}</p>}
         {(error || (data && live.length === 0)) && <p className="text-muted-foreground">{t("auctions.empty")}</p>}
 
-        <ul className="grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+        <ul className="grid gap-2 sm:gap-4 grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
           {live.map((a) => {
             const left = Date.parse(a.endDate) - now;
             const urgent = left < 60 * 60 * 1000;
@@ -83,17 +83,17 @@ export default function Auctions() {
                   <div className="aspect-square bg-muted/30 flex items-center justify-center">
                     {a.image ? <img src={a.image} alt={a.title} loading="lazy" className="h-full w-full object-contain" /> : null}
                   </div>
-                  <div className="p-3 flex flex-col gap-1 flex-1">
+                  <div className="p-2 sm:p-3 flex flex-col gap-1 flex-1">
                     <span className="text-xs font-semibold text-primary">{a.athlete}</span>
-                    <span className="text-sm line-clamp-2 text-pretty">{a.title}</span>
-                    <div className="mt-auto pt-2 flex items-end justify-between gap-2">
+                    <span className="text-xs sm:text-sm line-clamp-2 text-pretty">{a.title}</span>
+                    <div className="mt-auto pt-2 flex flex-wrap items-end justify-between gap-x-2 gap-y-1">
                       <div>
                         <div className="text-[11px] text-muted-foreground">{t("auctions.bid")}</div>
-                        <div className="font-bold">{a.currentBid != null ? `${a.currency} $${a.currentBid.toFixed(2)}` : "—"}</div>
+                        <div className="font-bold text-sm sm:text-base">{a.currentBid != null ? `${a.currency} $${a.currentBid.toFixed(2)}` : "—"}</div>
                       </div>
                       <div className="text-right">
                         <div className="text-[11px] text-muted-foreground">{t("auctions.endsIn")}</div>
-                        <div className={`font-mono text-sm ${urgent ? "text-destructive font-bold" : ""}`} aria-live="off">{formatLeft(left, es)}</div>
+                        <div className={`font-mono text-xs sm:text-sm ${urgent ? "text-destructive font-bold" : ""}`} aria-live="off">{formatLeft(left, es)}</div>
                       </div>
                     </div>
                   </div>

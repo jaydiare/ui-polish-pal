@@ -2,7 +2,8 @@ import { Suspense } from "react";
 import { lazyRetry } from "@/lib/lazy-retry";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { isHiddenPage } from "@/lib/hidden-pages";
 
 const Index = lazyRetry(() => import("./pages/Index"));
 const About = lazyRetry(() => import("./pages/About"));
@@ -49,11 +50,11 @@ const App = () => (
             <Route path="/blog/venezuelan-sports-cards-market-cap" element={<MarketCapBlog />} />
             <Route path="/blog/:slug" element={<BlogPost />} />
             <Route path="/data" element={<Data />} />
-            <Route path="/market-data" element={<MarketData />} />
-            <Route path="/checklist-intel" element={<ChecklistIntel />} />
+            <Route path="/market-data" element={isHiddenPage("/market-data") ? <Navigate to="/" replace /> : <MarketData />} />
+            <Route path="/checklist-intel" element={isHiddenPage("/checklist-intel") ? <Navigate to="/" replace /> : <ChecklistIntel />} />
             <Route path="/how-it-works" element={<HowItWorks />} />
             <Route path="/methodology" element={<Methodology />} />
-            <Route path="/mlb-venezuelan-leaders" element={<MlbVenezuelanLeaders />} />
+            <Route path="/mlb-venezuelan-leaders" element={isHiddenPage("/mlb-venezuelan-leaders") ? <Navigate to="/" replace /> : <MlbVenezuelanLeaders />} />
             <Route path="/auctions" element={<Auctions />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="/admin/adsense" element={<AdminAdsense />} />

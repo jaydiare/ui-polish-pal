@@ -4,8 +4,9 @@ import { Link, useLocation } from "react-router-dom";
 import LanguageToggle from "./LanguageToggle";
 import { useLanguage } from "@/i18n/LanguageProvider";
 import type { TranslationKey } from "@/i18n/translations";
+import { isHiddenPage } from "@/lib/hidden-pages";
 
-const NAV_ITEMS: { key: TranslationKey; to: string }[] = [
+const ALL_NAV_ITEMS: { key: TranslationKey; to: string }[] = [
   { key: "nav.home", to: "/" },
   { key: "nav.about", to: "/about" },
   { key: "nav.blog", to: "/blog" },
@@ -15,6 +16,7 @@ const NAV_ITEMS: { key: TranslationKey; to: string }[] = [
   { key: "nav.mlbLeaders", to: "/mlb-venezuelan-leaders" },
   { key: "nav.auctions", to: "/auctions" },
 ];
+const NAV_ITEMS = ALL_NAV_ITEMS.filter((item) => !isHiddenPage(item.to));
 
 const SOCIAL_LINKS = {
   instagram: "https://www.instagram.com/localheros_sportscards/",
