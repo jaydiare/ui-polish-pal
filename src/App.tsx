@@ -22,6 +22,7 @@ const Methodology = lazyRetry(() => import("./pages/Methodology"));
 const MlbVenezuelanLeaders = lazyRetry(() => import("./pages/MlbVenezuelanLeaders"));
 const Auctions = lazyRetry(() => import("./pages/Auctions"));
 const AdminAdsense = lazyRetry(() => import("./pages/AdminAdsense"));
+const OAuthConsent = lazyRetry(() => import("./pages/OAuthConsent"));
 const NotFound = lazyRetry(() => import("./pages/NotFound"));
 const Toaster = lazyRetry(() => import("@/components/ui/toaster").then(m => ({ default: m.Toaster })));
 const Sonner = lazyRetry(() => import("@/components/ui/sonner").then(m => ({ default: m.Toaster })));
@@ -58,6 +59,7 @@ const App = () => (
             <Route path="/auctions" element={<Auctions />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="/admin/adsense" element={<AdminAdsense />} />
+            <Route path="/.lovable/oauth/consent" element={<OAuthConsent />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </Suspense>
