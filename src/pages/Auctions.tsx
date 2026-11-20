@@ -10,14 +10,15 @@ type Auction = {
 };
 type Payload = { _meta?: { generatedAt?: string | null }; auctions?: Auction[] };
 
-type Bucket = "all" | "u10" | "10to50" | "o50";
-const BUCKETS: Bucket[] = ["all", "u10", "10to50", "o50"];
+type Bucket = "all" | "u5" | "5to10" | "10to50" | "o50";
+const BUCKETS: Bucket[] = ["all", "u5", "5to10", "10to50", "o50"];
 
 function inBucket(a: Auction, b: Bucket) {
   if (b === "all") return true;
   const v = a.currentBid;
   if (v == null) return false;
-  if (b === "u10") return v < 10;
+  if (b === "u5") return v < 5;
+  if (b === "5to10") return v >= 5 && v < 10;
   if (b === "10to50") return v >= 10 && v <= 50;
   return v > 50;
 }
@@ -66,9 +67,10 @@ export default function Auctions() {
   );
   const shown = useMemo(() => live.filter((a) => inBucket(a, bucket)), [live, bucket]);
   const counts = useMemo(() => {
-    const c: Record<Bucket, number> = { all: live.length, u10: 0, "10to50": 0, o50: 0 };
+    const c: Record<Bucket, number> = { all: live.length, u5: 0, "5to10": 0, "10to50": 0, o50: 0 };
     for (const a of live) {
-      if (inBucket(a, "u10")) c.u10++;
+      if (inBucket(a, "u5")) c.u5++;
+      else if (inBucket(a, "5to10")) c["5to10"]++;
       else if (inBucket(a, "10to50")) c["10to50"]++;
       else if (inBucket(a, "o50")) c.o50++;
     }
