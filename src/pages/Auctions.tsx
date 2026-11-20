@@ -10,6 +10,18 @@ type Auction = {
 };
 type Payload = { _meta?: { generatedAt?: string | null }; auctions?: Auction[] };
 
+type Bucket = "all" | "u10" | "10to50" | "o50";
+const BUCKETS: Bucket[] = ["all", "u10", "10to50", "o50"];
+
+function inBucket(a: Auction, b: Bucket) {
+  if (b === "all") return true;
+  const v = a.currentBid;
+  if (v == null) return false;
+  if (b === "u10") return v < 10;
+  if (b === "10to50") return v >= 10 && v <= 50;
+  return v > 50;
+}
+
 const SOURCES = [
   "https://raw.githubusercontent.com/jaydiare/ui-polish-pal/main/data/ebay-auctions.json",
   "/data/ebay-auctions.json",
@@ -28,6 +40,7 @@ export default function Auctions() {
   const [data, setData] = useState<Payload | null>(null);
   const [error, setError] = useState(false);
   const [now, setNow] = useState(Date.now());
+  const [bucket, setBucket] = useState<Bucket>("all");
 
   useEffect(() => {
     let alive = true;
@@ -51,6 +64,16 @@ export default function Auctions() {
     () => (data?.auctions || []).filter((a) => Date.parse(a.endDate) > now).sort((a, b) => Date.parse(a.endDate) - Date.parse(b.endDate)),
     [data, now],
   );
+  const shown = useMemo(() => live.filter((a) => inBucket(a, bucket)), [live, bucket]);
+  const counts = useMemo(() => {
+    const c: Record<Bucket, number> = { all: live.length, u10: 0, "10to50": 0, o50: 0 };
+    for (const a of live) {
+      if (inBucket(a, "u10")) c.u10++;
+      else if (inBucket(a, "10to50")) c["10to50"]++;
+      else if (inBucket(a, "o50")) c.o50++;
+    }
+    return c;
+  }, [live]);
   const updated = data?._meta?.generatedAt
     ? new Date(data._meta.generatedAt).toLocaleString(es ? "es-VE" : "en-US", { dateStyle: "medium", timeStyle: "short" })
     : null;
@@ -73,8 +96,40 @@ export default function Auctions() {
         {!data && !error && <p className="text-muted-foreground">{t("auctions.loading")}</p>}
         {(error || (data && live.length === 0)) && <p className="text-muted-foreground">{t("auctions.empty")}</p>}
 
+        {!!data && live.length > 0 && (
+          <div
+            role="group"
+            aria-label={t("auctions.filterLabel")}
+            className="mb-4 flex flex-wrap items-center gap-2"
+          >
+            {BUCKETS.map((b) => {
+              const active = bucket === b;
+              return (
+                <button
+                  key={b}
+                  type="button"
+                  aria-pressed={active}
+                  onClick={() => setBucket(b)}
+                  className={`rounded-full border px-3 py-1.5 text-xs sm:text-sm transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-primary ${
+                    active
+                      ? "border-primary bg-primary text-primary-foreground font-semibold"
+                      : "border-border bg-muted/20 text-foreground/85 hover:text-foreground"
+                  }`}
+                >
+                  {t(`auctions.filter.${b}`)}
+                  <span className="ml-1.5 opacity-70">{counts[b]}</span>
+                </button>
+              );
+            })}
+          </div>
+        )}
+
+        {!!data && live.length > 0 && shown.length === 0 && (
+          <p className="text-muted-foreground">{t("auctions.emptyFilter")}</p>
+        )}
+
         <ul className="grid gap-2 sm:gap-4 grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-          {live.map((a) => {
+          {shown.map((a) => {
             const left = Date.parse(a.endDate) - now;
             const urgent = left < 60 * 60 * 1000;
             return (
