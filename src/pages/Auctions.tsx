@@ -3,8 +3,6 @@ import VzlaNavbar from "@/components/VzlaNavbar";
 import VzlaFooter from "@/components/VzlaFooter";
 import SEOHead from "@/components/SEOHead";
 import { useLanguage } from "@/i18n/LanguageProvider";
-import { useWebMCP } from "use-webmcp-tool";
-import { runWebMCPTool } from "@/lib/webmcp-telemetry";
 
 type Auction = {
   itemId: string; athlete: string; sport: string | null; title: string; image: string | null;
@@ -56,17 +54,6 @@ export default function Auctions() {
   const updated = data?._meta?.generatedAt
     ? new Date(data._meta.generatedAt).toLocaleString(es ? "es-VE" : "en-US", { dateStyle: "medium", timeStyle: "short" })
     : null;
-
-  useWebMCP({
-    name: "read_visible_auctions",
-    description: "Read up to 20 auctions currently shown, ending soonest first, with bids from the last refresh.",
-    annotations: { readOnlyHint: true, untrustedContentHint: true },
-    execute: () => runWebMCPTool("read_visible_auctions", () => {
-      if (error) throw new Error("Auctions could not be loaded.");
-      if (!data) return "Auctions are loading.";
-      return `Last refresh: ${updated ?? "unknown"}. ${live.length} auctions shown.\n${live.slice(0, 20).map(a => `${a.itemId}: ${a.athlete}, ${a.title}, ${a.currency} $${a.currentBid ?? "unknown"}, ends ${a.endDate}`).join("\n") || "No live auctions shown."}`;
-    }),
-  });
 
   return (
     <div className="min-h-screen bg-background text-foreground">

@@ -1,6 +1,2 @@
 - Methodology copy (all pages, EN/ES, JSON-LD) must state the trim % that matches TAGUCHI_TRIM_PCT in scripts/*update-ebay-avg.js; why: pages drifted out of sync.
 - eBay auctions tracker: scripts/fetch-ebay-auctions.cjs (Browse API, AUCTION, endingSoonest) writes data/ebay-auctions.json every 3h via ebay-auctions.yml; page fetches it client-side, no backend; why: stays within eBay daily quota.
-- MCP tools are authored one per file in src/lib/mcp and OAuth-protected, reading only fixed public JSON sources; why: preserve Git data ownership and keep administrative records private.
-- The Vite MCP plugin owns generated transport; manifest extraction and app republish follow MCP changes; why: generated files do not establish hosted availability.
-- Browser auction tools register in the Auctions page through use-webmcp-tool with shared fail-open telemetry; why: expose only the mounted view without changing normal UI behavior.
-- OAuth consent keeps existing email/password authentication on the consent URL and uses that URL for signup confirmation; why: preserve authorization IDs without exposing tokens or adding public navigation.
