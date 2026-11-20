@@ -1,1486 +1,22 @@
 {
   "_meta": {
-    "generatedAt": "2026-11-19T20:37:33.233Z",
+    "generatedAt": "2026-11-20T02:20:39.972Z",
     "athletes": 100,
     "failed": 0,
-    "count": 490
+    "count": 492
   },
   "auctions": [
     {
-      "itemId": "v1|840122212534|0",
-      "athlete": "Andres Gimenez",
-      "sport": "Baseball",
-      "title": "Andres Gimenez Rookie - 2021 Topps - New York Mets",
-      "image": "https://i.ebayimg.com/images/g/va4AAeSwkW1q9iSd/s-l225.jpg",
-      "currentBid": 0.16,
-      "currency": "USD",
-      "bidCount": 2,
-      "endDate": "2026-11-19T20:42:47.000Z",
-      "url": "https://www.ebay.com/itm/840122212534?_skw=Andres+Gimenez+Baseball&hash=itemc39b2fa0b6:g:va4AAeSwkW1q9iSd&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
-    },
-    {
-      "itemId": "v1|860128878950|0",
-      "athlete": "Felix Hernandez",
-      "sport": "Baseball",
-      "title": "2024 Panini Flawless Gold Felix Hernandez Patch 6/10 PSA 6 PSA/DNA 8 AUTO",
-      "image": "https://i.ebayimg.com/images/g/ddIAAeSw-Mdqf0q9/s-l225.jpg",
-      "currentBid": 291,
-      "currency": "USD",
-      "bidCount": 0,
-      "endDate": "2026-11-19T20:46:08.000Z",
-      "url": "https://www.ebay.com/itm/860128878950?_skw=Felix+Hernandez+Baseball&hash=itemc843ad2166:g:ddIAAeSw-Mdqf0q9&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
-    },
-    {
-      "itemId": "v1|800909520284|0",
-      "athlete": "Andres Gimenez",
-      "sport": "Baseball",
-      "title": "Topps 2021 Bowman Chrome Andres Gimenez RC ROY Favorites RRY-AG 117/150",
-      "image": "https://i.ebayimg.com/images/g/G6AAAeSwkLVq7Ol0/s-l225.jpg",
-      "currentBid": 0.75,
-      "currency": "USD",
-      "bidCount": 0,
-      "endDate": "2026-11-19T20:49:45.000Z",
-      "url": "https://www.ebay.com/itm/800909520284?_skw=Andres+Gimenez+Baseball&hash=itemba79ed6d9c:g:G6AAAeSwkLVq7Ol0&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
-    },
-    {
-      "itemId": "v1|920136369291|0",
-      "athlete": "Andruw Monasterio",
-      "sport": "Baseball",
-      "title": "Topps Chrome Andruw Monasterio Brewers Rookie Refractor 2023 Card USC177",
-      "image": "https://i.ebayimg.com/images/g/STgAAeSwVftpoT~6/s-l225.jpg",
-      "currentBid": 3.64,
-      "currency": "USD",
-      "bidCount": 0,
-      "endDate": "2026-11-19T20:54:43.000Z",
-      "url": "https://www.ebay.com/itm/920136369291?_skw=Andruw+Monasterio+Baseball&hash=itemd63c66c48b:g:STgAAeSwVftpoT~6&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
-    },
-    {
-      "itemId": "v1|366810384926|0",
-      "athlete": "Carlos Narvaez",
-      "sport": "Baseball",
-      "title": "2025 Topps Inception - Carlos Narvaez #77 (RC) Boston Red Sox",
-      "image": "https://i.ebayimg.com/images/g/RjQAAeSwroZqRxxz/s-l225.jpg",
-      "currentBid": 0.99,
-      "currency": "USD",
-      "bidCount": 0,
-      "endDate": "2026-11-19T20:55:27.000Z",
-      "url": "https://www.ebay.com/itm/366810384926?_skw=Carlos+Narvaez+Baseball&hash=item55679a4a1e:g:RjQAAeSwroZqRxxz&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
-    },
-    {
-      "itemId": "v1|860138466806|0",
-      "athlete": "Carlos Gonzalez",
-      "sport": "Baseball",
-      "title": "Carlos Gonzalez 2011 Topps Lineage 75R-CGO Rockies Mini Game Used Relic (NM-M) ✨",
-      "image": "https://i.ebayimg.com/images/g/KuMAAOSwV5RmsQzh/s-l225.jpg",
-      "currentBid": 13.77,
-      "currency": "USD",
-      "bidCount": 0,
-      "endDate": "2026-11-19T20:56:41.000Z",
-      "url": "https://www.ebay.com/itm/860138466806?_skw=Carlos+Gonzalez+Baseball&hash=itemc8443f6df6:g:KuMAAOSwV5RmsQzh&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
-    },
-    {
-      "itemId": "v1|820347926332|0",
-      "athlete": "Dave Concepcion",
-      "sport": "Baseball",
-      "title": "Panini 2020 Prizm Dave Concepcion Green Prizm Cincinnati Reds #205",
-      "image": "https://i.ebayimg.com/images/g/etYAAeSwndRq7O39/s-l225.jpg",
-      "currentBid": 0.99,
-      "currency": "USD",
-      "bidCount": 0,
-      "endDate": "2026-11-19T20:59:27.000Z",
-      "url": "https://www.ebay.com/itm/820347926332?_skw=Dave+Concepcion+Baseball&hash=itembf008bf73c:g:etYAAeSwndRq7O39&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
-    },
-    {
-      "itemId": "v1|257849523074|0",
-      "athlete": "Andres Galarraga",
-      "sport": "Baseball",
-      "title": "2016 Donruss Signature Series Andres Galarraga Autograph Blue SP #07/20",
-      "image": "https://i.ebayimg.com/images/g/s-gAAOSwBAtme2vo/s-l225.jpg",
-      "currentBid": 39.99,
-      "currency": "USD",
-      "bidCount": 0,
-      "endDate": "2026-11-19T20:59:54.000Z",
-      "url": "https://www.ebay.com/itm/257849523074?_skw=Andres+Galarraga+Baseball&hash=item3c09077b82:g:s-gAAOSwBAtme2vo&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
-    },
-    {
-      "itemId": "v1|307279574332|0",
-      "athlete": "Andres Chaparro",
-      "sport": "Baseball",
-      "title": "2025 Topps Chrome - Andres Chaparro #187 X-Fractor (RC)",
-      "image": "https://i.ebayimg.com/images/g/awYAAeSwn75qFvAq/s-l225.jpg",
-      "currentBid": 0.89,
-      "currency": "USD",
-      "bidCount": 0,
-      "endDate": "2026-11-19T21:05:42.000Z",
-      "url": "https://www.ebay.com/itm/307279574332?_skw=Andres+Chaparro+Baseball&hash=item478b4a353c:g:awYAAeSwn75qFvAq&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
-    },
-    {
-      "itemId": "v1|257849547616|0",
+      "itemId": "v1|147678327177|0",
       "athlete": "Eugenio Suarez",
       "sport": "Baseball",
-      "title": "Topps Holiday 2026 Eugenio Suarez Green Foil Cincinnati Reds Baseball Card",
-      "image": "https://i.ebayimg.com/images/g/z8EAAeSwEPJq7PGI/s-l225.jpg",
-      "currentBid": 0.05,
-      "currency": "USD",
-      "bidCount": 0,
-      "endDate": "2026-11-19T21:14:07.000Z",
-      "url": "https://www.ebay.com/itm/257849547616?_skw=Eugenio+Suarez+Baseball&hash=item3c0907db60:g:z8EAAeSwEPJq7PGI&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
-    },
-    {
-      "itemId": "v1|168858017411|0",
-      "athlete": "Al Pedrique",
-      "sport": "Baseball",
-      "title": "1988 Donruss - Al Pedrique #361 Solid Blue Upper Right Corner (RC)",
-      "image": "https://i.ebayimg.com/images/g/SxIAAeSw3XhqLbRp/s-l225.jpg",
-      "currentBid": 2.25,
-      "currency": "USD",
-      "bidCount": 0,
-      "endDate": "2026-11-19T21:17:47.000Z",
-      "url": "https://www.ebay.com/itm/168858017411?_skw=Al+Pedrique+Baseball&hash=item2750b8de83:g:SxIAAeSw3XhqLbRp&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
-    },
-    {
-      "itemId": "v1|307282825963|0",
-      "athlete": "Brayan Rocchio",
-      "sport": "Baseball",
-      "title": "2026 Topps Series 2 Brayan Rocchio Gold Border Parallel /2026 #370 Guardians",
-      "image": "https://i.ebayimg.com/images/g/qP4AAeSwDNVq98V9/s-l225.jpg",
-      "currentBid": 0.99,
-      "currency": "USD",
-      "bidCount": 1,
-      "endDate": "2026-11-19T21:18:27.000Z",
-      "url": "https://www.ebay.com/itm/307282825963?_skw=Brayan+Rocchio+Baseball&hash=item478b7bd2eb:g:qP4AAeSwDNVq98V9&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
-    },
-    {
-      "itemId": "v1|800909618714|0",
-      "athlete": "Carlos Rivero",
-      "sport": "Baseball",
-      "title": "2026 Panini Stars & Stripes USA Carlos Rivero Silver Auto #026/149 NTS-CR",
-      "image": "https://i.ebayimg.com/images/g/dDkAAeSwQrNp3DoK/s-l225.jpg",
-      "currentBid": 8,
-      "currency": "USD",
-      "bidCount": 0,
-      "endDate": "2026-11-19T21:25:28.000Z",
-      "url": "https://www.ebay.com/itm/800909618714?_skw=Carlos+Rivero+Baseball&hash=itemba79eeee1a:g:dDkAAeSwQrNp3DoK&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
-    },
-    {
-      "itemId": "v1|880110108564|0",
-      "athlete": "Andres Gimenez",
-      "sport": "Baseball",
-      "title": "2025 Topps Chrome - Andres Gimenez #70 RayWave Refractor",
-      "image": "https://i.ebayimg.com/images/g/0Z0AAeSwUYVo1aCg/s-l225.jpg",
-      "currentBid": 0.99,
-      "currency": "USD",
-      "bidCount": 0,
-      "endDate": "2026-11-19T21:26:26.000Z",
-      "url": "https://www.ebay.com/itm/880110108564?_skw=Andres+Gimenez+Baseball&hash=itemcceaa67f94:g:0Z0AAeSwUYVo1aCg&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
-    },
-    {
-      "itemId": "v1|327453177026|0",
-      "athlete": "Carlos Perez",
-      "sport": "Baseball",
-      "title": "2023 Topps Chrome Sepia Refractor White Sox Carlos Perez RC #133",
-      "image": "https://i.ebayimg.com/images/g/2wQAAOSwRUZlj0i5/s-l225.jpg",
-      "currentBid": 1,
-      "currency": "USD",
-      "bidCount": 0,
-      "endDate": "2026-11-19T21:30:43.000Z",
-      "url": "https://www.ebay.com/itm/327453177026?_skw=Carlos+Perez+Baseball&hash=item4c3dbaf4c2:g:2wQAAOSwRUZlj0i5&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
-    },
-    {
-      "itemId": "v1|168858032630|0",
-      "athlete": "Eugenio Suarez",
-      "sport": "Baseball",
-      "title": "Topps 2023 Chrome Eugenio Suárez Cincinnati Reds #203 Baseball Card",
-      "image": "https://i.ebayimg.com/images/g/rtYAAeSwlShqdkV3/s-l225.jpg",
-      "currentBid": 1,
-      "currency": "USD",
-      "bidCount": 0,
-      "endDate": "2026-11-19T21:32:41.000Z",
-      "url": "https://www.ebay.com/itm/168858032630?_skw=Eugenio+Suarez+Baseball&hash=item2750b919f6:g:rtYAAeSwlShqdkV3&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
-    },
-    {
-      "itemId": "v1|287725213197|0",
-      "athlete": "Carlos Narvaez",
-      "sport": "Baseball",
-      "title": "2025 Topps Chrome - Carlos Narvaez #194 Refractor (RC)",
-      "image": "https://i.ebayimg.com/images/g/YhAAAeSwkj1q47AN/s-l225.jpg",
-      "currentBid": 0.5,
-      "currency": "USD",
-      "bidCount": 0,
-      "endDate": "2026-11-19T21:44:50.000Z",
-      "url": "https://www.ebay.com/itm/287725213197?_skw=Carlos+Narvaez+Baseball&hash=item42fdc2560d:g:YhAAAeSwkj1q47AN&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
-    },
-    {
-      "itemId": "v1|860138595321|0",
-      "athlete": "Eugenio Suarez",
-      "sport": "Baseball",
-      "title": "2026 Topps Holiday MLB Eugenio Suarez Reds Holiday Glitter H138",
-      "image": "https://i.ebayimg.com/images/g/EbMAAeSwzzpq47KR/s-l225.jpg",
-      "currentBid": 0.99,
-      "currency": "USD",
-      "bidCount": 0,
-      "endDate": "2026-11-19T21:56:03.000Z",
-      "url": "https://www.ebay.com/itm/860138595321?_skw=Eugenio+Suarez+Baseball&hash=itemc8444163f9:g:EbMAAeSwzzpq47KR&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
-    },
-    {
-      "itemId": "v1|137925840083|0",
-      "athlete": "Dave Concepcion",
-      "sport": "Baseball",
-      "title": "Topps 1971 Dave Concepcion RC #14 Cincinnati Reds Base Set Baseball Card",
-      "image": "https://i.ebayimg.com/images/g/c3MAAeSwxylq9jaM/s-l225.jpg",
-      "currentBid": 3,
-      "currency": "USD",
-      "bidCount": 3,
-      "endDate": "2026-11-19T21:59:41.000Z",
-      "url": "https://www.ebay.com/itm/137925840083?_skw=Dave+Concepcion+Baseball&hash=item201d054cd3:g:c3MAAeSwxylq9jaM&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
-    },
-    {
-      "itemId": "v1|920143732637|0",
-      "athlete": "Andruw Monasterio",
-      "sport": "Baseball",
-      "title": "2026 Topps Series 2 - Green Foil 1/99!! Andruw Monasterio #653 Red Sox",
-      "image": "https://i.ebayimg.com/images/g/fogAAeSw6tJqNDB7/s-l225.jpg",
+      "title": "2026 Topps Chrome Sapphire Gold Refractor #203 Eugenio Suarez 05/50 Reds",
+      "image": "https://i.ebayimg.com/images/g/Xl4AAeSwxrlq9nTp/s-l225.jpg",
       "currentBid": 5,
-      "currency": "USD",
-      "bidCount": 0,
-      "endDate": "2026-11-19T22:01:13.000Z",
-      "url": "https://www.ebay.com/itm/920143732637?_skw=Andruw+Monasterio+Baseball&hash=itemd63cd71f9d:g:fogAAeSw6tJqNDB7&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
-    },
-    {
-      "itemId": "v1|206691795709|0",
-      "athlete": "Anthony Santander",
-      "sport": "Baseball",
-      "title": "2018 Topps Stadium Club - Autographs Anthony Santander #SCA-AS (AU, RC)",
-      "image": "https://i.ebayimg.com/images/g/LC0AAeSwSS9q9FVW/s-l225.jpg",
-      "currentBid": 6.51,
-      "currency": "USD",
-      "bidCount": 3,
-      "endDate": "2026-11-19T22:02:01.000Z",
-      "url": "https://www.ebay.com/itm/206691795709?_skw=Anthony+Santander+Baseball&hash=item301fca82fd:g:LC0AAeSwSS9q9FVW&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
-    },
-    {
-      "itemId": "v1|800909740892|0",
-      "athlete": "Avisail Garcia",
-      "sport": "Baseball",
-      "title": "2023 Topps Chrome - Avisail Garcia #35 Purple Speckle Refractor /299",
-      "image": "https://i.ebayimg.com/images/g/o64AAeSwmRBq0UAe/s-l225.jpg",
-      "currentBid": 2.5,
-      "currency": "USD",
-      "bidCount": 0,
-      "endDate": "2026-11-19T22:09:29.000Z",
-      "url": "https://www.ebay.com/itm/800909740892?_skw=Avisail+Garcia+Baseball&hash=itemba79f0cb5c:g:o64AAeSwmRBq0UAe&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
-    },
-    {
-      "itemId": "v1|198795512222|0",
-      "athlete": "Bo Diaz",
-      "sport": "Baseball",
-      "title": "Topps 1978 Topps Rookie Catchers RC #708 Bo Diaz Dale Murphy Parrish Whitt",
-      "image": "https://i.ebayimg.com/images/g/AS4AAeSwgyhq66kw/s-l225.jpg",
-      "currentBid": 20,
-      "currency": "USD",
-      "bidCount": 0,
-      "endDate": "2026-11-19T22:15:08.000Z",
-      "url": "https://www.ebay.com/itm/198795512222?_skw=Bo+Diaz+Baseball&hash=item2e4922c99e:g:AS4AAeSwgyhq66kw&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
-    },
-    {
-      "itemId": "v1|407358946543|0",
-      "athlete": "Andres Gimenez",
-      "sport": "Baseball",
-      "title": "2021 Topps Stadium Club - Andres Gimenez #178 Red Foil (RC)",
-      "image": "https://i.ebayimg.com/images/g/8Y4AAeSw6JVqaBOr/s-l225.jpg",
-      "currentBid": 0.5,
-      "currency": "USD",
-      "bidCount": 0,
-      "endDate": "2026-11-19T22:16:35.000Z",
-      "url": "https://www.ebay.com/itm/407358946543?_skw=Andres+Gimenez+Baseball&hash=item5ed87c3cef:g:8Y4AAeSw6JVqaBOr&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
-    },
-    {
-      "itemId": "v1|198790575115|0",
-      "athlete": "Angel Bravo",
-      "sport": "Baseball",
-      "title": "1970 Topps Angel Bravo #283",
-      "image": "https://i.ebayimg.com/images/g/hYIAAOSw8ARl62~4/s-l225.jpg",
-      "currentBid": 0.89,
-      "currency": "USD",
-      "bidCount": 0,
-      "endDate": "2026-11-19T22:17:28.000Z",
-      "url": "https://www.ebay.com/itm/198790575115?_skw=Angel+Bravo+Baseball&hash=item2e48d7740b:g:hYIAAOSw8ARl62~4&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
-    },
-    {
-      "itemId": "v1|137925866893|0",
-      "athlete": "David Peralta",
-      "sport": "Baseball",
-      "title": "Topps 70th Anniversary 2015 Career High David Peralta Auto CHA-DP Dbacks MLB",
-      "image": "https://i.ebayimg.com/images/g/HUEAAeSwR0lq9jq4/s-l225.jpg",
-      "currentBid": 2,
-      "currency": "USD",
-      "bidCount": 0,
-      "endDate": "2026-11-19T22:18:55.000Z",
-      "url": "https://www.ebay.com/itm/137925866893?_skw=David+Peralta+Baseball&hash=item201d05b58d:g:HUEAAeSwR0lq9jq4&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
-    },
-    {
-      "itemId": "v1|800909753071|0",
-      "athlete": "Elias Diaz",
-      "sport": "Baseball",
-      "title": "2025 Topps Series 2 - Elias Diaz #501 Gold /2025",
-      "image": "https://i.ebayimg.com/images/g/QBUAAeSwt9Rq0UMA/s-l225.jpg",
-      "currentBid": 2.5,
-      "currency": "USD",
-      "bidCount": 0,
-      "endDate": "2026-11-19T22:19:07.000Z",
-      "url": "https://www.ebay.com/itm/800909753071?_skw=Elias+Diaz+Baseball&hash=itemba79f0faef:g:QBUAAeSwt9Rq0UMA&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
-    },
-    {
-      "itemId": "v1|327453227276|0",
-      "athlete": "Eugenio Suarez",
-      "sport": "Baseball",
-      "title": "2026 Topps Series 2 - Eugenio Suarez #446 Cincinnati Reds MNM",
-      "image": "https://i.ebayimg.com/images/g/Hj0AAeSwFY5qvs~B/s-l225.jpg",
-      "currentBid": 0.85,
-      "currency": "USD",
-      "bidCount": 0,
-      "endDate": "2026-11-19T22:27:33.000Z",
-      "url": "https://www.ebay.com/itm/327453227276?_skw=Eugenio+Suarez+Baseball&hash=item4c3dbbb90c:g:Hj0AAeSwFY5qvs~B&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
-    },
-    {
-      "itemId": "v1|227611740183|0",
-      "athlete": "Carlos Gonzalez",
-      "sport": "Baseball",
-      "title": "2008 Topps Heritage High Number - Rookie Stars of 2008 Carlos Gonzalez #578 (RC)",
-      "image": "https://i.ebayimg.com/images/g/HTMAAeSwrAxqTUSX/s-l225.jpg",
-      "currentBid": 0.54,
-      "currency": "USD",
-      "bidCount": 0,
-      "endDate": "2026-11-19T22:30:02.000Z",
-      "url": "https://www.ebay.com/itm/227611740183?_skw=Carlos+Gonzalez+Baseball&hash=item34feb78817:g:HTMAAeSwrAxqTUSX&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
-    },
-    {
-      "itemId": "v1|237174004352|0",
-      "athlete": "Felix Hernandez",
-      "sport": "Baseball",
-      "title": "2014 Topps Felix Hernandez Gold Parallel #/2014 Seattle Mariners #401",
-      "image": "https://i.ebayimg.com/images/g/pL8AAeSwfGRq8kq~/s-l225.jpg",
-      "currentBid": 3.99,
-      "currency": "USD",
-      "bidCount": 0,
-      "endDate": "2026-11-19T22:36:41.000Z",
-      "url": "https://www.ebay.com/itm/237174004352?_skw=Felix+Hernandez+Baseball&hash=item3738ac1a80:g:pL8AAeSwfGRq8kq~&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
-    },
-    {
-      "itemId": "v1|800894394111|0",
-      "athlete": "Felix Hernandez",
-      "sport": "Baseball",
-      "title": "Felix Hernandez 2013 Topps Update #US119 Mariners FREE SHIPPING StackedPacks",
-      "image": "https://i.ebayimg.com/images/g/6AMAAeSw6kNq8RMO/s-l225.jpg",
-      "currentBid": 0.49,
-      "currency": "USD",
-      "bidCount": 0,
-      "endDate": "2026-11-19T22:38:58.000Z",
-      "url": "https://www.ebay.com/itm/800894394111?_skw=Felix+Hernandez+Baseball&hash=itemba79069eff:g:6AMAAeSw6kNq8RMO&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
-    },
-    {
-      "itemId": "v1|407358987088|0",
-      "athlete": "Bo Diaz",
-      "sport": "Baseball",
-      "title": "Topps 1978 #708 Rookie Catchers Bo Diaz Dale Murphy Parrish Whitt RC",
-      "image": "https://i.ebayimg.com/images/g/Ip4AAeSw~Qtq0Ugb/s-l225.jpg",
-      "currentBid": 8.99,
-      "currency": "USD",
-      "bidCount": 0,
-      "endDate": "2026-11-19T22:41:01.000Z",
-      "url": "https://www.ebay.com/itm/407358987088?_skw=Bo+Diaz+Baseball&hash=item5ed87cdb50:g:Ip4AAeSw~Qtq0Ugb&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
-    },
-    {
-      "itemId": "v1|880110262643|0",
-      "athlete": "Andres Galarraga",
-      "sport": "Baseball",
-      "title": "Andres Galarraga 1999 Stadium Club Never Compromise #NC14 - Atlanta Braves",
-      "image": "https://i.ebayimg.com/images/g/pbIAAeSwDfZq0Ui4/s-l225.jpg",
-      "currentBid": 1,
-      "currency": "USD",
-      "bidCount": 0,
-      "endDate": "2026-11-19T22:43:33.000Z",
-      "url": "https://www.ebay.com/itm/880110262643?_skw=Andres+Galarraga+Baseball&hash=itemcceaa8d973:g:pbIAAeSwDfZq0Ui4&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
-    },
-    {
-      "itemId": "v1|880110271459|0",
-      "athlete": "Felix Hernandez",
-      "sport": "Baseball",
-      "title": "2005 Bowman #150 Felix Hernandez Gold",
-      "image": "https://i.ebayimg.com/images/g/92kAAeSwhs1qSoNQ/s-l225.jpg",
-      "currentBid": 2.99,
-      "currency": "USD",
-      "bidCount": 0,
-      "endDate": "2026-11-19T22:48:15.000Z",
-      "url": "https://www.ebay.com/itm/880110271459?_skw=Felix+Hernandez+Baseball&hash=itemcceaa8fbe3:g:92kAAeSwhs1qSoNQ&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
-    },
-    {
-      "itemId": "v1|227611758713|0",
-      "athlete": "Carlos Narvaez",
-      "sport": "Baseball",
-      "title": "2026 Topps Heritage Carlos Narváez #248 Pink Boston Red Sox ",
-      "image": "https://i.ebayimg.com/images/g/FRcAAeSwyZ1qID-w/s-l225.jpg",
-      "currentBid": 0.99,
-      "currency": "USD",
-      "bidCount": 0,
-      "endDate": "2026-11-19T22:50:29.000Z",
-      "url": "https://www.ebay.com/itm/227611758713?_skw=Carlos+Narvaez+Baseball&hash=item34feb7d079:g:FRcAAeSwyZ1qID-w&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
-    },
-    {
-      "itemId": "v1|900091613130|0",
-      "athlete": "Brusdar Graterol",
-      "sport": "Baseball",
-      "title": "2018 Bowman Best Autograph BRUSDAR GRATEROL RC CARD PSA 9 MINT",
-      "image": "https://i.ebayimg.com/images/g/c6kAAeSw8jlppI5P/s-l225.jpg",
-      "currentBid": 14.99,
-      "currency": "USD",
-      "bidCount": 0,
-      "endDate": "2026-11-19T22:51:00.000Z",
-      "url": "https://www.ebay.com/itm/900091613130?_skw=Brusdar+Graterol+Baseball&hash=itemd191a40fca:g:c6kAAeSw8jlppI5P&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
-    },
-    {
-      "itemId": "v1|940087398017|0",
-      "athlete": "Andres Gimenez",
-      "sport": "Baseball",
-      "title": "2021 Panini Immaculate Collection - Jumbo Jerseys Andres Gimenez #JJ-AGZ  /49",
-      "image": "https://i.ebayimg.com/images/g/AP8AAeSwWihqmd06/s-l225.jpg",
-      "currentBid": 4,
-      "currency": "USD",
-      "bidCount": 0,
-      "endDate": "2026-11-19T22:57:11.000Z",
-      "url": "https://www.ebay.com/itm/940087398017?_skw=Andres+Gimenez+Baseball&hash=itemdae1934e81:g:AP8AAeSwWihqmd06&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
-    },
-    {
-      "itemId": "v1|206701630323|0",
-      "athlete": "Carlos Carrasco",
-      "sport": "Baseball",
-      "title": "2017 Topps - Carlos Carrasco #31",
-      "image": "https://i.ebayimg.com/images/g/5SkAAeSwVaNq0UuD/s-l225.jpg",
-      "currentBid": 1.25,
-      "currency": "USD",
-      "bidCount": 0,
-      "endDate": "2026-11-19T22:57:16.000Z",
-      "url": "https://www.ebay.com/itm/206701630323?_skw=Carlos+Carrasco+Baseball&hash=item3020609373:g:5SkAAeSwVaNq0UuD&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
-    },
-    {
-      "itemId": "v1|137925959431|0",
-      "athlete": "Andres Gimenez",
-      "sport": "Baseball",
-      "title": "2021 Bowman Andres Gimenez  Rookie Card  #8 New York Mets",
-      "image": "https://i.ebayimg.com/images/g/L9YAAOSwh-1nByQB/s-l225.jpg",
-      "currentBid": 1.69,
-      "currency": "USD",
-      "bidCount": 0,
-      "endDate": "2026-11-19T22:58:49.000Z",
-      "url": "https://www.ebay.com/itm/137925959431?_skw=Andres+Gimenez+Baseball&hash=item201d071f07:g:L9YAAOSwh-1nByQB&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
-    },
-    {
-      "itemId": "v1|336893245512|0",
-      "athlete": "Dave Concepcion",
-      "sport": "Baseball",
-      "title": "1971 Topps - Dave Concepcion #14 (RC)",
-      "image": "https://i.ebayimg.com/images/g/sp0AAeSwSj9q9TRN/s-l225.jpg",
-      "currentBid": 4.09,
-      "currency": "USD",
-      "bidCount": 1,
-      "endDate": "2026-11-19T23:00:01.000Z",
-      "url": "https://www.ebay.com/itm/336893245512?_skw=Dave+Concepcion+Baseball&hash=item4e7066f848:g:sp0AAeSwSj9q9TRN&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
-    },
-    {
-      "itemId": "v1|257849658566|0",
-      "athlete": "Angel Zerpa",
-      "sport": "Baseball",
-      "title": "Panini 2022 Donruss Optic Rated Rookie Angel Zerpa #88 Lime Green Prizm MLB",
-      "image": "https://i.ebayimg.com/images/g/ip4AAeSwQIlqtZ3V/s-l225.jpg",
-      "currentBid": 1.55,
-      "currency": "USD",
-      "bidCount": 0,
-      "endDate": "2026-11-19T23:03:46.000Z",
-      "url": "https://www.ebay.com/itm/257849658566?_skw=Angel+Zerpa+Baseball&hash=item3c09098cc6:g:ip4AAeSwQIlqtZ3V&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
-    },
-    {
-      "itemId": "v1|327453263066|0",
-      "athlete": "Brayan Rocchio",
-      "sport": "Baseball",
-      "title": "2026 Topps S2 - Brayan Rocchio #370 Tanner Bibee #618 Slade Cecconi #641",
-      "image": "https://i.ebayimg.com/images/g/J~sAAeSw5hJqrGLm/s-l225.jpg",
-      "currentBid": 1.7,
-      "currency": "USD",
-      "bidCount": 0,
-      "endDate": "2026-11-19T23:05:22.000Z",
-      "url": "https://www.ebay.com/itm/327453263066?_skw=Brayan+Rocchio+Baseball&hash=item4c3dbc44da:g:J~sAAeSw5hJqrGLm&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
-    },
-    {
-      "itemId": "v1|800894391800|0",
-      "athlete": "Carlos Gonzalez",
-      "sport": "Baseball",
-      "title": "Carlos Gonzalez 2013 Topps Gypsy Queen #273 Rockies FREE SHIPPING StackedPacks",
-      "image": "https://i.ebayimg.com/images/g/E08AAeSwhmJq8RLd/s-l225.jpg",
-      "currentBid": 0.49,
-      "currency": "USD",
-      "bidCount": 0,
-      "endDate": "2026-11-19T23:09:24.000Z",
-      "url": "https://www.ebay.com/itm/800894391800?_skw=Carlos+Gonzalez+Baseball&hash=itemba790695f8:g:E08AAeSwhmJq8RLd&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
-    },
-    {
-      "itemId": "v1|407359032953|0",
-      "athlete": "Andres Galarraga",
-      "sport": "Baseball",
-      "title": "Panini 2026 Andres Galarraga En Fuego #E-AG Rockies Serial 02/25 Insert",
-      "image": "https://i.ebayimg.com/images/g/TOcAAeSw1FhqyBXA/s-l225.jpg",
-      "currentBid": 7.15,
-      "currency": "USD",
-      "bidCount": 0,
-      "endDate": "2026-11-19T23:16:28.000Z",
-      "url": "https://www.ebay.com/itm/407359032953?_skw=Andres+Galarraga+Baseball&hash=item5ed87d8e79:g:TOcAAeSw1FhqyBXA&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
-    },
-    {
-      "itemId": "v1|137925992001|0",
-      "athlete": "Angel Salazar",
-      "sport": "Baseball",
-      "title": "1986 - 1989 Topps Traded - Angel Salazar #96T Collector's Edition (Tiffany)",
-      "image": "https://i.ebayimg.com/images/g/4IIAAeSw4Gdq7Q6L/s-l225.jpg",
-      "currentBid": 2,
-      "currency": "USD",
-      "bidCount": 0,
-      "endDate": "2026-11-19T23:19:19.000Z",
-      "url": "https://www.ebay.com/itm/137925992001?_skw=Angel+Salazar+Baseball&hash=item201d079e41:g:4IIAAeSw4Gdq7Q6L&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
-    },
-    {
-      "itemId": "v1|800909894056|0",
-      "athlete": "Carlos Narvaez",
-      "sport": "Baseball",
-      "title": "2025 Topps Chrome - Carlos Narvaez #194 RayWave Refractor (RC)",
-      "image": "https://i.ebayimg.com/images/g/KUwAAeSwFh9ql4pN/s-l225.jpg",
-      "currentBid": 5,
-      "currency": "USD",
-      "bidCount": 0,
-      "endDate": "2026-11-19T23:20:30.000Z",
-      "url": "https://www.ebay.com/itm/800909894056?_skw=Carlos+Narvaez+Baseball&hash=itemba79f321a8:g:KUwAAeSwFh9ql4pN&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
-    },
-    {
-      "itemId": "v1|800909894833|0",
-      "athlete": "Andres Gimenez",
-      "sport": "Baseball",
-      "title": "2026 Topps Allen & Ginter Relics Andres Gimenez #FSRB-AG",
-      "image": "https://i.ebayimg.com/images/g/RowAAeSw5eZqyBY5/s-l225.jpg",
-      "currentBid": 0.5,
-      "currency": "USD",
-      "bidCount": 0,
-      "endDate": "2026-11-19T23:21:08.000Z",
-      "url": "https://www.ebay.com/itm/800909894833?_skw=Andres+Gimenez+Baseball&hash=itemba79f324b1:g:RowAAeSw5eZqyBY5&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
-    },
-    {
-      "itemId": "v1|900086672856|0",
-      "athlete": "Eugenio Suarez",
-      "sport": "Baseball",
-      "title": "2020 Bowman Chrome EUGENIO SUAREZ Gold Refractor /50 #33 Cincinnati Reds",
-      "image": "https://i.ebayimg.com/images/g/YccAAeSw2M1qJIHD/s-l225.jpg",
-      "currentBid": 14.98,
-      "currency": "USD",
-      "bidCount": 0,
-      "endDate": "2026-11-19T23:23:07.000Z",
-      "url": "https://www.ebay.com/itm/900086672856?_skw=Eugenio+Suarez+Baseball&hash=itemd19158add8:g:YccAAeSw2M1qJIHD&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
-    },
-    {
-      "itemId": "v1|407359050108|0",
-      "athlete": "Eugenio Suarez",
-      "sport": "Baseball",
-      "title": "Topps 2026 Holiday Eugenio Suárez Cincinnati Reds #H-138 MLB Card",
-      "image": "https://i.ebayimg.com/images/g/CNsAAeSwQrZq7RLf/s-l225.jpg",
-      "currentBid": 0.39,
-      "currency": "USD",
-      "bidCount": 0,
-      "endDate": "2026-11-19T23:36:42.000Z",
-      "url": "https://www.ebay.com/itm/407359050108?_skw=Eugenio+Suarez+Baseball&hash=item5ed87dd17c:g:CNsAAeSwQrZq7RLf&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
-    },
-    {
-      "itemId": "v1|117513251203|0",
-      "athlete": "Alex Delgado",
-      "sport": "Baseball",
-      "title": "(Carlos Delgado / Alex Rodriguez / Bret Boone) 2004 Topps #340 FREE SHIP",
-      "image": "https://i.ebayimg.com/images/g/YrUAAeSwEVFqvZSO/s-l225.jpg",
-      "currentBid": 0.49,
-      "currency": "USD",
-      "bidCount": 0,
-      "endDate": "2026-11-19T23:44:44.000Z",
-      "url": "https://www.ebay.com/itm/117513251203?_skw=Alex+Delgado+Baseball&hash=item1b5c55e983:g:YrUAAeSwEVFqvZSO&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
-    },
-    {
-      "itemId": "v1|206696867909|0",
-      "athlete": "Brayan Rocchio",
-      "sport": "Baseball",
-      "title": "BRAYAN ROCCHIO 2024 Topps Chrome X-FRACTOR #113 Cleveland Guardians",
-      "image": "https://i.ebayimg.com/images/g/zMIAAOSwtwhnAZS2/s-l225.jpg",
-      "currentBid": 0.75,
-      "currency": "USD",
-      "bidCount": 0,
-      "endDate": "2026-11-19T23:45:35.000Z",
-      "url": "https://www.ebay.com/itm/206696867909?_skw=Brayan+Rocchio+Baseball&hash=item302017e845:g:zMIAAOSwtwhnAZS2&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
-    },
-    {
-      "itemId": "v1|800897963264|0",
-      "athlete": "Bo Diaz",
-      "sport": "Baseball",
-      "title": "Base Stealers' Threat (Bo Diaz / Gary Carter) 1983 Fleer #637 FREE SHIPPING",
-      "image": "https://i.ebayimg.com/images/g/bAgAAeSwm-xqvZSS/s-l225.jpg",
-      "currentBid": 0.22,
-      "currency": "USD",
-      "bidCount": 2,
-      "endDate": "2026-11-19T23:46:15.000Z",
-      "url": "https://www.ebay.com/itm/800897963264?_skw=Bo+Diaz+Baseball&hash=itemba793d1500:g:bAgAAeSwm-xqvZSS&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
-    },
-    {
-      "itemId": "v1|800894394518|0",
-      "athlete": "Andres Galarraga",
-      "sport": "Baseball",
-      "title": "Andres Galarraga 1997 Leaf #241 Rockies FREE SHIPPING StackedPacks",
-      "image": "https://i.ebayimg.com/images/g/6gAAAeSw7oNq8RMg/s-l225.jpg",
-      "currentBid": 0.49,
-      "currency": "USD",
-      "bidCount": 0,
-      "endDate": "2026-11-19T23:53:30.000Z",
-      "url": "https://www.ebay.com/itm/800894394518?_skw=Andres+Galarraga+Baseball&hash=itemba7906a096:g:6gAAAeSw7oNq8RMg&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
-    },
-    {
-      "itemId": "v1|880110418046|0",
-      "athlete": "Felix Hernandez",
-      "sport": "Baseball",
-      "title": "FELIX HERNANDEZ 2010 SEATTLE CITY LIGHT BASEBALL CARD",
-      "image": "https://i.ebayimg.com/images/g/KHEAAeSwFHNqmgy9/s-l225.jpg",
-      "currentBid": 4,
-      "currency": "USD",
-      "bidCount": 0,
-      "endDate": "2026-11-19T23:53:36.000Z",
-      "url": "https://www.ebay.com/itm/880110418046?_skw=Felix+Hernandez+Baseball&hash=itemcceaab387e:g:KHEAAeSwFHNqmgy9&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
-    },
-    {
-      "itemId": "v1|147678135189|0",
-      "athlete": "Felix Hernandez",
-      "sport": "Baseball",
-      "title": "2026 Panini Donruss - Félix Hernández #41 Liberty",
-      "image": "https://i.ebayimg.com/images/g/~9cAAeSw4Qlq48~K/s-l225.jpg",
-      "currentBid": 1.99,
-      "currency": "USD",
-      "bidCount": 0,
-      "endDate": "2026-11-20T00:00:13.000Z",
-      "url": "https://www.ebay.com/itm/147678135189?_skw=Felix+Hernandez+Baseball&hash=item22624d8395:g:~9cAAeSw4Qlq48~K&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
-    },
-    {
-      "itemId": "v1|206701728532|0",
-      "athlete": "Andres Galarraga",
-      "sport": "Baseball",
-      "title": "1989 Donruss All-Stars - Andres Galarraga #45",
-      "image": "https://i.ebayimg.com/images/g/FoUAAeSwsNlq8l5B/s-l225.jpg",
-      "currentBid": 0.99,
-      "currency": "USD",
-      "bidCount": 0,
-      "endDate": "2026-11-20T00:00:19.000Z",
-      "url": "https://www.ebay.com/itm/206701728532?_skw=Andres+Galarraga+Baseball&hash=item3020621314:g:FoUAAeSwsNlq8l5B&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
-    },
-    {
-      "itemId": "v1|117518346822|0",
-      "athlete": "Andres Galarraga",
-      "sport": "Baseball",
-      "title": "Fleer 1986 Fleer #647 Fred Toliver/Andres Galarraga Rookie RC E",
-      "image": "https://i.ebayimg.com/images/g/ryEAAeSwr2JqpD~C/s-l225.jpg",
-      "currentBid": 4,
-      "currency": "USD",
-      "bidCount": 0,
-      "endDate": "2026-11-20T00:00:55.000Z",
-      "url": "https://www.ebay.com/itm/117518346822?_skw=Andres+Galarraga+Baseball&hash=item1b5ca3aa46:g:ryEAAeSwr2JqpD~C&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
-    },
-    {
-      "itemId": "v1|117518346891|0",
-      "athlete": "Andres Galarraga",
-      "sport": "Baseball",
-      "title": "Fleer 1986 Fleer #647 Fred Toliver/Andres Galarraga Rookie RC D",
-      "image": "https://i.ebayimg.com/images/g/HRMAAeSwnLRqpD9o/s-l225.jpg",
-      "currentBid": 4,
-      "currency": "USD",
-      "bidCount": 0,
-      "endDate": "2026-11-20T00:01:03.000Z",
-      "url": "https://www.ebay.com/itm/117518346891?_skw=Andres+Galarraga+Baseball&hash=item1b5ca3aa8b:g:HRMAAeSwnLRqpD9o&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
-    },
-    {
-      "itemId": "v1|227614642127|0",
-      "athlete": "Felix Hernandez",
-      "sport": "Baseball",
-      "title": "1/1 FELIX HERNANDEZ 2026 DONRUSS #41 BLACK PARALLEL! SEATTLE MARINERS!",
-      "image": "https://i.ebayimg.com/images/g/tgIAAeSwy81q-PUQ/s-l225.jpg",
-      "currentBid": 22,
-      "currency": "USD",
-      "bidCount": 3,
-      "endDate": "2026-11-20T00:01:32.000Z",
-      "url": "https://www.ebay.com/itm/227614642127?_skw=Felix+Hernandez+Baseball&hash=item34fee3cfcf:g:tgIAAeSwy81q-PUQ&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
-    },
-    {
-      "itemId": "v1|960176357884|0",
-      "athlete": "Alex Romero",
-      "sport": "Baseball",
-      "title": "2008 Upper Deck #721 Alex Romero Rookie Arizona Diamondbacks Baseball Card",
-      "image": "https://i.ebayimg.com/images/g/e7QAAOSwcNVm0c3E/s-l225.jpg",
-      "currentBid": 0.98,
-      "currency": "USD",
-      "bidCount": 0,
-      "endDate": "2026-11-20T00:04:10.000Z",
-      "url": "https://www.ebay.com/itm/960176357884?_skw=Alex+Romero+Baseball&hash=itemdf8ef881fc:g:e7QAAOSwcNVm0c3E&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
-    },
-    {
-      "itemId": "v1|880109900161|0",
-      "athlete": "Eugenio Suarez",
-      "sport": "Baseball",
-      "title": "2026 Topps Chrome Logofractor Edition - Eugenio Suarez #203",
-      "image": "https://i.ebayimg.com/images/g/BQQAAeSwPzBq8qvr/s-l225.jpg",
-      "currentBid": 0.99,
-      "currency": "USD",
-      "bidCount": 0,
-      "endDate": "2026-11-20T00:05:00.000Z",
-      "url": "https://www.ebay.com/itm/880109900161?_skw=Eugenio+Suarez+Baseball&hash=itemcceaa35181:g:BQQAAeSwPzBq8qvr&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
-    },
-    {
-      "itemId": "v1|128185818530|0",
-      "athlete": "Dave Concepcion",
-      "sport": "Baseball",
-      "title": "1983 TOPPS #400 DAVE CONCEPCION PSA 10",
-      "image": "https://i.ebayimg.com/images/g/6iYAAeSwx89q8mBD/s-l225.jpg",
-      "currentBid": 49.95,
-      "currency": "USD",
-      "bidCount": 0,
-      "endDate": "2026-11-20T00:09:20.000Z",
-      "url": "https://www.ebay.com/itm/128185818530?_skw=Dave+Concepcion+Baseball&hash=item1dd8785da2:g:6iYAAeSwx89q8mBD&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
-    },
-    {
-      "itemId": "v1|227611832060|0",
-      "athlete": "Eugenio Suarez",
-      "sport": "Baseball",
-      "title": "2020 Topps - 1985 Topps Baseball Series 2 Eugenio Suarez #85TB-12",
-      "image": "https://i.ebayimg.com/images/g/RuYAAeSwZQRpu2j3/s-l225.jpg",
-      "currentBid": 0.99,
-      "currency": "USD",
-      "bidCount": 0,
-      "endDate": "2026-11-20T00:11:50.000Z",
-      "url": "https://www.ebay.com/itm/227611832060?_skw=Eugenio+Suarez+Baseball&hash=item34feb8eefc:g:RuYAAeSwZQRpu2j3&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
-    },
-    {
-      "itemId": "v1|407359116251|0",
-      "athlete": "Eugenio Suarez",
-      "sport": "Baseball",
-      "title": "2026 Topps Chrome Eugenio Suarez Baseball Seams #203 Cincinnati Reds ",
-      "image": "https://i.ebayimg.com/images/g/U3cAAeSwNYZqvAkH/s-l225.jpg",
-      "currentBid": 0.99,
-      "currency": "USD",
-      "bidCount": 0,
-      "endDate": "2026-11-20T00:13:33.000Z",
-      "url": "https://www.ebay.com/itm/407359116251?_skw=Eugenio+Suarez+Baseball&hash=item5ed87ed3db:g:U3cAAeSwNYZqvAkH&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
-    },
-    {
-      "itemId": "v1|237179854723|0",
-      "athlete": "Andres Gimenez",
-      "sport": "Baseball",
-      "title": "Topps 2020 Heritage Prospects Andres Gimenez New York Mets #P-16 Insert",
-      "image": "https://i.ebayimg.com/images/g/Et0AAeSwpPxqta8j/s-l225.jpg",
-      "currentBid": 0.5,
-      "currency": "USD",
-      "bidCount": 0,
-      "endDate": "2026-11-20T00:17:17.000Z",
-      "url": "https://www.ebay.com/itm/237179854723?_skw=Andres+Gimenez+Baseball&hash=item3739055f83:g:Et0AAeSwpPxqta8j&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
-    },
-    {
-      "itemId": "v1|880110467978|0",
-      "athlete": "Brayan Rocchio",
-      "sport": "Baseball",
-      "title": "2023 Topps Chrome Update Series Autographs Brayan Rocchio Purple Refractor /250",
-      "image": "https://i.ebayimg.com/images/g/ckUAAeSwe9tqyCOd/s-l225.jpg",
-      "currentBid": 19.99,
-      "currency": "USD",
-      "bidCount": 0,
-      "endDate": "2026-11-20T00:17:31.000Z",
-      "url": "https://www.ebay.com/itm/880110467978?_skw=Brayan+Rocchio+Baseball&hash=itemcceaabfb8a:g:ckUAAeSwe9tqyCOd&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
-    },
-    {
-      "itemId": "v1|307279785508|0",
-      "athlete": "Andres Gimenez",
-      "sport": "Baseball",
-      "title": "2021 Select Concourse Light Blue Prizm #82 Andres Gimenez - Cleveland #18/35 SP",
-      "image": "https://i.ebayimg.com/images/g/S~cAAOSw8DZk6Aco/s-l225.jpg",
-      "currentBid": 1.34,
-      "currency": "USD",
-      "bidCount": 0,
-      "endDate": "2026-11-20T00:18:16.000Z",
-      "url": "https://www.ebay.com/itm/307279785508?_skw=Andres+Gimenez+Baseball&hash=item478b4d6e24:g:S~cAAOSw8DZk6Aco&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
-    },
-    {
-      "itemId": "v1|307282771153|0",
-      "athlete": "Andres Gimenez",
-      "sport": "Baseball",
-      "title": "2019 Bowman Chrome Sapphire Gold Refract ANDRES GIMENEZ RC CARD/15 PSA 10 GM-MT",
-      "image": "https://i.ebayimg.com/images/g/EeEAAeSwW3Rpqdi7/s-l225.jpg",
-      "currentBid": 99.99,
-      "currency": "USD",
-      "bidCount": 0,
-      "endDate": "2026-11-20T00:19:00.000Z",
-      "url": "https://www.ebay.com/itm/307282771153?_skw=Andres+Gimenez+Baseball&hash=item478b7afcd1:g:EeEAAeSwW3Rpqdi7&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
-    },
-    {
-      "itemId": "v1|860138881313|0",
-      "athlete": "Carlos Narvaez",
-      "sport": "Baseball",
-      "title": "2025 Topps Chrome - Carlos Narvaez #194 Refractor (RC)",
-      "image": "https://i.ebayimg.com/images/g/arEAAeSw5Gxq7R3E/s-l225.jpg",
-      "currentBid": 1.09,
-      "currency": "USD",
-      "bidCount": 0,
-      "endDate": "2026-11-20T00:24:01.000Z",
-      "url": "https://www.ebay.com/itm/860138881313?_skw=Carlos+Narvaez+Baseball&hash=itemc84445c121:g:arEAAeSw5Gxq7R3E&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
-    },
-    {
-      "itemId": "v1|860138882624|0",
-      "athlete": "Carlos Gonzalez",
-      "sport": "Baseball",
-      "title": "2012 Topps Gypsy Queen - Autograph Carlos Gonzalez #GQA-CG (AU)",
-      "image": "https://i.ebayimg.com/images/g/Gt0AAeSwo8JqkMVY/s-l225.jpg",
-      "currentBid": 20,
-      "currency": "USD",
-      "bidCount": 0,
-      "endDate": "2026-11-20T00:24:16.000Z",
-      "url": "https://www.ebay.com/itm/860138882624?_skw=Carlos+Gonzalez+Baseball&hash=itemc84445c640:g:Gt0AAeSwo8JqkMVY&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
-    },
-    {
-      "itemId": "v1|287729973211|0",
-      "athlete": "Anthony Santander",
-      "sport": "Baseball",
-      "title": "2025 Topps Chrome Green Lava Refractors Anthony Santander/99 #60 Blue Jays",
-      "image": "https://i.ebayimg.com/images/g/dasAAeSwyFxqAyLS/s-l225.jpg",
-      "currentBid": 1.99,
-      "currency": "USD",
-      "bidCount": 0,
-      "endDate": "2026-11-20T00:27:00.000Z",
-      "url": "https://www.ebay.com/itm/287729973211?_skw=Anthony+Santander+Baseball&hash=item42fe0af7db:g:dasAAeSwyFxqAyLS&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
-    },
-    {
-      "itemId": "v1|860144535839|0",
-      "athlete": "Eddy Diaz",
-      "sport": "Baseball",
-      "title": "Eddy Diaz 2021 Bowman Chrome 1st Pros Blue Mojo Refractor #BCP33 Rockies /150",
-      "image": "https://i.ebayimg.com/images/g/MgkAAeSwwgpqTuau/s-l225.jpg",
-      "currentBid": 0.99,
-      "currency": "USD",
-      "bidCount": 0,
-      "endDate": "2026-11-20T00:30:08.000Z",
-      "url": "https://www.ebay.com/itm/860144535839?_skw=Eddy+Diaz+Baseball&hash=itemc8449c091f:g:MgkAAeSwwgpqTuau&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
-    },
-    {
-      "itemId": "v1|860138898187|0",
-      "athlete": "Adbert Alzolay",
-      "sport": "Baseball",
-      "title": "2021 Topps - Future Stars Gold #658 Adbert Alzolay /2021",
-      "image": "https://i.ebayimg.com/images/g/MA0AAOSwIS1m-d3w/s-l225.jpg",
-      "currentBid": 0.89,
-      "currency": "USD",
-      "bidCount": 0,
-      "endDate": "2026-11-20T00:30:39.000Z",
-      "url": "https://www.ebay.com/itm/860138898187?_skw=Adbert+Alzolay+Baseball&hash=itemc84446030b:g:MA0AAOSwIS1m-d3w&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
-    },
-    {
-      "itemId": "v1|840122681340|0",
-      "athlete": "Alvaro Espinoza",
-      "sport": "Baseball",
-      "title": "Alvaro Espinoza (#529) - Minnesota Twins - 1987 Topps Baseball",
-      "image": "https://i.ebayimg.com/images/g/ofwAAeSw7ztqDjEb/s-l225.jpg",
-      "currentBid": 0.99,
-      "currency": "USD",
-      "bidCount": 0,
-      "endDate": "2026-11-20T00:32:27.000Z",
-      "url": "https://www.ebay.com/itm/840122681340?_skw=Alvaro+Espinoza+Baseball&hash=itemc39b36c7fc:g:ofwAAeSw7ztqDjEb&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
-    },
-    {
-      "itemId": "v1|117513322341|0",
-      "athlete": "Bradgley Rodriguez",
-      "sport": "Baseball",
-      "title": "2026 Topps Heritage Bradgley Rodriguez Red Parallel RC San Diego Padres #148",
-      "image": "https://i.ebayimg.com/images/g/LrsAAeSweQNqDjWO/s-l225.jpg",
-      "currentBid": 0.95,
-      "currency": "USD",
-      "bidCount": 0,
-      "endDate": "2026-11-20T00:37:24.000Z",
-      "url": "https://www.ebay.com/itm/117513322341?_skw=Bradgley+Rodriguez+Baseball&hash=item1b5c56ff65:g:LrsAAeSweQNqDjWO&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
-    },
-    {
-      "itemId": "v1|377641189932|0",
-      "athlete": "Carlos Martinez",
-      "sport": "Baseball",
-      "title": "Topps 1990 #461 Carlos Martinez Chicago White Sox Rookie Baseball MLB Base Set",
-      "image": "https://i.ebayimg.com/images/g/9QAAAeSwfVdq9ls8/s-l225.jpg",
-      "currentBid": 59.99,
-      "currency": "USD",
-      "bidCount": 0,
-      "endDate": "2026-11-20T00:37:39.000Z",
-      "url": "https://www.ebay.com/itm/377641189932?_skw=Carlos+Martinez+Baseball&hash=item57ed2b422c:g:9QAAAeSwfVdq9ls8&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
-    },
-    {
-      "itemId": "v1|960188806015|0",
-      "athlete": "Asdrubal Cabrera",
-      "sport": "Baseball",
-      "title": "Topps 2011 Asdrubal Cabrera Cleveland Indians Baseball Card #522 Base Set",
-      "image": "https://i.ebayimg.com/images/g/ByAAAeSw5oZqvvAK/s-l225.jpg",
-      "currentBid": 0.5,
-      "currency": "USD",
-      "bidCount": 0,
-      "endDate": "2026-11-20T00:45:26.000Z",
-      "url": "https://www.ebay.com/itm/960188806015?_skw=Asdrubal+Cabrera+Baseball&hash=itemdf8fb6737f:g:ByAAAeSw5oZqvvAK&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
-    },
-    {
-      "itemId": "v1|960176480599|0",
-      "athlete": "Dave Concepcion",
-      "sport": "Baseball",
-      "title": "1985 Topps #366 NM Cincinnati Reds Team Leaders Dave Concepcion",
-      "image": "https://i.ebayimg.com/images/g/dyQAAOSwoklkS8c0/s-l225.jpg",
-      "currentBid": 0.25,
-      "currency": "USD",
-      "bidCount": 0,
-      "endDate": "2026-11-20T00:48:21.000Z",
-      "url": "https://www.ebay.com/itm/960176480599?_skw=Dave+Concepcion+Baseball&hash=itemdf8efa6157:g:dyQAAOSwoklkS8c0&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
-    },
-    {
-      "itemId": "v1|940079565900|0",
-      "athlete": "Adbert Alzolay",
-      "sport": "Baseball",
-      "title": "Adbert Alzolay #129 2024 Topps Series 1 - Green Crackle Foil #105/499 Cubs RARE",
-      "image": "https://i.ebayimg.com/images/g/aDAAAOSwtOdmnBxr/s-l225.jpg",
-      "currentBid": 1,
-      "currency": "USD",
-      "bidCount": 0,
-      "endDate": "2026-11-20T00:49:00.000Z",
-      "url": "https://www.ebay.com/itm/940079565900?_skw=Adbert+Alzolay+Baseball&hash=itemdae11bcc4c:g:aDAAAOSwtOdmnBxr&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
-    },
-    {
-      "itemId": "v1|168851259602|0",
-      "athlete": "Dave Concepcion",
-      "sport": "Baseball",
-      "title": "1983 TOPPS #720 DAVE CONCEPCION (REDS) PSA 10",
-      "image": "https://i.ebayimg.com/images/g/KIkAAeSwGtJq8mow/s-l225.jpg",
-      "currentBid": 49.95,
-      "currency": "USD",
-      "bidCount": 0,
-      "endDate": "2026-11-20T00:51:07.000Z",
-      "url": "https://www.ebay.com/itm/168851259602?_skw=Dave+Concepcion+Baseball&hash=item275051c0d2:g:KIkAAeSwGtJq8mow&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
-    },
-    {
-      "itemId": "v1|820348429034|0",
-      "athlete": "Antonio Senzatela",
-      "sport": "Baseball",
-      "title": "Panini 2017 Contenders Rookie Premiere Materials Auto Antonio Senzatela #RPMA-AS",
-      "image": "https://i.ebayimg.com/images/g/HYwAAeSwio5q9l5S/s-l225.jpg",
-      "currentBid": 7,
-      "currency": "USD",
-      "bidCount": 0,
-      "endDate": "2026-11-20T00:54:37.000Z",
-      "url": "https://www.ebay.com/itm/820348429034?_skw=Antonio+Senzatela+Baseball&hash=itembf0093a2ea:g:HYwAAeSwio5q9l5S&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
-    },
-    {
-      "itemId": "v1|206688289363|0",
-      "athlete": "Andres Galarraga",
-      "sport": "Baseball",
-      "title": "1989 Montreal Expos Andres Galarraga Topps #590",
-      "image": "https://i.ebayimg.com/images/g/W2AAAeSwx1tphfVZ/s-l225.jpg",
-      "currentBid": 0.99,
-      "currency": "USD",
-      "bidCount": 0,
-      "endDate": "2026-11-20T00:54:39.000Z",
-      "url": "https://www.ebay.com/itm/206688289363?_skw=Andres+Galarraga+Baseball&hash=item301f950253:g:W2AAAeSwx1tphfVZ&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
-    },
-    {
-      "itemId": "v1|257852804572|0",
-      "athlete": "Felix Hernandez",
-      "sport": "Baseball",
-      "title": "2011 Topps Allen & Ginter Felix Hernandez Jersey #AGR-FH Seattle Mariners",
-      "image": "https://i.ebayimg.com/images/g/9UIAAeSwNGdq-Kkg/s-l225.jpg",
-      "currentBid": 3.95,
-      "currency": "USD",
-      "bidCount": 1,
-      "endDate": "2026-11-20T01:00:01.000Z",
-      "url": "https://www.ebay.com/itm/257852804572?_skw=Felix+Hernandez+Baseball&hash=item3c09398ddc:g:9UIAAeSwNGdq-Kkg&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
-    },
-    {
-      "itemId": "v1|267842103858|0",
-      "athlete": "Eugenio Suarez",
-      "sport": "Baseball",
-      "title": "2024 Topps Chrome Update Pink Refractor Eugenio Suarez #USC74 (MINT) 193/399",
-      "image": "https://i.ebayimg.com/images/g/PFcAAeSwKOdp-jTD/s-l225.jpg",
-      "currentBid": 1,
-      "currency": "USD",
-      "bidCount": 0,
-      "endDate": "2026-11-20T01:00:40.000Z",
-      "url": "https://www.ebay.com/itm/267842103858?_skw=Eugenio+Suarez+Baseball&hash=item3e5ca22a32:g:PFcAAeSwKOdp-jTD&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
-    },
-    {
-      "itemId": "v1|820348436470|0",
-      "athlete": "Carlos Guillen",
-      "sport": "Baseball",
-      "title": "2008 SPx - Winning Materials Carlos Guillen #WM-CG Mlb /125 (MEM)",
-      "image": "https://i.ebayimg.com/images/g/vI0AAeSwmWxq-7GW/s-l225.jpg",
-      "currentBid": 1,
-      "currency": "USD",
-      "bidCount": 0,
-      "endDate": "2026-11-20T01:00:51.000Z",
-      "url": "https://www.ebay.com/itm/820348436470?_skw=Carlos+Guillen+Baseball&hash=itembf0093bff6:g:vI0AAeSwmWxq-7GW&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
-    },
-    {
-      "itemId": "v1|840122739284|0",
-      "athlete": "Carlos Perez",
-      "sport": "Baseball",
-      "title": "2012 Topps Bowman Carlos Perez Auto 351/500 (Blue)",
-      "image": "https://i.ebayimg.com/images/g/zLsAAOSwvFdnRNc1/s-l225.jpg",
-      "currentBid": 2.1,
-      "currency": "USD",
-      "bidCount": 0,
-      "endDate": "2026-11-20T01:05:18.000Z",
-      "url": "https://www.ebay.com/itm/840122739284?_skw=Carlos+Perez+Baseball&hash=itemc39b37aa54:g:zLsAAOSwvFdnRNc1&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
-    },
-    {
-      "itemId": "v1|257849773159|0",
-      "athlete": "Brayan Rocchio",
-      "sport": "Baseball",
-      "title": "Cleveland Guardians Win AL Central 2025 Topps NOW 795 Brayan Rocchio PR /1286",
-      "image": "https://i.ebayimg.com/images/g/qUYAAeSwSdJo9r4x/s-l225.jpg",
-      "currentBid": 7.25,
-      "currency": "USD",
-      "bidCount": 0,
-      "endDate": "2026-11-20T01:08:02.000Z",
-      "url": "https://www.ebay.com/itm/257849773159?_skw=Brayan+Rocchio+Baseball&hash=item3c090b4c67:g:qUYAAeSwSdJo9r4x&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
-    },
-    {
-      "itemId": "v1|257849781251|0",
-      "athlete": "Brayan Rocchio",
-      "sport": "Baseball",
-      "title": "Brayan Rocchio Wild Card HR 2025 MLB Topps NOW 805 PR /394 Cleveland Guardians ",
-      "image": "https://i.ebayimg.com/images/g/sUkAAeSw9sdo9sBX/s-l225.jpg",
-      "currentBid": 7.25,
-      "currency": "USD",
-      "bidCount": 0,
-      "endDate": "2026-11-20T01:09:29.000Z",
-      "url": "https://www.ebay.com/itm/257849781251?_skw=Brayan+Rocchio+Baseball&hash=item3c090b6c03:g:sUkAAeSw9sdo9sBX&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
-    },
-    {
-      "itemId": "v1|206693444820|0",
-      "athlete": "Carlos Gonzalez",
-      "sport": "Baseball",
-      "title": "2005 TOPPS UPDATES & HIGHLIGHTS #UH298 CARLOS GONZALEZ RC ROOKIE BGS 9.5",
-      "image": "https://i.ebayimg.com/images/g/LPwAAeSwKNxq9RD2/s-l225.jpg",
-      "currentBid": 0.69,
-      "currency": "USD",
-      "bidCount": 1,
-      "endDate": "2026-11-20T01:12:00.000Z",
-      "url": "https://www.ebay.com/itm/206693444820?_skw=Carlos+Gonzalez+Baseball&hash=item301fe3acd4:g:LPwAAeSwKNxq9RD2&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
-    },
-    {
-      "itemId": "v1|257844717490|0",
-      "athlete": "Carlos Martinez",
-      "sport": "Baseball",
-      "title": " 2020 TOPPS BASEBALL - CARLOS MARTINEZ - GOLD PARALLEL - #508 - CARD - 1814/2020",
-      "image": "https://i.ebayimg.com/images/g/ecIAAOSwGypfvFrf/s-l225.jpg",
-      "currentBid": 0.01,
-      "currency": "USD",
-      "bidCount": 0,
-      "endDate": "2026-11-20T01:12:33.000Z",
-      "url": "https://www.ebay.com/itm/257844717490?_skw=Carlos+Martinez+Baseball&hash=item3c08be27b2:g:ecIAAOSwGypfvFrf&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
-    },
-    {
-      "itemId": "v1|198794013367|0",
-      "athlete": "Adbert Alzolay",
-      "sport": "Baseball",
-      "title": "Adbert Alzolay /99 RC 2020 Topps Chrome Rookie Autographs #RA-AA Green Refractor",
-      "image": "https://i.ebayimg.com/images/g/mmIAAeSwwKBq9~cy/s-l225.jpg",
-      "currentBid": 1.75,
-      "currency": "USD",
-      "bidCount": 1,
-      "endDate": "2026-11-20T01:15:01.000Z",
-      "url": "https://www.ebay.com/itm/198794013367?_skw=Adbert+Alzolay+Baseball&hash=item2e490beab7:g:mmIAAeSwwKBq9~cy&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
-    },
-    {
-      "itemId": "v1|940087398030|0",
-      "athlete": "Avisail Garcia",
-      "sport": "Baseball",
-      "title": "AVISAIL GARCIA 2022 TOPPS UPDATE SERIES BASEBALL GOLD /2022 #US324 MARLINS Q7473",
-      "image": "https://i.ebayimg.com/images/g/JqEAAeSwc1hq9kRP/s-l225.jpg",
-      "currentBid": 1,
-      "currency": "USD",
-      "bidCount": 0,
-      "endDate": "2026-11-20T01:16:00.000Z",
-      "url": "https://www.ebay.com/itm/940087398030?_skw=Avisail+Garcia+Baseball&hash=itemdae1934e8e:g:JqEAAeSwc1hq9kRP&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
-    },
-    {
-      "itemId": "v1|800910185942|0",
-      "athlete": "Andres Galarraga",
-      "sport": "Baseball",
-      "title": "1997 Donruss - Interleague Showdown Ken Griffey Jr, Andres Galarraga #439",
-      "image": "https://i.ebayimg.com/images/g/LmQAAeSw6glq4-K0/s-l225.jpg",
-      "currentBid": 0.99,
-      "currency": "USD",
-      "bidCount": 0,
-      "endDate": "2026-11-20T01:21:04.000Z",
-      "url": "https://www.ebay.com/itm/800910185942?_skw=Andres+Galarraga+Baseball&hash=itemba79f795d6:g:LmQAAeSw6glq4-K0&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
-    },
-    {
-      "itemId": "v1|147673899237|0",
-      "athlete": "Carlos Carrasco",
-      "sport": "Baseball",
-      "title": "2008 Bowman Sterling Prospects Carlos Carrasco #BSP-CC RC! Relic! Autograph!",
-      "image": "https://i.ebayimg.com/images/g/Xg4AAeSwNWRonT7k/s-l225.jpg",
-      "currentBid": 7.5,
-      "currency": "USD",
-      "bidCount": 0,
-      "endDate": "2026-11-20T01:21:37.000Z",
-      "url": "https://www.ebay.com/itm/147673899237?_skw=Carlos+Carrasco+Baseball&hash=item22620ce0e5:g:Xg4AAeSwNWRonT7k&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
-    },
-    {
-      "itemId": "v1|267838777202|0",
-      "athlete": "Dave Concepcion",
-      "sport": "Baseball",
-      "title": "1987 TOPPS #731 DAVE CONCEPCION REDS PSA 10",
-      "image": "https://i.ebayimg.com/images/g/jjMAAeSwGG1q8fu5/s-l225.jpg",
-      "currentBid": 10.5,
       "currency": "USD",
       "bidCount": 5,
-      "endDate": "2026-11-20T01:24:30.000Z",
-      "url": "https://www.ebay.com/itm/267838777202?_skw=Dave+Concepcion+Baseball&hash=item3e5c6f6772:g:jjMAAeSwGG1q8fu5&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
-    },
-    {
-      "itemId": "v1|800894392343|0",
-      "athlete": "Andres Galarraga",
-      "sport": "Baseball",
-      "title": "Andres Galarraga 1996 Collector's Choice #341 Rockies FREE SHIPPING StackedPacks",
-      "image": "https://i.ebayimg.com/images/g/nL4AAeSweiRq8RLs/s-l225.jpg",
-      "currentBid": 0.49,
-      "currency": "USD",
-      "bidCount": 0,
-      "endDate": "2026-11-20T01:24:55.000Z",
-      "url": "https://www.ebay.com/itm/800894392343?_skw=Andres+Galarraga+Baseball&hash=itemba79069817:g:nL4AAeSweiRq8RLs&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
-    },
-    {
-      "itemId": "v1|307279855440|0",
-      "athlete": "Al Pedrique",
-      "sport": "Baseball",
-      "title": "1989 Score - Al Pedrique #614",
-      "image": "https://i.ebayimg.com/images/g/NEAAAeSwK2xqyDUX/s-l225.jpg",
-      "currentBid": 0.78,
-      "currency": "USD",
-      "bidCount": 0,
-      "endDate": "2026-11-20T01:29:24.000Z",
-      "url": "https://www.ebay.com/itm/307279855440?_skw=Al+Pedrique+Baseball&hash=item478b4e7f50:g:NEAAAeSwK2xqyDUX&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
-    },
-    {
-      "itemId": "v1|168858318044|0",
-      "athlete": "Andry Lara",
-      "sport": "Baseball",
-      "title": "Andry Lara 2026 Topps Chrome Auto Rookie Refractor /499",
-      "image": "https://i.ebayimg.com/images/g/8t0AAeSwLcVqkFl1/s-l225.jpg",
-      "currentBid": 9.99,
-      "currency": "USD",
-      "bidCount": 0,
-      "endDate": "2026-11-20T01:32:07.000Z",
-      "url": "https://www.ebay.com/itm/168858318044?_skw=Andry+Lara+Baseball&hash=item2750bd74dc:g:8t0AAeSwLcVqkFl1&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
-    },
-    {
-      "itemId": "v1|800894392178|0",
-      "athlete": "Carlos Gonzalez",
-      "sport": "Baseball",
-      "title": "Carlos Gonzalez 2010 Topps 206 #259 Rockies FREE SHIPPING StackedPacks",
-      "image": "https://i.ebayimg.com/images/g/fm0AAeSw6ZBq8RLm/s-l225.jpg",
-      "currentBid": 0.49,
-      "currency": "USD",
-      "bidCount": 0,
-      "endDate": "2026-11-20T01:32:21.000Z",
-      "url": "https://www.ebay.com/itm/800894392178?_skw=Carlos+Gonzalez+Baseball&hash=itemba79069772:g:fm0AAeSw6ZBq8RLm&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
-    },
-    {
-      "itemId": "v1|860139039760|0",
-      "athlete": "Carlos Narvaez",
-      "sport": "Baseball",
-      "title": "Topps Allen & Ginter 2026 Carlos Narvaez Boston Red Sox #56 Base Set Card",
-      "image": "https://i.ebayimg.com/images/g/dYkAAeSw40tq9miQ/s-l225.jpg",
-      "currentBid": 0.32,
-      "currency": "USD",
-      "bidCount": 0,
-      "endDate": "2026-11-20T01:32:39.000Z",
-      "url": "https://www.ebay.com/itm/860139039760?_skw=Carlos+Narvaez+Baseball&hash=itemc844482c10:g:dYkAAeSw40tq9miQ&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
-    },
-    {
-      "itemId": "v1|128185936037|0",
-      "athlete": "Carlos Narvaez",
-      "sport": "Baseball",
-      "title": "Carlos Narvaez Rainbow Silver Rookie 2025 Topps Series One New York Yankees ",
-      "image": "https://i.ebayimg.com/images/g/XvcAAeSwOzVqG5OU/s-l225.jpg",
-      "currentBid": 0.99,
-      "currency": "USD",
-      "bidCount": 0,
-      "endDate": "2026-11-20T01:41:35.000Z",
-      "url": "https://www.ebay.com/itm/128185936037?_skw=Carlos+Narvaez+Baseball&hash=item1dd87a28a5:g:XvcAAeSwOzVqG5OU&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
-    },
-    {
-      "itemId": "v1|920137293329|0",
-      "athlete": "Anibal Sanchez",
-      "sport": "Baseball",
-      "title": "Anibal Sanchez: 2012 Topps Triple Thread Game Used Jersey #2/36 Miami Marlins",
-      "image": "https://i.ebayimg.com/images/g/TJ4AAeSwJ25onS5Z/s-l225.jpg",
-      "currentBid": 3.5,
-      "currency": "USD",
-      "bidCount": 0,
-      "endDate": "2026-11-20T01:48:55.000Z",
-      "url": "https://www.ebay.com/itm/920137293329?_skw=Anibal+Sanchez+Baseball&hash=itemd63c74de11:g:TJ4AAeSwJ25onS5Z&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
-    },
-    {
-      "itemId": "v1|860139072402|0",
-      "athlete": "Bradgley Rodriguez",
-      "sport": "Baseball",
-      "title": "2026 Topps Heritage - Bradgley Rodriguez #148 (RC)",
-      "image": "https://i.ebayimg.com/images/g/Z20AAeSwMgxq7TIJ/s-l225.jpg",
-      "currentBid": 0.25,
-      "currency": "USD",
-      "bidCount": 0,
-      "endDate": "2026-11-20T01:50:55.000Z",
-      "url": "https://www.ebay.com/itm/860139072402?_skw=Bradgley+Rodriguez+Baseball&hash=itemc84448ab92:g:Z20AAeSwMgxq7TIJ&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
-    },
-    {
-      "itemId": "v1|137917494749|0",
-      "athlete": "Carlos Perez",
-      "sport": "Baseball",
-      "title": "2023 Topps Chrome Platinum Anniversary Autographs #CPACP Carlos Perez RC",
-      "image": "https://i.ebayimg.com/images/g/rnYAAeSwEcxpN6K-/s-l225.jpg",
-      "currentBid": 0.99,
-      "currency": "USD",
-      "bidCount": 0,
-      "endDate": "2026-11-20T01:52:34.000Z",
-      "url": "https://www.ebay.com/itm/137917494749?_skw=Carlos+Perez+Baseball&hash=item201c85f5dd:g:rnYAAeSwEcxpN6K-&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
-    },
-    {
-      "itemId": "v1|920124103515|0",
-      "athlete": "Carlos Martinez",
-      "sport": "Baseball",
-      "title": "2016 Topps Chrome Purple Refractors #/275 #60 Carlos Martinez - STL Cardinals",
-      "image": "https://i.ebayimg.com/images/g/ejYAAeSwILNn1t4p/s-l225.jpg",
-      "currentBid": 0.99,
-      "currency": "USD",
-      "bidCount": 0,
-      "endDate": "2026-11-20T01:55:38.000Z",
-      "url": "https://www.ebay.com/itm/920124103515?_skw=Carlos+Martinez+Baseball&hash=itemd63bab9b5b:g:ejYAAeSwILNn1t4p&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
-    },
-    {
-      "itemId": "v1|227614776980|0",
-      "athlete": "Anderson Espinoza",
-      "sport": "Baseball",
-      "title": "2016 Bowman's Best - Top Prospects Anderson Espinoza #TP-4 Green Refractor...",
-      "image": "https://i.ebayimg.com/images/g/rTgAAeSwJMFq2A2E/s-l225.jpg",
-      "currentBid": 2.5,
-      "currency": "USD",
-      "bidCount": 0,
-      "endDate": "2026-11-20T01:57:58.000Z",
-      "url": "https://www.ebay.com/itm/227614776980?_skw=Anderson+Espinoza+Baseball&hash=item34fee5de94:g:rTgAAeSwJMFq2A2E&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
-    },
-    {
-      "itemId": "v1|960189003504|0",
-      "athlete": "Carlos Perez",
-      "sport": "Baseball",
-      "title": "Topps Finest 2023 Carlos Pérez Rookie Autograph Insert White Sox FA-CP",
-      "image": "https://i.ebayimg.com/images/g/h9QAAeSwqR1qrIxX/s-l225.jpg",
-      "currentBid": 1.5,
-      "currency": "USD",
-      "bidCount": 0,
-      "endDate": "2026-11-20T01:59:29.000Z",
-      "url": "https://www.ebay.com/itm/960189003504?_skw=Carlos+Perez+Baseball&hash=itemdf8fb976f0:g:h9QAAeSwqR1qrIxX&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
-    },
-    {
-      "itemId": "v1|820334899411|0",
-      "athlete": "Anthony Santander",
-      "sport": "Baseball",
-      "title": "2025 Topps Series 2 Anthony Santander Blue Holo Foil /150 #586 Color Match",
-      "image": "https://i.ebayimg.com/images/g/DHkAAeSwyMBohqzn/s-l225.jpg",
-      "currentBid": 2.99,
-      "currency": "USD",
-      "bidCount": 0,
-      "endDate": "2026-11-20T02:00:01.000Z",
-      "url": "https://www.ebay.com/itm/820334899411?_skw=Anthony+Santander+Baseball&hash=itembeffc530d3:g:DHkAAeSwyMBohqzn&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
-    },
-    {
-      "itemId": "v1|377641318224|0",
-      "athlete": "Alvaro Espinoza",
-      "sport": "Baseball",
-      "title": "Topps 1990 Topps #791 Alvaro Espinoza New York Yankees Baseball Base Set",
-      "image": "https://i.ebayimg.com/images/g/tcoAAeSwZA1q9m8a/s-l225.jpg",
-      "currentBid": 4.99,
-      "currency": "USD",
-      "bidCount": 0,
-      "endDate": "2026-11-20T02:00:59.000Z",
-      "url": "https://www.ebay.com/itm/377641318224?_skw=Alvaro+Espinoza+Baseball&hash=item57ed2d3750:g:tcoAAeSwZA1q9m8a&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
-    },
-    {
-      "itemId": "v1|900086936534|0",
-      "athlete": "Felix Hernandez",
-      "sport": "Baseball",
-      "title": "2026 Panini Noir Felix Hernandez Shadow Signatures On-Card AUTO /25 Mariners",
-      "image": "https://i.ebayimg.com/images/g/KNcAAeSwylZqz-ra/s-l225.jpg",
-      "currentBid": 60,
-      "currency": "USD",
-      "bidCount": 0,
-      "endDate": "2026-11-20T02:01:19.000Z",
-      "url": "https://www.ebay.com/itm/900086936534?_skw=Felix+Hernandez+Baseball&hash=itemd1915cb3d6:g:KNcAAeSwylZqz-ra&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
-    },
-    {
-      "itemId": "v1|227606904653|0",
-      "athlete": "Andres Chaparro",
-      "sport": "Baseball",
-      "title": "Andres Chaparro 2025 Topps Series 1 One Base Rookie Card RC #167 Nationals",
-      "image": "https://i.ebayimg.com/images/g/I8UAAeSw4u1p~jDi/s-l225.jpg",
-      "currentBid": 0.99,
-      "currency": "USD",
-      "bidCount": 0,
-      "endDate": "2026-11-20T02:01:24.000Z",
-      "url": "https://www.ebay.com/itm/227606904653?_skw=Andres+Chaparro+Baseball&hash=item34fe6dbf4d:g:I8UAAeSw4u1p~jDi&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
-    },
-    {
-      "itemId": "v1|287725640535|0",
-      "athlete": "Alex Escobar",
-      "sport": "Baseball",
-      "title": "2001 SP Top Prospects - Game Used Bat Alex Escobar #B-AES (MEM)",
-      "image": "https://i.ebayimg.com/images/g/kUsAAeSwe9tqx72K/s-l225.jpg",
-      "currentBid": 1.25,
-      "currency": "USD",
-      "bidCount": 0,
-      "endDate": "2026-11-20T02:01:29.000Z",
-      "url": "https://www.ebay.com/itm/287725640535?_skw=Alex+Escobar+Baseball&hash=item42fdc8db57:g:kUsAAeSwe9tqx72K&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
-    },
-    {
-      "itemId": "v1|407363774090|0",
-      "athlete": "Carlos Narvaez",
-      "sport": "Baseball",
-      "title": "2025 Topps Inception Carlos Narvaez RC Rookie Red 1/99 #77 Red Sox GY40",
-      "image": "https://i.ebayimg.com/images/g/O4UAAeSwwpVq7TMA/s-l225.jpg",
-      "currentBid": 0.99,
-      "currency": "USD",
-      "bidCount": 1,
-      "endDate": "2026-11-20T02:02:12.000Z",
-      "url": "https://www.ebay.com/itm/407363774090?_skw=Carlos+Narvaez+Baseball&hash=item5ed8c5e68a:g:O4UAAeSwwpVq7TMA&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
-    },
-    {
-      "itemId": "v1|377641321317|0",
-      "athlete": "Asdrubal Cabrera",
-      "sport": "Baseball",
-      "title": "2006 Bowman Chrome - Prospects Asdrubal Cabrera #BC87 Refractor /500 (RC)",
-      "image": "https://i.ebayimg.com/images/g/jrEAAeSwcPtq7TU1/s-l225.jpg",
-      "currentBid": 4.99,
-      "currency": "USD",
-      "bidCount": 0,
-      "endDate": "2026-11-20T02:02:55.000Z",
-      "url": "https://www.ebay.com/itm/377641321317?_skw=Asdrubal+Cabrera+Baseball&hash=item57ed2d4365:g:jrEAAeSwcPtq7TU1&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
-    },
-    {
-      "itemId": "v1|137926303146|0",
-      "athlete": "Felix Hernandez",
-      "sport": "Baseball",
-      "title": "2026 Panini Donruss Optic Félix Hernández Black Pandora Prizm Mariners #41",
-      "image": "https://i.ebayimg.com/images/g/JkkAAeSwFbBq9m-J/s-l225.jpg",
-      "currentBid": 2.5,
-      "currency": "USD",
-      "bidCount": 0,
-      "endDate": "2026-11-20T02:03:07.000Z",
-      "url": "https://www.ebay.com/itm/137926303146?_skw=Felix+Hernandez+Baseball&hash=item201d0c5daa:g:JkkAAeSwFbBq9m-J&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
-    },
-    {
-      "itemId": "v1|366803659254|0",
-      "athlete": "Carlos Narvaez",
-      "sport": "Baseball",
-      "title": "2025 Topps Chrome Carlos Narvaez #194 Sepia Refractor (RC) Boston Red Sox",
-      "image": "https://i.ebayimg.com/images/g/W~oAAeSwIPdq9WGt/s-l225.jpg",
-      "currentBid": 0.99,
-      "currency": "USD",
-      "bidCount": 0,
-      "endDate": "2026-11-20T02:05:01.000Z",
-      "url": "https://www.ebay.com/itm/366803659254?_skw=Carlos+Narvaez+Baseball&hash=item556733a9f6:g:W~oAAeSwIPdq9WGt&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
-    },
-    {
-      "itemId": "v1|820348558246|0",
-      "athlete": "Carlos Narvaez",
-      "sport": "Baseball",
-      "title": "Carlos Narvaez 2025 Topps Tier One - Breakout Autographs #BOA-CN Blue Foil /99",
-      "image": "https://i.ebayimg.com/images/g/SPQAAeSwUUNq9bJY/s-l225.jpg",
-      "currentBid": 5,
-      "currency": "USD",
-      "bidCount": 0,
-      "endDate": "2026-11-20T02:06:04.000Z",
-      "url": "https://www.ebay.com/itm/820348558246?_skw=Carlos+Narvaez+Baseball&hash=itembf00959ba6:g:SPQAAeSwUUNq9bJY&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
-    },
-    {
-      "itemId": "v1|407363796391|0",
-      "athlete": "Antonio Senzatela",
-      "sport": "Baseball",
-      "title": "2026 Topps Update Antonio Senzatela Green Foil 29/99 Rockies US119 IZ48",
-      "image": "https://i.ebayimg.com/images/g/nhkAAeSwf~Fq-RRF/s-l225.jpg",
-      "currentBid": 0.99,
-      "currency": "USD",
-      "bidCount": 1,
-      "endDate": "2026-11-20T02:09:03.000Z",
-      "url": "https://www.ebay.com/itm/407363796391?_skw=Antonio+Senzatela+Baseball&hash=item5ed8c63da7:g:nhkAAeSwf~Fq-RRF&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
-    },
-    {
-      "itemId": "v1|168858382472|0",
-      "athlete": "Brusdar Graterol",
-      "sport": "Baseball",
-      "title": "Brusdar Graterol (Dodgers) 2021 Topps UK Edition Significant Statistics GOLD /25",
-      "image": "https://i.ebayimg.com/images/g/27wAAeSwGDJqi4zP/s-l225.jpg",
-      "currentBid": 3.33,
-      "currency": "USD",
-      "bidCount": 0,
-      "endDate": "2026-11-20T02:11:09.000Z",
-      "url": "https://www.ebay.com/itm/168858382472?_skw=Brusdar+Graterol+Baseball&hash=item2750be7088:g:27wAAeSwGDJqi4zP&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
-    },
-    {
-      "itemId": "v1|287717566676|0",
-      "athlete": "Adbert Alzolay",
-      "sport": "Baseball",
-      "title": "ADBERT ALZOLAY 2020 Bowman ROOKIE Card #19 CHICAGO CUBS Free Shipping RC 19",
-      "image": "https://i.ebayimg.com/images/g/88cAAOSwCuVjA80Q/s-l225.jpg",
-      "currentBid": 2.99,
-      "currency": "USD",
-      "bidCount": 0,
-      "endDate": "2026-11-20T02:14:37.000Z",
-      "url": "https://www.ebay.com/itm/287717566676?_skw=Adbert+Alzolay+Baseball&hash=item42fd4da8d4:g:88cAAOSwCuVjA80Q&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
-    },
-    {
-      "itemId": "v1|920137374844|0",
-      "athlete": "Avisail Garcia",
-      "sport": "Baseball",
-      "title": "2024 Topps Series 2 - Avisail Garcia /76 #505 Independence Day ",
-      "image": "https://i.ebayimg.com/images/g/h6oAAeSwgstq2rXa/s-l225.jpg",
-      "currentBid": 4,
-      "currency": "USD",
-      "bidCount": 0,
-      "endDate": "2026-11-20T02:20:45.000Z",
-      "url": "https://www.ebay.com/itm/920137374844?_skw=Avisail+Garcia+Baseball&hash=itemd63c761c7c:g:h6oAAeSwgstq2rXa&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
-    },
-    {
-      "itemId": "v1|117511704139|0",
-      "athlete": "Carlos Carrasco",
-      "sport": "Baseball",
-      "title": "Carlos Carrasco 2007 Bowman Draft Picks & Prospects #BDPP68 Phillies FREE SHIP",
-      "image": "https://i.ebayimg.com/images/g/1bMAAeSwqwZq8RKf/s-l225.jpg",
-      "currentBid": 0.49,
-      "currency": "USD",
-      "bidCount": 1,
-      "endDate": "2026-11-20T02:21:03.000Z",
-      "url": "https://www.ebay.com/itm/117511704139?_skw=Carlos+Carrasco+Baseball&hash=item1b5c3e4e4b:g:1bMAAeSwqwZq8RKf&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
-    },
-    {
-      "itemId": "v1|820348617277|0",
-      "athlete": "Brusdar Graterol",
-      "sport": "Baseball",
-      "title": "Topps 2024 Los Angeles Dodgers Brusdar Graterol LAD-9 Base Set",
-      "image": "https://i.ebayimg.com/images/g/gV0AAeSwGGtqtcyq/s-l225.jpg",
-      "currentBid": 0.63,
-      "currency": "USD",
-      "bidCount": 0,
-      "endDate": "2026-11-20T02:23:30.000Z",
-      "url": "https://www.ebay.com/itm/820348617277?_skw=Brusdar+Graterol+Baseball&hash=itembf0096823d:g:gV0AAeSwGGtqtcyq&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
+      "endDate": "2026-11-20T02:24:35.000Z",
+      "url": "https://www.ebay.com/itm/147678327177?_skw=Eugenio+Suarez+Baseball&hash=item2262507189:g:Xl4AAeSwxrlq9nTp&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
     },
     {
       "itemId": "v1|307279904355|0",
@@ -1572,11 +108,47 @@
       "sport": "Baseball",
       "title": "2008 Topps Allen & Ginter's Mini #108 Alex Romero RC Diamondbacks",
       "image": "https://i.ebayimg.com/images/g/2EUAAeSwM6Fq-I5x/s-l225.jpg",
-      "currentBid": 0.06,
+      "currentBid": 0.12,
       "currency": "USD",
-      "bidCount": 2,
+      "bidCount": 3,
       "endDate": "2026-11-20T02:34:00.000Z",
       "url": "https://www.ebay.com/itm/900091236602?_skw=Alex+Romero+Baseball&hash=itemd1919e50fa:g:2EUAAeSwM6Fq-I5x&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
+    },
+    {
+      "itemId": "v1|407359349064|0",
+      "athlete": "Andres Gimenez",
+      "sport": "Baseball",
+      "title": "2026 Topps Holiday Andres Gimenez Blue Glitter Holiday - Blue Jays #H115",
+      "image": "https://i.ebayimg.com/images/g/-fsAAeSwqwZq7TX7/s-l225.jpg",
+      "currentBid": 0.99,
+      "currency": "USD",
+      "bidCount": 0,
+      "endDate": "2026-11-20T02:37:41.000Z",
+      "url": "https://www.ebay.com/itm/407359349064?_skw=Andres+Gimenez+Baseball&hash=item5ed8826148:g:-fsAAeSwqwZq7TX7&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
+    },
+    {
+      "itemId": "v1|800898356693|0",
+      "athlete": "Eugenio Suarez",
+      "sport": "Baseball",
+      "title": "2026 TOPPS COSMIC CHROME EUGENIO SUAREZ 18/50 #69",
+      "image": "https://i.ebayimg.com/images/g/X1cAAeSwBMdq8oK1/s-l225.jpg",
+      "currentBid": 1,
+      "currency": "USD",
+      "bidCount": 1,
+      "endDate": "2026-11-20T02:40:01.000Z",
+      "url": "https://www.ebay.com/itm/800898356693?_skw=Eugenio+Suarez+Baseball&hash=itemba794315d5:g:X1cAAeSwBMdq8oK1&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
+    },
+    {
+      "itemId": "v1|860139180407|0",
+      "athlete": "Andres Gimenez",
+      "sport": "Baseball",
+      "title": "2019 Bowman - Chrome Prospects Andres Gimenez #BCP-77 Green Shimmer Refractor...",
+      "image": "https://i.ebayimg.com/images/g/6rIAAeSw1XpqrJYz/s-l225.jpg",
+      "currentBid": 0.4,
+      "currency": "USD",
+      "bidCount": 0,
+      "endDate": "2026-11-20T02:40:41.000Z",
+      "url": "https://www.ebay.com/itm/860139180407?_skw=Andres+Gimenez+Baseball&hash=itemc8444a5177:g:6rIAAeSw1XpqrJYz&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
     },
     {
       "itemId": "v1|407352085190|0",
@@ -1639,6 +211,78 @@
       "url": "https://www.ebay.com/itm/840123005940?_skw=Angel+Guzman+Baseball&hash=itemc39b3bbbf4:g:XYgAAeSwnK1qGO~N&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
     },
     {
+      "itemId": "v1|860139217563|0",
+      "athlete": "Andres Galarraga",
+      "sport": "Baseball",
+      "title": "1997 Topps Stadium Club Firebrand Insert Andres Galarraga #FB 4 Members only",
+      "image": "https://i.ebayimg.com/images/g/Me4AAeSwyOBq7UE5/s-l225.jpg",
+      "currentBid": 1.99,
+      "currency": "USD",
+      "bidCount": 0,
+      "endDate": "2026-11-20T02:56:54.000Z",
+      "url": "https://www.ebay.com/itm/860139217563?_skw=Andres+Galarraga+Baseball&hash=itemc8444ae29b:g:Me4AAeSwyOBq7UE5&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
+    },
+    {
+      "itemId": "v1|336891129591|0",
+      "athlete": "Andres Galarraga",
+      "sport": "Baseball",
+      "title": "1997 SPx Steel Andres Galarraga #SPX24",
+      "image": "https://i.ebayimg.com/images/g/wOQAAeSwsqtq878n/s-l225.jpg",
+      "currentBid": 0.99,
+      "currency": "USD",
+      "bidCount": 0,
+      "endDate": "2026-11-20T02:57:26.000Z",
+      "url": "https://www.ebay.com/itm/336891129591?_skw=Andres+Galarraga+Baseball&hash=item4e7046aef7:g:wOQAAeSwsqtq878n&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
+    },
+    {
+      "itemId": "v1|940087466510|0",
+      "athlete": "Felix Hernandez",
+      "sport": "Baseball",
+      "title": "FELIX HERNANDEZ 2026 DONRUSS ELITE CAREER BEST NEON GREEN /99 #4 MARINERS Q8368",
+      "image": "https://i.ebayimg.com/images/g/z98AAeSwFbBq9k17/s-l225.jpg",
+      "currentBid": 1,
+      "currency": "USD",
+      "bidCount": 0,
+      "endDate": "2026-11-20T02:58:00.000Z",
+      "url": "https://www.ebay.com/itm/940087466510?_skw=Felix+Hernandez+Baseball&hash=itemdae1945a0e:g:z98AAeSwFbBq9k17&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
+    },
+    {
+      "itemId": "v1|147678349219|0",
+      "athlete": "Carlos Narvaez",
+      "sport": "Baseball",
+      "title": "2025 Bowman's Best of '25 Blue Refractor Carlos Narvaez RC Rookie AUTO 120/150",
+      "image": "https://i.ebayimg.com/images/g/ulwAAeSwr4Jq9nzf/s-l225.jpg",
+      "currentBid": 0.99,
+      "currency": "USD",
+      "bidCount": 1,
+      "endDate": "2026-11-20T02:58:32.000Z",
+      "url": "https://www.ebay.com/itm/147678349219?_skw=Carlos+Narvaez+Baseball&hash=item226250c7a3:g:ulwAAeSwr4Jq9nzf&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
+    },
+    {
+      "itemId": "v1|168858466043|0",
+      "athlete": "Andres Gimenez",
+      "sport": "Baseball",
+      "title": "Andres Gimenez 2026 Topps Chrome Baseball Seams Border #286 Toronto Blue Jays",
+      "image": "https://i.ebayimg.com/images/g/ahkAAeSw3jFqal2B/s-l225.jpg",
+      "currentBid": 2.99,
+      "currency": "USD",
+      "bidCount": 0,
+      "endDate": "2026-11-20T02:58:36.000Z",
+      "url": "https://www.ebay.com/itm/168858466043?_skw=Andres+Gimenez+Baseball&hash=item2750bfb6fb:g:ahkAAeSw3jFqal2B&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
+    },
+    {
+      "itemId": "v1|800917286217|0",
+      "athlete": "Eugenio Suarez",
+      "sport": "Baseball",
+      "title": "Eugenio Suárez 2026 Topps Pristine Red Refractor /5",
+      "image": "https://i.ebayimg.com/images/g/cZoAAeSwDHxq-MgC/s-l225.jpg",
+      "currentBid": 100,
+      "currency": "USD",
+      "bidCount": 0,
+      "endDate": "2026-11-20T02:59:01.000Z",
+      "url": "https://www.ebay.com/itm/800917286217?_skw=Eugenio+Suarez+Baseball&hash=itemba7a63ed49:g:cZoAAeSwDHxq-MgC&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
+    },
+    {
       "itemId": "v1|407352111140|0",
       "athlete": "Anibal Sanchez",
       "sport": "Baseball",
@@ -1649,6 +293,18 @@
       "bidCount": 0,
       "endDate": "2026-11-20T02:59:35.000Z",
       "url": "https://www.ebay.com/itm/407352111140?_skw=Anibal+Sanchez+Baseball&hash=item5ed813f024:g:RFYAAeSwtR9oDCEL&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
+    },
+    {
+      "itemId": "v1|366805404420|0",
+      "athlete": "Felix Hernandez",
+      "sport": "Baseball",
+      "title": "2024 Topps Five Star Felix Hernandez Mariners ON CARD AUTO 73/75",
+      "image": "https://i.ebayimg.com/images/g/ofIAAeSwE49q9gUZ/s-l225.jpg",
+      "currentBid": 20.5,
+      "currency": "USD",
+      "bidCount": 17,
+      "endDate": "2026-11-20T03:00:01.000Z",
+      "url": "https://www.ebay.com/itm/366805404420?_skw=Felix+Hernandez+Baseball&hash=item55674e4b04:g:ofIAAeSwE49q9gUZ&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
     },
     {
       "itemId": "v1|128186051127|0",
@@ -1685,6 +341,18 @@
       "bidCount": 0,
       "endDate": "2026-11-20T03:02:39.000Z",
       "url": "https://www.ebay.com/itm/307279960880?_skw=Asdrubal+Cabrera+Baseball&hash=item478b501b30:g:3PQAAeSwomBq4~pz&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
+    },
+    {
+      "itemId": "v1|920124262794|0",
+      "athlete": "Andres Galarraga",
+      "sport": "Baseball",
+      "title": "2024 Panini Prizm Prizms Silver #14 Andres Galarraga - Colorado Rockies",
+      "image": "https://i.ebayimg.com/images/g/tpcAAeSw3BZokS8Y/s-l225.jpg",
+      "currentBid": 0.79,
+      "currency": "USD",
+      "bidCount": 0,
+      "endDate": "2026-11-20T03:04:34.000Z",
+      "url": "https://www.ebay.com/itm/920124262794?_skw=Andres+Galarraga+Baseball&hash=itemd63bae098a:g:tpcAAeSw3BZokS8Y&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
     },
     {
       "itemId": "v1|407359397883|0",
@@ -1764,9 +432,9 @@
       "sport": "Baseball",
       "title": "1971 Topps Set-Break # 14 Dave Concepcion EX-EXMINT *GMCARDS*",
       "image": "https://i.ebayimg.com/images/g/WUwAAeSwXhVq8kX6/s-l225.jpg",
-      "currentBid": 8.5,
+      "currentBid": 9.27,
       "currency": "USD",
-      "bidCount": 8,
+      "bidCount": 9,
       "endDate": "2026-11-20T03:07:57.000Z",
       "url": "https://www.ebay.com/itm/137917048064?_skw=Dave+Concepcion+Baseball&hash=item201c7f2500:g:WUwAAeSwXhVq8kX6&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
     },
@@ -1783,6 +451,102 @@
       "url": "https://www.ebay.com/itm/820348814974?_skw=Anthony+Santander+Baseball&hash=itembf0099867e:g:WxIAAeSwENRq9n3F&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
     },
     {
+      "itemId": "v1|407352126300|0",
+      "athlete": "Felix Hernandez",
+      "sport": "Baseball",
+      "title": "2012 Bowman Chrome Legends In The Making Die Cuts #FH Felix Hernandez - Mariners",
+      "image": "https://i.ebayimg.com/images/g/a60AAOSweexlXiiF/s-l225.jpg",
+      "currentBid": 0.79,
+      "currency": "USD",
+      "bidCount": 0,
+      "endDate": "2026-11-20T03:09:47.000Z",
+      "url": "https://www.ebay.com/itm/407352126300?_skw=Felix+Hernandez+Baseball&hash=item5ed8142b5c:g:a60AAOSweexlXiiF&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
+    },
+    {
+      "itemId": "v1|900091615829|0",
+      "athlete": "Andres Gimenez",
+      "sport": "Baseball",
+      "title": "2019 Chrome Sapphire ORANGE REFRACTIVE ANDRES GIMENEZ Card /25 PSA 9 MINT",
+      "image": "https://i.ebayimg.com/images/g/cE8AAeSwD1tpXDpF/s-l225.jpg",
+      "currentBid": 74.99,
+      "currency": "USD",
+      "bidCount": 0,
+      "endDate": "2026-11-20T03:13:00.000Z",
+      "url": "https://www.ebay.com/itm/900091615829?_skw=Andres+Gimenez+Baseball&hash=itemd191a41a55:g:cE8AAeSwD1tpXDpF&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
+    },
+    {
+      "itemId": "v1|840115301056|0",
+      "athlete": "Andres Galarraga",
+      "sport": "Baseball",
+      "title": "ANDRES GALARRAGA 2026 TOPPS S2 #91B2-AGA 1991 AUTO EXPOS",
+      "image": "https://i.ebayimg.com/images/g/MB4AAeSwUQ5q82-D/s-l225.jpg",
+      "currentBid": 5.5,
+      "currency": "USD",
+      "bidCount": 4,
+      "endDate": "2026-11-20T03:13:20.000Z",
+      "url": "https://www.ebay.com/itm/840115301056?_skw=Andres+Galarraga+Baseball&hash=itemc39ac62ac0:g:MB4AAeSwUQ5q82-D&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
+    },
+    {
+      "itemId": "v1|800894391371|0",
+      "athlete": "Andres Galarraga",
+      "sport": "Baseball",
+      "title": "Andres Galarraga 2000 Upper Deck MVP #26 Braves FREE SHIPPING StackedPacks",
+      "image": "https://i.ebayimg.com/images/g/BI8AAeSw67Fq8RLQ/s-l225.jpg",
+      "currentBid": 0.49,
+      "currency": "USD",
+      "bidCount": 1,
+      "endDate": "2026-11-20T03:13:51.000Z",
+      "url": "https://www.ebay.com/itm/800894391371?_skw=Andres+Galarraga+Baseball&hash=itemba7906944b:g:BI8AAeSw67Fq8RLQ&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
+    },
+    {
+      "itemId": "v1|198790989378|0",
+      "athlete": "Andres Gimenez",
+      "sport": "Baseball",
+      "title": "Andres Gimenez auto finest ORANGE WAVE RARE 2021 15/25 # Fa-AG   Mets",
+      "image": "https://i.ebayimg.com/images/g/jnwAAOSwmbBhCNiC/s-l225.jpg",
+      "currentBid": 100,
+      "currency": "USD",
+      "bidCount": 0,
+      "endDate": "2026-11-20T03:19:35.000Z",
+      "url": "https://www.ebay.com/itm/198790989378?_skw=Andres+Gimenez+Baseball&hash=item2e48ddc642:g:jnwAAOSwmbBhCNiC&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
+    },
+    {
+      "itemId": "v1|147674016712|0",
+      "athlete": "Carlos Narvaez",
+      "sport": "Baseball",
+      "title": "2025 Topps Chrome Platinum Toile Gold Refractor Carlos Narvaez RC Rookie 13/50",
+      "image": "https://i.ebayimg.com/images/g/bMcAAeSwlg5q8o1O/s-l225.jpg",
+      "currentBid": 2.25,
+      "currency": "USD",
+      "bidCount": 3,
+      "endDate": "2026-11-20T03:19:36.000Z",
+      "url": "https://www.ebay.com/itm/147674016712?_skw=Carlos+Narvaez+Baseball&hash=item22620eabc8:g:bMcAAeSwlg5q8o1O&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
+    },
+    {
+      "itemId": "v1|820356286663|0",
+      "athlete": "Eugenio Suarez",
+      "sport": "Baseball",
+      "title": "Topps Chrome Sapphire 2026 Eugenio Suárez #203 Cincinnati Reds Parallel 44/50",
+      "image": "https://i.ebayimg.com/images/g/EekAAeSwSklq5RzJ/s-l225.jpg",
+      "currentBid": 7.99,
+      "currency": "USD",
+      "bidCount": 0,
+      "endDate": "2026-11-20T03:20:36.000Z",
+      "url": "https://www.ebay.com/itm/820356286663?_skw=Eugenio+Suarez+Baseball&hash=itembf010b88c7:g:EekAAeSwSklq5RzJ&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
+    },
+    {
+      "itemId": "v1|407359422236|0",
+      "athlete": "Andres Galarraga",
+      "sport": "Baseball",
+      "title": "Topps 1997 Team Timber Insert Andres Galarraga Colorado Rockies #TT 6",
+      "image": "https://i.ebayimg.com/images/g/fWsAAeSwlNZq9oKS/s-l225.jpg",
+      "currentBid": 0.6,
+      "currency": "USD",
+      "bidCount": 0,
+      "endDate": "2026-11-20T03:23:59.000Z",
+      "url": "https://www.ebay.com/itm/407359422236?_skw=Andres+Galarraga+Baseball&hash=item5ed8837f1c:g:fWsAAeSwlNZq9oKS&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
+    },
+    {
       "itemId": "v1|366806440234|0",
       "athlete": "Andres Chaparro",
       "sport": "Baseball",
@@ -1793,6 +557,42 @@
       "bidCount": 0,
       "endDate": "2026-11-20T03:24:28.000Z",
       "url": "https://www.ebay.com/itm/366806440234?_skw=Andres+Chaparro+Baseball&hash=item55675e192a:g:h0cAAeSwPWNq9oKX&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
+    },
+    {
+      "itemId": "v1|377644982747|0",
+      "athlete": "Felix Hernandez",
+      "sport": "Baseball",
+      "title": "2007 Upper Deck Ultimate Collection Felix Hernandez #/450 Mariners",
+      "image": "https://i.ebayimg.com/images/g/g3UAAeSwFk9q-D4B/s-l225.jpg",
+      "currentBid": 0.99,
+      "currency": "USD",
+      "bidCount": 0,
+      "endDate": "2026-11-20T03:26:40.000Z",
+      "url": "https://www.ebay.com/itm/377644982747?_skw=Felix+Hernandez+Baseball&hash=item57ed6521db:g:g3UAAeSwFk9q-D4B&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
+    },
+    {
+      "itemId": "v1|900087078695|0",
+      "athlete": "Carlos Narvaez",
+      "sport": "Baseball",
+      "title": "2025 Topps Chrome Rookie Blue RayWave Refractor /150 Carlos Narvaez Auto RC",
+      "image": "https://i.ebayimg.com/images/g/V5wAAeSwv4pq0YtE/s-l225.jpg",
+      "currentBid": 7.29,
+      "currency": "USD",
+      "bidCount": 0,
+      "endDate": "2026-11-20T03:27:09.000Z",
+      "url": "https://www.ebay.com/itm/900087078695?_skw=Carlos+Narvaez+Baseball&hash=itemd1915edf27:g:V5wAAeSwv4pq0YtE&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
+    },
+    {
+      "itemId": "v1|800910525397|0",
+      "athlete": "Eugenio Suarez",
+      "sport": "Baseball",
+      "title": "Topps 2026 Holiday Eugenio Suárez H138 Cincinnati Reds Baseball Trading Card",
+      "image": "https://i.ebayimg.com/images/g/3bAAAeSwkZBq9oN8/s-l225.jpg",
+      "currentBid": 0.99,
+      "currency": "USD",
+      "bidCount": 0,
+      "endDate": "2026-11-20T03:28:33.000Z",
+      "url": "https://www.ebay.com/itm/800910525397?_skw=Eugenio+Suarez+Baseball&hash=itemba79fcc3d5:g:3bAAAeSwkZBq9oN8&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
     },
     {
       "itemId": "v1|198784500074|0",
@@ -1807,6 +607,18 @@
       "url": "https://www.ebay.com/itm/198784500074?_skw=Adbert+Alzolay+Baseball&hash=item2e487ac16a:g:tskAAeSwS2xqsDCe&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
     },
     {
+      "itemId": "v1|307282772453|0",
+      "athlete": "Andres Gimenez",
+      "sport": "Baseball",
+      "title": "2020 Bowman Chrome Gold Refractor ANDRES GIMENEZ RC CARD /50 PSA 9 MINT",
+      "image": "https://i.ebayimg.com/images/g/YOkAAeSwfpVpo2Ro/s-l225.jpg",
+      "currentBid": 49.99,
+      "currency": "USD",
+      "bidCount": 0,
+      "endDate": "2026-11-20T03:33:00.000Z",
+      "url": "https://www.ebay.com/itm/307282772453?_skw=Andres+Gimenez+Baseball&hash=item478b7b01e5:g:YOkAAeSwfpVpo2Ro&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
+    },
+    {
       "itemId": "v1|198791002339|0",
       "athlete": "Carlos Zambrano",
       "sport": "Baseball",
@@ -1817,6 +629,30 @@
       "bidCount": 0,
       "endDate": "2026-11-20T03:33:22.000Z",
       "url": "https://www.ebay.com/itm/198791002339?_skw=Carlos+Zambrano+Baseball&hash=item2e48ddf8e3:g:jAcAAeSwKjZqrKIr&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
+    },
+    {
+      "itemId": "v1|168858522087|0",
+      "athlete": "Andres Galarraga",
+      "sport": "Baseball",
+      "title": "Andrés Galarraga Pink Foil Card MLB Vintage Rare Parallel Collectible",
+      "image": "https://i.ebayimg.com/images/g/1tQAAeSwK8Np36Al/s-l225.jpg",
+      "currentBid": 3,
+      "currency": "USD",
+      "bidCount": 0,
+      "endDate": "2026-11-20T03:33:46.000Z",
+      "url": "https://www.ebay.com/itm/168858522087?_skw=Andres+Galarraga+Baseball&hash=item2750c091e7:g:1tQAAeSwK8Np36Al&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
+    },
+    {
+      "itemId": "v1|128191797560|0",
+      "athlete": "Andres Gimenez",
+      "sport": "Baseball",
+      "title": "2026 Topps Chrome Black Andres Gimenez  Blue Refractor Auto /150 ",
+      "image": "https://i.ebayimg.com/images/g/r5AAAeSwlZFqo2MM/s-l225.jpg",
+      "currentBid": 0.99,
+      "currency": "USD",
+      "bidCount": 1,
+      "endDate": "2026-11-20T03:36:14.000Z",
+      "url": "https://www.ebay.com/itm/128191797560?_skw=Andres+Gimenez+Baseball&hash=item1dd8d39938:g:r5AAAeSwlZFqo2MM&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
     },
     {
       "itemId": "v1|198791004195|0",
@@ -1843,6 +679,18 @@
       "url": "https://www.ebay.com/itm/206701066594?_skw=Anthony+Santander+Baseball&hash=item302057f962:g:pLcAAeSwzfhq-J1F&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
     },
     {
+      "itemId": "v1|377644984964|0",
+      "athlete": "Felix Hernandez",
+      "sport": "Baseball",
+      "title": "2007 Topps Co-Signers Felix Hernandez Kenji Johjima Silver #/250",
+      "image": "https://i.ebayimg.com/images/g/e0cAAeSw8hNq-D6w/s-l225.jpg",
+      "currentBid": 0.99,
+      "currency": "USD",
+      "bidCount": 0,
+      "endDate": "2026-11-20T03:40:54.000Z",
+      "url": "https://www.ebay.com/itm/377644984964?_skw=Felix+Hernandez+Baseball&hash=item57ed652a84:g:e0cAAeSw8hNq-D6w&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
+    },
+    {
       "itemId": "v1|128186114478|0",
       "athlete": "Avisail Garcia",
       "sport": "Baseball",
@@ -1853,6 +701,30 @@
       "bidCount": 0,
       "endDate": "2026-11-20T03:41:34.000Z",
       "url": "https://www.ebay.com/itm/128186114478?_skw=Avisail+Garcia+Baseball&hash=item1dd87ce1ae:g:Ry8AAOSw2utmjBB6&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
+    },
+    {
+      "itemId": "v1|128194260512|0",
+      "athlete": "Felix Hernandez",
+      "sport": "Baseball",
+      "title": "2009 Triple Threads Felix Hernandez #/1350 Mariners",
+      "image": "https://i.ebayimg.com/images/g/hdAAAeSwMrpq-D7e/s-l225.jpg",
+      "currentBid": 0.99,
+      "currency": "USD",
+      "bidCount": 1,
+      "endDate": "2026-11-20T03:44:27.000Z",
+      "url": "https://www.ebay.com/itm/128194260512?_skw=Felix+Hernandez+Baseball&hash=item1dd8f92e20:g:hdAAAeSwMrpq-D7e&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
+    },
+    {
+      "itemId": "v1|800894391793|0",
+      "athlete": "Andres Galarraga",
+      "sport": "Baseball",
+      "title": "Andres Galarraga 1989 Score Scoremasters #33 Expos FREE SHIPPING StackedPacks",
+      "image": "https://i.ebayimg.com/images/g/4k4AAeSwakhq8RLe/s-l225.jpg",
+      "currentBid": 0.49,
+      "currency": "USD",
+      "bidCount": 0,
+      "endDate": "2026-11-20T03:47:25.000Z",
+      "url": "https://www.ebay.com/itm/800894391793?_skw=Andres+Galarraga+Baseball&hash=itemba790695f1:g:4k4AAeSwakhq8RLe&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
     },
     {
       "itemId": "v1|237180112397|0",
@@ -1867,6 +739,18 @@
       "url": "https://www.ebay.com/itm/237180112397?_skw=Dave+Concepcion+Baseball&hash=item3739094e0d:g:jo8AAeSwdYhq0WzX&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
     },
     {
+      "itemId": "v1|407359477299|0",
+      "athlete": "Felix Hernandez",
+      "sport": "Baseball",
+      "title": "2016 Topps Chrome Felix Hernandez #192 Prism Refractor Seattle Mariners 🔥",
+      "image": "https://i.ebayimg.com/images/g/FX8AAeSwe41qaZqE/s-l225.jpg",
+      "currentBid": 0.99,
+      "currency": "USD",
+      "bidCount": 0,
+      "endDate": "2026-11-20T03:53:13.000Z",
+      "url": "https://www.ebay.com/itm/407359477299?_skw=Felix+Hernandez+Baseball&hash=item5ed8845633:g:FX8AAeSwe41qaZqE&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
+    },
+    {
       "itemId": "v1|377641512747|0",
       "athlete": "Bob Abreu",
       "sport": "Baseball",
@@ -1877,6 +761,18 @@
       "bidCount": 0,
       "endDate": "2026-11-20T03:56:22.000Z",
       "url": "https://www.ebay.com/itm/377641512747?_skw=Bob+Abreu+Baseball&hash=item57ed302f2b:g:rGAAAeSwG3JqvxyZ&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
+    },
+    {
+      "itemId": "v1|117511705525|0",
+      "athlete": "Andres Galarraga",
+      "sport": "Baseball",
+      "title": "Andres Galarraga 2000 Metal #63 Braves FREE SHIPPING StackedPacks",
+      "image": "https://i.ebayimg.com/images/g/NEAAAeSw21Zq8RLh/s-l225.jpg",
+      "currentBid": 0.49,
+      "currency": "USD",
+      "bidCount": 1,
+      "endDate": "2026-11-20T04:00:01.000Z",
+      "url": "https://www.ebay.com/itm/117511705525?_skw=Andres+Galarraga+Baseball&hash=item1b5c3e53b5:g:NEAAAeSw21Zq8RLh&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
     },
     {
       "itemId": "v1|168858564082|0",
@@ -1891,6 +787,18 @@
       "url": "https://www.ebay.com/itm/168858564082?_skw=Adrian+Sanchez+Baseball&hash=item2750c135f2:g:BR4AAeSwP75q7VFb&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
     },
     {
+      "itemId": "v1|960189351224|0",
+      "athlete": "Dave Concepcion",
+      "sport": "Baseball",
+      "title": "Panini 2026 Donruss Elite Aspirations Dave Concepcion Reds #51  /499",
+      "image": "https://i.ebayimg.com/images/g/9q8AAeSw3DBq0pYM/s-l225.jpg",
+      "currentBid": 1,
+      "currency": "USD",
+      "bidCount": 1,
+      "endDate": "2026-11-20T04:06:28.000Z",
+      "url": "https://www.ebay.com/itm/960189351224?_skw=Dave+Concepcion+Baseball&hash=itemdf8fbec538:g:9q8AAeSw3DBq0pYM&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
+    },
+    {
       "itemId": "v1|820349118095|0",
       "athlete": "Carlos Zambrano",
       "sport": "Baseball",
@@ -1901,6 +809,18 @@
       "bidCount": 0,
       "endDate": "2026-11-20T04:08:44.000Z",
       "url": "https://www.ebay.com/itm/820349118095?_skw=Carlos+Zambrano+Baseball&hash=itembf009e268f:g:xrkAAeSwyShpSbse&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
+    },
+    {
+      "itemId": "v1|860129031574|0",
+      "athlete": "Dave Concepcion",
+      "sport": "Baseball",
+      "title": "1972 Topps Set-Break #267 Dave Concepcion EX-EXMINT *GMCARDS*",
+      "image": "https://i.ebayimg.com/images/g/2BoAAeSws9lq8kYY/s-l225.jpg",
+      "currentBid": 1.55,
+      "currency": "USD",
+      "bidCount": 4,
+      "endDate": "2026-11-20T04:09:26.000Z",
+      "url": "https://www.ebay.com/itm/860129031574?_skw=Dave+Concepcion+Baseball&hash=itemc843af7596:g:2BoAAeSws9lq8kYY&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
     },
     {
       "itemId": "v1|920137703170|0",
@@ -1915,6 +835,66 @@
       "url": "https://www.ebay.com/itm/920137703170?_skw=Brusdar+Graterol+Baseball&hash=itemd63c7b1f02:g:LeQAAeSwSflq0ZVV&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
     },
     {
+      "itemId": "v1|366811045785|0",
+      "athlete": "Andres Gimenez",
+      "sport": "Baseball",
+      "title": "Andres Gimenez - Diamante Foil - 2026 Topps Series 2 - #588 - Toronto Blue Jays",
+      "image": "https://i.ebayimg.com/images/g/400AAeSwEPpq5VfZ/s-l225.jpg",
+      "currentBid": 0.75,
+      "currency": "USD",
+      "bidCount": 0,
+      "endDate": "2026-11-20T04:10:30.000Z",
+      "url": "https://www.ebay.com/itm/366811045785?_skw=Andres+Gimenez+Baseball&hash=item5567a45f99:g:400AAeSwEPpq5VfZ&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
+    },
+    {
+      "itemId": "v1|800894392489|0",
+      "athlete": "Andres Galarraga",
+      "sport": "Baseball",
+      "title": "Andres Galarraga 2002 Donruss Fan Club #35 Giants FREE SHIPPING StackedPacks",
+      "image": "https://i.ebayimg.com/images/g/5ysAAeSw6kNq8RLx/s-l225.jpg",
+      "currentBid": 0.39,
+      "currency": "USD",
+      "bidCount": 1,
+      "endDate": "2026-11-20T04:12:34.000Z",
+      "url": "https://www.ebay.com/itm/800894392489?_skw=Andres+Galarraga+Baseball&hash=itemba790698a9:g:5ysAAeSw6kNq8RLx&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
+    },
+    {
+      "itemId": "v1|940093296718|0",
+      "athlete": "Eugenio Suarez",
+      "sport": "Baseball",
+      "title": "2026 Topps Heritage Chrome Refractor Eugenio Suárez Seattle Mariners 29",
+      "image": "https://i.ebayimg.com/images/g/JiwAAeSwFWxpwIJ6/s-l225.jpg",
+      "currentBid": 0.99,
+      "currency": "USD",
+      "bidCount": 0,
+      "endDate": "2026-11-20T04:13:50.000Z",
+      "url": "https://www.ebay.com/itm/940093296718?_skw=Eugenio+Suarez+Baseball&hash=itemdae1ed504e:g:JiwAAeSwFWxpwIJ6&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
+    },
+    {
+      "itemId": "v1|168858584180|0",
+      "athlete": "Felix Hernandez",
+      "sport": "Baseball",
+      "title": " Felix Hernandez Panini 2025 Select Global Icons Seattle Insert MLB Card #25",
+      "image": "https://i.ebayimg.com/images/g/snEAAeSwaJRpoMrA/s-l225.jpg",
+      "currentBid": 3,
+      "currency": "USD",
+      "bidCount": 0,
+      "endDate": "2026-11-20T04:20:22.000Z",
+      "url": "https://www.ebay.com/itm/168858584180?_skw=Felix+Hernandez+Baseball&hash=item2750c18474:g:snEAAeSwaJRpoMrA&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
+    },
+    {
+      "itemId": "v1|800894391782|0",
+      "athlete": "Felix Hernandez",
+      "sport": "Baseball",
+      "title": "Felix Hernandez 2015 Topps #325 Mariners FREE SHIPPING StackedPacks",
+      "image": "https://i.ebayimg.com/images/g/dgMAAeSwMgxq8RLZ/s-l225.jpg",
+      "currentBid": 0.49,
+      "currency": "USD",
+      "bidCount": 0,
+      "endDate": "2026-11-20T04:20:31.000Z",
+      "url": "https://www.ebay.com/itm/800894391782?_skw=Felix+Hernandez+Baseball&hash=itemba790695e6:g:dgMAAeSwMgxq8RLZ&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
+    },
+    {
       "itemId": "v1|128186157958|0",
       "athlete": "Andres Chaparro",
       "sport": "Baseball",
@@ -1925,6 +905,42 @@
       "bidCount": 0,
       "endDate": "2026-11-20T04:24:36.000Z",
       "url": "https://www.ebay.com/itm/128186157958?_skw=Andres+Chaparro+Baseball&hash=item1dd87d8b86:g:QhYAAeSwhRJoMOas&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
+    },
+    {
+      "itemId": "v1|920142411005|0",
+      "athlete": "Andres Gimenez",
+      "sport": "Baseball",
+      "title": "2021 Topps Chrome Platinum Aqua Wave Andres Gimenez RC BJWLC",
+      "image": "https://i.ebayimg.com/images/g/ghMAAeSw14Nq-Fe5/s-l225.jpg",
+      "currentBid": 0.99,
+      "currency": "USD",
+      "bidCount": 0,
+      "endDate": "2026-11-20T04:27:01.000Z",
+      "url": "https://www.ebay.com/itm/920142411005?_skw=Andres+Gimenez+Baseball&hash=itemd63cc2f4fd:g:ghMAAeSw14Nq-Fe5&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
+    },
+    {
+      "itemId": "v1|960188824269|0",
+      "athlete": "Dave Concepcion",
+      "sport": "Baseball",
+      "title": "Dave Concepcion 2026 Panini Prizm #205 Red /299",
+      "image": "https://i.ebayimg.com/images/g/gIEAAeSwVGNq9l5w/s-l225.jpg",
+      "currentBid": 1,
+      "currency": "USD",
+      "bidCount": 1,
+      "endDate": "2026-11-20T04:29:00.000Z",
+      "url": "https://www.ebay.com/itm/960188824269?_skw=Dave+Concepcion+Baseball&hash=itemdf8fb6bacd:g:gIEAAeSwVGNq9l5w&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
+    },
+    {
+      "itemId": "v1|128190863474|0",
+      "athlete": "Andres Gimenez",
+      "sport": "Baseball",
+      "title": "#'d /25 2021 Topps Gold Framed Auto Red Andres Gimenez INDIANS Rookie Blue Jays",
+      "image": "https://i.ebayimg.com/images/g/VcQAAeSwhFRqlM4s/s-l225.jpg",
+      "currentBid": 2.25,
+      "currency": "USD",
+      "bidCount": 2,
+      "endDate": "2026-11-20T04:30:01.000Z",
+      "url": "https://www.ebay.com/itm/128190863474?_skw=Andres+Gimenez+Baseball&hash=item1dd8c55872:g:VcQAAeSwhFRqlM4s&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
     },
     {
       "itemId": "v1|960189448313|0",
@@ -1973,6 +989,42 @@
       "bidCount": 0,
       "endDate": "2026-11-20T04:46:00.000Z",
       "url": "https://www.ebay.com/itm/257849979859?_skw=Anderson+Espinoza+Baseball&hash=item3c090e73d3:g:oZ8AAeSwfGdqV7N1&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
+    },
+    {
+      "itemId": "v1|900087237419|0",
+      "athlete": "Dave Concepcion",
+      "sport": "Baseball",
+      "title": "2026 Panini Prizm - Dave Concepcion #205 Prizm",
+      "image": "https://i.ebayimg.com/images/g/fIQAAeSwovlqyGQE/s-l225.jpg",
+      "currentBid": 1.25,
+      "currency": "USD",
+      "bidCount": 0,
+      "endDate": "2026-11-20T04:50:34.000Z",
+      "url": "https://www.ebay.com/itm/900087237419?_skw=Dave+Concepcion+Baseball&hash=itemd191614b2b:g:fIQAAeSwovlqyGQE&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
+    },
+    {
+      "itemId": "v1|860139415794|0",
+      "athlete": "Eugenio Suarez",
+      "sport": "Baseball",
+      "title": "Topps Chrome Eugenio Suarez #203 Cincinnati Reds Red Refractor Baseball Card",
+      "image": "https://i.ebayimg.com/images/g/NNkAAeSws-Fq2tnd/s-l225.jpg",
+      "currentBid": 4,
+      "currency": "USD",
+      "bidCount": 0,
+      "endDate": "2026-11-20T04:53:24.000Z",
+      "url": "https://www.ebay.com/itm/860139415794?_skw=Eugenio+Suarez+Baseball&hash=itemc8444de8f2:g:NNkAAeSws-Fq2tnd&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
+    },
+    {
+      "itemId": "v1|366811112760|0",
+      "athlete": "Felix Hernandez",
+      "sport": "Baseball",
+      "title": "2024 Wild Card Splat Felix Hernandez True Color Match 1/1 Mariners SPTT-87-FH",
+      "image": "https://i.ebayimg.com/images/g/uMAAAeSwVf1qgJU4/s-l225.jpg",
+      "currentBid": 27.99,
+      "currency": "USD",
+      "bidCount": 0,
+      "endDate": "2026-11-20T04:56:53.000Z",
+      "url": "https://www.ebay.com/itm/366811112760?_skw=Felix+Hernandez+Baseball&hash=item5567a56538:g:uMAAAeSwVf1qgJU4&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
     },
     {
       "itemId": "v1|800894394512|0",
@@ -2107,6 +1159,18 @@
       "url": "https://www.ebay.com/itm/377641680207?_skw=Andres+Blanco+Baseball&hash=item57ed32bd4f:g:q5oAAeSw3y1o5crX&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
     },
     {
+      "itemId": "v1|227607166752|0",
+      "athlete": "Dave Concepcion",
+      "sport": "Baseball",
+      "title": "2021 Topps Chrome Platinum org/yellow Ref /25 Dave Concepcion #544 PSA GEM MT 10",
+      "image": "https://i.ebayimg.com/images/g/kegAAeSwxclqve09/s-l225.jpg",
+      "currentBid": 79.95,
+      "currency": "USD",
+      "bidCount": 0,
+      "endDate": "2026-11-20T06:22:53.000Z",
+      "url": "https://www.ebay.com/itm/227607166752?_skw=Dave+Concepcion+Baseball&hash=item34fe71bf20:g:kegAAeSwxclqve09&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
+    },
+    {
       "itemId": "v1|206688853312|0",
       "athlete": "Antonio Senzatela",
       "sport": "Baseball",
@@ -2153,6 +1217,18 @@
       "bidCount": 0,
       "endDate": "2026-11-20T06:49:38.000Z",
       "url": "https://www.ebay.com/itm/860129979888?_skw=Anthony+Santander+Baseball&hash=itemc843bdedf0:g:PN4AAeSwRqFok4Dg&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
+    },
+    {
+      "itemId": "v1|860129980202|0",
+      "athlete": "Eugenio Suarez",
+      "sport": "Baseball",
+      "title": "2025 Topps Heritage - Eugenio Suarez #223 Dark Green Border Diamondbacks ",
+      "image": "https://i.ebayimg.com/images/g/G6QAAeSwtQloi~8x/s-l225.jpg",
+      "currentBid": 0.89,
+      "currency": "USD",
+      "bidCount": 0,
+      "endDate": "2026-11-20T06:49:45.000Z",
+      "url": "https://www.ebay.com/itm/860129980202?_skw=Eugenio+Suarez+Baseball&hash=itemc843bdef2a:g:G6QAAeSwtQloi~8x&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
     },
     {
       "itemId": "v1|860129980435|0",
@@ -2323,6 +1399,18 @@
       "url": "https://www.ebay.com/itm/366799048512?_skw=Carlos+Hernandez+Baseball&hash=item5566ed4f40:g:JLcAAOSw1admeCTr&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
     },
     {
+      "itemId": "v1|117519129275|0",
+      "athlete": "Eugenio Suarez",
+      "sport": "Baseball",
+      "title": "2021 Topps Heritage - High Number SP Eugenio Suarez #404",
+      "image": "https://i.ebayimg.com/images/g/q8EAAeSwumxq7dRa/s-l225.jpg",
+      "currentBid": 0.99,
+      "currency": "USD",
+      "bidCount": 0,
+      "endDate": "2026-11-20T13:23:34.000Z",
+      "url": "https://www.ebay.com/itm/117519129275?_skw=Eugenio+Suarez+Baseball&hash=item1b5caf9abb:g:q8EAAeSwumxq7dRa&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
+    },
+    {
       "itemId": "v1|117512903467|0",
       "athlete": "Anibal Sanchez",
       "sport": "Baseball",
@@ -2335,6 +1423,18 @@
       "url": "https://www.ebay.com/itm/117512903467?_skw=Anibal+Sanchez+Baseball&hash=item1b5c509b2b:g:oeoAAeSw3slq8hSP&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
     },
     {
+      "itemId": "v1|128192527621|0",
+      "athlete": "Carlos Narvaez",
+      "sport": "Baseball",
+      "title": "Carlos Narvaez RC Auto 2025 Topps Chrome Update /499 Rookie Debut Refractor",
+      "image": "https://i.ebayimg.com/images/g/MwsAAeSwKcBqo~ua/s-l225.jpg",
+      "currentBid": 3.99,
+      "currency": "USD",
+      "bidCount": 0,
+      "endDate": "2026-11-20T13:53:28.000Z",
+      "url": "https://www.ebay.com/itm/128192527621?_skw=Carlos+Narvaez+Baseball&hash=item1dd8debd05:g:MwsAAeSwKcBqo~ua&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
+    },
+    {
       "itemId": "v1|880105668924|0",
       "athlete": "Andres Chaparro",
       "sport": "Baseball",
@@ -2345,6 +1445,18 @@
       "bidCount": 0,
       "endDate": "2026-11-20T14:25:01.000Z",
       "url": "https://www.ebay.com/itm/880105668924?_skw=Andres+Chaparro+Baseball&hash=itemccea62c13c:g:Sv8AAeSwI1Zplhz8&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
+    },
+    {
+      "itemId": "v1|960178922603|0",
+      "athlete": "Dave Concepcion",
+      "sport": "Baseball",
+      "title": "Dave Concepcion Cincinnati Reds 1982 ALL-STAR  Autographed Card",
+      "image": "https://i.ebayimg.com/images/g/6vwAAOSwqutiy0hS/s-l225.jpg",
+      "currentBid": 30,
+      "currency": "USD",
+      "bidCount": 0,
+      "endDate": "2026-11-20T14:43:45.000Z",
+      "url": "https://www.ebay.com/itm/960178922603?_skw=Dave+Concepcion+Baseball&hash=itemdf8f1fa46b:g:6vwAAOSwqutiy0hS&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
     },
     {
       "itemId": "v1|168859552571|0",
@@ -2369,6 +1481,30 @@
       "bidCount": 0,
       "endDate": "2026-11-20T14:57:14.000Z",
       "url": "https://www.ebay.com/itm/327454308445?_skw=Andres+Chaparro+Baseball&hash=item4c3dcc385d:g:K00AAeSwVnJq4MzW&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
+    },
+    {
+      "itemId": "v1|377642711276|0",
+      "athlete": "Eugenio Suarez",
+      "sport": "Baseball",
+      "title": "Topps 2026 Heritage Eugenio Suárez #29 Purple Border Seattle Mariners MLB",
+      "image": "https://i.ebayimg.com/images/g/cd0AAeSwsqlqeKRn/s-l225.jpg",
+      "currentBid": 2,
+      "currency": "USD",
+      "bidCount": 0,
+      "endDate": "2026-11-20T15:09:02.000Z",
+      "url": "https://www.ebay.com/itm/377642711276?_skw=Eugenio+Suarez+Baseball&hash=item57ed4278ec:g:cd0AAeSwsqlqeKRn&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
+    },
+    {
+      "itemId": "v1|237180961237|0",
+      "athlete": "Dave Concepcion",
+      "sport": "Baseball",
+      "title": "DAVE CONCEPCION 2026 Panini Immaculate /35 RED INK Autograph #II-DC Reds",
+      "image": "https://i.ebayimg.com/images/g/0EsAAeSwR~9q6-TS/s-l225.jpg",
+      "currentBid": 8.27,
+      "currency": "USD",
+      "bidCount": 3,
+      "endDate": "2026-11-20T15:19:37.000Z",
+      "url": "https://www.ebay.com/itm/237180961237?_skw=Dave+Concepcion+Baseball&hash=item37391641d5:g:0EsAAeSwR~9q6-TS&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
     },
     {
       "itemId": "v1|800912339114|0",
@@ -2491,6 +1627,18 @@
       "url": "https://www.ebay.com/itm/940089478766?_skw=Adbert+Alzolay+Baseball&hash=itemdae1b30e6e:g:T~sAAeSwU61pwirf&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
     },
     {
+      "itemId": "v1|128192793657|0",
+      "athlete": "Carlos Narvaez",
+      "sport": "Baseball",
+      "title": "2026 Topps Allen & Ginter Mini Framed Magenta Printing Plate 1/1 Carlos Narvaez",
+      "image": "https://i.ebayimg.com/images/g/1XgAAeSwem5qyJ0X/s-l225.jpg",
+      "currentBid": 29.99,
+      "currency": "USD",
+      "bidCount": 0,
+      "endDate": "2026-11-20T17:19:16.000Z",
+      "url": "https://www.ebay.com/itm/128192793657?_skw=Carlos+Narvaez+Baseball&hash=item1dd8e2cc39:g:1XgAAeSwem5qyJ0X&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
+    },
+    {
       "itemId": "v1|257845825934|0",
       "athlete": "Alvaro Espinoza",
       "sport": "Baseball",
@@ -2599,6 +1747,18 @@
       "url": "https://www.ebay.com/itm/840125220760?_skw=Anthony+Santander+Baseball&hash=itemc39b5d8798:g:AFQAAeSwbxNq5NZ6&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
     },
     {
+      "itemId": "v1|137928226383|0",
+      "athlete": "Carlos Narvaez",
+      "sport": "Baseball",
+      "title": "2025 Topps Chrome - Rookie Auto Carlos Narvaez #RA-CAN Blue RayWave /150",
+      "image": "https://i.ebayimg.com/images/g/5PAAAeSw3i9qun2k/s-l225.jpg",
+      "currentBid": 95,
+      "currency": "USD",
+      "bidCount": 0,
+      "endDate": "2026-11-20T18:45:03.000Z",
+      "url": "https://www.ebay.com/itm/137928226383?_skw=Carlos+Narvaez+Baseball&hash=item201d29b64f:g:5PAAAeSw3i9qun2k&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
+    },
+    {
       "itemId": "v1|206690159747|0",
       "athlete": "Alberto Gonzalez",
       "sport": "Baseball",
@@ -2635,6 +1795,30 @@
       "url": "https://www.ebay.com/itm/407353704370?_skw=Andres+Chaparro+Baseball&hash=item5ed82c3fb2:g:dxEAAeSwGZJo00nk&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
     },
     {
+      "itemId": "v1|920139593638|0",
+      "athlete": "Carlos Narvaez",
+      "sport": "Baseball",
+      "title": "Carlos Narvaez 2026 Topps Heritage Dark Yellow Short Print SP #248 Red Sox",
+      "image": "https://i.ebayimg.com/images/g/oW0AAeSwc~ppz~QM/s-l225.jpg",
+      "currentBid": 1,
+      "currency": "USD",
+      "bidCount": 0,
+      "endDate": "2026-11-20T19:08:00.000Z",
+      "url": "https://www.ebay.com/itm/920139593638?_skw=Carlos+Narvaez+Baseball&hash=itemd63c97f7a6:g:oW0AAeSwc~ppz~QM&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
+    },
+    {
+      "itemId": "v1|820339523341|0",
+      "athlete": "Carlos Narvaez",
+      "sport": "Baseball",
+      "title": "Topps 2025 Series 1 Carlos Narvaez Rookie Mem Ball Star Fusion #115 /39",
+      "image": "https://i.ebayimg.com/images/g/2b0AAeSw9gtq82xt/s-l225.jpg",
+      "currentBid": 20,
+      "currency": "USD",
+      "bidCount": 0,
+      "endDate": "2026-11-20T19:12:28.000Z",
+      "url": "https://www.ebay.com/itm/820339523341?_skw=Carlos+Narvaez+Baseball&hash=itembf000bbf0d:g:2b0AAeSw9gtq82xt&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
+    },
+    {
       "itemId": "v1|960200684772|0",
       "athlete": "Elias Diaz",
       "sport": "Baseball",
@@ -2659,6 +1843,30 @@
       "url": "https://www.ebay.com/itm/257845978787?_skw=Carlos+Quintana+Baseball&hash=item3c08d166a3:g:F3oAAeSwyQ5pkJhY&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
     },
     {
+      "itemId": "v1|860141262279|0",
+      "athlete": "Carlos Narvaez",
+      "sport": "Baseball",
+      "title": "2026 Topps MLB Series One Carlos Narvaez 344",
+      "image": "https://i.ebayimg.com/images/g/1MUAAeSwC1Zp~PYG/s-l225.jpg",
+      "currentBid": 0.86,
+      "currency": "USD",
+      "bidCount": 0,
+      "endDate": "2026-11-20T19:17:06.000Z",
+      "url": "https://www.ebay.com/itm/860141262279?_skw=Carlos+Narvaez+Baseball&hash=itemc8446a15c7:g:1MUAAeSwC1Zp~PYG&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
+    },
+    {
+      "itemId": "v1|407353761369|0",
+      "athlete": "Anthony Santander",
+      "sport": "Baseball",
+      "title": "2025 Topps Chrome X-Fractors #60 Anthony Santander - Toronto Blue Jays",
+      "image": "https://i.ebayimg.com/images/g/6wAAAeSw-Xlo008G/s-l225.jpg",
+      "currentBid": 0.79,
+      "currency": "USD",
+      "bidCount": 0,
+      "endDate": "2026-11-20T19:41:46.000Z",
+      "url": "https://www.ebay.com/itm/407353761369?_skw=Anthony+Santander+Baseball&hash=item5ed82d1e59:g:6wAAAeSw-Xlo008G&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
+    },
+    {
       "itemId": "v1|407365324475|0",
       "athlete": "Carlos Perez",
       "sport": "Baseball",
@@ -2669,6 +1877,18 @@
       "bidCount": 0,
       "endDate": "2026-11-20T20:16:53.000Z",
       "url": "https://www.ebay.com/itm/407365324475?_skw=Carlos+Perez+Baseball&hash=item5ed8dd8ebb:g:j9cAAeSw5O9q83uH&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
+    },
+    {
+      "itemId": "v1|366808071417|0",
+      "athlete": "Anthony Santander",
+      "sport": "Baseball",
+      "title": "2024 Topps Heritage Short Print Card# 9  Anthony Santander  Baltimore Orioles SP",
+      "image": "https://i.ebayimg.com/images/g/6OwAAeSwu1NolkIL/s-l225.jpg",
+      "currentBid": 2,
+      "currency": "USD",
+      "bidCount": 0,
+      "endDate": "2026-11-20T20:24:42.000Z",
+      "url": "https://www.ebay.com/itm/366808071417?_skw=Anthony+Santander+Baseball&hash=item556776fcf9:g:6OwAAeSwu1NolkIL&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
     },
     {
       "itemId": "v1|366808071425|0",
@@ -2983,6 +2203,18 @@
       "url": "https://www.ebay.com/itm/960180388560?_skw=Franklin+Gutierrez+Baseball&hash=itemdf8f3602d0:g:RnIAAOSwC95gjGb0&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
     },
     {
+      "itemId": "v1|128193316129|0",
+      "athlete": "Carlos Narvaez",
+      "sport": "Baseball",
+      "title": "2026 Topps Allen and Ginter Gold Filigree /50 Carlos Narvaez #56 (1)",
+      "image": "https://i.ebayimg.com/images/g/KUwAAeSwHWZq0qha/s-l225.jpg",
+      "currentBid": 2.99,
+      "currency": "USD",
+      "bidCount": 0,
+      "endDate": "2026-11-20T23:43:51.000Z",
+      "url": "https://www.ebay.com/itm/128193316129?_skw=Carlos+Narvaez+Baseball&hash=item1dd8eac521:g:KUwAAeSwHWZq0qha&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
+    },
+    {
       "itemId": "v1|366812796722|0",
       "athlete": "Avisail Garcia",
       "sport": "Baseball",
@@ -3007,6 +2239,18 @@
       "url": "https://www.ebay.com/itm/147682248317?_skw=Armando+Galarraga+Baseball&hash=item22628c467d:g:Sn8AAeSwS2Fq86iK&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
     },
     {
+      "itemId": "v1|377648961613|0",
+      "athlete": "Brayan Rocchio",
+      "sport": "Baseball",
+      "title": "Brayan Rocchio 2019 Bowman Chrome 1st Prospects Auto #CPA-BR Indians [3hk",
+      "image": "https://i.ebayimg.com/images/g/mRwAAeSwz6hq-key/s-l225.jpg",
+      "currentBid": 1,
+      "currency": "USD",
+      "bidCount": 0,
+      "endDate": "2026-11-21T00:00:46.000Z",
+      "url": "https://www.ebay.com/itm/377648961613?_skw=Brayan+Rocchio+Baseball&hash=item57eda1d84d:g:mRwAAeSwz6hq-key&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
+    },
+    {
       "itemId": "v1|307284167327|0",
       "athlete": "Brusdar Graterol",
       "sport": "Baseball",
@@ -3029,6 +2273,18 @@
       "bidCount": 0,
       "endDate": "2026-11-21T00:03:13.000Z",
       "url": "https://www.ebay.com/itm/168853328250?_skw=Antonio+Senzatela+Baseball&hash=item275071517a:g:GoAAAOSwbPtkfVd9&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
+    },
+    {
+      "itemId": "v1|168853328369|0",
+      "athlete": "Carlos Gonzalez",
+      "sport": "Baseball",
+      "title": "2013 Topps Chasing History #CH-72 Carlos Gonzalez - Colorado Rockies",
+      "image": "https://i.ebayimg.com/images/g/SWQAAOSwPC5kn9DV/s-l225.jpg",
+      "currentBid": 0.79,
+      "currency": "USD",
+      "bidCount": 0,
+      "endDate": "2026-11-21T00:03:19.000Z",
+      "url": "https://www.ebay.com/itm/168853328369?_skw=Carlos+Gonzalez+Baseball&hash=item27507151f1:g:SWQAAOSwPC5kn9DV&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
     },
     {
       "itemId": "v1|117519983826|0",
@@ -3065,6 +2321,18 @@
       "bidCount": 0,
       "endDate": "2026-11-21T00:22:11.000Z",
       "url": "https://www.ebay.com/itm/800913768150?_skw=David+Peralta+Baseball&hash=itemba7a2e3ed6:g:1uEAAeSwXg1q7REE&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
+    },
+    {
+      "itemId": "v1|900094063375|0",
+      "athlete": "Adbert Alzolay",
+      "sport": "Baseball",
+      "title": "2020 Topps Chrome Auto ADBERT ALZOLAY RC CARD PSA 9 MINT",
+      "image": "https://i.ebayimg.com/images/g/14AAAeSw3YhpoNMj/s-l225.jpg",
+      "currentBid": 24.99,
+      "currency": "USD",
+      "bidCount": 0,
+      "endDate": "2026-11-21T00:24:00.000Z",
+      "url": "https://www.ebay.com/itm/900094063375?_skw=Adbert+Alzolay+Baseball&hash=itemd191c9730f:g:14AAAeSw3YhpoNMj&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
     },
     {
       "itemId": "v1|900089423504|0",
@@ -3223,6 +2491,30 @@
       "url": "https://www.ebay.com/itm/117520050845?_skw=Bob+Abreu+Baseball&hash=item1b5cbdaa9d:g:iwUAAOSwvI9nLsVq&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
     },
     {
+      "itemId": "v1|227613411301|0",
+      "athlete": "Anthony Santander",
+      "sport": "Baseball",
+      "title": "2025 Topps Finest Anthony Santander #239 Rare Blue Refractor Blue Jays 28/99",
+      "image": "https://i.ebayimg.com/images/g/g84AAeSwT45ozxQr/s-l225.jpg",
+      "currentBid": 2,
+      "currency": "USD",
+      "bidCount": 0,
+      "endDate": "2026-11-21T01:21:08.000Z",
+      "url": "https://www.ebay.com/itm/227613411301?_skw=Anthony+Santander+Baseball&hash=item34fed107e5:g:g84AAeSwT45ozxQr&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
+    },
+    {
+      "itemId": "v1|860147282781|0",
+      "athlete": "Adbert Alzolay",
+      "sport": "Baseball",
+      "title": "2021 Panini Mosaic - Scripts Adbert Alzolay #SCR-AA (AU)",
+      "image": "https://i.ebayimg.com/images/g/Y5IAAeSwZCxq88NS/s-l225.jpg",
+      "currentBid": 3.99,
+      "currency": "USD",
+      "bidCount": 0,
+      "endDate": "2026-11-21T01:22:56.000Z",
+      "url": "https://www.ebay.com/itm/860147282781?_skw=Adbert+Alzolay+Baseball&hash=itemc844c5f35d:g:Y5IAAeSwZCxq88NS&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
+    },
+    {
       "itemId": "v1|377644082264|0",
       "athlete": "Angel Zerpa",
       "sport": "Baseball",
@@ -3247,6 +2539,18 @@
       "url": "https://www.ebay.com/itm/377644082301?_skw=Angel+Zerpa+Baseball&hash=item57ed57647d:g:N0YAAeSwTEZqyQXg&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
     },
     {
+      "itemId": "v1|800914030091|0",
+      "athlete": "Brayan Rocchio",
+      "sport": "Baseball",
+      "title": "BRAYAN ROCCHIO SAPPHIRE REFRACTOR ROOKIE CLE SP RC • 2023 Topps Chrome #USCS214",
+      "image": "https://i.ebayimg.com/images/g/wcMAAeSw0f9q0r9z/s-l225.jpg",
+      "currentBid": 1.49,
+      "currency": "USD",
+      "bidCount": 0,
+      "endDate": "2026-11-21T01:36:48.000Z",
+      "url": "https://www.ebay.com/itm/800914030091?_skw=Brayan+Rocchio+Baseball&hash=itemba7a323e0b:g:wcMAAeSw0f9q0r9z&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
+    },
+    {
       "itemId": "v1|227613445664|0",
       "athlete": "Alex Delgado",
       "sport": "Baseball",
@@ -3257,6 +2561,18 @@
       "bidCount": 0,
       "endDate": "2026-11-21T01:59:20.000Z",
       "url": "https://www.ebay.com/itm/227613445664?_skw=Alex+Delgado+Baseball&hash=item34fed18e20:g:eTAAAOSwHLdmPnT9&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
+    },
+    {
+      "itemId": "v1|227613445717|0",
+      "athlete": "Adbert Alzolay",
+      "sport": "Baseball",
+      "title": "2020 Topps Archives Adbert Alzolay RC #171 Chicago Cubs Rookie",
+      "image": "https://i.ebayimg.com/images/g/w7cAAOSwsRxk70FK/s-l225.jpg",
+      "currentBid": 0.85,
+      "currency": "USD",
+      "bidCount": 0,
+      "endDate": "2026-11-21T01:59:22.000Z",
+      "url": "https://www.ebay.com/itm/227613445717?_skw=Adbert+Alzolay+Baseball&hash=item34fed18e55:g:w7cAAOSwsRxk70FK&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
     },
     {
       "itemId": "v1|128196401671|0",
@@ -3281,6 +2597,18 @@
       "bidCount": 0,
       "endDate": "2026-11-21T02:01:29.000Z",
       "url": "https://www.ebay.com/itm/198786663483?_skw=David+Peralta+Baseball&hash=item2e489bc43b:g:dT4AAOSwY4ljeBIA&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
+    },
+    {
+      "itemId": "v1|198786667074|0",
+      "athlete": "Avisail Garcia",
+      "sport": "Baseball",
+      "title": "Avisail Garcia signed 2011 Bowman Prospects Rookie card #72-Detroit Tigers",
+      "image": "https://i.ebayimg.com/images/g/K~wAAOSwhelkcAYG/s-l225.jpg",
+      "currentBid": 4.99,
+      "currency": "USD",
+      "bidCount": 0,
+      "endDate": "2026-11-21T02:03:22.000Z",
+      "url": "https://www.ebay.com/itm/198786667074?_skw=Avisail+Garcia+Baseball&hash=item2e489bd242:g:K~wAAOSwhelkcAYG&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
     },
     {
       "itemId": "v1|137934705226|0",
@@ -3353,6 +2681,42 @@
       "bidCount": 1,
       "endDate": "2026-11-21T02:22:15.000Z",
       "url": "https://www.ebay.com/itm/800897293788?_skw=Carlos+Zambrano+Baseball&hash=itemba7932dddc:g:ikAAAeSw4Gdq8hTQ&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
+    },
+    {
+      "itemId": "v1|128193543967|0",
+      "athlete": "Brayan Rocchio",
+      "sport": "Baseball",
+      "title": "2020 Topps ProDebut Brayan Rocchio Autographed Rookie Card",
+      "image": "https://i.ebayimg.com/images/g/9RYAAeSwB9hqvIsE/s-l225.jpg",
+      "currentBid": 3.99,
+      "currency": "USD",
+      "bidCount": 0,
+      "endDate": "2026-11-21T02:23:52.000Z",
+      "url": "https://www.ebay.com/itm/128193543967?_skw=Brayan+Rocchio+Baseball&hash=item1dd8ee3f1f:g:9RYAAeSwB9hqvIsE&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
+    },
+    {
+      "itemId": "v1|287720326137|0",
+      "athlete": "Carlos Carrasco",
+      "sport": "Baseball",
+      "title": "CARLOS CARRASCO 2008 Donruss Threads ROOKIE Card #85 Philadelphia Phillies RC",
+      "image": "https://i.ebayimg.com/images/g/AvYAAOSwArVidEhB/s-l225.jpg",
+      "currentBid": 3.25,
+      "currency": "USD",
+      "bidCount": 0,
+      "endDate": "2026-11-21T02:27:53.000Z",
+      "url": "https://www.ebay.com/itm/287720326137?_skw=Carlos+Carrasco+Baseball&hash=item42fd77c3f9:g:AvYAAOSwArVidEhB&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
+    },
+    {
+      "itemId": "v1|267843009421|0",
+      "athlete": "Brayan Rocchio",
+      "sport": "Baseball",
+      "title": "2025 Topps #194 Brayan Rocchio Memorial Day Camo #03/25 PSA 6",
+      "image": "https://i.ebayimg.com/images/g/ZKkAAeSwMjZq1Uxy/s-l225.jpg",
+      "currentBid": 19.99,
+      "currency": "USD",
+      "bidCount": 0,
+      "endDate": "2026-11-21T02:30:00.000Z",
+      "url": "https://www.ebay.com/itm/267843009421?_skw=Brayan+Rocchio+Baseball&hash=item3e5caffb8d:g:ZKkAAeSwMjZq1Uxy&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
     },
     {
       "itemId": "v1|880112601661|0",
@@ -3475,6 +2839,30 @@
       "url": "https://www.ebay.com/itm/287728448378?_skw=Antonio+Senzatela+Baseball&hash=item42fdf3b37a:g:C0IAAeSwU1Zq0uRI&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
     },
     {
+      "itemId": "v1|840126458617|0",
+      "athlete": "Adbert Alzolay",
+      "sport": "Baseball",
+      "title": "2020 Bowman Chrome - Adbert Alzolay #57 Refractor #d/499. Rookie ",
+      "image": "https://i.ebayimg.com/images/g/dVwAAeSwBoto2epg/s-l225.jpg",
+      "currentBid": 0.99,
+      "currency": "USD",
+      "bidCount": 0,
+      "endDate": "2026-11-21T04:07:40.000Z",
+      "url": "https://www.ebay.com/itm/840126458617?_skw=Adbert+Alzolay+Baseball&hash=itemc39b706af9:g:dVwAAeSwBoto2epg&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
+    },
+    {
+      "itemId": "v1|900081785905|0",
+      "athlete": "Carlos Carrasco",
+      "sport": "Baseball",
+      "title": "2022 Topps Heritage Chrome Blue Sparkle #685 Carlos Carrasco - New York Mets",
+      "image": "https://i.ebayimg.com/images/g/IZIAAeSwmyZpWXfi/s-l225.jpg",
+      "currentBid": 0.79,
+      "currency": "USD",
+      "bidCount": 0,
+      "endDate": "2026-11-21T04:08:08.000Z",
+      "url": "https://www.ebay.com/itm/900081785905?_skw=Carlos+Carrasco+Baseball&hash=itemd1910e1c31:g:IZIAAeSwmyZpWXfi&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
+    },
+    {
       "itemId": "v1|206699778778|0",
       "athlete": "Carlos Zambrano",
       "sport": "Baseball",
@@ -3559,6 +2947,18 @@
       "url": "https://www.ebay.com/itm/117512905148?_skw=Carlos+Zambrano+Baseball&hash=item1b5c50a1bc:g:yRoAAeSwjllq8hTP&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
     },
     {
+      "itemId": "v1|860147701649|0",
+      "athlete": "Avisail Garcia",
+      "sport": "Baseball",
+      "title": "Avisail Garcia #92 2022 Topps Milwaukee Brewers Baseball Card MLB Series 1",
+      "image": "https://i.ebayimg.com/images/g/1XoAAeSwf-xq2HA4/s-l225.jpg",
+      "currentBid": 0.99,
+      "currency": "USD",
+      "bidCount": 0,
+      "endDate": "2026-11-21T04:51:27.000Z",
+      "url": "https://www.ebay.com/itm/860147701649?_skw=Avisail+Garcia+Baseball&hash=itemc844cc5791:g:1XoAAeSwf-xq2HA4&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
+    },
+    {
       "itemId": "v1|198786975532|0",
       "athlete": "Carlos Silva",
       "sport": "Baseball",
@@ -3583,6 +2983,18 @@
       "url": "https://www.ebay.com/itm/227613605585?_skw=Carlos+Quintana+Baseball&hash=item34fed3fed1:g:~w0AAeSwvX1qyEuI&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
     },
     {
+      "itemId": "v1|366808913198|0",
+      "athlete": "Carlos Gonzalez",
+      "sport": "Baseball",
+      "title": "2014 Topps Chrome - Chrome Connections Die-Cuts Silver Carlos Gonzalez #CC-CG",
+      "image": "https://i.ebayimg.com/images/g/eXkAAeSwSMRq3DOU/s-l225.jpg",
+      "currentBid": 1.99,
+      "currency": "USD",
+      "bidCount": 0,
+      "endDate": "2026-11-21T05:29:17.000Z",
+      "url": "https://www.ebay.com/itm/366808913198?_skw=Carlos+Gonzalez+Baseball&hash=item556783d52e:g:eXkAAeSwSMRq3DOU&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
+    },
+    {
       "itemId": "v1|287720674235|0",
       "athlete": "Elias Diaz",
       "sport": "Baseball",
@@ -3593,6 +3005,18 @@
       "bidCount": 0,
       "endDate": "2026-11-21T05:30:03.000Z",
       "url": "https://www.ebay.com/itm/287720674235?_skw=Elias+Diaz+Baseball&hash=item42fd7d13bb:g:9aAAAeSwz2ZpjSo7&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
+    },
+    {
+      "itemId": "v1|820353083711|0",
+      "athlete": "Carlos Carrasco",
+      "sport": "Baseball",
+      "title": "Carlos Carrasco 2022 Topps Series 2 Baseball #633 New York Mets Sports Card ",
+      "image": "https://i.ebayimg.com/images/g/98UAAeSwmc1qBJV5/s-l225.jpg",
+      "currentBid": 0.01,
+      "currency": "USD",
+      "bidCount": 0,
+      "endDate": "2026-11-21T05:30:39.000Z",
+      "url": "https://www.ebay.com/itm/820353083711?_skw=Carlos+Carrasco+Baseball&hash=itembf00daa93f:g:98UAAeSwmc1qBJV5&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
     },
     {
       "itemId": "v1|147675592652|0",
@@ -3679,6 +3103,18 @@
       "url": "https://www.ebay.com/itm/327451083724?_skw=Carlos+Asuaje+Baseball&hash=item4c3d9b03cc:g:WJMAAeSwrdxqxVR3&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
     },
     {
+      "itemId": "v1|206700497758|0",
+      "athlete": "Elias Diaz",
+      "sport": "Baseball",
+      "title": "🔥Elias Diaz SN 2026 Topps Series 1 Blue Foil Parallel #28 🔥016 /150 SD Padres",
+      "image": "https://i.ebayimg.com/images/g/DlcAAeSw4vpqAfCd/s-l225.jpg",
+      "currentBid": 1.99,
+      "currency": "USD",
+      "bidCount": 0,
+      "endDate": "2026-11-21T11:42:30.000Z",
+      "url": "https://www.ebay.com/itm/206700497758?_skw=Elias+Diaz+Baseball&hash=item30204f4b5e:g:DlcAAeSw4vpqAfCd&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
+    },
+    {
       "itemId": "v1|307282284285|0",
       "athlete": "Andruw Monasterio",
       "sport": "Baseball",
@@ -3727,6 +3163,30 @@
       "url": "https://www.ebay.com/itm/366801585357?_skw=Carlos+Quintana+Baseball&hash=item55671404cd:g:CFYAAOSwazVl1QLR&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
     },
     {
+      "itemId": "v1|198794431580|0",
+      "athlete": "Brayan Rocchio",
+      "sport": "Baseball",
+      "title": "BRAYAN ROCCHIO 2026 TOPPS SERIES 2 **BASE CARD #370** (IN PACK FRESH CONDITION)",
+      "image": "https://i.ebayimg.com/images/g/0ggAAeSwchBqq9pW/s-l225.jpg",
+      "currentBid": 0.01,
+      "currency": "USD",
+      "bidCount": 0,
+      "endDate": "2026-11-21T12:44:52.000Z",
+      "url": "https://www.ebay.com/itm/198794431580?_skw=Brayan+Rocchio+Baseball&hash=item2e49124c5c:g:0ggAAeSwchBqq9pW&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
+    },
+    {
+      "itemId": "v1|327456036811|0",
+      "athlete": "Antonio Senzatela",
+      "sport": "Baseball",
+      "title": "2020 Topps Update Series - Antonio Senzatela #U-40 Gold /2020",
+      "image": "https://i.ebayimg.com/images/g/8u4AAeSwhmVo7VFA/s-l225.jpg",
+      "currentBid": 3,
+      "currency": "USD",
+      "bidCount": 0,
+      "endDate": "2026-11-21T13:42:11.000Z",
+      "url": "https://www.ebay.com/itm/327456036811?_skw=Antonio+Senzatela+Baseball&hash=item4c3de697cb:g:8u4AAeSwhmVo7VFA&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
+    },
+    {
       "itemId": "v1|257852263139|0",
       "athlete": "David Peralta",
       "sport": "Baseball",
@@ -3749,6 +3209,30 @@
       "bidCount": 0,
       "endDate": "2026-11-21T14:21:28.000Z",
       "url": "https://www.ebay.com/itm/137921852782?_skw=Carlos+Tocci+Baseball&hash=item201cc8756e:g:QUYAAOSw49FiipAH&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
+    },
+    {
+      "itemId": "v1|287721583277|0",
+      "athlete": "Carlos Gonzalez",
+      "sport": "Baseball",
+      "title": "CARLOS GONZALEZ 2008 Donruss Threads ROOKIE Card #82 Oakland A's FREE SHIPPING",
+      "image": "https://i.ebayimg.com/images/g/1l0AAOSwnXxjFQqB/s-l225.jpg",
+      "currentBid": 3.25,
+      "currency": "USD",
+      "bidCount": 0,
+      "endDate": "2026-11-21T14:24:33.000Z",
+      "url": "https://www.ebay.com/itm/287721583277?_skw=Carlos+Gonzalez+Baseball&hash=item42fd8af2ad:g:1l0AAOSwnXxjFQqB&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
+    },
+    {
+      "itemId": "v1|147676164322|0",
+      "athlete": "Brayan Rocchio",
+      "sport": "Baseball",
+      "title": "2024 Topps Chrome Baseball # 113 Brayan Rocchio 1",
+      "image": "https://i.ebayimg.com/images/g/XOQAAOSwj4Vmwe5t/s-l225.jpg",
+      "currentBid": 0.25,
+      "currency": "USD",
+      "bidCount": 0,
+      "endDate": "2026-11-21T14:34:49.000Z",
+      "url": "https://www.ebay.com/itm/147676164322?_skw=Brayan+Rocchio+Baseball&hash=item22622f70e2:g:XOQAAOSwj4Vmwe5t&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
     },
     {
       "itemId": "v1|267843438559|0",
@@ -3775,6 +3259,18 @@
       "url": "https://www.ebay.com/itm/287729351274?_skw=Carlos+Hernandez+Baseball&hash=item42fe017a6a:g:m-YAAeSwnZFq3Lzb&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
     },
     {
+      "itemId": "v1|336897426458|0",
+      "athlete": "Brusdar Graterol",
+      "sport": "Baseball",
+      "title": "Topps 2021 Topps Chrome Future Stars Insert Brusdar Graterol #FS-6 Dodgers",
+      "image": "https://i.ebayimg.com/images/g/VjYAAeSwHS5q70BO/s-l225.jpg",
+      "currentBid": 1,
+      "currency": "USD",
+      "bidCount": 0,
+      "endDate": "2026-11-21T15:15:23.000Z",
+      "url": "https://www.ebay.com/itm/336897426458?_skw=Brusdar+Graterol+Baseball&hash=item4e70a6c41a:g:VjYAAeSwHS5q70BO&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
+    },
+    {
       "itemId": "v1|336897430686|0",
       "athlete": "Bo Diaz",
       "sport": "Baseball",
@@ -3785,6 +3281,42 @@
       "bidCount": 0,
       "endDate": "2026-11-21T15:19:00.000Z",
       "url": "https://www.ebay.com/itm/336897430686?_skw=Bo+Diaz+Baseball&hash=item4e70a6d49e:g:PlEAAeSwxl5qrpky&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
+    },
+    {
+      "itemId": "v1|960196161877|0",
+      "athlete": "David Peralta",
+      "sport": "Baseball",
+      "title": "2015 Topps Finest Red David Peralta Rookie Card.Dbacks.#5/5.",
+      "image": "https://i.ebayimg.com/images/g/0QMAAOSw5gZcs3Mc/s-l225.jpg",
+      "currentBid": 7.99,
+      "currency": "USD",
+      "bidCount": 0,
+      "endDate": "2026-11-21T15:21:35.000Z",
+      "url": "https://www.ebay.com/itm/960196161877?_skw=David+Peralta+Baseball&hash=itemdf9026b155:g:0QMAAOSw5gZcs3Mc&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
+    },
+    {
+      "itemId": "v1|287729371961|0",
+      "athlete": "Carlos Martinez",
+      "sport": "Baseball",
+      "title": "2016 Allen & Ginter Carlos Martinez Relic Topps Sealed Cardinals",
+      "image": "https://i.ebayimg.com/images/g/kcIAAeSwYxho-8II/s-l225.jpg",
+      "currentBid": 5,
+      "currency": "USD",
+      "bidCount": 0,
+      "endDate": "2026-11-21T15:23:36.000Z",
+      "url": "https://www.ebay.com/itm/287729371961?_skw=Carlos+Martinez+Baseball&hash=item42fe01cb39:g:kcIAAeSwYxho-8II&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
+    },
+    {
+      "itemId": "v1|336897445422|0",
+      "athlete": "Brusdar Graterol",
+      "sport": "Baseball",
+      "title": " 2020 Contenders Optic Brusdar Graterol Autograph Cracked Ice 08/23",
+      "image": "https://i.ebayimg.com/images/g/XmUAAeSwr9Jqrpw7/s-l225.jpg",
+      "currentBid": 8.99,
+      "currency": "USD",
+      "bidCount": 0,
+      "endDate": "2026-11-21T15:30:55.000Z",
+      "url": "https://www.ebay.com/itm/336897445422?_skw=Brusdar+Graterol+Baseball&hash=item4e70a70e2e:g:XmUAAeSwr9Jqrpw7&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
     },
     {
       "itemId": "v1|800916527828|0",
@@ -3835,6 +3367,42 @@
       "url": "https://www.ebay.com/itm/227609698467?_skw=Angel+Zerpa+Baseball&hash=item34fe9860a3:g:cUcAAOSwUS1lfQtM&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
     },
     {
+      "itemId": "v1|307282536700|0",
+      "athlete": "Brusdar Graterol",
+      "sport": "Baseball",
+      "title": "Topps 2021 Topps Future Stars Brusdar Graterol Dodgers Baseball Card #85",
+      "image": "https://i.ebayimg.com/images/g/TCMAAeSw7FZq046A/s-l225.jpg",
+      "currentBid": 0.8,
+      "currency": "USD",
+      "bidCount": 0,
+      "endDate": "2026-11-21T16:06:15.000Z",
+      "url": "https://www.ebay.com/itm/307282536700?_skw=Brusdar+Graterol+Baseball&hash=item478b7768fc:g:TCMAAeSw7FZq046A&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
+    },
+    {
+      "itemId": "v1|960196271917|0",
+      "athlete": "Andres Chaparro",
+      "sport": "Baseball",
+      "title": "2026 Topps Series 2 Andres Chaparro #462",
+      "image": "https://i.ebayimg.com/images/g/g6YAAeSwr8Bq7KOk/s-l225.jpg",
+      "currentBid": 2.5,
+      "currency": "USD",
+      "bidCount": 0,
+      "endDate": "2026-11-21T16:06:39.000Z",
+      "url": "https://www.ebay.com/itm/960196271917?_skw=Andres+Chaparro+Baseball&hash=itemdf90285f2d:g:g6YAAeSwr8Bq7KOk&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
+    },
+    {
+      "itemId": "v1|860143598364|0",
+      "athlete": "Carlos Gonzalez",
+      "sport": "Baseball",
+      "title": "Topps 2012 Tribute Carlos Gonzalez #25 Bronze /299 Rockies",
+      "image": "https://i.ebayimg.com/images/g/9ecAAeSwgeNqwRrc/s-l225.jpg",
+      "currentBid": 5.5,
+      "currency": "USD",
+      "bidCount": 0,
+      "endDate": "2026-11-21T16:12:37.000Z",
+      "url": "https://www.ebay.com/itm/860143598364?_skw=Carlos+Gonzalez+Baseball&hash=itemc8448dbb1c:g:9ecAAeSwgeNqwRrc&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
+    },
+    {
       "itemId": "v1|366809982330|0",
       "athlete": "Carlos Perez",
       "sport": "Baseball",
@@ -3859,6 +3427,18 @@
       "url": "https://www.ebay.com/itm/960196412332?_skw=Asdrubal+Cabrera+Baseball&hash=itemdf902a83ac:g:rGsAAeSwAeto69ww&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
     },
     {
+      "itemId": "v1|880116792791|0",
+      "athlete": "Angel Zerpa",
+      "sport": "Baseball",
+      "title": "2022 Panini Prizm - Tier III Angel Zerpa #270 Red Donut Circle Prizm /99 (RC)",
+      "image": "https://i.ebayimg.com/images/g/96EAAeSwuItq-JSL/s-l225.jpg",
+      "currentBid": 3,
+      "currency": "USD",
+      "bidCount": 0,
+      "endDate": "2026-11-21T17:05:29.000Z",
+      "url": "https://www.ebay.com/itm/880116792791?_skw=Angel+Zerpa+Baseball&hash=itemcceb0c7dd7:g:96EAAeSwuItq-JSL&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
+    },
+    {
       "itemId": "v1|920143112386|0",
       "athlete": "Angel Guzman",
       "sport": "Baseball",
@@ -3881,6 +3461,42 @@
       "bidCount": 0,
       "endDate": "2026-11-21T17:50:44.000Z",
       "url": "https://www.ebay.com/itm/377645837968?_skw=Carlos+Quintana+Baseball&hash=item57ed722e90:g:mtkAAeSwyuJq-J8~&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
+    },
+    {
+      "itemId": "v1|336897631352|0",
+      "athlete": "Andres Chaparro",
+      "sport": "Baseball",
+      "title": "2026 Topps Series 2 Diamante Gold Foil 41/50 Andres Chaparro #462 Reds",
+      "image": "https://i.ebayimg.com/images/g/YjgAAeSwiuJqdNcV/s-l225.jpg",
+      "currentBid": 5,
+      "currency": "USD",
+      "bidCount": 0,
+      "endDate": "2026-11-21T18:07:22.000Z",
+      "url": "https://www.ebay.com/itm/336897631352?_skw=Andres+Chaparro+Baseball&hash=item4e70a9e478:g:YjgAAeSwiuJqdNcV&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
+    },
+    {
+      "itemId": "v1|147680622337|0",
+      "athlete": "Antonio Senzatela",
+      "sport": "Baseball",
+      "title": "2021 Topps Series 2 MEIJER PURPLE #420 Antonio Senzatela COLORADO ROCKIES 33",
+      "image": "https://i.ebayimg.com/images/g/x70AAOSwgB1iHYCC/s-l225.jpg",
+      "currentBid": 0.99,
+      "currency": "USD",
+      "bidCount": 0,
+      "endDate": "2026-11-21T18:08:15.000Z",
+      "url": "https://www.ebay.com/itm/147680622337?_skw=Antonio+Senzatela+Baseball&hash=item2262737701:g:x70AAOSwgB1iHYCC&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
+    },
+    {
+      "itemId": "v1|900091385777|0",
+      "athlete": "Avisail Garcia",
+      "sport": "Baseball",
+      "title": "2021 Topps Heritage High Number - Avisail Garcia #503",
+      "image": "https://i.ebayimg.com/images/g/lJUAAeSwd9to6riL/s-l225.jpg",
+      "currentBid": 0.95,
+      "currency": "USD",
+      "bidCount": 0,
+      "endDate": "2026-11-21T18:13:52.000Z",
+      "url": "https://www.ebay.com/itm/900091385777?_skw=Avisail+Garcia+Baseball&hash=itemd191a097b1:g:lJUAAeSwd9to6riL&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
     },
     {
       "itemId": "v1|920143254686|0",
@@ -3919,6 +3535,18 @@
       "url": "https://www.ebay.com/itm/117521353371?_skw=Anderson+Espinoza+Baseball&hash=item1b5cd18a9b:g:~qMAAeSwPGFqwUF6&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
     },
     {
+      "itemId": "v1|307282706393|0",
+      "athlete": "Carlos Gonzalez",
+      "sport": "Baseball",
+      "title": "2012 Bowman Chrome Legends in the Making Die-Cut Carlos Gonzalez #LIM-CG",
+      "image": "https://i.ebayimg.com/images/g/PbIAAeSwvBtpMLL0/s-l225.jpg",
+      "currentBid": 1,
+      "currency": "USD",
+      "bidCount": 0,
+      "endDate": "2026-11-21T19:10:15.000Z",
+      "url": "https://www.ebay.com/itm/307282706393?_skw=Carlos+Gonzalez+Baseball&hash=item478b79ffd9:g:PbIAAeSwvBtpMLL0&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
+    },
+    {
       "itemId": "v1|147676424348|0",
       "athlete": "Bruce Rondon",
       "sport": "Baseball",
@@ -3953,6 +3581,18 @@
       "bidCount": 0,
       "endDate": "2026-11-21T19:37:29.000Z",
       "url": "https://www.ebay.com/itm/168862947402?_skw=Carlos+Quintana+Baseball&hash=item275104184a:g:V6UAAeSwhp5qwUr-&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
+    },
+    {
+      "itemId": "v1|407356251121|0",
+      "athlete": "Carlos Gonzalez",
+      "sport": "Baseball",
+      "title": "2005 Topps Updates & Highlights Carlos Gonzalez First Year RC Rookie #UH298",
+      "image": "https://i.ebayimg.com/images/g/HdIAAOSwO7pivmOk/s-l225.jpg",
+      "currentBid": 0.99,
+      "currency": "USD",
+      "bidCount": 0,
+      "endDate": "2026-11-21T19:40:42.000Z",
+      "url": "https://www.ebay.com/itm/407356251121?_skw=Carlos+Gonzalez+Baseball&hash=item5ed8531bf1:g:HdIAAOSwO7pivmOk&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
     },
     {
       "itemId": "v1|128191414970|0",
@@ -4099,6 +3739,30 @@
       "url": "https://www.ebay.com/itm/198795473037?_skw=Alex+Escobar+Baseball&hash=item2e4922308d:g:CI4AAeSw5WNq750w&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
     },
     {
+      "itemId": "v1|377646283946|0",
+      "athlete": "Carlos Perez",
+      "sport": "Baseball",
+      "title": "Carlos Perez 1996 Leaf Signature Series Bronze On Card Autograph Auto Card",
+      "image": "https://i.ebayimg.com/images/g/VdEAAeSwoQRquDXq/s-l225.jpg",
+      "currentBid": 1.59,
+      "currency": "USD",
+      "bidCount": 0,
+      "endDate": "2026-11-21T22:16:40.000Z",
+      "url": "https://www.ebay.com/itm/377646283946?_skw=Carlos+Perez+Baseball&hash=item57ed78fcaa:g:VdEAAeSwoQRquDXq&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
+    },
+    {
+      "itemId": "v1|860144365133|0",
+      "athlete": "Bradgley Rodriguez",
+      "sport": "Baseball",
+      "title": "2026 Topps Series 1 - Bradgley Rodriguez #42 (RC)",
+      "image": "https://i.ebayimg.com/images/g/8u8AAeSw-ohq0--s/s-l225.jpg",
+      "currentBid": 0.65,
+      "currency": "USD",
+      "bidCount": 0,
+      "endDate": "2026-11-21T23:01:08.000Z",
+      "url": "https://www.ebay.com/itm/860144365133?_skw=Bradgley+Rodriguez+Baseball&hash=itemc844996e4d:g:8u8AAeSw-ohq0--s&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
+    },
+    {
       "itemId": "v1|377646347645|0",
       "athlete": "Andruw Monasterio",
       "sport": "Baseball",
@@ -4135,6 +3799,18 @@
       "url": "https://www.ebay.com/itm/227614597013?_skw=Carlos+Maldonado+Baseball&hash=item34fee31f95:g:9s0AAeSwM2tq5mb8&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
     },
     {
+      "itemId": "v1|800917715790|0",
+      "athlete": "Bradgley Rodriguez",
+      "sport": "Baseball",
+      "title": "2026 Topps Series 1 Bradgley Rodriguez #42 San Diego Padres RC Rookie Card",
+      "image": "https://i.ebayimg.com/images/g/Rq4AAeSwFh9qnf0D/s-l225.jpg",
+      "currentBid": 0.99,
+      "currency": "USD",
+      "bidCount": 0,
+      "endDate": "2026-11-21T23:24:13.000Z",
+      "url": "https://www.ebay.com/itm/800917715790?_skw=Bradgley+Rodriguez+Baseball&hash=itemba7a6a7b4e:g:Rq4AAeSwFh9qnf0D&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
+    },
+    {
       "itemId": "v1|168863193490|0",
       "athlete": "Andry Lara",
       "sport": "Baseball",
@@ -4157,6 +3833,18 @@
       "bidCount": 0,
       "endDate": "2026-11-22T00:24:08.000Z",
       "url": "https://www.ebay.com/itm/960197530880?_skw=Angel+Guzman+Baseball&hash=itemdf903b9500:g:UOIAAeSw8KJq-Pt4&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
+    },
+    {
+      "itemId": "v1|267843882596|0",
+      "athlete": "Carlos Perez",
+      "sport": "Baseball",
+      "title": "2023 Topps #452 Carlos Perez Chicago White Sox Rookie Card",
+      "image": "https://i.ebayimg.com/images/g/CxwAAOSwCjVklzMq/s-l225.jpg",
+      "currentBid": 1.75,
+      "currency": "USD",
+      "bidCount": 0,
+      "endDate": "2026-11-22T00:31:04.000Z",
+      "url": "https://www.ebay.com/itm/267843882596?_skw=Carlos+Perez+Baseball&hash=item3e5cbd4e64:g:CxwAAOSwCjVklzMq&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
     },
     {
       "itemId": "v1|840129378437|0",
@@ -4183,6 +3871,18 @@
       "url": "https://www.ebay.com/itm/227610243256?_skw=Carlos+Quintana+Baseball&hash=item34fea0b0b8:g:qiwAAOSw6OZlqCLa&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
     },
     {
+      "itemId": "v1|267841181889|0",
+      "athlete": "Carlos Martinez",
+      "sport": "Baseball",
+      "title": "2021 Topps Carlos Martinez Gold Parallel & 2012 Bowman First Bowman Card",
+      "image": "https://i.ebayimg.com/images/g/A~gAAOSwz8Fm9zJz/s-l225.jpg",
+      "currentBid": 0.69,
+      "currency": "USD",
+      "bidCount": 0,
+      "endDate": "2026-11-22T00:37:32.000Z",
+      "url": "https://www.ebay.com/itm/267841181889?_skw=Carlos+Martinez+Baseball&hash=item3e5c9418c1:g:A~gAAOSwz8Fm9zJz&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
+    },
+    {
       "itemId": "v1|800917921737|0",
       "athlete": "Eddy Diaz",
       "sport": "Baseball",
@@ -4193,6 +3893,18 @@
       "bidCount": 0,
       "endDate": "2026-11-22T00:47:43.000Z",
       "url": "https://www.ebay.com/itm/800917921737?_skw=Eddy+Diaz+Baseball&hash=itemba7a6d9fc9:g:6dMAAeSwJ7tq5AR6&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
+    },
+    {
+      "itemId": "v1|800905440475|0",
+      "athlete": "Carlos Perez",
+      "sport": "Baseball",
+      "title": "1999 Metal Universe Carlos Perez PMG Precious Metal Gems /50 #194 Dodgers PSA 7",
+      "image": "https://i.ebayimg.com/images/g/0rwAAeSw5n9pWu8k/s-l225.jpg",
+      "currentBid": 99.95,
+      "currency": "USD",
+      "bidCount": 0,
+      "endDate": "2026-11-22T01:19:00.000Z",
+      "url": "https://www.ebay.com/itm/800905440475?_skw=Carlos+Perez+Baseball&hash=itemba79af2cdb:g:0rwAAeSw5n9pWu8k&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
     },
     {
       "itemId": "v1|307282995298|0",
@@ -4255,6 +3967,18 @@
       "url": "https://www.ebay.com/itm/800900967544?_skw=Carlos+Guillen+Baseball&hash=itemba796aec78:g:~dIAAeSwF3Bq8261&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
     },
     {
+      "itemId": "v1|137931899735|0",
+      "athlete": "Carlos Perez",
+      "sport": "Baseball",
+      "title": "1996 Fleer Metal Universe - Carlos Perez #193 Montreal Expos",
+      "image": "https://i.ebayimg.com/images/g/5CUAAeSwULhprE0I/s-l225.jpg",
+      "currentBid": 0.99,
+      "currency": "USD",
+      "bidCount": 0,
+      "endDate": "2026-11-22T02:24:53.000Z",
+      "url": "https://www.ebay.com/itm/137931899735?_skw=Carlos+Perez+Baseball&hash=item201d61c357:g:5CUAAeSwULhprE0I&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
+    },
+    {
       "itemId": "v1|227614804649|0",
       "athlete": "Asdrubal Cabrera",
       "sport": "Baseball",
@@ -4315,6 +4039,18 @@
       "url": "https://www.ebay.com/itm/147681129665?_skw=Ali+Sanchez+Baseball&hash=item22627b34c1:g:apUAAeSw0T5qwbGI&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
     },
     {
+      "itemId": "v1|840129685055|0",
+      "athlete": "Carlos Martinez",
+      "sport": "Baseball",
+      "title": "Topps 2021 Chrome Platinum Anniversary Carlos Martinez Cardinals #459 Blue /199",
+      "image": "https://i.ebayimg.com/images/g/pYoAAeSwL3Vqi0fV/s-l225.jpg",
+      "currentBid": 0.99,
+      "currency": "USD",
+      "bidCount": 0,
+      "endDate": "2026-11-22T03:00:33.000Z",
+      "url": "https://www.ebay.com/itm/840129685055?_skw=Carlos+Martinez+Baseball&hash=itemc39ba1a63f:g:pYoAAeSwL3Vqi0fV&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
+    },
+    {
       "itemId": "v1|128199035306|0",
       "athlete": "Carlos Silva",
       "sport": "Baseball",
@@ -4327,6 +4063,18 @@
       "url": "https://www.ebay.com/itm/128199035306?_skw=Carlos+Silva+Baseball&hash=item1dd94209aa:g:wsIAAeSwogdq-2v2&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
     },
     {
+      "itemId": "v1|377646787712|0",
+      "athlete": "Andry Lara",
+      "sport": "Baseball",
+      "title": "Topps 2025 Series 1 Rookie #36 Andry Lara Washington Nationals Baseball Card",
+      "image": "https://i.ebayimg.com/images/g/U4YAAeSwWsdqwbhk/s-l225.jpg",
+      "currentBid": 4.99,
+      "currency": "USD",
+      "bidCount": 0,
+      "endDate": "2026-11-22T03:25:58.000Z",
+      "url": "https://www.ebay.com/itm/377646787712?_skw=Andry+Lara+Baseball&hash=item57ed80ac80:g:U4YAAeSwWsdqwbhk&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
+    },
+    {
       "itemId": "v1|227610422394|0",
       "athlete": "Anibal Sanchez",
       "sport": "Baseball",
@@ -4337,6 +4085,18 @@
       "bidCount": 0,
       "endDate": "2026-11-22T03:28:44.000Z",
       "url": "https://www.ebay.com/itm/227610422394?_skw=Anibal+Sanchez+Baseball&hash=item34fea36c7a:g:nVMAAeSwCbZqER5P&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
+    },
+    {
+      "itemId": "v1|117514598784|0",
+      "athlete": "Bo Diaz",
+      "sport": "Baseball",
+      "title": "Bo Diaz 1983 Donruss #147 Phillies FREE SHIPPING StackedPacks",
+      "image": "https://i.ebayimg.com/images/g/yaMAAeSwZwBq8264/s-l225.jpg",
+      "currentBid": 0.49,
+      "currency": "USD",
+      "bidCount": 0,
+      "endDate": "2026-11-22T03:36:29.000Z",
+      "url": "https://www.ebay.com/itm/117514598784?_skw=Bo+Diaz+Baseball&hash=item1b5c6a7980:g:yaMAAeSwZwBq8264&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
     },
     {
       "itemId": "v1|940093292472|0",
@@ -4397,6 +4157,18 @@
       "bidCount": 0,
       "endDate": "2026-11-22T04:59:40.000Z",
       "url": "https://www.ebay.com/itm/327457119122?_skw=Alcides+Escobar+Baseball&hash=item4c3df71b92:g:mg4AAeSwkEFqPtCw&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
+    },
+    {
+      "itemId": "v1|287730698575|0",
+      "athlete": "Bo Diaz",
+      "sport": "Baseball",
+      "title": "1979 Topps - Bo Diaz #61 Cleveland",
+      "image": "https://i.ebayimg.com/images/g/~QYAAeSwW-pq3YI4/s-l225.jpg",
+      "currentBid": 0.99,
+      "currency": "USD",
+      "bidCount": 0,
+      "endDate": "2026-11-22T05:15:31.000Z",
+      "url": "https://www.ebay.com/itm/287730698575?_skw=Bo+Diaz+Baseball&hash=item42fe16094f:g:~QYAAeSwW-pq3YI4&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
     },
     {
       "itemId": "v1|407364130487|0",
@@ -4543,6 +4315,18 @@
       "url": "https://www.ebay.com/itm/377648343446?_skw=Andruw+Monasterio+Baseball&hash=item57ed986996:g:MP4AAeSwVUdquUJF&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
     },
     {
+      "itemId": "v1|267844457505|0",
+      "athlete": "Bo Diaz",
+      "sport": "Baseball",
+      "title": "Topps 1978 Rookie Catchers #708 Bo Diaz Dale Murphy Parrish Whitt RC",
+      "image": "https://i.ebayimg.com/images/g/Y90AAeSww8xq-fsM/s-l225.jpg",
+      "currentBid": 2,
+      "currency": "USD",
+      "bidCount": 1,
+      "endDate": "2026-11-22T18:34:34.000Z",
+      "url": "https://www.ebay.com/itm/267844457505?_skw=Bo+Diaz+Baseball&hash=item3e5cc61421:g:Y90AAeSww8xq-fsM&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
+    },
+    {
       "itemId": "v1|960200603869|0",
       "athlete": "Andruw Monasterio",
       "sport": "Baseball",
@@ -4639,6 +4423,18 @@
       "url": "https://www.ebay.com/itm/377648640913?_skw=Asdrubal+Cabrera+Baseball&hash=item57ed9cf391:g:Z8wAAeSwpPRq56KP&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
     },
     {
+      "itemId": "v1|840132343353|0",
+      "athlete": "Andruw Monasterio",
+      "sport": "Baseball",
+      "title": "Topps 2024 Series Two Andruw Monasterio Short Print #653 Boston Red Sox",
+      "image": "https://i.ebayimg.com/images/g/E4AAAeSw~ahq3mMZ/s-l225.jpg",
+      "currentBid": 2.8,
+      "currency": "USD",
+      "bidCount": 0,
+      "endDate": "2026-11-22T21:14:56.000Z",
+      "url": "https://www.ebay.com/itm/840132343353?_skw=Andruw+Monasterio+Baseball&hash=itemc39bca3639:g:E4AAAeSw~ahq3mMZ&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
+    },
+    {
       "itemId": "v1|840132364741|0",
       "athlete": "Carlos Garcia",
       "sport": "Baseball",
@@ -4661,6 +4457,18 @@
       "bidCount": 1,
       "endDate": "2026-11-22T21:30:01.000Z",
       "url": "https://www.ebay.com/itm/227581085270?_skw=Carlos+Silva+Baseball&hash=item34fce3c656:g:myQAAeSwUdlq3Bh8&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
+    },
+    {
+      "itemId": "v1|287732122518|0",
+      "athlete": "Andruw Monasterio",
+      "sport": "Baseball",
+      "title": "Topps 2026 Series 2 Andruw Monasterio Boston Red Sox MLB Base Set #653",
+      "image": "https://i.ebayimg.com/images/g/9tIAAeSwTAdq57Lb/s-l225.jpg",
+      "currentBid": 1,
+      "currency": "USD",
+      "bidCount": 0,
+      "endDate": "2026-11-22T21:45:35.000Z",
+      "url": "https://www.ebay.com/itm/287732122518?_skw=Andruw+Monasterio+Baseball&hash=item42fe2bc396:g:9tIAAeSwTAdq57Lb&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
     },
     {
       "itemId": "v1|920146611768|0",
@@ -4975,6 +4783,18 @@
       "url": "https://www.ebay.com/itm/940095175958?_skw=Cesar+Izturis+Baseball&hash=itemdae209fd16:g:2lMAAeSwV7lq-h28&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
     },
     {
+      "itemId": "v1|327456534405|0",
+      "athlete": "Asdrubal Cabrera",
+      "sport": "Baseball",
+      "title": "2013 Tops Chrome Asdrubal Cabrera Sepia Refractor /75 card #58 serial 40/75",
+      "image": "https://i.ebayimg.com/images/g/IW8AAOSwbpJhtqLd/s-l225.jpg",
+      "currentBid": 1.99,
+      "currency": "USD",
+      "bidCount": 0,
+      "endDate": "2026-11-23T03:07:00.000Z",
+      "url": "https://www.ebay.com/itm/327456534405?_skw=Asdrubal+Cabrera+Baseball&hash=item4c3dee2f85:g:IW8AAOSwbpJhtqLd&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
+    },
+    {
       "itemId": "v1|168865399715|0",
       "athlete": "German Gonzalez",
       "sport": "Baseball",
@@ -5081,6 +4901,18 @@
       "bidCount": 0,
       "endDate": "2026-11-23T05:46:17.000Z",
       "url": "https://www.ebay.com/itm/287732865485?_skw=Al+Pedrique+Baseball&hash=item42fe3719cd:g:3dYAAeSwmOtq6CMX&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
+    },
+    {
+      "itemId": "v1|860148063245|0",
+      "athlete": "Asdrubal Cabrera",
+      "sport": "Baseball",
+      "title": "ASDRUBAL CABRERA 1/1 BASEBALL CARD PRINTING PLATE 2015 BOWMAN CHROME TAMPA RAYS",
+      "image": "https://i.ebayimg.com/images/g/Tn4AAOSwcZZlT~4R/s-l225.jpg",
+      "currentBid": 15,
+      "currency": "USD",
+      "bidCount": 0,
+      "endDate": "2026-11-23T07:08:30.000Z",
+      "url": "https://www.ebay.com/itm/860148063245?_skw=Asdrubal+Cabrera+Baseball&hash=itemc844d1dc0d:g:Tn4AAOSwcZZlT~4R&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
     },
     {
       "itemId": "v1|307284930572|0",
@@ -5383,6 +5215,18 @@
       "url": "https://www.ebay.com/itm/800929759008?_skw=Alberto+Gonzalez+Baseball&hash=itemba7b223f20:g:angAAeSwODVq2A6v&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
     },
     {
+      "itemId": "v1|137930614753|0",
+      "athlete": "Carlos Guillen",
+      "sport": "Baseball",
+      "title": "1997 Bowman's Best Refractor Carlos Guillen #135 Houston Astros",
+      "image": "https://i.ebayimg.com/images/g/lxoAAeSwgMtqcPCs/s-l225.jpg",
+      "currentBid": 5,
+      "currency": "USD",
+      "bidCount": 0,
+      "endDate": "2026-11-24T15:45:26.000Z",
+      "url": "https://www.ebay.com/itm/137930614753?_skw=Carlos+Guillen+Baseball&hash=item201d4e27e1:g:lxoAAeSwgMtqcPCs&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
+    },
+    {
       "itemId": "v1|327461545246|0",
       "athlete": "Alberto Callaspo",
       "sport": "Baseball",
@@ -5467,6 +5311,18 @@
       "url": "https://www.ebay.com/itm/920153651303?_skw=Alfredo+Gonzalez+Baseball&hash=itemd63d6e7867:g:ROQAAeSwrz1qxUAK&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
     },
     {
+      "itemId": "v1|880127471836|0",
+      "athlete": "Alex Escobar",
+      "sport": "Baseball",
+      "title": "2000 Fleer Autographics Alex Escobar Autograph Card",
+      "image": "https://i.ebayimg.com/images/g/Tc4AAeSwDq5ptPY~/s-l225.jpg",
+      "currentBid": 8.99,
+      "currency": "USD",
+      "bidCount": 0,
+      "endDate": "2026-11-24T21:50:47.000Z",
+      "url": "https://www.ebay.com/itm/880127471836?_skw=Alex+Escobar+Baseball&hash=itemccebaf70dc:g:Tc4AAeSwDq5ptPY~&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
+    },
+    {
       "itemId": "v1|168869657326|0",
       "athlete": "Harvey Garcia",
       "sport": "Baseball",
@@ -5489,6 +5345,18 @@
       "bidCount": 0,
       "endDate": "2026-11-24T22:53:29.000Z",
       "url": "https://www.ebay.com/itm/880127605631?_skw=Alex+Carrasquel+Baseball&hash=itemccebb17b7f:g:C6MAAeSw6RBq86Au&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
+    },
+    {
+      "itemId": "v1|940100758491|0",
+      "athlete": "Anderson Espinoza",
+      "sport": "Baseball",
+      "title": "2016 Bowman Chrome Anderson Espinoza 1st Auto BGS 9.5/10",
+      "image": "https://i.ebayimg.com/images/g/~C0AAeSw7k9qsvtr/s-l225.jpg",
+      "currentBid": 9.99,
+      "currency": "USD",
+      "bidCount": 0,
+      "endDate": "2026-11-24T23:06:32.000Z",
+      "url": "https://www.ebay.com/itm/940100758491?_skw=Anderson+Espinoza+Baseball&hash=itemdae25f2bdb:g:~C0AAeSw7k9qsvtr&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
     },
     {
       "itemId": "v1|366818001384|0",
@@ -5551,6 +5419,18 @@
       "url": "https://www.ebay.com/itm/287730315592?_skw=Cesar+Izturis+Baseball&hash=item42fe103148:g:PmYAAOSwMYxfJfLm&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
     },
     {
+      "itemId": "v1|377659220787|0",
+      "athlete": "Carlos Garcia",
+      "sport": "Baseball",
+      "title": "1993 Topps Finest Carlos Garcia #4 Pirates PSA 10 GEM MINT",
+      "image": "https://i.ebayimg.com/images/g/AJQAAeSwY7Nq~xn2/s-l225.jpg",
+      "currentBid": 0.99,
+      "currency": "USD",
+      "bidCount": 0,
+      "endDate": "2026-11-25T02:04:03.000Z",
+      "url": "https://www.ebay.com/itm/377659220787?_skw=Carlos+Garcia+Baseball&hash=item57ee3e6333:g:AJQAAeSwY7Nq~xn2&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
+    },
+    {
       "itemId": "v1|800931968720|0",
       "athlete": "Cesar Izturis",
       "sport": "Baseball",
@@ -5561,6 +5441,18 @@
       "bidCount": 0,
       "endDate": "2026-11-25T02:10:02.000Z",
       "url": "https://www.ebay.com/itm/800931968720?_skw=Cesar+Izturis+Baseball&hash=itemba7b43f6d0:g:7~cAAeSwhNRqztYU&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
+    },
+    {
+      "itemId": "v1|237186806749|0",
+      "athlete": "Anibal Sanchez",
+      "sport": "Baseball",
+      "title": "2014 Bowman Platinum Printing Plate Yellow 1/1 Anibal Sanchez #14",
+      "image": "https://i.ebayimg.com/images/g/Ok8AAeSwYzJq-47h/s-l225.jpg",
+      "currentBid": 0.99,
+      "currency": "USD",
+      "bidCount": 1,
+      "endDate": "2026-11-25T03:04:55.000Z",
+      "url": "https://www.ebay.com/itm/237186806749?_skw=Anibal+Sanchez+Baseball&hash=item37396f73dd:g:Ok8AAeSwYzJq-47h&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
     },
     {
       "itemId": "v1|237189465220|0",
@@ -5767,18 +5659,6 @@
       "url": "https://www.ebay.com/itm/800939244971?_skw=Adrian+Sanchez+Baseball&hash=itemba7bb2fdab:g:v10AAeSwV81o2tT0&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
     },
     {
-      "itemId": "v1|336900573825|0",
-      "athlete": "Carlos Garcia",
-      "sport": "Baseball",
-      "title": "1993 Topps Finest “CARLOS GARCIA” #4 Pittsburgh Pirates",
-      "image": "https://i.ebayimg.com/images/g/IIgAAeSw~r5n9CQn/s-l225.jpg",
-      "currentBid": 3.33,
-      "currency": "USD",
-      "bidCount": 0,
-      "endDate": "2026-11-26T18:12:56.000Z",
-      "url": "https://www.ebay.com/itm/336900573825?_skw=Carlos+Garcia+Baseball&hash=item4e70d6ca81:g:IIgAAeSw~r5n9CQn&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
-    },
-    {
       "itemId": "v1|900096713904|0",
       "athlete": "Alcides Escobar",
       "sport": "Baseball",
@@ -5801,6 +5681,126 @@
       "bidCount": 0,
       "endDate": "2026-11-26T18:37:45.000Z",
       "url": "https://www.ebay.com/itm/880133426394?_skw=Angel+Bravo+Baseball&hash=itemccec0a4cda:g:tt8AAeSwH8NqJGPX&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
+    },
+    {
+      "itemId": "v1|168874002769|0",
+      "athlete": "Al Pedrique",
+      "sport": "Baseball",
+      "title": "1988 Donruss - Al Pedrique #361 Solid Blue Upper Right Corner (RC)",
+      "image": "https://i.ebayimg.com/images/g/SxIAAeSw3XhqLbRp/s-l225.jpg",
+      "currentBid": 2.25,
+      "currency": "USD",
+      "bidCount": 0,
+      "endDate": "2026-11-26T21:17:55.000Z",
+      "url": "https://www.ebay.com/itm/168874002769?_skw=Al+Pedrique+Baseball&hash=item2751acc951:g:SxIAAeSw3XhqLbRp&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
+    },
+    {
+      "itemId": "v1|800939842164|0",
+      "athlete": "Carlos Rivero",
+      "sport": "Baseball",
+      "title": "2026 Panini Stars & Stripes USA Carlos Rivero Silver Auto #026/149 NTS-CR",
+      "image": "https://i.ebayimg.com/images/g/dDkAAeSwQrNp3DoK/s-l225.jpg",
+      "currentBid": 8,
+      "currency": "USD",
+      "bidCount": 0,
+      "endDate": "2026-11-26T21:25:41.000Z",
+      "url": "https://www.ebay.com/itm/800939842164?_skw=Carlos+Rivero+Baseball&hash=itemba7bbc1a74:g:dDkAAeSwQrNp3DoK&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
+    },
+    {
+      "itemId": "v1|800939924094|0",
+      "athlete": "Carlos Pulido",
+      "sport": "Baseball",
+      "title": "Carlos Pulido- (d.2023) Signed/Autograph/Auto 3x5 Index Card Minnesota Twins MLB",
+      "image": "https://i.ebayimg.com/images/g/7c0AAeSwuu5p-5~n/s-l225.jpg",
+      "currentBid": 9.99,
+      "currency": "USD",
+      "bidCount": 0,
+      "endDate": "2026-11-26T21:59:31.000Z",
+      "url": "https://www.ebay.com/itm/800939924094?_skw=Carlos+Pulido+Baseball&hash=itemba7bbd5a7e:g:7c0AAeSwuu5p-5~n&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
+    },
+    {
+      "itemId": "v1|198808766647|0",
+      "athlete": "Angel Bravo",
+      "sport": "Baseball",
+      "title": "1970 Topps Angel Bravo #283",
+      "image": "https://i.ebayimg.com/images/g/hYIAAOSw8ARl62~4/s-l225.jpg",
+      "currentBid": 0.89,
+      "currency": "USD",
+      "bidCount": 0,
+      "endDate": "2026-11-26T22:17:36.000Z",
+      "url": "https://www.ebay.com/itm/198808766647?_skw=Angel+Bravo+Baseball&hash=item2e49ed08b7:g:hYIAAOSw8ARl62~4&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
+    },
+    {
+      "itemId": "v1|137945375177|0",
+      "athlete": "Angel Salazar",
+      "sport": "Baseball",
+      "title": "1986 - 1989 Topps Traded - Angel Salazar #96T Collector's Edition (Tiffany)",
+      "image": "https://i.ebayimg.com/images/g/4IIAAeSw4Gdq7Q6L/s-l225.jpg",
+      "currentBid": 2,
+      "currency": "USD",
+      "bidCount": 0,
+      "endDate": "2026-11-26T23:19:27.000Z",
+      "url": "https://www.ebay.com/itm/137945375177?_skw=Angel+Salazar+Baseball&hash=item201e2f61c9:g:4IIAAeSw4Gdq7Q6L&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
+    },
+    {
+      "itemId": "v1|840146504498|0",
+      "athlete": "Alvaro Espinoza",
+      "sport": "Baseball",
+      "title": "Alvaro Espinoza (#529) - Minnesota Twins - 1987 Topps Baseball",
+      "image": "https://i.ebayimg.com/images/g/ofwAAeSw7ztqDjEb/s-l225.jpg",
+      "currentBid": 0.99,
+      "currency": "USD",
+      "bidCount": 0,
+      "endDate": "2026-11-27T00:32:35.000Z",
+      "url": "https://www.ebay.com/itm/840146504498?_skw=Alvaro+Espinoza+Baseball&hash=itemc39ca24b32:g:ofwAAeSw7ztqDjEb&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
+    },
+    {
+      "itemId": "v1|198808493108|0",
+      "athlete": "Bruce Rondon",
+      "sport": "Baseball",
+      "title": "Bruce Rondon — 2013 Topps Finest Rookie Auto Jumbo Relic /125",
+      "image": "https://i.ebayimg.com/images/g/6mwAAeSwJeJq~0c5/s-l225.jpg",
+      "currentBid": 5.99,
+      "currency": "USD",
+      "bidCount": 0,
+      "endDate": "2026-11-27T00:36:01.000Z",
+      "url": "https://www.ebay.com/itm/198808493108?_skw=Bruce+Rondon+Baseball&hash=item2e49e8dc34:g:6mwAAeSwJeJq~0c5&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
+    },
+    {
+      "itemId": "v1|128202916285|0",
+      "athlete": "Bruce Rondon",
+      "sport": "Baseball",
+      "title": "BRUCE RONDON RC, 2013 Topps *ROOKIE* cards #US315 NrMt (Tigers",
+      "image": "https://i.ebayimg.com/images/g/2FIAAeSwj1Rq~bA-/s-l225.jpg",
+      "currentBid": 0.99,
+      "currency": "USD",
+      "bidCount": 0,
+      "endDate": "2026-11-27T00:48:01.000Z",
+      "url": "https://www.ebay.com/itm/128202916285?_skw=Bruce+Rondon+Baseball&hash=item1dd97d41bd:g:2FIAAeSwj1Rq~bA-&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
+    },
+    {
+      "itemId": "v1|307291335294|0",
+      "athlete": "Al Pedrique",
+      "sport": "Baseball",
+      "title": "1989 Score - Al Pedrique #614",
+      "image": "https://i.ebayimg.com/images/g/NEAAAeSwK2xqyDUX/s-l225.jpg",
+      "currentBid": 0.78,
+      "currency": "USD",
+      "bidCount": 0,
+      "endDate": "2026-11-27T01:29:36.000Z",
+      "url": "https://www.ebay.com/itm/307291335294?_skw=Al+Pedrique+Baseball&hash=item478bfdaa7e:g:NEAAAeSwK2xqyDUX&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
+    },
+    {
+      "itemId": "v1|377660280933|0",
+      "athlete": "Alvaro Espinoza",
+      "sport": "Baseball",
+      "title": "Topps 1990 Topps #791 Alvaro Espinoza New York Yankees Baseball Base Set",
+      "image": "https://i.ebayimg.com/images/g/tcoAAeSwZA1q9m8a/s-l225.jpg",
+      "currentBid": 4.99,
+      "currency": "USD",
+      "bidCount": 0,
+      "endDate": "2026-11-27T02:01:13.000Z",
+      "url": "https://www.ebay.com/itm/377660280933?_skw=Alvaro+Espinoza+Baseball&hash=item57ee4e9065:g:tcoAAeSwZA1q9m8a&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
     },
     {
       "itemId": "v1|257856100736|0",
@@ -5885,6 +5885,30 @@
       "bidCount": 0,
       "endDate": "2026-11-29T03:07:41.000Z",
       "url": "https://www.ebay.com/itm/900102975951?_skw=Angel+Bravo+Baseball&hash=itemd1925171cf:g:UMwAAOSwvGBlimBE&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
+    },
+    {
+      "itemId": "v1|800940214485|0",
+      "athlete": "Franklin Gutierrez",
+      "sport": "Baseball",
+      "title": "Franklin Gutierrez 2012 Topps #286 Mariners FREE SHIPPING StackedPacks",
+      "image": "https://i.ebayimg.com/images/g/8KwAAeSwsm5qyX8H/s-l225.jpg",
+      "currentBid": 0.01,
+      "currency": "USD",
+      "bidCount": 0,
+      "endDate": "2026-11-29T23:57:02.000Z",
+      "url": "https://www.ebay.com/itm/800940214485?_skw=Franklin+Gutierrez+Baseball&hash=itemba7bc1c8d5:g:8KwAAeSwsm5qyX8H&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
+    },
+    {
+      "itemId": "v1|960218276200|0",
+      "athlete": "Alex Romero",
+      "sport": "Baseball",
+      "title": "2008 Upper Deck #721 Alex Romero Rookie Arizona Diamondbacks Baseball Card",
+      "image": "https://i.ebayimg.com/images/g/e7QAAOSwcNVm0c3E/s-l225.jpg",
+      "currentBid": 0.98,
+      "currency": "USD",
+      "bidCount": 0,
+      "endDate": "2026-11-30T00:04:19.000Z",
+      "url": "https://www.ebay.com/itm/960218276200?_skw=Alex+Romero+Baseball&hash=itemdf91782168:g:e7QAAOSwcNVm0c3E&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339142305&toolid=10001&customid=vzla-auctions"
     }
   ]
 }
