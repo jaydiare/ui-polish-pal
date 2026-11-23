@@ -181,7 +181,8 @@ function main() {
     if (!history[name].length) delete history[name];
   }
 
-  writeFileSync(HISTORY_FILE, JSON.stringify(history, null, 2));
+  // Compact JSON halves the download size without changing any history values.
+  writeFileSync(HISTORY_FILE, JSON.stringify(history));
   writeFileSync(FIRST_SEEN_FILE, JSON.stringify(firstSeen, null, 2));
   console.log(`✅ Snapshotted ${count} athletes → ${HISTORY_FILE}`);
   console.log(`✅ firstSeen tracker → ${FIRST_SEEN_FILE} (${Object.keys(firstSeen).length} athletes tracked)`);

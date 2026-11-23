@@ -12,6 +12,7 @@ import MlDealTracker from "@/components/MlDealTracker";
 import { useLanguage } from "@/i18n/LanguageProvider";
 import MarketSentimentChart from "@/components/MarketSentimentChart";
 import { buildEbaySearchUrl, buildEbayGradedSearchUrl } from "@/lib/vzla-helpers";
+import { fetchPublicJson } from "@/lib/public-json";
 const EpnPlacementSummary = lazy(() => import("@/components/EpnPlacementSummary"));
 
 import {
@@ -57,12 +58,8 @@ function getSoldPrice(rec: SoldRecord | undefined): number | null {
   return v != null && Number.isFinite(v) && v > 0 ? v : null;
 }
 
-async function fetchJson(url: string) {
-  try {
-    const res = await fetch(url, { cache: "no-store" });
-    if (!res.ok) return null;
-    return await res.json();
-  } catch { return null; }
+function fetchJson(url: string): Promise<any | null> {
+  return fetchPublicJson<any>(url);
 }
 
 const SPORT_COLORS: Record<string, string> = {
@@ -273,7 +270,7 @@ const Data = () => {
       fetchJson("https://raw.githubusercontent.com/jaydiare/ui-polish-pal/main/data/ebay-sold-avg.json"),
       fetchJson("https://raw.githubusercontent.com/jaydiare/ui-polish-pal/main/data/ebay-graded-avg.json"),
       fetchJson("https://raw.githubusercontent.com/jaydiare/ui-polish-pal/main/data/ebay-graded-sold-avg.json"),
-      fetchJson("data/athletes.json"),
+      fetchJson("https://raw.githubusercontent.com/jaydiare/ui-polish-pal/main/data/athletes.json"),
       fetchJson("https://raw.githubusercontent.com/jaydiare/ui-polish-pal/main/data/athlete-history.json"),
     ]).then(([listed, sold, gradedListed, gradedSold, athletes, history]) => {
       if (listed) setListedData(listed);

@@ -15,17 +15,12 @@ import {
 } from "@/lib/vzla-helpers";
 import { runKnapsack, BudgetCandidate, KnapsackResult } from "@/lib/budget-knapsack";
 import { useAthleteMlScores } from "@/hooks/useAthleteMlScores";
+import { fetchPublicJson } from "@/lib/public-json";
 
 const PAGE_SIZE = 48;
 
-async function fetchJson(path: string) {
-  try {
-    const res = await fetch(path, { cache: "no-store" });
-    if (!res.ok) return null;
-    return await res.json();
-  } catch {
-    return null;
-  }
+function fetchJson(path: string): Promise<any | null> {
+  return fetchPublicJson<any>(path);
 }
 
 const normalizeDataKey = (s: string) =>
