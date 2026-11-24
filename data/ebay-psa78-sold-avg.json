@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "updatedAt": "2026-11-23T08:03:42.351Z",
+    "updatedAt": "2026-11-24T00:15:42.394Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "PSA 7 + PSA 8 sold comps. Two queries per athlete. Strict per-grade title filter. Taguchi winsorized mean. USD via CBSA.",
     "targetGrades": [
@@ -8,8 +8,8 @@
       8
     ],
     "batchInfo": {
-      "startIdx": 320,
-      "endIdx": 328,
+      "startIdx": 328,
+      "endIdx": 336,
       "totalAthletes": 464
     },
     "maxPages": 3,
@@ -3260,35 +3260,35 @@
   },
   "Oscar Salazar": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-10-28T22:47:03.604Z"
+    "erroredAt": "2026-11-24T00:15:58.548Z"
   },
   "Osleivis Basabe": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-10-28T22:47:26.106Z"
+    "erroredAt": "2026-11-24T00:16:21.936Z"
   },
   "Oswald Peraza": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-10-28T22:47:47.330Z"
+    "erroredAt": "2026-11-24T00:16:41.693Z"
   },
   "Oswaldo Arcia": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-10-28T22:48:10.460Z"
+    "erroredAt": "2026-11-24T00:17:05.655Z"
   },
   "Oswaldo Cabrera": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-10-28T22:48:33.107Z"
+    "erroredAt": "2026-11-24T00:17:26.818Z"
   },
   "Oswaldo Navarro": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-10-28T22:48:53.248Z"
+    "erroredAt": "2026-11-24T00:17:47.792Z"
   },
   "Oswaldo Peraza": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-10-28T22:49:15.179Z"
+    "erroredAt": "2026-11-24T00:18:12.080Z"
   },
   "Ozzie Guillen": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-10-28T22:49:36.163Z"
+    "erroredAt": "2026-11-24T00:18:33.418Z"
   },
   "Pablo Lopez": {
     "error": "eBay fetch failed (403)",
