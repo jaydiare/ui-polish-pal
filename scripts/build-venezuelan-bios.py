@@ -12,6 +12,7 @@ ROOT = Path(__file__).resolve().parent.parent
 SOURCE = ROOT / "data" / "biofile0.csv"
 OUTPUTS = [ROOT / "data" / "venezuelan-bios.json", ROOT / "public" / "data" / "venezuelan-bios.json"]
 SUFFIXES = ("Jr", "Sr", "II", "III", "IV", "V")
+VENEZUELAN_HERITAGE_IDS = {"luzaj001"}
 
 # Preferred roster names that cannot be derived exactly from the source fields.
 ROSTER_ALIASES = {
@@ -61,7 +62,7 @@ def main() -> None:
 
     with SOURCE.open(encoding="utf-8-sig", newline="") as source_file:
         for row in csv.DictReader(source_file):
-            if row.get("birthcountry") != "Venezuela":
+            if row.get("birthcountry") != "Venezuela" and row.get("id") not in VENEZUELAN_HERITAGE_IDS:
                 continue
 
             player_id = row["id"]

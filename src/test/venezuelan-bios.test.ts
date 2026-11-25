@@ -1,4 +1,5 @@
 import { describe, expect, it } from "vitest";
+import generatedLookup from "../../data/venezuelan-bios.json";
 import {
   findVenezuelanBio,
   formatBioDate,
@@ -26,6 +27,12 @@ const lookup: VenezuelanBioLookup = {
 };
 
 describe("Venezuelan biography matching", () => {
+  it("includes Peru-born Jesús Luzardo through Venezuelan heritage and preserves Lima as birthplace", () => {
+    const bio = findVenezuelanBio(generatedLookup, "Jesús Luzardo", "Baseball");
+    expect(bio?.name).toBe("Jesus Luzardo");
+    expect(bio?.birthCity).toBe("Lima");
+    expect(bio?.birthState).toBe("Lima");
+  });
   it("matches Jackson Chourio exactly", () => {
     expect(findVenezuelanBio(lookup, "Jackson Chourio", "Baseball")?.birthCity).toBe("Maracaibo");
   });
