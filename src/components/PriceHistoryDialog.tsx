@@ -12,6 +12,9 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } f
 import { useLanguage } from "@/i18n/LanguageProvider";
 import CareerStatsStrip from "./CareerStatsStrip";
 import { Athlete } from "@/data/athletes";
+import { useVenezuelanBio } from "@/hooks/useVenezuelanBio";
+import { formatBioDate, formatBioHeight, formatBioWeight } from "@/lib/venezuelan-bios";
+import { initialsFromName } from "@/lib/vzla-helpers";
 
 
 export interface SeriesData {
@@ -23,6 +26,7 @@ interface PriceHistoryDialogProps {
   open: boolean;
   onOpenChange: (open: boolean) => void;
   athlete: Athlete;
+  photo?: string | null;
   raw?: SeriesData | null;
   graded?: SeriesData | null;
   priceMode: "raw" | "graded" | "both";
@@ -69,8 +73,8 @@ const summarize = (s?: SeriesData | null) => {
   };
 };
 
-const PriceHistoryDialog = ({ open, onOpenChange, athlete, raw, graded, priceMode }: PriceHistoryDialogProps) => {
-  const { t } = useLanguage();
+const PriceHistoryDialog = ({ open, onOpenChange, athlete, photo, raw, graded, priceMode }: PriceHistoryDialogProps) => {
+  const { t, lang } = useLanguage();
   const reducedMotion =
     typeof window !== "undefined" && window.matchMedia?.("(prefers-reduced-motion: reduce)").matches;
 
@@ -93,17 +97,65 @@ const PriceHistoryDialog = ({ open, onOpenChange, athlete, raw, graded, priceMod
 
   const activeSummary = summarize(showRaw && raw ? raw : showGraded && graded ? graded : raw ?? graded);
   const up = (activeSummary?.delta ?? 0) >= 0;
+  const bio = useVenezuelanBio(athlete.name, athlete.sport, open);
+  const sideLabel = (value: string) => {
+    const side = value.toUpperCase();
+    return ["R", "L", "S"].includes(side) ? t(`bio.side.${side}` as never) : value || "—";
+  };
+  const bioFields = bio ? [
+    { label: t("bio.bats"), value: sideLabel(bio.bats) },
+    { label: t("bio.throws"), value: sideLabel(bio.throws) },
+    { label: t("bio.height"), value: formatBioHeight(bio.height) },
+    { label: t("bio.weight"), value: formatBioWeight(bio.weight) },
+    { label: t("bio.hof"), value: bio.hof || "—" },
+    { label: t("bio.debut"), value: formatBioDate(bio.debut, lang) },
+    { label: t("bio.lastPlayed"), value: formatBioDate(bio.last, lang) },
+    { label: t("bio.birthCity"), value: bio.birthCity || "—" },
+    { label: t("bio.birthState"), value: bio.birthState || "—" },
+  ] : [];
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
       <DialogContent className="max-w-2xl w-[calc(100vw-1.5rem)] max-h-[calc(100dvh-2rem)] overflow-y-auto p-4 sm:p-6 z-[1100]">
-        <DialogHeader className="sticky top-0 z-10 bg-background pb-2 border-b border-border/40 pointer-events-none">
-          <DialogTitle className="font-display pr-6">{athlete.name}</DialogTitle>
-          <DialogDescription>
-            {t("history.title")} · {athlete.sport}
-            {athlete.team ? ` · ${athlete.team}` : ""}
-          </DialogDescription>
+        <DialogHeader className="sticky top-0 z-10 bg-background pb-3 border-b border-border/40">
+          <div className="flex items-center gap-3 pr-6">
+            {photo ? (
+              <img
+                src={photo}
+                alt={athlete.name}
+                className="w-14 h-14 rounded-xl object-cover object-center shrink-0 border border-border bg-secondary"
+                loading="eager"
+              />
+            ) : (
+              <div className="w-14 h-14 rounded-xl flex items-center justify-center font-display font-bold text-sm tracking-wide bg-secondary border border-border text-vzla-yellow shrink-0">
+                {initialsFromName(athlete.name)}
+              </div>
+            )}
+            <div className="min-w-0">
+              <DialogTitle className="font-display">{athlete.name}</DialogTitle>
+              <DialogDescription>
+                {t("history.title")} · {athlete.sport}
+                {athlete.team ? ` · ${athlete.team}` : ""}
+              </DialogDescription>
+            </div>
+          </div>
         </DialogHeader>
+
+        {bio && (
+          <section aria-label={t("bio.title")} className="rounded-xl border border-border/40 bg-secondary/30 p-3">
+            <h3 className="text-[10px] uppercase tracking-wider font-semibold text-muted-foreground mb-2">
+              {t("bio.title")}
+            </h3>
+            <dl className="grid grid-cols-2 sm:grid-cols-3 gap-x-4 gap-y-3">
+              {bioFields.map((field) => (
+                <div key={field.label}>
+                  <dt className="text-[9px] uppercase tracking-wider text-muted-foreground">{field.label}</dt>
+                  <dd className="text-xs font-semibold text-foreground mt-0.5">{field.value}</dd>
+                </div>
+              ))}
+            </dl>
+          </section>
+        )}
 
         <CareerStatsStrip name={athlete.name} sport={athlete.sport} enabled={open} />
 

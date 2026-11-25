@@ -232,7 +232,14 @@ const AthleteCard = forwardRef<HTMLElement, AthleteCardProps>(({ athlete, byName
         )}
         <div className="min-w-0 flex-1">
           <h3 className="font-display font-bold text-[15px] leading-tight line-clamp-2 text-foreground mb-1">
-            {athlete.name}
+            <button
+              type="button"
+              onClick={() => setHistoryOpen(true)}
+              aria-label={t("history.openFor").replace("{name}", athlete.name)}
+              className="text-left rounded-sm transition-colors hover:text-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+            >
+              {athlete.name}
+            </button>
           </h3>
           <div className="flex items-center gap-1.5 flex-wrap">
             <span className="inline-flex px-1.5 py-0.5 rounded text-[9px] font-bold bg-vzla-yellow/10 border border-vzla-yellow/20 text-vzla-yellow">
@@ -394,6 +401,7 @@ const AthleteCard = forwardRef<HTMLElement, AthleteCardProps>(({ athlete, byName
           open={historyOpen}
           onOpenChange={setHistoryOpen}
           athlete={athlete}
+          photo={photo}
           raw={showRawSparkline ? rawSparkData : null}
           graded={showGradedSparkline ? gradedSparkData : null}
           priceMode={priceMode}
