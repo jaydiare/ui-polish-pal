@@ -65,8 +65,8 @@ export const translations = {
     // Hero
     "hero.lastUpdate": "Last update",
     "hero.titleA": "VZLA",
-    "hero.titleB": "Sports Cards",
-    "hero.titleC": "Index",
+    "hero.titleB": "Sports",
+    "hero.titleC": "Elite",
     "hero.subtitle":
       "eBay market data for Venezuelan athletes' sports cards. Track prices, stability scores, and market trends.",
     "hero.intro":
@@ -246,9 +246,9 @@ export const translations = {
 
     // Hero
     "hero.lastUpdate": "Última actualización",
-    "hero.titleA": "Índice de",
-    "hero.titleB": "Cartas Deportivas",
-    "hero.titleC": "VZLA",
+    "hero.titleA": "VZLA",
+    "hero.titleB": "Sports",
+    "hero.titleC": "Elite",
     "hero.subtitle":
       "Datos del mercado de eBay para las cartas deportivas de atletas venezolanos. Sigue precios, puntajes de estabilidad y tendencias del mercado.",
     "hero.intro":
