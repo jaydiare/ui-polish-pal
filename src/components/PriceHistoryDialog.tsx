@@ -109,7 +109,6 @@ const PriceHistoryDialog = ({ open, onOpenChange, athlete, photo, raw, graded, p
     { label: t("bio.weight"), value: formatBioWeight(bio.weight) },
     { label: t("bio.hof"), value: bio.hof || "—" },
     { label: t("bio.debut"), value: formatBioDate(bio.debut, lang) },
-    { label: t("bio.lastPlayed"), value: formatBioDate(bio.last, lang) },
     { label: t("bio.birthCity"), value: bio.birthCity || "—" },
     { label: t("bio.birthState"), value: bio.birthState || "—" },
   ] : [];
