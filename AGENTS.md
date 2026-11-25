@@ -1,2 +1,3 @@
 - Methodology copy (all pages, EN/ES, JSON-LD) must state the trim % that matches TAGUCHI_TRIM_PCT in scripts/*update-ebay-avg.js; why: pages drifted out of sync.
 - eBay auctions tracker: scripts/fetch-ebay-auctions.cjs (Browse API, AUCTION, endingSoonest) writes data/ebay-auctions.json every 3h via ebay-auctions.yml; page fetches it client-side, no backend; why: stays within eBay daily quota.
+- Biography loading must try the local snapshot when a valid live snapshot lacks the requested player; why: newly included players must not disappear while remote data is stale.
