@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "updatedAt": "2026-11-25T21:56:34.153Z",
+    "updatedAt": "2026-11-26T08:48:32.177Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "PSA 7 + PSA 8 sold comps. Two queries per athlete. Strict per-grade title filter. Taguchi winsorized mean. USD via CBSA.",
     "targetGrades": [
@@ -8,8 +8,8 @@
       8
     ],
     "batchInfo": {
-      "startIdx": 360,
-      "endIdx": 368,
+      "startIdx": 368,
+      "endIdx": 376,
       "totalAthletes": 464
     },
     "maxPages": 3,
@@ -27,7 +27,7 @@
     },
     "fx": {
       "source": "CBSA Exchange Rates API",
-      "asOf": "2026-11-26T00:00:00.000Z"
+      "asOf": "2026-11-27T00:00:00.000Z"
     }
   },
   "Adbert Alzolay": {
@@ -3446,35 +3446,35 @@
   },
   "Roberto Petagine": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-10-30T13:24:47.160Z"
+    "erroredAt": "2026-11-26T08:48:48.510Z"
   },
   "Roberto Rodriguez": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-10-30T13:25:08.385Z"
+    "erroredAt": "2026-11-26T08:49:08.427Z"
   },
   "Robinson Chirinos": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-10-30T13:25:31.516Z"
+    "erroredAt": "2026-11-26T08:49:30.130Z"
   },
   "Roger Cedeno": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-10-30T13:25:53.727Z"
+    "erroredAt": "2026-11-26T08:49:50.469Z"
   },
   "Ronald Acuna Jr.": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-10-30T13:26:17.115Z"
+    "erroredAt": "2026-11-26T08:50:11.319Z"
   },
   "Ronald Belisario": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-10-30T13:26:40.566Z"
+    "erroredAt": "2026-11-26T08:50:35.139Z"
   },
   "Ronald Herrera": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-10-30T13:27:04.169Z"
+    "erroredAt": "2026-11-26T08:50:55.216Z"
   },
   "Ronald Torreyes": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-10-30T13:27:25.862Z"
+    "erroredAt": "2026-11-26T08:51:18.559Z"
   },
   "Ronny Cedeno": {
     "error": "eBay fetch failed (403)",
