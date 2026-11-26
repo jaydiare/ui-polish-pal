@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "updatedAt": "2026-11-26T08:48:32.177Z",
+    "updatedAt": "2026-11-26T21:50:33.554Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "PSA 7 + PSA 8 sold comps. Two queries per athlete. Strict per-grade title filter. Taguchi winsorized mean. USD via CBSA.",
     "targetGrades": [
@@ -8,8 +8,8 @@
       8
     ],
     "batchInfo": {
-      "startIdx": 368,
-      "endIdx": 376,
+      "startIdx": 376,
+      "endIdx": 384,
       "totalAthletes": 464
     },
     "maxPages": 3,
@@ -3478,23 +3478,23 @@
   },
   "Ronny Cedeno": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-10-30T22:35:48.349Z"
+    "erroredAt": "2026-11-26T21:50:48.793Z"
   },
   "Rosman Garcia": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-10-30T22:36:09.277Z"
+    "erroredAt": "2026-11-26T21:51:10.770Z"
   },
   "Rougned Odor": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-10-30T22:36:29.827Z"
+    "erroredAt": "2026-11-26T21:51:32.903Z"
   },
   "Ruben Quevedo": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-10-30T22:36:49.598Z"
+    "erroredAt": "2026-11-26T21:51:54.871Z"
   },
   "Salvador Perez": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-10-30T22:37:12.659Z"
+    "erroredAt": "2026-11-26T21:52:15.799Z"
   },
   "Sandy Leon": {
     "psa7": {
@@ -3524,15 +3524,15 @@
       "lastKnownSoldAt": null
     },
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-10-30T22:37:33.490Z"
+    "erroredAt": "2026-11-26T21:52:36.172Z"
   },
   "Sebastian Rivero": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-10-30T22:37:53.930Z"
+    "erroredAt": "2026-11-26T21:52:58.308Z"
   },
   "Sergio Escalona": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-10-30T22:38:15.641Z"
+    "erroredAt": "2026-11-26T21:53:19.174Z"
   },
   "Simon Muzziotti": {
     "error": "eBay fetch failed (403)",
