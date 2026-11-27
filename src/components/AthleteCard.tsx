@@ -411,7 +411,7 @@ const AthleteCard = forwardRef<HTMLElement, AthleteCardProps>(({ athlete, byName
 
       {/* ── Meta row: stability + sold + days listed ── */}
       {priceMode === "both" ? (
-        <div className="mt-2 grid grid-cols-2 gap-2 text-[9px] leading-tight text-muted-foreground">
+        <div className="mt-2 mb-1.5 sm:mb-0 grid grid-cols-2 gap-2 text-[9px] leading-tight text-muted-foreground">
           {/* Raw meta column — aligned to Raw price card */}
           <div data-align="meta-raw" className={`px-0.5 sm:px-2.5 flex items-center gap-1 whitespace-nowrap overflow-hidden min-w-0 ${dbgRaw} ${dbgRawMis}`}>
             <span className="uppercase font-bold tracking-wider text-muted-foreground/80 shrink-0">Raw</span>
@@ -436,7 +436,7 @@ const AthleteCard = forwardRef<HTMLElement, AthleteCardProps>(({ athlete, byName
           </div>
         </div>
       ) : (
-        <div className="mt-2 flex items-center gap-2 text-[10px] text-muted-foreground flex-wrap">
+        <div className="mt-2 mb-1.5 sm:mb-0 flex items-center gap-2 text-[10px] text-muted-foreground flex-wrap">
           <span className={`font-bold stability-${stability.bucket}`}>{stability.label}</span>
           {soldAvg != null && (
             <>
@@ -458,7 +458,7 @@ const AthleteCard = forwardRef<HTMLElement, AthleteCardProps>(({ athlete, byName
         href={shopUrl}
         target="_blank"
         rel="noopener noreferrer"
-        className="mt-auto pt-3 self-stretch inline-flex items-center justify-center px-2 sm:px-4 py-2 text-center rounded-lg cta-yellow no-underline text-xs font-bold tracking-wide group-hover:shadow-lg transition-all"
+        className="mt-auto self-stretch inline-flex items-center justify-center px-2 pt-2 pb-2 sm:px-4 sm:pt-3 sm:pb-2 text-center rounded-full sm:rounded-lg cta-yellow no-underline text-xs font-bold tracking-wide group-hover:shadow-lg transition-all"
       >
         Search on eBay →
       </a>
