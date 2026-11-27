@@ -284,6 +284,9 @@
   text-align: left;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
+@media (max-width: 639px) {
+  .athlete-card { padding: 12px; border-radius: 12px; }
+}
 
 .athlete-card:hover {
   transform: translateY(-4px);

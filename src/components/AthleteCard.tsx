@@ -217,21 +217,21 @@ const AthleteCard = forwardRef<HTMLElement, AthleteCardProps>(({ athlete, byName
       )}
 
       {/* ── Header ── */}
-      <div className="flex gap-3 items-start">
+      <div className="flex flex-col sm:flex-row gap-2 sm:gap-3 items-start">
         {photo ? (
           <img
             src={photo}
             alt={athlete.name}
-            className="w-14 h-14 rounded-xl object-cover object-center shrink-0 border border-border bg-secondary"
+            className="w-12 h-12 sm:w-14 sm:h-14 rounded-xl object-cover object-center shrink-0 border border-border bg-secondary"
             loading="lazy"
           />
         ) : (
-          <div className="w-14 h-14 rounded-xl flex items-center justify-center font-display font-bold text-sm tracking-wide bg-secondary border border-border text-vzla-yellow shrink-0">
+          <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-xl flex items-center justify-center font-display font-bold text-sm tracking-wide bg-secondary border border-border text-vzla-yellow shrink-0">
             {initials}
           </div>
         )}
         <div className="min-w-0 flex-1">
-          <h3 className="font-display font-bold text-[15px] leading-tight line-clamp-2 text-foreground mb-1">
+          <h3 className="font-display font-bold text-[13px] sm:text-[15px] leading-tight line-clamp-2 text-foreground mb-1">
             <button
               type="button"
               onClick={() => setHistoryOpen(true)}
@@ -313,9 +313,9 @@ const AthleteCard = forwardRef<HTMLElement, AthleteCardProps>(({ athlete, byName
       <div className={`mt-3 grid gap-2 ${priceMode === "both" ? "grid-cols-2" : "grid-cols-1"}`}>
         {/* Raw */}
         {(priceMode === "raw" || priceMode === "both") && (
-          <div data-align="price-raw" className={`p-2.5 rounded-lg bg-secondary/50 border border-border/40 ${dbgRaw} ${dbgRawMis}`}>
+          <div data-align="price-raw" className={`min-w-0 p-1.5 sm:p-2.5 rounded-lg bg-secondary/50 border border-border/40 ${dbgRaw} ${dbgRawMis}`}>
             <div className="text-[9px] text-muted-foreground font-medium uppercase tracking-wider mb-1">Raw</div>
-            <div className="text-base font-display font-bold text-foreground leading-none">{money}</div>
+            <div className="text-sm sm:text-base font-display font-bold text-foreground leading-none break-words">{money}</div>
             {rawFallback && (
               <div className="text-[8px] text-muted-foreground font-medium mt-0.5">Historical</div>
             )}
@@ -335,12 +335,12 @@ const AthleteCard = forwardRef<HTMLElement, AthleteCardProps>(({ athlete, byName
 
         {/* Graded */}
         {(priceMode === "graded" || priceMode === "both") && (
-          <div data-align="price-grd" className={`p-2.5 rounded-lg bg-secondary/50 border border-border/40 ${dbgGrd} ${dbgGrdMis}`}>
+          <div data-align="price-grd" className={`min-w-0 p-1.5 sm:p-2.5 rounded-lg bg-secondary/50 border border-border/40 ${dbgGrd} ${dbgGrdMis}`}>
             <div className="text-[9px] text-muted-foreground font-medium uppercase tracking-wider mb-1">Graded</div>
             {gradedMoney ? (
-              <div className="flex items-start justify-between gap-2">
+              <div className="flex flex-col sm:flex-row items-start justify-between gap-1 sm:gap-2">
                 <div>
-                  <div className="text-base font-display font-bold text-foreground leading-none">{gradedMoney}</div>
+                  <div className="text-sm sm:text-base font-display font-bold text-foreground leading-none break-words">{gradedMoney}</div>
                   {gradedFallback && (
                     <div className="text-[8px] text-muted-foreground font-medium mt-0.5">Historical</div>
                   )}
@@ -357,7 +357,7 @@ const AthleteCard = forwardRef<HTMLElement, AthleteCardProps>(({ athlete, byName
                   )}
                 </div>
                 {priceMode === "graded" && psaPop != null && (
-                  <div className="text-right shrink-0">
+                  <div className="sm:text-right shrink-0">
                     <div className="text-[8px] text-muted-foreground font-medium uppercase tracking-wider leading-tight">PSA</div>
                     <div className="text-[8px] text-muted-foreground font-medium uppercase tracking-wider leading-tight">POP #</div>
                     <div className="text-xs font-display font-bold text-foreground leading-tight mt-0.5">{psaPop.toLocaleString()}</div>
@@ -377,20 +377,20 @@ const AthleteCard = forwardRef<HTMLElement, AthleteCardProps>(({ athlete, byName
           type="button"
           onClick={() => setHistoryOpen(true)}
           aria-label={`View price history for ${athlete.name}`}
-          className={`mt-2 w-full flex items-center gap-2 rounded-lg px-1 py-0.5 cursor-pointer transition-colors hover:bg-foreground/5 ${priceMode === "both" && showRawSparkline && showGradedSparkline ? "grid grid-cols-2" : ""}`}
+          className={`mt-2 w-full min-w-0 overflow-hidden flex items-center gap-2 rounded-lg px-1 py-0.5 cursor-pointer transition-colors hover:bg-foreground/5 ${priceMode === "both" && showRawSparkline && showGradedSparkline ? "grid grid-cols-2" : ""}`}
         >
           {showRawSparkline && rawSparkData && (
-            <div className="flex items-center gap-1.5">
-              {priceMode === "both" && <span className="text-[8px] text-muted-foreground uppercase">Raw</span>}
+            <div className="flex min-w-0 items-center gap-1">
+              {priceMode === "both" && <span className="hidden sm:inline text-[8px] text-muted-foreground uppercase">Raw</span>}
               <Sparkline data={rawSparkData.values} dates={rawSparkData.dates} width={priceMode === "both" ? 60 : 80} height={20} />
-              <span className="text-[9px] text-muted-foreground">{rawSparkData.values.length}d</span>
+              <span className="hidden sm:inline text-[9px] text-muted-foreground">{rawSparkData.values.length}d</span>
             </div>
           )}
           {showGradedSparkline && gradedSparkData && (
-            <div className="flex items-center gap-1.5">
-              {priceMode === "both" && <span className="text-[8px] text-muted-foreground uppercase">Grd</span>}
+            <div className="flex min-w-0 items-center gap-1">
+              {priceMode === "both" && <span className="hidden sm:inline text-[8px] text-muted-foreground uppercase">Grd</span>}
               <Sparkline data={gradedSparkData.values} dates={gradedSparkData.dates} width={priceMode === "both" ? 60 : 80} height={20} />
-              <span className="text-[9px] text-muted-foreground">{gradedSparkData.values.length}d</span>
+              <span className="hidden sm:inline text-[9px] text-muted-foreground">{gradedSparkData.values.length}d</span>
             </div>
           )}
         </button>
@@ -413,7 +413,7 @@ const AthleteCard = forwardRef<HTMLElement, AthleteCardProps>(({ athlete, byName
       {priceMode === "both" ? (
         <div className="mt-2 grid grid-cols-2 gap-2 text-[9px] leading-tight text-muted-foreground">
           {/* Raw meta column — aligned to Raw price card */}
-          <div data-align="meta-raw" className={`px-2.5 flex items-center gap-1 whitespace-nowrap overflow-hidden min-w-0 ${dbgRaw} ${dbgRawMis}`}>
+          <div data-align="meta-raw" className={`px-0.5 sm:px-2.5 flex items-center gap-1 whitespace-nowrap overflow-hidden min-w-0 ${dbgRaw} ${dbgRawMis}`}>
             <span className="uppercase font-bold tracking-wider text-muted-foreground/80 shrink-0">Raw</span>
             <span className={`font-bold stability-${rawStability.bucket} truncate`}>{rawStability.label}</span>
             {rawDom != null && (
@@ -424,7 +424,7 @@ const AthleteCard = forwardRef<HTMLElement, AthleteCardProps>(({ athlete, byName
             )}
           </div>
           {/* Graded meta column — aligned to Graded price card */}
-          <div data-align="meta-grd" className={`px-2.5 flex items-center gap-1 whitespace-nowrap overflow-hidden min-w-0 ${dbgGrd} ${dbgGrdMis}`}>
+          <div data-align="meta-grd" className={`px-0.5 sm:px-2.5 flex items-center gap-1 whitespace-nowrap overflow-hidden min-w-0 ${dbgGrd} ${dbgGrdMis}`}>
             <span className="uppercase font-bold tracking-wider text-muted-foreground/80 shrink-0">Grd</span>
             <span className={`font-bold stability-${gradedStability.bucket} truncate`}>{gradedStability.label}</span>
             {gradedDom != null && (
@@ -458,7 +458,7 @@ const AthleteCard = forwardRef<HTMLElement, AthleteCardProps>(({ athlete, byName
         href={shopUrl}
         target="_blank"
         rel="noopener noreferrer"
-        className="mt-auto pt-3 self-stretch inline-flex items-center justify-center px-4 py-2 rounded-lg cta-yellow no-underline text-xs font-bold tracking-wide group-hover:shadow-lg transition-all"
+        className="mt-auto pt-3 self-stretch inline-flex items-center justify-center px-2 sm:px-4 py-2 text-center rounded-lg cta-yellow no-underline text-xs font-bold tracking-wide group-hover:shadow-lg transition-all"
       >
         Search on eBay →
       </a>
