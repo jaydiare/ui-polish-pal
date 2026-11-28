@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "updatedAt": "2026-11-27T21:34:37.821Z",
+    "updatedAt": "2026-11-28T08:19:36.792Z",
     "source": "eBay public sold listings (HTML scrape, LH_Sold=1)",
     "note": "PSA 7 + PSA 8 sold comps. Two queries per athlete. Strict per-grade title filter. Taguchi winsorized mean. USD via CBSA.",
     "targetGrades": [
@@ -8,8 +8,8 @@
       8
     ],
     "batchInfo": {
-      "startIdx": 392,
-      "endIdx": 400,
+      "startIdx": 400,
+      "endIdx": 408,
       "totalAthletes": 464
     },
     "maxPages": 3,
@@ -27,7 +27,7 @@
     },
     "fx": {
       "source": "CBSA Exchange Rates API",
-      "asOf": "2026-11-28T00:00:00.000Z"
+      "asOf": "2026-11-29T00:00:00.000Z"
     }
   },
   "Adbert Alzolay": {
@@ -3600,35 +3600,35 @@
   },
   "Wil Ledezma": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-10-31T21:48:59.502Z"
+    "erroredAt": "2026-11-28T08:19:52.251Z"
   },
   "Wilfredo Rodriguez": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-10-31T21:49:23.195Z"
+    "erroredAt": "2026-11-28T08:20:13.043Z"
   },
   "Wilfredo Tovar": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-10-31T21:49:44.097Z"
+    "erroredAt": "2026-11-28T08:20:34.460Z"
   },
   "William Bergolla": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-10-31T21:50:06.950Z"
+    "erroredAt": "2026-11-28T08:20:55.168Z"
   },
   "William Contreras": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-10-31T21:50:28.389Z"
+    "erroredAt": "2026-11-28T08:21:15.690Z"
   },
   "William Cuevas": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-10-31T21:50:51.201Z"
+    "erroredAt": "2026-11-28T08:21:38.928Z"
   },
   "Williams Perez": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-10-31T21:51:12.993Z"
+    "erroredAt": "2026-11-28T08:21:59.199Z"
   },
   "Willians Astudillo": {
     "error": "eBay fetch failed (403)",
-    "erroredAt": "2026-10-31T21:51:34.097Z"
+    "erroredAt": "2026-11-28T08:22:21.286Z"
   },
   "Willie Canate": {
     "error": "eBay fetch failed (403)",
